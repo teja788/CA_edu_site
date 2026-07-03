@@ -10,9 +10,22 @@ const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: 
 const bankQuestions = Object.values(bankModules).flatMap((mod) => {
   const bank = mod.default ?? mod;
   if (!Array.isArray(bank.questions)) return [];
-  // Descriptive questions (model-answer skeletons) are study material, not
-  // quiz items — only MCQs enter the deck.
-  const mcqs = bank.questions.filter((q) => q.type === 'mcq');
+  // Descriptive questions (model-answer skeletons) live in /practice/descriptive/,
+  // not here — only MCQs enter the deck. Case-scenario sets (the Inter 30% MCQ
+  // pattern) flatten into linked MCQs that stay together and score as a unit.
+  const mcqs = bank.questions.flatMap((q) => {
+    if (q.type === 'case_mcq_set' && Array.isArray(q.questions)) {
+      return q.questions.map((sub, i) => ({
+        topic: q.topic,
+        applicableAttempts: q.applicableAttempts,
+        lawAsOnDate: q.lawAsOnDate,
+        ...sub,
+        type: 'mcq',
+        case: { id: q.id, text: q.case, pos: i + 1, size: q.questions.length },
+      }));
+    }
+    return q.type === 'mcq' ? [q] : [];
+  });
   const paperNum = Number((bank.paper ?? '').match(/Paper\s*(\d)/i)?.[1] ?? 0);
   const chapterNum = Number((bank.chapter ?? '').match(/Ch\s*(\d+)/i)?.[1] ?? 0);
   // Foundation Papers 3 & 4 are the only negatively marked papers in the course.
@@ -40,6 +53,7 @@ const allQuestions = [...questions, ...bankQuestions];
     <div style="flex: 1;"></div>
     <span class="counter" data-counter>Question 1 of {allQuestions.length}</span>
     <span data-negative-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;">Foundation marking · −0.25</span>
+    <span data-inter-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;">Inter marking · no negative</span>
     <span data-timer hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8; font-variant-numeric: tabular-nums;">◷ Timed · <span data-timer-value>0:00</span></span>
   </div>
   <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
@@ -47,6 +61,7 @@ const allQuestions = [...questions, ...bankQuestions];
   <main style="max-width: 680px; margin: 0 auto; padding: 28px 20px 48px;">
     <div data-quiz-root>
       <div data-result-banner hidden></div>
+      <div data-case hidden class="card card-pad" style="margin-bottom: 18px; font-size: 15px; line-height: 1.65;"></div>
       <div style="font-size: 13px; color: var(--text-3); margin-bottom: 10px;" data-topic></div>
       <div style="font-size: 18px; line-height: 1.6; font-weight: 600; margin-bottom: 24px;" data-stem></div>
       <div style="display: flex; flex-direction: column; gap: 10px;" data-options></div>
@@ -60,6 +75,7 @@ const allQuestions = [...questions, ...bankQuestions];
       <div style="font-size: 24px; font-weight: 700; margin-bottom: 8px;" data-summary-title>Set complete</div>
       <div style="font-size: 16px; color: var(--text-2); margin-bottom: 6px;" data-summary-score></div>
       <div style="font-size: 14px; color: var(--text-3); margin-bottom: 24px;" data-summary-note></div>
+      <div data-case-summary hidden style="text-align: left; max-width: 560px; margin: 0 auto 24px;"></div>
 
       <!-- Attempt strategy (Foundation P3/P4 only): expected value of guessing
            vs skipping under +1 / −0.25 / 0 marking. Values per 1-mark MCQ. -->
@@ -135,11 +151,19 @@ const allQuestions = [...questions, ...bankQuestions];
       deck = base.filter((q) => q.topic.toLowerCase().includes(t));
       if (deck.length === 0) deck = base;
     } else if (params.get('mode') === 'mixed') {
-      deck = [...base];
-      for (let i = deck.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [deck[i], deck[j]] = [deck[j], deck[i]];
+      // Shuffle at block level: a case-scenario set's linked MCQs must stay
+      // together and in order, so each set travels as one block.
+      const blocks = [];
+      for (const q of base) {
+        const last = blocks[blocks.length - 1];
+        if (q.case && last && last[0].case?.id === q.case.id) last.push(q);
+        else blocks.push([q]);
       }
+      for (let i = blocks.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [blocks[i], blocks[j]] = [blocks[j], blocks[i]];
+      }
+      deck = blocks.flat();
     }
 
     // Foundation scoring mode (+1 / −0.25 / 0) — Papers 3 & 4 only. Activates
@@ -149,6 +173,14 @@ const allQuestions = [...questions, ...bankQuestions];
       params.get('scoring') === 'foundation' ||
       (deck.length > 0 && deck.every((q) => q.meta?.negative));
     if (negativeMode) document.querySelector('[data-negative-chip]').hidden = false;
+
+    // Intermediate profile: +1 / 0 / 0 — no negative marking anywhere at
+    // Inter, so the only strategy note is "attempt every MCQ".
+    const interMode =
+      !negativeMode &&
+      (params.get('scoring') === 'intermediate' ||
+        (deck.length > 0 && deck.every((q) => (q.meta?.level ?? 'intermediate') === 'intermediate')));
+    if (interMode) document.querySelector('[data-inter-chip]').hidden = false;
 
     if (params.get('timed') === '1') {
       const chip = document.querySelector('[data-timer]');
@@ -170,6 +202,8 @@ const allQuestions = [...questions, ...bankQuestions];
     let skippedCount = 0;
     let answered = false;
     let selected = null;
+    // Case sets score as a unit — per-set tallies for the summary.
+    const caseScores = new Map();
 
     function renderQuestion() {
       const q = deck[index];
@@ -178,6 +212,21 @@ const allQuestions = [...questions, ...bankQuestions];
       $('[data-counter]').textContent = `Question ${index + 1} of ${deck.length}`;
       $('[data-progress]').style.width = `${(index / deck.length) * 100}%`;
       $('[data-result-banner]').hidden = true;
+      const caseBox = $('[data-case]');
+      if (q.case) {
+        caseBox.hidden = false;
+        caseBox.innerHTML = '';
+        const label = document.createElement('div');
+        label.className = 'overline';
+        label.style.marginBottom = '8px';
+        label.textContent = `Case scenario · linked question ${q.case.pos} of ${q.case.size}`;
+        const text = document.createElement('p');
+        text.style.margin = '0';
+        text.textContent = q.case.text;
+        caseBox.append(label, text);
+      } else {
+        caseBox.hidden = true;
+      }
       $('[data-topic]').textContent = q.topic;
       $('[data-stem]').textContent = q.stem;
 
@@ -226,6 +275,12 @@ const allQuestions = [...questions, ...bankQuestions];
       const q = deck[index];
       answered = true;
       const isCorrect = selected === q.correct;
+      if (q.case) {
+        const cs = caseScores.get(q.case.id) ?? { correct: 0, answered: 0, size: q.case.size, topic: q.topic };
+        cs.answered += 1;
+        if (isCorrect) cs.correct += 1;
+        caseScores.set(q.case.id, cs);
+      }
       if (isCorrect) {
         correctCount += 1;
         clearMistake(q.id);
@@ -314,6 +369,30 @@ const allQuestions = [...questions, ...bankQuestions];
             correctCount === deck.length
               ? 'Clean sweep. This topic moves up.'
               : 'Missed questions are in your Mistake notebook — they’ll come back at the right time.';
+        }
+        if (caseScores.size > 0) {
+          // Sets score as a unit: report each case's tally alongside the total.
+          const box = document.querySelector('[data-case-summary]');
+          box.hidden = false;
+          box.innerHTML = '';
+          const label = document.createElement('div');
+          label.className = 'overline';
+          label.style.marginBottom = '10px';
+          label.textContent = 'Case-scenario sets — scored as a unit';
+          const card = document.createElement('div');
+          card.className = 'card card-pad';
+          for (const [, cs] of caseScores) {
+            const row = document.createElement('div');
+            row.style.cssText = 'display: flex; justify-content: space-between; gap: 12px; font-size: 14px; line-height: 2;';
+            const name = document.createElement('span');
+            name.textContent = cs.topic;
+            const score = document.createElement('span');
+            score.className = 'tnum';
+            score.textContent = `${cs.correct} of ${cs.size}`;
+            row.append(name, score);
+            card.appendChild(row);
+          }
+          box.append(label, card);
         }
         document.querySelector('[data-counter]').textContent = 'Done';
       } else {

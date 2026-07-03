@@ -67,3 +67,33 @@ Rules enforced by tooling and review:
 Descriptive items use `"type": "descriptive"` with a `skeleton` array instead of
 `options`/`correct`: each entry is `{ "point": "…", "marks": 1, "citation": "…" }`.
 They are ignored by the numerical runner and the consistency check.
+
+Optional fields consumed by `/practice/descriptive/` and the mock composer:
+`"marks"` (total; defaults to the skeleton sum) and `"workingNotes": true` when
+the rubric expects working notes. `citation` strings are shown in the
+self-grading rubric — cite the Act section / AS/SA paragraph the point rests on.
+
+## Case-scenario MCQ sets (Intermediate pattern)
+
+The Inter 30% MCQ section is case-based: a 150–250 word case paragraph with 4–5
+linked MCQs, rendered and scored as a unit. Bank shape:
+
+```json
+{
+  "id": "cs-p2c4-001",
+  "type": "case_mcq_set",
+  "topic": "Ch 4 · Share Capital · Rights issue case",
+  "case": "150–250 word scenario…",
+  "applicableAttempts": ["Sept 2026"],
+  "lawAsOnDate": "2026-02-28",
+  "questions": [
+    { "id": "cs-p2c4-001-a", "stem": "…", "options": [ … ], "correct": "B", "numerical": false, "sourceRef": "s.62(1)(a)" }
+  ]
+}
+```
+
+Sub-questions use the normal MCQ shape (every option explained, `sourceRef`
+mandatory); `applicableAttempts`/`lawAsOnDate` sit on the SET and are inherited.
+The quiz engine keeps the set together (mixed mode shuffles whole sets), shows
+the case above each linked question, and reports the set's score as a unit.
+`verify_numerical` verifiers treat each sub-question ID like any other MCQ.

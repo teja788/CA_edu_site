@@ -4,34 +4,14 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import Badge from '../components/Badge.astro';
 import TrustRow from '../components/TrustRow.astro';
 import { attempt } from '../data/site.js';
+import { amendments } from '../data/amendments.js';
 
 /**
  * Amendment tracker (plan §6.1): what changed since the SM edition,
- * per paper, per attempt, always sourced. Seeded with the amendments
- * referenced elsewhere on the site.
+ * per paper, per attempt, always sourced. Data lives in
+ * src/data/amendments.js (one changelog, also rendered per paper at
+ * /intermediate/<paper>/amendments/).
  */
-const amendments = [
-  {
-    paper: 'P1 · Advanced Accounting',
-    appliesFrom: 'Sept 2026',
-    title: 'Stamp duty on partnership deed revision — state-wise slabs',
-    old: '₹500 flat',
-    now: 'State-wise slab rates (Finance Act 2026)',
-    source: 'Finance Act 2026',
-    sourceUrl: 'https://egazette.gov.in/',
-    affected: [{ label: 'Admission of a partner — §3', href: '/intermediate/advanced-accounting/partnership-accounts/admission-of-a-partner/#s3' }],
-  },
-  {
-    paper: 'P3 · Taxation',
-    appliesFrom: 'Jan 2027',
-    title: 'Paper 3 syllabus revision announced by ICAI',
-    old: 'Sept 2026 syllabus',
-    now: 'Revised structure applies from the Jan 2027 attempt; Sept 2026 content is unaffected',
-    source: 'ICAI announcement',
-    sourceUrl: 'https://www.icai.org/',
-    affected: [],
-  },
-];
 ---
 
 <Base title="Updates & amendments">
@@ -54,8 +34,11 @@ const amendments = [
       {amendments.map((a) => (
         <div class="card card-pad">
           <div style="display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 8px;">
-            <div class="overline" style="font-size: 12px;">{a.paper}</div>
-            <Badge kind="amended">Applies from {a.appliesFrom}</Badge>
+            <div class="overline" style="font-size: 12px;"><a href={`/intermediate/${a.paperSlug}/amendments/`} style="color: inherit;">{a.paperLabel}</a></div>
+            <span style="display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end;">
+              {a.todo && <Badge kind="draft">Pending transcription</Badge>}
+              <Badge kind="amended">Applies from {a.appliesFrom}</Badge>
+            </span>
           </div>
           <div style="font-size: 17px; font-weight: 650; margin-bottom: 10px;">{a.title}</div>
           <div style="font-size: 15px; line-height: 1.65;">
@@ -70,6 +53,12 @@ const amendments = [
                 <a href={n.href}>Affected note: {n.label}</a>
               </>
             ))}
+            {a.affected.length === 0 && (
+              <>
+                <span class="dot" aria-hidden="true">·</span>
+                <span>No published content affected yet</span>
+              </>
+            )}
           </div>
         </div>
       ))}

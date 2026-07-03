@@ -1,0 +1,232 @@
+---
+import Base from '../../layouts/Base.astro';
+
+/**
+ * Descriptive practice (Inter pattern: 70% descriptive, plan §7 Phase 2
+ * "descriptive-answer training"). Flow per question: timed prompt → student
+ * writes (here or on paper) → rubric reveal: points expected, working notes
+ * required, section/AS/SA citations expected, mark allocation → self-grade
+ * point by point.
+ *
+ * Descriptive bank items: type "descriptive" with a `skeleton` array of
+ * { point, marks, citation } plus optional `workingNotes: true` and total
+ * `marks` (defaults to the skeleton sum). See src/data/questions/README.md.
+ */
+const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: true });
+const items = Object.values(bankModules).flatMap((mod) => {
+  const bank = mod.default ?? mod;
+  if (!Array.isArray(bank.questions)) return [];
+  return bank.questions
+    .filter((q) => q.type === 'descriptive' && Array.isArray(q.skeleton))
+    .map((q) => ({
+      ...q,
+      totalMarks: q.marks ?? q.skeleton.reduce((s, p) => s + (p.marks ?? 1), 0),
+      meta: { level: bank.level, paper: bank.paper, chapterSlug: bank.chapterSlug },
+    }));
+});
+---
+
+<Base title="Descriptive practice" bare>
+  <div class="quiz-bar">
+    <a href="/practice/">← Exit practice</a>
+    <div style="flex: 1;"></div>
+    <span class="counter" data-counter></span>
+    <span data-timer style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8; font-variant-numeric: tabular-nums;" hidden>◷ <span data-timer-value>0:00</span> / <span data-timer-budget></span></span>
+  </div>
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 28px 20px 48px;">
+    <div data-root>
+      <div style="font-size: 13px; color: var(--text-3); margin-bottom: 10px;" data-topic></div>
+      <div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+        <div style="font-size: 18px; line-height: 1.6; font-weight: 600; margin-bottom: 8px; flex: 1; min-width: 260px;" data-stem></div>
+        <span class="tnum" style="font-size: 14px; color: var(--text-2); white-space: nowrap;" data-marks></span>
+      </div>
+      <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; margin: 0 0 16px;" data-instructions></p>
+
+      <div data-write-phase>
+        <textarea data-answer rows="12" placeholder="Write your answer here — or on paper, exam-style. The rubric reveal works either way." style="width: 100%; font: inherit; font-size: 15px; line-height: 1.6; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); resize: vertical;"></textarea>
+        <div style="display: flex; align-items: center; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
+          <button type="button" class="btn btn-primary" data-reveal>Reveal marking rubric</button>
+          <button type="button" class="btn btn-tertiary" data-skip>Skip this question</button>
+        </div>
+      </div>
+
+      <div data-rubric-phase hidden>
+        <div class="overline" style="margin: 20px 0 10px;">Marking rubric — grade yourself point by point</div>
+        <div class="card card-pad">
+          <div data-rubric-flags style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin-bottom: 12px;"></div>
+          <div data-rubric-points style="display: flex; flex-direction: column; gap: 10px;"></div>
+        </div>
+        <div data-your-answer hidden style="margin-top: 16px;">
+          <div class="overline" style="margin-bottom: 8px;">What you wrote</div>
+          <div class="card card-pad" style="font-size: 14px; line-height: 1.65; white-space: pre-wrap;" data-your-answer-text></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-top: 20px; flex-wrap: wrap;">
+          <span style="font-size: 16px; font-weight: 650;" data-self-score></span>
+          <div style="flex: 1;"></div>
+          <button type="button" class="btn btn-primary" data-next>Next question</button>
+        </div>
+      </div>
+    </div>
+
+    <div data-summary hidden style="text-align: center; padding: 40px 0;">
+      <div style="font-size: 24px; font-weight: 700; margin-bottom: 8px;" data-summary-title>Session complete</div>
+      <div style="font-size: 16px; color: var(--text-2); margin-bottom: 6px;" data-summary-score></div>
+      <div style="font-size: 14px; color: var(--text-3); margin-bottom: 24px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.6;" data-summary-note>
+        Self-graded marks are honest only if you were harsh: a point counts when your answer states it,
+        cites it, and shows the working — “I knew that” doesn’t score in the exam hall either.
+      </div>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="/practice/descriptive/" class="btn btn-primary">Practice again</a>
+        <a href="/dashboard/" class="btn btn-secondary">Open dashboard</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="application/json" data-items set:html={JSON.stringify(items)}></script>
+
+  <script>
+    import { recordAnswer, addMistake } from '../../scripts/store.js';
+
+    const all = JSON.parse(document.querySelector('[data-items]').textContent);
+    const params = new URLSearchParams(location.search);
+    const scoped = params.get('level') || params.get('paper') || params.get('chapter');
+    let deck = all;
+    if (params.get('level')) deck = deck.filter((q) => q.meta?.level === params.get('level'));
+    if (params.get('paper')) {
+      const slug = params.get('paper').toLowerCase();
+      deck = deck.filter((q) => (q.meta?.paper ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(slug));
+    }
+    if (params.get('chapter')) deck = deck.filter((q) => q.meta?.chapterSlug === params.get('chapter'));
+
+    const $ = (sel) => document.querySelector(sel);
+    let index = 0;
+    let earnedTotal = 0;
+    let possibleTotal = 0;
+    let timerHandle = null;
+
+    // Exam pace ≈ 1.8 min/mark (100 marks · 3 hours) — the budget is a pacing
+    // signal, not a cutoff; the clock keeps counting past it.
+    function startTimer(marks) {
+      clearInterval(timerHandle);
+      const budget = Math.round(marks * 1.8 * 60);
+      const chip = $('[data-timer]');
+      chip.hidden = false;
+      $('[data-timer-budget]').textContent = `${Math.floor(budget / 60)}:${String(budget % 60).padStart(2, '0')} for ${marks} marks`;
+      const start = Date.now();
+      timerHandle = setInterval(() => {
+        const s = Math.floor((Date.now() - start) / 1000);
+        const v = $('[data-timer-value]');
+        v.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+        v.style.color = s > budget ? 'var(--incorrect, #e5484d)' : '';
+      }, 1000);
+    }
+
+    function render() {
+      const q = deck[index];
+      $('[data-counter]').textContent = `Question ${index + 1} of ${deck.length}`;
+      $('[data-topic]').textContent = q.topic ?? '';
+      $('[data-stem]').textContent = q.stem;
+      $('[data-marks]').textContent = `${q.totalMarks} marks`;
+      $('[data-instructions]').textContent = [
+        q.workingNotes ? 'Working notes are part of the answer — marks are allocated to them.' : null,
+        q.skeleton.some((p) => p.citation) ? 'Cite the section / AS / SA you rely on — citations carry marks.' : null,
+        'Answer exam-style, then reveal the rubric and grade yourself.',
+      ].filter(Boolean).join(' ');
+      $('[data-answer]').value = '';
+      $('[data-write-phase]').hidden = false;
+      $('[data-rubric-phase]').hidden = true;
+      startTimer(q.totalMarks);
+    }
+
+    function reveal() {
+      const q = deck[index];
+      clearInterval(timerHandle);
+      $('[data-write-phase]').hidden = true;
+      $('[data-rubric-phase]').hidden = false;
+
+      const flags = $('[data-rubric-flags]');
+      flags.innerHTML = '';
+      const flagBits = [];
+      if (q.workingNotes) flagBits.push('Working notes required');
+      if (q.skeleton.some((p) => p.citation)) flagBits.push('Citations expected (shown per point)');
+      flagBits.push(`Mark allocation: ${q.skeleton.map((p) => p.marks ?? 1).join(' + ')} = ${q.totalMarks}`);
+      flags.textContent = flagBits.join(' · ');
+
+      const wrap = $('[data-rubric-points]');
+      wrap.innerHTML = '';
+      q.skeleton.forEach((p, i) => {
+        const row = document.createElement('label');
+        row.style.cssText = 'display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.55; cursor: pointer;';
+        const box = document.createElement('input');
+        box.type = 'checkbox';
+        box.dataset.marks = p.marks ?? 1;
+        box.style.marginTop = '4px';
+        box.addEventListener('change', updateSelfScore);
+        const body = document.createElement('span');
+        body.style.flex = '1';
+        const cite = p.citation ? ` <span style="color: var(--text-3); font-size: 13px;">[${p.citation}]</span>` : '';
+        body.innerHTML = `${p.point}${cite}`;
+        const marks = document.createElement('span');
+        marks.className = 'tnum';
+        marks.style.cssText = 'color: var(--text-2); font-size: 14px; white-space: nowrap;';
+        marks.textContent = `${p.marks ?? 1} mark${(p.marks ?? 1) === 1 ? '' : 's'}`;
+        row.append(box, body, marks);
+        wrap.appendChild(row);
+      });
+
+      const written = $('[data-answer]').value.trim();
+      $('[data-your-answer]').hidden = written.length === 0;
+      $('[data-your-answer-text]').textContent = written;
+      updateSelfScore();
+    }
+
+    function updateSelfScore() {
+      const q = deck[index];
+      const earned = [...document.querySelectorAll('[data-rubric-points] input:checked')]
+        .reduce((s, b) => s + Number(b.dataset.marks), 0);
+      $('[data-self-score]').textContent = `Self-graded: ${earned} of ${q.totalMarks}`;
+    }
+
+    function next(counted) {
+      const q = deck[index];
+      if (counted) {
+        const earned = [...document.querySelectorAll('[data-rubric-points] input:checked')]
+          .reduce((s, b) => s + Number(b.dataset.marks), 0);
+        earnedTotal += earned;
+        possibleTotal += q.totalMarks;
+        const passed = earned >= q.totalMarks / 2;
+        recordAnswer({ questionId: q.id, correct: passed });
+        if (!passed) addMistake({ questionId: q.id, topic: q.topic ?? 'Descriptive' });
+      }
+      index += 1;
+      if (index >= deck.length) {
+        clearInterval(timerHandle);
+        $('[data-root]').hidden = true;
+        $('[data-summary]').hidden = false;
+        $('[data-counter]').textContent = 'Done';
+        $('[data-timer]').hidden = true;
+        $('[data-summary-score]').textContent =
+          possibleTotal > 0 ? `Self-graded ${earnedTotal} of ${possibleTotal} marks` : 'Nothing graded this session';
+      } else {
+        render();
+      }
+    }
+
+    document.querySelector('[data-reveal]').addEventListener('click', reveal);
+    document.querySelector('[data-skip]').addEventListener('click', () => next(false));
+    document.querySelector('[data-next]').addEventListener('click', () => next(true));
+
+    if (deck.length === 0) {
+      document.querySelector('[data-root]').hidden = true;
+      const summary = document.querySelector('[data-summary]');
+      summary.hidden = false;
+      document.querySelector('[data-summary-title]').textContent = 'No descriptive questions here yet';
+      document.querySelector('[data-summary-note]').textContent = scoped
+        ? 'Descriptive banks ship chapter by chapter alongside the MCQ banks.'
+        : 'Descriptive banks arrive with the Intermediate chapter loop — MCQ practice is live meanwhile.';
+    } else {
+      render();
+    }
+  </script>
+</Base>

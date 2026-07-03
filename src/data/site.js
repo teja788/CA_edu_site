@@ -6,12 +6,17 @@
  * All ICAI resources are LINKS to official sources, never re-hosted copies.
  */
 
+// Full attempt records (next three attempts, with verification TODOs) live in
+// intermediate.js `attempts`; this is the site-wide current-attempt pointer.
+// NOTE: the Income-tax Act 2025 / Finance Act 2026 applies only from the
+// May 2027 exams (ICAI announcement 08-12-2025); Sept 2026 stays on the
+// 1961 Act as amended by the Finance Act 2025.
 export const attempt = {
   id: 'sept-2026',
   name: 'Sept 2026',
   beginsOn: '2026-09-08',
   beginsLabel: '8 Sept 2026',
-  applicableFinanceAct: 'Finance Act 2026',
+  applicableFinanceAct: 'Finance Act 2025 (Income-tax Act, 1961 · AY 2026-27)',
 };
 
 export const level = {
@@ -33,7 +38,7 @@ export const papers = [
     shortName: 'Adv. Accounting',
     marks: 100,
     pattern: { mcqPct: 30, descriptivePct: 70, negativeMarking: false },
-    chapters: 14,
+    chapters: 15,
     topics: 96,
     status: 'live',
   },
@@ -46,7 +51,7 @@ export const papers = [
     shortName: 'Corporate Laws',
     marks: 100,
     pattern: { mcqPct: 30, descriptivePct: 70, negativeMarking: false },
-    chapters: 12,
+    chapters: 15,
     topics: 74,
     status: 'coming-soon',
   },
@@ -59,7 +64,7 @@ export const papers = [
     shortName: 'Taxation',
     marks: 100,
     pattern: { mcqPct: 30, descriptivePct: 70, negativeMarking: false },
-    chapters: 18,
+    chapters: 24,
     topics: 110,
     status: 'coming-soon',
   },
@@ -98,7 +103,7 @@ export const papers = [
     shortName: 'FM & SM',
     marks: 100,
     pattern: { mcqPct: 30, descriptivePct: 70, negativeMarking: false },
-    chapters: 16,
+    chapters: 14,
     topics: 90,
     status: 'coming-soon',
   },
@@ -143,11 +148,12 @@ export const paper1Sections = [
 export const paper1Resources = [
   {
     kind: 'SM',
-    title: 'Study Material — Paper 1 (2025 edition)',
-    url: 'https://www.icai.org/post/study-material-intermediate',
+    // Old /post/study-material-intermediate URL now 404s — ICAI reshuffle.
+    title: 'Study Material — Paper 1 Advanced Accounting (May 2026 onwards)',
+    url: 'https://www.icai.org/post/bos-int-p1-may2026-exam',
     host: 'icai.org',
     requiresLogin: false,
-    lastChecked: '28 Jun 2026',
+    lastChecked: '3 Jul 2026',
   },
   {
     kind: 'RTP',

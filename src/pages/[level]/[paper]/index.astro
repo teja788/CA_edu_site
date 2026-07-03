@@ -6,6 +6,7 @@ import AdSlot from '../../../components/AdSlot.astro';
 import TrustRow from '../../../components/TrustRow.astro';
 import { attempt } from '../../../data/site.js';
 import { allPaperPaths } from '../../../data/levels.js';
+import { getInterPaper } from '../../../data/intermediate.js';
 
 export function getStaticPaths() {
   return allPaperPaths()
@@ -20,6 +21,12 @@ export function getStaticPaths() {
 }
 
 const { level, group, paper } = Astro.props;
+
+// Intermediate papers carry the full ICAI-SM-aligned chapter taxonomy
+// (src/data/intermediate.js, verified 3 Jul 2026); other levels keep the
+// coming-soon state until their taxonomy files land.
+const interPaper = level.id === 'intermediate' ? getInterPaper(paper.slug) : null;
+const resources = interPaper?.resources ?? level.resources;
 ---
 
 <Base title={`Paper ${paper.number}: ${paper.name} — ${level.name}`} active="papers">
@@ -51,22 +58,54 @@ const { level, group, paper } = Astro.props;
       <a href="#resources">Resources</a>
     </div>
 
-    <div class="empty-state" style="max-width: 720px;">
-      <div style="width: 40px; height: 40px; border-radius: 999px; background: var(--surface-2); color: var(--text-3); display: inline-flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 10px;" aria-hidden="true">✎</div>
-      <div style="font-size: 16px; font-weight: 650; margin-bottom: 4px;">Original notes and practice for this paper are on the way</div>
-      <div style="font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 14px;">
-        Content ships in order of stability — Advanced Accounting first, tax papers last, once
-        amendment-tagging is battle-tested. Meanwhile, the official resources below are everything
-        you need to study this paper today.
+    {interPaper ? (
+      <>
+        <p style="max-width: 640px; font-size: 14px; color: var(--text-3); line-height: 1.6; margin: 16px 0 0;">
+          Chapter list follows the ICAI study material edition “{interPaper.edition}” exactly —
+          the SM index is the source of truth for scope.
+          {interPaper.volatile && ' Law/tax paper: every note and question here is attempt-tagged.'}
+        </p>
+        {interPaper.sections.map((section) => (
+          <>
+            <div class="overline" style="margin: 28px 0 10px;">{section.name}</div>
+            <div class="list-card" style="max-width: 720px;">
+              {section.chapters.map((ch) => (
+                <div class="list-row">
+                  <span class="tnum" style="min-width: 34px; color: var(--text-3); font-size: 14px;">{ch.smNumber ?? `Ch ${ch.number}`}</span>
+                  <span style="flex: 1;">
+                    <span style="font-size: 15px; font-weight: 600;">{ch.name}</span>
+                    {ch.units && (
+                      <span style="display: block; font-size: 13px; color: var(--text-3); margin-top: 2px;">{ch.units.join(' · ')}</span>
+                    )}
+                  </span>
+                  <Badge kind="neutral">Notes soon</Badge>
+                </div>
+              ))}
+            </div>
+          </>
+        ))}
+        <div class="trust-row" style="margin-top: 14px; max-width: 720px;">
+          <a href={`/intermediate/${paper.slug}/amendments/`}>Amendment tracker for this paper →</a>
+        </div>
+      </>
+    ) : (
+      <div class="empty-state" style="max-width: 720px;">
+        <div style="width: 40px; height: 40px; border-radius: 999px; background: var(--surface-2); color: var(--text-3); display: inline-flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 10px;" aria-hidden="true">✎</div>
+        <div style="font-size: 16px; font-weight: 650; margin-bottom: 4px;">Original notes and practice for this paper are on the way</div>
+        <div style="font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 14px;">
+          Content ships in order of stability — Advanced Accounting first, tax papers last, once
+          amendment-tagging is battle-tested. Meanwhile, the official resources below are everything
+          you need to study this paper today.
+        </div>
+        <a href="/intermediate/advanced-accounting/" class="btn btn-secondary">See a live paper page</a>
       </div>
-      <a href="/intermediate/advanced-accounting/" class="btn btn-secondary">See a live paper page</a>
-    </div>
+    )}
 
     <AdSlot />
 
     <div class="overline" id="resources" style="margin: 4px 0 12px;">Official ICAI resources · {attempt.name} attempt</div>
     <div class="list-card">
-      {level.resources.map((r) => (
+      {resources.map((r) => (
         <a class="list-row" href={r.url} rel="noopener" target="_blank">
           <span style="flex: 1;">
             <span style="font-size: 15px; font-weight: 600; color: var(--info-text);">{r.title} ↗</span>

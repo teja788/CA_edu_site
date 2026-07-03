@@ -80,7 +80,15 @@ residue the machines can't judge, not re-checking arithmetic.
    amber "✎ Community draft — cross-check with ICAI study material" badge with
    a report link. Every report link pre-fills a GitHub issue with the page ID
    via `/report-error/?page=…`. The badge comes off only via item 3.
-5. **Links are machine-checked weekly.** `scripts/linkcheck/` + the Monday
+5. **Law/tax content is pinned to attempts.** The volatile Intermediate
+   papers (P2 Corporate & Other Laws, P3 Taxation, P5 Auditing & Ethics)
+   cannot merge a question without `applicableAttempts` + `lawAsOnDate`, or a
+   note without `applicable_attempts` + `law_as_on_date` frontmatter —
+   `scripts/attempt_lint/` fails CI otherwise. Which Finance Act and cut-off
+   applies to each attempt lives in `src/data/intermediate.js` (`attempts`),
+   and every sourced change lands in `src/data/amendments.js`, rendered at
+   `/updates/` and `/intermediate/<paper>/amendments/`.
+6. **Links are machine-checked weekly.** `scripts/linkcheck/` + the Monday
    workflow ping every official URL, open an issue on failure, and stamp
    `lastChecked` dates after a green sweep.
 

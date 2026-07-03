@@ -1,11 +1,19 @@
-# Source registry for Foundation content generation (consumed by the
-# per-chapter content loop — Prompt 2). Every factual claim in generated
-# notes/questions must trace to a source in this file (plan §6.4 rule 1).
+# Source registry for content generation (consumed by the per-chapter
+# content loops — Foundation Prompt 2, Intermediate Prompt 5). Every factual
+# claim in generated notes/questions must trace to a source in this file
+# (plan §6.4 rule 1).
 #
 # Categories:
 #   law_primary    — statutory text; reproducible under s.52(1)(q), Copyright
 #                    Act 1957 (bare Acts only, no authorised commentary).
 #                    ALWAYS cite section numbers.
+#   tax_primary    — Intermediate: direct + indirect tax statutes and
+#                    notifications. Statutory text citable; ALWAYS record
+#                    section + notification number + date.
+#   company_law_primary — Companies Act 2013 ecosystem (Act + rules).
+#   accounting_standards — AS text as notified under the Companies
+#                    (Accounting Standards) Rules, 2021. Paraphrase in notes;
+#                    cite AS number + paragraph.
 #   econ_open      — openly licensed economics texts; may be ADAPTED with
 #                    attribution (CC BY 4.0).
 #   stats_open     — openly licensed statistics texts; same rule.
@@ -42,6 +50,83 @@ law_primary:
       act_no: "26 of 1881"
       used_for: "Foundation P2 Ch 7; P1 bills of exchange"
 
+# ── Intermediate sources ────────────────────────────────────────────────
+# The Income-tax Act 2025 boundary (ICAI announcement 08-12-2025,
+# https://boslive.icai.org/announcement_details.php?id=552):
+#   Sept 2026 & Jan 2027 exams — Income-tax Act 1961 as amended by FA 2025.
+#   May 2027 exams onwards      — Income-tax Act 2025 as amended by FA 2026.
+# Attempt records with cut-off dates live in src/data/intermediate.js.
+
+tax_primary:
+  license: "Statutory text — reproducible, Copyright Act 1957 s.52(1)(q)"
+  rules:
+    - ALWAYS record section (and sub-section/clause), notification number, and date on every claim.
+    - Rate and exemption positions must name the exact notification (e.g. "Notification No. 12/2017-CT (Rate) dated 28-06-2017, entry 66") — never "as per current rates".
+    - Tag every item with applicable_attempts and law_as_on_date; the attempt decides WHICH Act applies (1961 vs 2025 from May 2027) — enforced by scripts/attempt_lint in CI.
+    - Paper 3 is built LAST (plan §7 Phase 1) — no tax question merges until this machinery is battle-tested.
+  direct_tax:
+    - name: "The Income-tax Act, 1961 (as amended by the Finance Act, 2025)"
+      used_for: "Inter P3 Sec A — Sept 2026 and Jan 2027 attempts"
+      urls:
+        - https://incometaxindia.gov.in/pages/acts/income-tax-act.aspx
+        - https://www.indiacode.nic.in/
+    - name: "The Income-tax Act, 2025 (as amended by the Finance Act, 2026)"
+      used_for: "Inter P3 Sec A — May 2027 attempt onwards (ICAI announcement 08-12-2025)"
+      urls:
+        - https://incometaxindia.gov.in/
+      note: "ICAI has published a 1961→2025 section-mapping booklet; use it to migrate section citations, then verify against the Act text."
+    - name: "Applicable Finance Act (per attempt — see src/data/intermediate.js)"
+      urls:
+        - https://egazette.gov.in/
+  indirect_tax:
+    - name: "The Central Goods and Services Tax Act, 2017 + CGST Rules, 2017"
+      urls:
+        - https://cbic.gov.in/
+        - https://cbic-gst.gov.in/cgst-act.html
+    - name: "The Integrated Goods and Services Tax Act, 2017"
+      urls:
+        - https://cbic.gov.in/
+    - name: "GST rate & exemption notifications (CT-Rate / IT-Rate series)"
+      urls:
+        - https://cbic-gst.gov.in/central-tax-rate-notfns.html
+      note: "Only notifications up to the attempt's cut-off date apply — record the notification number AND date on every rate/exemption claim."
+
+company_law_primary:
+  license: "Statutory text — reproducible, Copyright Act 1957 s.52(1)(q)"
+  rules:
+    - Cite section + rule (e.g. "s.42 read with Rule 14, Companies (Prospectus and Allotment of Securities) Rules, 2014").
+    - Reproduce from India Code / MCA consolidated text only; never from commentary.
+    - Tag every item with applicable_attempts and law_as_on_date (Companies Act amendments apply per ICAI's cut-off for the attempt).
+  acts:
+    - name: "The Companies Act, 2013 + rules"
+      act_no: "18 of 2013"
+      used_for: "Inter P2 Part I Ch 1–11; P1 company accounts; P5 audit chapters"
+      urls:
+        - https://www.indiacode.nic.in/
+        - https://www.mca.gov.in/content/mca/global/en/acts-rules/companies-act/companies-act-2013.html
+    - name: "The Limited Liability Partnership Act, 2008"
+      act_no: "6 of 2009"
+      used_for: "Inter P2 Part I Ch 12"
+    - name: "The General Clauses Act, 1897"
+      act_no: "10 of 1897"
+      used_for: "Inter P2 Part II Ch 1"
+    - name: "The Foreign Exchange Management Act, 1999"
+      act_no: "42 of 1999"
+      used_for: "Inter P2 Part II Ch 3"
+
+accounting_standards:
+  license: "AS text is notified law — Companies (Accounting Standards) Rules, 2021 (MCA notification G.S.R. 432(E), 23-06-2021 — verify number/date before first citation)"
+  rules:
+    - Cite from the text NOTIFIED under the 2021 Rules, not from ICAI reprints or textbooks.
+    - PARAPHRASE in notes; cite AS number + paragraph (e.g. "AS 2 para 24"). Do not reproduce long extracts — s.52(1)(q) covers the notification text, but original-words is the house rule (plan §3.2).
+    - Applicability thresholds (Level I–IV / SMC) come from the 2021 Rules — Inter P1 Ch 3 depends on them.
+  source:
+    name: "Companies (Accounting Standards) Rules, 2021 — annexed AS 1–29"
+    used_for: "Inter P1 throughout; Foundation P1 AS references"
+    urls:
+      - https://www.mca.gov.in/
+      - https://egazette.gov.in/
+
 econ_open:
   - title: "Principles of Economics 3e"
     publisher: OpenStax (Rice University)
@@ -68,6 +153,18 @@ reference_only:
   - name: "ICAI Study Material (BoS Knowledge Portal)"
     url: https://www.icai.org/post/sm-foundation-paper1
     note: "Defines syllabus scope and the exam-setter's terminology; link to it, never reproduce it."
+  - name: "ICAI Study Material — Intermediate (May 2026 edition; per-paper URLs in src/data/intermediate.js)"
+    url: https://www.icai.org/post/bos-int-p1-may2026-exam
+    note: "Same rule: scope and terminology check only. The SM chapter index is the taxonomy source of truth."
+  - name: "Standards on Auditing (SA) — ICAI"
+    url: https://www.icai.org/post/auditing-and-assurance-standards
+    note: "SA text is ICAI copyright, NOT statute — never reproduce. Paraphrase the requirement in original words and cite the SA number + paragraph (e.g. 'SA 230 para 8'). Used for Inter P5."
+  - name: "ICAI Guidance Notes (auditing & accounting)"
+    url: https://www.icai.org/
+    note: "ICAI copyright — check facts only, cite by name, never copy."
+  - name: "ICAI Code of Ethics"
+    url: https://www.icai.org/post/code-of-ethics
+    note: "ICAI copyright — paraphrase principles in original words, cite edition + paragraph. Used for Inter P5 Ch 11."
   - name: "NCERT commerce textbooks (Class XI–XII Accountancy, Economics)"
     url: https://ncert.nic.in/textbook.php
   - name: "Khan Academy (maths, statistics, economics fundamentals)"

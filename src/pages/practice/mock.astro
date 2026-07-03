@@ -1,0 +1,214 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { questions as legacyQuestions } from '../../data/site.js';
+import { intermediatePapers, attempts } from '../../data/intermediate.js';
+
+/**
+ * Mock composer (plan §7 Phase 1 / §6.4 attempt gating): assemble a 100-mark
+ * Intermediate paper in the official 30:70 shape — Part I: 30 marks of
+ * case-scenario MCQs, Part II: 70 marks descriptive — from the question bank,
+ * filtered to the student's attempt.
+ *
+ * MCQs count 2 marks each (the Inter pattern's 15×2); descriptive items carry
+ * their own mark allocations. The composer is honest about shortfall: while
+ * banks are thin it fills what it can and says exactly what's missing.
+ */
+const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: true });
+const bankItems = Object.values(bankModules).flatMap((mod) => {
+  const bank = mod.default ?? mod;
+  if (!Array.isArray(bank.questions) || bank.level !== 'intermediate') return [];
+  const paperNum = Number((bank.paper ?? '').match(/Paper\s*(\d)/i)?.[1] ?? 0);
+  return bank.questions.map((q) => ({ ...q, paperNumber: paperNum }));
+});
+// The 12 launch MCQs in site.js are Inter P1 and stay usable until that bank
+// is regenerated through the chapter loop.
+const pool = [...legacyQuestions.map((q) => ({ ...q, paperNumber: 1 })), ...bankItems];
+
+const paperOptions = intermediatePapers.map((p) => ({ number: p.number, slug: p.slug, name: `Paper ${p.number}: ${p.name}` }));
+const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: a.verified }));
+---
+
+<Base title="Mock composer">
+  <main class="page">
+    <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Practice', href: '/practice/' }, { label: 'Mock composer' }]} />
+
+    <div class="overline" style="margin-bottom: 6px;">100 marks · official 30:70 shape · no negative marking</div>
+    <h1 style="margin: 0 0 12px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">Compose a mock paper</h1>
+    <p style="max-width: 640px; font-size: 15px; color: var(--text-2); line-height: 1.65; margin: 0 0 24px;">
+      Picks from the question bank, filtered to your attempt: Part I is 30 marks of case-scenario
+      MCQs (2 marks each), Part II is 70 marks descriptive. While banks are still filling up, the
+      composer builds what it can and tells you exactly how many marks it couldn't fill.
+    </p>
+
+    <div class="card card-pad" style="max-width: 640px; display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end;">
+      <label style="flex: 1; min-width: 220px; font-size: 13px; color: var(--text-2);">
+        Paper
+        <select data-paper style="display: block; width: 100%; margin-top: 6px; font: inherit; font-size: 15px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text);">
+          {paperOptions.map((p) => <option value={p.number}>{p.name}</option>)}
+        </select>
+      </label>
+      <label style="min-width: 180px; font-size: 13px; color: var(--text-2);">
+        Attempt
+        <select data-attempt style="display: block; width: 100%; margin-top: 6px; font: inherit; font-size: 15px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text);">
+          {attemptOptions.map((a) => <option value={a.name}>{a.name}</option>)}
+        </select>
+      </label>
+      <button type="button" class="btn btn-primary" data-compose>Compose paper</button>
+    </div>
+
+    <div data-output hidden style="margin-top: 32px; max-width: 720px;">
+      <div data-shortfall hidden class="card card-pad" style="margin-bottom: 20px; font-size: 14px; line-height: 1.6; border-left: 3px solid var(--warning, #f5a623);"></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+        <h2 style="font-size: 22px; font-weight: 700; margin: 0;" data-paper-title></h2>
+        <span class="tnum" style="font-size: 14px; color: var(--text-2);" data-paper-total></span>
+      </div>
+      <div class="trust-row" style="margin: 8px 0 20px;"><span data-attempt-line></span></div>
+
+      <div class="overline" style="margin: 20px 0 10px;">Part I — Case-scenario MCQs · <span data-mcq-marks></span></div>
+      <div data-mcq-list style="display: flex; flex-direction: column; gap: 14px;"></div>
+
+      <div class="overline" style="margin: 28px 0 10px;">Part II — Descriptive · <span data-desc-marks></span></div>
+      <div data-desc-list style="display: flex; flex-direction: column; gap: 14px;"></div>
+
+      <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+        <button type="button" class="btn btn-secondary" onclick="window.print()">Print / save as PDF</button>
+        <a class="btn btn-tertiary" data-quiz-link href="/practice/quiz/">Drill these MCQs interactively →</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="application/json" data-pool set:html={JSON.stringify(pool)}></script>
+
+  <script>
+    const pool = JSON.parse(document.querySelector('[data-pool]').textContent);
+    const $ = (sel) => document.querySelector(sel);
+    const MCQ_MARKS = 2;
+
+    function applicable(q, attemptName) {
+      // Attempt gating: items tagged to attempts must include the chosen one;
+      // untagged items on stable papers pass (law/tax items are always tagged —
+      // scripts/attempt_lint enforces that in CI).
+      return !Array.isArray(q.applicableAttempts) || q.applicableAttempts.includes(attemptName);
+    }
+
+    function compose() {
+      const paperNumber = Number($('[data-paper]').value);
+      const attemptName = $('[data-attempt]').value;
+      const inPaper = pool.filter((q) => q.paperNumber === paperNumber && applicable(q, attemptName));
+
+      // Part I — 30 marks of MCQs. Case sets first (they ARE the Inter
+      // pattern), whole sets only; standalone MCQs fill the remainder.
+      const caseSets = inPaper.filter((q) => q.type === 'case_mcq_set' && Array.isArray(q.questions));
+      const singles = inPaper.filter((q) => q.type === 'mcq');
+      let mcqMarks = 0;
+      const partI = [];
+      for (const set of caseSets) {
+        const setMarks = set.questions.length * MCQ_MARKS;
+        if (mcqMarks + setMarks <= 30) {
+          partI.push(set);
+          mcqMarks += setMarks;
+        }
+      }
+      for (const q of singles) {
+        if (mcqMarks + MCQ_MARKS <= 30) {
+          partI.push(q);
+          mcqMarks += MCQ_MARKS;
+        }
+      }
+
+      // Part II — 70 marks descriptive, greedy pack.
+      let descMarks = 0;
+      const partII = [];
+      const descriptives = inPaper
+        .filter((q) => q.type === 'descriptive' && Array.isArray(q.skeleton))
+        .map((q) => ({ ...q, totalMarks: q.marks ?? q.skeleton.reduce((s, p) => s + (p.marks ?? 1), 0) }));
+      for (const q of descriptives) {
+        if (descMarks + q.totalMarks <= 70) {
+          partII.push(q);
+          descMarks += q.totalMarks;
+        }
+      }
+
+      $('[data-output]').hidden = false;
+      $('[data-paper-title]').textContent = $('[data-paper]').selectedOptions[0].textContent;
+      $('[data-paper-total]').textContent = `${mcqMarks + descMarks} of 100 marks assembled`;
+      $('[data-attempt-line]').textContent = `Composed for the ${attemptName} attempt · items filtered by applicable_attempts`;
+      $('[data-mcq-marks]').textContent = `${mcqMarks} of 30 marks`;
+      $('[data-desc-marks]').textContent = `${descMarks} of 70 marks`;
+
+      const shortfall = $('[data-shortfall]');
+      const missing = [];
+      if (mcqMarks < 30) missing.push(`${30 - mcqMarks} MCQ marks`);
+      if (descMarks < 70) missing.push(`${70 - descMarks} descriptive marks`);
+      shortfall.hidden = missing.length === 0;
+      if (missing.length) {
+        shortfall.textContent = `Bank shortfall for this paper/attempt: ${missing.join(' and ')} couldn't be filled yet. Banks grow chapter by chapter — the ICAI MTPs and past papers on the paper page cover the gap meanwhile.`;
+      }
+
+      const mcqList = $('[data-mcq-list]');
+      mcqList.innerHTML = '';
+      let qNo = 1;
+      for (const item of partI) {
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        if (item.type === 'case_mcq_set') {
+          const caseP = document.createElement('p');
+          caseP.style.cssText = 'font-size: 14px; line-height: 1.65; color: var(--text-2); margin: 0 0 12px;';
+          caseP.textContent = item.case;
+          card.appendChild(caseP);
+          for (const sub of item.questions) {
+            card.appendChild(renderMcq(sub, qNo++));
+          }
+        } else {
+          card.appendChild(renderMcq(item, qNo++));
+        }
+        mcqList.appendChild(card);
+      }
+      if (partI.length === 0) mcqList.innerHTML = '<div class="empty-state" style="font-size: 14px; color: var(--text-3);">No MCQs in the bank for this paper/attempt yet.</div>';
+
+      const descList = $('[data-desc-list]');
+      descList.innerHTML = '';
+      for (const item of partII) {
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        const head = document.createElement('div');
+        head.style.cssText = 'display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.6;';
+        const stem = document.createElement('span');
+        stem.style.fontWeight = '600';
+        stem.textContent = `Q${qNo++}. ${item.stem}`;
+        const marks = document.createElement('span');
+        marks.className = 'tnum';
+        marks.style.cssText = 'color: var(--text-2); white-space: nowrap;';
+        marks.textContent = `${item.totalMarks} marks`;
+        head.append(stem, marks);
+        card.appendChild(head);
+        descList.appendChild(card);
+      }
+      if (partII.length === 0) descList.innerHTML = '<div class="empty-state" style="font-size: 14px; color: var(--text-3);">No descriptive items in the bank for this paper/attempt yet — practice against the rubrics in Descriptive practice once they land.</div>';
+
+      const paperSlugs = { 1: 'advanced-accounting', 2: 'corporate-and-other-laws', 3: 'taxation', 4: 'cost-and-management-accounting', 5: 'auditing-and-ethics', 6: 'fm-and-sm' };
+      $('[data-quiz-link]').href = `/practice/quiz/?level=intermediate&paper=${paperSlugs[paperNumber]}&mode=mixed`;
+    }
+
+    function renderMcq(q, no) {
+      const wrap = document.createElement('div');
+      wrap.style.cssText = 'font-size: 15px; line-height: 1.6; margin-top: 8px;';
+      const stem = document.createElement('div');
+      stem.style.fontWeight = '600';
+      stem.textContent = `Q${no}. ${q.stem} (${2} marks)`;
+      wrap.appendChild(stem);
+      const opts = document.createElement('div');
+      opts.style.cssText = 'font-size: 14px; color: var(--text-2); margin-top: 6px; display: flex; flex-direction: column; gap: 3px;';
+      for (const o of q.options ?? []) {
+        const line = document.createElement('span');
+        line.textContent = `(${o.key}) ${o.text}`;
+        opts.appendChild(line);
+      }
+      wrap.appendChild(opts);
+      return wrap;
+    }
+
+    document.querySelector('[data-compose]').addEventListener('click', compose);
+  </script>
+</Base>

@@ -23,6 +23,12 @@ jobs:
         run: |
           python3 scripts/verify_numerical/selftest.py
           python3 scripts/consistency_check/selftest.py
+          python3 scripts/attempt_lint/selftest.py
 
       - name: Verify every numerical question against its verify script
         run: python3 scripts/verify_numerical/run.py
+
+      # Day-one requirement (plan §6.2): law/tax content (Inter P2/P3/P5)
+      # without applicable_attempts + law_as_on_date cannot merge.
+      - name: Attempt-tagging lint on volatile papers
+        run: python3 scripts/attempt_lint/attempt_lint.py
