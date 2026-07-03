@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Base title="Search">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Search' }]} />
+      <h1 style="margin: 0 0 16px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Search topics
+      </h1>
+      <div id="search"></div>
+      <noscript>
+        <p style="font-size: 15px; color: var(--text-2);">Search needs JavaScript. Browse the <a href="/intermediate/">paper index</a> instead.</p>
+      </noscript>
+    </div>
+  </main>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <style is:global>
+    /* Theme Pagefind's UI with the design tokens */
+    :root {
+      --pagefind-ui-scale: 0.9;
+      --pagefind-ui-primary: var(--accent);
+      --pagefind-ui-text: var(--text);
+      --pagefind-ui-background: var(--surface);
+      --pagefind-ui-border: var(--border-strong);
+      --pagefind-ui-tag: var(--surface-2);
+      --pagefind-ui-border-width: 1.5px;
+      --pagefind-ui-border-radius: 8px;
+      --pagefind-ui-font: inherit;
+    }
+    #search .pagefind-ui__search-input { font-weight: 400; }
+    #search .pagefind-ui__result-link { color: var(--accent); }
+    #search .pagefind-ui__result-excerpt { color: var(--text-2); }
+  </style>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      const s = document.createElement('script');
+      s.src = '/pagefind/pagefind-ui.js';
+      s.onload = () => {
+        new PagefindUI({ element: '#search', showSubResults: true, showImages: false, autofocus: true });
+      };
+      s.onerror = () => {
+        document.getElementById('search').innerHTML =
+          '<p style="font-size: 15px; color: var(--text-2);">The search index is built with the production site (<code>npm run build</code>) and isn\'t available on the dev server. Browse the <a href="/intermediate/">paper index</a> instead.</p>';
+      };
+      document.head.appendChild(s);
+    });
+  </script>
+</Base>

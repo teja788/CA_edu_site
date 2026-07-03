@@ -46,20 +46,28 @@ const paper = papers.find((p) => p.id === 'p1');
         <div class="overline" style="margin: 24px 0 12px;">{section.name}</div>
         <div class="list-card">
           {section.chapters.map((ch) => (
-            <a
-              class="list-row"
-              href={ch.slug === 'partnership-accounts' ? '/intermediate/advanced-accounting/partnership-accounts/admission-of-a-partner/' : '#'}
-              aria-disabled={ch.slug !== 'partnership-accounts'}
-            >
-              <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
-              <span class="row-title">
-                {ch.name}
-                {ch.slug === 'partnership-accounts' && <span class="badge badge-progress" style="margin-left: 8px;">In progress</span>}
-                {ch.draft && <span class="badge badge-draft" style="margin-left: 8px;">✎ Community draft</span>}
-              </span>
-              <Mastery level={0} topicId={`ch-${ch.number}`} />
-              <span class="chev" aria-hidden="true">›</span>
-            </a>
+            <>
+              <a
+                class="list-row"
+                href={ch.slug === 'partnership-accounts' ? '/intermediate/advanced-accounting/partnership-accounts/goodwill-nature-valuation/' : '#'}
+                aria-disabled={ch.slug !== 'partnership-accounts'}
+              >
+                <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
+                <span class="row-title">
+                  {ch.name}
+                  {ch.slug === 'partnership-accounts' && <span class="badge badge-progress" style="margin-left: 8px;">In progress</span>}
+                  {ch.draft && <span class="badge badge-draft" style="margin-left: 8px;">✎ Community draft</span>}
+                </span>
+                <Mastery level={0} topicId={`ch-${ch.number}`} />
+                <span class="chev" aria-hidden="true">›</span>
+              </a>
+              {(ch.topics ?? []).filter((t) => t.hasNotes).map((t) => (
+                <a class="list-row" href={`/intermediate/advanced-accounting/${ch.slug}/${t.slug}/`} style="padding-left: 48px;">
+                  <span class="row-title" style="font-weight: 500; font-size: 15px;">{t.name}</span>
+                  <span class="chev" aria-hidden="true">›</span>
+                </a>
+              ))}
+            </>
           ))}
         </div>
         {i === 0 && <AdSlot />}

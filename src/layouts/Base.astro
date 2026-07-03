@@ -34,6 +34,13 @@ const nav = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#232B3A" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Adhyayan" />
+    <meta property="og:title" content={`${title} · Adhyayan`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta name="twitter:card" content="summary" />
     <script is:inline>
       // Set theme/text-size before paint to avoid a flash.
       (function () {
@@ -60,6 +67,7 @@ const nav = [
           ))}
         </nav>
         <span class="spacer"></span>
+        <a href="/search/" class="icon-btn" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;" aria-label="Search topics">⌕</a>
         <span class="textsize" role="group" aria-label="Text size">
           <button type="button" data-textsize-btn="normal" aria-label="Normal text size">A</button>
           <button type="button" data-textsize-btn="large" aria-label="Larger text size">A+</button>
@@ -105,7 +113,7 @@ const nav = [
           <p>
             No paid tier. No lead-gen. <a href="/about/">Our method &amp; honesty policy</a> ·
             <a href="/report-error/">Report an error</a> ·
-            <a href="https://github.com/" rel="noopener">Contribute on GitHub</a>
+            <a href="https://github.com/teja788/CA_edu_site" rel="noopener">Contribute on GitHub</a>
           </p>
         </div>
       </footer>
