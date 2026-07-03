@@ -1,0 +1,300 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Depreciation and Amortisation'
+description: 'CA Foundation Accounting Ch 5 — depreciation in plain language: SLM, WDV, units of production, disposals, change of estimate, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 5 · Depreciation'
+chapterSlug: depreciation-and-amortisation
+masteryId: f1-ch5
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'AS 10 (Property, Plant and Equipment) — concepts as summarised for Foundation'
+  - 'AS 26 (Intangible Assets) — amortisation concept'
+  - 'Companies Act 2013, Schedule II (useful-life framework, mentioned only)'
+sourceLabel: 'ICAI SM Ch 5 scope (May 2026 ed.) · AS 10'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '3 Jul 2026'
+readTime: 'About 18 min read · 4 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=depreciation-and-amortisation'
+practiceLabel: 'Practice this chapter · 45 questions'
+---
+import Callout from '../../../components/Callout.astro';
+
+Your uncle's kirana shop buys a delivery van. The van works for years, slowly wearing out.
+Depreciation is how the books show that slow wearing out — a little cost every year, instead of
+one big cost in the year of purchase. This chapter teaches you four ways to calculate it, what to
+do when an asset is sold, and what to do when your first estimate turns out wrong.
+
+In the exam this chapter is dependable: expect at least one full numerical (calculate depreciation,
+or profit/loss on sale) plus quick conceptual questions. The numericals follow fixed patterns —
+learn the four patterns in the worked examples below and there are no surprises left.
+
+## 1. What depreciation really is
+
+Depreciation is **spreading the cost of an asset over the years it is used**. It is an
+*allocation* of cost, not a *valuation*. The books do not try to show what the van would sell
+for today — they only spread its cost fairly over its working life.
+
+Why spread it? The **matching idea**: the van helps the shop earn money for (say) six years, so
+its cost should sit against six years of income — not crush the profit of year one alone.
+
+Three causes make assets lose usefulness:
+
+- **Wear and tear** — machines and vehicles wear out with use.
+- **Passage of time** — some rights simply expire. A 10-year licence loses value each year even
+  if it is never used.
+- **Obsolescence** — a newer, better technology makes the old one uneconomic. A perfectly working
+  billing machine can still be obsolete.
+
+<Callout kind="pointer">
+  <p>
+    Depreciation is charged <strong>even in a loss year, and even if the asset was idle</strong>.
+    It is not optional and does not depend on profit. Also note: depreciation itself involves
+    <strong>no cash payment</strong> — the cash went out when the asset was bought.
+  </p>
+</Callout>
+
+**One word, three cousins.** The same spreading idea has three names depending on the asset:
+**depreciation** for tangible assets (machines, vans), **amortisation** for intangible assets
+(patents, licences, software), and **depletion** for natural resources (a coal mine gives up
+its coal). **Land is not depreciated** — its useful life is unlimited.
+
+## 2. The five terms every question uses
+
+1. **Cost** — everything spent to bring the asset to its place and working condition: purchase
+   price + freight + installation + trial runs, minus any trade discount. (Same idea you met in
+   capital expenditure.)
+2. **Residual value** (scrap value) — what you expect to recover when you dispose of the asset at
+   the end.
+3. **Depreciable amount** = Cost − Residual value. **This is what gets spread.**
+4. **Useful life** — the years (or units of output) the business expects to use the asset. It is
+   an estimate, not a fact from a table.
+5. **Carrying amount / Written-down value (WDV)** = Cost − depreciation charged so far. This is
+   the figure standing in the books today.
+
+Quick check: a machine costs ₹1,10,000, expected scrap ₹10,000. The depreciable amount is
+₹1,00,000 — you never depreciate the ₹10,000 you expect to get back.
+
+<Callout kind="mistake">
+  <p>
+    The single most common slip in this chapter: using <strong>cost</strong> where the formula
+    needs <strong>cost − residual value</strong>. Any option in an MCQ that equals
+    “cost ÷ life” exactly is usually this trap, planted for you.
+  </p>
+</Callout>
+
+## 3. Straight Line Method (SLM)
+
+The same amount every year:
+
+<div class="formula">SLM depreciation per year = (Cost − Residual value) ÷ Useful life</div>
+
+The rate, when asked as a percentage, is on the **original cost** and stays fixed.
+
+Mini example: Sharma &amp; Sons (a GST-registered wholesaler in Indore) buys a packing machine for
+₹2,60,000, expects to use it 5 years and then sell it for ₹10,000. Yearly charge =
+(2,60,000 − 10,000) ÷ 5 = **₹50,000**, every year, for five years. After 5 years its carrying
+amount equals exactly the residual value, ₹10,000. SLM always lands exactly on residual value —
+that is a good self-check in the exam.
+
+## 4. Written Down Value method (WDV)
+
+A **fixed percentage** is applied every year to the **opening carrying amount** — not to cost.
+So the charge is big in early years and keeps shrinking.
+
+Mini example at 20% WDV on a ₹2,00,000 machine:
+
+| Year | Opening WDV | Depreciation @20% | Closing WDV |
+|---|---|---|---|
+| 1 | 2,00,000 | 40,000 | 1,60,000 |
+| 2 | 1,60,000 | 32,000 | 1,28,000 |
+| 3 | 1,28,000 | 25,600 | 1,02,400 |
+
+Notice the charge falls every year (40,000 → 32,000 → 25,600). WDV never reaches zero by itself —
+it keeps shrinking toward the residual value.
+
+When a question asks you to **find the WDV rate** that reaches a given residual value in *n*
+years:
+
+<div class="formula">Rate = 1 − (Residual value ÷ Cost)^(1/n)</div>
+
+Friendly numbers are always chosen. Cost ₹1,00,000, residual ₹12,500, life 3 years:
+12,500 ÷ 1,00,000 = 0.125, and the cube root of 0.125 is 0.5. Rate = 1 − 0.5 = **50%**.
+
+**Which method for what?** SLM suits assets that give equal service every year (furniture,
+buildings). WDV suits assets that lose more value early and need rising repair costs later
+(vehicles, machinery) — the falling depreciation plus rising repairs keeps the total yearly
+burden roughly even.
+
+## 5. Units of Production method
+
+When usage, not time, wears the asset out, charge by output:
+
+<div class="formula">Charge for the year = Depreciable amount × (Units produced this year ÷ Total expected lifetime units)</div>
+
+Mini example: a bottling machine costs ₹3,50,000, residual ₹50,000, expected lifetime output
+1,50,000 crates. This year it filled 30,000 crates. Charge = 3,00,000 × 30,000/1,50,000 =
+**₹60,000**.
+
+## 6. Assets bought or sold mid-year (pro-rata)
+
+Depreciation is charged **from the date the asset is ready for use, to the date of disposal** —
+month-wise in Foundation problems. A machine bought on 1 October gets only 6 months' depreciation
+in a March-ending year. Unless the question says otherwise, do not charge a full year on
+mid-year additions.
+
+## 7. Selling an asset: profit or loss on disposal
+
+Three steps, always the same:
+
+1. Charge depreciation **up to the date of sale** (pro-rata).
+2. Find the WDV on the date of sale.
+3. Compare: <strong>Sale price − WDV</strong>. Positive = profit on sale; negative = loss on sale.
+
+The profit or loss goes to the Profit &amp; Loss Account. It is compared with **WDV, never with
+original cost** — an asset sold below cost but above WDV gives a *profit*.
+
+## 8. When your estimate was wrong: revisions
+
+Useful life and residual value are estimates. When facts change, the estimate changes — and the
+fix is always **prospective**: past years are *not* reopened. You take the carrying amount as it
+stands, and spread what is left over the *remaining* revised life:
+
+<div class="formula">New yearly charge = (Carrying amount − Revised residual value) ÷ Remaining revised life</div>
+
+The same treatment applies to a **change of method** (say SLM to WDV): under AS 10 it is treated
+as a change in accounting *estimate* — apply the new method to the carrying amount from now on.
+No retrospective recalculation, no "surplus written back" drama. (Older books show a
+retrospective treatment — that belongs to the pre-revision AS 6 era. Follow the current SM.)
+
+## 9. Two ways to record it
+
+- **Direct method:** credit the Asset account each year (Depreciation A/c Dr → To Asset A/c).
+  The asset appears at WDV in the balance sheet.
+- **Provision for Depreciation method:** the Asset account stays at original cost; each year's
+  charge accumulates in a separate **Provision for Depreciation** (accumulated depreciation)
+  account. On sale, both the cost and the accumulated provision for that asset are transferred
+  out to an Asset Disposal account.
+
+Either way, the Profit &amp; Loss Account is debited with the same yearly charge.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — SLM with a cost build-up (easy)">
+  <p>
+    On 1 April 2025 Sharma &amp; Sons buys a delivery van: price ₹4,60,000, RTO registration and
+    insurance-at-purchase ₹25,000, seller's trade discount ₹10,000, van body painting with shop
+    branding ₹25,000. Expected life 6 years, expected scrap ₹50,000. Find the yearly SLM charge.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Cost of the van</div>
+    4,60,000 − 10,000 (trade discount) + 25,000 (registration) + 25,000 (branding) = <strong>₹5,00,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Yearly charge</div>
+    Depreciable amount = 5,00,000 − 50,000 = 4,50,000<br />
+    SLM charge = 4,50,000 ÷ 6 = <strong>₹75,000 per year</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — WDV, then a sale (moderate)">
+  <p>
+    Meena Traders buys a machine on 1 April 2023 for ₹4,00,000 and depreciates it at 25% WDV
+    (year ends 31 March). On 1 April 2025 the machine is sold for ₹2,00,000. Profit or loss?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — WDV on date of sale</div>
+    2023–24: 4,00,000 × 25% = 1,00,000 → WDV 3,00,000<br />
+    2024–25: 3,00,000 × 25% = 75,000 → WDV <strong>2,25,000</strong><br />
+    (Sold on 1 April 2025 — no depreciation for 2025–26.)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Result of sale</div>
+    Sale price 2,00,000 − WDV 2,25,000 = <strong>Loss ₹25,000</strong> (to P&amp;L A/c)
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — mid-year sale with pro-rata depreciation (moderate-hard)">
+  <p>
+    Verma Industries buys machinery for ₹3,00,000 on 1 April 2023; SLM at 10% p.a. on cost;
+    books close 31 March. The machinery is sold on 1 October 2025 for ₹2,05,000. Find the profit
+    or loss on sale.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Depreciation charged</div>
+    2023–24 (full year): 30,000<br />
+    2024–25 (full year): 30,000<br />
+    2025–26 (1 Apr – 1 Oct = 6 months): 30,000 × 6/12 = 15,000<br />
+    Total depreciation = <strong>₹75,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — WDV and result</div>
+    WDV on 1 Oct 2025 = 3,00,000 − 75,000 = 2,25,000<br />
+    Sale 2,05,000 − WDV 2,25,000 = <strong>Loss ₹20,000</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — revision of useful life (hard: the examiner's favourite)">
+  <p>
+    Plant cost ₹8,00,000 on 1 April 2022; residual value ₹80,000; life 8 years; SLM. At the start
+    of year 4 (1 April 2025) the total life is revised to 5 years and residual value to ₹30,000.
+    Depreciation for 2025–26?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Position after 3 years</div>
+    Old charge = (8,00,000 − 80,000) ÷ 8 = 90,000 per year<br />
+    Charged for 3 years = 2,70,000 → Carrying amount = 8,00,000 − 2,70,000 = <strong>5,30,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Spread what is left, prospectively</div>
+    Remaining life = 5 − 3 = 2 years<br />
+    New charge = (5,30,000 − 30,000) ÷ 2 = <strong>₹2,50,000 per year</strong><br />
+    Past years are not touched — no catch-up entry.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Cost vs depreciable amount.** Using cost ÷ life when a residual value is given. The wrong
+  option computed this way is nearly always present.
+- **WDV applied to cost.** Applying the WDV rate to original cost every year (that's SLM
+  behaviour). The rate applies to the *opening carrying amount*.
+- **Ignoring pro-rata months.** A 1 July purchase gets 9 months' charge in a March-ending year.
+  Wrong options show the 12-month figure.
+- **Profit on sale measured against cost.** Compare sale price with **WDV**. Selling below cost
+  but above WDV is a profit.
+- **Retrospective revision.** After a life/residual revision (or method change), never recompute
+  old years. Spread the current carrying amount forward. An option showing a "catch-up"
+  adjustment is the trap.
+- **Depreciating land**, or skipping depreciation because the asset was idle or the year made a
+  loss — all three are wrong.
+- **Forgetting the residual value changes too.** In revision questions, read whether the residual
+  value was also revised (Worked example 4: it fell to ₹30,000). Using the old residual is the
+  most common slip in the hardest variant.
+
+## One-page revision summary
+
+**Terms:** Depreciable amount = Cost − Residual value · WDV (carrying amount) = Cost −
+depreciation to date · Land: never depreciated · Intangibles: amortisation (AS 26) · Natural
+resources: depletion.
+
+**Formulas:**
+
+<div class="formula">SLM yearly charge = (Cost − Residual) ÷ Life</div>
+<div class="formula">WDV yearly charge = Rate % × Opening carrying amount</div>
+<div class="formula">WDV rate to hit residual in n years = 1 − (Residual ÷ Cost)^(1/n)</div>
+<div class="formula">Units method = (Cost − Residual) × Year's units ÷ Lifetime units</div>
+<div class="formula">Revision (prospective) = (Carrying amount − Revised residual) ÷ Remaining revised life</div>
+<div class="formula">Profit/(Loss) on sale = Sale price − WDV on date of sale</div>
+
+**Rules that answer theory MCQs:** allocation not valuation · charged even in loss years and on
+idle assets · non-cash charge · pro-rata from ready-for-use date to disposal date · change of
+method or estimate = prospective (AS 10) · SLM ends exactly at residual; WDV never reaches zero ·
+Provision-for-Depreciation method keeps the asset at cost; disposal goes through an Asset
+Disposal account · profit/loss on sale = against WDV, to P&amp;L.

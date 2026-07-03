@@ -10,11 +10,14 @@ const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: 
 const bankQuestions = Object.values(bankModules).flatMap((mod) => {
   const bank = mod.default ?? mod;
   if (!Array.isArray(bank.questions)) return [];
+  // Descriptive questions (model-answer skeletons) are study material, not
+  // quiz items — only MCQs enter the deck.
+  const mcqs = bank.questions.filter((q) => q.type === 'mcq');
   const paperNum = Number((bank.paper ?? '').match(/Paper\s*(\d)/i)?.[1] ?? 0);
   const chapterNum = Number((bank.chapter ?? '').match(/Ch\s*(\d+)/i)?.[1] ?? 0);
   // Foundation Papers 3 & 4 are the only negatively marked papers in the course.
   const negative = bank.level === 'foundation' && [3, 4].includes(paperNum);
-  return bank.questions.map((q) => ({
+  return mcqs.map((q) => ({
     ...q,
     meta: {
       level: bank.level,
@@ -107,7 +110,7 @@ const allQuestions = [...questions, ...bankQuestions];
     // Scope filters: ?level= & ?paper= select a chapter-bank slice; with an
     // explicit scope an empty deck shows an empty state, never a fallback.
     const params = new URLSearchParams(location.search);
-    const scoped = params.get('level') || params.get('paper');
+    const scoped = params.get('level') || params.get('paper') || params.get('chapter');
     let base = all;
     if (params.get('level')) {
       base = base.filter((q) => (q.meta?.level ?? 'intermediate') === params.get('level'));
@@ -117,6 +120,9 @@ const allQuestions = [...questions, ...bankQuestions];
       base = base.filter((q) =>
         (q.meta?.paper ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(slug)
       );
+    }
+    if (params.get('chapter')) {
+      base = base.filter((q) => q.meta?.chapterSlug === params.get('chapter'));
     }
     let deck = base;
     if (params.get('mode') === 'mistakes') {

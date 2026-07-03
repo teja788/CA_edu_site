@@ -95,7 +95,7 @@ export const foundationPapers = [
           { number: 2, slug: 'accounting-process', name: 'Accounting Process (Journal, Ledger, Trial Balance, Rectification)' },
           { number: 3, slug: 'bank-reconciliation-statement', name: 'Bank Reconciliation Statement' },
           { number: 4, slug: 'inventories', name: 'Inventories' },
-          { number: 5, slug: 'depreciation-and-amortisation', name: 'Depreciation and Amortisation' },
+          { number: 5, slug: 'depreciation-and-amortisation', name: 'Depreciation and Amortisation', hasNotes: true },
           { number: 6, slug: 'bills-of-exchange-and-promissory-notes', name: 'Bills of Exchange and Promissory Notes' },
           { number: 7, slug: 'final-accounts-of-sole-proprietors', name: 'Preparation of Final Accounts of Sole Proprietors' },
         ],

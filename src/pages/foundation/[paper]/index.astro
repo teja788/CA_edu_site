@@ -79,11 +79,23 @@ const chapterCount = paper.sections.reduce((n, s) => n + s.chapters.length, 0);
         <div class="overline" style="margin: 24px 0 12px;">{section.name}</div>
         <div class="list-card">
           {section.chapters.map((ch) => (
-            <div class="list-row">
-              <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
-              <span class="row-title">{ch.name}</span>
-              <Mastery level={0} topicId={`${paper.id}-ch${ch.number}`} />
-            </div>
+            ch.hasNotes ? (
+              <a class="list-row" href={`/foundation/${paper.slug}/${ch.slug}/`}>
+                <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
+                <span class="row-title">
+                  {ch.name}
+                  <span class="badge badge-draft" style="margin-left: 8px;">✎ Community draft</span>
+                </span>
+                <Mastery level={0} topicId={`${paper.id}-ch${ch.number}`} />
+                <span class="chev" aria-hidden="true">›</span>
+              </a>
+            ) : (
+              <div class="list-row">
+                <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
+                <span class="row-title">{ch.name}</span>
+                <Mastery level={0} topicId={`${paper.id}-ch${ch.number}`} />
+              </div>
+            )
           ))}
         </div>
         {i === 0 && <AdSlot />}

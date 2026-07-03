@@ -1,0 +1,990 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "chapterSlug": "depreciation-and-amortisation",
+  "chapter": "Ch 5 — Depreciation and Amortisation",
+  "questions": [
+    {
+      "id": "q-f1c5-001",
+      "topic": "Ch 5 · Depreciation · SLM basics",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Gupta Traders buys a machine for ₹3,10,000. Expected residual value is ₹10,000 and useful life is 5 years. Under the Straight Line Method, the yearly depreciation is:",
+      "options": [
+        { "key": "A", "text": "₹62,000", "explanation": "This is cost ÷ life. The residual value of ₹10,000 must be deducted first — you never depreciate the amount you expect to recover at the end." },
+        { "key": "B", "text": "₹60,000", "explanation": "Correct. Depreciable amount = 3,10,000 − 10,000 = 3,00,000; spread over 5 years = ₹60,000 per year." },
+        { "key": "C", "text": "₹64,000", "explanation": "This ADDS the residual value to cost ((3,10,000 + 10,000) ÷ 5). Residual value is subtracted, not added." },
+        { "key": "D", "text": "₹50,000", "explanation": "This divides by 6 instead of 5 — a life-counting slip. Life is the number of years of use, not years + 1." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: SLM, §3 →", "href": "/foundation/accounting/depreciation-and-amortisation/#3-straight-line-method-slm" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SLM formula: (cost − residual value) ÷ useful life",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-002",
+      "topic": "Ch 5 · Depreciation · Depreciable amount",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sharma & Sons buys a generator: price ₹5,00,000, freight ₹20,000, installation ₹40,000. Expected scrap value is ₹60,000. The depreciable amount is:",
+      "options": [
+        { "key": "A", "text": "₹5,60,000", "explanation": "This is the total cost but forgets to deduct the scrap value. Depreciable amount = cost − residual value." },
+        { "key": "B", "text": "₹5,00,000", "explanation": "Correct. Cost = 5,00,000 + 20,000 + 40,000 = 5,60,000 (freight and installation are capitalised); less scrap 60,000 → ₹5,00,000." },
+        { "key": "C", "text": "₹4,40,000", "explanation": "This treats freight and installation as expenses (5,00,000 − 60,000). Costs of bringing the asset to working condition are part of its cost, not revenue expenses." },
+        { "key": "D", "text": "₹5,40,000", "explanation": "This deducts the freight (20,000) instead of the scrap value (60,000) — a read-the-numbers slip." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The five terms, §2 →", "href": "/foundation/accounting/depreciation-and-amortisation/#2-the-five-terms-every-question-uses" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Depreciable amount = cost (incl. bringing-to-use costs) − residual value",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-003",
+      "topic": "Ch 5 · Depreciation · SLM basics",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An asset costs ₹2,00,000 with residual value ₹20,000 and useful life 9 years. The SLM depreciation rate, expressed as a percentage of original cost, is:",
+      "options": [
+        { "key": "A", "text": "10%", "explanation": "Correct. Yearly charge = (2,00,000 − 20,000) ÷ 9 = 20,000; as a % of cost = 20,000 ÷ 2,00,000 = 10%." },
+        { "key": "B", "text": "11.11%", "explanation": "This divides the charge by the depreciable amount (20,000 ÷ 1,80,000). The SLM rate is conventionally expressed on ORIGINAL COST." },
+        { "key": "C", "text": "12.5%", "explanation": "This uses a life of 8 years — an off-by-one slip in reading the life." },
+        { "key": "D", "text": "9.09%", "explanation": "This divides by cost PLUS residual (20,000 ÷ 2,20,000). Residual value never gets added to cost." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: SLM, §3 →", "href": "/foundation/accounting/depreciation-and-amortisation/#3-straight-line-method-slm" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SLM rate % = yearly charge ÷ original cost × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-004",
+      "topic": "Ch 5 · Depreciation · WDV method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine costing ₹5,00,000 is depreciated at 10% per annum under the Written Down Value method. Depreciation for the SECOND year is:",
+      "options": [
+        { "key": "A", "text": "₹50,000", "explanation": "This applies the rate to original cost — that is SLM behaviour. Under WDV the rate applies to the opening written-down value each year." },
+        { "key": "B", "text": "₹45,000", "explanation": "Correct. Year 1: 10% × 5,00,000 = 50,000 → WDV 4,50,000. Year 2: 10% × 4,50,000 = ₹45,000." },
+        { "key": "C", "text": "₹40,500", "explanation": "This is the THIRD year's charge (10% × 4,05,000) — one year too far." },
+        { "key": "D", "text": "₹47,500", "explanation": "This is the average of years 1 and 2 — eyeballing, not computing. Always work year by year." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "WDV charge = rate × opening carrying amount",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-005",
+      "topic": "Ch 5 · Depreciation · WDV method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Equipment costing ₹1,00,000 is depreciated at 20% p.a. WDV. Its carrying amount at the end of the THIRD year is:",
+      "options": [
+        { "key": "A", "text": "₹40,000", "explanation": "This removes 20,000 × 3 like SLM. Under WDV each year's charge shrinks because it is computed on the reducing balance." },
+        { "key": "B", "text": "₹51,200", "explanation": "Correct. 1,00,000 → 80,000 → 64,000 → ₹51,200 (each year × 0.8)." },
+        { "key": "C", "text": "₹48,800", "explanation": "This is the TOTAL depreciation charged over 3 years (1,00,000 − 51,200) — the question asks for the carrying amount, not the depreciation." },
+        { "key": "D", "text": "₹64,000", "explanation": "This stops after two years — a counting slip." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "WDV closing value = cost × (1 − rate)^n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-006",
+      "topic": "Ch 5 · Depreciation · WDV rate formula",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine costs ₹8,00,000 and must be written down to its residual value of ₹1,00,000 in 3 years under WDV. The required rate of depreciation is:",
+      "options": [
+        { "key": "A", "text": "50%", "explanation": "Correct. Rate = 1 − (1,00,000 ÷ 8,00,000)^(1/3) = 1 − (0.125)^(1/3) = 1 − 0.5 = 50%. Check: 8,00,000 → 4,00,000 → 2,00,000 → 1,00,000." },
+        { "key": "B", "text": "29.17%", "explanation": "This spreads the depreciable amount straight-line and expresses it on cost ((7,00,000 ÷ 3) ÷ 8,00,000) — an SLM habit; the question demands the WDV rate formula." },
+        { "key": "C", "text": "12.5%", "explanation": "This is just residual ÷ cost — the formula stops halfway; you still need the cube root and the subtraction from 1." },
+        { "key": "D", "text": "87.5%", "explanation": "This is 1 − 0.125 WITHOUT taking the cube root — the n-th root is the whole point of the formula." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "WDV rate = 1 − (residual ÷ cost)^(1/n)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-007",
+      "topic": "Ch 5 · Depreciation · Units of production",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bottling machine costs ₹3,50,000 (residual value ₹50,000). Its total expected output is 1,50,000 crates over an expected 5-year life. This year it produced 24,000 crates. Depreciation under the units-of-production method is:",
+      "options": [
+        { "key": "A", "text": "₹56,000", "explanation": "This applies the output fraction to COST (3,50,000 × 24/150) instead of to the depreciable amount — the residual value must come out first." },
+        { "key": "B", "text": "₹48,000", "explanation": "Correct. Depreciable amount 3,00,000 × (24,000 ÷ 1,50,000) = ₹48,000." },
+        { "key": "C", "text": "₹60,000", "explanation": "This is time-based SLM (3,00,000 ÷ 5). The question specifies the units method — the 5-year life is a distractor." },
+        { "key": "D", "text": "₹70,000", "explanation": "This is SLM on cost (3,50,000 ÷ 5) — two slips at once: wrong method AND residual ignored." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Units method, §5 →", "href": "/foundation/accounting/depreciation-and-amortisation/#5-units-of-production-method" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Units method: depreciable amount × year's units ÷ lifetime units",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-008",
+      "topic": "Ch 5 · Depreciation · Pro-rata",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Patel Furniture (books closed every 31 March) buys a machine for ₹2,50,000 on 1 July 2025. Depreciation is 12% p.a. SLM on cost. Depreciation for the year 2025–26 is:",
+      "options": [
+        { "key": "A", "text": "₹30,000", "explanation": "This charges a full year. The machine was owned only from 1 July — charge only 9 months (July to March)." },
+        { "key": "B", "text": "₹22,500", "explanation": "Correct. 2,50,000 × 12% × 9/12 = ₹22,500 (1 July 2025 → 31 March 2026 = 9 months)." },
+        { "key": "C", "text": "₹15,000", "explanation": "This charges only 6 months — a month-counting slip (July to March is 9 months, not 6)." },
+        { "key": "D", "text": "₹25,000", "explanation": "This charges 10 months — the count wrongly includes April 2026." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Pro-rata, §6 →", "href": "/foundation/accounting/depreciation-and-amortisation/#6-assets-bought-or-sold-mid-year-pro-rata" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Pro-rata: charge from date ready for use to year end",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-009",
+      "topic": "Ch 5 · Depreciation · Sale of asset",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Machinery bought on 1 April 2022 for ₹4,00,000 is depreciated at 10% p.a. SLM on cost (year end 31 March). On 30 September 2024 it is sold for ₹3,20,000. The result of the sale is:",
+      "options": [
+        { "key": "A", "text": "Profit ₹20,000", "explanation": "Correct. Depreciation: 40,000 (2022–23) + 40,000 (2023–24) + 20,000 (6 months of 2024–25) = 1,00,000. WDV = 3,00,000. Sale 3,20,000 − 3,00,000 = profit ₹20,000." },
+        { "key": "B", "text": "Loss ₹80,000", "explanation": "This compares the sale price with original COST (4,00,000 − 3,20,000). Profit or loss on sale is always measured against WDV." },
+        { "key": "C", "text": "Profit ₹40,000", "explanation": "This charges a FULL year for 2024–25 (WDV 2,80,000). Depreciation stops on the date of sale — only 6 months accrue." },
+        { "key": "D", "text": "Nil", "explanation": "This forgets the final 6 months entirely (WDV taken as 3,20,000 at the last year-end). Depreciation must be charged up to 30 September." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Selling an asset, §7 →", "href": "/foundation/accounting/depreciation-and-amortisation/#7-selling-an-asset-profit-or-loss-on-disposal" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Profit/loss on sale = sale price − WDV at date of sale",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-010",
+      "topic": "Ch 5 · Depreciation · Sale of asset",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine costing ₹6,40,000 is depreciated at 25% p.a. WDV. Exactly two full years later, on the first day of year 3, it is sold for ₹4,00,000. The result is:",
+      "options": [
+        { "key": "A", "text": "Profit ₹40,000", "explanation": "Correct. WDV: 6,40,000 → 4,80,000 → 3,60,000 after two years. Sale 4,00,000 − 3,60,000 = profit ₹40,000." },
+        { "key": "B", "text": "Loss ₹2,40,000", "explanation": "This compares sale price with original cost. An asset sold above WDV gives a PROFIT even though it sold below cost." },
+        { "key": "C", "text": "Profit ₹80,000", "explanation": "This computes both years' depreciation on COST (1,60,000 × 2, WDV 3,20,000) — SLM behaviour applied to a WDV question." },
+        { "key": "D", "text": "Loss ₹40,000", "explanation": "The magnitude is right but the sign is flipped — sale price (4,00,000) EXCEEDS WDV (3,60,000), so it is a profit." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Selling an asset, §7 →", "href": "/foundation/accounting/depreciation-and-amortisation/#7-selling-an-asset-profit-or-loss-on-disposal" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Profit/loss on sale = sale price − WDV; WDV = cost × (1−rate)^n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-011",
+      "topic": "Ch 5 · Depreciation · Change in estimate",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Plant costing ₹9,00,000 (residual ₹60,000, life 7 years, SLM) has been depreciated for 4 years. At the start of year 5 the TOTAL life is revised to 6 years and the residual value to ₹20,000. Depreciation for year 5 is:",
+      "options": [
+        { "key": "A", "text": "₹1,20,000", "explanation": "This is the original charge ((9,00,000 − 60,000) ÷ 7) — it ignores the revision entirely." },
+        { "key": "B", "text": "₹2,00,000", "explanation": "Correct. Carrying amount after 4 years = 9,00,000 − 4 × 1,20,000 = 4,20,000. Remaining life = 6 − 4 = 2 years. Charge = (4,20,000 − 20,000) ÷ 2 = ₹2,00,000." },
+        { "key": "C", "text": "₹2,10,000", "explanation": "This spreads the full carrying amount (4,20,000 ÷ 2) and forgets the revised residual value of ₹20,000." },
+        { "key": "D", "text": "₹1,80,000", "explanation": "This uses the OLD residual value ((4,20,000 − 60,000) ÷ 2). The question revises the residual too — read both revisions." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Revisions, §8 →", "href": "/foundation/accounting/depreciation-and-amortisation/#8-when-your-estimate-was-wrong-revisions" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "AS 10 change in estimate — prospective: (carrying amount − revised residual) ÷ remaining life",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-012",
+      "topic": "Ch 5 · Depreciation · Change of method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine costing ₹5,00,000 was depreciated at 20% WDV for 2 years. From year 3 the firm switches to SLM; remaining life is 4 years and residual value ₹40,000. Depreciation for year 3 is:",
+      "options": [
+        { "key": "A", "text": "₹70,000", "explanation": "Correct. WDV after 2 years: 5,00,000 → 4,00,000 → 3,20,000. SLM prospectively: (3,20,000 − 40,000) ÷ 4 = ₹70,000. Under AS 10 a change of method is a change in ESTIMATE — applied prospectively." },
+        { "key": "B", "text": "₹80,000", "explanation": "This spreads 3,20,000 ÷ 4 and forgets the residual value of ₹40,000." },
+        { "key": "C", "text": "₹76,667", "explanation": "This recomputes SLM retrospectively from day one ((5,00,000 − 40,000) ÷ 6). The old retrospective treatment belongs to the pre-revision era — current treatment is prospective." },
+        { "key": "D", "text": "₹64,000", "explanation": "This continues WDV (20% × 3,20,000) — it ignores the change of method." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Revisions, §8 →", "href": "/foundation/accounting/depreciation-and-amortisation/#8-when-your-estimate-was-wrong-revisions" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "AS 10 — change of depreciation method treated as change in estimate (prospective)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-013",
+      "topic": "Ch 5 · Depreciation · Change in estimate",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An asset costing ₹6,00,000 (nil residual, life 10 years, SLM) has run for 6 years. At the start of year 7, management decides the asset will last only 2 MORE years. Depreciation for year 7 is:",
+      "options": [
+        { "key": "A", "text": "₹60,000", "explanation": "The original charge — ignores the revision." },
+        { "key": "B", "text": "₹1,20,000", "explanation": "Correct. Carrying amount = 6,00,000 − 6 × 60,000 = 2,40,000; spread over the 2 remaining years = ₹1,20,000." },
+        { "key": "C", "text": "₹80,000", "explanation": "This spreads over 3 years — misreading '2 more years' as 'total life 9'. The remaining life is exactly 2." },
+        { "key": "D", "text": "₹30,000", "explanation": "This divides the carrying amount by the revised TOTAL life of 8 (2,40,000 ÷ 8) — the divisor is the REMAINING life, because past years are already charged." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Revisions, §8 →", "href": "/foundation/accounting/depreciation-and-amortisation/#8-when-your-estimate-was-wrong-revisions" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "AS 10 change in estimate — carrying amount ÷ remaining revised life",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-014",
+      "topic": "Ch 5 · Depreciation · Provision for depreciation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An asset costs ₹2,40,000 (residual ₹40,000, life 10 years, SLM). The firm uses a Provision for Depreciation account. After 4 full years, the balance in the Provision for Depreciation account is:",
+      "options": [
+        { "key": "A", "text": "₹80,000", "explanation": "Correct. Yearly charge = (2,40,000 − 40,000) ÷ 10 = 20,000; accumulated over 4 years = ₹80,000. The asset account itself still shows ₹2,40,000." },
+        { "key": "B", "text": "₹96,000", "explanation": "This accumulates cost ÷ 10 (24,000 × 4) — the residual value was ignored in the yearly charge." },
+        { "key": "C", "text": "₹1,60,000", "explanation": "This is the asset's CARRYING AMOUNT (2,40,000 − 80,000), not the provision balance. The provision holds the depreciation, not the remaining value." },
+        { "key": "D", "text": "₹60,000", "explanation": "Three years accumulated instead of four — a counting slip." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Two ways to record, §9 →", "href": "/foundation/accounting/depreciation-and-amortisation/#9-two-ways-to-record-it" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Provision for Depreciation = accumulated yearly charges; asset stays at cost",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-015",
+      "topic": "Ch 5 · Depreciation · Machine hour method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine costs ₹4,20,000 (residual ₹20,000). Total expected working life is 20,000 machine-hours over roughly 10 years. This year it ran 2,500 hours. Depreciation under the machine-hour method is:",
+      "options": [
+        { "key": "A", "text": "₹52,500", "explanation": "This applies the hours fraction to COST (4,20,000 × 2,500/20,000) — deduct the residual value first." },
+        { "key": "B", "text": "₹50,000", "explanation": "Correct. (4,20,000 − 20,000) × 2,500 ÷ 20,000 = ₹50,000." },
+        { "key": "C", "text": "₹40,000", "explanation": "This is time-based SLM on the depreciable amount (4,00,000 ÷ 10) — the method asked for is usage-based; the 10-year figure is a distractor." },
+        { "key": "D", "text": "₹42,000", "explanation": "This is SLM on cost (4,20,000 ÷ 10) — wrong method AND residual ignored." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Units method, §5 →", "href": "/foundation/accounting/depreciation-and-amortisation/#5-units-of-production-method" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Machine-hour method: depreciable amount × year's hours ÷ lifetime hours",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-016",
+      "topic": "Ch 5 · Depreciation · WDV method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine costing ₹2,00,000 is depreciated at 10% p.a. WDV. Depreciation for the THIRD year is:",
+      "options": [
+        { "key": "A", "text": "₹20,000", "explanation": "10% of cost — that is the year-1 charge (and the SLM habit). By year 3 the base has shrunk twice." },
+        { "key": "B", "text": "₹16,200", "explanation": "Correct. Year 1: 20,000 (WDV 1,80,000) → Year 2: 18,000 (WDV 1,62,000) → Year 3: 10% × 1,62,000 = ₹16,200." },
+        { "key": "C", "text": "₹18,000", "explanation": "That is the SECOND year's charge — stopped one year early." },
+        { "key": "D", "text": "₹14,580", "explanation": "That is the FOURTH year's charge — one multiplication too many." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "WDV year-n charge = rate × cost × (1−rate)^(n−1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-017",
+      "topic": "Ch 5 · Amortisation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A software licence is bought for ₹1,50,000 with a legal life of 10 years and no residual value. The yearly amortisation (straight line) is:",
+      "options": [
+        { "key": "A", "text": "₹15,000", "explanation": "Correct. 1,50,000 ÷ 10 = ₹15,000 per year. Amortisation is the same spreading idea applied to an intangible asset." },
+        { "key": "B", "text": "Nil — intangible assets are not written off", "explanation": "Intangibles with finite lives ARE amortised (AS 26). Only assets with unlimited life (like land) escape the charge." },
+        { "key": "C", "text": "₹30,000", "explanation": "This assumes a 5-year life. Use the life given in the question — here the legal life is 10 years." },
+        { "key": "D", "text": "₹1,50,000", "explanation": "This expenses the whole licence in year 1 — that defeats the matching idea; the licence serves the business for 10 years." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 26 — amortisation of finite-life intangibles",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-018",
+      "topic": "Ch 5 · Depletion",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Mining rights cost ₹50,00,000 for a mine holding an estimated 2,00,000 tonnes of ore. This year 15,000 tonnes were extracted. The depletion charge for the year is:",
+      "options": [
+        { "key": "A", "text": "₹3,75,000", "explanation": "Correct. 50,00,000 × 15,000 ÷ 2,00,000 = ₹3,75,000 — depletion follows extraction, exactly like the units-of-production idea." },
+        { "key": "B", "text": "₹2,50,000", "explanation": "This charges a flat 5% per year (a time-based habit). Depletion follows OUTPUT, not the calendar." },
+        { "key": "C", "text": "₹7,50,000", "explanation": "This uses 30,000 tonnes — double the actual extraction; a numbers-reading slip." },
+        { "key": "D", "text": "₹5,00,000", "explanation": "This charges 10% per year — a WDV-rate habit transferred to a depletion question." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Units method, §5 →", "href": "/foundation/accounting/depreciation-and-amortisation/#5-units-of-production-method" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Depletion = cost × units extracted ÷ total estimated units",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-019",
+      "topic": "Ch 5 · Depreciation · Provision method disposal",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Under the Provision for Depreciation method: an asset with original cost ₹3,00,000 and accumulated depreciation ₹1,10,000 is sold for ₹1,75,000. The result on disposal is:",
+      "options": [
+        { "key": "A", "text": "Loss ₹15,000", "explanation": "Correct. WDV = 3,00,000 − 1,10,000 = 1,90,000. Sale 1,75,000 − 1,90,000 = loss ₹15,000, transferred to P&L." },
+        { "key": "B", "text": "Loss ₹1,25,000", "explanation": "This compares sale price with original cost (3,00,000 − 1,75,000) — the accumulated depreciation must be netted off first." },
+        { "key": "C", "text": "Profit ₹65,000", "explanation": "This compares the sale price with the PROVISION balance (1,75,000 − 1,10,000) — a meaningless comparison; compare with WDV." },
+        { "key": "D", "text": "Profit ₹15,000", "explanation": "Right magnitude, wrong sign — the sale price is BELOW the WDV of 1,90,000, so it is a loss." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Two ways to record, §9 →", "href": "/foundation/accounting/depreciation-and-amortisation/#9-two-ways-to-record-it" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Disposal: WDV = cost − accumulated provision; result = sale − WDV",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-020",
+      "topic": "Ch 5 · Depreciation · SLM basics",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A van costs ₹5,00,000 with residual value ₹50,000 and life 6 years (SLM). The TOTAL depreciation charged over the van's whole life is:",
+      "options": [
+        { "key": "A", "text": "₹4,50,000", "explanation": "Correct. Total depreciation over the full life always equals the depreciable amount: 5,00,000 − 50,000 = ₹4,50,000. SLM lands exactly on residual value." },
+        { "key": "B", "text": "₹5,00,000", "explanation": "The full cost is never depreciated when a residual value exists — ₹50,000 comes back on disposal." },
+        { "key": "C", "text": "₹75,000", "explanation": "That is ONE year's charge (4,50,000 ÷ 6), not the lifetime total." },
+        { "key": "D", "text": "₹5,50,000", "explanation": "This adds the residual to cost — depreciation can never exceed what was spent." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: SLM, §3 →", "href": "/foundation/accounting/depreciation-and-amortisation/#3-straight-line-method-slm" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Lifetime depreciation = depreciable amount",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-021",
+      "topic": "Ch 5 · Depreciation · Reverse computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A firm charges SLM depreciation of ₹36,000 per year on a machine with useful life 8 years and residual value ₹12,000. The original cost of the machine is:",
+      "options": [
+        { "key": "A", "text": "₹3,00,000", "explanation": "Correct. Depreciable amount = 36,000 × 8 = 2,88,000; add back the residual: 2,88,000 + 12,000 = ₹3,00,000." },
+        { "key": "B", "text": "₹2,88,000", "explanation": "This multiplies back the charge (36,000 × 8) but forgets to ADD the residual value — that figure is the depreciable amount, not the cost." },
+        { "key": "C", "text": "₹2,76,000", "explanation": "This SUBTRACTS the residual instead of adding it (2,88,000 − 12,000) — direction confusion when working backwards." },
+        { "key": "D", "text": "₹3,72,000", "explanation": "This uses a 10-year life (36,000 × 10 + 12,000) — a habit figure; the life given is 8." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: SLM, §3 →", "href": "/foundation/accounting/depreciation-and-amortisation/#3-straight-line-method-slm" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Cost = SLM charge × life + residual value",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-022",
+      "topic": "Ch 5 · Depreciation · WDV method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Office equipment costing ₹2,50,000 is depreciated at 20% p.a. WDV. Its book value at the end of the SECOND year is:",
+      "options": [
+        { "key": "A", "text": "₹1,60,000", "explanation": "Correct. 2,50,000 → 2,00,000 (end of year 1) → 2,00,000 × 0.8 = ₹1,60,000." },
+        { "key": "B", "text": "₹1,50,000", "explanation": "This removes 50,000 twice — SLM behaviour. The year-2 charge is 20% of 2,00,000 (i.e. 40,000), not 50,000." },
+        { "key": "C", "text": "₹2,00,000", "explanation": "That is the value after ONE year — a counting slip." },
+        { "key": "D", "text": "₹1,28,000", "explanation": "That is the value after THREE years — one year too far." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "WDV book value = cost × (1−rate)^n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-023",
+      "topic": "Ch 5 · Depreciation · Sale of asset",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine bought on 1 April 2023 for ₹1,80,000 is depreciated at 10% p.a. SLM on cost (year end 31 March). It is sold on 31 December 2025 for ₹1,25,000. The result of the sale is:",
+      "options": [
+        { "key": "A", "text": "Loss ₹5,500", "explanation": "Correct. Depreciation: 18,000 + 18,000 + 13,500 (9 months of 2025–26) = 49,500. WDV = 1,30,500. Sale 1,25,000 − 1,30,500 = loss ₹5,500." },
+        { "key": "B", "text": "Loss ₹55,000", "explanation": "This compares the sale price with original cost (1,80,000 − 1,25,000) — always compare with WDV." },
+        { "key": "C", "text": "Loss ₹1,000", "explanation": "This charges a FULL year for 2025–26 (WDV 1,26,000). The machine left on 31 December — only 9 months accrue." },
+        { "key": "D", "text": "Profit ₹5,500", "explanation": "Right magnitude, flipped sign — the sale price is below WDV, so it is a loss." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Selling an asset, §7 →", "href": "/foundation/accounting/depreciation-and-amortisation/#7-selling-an-asset-profit-or-loss-on-disposal" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Pro-rata to disposal date; result = sale − WDV",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-024",
+      "topic": "Ch 5 · Depreciation · Cost & WDV",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Verma Foods buys a packing machine: price ₹3,00,000, installation ₹20,000, freight inward ₹16,000, and a separate ANNUAL maintenance contract of ₹20,000. Depreciation for year 1 at 25% WDV is:",
+      "options": [
+        { "key": "A", "text": "₹75,000", "explanation": "This depreciates the bare price only — installation and freight are part of the cost of bringing the machine to working condition." },
+        { "key": "B", "text": "₹80,000", "explanation": "This capitalises installation but expenses the freight — freight inward on an asset purchase is also capitalised." },
+        { "key": "C", "text": "₹84,000", "explanation": "Correct. Cost = 3,00,000 + 20,000 + 16,000 = 3,36,000; year 1 at 25% = ₹84,000. The maintenance contract is a yearly REVENUE expense, never capitalised." },
+        { "key": "D", "text": "₹89,000", "explanation": "This wrongly capitalises the annual maintenance contract too ((3,36,000 + 20,000) × 25%). Recurring running costs are revenue expenditure." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: The five terms, §2 →", "href": "/foundation/accounting/depreciation-and-amortisation/#2-the-five-terms-every-question-uses" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cost = price + bringing-to-use costs; revenue expenses excluded",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-025",
+      "topic": "Ch 5 · Depreciation · Nature",
+      "type": "mcq",
+      "stem": "Depreciation accounting is best described as a process of:",
+      "options": [
+        { "key": "A", "text": "Valuation of the asset at market price each year", "explanation": "Depreciation does NOT track market value — a van's book value can differ wildly from its resale price." },
+        { "key": "B", "text": "Allocation of the depreciable amount over the asset's useful life", "explanation": "Correct. Depreciation spreads (allocates) cost over the years of use — allocation, not valuation, is the standard one-word answer." },
+        { "key": "C", "text": "Setting aside cash to replace the asset", "explanation": "Depreciation involves no cash movement at all — the cash left when the asset was bought. Replacement funding is a separate decision." },
+        { "key": "D", "text": "Recording repairs and maintenance systematically", "explanation": "Repairs are revenue expenses recorded when incurred — completely separate from depreciation." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Depreciation = systematic allocation of depreciable amount over useful life",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-026",
+      "topic": "Ch 5 · Depreciation · Causes",
+      "type": "mcq",
+      "stem": "A GST-billing machine at Iyer Stores works perfectly, but a new UPI-linked model makes it uneconomic to keep using. The machine's loss of usefulness is caused by:",
+      "options": [
+        { "key": "A", "text": "Wear and tear", "explanation": "The machine works perfectly — nothing has physically worn out." },
+        { "key": "B", "text": "Obsolescence", "explanation": "Correct. A newer technology has made the old asset uneconomic — that is obsolescence, and it hits working assets too." },
+        { "key": "C", "text": "Depletion", "explanation": "Depletion applies to natural resources being physically used up (mines, quarries) — not to machines." },
+        { "key": "D", "text": "Passage of time", "explanation": "Time-based loss applies to rights that expire (like a lease) — here the cause is the NEW technology, not the calendar." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Causes of depreciation: wear & tear, time, obsolescence",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-027",
+      "topic": "Ch 5 · Depreciation · Scope",
+      "type": "mcq",
+      "stem": "Which of the following is NOT depreciated or amortised?",
+      "options": [
+        { "key": "A", "text": "Freehold land", "explanation": "Correct. Freehold land has an unlimited useful life, so there is nothing to spread. (A leasehold, by contrast, IS amortised over the lease term.)" },
+        { "key": "B", "text": "A building", "explanation": "Buildings wear out and are depreciated — only the land under them is not." },
+        { "key": "C", "text": "A patent", "explanation": "Patents have finite legal lives and are amortised (AS 26)." },
+        { "key": "D", "text": "A delivery van kept idle all year", "explanation": "Idle assets still lose value through time and obsolescence — depreciation continues." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Land: unlimited life → no depreciation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-028",
+      "topic": "Ch 5 · Depreciation · Nature",
+      "type": "mcq",
+      "stem": "Mehta & Co. made a heavy loss this year, and its machinery stood idle for four months. Regarding depreciation for the year, the firm must:",
+      "options": [
+        { "key": "A", "text": "Skip it — there is no profit to charge it against", "explanation": "Depreciation is not a profit-sharing item; it is a cost of using (and holding) the asset, charged in loss years too." },
+        { "key": "B", "text": "Charge it in full as usual", "explanation": "Correct. Depreciation is charged regardless of profit and regardless of idleness — value is lost through time and obsolescence even when the machine rests." },
+        { "key": "C", "text": "Charge only 8 months since the machinery was idle for 4", "explanation": "Idle months are not exempt — pro-rata applies to OWNERSHIP period (purchase/sale dates), not to usage gaps." },
+        { "key": "D", "text": "Defer it and charge double next year", "explanation": "Deferring understates this year's loss and breaks the matching idea. Each year bears its own charge." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Depreciation is mandatory — independent of profit and usage",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-029",
+      "topic": "Ch 5 · Depreciation · Nature",
+      "type": "mcq",
+      "stem": "Depreciation is called a 'non-cash expense' because:",
+      "options": [
+        { "key": "A", "text": "No cash leaves the business when depreciation is recorded", "explanation": "Correct. The cash went out when the asset was purchased; the yearly depreciation entry only allocates that old cost — no fresh cash moves." },
+        { "key": "B", "text": "It is not a real expense", "explanation": "It IS a real expense — the asset genuinely loses usefulness. 'Non-cash' describes the timing of cash, not the reality of the cost." },
+        { "key": "C", "text": "It is paid through the bank, never in cash", "explanation": "It is not 'paid' at all — there is no payee." },
+        { "key": "D", "text": "It appears only in the cash flow statement", "explanation": "Backwards — depreciation appears in the P&L, and is ADDED BACK in a cash flow statement precisely because it involved no cash." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Non-cash charge — cash outflow occurred at purchase",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-030",
+      "topic": "Ch 5 · Terminology",
+      "type": "mcq",
+      "stem": "Match the write-off to the asset: a coal mine, a patent, and a lathe machine are written off respectively through:",
+      "options": [
+        { "key": "A", "text": "Depletion, amortisation, depreciation", "explanation": "Correct. Natural resources are DEPLETED as they are extracted; intangibles are AMORTISED; tangible machines are DEPRECIATED. Same idea, three names." },
+        { "key": "B", "text": "Depreciation, depletion, amortisation", "explanation": "This rotates the labels one place — a mine is not 'depreciated'; its ore is physically used up (depletion)." },
+        { "key": "C", "text": "Amortisation, depreciation, depletion", "explanation": "Rotated the other way — a patent is intangible, so its write-off is amortisation, not depreciation." },
+        { "key": "D", "text": "Depletion, depreciation, amortisation", "explanation": "The mine is right, but the patent (intangible → amortisation) and lathe (tangible → depreciation) are swapped." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Depreciation / amortisation / depletion by asset class",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-031",
+      "topic": "Ch 5 · Depreciation · Method properties",
+      "type": "mcq",
+      "stem": "Which statement about the two main methods is CORRECT?",
+      "options": [
+        { "key": "A", "text": "Under SLM the carrying amount reaches exactly the residual value at the end of the useful life", "explanation": "Correct. SLM removes the same slice of the depreciable amount every year, so after the last year the book value equals the residual value exactly — a handy self-check." },
+        { "key": "B", "text": "Under WDV the carrying amount reaches zero at the end of the useful life", "explanation": "WDV multiplies by (1 − rate) each year and mathematically never reaches zero — it only approaches the residual value." },
+        { "key": "C", "text": "Under SLM the yearly charge falls every year", "explanation": "The falling charge is WDV's signature; SLM's charge is constant." },
+        { "key": "D", "text": "Under WDV the charge is the same every year", "explanation": "Swapped definitions — the constant charge is SLM." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SLM ends at residual; WDV never reaches zero",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-032",
+      "topic": "Ch 5 · Depreciation · Method choice",
+      "type": "mcq",
+      "stem": "WDV is often preferred for vehicles and machinery because:",
+      "options": [
+        { "key": "A", "text": "High early depreciation plus rising later repair costs keeps the total yearly burden roughly even", "explanation": "Correct. New machines need few repairs (high depreciation year); old machines need many repairs (low depreciation year) — WDV balances the two." },
+        { "key": "B", "text": "It charges less depreciation in total over the asset's life", "explanation": "Total lifetime depreciation is the depreciable amount under EVERY method — only the yearly pattern differs." },
+        { "key": "C", "text": "It is the only method the law permits for machinery", "explanation": "No such rule — the method should match the pattern in which the asset's benefits are consumed." },
+        { "key": "D", "text": "It avoids the need to estimate useful life", "explanation": "Life estimation is still needed (to set the rate, and for disclosures) — WDV does not remove estimates." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Method suitability: depreciation + repairs ≈ even total burden",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-033",
+      "topic": "Ch 5 · Depreciation · Change of method",
+      "type": "mcq",
+      "stem": "Under AS 10, a change in the METHOD of depreciation (e.g., WDV to SLM) is accounted for as:",
+      "options": [
+        { "key": "A", "text": "A change in accounting estimate — applied prospectively", "explanation": "Correct. AS 10 treats the depreciation method as an estimate of how the asset's benefits are consumed; a change applies from now on, with no reopening of past years." },
+        { "key": "B", "text": "A change in accounting policy — recomputed retrospectively from the asset's purchase", "explanation": "This was the OLD treatment under the pre-revision standard (AS 6 era) — older books still show it; the current answer is prospective." },
+        { "key": "C", "text": "A prior-period error, corrected through last year's figures", "explanation": "Nothing was WRONG earlier — an estimate changed. Errors and estimate-changes are different categories." },
+        { "key": "D", "text": "Not permitted once a method is chosen", "explanation": "A change is permitted when the new method better reflects the consumption pattern — it is the accounting treatment, not the permission, that is tested." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Revisions, §8 →", "href": "/foundation/accounting/depreciation-and-amortisation/#8-when-your-estimate-was-wrong-revisions" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 10 — method change = change in estimate (prospective)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-034",
+      "topic": "Ch 5 · Depreciation · Change in estimate",
+      "type": "mcq",
+      "stem": "Three years into an asset's 10-year estimated life, management revises the total life to 7 years. The correct treatment is:",
+      "options": [
+        { "key": "A", "text": "Spread the current carrying amount (less residual) over the remaining 4 years", "explanation": "Correct. Prospective treatment: take the book value as it stands and spread it over the REMAINING revised life (7 − 3 = 4 years)." },
+        { "key": "B", "text": "Recompute all three past years at the 7-year life and pass a catch-up entry", "explanation": "That is retrospective treatment — estimate changes never reopen past years." },
+        { "key": "C", "text": "Continue the old charge and write off the shortfall in the final year", "explanation": "This dumps the correction into one distorted final year — exactly what prospective spreading avoids." },
+        { "key": "D", "text": "Restate last year's financial statements", "explanation": "Restatement is for errors. A genuine change in estimate is new information, not a mistake." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Revisions, §8 →", "href": "/foundation/accounting/depreciation-and-amortisation/#8-when-your-estimate-was-wrong-revisions" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 10 — life revision applied prospectively over remaining life",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-035",
+      "topic": "Ch 5 · Depreciation · Sale of asset",
+      "type": "mcq",
+      "stem": "Profit or loss on the sale of a depreciable asset is measured as the difference between the sale price and:",
+      "options": [
+        { "key": "A", "text": "The written-down value on the date of sale", "explanation": "Correct. The books carry the asset at WDV, so WDV is the benchmark. Selling below cost but above WDV still yields a profit." },
+        { "key": "B", "text": "The original cost", "explanation": "Cost ignores the depreciation already charged — using it double-counts the wear already expensed." },
+        { "key": "C", "text": "The current market price of a similar new asset", "explanation": "Market prices of new assets are irrelevant to the books of the old one." },
+        { "key": "D", "text": "The residual value estimated at purchase", "explanation": "The residual estimate was only an input for computing the charge — the benchmark on sale is the actual WDV." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Selling an asset, §7 →", "href": "/foundation/accounting/depreciation-and-amortisation/#7-selling-an-asset-profit-or-loss-on-disposal" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Result on sale = sale price − WDV",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-036",
+      "topic": "Ch 5 · Depreciation · Provision method",
+      "type": "mcq",
+      "stem": "When a firm uses a Provision for Depreciation account, the Machinery account in the ledger shows:",
+      "options": [
+        { "key": "A", "text": "The original cost of the machinery", "explanation": "Correct. The whole point of the provision method: the asset account stays at cost, and accumulated depreciation collects separately in the provision account." },
+        { "key": "B", "text": "The written-down value", "explanation": "WDV appears under the DIRECT method (asset credited each year). With a provision account, WDV is only a net figure (cost − provision) shown in the balance sheet." },
+        { "key": "C", "text": "Cost minus residual value", "explanation": "The depreciable amount is a computation input — no ledger account shows it as a balance." },
+        { "key": "D", "text": "The current market value", "explanation": "Market value never enters the historical-cost ledger." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Two ways to record, §9 →", "href": "/foundation/accounting/depreciation-and-amortisation/#9-two-ways-to-record-it" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Provision method: asset account stays at original cost",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-037",
+      "topic": "Ch 5 · Depreciation · Journal entries",
+      "type": "mcq",
+      "stem": "Under the DIRECT method (no provision account), the yearly depreciation entry is:",
+      "options": [
+        { "key": "A", "text": "Depreciation A/c Dr — To Asset A/c", "explanation": "Correct. The expense account is debited and the asset itself is credited, so the asset's balance falls to WDV each year. (Depreciation A/c is then closed to P&L.)" },
+        { "key": "B", "text": "Asset A/c Dr — To Depreciation A/c", "explanation": "Reversed — this would INCREASE the asset every year." },
+        { "key": "C", "text": "Depreciation A/c Dr — To Provision for Depreciation A/c", "explanation": "That is the PROVISION method's entry — the question says no provision account is kept." },
+        { "key": "D", "text": "P&L A/c Dr — To Cash A/c", "explanation": "Depreciation involves no cash — there is never a Cash A/c credit in a depreciation entry." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Two ways to record, §9 →", "href": "/foundation/accounting/depreciation-and-amortisation/#9-two-ways-to-record-it" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Direct method journal entry",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-038",
+      "topic": "Ch 5 · Terminology",
+      "type": "mcq",
+      "stem": "'Depreciable amount' means:",
+      "options": [
+        { "key": "A", "text": "Cost of the asset minus its residual value", "explanation": "Correct. This is the amount actually spread over the useful life — the recoverable residual is never depreciated." },
+        { "key": "B", "text": "The original cost of the asset", "explanation": "Cost is the starting point, but the depreciable amount removes the expected recovery at the end." },
+        { "key": "C", "text": "Cost minus depreciation charged to date", "explanation": "That is the CARRYING AMOUNT (written-down value) — a different term the exam loves to swap in." },
+        { "key": "D", "text": "The yearly depreciation charge", "explanation": "The charge is one year's slice OF the depreciable amount, not the amount itself." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The five terms, §2 →", "href": "/foundation/accounting/depreciation-and-amortisation/#2-the-five-terms-every-question-uses" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Depreciable amount = cost − residual value",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-039",
+      "topic": "Ch 5 · Terminology",
+      "type": "mcq",
+      "stem": "The 'useful life' of an asset, for depreciation purposes, is:",
+      "options": [
+        { "key": "A", "text": "The period over which the BUSINESS expects to use it (or the output it expects from it)", "explanation": "Correct. Useful life is an entity-specific estimate — it can be expressed in years OR in units/hours of output, and it is usually shorter than the asset's total physical life." },
+        { "key": "B", "text": "The total physical life of the asset until it stops working", "explanation": "A firm may plan to replace vans every 5 years though they run for 12 — the USE period governs, not the physical maximum." },
+        { "key": "C", "text": "Exactly the period in the manufacturer's warranty", "explanation": "Warranties are commercial promises, not accounting estimates." },
+        { "key": "D", "text": "A fixed statutory number that cannot be changed once set", "explanation": "It is an estimate, revisited when facts change — revisions are applied prospectively." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The five terms, §2 →", "href": "/foundation/accounting/depreciation-and-amortisation/#2-the-five-terms-every-question-uses" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Useful life = expected period/output of use by the entity",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-040",
+      "topic": "Ch 5 · Depreciation · Reasoning",
+      "type": "mcq",
+      "stem": "Other things equal, a HIGHER estimated residual value results in:",
+      "options": [
+        { "key": "A", "text": "Lower yearly depreciation", "explanation": "Correct. A higher residual shrinks the depreciable amount (cost − residual), so each year's slice is smaller." },
+        { "key": "B", "text": "Higher yearly depreciation", "explanation": "Direction reversed — more expected recovery at the end means LESS to spread." },
+        { "key": "C", "text": "No effect on the yearly charge", "explanation": "Residual value sits inside the SLM numerator — it always affects the charge (except in the WDV charge formula, where it sets the rate instead)." },
+        { "key": "D", "text": "A shorter useful life", "explanation": "Residual value and useful life are independent estimates — one does not move the other." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The five terms, §2 →", "href": "/foundation/accounting/depreciation-and-amortisation/#2-the-five-terms-every-question-uses" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Charge varies inversely with residual value (SLM)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-041",
+      "topic": "Ch 5 · Depreciation · Pro-rata",
+      "type": "mcq",
+      "stem": "A machine was delivered on 1 May, installed and ready for use on 1 June, but actual production started on 1 August. Depreciation begins from:",
+      "options": [
+        { "key": "A", "text": "1 June — when the asset was ready for use", "explanation": "Correct. Depreciation runs from the date the asset is AVAILABLE for use — waiting for production to start does not postpone it." },
+        { "key": "B", "text": "1 August — when production began", "explanation": "Actual usage is not the trigger; availability is. The idle June–July period still consumes the asset's life." },
+        { "key": "C", "text": "1 May — the delivery date", "explanation": "On 1 May the machine was not yet in working condition — cost accumulation (installation) was still ongoing." },
+        { "key": "D", "text": "The start of the next financial year", "explanation": "There is no 'wait for a fresh year' rule — pro-rata handles mid-year starts." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Pro-rata, §6 →", "href": "/foundation/accounting/depreciation-and-amortisation/#6-assets-bought-or-sold-mid-year-pro-rata" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Depreciation from date available/ready for use (AS 10 concept)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-042",
+      "topic": "Ch 5 · Depreciation · Rationale",
+      "type": "mcq",
+      "stem": "Charging depreciation every year, instead of expensing the whole asset in the purchase year, follows which accounting idea?",
+      "options": [
+        { "key": "A", "text": "Matching — cost should sit against the income it helps earn", "explanation": "Correct. The asset earns income for many years, so its cost is matched against those years, not dumped on year one." },
+        { "key": "B", "text": "Conservatism — anticipate all possible losses", "explanation": "Conservatism is about caution with uncertain gains/losses; depreciation is systematic allocation, not caution." },
+        { "key": "C", "text": "Money measurement — record only what money can measure", "explanation": "That concept says WHAT gets recorded, not WHEN costs are recognised." },
+        { "key": "D", "text": "Dual aspect — every debit has a credit", "explanation": "Dual aspect is true of every entry, so it explains nothing specific about depreciation timing." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Matching concept — allocation rationale",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-043",
+      "topic": "Ch 5 · Depreciation · Method properties",
+      "type": "mcq",
+      "stem": "A firm using WDV notices the asset's book value never becomes zero. This is because:",
+      "options": [
+        { "key": "A", "text": "Each year's charge is a percentage of a shrinking balance, so a remainder always survives", "explanation": "Correct. Multiplying by (1 − rate) repeatedly approaches, but never reaches, zero — mathematically the book value only tends toward the residual value." },
+        { "key": "B", "text": "The firm has been calculating wrongly", "explanation": "Nothing is wrong — never-reaching-zero is an inherent property of the reducing-balance method." },
+        { "key": "C", "text": "WDV is not allowed to run for the full useful life", "explanation": "No such restriction exists." },
+        { "key": "D", "text": "Residual value keeps being added back each year", "explanation": "Nothing is added back — the balance simply shrinks by a proportion, not by a fixed amount." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: WDV, §4 →", "href": "/foundation/accounting/depreciation-and-amortisation/#4-written-down-value-method-wdv" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Reducing balance: value = cost × (1−r)^n > 0 for all n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-044",
+      "topic": "Ch 5 · Depreciation · Capital vs revenue",
+      "type": "mcq",
+      "stem": "Which of these amounts spent on a newly purchased second-hand lorry is NOT added to its cost for depreciation purposes?",
+      "options": [
+        { "key": "A", "text": "Overhauling the engine before first use", "explanation": "Pre-use overhaul brings the lorry to working condition — capitalised." },
+        { "key": "B", "text": "Fresh registration and number-plate transfer fees", "explanation": "Necessary to put the lorry on the road for the first time — capitalised." },
+        { "key": "C", "text": "Diesel and driver's salary for the first month of running", "explanation": "Correct — these are running (revenue) costs of USING the lorry, not of acquiring it. They go straight to the P&L." },
+        { "key": "D", "text": "Freight for bringing the lorry from the seller's city", "explanation": "Bringing the asset to its location is part of cost — capitalised." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: The five terms, §2 →", "href": "/foundation/accounting/depreciation-and-amortisation/#2-the-five-terms-every-question-uses" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Capitalise bringing-to-use costs; expense running costs",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "q-f1c5-045",
+      "topic": "Ch 5 · Depreciation · Regulatory context",
+      "type": "mcq",
+      "stem": "For companies registered under the Companies Act 2013, indicative useful lives of assets for computing depreciation are given in:",
+      "options": [
+        { "key": "A", "text": "Schedule II of the Companies Act 2013", "explanation": "Correct. Schedule II ('Useful Lives to Compute Depreciation') gives the useful-life framework companies follow — Foundation needs only this mapping." },
+        { "key": "B", "text": "Schedule III of the Companies Act 2013", "explanation": "Schedule III prescribes the FORMAT of financial statements, not useful lives." },
+        { "key": "C", "text": "AS 2", "explanation": "AS 2 deals with inventory valuation — unrelated to depreciation." },
+        { "key": "D", "text": "The GST rate schedules", "explanation": "GST schedules classify goods/services for tax rates — nothing to do with depreciation." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What depreciation is, §1 →", "href": "/foundation/accounting/depreciation-and-amortisation/#1-what-depreciation-really-is" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, Schedule II",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "d-f1c5-01",
+      "topic": "Ch 5 · Depreciation · Theory",
+      "type": "descriptive",
+      "stem": "Define depreciation. State its three main causes and explain why depreciation must be charged even in a year of loss. (5 marks)",
+      "skeleton": [
+        { "point": "Definition: systematic allocation of the depreciable amount (cost − residual value) of an asset over its useful life; allocation, not valuation", "marks": 1, "citation": "AS 10 concept; Companies Act 2013 Sch II Part A defines the same idea" },
+        { "point": "Cause 1 — wear and tear from use", "marks": 0.5, "citation": "concept" },
+        { "point": "Cause 2 — passage of time / expiry of legal rights", "marks": 0.5, "citation": "concept" },
+        { "point": "Cause 3 — obsolescence (new technology makes the asset uneconomic)", "marks": 1, "citation": "concept" },
+        { "point": "Charged in loss years: it is a cost of using the asset, needed for true profit/loss (matching); not dependent on profits or usage", "marks": 2, "citation": "matching concept" }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Depreciation definition, causes, mandatory nature",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "d-f1c5-02",
+      "topic": "Ch 5 · Depreciation · Theory",
+      "type": "descriptive",
+      "stem": "Distinguish between the Straight Line Method and the Written Down Value method of depreciation (any four points), and state one type of asset each method suits. (5 marks)",
+      "skeleton": [
+        { "point": "Base: SLM — on original cost (constant); WDV — on opening book value (reducing)", "marks": 1, "citation": "formula" },
+        { "point": "Yearly charge: SLM equal every year; WDV highest in year 1, falls each year", "marks": 1, "citation": "formula" },
+        { "point": "End value: SLM reaches residual value exactly; WDV never reaches zero", "marks": 1, "citation": "cost × (1−r)^n > 0" },
+        { "point": "Total burden with repairs: WDV + rising repairs ≈ even total; SLM total burden rises as repairs grow", "marks": 1, "citation": "method-suitability logic" },
+        { "point": "Suitability: SLM — assets with even service (furniture, buildings, leases); WDV — vehicles/machinery with heavy early benefit", "marks": 1, "citation": "concept" }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SLM vs WDV distinctions",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "d-f1c5-03",
+      "topic": "Ch 5 · Depreciation · Practical",
+      "type": "descriptive",
+      "stem": "On 1 April 2023 Rathi Mills bought machinery for ₹6,00,000 (SLM, 10% p.a. on cost, year end 31 March). On 1 October 2025, one-third of the machinery (original cost ₹2,00,000) was sold for ₹1,42,000. Prepare the Machinery Account for 2023–24 to 2025–26. (10 marks)",
+      "skeleton": [
+        { "point": "2023–24: full-year depreciation 60,000 (10% × 6,00,000); closing balance 5,40,000", "marks": 2, "citation": "SLM on cost" },
+        { "point": "2024–25: depreciation 60,000; closing balance 4,80,000", "marks": 1, "citation": "SLM on cost" },
+        { "point": "2025–26 on sold part: 6 months' depreciation = 10,000 (10% × 2,00,000 × 6/12)", "marks": 2, "citation": "pro-rata to date of sale" },
+        { "point": "WDV of sold part on 1 Oct 2025 = 2,00,000 − (20,000 + 20,000 + 10,000) = 1,50,000; loss on sale = 1,50,000 − 1,42,000 = 8,000", "marks": 3, "citation": "sale price − WDV" },
+        { "point": "2025–26 on retained part (cost 4,00,000): full-year depreciation 40,000; closing balance = 4,00,000 − (3 × 40,000) = 2,80,000, shown as balancing figure with dates and particulars in proper account format", "marks": 2, "citation": "ledger format; working notes shown" }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Machinery account with part-sale; pro-rata; loss on sale",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "d-f1c5-04",
+      "topic": "Ch 5 · Depreciation · Theory",
+      "type": "descriptive",
+      "stem": "What is the accounting treatment when (a) the useful life of an asset is revised, and (b) the method of depreciation is changed? Illustrate (a) with a simple example. (5 marks)",
+      "skeleton": [
+        { "point": "(a) Change in estimate → prospective: (carrying amount − revised residual) ÷ remaining revised life; past years untouched", "marks": 2, "citation": "AS 10 estimate-change concept" },
+        { "point": "Example: cost 1,00,000, life 5, SLM 20,000/yr; after 2 years carrying 60,000; life revised to total 4 → charge 60,000 ÷ 2 = 30,000", "marks": 2, "citation": "worked illustration" },
+        { "point": "(b) Method change is ALSO a change in estimate under AS 10 → prospective from the carrying amount; no retrospective recomputation", "marks": 1, "citation": "AS 10 — method = estimate of consumption pattern" }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 10 revisions — prospective treatment",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "d-f1c5-05",
+      "topic": "Ch 5 · Depreciation · Practical",
+      "type": "descriptive",
+      "stem": "Explain the Provision for Depreciation method. Pass the journal entries for (i) the yearly depreciation charge and (ii) transfer of the relevant balances when the asset is sold. (5 marks)",
+      "skeleton": [
+        { "point": "Concept: asset account remains at original cost; yearly charges accumulate in a separate Provision for Depreciation (accumulated depreciation) account", "marks": 1, "citation": "provision method" },
+        { "point": "(i) Depreciation A/c Dr → To Provision for Depreciation A/c; then P&L A/c Dr → To Depreciation A/c", "marks": 2, "citation": "journal" },
+        { "point": "(ii) On sale: Asset Disposal A/c Dr → To Asset A/c (original cost); Provision for Depreciation A/c Dr → To Asset Disposal A/c (accumulated amount)", "marks": 1.5, "citation": "journal" },
+        { "point": "Bank A/c Dr → To Asset Disposal A/c (sale proceeds); balance of Disposal A/c = profit (Cr) or loss (Dr) → transferred to P&L", "marks": 0.5, "citation": "journal" }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Provision method mechanics + disposal entries",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    },
+    {
+      "id": "d-f1c5-06",
+      "topic": "Ch 5 · Depreciation · Theory",
+      "type": "descriptive",
+      "stem": "When is the units-of-production (or machine-hour) method more appropriate than time-based methods? Give the formula and one business example. (4 marks)",
+      "skeleton": [
+        { "point": "Appropriate when wear depends on USAGE, not time — output/hours drive the loss of usefulness", "marks": 1, "citation": "concept" },
+        { "point": "Formula: (cost − residual value) × units (or hours) this year ÷ total expected lifetime units (or hours)", "marks": 2, "citation": "formula" },
+        { "point": "Example: a bottling machine rated for a fixed number of crates; a stone-crusher rated in machine-hours; charge follows each year's actual output", "marks": 1, "citation": "illustration" }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Units-of-production method",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-07-03"
+    }
+  ]
+}

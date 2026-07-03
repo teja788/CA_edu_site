@@ -1,0 +1,96 @@
+---
+/**
+ * Layout for MDX chapter notes (plan §6.3: content = MDX in the repo,
+ * frontmatter carries taxonomy + verification metadata).
+ *
+ * Mirrors the hand-built notes pages (e.g. admission-of-a-partner.astro):
+ * reading measure ≤640px, sidebar TOC from h2 headings, mastery card,
+ * "Community draft" badge while review_status is "unreviewed".
+ */
+import Base from './Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Mastery from '../components/Mastery.astro';
+import TrustRow from '../components/TrustRow.astro';
+import { attempt } from '../data/site.js';
+
+const { frontmatter, headings = [] } = Astro.props;
+const fm = frontmatter;
+const toc = headings.filter((h) => h.depth === 2);
+const crumbs = [
+  { label: fm.levelName, href: `/${fm.level}/` },
+  { label: fm.paper, href: `/${fm.level}/${fm.paperSlug}/` },
+  { label: fm.chapter },
+];
+---
+
+<Base title={`${fm.title} — ${fm.paper}`} description={fm.description} active="papers">
+  <main class="page" style="max-width: 1024px;">
+    <div style="display: flex; gap: 48px; justify-content: center; align-items: flex-start;">
+      <article style="max-width: 640px; min-width: 0; flex: 1;">
+        <Breadcrumb crumbs={crumbs} />
+
+        <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">{fm.title}</h1>
+        <div style="margin: 12px 0 8px;">
+          <TrustRow attempt={attempt.name} updated={fm.last_verified} source={fm.sourceLabel} />
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 14px; color: var(--text-3); margin-bottom: 24px;">
+          {fm.readTime && <span>{fm.readTime}</span>}
+          {fm.review_status === 'unreviewed' && <span class="badge badge-draft">✎ Community draft — not yet CA-reviewed</span>}
+        </div>
+
+        <div class="article">
+          <slot />
+        </div>
+
+        <div style="border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px;">
+          {fm.practiceHref && (
+            <a href={fm.practiceHref} class="btn btn-primary">{fm.practiceLabel ?? 'Practice this chapter'}</a>
+          )}
+          <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; margin-top: 16px;">
+            Spotted an error? <a href={`/report-error/?page=${Astro.url.pathname}`}>Report it</a> — fixes are public.
+            The ICAI Study Material is always the primary source for this chapter.
+          </p>
+        </div>
+      </article>
+
+      <aside style="width: 240px; flex-shrink: 0; position: sticky; top: 24px;" class="notes-sidebar">
+        <div class="overline" style="font-size: 12px; margin-bottom: 10px;">On this page</div>
+        <div style="display: flex; flex-direction: column; border-left: 2px solid var(--border);" data-toc>
+          {toc.map((h, i) => (
+            <a
+              href={`#${h.slug}`}
+              style={`padding: 8px 14px; font-size: 14px; text-decoration: none; ${i === 0 ? 'color: var(--text); font-weight: 650; border-left: 2px solid var(--accent); margin-left: -2px;' : 'color: var(--text-2);'}`}
+            >{h.text}</a>
+          ))}
+        </div>
+        {fm.masteryId && (
+          <div class="card" style="margin-top: 24px; padding: 16px;">
+            <div style="font-size: 13px; font-weight: 650; margin-bottom: 8px;">Your standing</div>
+            <Mastery level={0} topicId={fm.masteryId} />
+            <div style="font-size: 13px; color: var(--text-3); margin-top: 8px; line-height: 1.5;">
+              Practising moves this up. No penalty for reading slowly.
+            </div>
+          </div>
+        )}
+      </aside>
+    </div>
+  </main>
+
+  <style>
+    @media (max-width: 900px) {
+      .notes-sidebar { display: none; }
+    }
+  </style>
+
+  <script>
+    import { getMastery } from '../scripts/store.js';
+    const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
+    document.querySelectorAll('[data-mastery]').forEach((el) => {
+      const level = getMastery(el.dataset.mastery);
+      if (!level) return;
+      el.querySelectorAll('.seg').forEach((seg, i) => seg.classList.toggle('on', i < level));
+      const label = el.querySelector('[data-mastery-label]');
+      if (label) label.textContent = labels[level];
+    });
+  </script>
+</Base>
