@@ -50,6 +50,44 @@ Content lives in `src/data/` (questions, flashcards, resources, taxonomy) and
 `src/pages/` (notes). The design system is documented in the design handoff bundle
 (`CA Intermediate UI System.zip`) — recreate its patterns, don't invent new ones.
 
+## The verification pipeline (how a reviewer audits fast)
+
+Every chapter of content moves through the same machine-checked pipeline
+before a human ever spends time on it. Reviewers: you are auditing the
+residue the machines can't judge, not re-checking arithmetic.
+
+1. **Numerical answers are computed, never trusted.** Each chapter bank
+   (`src/data/questions/<level>/<paper>/<chapter>.json`) flags computable
+   questions `"numerical": true` and ships
+   `scripts/verify_numerical/verify_<chapter>.py`, which recomputes every
+   answer from the stem's parameters. CI
+   (`.github/workflows/verify-content.yml`) fails the PR on any mismatch or
+   missing verifier — a fluent explanation defending a wrong key cannot merge.
+   The toolkit's own self-test contains a planted wrong key to prove the
+   runner catches exactly that.
+2. **Non-computable MCQs get an independent pass.** `scripts/consistency_check/`
+   strips a bank to a blind file, a fresh session re-answers it without the
+   key, and disagreements are quarantined in `review_queue.md` (root) with
+   both answers shown — quarantined questions never merge until a human
+   resolves them from the primary source.
+3. **Law/tax/audit claims are traceable.** Every cited section/AS/SA/
+   notification has an entry in `citations/<level>/<paper>/citations_<chapter>.md`
+   quoting the exact bare-act line it relies on. Spot-check the quotes against
+   India Code / incometaxindia.gov.in / mca.gov.in / cbic.gov.in, initial the
+   entries, and remove the draft badge in the same PR.
+4. **Unreviewed pages say so, loudly.** Content whose frontmatter/props carry
+   `review_status: "unreviewed"` (the `draft` flag on `TrustRow`) renders the
+   amber "✎ Community draft — cross-check with ICAI study material" badge with
+   a report link. Every report link pre-fills a GitHub issue with the page ID
+   via `/report-error/?page=…`. The badge comes off only via item 3.
+5. **Links are machine-checked weekly.** `scripts/linkcheck/` + the Monday
+   workflow ping every official URL, open an issue on failure, and stamp
+   `lastChecked` dates after a green sweep.
+
+The fastest useful review: open `review_queue.md`, resolve a quarantined
+question against the bare Act, and open a PR with the fix — 15 minutes,
+permanent value.
+
 ## Licensing of contributions
 
 By contributing you agree your code is MIT-licensed and your content is

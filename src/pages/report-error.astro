@@ -23,7 +23,35 @@ import Breadcrumb from '../components/Breadcrumb.astro';
         </p>
       </div>
 
-      <a href="https://github.com/teja788/CA_edu_site/issues/new" rel="noopener" class="btn btn-primary">Open a GitHub issue ↗</a>
+      <p id="reporting-page" style="display: none; font-size: 14px; color: var(--text-2); margin: 0 0 12px;">
+        Reporting: <code id="reporting-page-id"></code>
+      </p>
+
+      <a id="gh-issue-link" href="https://github.com/teja788/CA_edu_site/issues/new?labels=error-report" rel="noopener" class="btn btn-primary">Open a GitHub issue ↗</a>
+
+      <script>
+        // Pre-fill the GitHub issue with the page ID passed by every
+        // "Report an error" link (plan §6.4: one-click error reporting).
+        const page = new URLSearchParams(location.search).get('page');
+        const link = document.getElementById('gh-issue-link');
+        const title = `Error report: ${page || '(page URL here)'}`;
+        const body = [
+          `**Page:** ${page || '(paste the page URL)'}`,
+          '',
+          '**What is wrong:**',
+          '',
+          '',
+          '**Correct position + source (ICAI SM module / Act section / notification):**',
+          '',
+        ].join('\n');
+        link.href =
+          'https://github.com/teja788/CA_edu_site/issues/new' +
+          `?labels=error-report&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+        if (page) {
+          document.getElementById('reporting-page-id').textContent = page;
+          document.getElementById('reporting-page').style.display = 'block';
+        }
+      </script>
 
       <div class="card card-pad" style="margin-top: 24px;">
         <div style="font-size: 15px; font-weight: 650; margin-bottom: 8px;">What happens next</div>

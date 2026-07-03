@@ -1,0 +1,28 @@
+# Content verification gate (plan §6.4): a PR containing a numerical question
+# that the verify scripts can't reproduce — or that lacks a verifier at all —
+# cannot merge. The self-tests run first so a broken toolkit can never
+# green-light broken content. Requires branch protection on main with this
+# job listed as a required status check (one-time manual setup).
+name: Content verification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Toolkit self-tests (planted-error exemplar must be caught)
+        run: |
+          python3 scripts/verify_numerical/selftest.py
+          python3 scripts/consistency_check/selftest.py
+
+      - name: Verify every numerical question against its verify script
+        run: python3 scripts/verify_numerical/run.py

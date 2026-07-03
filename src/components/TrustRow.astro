@@ -6,13 +6,20 @@ interface Props {
   updated: string;
   source?: string;
   draft?: boolean;
+  /** Page identifier carried into the pre-filled error report; defaults to the page path. */
+  pageId?: string;
 }
 const { attempt, updated, source, draft = false } = Astro.props;
+const pageId = Astro.props.pageId ?? Astro.url.pathname;
+const reportHref = `/report-error/?page=${encodeURIComponent(pageId)}`;
 ---
 
 <div class="trust-row">
   {draft ? (
-    <Badge kind="draft">Community draft</Badge>
+    <>
+      <Badge kind="draft">Community draft</Badge>
+      <span>— cross-check with ICAI study material.</span>
+    </>
   ) : (
     <Badge kind="verified">Verified for {attempt} attempt</Badge>
   )}
@@ -24,5 +31,5 @@ const { attempt, updated, source, draft = false } = Astro.props;
     </>
   )}
   <span class="dot" aria-hidden="true">·</span>
-  <a href="/report-error/">Report an error</a>
+  <a href={reportHref}>{draft ? 'Report errors' : 'Report an error'}</a>
 </div>
