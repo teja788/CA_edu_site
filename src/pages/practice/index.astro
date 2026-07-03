@@ -19,10 +19,31 @@ import { attempt, questions } from '../../data/site.js';
     <div class="list-card" style="max-width: 720px;">
       <a class="list-row" href="/practice/quiz/">
         <span style="flex: 1;">
-          <span style="display: block; font-size: 16px; font-weight: 600;">Ch 4 · Partnership · Admission of a partner</span>
-          <span style="font-size: 13px; color: var(--text-2);">{questions.length} questions · per-option explanations</span>
+          <span style="display: block; font-size: 16px; font-weight: 600;">Paper 1 · full practice set</span>
+          <span style="font-size: 13px; color: var(--text-2);">{questions.length} questions · AS + partnership · per-option explanations</span>
         </span>
         <Badge kind="verified">{attempt.name}</Badge>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+      <a class="list-row" href="/practice/quiz/?topic=admission">
+        <span style="flex: 1;">
+          <span style="display: block; font-size: 16px; font-weight: 600;">Ch 4 · Partnership · Admission of a partner</span>
+          <span style="font-size: 13px; color: var(--text-2);">{questions.filter((q) => q.topic.includes('Admission')).length} questions · topic drill</span>
+        </span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+      <a class="list-row" href="/practice/quiz/?mode=mixed&timed=1">
+        <span style="flex: 1;">
+          <span style="display: block; font-size: 16px; font-weight: 600;">Mixed timed drill</span>
+          <span style="font-size: 13px; color: var(--text-2);">All topics shuffled, elapsed clock running — closest to the exam</span>
+        </span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+      <a class="list-row" href="/practice/flashcards/">
+        <span style="flex: 1;">
+          <span style="display: block; font-size: 16px; font-weight: 600;">Flashcards — spaced review</span>
+          <span style="font-size: 13px; color: var(--text-2);" data-due-count>AS numbers, formulas, rules — scheduled so you don't have to</span>
+        </span>
         <span class="chev" aria-hidden="true">›</span>
       </a>
       <a class="list-row" href="/practice/quiz/?mode=mistakes">
@@ -46,9 +67,13 @@ import { attempt, questions } from '../../data/site.js';
   </main>
 
   <script>
-    import { getMistakes } from '../../scripts/store.js';
+    import { getMistakes, getDueCards } from '../../scripts/store.js';
+    import { allCards } from '../../data/flashcards.js';
     const n = getMistakes().length;
     const el = document.querySelector('[data-mistake-count]');
     if (el && n > 0) el.textContent = `${n} question${n === 1 ? '' : 's'} waiting for another look`;
+    const due = getDueCards(allCards).length;
+    const dueEl = document.querySelector('[data-due-count]');
+    if (dueEl && due > 0) dueEl.textContent = `${due} card${due === 1 ? '' : 's'} due now — about ${Math.max(1, Math.round(due * 0.5))} minutes`;
   </script>
 </Base>

@@ -31,6 +31,9 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} · Adhyayan</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#232B3A" />
     <script is:inline>
       // Set theme/text-size before paint to avoid a flash.
       (function () {
@@ -81,6 +84,19 @@ const nav = [
     {!bare && (
       <footer class="site-footer">
         <div class="page-width">
+          <p style="display: flex; flex-wrap: wrap; gap: 6px 16px;">
+            <a href="/start-here/">Start here</a>
+            <a href="/foundation/">Foundation</a>
+            <a href="/intermediate/">Intermediate</a>
+            <a href="/final/">Final</a>
+            <a href="/attempt/">Your attempt</a>
+            <a href="/updates/">Amendments</a>
+            <a href="/plan/">Study plan</a>
+            <a href="/guides/spom/">SPOM</a>
+            <a href="/guides/articleship/">Articleship</a>
+            <a href="/guides/exemptions/">Exemptions</a>
+            <a href="/guides/answer-writing/">Answer writing</a>
+          </p>
           <p>
             <strong>Adhyayan</strong> is an independent, free, open study project. It is
             <strong> not affiliated with, or endorsed by, the Institute of Chartered Accountants of India (ICAI)</strong>.
@@ -88,7 +104,8 @@ const nav = [
           </p>
           <p>
             No paid tier. No lead-gen. <a href="/about/">Our method &amp; honesty policy</a> ·
-            <a href="https://github.com/" rel="noopener">Report an error / contribute</a>
+            <a href="/report-error/">Report an error</a> ·
+            <a href="https://github.com/" rel="noopener">Contribute on GitHub</a>
           </p>
         </div>
       </footer>
@@ -128,6 +145,9 @@ const nav = [
             syncSize();
           });
         });
+        if ('serviceWorker' in navigator && location.protocol === 'https:') {
+          navigator.serviceWorker.register('/sw.js');
+        }
       })();
     </script>
   </body>

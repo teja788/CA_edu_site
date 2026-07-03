@@ -65,6 +65,53 @@ export function recordAnswer({ questionId, correct }) {
   write(state);
 }
 
+/**
+ * Spaced-repetition scheduler for flashcards — a lightweight
+ * SM-2/FSRS-style algorithm (plan §6.3 suggests ts-fsrs; this keeps v1
+ * dependency-free with the same behaviour class: expanding intervals,
+ * ease adjusted by rating). State: { due, ivl (days), ease, reps }.
+ */
+export function getCardState(cardId) {
+  return read().fsrs?.[cardId] ?? null;
+}
+
+export function rateCard(cardId, rating) {
+  // rating: 'again' | 'hard' | 'good' | 'easy'
+  const state = read();
+  state.fsrs = state.fsrs ?? {};
+  const prev = state.fsrs[cardId] ?? { ivl: 0, ease: 2.5, reps: 0 };
+  let { ivl, ease } = prev;
+
+  if (rating === 'again') {
+    ease = Math.max(1.3, ease - 0.2);
+    ivl = 0; // due again in 10 minutes
+  } else if (rating === 'hard') {
+    ease = Math.max(1.3, ease - 0.15);
+    ivl = Math.max(1, ivl * 1.2);
+  } else if (rating === 'good') {
+    ivl = ivl === 0 ? 1 : ivl * ease;
+  } else {
+    ease = ease + 0.15;
+    ivl = ivl === 0 ? 4 : ivl * ease * 1.3;
+  }
+  ivl = Math.min(ivl, 365);
+
+  const dueMs = rating === 'again' ? 10 * 60 * 1000 : ivl * 86400000;
+  state.fsrs[cardId] = { ivl, ease, reps: prev.reps + 1, due: Date.now() + dueMs };
+  write(state);
+  return state.fsrs[cardId];
+}
+
+/** Cards due now: never-seen cards are always due. */
+export function getDueCards(allCards) {
+  const fsrs = read().fsrs ?? {};
+  const now = Date.now();
+  return allCards.filter((c) => {
+    const s = fsrs[c.id];
+    return !s || s.due <= now;
+  });
+}
+
 export function getWeekStats() {
   const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
   const recent = (read().history ?? []).filter((h) => h.at >= weekAgo);

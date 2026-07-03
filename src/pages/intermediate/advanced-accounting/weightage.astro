@@ -1,0 +1,75 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Callout from '../../../components/Callout.astro';
+import TrustRow from '../../../components/TrustRow.astro';
+import { attempt } from '../../../data/site.js';
+
+/**
+ * Weightage analysis (plan Phase 1) — original analysis of ICAI's
+ * published section weightages + past-paper patterns. Ships as a
+ * community draft until a reviewer signs off (accuracy rule §6.4-2).
+ */
+const sections = [
+  { name: 'Accounting Standards (AS applications)', range: '25–35%', note: 'The single largest block; AS 2, 3, 10 and 26 recur most attempts.' },
+  { name: 'Partnership & LLP accounts', range: '10–20%', note: 'Admission/retirement/dissolution rotate; usually one 10-mark practical.' },
+  { name: 'Company accounts (incl. buy-back, amalgamation)', range: '20–30%', note: 'At least one long practical almost every attempt.' },
+  { name: 'Special transactions (branch, departmental, etc.)', range: '10–20%', note: 'Predictable formats; efficient marks for the prepared.' },
+  { name: 'Financial statement preparation & others', range: '10–15%', note: 'Includes case-scenario MCQ coverage across the syllabus.' },
+];
+---
+
+<Base title="Paper 1 — weightage analysis" active="papers">
+  <main class="page">
+    <div style="max-width: 720px;">
+      <Breadcrumb crumbs={[
+        { label: 'CA Intermediate', href: '/intermediate/' },
+        { label: 'Paper 1 · Adv. Accounting', href: '/intermediate/advanced-accounting/' },
+        { label: 'Weightage analysis' },
+      ]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Where the marks live
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={attempt.name} updated="28 Jun 2026" source="ICAI syllabus weightage ranges; publicly listed past papers" draft={true} />
+      </div>
+
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px; max-width: 640px;">
+        ICAI publishes section-wise weightage ranges in the syllabus itself; past papers show how those
+        ranges are actually used. Read this as a <strong>prioritisation tool</strong> — where an hour of
+        study buys the most marks — never as permission to skip a section.
+      </p>
+
+      <div class="table-scroll">
+        <div class="data-table" style="min-width: 560px;">
+          <div class="tr head" style="grid-template-columns: 2fr 0.7fr 2fr;">
+            <div class="td">Syllabus section</div><div class="td num">Weightage</div><div class="td">Pattern note</div>
+          </div>
+          {sections.map((s) => (
+            <div class="tr" style="grid-template-columns: 2fr 0.7fr 2fr;">
+              <div class="td">{s.name}</div><div class="td num">{s.range}</div><div class="td" style="color: var(--text-2); font-size: 14px;">{s.note}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <Callout kind="pointer" label="How to use this">
+        <p>
+          Accounting Standards + company accounts together approach 60% of the paper. If your time is
+          short, mastery there plus the 30% MCQ section (no negative marking — attempt everything)
+          is the highest-probability path to 40+. The ranges are ICAI's; the pattern notes are our
+          reading of past papers — <a href="/report-error/">challenge them</a> if your analysis differs.
+        </p>
+      </Callout>
+
+      <Callout kind="mistake">
+        <p>
+          Chasing "important chapters" lists that promise exact marks per chapter. ICAI sets papers
+          within published <em>ranges</em>, and rotates freely inside them. Anyone quoting exact
+          chapter-wise marks for a future attempt is guessing.
+        </p>
+      </Callout>
+    </div>
+  </main>
+</Base>

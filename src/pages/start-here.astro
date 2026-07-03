@@ -1,0 +1,112 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Callout from '../components/Callout.astro';
+import TrustRow from '../components/TrustRow.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { attempt } from '../data/site.js';
+---
+
+<Base title="Start here — the self-study playbook">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Start here' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Self-study CA, from zero
+      </h1>
+      <div style="margin: 12px 0 8px;">
+        <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI announcements; Dunlosky et al. 2013" />
+      </div>
+      <div style="font-size: 14px; color: var(--text-3); margin-bottom: 24px;">About 8 min read</div>
+
+      <div class="article">
+        <p>
+          Coaching for the full CA journey costs roughly ₹2–4 lakh. ICAI's own fees — registration plus
+          exams — total about ₹70,000. Everything else you need is already free:
+          study material, revision papers, mock tests, past papers with model answers, and live classes.
+          This page is the method for using it all.
+        </p>
+
+        <h2>Is self-study viable? (the honest answer)</h2>
+        <p>
+          Yes for disciplined students, with caveats. Pass rates are low for everyone — coaching included
+          (Intermediate Group I has run as low as ~9–15%). What passing students share is not a coaching
+          subscription; it is <strong>practice volume, revision cycles, and exam-writing skill</strong>.
+          If you can hold a schedule without external pressure, the free ecosystem is sufficient.
+          If you need structure imposed on you, budget coaching for your weakest paper only.
+        </p>
+
+        <h2>Step 1 — Set up your free stack (one sitting)</h2>
+        <p>
+          Register on ICAI's <a href="https://eservices.icai.org" rel="noopener">Self Service Portal ↗</a>,
+          then collect your five free tools:
+        </p>
+        <p>
+          <strong>1.</strong> Study Material from the <a href="https://www.icai.org/post/bos-knowledge-portal" rel="noopener">BoS Knowledge Portal ↗</a> (order print at cost from <a href="https://cds.icai.org" rel="noopener">cds.icai.org ↗</a>) ·
+          <strong>2.</strong> RTPs and MTPs for your attempt ·
+          <strong>3.</strong> Past papers with suggested answers ·
+          <strong>4.</strong> Free live classes on <a href="https://boslive.icai.org" rel="noopener">BoS Live ↗</a> and <a href="https://www.youtube.com/@icaicatube" rel="noopener">ICAI CA Tube ↗</a> ·
+          <strong>5.</strong> The ICAI BoS mobile app.
+        </p>
+
+        <Callout kind="pointer">
+          <p>
+            Some BoS-portal content sits behind a free student login (registration number + date of birth),
+            and the portal shows you only your course level. ICAI CA Tube on YouTube is fully public.
+          </p>
+        </Callout>
+
+        <h2>Step 2 — Study in the order that produces marks</h2>
+        <p>The two highest-utility techniques in the learning-science literature are <strong>practice testing</strong> and <strong>spaced practice</strong>. Encode them as a loop:</p>
+        <p>
+          <strong>Learn</strong> a topic from the SM or a free lecture →
+          <strong>test yourself immediately</strong> (our quizzes, SM illustrations) →
+          <strong>revise once within 48 hours</strong> →
+          <strong>revise again within a week</strong> →
+          then let the <a href="/dashboard/">review queue</a> schedule it from there.
+        </p>
+
+        <Callout kind="mistake">
+          <p>
+            The classic self-study failure: watching lectures for months and "saving revision for the end."
+            Passive watching feels like progress and produces almost none. If a day contains no retrieval —
+            no questions answered from memory — it wasn't a study day.
+          </p>
+        </Callout>
+
+        <h2>Step 3 — Make the exam pattern work for you</h2>
+        <p>
+          Intermediate and Final papers are 30% case-scenario MCQs with <strong>no negative marking</strong> —
+          attempt every single MCQ. The 70% descriptive portion rewards presentation: working notes,
+          section citations, prescribed formats. Study ICAI's suggested answers as
+          <em>writing models</em>, not just solutions — see the
+          <a href="/guides/answer-writing/">answer-writing guide</a>.
+        </p>
+
+        <h2>Step 4 — Plan backwards from your attempt</h2>
+        <p>
+          Exams run three times a year and every attempt has its own applicable amendments, RTP, and
+          cut-offs. Check <a href="/attempt/">your attempt dashboard</a>, then generate a week-by-week
+          schedule with the <a href="/plan/">study-plan generator</a>. Finish the syllabus with at least
+          6 weeks to spare: two full revision cycles plus both MTP series under exam conditions.
+        </p>
+
+        <Callout kind="amendment" label="Amendments are the self-study tax">
+          <p>
+            Law and tax change every attempt. Never study from seniors' old notes or pirated PDFs — a
+            stale section number costs real marks. Check the <a href="/updates/">amendment tracker</a>
+            and the RTP for your attempt; both are attempt-specific by design.
+          </p>
+        </Callout>
+      </div>
+
+      <AdSlot />
+
+      <div style="border-top: 1px solid var(--border); padding-top: 20px;">
+        <a href="/plan/" class="btn btn-primary">Generate your study plan</a>
+        <a href="/intermediate/" class="btn btn-tertiary">Browse the papers</a>
+      </div>
+    </div>
+  </main>
+</Base>

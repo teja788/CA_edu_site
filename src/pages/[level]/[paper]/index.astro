@@ -1,0 +1,82 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Badge from '../../../components/Badge.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import TrustRow from '../../../components/TrustRow.astro';
+import { attempt } from '../../../data/site.js';
+import { allPaperPaths } from '../../../data/levels.js';
+
+export function getStaticPaths() {
+  return allPaperPaths()
+    // advanced-accounting has its own rich static page
+    .filter(({ level, paper }) => !(level.id === 'intermediate' && paper.slug === 'advanced-accounting'))
+    .map(({ level, group, paper }) => ({
+      params: { level: level.id, paper: paper.slug },
+      props: { level, group, paper },
+    }));
+}
+
+const { level, group, paper } = Astro.props;
+---
+
+<Base title={`Paper ${paper.number}: ${paper.name} — ${level.name}`} active="papers">
+  <main class="page">
+    <Breadcrumb crumbs={[
+      { label: level.name, href: `/${level.id}/` },
+      { label: `Paper ${paper.number} · ${paper.shortName}` },
+    ]} />
+
+    <div class="overline" style="margin-bottom: 6px;">{level.name} · {group.name} · {paper.marks} marks</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+      Paper {paper.number}: {paper.name}
+    </h1>
+    <div style="margin-top: 12px;">
+      <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI syllabus (New Scheme)" />
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;">
+      <Badge kind="neutral">{paper.pattern.style}</Badge>
+      {paper.pattern.negativeMarking
+        ? <Badge kind="amended">0.25 negative marking</Badge>
+        : <Badge kind="neutral">No negative marking</Badge>}
+      {paper.openBook && <Badge kind="login">Open book</Badge>}
+    </div>
+
+    <div class="tabs" role="tablist">
+      <span class="active">Chapters</span>
+      <span style="color: var(--text-3);">Practice</span>
+      <a href="#resources">Resources</a>
+    </div>
+
+    <div class="empty-state" style="max-width: 720px;">
+      <div style="width: 40px; height: 40px; border-radius: 999px; background: var(--surface-2); color: var(--text-3); display: inline-flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 10px;" aria-hidden="true">✎</div>
+      <div style="font-size: 16px; font-weight: 650; margin-bottom: 4px;">Original notes and practice for this paper are on the way</div>
+      <div style="font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 14px;">
+        Content ships in order of stability — Advanced Accounting first, tax papers last, once
+        amendment-tagging is battle-tested. Meanwhile, the official resources below are everything
+        you need to study this paper today.
+      </div>
+      <a href="/intermediate/advanced-accounting/" class="btn btn-secondary">See a live paper page</a>
+    </div>
+
+    <AdSlot />
+
+    <div class="overline" id="resources" style="margin: 4px 0 12px;">Official ICAI resources · {attempt.name} attempt</div>
+    <div class="list-card">
+      {level.resources.map((r) => (
+        <a class="list-row" href={r.url} rel="noopener" target="_blank">
+          <span style="flex: 1;">
+            <span style="font-size: 15px; font-weight: 600; color: var(--info-text);">{r.title} ↗</span>
+            <span style="display: block; font-size: 13px; color: var(--text-3); margin-top: 2px;">{r.host} · Last checked {r.lastChecked}</span>
+          </span>
+          {r.requiresLogin && <Badge kind="login">Requires ICAI login</Badge>}
+        </a>
+      ))}
+    </div>
+    <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; max-width: 640px;">
+      Links go to official sources only — nothing is re-hosted here. “Requires ICAI login” means the free
+      student login on the BoS portal (registration number + date of birth).
+    </p>
+  </main>
+</Base>

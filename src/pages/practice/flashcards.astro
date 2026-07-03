@@ -1,0 +1,114 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allCards } from '../../data/flashcards.js';
+---
+
+<Base title="Flashcard review" bare>
+  <div class="quiz-bar">
+    <a href="/practice/">← Exit review</a>
+    <div style="flex: 1;"></div>
+    <span class="counter" data-counter></span>
+  </div>
+  <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
+
+  <main style="max-width: 640px; margin: 0 auto; padding: 28px 20px 48px;">
+    <div data-review-root>
+      <div style="font-size: 13px; color: var(--text-3); margin-bottom: 10px;" data-deck></div>
+
+      <div class="card card-e1" style="padding: 28px 24px; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+        <div style="font-size: 18px; line-height: 1.6; font-weight: 600;" data-front></div>
+        <div hidden data-back-wrap>
+          <div style="height: 1px; background: var(--border); margin: 18px 0;"></div>
+          <div style="font-size: 16px; line-height: 1.65;" data-back></div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px; margin-top: 20px; flex-wrap: wrap;" data-actions>
+        <button type="button" class="btn btn-primary" data-show>Show answer</button>
+      </div>
+      <div style="font-size: 13px; color: var(--text-3); margin-top: 16px; line-height: 1.5;">
+        Rate honestly — the schedule only works if the ratings are true. “Again” brings a card back in
+        10 minutes; the rest push it days or weeks out.
+      </div>
+    </div>
+
+    <div data-done hidden style="text-align: center; padding: 40px 0;">
+      <div class="empty-state">
+        <div style="width: 40px; height: 40px; border-radius: 999px; background: var(--surface-2); color: var(--text-3); display: inline-flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 10px;" aria-hidden="true">✓</div>
+        <div style="font-size: 16px; font-weight: 650; margin-bottom: 4px;">Nothing to review right now</div>
+        <div style="font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 14px;">
+          Your review queue is clear. Rest, or read something new.
+        </div>
+        <a href="/intermediate/advanced-accounting/" class="btn btn-secondary">Browse chapters</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="application/json" data-cards set:html={JSON.stringify(allCards)}></script>
+
+  <script>
+    import { getDueCards, rateCard } from '../../scripts/store.js';
+
+    const allCards = JSON.parse(document.querySelector('[data-cards]').textContent);
+    let queue = getDueCards(allCards);
+    const total = queue.length;
+    let seen = 0;
+
+    const root = document.querySelector('[data-review-root]');
+    const done = document.querySelector('[data-done]');
+
+    function render() {
+      if (queue.length === 0) {
+        root.hidden = true;
+        done.hidden = false;
+        document.querySelector('[data-counter]').textContent = 'Done';
+        document.querySelector('[data-progress]').style.width = '100%';
+        return;
+      }
+      const card = queue[0];
+      document.querySelector('[data-counter]').textContent = `${queue.length} card${queue.length === 1 ? '' : 's'} due`;
+      document.querySelector('[data-progress]').style.width = `${total ? (seen / total) * 100 : 0}%`;
+      document.querySelector('[data-deck]').textContent = card.deckName;
+      document.querySelector('[data-front]').textContent = card.front;
+      document.querySelector('[data-back]').textContent = card.back;
+      document.querySelector('[data-back-wrap]').hidden = true;
+
+      const actions = document.querySelector('[data-actions]');
+      actions.innerHTML = '';
+      const show = document.createElement('button');
+      show.type = 'button';
+      show.className = 'btn btn-primary';
+      show.setAttribute('data-show', '');
+      show.textContent = 'Show answer';
+      show.addEventListener('click', () => {
+        document.querySelector('[data-back-wrap]').hidden = false;
+        actions.innerHTML = '';
+        const ratings = [
+          { key: 'again', label: 'Again', cls: 'btn-secondary', hint: '10 min' },
+          { key: 'hard', label: 'Hard', cls: 'btn-secondary', hint: '' },
+          { key: 'good', label: 'Good', cls: 'btn-primary', hint: '' },
+          { key: 'easy', label: 'Easy', cls: 'btn-secondary', hint: '' },
+        ];
+        for (const r of ratings) {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = `btn ${r.cls}`;
+          b.textContent = r.label;
+          b.addEventListener('click', () => {
+            const state = rateCard(queue[0].id, r.key);
+            const card = queue.shift();
+            seen += 1;
+            // "Again" cards return to the back of today's queue.
+            if (r.key === 'again') queue.push(card);
+            render();
+          });
+          actions.appendChild(b);
+        }
+      });
+      actions.appendChild(show);
+      show.focus();
+    }
+
+    render();
+  </script>
+</Base>

@@ -1,0 +1,70 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Callout from '../../components/Callout.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import { attempt } from '../../data/site.js';
+---
+
+<Base title="SPOM — the definitive guide">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'SPOM' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        SPOM: Self-Paced Online Modules
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="lms.icai.org; ICAI announcements" />
+      </div>
+
+      <div class="article">
+        <p>
+          SPOM is the mandatory online-module stage you must qualify <strong>before appearing in CA Final</strong>.
+          It runs on ICAI's LMS (<a href="https://lms.icai.org" rel="noopener">lms.icai.org ↗</a>) with test
+          booking at <a href="https://spmt.icai.org" rel="noopener">spmt.icai.org ↗</a>. It is badly explained
+          almost everywhere — here is the whole thing.
+        </p>
+
+        <h2>The four sets</h2>
+        <p>
+          <strong>SET A — Corporate &amp; Economic Laws.</strong> Mandatory; expert knowledge expected.<br />
+          <strong>SET B — Strategic Cost &amp; Performance Management.</strong> Mandatory; expert knowledge.<br />
+          <strong>SET C — one elective</strong> from ~10 subjects (working knowledge).<br />
+          <strong>SET D — one multidisciplinary elective</strong> from ~4 subjects (working knowledge).
+        </p>
+
+        <h2>The rules that matter</h2>
+        <p>
+          50% to pass each set · unlimited attempts · no negative marking · no extra fee ·
+          prescribed learning hours must be completed on the LMS <em>before</em> you can book the test ·
+          webcam and face-detection requirements apply during the test ·
+          SPOM marks do <strong>not</strong> aggregate with your Final marks.
+        </p>
+
+        <Callout kind="mistake">
+          <p>
+            The most common failure is logistical, not academic: leaving SPOM until your Final attempt is
+            close, then discovering the learning-hours requirement blocks your test booking. Start the
+            modules early in articleship and clear them long before your Final forms.
+          </p>
+        </Callout>
+
+        <Callout kind="pointer">
+          <p>
+            SET A and SET B overlap heavily with Final syllabus thinking. Treat them as an early first pass
+            over that material rather than a box-ticking exercise — the hours are spent either way.
+          </p>
+        </Callout>
+
+        <h2>Before you rely on this page</h2>
+        <p>
+          Exemption categories, elective lists and hardware requirements are revised by ICAI from time to
+          time. Verify against the current SPOM announcement on
+          <a href="https://www.icai.org" rel="noopener">icai.org ↗</a> before booking — and
+          <a href="/report-error/">report anything outdated here</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>

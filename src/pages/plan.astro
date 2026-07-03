@@ -1,0 +1,180 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Callout from '../components/Callout.astro';
+import { attempt } from '../data/site.js';
+---
+
+<Base title="Study-plan generator">
+  <main class="page">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Study plan' }]} />
+
+      <div class="overline" style="margin-bottom: 6px;">Structure is what coaching actually sells</div>
+      <h1 style="margin: 0 0 12px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Your week-by-week study plan
+      </h1>
+      <p style="font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 0 0 24px;">
+        Built on the revision cycle that works: learn → revise within 48 hours → revise again in a week →
+        pre-exam pass. No plan survives a bad week intact — this one just stretches; nothing is "lost".
+      </p>
+
+      <form class="card card-pad" data-plan-form style="margin-bottom: 28px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 650;">
+            Your attempt
+            <select name="attempt" style="font-family: inherit; font-size: 16px; min-height: 44px; padding: 8px 12px; border: 1.5px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text);">
+              <option value="2026-09-08">Sept 2026 (begins 8 Sept)</option>
+              <option value="2027-01-15">Jan 2027 (dates TBA — assumed mid-Jan)</option>
+            </select>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 650;">
+            Group
+            <select name="group" style="font-family: inherit; font-size: 16px; min-height: 44px; padding: 8px 12px; border: 1.5px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text);">
+              <option value="g1">Group I (3 papers)</option>
+              <option value="g2">Group II (3 papers)</option>
+              <option value="both">Both groups (6 papers)</option>
+            </select>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 650;">
+            Study hours per day
+            <select name="hours" style="font-family: inherit; font-size: 16px; min-height: 44px; padding: 8px 12px; border: 1.5px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text);">
+              <option value="2">~2 (working / articleship)</option>
+              <option value="4" selected>~4</option>
+              <option value="6">6+ (full-time prep)</option>
+            </select>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Generate plan</button>
+      </form>
+
+      <div data-plan-warning hidden class="banner" style="margin-bottom: 24px;">
+        <span style="flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px; background: var(--warning); color: var(--on-warning); display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;" aria-hidden="true">!</span>
+        <div style="flex: 1;" data-plan-warning-text></div>
+      </div>
+
+      <div data-plan-output hidden>
+        <div class="card card-pad" style="margin-bottom: 24px;">
+          <div style="font-size: 18px; font-weight: 700; margin-bottom: 6px;" data-plan-headline></div>
+          <div class="tnum" style="font-size: 14px; color: var(--text-2); line-height: 1.7;" data-plan-summary></div>
+        </div>
+        <div data-plan-phases style="display: flex; flex-direction: column; gap: 16px;"></div>
+
+        <Callout kind="pointer" label="How to run a week">
+          <p>
+            Each study day: new material first (60%), then yesterday's 48-hour revision (25%),
+            then the <a href="/dashboard/">review queue</a> (15%). Sundays: no new material —
+            cumulative mixed practice on everything so far. Skipped days just push the plan;
+            never "catch up" by skipping revision.
+          </p>
+        </Callout>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const form = document.querySelector('[data-plan-form]');
+    const out = document.querySelector('[data-plan-output]');
+    const warning = document.querySelector('[data-plan-warning]');
+
+    const PAPERS = {
+      g1: ['P1 Adv. Accounting', 'P2 Corporate & Other Laws', 'P3 Taxation'],
+      g2: ['P4 Cost & Mgmt Accounting', 'P5 Auditing & Ethics', 'P6 FM & SM'],
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const examDate = new Date(data.get('attempt') + 'T00:00:00+05:30');
+      const groupKey = data.get('group');
+      const hours = Number(data.get('hours'));
+
+      const papers = groupKey === 'both' ? [...PAPERS.g1, ...PAPERS.g2] : PAPERS[groupKey];
+      const weeks = Math.floor((examDate.getTime() - Date.now()) / (7 * 86400000));
+
+      // Effort needed: roughly 350 study-hours per paper-group of 3 at Inter,
+      // scaled by weekly hours available.
+      const weeklyHours = hours * 6; // one lighter day per week
+      const hoursNeeded = papers.length * 110;
+      const weeksNeeded = Math.ceil(hoursNeeded / weeklyHours) + 4; // + revision & mocks
+
+      warning.hidden = true;
+      if (weeks < 4) {
+        warning.hidden = false;
+        warning.querySelector('[data-plan-warning-text]').innerHTML =
+          `<strong>${weeks} week${weeks === 1 ? '' : 's'} is revision territory, not first-study territory.</strong> ` +
+          'If the syllabus isn’t finished, consider the next attempt for a full preparation — or run a pure revision + MTP sprint on your strongest group.';
+      } else if (weeks < weeksNeeded) {
+        warning.hidden = false;
+        warning.querySelector('[data-plan-warning-text]').innerHTML =
+          `At ~${hours}h/day this scope usually needs about <strong>${weeksNeeded} weeks</strong>; you have <strong>${weeks}</strong>. ` +
+          'The plan below compresses revision, not learning. Options: increase daily hours, or attempt one group instead of both.';
+      }
+
+      // Phase split: learn 55%, revise-1 20%, revise-2 15%, mocks 10% (min 1 week each).
+      const learn = Math.max(1, Math.round(weeks * 0.55));
+      const rev1 = Math.max(1, Math.round(weeks * 0.2));
+      const rev2 = Math.max(1, Math.round(weeks * 0.15));
+      const mocks = Math.max(1, weeks - learn - rev1 - rev2);
+
+      document.querySelector('[data-plan-headline]').textContent =
+        `${weeks} weeks to the exam · ${papers.length} papers · ~${weeklyHours} study-hours a week`;
+      document.querySelector('[data-plan-summary]').innerHTML =
+        `Learning ${learn} wk · Revision-1 ${rev1} wk · Revision-2 ${rev2} wk · Mocks &amp; final pass ${mocks} wk<br>` +
+        'Built-in cycle: every topic is revised within 48 hours, again within a week, then spaced by the review queue.';
+
+      const phasesEl = document.querySelector('[data-plan-phases]');
+      phasesEl.innerHTML = '';
+
+      const phases = [
+        {
+          name: `Phase 1 · Learning — weeks 1 to ${learn}`,
+          body: papers.map((p, i) => {
+            // Spread papers evenly across the learning weeks; when papers
+            // outnumber weeks, several papers share a week.
+            const from = Math.min(learn, Math.floor((i * learn) / papers.length) + 1);
+            const to = Math.min(learn, Math.max(from, Math.ceil(((i + 1) * learn) / papers.length)));
+            const label = from === to ? `Week ${from}` : `Weeks ${from}–${to}`;
+            return `<strong>${label}:</strong> ${p} — chapters in SM order, quiz after every topic, 48-hour revisions running daily.`;
+          }),
+        },
+        {
+          name: `Phase 2 · Revision 1 — ${rev1} week${rev1 > 1 ? 's' : ''}`,
+          body: [
+            'One full pass, all papers in parallel: chapter summaries + your Mistake notebook, not the full SM.',
+            'Solve the RTP for your attempt now — it carries the amendments the SM doesn’t.',
+          ],
+        },
+        {
+          name: `Phase 3 · Revision 2 — ${rev2} week${rev2 > 1 ? 's' : ''}`,
+          body: [
+            'Weak topics only, chosen by your mastery map and mistake data — not by comfort.',
+            'Daily timed descriptive answers (18 min per 10-marker) using the answer-writing rubric.',
+          ],
+        },
+        {
+          name: `Phase 4 · Mocks & final pass — ${mocks} week${mocks > 1 ? 's' : ''}`,
+          body: [
+            'Both MTP series under strict exam conditions, 2–3 full papers a week, graded against suggested answers.',
+            'Between mocks: review queue + formula/section sheets only. No new material in the last two weeks.',
+          ],
+        },
+      ];
+
+      for (const phase of phases) {
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        card.innerHTML =
+          `<div style="font-size: 16px; font-weight: 700; margin-bottom: 10px;">${phase.name}</div>` +
+          `<ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.75; color: var(--text-2);">` +
+          phase.body.map((b) => `<li>${b}</li>`).join('') +
+          '</ul>';
+        phasesEl.appendChild(card);
+      }
+
+      out.hidden = false;
+      out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</Base>

@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Badge from '../../components/Badge.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import { attempt } from '../../data/site.js';
+import { levels } from '../../data/levels.js';
+
+export function getStaticPaths() {
+  return levels.map((level) => ({ params: { level: level.id }, props: { level } }));
+}
+
+const { level } = Astro.props;
+---
+
+<Base title={level.name} active="papers">
+  <main class="page">
+    <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: level.name }]} />
+
+    <div class="overline" style="margin-bottom: 6px;">{level.overline}</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">{level.name}</h1>
+    <div style="margin-top: 12px;">
+      <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI New Scheme (2023)" />
+    </div>
+
+    <p style="max-width: 640px; font-size: 17px; line-height: 1.7; margin: 20px 0 0;">{level.intro}</p>
+
+    {level.groups.map((group, gi) => (
+      <>
+        <div class="overline" style="margin: 32px 0 12px;">{group.name}</div>
+        <div class="list-card">
+          {group.papers.map((p) => (
+            <a class="list-row" href={`/${level.id}/${p.slug}/`}>
+              <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
+              <span class="row-title">
+                {p.name}
+                {p.status === 'live' && <Badge kind="verified">Live</Badge>}
+                {p.pattern.negativeMarking && <Badge kind="amended">0.25 negative marking</Badge>}
+                {p.openBook && <Badge kind="login">Open book</Badge>}
+              </span>
+              <span class="row-meta tnum">{p.marks} marks</span>
+              <span class="chev" aria-hidden="true">›</span>
+            </a>
+          ))}
+        </div>
+        {gi === 0 && level.groups.length > 1 && <AdSlot />}
+      </>
+    ))}
+
+    <div class="overline" style="margin: 32px 0 12px;">Passing rules, in plain language</div>
+    <div class="card card-pad">
+      <ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.8; color: var(--text);">
+        {level.passing.map((rule) => <li set:html={rule.replace('SPOM guide', '<a href="/guides/spom/">SPOM guide</a>')} />)}
+      </ul>
+      <div class="trust-row" style="margin-top: 14px;">
+        <Badge kind="verified">Verified for {attempt.name} attempt</Badge>
+        <span>Always re-verify against the latest ICAI notification before your exam.</span>
+      </div>
+    </div>
+
+    <div class="overline" style="margin: 32px 0 12px;">Related guides</div>
+    <div class="list-card" style="max-width: 720px;">
+      <a class="list-row" href="/start-here/"><span class="row-title">Start here — the self-study playbook</span><span class="chev" aria-hidden="true">›</span></a>
+      <a class="list-row" href="/guides/exemptions/"><span class="row-title">Exemption rules, explained</span><span class="chev" aria-hidden="true">›</span></a>
+      {level.id === 'final' && <a class="list-row" href="/guides/spom/"><span class="row-title">SPOM — the definitive guide</span><span class="chev" aria-hidden="true">›</span></a>}
+      {level.id !== 'foundation' && <a class="list-row" href="/guides/articleship/"><span class="row-title">Articleship under the new scheme</span><span class="chev" aria-hidden="true">›</span></a>}
+      <a class="list-row" href="/attempt/"><span class="row-title">Your attempt — dates, forms, applicable law</span><span class="chev" aria-hidden="true">›</span></a>
+    </div>
+  </main>
+</Base>

@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Callout from '../../components/Callout.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import { attempt } from '../../data/site.js';
+---
+
+<Base title="Exemption rules, explained">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'Exemptions' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Exemption rules, in plain language
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI revised exemption norms (2025)" />
+      </div>
+
+      <div class="article">
+        <p>
+          Exemptions trip up more students than any other rule, because the policy changed in 2025 and
+          most advice online describes the old system. Here is the current shape — applies to
+          Intermediate and Final (Foundation has no exemptions).
+        </p>
+
+        <h2>How you earn one</h2>
+        <p>
+          Score <strong>60 or more</strong> in a paper while <strong>failing that group</strong>, and that
+          paper is treated as exempt under ICAI's revised norms — you don't write it again.
+        </p>
+
+        <Callout kind="amendment" label="What changed in 2025">
+          <p>
+            <span style="text-decoration: line-through; color: var(--text-3);">Old rule: exemption valid for the next three attempts only, shown as “E” then lapsing.</span><br />
+            Revised norms treat 60+ papers as <strong>permanently exempt</strong>; the remaining papers in
+            that group then require <strong>50% each</strong> to pass the group. Verify the current wording
+            on <a href="https://www.icai.org" rel="noopener">icai.org ↗</a> — this page is a plain-language
+            summary, not the notification itself.
+          </p>
+        </Callout>
+
+        <h2>The 50% catch</h2>
+        <p>
+          Passing with an exemption is <em>harder per remaining paper</em>: instead of 40 each plus 50%
+          aggregate, every remaining paper needs 50. An exemption is a head start, not a discount —
+          plan your revision to clear the whole group, not to farm exemptions.
+        </p>
+
+        <h2>Surrendering an exemption</h2>
+        <p>
+          You may surrender an exemption (for instance, to reattempt a paper where you believe you can
+          score higher under the normal 40/50 rules). Surrender is done through the exam form — think
+          carefully; it is not reversible for that attempt.
+        </p>
+
+        <Callout kind="mistake">
+          <p>
+            Assuming an exemption means "group passed." It doesn't. The group is passed only when the
+            remaining papers meet the 50% requirement in a single sitting. Until then, the exemption
+            just carries forward.
+          </p>
+        </Callout>
+      </div>
+    </div>
+  </main>
+</Base>

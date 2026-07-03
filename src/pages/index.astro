@@ -23,6 +23,7 @@ const group2 = papers.filter((p) => p.group === 2);
       </p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
         <a href="/intermediate/" class="btn btn-primary">Start with CA Intermediate</a>
+        <a href="/start-here/" class="btn btn-secondary">New to CA? Start here</a>
         <a href="/about/" class="btn btn-tertiary">How this site teaches</a>
       </div>
     </section>
@@ -49,13 +50,27 @@ const group2 = papers.filter((p) => p.group === 2);
       <div class="overline" style="margin-bottom: 12px;">Group II</div>
       <div class="list-card">
         {group2.map((p) => (
-          <a class="list-row" href="/intermediate/">
+          <a class="list-row" href={`/intermediate/${p.slug}/`}>
             <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
             <span class="row-title">{p.name}</span>
             <Badge kind="neutral">Coming soon</Badge>
             <span class="chev" aria-hidden="true">›</span>
           </a>
         ))}
+      </div>
+
+      <div class="overline" style="margin: 32px 0 12px;">Other levels</div>
+      <div class="list-card">
+        <a class="list-row" href="/foundation/">
+          <span class="row-title">CA Foundation</span>
+          <span class="row-meta">4 papers · level guide + official resources</span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+        <a class="list-row" href="/final/">
+          <span class="row-title">CA Final</span>
+          <span class="row-meta">6 papers · level guide + SPOM guide</span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
       </div>
     </section>
 

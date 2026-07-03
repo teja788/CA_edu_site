@@ -8,6 +8,7 @@ import { questions } from '../../data/site.js';
     <a href="/practice/">← Exit practice</a>
     <div style="flex: 1;"></div>
     <span class="counter" data-counter>Question 1 of {questions.length}</span>
+    <span data-timer hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8; font-variant-numeric: tabular-nums;">◷ Timed · <span data-timer-value>0:00</span></span>
   </div>
   <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
 
@@ -41,7 +42,8 @@ import { questions } from '../../data/site.js';
 
     const all = JSON.parse(document.querySelector('[data-questions]').textContent);
 
-    // ?mode=mistakes → only questions currently in the notebook
+    // Modes: ?mode=mistakes → notebook only · ?mode=mixed → shuffled across
+    // topics (interleaving) · ?timed=1 → factual elapsed clock, not a threat.
     const params = new URLSearchParams(location.search);
     let deck = all;
     if (params.get('mode') === 'mistakes') {
@@ -49,6 +51,27 @@ import { questions } from '../../data/site.js';
       const ids = new Set(saved.map((m) => m.questionId));
       deck = all.filter((q) => ids.has(q.id));
       if (deck.length === 0) deck = all;
+    } else if (params.get('topic')) {
+      const t = params.get('topic').toLowerCase();
+      deck = all.filter((q) => q.topic.toLowerCase().includes(t));
+      if (deck.length === 0) deck = all;
+    } else if (params.get('mode') === 'mixed') {
+      deck = [...all];
+      for (let i = deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];
+      }
+    }
+
+    if (params.get('timed') === '1') {
+      const chip = document.querySelector('[data-timer]');
+      const value = document.querySelector('[data-timer-value]');
+      chip.hidden = false;
+      const start = Date.now();
+      setInterval(() => {
+        const s = Math.floor((Date.now() - start) / 1000);
+        value.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+      }, 1000);
     }
 
     const $ = (sel) => document.querySelector(sel);

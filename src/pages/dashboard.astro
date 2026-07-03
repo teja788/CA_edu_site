@@ -36,13 +36,18 @@ import { attempt, papers } from '../data/site.js';
               <span style="flex: 1; font-size: 15px; font-weight: 600;">Admission of a partner — practice set</span>
               <span style="font-size: 13px; color: var(--text-3);">P1 · Ch 4</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 14px; min-height: 52px; border-top: 1px solid var(--surface-2); border-bottom: 1px solid var(--surface-2);">
+            <div style="display: flex; align-items: center; gap: 14px; min-height: 52px; border-top: 1px solid var(--surface-2);">
               <span style="width: 22px; height: 22px; border-radius: 6px; background: var(--incorrect-tint); color: var(--incorrect-text); display: inline-flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0;" aria-hidden="true">✕</span>
               <span style="flex: 1; font-size: 15px; font-weight: 600;" data-queue-mistakes>From Mistake notebook</span>
               <span style="font-size: 13px; color: var(--text-3);">Mixed</span>
             </div>
+            <div style="display: flex; align-items: center; gap: 14px; min-height: 52px; border-top: 1px solid var(--surface-2); border-bottom: 1px solid var(--surface-2);">
+              <span style="width: 22px; height: 22px; border-radius: 6px; background: var(--info-tint); color: var(--info-text); display: inline-flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0;" aria-hidden="true">★</span>
+              <span style="flex: 1; font-size: 15px; font-weight: 600;" data-queue-cards>Flashcards — quick recall</span>
+              <span style="font-size: 13px; color: var(--text-3);">Spaced</span>
+            </div>
           </div>
-          <a href="/practice/quiz/" class="btn btn-primary" style="margin-top: 18px;">Start today's review</a>
+          <a href="/practice/quiz/" class="btn btn-primary" style="margin-top: 18px;" data-review-cta>Start today's review</a>
         </section>
 
         <!-- ad slot BELOW the queue card -->
@@ -110,7 +115,8 @@ import { attempt, papers } from '../data/site.js';
   </style>
 
   <script>
-    import { getMistakes, getWeekStats, getPaperProgress } from '../scripts/store.js';
+    import { getMistakes, getWeekStats, getPaperProgress, getDueCards } from '../scripts/store.js';
+    import { allCards } from '../data/flashcards.js';
 
     // Greeting by time of day — factual, no pressure.
     const h = new Date().getHours();
@@ -122,14 +128,21 @@ import { attempt, papers } from '../data/site.js';
     const days = Math.max(0, Math.ceil((begins.getTime() - Date.now()) / 86400000));
     document.querySelector('[data-days-left]').textContent = `${days} days from today · `;
 
-    // Review queue caption + mistake row.
+    // Review queue caption + rows.
     const mistakes = getMistakes();
-    document.querySelector('[data-queue-caption]').textContent = mistakes.length > 0
-      ? `${mistakes.length + 1} items due. Anything skipped simply waits.`
-      : 'One practice set due. Anything skipped simply waits.';
+    const due = getDueCards(allCards).length;
+    const items = 1 + mistakes.length + due;
+    const minutes = Math.max(5, Math.round(items * 1.5));
+    document.querySelector('[data-queue-caption]').textContent =
+      `${items} item${items === 1 ? '' : 's'} due — about ${minutes} minutes. Anything skipped simply waits.`;
     document.querySelector('[data-queue-mistakes]').textContent = mistakes.length > 0
       ? `From Mistake notebook — ${mistakes.length} question${mistakes.length === 1 ? '' : 's'}`
       : 'Mistake notebook — empty, nothing waiting';
+    document.querySelector('[data-queue-cards]').textContent = due > 0
+      ? `Flashcards — ${due} card${due === 1 ? '' : 's'} due`
+      : 'Flashcards — all scheduled ahead';
+    // Cards due? Review starts there; otherwise the practice set.
+    if (due > 0) document.querySelector('[data-review-cta]').href = '/practice/flashcards/';
 
     // Recent mistakes list.
     if (mistakes.length > 0) {

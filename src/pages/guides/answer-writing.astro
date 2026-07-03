@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Callout from '../../components/Callout.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import { attempt } from '../../data/site.js';
+---
+
+<Base title="Answer like a topper — descriptive writing">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'Answer writing' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Answer like a topper
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="Anatomy of ICAI suggested answers (described, not copied)" />
+      </div>
+
+      <div class="article">
+        <p>
+          The 70% descriptive portion is marked against a scheme that rewards <em>presentation</em> as much
+          as knowledge. ICAI's own suggested answers reveal the format examiners expect. Study their
+          anatomy — every good answer has the same four parts.
+        </p>
+
+        <h2>The four-part anatomy</h2>
+        <p>
+          <strong>1. Provision/concept</strong> — state the rule first, with its citation
+          ("As per AS 26…", "Under Section 141(3)(d)…").<br />
+          <strong>2. Application</strong> — connect the rule to the facts of this question, in your own words.<br />
+          <strong>3. Working notes</strong> — numbered, cross-referenced, shown separately. Markers award
+          step marks from workings even when the final figure is wrong.<br />
+          <strong>4. Conclusion</strong> — one sentence that answers exactly what was asked.
+        </p>
+
+        <Callout kind="pointer">
+          <p>
+            Practical papers: write working notes <em>first</em>, on the right-hand page, then the main
+            answer referencing "WN-1", "WN-2". Law/audit papers: provision → application → conclusion,
+            with the section number in the first line. Quote section numbers only when sure — a wrong
+            citation reads worse than none.
+          </p>
+        </Callout>
+
+        <h2>Self-grading rubric</h2>
+        <p>After each timed answer, score yourself 0–2 on each: rule stated with source · applied to the facts (not just recited) · workings shown and referenced · conclusion answers the question · presentation (headings, underlining key terms). 8+/10 is exam-ready; below that, rewrite the answer once from the model's structure.</p>
+
+        <Callout kind="mistake">
+          <p>
+            Writing everything you know about the topic. Examiners mark against specific points; padding
+            costs time and signals uncertainty. If the question is for 5 marks, the marking scheme has
+            roughly 5 things — find them, state them, stop.
+          </p>
+        </Callout>
+
+        <h2>Timed drills</h2>
+        <p>
+          Weekly, from month two: pick one past-paper descriptive question, set 18 minutes (a 10-marker's
+          budget in a 3-hour paper), handwrite the answer, then grade it against ICAI's suggested answer
+          with the rubric above. Handwriting speed and layout are trainable — and only trainable on paper.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>

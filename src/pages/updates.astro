@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Badge from '../components/Badge.astro';
+import TrustRow from '../components/TrustRow.astro';
+import { attempt } from '../data/site.js';
+
+/**
+ * Amendment tracker (plan §6.1): what changed since the SM edition,
+ * per paper, per attempt, always sourced. Seeded with the amendments
+ * referenced elsewhere on the site.
+ */
+const amendments = [
+  {
+    paper: 'P1 · Advanced Accounting',
+    appliesFrom: 'Sept 2026',
+    title: 'Stamp duty on partnership deed revision — state-wise slabs',
+    old: '₹500 flat',
+    now: 'State-wise slab rates (Finance Act 2026)',
+    source: 'Finance Act 2026',
+    sourceUrl: 'https://egazette.gov.in/',
+    affected: [{ label: 'Admission of a partner — §3', href: '/intermediate/advanced-accounting/partnership-accounts/admission-of-a-partner/#s3' }],
+  },
+  {
+    paper: 'P3 · Taxation',
+    appliesFrom: 'Jan 2027',
+    title: 'Paper 3 syllabus revision announced by ICAI',
+    old: 'Sept 2026 syllabus',
+    now: 'Revised structure applies from the Jan 2027 attempt; Sept 2026 content is unaffected',
+    source: 'ICAI announcement',
+    sourceUrl: 'https://www.icai.org/',
+    affected: [],
+  },
+];
+---
+
+<Base title="Updates & amendments">
+  <main class="page">
+    <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Updates & amendments' }]} />
+
+    <div class="overline" style="margin-bottom: 6px;">What changed since the study material edition</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">Amendment tracker</h1>
+    <div style="margin: 12px 0 0;">
+      <TrustRow attempt={attempt.name} updated="28 Jun 2026" source="Each entry cites its notification" />
+    </div>
+
+    <p style="max-width: 640px; font-size: 17px; line-height: 1.7; margin: 20px 0 0;">
+      Every entry names the paper it touches, the attempt it applies from, the old and new position,
+      and the official source. Notes affected by an amendment carry an
+      <span class="badge badge-amended">! Amended</span> callout inline.
+    </p>
+
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 28px; max-width: 720px;">
+      {amendments.map((a) => (
+        <div class="card card-pad">
+          <div style="display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 8px;">
+            <div class="overline" style="font-size: 12px;">{a.paper}</div>
+            <Badge kind="amended">Applies from {a.appliesFrom}</Badge>
+          </div>
+          <div style="font-size: 17px; font-weight: 650; margin-bottom: 10px;">{a.title}</div>
+          <div style="font-size: 15px; line-height: 1.65;">
+            <span style="text-decoration: line-through; color: var(--text-3);">{a.old}</span><br />
+            {a.now}
+          </div>
+          <div class="trust-row" style="margin-top: 12px;">
+            <span>Source: <a href={a.sourceUrl} rel="noopener">{a.source} ↗</a></span>
+            {a.affected.map((n) => (
+              <>
+                <span class="dot" aria-hidden="true">·</span>
+                <a href={n.href}>Affected note: {n.label}</a>
+              </>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="empty-state" style="max-width: 720px; margin-top: 24px;">
+      <div style="font-size: 16px; font-weight: 650; margin-bottom: 4px;">That's everything tracked so far</div>
+      <div style="font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 14px;">
+        The tracker follows the ecosystem's rhythm: Finance Act (Feb–Apr), GST notifications (rolling),
+        SM edition updates, and RTP releases (~2 months pre-exam). Spotted something missing?
+      </div>
+      <a href="/report-error/" class="btn btn-secondary">Report a missing amendment</a>
+    </div>
+  </main>
+</Base>

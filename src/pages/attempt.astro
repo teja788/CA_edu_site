@@ -1,0 +1,95 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Badge from '../components/Badge.astro';
+import AdSlot from '../components/AdSlot.astro';
+import TrustRow from '../components/TrustRow.astro';
+import { attempt } from '../data/site.js';
+
+/**
+ * Attempt dashboard (plan §2.4): dates, forms, applicable law, links —
+ * the page that answers "which material applies to MY attempt?"
+ * Dates below are seeded; each carries its verification source.
+ */
+const milestones = [
+  { label: 'Exam forms open', value: 'Announced ~4 months before exams', note: 'watch icai.nic.in', done: true },
+  { label: 'Last date for forms (without late fee)', value: 'Per ICAI notification', note: 'verify on icai.nic.in', done: true },
+  { label: 'RTP release', value: '~2 months before exams', note: 'boslive.icai.org', done: true },
+  { label: 'MTP Series I & II', value: 'Rolling, ~6–8 weeks before exams', note: 'BoS portal', done: false },
+  { label: 'Admit cards', value: '~2 weeks before exams', note: 'icai.nic.in', done: false },
+  { label: 'Exams begin', value: attempt.beginsLabel, note: 'Intermediate', done: false },
+];
+---
+
+<Base title={`Your attempt — ${attempt.name}`} active="dashboard">
+  <main class="page">
+    <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: `Your attempt · ${attempt.name}` }]} />
+
+    <div style="display: flex; justify-content: space-between; gap: 24px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 8px;">
+      <div>
+        <div class="overline" style="margin-bottom: 6px;">Attempt dashboard</div>
+        <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">{attempt.name} attempt</h1>
+      </div>
+      <div class="tnum" style="text-align: right; font-size: 14px; color: var(--text-2);">
+        <div>Exams begin <strong style="color: var(--text);">{attempt.beginsLabel}</strong></div>
+        <div style="color: var(--text-3);"><span data-days-left></span></div>
+      </div>
+    </div>
+    <TrustRow attempt={attempt.name} updated="28 Jun 2026" source="ICAI exam notifications" />
+
+    <div class="overline" style="margin: 32px 0 12px;">Applicable law for {attempt.name}</div>
+    <div class="card card-pad" style="max-width: 720px;">
+      <div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.6;">
+        <div style="display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+          <strong style="min-width: 180px;">Income tax</strong>
+          <span>{attempt.applicableFinanceAct} — assessments per the law as amended up to the ICAI cut-off for this attempt.</span>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+          <strong style="min-width: 180px;">GST</strong>
+          <span>Notifications/circulars up to the applicability cut-off announced for {attempt.name}.</span>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+          <strong style="min-width: 180px;">Company law &amp; others</strong>
+          <span>Amendments notified up to the same cut-off; see the <a href="/updates/">amendment tracker</a> for what changed since the SM edition.</span>
+        </div>
+      </div>
+      <div class="trust-row" style="margin-top: 16px;">
+        <Badge kind="amended">Verify the exact cut-off</Badge>
+        <span>ICAI announces the applicability date per attempt — always confirm on <a href="https://www.icai.org" rel="noopener">icai.org ↗</a>.</span>
+      </div>
+    </div>
+
+    <div class="overline" style="margin: 32px 0 12px;">Key dates &amp; milestones</div>
+    <div class="list-card" style="max-width: 720px;">
+      {milestones.map((m) => (
+        <div class="list-row">
+          <span style={`width: 22px; height: 22px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; ${m.done ? 'background: var(--correct-tint); color: var(--correct-text); border: 1px solid var(--correct-border);' : 'border: 1.5px solid var(--border-strong); color: var(--text-3);'}`} aria-hidden="true">{m.done ? '✓' : ''}</span>
+          <span style="flex: 1;">
+            <span style="display: block; font-size: 15px; font-weight: 600;">{m.label}</span>
+            <span style="font-size: 13px; color: var(--text-3);">{m.note}</span>
+          </span>
+          <span class="row-meta tnum">{m.value}</span>
+        </div>
+      ))}
+    </div>
+
+    <AdSlot />
+
+    <div class="overline" style="margin: 4px 0 12px;">This attempt's material, per paper</div>
+    <p style="max-width: 640px; font-size: 15px; color: var(--text-2); line-height: 1.6; margin: 0 0 16px;">
+      RTPs and MTPs are attempt-specific — the {attempt.name} RTP contains the statutory amendments that
+      aren't in the study material. Get them from each paper's resource directory:
+    </p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="/intermediate/advanced-accounting/#resources" class="btn btn-secondary">Paper 1 resources</a>
+      <a href="/intermediate/" class="btn btn-secondary">All Intermediate papers</a>
+      <a href="/plan/" class="btn btn-primary">Plan backwards from {attempt.beginsLabel}</a>
+    </div>
+  </main>
+
+  <script>
+    const begins = new Date('2026-09-08T00:00:00+05:30');
+    const days = Math.max(0, Math.ceil((begins.getTime() - Date.now()) / 86400000));
+    document.querySelector('[data-days-left]').textContent = `${days} days from today`;
+  </script>
+</Base>

@@ -1,0 +1,70 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Callout from '../../components/Callout.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import { attempt } from '../../data/site.js';
+---
+
+<Base title="Articleship under the new scheme">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'Articleship' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Articleship under the new scheme
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI New Scheme (2023) regulations" />
+      </div>
+
+      <div class="article">
+        <p>
+          Under the New Scheme, practical training is <strong>2 years</strong> (down from 3), and it starts
+          only after <strong>both groups of Intermediate are cleared</strong> plus ICITSS. That makes the
+          total journey roughly 3.5–4.5 years after Class 12.
+        </p>
+
+        <h2>The sequence</h2>
+        <p>
+          Foundation (or direct entry) → Intermediate both groups → ICITSS →
+          <strong>2 years of articleship</strong> → during/after training: SPOM + AICITSS →
+          CA Final (you can appear after completing training, subject to the 6-month study period rule —
+          verify current wording).
+        </p>
+
+        <h2>Choosing a firm</h2>
+        <p>
+          Big-firm vs small-firm is a genuine trade-off: large firms give depth in one vertical
+          (usually audit) and brand value; small firms give breadth — tax, audit, ROC work, client
+          handling — and usually more exam-leave flexibility. For self-study students, leave policy
+          and commute time are study variables, not perks. Ask about both before signing.
+        </p>
+
+        <Callout kind="pointer">
+          <p>
+            Your Final papers reward articleship experience directly — audit reports you drafted,
+            returns you filed, Ind AS adjustments you booked all reappear as case scenarios.
+            Keep a work diary; it doubles as revision material.
+          </p>
+        </Callout>
+
+        <Callout kind="mistake">
+          <p>
+            Treating articleship and Final prep as sequential ("I'll study after training"). The students
+            who clear Final in the first attempt run a light, consistent study loop — the
+            <a href="/dashboard/">review queue</a> works in 20-minute sessions — throughout training,
+            then use the study period for full-length mocks, not first reading.
+          </p>
+        </Callout>
+
+        <h2>Stipend and regulations</h2>
+        <p>
+          Minimum stipends are prescribed by ICAI regulations and revised periodically; actual market
+          stipends vary widely by city and firm. Check the current schedule on
+          <a href="https://www.icai.org" rel="noopener">icai.org ↗</a> before relying on a number.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>

@@ -1,0 +1,46 @@
+# Link health (plan §6.3): ICAI reshuffles URLs often, and dead official
+# links destroy trust fastest. Weekly sweep of every ResourceLink URL in
+# the data files; failures open a GitHub issue automatically.
+name: Weekly link check
+
+on:
+  schedule:
+    - cron: '30 2 * * 1' # Mondays 02:30 UTC (08:00 IST)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract URLs from data files
+        run: |
+          grep -rhoE "https?://[^'\"]+" src/data/ | sort -u > urls.txt
+          echo "Checking $(wc -l < urls.txt) unique URLs"
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-retries 3 --timeout 20 urls.txt
+          fail: true
+
+      - name: Open issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Dead resource link detected (${new Date().toISOString().slice(0, 10)})`,
+              labels: ['link-health'],
+              body: 'The weekly link check found at least one dead or moved URL in `src/data/`. ' +
+                    'See the failed [workflow run](' + context.serverUrl + '/' + context.repo.owner + '/' +
+                    context.repo.repo + '/actions/runs/' + context.runId + ') for details. ' +
+                    'Fix the link and update its `lastChecked` date.'
+            });
