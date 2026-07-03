@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Badge from '../../components/Badge.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import { attempt, papers } from '../../data/site.js';
+
+const group1 = papers.filter((p) => p.group === 1);
+const group2 = papers.filter((p) => p.group === 2);
+---
+
+<Base title="CA Intermediate" active="papers">
+  <main class="page">
+    <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'CA Intermediate' }]} />
+
+    <div class="overline" style="margin-bottom: 6px;">6 papers · 2 groups · 3 attempts a year</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">CA Intermediate</h1>
+    <div style="margin-top: 12px;">
+      <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI New Scheme (2023)" />
+    </div>
+
+    <p style="max-width: 640px; font-size: 17px; line-height: 1.7; margin: 20px 0 0;">
+      Each paper is 100 marks: <strong>30% case-scenario MCQs + 70% descriptive, no negative marking</strong>.
+      To pass a group you need <strong>40% in every paper and 50% aggregate</strong>.
+      Papers scoring 60+ earn a permanent exemption — verify current exemption wording on
+      <a href="https://www.icai.org" rel="noopener">icai.org</a> before you rely on it.
+    </p>
+
+    <div class="overline" style="margin: 32px 0 12px;">Group I</div>
+    <div class="list-card">
+      {group1.map((p) => (
+        <a class="list-row" href={p.status === 'live' ? `/intermediate/${p.slug}/` : '#'} aria-disabled={p.status !== 'live'}>
+          <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
+          <span class="row-title">
+            {p.name}
+            {p.status !== 'live' && <span class="badge badge-neutral" style="margin-left: 8px;">Coming soon</span>}
+          </span>
+          <span class="row-meta tnum">{p.marks} marks</span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+      ))}
+    </div>
+
+    <AdSlot />
+
+    <div class="overline" style="margin: 0 0 12px;">Group II</div>
+    <div class="list-card">
+      {group2.map((p) => (
+        <a class="list-row" href="#" aria-disabled="true">
+          <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
+          <span class="row-title">
+            {p.name}
+            <span class="badge badge-neutral" style="margin-left: 8px;">Coming soon</span>
+          </span>
+          <span class="row-meta tnum">{p.marks} marks</span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="overline" style="margin: 32px 0 12px;">Passing rules, in plain language</div>
+    <div class="card card-pad">
+      <ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.8; color: var(--text);">
+        <li><strong>Per paper:</strong> minimum 40 of 100.</li>
+        <li><strong>Per group:</strong> minimum 50% aggregate across the group's three papers.</li>
+        <li><strong>Exemption:</strong> score 60+ in a paper and fail the group — that paper is exempt in future attempts; remaining papers then need 50% each. Exemptions can be surrendered.</li>
+        <li><strong>No negative marking</strong> in any Intermediate paper — attempt every MCQ.</li>
+      </ul>
+      <div class="trust-row" style="margin-top: 14px;">
+        <Badge kind="verified">Verified for {attempt.name} attempt</Badge>
+        <span>Always re-verify against the latest ICAI notification before your exam.</span>
+      </div>
+    </div>
+  </main>
+</Base>

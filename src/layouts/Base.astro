@@ -1,0 +1,134 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: 'home' | 'papers' | 'practice' | 'dashboard';
+  /** Quiz pages hide the standard chrome (dedicated quiz bar, no bottom nav). */
+  bare?: boolean;
+}
+
+const {
+  title,
+  description = 'Every resource you need to become a CA is already free. We organize it, keep it current, and give you the practice system coaching never did.',
+  active,
+  bare = false,
+} = Astro.props;
+
+const nav = [
+  { key: 'home', label: 'Home', href: '/', icon: '⌂' },
+  { key: 'papers', label: 'Papers', href: '/intermediate/', icon: '▤' },
+  { key: 'practice', label: 'Practice', href: '/practice/', icon: '✎' },
+  { key: 'dashboard', label: 'Dashboard', href: '/dashboard/', icon: '◔' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Adhyayan</title>
+    <meta name="description" content={description} />
+    <script is:inline>
+      // Set theme/text-size before paint to avoid a flash.
+      (function () {
+        var theme = localStorage.getItem('adh-theme');
+        if (!theme) {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+        var ts = localStorage.getItem('adh-textsize');
+        if (ts === 'large') document.documentElement.dataset.textsize = 'large';
+      })();
+    </script>
+  </head>
+  <body>
+    {!bare && (
+      <header class="site-header">
+        <a class="brand" href="/">
+          <span class="brand-tile" aria-hidden="true">अ</span>
+          <span class="brand-name">Adhyayan</span>
+        </a>
+        <nav aria-label="Main">
+          {nav.map((item) => (
+            <a href={item.href} class={active === item.key ? 'active' : ''} aria-current={active === item.key ? 'page' : undefined}>{item.label}</a>
+          ))}
+        </nav>
+        <span class="spacer"></span>
+        <span class="textsize" role="group" aria-label="Text size">
+          <button type="button" data-textsize-btn="normal" aria-label="Normal text size">A</button>
+          <button type="button" data-textsize-btn="large" aria-label="Larger text size">A+</button>
+        </span>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">☾</button>
+      </header>
+    )}
+
+    <slot />
+
+    {!bare && (
+      <nav class="bottom-nav" aria-label="Main, mobile">
+        {nav.map((item) => (
+          <a href={item.href} class={active === item.key ? 'active' : ''} aria-current={active === item.key ? 'page' : undefined}>
+            <span class="bn-icon" aria-hidden="true">{item.icon}</span>
+            <span class="bn-label">{item.label}</span>
+          </a>
+        ))}
+      </nav>
+    )}
+
+    {!bare && (
+      <footer class="site-footer">
+        <div class="page-width">
+          <p>
+            <strong>Adhyayan</strong> is an independent, free, open study project. It is
+            <strong> not affiliated with, or endorsed by, the Institute of Chartered Accountants of India (ICAI)</strong>.
+            ICAI study material, RTPs, MTPs and past papers are linked, never re-hosted — ICAI is always your primary source.
+          </p>
+          <p>
+            No paid tier. No lead-gen. <a href="/about/">Our method &amp; honesty policy</a> ·
+            <a href="https://github.com/" rel="noopener">Report an error / contribute</a>
+          </p>
+        </div>
+      </footer>
+    )}
+
+    <script is:inline>
+      (function () {
+        document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+          var sync = function () {
+            btn.textContent = document.documentElement.dataset.theme === 'dark' ? '☀' : '☾';
+          };
+          sync();
+          btn.addEventListener('click', function () {
+            var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.dataset.theme = next;
+            localStorage.setItem('adh-theme', next);
+            sync();
+          });
+        });
+        var sizeBtns = document.querySelectorAll('[data-textsize-btn]');
+        var syncSize = function () {
+          var large = document.documentElement.dataset.textsize === 'large';
+          sizeBtns.forEach(function (b) {
+            b.classList.toggle('active', (b.dataset.textsizeBtn === 'large') === large);
+          });
+        };
+        syncSize();
+        sizeBtns.forEach(function (b) {
+          b.addEventListener('click', function () {
+            if (b.dataset.textsizeBtn === 'large') {
+              document.documentElement.dataset.textsize = 'large';
+              localStorage.setItem('adh-textsize', 'large');
+            } else {
+              delete document.documentElement.dataset.textsize;
+              localStorage.setItem('adh-textsize', 'normal');
+            }
+            syncSize();
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

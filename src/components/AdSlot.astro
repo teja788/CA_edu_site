@@ -1,0 +1,16 @@
+---
+/**
+ * Fixed-height ad reservation. Placement rules (design handoff):
+ * only between content sections — never inside quiz flow, the reading
+ * measure, or the dashboard review queue.
+ */
+interface Props {
+  size?: string;
+}
+const { size } = Astro.props;
+---
+
+<div class="ad-slot" role="complementary" aria-label="Advertisement">
+  <div class="ad-label">Advertisement</div>
+  <div class="ad-body">{size ? `${size} reserved` : 'Ads keep Adhyayan free'}</div>
+</div>

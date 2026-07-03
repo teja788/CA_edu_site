@@ -1,0 +1,155 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import Callout from '../../../../components/Callout.astro';
+import AdSlot from '../../../../components/AdSlot.astro';
+import Mastery from '../../../../components/Mastery.astro';
+import TrustRow from '../../../../components/TrustRow.astro';
+import { attempt } from '../../../../data/site.js';
+---
+
+<Base title="Admission of a partner — Advanced Accounting Ch 4" active="papers">
+  <main class="page" style="max-width: 1024px;">
+    <div style="display: flex; gap: 48px; justify-content: center; align-items: flex-start;">
+      <!-- article -->
+      <article style="max-width: 640px; min-width: 0; flex: 1;">
+        <Breadcrumb crumbs={[
+          { label: 'CA Intermediate', href: '/intermediate/' },
+          { label: 'Paper 1 · Adv. Accounting', href: '/intermediate/advanced-accounting/' },
+          { label: 'Ch 4 · Partnership', href: '/intermediate/advanced-accounting/' },
+          { label: 'Admission of a partner' },
+        ]} />
+
+        <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">Admission of a partner</h1>
+        <div style="margin: 12px 0 8px;">
+          <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI SM Mod 2, Unit 3" />
+        </div>
+        <div style="font-size: 14px; color: var(--text-3); margin-bottom: 24px;">About 12 min read · 3 worked examples</div>
+
+        <div class="article">
+          <p>
+            When a new partner is admitted, the firm is reconstituted. Three things must be settled:
+            the <strong>new profit-sharing ratio</strong>, the <strong>treatment of goodwill</strong>, and the
+            <strong>revaluation of assets and liabilities</strong>. Every admission question in the exam is a
+            combination of these three.
+          </p>
+
+          <h2 id="s1">1. Sacrificing ratio</h2>
+          <p>The sacrificing ratio is the ratio in which the <em>old</em> partners give up their share in favour of the new partner:</p>
+          <div class="formula">Sacrificing ratio = Old ratio − New ratio</div>
+
+          <Callout kind="example" label="Worked example 1">
+            <p>A and B share profits 3:2. They admit C for a 1/5th share, which C takes equally from both. Find the new ratio and sacrificing ratio.</p>
+            <div class="working-note">
+              <div class="working-note-label">Working note 1 — C's acquisition</div>
+              C takes 1/10 from A and 1/10 from B.<br />
+              A's new share = 3/5 − 1/10 = <strong>5/10</strong> &nbsp;·&nbsp; B's new share = 2/5 − 1/10 = <strong>3/10</strong><br />
+              New ratio A:B:C = <strong>5 : 3 : 2</strong> &nbsp;·&nbsp; Sacrificing ratio = <strong>1 : 1</strong>
+            </div>
+          </Callout>
+
+          <Callout kind="mistake">
+            <p>
+              Assuming the sacrificing ratio always equals the old ratio. It does <strong>only</strong> when the
+              question is silent on how the new partner's share is acquired. If the question says
+              “equally from both”, compute it — as above.
+            </p>
+          </Callout>
+
+          <h2 id="s2">2. Treatment of goodwill</h2>
+          <p>
+            Under AS 26, goodwill is recorded only when consideration is paid. The premium the new partner
+            brings is shared by the old partners in the sacrificing ratio.
+          </p>
+
+          <Callout kind="pointer">
+            <p>
+              Goodwill adjustment appears in almost every admission question — typically 4–5 marks of a
+              10-mark problem. Show the journal entry <em>and</em> the working note; ICAI marking gives credit
+              for the working even if the final figure slips.
+            </p>
+          </Callout>
+
+          <div class="table-scroll">
+            <div class="data-table">
+              <div class="tr head"><div class="td">Particulars</div><div class="td num">Dr (₹)</div><div class="td num">Cr (₹)</div></div>
+              <div class="tr"><div class="td">Cash A/c</div><div class="td num">2,40,000</div><div class="td num dim">—</div></div>
+              <div class="tr alt"><div class="td">Premium for goodwill</div><div class="td num">60,000</div><div class="td num dim">—</div></div>
+              <div class="tr"><div class="td indent">To C's Capital A/c</div><div class="td num dim">—</div><div class="td num">3,00,000</div></div>
+              <div class="tr total"><div class="td">Total</div><div class="td num">3,00,000</div><div class="td num">3,00,000</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ad slot between h2 sections, never inside the reading measure -->
+        <AdSlot />
+
+        <div class="article">
+          <h2 id="s3" style="margin-top: 0;">3. Revaluation of assets and liabilities</h2>
+          <p>
+            A Revaluation Account is opened; the profit or loss belongs to the
+            <strong>old partners in the old ratio</strong>, because the change in values happened during their tenure.
+          </p>
+
+          <Callout kind="amendment" label={`Amendment alert · applies from ${attempt.name}`}>
+            <p>
+              <span style="text-decoration: line-through; color: var(--text-3);">Stamp duty on partnership deed revision: ₹500 flat.</span><br />
+              Now state-wise slab rates apply (Finance Act 2026). Questions set before 2026 may show the
+              old figure — follow the new rule in the exam.
+            </p>
+          </Callout>
+        </div>
+
+        <!-- article footer -->
+        <div style="border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px;">
+          <a href="/practice/quiz/" class="btn btn-primary">Practice this topic · 4 questions</a>
+          <div style="display: flex; justify-content: space-between; margin-top: 24px; gap: 16px;">
+            <a href="#" class="card card-e1" style="flex: 1; padding: 14px 16px; text-decoration: none; color: var(--text);">
+              <span style="display: block; font-size: 12px; color: var(--text-3); margin-bottom: 2px;">← Previous</span>
+              <span style="font-size: 15px; font-weight: 600;">Goodwill: nature &amp; valuation</span>
+            </a>
+            <a href="#" class="card card-e1" style="flex: 1; padding: 14px 16px; text-decoration: none; color: var(--text); text-align: right;">
+              <span style="display: block; font-size: 12px; color: var(--text-3); margin-bottom: 2px;">Next →</span>
+              <span style="font-size: 15px; font-weight: 600;">Retirement of a partner</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- sidebar -->
+      <aside style="width: 240px; flex-shrink: 0; position: sticky; top: 24px;" class="notes-sidebar">
+        <div class="overline" style="font-size: 12px; margin-bottom: 10px;">On this page</div>
+        <div style="display: flex; flex-direction: column; border-left: 2px solid var(--border);" data-toc>
+          <a href="#s1" style="padding: 8px 14px; font-size: 14px; color: var(--text); font-weight: 650; text-decoration: none; border-left: 2px solid var(--accent); margin-left: -2px;">1. Sacrificing ratio</a>
+          <a href="#s2" style="padding: 8px 14px; font-size: 14px; color: var(--text-2); text-decoration: none;">2. Treatment of goodwill</a>
+          <a href="#s3" style="padding: 8px 14px; font-size: 14px; color: var(--text-2); text-decoration: none;">3. Revaluation</a>
+        </div>
+        <div class="card" style="margin-top: 24px; padding: 16px;">
+          <div style="font-size: 13px; font-weight: 650; margin-bottom: 8px;">Your standing</div>
+          <Mastery level={0} topicId="p1-ch4-admission" />
+          <div style="font-size: 13px; color: var(--text-3); margin-top: 8px; line-height: 1.5;">
+            Practising moves this up. No penalty for reading slowly.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <style>
+    @media (max-width: 900px) {
+      .notes-sidebar { display: none; }
+    }
+  </style>
+
+  <script>
+    import { getMastery } from '../../../../scripts/store.js';
+    const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
+    const el = document.querySelector('[data-mastery="p1-ch4-admission"]');
+    if (el) {
+      const level = getMastery('p1-ch4-admission');
+      el.querySelectorAll('.seg').forEach((seg, i) => seg.classList.toggle('on', i < level));
+      const label = el.querySelector('[data-mastery-label]');
+      if (label) label.textContent = labels[level];
+    }
+  </script>
+</Base>

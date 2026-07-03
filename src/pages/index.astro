@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import Badge from '../components/Badge.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { attempt, papers } from '../data/site.js';
+
+const group1 = papers.filter((p) => p.group === 1);
+const group2 = papers.filter((p) => p.group === 2);
+---
+
+<Base title="Free, organized CA exam prep" active="home">
+  <main class="page">
+    <section style="max-width: 640px; padding: 24px 0 8px;">
+      <div class="overline">Free forever · Open source · Not affiliated with ICAI</div>
+      <h1 style="margin: 8px 0 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Every resource you need to become a CA is already free.
+      </h1>
+      <p style="font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 12px 0 20px;">
+        ICAI gives away the study material, revision papers, mock tests and even live classes.
+        What's missing is organisation, a practice engine, and a study method.
+        Adhyayan is that missing piece — built on retrieval practice and spaced repetition,
+        the two study techniques with the strongest evidence behind them.
+      </p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+        <a href="/intermediate/" class="btn btn-primary">Start with CA Intermediate</a>
+        <a href="/about/" class="btn btn-tertiary">How this site teaches</a>
+      </div>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <div class="overline" style="margin-bottom: 12px;">CA Intermediate · {attempt.name} attempt · Group I</div>
+      <div class="list-card">
+        {group1.map((p) => (
+          <a class="list-row" href={p.status === 'live' ? `/intermediate/${p.slug}/` : '/intermediate/'}>
+            <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
+            <span class="row-title">{p.name}</span>
+            {p.status === 'live' ? (
+              <Badge kind="verified">Verified</Badge>
+            ) : (
+              <Badge kind="neutral">Coming soon</Badge>
+            )}
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        ))}
+      </div>
+
+      <AdSlot />
+
+      <div class="overline" style="margin-bottom: 12px;">Group II</div>
+      <div class="list-card">
+        {group2.map((p) => (
+          <a class="list-row" href="/intermediate/">
+            <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
+            <span class="row-title">{p.name}</span>
+            <Badge kind="neutral">Coming soon</Badge>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+      <div class="card card-pad card-e1">
+        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Practice-first, always</div>
+        <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 14px;">
+          Original MCQs where every option explains <em>why</em> it's right or wrong.
+          Wrong answers slip quietly into your Mistake notebook and come back at the right time.
+        </p>
+        <a href="/practice/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Try a practice set →</a>
+      </div>
+      <div class="card card-pad card-e1">
+        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">The official map</div>
+        <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 14px;">
+          Every free official ICAI resource — study material, RTPs, MTPs, past papers, live classes —
+          organised per paper, per attempt, with login flags and last-checked dates.
+        </p>
+        <a href="/intermediate/advanced-accounting/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">See Paper 1's resources →</a>
+      </div>
+      <div class="card card-pad card-e1">
+        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Your attempt, tracked</div>
+        <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 14px;">
+          {attempt.name} exams begin {attempt.beginsLabel}. Content is tagged per attempt,
+          so amendments never surprise you.
+        </p>
+        <a href="/dashboard/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Open your dashboard →</a>
+      </div>
+    </section>
+  </main>
+</Base>

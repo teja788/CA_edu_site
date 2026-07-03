@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Base title="Our method & honesty policy">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'About & method' }]} />
+
+      <h1 style="margin: 0 0 16px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        How Adhyayan teaches
+      </h1>
+
+      <div class="article">
+        <p>
+          This site is a <strong>practice-first learning system</strong>, not a content library.
+          Every feature maps to a technique with strong evidence behind it.
+        </p>
+
+        <h2>Retrieval practice</h2>
+        <p>
+          Testing yourself beats re-reading. Practice testing is one of the two highest-utility study
+          techniques identified in the learning-science literature (Dunlosky et al. 2013; replicated
+          across 242 studies by Hattie &amp; Donoghue 2021). That's why every topic ends in a quiz and
+          every quiz option explains itself.
+        </p>
+
+        <h2>Spaced repetition</h2>
+        <p>
+          The second high-utility technique. Your mistakes and flashcards return on a schedule instead
+          of relying on willpower. Skipped days aren't punished — the queue simply adjusts.
+        </p>
+
+        <h2>Mastery, not watch-time</h2>
+        <p>
+          Topics move Not started → Familiar → Proficient → Mastered based on what you can
+          <em>answer</em>, never on what you watched. There are no streaks, no guilt mechanics,
+          and nothing designed to increase time-on-site without increasing marks.
+        </p>
+
+        <h2>What this site is not</h2>
+        <p>
+          Adhyayan is <strong>independent — not affiliated with, or endorsed by, ICAI</strong>.
+          ICAI's own material is the primary source and the exam-setter's voice; we link to it and
+          organise it, we never re-host it. Our notes and questions are original, written from the
+          syllabus and primary law, published under CC BY-SA 4.0, and open to correction by anyone.
+        </p>
+
+        <h2>When we're wrong</h2>
+        <p>
+          Every page carries a “Report an error” link and a “Verified for {'{attempt}'}” badge with a
+          date. Unreviewed pages are marked as community drafts. Errors are fixed in public.
+          In tax and law, a wrong section number is worse than nothing — accuracy is a process here,
+          not an intention.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>

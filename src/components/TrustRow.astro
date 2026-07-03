@@ -1,0 +1,28 @@
+---
+import Badge from './Badge.astro';
+
+interface Props {
+  attempt: string;
+  updated: string;
+  source?: string;
+  draft?: boolean;
+}
+const { attempt, updated, source, draft = false } = Astro.props;
+---
+
+<div class="trust-row">
+  {draft ? (
+    <Badge kind="draft">Community draft</Badge>
+  ) : (
+    <Badge kind="verified">Verified for {attempt} attempt</Badge>
+  )}
+  <span>Updated {updated}</span>
+  {source && (
+    <>
+      <span class="dot" aria-hidden="true">·</span>
+      <span>Source: {source}</span>
+    </>
+  )}
+  <span class="dot" aria-hidden="true">·</span>
+  <a href="/report-error/">Report an error</a>
+</div>

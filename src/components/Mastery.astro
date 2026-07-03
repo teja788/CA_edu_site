@@ -1,0 +1,19 @@
+---
+/** Mastery states: 0 Not started · 1 Familiar · 2 Proficient · 3 Mastered */
+interface Props {
+  level?: 0 | 1 | 2 | 3;
+  showLabel?: boolean;
+  topicId?: string;
+}
+const { level = 0, showLabel = true, topicId } = Astro.props;
+const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
+---
+
+<span class="mastery" data-mastery={topicId}>
+  <span class="segs" aria-hidden="true">
+    {[0, 1, 2].map((i) => (
+      <span class={`seg ${i < level ? 'on' : ''}`}></span>
+    ))}
+  </span>
+  {showLabel && <span class="label" data-mastery-label>{labels[level]}</span>}
+</span>

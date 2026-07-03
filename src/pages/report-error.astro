@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Base title="Report an error">
+  <main class="page">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Report an error' }]} />
+
+      <h1 style="margin: 0 0 16px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Spotted a mistake? Thank you.
+      </h1>
+
+      <div class="article">
+        <p>
+          Readers who report errors are how a free project reaches paid-quality accuracy.
+          Tell us the page, what's wrong, and (if you can) the ICAI source or Act section that
+          shows the correct position.
+        </p>
+        <p>
+          File it as a GitHub issue — it's public, and so is the fix log:
+        </p>
+      </div>
+
+      <a href="https://github.com/" rel="noopener" class="btn btn-primary">Open a GitHub issue ↗</a>
+
+      <div class="card card-pad" style="margin-top: 24px;">
+        <div style="font-size: 15px; font-weight: 650; margin-bottom: 8px;">What happens next</div>
+        <ul style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.8; color: var(--text-2);">
+          <li>Confirmed content errors are fixed within 7 days.</li>
+          <li>The page's “Updated” date and changelog reflect the fix.</li>
+          <li>Dead official links are repaired as soon as they're flagged.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</Base>

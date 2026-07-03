@@ -1,0 +1,195 @@
+---
+import Base from '../../layouts/Base.astro';
+import { questions } from '../../data/site.js';
+---
+
+<Base title="Practice quiz" bare>
+  <div class="quiz-bar">
+    <a href="/practice/">← Exit practice</a>
+    <div style="flex: 1;"></div>
+    <span class="counter" data-counter>Question 1 of {questions.length}</span>
+  </div>
+  <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
+
+  <main style="max-width: 680px; margin: 0 auto; padding: 28px 20px 48px;">
+    <div data-quiz-root>
+      <div data-result-banner hidden></div>
+      <div style="font-size: 13px; color: var(--text-3); margin-bottom: 10px;" data-topic></div>
+      <div style="font-size: 18px; line-height: 1.6; font-weight: 600; margin-bottom: 24px;" data-stem></div>
+      <div style="display: flex; flex-direction: column; gap: 10px;" data-options></div>
+      <div style="display: flex; align-items: center; gap: 16px; margin-top: 24px; flex-wrap: wrap;" data-actions>
+        <button type="button" class="btn btn-primary" data-check disabled>Check answer</button>
+        <button type="button" class="btn btn-tertiary" data-skip>Skip this question</button>
+      </div>
+    </div>
+
+    <div data-summary hidden style="text-align: center; padding: 40px 0;">
+      <div style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Set complete</div>
+      <div style="font-size: 16px; color: var(--text-2); margin-bottom: 6px;" data-summary-score></div>
+      <div style="font-size: 14px; color: var(--text-3); margin-bottom: 24px;" data-summary-note></div>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="/practice/quiz/" class="btn btn-primary">Practice again</a>
+        <a href="/dashboard/" class="btn btn-secondary">Open dashboard</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="application/json" data-questions set:html={JSON.stringify(questions)}></script>
+
+  <script>
+    import { addMistake, clearMistake, recordAnswer, bumpMastery } from '../../scripts/store.js';
+
+    const all = JSON.parse(document.querySelector('[data-questions]').textContent);
+
+    // ?mode=mistakes → only questions currently in the notebook
+    const params = new URLSearchParams(location.search);
+    let deck = all;
+    if (params.get('mode') === 'mistakes') {
+      const saved = JSON.parse(localStorage.getItem('adh-progress') ?? '{}').mistakes ?? [];
+      const ids = new Set(saved.map((m) => m.questionId));
+      deck = all.filter((q) => ids.has(q.id));
+      if (deck.length === 0) deck = all;
+    }
+
+    const $ = (sel) => document.querySelector(sel);
+    const root = $('[data-quiz-root]');
+    const summary = $('[data-summary]');
+    let index = 0;
+    let correctCount = 0;
+    let answered = false;
+    let selected = null;
+
+    function renderQuestion() {
+      const q = deck[index];
+      answered = false;
+      selected = null;
+      $('[data-counter]').textContent = `Question ${index + 1} of ${deck.length}`;
+      $('[data-progress]').style.width = `${(index / deck.length) * 100}%`;
+      $('[data-result-banner]').hidden = true;
+      $('[data-topic]').textContent = q.topic;
+      $('[data-stem]').textContent = q.stem;
+
+      const wrap = $('[data-options]');
+      wrap.innerHTML = '';
+      q.options.forEach((opt) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'option';
+        btn.dataset.key = opt.key;
+        btn.innerHTML = `<span class="opt-letter">${opt.key}</span><span class="tnum">${opt.text}</span><span class="opt-state" hidden>Selected</span>`;
+        btn.addEventListener('click', () => {
+          if (answered) return;
+          selected = opt.key;
+          wrap.querySelectorAll('.option').forEach((b) => {
+            const on = b.dataset.key === opt.key;
+            b.classList.toggle('selected', on);
+            b.querySelector('.opt-state').hidden = !on;
+          });
+          $('[data-check]').disabled = false;
+        });
+        wrap.appendChild(btn);
+      });
+
+      const actions = $('[data-actions]');
+      actions.innerHTML = '';
+      const check = document.createElement('button');
+      check.type = 'button';
+      check.className = 'btn btn-primary';
+      check.setAttribute('data-check', '');
+      check.textContent = 'Check answer';
+      check.disabled = true;
+      check.addEventListener('click', () => reveal());
+      const skip = document.createElement('button');
+      skip.type = 'button';
+      skip.className = 'btn btn-tertiary';
+      skip.textContent = 'Skip this question';
+      skip.addEventListener('click', () => next());
+      actions.append(check, skip);
+    }
+
+    function reveal() {
+      const q = deck[index];
+      answered = true;
+      const isCorrect = selected === q.correct;
+      if (isCorrect) {
+        correctCount += 1;
+        clearMistake(q.id);
+        bumpMastery('p1-ch4-admission', correctCount >= 3 ? 2 : 1);
+      } else {
+        addMistake({ questionId: q.id, topic: q.topic });
+      }
+      recordAnswer({ questionId: q.id, correct: isCorrect });
+
+      const banner = document.querySelector('[data-result-banner]');
+      banner.hidden = false;
+      banner.className = `result-banner ${isCorrect ? 'correct' : 'incorrect'}`;
+      banner.innerHTML = isCorrect
+        ? `<span class="rb-glyph" aria-hidden="true">✓</span><span class="rb-word">Correct</span>`
+        : `<span class="rb-glyph" aria-hidden="true">✕</span><span class="rb-word">Not this time.</span><span class="rb-note">Saved to your Mistake notebook for review.</span>`;
+
+      // Re-render options as result cards — EVERY option gets an explanation.
+      const wrap = document.querySelector('[data-options]');
+      wrap.innerHTML = '';
+      q.options.forEach((opt) => {
+        const div = document.createElement('div');
+        const isAnswer = opt.key === q.correct;
+        const isChosenWrong = opt.key === selected && !isAnswer;
+        div.className = `result-option ${isAnswer ? 'is-correct' : ''} ${isChosenWrong ? 'is-wrong' : ''}`;
+        const glyph = isAnswer
+          ? `<span class="opt-letter" style="background: var(--correct); color: var(--on-correct); border-color: var(--correct);" aria-hidden="true">✓</span>`
+          : isChosenWrong
+            ? `<span class="opt-letter" style="background: var(--incorrect); color: var(--on-incorrect); border-color: var(--incorrect);" aria-hidden="true">✕</span>`
+            : `<span class="opt-letter">${opt.key}</span>`;
+        const tag = isAnswer
+          ? `<span class="opt-tag">${opt.key === selected ? 'Yours ✓' : 'Correct answer'}</span>`
+          : isChosenWrong
+            ? `<span class="opt-tag">Your answer</span>`
+            : '';
+        const readLink = isAnswer && q.readLink
+          ? ` <a href="${q.readLink.href}" style="font-weight: 650;">${q.readLink.label}</a>`
+          : '';
+        div.innerHTML = `<div class="opt-row">${glyph}<span class="tnum">${opt.text}</span>${tag}</div><div class="opt-expl">${opt.explanation}${readLink}</div>`;
+        wrap.appendChild(div);
+      });
+
+      const actions = document.querySelector('[data-actions]');
+      actions.innerHTML = '';
+      const nextBtn = document.createElement('button');
+      nextBtn.type = 'button';
+      nextBtn.className = 'btn btn-primary';
+      nextBtn.textContent = index + 1 < deck.length ? 'Next question' : 'Finish set';
+      nextBtn.addEventListener('click', () => next());
+      const notebook = document.createElement('a');
+      notebook.href = '/dashboard/#mistakes';
+      notebook.className = 'btn btn-tertiary';
+      notebook.textContent = 'Open Mistake notebook';
+      actions.append(nextBtn, notebook);
+      nextBtn.focus();
+    }
+
+    function next() {
+      index += 1;
+      if (index >= deck.length) {
+        document.querySelector('[data-progress]').style.width = '100%';
+        root.hidden = true;
+        summary.hidden = false;
+        document.querySelector('[data-summary-score]').textContent =
+          `${correctCount} of ${deck.length} correct`;
+        document.querySelector('[data-summary-note]').textContent =
+          correctCount === deck.length
+            ? 'Clean sweep. This topic moves up.'
+            : 'Missed questions are in your Mistake notebook — they’ll come back at the right time.';
+        document.querySelector('[data-counter]').textContent = 'Done';
+      } else {
+        renderQuestion();
+      }
+    }
+
+    if (deck.length === 0) {
+      root.hidden = true;
+      summary.hidden = false;
+    } else {
+      renderQuestion();
+    }
+  </script>
+</Base>

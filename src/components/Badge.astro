@@ -1,0 +1,19 @@
+---
+interface Props {
+  kind: 'verified' | 'draft' | 'login' | 'neutral' | 'amended' | 'progress';
+}
+const { kind } = Astro.props;
+const glyphs: Record<string, string> = {
+  verified: '✓',
+  draft: '✎',
+  login: '🔒',
+  amended: '!',
+  neutral: '',
+  progress: '',
+};
+---
+
+<span class={`badge badge-${kind}`}>
+  {glyphs[kind] && <span aria-hidden="true">{glyphs[kind]}</span>}
+  <slot />
+</span>

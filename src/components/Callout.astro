@@ -1,0 +1,22 @@
+---
+interface Props {
+  kind: 'example' | 'mistake' | 'pointer' | 'amendment';
+  label?: string;
+}
+const { kind, label } = Astro.props;
+const defaults: Record<string, { glyph: string; label: string }> = {
+  example: { glyph: '✎', label: 'Worked example' },
+  mistake: { glyph: '✕', label: 'Common mistake' },
+  pointer: { glyph: '★', label: 'Exam pointer' },
+  amendment: { glyph: '!', label: 'Amendment alert' },
+};
+const meta = defaults[kind];
+---
+
+<aside class={`callout callout-${kind}`}>
+  <div class="callout-head">
+    <span class="callout-glyph" aria-hidden="true">{meta.glyph}</span>
+    <span class="callout-label">{label ?? meta.label}</span>
+  </div>
+  <div class="callout-body"><slot /></div>
+</aside>
