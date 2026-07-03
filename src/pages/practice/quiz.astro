@@ -1,13 +1,42 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { questions } from '../../data/site.js';
+import { foundationScoring } from '../../data/foundation.js';
+
+// Chapter banks (src/data/questions/<level>/<paper>/<chapter>.json — see that
+// dir's README) merge into the deck at build time. Bank metadata rides along
+// on each question so the client can filter by level/paper and switch scoring.
+const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: true });
+const bankQuestions = Object.values(bankModules).flatMap((mod) => {
+  const bank = mod.default ?? mod;
+  if (!Array.isArray(bank.questions)) return [];
+  const paperNum = Number((bank.paper ?? '').match(/Paper\s*(\d)/i)?.[1] ?? 0);
+  const chapterNum = Number((bank.chapter ?? '').match(/Ch\s*(\d+)/i)?.[1] ?? 0);
+  // Foundation Papers 3 & 4 are the only negatively marked papers in the course.
+  const negative = bank.level === 'foundation' && [3, 4].includes(paperNum);
+  return bank.questions.map((q) => ({
+    ...q,
+    meta: {
+      level: bank.level,
+      paper: bank.paper,
+      chapterSlug: bank.chapterSlug,
+      negative,
+      masteryId:
+        bank.level === 'foundation' && paperNum && chapterNum
+          ? `f${paperNum}-ch${chapterNum}`
+          : null,
+    },
+  }));
+});
+const allQuestions = [...questions, ...bankQuestions];
 ---
 
 <Base title="Practice quiz" bare>
   <div class="quiz-bar">
     <a href="/practice/">← Exit practice</a>
     <div style="flex: 1;"></div>
-    <span class="counter" data-counter>Question 1 of {questions.length}</span>
+    <span class="counter" data-counter>Question 1 of {allQuestions.length}</span>
+    <span data-negative-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;">Foundation marking · −0.25</span>
     <span data-timer hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8; font-variant-numeric: tabular-nums;">◷ Timed · <span data-timer-value>0:00</span></span>
   </div>
   <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
@@ -25,9 +54,39 @@ import { questions } from '../../data/site.js';
     </div>
 
     <div data-summary hidden style="text-align: center; padding: 40px 0;">
-      <div style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Set complete</div>
+      <div style="font-size: 24px; font-weight: 700; margin-bottom: 8px;" data-summary-title>Set complete</div>
       <div style="font-size: 16px; color: var(--text-2); margin-bottom: 6px;" data-summary-score></div>
       <div style="font-size: 14px; color: var(--text-3); margin-bottom: 24px;" data-summary-note></div>
+
+      <!-- Attempt strategy (Foundation P3/P4 only): expected value of guessing
+           vs skipping under +1 / −0.25 / 0 marking. Values per 1-mark MCQ. -->
+      <div data-strategy hidden style="text-align: left; max-width: 560px; margin: 0 auto 24px;">
+        <div class="overline" style="margin-bottom: 10px;">Attempt strategy — when to guess, when to skip</div>
+        <div class="card card-pad">
+          <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: var(--text-2);" data-strategy-personal></p>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <thead>
+              <tr style="color: var(--text-3); text-align: left;">
+                <th style="font-weight: 600; padding: 4px 0;">Your situation on a question</th>
+                <th style="font-weight: 600; padding: 4px 0; text-align: right;">Marks you earn on average</th>
+              </tr>
+            </thead>
+            <tbody class="tnum" style="line-height: 1.9;">
+              <tr><td>Skip it</td><td style="text-align: right;">0 — guaranteed</td></tr>
+              <tr><td>Blind guess, all 4 options live</td><td style="text-align: right;">+0.06 — a coin toss, not a strategy</td></tr>
+              <tr><td>One option eliminated</td><td style="text-align: right;">+0.17</td></tr>
+              <tr style="font-weight: 650;"><td>Two eliminated (a 50–50)</td><td style="text-align: right;">+0.38 — always attempt</td></tr>
+              <tr><td>Sure of the answer</td><td style="text-align: right;">+1.00</td></tr>
+            </tbody>
+          </table>
+          <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.6; color: var(--text-2);">
+            The rule: work every question far enough to <strong>eliminate options</strong>. Once two are
+            gone, guessing is clearly profitable — never leave a 50–50 blank. A blind guess averages
+            out near zero, so it buys you variance, not marks: read first, eliminate, then decide.
+          </p>
+        </div>
+      </div>
+
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="/practice/quiz/" class="btn btn-primary">Practice again</a>
         <a href="/dashboard/" class="btn btn-secondary">Open dashboard</a>
@@ -35,7 +94,8 @@ import { questions } from '../../data/site.js';
     </div>
   </main>
 
-  <script type="application/json" data-questions set:html={JSON.stringify(questions)}></script>
+  <script type="application/json" data-questions set:html={JSON.stringify(allQuestions)}></script>
+  <script type="application/json" data-scoring set:html={JSON.stringify(foundationScoring)}></script>
 
   <script>
     import { addMistake, clearMistake, recordAnswer, bumpMastery } from '../../scripts/store.js';
@@ -44,24 +104,45 @@ import { questions } from '../../data/site.js';
 
     // Modes: ?mode=mistakes → notebook only · ?mode=mixed → shuffled across
     // topics (interleaving) · ?timed=1 → factual elapsed clock, not a threat.
+    // Scope filters: ?level= & ?paper= select a chapter-bank slice; with an
+    // explicit scope an empty deck shows an empty state, never a fallback.
     const params = new URLSearchParams(location.search);
-    let deck = all;
+    const scoped = params.get('level') || params.get('paper');
+    let base = all;
+    if (params.get('level')) {
+      base = base.filter((q) => (q.meta?.level ?? 'intermediate') === params.get('level'));
+    }
+    if (params.get('paper')) {
+      const slug = params.get('paper').toLowerCase();
+      base = base.filter((q) =>
+        (q.meta?.paper ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(slug)
+      );
+    }
+    let deck = base;
     if (params.get('mode') === 'mistakes') {
       const saved = JSON.parse(localStorage.getItem('adh-progress') ?? '{}').mistakes ?? [];
       const ids = new Set(saved.map((m) => m.questionId));
-      deck = all.filter((q) => ids.has(q.id));
-      if (deck.length === 0) deck = all;
+      deck = base.filter((q) => ids.has(q.id));
+      if (deck.length === 0) deck = base;
     } else if (params.get('topic')) {
       const t = params.get('topic').toLowerCase();
-      deck = all.filter((q) => q.topic.toLowerCase().includes(t));
-      if (deck.length === 0) deck = all;
+      deck = base.filter((q) => q.topic.toLowerCase().includes(t));
+      if (deck.length === 0) deck = base;
     } else if (params.get('mode') === 'mixed') {
-      deck = [...all];
+      deck = [...base];
       for (let i = deck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [deck[i], deck[j]] = [deck[j], deck[i]];
       }
     }
+
+    // Foundation scoring mode (+1 / −0.25 / 0) — Papers 3 & 4 only. Activates
+    // from the bank metadata, or explicitly via ?scoring=foundation.
+    const scoring = JSON.parse(document.querySelector('[data-scoring]').textContent);
+    const negativeMode =
+      params.get('scoring') === 'foundation' ||
+      (deck.length > 0 && deck.every((q) => q.meta?.negative));
+    if (negativeMode) document.querySelector('[data-negative-chip]').hidden = false;
 
     if (params.get('timed') === '1') {
       const chip = document.querySelector('[data-timer]');
@@ -79,6 +160,8 @@ import { questions } from '../../data/site.js';
     const summary = $('[data-summary]');
     let index = 0;
     let correctCount = 0;
+    let wrongCount = 0;
+    let skippedCount = 0;
     let answered = false;
     let selected = null;
 
@@ -125,8 +208,11 @@ import { questions } from '../../data/site.js';
       const skip = document.createElement('button');
       skip.type = 'button';
       skip.className = 'btn btn-tertiary';
-      skip.textContent = 'Skip this question';
-      skip.addEventListener('click', () => next());
+      skip.textContent = negativeMode ? 'Skip this question (0 marks)' : 'Skip this question';
+      skip.addEventListener('click', () => {
+        skippedCount += 1;
+        next();
+      });
       actions.append(check, skip);
     }
 
@@ -137,8 +223,9 @@ import { questions } from '../../data/site.js';
       if (isCorrect) {
         correctCount += 1;
         clearMistake(q.id);
-        bumpMastery('p1-ch4-admission', correctCount >= 3 ? 2 : 1);
+        bumpMastery(q.meta?.masteryId ?? 'p1-ch4-admission', correctCount >= 3 ? 2 : 1);
       } else {
+        wrongCount += 1;
         addMistake({ questionId: q.id, topic: q.topic });
       }
       recordAnswer({ questionId: q.id, correct: isCorrect });
@@ -147,8 +234,8 @@ import { questions } from '../../data/site.js';
       banner.hidden = false;
       banner.className = `result-banner ${isCorrect ? 'correct' : 'incorrect'}`;
       banner.innerHTML = isCorrect
-        ? `<span class="rb-glyph" aria-hidden="true">✓</span><span class="rb-word">Correct</span>`
-        : `<span class="rb-glyph" aria-hidden="true">✕</span><span class="rb-word">Not this time.</span><span class="rb-note">Saved to your Mistake notebook for review.</span>`;
+        ? `<span class="rb-glyph" aria-hidden="true">✓</span><span class="rb-word">Correct${negativeMode ? ' · +1 mark' : ''}</span>`
+        : `<span class="rb-glyph" aria-hidden="true">✕</span><span class="rb-word">Not this time.</span><span class="rb-note">${negativeMode ? '−0.25 marks · ' : ''}Saved to your Mistake notebook for review.</span>`;
 
       // Re-render options as result cards — EVERY option gets an explanation.
       const wrap = document.querySelector('[data-options]');
@@ -196,12 +283,32 @@ import { questions } from '../../data/site.js';
         document.querySelector('[data-progress]').style.width = '100%';
         root.hidden = true;
         summary.hidden = false;
-        document.querySelector('[data-summary-score]').textContent =
-          `${correctCount} of ${deck.length} correct`;
-        document.querySelector('[data-summary-note]').textContent =
-          correctCount === deck.length
-            ? 'Clean sweep. This topic moves up.'
-            : 'Missed questions are in your Mistake notebook — they’ll come back at the right time.';
+        if (negativeMode) {
+          // Net score under Foundation marking: +1 correct, −0.25 wrong, 0 skipped.
+          const net = correctCount * scoring.correct + wrongCount * scoring.wrong;
+          const fmt = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
+          document.querySelector('[data-summary-title]').textContent =
+            `Net score: ${fmt(net)} of ${deck.length}`;
+          document.querySelector('[data-summary-score]').textContent =
+            `${correctCount} correct (+${correctCount}) · ${wrongCount} wrong (−${fmt(wrongCount * 0.25)}) · ${skippedCount} skipped (0)`;
+          document.querySelector('[data-summary-note]').textContent =
+            wrongCount > 0
+              ? 'Missed questions are in your Mistake notebook — they’ll come back at the right time.'
+              : 'Nothing lost to negative marking this set.';
+          const personal = document.querySelector('[data-strategy-personal]');
+          personal.textContent =
+            wrongCount > 0
+              ? `Negative marking cost you ${fmt(wrongCount * 0.25)} mark${wrongCount * 0.25 === 1 ? '' : 's'} this set. That is the price of attempting — worth paying only when the odds are on your side:`
+              : 'You gave nothing away to negative marking this set. Keep deciding attempts the same way:';
+          document.querySelector('[data-strategy]').hidden = false;
+        } else {
+          document.querySelector('[data-summary-score]').textContent =
+            `${correctCount} of ${deck.length} correct`;
+          document.querySelector('[data-summary-note]').textContent =
+            correctCount === deck.length
+              ? 'Clean sweep. This topic moves up.'
+              : 'Missed questions are in your Mistake notebook — they’ll come back at the right time.';
+        }
         document.querySelector('[data-counter]').textContent = 'Done';
       } else {
         renderQuestion();
@@ -211,6 +318,11 @@ import { questions } from '../../data/site.js';
     if (deck.length === 0) {
       root.hidden = true;
       summary.hidden = false;
+      if (scoped) {
+        document.querySelector('[data-summary-title]').textContent = 'No questions here yet';
+        document.querySelector('[data-summary-note]').textContent =
+          'Question banks ship chapter by chapter. Until then, the official ICAI resources on the paper page cover this paper completely.';
+      }
     } else {
       renderQuestion();
     }

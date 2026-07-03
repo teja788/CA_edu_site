@@ -1,0 +1,132 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Badge from '../../../components/Badge.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import Mastery from '../../../components/Mastery.astro';
+import TrustRow from '../../../components/TrustRow.astro';
+import { attempt } from '../../../data/site.js';
+import { foundationPapers, foundationScoring } from '../../../data/foundation.js';
+
+export function getStaticPaths() {
+  return foundationPapers.map((paper) => ({
+    params: { paper: paper.slug },
+    props: { paper },
+  }));
+}
+
+const { paper } = Astro.props;
+const negative = paper.pattern.negativeMarking;
+const practiceHref = `/practice/quiz/?level=foundation&paper=${paper.slug}${negative ? '&scoring=foundation' : ''}`;
+const chapterCount = paper.sections.reduce((n, s) => n + s.chapters.length, 0);
+---
+
+<Base title={`Paper ${paper.number}: ${paper.name} — CA Foundation`} active="papers">
+  <main class="page">
+    <Breadcrumb crumbs={[
+      { label: 'CA Foundation', href: '/foundation/' },
+      { label: `Paper ${paper.number} · ${paper.shortName}` },
+    ]} />
+
+    <div class="overline" style="margin-bottom: 6px;">CA Foundation · Paper {paper.number} of 4 · {paper.marks} marks</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+      Paper {paper.number}: {paper.name}
+    </h1>
+    <div style="margin-top: 12px;">
+      <TrustRow attempt={attempt.name} updated="3 Jul 2026" source="ICAI SM index (May 2026 onwards ed.)" />
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;">
+      <Badge kind="neutral">{paper.pattern.style}</Badge>
+      {negative
+        ? <Badge kind="amended">0.25 negative marking</Badge>
+        : <Badge kind="neutral">No negative marking</Badge>}
+      <Badge kind="neutral">{chapterCount} chapters</Badge>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <span class="active">Chapters</span>
+      <a href={practiceHref}>Practice</a>
+      <a href="#resources">Resources</a>
+    </div>
+
+    <!-- Pattern & passing rules -->
+    <div class="overline" style="margin: 24px 0 12px;">Pattern &amp; passing rules</div>
+    <div class="card card-pad" style="max-width: 720px;">
+      <ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.8; color: var(--text);">
+        <li>{paper.marks} marks · {paper.pattern.style}{negative ? ' · every question carries negative marking' : ''}.</li>
+        <li>Pass this paper: <strong>minimum 40 of 100</strong>.</li>
+        <li>Pass Foundation: 40 in <em>each</em> of the four papers <strong>and 50% aggregate</strong> (200 of 400) across all four together.</li>
+        {negative ? (
+          <li>
+            Marking: <strong>+1 for a correct answer, −0.25 for a wrong answer, 0 for a skip</strong>.
+            Guessing blind averages out to roughly zero — it only becomes clearly profitable once you can
+            eliminate two options. The practice engine shows you this after every set.
+          </li>
+        ) : (
+          <li>Descriptive paper — presentation earns marks: working notes, formats and stated assumptions.</li>
+        )}
+      </ul>
+      <div class="trust-row" style="margin-top: 14px;">
+        <Badge kind="verified">Verified for {attempt.name} attempt</Badge>
+        <span>Always re-verify against the latest ICAI notification before your exam.</span>
+      </div>
+    </div>
+
+    <!-- Chapters with mastery states -->
+    {paper.sections.map((section, i) => (
+      <>
+        <div class="overline" style="margin: 24px 0 12px;">{section.name}</div>
+        <div class="list-card">
+          {section.chapters.map((ch) => (
+            <div class="list-row">
+              <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
+              <span class="row-title">{ch.name}</span>
+              <Mastery level={0} topicId={`${paper.id}-ch${ch.number}`} />
+            </div>
+          ))}
+        </div>
+        {i === 0 && <AdSlot />}
+      </>
+    ))}
+
+    <div class="empty-state" style="max-width: 720px; margin-top: 20px;">
+      <div style="font-size: 15px; font-weight: 650; margin-bottom: 4px;">Original notes and practice ship chapter by chapter</div>
+      <div style="font-size: 14px; color: var(--text-2); line-height: 1.55;">
+        Until a chapter goes live here, the official ICAI study material below is the complete,
+        free syllabus source for this paper — start there today.
+      </div>
+    </div>
+
+    <!-- Official resources: deep links only, never re-hosted -->
+    <div class="overline" id="resources" style="margin: 32px 0 12px;">Official ICAI resources · {attempt.name} attempt</div>
+    <div class="list-card">
+      {paper.resources.map((r) => (
+        <a class="list-row" href={r.url} rel="noopener" target="_blank">
+          <span style="flex: 1;">
+            <span style="font-size: 15px; font-weight: 600; color: var(--info-text);">{r.title} ↗</span>
+            <span style="display: block; font-size: 13px; color: var(--text-3); margin-top: 2px;">{r.host} · Last checked {r.lastChecked}</span>
+          </span>
+          {r.requiresLogin && <Badge kind="login">Requires ICAI login</Badge>}
+        </a>
+      ))}
+    </div>
+    <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; max-width: 640px;">
+      Links go to official sources only — nothing is re-hosted here. “Requires ICAI login” means the free
+      student login on the BoS portal (registration number + date of birth). Foundation students see
+      Foundation content after logging in.
+    </p>
+  </main>
+
+  <script>
+    import { getMastery } from '../../../scripts/store.js';
+    const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
+    document.querySelectorAll('[data-mastery]').forEach((el) => {
+      const level = getMastery(el.dataset.mastery);
+      if (!level) return;
+      el.querySelectorAll('.seg').forEach((seg, i) => seg.classList.toggle('on', i < level));
+      const label = el.querySelector('[data-mastery-label]');
+      if (label) label.textContent = labels[level];
+    });
+  </script>
+</Base>

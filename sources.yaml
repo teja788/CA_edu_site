@@ -1,0 +1,80 @@
+# Source registry for Foundation content generation (consumed by the
+# per-chapter content loop — Prompt 2). Every factual claim in generated
+# notes/questions must trace to a source in this file (plan §6.4 rule 1).
+#
+# Categories:
+#   law_primary    — statutory text; reproducible under s.52(1)(q), Copyright
+#                    Act 1957 (bare Acts only, no authorised commentary).
+#                    ALWAYS cite section numbers.
+#   econ_open      — openly licensed economics texts; may be ADAPTED with
+#                    attribution (CC BY 4.0).
+#   stats_open     — openly licensed statistics texts; same rule.
+#   reference_only — read to CHECK facts; never copy any text from these.
+#   forbidden      — never read from, copy, or paraphrase.
+
+law_primary:
+  license: "Reproducible — Copyright Act 1957, s.52(1)(q) (Acts of Parliament; excludes authorised commentary)"
+  rules:
+    - Always cite the section number (and sub-section where relevant) in the note or explanation.
+    - Reproduce from the consolidated bare Act only; never from a commentary or coaching summary.
+    - Tag every law-derived item with applicable_attempts and law_as_on_date.
+  registry: https://www.indiacode.nic.in/
+  # Deep handle URLs on India Code are session-quirky; resolve the canonical
+  # handle URL for each Act on first use in Prompt 2, record it here, and let
+  # scripts/linkcheck watch it thereafter.
+  acts:
+    - name: "The Indian Contract Act, 1872"
+      act_no: "9 of 1872"
+      used_for: "Foundation P2 Ch 2"
+    - name: "The Sale of Goods Act, 1930"
+      act_no: "3 of 1930"
+      used_for: "Foundation P2 Ch 3"
+    - name: "The Indian Partnership Act, 1932"
+      act_no: "9 of 1932"
+      used_for: "Foundation P2 Ch 4; P1 partnership accounts"
+    - name: "The Limited Liability Partnership Act, 2008"
+      act_no: "6 of 2009"
+      used_for: "Foundation P2 Ch 5; P1 LLP accounts"
+    - name: "The Companies Act, 2013"
+      act_no: "18 of 2013"
+      used_for: "Foundation P2 Ch 6; P1 company accounts"
+    - name: "The Negotiable Instruments Act, 1881"
+      act_no: "26 of 1881"
+      used_for: "Foundation P2 Ch 7; P1 bills of exchange"
+
+econ_open:
+  - title: "Principles of Economics 3e"
+    publisher: OpenStax (Rice University)
+    url: https://openstax.org/details/books/principles-economics-3e
+    license: CC BY 4.0
+    rules:
+      - May be adapted (rewritten, re-exampled, Indianised) WITH attribution.
+      - Attribution line lives on the site credits section (/about/#credits) — keep it current.
+      - Adapt to the Indian context; ICAI's syllabus framing governs scope, not this book's.
+    used_for: "Foundation P4 Business Economics (micro/macro chapters)"
+
+stats_open:
+  - title: "Introductory Business Statistics 2e"
+    publisher: OpenStax (Rice University)
+    url: https://openstax.org/details/books/introductory-business-statistics-2e
+    license: CC BY 4.0
+    rules:
+      - Same adaptation-with-attribution rule as econ_open.
+    used_for: "Foundation P3 Part C Statistics"
+
+reference_only:
+  # Read to verify facts, scope, and terminology. NEVER copy or closely
+  # paraphrase any text, question, or worked example from these.
+  - name: "ICAI Study Material (BoS Knowledge Portal)"
+    url: https://www.icai.org/post/sm-foundation-paper1
+    note: "Defines syllabus scope and the exam-setter's terminology; link to it, never reproduce it."
+  - name: "NCERT commerce textbooks (Class XI–XII Accountancy, Economics)"
+    url: https://ncert.nic.in/textbook.php
+  - name: "Khan Academy (maths, statistics, economics fundamentals)"
+    url: https://www.khanacademy.org/
+
+forbidden:
+  - "Any coaching institute's notes, handouts, or recorded content"
+  - "Paid/commercial books and their solved examples"
+  - "ICAI question paper text, MTP/RTP question text, or suggested-answer text (verbatim or paraphrased)"
+  - "Telegram/pirated compilations of any of the above"

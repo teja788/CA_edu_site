@@ -133,6 +133,9 @@
 /* ============ base ============ */
 
 * { box-sizing: border-box; }
+/* The hidden attribute always wins, even over inline display styles
+   (the quiz bar's timer and marking chips rely on this). */
+[hidden] { display: none !important; }
 
 html {
   font-family: var(--font);

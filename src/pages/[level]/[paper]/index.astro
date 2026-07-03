@@ -11,6 +11,8 @@ export function getStaticPaths() {
   return allPaperPaths()
     // advanced-accounting has its own rich static page
     .filter(({ level, paper }) => !(level.id === 'intermediate' && paper.slug === 'advanced-accounting'))
+    // all four Foundation papers have dedicated pages under src/pages/foundation/
+    .filter(({ level }) => level.id !== 'foundation')
     .map(({ level, group, paper }) => ({
       params: { level: level.id, paper: paper.slug },
       props: { level, group, paper },

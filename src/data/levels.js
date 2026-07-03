@@ -6,6 +6,7 @@
  * before content production for a new attempt (plan §2, first line).
  */
 import { papers as intermediatePapers } from './site.js';
+import { foundationPapers } from './foundation.js';
 
 const commonResources = (levelName) => [
   {
@@ -75,12 +76,15 @@ export const levels = [
     groups: [
       {
         name: 'All papers',
-        papers: [
-          { number: 1, slug: 'accounting', name: 'Accounting', shortName: 'Accounting', marks: 100, pattern: { style: 'Descriptive', negativeMarking: false } },
-          { number: 2, slug: 'business-laws', name: 'Business Laws', shortName: 'Business Laws', marks: 100, pattern: { style: 'Descriptive', negativeMarking: false } },
-          { number: 3, slug: 'quantitative-aptitude', name: 'Quantitative Aptitude (Maths, LR, Stats)', shortName: 'Quant. Aptitude', marks: 100, pattern: { style: 'Objective', negativeMarking: true } },
-          { number: 4, slug: 'business-economics', name: 'Business Economics', shortName: 'Business Economics', marks: 100, pattern: { style: 'Objective', negativeMarking: true } },
-        ],
+        // Full taxonomy (chapters verified against the ICAI SM index) lives in foundation.js.
+        papers: foundationPapers.map((p) => ({
+          number: p.number,
+          slug: p.slug,
+          name: p.number === 3 ? `${p.name} (Maths, LR, Stats)` : p.name,
+          shortName: p.shortName,
+          marks: p.marks,
+          pattern: p.pattern,
+        })),
       },
     ],
     resources: commonResources('Foundation'),
