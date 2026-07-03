@@ -1,60 +1,161 @@
 {
-  "level": "fixture",
-  "paper": "Toolkit self-test — not real content",
-  "chapterSlug": "depreciation-demo",
-  "chapter": "Fixture: change-in-estimate depreciation",
-  "questions": [
+ "level": "fixture",
+ "paper": "Toolkit self-test — not real content",
+ "chapterSlug": "depreciation-demo",
+ "chapter": "Fixture: change-in-estimate depreciation",
+ "questions": [
+  {
+   "id": "q-dep-001",
+   "topic": "Fixture · Depreciation · Change in estimate",
+   "type": "mcq",
+   "numerical": true,
+   "stem": "A machine costing ₹5,00,000 (residual value ₹50,000, life 10 years) is depreciated on SLM. After 4 years, remaining life is revised to 3 years with the same residual value. Depreciation for year 5 = ?",
+   "options": [
     {
-      "id": "q-dep-001",
-      "topic": "Fixture · Depreciation · Change in estimate",
-      "type": "mcq",
-      "numerical": true,
-      "stem": "A machine costing ₹5,00,000 (residual value ₹50,000, life 10 years) is depreciated on SLM. After 4 years, remaining life is revised to 3 years with the same residual value. Depreciation for year 5 = ?",
-      "options": [
-        { "key": "A", "text": "₹45,000", "explanation": "The original SLM charge — trap: ignores the revision." },
-        { "key": "B", "text": "₹1,10,000", "explanation": "Planted-wrong key: fluent prose claims this, but WDV after 4 yrs = 5,00,000 − 4×45,000 = 3,20,000; (3,20,000 − 50,000)/3 = 90,000." },
-        { "key": "C", "text": "₹1,00,000", "explanation": "Divides WDV by 3 but forgets to remove residual value first: 3,20,000/3 ≈ 1,06,667 rounded wrong — no basis." },
-        { "key": "D", "text": "₹90,000", "explanation": "The actual computation: (3,20,000 − 50,000)/3 = 90,000." }
-      ],
-      "correct": "B",
-      "difficulty": "medium",
-      "source": "fixture — deliberately wrong key; the runner MUST flag this",
-      "applicableAttempts": ["fixture"],
-      "lastVerified": "2026-07-03"
+     "key": "A",
+     "text": "₹45,000",
+     "explanation": "The original SLM charge — trap: ignores the revision."
     },
     {
-      "id": "q-dep-002",
-      "topic": "Fixture · Depreciation · SLM basics",
-      "type": "mcq",
-      "numerical": true,
-      "stem": "Asset cost ₹2,40,000, residual value ₹40,000, useful life 8 years. Annual SLM depreciation = ?",
-      "options": [
-        { "key": "A", "text": "₹30,000", "explanation": "Forgets residual value: 2,40,000/8 = 30,000." },
-        { "key": "B", "text": "₹25,000", "explanation": "(2,40,000 − 40,000)/8 = 25,000." },
-        { "key": "C", "text": "₹35,000", "explanation": "Adds residual value instead of subtracting." },
-        { "key": "D", "text": "₹20,000", "explanation": "Uses 10 years instead of 8." }
-      ],
-      "correct": "B",
-      "difficulty": "easy",
-      "source": "fixture — correct key; the runner must pass this",
-      "applicableAttempts": ["fixture"],
-      "lastVerified": "2026-07-03"
+     "key": "B",
+     "text": "₹1,10,000",
+     "explanation": "Planted-wrong key: fluent prose claims this, but WDV after 4 yrs = 5,00,000 − 4×45,000 = 3,20,000; (3,20,000 − 50,000)/3 = 90,000."
     },
     {
-      "id": "q-dep-003",
-      "topic": "Fixture · Depreciation · Coverage gap",
-      "type": "mcq",
-      "numerical": true,
-      "stem": "Fixture question with NO verifier function — the runner must flag missing coverage.",
-      "options": [
-        { "key": "A", "text": "₹1", "explanation": "fixture" },
-        { "key": "B", "text": "₹2", "explanation": "fixture" }
-      ],
-      "correct": "A",
-      "difficulty": "easy",
-      "source": "fixture — missing verifier; the runner must flag this",
-      "applicableAttempts": ["fixture"],
-      "lastVerified": "2026-07-03"
+     "key": "C",
+     "text": "₹1,00,000",
+     "explanation": "Divides WDV by 3 but forgets to remove residual value first: 3,20,000/3 ≈ 1,06,667 rounded wrong — no basis."
+    },
+    {
+     "key": "D",
+     "text": "₹90,000",
+     "explanation": "The actual computation: (3,20,000 − 50,000)/3 = 90,000."
     }
-  ]
+   ],
+   "correct": "B",
+   "difficulty": "medium",
+   "source": "fixture — deliberately wrong key; the runner MUST flag this",
+   "applicableAttempts": [
+    "fixture"
+   ],
+   "lastVerified": "2026-07-03"
+  },
+  {
+   "id": "q-dep-002",
+   "topic": "Fixture · Depreciation · SLM basics",
+   "type": "mcq",
+   "numerical": true,
+   "stem": "Asset cost ₹2,40,000, residual value ₹40,000, useful life 8 years. Annual SLM depreciation = ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "₹30,000",
+     "explanation": "Forgets residual value: 2,40,000/8 = 30,000."
+    },
+    {
+     "key": "B",
+     "text": "₹25,000",
+     "explanation": "(2,40,000 − 40,000)/8 = 25,000."
+    },
+    {
+     "key": "C",
+     "text": "₹35,000",
+     "explanation": "Adds residual value instead of subtracting."
+    },
+    {
+     "key": "D",
+     "text": "₹20,000",
+     "explanation": "Uses 10 years instead of 8."
+    }
+   ],
+   "correct": "B",
+   "difficulty": "easy",
+   "source": "fixture — correct key; the runner must pass this",
+   "applicableAttempts": [
+    "fixture"
+   ],
+   "lastVerified": "2026-07-03"
+  },
+  {
+   "id": "q-dep-003",
+   "topic": "Fixture · Depreciation · Coverage gap",
+   "type": "mcq",
+   "numerical": true,
+   "stem": "Fixture question with NO verifier function — the runner must flag missing coverage.",
+   "options": [
+    {
+     "key": "A",
+     "text": "₹1",
+     "explanation": "fixture"
+    },
+    {
+     "key": "B",
+     "text": "₹2",
+     "explanation": "fixture"
+    }
+   ],
+   "correct": "A",
+   "difficulty": "easy",
+   "source": "fixture — missing verifier; the runner must flag this",
+   "applicableAttempts": [
+    "fixture"
+   ],
+   "lastVerified": "2026-07-03"
+  },
+  {
+   "id": "cs-dep-004",
+   "type": "case_mcq_set",
+   "topic": "Fixture · Case set",
+   "case": "Fixture case: Vega Tools Ltd bought a lathe for ₹2,00,000 (residual ₹20,000, life 6 years, SLM). The accountant also wonders whether depreciation stops in an idle year.",
+   "questions": [
+    {
+     "id": "q-dep-004-a",
+     "type": "mcq",
+     "numerical": true,
+     "stem": "Yearly SLM charge on the lathe = ?",
+     "options": [
+      {
+       "key": "A",
+       "text": "₹30,000",
+       "explanation": "(2,00,000 − 20,000)/6 = 30,000."
+      },
+      {
+       "key": "B",
+       "text": "₹33,333",
+       "explanation": "Planted-wrong key: divides cost by 6 without removing residual."
+      },
+      {
+       "key": "C",
+       "text": "₹20,000",
+       "explanation": "No basis."
+      },
+      {
+       "key": "D",
+       "text": "₹36,000",
+       "explanation": "No basis."
+      }
+     ],
+     "correct": "B"
+    },
+    {
+     "id": "q-dep-004-b",
+     "type": "mcq",
+     "stem": "In an idle year, depreciation is…",
+     "options": [
+      {
+       "key": "A",
+       "text": "still charged",
+       "explanation": "Time and obsolescence run regardless of use."
+      },
+      {
+       "key": "B",
+       "text": "suspended",
+       "explanation": "Wrong — allocation continues."
+      }
+     ],
+     "correct": "A"
+    }
+   ]
+  }
+ ]
 }

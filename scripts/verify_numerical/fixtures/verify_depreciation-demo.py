@@ -25,3 +25,12 @@ def q_dep_002():
     options = {"A": 30_000, "B": 25_000, "C": 35_000, "D": 20_000}
     answer = next(k for k, v in options.items() if v == charge)
     return {"answer": answer, "computed": charge}
+
+
+def q_dep_004_a():
+    # Case-set sub-question: SLM on the fixture lathe. The bank's key is a
+    # PLANTED error (B); the runner must flatten case sets and catch it.
+    charge = _slm(200_000, 20_000, 6)
+    options = {"A": 30_000, "B": 33_333, "C": 20_000, "D": 36_000}
+    answer = next(k for k, v in options.items() if v == charge)
+    return {"answer": answer, "computed": charge}

@@ -1,0 +1,274 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Buyback of Securities'
+description: 'CA Intermediate Advanced Accounting Ch 12 — buyback of securities in plain language: s.68 conditions, the three-test maximum-buyback pattern, CRR, journal entries with full working notes.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 12 · Buyback of Securities'
+chapterSlug: buyback-of-securities
+masteryId: i1-ch12
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 68, 69, 70; s.2(43) (free reserves)'
+  - 'Companies (Share Capital and Debentures) Rules 2014, Rule 17 (unlisted buybacks)'
+  - 'Schedule III presentation (mentioned only)'
+sourceLabel: 'Companies Act 2013 ss. 68–70 · ICAI SM Ch 12 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '3 Jul 2026'
+readTime: 'About 20 min read · 3 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=buyback-of-securities'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A company usually takes money IN from shareholders. A buyback is the reverse gear: the company
+pays money OUT to purchase its own shares and cancel them. Fewer shares remain, each remaining
+share owns a bigger slice, and the balance sheet shrinks. Because paying capital back to owners
+is exactly what creditor-protection law exists to police, the Companies Act 2013 wraps buyback
+in tight conditions — and the exam tests whether you can apply those conditions *and* pass the
+journal entries, with working notes an examiner can follow.
+
+This chapter is a dependable scorer: one full numerical (maximum permissible buyback, or
+entries + balance-sheet extract) plus conceptual MCQs on the limits and timelines. Every
+numerical follows the same three-test pattern shown in Worked Example 1. Learn the pattern
+and the working-note format, and there is nothing left to surprise you.
+
+## 1. What a buyback is, and why companies do it
+
+**Buyback (purchase of own securities)** is a company acquiring its own shares or other
+specified securities from existing holders, against payment, followed by cancellation of what
+it bought. The power comes from **section 68(1)** of the Companies Act 2013 — a company may
+purchase its own shares or other specified securities out of:
+
+- its **free reserves**,
+- its **securities premium account**, or
+- the **proceeds of an earlier issue** of shares or other specified securities — **but never**
+  money raised by earlier issuing the *same kind* of shares (s.68(1) proviso). You cannot
+  issue fresh equity today to buy back equity tomorrow.
+
+Why do it? Returning surplus cash, supporting a share price seen as undervalued, improving
+return-on-equity and EPS by shrinking the equity base, or adjusting the capital structure.
+For the exam you need the *mechanics*, not the strategy — but a stem will often dress the
+motive in a story, so read past it to the numbers.
+
+<Callout kind="pointer">
+  <p>
+    <strong>"Free reserves" has TWO layers here — the exam's favourite trap.</strong> Generally,
+    s.2(43) excludes the securities premium account (and revaluation reserve, and unrealised
+    gains) from free reserves. But the Explanation to s.68 says that <em>for buyback purposes</em>
+    "free reserves" <strong>includes the securities premium account</strong>. So when you compute
+    the 25%/10% limits and the debt-equity test, securities premium joins the base; revaluation
+    reserve never does. Outside s.68 — say, declaring dividend — s.2(43) rules and premium is out.
+  </p>
+</Callout>
+
+## 2. The rulebook: conditions under s.68(2)
+
+No buyback is valid unless ALL of these hold:
+
+| Condition | Rule | Source |
+|---|---|---|
+| Authorisation | Articles must authorise the buyback | s.68(2)(a) |
+| Approval | **Special resolution** in general meeting; a **board resolution** alone suffices if the buyback is **10% or less** of paid-up equity capital + free reserves | s.68(2)(b) |
+| Size ceiling | Buyback ≤ **25% of paid-up share capital + free reserves** (free reserves here **includes securities premium** — s.68 Explanation) in a financial year; for equity buybacks the 25% is also measured against **total paid-up equity capital** as a shares-count test | s.68(2)(c) |
+| Leverage | Post-buyback **debt ≤ 2 × (paid-up capital + free reserves)** — the 2:1 debt-equity ceiling. "Debt" = secured **and** unsecured | s.68(2)(d) |
+| Quality | Only **fully paid-up** shares can be bought back | s.68(2)(e) |
+| Procedure | Listed companies follow SEBI regulations; unlisted companies follow Rule 17 of the Share Capital and Debentures Rules 2014 | s.68(2)(f)–(g) |
+
+Two follow-on timing rules sit in the same section:
+
+- **One offer a year:** no fresh buyback offer within **one year** of the closure of the
+  preceding offer (proviso to s.68(2)).
+- **Complete in a year:** every buyback must be **completed within one year** of the special
+  (or board) resolution — s.68(4).
+
+<Callout kind="mistake">
+  <p>
+    <strong>The 10% and the 25% answer different questions.</strong> 10% of (paid-up equity
+    capital + free reserves) is the ceiling for the <em>board route</em> — skip the general
+    meeting. 25% of (paid-up capital + free reserves) is the absolute yearly ceiling
+    <em>with</em> a special resolution. A stem that says "the board alone approved" caps the
+    company at 10%, however much headroom the 25% test shows.
+  </p>
+</Callout>
+
+## 3. After the cheque: extinguishment and the quiet period
+
+- **Extinguish within 7 days:** shares bought back must be extinguished and physically
+  destroyed within **seven days** of the last date of completion — s.68(7).
+- **No fresh issue for 6 months:** after a buyback, the company cannot make a *further issue
+  of the same kind of shares* within **six months**, except bonus shares or conversions
+  (ESOPs, sweat equity, convertible instruments already outstanding) — s.68(8).
+- **Register of buyback** (SH-10) and, before the buyback, a **declaration of solvency**
+  (SH-9) signed by two directors — s.68(5)–(6), (9); Rule 17 for unlisted companies.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · SEBI route for listed companies">
+  <p>
+    For <strong>listed</strong> companies the procedural layer (offer routes, escrow,
+    tender-offer mechanics) lives in the SEBI (Buy-back of Securities) Regulations 2018,
+    which SEBI has amended repeatedly — including phasing down the open-market route. The
+    Companies Act layer above is stable; the SEBI layer is not summarised here. Before
+    answering a listed-company procedure question, cross-check the current SEBI position.
+    Logged to review_queue.md for a human pass.
+  </p>
+</Callout>
+
+## 4. Prohibitions — s.70
+
+A company must NOT buy back its shares:
+
+1. **through any subsidiary**, including its own subsidiaries;
+2. **through investment companies**, singly or as a group; or
+3. while a **default subsists** in repaying deposits or interest on them, redeeming debentures
+   or preference shares, paying dividend, or repaying a term loan (or interest) to a bank or
+   financial institution. If the default has been **remedied**, the ban continues for
+   **three years** after the default ceased — s.70(1) proviso.
+
+Buyback is also barred while the company has not complied with **s.92** (annual return),
+**s.123** (declaration of dividend), **s.127** (failure to distribute dividend) or **s.128**
+(books of account) — s.70(2).
+
+## 5. Accounting: the entries and the CRR
+
+The accounting has exactly four moves. Suppose shares of face value *F* are bought back at
+price *P* (so premium on buyback = *P − F*):
+
+1. **Make the payment due:**
+   `Equity share capital A/c Dr (F)` · `Premium on buyback A/c Dr (P − F)` →
+   `To Equity shareholders A/c (P)`
+2. **Fund the premium** — write it off against **securities premium** first (to the extent
+   available), balance against **free reserves**:
+   `Securities premium A/c Dr` · `General reserve / P&L A/c Dr` → `To Premium on buyback A/c`
+3. **Pay:** `Equity shareholders A/c Dr` → `To Bank A/c`
+4. **Capital redemption reserve (s.69):** where the buyback is out of free reserves or
+   securities premium, transfer **a sum equal to the nominal value of the shares bought
+   back** to CRR: `General reserve / P&L A/c Dr` → `To Capital redemption reserve A/c`.
+   If part of the buyback is funded by the **proceeds of a fresh issue** (of a different
+   kind), CRR = nominal value bought back **minus** those proceeds.
+
+The CRR exists to stop capital escaping through the back door: distributable reserves equal to
+the cancelled capital are locked away. CRR can be applied **only** for issuing **fully paid
+bonus shares** — s.69(2).
+
+<Callout kind="mistake">
+  <p>
+    <strong>CRR is the nominal value, never the amount paid.</strong> Buy back 40,000 shares
+    of ₹10 at ₹15 out of free reserves and the CRR transfer is ₹4,00,000 — not ₹6,00,000.
+    The premium is a separate write-off (entry 2). Mixing the two is the single most common
+    error in this chapter.
+  </p>
+</Callout>
+
+### Worked Example 1 — journal entries (the standard pattern)
+
+Meridian Foods Ltd buys back 30,000 equity shares of ₹10 each at ₹25 per share. The balance
+sheet shows securities premium of ₹3,00,000 and general reserve of ₹9,00,000. No fresh issue
+is made.
+
+**Working Note 1 — amounts.** Nominal value = 30,000 × 10 = **₹3,00,000**. Payment = 30,000 ×
+25 = **₹7,50,000**. Premium on buyback = 30,000 × 15 = **₹4,50,000**.
+
+**Working Note 2 — funding the premium.** Securities premium available ₹3,00,000 is used
+first; the balance ₹1,50,000 comes from general reserve.
+
+**Working Note 3 — CRR.** No fresh issue, so CRR = full nominal value = **₹3,00,000**, from
+general reserve.
+
+| Journal | Dr (₹) | Cr (₹) |
+|---|---|---|
+| Equity share capital A/c Dr | 3,00,000 | |
+| Premium on buyback A/c Dr | 4,50,000 | |
+| — To Equity shareholders A/c | | 7,50,000 |
+| Securities premium A/c Dr | 3,00,000 | |
+| General reserve A/c Dr | 1,50,000 | |
+| — To Premium on buyback A/c | | 4,50,000 |
+| Equity shareholders A/c Dr | 7,50,000 | |
+| — To Bank A/c | | 7,50,000 |
+| General reserve A/c Dr | 3,00,000 | |
+| — To Capital redemption reserve A/c | | 3,00,000 |
+
+Check the drain on general reserve: 1,50,000 (premium) + 3,00,000 (CRR) = ₹4,50,000, leaving
+₹4,50,000 — comfortably inside the ₹9,00,000 available. Always show this check; it is where
+examiners look first.
+
+### Worked Example 2 — buyback partly out of a fresh issue
+
+Orbit Textiles Ltd buys back 50,000 equity shares of ₹10 at ₹18, partly funded by a fresh
+issue of 20,000 preference shares of ₹10 at par (a *different kind* of security — permitted
+as a source).
+
+**Working Note 1.** Nominal value bought back = 50,000 × 10 = ₹5,00,000. Payment = 50,000 ×
+18 = ₹9,00,000. Premium = ₹4,00,000, written off against securities premium / free reserves
+as available.
+
+**Working Note 2 — CRR with a fresh issue.** CRR = nominal value bought back − proceeds of
+the fresh issue = 5,00,000 − 2,00,000 = **₹3,00,000**. The fresh-issue portion of the capital
+cancelled is already replaced by new capital, so only the free-reserve-funded portion needs
+locking into CRR.
+
+## 6. The maximum-buyback pattern (the exam's favourite numerical)
+
+Whenever a stem asks "what is the maximum number of shares the company can buy back?", run
+**three tests and take the smallest answer**. Show each test as its own working note.
+
+- **Test 1 — shares outstanding:** 25% of the number of paid-up equity shares.
+- **Test 2 — resources:** 25% of (paid-up capital + free reserves), divided by the buyback
+  price per share.
+- **Test 3 — debt-equity:** post-buyback, debt ≤ 2 × shareholders' funds. Maximum cash that
+  can leave = shareholders' funds − (total debt ÷ 2). Divide by price for the share count.
+
+### Worked Example 3 — maximum permissible buyback
+
+Zenith Gears Ltd (unlisted, Pune) has: paid-up equity capital ₹20,00,000 (2,00,000 shares of
+₹10); general reserve ₹18,00,000; surplus in P&L ₹4,00,000; secured term loan ₹40,00,000;
+unsecured loan ₹14,00,000. The board proposes a buyback at ₹28 per share with a special
+resolution in place. Maximum shares?
+
+**Working Note 1 — shares-outstanding test.** 25% × 2,00,000 = **50,000 shares**.
+
+**Working Note 2 — resources test.** Free reserves = 18,00,000 + 4,00,000 = ₹22,00,000
+(no securities premium exists here; had there been one, it would join the base — s.68
+Explanation). Base = 20,00,000 + 22,00,000 = ₹42,00,000. 25% = ₹10,50,000. At ₹28:
+10,50,000 ÷ 28 = **37,500 shares**.
+
+**Working Note 3 — debt-equity test.** Debt = 40,00,000 + 14,00,000 = ₹54,00,000. Minimum
+post-buyback equity = 54,00,000 ÷ 2 = ₹27,00,000. Maximum outflow = 42,00,000 − 27,00,000 =
+₹15,00,000. At ₹28: **53,571 shares** (rounded down).
+
+**Conclusion.** Maximum buyback = **min(50,000; 37,500; 53,571) = 37,500 shares**, costing
+37,500 × 28 = ₹10,50,000. Had only the board approved (no special resolution), the ceiling
+would drop to 10%: ₹4,20,000 ÷ 28 = 15,000 shares.
+
+<Callout kind="example" label="Working-note discipline = marks">
+  <p>
+    At Intermediate the working notes ARE the answer. Label each test, show the base, the
+    percentage, the division by price, and the explicit min() conclusion. An unlabelled
+    correct figure earns less than a labelled trail an examiner can tick line by line.
+  </p>
+</Callout>
+
+## 7. Presentation and the wider map
+
+After the buyback, the balance sheet (Schedule III) shows the reduced **equity share
+capital**, the new **capital redemption reserve** under Reserves & Surplus, and the drained
+securities premium / free reserves. Disclose the buyback in the notes to accounts.
+
+Keep buyback distinct from its neighbours:
+
+- **Reduction of capital (s.66):** a court-supervised (NCLT) route that can touch *any*
+  capital, including unpaid amounts; buyback is a self-administered purchase of fully paid
+  shares within s.68 limits — no tribunal.
+- **Redemption of preference shares (s.55):** the scheduled retirement of a class issued as
+  redeemable; buyback is discretionary and targets equity or other specified securities.
+- **ESOP trust purchases / treasury shares:** Indian law requires extinguishment within seven
+  days — bought-back shares can never be held as treasury stock.
+
+That's the chapter. The three-test pattern (WE 3), the four journal moves (WE 1), and the
+CRR-with-fresh-issue twist (WE 2) cover every numerical the SM asks; the limits table and
+s.70 list cover the MCQs.

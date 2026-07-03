@@ -139,6 +139,18 @@ export const paper1Sections = [
       { number: 5, slug: 'branch-accounting', name: 'Branch accounting', draft: true },
     ],
   },
+  {
+    name: 'Section C · Company accounts (ICAI Module 3)',
+    chapters: [
+      {
+        number: 12,
+        slug: 'buyback-of-securities',
+        name: 'Buyback of Securities',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/buyback-of-securities/',
+      },
+    ],
+  },
 ];
 
 /**

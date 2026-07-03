@@ -38,8 +38,8 @@ const bankQuestions = Object.values(bankModules).flatMap((mod) => {
       chapterSlug: bank.chapterSlug,
       negative,
       masteryId:
-        bank.level === 'foundation' && paperNum && chapterNum
-          ? `f${paperNum}-ch${chapterNum}`
+        paperNum && chapterNum
+          ? `${bank.level === 'foundation' ? 'f' : 'i'}${paperNum}-ch${chapterNum}`
           : null,
     },
   }));

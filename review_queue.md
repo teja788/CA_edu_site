@@ -17,3 +17,19 @@ Triage rules:
    pruned once the fix is committed — git history is the log.
 
 ---
+
+## buyback-of-securities — AMENDMENT-CHECK 2026-07-03
+
+- [ ] **Notes §3 (SEBI route for listed companies)** — the notes deliberately do
+  NOT summarise the SEBI (Buy-back of Securities) Regulations 2018 (open-market
+  route phase-down, escrow, tender mechanics) because SEBI amends them
+  frequently. A human must decide, per attempt, whether the Inter P1 syllabus
+  expects any SEBI-layer detail beyond "listed companies follow SEBI
+  regulations", and update notes §3 + the P1 amendment tracker accordingly.
+  Source to check: https://www.sebi.gov.in/legal/regulations (Buy-back of
+  Securities Regulations, as amended).
+- [ ] **s.68 Explanation numbering** — content relies on the Explanation to
+  s.68 including securities premium in free reserves for buyback. The
+  substance is standard ICAI-solution doctrine, but verify the exact clause
+  label/wording in the current consolidated Act (India Code) and initial the
+  citations row.

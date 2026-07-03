@@ -49,8 +49,8 @@ const paper = papers.find((p) => p.id === 'p1');
             <>
               <a
                 class="list-row"
-                href={ch.slug === 'partnership-accounts' ? '/intermediate/advanced-accounting/partnership-accounts/goodwill-nature-valuation/' : '#'}
-                aria-disabled={ch.slug !== 'partnership-accounts'}
+                href={ch.notesHref ?? (ch.slug === 'partnership-accounts' ? '/intermediate/advanced-accounting/partnership-accounts/goodwill-nature-valuation/' : '#')}
+                aria-disabled={!ch.notesHref && ch.slug !== 'partnership-accounts'}
               >
                 <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
                 <span class="row-title">

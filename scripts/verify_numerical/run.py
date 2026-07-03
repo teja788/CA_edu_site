@@ -53,7 +53,15 @@ def check_bank(bank_path: Path, modules_dir: Path):
         return [(bank_path.name, "(file)", f"unparseable JSON: {e}")], 0
 
     slug = data.get("chapterSlug") or bank_path.stem
-    numerical = [q for q in data.get("questions", []) if q.get("numerical")]
+    # case_mcq_set entries hold linked MCQs in `questions`; each sub-question
+    # carries its own `numerical` flag and verifier function like any MCQ.
+    flat = []
+    for q in data.get("questions", []):
+        if q.get("type") == "case_mcq_set":
+            flat.extend(q.get("questions", []))
+        else:
+            flat.append(q)
+    numerical = [q for q in flat if q.get("numerical")]
     if not numerical:
         return [], 0
 

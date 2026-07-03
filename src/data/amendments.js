@@ -18,6 +18,19 @@
 
 export const amendments = [
   {
+    id: 'amd-p1-sebi-buyback',
+    paperSlug: 'advanced-accounting',
+    paperLabel: 'P1 · Advanced Accounting',
+    appliesFrom: 'Sept 2026',
+    title: 'SEBI (Buy-back of Securities) Regulations — listed-company procedure watch item',
+    old: 'Ch 12 notes summarise only the stable Companies Act layer (ss. 68–70)',
+    now: 'Pending human decision — SEBI has amended the 2018 buyback regulations repeatedly (incl. phasing down the open-market route). Confirm per attempt whether the Inter P1 syllabus expects SEBI-layer detail, and update Ch 12 notes §3 if so (AMENDMENT-CHECK marker in the notes; also in review_queue.md)',
+    source: 'SEBI regulations page',
+    sourceUrl: 'https://www.sebi.gov.in/legal/regulations',
+    affected: [{ label: 'Ch 12 Buyback — §3', href: '/intermediate/advanced-accounting/buyback-of-securities/#s3' }],
+    todo: true,
+  },
+  {
     id: 'amd-p3-itact2025',
     paperSlug: 'taxation',
     paperLabel: 'P3 · Taxation',

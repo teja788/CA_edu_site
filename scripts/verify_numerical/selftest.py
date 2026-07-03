@@ -31,8 +31,13 @@ def main() -> int:
         problems.append("runner did NOT flag q-dep-003, which has no verifier function")
     if "q-dep-002" in failed_ids:
         problems.append("runner wrongly failed q-dep-002, whose key is correct")
-    if len(failures) != 2:
-        problems.append(f"expected exactly 2 failures, got {len(failures)}: {failures}")
+    if "q-dep-004-a" not in failed_ids:
+        problems.append(
+            "runner did NOT catch the planted wrong key on case-set sub-question "
+            "q-dep-004-a — case_mcq_set entries must be flattened and verified"
+        )
+    if len(failures) != 3:
+        problems.append(f"expected exactly 3 failures, got {len(failures)}: {failures}")
 
     if problems:
         print("SELFTEST FAILED:")

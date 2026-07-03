@@ -41,20 +41,34 @@ def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def flatten_mcqs(bank: dict):
+    """Yield (mcq, case_text) for every MCQ, entering case_mcq_set entries.
+
+    Case sub-questions are unanswerable without their case paragraph, so the
+    blind copy must carry it; standalone MCQs get case_text=None.
+    """
+    for q in bank.get("questions", []):
+        if q.get("type") == "case_mcq_set":
+            for sub in q.get("questions", []):
+                yield sub, q.get("case")
+        elif q.get("type", "mcq") == "mcq":
+            yield q, None
+
+
 def cmd_strip(args) -> int:
     bank = load(args.bank)
-    mcqs = [q for q in bank.get("questions", []) if q.get("type", "mcq") == "mcq"]
     blind = {
         "chapterSlug": bank.get("chapterSlug", args.bank.stem),
         "instructions": BLIND_INSTRUCTIONS,
         "questions": [
             {
                 "id": q["id"],
+                **({"case": case} if case else {}),
                 "stem": q["stem"],
                 "options": [{"key": o["key"], "text": o["text"]} for o in q["options"]],
                 "answer": None,
             }
-            for q in mcqs
+            for q, case in flatten_mcqs(bank)
         ],
     }
     out = json.dumps(blind, ensure_ascii=False, indent=2)
@@ -81,9 +95,7 @@ def cmd_diff(args) -> int:
     slug = bank.get("chapterSlug", args.bank.stem)
 
     mismatches, unanswered, agreed = [], [], 0
-    for q in bank.get("questions", []):
-        if q.get("type", "mcq") != "mcq":
-            continue
+    for q, _case in flatten_mcqs(bank):
         got = answers.get(q["id"], {})
         fresh = got.get("answer")
         if not fresh:

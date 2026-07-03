@@ -31,10 +31,17 @@ def main() -> int:
             problems.append(f"strip failed: {r.stderr}")
         if any("correct" in q or any("explanation" in o for o in q["options"]) for q in blind["questions"]):
             problems.append("strip leaked the key or explanations into the blind file")
+        blind_ids = {q["id"] for q in blind["questions"]}
+        if not {"q-dep-004-a", "q-dep-004-b"} <= blind_ids:
+            problems.append("strip did not flatten case_mcq_set sub-questions into the blind file")
+        if not any(q.get("case") for q in blind["questions"] if q["id"] == "q-dep-004-a"):
+            problems.append("case sub-question is missing its case paragraph — unanswerable blind")
 
         # Simulated fresh pass: computes D on the planted-error question
-        # (key wrongly says B), agrees with the key elsewhere.
-        fresh = {"answers": {"q-dep-001": "D", "q-dep-002": "B", "q-dep-003": "A"}}
+        # (key wrongly says B) and A on the planted case-set error, agrees
+        # with the key elsewhere.
+        fresh = {"answers": {"q-dep-001": "D", "q-dep-002": "B", "q-dep-003": "A",
+                             "q-dep-004-a": "A", "q-dep-004-b": "A"}}
         answered_path.write_text(json.dumps(fresh))
 
         r = run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path))
@@ -46,8 +53,12 @@ def main() -> int:
         if "q-dep-002" in queue:
             problems.append("agreed question q-dep-002 wrongly quarantined")
 
+        if "q-dep-004-a" not in queue:
+            problems.append("case-set mismatch q-dep-004-a was not quarantined")
+
         # All-agree pass must exit 0; unanswered question must exit 2.
-        fresh_ok = {"answers": {"q-dep-001": "B", "q-dep-002": "B", "q-dep-003": "A"}}
+        fresh_ok = {"answers": {"q-dep-001": "B", "q-dep-002": "B", "q-dep-003": "A",
+                                "q-dep-004-a": "B", "q-dep-004-b": "A"}}
         answered_path.write_text(json.dumps(fresh_ok))
         if run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path)).returncode != 0:
             problems.append("diff should exit 0 when every answer agrees")
