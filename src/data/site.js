@@ -149,6 +149,13 @@ export const paper1Sections = [
         draft: true,
         notesHref: '/intermediate/advanced-accounting/buyback-of-securities/',
       },
+      {
+        number: 13,
+        slug: 'amalgamation-of-companies',
+        name: 'Amalgamation of Companies',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/amalgamation-of-companies/',
+      },
     ],
   },
 ];

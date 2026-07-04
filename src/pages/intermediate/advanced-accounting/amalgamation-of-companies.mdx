@@ -1,0 +1,291 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Amalgamation of Companies'
+description: 'CA Intermediate Advanced Accounting Ch 13 — AS 14 in plain language: merger vs purchase, the five conditions, purchase consideration methods, pooling vs purchase accounting, statutory reserves, with full working notes.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 13 · Amalgamation of Companies'
+chapterSlug: amalgamation-of-companies
+masteryId: i1-ch13
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'AS 14 Accounting for Amalgamations (definitions para 3; merger conditions para 3(e); purchase consideration para 3(g))'
+  - 'Companies Act 2013 (amalgamation pursuant to statute; Schedule III presentation)'
+  - 'MCA amendment (2016): Amalgamation Adjustment Account renamed Amalgamation Adjustment Reserve'
+sourceLabel: 'AS 14 · ICAI SM Ch 13 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '4 Jul 2026'
+readTime: 'About 22 min read · 3 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=amalgamation-of-companies'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Two companies become one. Either they pool everything and carry on as if they had always been
+a single business, or one of them simply buys the other's business and accounts for it like any
+purchase. AS 14 exists to keep those two stories from being told with the same journal entries —
+because the first preserves reserves and book values, and the second creates goodwill or capital
+reserve and drops the seller's reserves entirely.
+
+This chapter is the biggest single-numerical scorer in Module 3: a full question walks you from
+purchase consideration through the transferee's incorporation entries to the post-amalgamation
+balance sheet. Every mark sits inside a working note, and every working note comes from a small
+set of fixed rules. This page gives you the rules, the three standard computations, and the traps.
+
+## 1. Who is who, and the three flavours
+
+**Amalgamation** under AS 14 means an amalgamation pursuant to the Companies Act 2013 or any
+other applicable statute. The company that dies is the **transferor** (vendor) company; the
+company that receives its business is the **transferee** (purchasing) company. Exam stems use
+all four labels interchangeably — fix the direction before touching a number.
+
+Three arrangements wear the same accounting clothes:
+
+- **Amalgamation (strict sense):** A Ltd and B Ltd combine into a newly formed C Ltd. Both
+  transferors vanish; the new company is the transferee.
+- **Absorption:** A Ltd continues and takes over B Ltd. No new company is formed; B Ltd is the
+  transferor.
+- **External reconstruction:** a new company is formed for the specific purpose of taking over
+  the business of one existing (often struggling) company, which is then wound up. One seller,
+  one newly incorporated buyer — the accounting is identical to amalgamation.
+
+AS 14 governs all three. What it does **not** govern here: acquisitions where the acquired
+company stays alive as a subsidiary (that is consolidation territory), and Ind AS 103 — the
+Inter P1 syllabus tests AS 14, not Ind AS.
+
+## 2. Merger or purchase: the five conditions
+
+AS 14 recognises exactly two species. An **amalgamation in the nature of merger** must satisfy
+**all five** conditions of para 3(e); failing even one makes it an **amalgamation in the nature
+of purchase**.
+
+| # | Condition (para 3(e)) | The idea |
+|---|---|---|
+| 1 | All assets **and** all liabilities of the transferor become assets and liabilities of the transferee | Nothing is left behind |
+| 2 | Holders of at least **90% (by face value) of the transferor's equity shares** — not counting shares the transferee or its subsidiaries/nominees already hold — must end up as equity shareholders of the transferee | Continuity of ownership |
+| 3 | Those equity shareholders are paid **wholly in equity shares** of the transferee — cash allowed only for **fractional entitlements** | No cash-out of the owners |
+| 4 | The transferee **intends to carry on** the transferor's business | Continuity of business |
+| 5 | Book values of assets and liabilities are carried forward **unchanged**, except adjustments needed to bring **accounting policies into line** (e.g. re-stating inventory from weighted average to FIFO) | Continuity of values |
+
+<Callout kind="mistake">
+  <p>
+    <strong>The 90% test is on FACE VALUE of equity shares, not on votes, not on all
+    securities, and not on the whole register.</strong> Shares the transferee (or its
+    subsidiaries or nominees) already holds are excluded from the base before you test 90%.
+    A stem where the transferee already owns 10,000 of the transferor's 2,00,000 shares asks
+    for 90% of 1,90,000 — that is 1,71,000 shares, not 1,80,000.
+  </p>
+</Callout>
+
+Why anyone cares: a merger uses the **pooling of interests method** (reserves survive, no
+goodwill), a purchase uses the **purchase method** (reserves die, goodwill or capital reserve
+is born). The classification drives every entry that follows.
+
+## 3. Purchase consideration
+
+Para 3(g) of AS 14 defines **purchase consideration** as the aggregate of shares and other
+securities issued, plus cash or other assets paid, by the transferee **to the shareholders of
+the transferor** — equity and preference shareholders both.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Only payments to shareholders count.</strong> Whatever the transferee pays or
+    promises to debenture holders or trade creditors of the transferor is NOT purchase
+    consideration — a debenture liability taken over simply enters the net-assets computation
+    as a liability assumed. Liquidation expenses the transferee reimburses are not purchase
+    consideration either; they are debited to goodwill (or capital reserve). This single rule
+    kills more marks in this chapter than any other.
+  </p>
+</Callout>
+
+Four standard ways a stem hands you the number:
+
+1. **Lump sum** — stated outright; nothing to compute.
+2. **Net payment** — add up everything given to equity and preference shareholders: shares
+   issued (at issue price), cash, other assets. Ignore payments to anyone else.
+3. **Net assets** — assets taken over at **agreed values** minus liabilities assumed
+   (outside liabilities only — never share capital or reserves). Book values apply only
+   where no value was agreed.
+4. **Intrinsic value / share exchange** — value each company's share from its net assets
+   (intrinsic value = net assets ÷ number of equity shares), set the exchange ratio, then
+   purchase consideration = shares issued × issue value, plus any cash for fractions.
+
+### Worked Example 1 — net payment method
+
+Narmada Chemicals Ltd takes over Tapti Dyes Ltd. Tapti has 1,00,000 equity shares of ₹10 and
+5,000 preference shares of ₹100. Terms: preference shareholders are paid cash at a 5% premium;
+equity shareholders receive 3 equity shares of Narmada (₹10 each, agreed issue value ₹15) for
+every 4 shares held, plus ₹2 cash per share held. Narmada also agrees to discharge Tapti's
+₹4,00,000 debentures at par.
+
+**Working Note 1 — preference shareholders.** 5,000 × ₹105 = **₹5,25,000** cash.
+
+**Working Note 2 — equity shareholders.** Shares issued = 1,00,000 × 3/4 = 75,000 shares at
+₹15 = ₹11,25,000. Cash = 1,00,000 × ₹2 = ₹2,00,000. Subtotal ₹13,25,000.
+
+**Working Note 3 — purchase consideration.** 5,25,000 + 13,25,000 = **₹18,50,000**. The
+₹4,00,000 to debenture holders is excluded — it is a liability taken over, not consideration
+to shareholders.
+
+## 4. The two accounting methods
+
+### Pooling of interests (merger only)
+
+- Assets, liabilities **and reserves** of the transferor come in at their **existing carrying
+  amounts** (adjusted only for uniform accounting policies).
+- The identity of reserves is preserved — general reserve stays general reserve, P&L balance
+  stays P&L balance.
+- The only plug: the difference between the **share capital issued** (plus any cash or other
+  consideration) and the transferor's **share capital** is adjusted **in reserves**. Issue more
+  capital than you cancel, and reserves shrink by the difference; issue less, and reserves grow.
+
+The three-step working note: **Step 1** — consideration recorded (capital issued + cash etc.).
+**Step 2** — transferor's paid-up capital (equity + preference). **Step 3** — Step 1 − Step 2,
+adjusted against reserves.
+
+### Purchase method (everything else)
+
+- Assets and liabilities come in either at existing carrying amounts or at the **fair values**
+  the consideration was allocated over — as the terms provide. Reserves of the transferor
+  (other than statutory reserves — next section) are **not recorded at all**.
+- Compare **net assets taken over** with **purchase consideration**:
+  - Consideration **higher** → the excess is **goodwill**.
+  - Net assets **higher** → the shortfall is **capital reserve**.
+- **Goodwill arising on amalgamation is amortised over a period not exceeding five years**,
+  unless a somewhat longer period can be justified.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Direction check before you write "goodwill".</strong> Paying ₹27,50,000 for net
+    assets of ₹25,00,000 gives goodwill of ₹2,50,000. Getting net assets of ₹30,00,000 for
+    ₹27,50,000 gives capital reserve. Goodwill = you paid MORE than you got. If your goodwill
+    figure appears when the consideration is the smaller number, the working note is upside
+    down.
+  </p>
+</Callout>
+
+### Worked Example 2 — purchase method with goodwill
+
+Godavari Foods Ltd absorbs Krishna Agro Ltd (an amalgamation in the nature of purchase) for a
+purchase consideration of ₹27,50,000. Agreed values of assets taken over: PPE ₹24,00,000,
+inventory ₹6,50,000, trade receivables ₹5,50,000, cash ₹1,00,000. Liabilities assumed: 12%
+debentures ₹8,00,000 and trade creditors ₹4,00,000. Krishna's books also show a general
+reserve of ₹3,00,000 and an investment allowance reserve (statutory) of ₹1,50,000.
+
+**Working Note 1 — net assets taken over.** Assets 24,00,000 + 6,50,000 + 5,50,000 + 1,00,000
+= ₹37,00,000. Less liabilities 8,00,000 + 4,00,000 = ₹12,00,000. Net assets = **₹25,00,000**.
+
+**Working Note 2 — goodwill.** Consideration 27,50,000 − net assets 25,00,000 =
+**goodwill ₹2,50,000**, to be amortised over not more than five years — ₹50,000 a year on a
+straight-line basis unless a longer period is justified.
+
+**Working Note 3 — reserves.** The general reserve of ₹3,00,000 is ignored (purchase method).
+The statutory reserve of ₹1,50,000 must be kept alive — see the next section for the entry.
+
+### Worked Example 3 — pooling of interests
+
+Sabarmati Textiles Ltd and Mahi Mills Ltd amalgamate in the nature of merger. Mahi's balance
+sheet: equity capital ₹16,00,000 (1,60,000 shares of ₹10), general reserve ₹6,00,000, P&L
+balance ₹2,40,000. Sabarmati (general reserve ₹10,00,000) issues 1,90,000 equity shares of ₹10
+to Mahi's shareholders. All assets and liabilities come across at book value.
+
+**Working Note — reserve adjustment.** Capital issued = ₹19,00,000. Mahi's capital =
+₹16,00,000. Excess = ₹3,00,000, deducted from reserves. Combined general reserve = 10,00,000
++ 6,00,000 − 3,00,000 = **₹13,00,000**; Mahi's P&L balance of ₹2,40,000 carries forward with
+its identity intact. No goodwill, no capital reserve — pooling never creates either.
+
+## 5. Statutory reserves and the Amalgamation Adjustment Reserve
+
+Some reserves exist because a statute demanded them (investment allowance reserve, export
+profit reserve, and similar). In a **purchase**, they are the one exception to the
+"transferor's reserves die" rule: while the statute still requires the reserve to be
+maintained, the transferee records it with this entry:
+
+| Journal | Dr | Cr |
+|---|---|---|
+| Amalgamation Adjustment Reserve A/c Dr | ✓ | |
+| — To Statutory Reserve A/c | | ✓ |
+
+The **Amalgamation Adjustment Reserve** appears as a **separate line item** shown as a
+*negative* balance under Other Equity / Reserves — it is **not** netted off against the
+statutory reserve it mirrors. When the statutory holding period ends, the entry is simply
+reversed and both lines disappear.
+
+<Callout kind="pointer">
+  <p>
+    <strong>"Reserve", not "Account".</strong> Older material calls this the Amalgamation
+    Adjustment <em>Account</em>; an MCA amendment in 2016 renamed it Amalgamation Adjustment
+    <em>Reserve</em> and fixed its presentation as a separate (negative) head within reserves.
+    An MCQ option offering the old name with set-off against statutory reserve is a planted
+    trap. In a merger this machinery is never needed — pooling carries ALL reserves across
+    anyway.
+  </p>
+</Callout>
+
+## 6. Closing the transferor's books
+
+The transferor dies by ledger. The sequence — every step its own working note:
+
+1. **Open Realisation A/c** and transfer all assets taken over at **book values** (including
+   goodwill if on the books; cash too, if taken over).
+2. Transfer **liabilities taken over** at book values to the credit side.
+3. **Consideration due:** `Transferee Co. A/c Dr → To Realisation A/c` with the purchase
+   consideration.
+4. Liabilities **not** taken over (say, debentures the transferee refused) are settled by the
+   transferor directly; any difference from book value lands in Realisation A/c.
+5. **Liquidation expenses:** borne by the transferor → debit Realisation A/c. Reimbursed or
+   borne by the transferee → the transferor's books ignore them (the transferee debits
+   goodwill/capital reserve).
+6. Balance of Realisation A/c = **profit or loss on realisation** → transferred to the
+   **Equity Shareholders A/c**.
+7. Settle preference shareholders (premium/discount versus book value routes through
+   Realisation A/c), then distribute shares and cash received to equity shareholders, closing
+   the Equity Shareholders A/c to nil.
+
+The Equity Shareholders A/c is the final scorecard: capital + reserves + realisation profit −
+losses − what they receive = nil. If it doesn't close, a working note upstream is wrong.
+
+## 7. In the transferee's books, and the inter-company clean-ups
+
+The standard incorporation sequence (purchase method):
+
+| Journal | What it does |
+|---|---|
+| Business Purchase A/c Dr → To Liquidator of Transferor Co. | Consideration becomes payable |
+| Assets taken over Dr → To Liabilities assumed; To Business Purchase; (balance) To Capital Reserve — or Goodwill Dr | Assets/liabilities incorporated at agreed values; goodwill or capital reserve plugs |
+| Liquidator of Transferor Co. Dr → To Equity Share Capital / Securities Premium / Bank | Consideration discharged (shares at issue price split into capital and premium) |
+| Amalgamation Adjustment Reserve Dr → To Statutory Reserve | Only if statutory reserves must survive |
+
+Under pooling, the same skeleton runs at carrying amounts, reserves are brought in with their
+identity, and the capital-vs-capital difference adjusts reserves instead of creating goodwill.
+
+Then two clean-ups the examiner loves:
+
+- **Mutual owings:** if the companies owed each other money, the combined books would show a
+  receivable and a payable that no longer face an outsider. Eliminate after the acquisition
+  entries: `Trade Payables Dr → To Trade Receivables` for the mutual amount.
+- **Unrealised profit in stock:** if one company holds inventory bought from the other, the
+  seller's profit margin inside that stock is unrealised for the combined entity. Reduce the
+  stock to its cost to the group; the matching debit goes to goodwill/capital reserve under
+  the purchase method (or against revenue reserves in a merger).
+
+<Callout kind="example" label="Working-note discipline = marks">
+  <p>
+    A full amalgamation answer is five working notes in a fixed order: (1) purchase
+    consideration, (2) net assets / reserve adjustment, (3) goodwill or capital reserve,
+    (4) statutory reserve entry, (5) inter-company eliminations — then the balance sheet.
+    Label each note, state the method you concluded (merger/purchase) and WHY in one line,
+    and the marks follow the trail.
+  </p>
+</Callout>
+
+That's the chapter. Classify with the five conditions (§2), price with the four consideration
+methods (§3, WE 1), plug with goodwill or the reserve adjustment (§4, WE 2–3), keep statutory
+reserves alive through the Amalgamation Adjustment Reserve (§5), and finish with the mutual
+owings and stock-profit eliminations (§7).

@@ -33,3 +33,26 @@ Triage rules:
   substance is standard ICAI-solution doctrine, but verify the exact clause
   label/wording in the current consolidated Act (India Code) and initial the
   citations row.
+
+## amalgamation-of-companies — VERIFY 2026-07-04
+
+- [ ] **AS 14 paragraph numbering** — notes/bank/citations cite para 3(e) and
+  3(g) precisely (safe: definitions), but the pooling-method, purchase-method,
+  goodwill-amortisation and statutory-reserve positions are cited generically
+  ("AS 14 — purchase method" etc.). A human should insert the exact para
+  numbers from the notified standard (Companies (Accounting Standards) Rules
+  2021 text) into citations_amalgamation-of-companies.md and initial the rows.
+- [ ] **MCA 2016 rename** — notes §5 and flashcard am-10 state the
+  "Amalgamation Adjustment Account → Reserve" rename came from the MCA's 2016
+  amendment (believed Companies (Accounting Standards) Amendment Rules, 2016,
+  notified 30-03-2016). Confirm the instrument + date before anyone cites it
+  verbatim in an answer.
+- [ ] **Quoted standard text** — one 10-word shingle vs the SM survives by
+  design: the AS 14 amortisation formula ("five years unless a somewhat longer
+  period can be justified"), retained as a marked quotation in notes §4 and
+  q-009/q-021/d-005. Confirm we are comfortable quoting notified-standard
+  wording at this length (precedent: statutory text, Copyright Act s.52(1)(q)).
+- [ ] **Fixed while here: buyback readLink anchors** — the Ch 12 bank's
+  readLink hrefs pointed at #s2/#s5/#s6, which never existed on the built page
+  (Astro auto-slugs headings). Re-pointed to the real heading ids this
+  session; spot-click two of them after the next deploy.

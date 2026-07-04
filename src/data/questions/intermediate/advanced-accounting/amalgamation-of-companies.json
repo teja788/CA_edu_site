@@ -1,0 +1,2137 @@
+{
+  "level": "intermediate",
+  "paper": "Paper 1 — Advanced Accounting",
+  "chapterSlug": "amalgamation-of-companies",
+  "chapter": "Ch 13 — Amalgamation of Companies",
+  "questions": [
+    {
+      "id": "q-i1c13-001",
+      "topic": "Ch 13 · Amalgamation · Purchase consideration — net payment",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kaveri Paints Ltd takes over Penna Coatings Ltd, which has 80,000 equity shares of ₹10 each. Terms: every 5 Penna shares fetch 2 equity shares of Kaveri (face value ₹10, issued at ₹18) plus ₹3 cash per Penna share held. Kaveri also agrees to pay Penna's trade creditors of ₹2,00,000 directly. Purchase consideration under the net payment method is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,16,000",
+          "explanation": "Shares: 80,000 × 2/5 = 32,000 shares × ₹18 = ₹5,76,000; cash: 80,000 × ₹3 = ₹2,40,000; total ₹8,16,000. The creditor payment never enters purchase consideration."
+        },
+        {
+          "key": "B",
+          "text": "₹5,60,000",
+          "explanation": "This values the 32,000 shares at ₹10 face value — shares issued as consideration are taken at their issue price of ₹18."
+        },
+        {
+          "key": "C",
+          "text": "₹10,16,000",
+          "explanation": "This adds the ₹2,00,000 paid to creditors — para 3(g) counts only payments to SHAREHOLDERS."
+        },
+        {
+          "key": "D",
+          "text": "₹5,76,000",
+          "explanation": "This is the share element alone — the ₹3-per-share cash to equity holders is also consideration."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(g)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-002",
+      "topic": "Ch 13 · Amalgamation · What counts as consideration",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under para 3(g) of AS 14, which of the following is NOT part of purchase consideration?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Equity shares issued by the transferee to the transferor's preference shareholders",
+          "explanation": "Preference shareholders are shareholders — anything issued to them counts."
+        },
+        {
+          "key": "B",
+          "text": "Amounts the transferee agrees to pay the transferor's debenture holders",
+          "explanation": "Debenture holders are lenders, not shareholders. A debenture settlement is a liability taken over — it affects net assets, never purchase consideration."
+        },
+        {
+          "key": "C",
+          "text": "Cash paid by the transferee to the transferor's equity shareholders",
+          "explanation": "Cash to equity shareholders is squarely within the definition."
+        },
+        {
+          "key": "D",
+          "text": "Preference shares issued by the transferee to the transferor's equity shareholders",
+          "explanation": "Securities issued to shareholders count, whatever their class."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(g)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-003",
+      "topic": "Ch 13 · Amalgamation · Purchase consideration — net assets",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sharda Ceramics Ltd acquires the business of Betwa Tiles Ltd. Assets taken over are agreed at ₹52,00,000 and liabilities assumed at ₹17,00,000. Betwa's balance sheet also shows share capital of ₹20,00,000 and reserves of ₹8,00,000. Purchase consideration under the net assets method is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹52,00,000",
+          "explanation": "This ignores the liabilities assumed — the transferee pays for the NET of assets over outside liabilities."
+        },
+        {
+          "key": "B",
+          "text": "₹7,00,000",
+          "explanation": "This deducts capital and reserves (₹28,00,000) as well — share capital and reserves are not outside liabilities."
+        },
+        {
+          "key": "C",
+          "text": "₹35,00,000",
+          "explanation": "Net assets method: agreed value of assets taken over ₹52,00,000 − liabilities assumed ₹17,00,000 = ₹35,00,000. Capital and reserves never enter the computation."
+        },
+        {
+          "key": "D",
+          "text": "₹24,00,000",
+          "explanation": "This deducts capital + reserves instead of the liabilities assumed — the deduction is for OUTSIDE liabilities only."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(g); net assets method",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-004",
+      "topic": "Ch 13 · Amalgamation · Purchase consideration — share exchange",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Mandovi Breweries Ltd issues 3 of its equity shares (₹10 each, agreed issue value ₹24) for every 5 shares held in Zuari Bottling Ltd, which has 2,50,000 equity shares outstanding. Purchase consideration is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹25,00,000",
+          "explanation": "This is Zuari's paid-up capital — the consideration is what the transferee gives, not what the transferor had."
+        },
+        {
+          "key": "B",
+          "text": "₹36,00,000",
+          "explanation": "Shares issued = 2,50,000 × 3/5 = 1,50,000; at ₹24 each, consideration = ₹36,00,000."
+        },
+        {
+          "key": "C",
+          "text": "₹60,00,000",
+          "explanation": "This prices ALL 2,50,000 Zuari shares at ₹24 — only the 1,50,000 Mandovi shares actually issued are consideration."
+        },
+        {
+          "key": "D",
+          "text": "₹15,00,000",
+          "explanation": "This takes the 1,50,000 shares at ₹10 face value — consideration uses the agreed issue value of ₹24."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(g); share exchange method",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-005",
+      "topic": "Ch 13 · Amalgamation · Merger conditions — cash for fractions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For an amalgamation to qualify as a merger under para 3(e) of AS 14, the consideration to the transferor's equity shareholders must be discharged wholly by equity shares of the transferee, EXCEPT that cash may be paid:",
+      "options": [
+        {
+          "key": "A",
+          "text": "To shareholders who dissent from the scheme",
+          "explanation": "Dissenting shareholders paid in cash would break the wholly-by-equity-shares condition beyond fractions — para 3(e) has no dissenter carve-out."
+        },
+        {
+          "key": "B",
+          "text": "Towards the transferor's preference shareholders",
+          "explanation": "The wholly-in-equity condition governs EQUITY shareholders; preference shareholders are outside condition (iii) altogether."
+        },
+        {
+          "key": "C",
+          "text": "Up to 10% of the total consideration",
+          "explanation": "There is no percentage-based cash allowance in AS 14 — only fractions."
+        },
+        {
+          "key": "D",
+          "text": "For fractional share entitlements",
+          "explanation": "Condition (iii) permits cash only in respect of fractional shares — a shareholder entitled to 12.5 shares gets 12 shares and the half-share in cash."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The five conditions →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#2-merger-or-purchase-the-five-conditions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(e)(iii)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-006",
+      "topic": "Ch 13 · Amalgamation · Merger conditions — the 90% base",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vindhya Alloys Ltd proposes to absorb Satpura Castings Ltd, which has 2,00,000 equity shares of ₹10. Vindhya already holds 15,000 Satpura shares. For the amalgamation to qualify as a merger, holders of at least how many Satpura shares (by face value count) must become equity shareholders of Vindhya?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,50,000 shares",
+          "explanation": "75% is the special-resolution threshold under company law, not the AS 14 merger test — AS 14 asks for 90%."
+        },
+        {
+          "key": "B",
+          "text": "1,66,500 shares",
+          "explanation": "Shares already held by the transferee are excluded: base = 2,00,000 − 15,000 = 1,85,000; 90% × 1,85,000 = 1,66,500."
+        },
+        {
+          "key": "C",
+          "text": "1,80,000 shares",
+          "explanation": "This is 90% of ALL shares — the 15,000 shares Vindhya already holds must be excluded from the base first."
+        },
+        {
+          "key": "D",
+          "text": "1,85,000 shares",
+          "explanation": "That is the whole eligible base — the condition requires 90% of it, not all of it."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The five conditions →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#2-merger-or-purchase-the-five-conditions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(e)(ii)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-007",
+      "topic": "Ch 13 · Amalgamation · Goodwill on amalgamation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In an amalgamation in the nature of purchase, Son Valley Cements Ltd pays purchase consideration of ₹60,00,000 for net assets of the transferor valued at ₹52,00,000. The difference is recorded as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Capital reserve of ₹8,00,000",
+          "explanation": "Capital reserve arises when net assets EXCEED consideration — here the direction is the other way."
+        },
+        {
+          "key": "B",
+          "text": "Goodwill of ₹8,00,000",
+          "explanation": "Consideration exceeds net assets by ₹8,00,000 — the excess paid over what was received is goodwill."
+        },
+        {
+          "key": "C",
+          "text": "Charge to the Statement of P&L of ₹8,00,000",
+          "explanation": "The excess is capitalised as goodwill and amortised — it is not expensed at once."
+        },
+        {
+          "key": "D",
+          "text": "Goodwill of ₹52,00,000",
+          "explanation": "Net assets are what was received, not the unpaid-for excess — goodwill is only the ₹8,00,000 difference."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14 — purchase method (goodwill/capital reserve)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-008",
+      "topic": "Ch 13 · Amalgamation · Capital reserve",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Gomti Glass Ltd takes over assets of Sarayu Bottles Ltd agreed at ₹61,00,000 and liabilities of ₹13,00,000, for a purchase consideration of ₹42,00,000 (amalgamation in the nature of purchase). The transferee records:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Capital reserve of ₹6,00,000",
+          "explanation": "Net assets = 61,00,000 − 13,00,000 = ₹48,00,000; consideration ₹42,00,000 is LESS, so the ₹6,00,000 shortfall is capital reserve."
+        },
+        {
+          "key": "B",
+          "text": "Capital reserve of ₹48,00,000",
+          "explanation": "₹48,00,000 is the net assets figure itself — only the difference from consideration becomes capital reserve."
+        },
+        {
+          "key": "C",
+          "text": "Goodwill of ₹6,00,000",
+          "explanation": "Goodwill needs consideration to EXCEED net assets — here the transferee paid less than it received."
+        },
+        {
+          "key": "D",
+          "text": "Goodwill of ₹19,00,000",
+          "explanation": "This compares gross assets (₹61,00,000) with consideration and mislabels the direction — liabilities must be deducted first."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14 — purchase method (goodwill/capital reserve)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-009",
+      "topic": "Ch 13 · Amalgamation · Goodwill amortisation period",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Goodwill arising on an amalgamation in the nature of purchase should, per AS 14, be amortised over:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A period not exceeding five years, unless a somewhat longer period can be justified",
+          "explanation": "AS 14 prescribes systematic amortisation over not more than five years, with a longer period only where justification exists."
+        },
+        {
+          "key": "B",
+          "text": "The year of amalgamation itself, as an immediate write-off",
+          "explanation": "Immediate write-off is not the AS 14 treatment — the standard requires systematic amortisation."
+        },
+        {
+          "key": "C",
+          "text": "A period not exceeding ten years in all cases",
+          "explanation": "Ten years is the AS 26 rebuttable presumption for other intangibles — AS 14's own rule for amalgamation goodwill is five years."
+        },
+        {
+          "key": "D",
+          "text": "No period — it is tested annually for impairment instead",
+          "explanation": "Impairment-only treatment is the Ind AS 103 world; AS 14 requires amortisation."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14 — goodwill arising on amalgamation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-010",
+      "topic": "Ch 13 · Amalgamation · Pooling — reserve adjustment",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a merger accounted under the pooling of interests method, Yamuna Fabrics Ltd issues share capital of ₹25,00,000 to the shareholders of Chambal Weaves Ltd, whose paid-up capital was ₹18,00,000 equity plus ₹2,00,000 preference. The difference is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,00,000 recorded as goodwill",
+          "explanation": "Pooling NEVER creates goodwill — the difference goes to reserves."
+        },
+        {
+          "key": "B",
+          "text": "₹5,00,000 added to reserves",
+          "explanation": "Reserves are INCREASED only when capital issued is less than the capital cancelled — here it is more."
+        },
+        {
+          "key": "C",
+          "text": "₹5,00,000 deducted from reserves",
+          "explanation": "Capital issued ₹25,00,000 − transferor capital ₹20,00,000 (equity + preference) = ₹5,00,000, adjusted against reserves — issued more capital than was cancelled, so reserves shrink."
+        },
+        {
+          "key": "D",
+          "text": "₹7,00,000 deducted from reserves",
+          "explanation": "This ignores the ₹2,00,000 preference capital — the comparison uses the transferor's entire paid-up capital."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14 — pooling of interests method",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-011",
+      "topic": "Ch 13 · Amalgamation · Reserves under purchase method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In an amalgamation in the nature of purchase, which reserves of the transferor company appear in the transferee's financial statements?",
+      "options": [
+        {
+          "key": "A",
+          "text": "No reserves under any circumstances",
+          "explanation": "Almost — statutory reserves are the one exception, kept alive through the Amalgamation Adjustment Reserve."
+        },
+        {
+          "key": "B",
+          "text": "All reserves, at their carrying amounts",
+          "explanation": "Carrying every reserve across is the POOLING treatment — purchase method records none except statutory reserves."
+        },
+        {
+          "key": "C",
+          "text": "Only the general reserve and P&L balance",
+          "explanation": "These are precisely the reserves that are NOT recorded under the purchase method."
+        },
+        {
+          "key": "D",
+          "text": "Only statutory reserves, via the Amalgamation Adjustment Reserve mechanism",
+          "explanation": "Purchase method drops all transferor reserves except statutory reserves, which retain their identity as long as the governing statute requires."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Statutory reserves →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#5-statutory-reserves-and-the-amalgamation-adjustment-reserve"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14 — treatment of reserves under purchase method",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-012",
+      "topic": "Ch 13 · Amalgamation · AAR presentation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Amalgamation Adjustment Reserve created while incorporating a transferor's statutory reserve is presented as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A separate line item with a negative balance within reserves — not set off against the statutory reserve",
+          "explanation": "It must appear as its own (negative) head under reserves; netting it against the statutory reserve is expressly not permitted. Both are reversed when the statutory retention period ends."
+        },
+        {
+          "key": "B",
+          "text": "An intangible asset amortised over five years",
+          "explanation": "Five-year amortisation belongs to goodwill on amalgamation — the AAR is a reserves-side item."
+        },
+        {
+          "key": "C",
+          "text": "A deduction from the statutory reserve it relates to",
+          "explanation": "Set-off against the statutory reserve is exactly what the separate-line-item requirement forbids."
+        },
+        {
+          "key": "D",
+          "text": "A contingent liability in the notes",
+          "explanation": "It is a recognised (negative) component of reserves, not an off-balance-sheet disclosure."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Statutory reserves →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#5-statutory-reserves-and-the-amalgamation-adjustment-reserve"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14 — statutory reserves; MCA amendment 2016 (Amalgamation Adjustment Reserve)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-013",
+      "topic": "Ch 13 · Amalgamation · Mutual owings",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On the date of absorption, the transferee's trade receivables are ₹8,00,000 and the transferor's are ₹5,00,000. Included in the transferee's receivables is ₹1,20,000 due from the transferor. Combined trade receivables in the post-amalgamation balance sheet are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹13,00,000",
+          "explanation": "Adding without elimination leaves a receivable the combined entity owes itself — mutual owings must be knocked out."
+        },
+        {
+          "key": "B",
+          "text": "₹10,60,000",
+          "explanation": "This eliminates ₹1,20,000 twice — the mutual balance is removed once from receivables (and once from payables)."
+        },
+        {
+          "key": "C",
+          "text": "₹11,80,000",
+          "explanation": "8,00,000 + 5,00,000 = ₹13,00,000, less the ₹1,20,000 mutual owing eliminated (Trade Payables Dr → To Trade Receivables) = ₹11,80,000."
+        },
+        {
+          "key": "D",
+          "text": "₹6,80,000",
+          "explanation": "This drops the transferor's receivables entirely — only the ₹1,20,000 mutual balance is eliminated."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Inter-company clean-ups →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#7-in-the-transferees-books-and-the-inter-company-clean-ups"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Inter-company owings elimination (SM Ch 13 treatment)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-014",
+      "topic": "Ch 13 · Amalgamation · Unrealised profit in stock",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "After absorbing Tawa Traders, the transferee holds inventory of ₹2,40,000 purchased from Tawa, which invoiced goods at cost plus 20%. The unrealised profit to be eliminated from stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹48,000",
+          "explanation": "20% of the invoice value treats the mark-up as a margin ON SELLING PRICE — it is 20% on COST, so the fraction is 20/120."
+        },
+        {
+          "key": "B",
+          "text": "₹2,00,000",
+          "explanation": "That is the COST of the stock — the elimination removes only the profit layer sitting above cost."
+        },
+        {
+          "key": "C",
+          "text": "₹40,000",
+          "explanation": "Margin on invoice price = 20/120; unrealised profit = 2,40,000 × 20/120 = ₹40,000, bringing the stock down to its ₹2,00,000 cost to the group."
+        },
+        {
+          "key": "D",
+          "text": "₹60,000",
+          "explanation": "This applies 25% to invoice value — 25% on cost would equal 20% on selling price, the reverse of the given mark-up."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Inter-company clean-ups →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#7-in-the-transferees-books-and-the-inter-company-clean-ups"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Unrealised profit elimination (SM Ch 13 treatment)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-015",
+      "topic": "Ch 13 · Amalgamation · External reconstruction",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "External reconstruction refers to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An existing company absorbing another existing company",
+          "explanation": "That is absorption — no new company is formed at all."
+        },
+        {
+          "key": "B",
+          "text": "Two existing companies combining into a newly formed third company",
+          "explanation": "That is amalgamation in the strict sense — external reconstruction involves only ONE existing company being taken over."
+        },
+        {
+          "key": "C",
+          "text": "A new company formed specifically to take over the business of one existing company, which is then wound up",
+          "explanation": "One seller, one purpose-built buyer — the existing company transfers its business to the newly floated company and dies. The accounting follows AS 14 like any amalgamation."
+        },
+        {
+          "key": "D",
+          "text": "A company reorganising its capital internally by writing down shares against accumulated losses",
+          "explanation": "Writing down capital within the same entity is INTERNAL reconstruction — a different chapter with no transferee company."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The three flavours →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#1-who-is-who-and-the-three-flavours"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 13 scope — amalgamation, absorption, external reconstruction",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-016",
+      "topic": "Ch 13 · Amalgamation · Realisation account mechanics",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "While closing the transferor's books, the balance of the Realisation Account (profit or loss on realisation) is transferred to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The Transferee Company Account",
+          "explanation": "The transferee's account records only the consideration receivable and its discharge — never the realisation result."
+        },
+        {
+          "key": "B",
+          "text": "The Statement of Profit and Loss",
+          "explanation": "The transferor is being wound up — there is no continuing P&L to absorb the result."
+        },
+        {
+          "key": "C",
+          "text": "The Equity Shareholders Account",
+          "explanation": "Realisation profit or loss belongs to the residual owners — it joins capital and free reserves in the Equity Shareholders Account, which must then close to nil."
+        },
+        {
+          "key": "D",
+          "text": "Capital Reserve",
+          "explanation": "Capital reserve on amalgamation arises in the TRANSFEREE's books under the purchase method, not in the dying company's ledger."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Closing the transferor's books →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#6-closing-the-transferors-books"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Transferor book-closing entries (SM Ch 13)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-017",
+      "topic": "Ch 13 · Amalgamation · Realisation profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Purna Pipes Ltd transfers to its acquirer assets with a book value of ₹50,00,000 and liabilities of ₹18,00,000, for purchase consideration of ₹36,00,000. Liquidation expenses of ₹50,000 are borne by Purna itself. Profit on realisation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Loss of ₹3,50,000",
+          "explanation": "The consideration exceeds the net book value given up — the result is a profit, not a loss."
+        },
+        {
+          "key": "B",
+          "text": "₹3,50,000",
+          "explanation": "Consideration 36,00,000 − net book value taken over (50,00,000 − 18,00,000 = 32,00,000) − expenses 50,000 = ₹3,50,000."
+        },
+        {
+          "key": "C",
+          "text": "₹4,50,000",
+          "explanation": "This ADDS the expenses instead of deducting them — expenses borne by the transferor reduce the realisation profit."
+        },
+        {
+          "key": "D",
+          "text": "₹4,00,000",
+          "explanation": "This forgets the liquidation expenses, which the transferor bears and debits to the Realisation Account."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Closing the transferor's books →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#6-closing-the-transferors-books"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Transferor book-closing entries (SM Ch 13)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-018",
+      "topic": "Ch 13 · Amalgamation · Method selection",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The pooling of interests method of accounting may be applied:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only to an amalgamation that satisfies all five conditions of para 3(e) — a merger",
+          "explanation": "Pooling is reserved for mergers; any amalgamation failing even one condition is a purchase and must use the purchase method."
+        },
+        {
+          "key": "B",
+          "text": "Whenever the two companies are in the same line of business",
+          "explanation": "Genuine pooling requires the para 3(e) conditions — same industry is not among them."
+        },
+        {
+          "key": "C",
+          "text": "To any amalgamation, at the transferee's option",
+          "explanation": "The method is dictated by the classification, never by choice."
+        },
+        {
+          "key": "D",
+          "text": "Only when a new company is formed to take over both businesses",
+          "explanation": "A merger can equally be an absorption by an existing company — what matters is the five conditions, not whether a new entity exists."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(e); methods of accounting",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-019",
+      "topic": "Ch 13 · Amalgamation · Intrinsic value exchange",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Hooghly Shipping Ltd (net assets ₹96,00,000; 4,00,000 equity shares) absorbs Damodar Barges Ltd (net assets ₹30,00,000; 2,50,000 equity shares). Shares are exchanged on intrinsic values. The number of Hooghly shares issued is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5,00,000 shares",
+          "explanation": "This inverts the ratio to 2-for-1 — the cheaper Damodar share earns HALF a Hooghly share, not two."
+        },
+        {
+          "key": "B",
+          "text": "62,500 shares",
+          "explanation": "1-for-4 has no basis — the intrinsic values stand in a 1:2 relation, not 1:4."
+        },
+        {
+          "key": "C",
+          "text": "2,50,000 shares",
+          "explanation": "A 1:1 swap ignores that a Hooghly share is worth twice a Damodar share."
+        },
+        {
+          "key": "D",
+          "text": "1,25,000 shares",
+          "explanation": "Intrinsic values: Hooghly 96,00,000 ÷ 4,00,000 = ₹24; Damodar 30,00,000 ÷ 2,50,000 = ₹12. Ratio ₹12/₹24 = 1 Hooghly share per 2 Damodar shares → 2,50,000 ÷ 2 = 1,25,000 shares."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Intrinsic value / share exchange method (SM Ch 13)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-020",
+      "topic": "Ch 13 · Amalgamation · Liquidation expenses borne by transferee",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Where the transferee company agrees to bear the transferor's liquidation expenses, the transferee debits the amount to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Purchase consideration, increasing it",
+          "explanation": "Para 3(g) confines consideration to what shareholders receive — reimbursed winding-up costs go to goodwill/capital reserve instead."
+        },
+        {
+          "key": "B",
+          "text": "The Realisation Account",
+          "explanation": "The Realisation Account lives in the TRANSFEROR's books — and even there, only expenses the transferor itself bears are debited."
+        },
+        {
+          "key": "C",
+          "text": "Goodwill (or Capital Reserve) Account",
+          "explanation": "The expense is part of the cost of acquiring the business but is NOT purchase consideration — it adjusts goodwill or capital reserve directly."
+        },
+        {
+          "key": "D",
+          "text": "The Statement of Profit and Loss as an expense",
+          "explanation": "It is an acquisition-related capital adjustment in this chapter's scheme, not a revenue expense of the transferee."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Liquidation expenses treatment (SM Ch 13); AS 14, para 3(g)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-021",
+      "topic": "Ch 13 · Amalgamation · Goodwill amortisation amount",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Goodwill of ₹2,50,000 arose on an amalgamation in the nature of purchase. Amortising on a straight-line basis over the maximum period AS 14 ordinarily allows, the annual amortisation charge is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹50,000",
+          "explanation": "AS 14's ordinary ceiling is five years: 2,50,000 ÷ 5 = ₹50,000 per year."
+        },
+        {
+          "key": "B",
+          "text": "₹2,50,000",
+          "explanation": "Full write-off in year one is not required — the standard spreads the charge over the amortisation period."
+        },
+        {
+          "key": "C",
+          "text": "₹12,500",
+          "explanation": "Twenty years has no basis in AS 14 — the ordinary maximum is five."
+        },
+        {
+          "key": "D",
+          "text": "₹25,000",
+          "explanation": "Ten years is the AS 26 presumption for other intangibles — AS 14's own ordinary maximum is five years."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14 — goodwill arising on amalgamation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-022",
+      "topic": "Ch 13 · Amalgamation · Pooling — asset values",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the pooling of interests method, the transferor's assets and liabilities are incorporated in the transferee's books at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Values agreed between the two boards, whatever they are",
+          "explanation": "Agreed-value incorporation is purchase-method territory; a merger carries book values forward."
+        },
+        {
+          "key": "B",
+          "text": "Their existing carrying amounts, adjusted only to achieve uniformity of accounting policies",
+          "explanation": "Pooling continues the old book values; the sole permitted adjustment aligns accounting policies (e.g. restating inventory from weighted average to FIFO)."
+        },
+        {
+          "key": "C",
+          "text": "Realisable values net of expected selling costs",
+          "explanation": "Realisable value is a liquidation basis — a merger assumes the business continues as before."
+        },
+        {
+          "key": "D",
+          "text": "Fair values on the date of amalgamation",
+          "explanation": "Fair-value allocation belongs to the PURCHASE method — pooling preserves book values."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 14 — pooling of interests method; para 3(e)(v)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-023",
+      "topic": "Ch 13 · Amalgamation · Consideration — exclusions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In an absorption, the transferee issues shares worth ₹14,00,000 plus cash of ₹2,00,000 to the transferor's equity shareholders, issues shares worth ₹5,00,000 to its preference shareholders, pays the transferor's debenture holders ₹4,00,000, and reimburses liquidation expenses of ₹30,000. Purchase consideration per AS 14 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹21,00,000",
+          "explanation": "Only payments to shareholders count: 14,00,000 + 2,00,000 + 5,00,000 = ₹21,00,000. Debenture holders and expense reimbursements stay out."
+        },
+        {
+          "key": "B",
+          "text": "₹21,30,000",
+          "explanation": "This adds the liquidation-expense reimbursement, which is debited to goodwill/capital reserve, not to consideration."
+        },
+        {
+          "key": "C",
+          "text": "₹25,00,000",
+          "explanation": "This wrongly adds the ₹4,00,000 to debenture holders — lenders are not shareholders."
+        },
+        {
+          "key": "D",
+          "text": "₹25,30,000",
+          "explanation": "This adds both the debenture payment and the expense reimbursement — para 3(g) excludes each of them."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(g)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-024",
+      "topic": "Ch 13 · Amalgamation · Statutory reserves — which method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Amalgamation Adjustment Reserve mechanism for carrying forward statutory reserves is needed:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Under neither method — statutory reserves always lapse",
+          "explanation": "Statutory reserves must be maintained while the governing statute requires — that is exactly why the AAR entry exists."
+        },
+        {
+          "key": "B",
+          "text": "Under both methods, in every amalgamation",
+          "explanation": "It is redundant under pooling — the statutory reserve arrives with all the other reserves."
+        },
+        {
+          "key": "C",
+          "text": "Only under the pooling of interests method",
+          "explanation": "Backwards — pooling has no need for it, since reserves are carried forward as a matter of course."
+        },
+        {
+          "key": "D",
+          "text": "Only under the purchase method — pooling carries all reserves across anyway",
+          "explanation": "In a merger every reserve survives with its identity, so no special machinery is needed; the AAR exists because the purchase method otherwise drops the transferor's reserves."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Statutory reserves →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#5-statutory-reserves-and-the-amalgamation-adjustment-reserve"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14 — statutory reserves under purchase method",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-025",
+      "topic": "Ch 13 · Amalgamation · Net assets — agreed vs book values",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ulhas Motors Ltd takes over Savitri Auto Ltd: PPE at an agreed ₹30,00,000 (book value ₹26,00,000), inventory at book value ₹5,00,000 (no value agreed), receivables at an agreed ₹5,60,000, and assumes creditors of ₹6,60,000. Net assets taken over amount to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹40,60,000",
+          "explanation": "This forgets to deduct the creditors assumed — net assets are net of outside liabilities taken over."
+        },
+        {
+          "key": "B",
+          "text": "₹30,00,000",
+          "explanation": "This uses the ₹26,00,000 book value for PPE — where a value has been agreed, the agreed value prevails."
+        },
+        {
+          "key": "C",
+          "text": "₹29,00,000",
+          "explanation": "This omits the inventory — assets with no agreed value still come in, at their book value."
+        },
+        {
+          "key": "D",
+          "text": "₹34,00,000",
+          "explanation": "Agreed values where they exist, book values where none was agreed: 30,00,000 + 5,00,000 + 5,60,000 − 6,60,000 = ₹34,00,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Purchase consideration →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#3-purchase-consideration"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14 — net assets method (agreed values; book value where not agreed)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-026",
+      "topic": "Ch 13 · Amalgamation · Mutual owings entry",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "After passing the usual acquisition entries, the transferee eliminates an amount the two companies owed each other by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "No entry — the balances cancel automatically on consolidation",
+          "explanation": "This is a single surviving legal entity, not a consolidation working — an actual journal entry is needed."
+        },
+        {
+          "key": "B",
+          "text": "Trade Receivables A/c Dr → To Trade Payables A/c",
+          "explanation": "This GROSSES UP both balances instead of cancelling them — the debit must go to payables."
+        },
+        {
+          "key": "C",
+          "text": "Goodwill A/c Dr → To Trade Receivables A/c",
+          "explanation": "A mutual owing is not a valuation adjustment — it cancels against the matching payable, leaving goodwill untouched."
+        },
+        {
+          "key": "D",
+          "text": "Trade Payables A/c Dr → To Trade Receivables A/c",
+          "explanation": "The mutual balance sits as a receivable in one ledger and a payable in the other; one entry removes both from the combined books."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Inter-company clean-ups →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#7-in-the-transferees-books-and-the-inter-company-clean-ups"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Inter-company owings elimination (SM Ch 13 treatment)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-027",
+      "topic": "Ch 13 · Amalgamation · Pooling — combined reserves",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kosi Cables Ltd (general reserve ₹12,00,000) merges with Gandak Wires Ltd (general reserve ₹5,00,000, P&L balance ₹1,80,000, paid-up capital ₹20,00,000) under the pooling of interests method, issuing share capital of ₹22,00,000. If the capital difference is adjusted against general reserve, the combined general reserve is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹15,00,000",
+          "explanation": "Adjustment = 22,00,000 − 20,00,000 = ₹2,00,000. Combined GR = 12,00,000 + 5,00,000 − 2,00,000 = ₹15,00,000; the P&L balance carries forward separately."
+        },
+        {
+          "key": "B",
+          "text": "₹18,80,000",
+          "explanation": "This lumps the P&L balance into general reserve AND skips the adjustment — pooling preserves each reserve's identity."
+        },
+        {
+          "key": "C",
+          "text": "₹12,00,000",
+          "explanation": "Dropping the transferor's reserve is purchase-method thinking — a merger carries it forward."
+        },
+        {
+          "key": "D",
+          "text": "₹17,00,000",
+          "explanation": "This forgets the ₹2,00,000 capital-difference adjustment that pooling requires."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The two accounting methods →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#4-the-two-accounting-methods"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "AS 14 — pooling of interests method",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c13-028",
+      "topic": "Ch 13 · Amalgamation · Classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which single feature, by itself, forces an amalgamation to be classified as being in the nature of PURCHASE?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The transferee revalued its OWN assets last year",
+          "explanation": "The book-value condition concerns the TRANSFEROR's assets on incorporation — the transferee's own past revaluations are irrelevant."
+        },
+        {
+          "key": "B",
+          "text": "Holders of 92% of the transferor's equity face value become transferee shareholders",
+          "explanation": "92% clears the 90% threshold — this condition is satisfied, not broken."
+        },
+        {
+          "key": "C",
+          "text": "The transferor's inventory is restated from weighted average to FIFO to match the transferee's policy",
+          "explanation": "Policy-uniformity adjustments are expressly permitted by condition (v) — they do not disturb merger status."
+        },
+        {
+          "key": "D",
+          "text": "Equity shareholders of the transferor receive ₹5 cash per share in addition to equity shares",
+          "explanation": "Cash beyond fractional entitlements breaks condition (iii) — consideration must be wholly equity shares. One failed condition is enough."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The five conditions →",
+        "href": "/intermediate/advanced-accounting/amalgamation-of-companies/#2-merger-or-purchase-the-five-conditions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 14, para 3(e)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "cs-i1c13-001",
+      "type": "case_mcq_set",
+      "topic": "Ch 13 · Amalgamation · Case: Chenab absorbs Jhelum (purchase method)",
+      "case": "Chenab Engineering Ltd absorbs Jhelum Forgings Ltd in an amalgamation in the nature of purchase. Jhelum's balance sheet shows: 1,50,000 equity shares of ₹10 fully paid (₹15,00,000); general reserve ₹4,00,000; export profit reserve (maintained under a statutory requirement with three years still to run) ₹1,00,000; 10% debentures ₹6,00,000; trade creditors ₹3,50,000. Chenab takes over all assets at an agreed total of ₹34,00,000 and assumes both the debentures and the creditors. The terms: every 5 Jhelum equity shares fetch 4 equity shares of Chenab (face ₹10, issued at ₹12.50), plus ₹1 cash per Jhelum share held. The CFO wants the acquisition schedule: consideration, net assets, the resulting goodwill or capital reserve, and the fate of Jhelum's reserves.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c13-001-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Purchase consideration is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹22,50,000",
+              "explanation": "This adds the ₹6,00,000 debentures — a liability assumed, which belongs in the net-assets working, not in consideration."
+            },
+            {
+              "key": "B",
+              "text": "₹16,50,000",
+              "explanation": "Shares: 1,50,000 × 4/5 = 1,20,000 shares × ₹12.50 = ₹15,00,000; cash: 1,50,000 × ₹1 = ₹1,50,000; total ₹16,50,000."
+            },
+            {
+              "key": "C",
+              "text": "₹15,00,000",
+              "explanation": "The share element alone — the ₹1-per-share cash to equity holders is consideration too."
+            },
+            {
+              "key": "D",
+              "text": "₹13,50,000",
+              "explanation": "This takes the 1,20,000 shares at ₹10 face value — consideration shares are measured at the ₹12.50 issue price."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 14, para 3(g)"
+        },
+        {
+          "id": "cs-i1c13-001-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Net assets taken over amount to:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹34,00,000",
+              "explanation": "Gross assets — the debentures and creditors Chenab assumes must be deducted."
+            },
+            {
+              "key": "B",
+              "text": "₹19,50,000",
+              "explanation": "This also deducts Jhelum's reserves (₹5,00,000) — reserves are owners' funds, never a deduction in the net-assets working."
+            },
+            {
+              "key": "C",
+              "text": "₹24,50,000",
+              "explanation": "Agreed assets ₹34,00,000 − liabilities assumed (6,00,000 + 3,50,000 = ₹9,50,000) = ₹24,50,000."
+            },
+            {
+              "key": "D",
+              "text": "₹28,00,000",
+              "explanation": "This deducts only the debentures — the trade creditors are assumed as well."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 14 — net assets computation"
+        },
+        {
+          "id": "cs-i1c13-001-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The acquisition gives rise to:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Goodwill of ₹8,00,000",
+              "explanation": "Goodwill would need consideration to be the LARGER number — here Chenab paid less than the net assets received."
+            },
+            {
+              "key": "B",
+              "text": "Capital reserve of ₹17,50,000",
+              "explanation": "This compares gross assets ₹34,00,000 with consideration — liabilities assumed must be netted first."
+            },
+            {
+              "key": "C",
+              "text": "Capital reserve of ₹8,00,000",
+              "explanation": "Net assets ₹24,50,000 exceed consideration ₹16,50,000 by ₹8,00,000 — the bargain element is capital reserve."
+            },
+            {
+              "key": "D",
+              "text": "Neither — the difference adjusts general reserve",
+              "explanation": "Adjusting reserves for the difference is the POOLING plug; a purchase produces goodwill or capital reserve."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 14 — purchase method (goodwill/capital reserve)"
+        },
+        {
+          "id": "cs-i1c13-001-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "To keep Jhelum's export profit reserve alive, Chenab passes:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Export Profit Reserve Dr ₹1,00,000 → To P&L ₹1,00,000",
+              "explanation": "This RELEASES the reserve to profit — the opposite of preserving it; release happens only when the statutory period ends, and via reversal of the AAR entry."
+            },
+            {
+              "key": "B",
+              "text": "Amalgamation Adjustment Reserve Dr ₹5,00,000 → To Reserves ₹5,00,000",
+              "explanation": "₹5,00,000 sweeps in the general reserve too — only STATUTORY reserves get this treatment; general reserve is simply dropped."
+            },
+            {
+              "key": "C",
+              "text": "No entry — statutory reserves lapse on amalgamation",
+              "explanation": "They must be maintained while the statute requires (three years remain here) — that is the whole point of the mechanism."
+            },
+            {
+              "key": "D",
+              "text": "Amalgamation Adjustment Reserve Dr ₹1,00,000 → To Export Profit Reserve ₹1,00,000",
+              "explanation": "Statutory reserves retain their identity for the balance of the statutory period; the AAR (a negative reserves line) is the balancing debit."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "AS 14 — statutory reserves; Amalgamation Adjustment Reserve"
+        },
+        {
+          "id": "cs-i1c13-001-e",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Jhelum's general reserve of ₹4,00,000 appears in Chenab's post-amalgamation balance sheet:",
+          "options": [
+            {
+              "key": "A",
+              "text": "As part of capital reserve",
+              "explanation": "Capital reserve is the excess of net assets over consideration — it is computed, not assembled from the transferor's reserve balances."
+            },
+            {
+              "key": "B",
+              "text": "Merged into Chenab's own general reserve",
+              "explanation": "Carrying reserves across is pooling treatment — this amalgamation is a purchase."
+            },
+            {
+              "key": "C",
+              "text": "Nowhere — under the purchase method it is not recorded at all",
+              "explanation": "Non-statutory reserves of the transferor die with it in a purchase; only the export profit reserve survives, via the AAR entry."
+            },
+            {
+              "key": "D",
+              "text": "As a negative Amalgamation Adjustment Reserve",
+              "explanation": "The AAR mirrors STATUTORY reserves only — the general reserve simply disappears."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 14 — treatment of reserves under purchase method"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c13-002",
+      "type": "case_mcq_set",
+      "topic": "Ch 13 · Amalgamation · Case: Bhagirathi–Alaknanda merger (pooling)",
+      "case": "Bhagirathi Cotton Ltd and Alaknanda Spinning Ltd amalgamate. All assets and liabilities of Alaknanda pass to Bhagirathi; holders of 96% of Alaknanda's equity face value become Bhagirathi shareholders; the consideration is wholly equity shares (cash only for fractions); the spinning business will continue; and book values are carried forward. Alaknanda's balance sheet: paid-up equity capital ₹20,00,000 (2,00,000 shares of ₹10); general reserve ₹7,00,000; P&L balance ₹3,00,000. Bhagirathi (general reserve ₹15,00,000) issues 9 of its ₹10 equity shares for every 8 Alaknanda shares held. The capital difference, per the scheme, is adjusted against general reserve.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c13-002-a",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The amalgamation is accounted for under:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Either method, at Bhagirathi's option",
+              "explanation": "The method follows the classification automatically — there is no accounting choice."
+            },
+            {
+              "key": "B",
+              "text": "The purchase method — only 96% (not 100%) of shareholders joined",
+              "explanation": "The threshold is 90% of the eligible face value; 96% passes comfortably."
+            },
+            {
+              "key": "C",
+              "text": "The pooling of interests method — all five para 3(e) conditions are satisfied",
+              "explanation": "All assets/liabilities pass, 96% ≥ 90%, consideration is wholly equity (fractions aside), the business continues, and book values are retained — a merger, so pooling applies."
+            },
+            {
+              "key": "D",
+              "text": "The purchase method — cash was paid for fractions",
+              "explanation": "Fractional cash is the one payment condition (iii) expressly permits — it does not break merger status."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 14, para 3(e)"
+        },
+        {
+          "id": "cs-i1c13-002-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Share capital issued by Bhagirathi is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "25,000 shares — ₹2,50,000",
+              "explanation": "This issues only the excess over a 1:1 swap — the full 9 shares per 8 held must be issued."
+            },
+            {
+              "key": "B",
+              "text": "1,77,778 shares — ₹17,77,780",
+              "explanation": "This inverts the ratio to 8-for-9 — Alaknanda holders receive MORE shares than they surrender, not fewer."
+            },
+            {
+              "key": "C",
+              "text": "2,00,000 shares — ₹20,00,000",
+              "explanation": "A 1:1 swap ignores the stated 9-for-8 exchange ratio."
+            },
+            {
+              "key": "D",
+              "text": "2,25,000 shares — ₹22,50,000",
+              "explanation": "2,00,000 × 9/8 = 2,25,000 shares of ₹10 = ₹22,50,000."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "Share exchange arithmetic"
+        },
+        {
+          "id": "cs-i1c13-002-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The amount adjusted against reserves under pooling is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nil — pooling never adjusts reserves",
+              "explanation": "The capital-difference adjustment is precisely the one plug pooling requires."
+            },
+            {
+              "key": "B",
+              "text": "₹2,50,000, added to reserves",
+              "explanation": "Reserves would grow only if capital issued were LESS than the capital cancelled — here it is more."
+            },
+            {
+              "key": "C",
+              "text": "₹2,50,000, recorded as goodwill",
+              "explanation": "Pooling never produces goodwill — the difference always lands in reserves."
+            },
+            {
+              "key": "D",
+              "text": "₹2,50,000, deducted",
+              "explanation": "Capital issued ₹22,50,000 − Alaknanda's capital ₹20,00,000 = ₹2,50,000, deducted from reserves since more capital was issued than cancelled."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "AS 14 — pooling of interests method"
+        },
+        {
+          "id": "cs-i1c13-002-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Combined general reserve after the merger is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹22,00,000",
+              "explanation": "This skips the ₹2,50,000 adjustment for the excess capital issued."
+            },
+            {
+              "key": "B",
+              "text": "₹19,50,000",
+              "explanation": "15,00,000 + 7,00,000 − 2,50,000 (capital-difference adjustment) = ₹19,50,000."
+            },
+            {
+              "key": "C",
+              "text": "₹12,50,000",
+              "explanation": "This applies the adjustment but forgets to add Alaknanda's ₹7,00,000 general reserve first."
+            },
+            {
+              "key": "D",
+              "text": "₹15,00,000",
+              "explanation": "Dropping Alaknanda's general reserve is purchase-method treatment — pooling carries it forward."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 14 — pooling of interests method"
+        },
+        {
+          "id": "cs-i1c13-002-e",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Alaknanda's P&L balance of ₹3,00,000 is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Merged into general reserve",
+              "explanation": "Reserves keep their separate identities under pooling — no relabelling."
+            },
+            {
+              "key": "B",
+              "text": "Transferred to Capital Reserve",
+              "explanation": "No capital reserve arises in a pooling — and reserve identities are preserved in any case."
+            },
+            {
+              "key": "C",
+              "text": "Carried into Bhagirathi's books as a P&L (retained earnings) balance, identity intact",
+              "explanation": "Pooling preserves the identity of every reserve — P&L balance stays P&L balance."
+            },
+            {
+              "key": "D",
+              "text": "Not recorded",
+              "explanation": "Dropping it is purchase-method treatment; in a merger all reserves come across."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 14 — pooling of interests method (identity of reserves)"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c13-003",
+      "type": "case_mcq_set",
+      "topic": "Ch 13 · Amalgamation · Case: Closing Tungabhadra's books",
+      "case": "Tungabhadra Ceramics Ltd transfers its business to Malaprabha Potteries Ltd for a purchase consideration of ₹38,00,000. Its balance sheet on that date: sundry assets ₹42,00,000 (all taken over at book value) and cash ₹4,00,000 (retained); trade creditors ₹9,00,000 (taken over); bank loan ₹3,00,000 (NOT taken over — repaid at book value by Tungabhadra); equity capital ₹25,00,000; general reserve ₹6,00,000; P&L balance ₹3,00,000. Tungabhadra pays its own liquidation expenses of ₹40,000 from the retained cash. You are closing Tungabhadra's books.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c13-003-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Profit on realisation is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,60,000",
+              "explanation": "This wrongly deducts the ₹3,00,000 bank loan — a liability repaid at its book value passes through with no profit or loss effect."
+            },
+            {
+              "key": "B",
+              "text": "₹4,60,000",
+              "explanation": "Consideration 38,00,000 − net book value taken over (42,00,000 − 9,00,000 = 33,00,000) − liquidation expenses 40,000 = ₹4,60,000. The bank loan, repaid at book value, creates no realisation difference."
+            },
+            {
+              "key": "C",
+              "text": "₹5,00,000",
+              "explanation": "This ignores the ₹40,000 liquidation expenses borne by Tungabhadra, which are debited to the Realisation Account."
+            },
+            {
+              "key": "D",
+              "text": "Loss of ₹4,60,000",
+              "explanation": "Consideration exceeds the net book value surrendered — the realisation result is a profit."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "Realisation account mechanics (SM Ch 13)"
+        },
+        {
+          "id": "cs-i1c13-003-b",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The ₹40,000 liquidation expenses borne by Tungabhadra are debited to:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Goodwill Account",
+              "explanation": "Goodwill adjustments for such expenses arise in the TRANSFEREE's books, and only when the transferee bears them."
+            },
+            {
+              "key": "B",
+              "text": "The Equity Shareholders Account directly",
+              "explanation": "The Equity Shareholders Account receives the realisation RESULT — individual expenses route through the Realisation Account first."
+            },
+            {
+              "key": "C",
+              "text": "The Transferee Company Account",
+              "explanation": "That account tracks consideration due and received — never the transferor's own expenses."
+            },
+            {
+              "key": "D",
+              "text": "The Realisation Account",
+              "explanation": "Expenses of winding up borne by the transferor reduce the realisation profit."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "Liquidation expenses — transferor bears (SM Ch 13)"
+        },
+        {
+          "id": "cs-i1c13-003-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The total ultimately credited to (and distributed from) the Equity Shareholders Account is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹35,60,000",
+              "explanation": "This forgets the ₹3,00,000 P&L balance, which is as much shareholders' money as the general reserve."
+            },
+            {
+              "key": "B",
+              "text": "₹34,00,000",
+              "explanation": "That is book equity before the realisation profit — the ₹4,60,000 profit belongs to the shareholders too."
+            },
+            {
+              "key": "C",
+              "text": "₹38,60,000",
+              "explanation": "Capital 25,00,000 + general reserve 6,00,000 + P&L 3,00,000 + realisation profit 4,60,000 = ₹38,60,000. Cross-check: consideration 38,00,000 + leftover cash (4,00,000 − 3,00,000 − 40,000 = 60,000) = ₹38,60,000. ✓"
+            },
+            {
+              "key": "D",
+              "text": "₹38,00,000",
+              "explanation": "That is just the purchase consideration — shareholders also receive the leftover retained cash of ₹60,000."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "Equity Shareholders Account closure (SM Ch 13)"
+        },
+        {
+          "id": "cs-i1c13-003-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Had Malaprabha (the transferee) agreed to bear the ₹40,000 liquidation expenses instead, then in Tungabhadra's books:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Purchase consideration would rise by ₹40,000",
+              "explanation": "Para 3(g) confines consideration to payments to shareholders — an expense reimbursement is not one."
+            },
+            {
+              "key": "B",
+              "text": "The Equity Shareholders Account would be credited ₹40,000",
+              "explanation": "The shareholders neither pay nor receive this amount — it is the transferee's cost."
+            },
+            {
+              "key": "C",
+              "text": "No entry would be made for the expenses",
+              "explanation": "Expenses borne by the transferee bypass the transferor's ledger entirely; the transferee debits them to goodwill or capital reserve."
+            },
+            {
+              "key": "D",
+              "text": "The Realisation Account would still be debited ₹40,000",
+              "explanation": "Only expenses the transferor itself bears hit its Realisation Account."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "Liquidation expenses — transferee bears (SM Ch 13); AS 14, para 3(g)"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c13-004",
+      "type": "case_mcq_set",
+      "topic": "Ch 13 · Amalgamation · Case: Periyar–Vaigai intrinsic values",
+      "case": "Periyar Pumps Ltd absorbs Vaigai Valves Ltd, with the share exchange fixed on intrinsic values. Periyar: net assets ₹1,20,00,000; 5,00,000 equity shares of ₹10. Vaigai: net assets ₹18,00,000; 1,50,000 equity shares of ₹10. Shares are issued at intrinsic value; no cash changes hands (assume no fractions arise).",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c13-004-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The intrinsic value of one Vaigai share is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹6",
+              "explanation": "This halves the intrinsic value by applying the exchange ratio prematurely — value the share first, set the ratio second."
+            },
+            {
+              "key": "B",
+              "text": "₹10",
+              "explanation": "Face value is a label, not a valuation — intrinsic value comes from net assets per share."
+            },
+            {
+              "key": "C",
+              "text": "₹24",
+              "explanation": "₹24 is PERIYAR's intrinsic value (1,20,00,000 ÷ 5,00,000) — the question asks for Vaigai's."
+            },
+            {
+              "key": "D",
+              "text": "₹12",
+              "explanation": "18,00,000 ÷ 1,50,000 shares = ₹12 per share."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "Intrinsic value method (SM Ch 13)"
+        },
+        {
+          "id": "cs-i1c13-004-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The share exchange ratio is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "1 Periyar share for every 2 Vaigai shares",
+              "explanation": "₹12 ÷ ₹24 = ½ — two Vaigai shares carry the value of one Periyar share."
+            },
+            {
+              "key": "B",
+              "text": "1 Periyar share for every 1 Vaigai share",
+              "explanation": "A 1:1 swap ignores that the shares differ in value by a factor of two."
+            },
+            {
+              "key": "C",
+              "text": "3 Periyar shares for every 5 Vaigai shares",
+              "explanation": "3:5 would need intrinsic values in a 3:5 relation — these stand at 1:2."
+            },
+            {
+              "key": "D",
+              "text": "2 Periyar shares for every 1 Vaigai share",
+              "explanation": "Inverted — this would hand Vaigai holders four times their entitlement."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "Intrinsic value method (SM Ch 13)"
+        },
+        {
+          "id": "cs-i1c13-004-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Periyar issues:",
+          "options": [
+            {
+              "key": "A",
+              "text": "75,000 shares",
+              "explanation": "1,50,000 Vaigai shares ÷ 2 = 75,000 Periyar shares."
+            },
+            {
+              "key": "B",
+              "text": "1,50,000 shares",
+              "explanation": "This is a 1:1 swap — the ratio is 1 for 2."
+            },
+            {
+              "key": "C",
+              "text": "37,500 shares",
+              "explanation": "1-for-4 halves the correct entitlement — the ratio is 1 for 2."
+            },
+            {
+              "key": "D",
+              "text": "3,00,000 shares",
+              "explanation": "This applies the inverted 2-for-1 ratio."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "Intrinsic value method (SM Ch 13)"
+        },
+        {
+          "id": "cs-i1c13-004-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Purchase consideration (shares issued at intrinsic value) is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹36,00,000",
+              "explanation": "This prices all 1,50,000 VAIGAI shares at ₹24 — only the 75,000 Periyar shares issued constitute consideration."
+            },
+            {
+              "key": "B",
+              "text": "₹18,00,000",
+              "explanation": "75,000 shares × ₹24 = ₹18,00,000 — which, satisfyingly, equals Vaigai's net assets: exchanging at intrinsic values prices the business exactly at its net asset value."
+            },
+            {
+              "key": "C",
+              "text": "₹7,50,000",
+              "explanation": "This takes the 75,000 shares at ₹10 face value — they are issued at the ₹24 intrinsic value."
+            },
+            {
+              "key": "D",
+              "text": "₹9,00,000",
+              "explanation": "This multiplies the 75,000 shares by Vaigai's ₹12 — the shares being issued are Periyar's, valued at ₹24."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 14, para 3(g); intrinsic value method"
+        }
+      ]
+    },
+    {
+      "id": "d-i1c13-001",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Merger conditions",
+      "stem": "State the conditions that must all be satisfied under AS 14 for an amalgamation to be classified as an amalgamation in the nature of merger. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "All assets and all liabilities of the transferor become assets and liabilities of the transferee",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(i)"
+        },
+        {
+          "point": "Holders of at least 90% (by face value) of the transferor's equity shares — excluding shares the transferee or its subsidiaries/nominees already hold — end up as the transferee's equity shareholders",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(ii)"
+        },
+        {
+          "point": "Consideration to those equity shareholders is discharged wholly by issue of equity shares of the transferee, except cash for fractional shares",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(iii)"
+        },
+        {
+          "point": "The transferee intends to carry on the transferor's business after the amalgamation",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(iv)"
+        },
+        {
+          "point": "No adjustment is intended to the book values of assets and liabilities taken over, except to ensure uniformity of accounting policies",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(v)"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-002",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Merger vs purchase",
+      "stem": "Distinguish amalgamation in the nature of merger from amalgamation in the nature of purchase. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Transfer of assets/liabilities: merger requires ALL assets and liabilities to pass; a purchase need not take everything",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(i)"
+        },
+        {
+          "point": "Shareholder continuity: merger requires ≥90% (face value) of equity holders to become transferee shareholders; no such requirement in a purchase",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(ii)"
+        },
+        {
+          "point": "Consideration: merger — wholly equity shares (cash only for fractions); purchase — any mix of shares, securities and cash",
+          "marks": 1,
+          "citation": "AS 14, para 3(e)(iii)"
+        },
+        {
+          "point": "Accounting: merger → pooling of interests (book values, reserves preserved, no goodwill); purchase → purchase method (agreed/fair values, reserves dropped except statutory, goodwill or capital reserve arises)",
+          "marks": 1,
+          "citation": "AS 14 — methods of accounting"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-003",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Purchase consideration",
+      "stem": "Define purchase consideration under AS 14 and briefly explain the methods of computing it. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Definition: aggregate of shares and other securities issued and payments in cash or other assets by the transferee to the SHAREHOLDERS (equity and preference) of the transferor; payments to debenture holders/creditors and expense reimbursements are excluded",
+          "marks": 2,
+          "citation": "AS 14, para 3(g)"
+        },
+        {
+          "point": "Lump sum method — a fixed amount stated in the scheme",
+          "marks": 0.5,
+          "citation": "SM Ch 13 — methods of computing consideration"
+        },
+        {
+          "point": "Net payment method — aggregate of everything given to equity and preference shareholders (shares at issue price, cash, other assets)",
+          "marks": 1,
+          "citation": "SM Ch 13 — methods of computing consideration"
+        },
+        {
+          "point": "Net assets method — assets taken over at agreed values (book value where none agreed) minus outside liabilities assumed",
+          "marks": 1,
+          "citation": "SM Ch 13 — methods of computing consideration"
+        },
+        {
+          "point": "Intrinsic value / share exchange method — value per share from net assets, exchange ratio set on relative intrinsic values",
+          "marks": 0.5,
+          "citation": "SM Ch 13 — methods of computing consideration"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-004",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Pooling of interests",
+      "stem": "Describe the accounting treatment under the pooling of interests method. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Assets, liabilities and reserves of the transferor recorded at existing carrying amounts, adjusted only for uniformity of accounting policies",
+          "marks": 1.5,
+          "citation": "AS 14 — pooling of interests method"
+        },
+        {
+          "point": "Identity of the transferor's reserves is preserved (general reserve remains general reserve, P&L balance remains P&L balance)",
+          "marks": 1,
+          "citation": "AS 14 — pooling of interests method"
+        },
+        {
+          "point": "Difference between share capital issued (plus any additional consideration) and the transferor's share capital is adjusted in reserves",
+          "marks": 1.5,
+          "citation": "AS 14 — pooling of interests method"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-005",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Purchase method",
+      "stem": "Describe the accounting treatment under the purchase method, including the treatment of goodwill arising on amalgamation. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Assets and liabilities incorporated at existing carrying amounts OR consideration allocated to identifiable assets and liabilities at fair values on the amalgamation date",
+          "marks": 1.5,
+          "citation": "AS 14 — purchase method"
+        },
+        {
+          "point": "Transferor's reserves (other than statutory) are not recorded",
+          "marks": 1,
+          "citation": "AS 14 — treatment of reserves under purchase method"
+        },
+        {
+          "point": "Excess of consideration over net assets = goodwill; shortfall = capital reserve",
+          "marks": 1.5,
+          "citation": "AS 14 — purchase method"
+        },
+        {
+          "point": "Goodwill amortised over a period not exceeding five years unless a somewhat longer period can be justified",
+          "marks": 1,
+          "citation": "AS 14 — goodwill arising on amalgamation"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-006",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Statutory reserves",
+      "stem": "How are statutory reserves of the transferor dealt with in an amalgamation in the nature of purchase? Give the journal entry and the presentation. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Statutory reserves retain their identity in the transferee's financial statements as long as the governing statute requires — the one exception to reserves being dropped",
+          "marks": 1,
+          "citation": "AS 14 — statutory reserves"
+        },
+        {
+          "point": "Entry: Amalgamation Adjustment Reserve A/c Dr → To Statutory Reserve A/c",
+          "marks": 1,
+          "citation": "AS 14 — statutory reserves; MCA amendment 2016"
+        },
+        {
+          "point": "AAR presented as a separate line item (negative balance) within reserves — not set off against the statutory reserve",
+          "marks": 1,
+          "citation": "Schedule III presentation; MCA amendment 2016"
+        },
+        {
+          "point": "When the statutory retention period ends, the entry is reversed and both items disappear",
+          "marks": 1,
+          "citation": "AS 14 — statutory reserves"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-007",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Closing the transferor's books",
+      "stem": "Outline the steps (with the key ledger accounts) for closing the books of the transferor company on amalgamation. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Open Realisation A/c: transfer assets taken over at book values (debit) and liabilities taken over at book values (credit)",
+          "marks": 1,
+          "citation": "SM Ch 13 — transferor's books"
+        },
+        {
+          "point": "Record consideration due: Transferee Co. A/c Dr → To Realisation A/c; on receipt, split into shares/cash received",
+          "marks": 1,
+          "citation": "SM Ch 13 — transferor's books"
+        },
+        {
+          "point": "Settle liabilities not taken over (difference from book value routes through Realisation A/c); debit liquidation expenses borne by the transferor to Realisation A/c",
+          "marks": 1,
+          "citation": "SM Ch 13 — transferor's books"
+        },
+        {
+          "point": "Transfer Realisation profit/loss to Equity Shareholders A/c; settle preference shareholders (premium/discount via Realisation A/c)",
+          "marks": 1,
+          "citation": "SM Ch 13 — transferor's books"
+        },
+        {
+          "point": "Credit capital and free reserves to Equity Shareholders A/c and distribute the shares, cash and residual assets received — the account must close to nil",
+          "marks": 1,
+          "citation": "SM Ch 13 — transferor's books"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-008",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · Inter-company adjustments",
+      "stem": "Explain the treatment of (a) mutual owings between the amalgamating companies and (b) unrealised profit on inventory purchased from the other company, in the transferee's books. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Mutual owings: after the acquisition entries, eliminate the common balance — Trade Payables A/c Dr → To Trade Receivables A/c",
+          "marks": 1.5,
+          "citation": "SM Ch 13 — inter-company owings"
+        },
+        {
+          "point": "No adjustment is needed in the Realisation Account or business-purchase entries for the mutual debt",
+          "marks": 0.5,
+          "citation": "SM Ch 13 — inter-company owings"
+        },
+        {
+          "point": "Unrealised profit: reduce inventory to its cost to the combined entity (profit = margin fraction × invoice value of stock held)",
+          "marks": 1,
+          "citation": "SM Ch 13 — adjustment of stock value"
+        },
+        {
+          "point": "Matching debit: goodwill/capital reserve under the purchase method (or against revenue reserves in a merger)",
+          "marks": 1,
+          "citation": "SM Ch 13 — adjustment of stock value"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c13-009",
+      "type": "descriptive",
+      "topic": "Ch 13 · Amalgamation · External reconstruction",
+      "stem": "Write a short note on external reconstruction, distinguishing it from amalgamation and absorption. (3 marks)",
+      "marks": 3,
+      "skeleton": [
+        {
+          "point": "External reconstruction: a new company is formed expressly to take over the business of ONE existing company, which is then wound up — same AS 14 accounting",
+          "marks": 1.5,
+          "citation": "SM Ch 13 — scope"
+        },
+        {
+          "point": "Amalgamation (strict sense): two or more existing companies combine into a newly formed company; absorption: an existing company takes over another existing company with no new entity formed",
+          "marks": 1,
+          "citation": "SM Ch 13 — scope"
+        },
+        {
+          "point": "Contrast with internal reconstruction, where capital is reorganised within the SAME entity and no transferee exists",
+          "marks": 0.5,
+          "citation": "SM Ch 13 — scope; Ch 14 boundary"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    }
+  ]
+}
