@@ -99,3 +99,18 @@ Triage rules:
   Schedule III phrases verbatim (share-number reconciliation wording, the
   nature-wise P&L line-item names, the rounding bands). They survive the
   shingle check by design and are marked ※ in the citations file.
+
+## introduction-to-accounting-standards — VERIFY 2026-07-04
+
+- [ ] **Roadmap dates/thresholds** — the chapter leans on the SM §14
+  snapshot: voluntary 2015-16; Phase I 1-4-2016 ≥₹500cr; Phase II 1-4-2017
+  all-listed-except-SME + ₹250-500cr; NBFCs 2018/2019. Spot-check each
+  against the SM and the MCA notifications, and initial the citations rows —
+  these are the highest-yield memorised facts in the bank.
+- [ ] **Stale 2006-Rules reference in the SM** — the SM's roadmap bullet
+  says uncovered companies continue with the 2006 Rules; the content states
+  the 2021 Rules (per SM §3). Confirm the notes/bank never repeat the stale
+  reference.
+- [ ] **NFRA vs NACAS wording in s.133** — content says CG notifies "in
+  consultation with NFRA". Confirm the current s.133 text and the SM edition
+  agree (older editions referenced NACAS).

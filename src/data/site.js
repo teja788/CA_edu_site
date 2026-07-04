@@ -143,6 +143,13 @@ export const paper1Sections = [
     name: 'Section C · Company accounts (ICAI Module 3)',
     chapters: [
       {
+        number: 1,
+        slug: 'introduction-to-accounting-standards',
+        name: 'Introduction to Accounting Standards',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/introduction-to-accounting-standards/',
+      },
+      {
         number: 11,
         slug: 'financial-statements-of-companies',
         name: 'Financial Statements of Companies',
