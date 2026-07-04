@@ -150,6 +150,13 @@ export const paper1Sections = [
         notesHref: '/intermediate/advanced-accounting/introduction-to-accounting-standards/',
       },
       {
+        number: 2,
+        slug: 'framework-for-preparation-and-presentation-of-fs',
+        name: 'Framework for Preparation & Presentation of Financial Statements',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/framework-for-preparation-and-presentation-of-fs/',
+      },
+      {
         number: 11,
         slug: 'financial-statements-of-companies',
         name: 'Financial Statements of Companies',

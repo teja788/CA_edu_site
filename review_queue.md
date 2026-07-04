@@ -114,3 +114,17 @@ Triage rules:
 - [ ] **NFRA vs NACAS wording in s.133** — content says CG notifies "in
   consultation with NFRA". Confirm the current s.133 text and the SM edition
   agree (older editions referenced NACAS).
+
+## framework-for-preparation-and-presentation-of-fs — VERIFY 2026-07-04
+
+- [ ] **Asset/liability definitions quoted on purpose** — the Framework's
+  definitions of asset and liability are kept near-verbatim in notes §4, the
+  bank (q-014/q-015 correct options) and flashcards fw-9/fw-10, because exam
+  answers require the definitional wording. All surviving shingles sit inside
+  these two definitions (marked ※ in the citations file). Confirm the
+  wording matches the current Framework text exactly — a paraphrased
+  "definition" is worse than none.
+- [ ] **Capital-maintenance case arithmetic basis** — cs-003 asserts CPP
+  profit = sales − restated opening capital, with retained profit measured
+  after drawings. Confirm this matches the SM's Example 8/9 presentation
+  (the SM works the same way, but the reviewer should sight it).
