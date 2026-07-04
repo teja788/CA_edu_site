@@ -1,0 +1,2604 @@
+{
+  "level": "intermediate",
+  "paper": "advanced-accounting",
+  "chapterSlug": "assets-based-as",
+  "chapter": "Ch 5 · Assets Based Accounting Standards",
+  "questions": [
+    {
+      "id": "q-i1c05-001",
+      "topic": "Ch 5 · AS 2 · Scope",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following IS valued under AS 2?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U1 — scope of AS 2",
+      "readLink": {
+        "label": "Read: AS 2 — Valuation of Inventories →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#1-as-2-valuation-of-inventories"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cement lying at the site of a construction contract",
+          "explanation": "Inventory held for use in construction rides with AS 7's construction WIP, outside AS 2."
+        },
+        {
+          "key": "B",
+          "text": "A tea producer's harvested crop carried at NRV by established industry practice",
+          "explanation": "Producers' inventories of agricultural/forest/mineral products at NRV per established practice are excluded."
+        },
+        {
+          "key": "C",
+          "text": "Equity shares held as stock-in-trade by a dealer",
+          "explanation": "Shares/debentures held as stock-in-trade are excluded from AS 2's scope."
+        },
+        {
+          "key": "D",
+          "text": "Finished garments held by a manufacturer for sale in the ordinary course of business",
+          "explanation": "Goods held for sale in the ordinary course are the core of AS 2's scope."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-002",
+      "topic": "Ch 5 · AS 2 · Cost exclusions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which cost may enter the cost of inventories under AS 2?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U1 — exclusions from cost",
+      "readLink": {
+        "label": "Read: AS 2 — Valuation of Inventories →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#1-as-2-valuation-of-inventories"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Storage costs of maturing whisky, where storage is a necessary stage of the production process",
+          "explanation": "Storage is excluded UNLESS it is necessary in the production process prior to a further stage."
+        },
+        {
+          "key": "B",
+          "text": "Salesmen's commission on sales of the finished product",
+          "explanation": "Selling and distribution costs are always excluded from inventory cost."
+        },
+        {
+          "key": "C",
+          "text": "Abnormal wastage of materials during a machine breakdown",
+          "explanation": "Abnormal waste is expensed when incurred, never inventoried."
+        },
+        {
+          "key": "D",
+          "text": "General administrative overheads of the head office",
+          "explanation": "Admin overheads that do not bring inventory to location/condition stay out."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-003",
+      "topic": "Ch 5 · AS 2 · Cost formulas",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 2, where inventory items are ordinarily interchangeable, cost is determined by:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U1 — cost formulas",
+      "readLink": {
+        "label": "Read: AS 2 — Valuation of Inventories →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#1-as-2-valuation-of-inventories"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "FIFO or weighted average, whichever gives the fairest approximation of the cost actually incurred",
+          "explanation": "Specific identification is for non-interchangeable/earmarked items; LIFO is not permitted at all."
+        },
+        {
+          "key": "B",
+          "text": "Specific identification of individual costs",
+          "explanation": "Specific identification applies only where items are NOT ordinarily interchangeable or are earmarked."
+        },
+        {
+          "key": "C",
+          "text": "The retail method in all cases",
+          "explanation": "The retail method is a measurement technique for suitable retail businesses, not the general formula."
+        },
+        {
+          "key": "D",
+          "text": "LIFO, FIFO or weighted average at the enterprise's option",
+          "explanation": "LIFO is not a permitted formula under AS 2 (Revised)."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-004",
+      "topic": "Ch 5 · AS 2 · Materials held for use",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Raw material was bought at ₹100/kg; its market price has fallen to ₹85/kg. The finished product containing it is still expected to sell above its cost. The raw material is valued at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U1 — NRV of materials held for use",
+      "readLink": {
+        "label": "Read: AS 2 — Valuation of Inventories →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#1-as-2-valuation-of-inventories"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹85 — inventory always sits at the lower of cost and market",
+          "explanation": "The lower-of rule for materials is switched off while the finished product clears its cost."
+        },
+        {
+          "key": "B",
+          "text": "₹92.50 — the average of cost and replacement price",
+          "explanation": "No averaging rule exists in AS 2."
+        },
+        {
+          "key": "C",
+          "text": "₹100 — materials are not written below cost while the finished product sells at or above cost",
+          "explanation": "The material's value is realised through the product; a write-down waits until the PRODUCT falls below cost (then replacement cost may measure NRV)."
+        },
+        {
+          "key": "D",
+          "text": "Nil until the market recovers",
+          "explanation": "Nothing supports writing a usable material off entirely."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c05-005",
+      "topic": "Ch 5 · AS 2 · By-products",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 2, by-products, scrap and waste that are immaterial are measured at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U1 — joint and by-products",
+      "readLink": {
+        "label": "Read: AS 2 — Valuation of Inventories →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#1-as-2-valuation-of-inventories"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Net realisable value, which is deducted from the cost of the main product",
+          "explanation": "The main product carries joint cost minus the NRV of by-products/scrap."
+        },
+        {
+          "key": "B",
+          "text": "Zero, with proceeds credited to other income",
+          "explanation": "AS 2 nets the NRV against the main product's cost instead."
+        },
+        {
+          "key": "C",
+          "text": "Full joint cost allocated on relative sales value",
+          "explanation": "Rational allocation is for JOINT products of similar importance, not immaterial by-products."
+        },
+        {
+          "key": "D",
+          "text": "Replacement cost",
+          "explanation": "Replacement cost is a materials-NRV surrogate, not the by-product rule."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-006",
+      "topic": "Ch 5 · AS 2 · NRV computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "WIP has a cost of ₹90 per unit. The finished product will sell for ₹120; completion will cost ₹30 per unit and selling costs are ₹5 per unit. The WIP is carried at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U1 — net realisable value",
+      "readLink": {
+        "label": "Read: AS 2 — Valuation of Inventories →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#1-as-2-valuation-of-inventories"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹85",
+          "explanation": "NRV = 120 − 30 − 5 = ₹85, below cost ₹90 — value at NRV."
+        },
+        {
+          "key": "B",
+          "text": "₹90",
+          "explanation": "Cost exceeds NRV (85); the lower-of rule bites."
+        },
+        {
+          "key": "C",
+          "text": "₹80",
+          "explanation": "Deducts something twice — NRV is price less completion less selling costs, once each."
+        },
+        {
+          "key": "D",
+          "text": "₹115",
+          "explanation": "Forgets the ₹30 completion cost still to be incurred."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-007",
+      "topic": "Ch 5 · AS 10 · Scope & definitions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about AS 10 (Revised) is correct?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — scope, bearer plants, investment property",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bearer plants and the produce on them are both PPE",
+          "explanation": "The produce is outside AS 10."
+        },
+        {
+          "key": "B",
+          "text": "PPE must be used for more than three years to qualify",
+          "explanation": "The expectation is use during more than twelve months, not three years."
+        },
+        {
+          "key": "C",
+          "text": "Bearer plants are PPE, but the produce growing on them is not; investment property is accounted for only under the cost model",
+          "explanation": "Both special rules sit in the standard's scope notes."
+        },
+        {
+          "key": "D",
+          "text": "Investment property may be carried under the revaluation model",
+          "explanation": "Investment property is restricted to the COST model."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c05-008",
+      "topic": "Ch 5 · AS 10 · Cost of acquisition",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine: list price ₹10,00,000 less 2% trade discount; refundable GST credit ₹1,20,000; freight inwards ₹40,000; installation ₹25,000; testing costs (net of sale proceeds of test output) ₹15,000; general administrative overheads ₹30,000; operating loss in the first three months ₹50,000. Its AS 10 cost is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — elements of cost",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹10,45,000",
+          "explanation": "Drops the net testing cost, which is a directly attributable cost of readying the asset."
+        },
+        {
+          "key": "B",
+          "text": "₹10,60,000",
+          "explanation": "9,80,000 + 40,000 + 25,000 + 15,000. Refundable taxes, admin overheads and initial operating losses never enter cost."
+        },
+        {
+          "key": "C",
+          "text": "₹11,80,000",
+          "explanation": "Adds the refundable GST — only NON-refundable duties/taxes are capitalised."
+        },
+        {
+          "key": "D",
+          "text": "₹11,10,000",
+          "explanation": "Adds the initial operating loss — running below capacity after readiness is expensed."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-009",
+      "topic": "Ch 5 · AS 10 · Exchange of assets",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "PPE acquired in exchange for a non-monetary asset is measured at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — exchanges of assets",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fair value, unless the exchange lacks commercial substance or neither fair value is reliably measurable — then the carrying amount of the asset given up",
+          "explanation": "Fair value is the rule; carrying amount is the fallback in the two stated cases."
+        },
+        {
+          "key": "B",
+          "text": "Nil, since no cash consideration passed",
+          "explanation": "Non-monetary consideration still produces a measurable cost."
+        },
+        {
+          "key": "C",
+          "text": "The lower of the two assets' fair values",
+          "explanation": "No lower-of rule exists for exchanges."
+        },
+        {
+          "key": "D",
+          "text": "The carrying amount of the asset given up in all cases",
+          "explanation": "Carrying amount applies only in the exception cases."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-010",
+      "topic": "Ch 5 · AS 10 · Spares",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 10 (Revised), spare parts, stand-by equipment and servicing equipment are:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — spare parts and stand-by equipment",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Always PPE if purchased with the main machine",
+          "explanation": "Purchase timing is irrelevant; the definition governs."
+        },
+        {
+          "key": "B",
+          "text": "PPE when they meet the definition of PPE; otherwise inventory",
+          "explanation": "The definition — held for use, expected use beyond twelve months — decides, not the label 'spares'."
+        },
+        {
+          "key": "C",
+          "text": "Always inventory until actually fitted",
+          "explanation": "Items meeting the PPE definition are PPE even before use."
+        },
+        {
+          "key": "D",
+          "text": "Expensed on purchase",
+          "explanation": "Neither treatment expenses them on purchase."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-011",
+      "topic": "Ch 5 · AS 10 · Revaluation model",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An enterprise adopting the revaluation model under AS 10 must:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — revaluation model",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apply it asset by asset at management's choice",
+          "explanation": "Selective revaluation within a class is exactly what the rule forbids."
+        },
+        {
+          "key": "B",
+          "text": "Apply it to the entire class of PPE to which the asset belongs, and keep revaluations current enough that carrying amounts do not differ materially from fair value",
+          "explanation": "Class-wide application prevents cherry-picking single appreciating assets."
+        },
+        {
+          "key": "C",
+          "text": "Route every revaluation increase through the P&L",
+          "explanation": "Increases go to revaluation surplus except to the extent they reverse a prior P&L decrease."
+        },
+        {
+          "key": "D",
+          "text": "Revalue every asset annually without exception",
+          "explanation": "The test is materiality of the gap, not a fixed annual cycle for every item."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-012",
+      "topic": "Ch 5 · AS 10 · Revaluation reversal",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An asset was earlier written DOWN by ₹50,000 through the P&L. It is now revalued UPWARD by ₹1,50,000. The credit to revaluation surplus is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — revaluation increase after a decrease",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,00,000",
+          "explanation": "First ₹50,000 reverses the earlier P&L charge (credited to P&L); only the balance reaches the surplus."
+        },
+        {
+          "key": "B",
+          "text": "₹1,50,000",
+          "explanation": "Ignores that the increase first reverses the prior decrease through the P&L."
+        },
+        {
+          "key": "C",
+          "text": "Nil",
+          "explanation": "Only ₹50,000 of the increase belongs to the P&L; the remaining ₹1,00,000 is surplus."
+        },
+        {
+          "key": "D",
+          "text": "₹50,000",
+          "explanation": "Swaps the two components — the P&L takes 50,000, the surplus takes the rest."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-013",
+      "topic": "Ch 5 · AS 10 · Depreciation changes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company switches from WDV to straight-line depreciation. Under AS 10 (Revised) this is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — review of method, life and residual value",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Prohibited unless a statute requires it",
+          "explanation": "A change is allowed whenever the new method better reflects the consumption pattern."
+        },
+        {
+          "key": "B",
+          "text": "A change in accounting ESTIMATE — applied prospectively over the remaining life, with AS 5 disclosure",
+          "explanation": "The method expresses the consumption pattern, an estimate; no retrospective recomputation."
+        },
+        {
+          "key": "C",
+          "text": "Adjusted directly against opening reserves",
+          "explanation": "No reserves adjustment — the change works prospectively through future charges."
+        },
+        {
+          "key": "D",
+          "text": "A change in accounting POLICY requiring retrospective recomputation",
+          "explanation": "Retrospective recomputation is the superseded AS 6 treatment."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-014",
+      "topic": "Ch 5 · AS 10 · Retirement & disposal",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Items of PPE retired from active use and held for disposal are carried at:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U2 — retirements",
+      "readLink": {
+        "label": "Read: AS 10 — Property, Plant and Equipment →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#2-as-10-property-plant-and-equipment"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nil, being no longer in use",
+          "explanation": "Held-for-disposal assets still have realisable value."
+        },
+        {
+          "key": "B",
+          "text": "Net realisable value in all cases",
+          "explanation": "NRV governs only when it is BELOW carrying amount."
+        },
+        {
+          "key": "C",
+          "text": "The lower of their carrying amount and net realisable value",
+          "explanation": "Once retired, the asset is written down to NRV if lower, with the write-down in the P&L."
+        },
+        {
+          "key": "D",
+          "text": "Carrying amount frozen at retirement date",
+          "explanation": "A freeze would overstate assets whose value has fallen."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c05-015",
+      "topic": "Ch 5 · AS 13 · Classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A current investment under AS 13 is one that is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U3 — classification of investments",
+      "readLink": {
+        "label": "Read: AS 13 — Accounting for Investments →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#3-as-13-accounting-for-investments"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Held for less than one year, whatever its nature",
+          "explanation": "Ready realisability is also required — intention alone is not enough."
+        },
+        {
+          "key": "B",
+          "text": "Quoted on a recognised stock exchange",
+          "explanation": "Quotation helps realisability but is not the definition."
+        },
+        {
+          "key": "C",
+          "text": "Any investment made out of working capital",
+          "explanation": "The funding source is irrelevant to classification."
+        },
+        {
+          "key": "D",
+          "text": "By its nature readily realisable AND intended to be held for not more than one year from acquisition",
+          "explanation": "Both limbs must hold; everything else is long-term."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-016",
+      "topic": "Ch 5 · AS 13 · Current investments",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Current investments are carried at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U3 — carrying amount of current investments",
+      "readLink": {
+        "label": "Read: AS 13 — Accounting for Investments →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#3-as-13-accounting-for-investments"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cost, with declines noted in the accounts",
+          "explanation": "Cost-only carrying is the long-term rule (absent other-than-temporary decline)."
+        },
+        {
+          "key": "B",
+          "text": "The lower of cost and fair value of the portfolio as a whole",
+          "explanation": "Overall/global valuation is expressly not considered appropriate."
+        },
+        {
+          "key": "C",
+          "text": "Fair value, with all changes through the P&L",
+          "explanation": "Mark-to-market through P&L is not AS 13's model."
+        },
+        {
+          "key": "D",
+          "text": "The lower of cost and fair value, determined individually or by category — never on an overall (global) basis",
+          "explanation": "Global netting would let gains in one scrip mask losses in another."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-017",
+      "topic": "Ch 5 · AS 13 · Long-term investments",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The carrying amount of long-term investments is reduced when:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U3 — long-term investments",
+      "readLink": {
+        "label": "Read: AS 13 — Accounting for Investments →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#3-as-13-accounting-for-investments"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "The portfolio of long-term investments as a whole falls below cost",
+          "explanation": "The assessment is individual, not portfolio-wide."
+        },
+        {
+          "key": "B",
+          "text": "There is a decline, OTHER THAN TEMPORARY, in value — judged for each investment individually, and reversed when the decline no longer exists",
+          "explanation": "Temporary dips are ignored; the provision reverses on recovery."
+        },
+        {
+          "key": "C",
+          "text": "Dividends are missed for two consecutive years",
+          "explanation": "Missed dividends may be evidence, but the test is other-than-temporary decline in value."
+        },
+        {
+          "key": "D",
+          "text": "Market value falls below cost at any balance sheet date",
+          "explanation": "A merely temporary fall does not trigger a write-down of long-term investments."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-018",
+      "topic": "Ch 5 · AS 13 · Rights shares",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An investor holds 1,000 shares bought at ₹150 each. A 1-for-5 rights issue at ₹120 is subscribed in full. The average carrying cost per share after subscription is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U3 — rights shares subscribed",
+      "readLink": {
+        "label": "Read: AS 13 — Accounting for Investments →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#3-as-13-accounting-for-investments"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹150",
+          "explanation": "Ignores that the subscription cost merges into the enlarged holding."
+        },
+        {
+          "key": "B",
+          "text": "₹120",
+          "explanation": "That is the rights price alone, not the blended carrying cost."
+        },
+        {
+          "key": "C",
+          "text": "₹135",
+          "explanation": "A simple mean of the two prices ignores the 5:1 weighting."
+        },
+        {
+          "key": "D",
+          "text": "₹145",
+          "explanation": "Cost of rights (200 × 120 = 24,000) is ADDED to the holding: (1,50,000 + 24,000) ÷ 1,200 = 145."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-019",
+      "topic": "Ch 5 · AS 13 · Pre-acquisition income",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Dividend received out of profits earned BEFORE the investor acquired the shares is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U3 — dividends from pre-acquisition profits",
+      "readLink": {
+        "label": "Read: AS 13 — Accounting for Investments →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#3-as-13-accounting-for-investments"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ignored until the investment is sold",
+          "explanation": "The cost adjustment happens when the dividend is received."
+        },
+        {
+          "key": "B",
+          "text": "Applied to reduce the cost of the investment, being a recovery of cost",
+          "explanation": "Only post-acquisition earnings are income to the investor."
+        },
+        {
+          "key": "C",
+          "text": "Credited to capital reserve",
+          "explanation": "The credit adjusts the investment's cost, not a reserve."
+        },
+        {
+          "key": "D",
+          "text": "Credited to the P&L like any dividend",
+          "explanation": "Crediting pre-acquisition profit to income inflates returns bought and paid for."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-020",
+      "topic": "Ch 5 · AS 13 · Reclassification",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A long-term investment (cost ₹5,00,000, carrying amount ₹4,20,000 after an other-than-temporary write-down, current fair value ₹4,10,000) is reclassified as current. It is transferred at:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U3 — reclassification of investments",
+      "readLink": {
+        "label": "Read: AS 13 — Accounting for Investments →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#3-as-13-accounting-for-investments"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,20,000 — the lower of cost and carrying amount at the date of transfer",
+          "explanation": "Long-term → current uses lower of cost and CARRYING amount; fair value drives the current→long-term direction instead."
+        },
+        {
+          "key": "B",
+          "text": "₹4,10,000 — fair value on the date of transfer",
+          "explanation": "Lower-of-cost-and-FAIR-VALUE is the rule for the OPPOSITE direction (current → long-term)."
+        },
+        {
+          "key": "C",
+          "text": "₹5,00,000 — original cost",
+          "explanation": "Transferring at cost would silently reverse the recognised decline."
+        },
+        {
+          "key": "D",
+          "text": "₹4,60,000 — the mean of cost and carrying amount",
+          "explanation": "No averaging rule exists."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-021",
+      "topic": "Ch 5 · AS 16 · What counts",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT a borrowing cost under AS 16?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U4 — meaning of borrowing costs",
+      "readLink": {
+        "label": "Read: AS 16 — Borrowing Costs →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#4-as-16-borrowing-costs"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amortisation of discounts on debenture issues",
+          "explanation": "Discount/premium amortisation is a listed borrowing cost."
+        },
+        {
+          "key": "B",
+          "text": "Dividend on preference share capital not classified as a liability",
+          "explanation": "Owners' equity — including such preference capital — is outside AS 16."
+        },
+        {
+          "key": "C",
+          "text": "Exchange differences on foreign currency borrowings to the extent they adjust interest costs",
+          "explanation": "Such differences are borrowing costs up to the interest a comparable rupee loan would carry."
+        },
+        {
+          "key": "D",
+          "text": "Finance charges under an AS 19 finance lease",
+          "explanation": "Finance-lease charges are borrowing costs."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-022",
+      "topic": "Ch 5 · AS 16 · Qualifying asset",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which asset QUALIFIES for borrowing-cost capitalisation?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U4 — qualifying assets",
+      "readLink": {
+        "label": "Read: AS 16 — Borrowing Costs →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#4-as-16-borrowing-costs"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "A machine ready for its intended use when acquired",
+          "explanation": "Assets ready on acquisition never qualify."
+        },
+        {
+          "key": "B",
+          "text": "Whisky inventory that necessarily matures over several years before sale",
+          "explanation": "Inventories needing a substantial period to reach saleable condition qualify."
+        },
+        {
+          "key": "C",
+          "text": "Investments in listed equity shares",
+          "explanation": "Financial investments are not qualifying assets."
+        },
+        {
+          "key": "D",
+          "text": "Garments routinely manufactured in large quantities over a few weeks",
+          "explanation": "Routinely mass-produced, quick-turn inventories are excluded."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-023",
+      "topic": "Ch 5 · AS 16 · Commencement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Capitalisation of borrowing costs commences only when:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U4 — commencement of capitalisation",
+      "readLink": {
+        "label": "Read: AS 16 — Borrowing Costs →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#4-as-16-borrowing-costs"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "All three hold: expenditure on the asset is being incurred, borrowing costs are being incurred, and activities necessary to prepare the asset are in progress",
+          "explanation": "The activities limb includes technical and administrative work before physical construction."
+        },
+        {
+          "key": "B",
+          "text": "The loan is sanctioned",
+          "explanation": "Sanction alone incurs neither cost nor activity."
+        },
+        {
+          "key": "C",
+          "text": "Physical construction begins",
+          "explanation": "Pre-construction technical/administrative work already satisfies the activities limb — but the other two limbs are also needed."
+        },
+        {
+          "key": "D",
+          "text": "The first repayment instalment falls due",
+          "explanation": "Repayment schedules have nothing to do with commencement."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-024",
+      "topic": "Ch 5 · AS 16 · Suspension",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Construction of a bridge is halted for three months by high monsoon water levels, usual in the region. During the halt, capitalisation of borrowing costs:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U4 — suspension of capitalisation",
+      "readLink": {
+        "label": "Read: AS 16 — Borrowing Costs →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#4-as-16-borrowing-costs"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Is suspended, and previously capitalised amounts are reversed",
+          "explanation": "No reversal rule exists even for genuine suspensions."
+        },
+        {
+          "key": "B",
+          "text": "Continues — a temporary delay necessary to the process or inherent to the asset's location does not suspend capitalisation",
+          "explanation": "Suspension is for EXTENDED interruptions of active development, not inherent seasonal pauses."
+        },
+        {
+          "key": "C",
+          "text": "Continues only if the lender agrees",
+          "explanation": "Lender consent is irrelevant to the accounting."
+        },
+        {
+          "key": "D",
+          "text": "Is suspended, since active development has stopped",
+          "explanation": "The monsoon pause is a normal incident of building bridges there — capitalisation continues."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-025",
+      "topic": "Ch 5 · AS 16 · Specific borrowing",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A 14% loan of ₹10,00,000 was taken on 1 April specifically for a qualifying asset. Idle funds earned ₹35,000 during the year. Borrowing costs eligible for capitalisation for the year are:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U4 — specific borrowings",
+      "readLink": {
+        "label": "Read: AS 16 — Borrowing Costs →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#4-as-16-borrowing-costs"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹35,000",
+          "explanation": "That is the deduction, not the capitalisable amount."
+        },
+        {
+          "key": "B",
+          "text": "₹1,40,000",
+          "explanation": "Income on temporarily invested specific borrowings must be deducted."
+        },
+        {
+          "key": "C",
+          "text": "₹1,75,000",
+          "explanation": "Adds the investment income instead of deducting it."
+        },
+        {
+          "key": "D",
+          "text": "₹1,05,000",
+          "explanation": "Actual costs 1,40,000 less temporary-investment income 35,000."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-026",
+      "topic": "Ch 5 · AS 19 · Scope",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which lease is OUTSIDE the scope of AS 19?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U5 — scope of AS 19",
+      "readLink": {
+        "label": "Read: AS 19 — Leases →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#5-as-19-leases"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "A 30-year lease of land",
+          "explanation": "Leases of land, natural-resource rights and film-type licensing agreements are all excluded."
+        },
+        {
+          "key": "B",
+          "text": "A one-year office-equipment rental",
+          "explanation": "Short operating leases of equipment remain within AS 19."
+        },
+        {
+          "key": "C",
+          "text": "A 5-year lease of a delivery truck",
+          "explanation": "Vehicle leases are squarely in scope."
+        },
+        {
+          "key": "D",
+          "text": "A 3-year lease of factory machinery with a purchase option",
+          "explanation": "Machinery leases are in scope; the option merely affects classification."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-027",
+      "topic": "Ch 5 · AS 19 · Classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following, on its own, does NOT point to a finance lease?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U5 — finance vs operating classification",
+      "readLink": {
+        "label": "Read: AS 19 — Leases →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#5-as-19-leases"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "A purchase option priced well below expected fair value",
+          "explanation": "The bargain purchase option is a named situation."
+        },
+        {
+          "key": "B",
+          "text": "The asset is so specialised that only the lessee can use it without major modification",
+          "explanation": "Specialised nature is a named situation."
+        },
+        {
+          "key": "C",
+          "text": "The lease term covers the major part of the asset's economic life",
+          "explanation": "A named finance-lease situation."
+        },
+        {
+          "key": "D",
+          "text": "The lessor retains responsibility for insurance and maintenance of the asset",
+          "explanation": "Risk retention by the LESSOR points the other way — towards an operating lease."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-028",
+      "topic": "Ch 5 · AS 19 · Lessee measurement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "At inception of a finance lease, the lessee recognises the leased asset and liability at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U5 — lessee accounting for finance leases",
+      "readLink": {
+        "label": "Read: AS 19 — Leases →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#5-as-19-leases"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "The asset's cost in the lessor's books",
+          "explanation": "The lessor's carrying amount is irrelevant to the lessee."
+        },
+        {
+          "key": "B",
+          "text": "The fair value of the asset in all cases",
+          "explanation": "Fair value is only one candidate; the lower figure governs."
+        },
+        {
+          "key": "C",
+          "text": "The LOWER of the asset's fair value and the present value of minimum lease payments (discounted at the implicit rate, else the incremental borrowing rate)",
+          "explanation": "The lower-of cap prevents capitalising more than the asset is worth."
+        },
+        {
+          "key": "D",
+          "text": "The undiscounted total of minimum lease payments",
+          "explanation": "Undiscounted totals ignore the financing element entirely."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c05-029",
+      "topic": "Ch 5 · AS 19 · Lessee depreciation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under a finance lease with NO reasonable certainty that the lessee will obtain ownership, the leased asset is depreciated over:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U5 — depreciation of leased assets",
+      "readLink": {
+        "label": "Read: AS 19 — Leases →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#5-as-19-leases"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "The lease term in all cases",
+          "explanation": "If the useful life is SHORTER than the term, the life governs."
+        },
+        {
+          "key": "B",
+          "text": "Its full useful life",
+          "explanation": "Full life applies only when ownership is reasonably certain."
+        },
+        {
+          "key": "C",
+          "text": "Ten years by presumption",
+          "explanation": "The ten-year presumption belongs to AS 26 intangibles, not leases."
+        },
+        {
+          "key": "D",
+          "text": "The shorter of the lease term and its useful life",
+          "explanation": "Without ownership certainty the lessee's use cannot outlast the lease."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-030",
+      "topic": "Ch 5 · AS 19 · Lessor",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A lessor's gross investment in a finance lease is ₹13,00,000 (minimum lease payments ₹12,00,000 + unguaranteed residual value ₹1,00,000). The present value of these components at the implicit rate is ₹9,90,000. Unearned finance income is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U5 — lessor finance-lease income",
+      "readLink": {
+        "label": "Read: AS 19 — Leases →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#5-as-19-leases"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,10,000",
+          "explanation": "Forgets the unguaranteed residual inside the gross investment (12,00,000 − 9,90,000)."
+        },
+        {
+          "key": "B",
+          "text": "₹9,90,000",
+          "explanation": "That is the net investment (the receivable), not the unearned income."
+        },
+        {
+          "key": "C",
+          "text": "₹3,10,000",
+          "explanation": "UFI = gross investment − present value (net investment): 13,00,000 − 9,90,000."
+        },
+        {
+          "key": "D",
+          "text": "₹13,00,000",
+          "explanation": "That is the gross investment itself."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c05-031",
+      "topic": "Ch 5 · AS 19 · Sale and leaseback",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a sale-and-leaseback where the leaseback is a FINANCE lease, the excess of sale proceeds over carrying amount is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U5 — sale and leaseback",
+      "readLink": {
+        "label": "Read: AS 19 — Leases →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#5-as-19-leases"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Credited to capital reserve permanently",
+          "explanation": "The deferral amortises to income; it is not a permanent reserve."
+        },
+        {
+          "key": "B",
+          "text": "Deferred and amortised over the lease term in proportion to the depreciation of the leased asset",
+          "explanation": "The 'sale' is in substance a secured borrowing — profit cannot be front-loaded."
+        },
+        {
+          "key": "C",
+          "text": "Netted against future rentals as they fall due",
+          "explanation": "Amortisation follows depreciation of the asset, not the rental schedule."
+        },
+        {
+          "key": "D",
+          "text": "Recognised in the P&L immediately",
+          "explanation": "Immediate recognition belongs to fair-value OPERATING leasebacks."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-032",
+      "topic": "Ch 5 · AS 26 · Prohibitions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following can NEVER be recognised as an asset under AS 26?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U6 — internally generated goodwill and brands",
+      "readLink": {
+        "label": "Read: AS 26 — Intangible Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#6-as-26-intangible-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "A purchased patent",
+          "explanation": "Purchased intangibles with measurable cost are recognisable."
+        },
+        {
+          "key": "B",
+          "text": "Internally generated goodwill, brands, mastheads, publishing titles and customer lists",
+          "explanation": "None is an identifiable resource controlled at reliably measurable cost."
+        },
+        {
+          "key": "C",
+          "text": "Development expenditure meeting all six recognition criteria",
+          "explanation": "That is precisely what AS 26 capitalises."
+        },
+        {
+          "key": "D",
+          "text": "A licence acquired as part of an amalgamation",
+          "explanation": "Intangibles acquired in amalgamations are recognisable at fair value under AS 14/26."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-033",
+      "topic": "Ch 5 · AS 26 · Research vs development",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Where an enterprise cannot distinguish the research phase of an internal project from its development phase, the expenditure is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U6 — research and development phases",
+      "readLink": {
+        "label": "Read: AS 26 — Intangible Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#6-as-26-intangible-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Split 50:50 between expense and asset",
+          "explanation": "No apportionment rule exists."
+        },
+        {
+          "key": "B",
+          "text": "Treated as if incurred in the research phase only — expensed",
+          "explanation": "Doubt resolves against capitalisation."
+        },
+        {
+          "key": "C",
+          "text": "Treated as development and capitalised",
+          "explanation": "Capitalisation needs the six demonstrations, impossible without a distinguishable phase."
+        },
+        {
+          "key": "D",
+          "text": "Deferred until the project concludes",
+          "explanation": "Deferral of unproven expenditure is what AS 26 forbids."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-034",
+      "topic": "Ch 5 · AS 26 · Development criteria",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which is NOT among the six conditions for capitalising development expenditure?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U6 — recognition of development expenditure",
+      "readLink": {
+        "label": "Read: AS 26 — Intangible Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#6-as-26-intangible-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Availability of adequate technical and financial resources to complete it",
+          "explanation": "One of the six."
+        },
+        {
+          "key": "B",
+          "text": "Ability to measure the attributable expenditure reliably",
+          "explanation": "One of the six."
+        },
+        {
+          "key": "C",
+          "text": "Technical feasibility of completing the asset",
+          "explanation": "First of the six demonstrations."
+        },
+        {
+          "key": "D",
+          "text": "Approval of the project by a government authority",
+          "explanation": "The six are: technical feasibility, intention to complete, ability to use/sell, how benefits will be generated, adequate resources, reliable measurement."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-035",
+      "topic": "Ch 5 · AS 26 · Useful life",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "AS 26's position on the useful life of an intangible asset is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U6 — amortisation period",
+      "readLink": {
+        "label": "Read: AS 26 — Intangible Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#6-as-26-intangible-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "An unlimited life if cash flows are expected indefinitely",
+          "explanation": "AS 26 requires a finite amortisation life."
+        },
+        {
+          "key": "B",
+          "text": "A fixed maximum of ten years in all cases",
+          "explanation": "The presumption CAN be rebutted with evidence of a longer life."
+        },
+        {
+          "key": "C",
+          "text": "The legal term plus expected renewals in every case",
+          "explanation": "Renewals count only when virtually certain."
+        },
+        {
+          "key": "D",
+          "text": "A rebuttable presumption that it will not exceed ten years from availability for use; a life from legal rights cannot exceed the legal term unless renewal is virtually certain",
+          "explanation": "Longer lives are possible with persuasive evidence — the presumption is rebuttable."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-036",
+      "topic": "Ch 5 · AS 26 · Amortisation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Development costs of ₹8,00,000 were capitalised for a process available for use on 1 April. The legal right runs 12 years, but the enterprise's best supported estimate of economic life is 8 years. Annual amortisation (straight-line, nil residual) is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U6 — amortisation computation",
+      "readLink": {
+        "label": "Read: AS 26 — Intangible Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#6-as-26-intangible-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,60,000",
+          "explanation": "Divides by 5 years — no such period appears in the facts."
+        },
+        {
+          "key": "B",
+          "text": "₹1,00,000",
+          "explanation": "8,00,000 over the best-estimate life of 8 years — within both the legal term and the rebuttable 10-year presumption."
+        },
+        {
+          "key": "C",
+          "text": "₹80,000",
+          "explanation": "Uses the 10-year presumption though a shorter best estimate (8 years) exists."
+        },
+        {
+          "key": "D",
+          "text": "₹66,667",
+          "explanation": "Uses the 12-year legal term, ignoring the shorter economic-life estimate."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-037",
+      "topic": "Ch 5 · AS 26 · Residual value",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The residual value of an intangible asset is assumed to be zero UNLESS:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U6 — residual value",
+      "readLink": {
+        "label": "Read: AS 26 — Intangible Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#6-as-26-intangible-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Management estimates a resale value in good faith",
+          "explanation": "Management optimism alone cannot displace the zero assumption."
+        },
+        {
+          "key": "B",
+          "text": "A third party has committed to purchase it at the end of its useful life, or an active market exists that is likely to survive the asset's useful life",
+          "explanation": "Only these two escapes rebut the zero assumption."
+        },
+        {
+          "key": "C",
+          "text": "The asset is amortised over less than ten years",
+          "explanation": "The amortisation period does not affect the residual assumption."
+        },
+        {
+          "key": "D",
+          "text": "The asset was acquired rather than internally generated",
+          "explanation": "Acquisition mode is irrelevant to residual value."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-038",
+      "topic": "Ch 5 · AS 28 · Indications",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which is an EXTERNAL indication of impairment under AS 28?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U7 — indications of impairment",
+      "readLink": {
+        "label": "Read: AS 28 — Impairment of Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#7-as-28-impairment-of-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "An internal report showing worse-than-budgeted cash flows",
+          "explanation": "Internal evidence of underperformance."
+        },
+        {
+          "key": "B",
+          "text": "A plan to restructure the operation the asset serves",
+          "explanation": "Restructuring plans are internal indications."
+        },
+        {
+          "key": "C",
+          "text": "Evidence of physical damage to the asset",
+          "explanation": "Damage is an INTERNAL source of information."
+        },
+        {
+          "key": "D",
+          "text": "The carrying amount of the enterprise's net assets exceeds its market capitalisation",
+          "explanation": "A listed external signal — the market prices the whole below book."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-039",
+      "topic": "Ch 5 · AS 28 · Recoverable amount",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Recoverable amount under AS 28 is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U7 — recoverable amount",
+      "readLink": {
+        "label": "Read: AS 28 — Impairment of Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#7-as-28-impairment-of-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Net selling price in all cases",
+          "explanation": "Value in use rescues assets worth more in continued use."
+        },
+        {
+          "key": "B",
+          "text": "The HIGHER of net selling price and value in use",
+          "explanation": "An asset is impaired only if the better of selling it and using it falls short of carrying amount."
+        },
+        {
+          "key": "C",
+          "text": "Value in use in all cases",
+          "explanation": "Net selling price rescues assets worth more sold than used."
+        },
+        {
+          "key": "D",
+          "text": "The lower of net selling price and value in use",
+          "explanation": "The lower-of pattern belongs to inventory, not impairment."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c05-040",
+      "topic": "Ch 5 · AS 28 · Measuring the loss",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An asset's carrying amount is ₹10,00,000; net selling price ₹8,20,000; value in use ₹8,80,000. The impairment loss is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U7 — impairment loss",
+      "readLink": {
+        "label": "Read: AS 28 — Impairment of Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#7-as-28-impairment-of-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,20,000",
+          "explanation": "Recoverable amount = higher(8,20,000, 8,80,000) = 8,80,000; loss = 10,00,000 − 8,80,000."
+        },
+        {
+          "key": "B",
+          "text": "₹60,000",
+          "explanation": "That is the gap between the two recoverable-amount candidates, not the loss."
+        },
+        {
+          "key": "C",
+          "text": "Nil",
+          "explanation": "Recoverable amount is below carrying amount, so a loss exists."
+        },
+        {
+          "key": "D",
+          "text": "₹1,80,000",
+          "explanation": "Measures against net selling price though value in use is higher."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c05-041",
+      "topic": "Ch 5 · AS 28 · Value in use",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In computing value in use, AS 28 requires:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U7 — value in use",
+      "readLink": {
+        "label": "Read: AS 28 — Impairment of Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#7-as-28-impairment-of-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "The enterprise's average historical growth applied indefinitely",
+          "explanation": "Growth beyond budgets must be steady or DECLINING, capped at the long-term average."
+        },
+        {
+          "key": "B",
+          "text": "Budgets covering the asset's whole remaining life",
+          "explanation": "Formal budgets are capped at five years absent justification."
+        },
+        {
+          "key": "C",
+          "text": "Post-tax cash flows discounted at the post-tax cost of capital",
+          "explanation": "AS 28 works pre-tax on both flows and rate."
+        },
+        {
+          "key": "D",
+          "text": "Cash flow projections on reasonable and supportable assumptions, budgets of at most five years, and a PRE-TAX discount rate reflecting the time value of money and asset-specific risks",
+          "explanation": "Extrapolation beyond the budget period uses a steady or declining growth rate not above the long-term average."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c05-042",
+      "topic": "Ch 5 · AS 28 · Reversals",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about reversal of impairment losses is correct?",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 5 U7 — reversal of impairment losses",
+      "readLink": {
+        "label": "Read: AS 28 — Impairment of Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#7-as-28-impairment-of-assets"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reversals restore the asset to its recoverable amount without limit",
+          "explanation": "The no-impairment depreciated-cost ceiling always applies."
+        },
+        {
+          "key": "B",
+          "text": "Goodwill impairment reverses whenever the CGU recovers",
+          "explanation": "Goodwill reversal needs the exceptional external-event condition, not mere recovery."
+        },
+        {
+          "key": "C",
+          "text": "The increased carrying amount cannot exceed the depreciated carrying amount that would have existed had no impairment ever been recognised; goodwill reversals need a specific external event of an exceptional nature",
+          "explanation": "Anything above the no-impairment line is revaluation (AS 10's territory), and goodwill reversal is nearly shut."
+        },
+        {
+          "key": "D",
+          "text": "Impairment losses are never reversed",
+          "explanation": "Reversals are required when indications show the loss has decreased — within the ceiling."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "cs-i1c05-001",
+      "type": "case_mcq_set",
+      "topic": "Ch 5 · AS 2 · Case: Narmada Fabrics (inventory valuation)",
+      "case": "Narmada Fabrics Ltd produced 10,000 units during the year. Costs: direct materials ₹4,00,000; direct labour ₹2,40,000; variable production overheads ₹1,60,000; fixed production overheads ₹3,00,000. Normal capacity is 12,000 units per year. Closing inventory is 1,500 units. The product's expected selling price is ₹95 per unit with selling costs of ₹3 per unit.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 2 — Valuation of Inventories →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#1-as-2-valuation-of-inventories"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c05-001-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The fixed production overhead absorbed into cost PER UNIT is:",
+          "sourceRef": "SM Ch 5 U1 — fixed overhead absorption",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹20",
+              "explanation": "That is the labour rate hiding as overhead (2,40,000 ÷ 12,000)."
+            },
+            {
+              "key": "B",
+              "text": "₹27.50",
+              "explanation": "An average of the two bases has no sanction."
+            },
+            {
+              "key": "C",
+              "text": "₹25",
+              "explanation": "Fixed overheads ride on NORMAL capacity: 3,00,000 ÷ 12,000 = ₹25, though only 10,000 units were made."
+            },
+            {
+              "key": "D",
+              "text": "₹30",
+              "explanation": "Divides by actual production (10,000) — low output never inflates unit cost."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c05-001-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The AS 2 cost per unit of finished goods is:",
+          "sourceRef": "SM Ch 5 U1 — cost of conversion",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹89",
+              "explanation": "Omits the variable production overheads."
+            },
+            {
+              "key": "B",
+              "text": "₹105",
+              "explanation": "Materials 40 + labour 24 + variable OH 16 (all on actual 10,000 units) + fixed OH 25 (on normal capacity)."
+            },
+            {
+              "key": "C",
+              "text": "₹80",
+              "explanation": "Stops at variable cost, omitting fixed production overheads entirely."
+            },
+            {
+              "key": "D",
+              "text": "₹110",
+              "explanation": "Uses ₹30 fixed overhead absorbed on actual output."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i1c05-001-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Closing inventory is carried in the balance sheet at:",
+          "sourceRef": "SM Ch 5 U1 — lower of cost and NRV",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,38,000",
+              "explanation": "NRV = 95 − 3 = ₹92, below cost ₹105 → 1,500 × 92."
+            },
+            {
+              "key": "B",
+              "text": "₹1,32,000",
+              "explanation": "No basis — NRV deducts the ₹3 selling cost once, giving ₹92 not ₹88."
+            },
+            {
+              "key": "C",
+              "text": "₹1,57,500",
+              "explanation": "Values at cost ₹105, ignoring that NRV is lower."
+            },
+            {
+              "key": "D",
+              "text": "₹1,42,500",
+              "explanation": "Values at the ₹95 selling price without deducting selling costs."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i1c05-001-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The fixed production overhead charged straight to the P&L (unabsorbed) is:",
+          "sourceRef": "SM Ch 5 U1 — unabsorbed fixed overheads",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹60,000",
+              "explanation": "Uses a ₹30 rate for the shortfall — the rate stays at ₹25."
+            },
+            {
+              "key": "B",
+              "text": "₹50,000",
+              "explanation": "3,00,000 incurred − 25 × 10,000 absorbed = ₹50,000 expensed as period cost."
+            },
+            {
+              "key": "C",
+              "text": "₹25,000",
+              "explanation": "Halves the shortfall without basis; 2,000 units × 25 = 50,000."
+            },
+            {
+              "key": "D",
+              "text": "Nil",
+              "explanation": "Absorption at normal capacity leaves 2,000 units' worth unabsorbed."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c05-002",
+      "type": "case_mcq_set",
+      "topic": "Ch 5 · AS 16 · Case: Chambal Power (borrowing costs)",
+      "case": "Chambal Power Ltd is building a plant (a qualifying asset) through the year ended 31 March. A specific 12% loan of ₹40,00,000 was drawn on 1 April; pending use, idle funds earned interest of ₹60,000. The company's general borrowings throughout the year were ₹25,00,000 at 10% and ₹25,00,000 at 14%. Average expenditure on the plant funded from general borrowings was ₹10,00,000.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 16 — Borrowing Costs →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#4-as-16-borrowing-costs"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c05-002-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Borrowing costs capitalisable from the SPECIFIC loan are:",
+          "sourceRef": "SM Ch 5 U4 — specific borrowings",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹5,40,000",
+              "explanation": "Adds the investment income instead of deducting it."
+            },
+            {
+              "key": "B",
+              "text": "₹60,000",
+              "explanation": "That is the deduction, not the capitalisable cost."
+            },
+            {
+              "key": "C",
+              "text": "₹4,20,000",
+              "explanation": "12% × 40,00,000 = 4,80,000 less temporary-investment income 60,000."
+            },
+            {
+              "key": "D",
+              "text": "₹4,80,000",
+              "explanation": "Ignores the ₹60,000 earned on temporarily invested funds."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c05-002-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The capitalisation rate for general borrowings is:",
+          "sourceRef": "SM Ch 5 U4 — capitalisation rate",
+          "options": [
+            {
+              "key": "A",
+              "text": "10%",
+              "explanation": "The cheaper loan's rate alone — the pool is blended."
+            },
+            {
+              "key": "B",
+              "text": "12%",
+              "explanation": "Weighted average: (2,50,000 + 3,50,000) ÷ 50,00,000."
+            },
+            {
+              "key": "C",
+              "text": "14%",
+              "explanation": "The dearer loan's rate alone."
+            },
+            {
+              "key": "D",
+              "text": "11.5%",
+              "explanation": "Mis-weights the equal pools; equal amounts blend to the simple mean, 12%."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i1c05-002-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Total borrowing costs capitalised for the year are:",
+          "sourceRef": "SM Ch 5 U4 — total capitalisation",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹4,20,000",
+              "explanation": "Leaves out the general-borrowings component."
+            },
+            {
+              "key": "B",
+              "text": "₹5,40,000",
+              "explanation": "Specific 4,20,000 + general 12% × 10,00,000 = 1,20,000."
+            },
+            {
+              "key": "C",
+              "text": "₹1,20,000",
+              "explanation": "Leaves out the specific-loan component."
+            },
+            {
+              "key": "D",
+              "text": "₹6,00,000",
+              "explanation": "Uses the gross specific cost (4,80,000) without deducting investment income."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c05-003",
+      "type": "case_mcq_set",
+      "topic": "Ch 5 · AS 19 · Case: Tapti Logistics (lessee finance lease)",
+      "case": "Tapti Logistics Ltd leases a fleet vehicle system for 5 years at ₹2,50,000 per year payable at each year end. The fair value of the asset at inception is ₹10,00,000. The interest rate implicit in the lease is 10% (5-year annuity PV factor 3.791). There is no reasonable certainty that ownership will pass.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 19 — Leases →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#5-as-19-leases"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c05-003-a",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The lease is classified as:",
+          "sourceRef": "SM Ch 5 U5 — classification",
+          "options": [
+            {
+              "key": "A",
+              "text": "A finance lease only if the lessor agrees in writing",
+              "explanation": "Classification follows substance at inception, not consent."
+            },
+            {
+              "key": "B",
+              "text": "A finance lease — the present value of minimum lease payments (≈95% of fair value) is substantially all of the asset's fair value",
+              "explanation": "2,50,000 × 3.791 = 9,47,750 ≈ 94.8% of ₹10,00,000."
+            },
+            {
+              "key": "C",
+              "text": "An operating lease — payments are annual, not monthly",
+              "explanation": "Payment frequency is irrelevant to classification."
+            },
+            {
+              "key": "D",
+              "text": "An operating lease — title does not pass",
+              "explanation": "Title transfer is not required; risks-and-rewards substance governs."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i1c05-003-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The asset and liability recognised at inception amount to:",
+          "sourceRef": "SM Ch 5 U5 — initial measurement",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹12,50,000",
+              "explanation": "The undiscounted rentals ignore the financing element."
+            },
+            {
+              "key": "B",
+              "text": "₹9,00,000",
+              "explanation": "No computation in the facts produces this figure — discount the rentals at 10%."
+            },
+            {
+              "key": "C",
+              "text": "₹10,00,000",
+              "explanation": "Fair value loses to the lower PV of minimum lease payments."
+            },
+            {
+              "key": "D",
+              "text": "₹9,47,750",
+              "explanation": "PV of MLP (2,50,000 × 3.791), which is LOWER than the ₹10,00,000 fair value."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c05-003-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The finance charge for Year 1 is:",
+          "sourceRef": "SM Ch 5 U5 — finance charge allocation",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,25,000",
+              "explanation": "10% of the undiscounted rental total has no meaning."
+            },
+            {
+              "key": "B",
+              "text": "₹1,00,000",
+              "explanation": "10% on fair value — the rate applies to the recognised liability."
+            },
+            {
+              "key": "C",
+              "text": "₹94,775",
+              "explanation": "10% on the opening liability of 9,47,750."
+            },
+            {
+              "key": "D",
+              "text": "₹2,50,000",
+              "explanation": "That is the whole rental; only its interest component is a finance charge."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c05-003-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The lease liability outstanding at the END of Year 1 (after the payment) is:",
+          "sourceRef": "SM Ch 5 U5 — liability run-off",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹7,92,525",
+              "explanation": "9,47,750 + 94,775 interest − 2,50,000 payment."
+            },
+            {
+              "key": "B",
+              "text": "₹10,42,525",
+              "explanation": "Accrues interest but forgets the year-end payment."
+            },
+            {
+              "key": "C",
+              "text": "₹6,97,750",
+              "explanation": "Deducts the full rental without first accruing the year's interest."
+            },
+            {
+              "key": "D",
+              "text": "₹8,52,975",
+              "explanation": "Reduces the liability by 10% — the mechanics are interest-accrual minus payment."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c05-004",
+      "type": "case_mcq_set",
+      "topic": "Ch 5 · AS 28 · Case: Sabarmati Chemicals (CGU impairment)",
+      "case": "A cash-generating unit of Sabarmati Chemicals Ltd comprises: allocated goodwill ₹1,00,000; plant and machinery ₹6,00,000; intangible assets ₹2,00,000 — total carrying amount ₹9,00,000. Following an adverse regulatory change, the unit's recoverable amount is determined at ₹6,75,000. No individual asset's net selling price or value in use is separately determinable.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 28 — Impairment of Assets →",
+        "href": "/intermediate/advanced-accounting/assets-based-as/#7-as-28-impairment-of-assets"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c05-004-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The impairment loss for the CGU is:",
+          "sourceRef": "SM Ch 5 U7 — CGU impairment loss",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹2,25,000",
+              "explanation": "Carrying 9,00,000 − recoverable 6,75,000."
+            },
+            {
+              "key": "B",
+              "text": "₹2,00,000",
+              "explanation": "No computation in the facts gives this — subtract recoverable from carrying."
+            },
+            {
+              "key": "C",
+              "text": "₹2,50,000",
+              "explanation": "Overshoots; the gap is exactly 2,25,000."
+            },
+            {
+              "key": "D",
+              "text": "₹1,25,000",
+              "explanation": "That is the loss remaining AFTER goodwill absorbs its share."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i1c05-004-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The loss allocated to PLANT AND MACHINERY is:",
+          "sourceRef": "SM Ch 5 U7 — allocation order",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,68,750",
+              "explanation": "Pro-rates the full 2,25,000 over plant and intangibles, skipping the goodwill-first step."
+            },
+            {
+              "key": "B",
+              "text": "₹1,50,000",
+              "explanation": "Pro-rates the whole loss over all assets INCLUDING goodwill — goodwill goes first."
+            },
+            {
+              "key": "C",
+              "text": "₹93,750",
+              "explanation": "Goodwill absorbs 1,00,000 first; the remaining 1,25,000 splits pro-rata 6:2 → plant 93,750."
+            },
+            {
+              "key": "D",
+              "text": "₹1,25,000",
+              "explanation": "That is the residual loss after goodwill, before pro-rating between the two assets."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c05-004-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The carrying amount of plant and machinery after the impairment is:",
+          "sourceRef": "SM Ch 5 U7 — post-impairment carrying amounts",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹5,06,250",
+              "explanation": "6,00,000 − 93,750."
+            },
+            {
+              "key": "B",
+              "text": "₹4,31,250",
+              "explanation": "Deducts 1,68,750 — the skip-goodwill error."
+            },
+            {
+              "key": "C",
+              "text": "₹6,00,000",
+              "explanation": "Plant must absorb its pro-rata share once goodwill is exhausted."
+            },
+            {
+              "key": "D",
+              "text": "₹4,50,000",
+              "explanation": "Deducts 1,50,000 — the all-assets pro-rata error."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "d-i1c05-001",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 2 · Cost of inventories",
+      "stem": "What is included in, and excluded from, the cost of inventories under AS 2? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Purchase cost: price + non-recoverable duties/taxes + freight inward and other directly attributable acquisition costs − trade discounts and rebates",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U1"
+        },
+        {
+          "point": "Conversion cost: direct labour; variable production overheads on actual output; fixed production overheads absorbed at NORMAL capacity (shortfall expensed; abnormally high output cuts the rate to actual)",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U1"
+        },
+        {
+          "point": "Other costs only so far as incurred to bring inventory to present location and condition",
+          "marks": 1,
+          "citation": "SM Ch 5 U1"
+        },
+        {
+          "point": "Excluded: abnormal waste; storage (unless a necessary production stage); administrative overheads; selling and distribution costs",
+          "marks": 1,
+          "citation": "SM Ch 5 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c05-002",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 10 · Elements of cost",
+      "stem": "State the elements of cost of an item of PPE under AS 10 (Revised), giving two examples of costs that are NOT part of cost. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Purchase price including import duties and non-refundable taxes, net of trade discounts and rebates",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U2"
+        },
+        {
+          "point": "Directly attributable costs of bringing the asset to location and condition: site preparation, delivery/handling, installation/assembly, professional fees, net testing costs",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U2"
+        },
+        {
+          "point": "Initial estimate of decommissioning, restoration and similar obligations",
+          "marks": 1,
+          "citation": "SM Ch 5 U2"
+        },
+        {
+          "point": "Not cost (any two): new-facility opening costs, advertising, administration/general overheads, initial operating losses, relocation costs",
+          "marks": 1,
+          "citation": "SM Ch 5 U2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c05-003",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 10 · Revaluation",
+      "stem": "Explain the treatment of increases and decreases on revaluation of PPE and the disposal of the revaluation surplus. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Model applies to an entire CLASS; revaluations kept sufficiently current",
+          "marks": 1,
+          "citation": "SM Ch 5 U2"
+        },
+        {
+          "point": "Increase → revaluation surplus; but credited to P&L to the extent it reverses a previous P&L decrease of the same asset",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U2"
+        },
+        {
+          "point": "Decrease → P&L; but debited to surplus to the extent a credit balance exists for that asset",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U2"
+        },
+        {
+          "point": "Surplus transferred to revenue reserves on derecognition, or progressively by the depreciation differential — never through the P&L",
+          "marks": 1,
+          "citation": "SM Ch 5 U2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c05-004",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 13 · Carrying and reclassification",
+      "stem": "State the carrying-amount rules for current and long-term investments and the rules on reclassification between the two. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Current: lower of cost and fair value, individually or by category — never on an overall/global basis",
+          "marks": 1,
+          "citation": "SM Ch 5 U3"
+        },
+        {
+          "point": "Long-term: cost, reduced individually for declines other than temporary; reduction reversed when it no longer exists",
+          "marks": 1,
+          "citation": "SM Ch 5 U3"
+        },
+        {
+          "point": "Long-term → current: transfer at lower of cost and carrying amount at the transfer date",
+          "marks": 1,
+          "citation": "SM Ch 5 U3"
+        },
+        {
+          "point": "Current → long-term: transfer at lower of cost and fair value at the transfer date",
+          "marks": 1,
+          "citation": "SM Ch 5 U3"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c05-005",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 16 · Timing",
+      "stem": "When does capitalisation of borrowing costs commence, get suspended and cease under AS 16? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Commencement — all three: expenditure being incurred; borrowing costs being incurred; activities necessary to prepare the asset in progress (including technical/administrative work)",
+          "marks": 2,
+          "citation": "SM Ch 5 U4"
+        },
+        {
+          "point": "Suspended while active development stands interrupted for an EXTENDED period",
+          "marks": 1,
+          "citation": "SM Ch 5 U4"
+        },
+        {
+          "point": "No suspension for temporary delays necessary to the process or inherent to the asset/locality (e.g. usual monsoon interruption)",
+          "marks": 1,
+          "citation": "SM Ch 5 U4"
+        },
+        {
+          "point": "Cessation when substantially all preparatory activities are complete; part-wise cessation for parts usable independently",
+          "marks": 1,
+          "citation": "SM Ch 5 U4"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c05-006",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 19 · Classification",
+      "stem": "State the situations which would normally lead a lease to be classified as a finance lease under AS 19. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Ownership passes to the lessee once the term ends",
+          "marks": 1,
+          "citation": "SM Ch 5 U5"
+        },
+        {
+          "point": "Bargain purchase option expected to be exercised",
+          "marks": 1,
+          "citation": "SM Ch 5 U5"
+        },
+        {
+          "point": "Lease term covers the major part of the asset's economic life even without title transfer",
+          "marks": 1,
+          "citation": "SM Ch 5 U5"
+        },
+        {
+          "point": "PV of minimum lease payments at inception ≥ substantially all of the asset's fair value",
+          "marks": 1,
+          "citation": "SM Ch 5 U5"
+        },
+        {
+          "point": "Asset of specialised nature usable only by the lessee without major modifications (supporting indicators: lessee bears cancellation losses / residual fluctuations; bargain renewal)",
+          "marks": 1,
+          "citation": "SM Ch 5 U5"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c05-007",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 26 · Development expenditure",
+      "stem": "State the conditions an enterprise must demonstrate to capitalise development expenditure under AS 26. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Technical feasibility of completing the intangible asset for use or sale",
+          "marks": 1,
+          "citation": "SM Ch 5 U6"
+        },
+        {
+          "point": "Intention to complete, and ability to use or sell, the asset",
+          "marks": 1,
+          "citation": "SM Ch 5 U6"
+        },
+        {
+          "point": "How the asset will generate probable future economic benefits (market for output/asset, or internal usefulness)",
+          "marks": 1,
+          "citation": "SM Ch 5 U6"
+        },
+        {
+          "point": "Adequate technical, financial and other resources to complete and use/sell",
+          "marks": 1,
+          "citation": "SM Ch 5 U6"
+        },
+        {
+          "point": "Reliable measurement of attributable expenditure; research (or indistinguishable projects) always expensed",
+          "marks": 1,
+          "citation": "SM Ch 5 U6"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c05-008",
+      "type": "descriptive",
+      "topic": "Ch 5 · AS 28 · CGU mechanics",
+      "stem": "How is an impairment loss of a cash-generating unit allocated, and what limits apply to reversals of impairment losses? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Loss allocated FIRST to goodwill allocated to the CGU",
+          "marks": 1,
+          "citation": "SM Ch 5 U7"
+        },
+        {
+          "point": "Balance pro-rata to other assets on their carrying amounts; no asset below the highest of its NSP, VIU and zero (excess re-allocated)",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U7"
+        },
+        {
+          "point": "Reversal ceiling: carrying amount may not exceed depreciated carrying amount had no impairment been recognised; excess would be revaluation (AS 10)",
+          "marks": 1.5,
+          "citation": "SM Ch 5 U7"
+        },
+        {
+          "point": "Goodwill reversal only where the loss arose from a specific external event of exceptional nature not expected to recur, reversed by subsequent external events",
+          "marks": 1,
+          "citation": "SM Ch 5 U7"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    }
+  ]
+}

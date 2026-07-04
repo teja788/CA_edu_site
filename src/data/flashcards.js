@@ -274,6 +274,32 @@ export const decks = [
       { id: 'pd-18', front: 'AS 25 interim tax rate:', back: 'Best estimate of the WEIGHTED AVERAGE ANNUAL effective rate × each period’s income. Estimate changes → adjust LATER interim periods, never restate. Materiality judged on INTERIM data.' },
     ],
   },
+  {
+    id: 'inter-p1-assets-as',
+    name: 'Assets Based AS — AS 2/10/13/16/19/26/28',
+    paper: 'Inter P1 · Ch 5',
+    applicableAttempts: ['Sept 2026', 'Jan 2027'],
+    cards: [
+      { id: 'ab-1', front: 'AS 2 master rule + application level:', back: 'LOWER of cost and NRV, ITEM BY ITEM (or groups of similar items) — never globally. NRV = selling price − completion costs − selling costs.' },
+      { id: 'ab-2', front: 'AS 2 fixed production overheads ride on…', back: 'NORMAL capacity, not actual. Low output → shortfall EXPENSED. Abnormally high output → cut the rate to actual so inventory never exceeds actual fixed OH.' },
+      { id: 'ab-3', front: 'AS 2 permitted cost formulas:', back: 'Specific identification (non-interchangeable/earmarked) · else FIFO or WEIGHTED AVERAGE — fairest approximation. LIFO: never. Standard cost/retail method OK as techniques.' },
+      { id: 'ab-4', front: 'Raw materials write-down trigger:', back: 'ONLY when the finished product falls below cost. While the product clears cost, materials stay AT cost even if their market fell. Then: replacement cost ≈ NRV.' },
+      { id: 'ab-5', front: 'AS 10 cost includes / excludes:', back: 'IN: net price + non-refundable duties + site prep/freight/installation/net testing + DISMANTLING estimate. OUT: refundable taxes, new-facility opening, admin OH, INITIAL OPERATING LOSSES, relocation.' },
+      { id: 'ab-6', front: 'AS 10 revaluation routing:', back: 'Class-wide only. UP → revaluation surplus (except reversing a prior P&L hit → P&L). DOWN → P&L (except against existing surplus). Surplus exits to revenue reserves, NEVER via P&L.' },
+      { id: 'ab-7', front: 'WDV → SLM switch is a change in…', back: 'ESTIMATE (AS 10 Revised) — prospective over remaining life + AS 5 disclosure. Retired-from-use assets: lower of carrying amount and NRV.' },
+      { id: 'ab-8', front: 'AS 13 current investment two-limb test + ceiling:', back: 'Readily realisable + intended ≤ 1 YEAR. Carried at lower of cost and fair value, individually/by category — NEVER overall.' },
+      { id: 'ab-9', front: 'AS 13 long-term write-down + reclassification:', back: 'Only for OTHER-THAN-TEMPORARY decline, per investment; reverses on recovery. LT→current: lower(cost, CARRYING). Current→LT: lower(cost, FAIR VALUE).' },
+      { id: 'ab-10', front: 'AS 13 rights shares + pre-acquisition dividend:', back: 'Rights SUBSCRIBED → add to carrying cost. Rights SOLD → P&L (unless cum-right purchase and ex-right value < cost). Pre-acquisition dividend → REDUCES COST.' },
+      { id: 'ab-11', front: 'AS 16 specific vs general borrowings:', back: 'Specific: actual costs − TEMPORARY-INVESTMENT INCOME. General: weighted-average CAPITALISATION RATE × expenditure, capped at actual costs incurred.' },
+      { id: 'ab-12', front: 'AS 16 commencement triple + suspension:', back: 'Expenditure incurred + borrowing costs incurred + activities in progress (ALL three). Suspend on EXTENDED interruption; inherent delays (usual monsoon) keep capitalising. Cease at substantial completion.' },
+      { id: 'ab-13', front: 'AS 19 lessee finance-lease opening entry:', back: 'Asset & liability at LOWER of fair value and PV of MLP (implicit rate, else incremental borrowing rate). No ownership certainty → depreciate over SHORTER of term and life.' },
+      { id: 'ab-14', front: 'AS 19 lessor finance lease:', back: 'Receivable = NET INVESTMENT. GI = MLP + unguaranteed residual; UFI = GI − PV. Income at a CONSTANT periodic rate on net investment outstanding.' },
+      { id: 'ab-15', front: 'Sale & leaseback — finance leaseback:', back: 'Excess of proceeds over carrying DEFERRED, amortised over the term in proportion to DEPRECIATION. (Operating at fair value → recognise immediately.) Land leases: outside AS 19.' },
+      { id: 'ab-16', front: 'AS 26 never-recognise list + R&D split:', back: 'Internal GOODWILL, BRANDS, mastheads, titles, customer lists: never. Research: always expensed. Development: capitalise only on ALL SIX demonstrations; indistinguishable → treat as research.' },
+      { id: 'ab-17', front: 'AS 26 amortisation frame:', back: 'Best-estimate life, REBUTTABLE ≤10-year presumption from availability; legal-rights life ≤ legal term unless renewal virtually certain; residual ZERO unless committed buyer/active market. No revaluation model.' },
+      { id: 'ab-18', front: 'AS 28 CGU loss order + reversal ceiling:', back: 'GOODWILL first, then PRO-RATA on carrying amounts (floor: highest of NSP/VIU/zero). Reversal ≤ depreciated no-impairment carrying; goodwill reversal needs an EXCEPTIONAL external event.' },
+    ],
+  },
 ];
 
 export const allCards = decks.flatMap((d) => d.cards.map((c) => ({ ...c, deckId: d.id, deckName: d.name })));

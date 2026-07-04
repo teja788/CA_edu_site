@@ -174,3 +174,29 @@ Triage rules:
   count as a fraction to the extent of dividend entitlement, and the SM note
   treats no-dividend partly-paid shares as potential equity shares for
   diluted EPS. Sight the SM Unit 5 note and initial.
+
+## assets-based-as — VERIFY 2026-07-04
+
+- [ ] **Definitional quotations kept on purpose** — the ※ clusters in the
+  citations file (AS 2 inventory definition, AS 10/26 held-for-use tail and
+  intangible definition, AS 13 current-investment definition and LT→current
+  rule, AS 16 qualifying-asset core and exchange-difference clause, AS 19
+  lease/finance-lease definitions, lower-of initial measurement,
+  straight-line rule and S&LB deferral rule, AS 10 retired-assets rule,
+  AS 28 discount-rate wording and goodwill-reversal condition). Confirm each
+  against the current AS text.
+- [ ] **AS 28 goodwill-reversal wording** — the extracted SM Unit 7 text did
+  not surface the "specific external event of an exceptional nature" sentence
+  verbatim (PDF extraction may have mangled it). The notes/bank state the
+  AS 28 rule; sight the SM/AS 28 paragraph on reversal of goodwill impairment
+  and initial.
+- [ ] **AS 16 "ordinarily twelve months"** — the notes gloss "substantial
+  period" with the customary twelve-month yardstick. The SM discusses the
+  12-month norm in its explanation; confirm the SM wording supports
+  "ordinarily" and initial.
+- [ ] **AS 13 cum-right exception** — q/notes state the narrow case where
+  sale proceeds of unsubscribed rights reduce carrying cost (cum-right
+  purchase + ex-right value below cost). Sight the SM Unit 3 paragraph.
+- [ ] **AS 10 testing proceeds** — q-008 nets sale proceeds of test output
+  against testing costs per AS 10 (Revised). Confirm the SM presents net
+  testing cost the same way.

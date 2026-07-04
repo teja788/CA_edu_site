@@ -1,0 +1,416 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Assets Based Accounting Standards'
+description: 'CA Intermediate Advanced Accounting Ch 5 — AS 2, AS 10, AS 13, AS 16, AS 19, AS 26 and AS 28 in plain language: inventory valuation, PPE cost and revaluation, investments, borrowing costs, leases, intangibles and impairment.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 5 · Assets Based Accounting Standards'
+chapterSlug: assets-based-as
+masteryId: i1-ch5
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI SM Ch 5 Units 1–7 (May 2026 ed.)'
+  - 'AS 2, AS 10, AS 13, AS 16, AS 19, AS 26, AS 28'
+sourceLabel: 'ICAI SM Ch 5 U1–U7 · AS 2/10/13/16/19/26/28 (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '4 Jul 2026'
+readTime: 'About 40 min read · 3 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=assets-based-as'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Everything on the asset side of the balance sheet gets its rulebook in this chapter.
+Seven standards answer the same three questions for seven kinds of asset: **what goes
+into cost**, **what the carrying amount may not exceed**, and **when value lost must be
+recognised**. Inventory may not sit above net realisable value (AS 2); PPE carries the
+full cost of getting it ready and may be revalued by class (AS 10); investments split by
+intention into current and long-term with different ceilings (AS 13); borrowing costs
+attach to assets that take substantial time to build (AS 16); leases follow economic
+substance, not legal title (AS 19); intangibles must earn recognition and amortise
+against a ten-year presumption (AS 26); and when any of it stops earning its keep, AS 28
+writes it down to recoverable amount. This is the most numerical chapter of the AS
+clusters — every unit has a computation the exam can set.
+
+Applicability shorthand (the regime lives in
+[Ch 3](/intermediate/advanced-accounting/applicability-of-accounting-standards/)):
+AS 2, 10, 13 and 16 bind everyone in full. AS 19 and AS 28 carry **disclosure and
+measurement relaxations** for SMCs and MSMEs — most usefully, the smaller entities may
+estimate value in use as a **reasonable estimate** instead of running a present-value
+computation — and AS 28 is off entirely for the smaller MSME sub-class.
+
+## 1. AS 2: Valuation of Inventories
+
+Inventories are assets held **for sale in the ordinary course of business** (finished
+goods), **in the process of production** for such sale (WIP), or **as materials or
+supplies to be consumed** in production or rendering of services. Four things sit
+outside AS 2: WIP under construction contracts (AS 7 territory, including cement lying
+at a construction site), WIP of service providers, shares/debentures held as
+stock-in-trade, and producers' inventories of livestock, agricultural, forest and
+mineral products carried at NRV by established industry practice.
+
+The master rule: value inventories at the **lower of cost and net realisable value**,
+applied **item by item** (or by groups of similar items) — never on a global basis.
+
+**Cost** has three layers:
+
+- **Purchase** — price plus duties and taxes (excluding those **recoverable** from the
+  authorities), freight inwards and other directly attributable acquisition costs, less
+  trade discounts and rebates.
+- **Conversion** — direct labour plus production overheads. **Variable** overheads ride
+  on actual production; **fixed** overheads are absorbed at **normal capacity** — the
+  average production expected over periods under normal circumstances, allowing for
+  planned maintenance. Actual output below normal → the unabsorbed fixed overhead is
+  **expensed**, not loaded onto fewer units. Abnormally high output → the rate is cut to
+  actual, so inventory never carries more than actual fixed overhead.
+- **Other costs** — only to the extent incurred to bring inventory to its present
+  location and condition.
+
+**Excluded from cost and expensed when incurred**: abnormal waste of materials, labour
+or production costs; storage costs (unless a necessary stage before further
+production); administrative overheads that don't bring inventory to location/condition;
+selling and distribution costs. Interest enters only where AS 16's conditions are met.
+
+**Cost formulas**: where items are not ordinarily interchangeable (or are earmarked for
+specific projects), use **specific identification**. Otherwise, **FIFO or weighted
+average** — whichever gives the fairest approximation of the cost actually incurred.
+LIFO is not an option. **Standard cost** and the **retail method** are acceptable
+measurement *techniques* if they approximate actual cost.
+
+**Net realisable value** = estimated selling price in the ordinary course of business −
+estimated costs of completion − estimated costs necessary to make the sale. Estimates
+rest on the most reliable evidence at the time of estimation, adjusted for
+post-balance-sheet events that confirm year-end conditions.
+
+<Callout kind="pointer">
+**Materials held for use** are NOT written below cost so long as the finished product
+they will enter is expected to sell **at or above cost**. Only when the finished
+product itself falls below cost are the materials written down — and then their
+**replacement cost** may be the best available measure of NRV.
+</Callout>
+
+Joint products: allocate joint costs on a rational and consistent basis (relative sales
+value at split-off is typical). **By-products, scrap and waste** are measured at NRV,
+which is **deducted from the cost of the main product**. Disclose the accounting policy
+including the cost formula used, and the total carrying amount with its classification.
+
+<Callout kind="example">
+Fixed production overheads ₹3,00,000; normal capacity 12,000 units; actual production
+10,000 units. Absorption rate = ₹25 per unit (never ₹30): inventory absorbs
+₹2,50,000 and the ₹50,000 of unabsorbed overhead is expensed in the P&L.
+</Callout>
+
+## 2. AS 10: Property, Plant and Equipment
+
+PPE are **tangible** items **held for use** in production or supply of goods or
+services, for rental to others, or for administrative purposes, and **expected to be
+used during more than twelve months**. Recognition needs the usual pair: probable
+future economic benefits and reliably measurable cost. **Bearer plants** are PPE; the
+**produce on them is not**. **Investment property** (defined in AS 13) is accounted for
+only under the **cost model** of this standard.
+
+**Cost** = purchase price (including import duties and non-refundable taxes, net of
+trade discounts and rebates) **+ directly attributable costs** of bringing the asset to
+the location and condition for intended operation (site preparation, delivery and
+handling, installation and assembly, professional fees, testing costs) **+ the initial
+estimate of decommissioning, restoration and similar obligations** incurred on
+acquisition. **Never cost**: expenses of opening a new facility, advertising and
+promotion, administration and general overheads, **initial operating losses**, and
+relocation/reorganisation costs. Capitalisation stops when the asset is in the location
+and condition to operate as intended — costs of the period while it waits to be used,
+or runs below capacity, are expensed.
+
+Self-constructed assets follow the same principles: internal profits are eliminated and
+the cost of **abnormal** wasted material, labour or other resources stays out.
+**Exchanges of assets** are measured at **fair value** unless the exchange lacks
+commercial substance or neither fair value is reliably measurable — then use the
+carrying amount of the asset given up. **Spare parts, stand-by and servicing
+equipment** are PPE when they meet the definition; otherwise they are inventory.
+Replacement parts and **regular major inspections** are capitalised into the carrying
+amount when the recognition criteria are met, with the replaced part or previous
+inspection derecognised.
+
+After recognition, choose per **entire class**: the **cost model** (cost less
+accumulated depreciation and impairment) or the **revaluation model** (fair value at
+revaluation date less subsequent depreciation/impairment), with revaluations regular
+enough that carrying amounts stay near fair value. The direction rules:
+
+- **Increase** → credit **revaluation surplus** in owners' interests; except to the
+  extent it reverses a previous decrease of the same asset charged to P&L → credit P&L.
+- **Decrease** → charge to P&L; except to the extent a credit balance exists in the
+  revaluation surplus for that asset → debit the surplus.
+- The surplus may be transferred to **revenue reserves** when the asset is
+  derecognised — or progressively, as the asset is used, by the difference between
+  depreciation on the revalued amount and on original cost. Never through the P&L.
+
+**Depreciation**: each part with a significant cost and a different useful life is
+depreciated **separately** (component approach). Land has an unlimited life and is not
+depreciated (quarries and landfills aside). Residual value, useful life and method are
+reviewed at least each year-end; a change in any of them — including a **change of
+depreciation method** — is a **change in accounting estimate**, applied prospectively
+with AS 5 disclosure. Items **retired from active use and held for disposal** are
+carried at the **lower of carrying amount and net realisable value**. On derecognition,
+the gain or loss (proceeds − carrying amount) goes to the P&L — and gains are **not
+classified as revenue**.
+
+## 3. AS 13: Accounting for Investments
+
+Investments are assets held for **income, appreciation or other benefits** — not
+stock-in-trade (securities held for sale in the ordinary course of business are
+outside AS 13). The split that drives everything: a **current investment** is by nature
+**readily realisable and intended to be held for not more than one year** from
+acquisition; everything else is **long-term**.
+
+**Cost** includes brokerage, fees and duties. Securities issued as consideration →
+cost is the **fair value of the securities issued**; asset exchanged → fair value of
+the asset given up (or of the investment received if more clearly evident).
+**Pre-acquisition dividends** and interest for pre-acquisition periods are a **recovery
+of cost**, not income. **Rights shares subscribed** → add the subscription cost to the
+carrying amount of the holding. Rights **sold** without subscribing → proceeds go to
+the **P&L** — except where the original holding was bought **cum-right** and the market
+value ex-right has fallen below cost, in which case applying the proceeds to reduce the
+carrying amount is appropriate.
+
+Carrying amounts:
+
+- **Current** — **lower of cost and fair value**, determined **individually or by
+  category**, but never on an overall (global) basis.
+- **Long-term** — **cost**, reduced (individually, investment by investment) for any
+  decline **other than temporary**; the reduction is charged to the P&L and **reversed**
+  when the decline no longer exists.
+
+**Investment property** — land or buildings held for rental income or appreciation
+rather than for use in operations — is a long-term investment carried under AS 10's
+cost model. **Reclassification**: long-term → current, transfer at the **lower of cost
+and carrying amount** at the transfer date; current → long-term, transfer at the
+**lower of cost and fair value** at that date. On disposal, the difference between net
+proceeds and carrying amount hits the P&L. Disclosures include gross income from
+investments, profits/losses on disposals, and the **aggregate market value of quoted
+investments** alongside the aggregate carrying amounts.
+
+## 4. AS 16: Borrowing Costs
+
+Borrowing costs are interest and other costs incurred **in connection with borrowing**:
+interest and commitment charges, amortisation of discounts/premiums and of ancillary
+issue costs, finance charges under AS 19 finance leases, and **exchange differences on
+foreign-currency borrowings to the extent they are regarded as an adjustment to
+interest costs** (capped at the interest a comparable rupee borrowing would have
+carried). Owners' equity — including preference capital not classified as a liability —
+is not a borrowing.
+
+The rule: borrowing costs **directly attributable to the acquisition, construction or
+production of a qualifying asset** are capitalised as part of its cost; all other
+borrowing costs are expensed. A **qualifying asset** necessarily takes a **substantial
+period of time** — ordinarily **twelve months** — to get ready for intended use or sale
+(manufacturing plants, power facilities, long-gestation inventories, investment
+properties). Assets ready for use on acquisition, and inventories routinely produced in
+large quantities on a repetitive basis, don't qualify.
+
+The arithmetic splits by funding source:
+
+- **Specific borrowings** → capitalise **actual borrowing costs incurred less income on
+  the temporary investment** of the unspent funds.
+- **General borrowings** → apply a **capitalisation rate** (the weighted average cost
+  of general borrowings outstanding) to the expenditure on the asset — capped at the
+  total borrowing costs actually incurred in the period.
+
+<Callout kind="example">
+Specific 12% loan of ₹40,00,000 for a plant, idle funds earning ₹60,000: capitalise
+4,80,000 − 60,000 = ₹4,20,000. General pool: ₹25,00,000 at 10% and ₹25,00,000 at 14% →
+capitalisation rate (2,50,000 + 3,50,000)/50,00,000 = 12%, applied to the qualifying
+expenditure funded from the pool.
+</Callout>
+
+Timing: **commencement** needs all three — expenditure on the asset is being incurred,
+borrowing costs are being incurred, and activities necessary to prepare the asset are
+in progress (including technical/administrative work before construction).
+Capitalisation is **suspended** while active development stands interrupted for an
+**extended period** — but not for temporary delays that are necessary parts of the
+process or inherent to the asset (a bridge waiting out the monsoon keeps capitalising
+where that interruption is usual in the territory). **Cessation** when substantially all the activities necessary
+to prepare the asset are complete; a part that can be used while construction continues
+on other parts stops capitalising when that part is ready. If the resulting carrying
+amount exceeds recoverable amount, write it down per the other standards. Disclose the
+policy and the **amount of borrowing costs capitalised during the period**.
+
+## 5. AS 19: Leases
+
+A lease transfers the **right to use** an asset for an agreed period in return for
+payments — and AS 19 accounts for the economics, not the paperwork. Outside its scope:
+lease agreements to explore for or use natural resources, licensing agreements for
+items like films, video recordings, plays, patents and copyrights, and **leases of
+land**.
+
+A **finance lease** transfers **substantially all the risks and rewards incident to
+ownership** — title may or may not eventually pass. The classic situations, any of
+which normally points to a finance lease: ownership transfers by the end of the term; a
+**bargain purchase option**; the term covers the **major part of the asset's economic
+life** even without title transfer; the **present value of the minimum lease payments
+is at least substantially all of the asset's fair value** at inception; the asset is of
+a **specialised nature** usable only by the lessee without major modification.
+Supporting indicators: lessee bears the lessor's cancellation losses, residual-value
+fluctuations fall on the lessee, or a bargain-rent renewal exists. Everything else is
+an **operating lease**.
+
+**Lessee, finance lease**: recognise an asset and a liability at the **lower of the
+fair value of the leased asset and the present value of the minimum lease payments**
+(discounted at the interest rate implicit in the lease, or failing that the incremental
+borrowing rate). Each payment splits into a **finance charge** (rate on the outstanding
+liability) and a **principal reduction**. Depreciate per AS 10 consistently with owned
+assets — and if there is **no reasonable certainty of ownership** at the end, over the
+**shorter of the lease term and useful life**.
+
+**Lessee, operating lease**: rent is expensed on a **straight-line basis** over the
+lease term unless another systematic basis better represents the time pattern of the
+benefit — deliberately ignoring stepped or back-loaded cash payments.
+
+**Lessor, finance lease**: derecognise the asset and recognise a **receivable equal to
+the net investment** in the lease. Gross investment = minimum lease payments (from the
+lessor's standpoint) + **unguaranteed residual value**; **unearned finance income =
+gross investment − present value** of those components at the implicit rate; income is
+recognised at a **constant periodic rate of return on the net investment outstanding**.
+**Lessor, operating lease**: the asset stays on the lessor's balance sheet, is
+depreciated per AS 10, and rental income is recognised straight-line unless another
+basis fits better.
+
+**Sale and leaseback**: if the leaseback is a **finance lease**, any excess of sale
+proceeds over carrying amount is **deferred and amortised over the lease term in
+proportion to depreciation** — the "sale" is in substance a loan on the asset's
+security. If the leaseback is an **operating lease**, the result depends on fair value:
+at fair value, recognise profit or loss immediately; below fair value, recognise
+immediately **unless** the loss is compensated by below-market future rentals (defer
+and amortise in proportion to the rentals); above fair value, the excess over fair
+value is deferred and amortised over the expected period of use.
+
+<Callout kind="mistake">
+The lessee's finance-lease asset is NOT recorded at fair value by default — it is the
+**lower** of fair value and PV of minimum lease payments. And the depreciation life is
+the **shorter** of lease term and useful life only when ownership is not reasonably
+certain; with reasonable certainty, use the useful life, full stop.
+</Callout>
+
+## 6. AS 26: Intangible Assets
+
+An intangible asset is an **identifiable, non-monetary asset without physical
+substance**, held for use in production/supply, rental, or administration. Recognition
+demands the definition — identifiability (separable from goodwill), **control** (power
+to obtain the benefits and restrict others' access, usually via legal rights), future
+economic benefits — plus the standard pair: probable benefits and reliably measurable
+cost. AS 26 also governs expenditure on **advertising, training, start-up and R&D
+activities**, and rights under licensing agreements for films, recordings, plays,
+manuscripts, patents and copyrights.
+
+The famous prohibitions: **internally generated goodwill is never recognised** — it is
+not an identifiable resource controlled at measurable cost. Internally generated
+**brands, mastheads, publishing titles and customer lists** are likewise never
+recognised. Expenditure once expensed is **never reinstated** as an asset later.
+
+Internal projects split into two phases. **Research** (original, planned investigation
+for new knowledge) is **always expensed**. **Development** expenditure is capitalised
+**if and only if all six** are demonstrated:
+
+1. **Technical feasibility** of completing the asset for use or sale;
+2. **Intention** to complete and use or sell it;
+3. **Ability** to use or sell it;
+4. **How the asset will generate probable future benefits** (a market exists for its
+   output or the asset itself, or it is internally useful);
+5. **Adequate resources** — technical, financial and other — to complete it;
+6. **Reliable measurement** of the attributable expenditure.
+
+If the research phase cannot be distinguished from the development phase, treat the
+whole project **as research** — expense it. Expenditure on advertising, training and
+start-up activities is expensed when incurred.
+
+After recognition: **cost less accumulated amortisation and impairment losses** — AS 26
+offers **no revaluation model**. Amortise over the **best estimate of useful life**,
+with a **rebuttable presumption that useful life will not exceed ten years** from the
+date the asset is available for use. A life from legal rights cannot exceed the legal
+term unless renewal is **virtually certain**. The method mirrors the consumption
+pattern (straight-line if it can't be determined reliably); the **residual value is
+assumed to be zero** unless a third party has committed to buy the asset at the end of
+its life or an active market exists that will survive the asset's useful life. Review
+the amortisation period and method at least each year end.
+
+## 7. AS 28: Impairment of Assets
+
+Depreciation spreads cost; **impairment recognises that the cost will not come back**.
+At each balance sheet date the enterprise checks for **indications** of impairment —
+external (a material fall in market value beyond normal use/time effects; adverse
+changes in the technological, market, economic or legal environment; market interest
+rates rising enough to bite the discount rate; **carrying amount of net assets
+exceeding market capitalisation**) and internal (obsolescence or physical damage;
+restructuring, idle status or plans to dispose; internal evidence of
+worse-than-expected performance). Only if an indication exists must recoverable amount
+be estimated.
+
+**Recoverable amount = the higher of net selling price and value in use.**
+
+- **Net selling price** — the amount obtainable in an arm's-length sale between
+  knowledgeable, willing parties, less costs of disposal.
+- **Value in use** — the **present value** of estimated future cash flows from
+  continuing use plus the residual on ultimate disposal. Projections rest on reasonable
+  and supportable assumptions, on budgets/forecasts of at most **five years**, with
+  steady-or-declining growth extrapolation beyond (not above the long-term average for
+  the products, industries or countries involved). The **discount rate is pre-tax**,
+  reflecting current market assessments of the time value of money and the risks
+  specific to the asset.
+
+If recoverable amount is below carrying amount, write the asset down and take the
+**impairment loss to the P&L** (revalued assets: against the revaluation surplus
+first). Depreciation for future periods is then re-planned on the new carrying amount
+over the remaining life.
+
+Where an individual asset generates no largely independent cash inflows, test its
+**cash-generating unit** — the smallest identifiable group of assets whose cash inflows
+are largely independent of those from other assets. Goodwill rides with the CGUs it
+belongs to: apply the **bottom-up test** (allocate goodwill to the unit where a
+reasonable, consistent basis exists and test the unit with it); where goodwill cannot
+be so allocated, add the **top-down test** at the smallest unit that carries it. An
+impairment loss for a CGU is allocated in strict order: **first to goodwill**, then to
+the other assets **pro-rata to their carrying amounts** — but no asset falls below the
+highest of its own net selling price, value in use and zero (the excess re-allocates).
+
+<Callout kind="example">
+CGU: goodwill ₹1,00,000, PPE ₹6,00,000, intangibles ₹2,00,000 (total ₹9,00,000);
+recoverable amount ₹6,75,000. Loss ₹2,25,000 → goodwill absorbs its full ₹1,00,000
+first; the remaining ₹1,25,000 splits 6:2 over PPE and intangibles → ₹93,750 and
+₹31,250.
+</Callout>
+
+**Reversals** mirror the recognition test: an indication that the loss has decreased →
+re-estimate recoverable amount. The increased carrying amount may **not exceed the
+carrying amount that would have stood (net of depreciation) had no impairment loss ever
+been recognised** — anything above that line is revaluation, which belongs to AS 10.
+Reversals go to the P&L (revalued assets: to the surplus), and depreciation is
+re-planned again. A goodwill impairment is reversed only in the narrow case where the
+loss was caused by a **specific external event of an exceptional nature** not expected
+to recur, and subsequent external events have reversed its effect.
+
+## 8. The chapter in one paragraph
+
+AS 2 values inventory at the lower of cost (purchase + conversion with fixed overheads
+at normal capacity + location/condition costs; FIFO or weighted average when specific
+identification is impossible) and NRV, item by item, sparing raw materials while the
+finished product clears cost. AS 10 loads PPE cost with everything needed to make the
+asset operational including dismantling estimates, lets a whole class carry fair value
+through the revaluation surplus, depreciates by component, and treats method changes as
+estimates. AS 13 splits investments by intention — current at lower of cost and fair
+value (never globally), long-term at cost less other-than-temporary declines — and
+polices reclassification with lower-of rules. AS 16 capitalises borrowing costs on
+qualifying assets: specific borrowings net of temporary investment income, general
+borrowings at the weighted-average capitalisation rate, between commencement and
+substantial completion, suspended in extended interruptions. AS 19 classifies by risks
+and rewards: finance-lease lessees capitalise the lower of fair value and PV of minimum
+lease payments and split each rental into interest and principal; lessors hold net
+investment; sale-and-leaseback gains defer when the leaseback is financial. AS 26
+expenses research, capitalises development only on six demonstrations, never recognises
+internal goodwill or brands, and amortises against a rebuttable ten-year ceiling with
+zero residual by default. AS 28 writes assets (or their cash-generating units) down to
+the higher of net selling price and value in use — goodwill first, pro-rata next — and
+caps any reversal at depreciated historical cost.
