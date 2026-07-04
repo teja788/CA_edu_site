@@ -157,6 +157,13 @@ export const paper1Sections = [
         notesHref: '/intermediate/advanced-accounting/framework-for-preparation-and-presentation-of-fs/',
       },
       {
+        number: 3,
+        slug: 'applicability-of-accounting-standards',
+        name: 'Applicability of Accounting Standards',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/applicability-of-accounting-standards/',
+      },
+      {
         number: 11,
         slug: 'financial-statements-of-companies',
         name: 'Financial Statements of Companies',

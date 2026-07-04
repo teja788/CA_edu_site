@@ -128,3 +128,20 @@ Triage rules:
   profit = sales − restated opening capital, with retained profit measured
   after drawings. Confirm this matches the SM's Example 8/9 presentation
   (the SM works the same way, but the reviewer should sight it).
+
+## applicability-of-accounting-standards — VERIFY 2026-07-04
+
+- [ ] **Five-gate definitional wording kept on purpose** — the SMC (AS Rules
+  2021) and MSME (revised ICAI announcement) gates are quoted near-verbatim
+  in notes/bank/flashcards (※ in citations). Confirm each threshold against
+  the MCA notification and the ICAI announcement: ₹250cr turnover excl.
+  other income; ₹50cr borrowings AT ANY TIME in the preceding year (SMC
+  wording "including public deposits" — sight it); ₹50cr/₹10cr AS 18-28
+  sub-class; end-of-period test date.
+- [ ] **Blind-pass primer caveat** — the revised Aug-2024 MSME/Large scheme
+  post-dates general knowledge, so the blind solver was given the regime
+  RULES (not answers) before solving. Weaker independence than other
+  chapters; a human spot-check of 5 random questions would restore it.
+- [ ] **Legacy Level I-IV references** — the site must nowhere else imply
+  the four-level non-company scheme still operates (superseded for periods
+  from 1 Apr 2024).
