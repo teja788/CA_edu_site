@@ -143,6 +143,13 @@ export const paper1Sections = [
     name: 'Section C · Company accounts (ICAI Module 3)',
     chapters: [
       {
+        number: 11,
+        slug: 'financial-statements-of-companies',
+        name: 'Financial Statements of Companies',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/financial-statements-of-companies/',
+      },
+      {
         number: 12,
         slug: 'buyback-of-securities',
         name: 'Buyback of Securities',

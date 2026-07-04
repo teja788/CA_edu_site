@@ -1,0 +1,2077 @@
+{
+  "level": "intermediate",
+  "paper": "advanced-accounting",
+  "chapterSlug": "financial-statements-of-companies",
+  "chapter": "Ch 11 · Financial Statements of Companies",
+  "questions": [
+    {
+      "id": "q-i1c11-001",
+      "topic": "Ch 11 · Company FS · s.2(40)",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which company may legitimately present financial statements WITHOUT a cash flow statement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "No company — the cash flow statement is universal",
+          "explanation": "The definition expressly lets OPCs, small companies and dormant companies drop it."
+        },
+        {
+          "key": "B",
+          "text": "A One Person Company, small company or dormant company",
+          "explanation": "The s.2(40) definition itself carves these out — they may omit the cash flow statement."
+        },
+        {
+          "key": "C",
+          "text": "Any private company, regardless of size",
+          "explanation": "Private status alone earns no exemption — the carve-out is for OPCs, small companies and dormant companies."
+        },
+        {
+          "key": "D",
+          "text": "Any unlisted company",
+          "explanation": "Listing is irrelevant to the s.2(40) exemption."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The statutory frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#1-the-statutory-frame"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.2(40) proviso",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-002",
+      "topic": "Ch 11 · Company FS · Books of account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Books of account of a company must ordinarily be preserved in good order for a minimum of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Eight financial years immediately preceding the current year",
+          "explanation": "s.128(5) — eight years (or all years, if the company is younger), longer where an investigation directs."
+        },
+        {
+          "key": "B",
+          "text": "Ten financial years",
+          "explanation": "Ten years overshoots the s.128(5) minimum of eight."
+        },
+        {
+          "key": "C",
+          "text": "Five financial years",
+          "explanation": "Five years is not the statutory floor — s.128(5) fixes eight."
+        },
+        {
+          "key": "D",
+          "text": "Three financial years",
+          "explanation": "Three years is far short of the eight-year minimum."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The statutory frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#1-the-statutory-frame"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.128(5)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-003",
+      "topic": "Ch 11 · Company FS · Classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For an asset to be classified as CURRENT under Schedule III, it must satisfy:",
+      "options": [
+        {
+          "key": "A",
+          "text": "ALL of the tests simultaneously",
+          "explanation": "Requiring all four would exclude almost everything — the tests are alternatives, not cumulative conditions."
+        },
+        {
+          "key": "B",
+          "text": "ANY ONE of the tests — realisation in the operating cycle, held for trading, realisation within twelve months, or being cash/a cash equivalent",
+          "explanation": "The four criteria are alternatives; meeting any single one makes the asset current."
+        },
+        {
+          "key": "C",
+          "text": "Only the twelve-month realisation test",
+          "explanation": "The operating-cycle, trading and cash tests are equally sufficient routes to current classification."
+        },
+        {
+          "key": "D",
+          "text": "Both the twelve-month test and the operating-cycle test",
+          "explanation": "Either test alone suffices — that is exactly how a 15-month-cycle company treats 14-month inventory as current."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The classification tests →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#3-the-classification-tests"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — general instructions, current assets",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-004",
+      "topic": "Ch 11 · Company FS · Operating cycle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A manufacturer holds raw material for 2 months, processes it for 1 month, holds finished goods for 2 months and collects receivables in 3 months. Its operating cycle is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3 months",
+          "explanation": "3 months is just the collection leg; the cycle spans the whole inventory-to-cash journey."
+        },
+        {
+          "key": "B",
+          "text": "5 months",
+          "explanation": "5 months stops at finished goods and ignores the 3-month collection period — the cycle runs to CASH."
+        },
+        {
+          "key": "C",
+          "text": "12 months",
+          "explanation": "Twelve months is only the DEFAULT when the cycle cannot be identified — here it can be, at 8 months."
+        },
+        {
+          "key": "D",
+          "text": "8 months",
+          "explanation": "Operating cycle = acquisition to cash realisation: 2 + 1 + 2 + 3 = 8 months."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The Schedule III balance sheet →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#2-the-schedule-iii-balance-sheet"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — operating cycle",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-005",
+      "topic": "Ch 11 · Company FS · Operating cycle",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Where a company's normal operating cycle cannot be identified, Schedule III directs that it be assumed to be:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Twenty-four months",
+          "explanation": "The default is twelve months, not two years."
+        },
+        {
+          "key": "B",
+          "text": "The industry average cycle",
+          "explanation": "Schedule III prescribes a flat twelve-month assumption, not an industry benchmark."
+        },
+        {
+          "key": "C",
+          "text": "Six months",
+          "explanation": "No six-month default exists in Schedule III."
+        },
+        {
+          "key": "D",
+          "text": "Twelve months",
+          "explanation": "The Schedule's default: an unidentifiable cycle is taken as twelve months."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The Schedule III balance sheet →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#2-the-schedule-iii-balance-sheet"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — operating cycle default",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-006",
+      "topic": "Ch 11 · Company FS · Current maturities",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A ₹10,00,000 term loan is repayable in five equal annual instalments, the first falling due four months after the balance sheet date. The amount shown under CURRENT liabilities is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹10,00,000",
+          "explanation": "The whole loan is not current — only the slice due within twelve months of the reporting date."
+        },
+        {
+          "key": "B",
+          "text": "₹2,00,000",
+          "explanation": "Only the instalment due within twelve months (10,00,000 ÷ 5 = ₹2,00,000) is a current maturity; ₹8,00,000 stays under long-term borrowings."
+        },
+        {
+          "key": "C",
+          "text": "Nil",
+          "explanation": "An instalment due in four months is squarely within twelve months — it must move to current liabilities."
+        },
+        {
+          "key": "D",
+          "text": "₹4,00,000",
+          "explanation": "₹4,00,000 counts two instalments, but only one falls due within the next twelve months on these dates."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The classification tests →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#3-the-classification-tests"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — current maturities of long-term debt",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-007",
+      "topic": "Ch 11 · Company FS · Share application money",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Share application money pending allotment, NOT due for refund, appears in the Schedule III balance sheet:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Inside share capital under shareholders' funds",
+          "explanation": "Until allotment there are no shares — it cannot sit inside share capital."
+        },
+        {
+          "key": "B",
+          "text": "Under long-term borrowings",
+          "explanation": "Application money is not a borrowing — it awaits conversion into equity."
+        },
+        {
+          "key": "C",
+          "text": "Under other current liabilities in every case",
+          "explanation": "Other current liabilities is the home only for amounts DUE FOR REFUND (or where allotment is overdue)."
+        },
+        {
+          "key": "D",
+          "text": "On its own line between shareholders' funds and non-current liabilities",
+          "explanation": "The Schedule gives it a dedicated position — it is neither equity yet nor a borrowing."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The Schedule III balance sheet →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#2-the-schedule-iii-balance-sheet"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — share application money pending allotment",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-008",
+      "topic": "Ch 11 · Company FS · Current liability test",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A liability must be classified as CURRENT where the company:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Has no unconditional right to defer its settlement beyond twelve months from the reporting date",
+          "explanation": "That is the fourth Schedule III test — a conditional or absent deferral right forces current classification."
+        },
+        {
+          "key": "B",
+          "text": "Intends to refinance the liability after the year end",
+          "explanation": "Intention to refinance does not create a present unconditional right to defer."
+        },
+        {
+          "key": "C",
+          "text": "Classifies the matching asset as non-current",
+          "explanation": "Asset and liability classifications are tested independently — there is no matching rule."
+        },
+        {
+          "key": "D",
+          "text": "Merely expects, based on past practice, that the lender will roll the debt over",
+          "explanation": "Expectation is not an UNCONDITIONAL RIGHT — without the right, the liability is current."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The classification tests →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#3-the-classification-tests"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — current liabilities criteria",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-009",
+      "topic": "Ch 11 · Company FS · Share capital note",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vindhya Foods began the year with 5,00,000 equity shares and issued bonus shares in the ratio 1:5 during the year. The share-reconciliation note shows closing shares outstanding of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6,00,000 shares",
+          "explanation": "Bonus 1:5 → 5,00,000 ÷ 5 = 1,00,000 new shares; 5,00,000 + 1,00,000 = 6,00,000."
+        },
+        {
+          "key": "B",
+          "text": "5,20,000 shares",
+          "explanation": "5,20,000 divides by 25; one-fifth of 5,00,000 is 1,00,000 new shares."
+        },
+        {
+          "key": "C",
+          "text": "5,00,000 shares",
+          "explanation": "5,00,000 ignores the bonus issue — the note must show the movement to 6,00,000."
+        },
+        {
+          "key": "D",
+          "text": "10,00,000 shares",
+          "explanation": "10,00,000 doubles the capital — a 1:5 bonus adds only one share per five held."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The disclosures examiners test →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#4-the-disclosures-examiners-test"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — reconciliation of shares outstanding",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-010",
+      "topic": "Ch 11 · Company FS · Disclosures",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The share capital note must separately disclose shareholders holding:",
+      "options": [
+        {
+          "key": "A",
+          "text": "More than 5% of the shares, with the number of shares held",
+          "explanation": "Schedule III requires naming each more-than-5% holder and the shares they hold."
+        },
+        {
+          "key": "B",
+          "text": "More than 10% of the shares",
+          "explanation": "The Schedule III threshold is 5%, not 10%."
+        },
+        {
+          "key": "C",
+          "text": "More than 1% of the shares",
+          "explanation": "1% is below the disclosure line — the requirement bites above 5%."
+        },
+        {
+          "key": "D",
+          "text": "Any number of shares, if they are directors",
+          "explanation": "Directors' holdings have their own homes elsewhere; this note is driven purely by the 5% threshold."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The disclosures examiners test →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#4-the-disclosures-examiners-test"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — shareholders holding more than 5%",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-011",
+      "topic": "Ch 11 · Company FS · Revenue from operations",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Betwa Ceramics billed customers ₹59,00,000 during the year, which includes GST of ₹9,00,000 collected for the government. Revenue from operations in the statement of profit and loss is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹45,00,000",
+          "explanation": "₹45,00,000 deducts too much — only the ₹9,00,000 GST comes off the billing."
+        },
+        {
+          "key": "B",
+          "text": "₹68,00,000",
+          "explanation": "₹68,00,000 ADDS the GST again instead of stripping it out."
+        },
+        {
+          "key": "C",
+          "text": "₹59,00,000",
+          "explanation": "₹59,00,000 wrongly treats the GST collected as the company's own revenue."
+        },
+        {
+          "key": "D",
+          "text": "₹50,00,000",
+          "explanation": "GST is collected on behalf of government and is not the company's revenue: 59,00,000 − 9,00,000 = ₹50,00,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The statement of profit and loss →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#5-the-statement-of-profit-and-loss"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 11 U1 — revenue from operations excludes taxes collected",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-012",
+      "topic": "Ch 11 · Company FS · P&L format",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Division I statement of profit and loss classifies expenses:",
+      "options": [
+        {
+          "key": "A",
+          "text": "By whichever basis the directors consider more informative",
+          "explanation": "The format is prescribed, not elective."
+        },
+        {
+          "key": "B",
+          "text": "By FUNCTION — cost of sales, administrative, selling and distribution",
+          "explanation": "Function-wise classification is not the Division I format."
+        },
+        {
+          "key": "C",
+          "text": "By cash and non-cash character",
+          "explanation": "Cash/non-cash is a cash-flow-statement idea, not the P&L classification axis."
+        },
+        {
+          "key": "D",
+          "text": "By NATURE — materials consumed, employee benefits, finance costs, depreciation, other expenses",
+          "explanation": "Division I prescribes nature-wise heads; there is no cost-of-sales/admin/selling split."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The statement of profit and loss →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#5-the-statement-of-profit-and-loss"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — Part II statement of P&L",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-013",
+      "topic": "Ch 11 · Company FS · Rounding",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company with total income of ₹250 crore must round the figures in its financial statements to the nearest:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rupee, with no rounding permitted",
+          "explanation": "Rounding is MANDATORY under Division I as amended, not optional."
+        },
+        {
+          "key": "B",
+          "text": "Tens of crores",
+          "explanation": "No tens-of-crores band exists in the Schedule."
+        },
+        {
+          "key": "C",
+          "text": "Hundreds or thousands only",
+          "explanation": "Hundreds/thousands belong to the below-₹100-crore band."
+        },
+        {
+          "key": "D",
+          "text": "Lakhs, millions or crores, or decimals thereof",
+          "explanation": "Total income of ₹100 crore or more → rounding to lakhs, millions or crores (or decimals) is the prescribed band."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The disclosures examiners test →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#4-the-disclosures-examiners-test"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — general instructions, rounding off",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-014",
+      "topic": "Ch 11 · Company FS · Contingent liabilities",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Contingent liabilities (claims not acknowledged as debts, guarantees given) are presented:",
+      "options": [
+        {
+          "key": "A",
+          "text": "In the notes to accounts — never on the face of the balance sheet",
+          "explanation": "Schedule III places contingent liabilities and commitments in the notes."
+        },
+        {
+          "key": "B",
+          "text": "As a deduction from reserves and surplus",
+          "explanation": "Nothing is deducted from reserves for a contingency that is merely disclosed."
+        },
+        {
+          "key": "C",
+          "text": "On the face of the balance sheet under current liabilities",
+          "explanation": "A contingent item is not a recognised liability — it stays off the face."
+        },
+        {
+          "key": "D",
+          "text": "Only in the directors' report",
+          "explanation": "The directors' report is no substitute for the notes-to-accounts disclosure."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The disclosures examiners test →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#4-the-disclosures-examiners-test"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Schedule III Division I — contingent liabilities and commitments",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-015",
+      "topic": "Ch 11 · Cash flow · Cash equivalents",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "At the year end a company holds: treasury bills bought two months before maturity ₹3,00,000; a six-month fixed deposit ₹5,00,000; listed equity shares ₹2,00,000; cash on hand ₹50,000. Cash and cash equivalents for AS 3 total:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,50,000",
+          "explanation": "₹8,50,000 wrongly admits the six-month fixed deposit — the three-month test is applied at ACQUISITION."
+        },
+        {
+          "key": "B",
+          "text": "₹10,50,000",
+          "explanation": "₹10,50,000 sweeps in the equity shares too — their value risk disqualifies them."
+        },
+        {
+          "key": "C",
+          "text": "₹3,50,000",
+          "explanation": "T-bills within three months of acquisition ₹3,00,000 + cash ₹50,000. The 6-month FD fails the acquisition-term test; equity shares carry value risk."
+        },
+        {
+          "key": "D",
+          "text": "₹50,000",
+          "explanation": "₹50,000 forgets the two-month treasury bills, a textbook cash equivalent."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — cash and cash equivalents",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-016",
+      "topic": "Ch 11 · Cash flow · Cash equivalents",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The three-month yardstick for a cash equivalent is measured from:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The date the investment is sold",
+          "explanation": "Disposal dates are irrelevant to the classification."
+        },
+        {
+          "key": "B",
+          "text": "The balance sheet date",
+          "explanation": "Measuring from the reporting date would convert every maturing deposit into a cash equivalent — the test is at acquisition."
+        },
+        {
+          "key": "C",
+          "text": "The date of ACQUISITION of the investment",
+          "explanation": "AS 3 tests the term at acquisition — a 6-month deposit never becomes a cash equivalent merely by ageing."
+        },
+        {
+          "key": "D",
+          "text": "The start of the financial year",
+          "explanation": "The financial year has nothing to do with the instrument's term."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — short maturity from date of acquisition",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-017",
+      "topic": "Ch 11 · Cash flow · Indirect method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Net profit ₹4,20,000; depreciation ₹80,000; loss on sale of machinery ₹10,000; debtors increased ₹30,000; inventory decreased ₹20,000; creditors increased ₹15,000. Cash generated from operations (before tax) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,00,000",
+          "explanation": "₹5,00,000 misses the creditors increase of ₹15,000, which releases cash."
+        },
+        {
+          "key": "B",
+          "text": "₹5,45,000",
+          "explanation": "₹5,45,000 adds the debtors increase; growing debtors LOCK UP cash and are deducted."
+        },
+        {
+          "key": "C",
+          "text": "₹5,15,000",
+          "explanation": "4,20,000 + 80,000 + 10,000 − 30,000 + 20,000 + 15,000 = ₹5,15,000."
+        },
+        {
+          "key": "D",
+          "text": "₹4,95,000",
+          "explanation": "₹4,95,000 subtracts the ₹10,000 loss on sale — a loss is a NON-CASH debit and must be added back."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Building the statement →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#7-building-the-statement"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — indirect method",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-018",
+      "topic": "Ch 11 · Cash flow · Interest & dividends",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For a manufacturing company, interest PAID on a term loan and interest RECEIVED on investments are classified respectively as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Investing outflow; financing inflow",
+          "explanation": "This swaps the two rules — paid goes to financing, received to investing."
+        },
+        {
+          "key": "B",
+          "text": "Financing outflow; investing inflow",
+          "explanation": "Non-financial enterprise: servicing borrowings is financing, returns on investments are investing."
+        },
+        {
+          "key": "C",
+          "text": "Financing outflow; financing inflow",
+          "explanation": "Interest received is a return ON investment — investing, not financing."
+        },
+        {
+          "key": "D",
+          "text": "Operating outflow; operating inflow",
+          "explanation": "Operating treatment of interest belongs to FINANCIAL enterprises, not manufacturers."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — interest and dividends, non-financial enterprise",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-019",
+      "topic": "Ch 11 · Cash flow · Financial enterprise",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For a BANK, interest paid on deposits and interest earned on advances are classified as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Financing (paid) and investing (earned)",
+          "explanation": "That split is the NON-financial-enterprise rule; a bank's interest flows are its operations."
+        },
+        {
+          "key": "B",
+          "text": "Investing activities — both",
+          "explanation": "A bank's core interest flows are operating, not investing."
+        },
+        {
+          "key": "C",
+          "text": "Excluded from the cash flow statement",
+          "explanation": "They are cash flows like any other — classified under operating for a bank."
+        },
+        {
+          "key": "D",
+          "text": "Operating activities — both",
+          "explanation": "For a financial enterprise, lending and borrowing ARE the principal revenue-producing activity, so both flows are operating."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 3 — financial enterprises",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-020",
+      "topic": "Ch 11 · Cash flow · Investing",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A non-financial company: purchased machinery ₹6,00,000; sold old machinery for ₹1,50,000; purchased investments ₹2,00,000; received dividend ₹40,000. Net cash flow from INVESTING activities is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(₹8,10,000)",
+          "explanation": "(₹8,10,000) treats the machinery sale proceeds as an outflow instead of an inflow."
+        },
+        {
+          "key": "B",
+          "text": "(₹6,50,000)",
+          "explanation": "(₹6,50,000) leaves out the ₹40,000 dividend received, an investing inflow here."
+        },
+        {
+          "key": "C",
+          "text": "(₹6,10,000)",
+          "explanation": "−6,00,000 + 1,50,000 − 2,00,000 + 40,000 = −₹6,10,000 — dividend received is investing for a non-financial company."
+        },
+        {
+          "key": "D",
+          "text": "(₹4,10,000)",
+          "explanation": "(₹4,10,000) omits the investment purchase of ₹2,00,000."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — investing activities",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-021",
+      "topic": "Ch 11 · Cash flow · Financing",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "During the year a company issued equity shares for ₹8,00,000, repaid a term loan ₹3,00,000, paid dividend ₹1,20,000 and paid interest ₹60,000. Net cash flow from FINANCING activities is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,80,000",
+          "explanation": "₹3,80,000 omits the interest paid, a financing outflow for a non-financial company."
+        },
+        {
+          "key": "B",
+          "text": "₹5,00,000",
+          "explanation": "₹5,00,000 nets only the share issue and loan repayment, dropping both distribution outflows."
+        },
+        {
+          "key": "C",
+          "text": "₹3,20,000",
+          "explanation": "8,00,000 − 3,00,000 − 1,20,000 − 60,000 = ₹3,20,000."
+        },
+        {
+          "key": "D",
+          "text": "₹2,60,000",
+          "explanation": "₹2,60,000 deducts the interest twice."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — financing activities",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-022",
+      "topic": "Ch 11 · Cash flow · Taxes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 3, cash flows arising from taxes on income are classified as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Excluded, since tax is an appropriation of profit",
+          "explanation": "Tax paid is a real cash outflow and always appears in the statement."
+        },
+        {
+          "key": "B",
+          "text": "Financing activities in all cases",
+          "explanation": "Taxes are not financing flows by default."
+        },
+        {
+          "key": "C",
+          "text": "Operating activities, unless specifically identifiable with financing or investing transactions",
+          "explanation": "The default is operating; only a tax traceable to a specific investing/financing transaction follows that activity."
+        },
+        {
+          "key": "D",
+          "text": "Investing activities in all cases",
+          "explanation": "Only a tax specifically attributable to an investing transaction goes there."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 3 — taxes on income",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-023",
+      "topic": "Ch 11 · Cash flow · Tax paid",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Provision for tax: opening balance ₹90,000, closing balance ₹1,05,000; the charge to P&L for the year was ₹1,20,000. Tax actually PAID during the year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹90,000",
+          "explanation": "₹90,000 is just the opening provision, not the payment."
+        },
+        {
+          "key": "B",
+          "text": "₹1,20,000",
+          "explanation": "₹1,20,000 is the P&L CHARGE; the cash flow statement needs the amount actually paid."
+        },
+        {
+          "key": "C",
+          "text": "₹1,05,000",
+          "explanation": "Paid = opening 90,000 + charge 1,20,000 − closing 1,05,000 = ₹1,05,000."
+        },
+        {
+          "key": "D",
+          "text": "₹1,35,000",
+          "explanation": "₹1,35,000 adds the closing balance instead of deducting it."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Building the statement →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#7-building-the-statement"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — taxes paid; provision account reconstruction",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-024",
+      "topic": "Ch 11 · Cash flow · Non-cash",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Equity shares issued to a vendor as consideration for machinery acquired are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Shown as a financing inflow and an investing outflow of equal amount",
+          "explanation": "Grossing up a cashless deal fabricates flows that never happened."
+        },
+        {
+          "key": "B",
+          "text": "Excluded from the cash flow statement and disclosed separately",
+          "explanation": "No cash moved — AS 3 keeps non-cash investing/financing transactions out of the statement, with separate disclosure."
+        },
+        {
+          "key": "C",
+          "text": "Shown under operating activities",
+          "explanation": "It is neither operating nor a cash flow."
+        },
+        {
+          "key": "D",
+          "text": "Shown only as an investing outflow",
+          "explanation": "There was no outflow of cash at all."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 3 — non-cash transactions",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-025",
+      "topic": "Ch 11 · Cash flow · Reconstruction",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Machinery account: opening balance ₹8,00,000, closing balance ₹9,50,000. Depreciation for the year was ₹1,00,000 and a machine with a written-down value of ₹50,000 was sold. Machinery PURCHASED during the year was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,00,000",
+          "explanation": "₹2,00,000 forgets the depreciation charged through the account."
+        },
+        {
+          "key": "B",
+          "text": "₹1,50,000",
+          "explanation": "₹1,50,000 is only the raw balance movement, ignoring depreciation and the disposal."
+        },
+        {
+          "key": "C",
+          "text": "₹3,00,000",
+          "explanation": "Purchases = closing 9,50,000 + depreciation 1,00,000 + WDV sold 50,000 − opening 8,00,000 = ₹3,00,000."
+        },
+        {
+          "key": "D",
+          "text": "₹2,50,000",
+          "explanation": "₹2,50,000 forgets the ₹50,000 written-down value that left on the sale."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Building the statement →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#7-building-the-statement"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 3 — asset account reconstruction for investing flows",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-026",
+      "topic": "Ch 11 · Cash flow · Methods",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The difference between the direct and indirect methods of preparing a cash flow statement lies in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The treatment of financing flows",
+          "explanation": "Financing and investing sections are untouched by the choice of method."
+        },
+        {
+          "key": "B",
+          "text": "The operating section only — investing and financing are identical, and both methods give the same cash from operations",
+          "explanation": "Direct shows gross receipts/payments; indirect un-does accruals from net profit; the destination figure is the same."
+        },
+        {
+          "key": "C",
+          "text": "Whether cash equivalents are included",
+          "explanation": "The cash-equivalent definition is common to both methods."
+        },
+        {
+          "key": "D",
+          "text": "The total of the statement — the direct method reports higher cash",
+          "explanation": "Both methods must arrive at the identical cash from operations."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 3 — direct and indirect methods",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-027",
+      "topic": "Ch 11 · Cash flow · Direct method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sales for the year were ₹20,00,000 (all on credit) and trade receivables increased by ₹1,60,000. Under the direct method, cash received from customers is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹21,60,000",
+          "explanation": "₹21,60,000 adds the receivables increase — money still stuck with customers cannot be a receipt."
+        },
+        {
+          "key": "B",
+          "text": "₹18,40,000",
+          "explanation": "Receipts = sales − increase in receivables = 20,00,000 − 1,60,000 = ₹18,40,000."
+        },
+        {
+          "key": "C",
+          "text": "₹20,00,000",
+          "explanation": "₹20,00,000 is accrual sales, not the cash actually collected."
+        },
+        {
+          "key": "D",
+          "text": "₹16,80,000",
+          "explanation": "₹16,80,000 deducts the increase twice."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Building the statement →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#7-building-the-statement"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 3 — direct method receipts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c11-028",
+      "topic": "Ch 11 · Cash flow · Overdraft",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 3, a movement in bank overdraft / cash credit during the year is presented as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A financing activity — overdrafts are borrowings, not negative cash",
+          "explanation": "AS 3 treats bank borrowings, including overdrafts and cash credit, as financing flows."
+        },
+        {
+          "key": "B",
+          "text": "Part of cash and cash equivalents",
+          "explanation": "Folding overdrafts into cash is the Ind AS/IAS 7 cash-management idea — AS 3 does not adopt it."
+        },
+        {
+          "key": "C",
+          "text": "An investing activity",
+          "explanation": "Nothing is being invested — the overdraft is a borrowing."
+        },
+        {
+          "key": "D",
+          "text": "An operating activity",
+          "explanation": "An overdraft finances the business; drawing it down is not an operating flow."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cash flow statements — the AS 3 frame →",
+        "href": "/intermediate/advanced-accounting/financial-statements-of-companies/#6-cash-flow-statements-the-as-3-frame"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "AS 3 — bank borrowings as financing; SM Ch 11 U2",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "cs-i1c11-001",
+      "type": "case_mcq_set",
+      "topic": "Ch 11 · Company FS · Case: Narmada Shipworks (classification with a long cycle)",
+      "case": "Narmada Shipworks Ltd builds fishing trawlers. It holds raw material for 4 months, spends 3 months in fabrication, holds finished craft for 5 months and collects from customers in 3 months. At 31 March its balances include: inventory expected to convert to cash in 14 months; a ₹12,00,000 term loan repayable in six half-yearly instalments of ₹2,00,000 each, the first falling due 6 months after the balance sheet date; and a security deposit with the state electricity board refundable when the connection is surrendered, expected after three years.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c11-001-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The company's normal operating cycle is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "12 months",
+              "explanation": "Twelve months is only the fallback where the cycle CANNOT be identified — here it can."
+            },
+            {
+              "key": "B",
+              "text": "3 months",
+              "explanation": "3 months is merely the collection period."
+            },
+            {
+              "key": "C",
+              "text": "15 months",
+              "explanation": "4 + 3 + 5 + 3 = 15 months from acquiring materials to realising cash."
+            },
+            {
+              "key": "D",
+              "text": "9 months",
+              "explanation": "9 months counts only some legs; the cycle runs through all four stages to cash."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "Schedule III Division I — operating cycle"
+        },
+        {
+          "id": "cs-i1c11-001-b",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The inventory expected to convert in 14 months is classified as:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Current — it will be realised within the 15-month operating cycle",
+              "explanation": "The cycle test is an independent, sufficient route to current classification, even past twelve months."
+            },
+            {
+              "key": "B",
+              "text": "Non-current — it exceeds twelve months",
+              "explanation": "The twelve-month test is not the only test; realisation within the operating cycle suffices."
+            },
+            {
+              "key": "C",
+              "text": "Split: twelve months' worth current, the rest non-current",
+              "explanation": "No time-apportionment exists — the whole item passes the cycle test."
+            },
+            {
+              "key": "D",
+              "text": "Current only if management so elects",
+              "explanation": "Classification follows the Schedule III tests, not an election."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "Schedule III Division I — current assets, operating-cycle test"
+        },
+        {
+          "id": "cs-i1c11-001-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Of the ₹12,00,000 term loan, the amount classified under current liabilities is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹12,00,000",
+              "explanation": "The whole loan is not current; only the twelve-month slice moves down."
+            },
+            {
+              "key": "B",
+              "text": "₹4,00,000",
+              "explanation": "Instalments due at months 6 and 12 fall within twelve months: 2 × ₹2,00,000 = ₹4,00,000 current; ₹8,00,000 long-term."
+            },
+            {
+              "key": "C",
+              "text": "Nil",
+              "explanation": "Current maturities of long-term debt must be reclassified — two instalments qualify."
+            },
+            {
+              "key": "D",
+              "text": "₹2,00,000",
+              "explanation": "₹2,00,000 counts only the first instalment — the second, due exactly at month 12, is also within twelve months."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "Schedule III Division I — current maturities of long-term debt"
+        },
+        {
+          "id": "cs-i1c11-001-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The electricity-board security deposit is presented as:",
+          "options": [
+            {
+              "key": "A",
+              "text": "A non-current asset (long-term loans and advances/other non-current assets)",
+              "explanation": "Refund is expected after three years — outside both the cycle and twelve months."
+            },
+            {
+              "key": "B",
+              "text": "A contingent asset in the notes",
+              "explanation": "The refund right is real, not contingent — it is a recognised asset."
+            },
+            {
+              "key": "C",
+              "text": "A current asset, since deposits are always liquid",
+              "explanation": "Liquidity in form does not override an expected three-year holding."
+            },
+            {
+              "key": "D",
+              "text": "Cash and cash equivalents",
+              "explanation": "A deposit refundable in three years is nowhere near a cash equivalent."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "Schedule III Division I — non-current assets"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c11-002",
+      "type": "case_mcq_set",
+      "topic": "Ch 11 · Company FS · Case: Chenab Textiles (capital and P&L disclosures)",
+      "case": "Chenab Textiles Ltd began the year with 8,00,000 fully paid-up equity shares of face value ₹10. During the year it made a rights issue of one share for every four held, fully subscribed and paid at par. Customer billings for the year totalled ₹62,40,000, which includes GST of ₹6,40,000 collected on behalf of government. After the year end but before the accounts were approved, the Board proposed a final dividend of ₹1.50 per share.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c11-002-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The share-reconciliation note shows closing shares outstanding of:",
+          "options": [
+            {
+              "key": "A",
+              "text": "10,00,000 shares",
+              "explanation": "Rights 1:4 → 8,00,000 ÷ 4 = 2,00,000 new shares; 8,00,000 + 2,00,000 = 10,00,000."
+            },
+            {
+              "key": "B",
+              "text": "9,00,000 shares",
+              "explanation": "9,00,000 halves the rights entitlement; a 1:4 issue on 8,00,000 shares adds 2,00,000."
+            },
+            {
+              "key": "C",
+              "text": "8,00,000 shares",
+              "explanation": "8,00,000 ignores the rights issue the note exists to show."
+            },
+            {
+              "key": "D",
+              "text": "12,00,000 shares",
+              "explanation": "12,00,000 treats the ratio as 1:2 — it was one for every FOUR."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "Schedule III Division I — reconciliation of shares outstanding"
+        },
+        {
+          "id": "cs-i1c11-002-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Revenue from operations for the year is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹62,40,000",
+              "explanation": "₹62,40,000 counts the GST as the company's own revenue — it is a collection for government."
+            },
+            {
+              "key": "B",
+              "text": "₹49,60,000",
+              "explanation": "₹49,60,000 strips the GST twice."
+            },
+            {
+              "key": "C",
+              "text": "₹56,00,000",
+              "explanation": "GST collected for government is excluded: 62,40,000 − 6,40,000 = ₹56,00,000."
+            },
+            {
+              "key": "D",
+              "text": "₹68,80,000",
+              "explanation": "₹68,80,000 adds the GST on top instead of removing it."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "SM Ch 11 U1 — revenue excludes taxes collected"
+        },
+        {
+          "id": "cs-i1c11-002-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "In the statement of profit and loss, employee costs, finance costs and depreciation appear:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Wherever the auditor prefers",
+              "explanation": "The format is statutory, not discretionary."
+            },
+            {
+              "key": "B",
+              "text": "Only in the notes, not on the face",
+              "explanation": "These are face-of-statement line items in the prescribed format."
+            },
+            {
+              "key": "C",
+              "text": "Merged into cost of sales and administrative expenses",
+              "explanation": "That is function-wise classification — not the Division I format."
+            },
+            {
+              "key": "D",
+              "text": "As separate NATURE-wise line items prescribed by Division I",
+              "explanation": "Employee benefits expense, finance costs, and depreciation & amortisation are each prescribed heads."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "Schedule III Division I — Part II"
+        },
+        {
+          "id": "cs-i1c11-002-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The dividend proposed after the year end is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Deducted directly from surplus in reserves",
+              "explanation": "No appropriation is made until the dividend is declared."
+            },
+            {
+              "key": "B",
+              "text": "Disclosed in the notes; recognised as a liability only when declared",
+              "explanation": "Under AS 4 (as amended), a post-year-end proposal is a non-adjusting event — note disclosure only."
+            },
+            {
+              "key": "C",
+              "text": "Provided for as a current liability at the year end",
+              "explanation": "Providing for proposed dividend is the OLD treatment; AS 4 as amended forbids it."
+            },
+            {
+              "key": "D",
+              "text": "Ignored entirely until paid",
+              "explanation": "It cannot be ignored — the notes must disclose it."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 4 (amended) — proposed dividend; SM Ch 11 U1"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c11-003",
+      "type": "case_mcq_set",
+      "topic": "Ch 11 · Cash flow · Case: Periyar Chemicals (indirect method, all sections)",
+      "case": "Periyar Chemicals Ltd (a non-financial company) reports for the year: net profit before tax ₹6,50,000; depreciation ₹1,20,000; profit on sale of investments ₹20,000; interest expense ₹45,000. During the year trade receivables increased by ₹70,000, inventory decreased by ₹40,000 and trade payables increased by ₹25,000. Income tax paid was ₹1,80,000. The company purchased plant for ₹3,00,000, sold investments with a book value of ₹1,00,000 for ₹1,20,000, raised a long-term loan of ₹2,00,000, paid dividend of ₹90,000 and paid the interest of ₹45,000 in cash.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c11-003-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Operating profit before working capital changes is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹7,50,000",
+              "explanation": "₹7,50,000 leaves out the interest expense add-back of ₹45,000."
+            },
+            {
+              "key": "B",
+              "text": "₹6,50,000",
+              "explanation": "₹6,50,000 is raw net profit with no adjustments at all."
+            },
+            {
+              "key": "C",
+              "text": "₹7,95,000",
+              "explanation": "6,50,000 + depreciation 1,20,000 − profit on sale 20,000 + interest expense 45,000 = ₹7,95,000."
+            },
+            {
+              "key": "D",
+              "text": "₹8,35,000",
+              "explanation": "₹8,35,000 ADDS the ₹20,000 profit on sale — it must be deducted; the proceeds belong to investing."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 3 — indirect method, non-cash adjustments"
+        },
+        {
+          "id": "cs-i1c11-003-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Net cash FROM OPERATING activities is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹5,65,000",
+              "explanation": "₹5,65,000 wrongly deducts the interest of ₹45,000 here — it is shown under financing."
+            },
+            {
+              "key": "B",
+              "text": "₹6,10,000",
+              "explanation": "7,95,000 − 70,000 + 40,000 + 25,000 = 7,90,000 generated; less tax paid 1,80,000 → ₹6,10,000."
+            },
+            {
+              "key": "C",
+              "text": "₹6,80,000",
+              "explanation": "₹6,80,000 adds the receivables increase instead of deducting it."
+            },
+            {
+              "key": "D",
+              "text": "₹7,90,000",
+              "explanation": "₹7,90,000 stops before deducting the ₹1,80,000 tax paid."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 3 — cash generated from operations less taxes"
+        },
+        {
+          "id": "cs-i1c11-003-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Net cash flow from INVESTING activities is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "(₹2,00,000)",
+              "explanation": "(₹2,00,000) uses the ₹1,00,000 book value as the inflow — the CASH received was ₹1,20,000."
+            },
+            {
+              "key": "B",
+              "text": "(₹1,80,000)",
+              "explanation": "−3,00,000 plant + 1,20,000 sale proceeds = −₹1,80,000. The ₹20,000 profit is already inside the proceeds."
+            },
+            {
+              "key": "C",
+              "text": "(₹3,00,000)",
+              "explanation": "(₹3,00,000) ignores the investment sale proceeds entirely."
+            },
+            {
+              "key": "D",
+              "text": "(₹1,60,000)",
+              "explanation": "(₹1,60,000) adds the ₹20,000 profit on top of the proceeds — double counting."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 3 — investing: gross proceeds, not book values"
+        },
+        {
+          "id": "cs-i1c11-003-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Net cash flow from FINANCING activities is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "(₹1,35,000)",
+              "explanation": "(₹1,35,000) drops the ₹2,00,000 loan inflow."
+            },
+            {
+              "key": "B",
+              "text": "₹1,10,000",
+              "explanation": "₹1,10,000 forgets the interest paid, a financing outflow for a non-financial company."
+            },
+            {
+              "key": "C",
+              "text": "₹65,000",
+              "explanation": "+2,00,000 loan − 90,000 dividend − 45,000 interest = ₹65,000."
+            },
+            {
+              "key": "D",
+              "text": "₹2,00,000",
+              "explanation": "₹2,00,000 counts only the loan raised and no distributions."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 3 — financing activities"
+        },
+        {
+          "id": "cs-i1c11-003-e",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The net INCREASE in cash and cash equivalents for the year is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹4,95,000",
+              "explanation": "6,10,000 − 1,80,000 + 65,000 = ₹4,95,000 across the three sections."
+            },
+            {
+              "key": "B",
+              "text": "₹4,30,000",
+              "explanation": "₹4,30,000 omits the financing section's ₹65,000 inflow."
+            },
+            {
+              "key": "C",
+              "text": "₹6,10,000",
+              "explanation": "₹6,10,000 is only the operating section."
+            },
+            {
+              "key": "D",
+              "text": "₹5,15,000",
+              "explanation": "₹5,15,000 mis-signs the investing outflow."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "AS 3 — net change in cash and cash equivalents"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c11-004",
+      "type": "case_mcq_set",
+      "topic": "Ch 11 · Cash flow · Case: Kaveri Motors (classification quickfire)",
+      "case": "Kaveri Motors Ltd, a vehicle manufacturer (not a financial enterprise), asks you to classify several items for its AS 3 cash flow statement: (i) interest received on surplus funds parked in bonds; (ii) income tax paid for the year (none of it attributable to any investing or financing transaction); (iii) equity shares issued to the vendor of a robotic welding line as full consideration; (iv) an increase in its cash credit utilisation with the bank.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c11-004-a",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The interest received on bonds is classified as:",
+          "options": [
+            {
+              "key": "A",
+              "text": "A financing inflow",
+              "explanation": "Financing covers the company's OWN capital and borrowings, not returns earned on parked funds."
+            },
+            {
+              "key": "B",
+              "text": "Excluded from the statement",
+              "explanation": "Cash was received — it must appear, under investing."
+            },
+            {
+              "key": "C",
+              "text": "An operating inflow",
+              "explanation": "Operating treatment of interest belongs to financial enterprises."
+            },
+            {
+              "key": "D",
+              "text": "An investing inflow",
+              "explanation": "For a non-financial enterprise, returns on investments — interest and dividends received — are investing flows."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "AS 3 — interest received, non-financial enterprise"
+        },
+        {
+          "id": "cs-i1c11-004-b",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The income tax paid is classified as:",
+          "options": [
+            {
+              "key": "A",
+              "text": "An investing outflow",
+              "explanation": "No specific attribution to investing exists on these facts."
+            },
+            {
+              "key": "B",
+              "text": "Apportioned across all three activities pro rata",
+              "explanation": "AS 3 prescribes no pro-rata spreading of tax."
+            },
+            {
+              "key": "C",
+              "text": "An operating outflow",
+              "explanation": "Taxes on income default to operating unless specifically attributable to investing or financing — here they are not."
+            },
+            {
+              "key": "D",
+              "text": "A financing outflow",
+              "explanation": "No specific attribution to financing exists on these facts."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 3 — taxes on income"
+        },
+        {
+          "id": "cs-i1c11-004-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The shares issued to the machinery vendor are:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kept out of the cash flow statement and disclosed separately as a non-cash transaction",
+              "explanation": "No cash flowed — AS 3 excludes non-cash investing/financing transactions from the statement."
+            },
+            {
+              "key": "B",
+              "text": "Shown as a financing inflow with a matching investing outflow",
+              "explanation": "Fabricating two equal flows misstates both sections — nothing cash-like happened."
+            },
+            {
+              "key": "C",
+              "text": "Recognised only when the shares are later sold by the vendor",
+              "explanation": "The vendor's later dealings are irrelevant to the company's statement."
+            },
+            {
+              "key": "D",
+              "text": "Shown as an operating item since machinery makes the product",
+              "explanation": "Machinery acquisition is never operating, and this one involved no cash at all."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "AS 3 — non-cash transactions"
+        },
+        {
+          "id": "cs-i1c11-004-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The increase in cash credit utilisation is presented as:",
+          "options": [
+            {
+              "key": "A",
+              "text": "An operating inflow, as it funds working capital",
+              "explanation": "The purpose of the borrowing does not change its financing character."
+            },
+            {
+              "key": "B",
+              "text": "A financing inflow — cash credit is a borrowing under AS 3",
+              "explanation": "AS 3 treats overdrafts/cash credit as bank borrowings within financing, not as negative cash."
+            },
+            {
+              "key": "C",
+              "text": "An investing inflow",
+              "explanation": "Borrowing from a bank is not an investing activity."
+            },
+            {
+              "key": "D",
+              "text": "A reduction of cash and cash equivalents",
+              "explanation": "Netting overdrafts into cash follows IAS 7/Ind AS 7 thinking — AS 3 keeps them in financing."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 3 — bank borrowings as financing"
+        }
+      ]
+    },
+    {
+      "id": "d-i1c11-001",
+      "type": "descriptive",
+      "topic": "Ch 11 · Company FS · s.2(40)",
+      "stem": "Define 'financial statements' under s.2(40) of the Companies Act 2013 and state the exemption it contains. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Financial statements include: balance sheet, statement of profit and loss (or income & expenditure account), cash flow statement, statement of changes in equity where applicable, and explanatory notes forming part thereof",
+          "marks": 2.5,
+          "citation": "Companies Act 2013, s.2(40)"
+        },
+        {
+          "point": "Exemption: a One Person Company, small company and dormant company may exclude the cash flow statement",
+          "marks": 1,
+          "citation": "s.2(40) proviso"
+        },
+        {
+          "point": "Statements must give a true and fair view and comply with Schedule III (s.129)",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, s.129"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-002",
+      "type": "descriptive",
+      "topic": "Ch 11 · Company FS · Books of account",
+      "stem": "State the requirements of s.128 of the Companies Act 2013 regarding books of account. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Kept at the registered office; may be kept at another place in India by Board decision with notice to the Registrar; electronic mode permitted",
+          "marks": 1.5,
+          "citation": "Companies Act 2013, s.128(1)"
+        },
+        {
+          "point": "Must give a true and fair view of the company's state of affairs, including branches, and explain the transactions",
+          "marks": 1,
+          "citation": "s.128(1)"
+        },
+        {
+          "point": "Accrual basis and double-entry system are mandatory",
+          "marks": 0.5,
+          "citation": "s.128(1)"
+        },
+        {
+          "point": "Preservation: minimum eight financial years (longer if an investigation has been ordered)",
+          "marks": 1,
+          "citation": "s.128(5)"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-003",
+      "type": "descriptive",
+      "topic": "Ch 11 · Company FS · Classification",
+      "stem": "State the Schedule III criteria for classifying an asset as current, and explain the role of the operating cycle. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Current if ANY one: expected realisation/sale/consumption in the normal operating cycle; held primarily for trading; expected realisation within twelve months of the reporting date; cash or cash equivalent unless restricted beyond twelve months",
+          "marks": 2.5,
+          "citation": "Schedule III Division I — general instructions"
+        },
+        {
+          "point": "All other assets are non-current",
+          "marks": 0.5,
+          "citation": "Schedule III Division I"
+        },
+        {
+          "point": "Operating cycle = time between acquisition of assets for processing and realisation in cash or cash equivalents; where unidentifiable, assumed twelve months",
+          "marks": 1,
+          "citation": "Schedule III Division I"
+        },
+        {
+          "point": "Effect: a long cycle (e.g. 15 months) makes 14-month inventory current — the cycle and twelve-month tests are alternatives",
+          "marks": 1,
+          "citation": "SM Ch 11 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-004",
+      "type": "descriptive",
+      "topic": "Ch 11 · Company FS · Current liabilities",
+      "stem": "When must a liability be classified as current under Schedule III? Illustrate the 'unconditional right to defer' test. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Current if ANY one: settlement expected in the normal operating cycle; held primarily for trading; due within twelve months of the reporting date; no unconditional right to defer settlement beyond twelve months",
+          "marks": 2,
+          "citation": "Schedule III Division I"
+        },
+        {
+          "point": "Illustration: a loan repayable on demand is current even if the lender is not expected to demand; expectation of rollover ≠ unconditional right",
+          "marks": 1,
+          "citation": "SM Ch 11 U1"
+        },
+        {
+          "point": "Current maturities of long-term debt (instalments due within twelve months) move to current liabilities",
+          "marks": 1,
+          "citation": "Schedule III Division I"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-005",
+      "type": "descriptive",
+      "topic": "Ch 11 · Company FS · Disclosures",
+      "stem": "List the principal disclosures Schedule III requires in the notes for share capital and reserves & surplus. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Share capital: authorised, issued, subscribed, paid-up; reconciliation of NUMBER of shares outstanding (opening → closing); rights/preferences/restrictions per class",
+          "marks": 2,
+          "citation": "Schedule III Division I — notes on share capital"
+        },
+        {
+          "point": "Shares held by holding/ultimate holding company and their subsidiaries; shareholders holding more than 5% with number of shares; shares reserved for options/contracts",
+          "marks": 1.5,
+          "citation": "Schedule III Division I"
+        },
+        {
+          "point": "Reserves & surplus itemised: capital reserve, securities premium, revaluation reserve, general reserve, surplus — with additions/deductions during the year",
+          "marks": 1,
+          "citation": "Schedule III Division I — reserves and surplus"
+        },
+        {
+          "point": "Debit balance of the statement of P&L shown as a negative figure under Surplus, even if the aggregate turns negative",
+          "marks": 0.5,
+          "citation": "Schedule III Division I"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-006",
+      "type": "descriptive",
+      "topic": "Ch 11 · Cash flow · Cash equivalents",
+      "stem": "Define cash equivalents under AS 3 and give two examples of items that qualify and two that fail. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Short-term, highly liquid investments readily convertible into KNOWN amounts of cash, subject to INSIGNIFICANT risk of change in value; working rule — maturity of three months or less from the date of acquisition",
+          "marks": 2,
+          "citation": "AS 3 — definitions"
+        },
+        {
+          "point": "Qualify: treasury bills bought within three months of maturity; short-term deposits ≤ 3 months; redeemable preference shares acquired shortly before their fixed redemption date",
+          "marks": 1,
+          "citation": "AS 3"
+        },
+        {
+          "point": "Fail: equity shares (value risk); a six-month fixed deposit even in its final month (term tested at acquisition)",
+          "marks": 1,
+          "citation": "AS 3; SM Ch 11 U2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-007",
+      "type": "descriptive",
+      "topic": "Ch 11 · Cash flow · Activities",
+      "stem": "Describe the three classifications of cash flows under AS 3, with two examples of each. (6 marks)",
+      "marks": 6,
+      "skeleton": [
+        {
+          "point": "Operating: principal revenue-producing activities — receipts from customers, payments to suppliers and employees, taxes on income (unless attributable elsewhere)",
+          "marks": 2,
+          "citation": "AS 3 — operating activities"
+        },
+        {
+          "point": "Investing: acquisition/disposal of long-term assets and investments — purchase/sale of PPE, purchase/sale of investments, loans to third parties, interest/dividends received (non-financial enterprise)",
+          "marks": 2,
+          "citation": "AS 3 — investing activities"
+        },
+        {
+          "point": "Financing: changes in owners' capital and borrowings — share issue, buyback, raising/repaying loans, interest/dividends paid (non-financial enterprise)",
+          "marks": 2,
+          "citation": "AS 3 — financing activities"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-008",
+      "type": "descriptive",
+      "topic": "Ch 11 · Cash flow · Methods",
+      "stem": "Distinguish the direct method from the indirect method of reporting cash flows from operating activities. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Direct: major classes of GROSS cash receipts and payments reported (customers, suppliers, employees) — assembled from records or by adjusting sales/COGS for working-capital and accrual items",
+          "marks": 1.5,
+          "citation": "AS 3 — direct method"
+        },
+        {
+          "point": "Indirect: starts from net profit; adjusts non-cash items (depreciation, provisions), items belonging to other activities (interest, profit/loss on disposals) and working-capital changes",
+          "marks": 1.5,
+          "citation": "AS 3 — indirect method"
+        },
+        {
+          "point": "Both produce identical cash from operations; investing and financing sections are unaffected by the choice",
+          "marks": 1,
+          "citation": "AS 3"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c11-009",
+      "type": "descriptive",
+      "topic": "Ch 11 · Cash flow · Special items",
+      "stem": "How are interest, dividends and taxes on income classified in a cash flow statement? Distinguish financial from other enterprises. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Financial enterprise: interest paid, interest received and dividends received are OPERATING (lending/borrowing is the revenue-producing activity); dividends PAID remain financing",
+          "marks": 2,
+          "citation": "AS 3 — financial enterprises"
+        },
+        {
+          "point": "Other enterprises: interest and dividends received → investing; interest and dividends paid → financing",
+          "marks": 1.5,
+          "citation": "AS 3"
+        },
+        {
+          "point": "Each such item disclosed separately in the statement",
+          "marks": 0.5,
+          "citation": "AS 3"
+        },
+        {
+          "point": "Taxes on income: operating unless specifically identifiable with a financing or investing transaction",
+          "marks": 1,
+          "citation": "AS 3 — taxes on income"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    }
+  ]
+}

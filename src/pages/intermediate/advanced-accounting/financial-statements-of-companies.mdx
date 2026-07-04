@@ -1,0 +1,228 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Financial Statements of Companies'
+description: 'CA Intermediate Advanced Accounting Ch 11 — company final accounts in plain language: books of account, Schedule III Division I, current/non-current classification, the tested disclosures, and AS 3 cash flow statements.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 11 · Financial Statements of Companies'
+chapterSlug: financial-statements-of-companies
+masteryId: i1-ch11
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 2(40), 128, 129, 123; Schedule III Division I'
+  - 'AS 3 Cash Flow Statements'
+  - 'ICAI SM Ch 11 Units 1–2 (May 2026 ed.)'
+sourceLabel: 'Companies Act 2013 s.129 + Schedule III · AS 3 · ICAI SM Ch 11 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '4 Jul 2026'
+readTime: 'About 24 min read · 3 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=financial-statements-of-companies'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Every other chapter in this paper eventually lands here: whatever you account for —
+buybacks, amalgamations, branches — must finally be *presented* in one prescribed shape.
+This chapter is that shape. Unit 1 gives the statutory frame (who keeps which books, what
+"financial statements" legally means) and the Schedule III Division I formats with their
+current/non-current logic. Unit 2 adds the statement examiners love most: the AS 3 cash
+flow statement, where every rupee of movement must be filed under operating, investing or
+financing.
+
+## 1. The statutory frame
+
+**Books of account (s.128).** Every company keeps books of account, other relevant books
+and financial statements at its **registered office** — a different place in India is
+allowed if the Board decides and the Registrar is notified. Books may be kept in
+**electronic mode**. They must give a true and fair view, be kept on **accrual basis and
+double-entry**, and be preserved for **at least eight financial years** (longer if an
+investigation has been ordered).
+
+**Financial statements (s.2(40))** are a defined set: balance sheet, statement of profit
+and loss, **cash flow statement**, statement of changes in equity (where applicable), and
+the explanatory notes. One carve-out recurs in exams: a **One Person Company, small
+company and dormant company** may skip the cash flow statement.
+
+**Final accounts (s.129).** Financial statements must give a **true and fair view**,
+comply with the accounting standards, and follow **Schedule III**. Division I of the
+Schedule serves companies under the Companies (Accounting Standards) Rules; Division II
+re-casts it for Ind AS companies. This chapter lives in **Division I**.
+
+## 2. The Schedule III balance sheet
+
+Division I prescribes a **vertical** balance sheet: *Equity and Liabilities* on top,
+*Assets* below, everything split between current and non-current.
+
+| Equity and Liabilities | Assets |
+|---|---|
+| Shareholders' funds (share capital, reserves & surplus, money against warrants) | Non-current assets (PPE & intangibles, non-current investments, deferred tax asset, long-term loans & advances, other) |
+| Share application money pending allotment | Current assets (current investments, inventories, trade receivables, cash & equivalents, short-term loans & advances, other) |
+| Non-current liabilities (long-term borrowings, deferred tax liability, other, long-term provisions) | |
+| Current liabilities (short-term borrowings, trade payables, other current liabilities, short-term provisions) | |
+
+**Share application money pending allotment** sits on its own line between shareholders'
+funds and non-current liabilities — but only to the extent it is **not refundable**; any
+amount due for refund (or where allotment is overdue) belongs in **other current
+liabilities**.
+
+The engine underneath the format is the **operating cycle**: the time between acquiring
+assets for processing and their realisation in cash or cash equivalents. Where the cycle
+cannot be identified, it is **assumed to be twelve months**.
+
+## 3. The classification tests
+
+An asset is **current** if it satisfies any one of: expected to be realised in (or
+intended for sale/consumption in) the **normal operating cycle**; held primarily for
+**trading**; expected to be realised within **twelve months** of the reporting date; or
+it is **cash or a cash equivalent** (unless restricted beyond twelve months). All other
+assets are non-current.
+
+A liability is **current** if any one holds: expected to be settled in the normal
+operating cycle; held primarily for trading; due to be settled within **twelve months**;
+or the company **lacks an unconditional right to defer settlement beyond twelve months**.
+
+<Callout kind="pointer">
+  <p>
+    <strong>The operating cycle can rescue an item past twelve months.</strong> A
+    shipbuilder whose cycle runs fifteen months classifies inventory realisable in
+    fourteen months as CURRENT — the cycle test and the twelve-month test are
+    alternatives, and satisfying either one is enough. The reverse trap: the portion of a
+    term loan instalment falling due within twelve months is always a current liability
+    ("current maturities of long-term debt"), however long the loan's tail.
+  </p>
+</Callout>
+
+### Worked example 1 — classification with a long cycle
+
+Narmada Shipworks holds raw material 4 months, works on hulls 3 months, holds finished
+craft 5 months and collects from customers in 3 months: operating cycle = 4 + 3 + 5 + 3 =
+**15 months**. Inventory expected to convert in 14 months → **current** (within the
+cycle). A ₹12,00,000 term loan repays in six half-yearly instalments of ₹2,00,000, the
+first due 6 months from the balance sheet date → instalments due within twelve months =
+2 × ₹2,00,000 = **₹4,00,000 current**, ₹8,00,000 non-current. A security deposit with the
+electricity board refundable after three years → **non-current**, whatever the cycle.
+
+## 4. The disclosures examiners test
+
+- **Share capital note**: authorised, issued, subscribed and paid-up; a **reconciliation
+  of the number of shares outstanding** at the beginning and end of the year; rights and
+  restrictions per class; shares held by the holding company; **shareholders holding more
+  than 5%**, with the number of shares; shares reserved under options.
+- **Reserves and surplus**: itemised (capital reserve, securities premium, revaluation
+  reserve, general reserve, surplus…), with additions and deductions shown. A **debit
+  balance of the statement of profit and loss** is shown as a *negative* figure under
+  "Surplus" — even if the net result of reserves and surplus is negative.
+- **Contingent liabilities and commitments** appear in the **notes**, never on the face:
+  claims not acknowledged as debts, guarantees, estimated value of unexecuted capital
+  contracts.
+- **Rounding off** (mandatory): total income below ₹100 crore → round to the nearest
+  hundreds, thousands, lakhs or millions (or decimals thereof); total income of ₹100
+  crore or more → nearest **lakhs, millions or crores** (or decimals thereof).
+- **Dividends proposed after the year end** are NOT a liability (AS 4 as amended) — they
+  are disclosed in the notes and recognised only when declared.
+
+### Worked example 2 — the share capital reconciliation
+
+Chenab Textiles began the year with 8,00,000 equity shares of ₹10. Mid-year it made a
+1-for-4 rights issue, fully subscribed: 8,00,000 ÷ 4 = 2,00,000 new shares. Closing
+position: **10,00,000 shares, ₹1,00,00,000 paid-up capital** — and the note must show the
+opening count, the movement and the closing count, not just the closing rupees.
+
+## 5. The statement of profit and loss
+
+Division I classifies expenses **by nature** — revenue from operations, other income,
+then cost of materials consumed, purchases of stock-in-trade, changes in inventories,
+employee benefits expense, finance costs, depreciation and amortisation, other expenses.
+No cost-of-sales/administration/selling split (that is classification by function).
+Revenue from operations excludes amounts collected as GST — a tax collected for
+government is not the company's revenue. Exceptional and extraordinary items (AS 5
+survives in Division I) get their own lines before tax.
+
+## 6. Cash flow statements: the AS 3 frame
+
+The cash flow statement explains the movement in **cash and cash equivalents**. Cash
+equivalents are **short-term, highly liquid investments readily convertible into known
+amounts of cash, subject to insignificant risk of change in value** — as a working rule,
+investments with a maturity of **three months or less from the date of acquisition**. A
+six-month fixed deposit fails however close to maturity it now is; the test looks at the
+term when you acquired it. Equity shares are out (value risk), except something like
+redeemable preference shares bought weeks before their fixed redemption.
+
+Every other movement is filed under one of three activities:
+
+- **Operating** — the principal revenue-producing activities: cash from customers,
+  payments to suppliers and employees, **taxes on income unless specifically
+  attributable** to investing or financing.
+- **Investing** — acquisition and disposal of long-term assets and investments: buying
+  and selling PPE, loans to third parties, and (for a non-financial company) **interest
+  and dividends received**.
+- **Financing** — changes in the size and composition of owners' capital and borrowings:
+  share issues, buybacks, raising and repaying loans, and (non-financial company)
+  **interest and dividends paid**. AS 3 treats **bank overdrafts and cash credits as
+  borrowings — financing activity**, not as negative cash.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Interest and dividends flip with the business.</strong> For a
+    <em>financial</em> enterprise, interest paid and interest/dividends received are
+    OPERATING flows — lending is its revenue-producing activity. For everyone else:
+    received → investing, paid → financing. And a pure non-cash transaction (shares
+    issued to a vendor for machinery, debentures converted to equity) never enters the
+    statement at all — it is disclosed separately.
+  </p>
+</Callout>
+
+**Direct vs indirect method.** The direct method reports gross receipts from customers
+and gross payments to suppliers/employees; the indirect method starts from net profit and
+un-does non-cash items and working-capital movements. Both end at the same cash from
+operations; only the operating section differs.
+
+## 7. Building the statement
+
+The indirect-method drill, in order:
+
+1. Start with **net profit before tax and extraordinary items**.
+2. Add back non-cash charges (depreciation, amortisation, provisions) and items belonging
+   to other activities (interest expense → add back here, show under financing; profit on
+   sale of assets/investments → deduct, the proceeds go to investing).
+3. Adjust **working capital**: increase in current assets consumes cash (deduct);
+   increase in current liabilities releases cash (add).
+4. Deduct **taxes on income actually paid** → cash from operating activities.
+5. Build investing and financing sections from gross movements (a machinery account often
+   has to be reconstructed to find purchases: closing + depreciation + WDV of disposals −
+   opening).
+6. Total of the three sections = net increase/decrease in cash and cash equivalents;
+   prove it against opening and closing balances.
+
+### Worked example 3 — indirect method, all three sections
+
+Periyar Chemicals: net profit before tax ₹6,50,000; depreciation ₹1,20,000; profit on
+sale of investments ₹20,000; interest expense ₹45,000. Debtors rose ₹70,000, inventory
+fell ₹40,000, creditors rose ₹25,000. Tax paid ₹1,80,000. It bought PPE for ₹3,00,000,
+sold investments (book value ₹1,00,000) for ₹1,20,000, raised a loan of ₹2,00,000, paid
+dividend ₹90,000 and paid the interest of ₹45,000.
+
+Operating before working capital: 6,50,000 + 1,20,000 − 20,000 + 45,000 = ₹7,95,000.
+After working capital: 7,95,000 − 70,000 + 40,000 + 25,000 = ₹7,90,000. Less tax paid →
+**CFO ₹6,10,000**. Investing: −3,00,000 + 1,20,000 = **−₹1,80,000** (the ₹20,000 profit
+is inside the ₹1,20,000 proceeds — never count it twice). Financing: +2,00,000 − 90,000 −
+45,000 = **+₹65,000**. Net increase in cash: 6,10,000 − 1,80,000 + 65,000 = **₹4,95,000**.
+
+## 8. The chapter in one paragraph
+
+Books at the registered office, eight years, accrual and double entry (s.128); financial
+statements are the s.2(40) five-piece set (OPC/small/dormant may drop the cash flow);
+true and fair in Schedule III's shape (s.129). Division I: vertical balance sheet on the
+current/non-current axis, operating cycle as the yardstick (twelve months by default),
+share capital reconciliation, >5% holders, negative surplus stays in reserves & surplus,
+contingent liabilities in notes, mandatory rounding. P&L by nature. AS 3: cash
+equivalents = three months from acquisition; three activities; interest/dividends flip
+between financial and other enterprises; overdrafts are financing; non-cash deals stay
+out; indirect method un-does accruals from net profit and lands on the same CFO as the
+direct method.

@@ -82,3 +82,20 @@ Triage rules:
   non-monetary items become their historical costs and the FCTR stays until
   disposal. Verify against the AS 11 text (paras on change in classification)
   and initial the citations row.
+
+## financial-statements-of-companies — VERIFY 2026-07-04
+
+- [ ] **Overdraft/cash credit under AS 3** — q-028, cs-004-d, notes §6 and
+  fs-15 present overdraft/cash credit movements as FINANCING flows. The blind
+  pass agreed but noted AS 3's text can be read to admit on-demand overdrafts
+  nearer the cash pool. Confirm the SM Ch 11 U2 presentation and initial the
+  citations row.
+- [ ] **Month-12 instalment boundary** — cs-001-c counts an instalment due
+  exactly twelve months after the reporting date as a current maturity
+  (₹4,00,000, not ₹2,00,000). The blind pass reached the same answer but
+  flagged the boundary. Confirm the SM/Schedule III convention ("due to be
+  settled within twelve months") and initial.
+- [ ] **Statutory quotations kept on purpose** — the notes quote three
+  Schedule III phrases verbatim (share-number reconciliation wording, the
+  nature-wise P&L line-item names, the rounding bands). They survive the
+  shingle check by design and are marked ※ in the citations file.
