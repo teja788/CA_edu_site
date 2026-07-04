@@ -163,6 +163,13 @@ export const paper1Sections = [
         draft: true,
         notesHref: '/intermediate/advanced-accounting/internal-reconstruction/',
       },
+      {
+        number: 15,
+        slug: 'branches-including-foreign',
+        name: 'Accounting for Branches including Foreign Branches',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/branches-including-foreign/',
+      },
     ],
   },
 ];

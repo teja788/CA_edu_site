@@ -68,3 +68,17 @@ Triage rules:
 - [ ] **s.66 clause labels** — content cites s.66(1)(a) / s.66(1)(b)(i)-(ii)
   for the three reduction modes. Verify the exact clause lettering in the
   current consolidated Act (India Code) and initial the citations rows.
+
+## branches-including-foreign — VERIFY 2026-07-04
+
+- [ ] **Transit-adjustment convention** — notes §5, q-014 and cs-003 state
+  that goods/cash-in-transit entries are passed in HEAD OFFICE books. That is
+  the SM Ch 15 convention, but some texts have the branch record goods in
+  transit; the blind pass flagged the same question as its one mildly
+  uncertain answer. Confirm the SM's presentation and initial the citations
+  row (SM Ch 15 §7.1).
+- [ ] **AS 11 reclassification wording** — q-028 / d-009 state that on a
+  non-integral → integral change the change-date translated amounts of
+  non-monetary items become their historical costs and the FCTR stays until
+  disposal. Verify against the AS 11 text (paras on change in classification)
+  and initial the citations row.

@@ -1,0 +1,2097 @@
+{
+  "level": "intermediate",
+  "paper": "advanced-accounting",
+  "chapterSlug": "branches-including-foreign",
+  "chapter": "Ch 15 · Accounting for Branches including Foreign Branches",
+  "questions": [
+    {
+      "id": "q-i1c15-001",
+      "topic": "Ch 15 · Branches · Loading",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Tapti Traders invoices goods to its Akola branch at cost plus 25%. During the year, goods invoiced at ₹4,00,000 were sent. The loading included in the goods sent is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,20,000",
+          "explanation": "₹3,20,000 is the COST of the goods sent, not the loading."
+        },
+        {
+          "key": "B",
+          "text": "₹1,00,000",
+          "explanation": "₹1,00,000 applies 25% to the invoice price — but the 25% margin is stated on COST, so it is 1/5 of invoice price."
+        },
+        {
+          "key": "C",
+          "text": "₹64,000",
+          "explanation": "₹64,000 is 1/5 of the cost (₹3,20,000) — the loading fraction applies to the invoice price."
+        },
+        {
+          "key": "D",
+          "text": "₹80,000",
+          "explanation": "Cost + 25% means the loading is 25/125 = 1/5 of invoice price: ₹4,00,000 × 1/5 = ₹80,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Invoice price and the loading →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#3-invoice-price-and-the-loading"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.2 — goods invoiced at selling price; loading arithmetic",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-002",
+      "topic": "Ch 15 · Branches · Debtors method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the debtors method, which of the following is entered DIRECTLY in the Branch Account maintained by head office?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Credit sales made by the branch",
+          "explanation": "Credit sales appear only in the memorandum Branch Debtors Account; the Branch Account sees just the cash collected and the closing debtors."
+        },
+        {
+          "key": "B",
+          "text": "Cash remitted by the branch to head office",
+          "explanation": "Only actual flows between HO and branch (goods, expenses paid, remittances) and opening/closing balances enter the Branch Account."
+        },
+        {
+          "key": "C",
+          "text": "Bad debts written off at the branch",
+          "explanation": "Bad debts live in the memorandum Branch Debtors Account — they reach the Branch Account only through a smaller closing debtors figure."
+        },
+        {
+          "key": "D",
+          "text": "Discounts allowed to branch customers",
+          "explanation": "Discounts allowed, like bad debts, stay in the memorandum Branch Debtors Account."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The debtors method →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#2-dependent-branches-the-debtors-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.1 — debtors method; memorandum accounts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-003",
+      "topic": "Ch 15 · Branches · Stock reserve",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A branch's closing stock stands at ₹90,000 at invoice price. Goods are invoiced at cost plus 20%. The stock reserve required against the closing stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹75,000",
+          "explanation": "₹75,000 is the COST of the closing stock, not the unrealised loading in it."
+        },
+        {
+          "key": "B",
+          "text": "₹18,000",
+          "explanation": "₹18,000 takes 20% of the invoice price — the margin is on cost, so the loading is only 1/6 of invoice price."
+        },
+        {
+          "key": "C",
+          "text": "₹12,500",
+          "explanation": "₹12,500 is 1/6 of the cost figure — the fraction applies to the invoice-price stock of ₹90,000."
+        },
+        {
+          "key": "D",
+          "text": "₹15,000",
+          "explanation": "Cost + 20% → loading = 20/120 = 1/6 of invoice price: ₹90,000 × 1/6 = ₹15,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Invoice price and the loading →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#3-invoice-price-and-the-loading"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.2 — stock reserve at invoice price",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-004",
+      "topic": "Ch 15 · Branches · Branch vs department",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement correctly separates branch accounts from departmental accounts?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Departments share one roof and one set of books, so the central problem is allocating common expenses; branches are geographically separate, so the problem is recording across locations",
+          "explanation": "That is the core distinction — allocation within one book-set versus recording between locations (with transit items and, for foreign branches, currency translation)."
+        },
+        {
+          "key": "B",
+          "text": "Cash-in-transit items arise equally in departmental accounting",
+          "explanation": "Transit items exist because locations are separated in space and books — they have no counterpart between departments under one roof."
+        },
+        {
+          "key": "C",
+          "text": "Departmental accounts require currency translation whenever departments trade with each other",
+          "explanation": "Departments operate under one roof in one currency — translation arises only for FOREIGN BRANCHES under AS 11."
+        },
+        {
+          "key": "D",
+          "text": "Branch accounts never require apportionment of any head-office expense",
+          "explanation": "HO expenses can be charged/allocated to branches (a standard reconciliation item) — apportionment is not unique to departments."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The branch map →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#1-the-branch-map"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §2 — branch vs departmental accounts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-005",
+      "topic": "Ch 15 · Branches · Debtors method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Godavari Stores' Latur branch (goods invoiced at cost): opening stock ₹25,000; goods sent during the year ₹2,00,000; branch expenses paid by HO ₹15,000; remittances received from the branch ₹2,30,000; closing stock ₹30,000. Branch profit under the debtors method is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹50,000",
+          "explanation": "₹50,000 omits the opening stock AND treats closing stock incorrectly — both stocks belong in the account."
+        },
+        {
+          "key": "B",
+          "text": "₹30,000",
+          "explanation": "₹30,000 double-counts by ignoring the opening stock debit of ₹25,000 while keeping part of the adjustment."
+        },
+        {
+          "key": "C",
+          "text": "₹35,000",
+          "explanation": "₹35,000 forgets the ₹15,000 expenses paid by HO, which must be debited to the Branch Account."
+        },
+        {
+          "key": "D",
+          "text": "₹20,000",
+          "explanation": "Credits (2,30,000 + 30,000) − debits (25,000 + 2,00,000 + 15,000) = 2,60,000 − 2,40,000 = ₹20,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The debtors method →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#2-dependent-branches-the-debtors-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.1 — Branch Account as quasi-debtor",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-006",
+      "topic": "Ch 15 · Branches · Stock & debtors",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the stock and debtors method, the balancing figure of the Branch Stock Account (kept at invoice price) reveals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The closing balance of branch debtors",
+          "explanation": "Closing debtors come from the Branch Debtors Account."
+        },
+        {
+          "key": "B",
+          "text": "The branch's net profit for the period",
+          "explanation": "Net profit emerges in the Branch Profit & Loss Account, not the stock account."
+        },
+        {
+          "key": "C",
+          "text": "The unrealised loading on goods sent",
+          "explanation": "The loading is isolated in the Branch Adjustment Account, not thrown out by the stock account's balance."
+        },
+        {
+          "key": "D",
+          "text": "Shortage or surplus of stock at the branch",
+          "explanation": "That control is the method's whole point — the Branch Stock Account at invoice price exposes pilferage, wastage or excess as its balancing figure."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The debtors method →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#2-dependent-branches-the-debtors-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.2 — stock & debtors method; branch stock control",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-007",
+      "topic": "Ch 15 · Branches · Shortage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A branch receiving goods at cost plus 50% discovers a stock shortage of ₹6,000 (at invoice price). The amount charged to the Branch Profit & Loss Account for the shortage is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6,000",
+          "explanation": "Charging the full ₹6,000 double-counts the ₹2,000 loading, which was never realised profit in the first place."
+        },
+        {
+          "key": "B",
+          "text": "Nil",
+          "explanation": "A genuine physical shortage is a real loss at cost — it cannot vanish entirely."
+        },
+        {
+          "key": "C",
+          "text": "₹2,000",
+          "explanation": "₹2,000 is the LOADING portion that goes against the Branch Adjustment Account — the P&L bears the cost portion."
+        },
+        {
+          "key": "D",
+          "text": "₹4,000",
+          "explanation": "Loading = 50/150 = 1/3 of invoice price (₹2,000) cancels against the Branch Adjustment Account; only the COST portion ₹4,000 is a real loss to P&L."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Invoice price and the loading →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#3-invoice-price-and-the-loading"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.2 — treatment of shortage at invoice price",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-008",
+      "topic": "Ch 15 · Branches · Memorandum debtors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Branch debtors: opening ₹40,000; credit sales ₹3,00,000; cash collected from debtors ₹2,80,000; bad debts ₹5,000; discounts allowed ₹3,000; sales returns from customers ₹12,000. Closing branch debtors are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹52,000",
+          "explanation": "₹52,000 forgets the ₹12,000 sales returns, which reduce debtors."
+        },
+        {
+          "key": "B",
+          "text": "₹48,000",
+          "explanation": "₹48,000 omits bad debts and discounts allowed (₹8,000), both of which extinguish debtor balances without cash."
+        },
+        {
+          "key": "C",
+          "text": "₹43,000",
+          "explanation": "₹43,000 forgets the discounts allowed of ₹3,000 — discounts extinguish debtor balances just as cash does."
+        },
+        {
+          "key": "D",
+          "text": "₹40,000",
+          "explanation": "40,000 + 3,00,000 − 2,80,000 − 5,000 − 3,000 − 12,000 = ₹40,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The debtors method →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#2-dependent-branches-the-debtors-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.1 — memorandum Branch Debtors Account",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-009",
+      "topic": "Ch 15 · Branches · Invoice price",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Why does a head office commonly invoice goods to its dependent branch at a price above cost?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Because accounting standards prohibit transferring goods at cost",
+          "explanation": "No standard forbids transfers at cost — invoice pricing is a managerial choice, not a legal mandate."
+        },
+        {
+          "key": "B",
+          "text": "To keep the true profit margin confidential from branch staff and to strengthen control over branch stock",
+          "explanation": "Both purposes are standard: the branch sees only invoice values, and a stock account kept at invoice price polices shortages."
+        },
+        {
+          "key": "C",
+          "text": "To avoid maintaining any stock records at the branch",
+          "explanation": "Invoice pricing changes the valuation basis of records, it does not remove the need for them."
+        },
+        {
+          "key": "D",
+          "text": "To increase the reported profit of the business as a whole",
+          "explanation": "The loading is UNREALISED profit within the entity — stock reserves strip it out precisely so overall profit is NOT inflated."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Invoice price and the loading →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#3-invoice-price-and-the-loading"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §4 — methods of charging goods to branches",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-010",
+      "topic": "Ch 15 · Branches · Wholesale method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Under the wholesale branch method: goods costing ₹1,50,000 would fetch ₹1,92,000 if sold wholesale; the branch retails them for ₹2,40,000. The profit attributable to the BRANCH is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹90,000",
+          "explanation": "₹90,000 (retail − cost) is the TOTAL profit; the wholesale slice of ₹42,000 is head office's, earned whether or not the branch existed."
+        },
+        {
+          "key": "B",
+          "text": "₹48,000",
+          "explanation": "Branch profit = retail sales − wholesale value of the goods sold = 2,40,000 − 1,92,000 = ₹48,000; the wholesale margin belongs to HO."
+        },
+        {
+          "key": "C",
+          "text": "₹42,000",
+          "explanation": "₹42,000 (wholesale − cost) is head office's profit, not the branch's."
+        },
+        {
+          "key": "D",
+          "text": "₹24,000",
+          "explanation": "₹24,000 matches no measure here — the branch earns the retail-over-wholesale differential of ₹48,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The wholesale branch method →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#4-the-wholesale-branch-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.3 — goods invoiced at wholesale price",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-011",
+      "topic": "Ch 15 · Branches · Wholesale method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A retail branch holds closing stock of ₹70,000 valued at wholesale price. The wholesale price is cost plus 25%. The stock reserve head office must create is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹11,200",
+          "explanation": "₹11,200 is 1/5 of the cost — the fraction applies to the wholesale-priced stock of ₹70,000."
+        },
+        {
+          "key": "B",
+          "text": "₹17,500",
+          "explanation": "₹17,500 applies 25% to the wholesale value — the margin is stated on cost, so it is 1/5 of wholesale."
+        },
+        {
+          "key": "C",
+          "text": "₹56,000",
+          "explanation": "₹56,000 is the COST of the closing stock, not the reserve."
+        },
+        {
+          "key": "D",
+          "text": "₹14,000",
+          "explanation": "The unrealised wholesale margin = 25/125 = 1/5 of the wholesale value: ₹70,000 × 1/5 = ₹14,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The wholesale branch method →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#4-the-wholesale-branch-method"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.3 — stock reserve at wholesale margin",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-012",
+      "topic": "Ch 15 · Branches · Wholesale method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The rationale of the wholesale branch method is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "It removes the need for any stock reserve",
+          "explanation": "The opposite: closing branch stock at wholesale price REQUIRES a reserve for the unrealised wholesale margin."
+        },
+        {
+          "key": "B",
+          "text": "Branches must, by law, purchase from head office at market price",
+          "explanation": "There is no such legal requirement — the method is a performance-measurement choice."
+        },
+        {
+          "key": "C",
+          "text": "It lets the branch report the entire profit on goods it sells",
+          "explanation": "The branch reports only the retail slice — the wholesale margin is deliberately kept away from it."
+        },
+        {
+          "key": "D",
+          "text": "Head office would have earned the wholesale margin even without the branch, so only the retail-over-wholesale excess measures the branch's own performance",
+          "explanation": "Exactly — invoicing at wholesale price splits total profit into what HO earns anyway and what retailing adds."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The wholesale branch method →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#4-the-wholesale-branch-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §5.3 — rationale of wholesale invoicing",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-013",
+      "topic": "Ch 15 · Branches · Transit items",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "During the year head office dispatched goods worth ₹5,60,000 to its Surat branch; the branch's books show goods received of only ₹5,35,000 by 31 March. Goods in transit at the year end are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,35,000",
+          "explanation": "₹5,35,000 is what the branch RECEIVED; the transit figure is the undelivered difference."
+        },
+        {
+          "key": "B",
+          "text": "₹35,000",
+          "explanation": "₹35,000 mis-subtracts — the gap between ₹5,60,000 and ₹5,35,000 is ₹25,000."
+        },
+        {
+          "key": "C",
+          "text": "₹25,000",
+          "explanation": "Goods in transit = dispatched − received = 5,60,000 − 5,35,000 = ₹25,000."
+        },
+        {
+          "key": "D",
+          "text": "Nil, because title passes only on receipt",
+          "explanation": "Within one entity there is no sale at all — the goods exist and must appear somewhere, hence a Goods in Transit account."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §7.1 — reasons for disagreement; goods in transit",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-014",
+      "topic": "Ch 15 · Branches · Transit items",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Adjustment entries for cash in transit and goods in transit at the year end are conventionally passed in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The books of the head office",
+          "explanation": "The SM convention: HO debits Goods/Cash in Transit and credits the Branch Account, bringing the two current accounts into agreement."
+        },
+        {
+          "key": "B",
+          "text": "Both sets of books simultaneously",
+          "explanation": "Passing the entry twice would double-count the transit items in the combined accounts."
+        },
+        {
+          "key": "C",
+          "text": "Neither — transit items are simply ignored until they arrive",
+          "explanation": "Ignoring them leaves the current accounts disagreeing and understates combined assets."
+        },
+        {
+          "key": "D",
+          "text": "The books of the branch",
+          "explanation": "The branch's books stay as they are — the reconciling entries are passed by head office."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §7.1 — transit adjustments in HO books",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-015",
+      "topic": "Ch 15 · Branches · Reconciliation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Head office's Branch Account shows a debit balance of ₹3,46,000. Cash in transit is ₹16,000 and goods in transit ₹30,000; there are no other differences. The credit balance of the Head Office Account in the branch books is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,00,000",
+          "explanation": "3,46,000 − 16,000 − 30,000 = ₹3,00,000 — after removing both transit items the two current accounts mirror each other."
+        },
+        {
+          "key": "B",
+          "text": "₹3,46,000",
+          "explanation": "₹3,46,000 ignores the transit items, which the branch has already recorded (cash) or not yet recorded (goods)."
+        },
+        {
+          "key": "C",
+          "text": "₹3,30,000",
+          "explanation": "₹3,30,000 adjusts only the cash in transit and forgets the ₹30,000 goods in transit."
+        },
+        {
+          "key": "D",
+          "text": "₹3,92,000",
+          "explanation": "₹3,92,000 ADDS the transit items instead of deducting them from the HO balance."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §7.1 — reconciliation of current accounts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-016",
+      "topic": "Ch 15 · Branches · Fixed assets in HO books",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Branch furniture is recorded in the head office books. Depreciation on it, being a branch expense, is recorded by the BRANCH as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Depreciation A/c Dr → To Furniture A/c",
+          "explanation": "The branch has NO furniture account — the asset lives in HO's books."
+        },
+        {
+          "key": "B",
+          "text": "Depreciation A/c Dr → To Head Office A/c",
+          "explanation": "The branch bears the expense but holds no asset account — the credit goes to the Head Office Account, mirroring HO's entry (Branch A/c Dr → To Branch Furniture)."
+        },
+        {
+          "key": "C",
+          "text": "No entry in the branch books",
+          "explanation": "The depreciation is the branch's expense; skipping it misstates branch profit and leaves the current accounts apart."
+        },
+        {
+          "key": "D",
+          "text": "Head Office A/c Dr → To Depreciation A/c",
+          "explanation": "This reverses the entry — the branch must DEBIT the expense and credit HO."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §7.2 — branch fixed assets maintained in HO books",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-017",
+      "topic": "Ch 15 · Branches · Fixed assets in HO books",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Machinery costing ₹2,40,000 used at a branch is carried in head office books and depreciated at 10% p.a. on written-down value. Depreciation for the SECOND year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹24,000",
+          "explanation": "₹24,000 is the FIRST year's charge — WDV depreciation shrinks each year."
+        },
+        {
+          "key": "B",
+          "text": "₹19,440",
+          "explanation": "₹19,440 is the THIRD year's charge (10% of 1,94,400)."
+        },
+        {
+          "key": "C",
+          "text": "₹21,600",
+          "explanation": "Year 1: 2,40,000 × 10% = 24,000; WDV 2,16,000; year 2: 2,16,000 × 10% = ₹21,600."
+        },
+        {
+          "key": "D",
+          "text": "₹48,000",
+          "explanation": "₹48,000 is two years of straight-line charge, not the second year's WDV charge."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §7.2 — depreciation on branch assets in HO books",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-018",
+      "topic": "Ch 15 · Branches · Inter-branch",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Goods sent by the Delhi branch directly to the Chennai branch are normally recorded:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only in head office books, with no branch entries at all",
+          "explanation": "Both branches must record the movement of their own goods — they simply record it AGAINST head office."
+        },
+        {
+          "key": "B",
+          "text": "In a separate Delhi–Chennai current account in each branch's books",
+          "explanation": "Branch-to-branch current accounts would multiply reconciliation work — the SM convention routes everything through HO."
+        },
+        {
+          "key": "C",
+          "text": "As a sale by Delhi and a purchase by Chennai at market price",
+          "explanation": "Within one legal entity there is no sale — inter-branch transfers are internal movements."
+        },
+        {
+          "key": "D",
+          "text": "As if each branch had dealt only with head office — Delhi credits HO, Chennai debits HO",
+          "explanation": "Inter-branch transactions are routed through the Head Office Account so that each branch maintains a single control relationship."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §7.2 — inter-branch transactions through HO",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-019",
+      "topic": "Ch 15 · Branches · Incorporation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From an independent branch's trial balance: sales ₹4,80,000; opening stock ₹40,000; goods received from HO ₹3,20,000; closing stock ₹60,000; branch expenses ₹90,000. The branch net profit to be incorporated in HO books is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,80,000",
+          "explanation": "₹1,80,000 is the GROSS profit — branch expenses of ₹90,000 still have to be charged."
+        },
+        {
+          "key": "B",
+          "text": "₹70,000",
+          "explanation": "₹70,000 deducts the closing stock instead of adding it back in the COGS computation."
+        },
+        {
+          "key": "C",
+          "text": "₹90,000",
+          "explanation": "COGS = 40,000 + 3,20,000 − 60,000 = 3,00,000; gross profit = 4,80,000 − 3,00,000 = 1,80,000; net profit = 1,80,000 − 90,000 = ₹90,000."
+        },
+        {
+          "key": "D",
+          "text": "₹1,30,000",
+          "explanation": "₹1,30,000 ignores the opening stock of ₹40,000 in cost of goods sold."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §8 — incorporation of branch trial balance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-020",
+      "topic": "Ch 15 · Branches · Independent branch",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the books of an independent branch, the Head Office Account functions as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A memorandum account with no place in the trial balance",
+          "explanation": "The Head Office Account is a real ledger account and appears in the branch trial balance."
+        },
+        {
+          "key": "B",
+          "text": "A proxy capital account — the branch's ownership link to the entity, mirrored by the Branch Account in HO books",
+          "explanation": "The two current accounts are mirror images: HO's investment in the branch on one side, the branch's obligation to HO on the other."
+        },
+        {
+          "key": "C",
+          "text": "A profit and loss appropriation account",
+          "explanation": "Appropriations are an entity-level matter — the HO Account records transactions with head office."
+        },
+        {
+          "key": "D",
+          "text": "An ordinary trade creditor to be settled in cash monthly",
+          "explanation": "HO is not a creditor of its own branch in the trade sense — the account records the whole HO–branch relationship, not purchases awaiting payment."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Independent branches and reconciliation →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#5-independent-branches-and-reconciliation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 15 §6 — independent branch bookkeeping",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-021",
+      "topic": "Ch 15 · Foreign branches · Classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 11, the decisive mark of a NON-integral foreign operation is that it:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Is located outside India, whatever its manner of operation",
+          "explanation": "Location alone decides nothing — an overseas branch selling only HO-supplied goods and remitting proceeds is INTEGRAL."
+        },
+        {
+          "key": "B",
+          "text": "Remits all its takings to head office as an extension of HO's business",
+          "explanation": "That describes an INTEGRAL operation — the extension-of-the-enterprise pattern."
+        },
+        {
+          "key": "C",
+          "text": "Deals in more than one foreign currency",
+          "explanation": "Multi-currency dealing is irrelevant to the classification; autonomy in the local currency is what matters."
+        },
+        {
+          "key": "D",
+          "text": "Accumulates cash, incurs expenses, raises finance and makes sales substantially in its local currency, with significant autonomy",
+          "explanation": "That local-currency self-sufficiency is the test — HO's exposure is then to the NET INVESTMENT, so the closing-rate method applies."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 11 — integral vs non-integral foreign operations; SM Ch 15 §12",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-022",
+      "topic": "Ch 15 · Foreign branches · IFO translation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An INTEGRAL foreign branch holds fixed assets of $20,000, acquired when $1 = ₹64. At the year end $1 = ₹82 (average for the year ₹80). The fixed assets are translated at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹16,00,000",
+          "explanation": "₹16,00,000 uses the average rate, which approximates transaction-date rates for INCOME AND EXPENSES, not for fixed assets."
+        },
+        {
+          "key": "B",
+          "text": "₹12,80,000",
+          "explanation": "Integral operation → non-monetary items carried at historical cost use the rate at the transaction date: 20,000 × 64 = ₹12,80,000."
+        },
+        {
+          "key": "C",
+          "text": "₹16,40,000",
+          "explanation": "₹16,40,000 uses the CLOSING rate — that is the non-integral treatment, not the integral one."
+        },
+        {
+          "key": "D",
+          "text": "₹12,00,000",
+          "explanation": "₹12,00,000 corresponds to no given rate — the historical ₹64 rate gives ₹12,80,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 11 — translation for integral foreign operations",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-023",
+      "topic": "Ch 15 · Foreign branches · NFO translation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Same facts, but the branch is NON-integral: fixed assets $20,000, acquired at ₹64; closing rate ₹82; average ₹80. The fixed assets are translated at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹12,80,000",
+          "explanation": "₹12,80,000 uses the historical rate — the integral treatment; a non-integral balance sheet translates wholesale at closing rate."
+        },
+        {
+          "key": "B",
+          "text": "₹16,00,000",
+          "explanation": "₹16,00,000 uses the average rate, which serves the income statement, not the balance sheet."
+        },
+        {
+          "key": "C",
+          "text": "₹14,60,000",
+          "explanation": "₹14,60,000 splits the difference between rates — AS 11 permits no blending for balance-sheet items."
+        },
+        {
+          "key": "D",
+          "text": "₹16,40,000",
+          "explanation": "Non-integral operation → ALL assets and liabilities, monetary and non-monetary, use the closing rate: 20,000 × 82 = ₹16,40,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 11 — closing-rate method for non-integral operations",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-024",
+      "topic": "Ch 15 · Foreign branches · Exchange differences",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Exchange differences arising on translating a NON-integral foreign operation are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ignored, since they are purely notional",
+          "explanation": "They are recognised — just parked in equity (FCTR) rather than run through profit."
+        },
+        {
+          "key": "B",
+          "text": "Added to the cost of the branch's fixed assets",
+          "explanation": "Capitalising translation differences into assets is not the AS 11 rule for non-integral operations."
+        },
+        {
+          "key": "C",
+          "text": "Accumulated in a Foreign Currency Translation Reserve until disposal of the net investment",
+          "explanation": "The FCTR treatment reflects that HO's exposure is to the net investment as a whole — the difference is unrealised until disposal."
+        },
+        {
+          "key": "D",
+          "text": "Recognised immediately in the profit and loss account",
+          "explanation": "Immediate P&L recognition is the INTEGRAL treatment."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 11 — FCTR for non-integral operations",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-025",
+      "topic": "Ch 15 · Foreign branches · Monetary items",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A foreign branch (any classification) shows debtors $6,000, cash $1,000 and creditors $2,500. Closing rate ₹84, average rate ₹80. The NET monetary assets translate to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,88,000",
+          "explanation": "₹5,88,000 ignores the creditors of $2,500, which are monetary liabilities."
+        },
+        {
+          "key": "B",
+          "text": "₹2,94,000",
+          "explanation": "₹2,94,000 leaves out the cash of $1,000 — all three items are monetary."
+        },
+        {
+          "key": "C",
+          "text": "₹3,78,000",
+          "explanation": "Monetary items always use the closing rate: (6,000 + 1,000 − 2,500) × 84 = 4,500 × 84 = ₹3,78,000."
+        },
+        {
+          "key": "D",
+          "text": "₹3,60,000",
+          "explanation": "₹3,60,000 uses the average rate — monetary items take the CLOSING rate under both classifications."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 11 — monetary items at closing rate",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-026",
+      "topic": "Ch 15 · Foreign branches · Disposal",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On disposal of a non-integral foreign operation, the balance in the Foreign Currency Translation Reserve is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Carried forward indefinitely in the balance sheet",
+          "explanation": "After disposal there is no net investment left to which the reserve could relate."
+        },
+        {
+          "key": "B",
+          "text": "Written off against goodwill",
+          "explanation": "Goodwill has nothing to do with releasing accumulated translation differences."
+        },
+        {
+          "key": "C",
+          "text": "Transferred to capital reserve permanently",
+          "explanation": "The FCTR is not a permanent capital reserve — it is released to income when the investment is realised."
+        },
+        {
+          "key": "D",
+          "text": "Recognised in the profit and loss account",
+          "explanation": "Disposal realises the net investment, so the accumulated translation differences are released to P&L."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 11 — disposal of a non-integral foreign operation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-027",
+      "topic": "Ch 15 · Foreign branches · Income translation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A foreign branch earned revenue of $50,000 spread evenly through the year. Average rate for the year ₹79; closing rate ₹83. For incorporation, the revenue is translated at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹41,50,000",
+          "explanation": "₹41,50,000 uses the closing rate — that serves balance-sheet items, not the income statement."
+        },
+        {
+          "key": "B",
+          "text": "₹39,50,000",
+          "explanation": "Income and expense items use transaction-date rates, approximated by the average rate: 50,000 × 79 = ₹39,50,000 (both classifications)."
+        },
+        {
+          "key": "C",
+          "text": "₹40,50,000",
+          "explanation": "₹40,50,000 averages the average and closing rates — AS 11 prescribes no such blend."
+        },
+        {
+          "key": "D",
+          "text": "₹39,00,000",
+          "explanation": "₹39,00,000 matches no given rate; the average-rate translation is ₹39,50,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 11 — income/expenses at transaction-date (average) rates",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c15-028",
+      "topic": "Ch 15 · Foreign branches · Reclassification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When a NON-integral foreign operation is reclassified as INTEGRAL, AS 11 requires that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The FCTR balance is transferred immediately to the profit and loss account",
+          "explanation": "The FCTR is released on DISPOSAL of the operation, not on a change in classification."
+        },
+        {
+          "key": "B",
+          "text": "All prior-year financial statements are restated retrospectively",
+          "explanation": "The change is applied from the date of reclassification — no retrospective restatement."
+        },
+        {
+          "key": "C",
+          "text": "Non-monetary items revert to their original pre-translation costs in foreign currency terms at old rates",
+          "explanation": "The translated amounts AT THE CHANGE DATE become the new historical costs — there is no reversion."
+        },
+        {
+          "key": "D",
+          "text": "Translated amounts of non-monetary items at the date of change become their historical cost; the accumulated FCTR stays until disposal",
+          "explanation": "Both limbs are the AS 11 rule — the change applies prospectively and the old reserve is not recycled merely on reclassification."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Foreign branches — AS 11 →",
+        "href": "/intermediate/advanced-accounting/branches-including-foreign/#6-foreign-branches-as-11-translation"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "AS 11 — change in classification; SM Ch 15 §13.2",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "cs-i1c15-001",
+      "type": "case_mcq_set",
+      "topic": "Ch 15 · Branches · Case: Deccan Textiles, Nashik branch (debtors method at invoice price)",
+      "case": "Deccan Textiles Ltd, Mumbai, invoices goods to its Nashik branch at cost plus 20%. The branch sells for cash and on credit, remits all takings to head office, and has its expenses paid by head office. For the year ended 31 March: opening stock at the branch (at invoice price) ₹48,000; goods sent to branch during the year (at invoice price) ₹6,00,000; remittances from the branch ₹6,10,000; branch expenses paid by head office ₹54,000; closing stock at the branch (at invoice price) ₹72,000. Head office uses the debtors method with a Branch Account kept at invoice price.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c15-001-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The loading included in the goods sent to the branch during the year is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,20,000",
+              "explanation": "₹1,20,000 takes 20% of the invoice price; the margin is on cost, so the loading is 1/6 of invoice price."
+            },
+            {
+              "key": "B",
+              "text": "₹83,333",
+              "explanation": "₹83,333 applies 1/6 to the cost — the fraction belongs on the invoice-price figure."
+            },
+            {
+              "key": "C",
+              "text": "₹1,00,000",
+              "explanation": "Cost + 20% → loading = 20/120 = 1/6 of invoice price: 6,00,000 × 1/6 = ₹1,00,000."
+            },
+            {
+              "key": "D",
+              "text": "₹5,00,000",
+              "explanation": "₹5,00,000 is the COST of the goods sent."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "SM Ch 15 §5.2 — loading on goods sent"
+        },
+        {
+          "id": "cs-i1c15-001-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The stock reserve required against the branch's closing stock is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹12,000",
+              "explanation": "72,000 × 1/6 = ₹12,000 of unrealised loading sits in the closing stock."
+            },
+            {
+              "key": "B",
+              "text": "₹14,400",
+              "explanation": "₹14,400 is 20% of the invoice-price stock; the loading fraction is 1/6."
+            },
+            {
+              "key": "C",
+              "text": "₹60,000",
+              "explanation": "₹60,000 is the cost of the closing stock, not its loading."
+            },
+            {
+              "key": "D",
+              "text": "₹8,000",
+              "explanation": "₹8,000 is the reserve on the OPENING stock (48,000 × 1/6), which is written back this year."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 15 §5.2 — closing stock reserve"
+        },
+        {
+          "id": "cs-i1c15-001-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The branch profit for the year, after all loading adjustments, is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹80,000",
+              "explanation": "₹80,000 nets the two stock reserves incorrectly — the net stock-reserve effect is −4,000, and the apparent loss is −20,000."
+            },
+            {
+              "key": "B",
+              "text": "₹1,00,000",
+              "explanation": "₹1,00,000 is just the loading on goods sent, before the apparent loss and stock reserves."
+            },
+            {
+              "key": "C",
+              "text": "₹76,000",
+              "explanation": "Branch A/c at IP: debits 48,000 + 6,00,000 + 54,000 = 7,02,000; credits 6,10,000 + 72,000 = 6,82,000 → apparent loss 20,000. Add loading on goods sent +1,00,000, closing reserve −12,000, opening reserve written back +8,000 → ₹76,000 profit."
+            },
+            {
+              "key": "D",
+              "text": "₹96,000",
+              "explanation": "₹96,000 stops at the loading adjustments and forgets the ₹20,000 apparent loss thrown up by the invoice-price account."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "SM Ch 15 §5.2 — profit at invoice price"
+        },
+        {
+          "id": "cs-i1c15-001-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The branch's credit sales and any bad debts would appear in:",
+          "options": [
+            {
+              "key": "A",
+              "text": "A memorandum Branch Debtors Account only — the Branch Account records just collections and closing debtors",
+              "explanation": "The debtors method keeps non-cash debtor events (credit sales, bad debts, discounts) in the memorandum account."
+            },
+            {
+              "key": "B",
+              "text": "The Branch Account directly, as separate debit entries",
+              "explanation": "Credit sales never enter the Branch Account directly — only actual flows and closing balances do."
+            },
+            {
+              "key": "C",
+              "text": "Head office's own Sales Account",
+              "explanation": "Branch credit sales are the branch's trading, tracked through the memorandum debtors account."
+            },
+            {
+              "key": "D",
+              "text": "Nowhere, until the customers actually pay",
+              "explanation": "The memorandum account records them as they occur, so closing debtors can be established."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 15 §5.1 — memorandum accounts"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c15-002",
+      "type": "case_mcq_set",
+      "topic": "Ch 15 · Branches · Case: Sahyadri Footwear (stock & debtors with shortage)",
+      "case": "Sahyadri Footwear invoices goods to its Kolhapur branch at cost plus 50%. All branch sales are cash sales made at the invoice price. For the year: opening stock at invoice price ₹30,000; goods sent during the year at invoice price ₹3,00,000; cash sales ₹2,85,000; physical closing stock at invoice price ₹36,000. Head office maintains the stock and debtors method: Branch Stock Account at invoice price, with the loading isolated in a Branch Adjustment Account.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c15-002-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The shortage revealed by the Branch Stock Account (at invoice price) is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹6,000",
+              "explanation": "₹6,000 is the COST portion of the shortage; the stock account, kept at invoice price, throws out ₹9,000."
+            },
+            {
+              "key": "B",
+              "text": "Nil",
+              "explanation": "The account does not balance: ₹9,000 of invoice-price stock is unaccounted for."
+            },
+            {
+              "key": "C",
+              "text": "₹15,000",
+              "explanation": "₹15,000 misadds the account — the gap between ₹3,30,000 and ₹3,21,000 is ₹9,000."
+            },
+            {
+              "key": "D",
+              "text": "₹9,000",
+              "explanation": "Debits 30,000 + 3,00,000 = 3,30,000 against credits 2,85,000 + 36,000 = 3,21,000 → shortage ₹9,000 at invoice price."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "SM Ch 15 §5.2 — branch stock account balancing figure"
+        },
+        {
+          "id": "cs-i1c15-002-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Of that shortage, the amount ultimately charged to the Branch Profit & Loss Account is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹9,000",
+              "explanation": "Charging the full invoice-price shortage double-counts the ₹3,000 loading that was never realised profit."
+            },
+            {
+              "key": "B",
+              "text": "₹6,000",
+              "explanation": "Loading = 50/150 = 1/3 of invoice price: ₹3,000 cancels against the Branch Adjustment Account; the cost portion 9,000 × 2/3 = ₹6,000 is the real loss."
+            },
+            {
+              "key": "C",
+              "text": "₹4,500",
+              "explanation": "₹4,500 halves the shortage; the cost fraction at cost+50% is 2/3, giving ₹6,000."
+            },
+            {
+              "key": "D",
+              "text": "₹3,000",
+              "explanation": "₹3,000 is the loading portion, which goes against the Branch Adjustment Account — not the P&L."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "SM Ch 15 §5.2 — shortage split between cost and loading"
+        },
+        {
+          "id": "cs-i1c15-002-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The stock reserve against the branch's closing stock is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹10,000",
+              "explanation": "₹10,000 applies 1/3 to the opening stock figure — the reserve is measured on CLOSING stock of ₹36,000."
+            },
+            {
+              "key": "B",
+              "text": "₹24,000",
+              "explanation": "₹24,000 is the COST of the closing stock (36,000 × 2/3), not its loading."
+            },
+            {
+              "key": "C",
+              "text": "₹12,000",
+              "explanation": "36,000 × 1/3 = ₹12,000 — the loading fraction at cost+50% is 50/150 = 1/3 of invoice price."
+            },
+            {
+              "key": "D",
+              "text": "₹18,000",
+              "explanation": "₹18,000 applies 50% to the invoice-price stock; the loading is 1/3 of invoice price."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "SM Ch 15 §5.2 — stock reserve"
+        },
+        {
+          "id": "cs-i1c15-002-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The gross profit realised on the goods actually SOLD (before charging the shortage) is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,00,000",
+              "explanation": "₹1,00,000 is the loading on the goods SENT (3,00,000 × 1/3), not on the goods SOLD."
+            },
+            {
+              "key": "B",
+              "text": "₹1,42,500",
+              "explanation": "₹1,42,500 applies 50% to sales; the margin over invoice price is 1/3, being 50 on every 150 of sales."
+            },
+            {
+              "key": "C",
+              "text": "₹95,000",
+              "explanation": "Sales were made at invoice price, so the realised loading is 2,85,000 × 1/3 = ₹95,000."
+            },
+            {
+              "key": "D",
+              "text": "₹89,000",
+              "explanation": "₹89,000 nets the shortage's cost portion against gross profit — the question asks for gross profit BEFORE the shortage."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "SM Ch 15 §5.2 — realised loading on sales"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c15-003",
+      "type": "case_mcq_set",
+      "topic": "Ch 15 · Branches · Case: Yamuna Electricals, Kanpur branch (reconciliation)",
+      "case": "Yamuna Electricals' head office (Delhi) shows its Kanpur Branch Account at a debit of ₹4,52,000 on 31 March. The Kanpur branch's Head Office Account shows a credit of ₹4,00,000 on the same date. Investigation reveals: (i) goods invoiced at ₹32,000 were dispatched by head office on 27 March and received by the branch on 4 April; (ii) the branch remitted ₹15,000 on 30 March, which head office received on 3 April; (iii) branch furniture is maintained in head office books, and head office has recorded depreciation of ₹5,000 (Branch A/c Dr → To Branch Furniture A/c) which the branch has not yet recorded.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c15-003-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "After adjusting the goods in transit and cash in transit in head office books, the Branch Account balance becomes:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹4,52,000",
+              "explanation": "₹4,52,000 is the balance BEFORE the transit adjustments."
+            },
+            {
+              "key": "B",
+              "text": "₹4,05,000",
+              "explanation": "4,52,000 − 32,000 (goods in transit) − 15,000 (cash in transit) = ₹4,05,000."
+            },
+            {
+              "key": "C",
+              "text": "₹4,20,000",
+              "explanation": "₹4,20,000 adjusts only the goods in transit and forgets the ₹15,000 cash in transit."
+            },
+            {
+              "key": "D",
+              "text": "₹4,99,000",
+              "explanation": "₹4,99,000 ADDS the transit items — they must be credited OUT of the Branch Account into transit accounts."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "SM Ch 15 §7.1 — transit adjustments"
+        },
+        {
+          "id": "cs-i1c15-003-b",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The entry the BRANCH must still pass for the depreciation on its furniture is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Depreciation A/c Dr ₹5,000 → To Head Office A/c ₹5,000",
+              "explanation": "The branch bears the expense but holds no asset account — the credit goes to the Head Office Account, mirroring HO's entry."
+            },
+            {
+              "key": "B",
+              "text": "No entry; head office's record suffices",
+              "explanation": "Without the branch entry, branch profit is overstated and the current accounts stay apart by ₹5,000."
+            },
+            {
+              "key": "C",
+              "text": "Head Office A/c Dr ₹5,000 → To Depreciation A/c ₹5,000",
+              "explanation": "Reversed — the branch must debit the expense and credit head office."
+            },
+            {
+              "key": "D",
+              "text": "Depreciation A/c Dr ₹5,000 → To Furniture A/c ₹5,000",
+              "explanation": "The furniture account lives in head office books — the branch has no asset account to credit."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 15 §7.2 — depreciation on assets in HO books"
+        },
+        {
+          "id": "cs-i1c15-003-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "After the branch records the depreciation, its Head Office Account balance becomes:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹4,52,000 credit",
+              "explanation": "₹4,52,000 was head office's UNADJUSTED debit — the branch never mirrors the transit items."
+            },
+            {
+              "key": "B",
+              "text": "₹4,05,000 credit",
+              "explanation": "4,00,000 + 5,000 (credit to HO for the depreciation) = ₹4,05,000 — now agreeing with head office's adjusted balance."
+            },
+            {
+              "key": "C",
+              "text": "₹4,00,000 credit",
+              "explanation": "₹4,00,000 is the balance before the missing depreciation entry."
+            },
+            {
+              "key": "D",
+              "text": "₹3,95,000 credit",
+              "explanation": "₹3,95,000 DEDUCTS the depreciation — the branch entry CREDITS the Head Office Account, increasing the balance."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "SM Ch 15 §7 — agreement of current accounts"
+        },
+        {
+          "id": "cs-i1c15-003-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "In the combined balance sheet of the entity at 31 March, the transit items appear as:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Assets of ₹32,000 only, since cash in transit is already someone's cash",
+              "explanation": "The remitted ₹15,000 has left the branch's cash and not reached HO's — it exists only as cash in transit."
+            },
+            {
+              "key": "B",
+              "text": "Assets totalling ₹47,000 (goods in transit ₹32,000 + cash in transit ₹15,000)",
+              "explanation": "Transit items belong to the entity but sit in no one's stock or cash — they are shown as distinct assets of ₹47,000 in total."
+            },
+            {
+              "key": "C",
+              "text": "Nothing — the items cancel against each other",
+              "explanation": "Transit items never cancel; they are real assets momentarily between locations."
+            },
+            {
+              "key": "D",
+              "text": "A liability of ₹47,000 owed to the branch",
+              "explanation": "Goods and cash in transit are the entity's own assets, not liabilities."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "SM Ch 15 §7.1 — transit items in the combined balance sheet"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c15-004",
+      "type": "case_mcq_set",
+      "topic": "Ch 15 · Foreign branches · Case: Krishna Exports, Singapore branch (AS 11 translation)",
+      "case": "Krishna Exports Ltd has a Singapore branch whose trial balance at 31 March shows (in $): fixed assets 25,000 (acquired several years ago when $1 = ₹58); inventory carried at cost 8,000 (purchased when $1 = ₹81); trade receivables 12,000; trade payables 7,000; cash 3,000. Exchange rates: closing $1 = ₹84; average for the year $1 = ₹80. Answer for the classifications indicated in each question.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c15-004-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the branch is an INTEGRAL foreign operation, the fixed assets are translated at:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹21,00,000",
+              "explanation": "₹21,00,000 uses the closing rate — the non-integral treatment."
+            },
+            {
+              "key": "B",
+              "text": "₹20,00,000",
+              "explanation": "₹20,00,000 uses the average rate, which serves income and expenses, not fixed assets."
+            },
+            {
+              "key": "C",
+              "text": "₹14,50,000",
+              "explanation": "Integral → historical-cost non-monetary items use the transaction-date rate: 25,000 × 58 = ₹14,50,000."
+            },
+            {
+              "key": "D",
+              "text": "₹14,00,000",
+              "explanation": "₹14,00,000 corresponds to no given rate; the historical ₹58 gives ₹14,50,000."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 11 — integral: non-monetary at historical rate"
+        },
+        {
+          "id": "cs-i1c15-004-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the branch is a NON-INTEGRAL foreign operation, the same fixed assets are translated at:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹22,50,000",
+              "explanation": "₹22,50,000 matches no given rate; the closing ₹84 gives ₹21,00,000."
+            },
+            {
+              "key": "B",
+              "text": "₹20,00,000",
+              "explanation": "₹20,00,000 uses the average rate — balance-sheet items of a non-integral operation take the closing rate."
+            },
+            {
+              "key": "C",
+              "text": "₹21,00,000",
+              "explanation": "Non-integral → the whole balance sheet, including fixed assets, uses the closing rate: 25,000 × 84 = ₹21,00,000."
+            },
+            {
+              "key": "D",
+              "text": "₹14,50,000",
+              "explanation": "₹14,50,000 is the historical-rate (integral) figure."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 11 — non-integral: closing-rate method"
+        },
+        {
+          "id": "cs-i1c15-004-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Under EITHER classification, the trade receivables are translated at:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹9,60,000",
+              "explanation": "₹9,60,000 uses the average rate; monetary items always take the closing rate."
+            },
+            {
+              "key": "B",
+              "text": "₹10,50,000",
+              "explanation": "₹10,50,000 corresponds to no given rate; 12,000 × 84 = ₹10,08,000."
+            },
+            {
+              "key": "C",
+              "text": "₹10,08,000",
+              "explanation": "Receivables are monetary — closing rate under both classifications: 12,000 × 84 = ₹10,08,000."
+            },
+            {
+              "key": "D",
+              "text": "₹6,96,000",
+              "explanation": "₹6,96,000 uses the fixed assets' historical rate of ₹58, which has nothing to do with current receivables."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 11 — monetary items at closing rate"
+        },
+        {
+          "id": "cs-i1c15-004-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "If the branch is NON-integral, the exchange difference arising on translating its trial balance is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Split equally between P&L and reserves",
+              "explanation": "No such split exists — classification decides the whole destination."
+            },
+            {
+              "key": "B",
+              "text": "Adjusted against the branch's fixed assets",
+              "explanation": "AS 11 does not capitalise translation differences into assets for non-integral operations."
+            },
+            {
+              "key": "C",
+              "text": "Accumulated in the Foreign Currency Translation Reserve until the net investment is disposed of",
+              "explanation": "The closing-rate method parks translation differences in FCTR — they reach P&L only on disposal."
+            },
+            {
+              "key": "D",
+              "text": "Recognised immediately in the profit and loss account",
+              "explanation": "Immediate P&L recognition is the INTEGRAL treatment."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "AS 11 — FCTR for non-integral operations"
+        },
+        {
+          "id": "cs-i1c15-004-e",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the branch is INTEGRAL, the inventory carried at cost is translated at:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹6,72,000",
+              "explanation": "₹6,72,000 uses the closing rate — inventory at cost is NON-monetary, so an integral operation uses the purchase-date rate."
+            },
+            {
+              "key": "B",
+              "text": "₹6,48,000",
+              "explanation": "Integral → non-monetary items at historical cost use the rate when the cost was incurred: 8,000 × 81 = ₹6,48,000."
+            },
+            {
+              "key": "C",
+              "text": "₹4,64,000",
+              "explanation": "₹4,64,000 uses the fixed assets' acquisition rate of ₹58 — each non-monetary item uses ITS OWN transaction-date rate."
+            },
+            {
+              "key": "D",
+              "text": "₹6,40,000",
+              "explanation": "₹6,40,000 uses the year's average rate; the purchase-date rate of ₹81 governs."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "AS 11 — integral: inventory at purchase-date rate"
+        }
+      ]
+    },
+    {
+      "id": "d-i1c15-001",
+      "type": "descriptive",
+      "topic": "Ch 15 · Branches · Branch vs department",
+      "stem": "Distinguish between branch accounts and departmental accounts. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Departments carry on activities under one roof within one set of books; branches are geographically separated establishments carrying on the same business away from the principal place",
+          "marks": 1,
+          "citation": "SM Ch 15 §2"
+        },
+        {
+          "point": "Departmental accounting's central problem: allocation/apportionment of common expenses between departments to measure each activity's result",
+          "marks": 1,
+          "citation": "SM Ch 15 §2"
+        },
+        {
+          "point": "Branch accounting's central problem: recording across locations — dependent-branch methods, mirror current accounts, reconciliation of transit items",
+          "marks": 1,
+          "citation": "SM Ch 15 §2, §7"
+        },
+        {
+          "point": "Items with no departmental counterpart: goods/cash in transit, and translation of foreign-branch trial balances under AS 11",
+          "marks": 1,
+          "citation": "SM Ch 15 §2, §10-12"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-002",
+      "type": "descriptive",
+      "topic": "Ch 15 · Branches · Debtors method",
+      "stem": "Describe the debtors method of accounting for a dependent branch. Which items are excluded from the Branch Account, and how are they dealt with? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "HO opens a single Branch Account treated like a customer: debited with opening branch assets, goods sent (net of returns) and branch expenses paid by HO; credited with remittances and closing branch assets",
+          "marks": 2,
+          "citation": "SM Ch 15 §5.1"
+        },
+        {
+          "point": "Balancing figure of the account = branch profit or loss for the period",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.1"
+        },
+        {
+          "point": "Excluded: credit sales, bad debts, discounts allowed, sales returns by customers — no cash moves between HO and branch for these",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.1"
+        },
+        {
+          "point": "They are recorded in a memorandum Branch Debtors Account (and petty expenses in a memorandum Petty Cash Account), which feed only collections and closing balances into the Branch Account",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.1 — memorandum accounts"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-003",
+      "type": "descriptive",
+      "topic": "Ch 15 · Branches · Loading adjustments",
+      "stem": "Goods are invoiced to a branch at selling price. Explain the loading adjustments required before the true branch profit can be determined. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Loading = invoice price − cost; convert a margin stated on cost to a fraction of invoice price [margin/(100+margin)] before adjusting",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.2"
+        },
+        {
+          "point": "Goods sent to branch: loading on the year's sendings is eliminated (Goods Sent to Branch A/c Dr → To Branch Adjustment A/c)",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.2"
+        },
+        {
+          "point": "Closing stock: stock reserve = closing stock at IP × loading fraction, carried against the stock; opening stock's reserve written back — net profit effect is the difference",
+          "marks": 1.5,
+          "citation": "SM Ch 15 §5.2"
+        },
+        {
+          "point": "Shortage/surplus at IP is split: loading portion cancels in the Branch Adjustment Account; only the cost portion is charged (credited) to Branch P&L",
+          "marks": 1.5,
+          "citation": "SM Ch 15 §5.2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-004",
+      "type": "descriptive",
+      "topic": "Ch 15 · Branches · Stock & debtors method",
+      "stem": "List the accounts maintained under the stock and debtors method and state the purpose each serves. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Branch Stock Account (at invoice price): records goods flows; balancing figure exposes shortage or surplus — the method's control feature",
+          "marks": 1.5,
+          "citation": "SM Ch 15 §5.2"
+        },
+        {
+          "point": "Branch Debtors Account: ascertains closing debtors from opening balance, credit sales, collections, bad debts, discounts, returns",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.2"
+        },
+        {
+          "point": "Branch Expenses Account: accumulates all branch expenses for transfer to Branch P&L",
+          "marks": 0.5,
+          "citation": "SM Ch 15 §5.2"
+        },
+        {
+          "point": "Goods Sent to Branch Account: nets returns, surrenders its loading to the Adjustment Account, and closes to Trading/Purchases",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.2"
+        },
+        {
+          "point": "Branch Adjustment Account (where invoice pricing is used): collects loadings on goods sent and stocks, absorbs the loading in shortages; balance = gross profit, carried to Branch P&L",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-005",
+      "type": "descriptive",
+      "topic": "Ch 15 · Branches · Wholesale method",
+      "stem": "Why is the wholesale branch method used, and how is the stock reserve under it computed? (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Where the entity sells wholesale to outsiders and retail through branches, invoicing branches at wholesale price separates profit HO would earn anyway (wholesale − cost) from the branch's own retail skill (retail − wholesale)",
+          "marks": 2,
+          "citation": "SM Ch 15 §5.3"
+        },
+        {
+          "point": "Branch closing stock stands at wholesale price, so HO's wholesale margin on unsold stock is unrealised",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.3"
+        },
+        {
+          "point": "Stock reserve = closing branch stock × (wholesale − cost)/wholesale; debited to HO P&L and carried against stock until sold",
+          "marks": 1,
+          "citation": "SM Ch 15 §5.3"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-006",
+      "type": "descriptive",
+      "topic": "Ch 15 · Branches · Reconciliation",
+      "stem": "Why may the Branch Account in head office books and the Head Office Account in branch books disagree at the year end? How is agreement restored? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Goods in transit: HO debited Branch on dispatch; branch has not received/recorded",
+          "marks": 1,
+          "citation": "SM Ch 15 §7.1"
+        },
+        {
+          "point": "Cash in transit: branch credited HO on remittance; HO has not received",
+          "marks": 1,
+          "citation": "SM Ch 15 §7.1"
+        },
+        {
+          "point": "One-sided entries: HO expenses charged to branch, depreciation on branch assets kept in HO books, errors — recorded by one party only",
+          "marks": 1,
+          "citation": "SM Ch 15 §7.2"
+        },
+        {
+          "point": "Restoration: transit items adjusted in HO books (Goods/Cash in Transit A/c Dr → To Branch A/c); the party that missed a one-sided entry passes it; transit items shown as assets in the combined balance sheet",
+          "marks": 2,
+          "citation": "SM Ch 15 §7.1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-007",
+      "type": "descriptive",
+      "topic": "Ch 15 · Branches · Assets in HO books",
+      "stem": "Branch fixed assets are maintained in head office books. Give the journal entries for depreciation in both sets of books, and state the effect of omitting the branch's entry. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "HO books: Branch A/c Dr → To Branch Fixed Asset A/c (asset written down, branch charged)",
+          "marks": 1.5,
+          "citation": "SM Ch 15 §7.2"
+        },
+        {
+          "point": "Branch books: Depreciation A/c Dr → To Head Office A/c (expense recognised, HO credited)",
+          "marks": 1.5,
+          "citation": "SM Ch 15 §7.2"
+        },
+        {
+          "point": "Omission by branch: branch profit overstated by the depreciation and the two current accounts disagree by the same amount",
+          "marks": 1,
+          "citation": "SM Ch 15 §7.2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-008",
+      "type": "descriptive",
+      "topic": "Ch 15 · Foreign branches · AS 11",
+      "stem": "Distinguish integral from non-integral foreign operations under AS 11 and set out the translation rules for each. (6 marks)",
+      "marks": 6,
+      "skeleton": [
+        {
+          "point": "Integral: carries on business as an extension of the reporting enterprise (e.g. sells HO-supplied goods, remits proceeds); its cash flows immediately affect HO",
+          "marks": 1,
+          "citation": "AS 11 — classification"
+        },
+        {
+          "point": "Non-integral: accumulates cash, incurs expenses, raises finance and sells substantially in local currency with significant autonomy; HO's exposure is its net investment",
+          "marks": 1,
+          "citation": "AS 11 — classification"
+        },
+        {
+          "point": "Integral translation: monetary at closing rate; non-monetary at historical (transaction-date) rates; income/expenses at transaction-date (average) rates; differences to P&L",
+          "marks": 2,
+          "citation": "AS 11 — integral rules"
+        },
+        {
+          "point": "Non-integral translation: all assets and liabilities at closing rate; income/expenses at transaction-date (average) rates; differences accumulated in FCTR",
+          "marks": 1.5,
+          "citation": "AS 11 — closing-rate method"
+        },
+        {
+          "point": "FCTR recognised in P&L on disposal of the net investment",
+          "marks": 0.5,
+          "citation": "AS 11 — disposal"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c15-009",
+      "type": "descriptive",
+      "topic": "Ch 15 · Foreign branches · Reclassification",
+      "stem": "State the AS 11 treatment when a foreign operation's classification changes, in each direction. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Integral → non-integral: translation rules of the new classification apply from the date of change; exchange differences on non-monetary items from that date go to FCTR",
+          "marks": 2,
+          "citation": "AS 11 — change in classification; SM Ch 15 §13.1"
+        },
+        {
+          "point": "Non-integral → integral: translated amounts of non-monetary items at the change date become their historical costs for onward accounting",
+          "marks": 1,
+          "citation": "AS 11; SM Ch 15 §13.2"
+        },
+        {
+          "point": "FCTR accumulated while non-integral is NOT released on reclassification — it waits until disposal of the operation",
+          "marks": 1,
+          "citation": "AS 11 — disposal rule"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    }
+  ]
+}
