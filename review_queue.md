@@ -145,3 +145,32 @@ Triage rules:
 - [ ] **Legacy Level I-IV references** — the site must nowhere else imply
   the four-level non-company scheme still operates (superseded for periods
   from 1 Apr 2024).
+
+## presentation-and-disclosures-based-as — VERIFY 2026-07-04
+
+- [ ] **Stale "Level I" applicability wording inside the SM units** — SM Ch 4
+  U2 (AS 3) and U3 (AS 17) intros still say the standards bind "Level I"
+  non-corporate entities, but Ch 3 of the SAME SM edition teaches the revised
+  Aug-2024 MSME/Large scheme (Level I–IV superseded for periods from
+  1-4-2024). The site's Ch 4 content states applicability per the REVISED
+  scheme (MSMEs skip AS 3/17/20/24; SMCs skip AS 17 and diluted EPS but keep
+  AS 3). Confirm the revised scheme is what the Sept 2026 exam expects and
+  initial — this is an internal inconsistency in the SM itself.
+- [ ] **Definitional quotations kept on purpose** — five clusters survive the
+  shingle check by design (※ in the citations file): AS 24's
+  discontinuing-operation definition, AS 18's related-party families and
+  relative definition, AS 17's business-segment definition, AS 20's basic-EPS
+  formula phrase and face-of-P&L requirement, AS 18's aggregation sentence.
+  Confirm each matches the current AS text exactly.
+- [ ] **Overdraft convention continuity** — Ch 4 notes §2 repeat the site's
+  Ch 11 convention (bank overdraft / cash credit movements = financing).
+  The SM Ch 4 U2 item list places overdraft and cash credit alongside
+  financing borrowings; sight it and initial (same open item as Ch 11).
+- [ ] **AS 25 final-interim-period rule** — q-039 asserts nature and amount
+  of a material estimate change in the final interim period (no separate
+  report published) go to the annual FS notes. Sight the SM/AS 25 paragraph
+  and initial.
+- [ ] **Partly paid shares in EPS** — notes §5 states partly paid shares
+  count as a fraction to the extent of dividend entitlement, and the SM note
+  treats no-dividend partly-paid shares as potential equity shares for
+  diluted EPS. Sight the SM Unit 5 note and initial.

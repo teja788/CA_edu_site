@@ -1,0 +1,374 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Presentation & Disclosures Based Accounting Standards'
+description: 'CA Intermediate Advanced Accounting Ch 4 — AS 1, AS 3, AS 17, AS 18, AS 20, AS 24 and AS 25 in plain language: policy disclosure, cash flow classification, segment thresholds, related-party tests, EPS arithmetic, discontinuing operations and interim reporting.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 4 · Presentation & Disclosures Based AS'
+chapterSlug: presentation-and-disclosures-based-as
+masteryId: i1-ch4
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI SM Ch 4 Units 1–7 (May 2026 ed.)'
+  - 'AS 1, AS 3, AS 17, AS 18, AS 20, AS 24, AS 25'
+sourceLabel: 'ICAI SM Ch 4 U1–U7 · AS 1/3/17/18/20/24/25 (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '4 Jul 2026'
+readTime: 'About 35 min read · 3 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=presentation-and-disclosures-based-as'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Seven standards share this chapter, and one idea unites them: none of them changes *how
+much* profit you make — they change **what the reader gets told**. AS 1 makes you confess
+your accounting policies; AS 3 re-sorts the year into three streams of cash; AS 17 slices
+the enterprise into segments; AS 18 names the parties who could bend a deal; AS 20
+standardises the most-quoted number in finance; AS 24 forces early warning of a business
+being shut down; AS 25 disciplines the quarterly report. Presentation and disclosure —
+not measurement — is the battleground, and the exam mines each standard's definitions
+and thresholds.
+
+Applicability shorthand for the whole chapter (the detailed regime lives in
+[Ch 3](/intermediate/advanced-accounting/applicability-of-accounting-standards/)):
+**AS 1 binds everyone.** Non-company **MSMEs skip AS 3, AS 17, AS 20 and AS 24
+entirely**, and the smaller MSME sub-class skips AS 18 too. **SMCs skip AS 17 and the
+diluted-EPS disclosure but still prepare a cash flow statement** — a company's cash-flow
+exemption comes from s.2(40) of the Companies Act (OPC, small company, dormant company),
+not from the AS regime. AS 25 binds only an enterprise that is *required or elects* to
+publish an interim report.
+
+## 1. AS 1: Disclosure of Accounting Policies
+
+Standardisation never eliminates choice: standards cannot cover every area, and no
+single policy suits every enterprise. **Accounting policies** are the specific accounting
+principles and the methods of applying them that an enterprise adopts in preparing its
+statements. Familiar areas where policies legitimately differ: depreciation methods,
+inventory valuation, treatment of goodwill, valuation of investments, retirement
+benefits, recognition of profit on long-term contracts, valuation of fixed assets.
+
+Three **fundamental accounting assumptions** — going concern, consistency, accrual — are
+presumed. The disclosure rule is one-directional: **say nothing if they are followed;
+disclose the fact if any is not**. (The Framework chapter covers what each assumption
+means; AS 1 only legislates the disclosure.)
+
+Selection of a policy is governed by one master test — the statements should present a
+**true and fair** view — served by three considerations:
+
+- **Prudence** — do not anticipate profits; provide for all known liabilities and
+  losses even if the amount needs estimation.
+- **Substance over form** — account for the financial reality of a transaction, not
+  merely its legal shape.
+- **Materiality** — disclose every item whose knowledge might influence a user's
+  decisions.
+
+The disclosure discipline itself:
+
+- All **significant accounting policies should be disclosed in one place**, as part of
+  the financial statements — not scattered through the notes.
+- A **change** in policy that has a material effect must be disclosed with the **amount
+  of the effect** to the extent ascertainable; if not ascertainable, **that fact** must
+  be stated.
+- A change with no material effect now but one **reasonably expected in later periods**
+  must still be disclosed in the period of the change.
+
+<Callout kind="mistake">
+Disclosure is not detergent. A **wrong or inappropriate treatment is not remedied by
+disclosing the policy** or by a note — AS 1 makes this explicit. You cannot depreciate
+nothing, footnote it candidly, and call the statements true and fair.
+</Callout>
+
+## 2. AS 3: Cash Flow Statements
+
+Profit is an opinion; cash is a fact. AS 3 explains where the year's cash came from and
+went, classified into **operating**, **investing** and **financing** activities. The
+statement reconciles opening to closing **cash and cash equivalents** — cash in hand,
+demand deposits, and investments that are **short-term (maturity of, say, three months
+or less from acquisition), highly liquid, readily convertible into known amounts of
+cash, and subject to insignificant risk of change in value**.
+
+| Stream | What it holds | Signature items |
+| --- | --- | --- |
+| Operating | Principal revenue-producing activities | Cash from customers, payments to suppliers and employees, taxes on income |
+| Investing | Acquisition/disposal of long-term assets and investments outside cash equivalents | Purchase/sale of PPE and investments, loans made and recovered |
+| Financing | Changes in the size/composition of owners' capital and borrowings | Share/debenture proceeds, repayments, dividends paid |
+
+Operating flows can be reported by the **direct method** (gross receipts less gross
+payments) or the **indirect method** (net profit adjusted for non-cash items, deferrals
+and accruals, and items belonging to investing/financing). Both give the same subtotal;
+only the presentation of operating flows differs.
+
+The classification traps the exam loves:
+
+- **Interest and dividends** — for a **financial enterprise**, interest paid and
+  interest/dividends received are **operating**. For every other enterprise, interest
+  and dividends **received are investing**; interest **paid** and dividends **paid are
+  financing**. Dividends paid are financing for everyone.
+- **Taxes on income** are **operating** unless specifically identifiable with an
+  investing or financing transaction (securities transaction tax on a sale of
+  investments rides with the investing flow; dividend distribution levies ride with the
+  financing flow).
+- **Extraordinary items** are shown **separately within the activity** to which they
+  belong (an earthquake insurance recovery for stock loss: operating, disclosed
+  separately).
+- **Non-cash transactions** — shares issued for machinery, debentures converted to
+  equity — are **excluded** from the statement and disclosed elsewhere.
+- **Foreign currency flows** are recorded at the **rate on the date of the flow**;
+  exchange gains/losses on cash balances are shown as a separate reconciling item, not
+  as an operating/investing/financing flow.
+- **Net-basis reporting** is allowed where turnover is quick, amounts large and
+  maturities short (e.g. a bank's demand deposits), and for items held on behalf of
+  customers.
+
+<Callout kind="pointer">
+This site presents **bank overdraft and cash credit movements as financing flows**
+(the convention used throughout Ch 11's statements). Some presentations treat repayable-
+on-demand overdrafts as a component of cash management — the SM's item list places
+overdraft and cash credit with the financing borrowings, and consistency is what the
+examiner rewards.
+</Callout>
+
+## 3. AS 17: Segment Reporting
+
+One consolidated total hides the fact that a conglomerate's pharma arm grows while its
+steel arm bleeds. AS 17 reports the parts. A **business segment** is a distinguishable
+component providing an individual product/service or related group of them, **subject to
+risks and returns different from other business segments**. A **geographical segment**
+is the same idea for economic environments. The **primary** reporting format is whichever
+of the two dominates the enterprise's risks and returns — usually visible from its
+internal organisation and reporting structure; the other becomes **secondary** with
+lighter disclosure.
+
+A segment is **reportable** if it crosses **any one** of three 10% tests:
+
+| Test | Threshold |
+| --- | --- |
+| Revenue | Segment revenue (external **plus inter-segment**) ≥ 10% of combined total revenue of all segments |
+| Result | Segment result ≥ 10% of the **greater in absolute amount** of (i) combined result of all segments in profit, (ii) combined result of all segments in loss |
+| Assets | Segment assets ≥ 10% of total segment assets |
+
+Then the **75% floor**: if external revenue of the reportable segments is under 75% of
+total enterprise revenue, keep adding segments (even sub-10% ones) until it isn't. A
+segment reported last year stays reportable this year if management judges it of
+continuing significance, even if it now fails all three tests.
+
+Definitional hygiene the MCQs test: **segment revenue** excludes extraordinary items and
+interest/dividend income (unless the segment's operations are primarily financial);
+**segment expense** excludes interest expense (same caveat), extraordinary items, income
+tax, and general head-office expenses. **Segment result = segment revenue − segment
+expense** — pre-tax, pre-central-overhead. Primary-format disclosures: revenue (external
+and inter-segment separately), result, assets, liabilities, capital expenditure,
+depreciation, and other significant non-cash expenses.
+
+<Callout kind="example">
+Segments A/B/C/D earn results of ₹120, ₹(300), ₹40, ₹(20) lakh. Profits total ₹160;
+losses total ₹(320). The 10% result test uses ₹320 (greater absolute) — a segment needs
+|result| ≥ ₹32 lakh. A (₹120) and B (₹300) qualify on result; C (₹40) does too; D (₹20)
+must look to the revenue or asset tests.
+</Callout>
+
+## 4. AS 18: Related Party Disclosures
+
+An arm's-length market price is the silent assumption behind every number in the
+accounts. Between related parties that assumption dies — a holding company can instruct
+a subsidiary to sell at cost, or not to compete. AS 18 does not prohibit or re-price
+anything; it makes the **relationship and the dealings visible**. Parties are related if
+one **controls** or exercises **significant influence** over the other (or both are
+under common control) **at any time during the year**.
+
+The five related-party families:
+
+1. Enterprises that directly or indirectly **control, or are controlled by, or are
+   under common control** with the reporting enterprise (holding companies,
+   subsidiaries, fellow subsidiaries).
+2. **Associates and joint ventures**, and the investing parties/venturers in respect of
+   which the reporting enterprise is an associate or JV.
+3. **Individuals** owning voting power that gives control or significant influence,
+   and **relatives** of any such individual.
+4. **Key management personnel** and their relatives.
+5. Enterprises over which any person in (3) or (4) can exercise significant influence.
+
+**Control** = ownership (direct/indirect) of **more than half the voting power**, or
+control of the **composition of the board**, or a **substantial interest in voting power
+plus the power to direct financial/operating policies**. **Significant influence** =
+participation in financial/operating policy decisions without control — presumed at
+**20% or more of voting power**. A **relative** is the spouse, son, daughter, brother,
+sister, father or mother who may be expected to influence, or be influenced by, the
+individual.
+
+Deemed **not** related: two companies merely sharing a **common director** (unless the
+director can affect the policies of both in their mutual dealings); a **single customer,
+supplier, franchiser, distributor or agent** on whom the enterprise merely depends
+economically; **providers of finance, trade unions, public utilities and government
+departments** in the ordinary course of their dealings.
+
+Disclosure exemptions: where disclosure would **conflict with confidentiality duties
+imposed by statute or a regulator**; **state-controlled enterprises** need not disclose
+transactions with *other* state-controlled enterprises; and **intra-group transactions
+eliminated on consolidation** need no disclosure in the consolidated statements.
+
+What gets disclosed: where **control exists**, the name and nature of the relationship
+**even if there were no transactions**. Where transactions occurred: the name, nature of
+relationship, nature of the transactions and their **volume**, outstanding balances and
+provisions for doubtful debts from related parties, and amounts written off or back.
+Items of a similar nature may be **aggregated by type** unless separate disclosure is
+needed to understand the effects. **Remuneration to key management personnel is itself a
+related-party transaction** — a favourite trick stem.
+
+## 5. AS 20: Earnings Per Share
+
+Every P/E ratio quotes it, so AS 20 standardises it. Every company presents **basic and
+diluted EPS on the face of the statement of profit and loss** — and an SMC's relief is
+only from the *diluted* figure.
+
+**Basic EPS** = net profit (or loss) **attributable to equity shareholders** ÷
+**weighted average number of equity shares** outstanding. The numerator deducts
+**preference dividends and any attributable tax** — for **cumulative** preference
+shares, the full dividend for the period **whether or not declared**. The denominator
+weights each block of shares by the fraction of the period it was outstanding, counted
+from the **date consideration becomes receivable**. Partly paid shares count as a
+**fraction of a share** to the extent they carry dividend rights during the period.
+
+Issues that change share count **without a matching change in resources** are treated as
+if they happened at the **beginning of the earliest period reported** — bonus issues and
+share splits restate every period presented. A **rights issue below fair value** hides a
+bonus element inside a full-price issue, so pre-rights share counts are multiplied by:
+
+**Fair value per share immediately before the rights ÷ theoretical ex-rights value per
+share (TERP)** — where TERP = (aggregate market value of shares before exercise +
+rights proceeds) ÷ shares after exercise.
+
+<Callout kind="example">
+1,00,000 shares; fair value ₹25 cum-rights; 1-for-4 rights at ₹15. TERP =
+(1,00,000×25 + 25,000×15) ÷ 1,25,000 = ₹23. Adjustment factor = 25/23. Prior-period and
+pre-rights share counts are multiplied by 25/23; from the rights date, 1,25,000 actual
+shares are weighted normally.
+</Callout>
+
+**Diluted EPS** asks: what if every **dilutive potential equity share** — convertible
+debentures/preference shares, options, warrants, shares issuable on contingencies —
+became equity? The numerator adds back the interest or preference dividend on the
+dilutive instrument **net of tax**; the denominator adds the weighted shares issuable.
+For **options**, only the *bonus* element dilutes: shares deemed issued for no
+consideration = options × (1 − exercise price ÷ fair value). Potential shares are
+**dilutive only if they reduce EPS from continuing ordinary activities**; anti-dilutive
+series are ignored, and each series is tested separately, most dilutive first.
+
+<Callout kind="mistake">
+A loss year inverts intuition: converting a debenture *reduces the loss per share*,
+which is anti-dilutive — so in a loss year most potential shares are **excluded** and
+diluted EPS equals basic. Dilution means a *worse* figure for shareholders, not a
+bigger denominator.
+</Callout>
+
+## 6. AS 24: Discontinuing Operations
+
+When a company decides to exit a major line of business, the reader deserves to know
+*before* the exit completes — the remaining business is what they are pricing. A
+**discontinuing operation** is a **component** of an enterprise that:
+
+- (a) the enterprise, **pursuant to a single plan**, is disposing of substantially in
+  its entirety (single transaction, demerger, spin-off), disposing of piecemeal, or
+  **terminating through abandonment**; and
+- (b) represents a **separate major line of business or geographical area** of
+  operations; and
+- (c) can be **distinguished operationally and for financial reporting** purposes.
+
+All three limbs must hold. Gradually phasing out a product line, shutting a few
+branches, or shifting production between sites is **restructuring, not a discontinuing
+operation**, because no separate major line is being exited under a single plan.
+
+Disclosure starts at the **initial disclosure event** — the **earlier** of (i) entering
+a **binding sale agreement** for substantially all the component's assets, and (ii) the
+board **both approving a detailed formal plan and announcing it**. A detailed formal
+plan pins down which major assets will go, the expected method and timing of the
+disposal, the principal locations affected, the employees to be compensated, and the
+estimated proceeds.
+
+AS 24 sets **no new recognition or measurement rules** — provisions come from AS 29,
+impairment from AS 28, employee terminations from AS 15. Its own demands are disclosure:
+a description of the operation and the segment it sat in, the date and nature of the
+initial disclosure event, the expected timing of completion, carrying amounts of assets
+and liabilities to be disposed of, the **revenue, expenses and pre-tax profit or loss
+attributable to the operation with its tax expense**, and its **net cash flows by
+activity** — updated every period until the discontinuance is complete, with
+**comparatives restated** to segregate continuing from discontinuing amounts.
+
+<Callout kind="pointer">
+A discontinuing operation is **not an extraordinary item** — its results stay inside
+ordinary activities, separately disclosed. And once a plan is announced, abandoning the
+plan is itself disclosable, with the reasons.
+</Callout>
+
+## 7. AS 25: Interim Financial Reporting
+
+AS 25 **does not force anyone to report quarterly** — statute and regulators (SEBI's
+listing obligations) decide who reports and how often. Its rule: **if** an enterprise is
+required to, or elects to, present an interim financial report, it must comply. An
+**interim period** is a reporting period **shorter than a full financial year**; an
+interim report is either a **complete** set of statements or a **condensed** one.
+
+Minimum contents of a condensed report: **condensed balance sheet, condensed statement
+of profit and loss, condensed cash flow statement, and selected explanatory notes** —
+each headline and subtotal from the latest annual statements survives condensation.
+Selected notes cover what changed since the year end: policy changes, seasonality,
+unusual items, estimate revisions, issues/buy-backs of securities, dividends, segment
+data (if AS 17 applies), post-interim events, acquisitions and disposals.
+
+The periods table the exam loves:
+
+| Statement | Current | Comparative |
+| --- | --- | --- |
+| Balance sheet | As at the interim date | As at the **close of the preceding full financial year** |
+| P&L | The interim period itself **plus** cumulative year-to-date | The matching interim period and matching year-to-date, one year back |
+| Cash flow | Cumulative **year-to-date only** | The matching year-to-date, one year back |
+
+Recognition and measurement: apply the **same accounting policies as the annual
+statements**. Revenue that arrives **seasonally or occasionally is not anticipated or
+deferred** at an interim date if such treatment would be improper at year end; costs
+incurred **unevenly** are anticipated or deferred only if that treatment would also be
+appropriate at the year end. **Materiality is assessed against the interim period's own
+data**, not the expected annual figures.
+
+Income tax is the calculation set-piece: interim tax expense uses the **best estimate of
+the weighted average annual effective tax rate** expected for the full year, applied to
+the interim period's pre-tax income, with later interim periods absorbing any change in
+the estimate.
+
+<Callout kind="example">
+Estimated annual income ₹10,00,000; slab tax: 30% on the first ₹5,00,000 and 40% on the
+rest → estimated annual tax ₹3,50,000 → weighted average annual effective rate 35%.
+Quarterly pre-tax income of ₹2,50,000 bears tax of ₹87,500 each quarter — not 30% on
+early quarters and 40% later.
+</Callout>
+
+If an estimate reported in an interim period **changes materially in the final interim
+period** and no separate report is published for that period, the **nature and amount of
+the change must be disclosed in the annual financial statements' notes**.
+
+## 8. The chapter in one paragraph
+
+AS 1 makes every enterprise disclose its significant accounting policies in one place,
+flag departures from the three fundamental assumptions, and confess policy changes with
+their money effect — while insisting disclosure never cures a wrong treatment. AS 3
+re-sorts the year into operating, investing and financing cash flows around a
+cash-equivalents core (≤ three months, insignificant risk), with interest/dividend
+classification hinging on whether the enterprise is financial. AS 17 makes any segment
+reportable that crosses 10% of revenue, of the greater-absolute profit-or-loss pool, or
+of assets — topped up until reportable segments carry 75% of external revenue. AS 18
+names five families of related parties around control (>50% votes / board / substantial
+interest + policy power) and significant influence (20% presumption), then discloses
+relationships, volumes and balances. AS 20 weights shares by time and consideration,
+restates bonus issues retrospectively, splits a cheap rights issue into its bonus
+element via fair-value/TERP, and admits only dilutive potential shares into diluted EPS.
+AS 24 forces disclosure of a single-plan exit from a major line of business from the
+earlier of a binding sale agreement or an approved-and-announced formal plan, using
+other standards for all measurement. AS 25 disciplines whoever must (or opts to) report
+interim: condensed statements, annual-policy consistency, and tax at the estimated
+weighted average annual effective rate.

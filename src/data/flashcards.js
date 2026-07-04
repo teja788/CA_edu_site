@@ -248,6 +248,32 @@ export const decks = [
       { id: 'fdep-18', front: 'For companies, indicative useful lives come from…', back: 'Schedule II of the Companies Act 2013 ("Useful Lives to Compute Depreciation", see s.123). Schedule III is the financial-statement FORMAT — a classic swap in MCQs.' },
     ],
   },
+  {
+    id: 'inter-p1-presentation-as',
+    name: 'Presentation & Disclosure AS — AS 1/3/17/18/20/24/25',
+    paper: 'Inter P1 · Ch 4',
+    applicableAttempts: ['Sept 2026', 'Jan 2027'],
+    cards: [
+      { id: 'pd-1', front: 'AS 1: when do the fundamental assumptions get disclosed?', back: 'ONLY on departure. Going concern, consistency, accrual are presumed — silence signals compliance. And disclosure never CURES a wrong treatment.' },
+      { id: 'pd-2', front: 'AS 1 policy-selection trio:', back: 'PRUDENCE · SUBSTANCE OVER FORM · MATERIALITY — all serving one master test: true and fair presentation. All significant policies disclosed in ONE PLACE.' },
+      { id: 'pd-3', front: 'AS 1 change in policy — disclose what?', back: 'The change + the AMOUNT of material effect (to the extent ascertainable; else say it is not ascertainable). Effect expected only in LATER periods → still disclose in the change year.' },
+      { id: 'pd-4', front: 'Cash equivalent (AS 3) — the two-part test:', back: 'SHORT maturity (~3 months or less FROM ACQUISITION) + INSIGNIFICANT risk of value change. A 9-month FD and equity shares both fail.' },
+      { id: 'pd-5', front: 'AS 3 interest & dividends — non-financial company:', back: 'RECEIVED → investing. PAID (interest and dividend) → financing. Financial enterprise: interest paid + interest/dividends received → OPERATING; dividends paid stay financing.' },
+      { id: 'pd-6', front: 'AS 3 taxes on income go to…', back: 'OPERATING — unless specifically identifiable with an investing/financing transaction (then they ride with it).' },
+      { id: 'pd-7', front: 'Shares issued for machinery in the CFS:', back: 'EXCLUDED — non-cash investing/financing transactions are disclosed elsewhere, never grossed up into flows.' },
+      { id: 'pd-8', front: 'AS 17 three 10% tests (any ONE qualifies):', back: 'REVENUE (ext + inter-segment) ≥ 10% of combined revenue · |RESULT| ≥ 10% of the GREATER absolute pool (all-profit vs all-loss) · ASSETS ≥ 10% of segment assets.' },
+      { id: 'pd-9', front: 'AS 17 75% floor:', back: 'Reportable segments must carry ≥ 75% of EXTERNAL enterprise revenue — keep adding sub-10% segments until they do. Last year’s segment of continuing significance stays reportable.' },
+      { id: 'pd-10', front: 'AS 18 control =', back: '>50% VOTING power · or BOARD-composition control · or SUBSTANTIAL voting interest + power to direct financial/operating policies. Significant influence: ≥20% presumption.' },
+      { id: 'pd-11', front: 'AS 18 deemed NOT related:', back: 'Mere common director · single big customer/supplier (economic dependence) · finance providers, trade unions, utilities, government departments in normal dealings.' },
+      { id: 'pd-12', front: 'AS 18: control but zero transactions —', back: 'STILL disclose name + nature of relationship. KMP remuneration IS a related-party transaction. State-controlled ↔ state-controlled dealings are exempt.' },
+      { id: 'pd-13', front: 'AS 20 bonus vs rights in the denominator:', back: 'BONUS/split → as if at the START of the earliest period, comparatives restated, never time-weighted. RIGHTS below fair value → multiply pre-rights counts by FAIR VALUE ÷ TERP.' },
+      { id: 'pd-14', front: 'AS 20 options in diluted EPS add…', back: 'Only the BONUS element: options × (fair − exercise)/fair. And in a LOSS year, potential shares that shrink the loss/share are ANTI-dilutive → excluded.' },
+      { id: 'pd-15', front: 'AS 20 cumulative preference dividend:', back: 'Deducted from earnings WHETHER OR NOT DECLARED. Both basic and diluted EPS go on the FACE of the P&L — even when negative.' },
+      { id: 'pd-16', front: 'AS 24 discontinuing operation = 3 cumulative limbs:', back: 'SINGLE PLAN exit (entirety/piecemeal/abandonment) + separate MAJOR line of business or geography + operationally & financially DISTINGUISHABLE. Gradual phase-outs and plant shifts fail.' },
+      { id: 'pd-17', front: 'AS 24 initial disclosure event:', back: 'EARLIER of (i) binding sale agreement for substantially all assets, (ii) board APPROVAL + ANNOUNCEMENT of a detailed formal plan. Not extraordinary; no new measurement rules — AS 29/28/15 do that work.' },
+      { id: 'pd-18', front: 'AS 25 interim tax rate:', back: 'Best estimate of the WEIGHTED AVERAGE ANNUAL effective rate × each period’s income. Estimate changes → adjust LATER interim periods, never restate. Materiality judged on INTERIM data.' },
+    ],
+  },
 ];
 
 export const allCards = decks.flatMap((d) => d.cards.map((c) => ({ ...c, deckId: d.id, deckName: d.name })));
