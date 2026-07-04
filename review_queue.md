@@ -56,3 +56,15 @@ Triage rules:
   readLink hrefs pointed at #s2/#s5/#s6, which never existed on the built page
   (Astro auto-slugs headings). Re-pointed to the real heading ids this
   session; spot-click two of them after the next deploy.
+
+## internal-reconstruction — VERIFY 2026-07-04
+
+- [ ] **Five-year disclosure anchor** — notes §6 and q-016 state that amounts
+  written off fixed assets under a scheme are shown for five years. The SM
+  Ch 14 asserts this; its statutory anchor today (the rule descends from an
+  old Schedule VI note) should be confirmed against current Schedule III /
+  NCLT practice, and the citations row initialled. The blind pass flagged the
+  same question as its one medium-confidence answer — same reason.
+- [ ] **s.66 clause labels** — content cites s.66(1)(a) / s.66(1)(b)(i)-(ii)
+  for the three reduction modes. Verify the exact clause lettering in the
+  current consolidated Act (India Code) and initial the citations rows.

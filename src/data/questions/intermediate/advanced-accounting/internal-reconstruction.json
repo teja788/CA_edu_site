@@ -1,0 +1,2077 @@
+{
+  "level": "intermediate",
+  "paper": "Paper 1 — Advanced Accounting",
+  "chapterSlug": "internal-reconstruction",
+  "chapter": "Ch 14 — Internal Reconstruction",
+  "questions": [
+    {
+      "id": "q-i1c14-001",
+      "topic": "Ch 14 · Internal Reconstruction · Sub-division",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Wainganga Paper Ltd has 8,000 equity shares of ₹100 each, ₹60 paid up. It sub-divides them into shares of ₹10 each. Each new share is paid up to the extent of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6",
+          "explanation": "The paid/unpaid proportion must survive the split: 60/100 = 60%, so each new ₹10 share carries ₹6 paid up (80,000 shares in all)."
+        },
+        {
+          "key": "B",
+          "text": "₹4",
+          "explanation": "₹4 is the UNPAID portion of each new share, not the paid-up portion."
+        },
+        {
+          "key": "C",
+          "text": "₹60",
+          "explanation": "₹60 was the paid-up amount on the old ₹100 share — the new share has a face value of only ₹10."
+        },
+        {
+          "key": "D",
+          "text": "₹10",
+          "explanation": "Fully paid new shares would quietly wipe out the shareholders' unpaid liability — sub-division must preserve the 60% paid proportion."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Alteration of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#2-alteration-of-share-capital-s61"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.61(1)(b); proportion rule",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-002",
+      "topic": "Ch 14 · Internal Reconstruction · s.61 procedure",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "To alter its share capital under section 61 (consolidation, sub-division, conversion to stock, cancellation of unissued shares), a company needs:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Authorisation in its articles and an ordinary resolution in general meeting",
+          "explanation": "s.61 alterations are the light-touch route: articles must permit, and an ordinary resolution suffices — no tribunal."
+        },
+        {
+          "key": "B",
+          "text": "A board resolution alone",
+          "explanation": "The board cannot alter the capital clause by itself — members must pass an ordinary resolution."
+        },
+        {
+          "key": "C",
+          "text": "Approval of creditors holding two-thirds in value",
+          "explanation": "Creditor consent belongs to reduction and schemes — an alteration touches nobody's paid-up money, so creditors have no say."
+        },
+        {
+          "key": "D",
+          "text": "A special resolution confirmed by the Tribunal",
+          "explanation": "Special resolution + NCLT confirmation is the s.66 REDUCTION procedure — alteration is deliberately easier."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Alteration of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#2-alteration-of-share-capital-s61"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.61(1)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-003",
+      "topic": "Ch 14 · Internal Reconstruction · Consolidation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Indravati Chemicals Ltd consolidates its 5,00,000 fully paid equity shares of ₹2 each into shares of ₹10 each. The number of shares after consolidation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,00,000 shares",
+          "explanation": "Capital stays ₹10,00,000; five ₹2 shares roll into one ₹10 share → 5,00,000 ÷ 5 = 1,00,000 shares."
+        },
+        {
+          "key": "B",
+          "text": "5,00,000 shares",
+          "explanation": "An unchanged count with a higher face value would multiply capital five times — consolidation repackages, never creates."
+        },
+        {
+          "key": "C",
+          "text": "50,000 shares",
+          "explanation": "This divides by 10 — the ratio is new denomination ÷ old = 5, not 10."
+        },
+        {
+          "key": "D",
+          "text": "2,50,000 shares",
+          "explanation": "This halves the count — the denomination rose fivefold (₹2 → ₹10), so the count falls fivefold."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Alteration of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#2-alteration-of-share-capital-s61"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.61(1)(b)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-004",
+      "topic": "Ch 14 · Internal Reconstruction · Cancelling unissued shares",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company cancels 1,00,000 authorised shares that were never taken or agreed to be taken by anyone. This is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A reduction of capital requiring Tribunal confirmation",
+          "explanation": "s.66 governs cancelling PAID-UP capital — unissued shares have no paid-up money in them."
+        },
+        {
+          "key": "B",
+          "text": "Prohibited — authorised capital can only be increased",
+          "explanation": "s.61 expressly permits cancelling shares not taken or agreed to be taken."
+        },
+        {
+          "key": "C",
+          "text": "An alteration under s.61 — it trims authorised capital and is NOT a reduction of share capital",
+          "explanation": "s.61(1)(e) cancellation touches only the unissued, authorised figure; no paid-up money is affected, so the s.66 machinery (special resolution, Tribunal) is not attracted."
+        },
+        {
+          "key": "D",
+          "text": "A buyback of securities",
+          "explanation": "A buyback purchases ISSUED shares from holders for cash — these shares were never issued."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Alteration of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#2-alteration-of-share-capital-s61"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.61(1)(e) and s.61(2)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-005",
+      "topic": "Ch 14 · Internal Reconstruction · Reduction of paid-up value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Under a sanctioned scheme, Panchganga Motors Ltd reduces its 60,000 equity shares of ₹10 fully paid to ₹6 paid up per share, the face value remaining ₹10. The credit to the Capital Reduction Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,60,000",
+          "explanation": "₹3,60,000 is the capital that REMAINS (60,000 × 6) — the credit is the amount given up."
+        },
+        {
+          "key": "B",
+          "text": "₹2,40,000",
+          "explanation": "The sacrifice is ₹4 per share: 60,000 × 4 = ₹2,40,000 credited to Capital Reduction."
+        },
+        {
+          "key": "C",
+          "text": "Nil",
+          "explanation": "Retaining the face value does not negate the reduction — paid-up value fell by ₹4 per share, and that sacrifice is the credit."
+        },
+        {
+          "key": "D",
+          "text": "₹6,00,000",
+          "explanation": "That is the entire original capital — only the cancelled slice moves to Capital Reduction."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66(1)(b)(ii); SM Ch 14 entries",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-006",
+      "topic": "Ch 14 · Internal Reconstruction · s.66 procedure",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A reduction of share capital under section 66 requires:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A special resolution alone, with no external confirmation",
+          "explanation": "The special resolution is necessary but not sufficient — the Tribunal must confirm before the reduction takes effect."
+        },
+        {
+          "key": "B",
+          "text": "Only a board resolution and a registered valuer's certificate",
+          "explanation": "Neither substitutes for the members' special resolution and the Tribunal's confirmation."
+        },
+        {
+          "key": "C",
+          "text": "A special resolution and confirmation by the Tribunal",
+          "explanation": "Because reduction shrinks the creditors' cushion, s.66 demands a special resolution plus NCLT confirmation on the company's application."
+        },
+        {
+          "key": "D",
+          "text": "An ordinary resolution, if the articles authorise",
+          "explanation": "That is the s.61 ALTERATION procedure — reduction is the heavier surgery with heavier safeguards."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66(1), s.66(3)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-007",
+      "topic": "Ch 14 · Internal Reconstruction · Both values reduced",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Koyna Turbines Ltd reduces its 25,000 equity shares of ₹100 fully paid to ₹25 fully paid (face value also reduced to ₹25). The credit to the Capital Reduction Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6,25,000",
+          "explanation": "₹6,25,000 is the NEW capital (25,000 × 25) — the credit is what was given up, not what remains."
+        },
+        {
+          "key": "B",
+          "text": "₹12,50,000",
+          "explanation": "A 50% write-down would give this — the scheme cut the shares by 75%, from ₹100 to ₹25."
+        },
+        {
+          "key": "C",
+          "text": "₹18,75,000",
+          "explanation": "Sacrifice = ₹75 per share × 25,000 = ₹18,75,000; the old ₹100 capital account closes, the new ₹25 account opens, and the difference feeds Capital Reduction."
+        },
+        {
+          "key": "D",
+          "text": "₹25,00,000",
+          "explanation": "The whole old capital cannot be the sacrifice — ₹6,25,000 of it survives as the new paid-up capital."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66(1)(b)(ii); SM Ch 14 entries",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-008",
+      "topic": "Ch 14 · Internal Reconstruction · Extinguishing uncalled liability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sina Foundries Ltd has 50,000 equity shares of ₹10 each, ₹8 paid up. The scheme cancels the uncalled ₹2 per share, making the shares ₹8 fully paid. The amount credited to the Capital Reduction Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,00,000",
+          "explanation": "That is the paid-up capital that CONTINUES (50,000 × 8) — untouched by this mode of reduction."
+        },
+        {
+          "key": "B",
+          "text": "₹1,00,000",
+          "explanation": "50,000 × ₹2 is the uncalled amount extinguished — but uncalled money was never paid in, so it cannot fund any write-off."
+        },
+        {
+          "key": "C",
+          "text": "₹5,00,000",
+          "explanation": "The full face value never moves — only the label on the shares changes, from ₹10 partly paid to ₹8 fully paid."
+        },
+        {
+          "key": "D",
+          "text": "Nil",
+          "explanation": "Cancelling UNCALLED capital extinguishes a future liability — no paid-up money is sacrificed, so nothing is freed to write losses against. The entry merely swaps partly paid ₹10 shares for fully paid ₹8 shares."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66(1)(a); SM Ch 14 entries",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-009",
+      "topic": "Ch 14 · Internal Reconstruction · Creditors' sacrifice",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Under a scheme of arrangement, trade creditors of Bhadra Ceramics Ltd amounting to ₹4,80,000 agree to accept 75 paise in the rupee in full settlement. The credit to the Reconstruction Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,60,000",
+          "explanation": "₹3,60,000 (75%) is what the creditors will still be PAID — the credit is only the slice they gave up."
+        },
+        {
+          "key": "B",
+          "text": "₹4,80,000",
+          "explanation": "The full claim is not sacrificed — three-quarters of it survives as a payable."
+        },
+        {
+          "key": "C",
+          "text": "₹1,20,000",
+          "explanation": "The sacrifice is the 25% forgone: 4,80,000 × 25% = ₹1,20,000 — Creditors Dr 1,20,000 → To Reconstruction."
+        },
+        {
+          "key": "D",
+          "text": "₹96,000",
+          "explanation": "This applies a 20% sacrifice — accepting 75 paise per rupee means forgoing 25 paise, not 20."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Compromise and surrender →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#4-compromise-arrangement-and-surrender"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — settlement of outside liabilities",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-010",
+      "topic": "Ch 14 · Internal Reconstruction · Debenture holders' sacrifice",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Holders of 12% debentures of ₹5,00,000 in Netravati Infra Ltd agree to exchange them for new 10% debentures equal to 85% of their claim. The sacrifice credited to the Reconstruction Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹75,000",
+          "explanation": "New debentures = 85% × 5,00,000 = ₹4,25,000; sacrifice = 5,00,000 − 4,25,000 = ₹75,000."
+        },
+        {
+          "key": "B",
+          "text": "₹5,00,000",
+          "explanation": "The old debentures are not written off entirely — 85% of the claim survives in new form."
+        },
+        {
+          "key": "C",
+          "text": "₹4,25,000",
+          "explanation": "That is the NEW debenture liability issued — the reconstruction credit is only the portion surrendered."
+        },
+        {
+          "key": "D",
+          "text": "₹50,000",
+          "explanation": "This takes a 10% sacrifice — the exchange is at 85%, so 15% is forgone. (The coupon drop from 12% to 10% affects future interest, not this principal computation.)"
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Compromise and surrender →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#4-compromise-arrangement-and-surrender"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — settlement of outside liabilities",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-011",
+      "topic": "Ch 14 · Internal Reconstruction · Asset appreciation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "As part of a reconstruction scheme, land of Manjira Estates Ltd with a book value of ₹3,00,000 is revalued at ₹4,20,000. The entry is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Land A/c Dr ₹4,20,000 → To Capital Reduction A/c ₹4,20,000",
+          "explanation": "Only the INCREASE of ₹1,20,000 is recorded — the ₹3,00,000 book value already sits in the land account."
+        },
+        {
+          "key": "B",
+          "text": "Land A/c Dr ₹1,20,000 → To Capital Reduction A/c ₹1,20,000",
+          "explanation": "An appreciation found during the scheme is a credit the scheme can use: debit the asset up by ₹1,20,000, credit Capital Reduction."
+        },
+        {
+          "key": "C",
+          "text": "No entry — appreciation cannot be recognised in a reconstruction",
+          "explanation": "The SM treatment expressly credits appreciations to Capital Reduction — schemes routinely revalue both ways."
+        },
+        {
+          "key": "D",
+          "text": "Land A/c Dr ₹1,20,000 → To Revaluation Reserve A/c ₹1,20,000",
+          "explanation": "In a reconstruction the surplus is marshalled into the Capital Reduction Account to absorb write-offs — parking it in a revaluation reserve would defeat the scheme."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Capital Reduction Account →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#5-the-capital-reduction-account-at-work"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — entries on reconstruction (appreciation)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-012",
+      "topic": "Ch 14 · Internal Reconstruction · Write-off total",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A scheme requires Kundalika Motors Ltd to write off: P&L debit balance ₹2,60,000, goodwill ₹80,000, preliminary expenses ₹15,000 and overvalued patents ₹45,000. The total debit to the Capital Reduction Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,85,000",
+          "explanation": "This omits preliminary expenses — fictitious assets are always in the write-off list."
+        },
+        {
+          "key": "B",
+          "text": "₹4,00,000",
+          "explanation": "2,60,000 + 80,000 + 15,000 + 45,000 = ₹4,00,000 — every hollow asset and the accumulated loss go out through Capital Reduction."
+        },
+        {
+          "key": "C",
+          "text": "₹3,20,000",
+          "explanation": "This omits goodwill — a worthless intangible is precisely what the scheme exists to remove."
+        },
+        {
+          "key": "D",
+          "text": "₹3,55,000",
+          "explanation": "This omits the ₹45,000 patents write-down — overvalued assets are written off through the account like the rest."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Capital Reduction Account →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#5-the-capital-reduction-account-at-work"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — entries on reconstruction (write-offs)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-013",
+      "topic": "Ch 14 · Internal Reconstruction · Balance of the account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "After all scheme entries, the Capital Reduction Account of Penganga Tools Ltd shows credits of ₹5,10,000 against write-offs of ₹4,72,000. The remaining balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹38,000, credited to the Statement of P&L",
+          "explanation": "Routing a capital sacrifice through profit would let the scheme manufacture earnings — it goes to capital reserve."
+        },
+        {
+          "key": "B",
+          "text": "₹38,000, transferred to General Reserve",
+          "explanation": "The destination is CAPITAL reserve — the surplus arose from capital sacrifices, not trading, and stays non-distributable."
+        },
+        {
+          "key": "C",
+          "text": "Nil — the account must always close out exactly",
+          "explanation": "Schemes rarely land exactly; the account closes BY the transfer of its ₹38,000 balance to capital reserve."
+        },
+        {
+          "key": "D",
+          "text": "₹38,000, transferred to Capital Reserve",
+          "explanation": "A credit balance left after the write-offs goes to Capital Reserve under Reserves and Surplus — 5,10,000 − 4,72,000 = ₹38,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The Capital Reduction Account →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#5-the-capital-reduction-account-at-work"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — balance of reconstruction account",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-014",
+      "topic": "Ch 14 · Internal Reconstruction · Shortfall in the account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "If the write-offs a scheme demands EXCEED the total credits in the Reconstruction Account, the gap is bridged by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Drawing on the existing reserves in the books",
+          "explanation": "The SM treatment: where sacrifices fall short, reserves already standing in the books are applied against the remaining write-offs."
+        },
+        {
+          "key": "B",
+          "text": "Debiting the Tribunal-approved amount to share premium without limit",
+          "explanation": "Securities premium can participate only as the scheme and law provide — the standing answer for a shortfall is the company's existing reserves."
+        },
+        {
+          "key": "C",
+          "text": "Carrying the excess forward as goodwill",
+          "explanation": "Manufacturing an asset out of unabsorbed losses would repeat the disease the scheme is curing."
+        },
+        {
+          "key": "D",
+          "text": "Leaving the assets overstated to the extent of the gap",
+          "explanation": "A scheme that leaves the books dishonest has failed its one job — the write-offs must be completed."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The Capital Reduction Account →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#5-the-capital-reduction-account-at-work"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — balance of reconstruction account",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-015",
+      "topic": "Ch 14 · Internal Reconstruction · \"and Reduced\"",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The words \"and Reduced\" are added after the company's name following a capital reduction:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only if the Tribunal so orders",
+          "explanation": "The suffix is not automatic — it appears only when the confirming Tribunal directs it as a warning flag to those dealing with the company."
+        },
+        {
+          "key": "B",
+          "text": "Whenever the reduction exceeds 50% of paid-up capital",
+          "explanation": "No percentage trigger exists — the Tribunal's discretion is the only test."
+        },
+        {
+          "key": "C",
+          "text": "In every case, for five years",
+          "explanation": "Five years is the disclosure period for amounts written off fixed assets — the name suffix itself depends entirely on the Tribunal's order."
+        },
+        {
+          "key": "D",
+          "text": "Never — the practice was abolished by the Companies Act 2013",
+          "explanation": "The practice survives; it simply operates at the Tribunal's direction."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The reconstructed balance sheet →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#6-the-reconstructed-balance-sheet"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — presentation after reconstruction",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-016",
+      "topic": "Ch 14 · Internal Reconstruction · Five-year disclosure",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The amount written off fixed assets under a reconstruction scheme must be shown in the company's accounts for:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ten years",
+          "explanation": "Ten years has no basis here — the disclosure period is five."
+        },
+        {
+          "key": "B",
+          "text": "Five years",
+          "explanation": "The SM's presentation rule: the write-off remains visible in the fixed-asset disclosures for five years, keeping the surgery on record."
+        },
+        {
+          "key": "C",
+          "text": "Until the asset is disposed of",
+          "explanation": "The rule is time-boxed at five years, not tied to the asset's remaining life."
+        },
+        {
+          "key": "D",
+          "text": "One year",
+          "explanation": "A single year would let the write-down vanish from view immediately — the prescribed window is five years."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The reconstructed balance sheet →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#6-the-reconstructed-balance-sheet"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — presentation after reconstruction",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-017",
+      "topic": "Ch 14 · Internal Reconstruction · Surrender — cancellation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a surrender scheme, shareholders of Ghataprabha Mills Ltd surrender shares with a paid-up value of ₹7,20,000. Shares worth ₹5,20,000 are re-allotted to creditors in settlement of their claims. The surrendered shares remaining are cancelled. The credit to the Reconstruction Account on cancellation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nil",
+          "explanation": "Surrendered shares that find no taker do not quietly return to shareholders — they are cancelled through the Reconstruction Account."
+        },
+        {
+          "key": "B",
+          "text": "₹2,00,000",
+          "explanation": "Unutilised surrendered capital = 7,20,000 − 5,20,000 = ₹2,00,000, cancelled and credited to the Reconstruction Account."
+        },
+        {
+          "key": "C",
+          "text": "₹5,20,000",
+          "explanation": "That portion was RE-ALLOTTED, not cancelled — it lives on as capital in the creditors' hands."
+        },
+        {
+          "key": "D",
+          "text": "₹7,20,000",
+          "explanation": "₹5,20,000 of the surrendered shares went back out to creditors — only the unutilised remainder is cancelled."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Compromise and surrender →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#4-compromise-arrangement-and-surrender"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — surrender of shares",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-018",
+      "topic": "Ch 14 · Internal Reconstruction · Surrender — purpose",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the surrender-of-shares method of internal reconstruction, the surrendered shares are primarily used to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Re-allot to debenture holders and creditors so their claims against the company reduce",
+          "explanation": "That is the engine of the method: sub-divide, surrender, and hand the surrendered shares to outside claimants in discharge of their dues; the leftovers are cancelled."
+        },
+        {
+          "key": "B",
+          "text": "Sell in the market to raise fresh working capital",
+          "explanation": "A distressed company hawking its own surrendered shares is not the scheme — they go to existing claimants, not the market."
+        },
+        {
+          "key": "C",
+          "text": "Hold as treasury stock for future employee options",
+          "explanation": "Indian company law does not permit treasury shares — surrendered shares are either re-allotted under the scheme or cancelled."
+        },
+        {
+          "key": "D",
+          "text": "Distribute pro-rata to the remaining shareholders as bonus",
+          "explanation": "Handing them back to shareholders would undo the surrender — the point is to move value to creditors."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Compromise and surrender →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#4-compromise-arrangement-and-surrender"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — surrender of shares",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-019",
+      "topic": "Ch 14 · Internal Reconstruction · Scheme expenses",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Expenses incurred in carrying out a scheme of internal reconstruction are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Charged to the Statement of P&L of the following year",
+          "explanation": "The costs belong to the scheme, not to next year's operations — they go through the reconstruction account now."
+        },
+        {
+          "key": "B",
+          "text": "Debited to the Capital Reduction (Reconstruction) Account",
+          "explanation": "Scheme costs are part of the reconstruction itself and are absorbed by the account along with the write-offs."
+        },
+        {
+          "key": "C",
+          "text": "Capitalised as deferred revenue expenditure",
+          "explanation": "Creating a new fictitious asset in the very scheme meant to remove them would be self-defeating."
+        },
+        {
+          "key": "D",
+          "text": "Adjusted against securities premium in all cases",
+          "explanation": "Securities premium participates only where the scheme provides — the default home for scheme expenses is the reconstruction account."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Capital Reduction Account →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#5-the-capital-reduction-account-at-work"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — entries on reconstruction",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-020",
+      "topic": "Ch 14 · Internal Reconstruction · New paid-up capital",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Varada Cements Ltd has 30,000 equity shares of ₹100 fully paid. A sanctioned scheme reduces them to ₹40 fully paid. The paid-up share capital after the scheme is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,00,000",
+          "explanation": "This confuses the ₹10 face-value convention with the stated ₹40 — the new paid-up value per share is ₹40."
+        },
+        {
+          "key": "B",
+          "text": "₹12,00,000",
+          "explanation": "30,000 × ₹40 = ₹12,00,000 — the balance-sheet capital line after the scheme."
+        },
+        {
+          "key": "C",
+          "text": "₹18,00,000",
+          "explanation": "₹18,00,000 (30,000 × 60) is the amount CANCELLED and credited to Capital Reduction — not what survives."
+        },
+        {
+          "key": "D",
+          "text": "₹30,00,000",
+          "explanation": "That is the pre-scheme capital — the reduction cut each share from ₹100 to ₹40."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66; SM Ch 14 entries",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-021",
+      "topic": "Ch 14 · Internal Reconstruction · Internal vs external",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The essential difference between internal and external reconstruction is that in internal reconstruction:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A new company takes over the business of the old one",
+          "explanation": "That is EXTERNAL reconstruction — the defining feature of the internal variety is that no new entity appears."
+        },
+        {
+          "key": "B",
+          "text": "The accounting follows AS 14",
+          "explanation": "AS 14 governs amalgamations including external reconstruction — internal reconstruction runs on the Capital Reduction Account, not AS 14."
+        },
+        {
+          "key": "C",
+          "text": "Creditors can never be asked to sacrifice",
+          "explanation": "Compromises with creditors and debenture holders are a standard limb of internal schemes."
+        },
+        {
+          "key": "D",
+          "text": "The same company survives and absorbs its own losses; no new company is formed",
+          "explanation": "Internal reconstruction reorganises capital within the existing entity. External reconstruction forms a NEW company to take over the business (accounted under AS 14) and winds the old one up."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: What internal reconstruction is →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#1-what-internal-reconstruction-is"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — types of reconstruction",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-022",
+      "topic": "Ch 14 · Internal Reconstruction · When the account opens",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of these methods of internal reconstruction does NOT involve the Capital Reduction / Reconstruction Account?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reduction of share capital by cancelling lost capital",
+          "explanation": "This is the account's core use — the cancelled capital is its opening credit."
+        },
+        {
+          "key": "B",
+          "text": "A compromise in which creditors accept part payment",
+          "explanation": "The creditors' sacrifice is credited to the reconstruction account."
+        },
+        {
+          "key": "C",
+          "text": "Sub-division of shares and variation of shareholders' rights",
+          "explanation": "Alterations of capital (s.61) and rights variations (s.48) rearrange packaging — nobody sacrifices paid-up money, so no reconstruction account opens. It is needed for reduction, compromises and surrender."
+        },
+        {
+          "key": "D",
+          "text": "Surrender of shares with cancellation of the unutilised portion",
+          "explanation": "The cancellation credit flows through the reconstruction account."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Alteration of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#2-alteration-of-share-capital-s61"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — entries on reconstruction (which methods open the account)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-023",
+      "topic": "Ch 14 · Internal Reconstruction · Reserves given up",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under a scheme, the equity shareholders of Hemavati Agro Ltd give up their claim over the general reserve of ₹2,50,000 so it can absorb accumulated losses. The entry is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reconstruction A/c Dr ₹2,50,000 → To General Reserve A/c ₹2,50,000",
+          "explanation": "This runs backwards — it would CREATE a reserve out of the scheme instead of absorbing one into it."
+        },
+        {
+          "key": "B",
+          "text": "General Reserve A/c Dr ₹2,50,000 → To Capital Reserve A/c ₹2,50,000",
+          "explanation": "Capital reserve receives only the FINAL surplus of the reconstruction account — reserves given up route through the account first."
+        },
+        {
+          "key": "C",
+          "text": "General Reserve A/c Dr ₹2,50,000 → To Reconstruction A/c ₹2,50,000",
+          "explanation": "Reserves surrendered by shareholders are marshalled into the Reconstruction Account, joining the pool that absorbs the write-offs."
+        },
+        {
+          "key": "D",
+          "text": "No entry — reserves cannot be applied in a reconstruction",
+          "explanation": "Reserves given up by shareholders are a standard credit in schemes — the SM lists this entry expressly."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Compromise and surrender →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#4-compromise-arrangement-and-surrender"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — shareholders giving up reserves",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-024",
+      "topic": "Ch 14 · Internal Reconstruction · Modes of reduction",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Section 66 permits a company to reduce its share capital in which of the following ways?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only by cancelling capital that is lost",
+          "explanation": "Cancelling lost capital is one mode of three — extinguishing uncalled liability and paying off excess capital are equally valid."
+        },
+        {
+          "key": "B",
+          "text": "Extinguish liability for unpaid capital; pay off excess capital; cancel lost capital",
+          "explanation": "The three statutory modes: relieve shareholders of uncalled amounts, return capital surplus to requirements, and cancel paid-up capital unrepresented by assets — the third being the reconstruction workhorse."
+        },
+        {
+          "key": "C",
+          "text": "Only by paying off capital in cash",
+          "explanation": "Pay-off is one mode; the other two involve no cash at all."
+        },
+        {
+          "key": "D",
+          "text": "By cancelling unissued authorised shares",
+          "explanation": "That is a s.61 ALTERATION — unissued shares hold no paid-up money, so cancelling them is not a reduction."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66(1)(a)-(b)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-025",
+      "topic": "Ch 14 · Internal Reconstruction · Paying off excess capital",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Amaravati Textiles Ltd, flush with cash, returns ₹25 per share on its 10,000 preference shares of ₹100 fully paid (reducing them to ₹75 paid). Paid-up capital falls by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,50,000 — and nothing is credited to Capital Reduction",
+          "explanation": "10,000 × 25 = ₹2,50,000 leaves as cash to shareholders. Value returned, not sacrificed — so this mode generates no reconstruction credit."
+        },
+        {
+          "key": "B",
+          "text": "₹10,00,000",
+          "explanation": "Only the ₹25 slice per share is paid off — ₹75 per share stays as capital."
+        },
+        {
+          "key": "C",
+          "text": "₹7,50,000",
+          "explanation": "₹7,50,000 is the capital REMAINING (10,000 × 75), not the reduction."
+        },
+        {
+          "key": "D",
+          "text": "₹2,50,000, credited to the Capital Reduction Account",
+          "explanation": "The amount is right but the destination is wrong — cash went back to shareholders, so there is no sacrifice to credit to the account."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66(1)(b)(i)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-026",
+      "topic": "Ch 14 · Internal Reconstruction · Confirming authority",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The authority that confirms a reduction of share capital under section 66 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The National Company Law Tribunal",
+          "explanation": "The company applies to the Tribunal after the special resolution; the NCLT hears creditors' representations before confirming."
+        },
+        {
+          "key": "B",
+          "text": "The Registrar of Companies",
+          "explanation": "The RoC registers the confirmed reduction afterwards — confirmation itself is the Tribunal's."
+        },
+        {
+          "key": "C",
+          "text": "The Regional Director",
+          "explanation": "The Regional Director has other compromises to bless — s.66 confirmation belongs to the Tribunal."
+        },
+        {
+          "key": "D",
+          "text": "SEBI, for all companies",
+          "explanation": "SEBI's writ runs over listed-company processes, not the s.66 confirmation, which is the Tribunal's for every company."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Reduction of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#3-reduction-of-share-capital-s66"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.66(1), (3)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-027",
+      "topic": "Ch 14 · Internal Reconstruction · Full account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Aganashini Marine Ltd's scheme produces these Reconstruction Account entries — credits: capital reduction ₹6,00,000, creditors' sacrifice ₹90,000, appreciation of land ₹60,000; debits: P&L debit balance ₹4,80,000, goodwill ₹1,20,000, machinery written down ₹90,000, scheme expenses ₹20,000. The transfer to Capital Reserve is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹40,000",
+          "explanation": "Credits 7,50,000 − debits 7,10,000 = ₹40,000 to Capital Reserve."
+        },
+        {
+          "key": "B",
+          "text": "Nil",
+          "explanation": "The account does not net to zero here — credits exceed debits by ₹40,000, and that surplus must go somewhere: capital reserve."
+        },
+        {
+          "key": "C",
+          "text": "₹7,10,000",
+          "explanation": "That is the debit side total — the capital reserve gets only the excess of credits over debits."
+        },
+        {
+          "key": "D",
+          "text": "₹7,50,000",
+          "explanation": "That is the gross credit side — the write-offs must be set against it first."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The Capital Reduction Account →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#5-the-capital-reduction-account-at-work"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 14 — balance of reconstruction account",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "q-i1c14-028",
+      "topic": "Ch 14 · Internal Reconstruction · Conversion to stock",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 61, a company may convert into stock:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Shares held for more than one year",
+          "explanation": "Holding period is irrelevant — the only statutory condition is that the shares be fully paid."
+        },
+        {
+          "key": "B",
+          "text": "Only preference shares",
+          "explanation": "No class restriction of this kind exists — the test is full payment, not class."
+        },
+        {
+          "key": "C",
+          "text": "Any shares, whether fully or partly paid",
+          "explanation": "Partly paid shares cannot become stock — the unpaid-call machinery needs identifiable shares."
+        },
+        {
+          "key": "D",
+          "text": "Only its fully paid-up shares",
+          "explanation": "Stock is the fused, transferable-in-any-amount form of capital — only FULLY PAID shares can be converted (and stock can be reconverted into fully paid shares)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Alteration of share capital →",
+        "href": "/intermediate/advanced-accounting/internal-reconstruction/#2-alteration-of-share-capital-s61"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s.61(1)(c)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "cs-i1c14-001",
+      "type": "case_mcq_set",
+      "topic": "Ch 14 · Internal Reconstruction · Case: Vetravati Engineering (full scheme)",
+      "case": "Vetravati Engineering Ltd has been unprofitable for six years. Its balance sheet shows: 80,000 equity shares of ₹10 fully paid (₹8,00,000); 3,000 9% preference shares of ₹100 fully paid (₹3,00,000); trade creditors ₹2,40,000; P&L debit balance ₹5,80,000; goodwill ₹1,00,000; obsolete inventory overvalued by ₹60,000; preliminary expenses ₹10,000. The Tribunal-confirmed scheme provides: equity shares reduced to ₹2.50 fully paid (face value ₹2.50); preference shares reduced to ₹75 fully paid (face value ₹75); creditors forgo 25% of their claims; freehold property is appreciated by ₹90,000; all fictitious and lost assets are written off; any balance goes to capital reserve.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c14-001-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The credit to Capital Reduction from the equity shareholders is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹8,00,000",
+              "explanation": "The whole old capital is not sacrificed — ₹2,00,000 survives as the new paid-up capital."
+            },
+            {
+              "key": "B",
+              "text": "₹2,00,000",
+              "explanation": "₹2,00,000 (80,000 × 2.50) is what REMAINS, not what was given up."
+            },
+            {
+              "key": "C",
+              "text": "₹7,50,000",
+              "explanation": "This multiplies ₹7.50 by 1,00,000 shares — the company has 80,000 shares."
+            },
+            {
+              "key": "D",
+              "text": "₹6,00,000",
+              "explanation": "Sacrifice = ₹7.50 per share × 80,000 = ₹6,00,000; the shares continue as ₹2.50 fully paid."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "Companies Act 2013, s.66(1)(b)(ii); SM Ch 14 entries"
+        },
+        {
+          "id": "cs-i1c14-001-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Total credits to the Capital Reduction Account under the scheme are:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹7,65,000",
+              "explanation": "This omits the creditors' ₹60,000 sacrifice — a compromise credit belongs in the account."
+            },
+            {
+              "key": "B",
+              "text": "₹7,50,000",
+              "explanation": "This omits the preference shareholders' ₹75,000 sacrifice (₹100 → ₹75 per share on 3,000 shares)."
+            },
+            {
+              "key": "C",
+              "text": "₹7,35,000",
+              "explanation": "This omits the ₹90,000 appreciation of freehold property, which the scheme credits to the account."
+            },
+            {
+              "key": "D",
+              "text": "₹8,25,000",
+              "explanation": "Equity 6,00,000 + preference (3,000 × ₹25) 75,000 + creditors (25% × 2,40,000) 60,000 + property appreciation 90,000 = ₹8,25,000."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "SM Ch 14 — entries on reconstruction"
+        },
+        {
+          "id": "cs-i1c14-001-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Total write-offs debited to the Capital Reduction Account are:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹7,50,000",
+              "explanation": "P&L 5,80,000 + goodwill 1,00,000 + inventory overvaluation 60,000 + preliminary expenses 10,000 = ₹7,50,000."
+            },
+            {
+              "key": "B",
+              "text": "₹7,40,000",
+              "explanation": "This omits the ₹10,000 preliminary expenses — fictitious assets are always in the write-off list."
+            },
+            {
+              "key": "C",
+              "text": "₹6,50,000",
+              "explanation": "This omits goodwill — a worthless intangible is the first thing a scheme removes."
+            },
+            {
+              "key": "D",
+              "text": "₹6,90,000",
+              "explanation": "This omits the ₹60,000 inventory overvaluation — overvalued current assets are written down through the account too."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 14 — entries on reconstruction"
+        },
+        {
+          "id": "cs-i1c14-001-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The balance transferred to Capital Reserve is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹75,000",
+              "explanation": "Credits 8,25,000 − write-offs 7,50,000 = ₹75,000 to Capital Reserve."
+            },
+            {
+              "key": "B",
+              "text": "₹8,25,000",
+              "explanation": "That is the gross credit side; ₹7,50,000 of it was consumed by the write-offs."
+            },
+            {
+              "key": "C",
+              "text": "₹1,50,000",
+              "explanation": "This double-counts — the surplus is a single ₹75,000."
+            },
+            {
+              "key": "D",
+              "text": "Nil",
+              "explanation": "The scheme's credits exceed its debits by ₹75,000 — that surplus must be parked in capital reserve."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 14 — balance of reconstruction account"
+        },
+        {
+          "id": "cs-i1c14-001-e",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Vetravati must add \"and Reduced\" to its name:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Never — the suffix applies only to voluntary winding up",
+              "explanation": "The practice belongs to capital reduction, applied when the Tribunal orders it."
+            },
+            {
+              "key": "B",
+              "text": "Automatically, because the reduction exceeded 50%",
+              "explanation": "There is no percentage trigger — only the Tribunal's direction matters."
+            },
+            {
+              "key": "C",
+              "text": "Automatically, for five years",
+              "explanation": "Five years is the fixed-asset write-off disclosure window, not a name rule."
+            },
+            {
+              "key": "D",
+              "text": "Only if the Tribunal's confirmation order so directs",
+              "explanation": "The suffix operates at the Tribunal's discretion — it is a warning label the NCLT may or may not require."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "SM Ch 14 — presentation after reconstruction"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c14-002",
+      "type": "case_mcq_set",
+      "topic": "Ch 14 · Internal Reconstruction · Case: Tapti Sugars (alteration)",
+      "case": "Tapti Sugars Ltd, authorised by its articles, resolves in general meeting to sub-divide its 20,000 equity shares of ₹50 each, ₹40 paid up, into equity shares of ₹10 each. No other change is made to the capital structure.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c14-002-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "After the sub-division, the number of equity shares is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "2,00,000 shares",
+              "explanation": "A tenfold count needs a ₹5 new denomination — the resolution says ₹10."
+            },
+            {
+              "key": "B",
+              "text": "1,00,000 shares",
+              "explanation": "Each ₹50 share splits into five ₹10 shares: 20,000 × 5 = 1,00,000."
+            },
+            {
+              "key": "C",
+              "text": "20,000 shares",
+              "explanation": "An unchanged count with a smaller face value would shrink capital — sub-division multiplies the count instead."
+            },
+            {
+              "key": "D",
+              "text": "40,000 shares",
+              "explanation": "A doubling would follow a ₹50 → ₹25 split; the split here is ₹50 → ₹10, i.e. fivefold."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "Companies Act 2013, s.61(1)(b)"
+        },
+        {
+          "id": "cs-i1c14-002-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The paid-up amount on each new ₹10 share is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹8",
+              "explanation": "The paid proportion (40/50 = 80%) must be preserved: 80% × ₹10 = ₹8 paid up, ₹2 uncalled."
+            },
+            {
+              "key": "B",
+              "text": "₹2",
+              "explanation": "₹2 is the UNPAID amount per new share."
+            },
+            {
+              "key": "C",
+              "text": "₹10",
+              "explanation": "Making the new shares fully paid would extinguish the shareholders' unpaid liability — that needs a s.66 reduction, not a sub-division."
+            },
+            {
+              "key": "D",
+              "text": "₹40",
+              "explanation": "₹40 was the paid-up amount on the old ₹50 share — each new share is only a fifth of it."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 14 — proportion rule on sub-division"
+        },
+        {
+          "id": "cs-i1c14-002-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The Capital Reduction Account required for this sub-division is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "None — an alteration under s.61 never opens the account",
+              "explanation": "Paid-up capital is unchanged (1,00,000 × ₹8 = 20,000 × ₹40); nothing is sacrificed, so there is nothing to credit."
+            },
+            {
+              "key": "B",
+              "text": "Credited with ₹2,00,000",
+              "explanation": "The ₹2,00,000 uncalled amount neither disappears nor moves — it remains callable on the new shares."
+            },
+            {
+              "key": "C",
+              "text": "Credited with ₹8,00,000",
+              "explanation": "₹8,00,000 is simply the continuing paid-up capital — no part of it was given up."
+            },
+            {
+              "key": "D",
+              "text": "Debited with the sub-division expenses only",
+              "explanation": "Routine alteration costs are revenue expenses; the reconstruction account does not open for an alteration at all."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 14 — which methods open the account"
+        },
+        {
+          "id": "cs-i1c14-002-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The resolution and approvals Tapti needed were:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Consent of 75% of creditors in value",
+              "explanation": "Creditors are unaffected by a repackaging of shares — their consent is not required."
+            },
+            {
+              "key": "B",
+              "text": "An ordinary resolution, with authority in the articles — no Tribunal involvement",
+              "explanation": "s.61 alterations run on articles + ordinary resolution; the NCLT enters only for s.66 reductions."
+            },
+            {
+              "key": "C",
+              "text": "A board resolution ratified by the Registrar",
+              "explanation": "Members must resolve; the Registrar only receives the notice of alteration afterwards."
+            },
+            {
+              "key": "D",
+              "text": "A special resolution confirmed by the NCLT",
+              "explanation": "That is the s.66 reduction procedure — a sub-division is an alteration, not a reduction."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "Companies Act 2013, s.61(1), s.64"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c14-003",
+      "type": "case_mcq_set",
+      "topic": "Ch 14 · Internal Reconstruction · Case: Pennar Fabrics (surrender)",
+      "case": "Pennar Fabrics Ltd has 30,000 equity shares of ₹20 fully paid. Its sanctioned scheme: (1) sub-divide each share into five shares of ₹4 each; (2) shareholders surrender 50% of their holdings to the company; (3) creditors owed ₹2,60,000 accept 60,000 of the surrendered shares (₹4 each, ₹2,40,000) in full settlement of their claims; (4) surrendered shares not re-allotted are cancelled.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c14-003-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The paid-up value of the shares surrendered is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹6,00,000",
+              "explanation": "That is the entire capital — only half the holdings are surrendered."
+            },
+            {
+              "key": "B",
+              "text": "₹1,50,000",
+              "explanation": "This halves the value twice — 50% of the ₹6,00,000 capital is ₹3,00,000."
+            },
+            {
+              "key": "C",
+              "text": "₹75,000",
+              "explanation": "75,000 is the NUMBER of shares surrendered — their paid-up value is that count × ₹4."
+            },
+            {
+              "key": "D",
+              "text": "₹3,00,000",
+              "explanation": "After sub-division: 1,50,000 shares of ₹4. Surrender 50% → 75,000 shares × ₹4 = ₹3,00,000."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "SM Ch 14 — surrender of shares"
+        },
+        {
+          "id": "cs-i1c14-003-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The sacrifice by creditors credited to the Reconstruction Account is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹2,60,000",
+              "explanation": "The whole claim was not forgone — shares worth ₹2,40,000 discharged most of it."
+            },
+            {
+              "key": "B",
+              "text": "₹2,40,000",
+              "explanation": "₹2,40,000 is the value of shares the creditors RECEIVED — their sacrifice is the shortfall against the claim."
+            },
+            {
+              "key": "C",
+              "text": "₹20,000",
+              "explanation": "Claims of ₹2,60,000 settled with shares worth ₹2,40,000 → sacrifice ₹20,000."
+            },
+            {
+              "key": "D",
+              "text": "₹60,000",
+              "explanation": "₹60,000 confuses the cancelled-shares figure with the creditors' sacrifice."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "SM Ch 14 — surrender of shares; settlement of liabilities"
+        },
+        {
+          "id": "cs-i1c14-003-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The credit to the Reconstruction Account on cancelling the unutilised surrendered shares is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹60,000",
+              "explanation": "Surrendered 75,000 shares − re-allotted 60,000 = 15,000 shares × ₹4 = ₹60,000 cancelled to the Reconstruction Account."
+            },
+            {
+              "key": "B",
+              "text": "₹3,00,000",
+              "explanation": "That is the full surrendered value — 60,000 of those shares went to creditors and live on."
+            },
+            {
+              "key": "C",
+              "text": "₹15,000",
+              "explanation": "15,000 is the count of cancelled shares; the rupee credit is that count × ₹4."
+            },
+            {
+              "key": "D",
+              "text": "₹2,40,000",
+              "explanation": "The re-allotted shares are NOT cancelled — they became the creditors' capital."
+            }
+          ],
+          "correct": "A",
+          "sourceRef": "SM Ch 14 — surrender of shares"
+        },
+        {
+          "id": "cs-i1c14-003-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The total credited to the Reconstruction Account by this scheme (creditors' sacrifice plus cancellation) is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹3,20,000",
+              "explanation": "This adds the full surrendered value to the sacrifice — but ₹2,40,000 of the surrendered shares was re-allotted, not sacrificed."
+            },
+            {
+              "key": "B",
+              "text": "₹60,000",
+              "explanation": "This counts only the cancellation — the creditors' ₹20,000 sacrifice is a reconstruction credit too."
+            },
+            {
+              "key": "C",
+              "text": "₹80,000",
+              "explanation": "Sacrifice ₹20,000 + cancellation ₹60,000 = ₹80,000 available to absorb write-offs."
+            },
+            {
+              "key": "D",
+              "text": "₹20,000",
+              "explanation": "This counts only the creditors' sacrifice and misses the ₹60,000 cancellation credit."
+            }
+          ],
+          "correct": "C",
+          "sourceRef": "SM Ch 14 — surrender of shares"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c14-004",
+      "type": "case_mcq_set",
+      "topic": "Ch 14 · Internal Reconstruction · Case: Bhima Alloys (reduction + account)",
+      "case": "Bhima Alloys Ltd's Tribunal-confirmed scheme provides: (1) the 1,20,000 equity shares of ₹10 fully paid are reduced to ₹5 fully paid (face value ₹5); (2) plant is revalued upwards by ₹45,000; (3) debenture holders owed ₹4,00,000 accept new debentures of ₹3,25,000 in full settlement; (4) the following are written off: P&L debit balance ₹5,10,000, goodwill ₹95,000, discount on issue of debentures ₹15,000; (5) scheme expenses of ₹10,000 are paid in cash and absorbed by the scheme; (6) any balance goes to capital reserve.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "questions": [
+        {
+          "id": "cs-i1c14-004-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The credit to Capital Reduction from the equity capital write-down is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹12,00,000",
+              "explanation": "That is the whole pre-scheme capital — half of it survives as ₹5-paid shares."
+            },
+            {
+              "key": "B",
+              "text": "₹90,000",
+              "explanation": "₹90,000 is the final capital-reserve balance, not the capital sacrifice."
+            },
+            {
+              "key": "C",
+              "text": "₹7,20,000",
+              "explanation": "₹7,20,000 is the account's total credit side — the capital element alone is ₹6,00,000."
+            },
+            {
+              "key": "D",
+              "text": "₹6,00,000",
+              "explanation": "1,20,000 × (10 − 5) = ₹6,00,000."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "Companies Act 2013, s.66(1)(b)(ii); SM Ch 14 entries"
+        },
+        {
+          "id": "cs-i1c14-004-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Total credits to the Capital Reduction Account are:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹6,00,000",
+              "explanation": "This counts only the capital reduction and ignores both outside credits."
+            },
+            {
+              "key": "B",
+              "text": "₹6,75,000",
+              "explanation": "This omits the ₹45,000 plant appreciation."
+            },
+            {
+              "key": "C",
+              "text": "₹6,45,000",
+              "explanation": "This omits the debenture holders' ₹75,000 sacrifice."
+            },
+            {
+              "key": "D",
+              "text": "₹7,20,000",
+              "explanation": "Capital 6,00,000 + plant appreciation 45,000 + debenture holders' sacrifice (4,00,000 − 3,25,000) 75,000 = ₹7,20,000."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "SM Ch 14 — entries on reconstruction"
+        },
+        {
+          "id": "cs-i1c14-004-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The transfer to Capital Reserve is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,05,000",
+              "explanation": "This omits the ₹15,000 discount on issue of debentures — a fictitious asset the scheme writes off."
+            },
+            {
+              "key": "B",
+              "text": "₹90,000",
+              "explanation": "Debits: 5,10,000 + 95,000 + 15,000 + 10,000 = ₹6,30,000. Credits ₹7,20,000 − 6,30,000 = ₹90,000."
+            },
+            {
+              "key": "C",
+              "text": "Nil",
+              "explanation": "Credits exceed debits by ₹90,000 — the account cannot simply vanish; the surplus goes to capital reserve."
+            },
+            {
+              "key": "D",
+              "text": "₹1,00,000",
+              "explanation": "This forgets the ₹10,000 scheme expenses, which the account absorbs before anything reaches capital reserve."
+            }
+          ],
+          "correct": "B",
+          "sourceRef": "SM Ch 14 — balance of reconstruction account"
+        },
+        {
+          "id": "cs-i1c14-004-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Paid-up equity capital in the post-scheme balance sheet is:",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹6,90,000",
+              "explanation": "This lumps the ₹90,000 capital reserve into share capital — they are separate lines under Schedule III."
+            },
+            {
+              "key": "B",
+              "text": "₹12,00,000",
+              "explanation": "That is the pre-scheme figure — the write-down halved it."
+            },
+            {
+              "key": "C",
+              "text": "₹7,20,000",
+              "explanation": "₹7,20,000 is the reconstruction account's credit total, not the surviving capital."
+            },
+            {
+              "key": "D",
+              "text": "₹6,00,000",
+              "explanation": "1,20,000 shares × ₹5 = ₹6,00,000."
+            }
+          ],
+          "correct": "D",
+          "sourceRef": "Schedule III presentation; SM Ch 14"
+        }
+      ]
+    },
+    {
+      "id": "d-i1c14-001",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · Meaning",
+      "stem": "What is internal reconstruction? How does it differ from external reconstruction? (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Internal reconstruction: reorganisation of the company's capital within the SAME entity — revaluing assets, reassessing liabilities, writing off accumulated losses against capital sacrifices, reducing paid-up values and/or varying class rights",
+          "marks": 1.5,
+          "citation": "SM Ch 14 — meaning of reconstruction"
+        },
+        {
+          "point": "Typical trigger: continuous losses leaving the balance sheet with a P&L debit balance, fictitious assets and overvalued assets — capital no longer represented by available assets",
+          "marks": 1,
+          "citation": "SM Ch 14 — meaning of reconstruction"
+        },
+        {
+          "point": "External reconstruction: a NEW company is formed to take over the existing company's business, the old company is wound up; accounted as an amalgamation under AS 14 (s.232 machinery)",
+          "marks": 1,
+          "citation": "SM Ch 14 — types of reconstruction; AS 14"
+        },
+        {
+          "point": "Internal reconstruction runs on ss. 61/66 and the Capital Reduction Account; losses are absorbed internally, not left behind in a dying entity",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, ss. 61, 66"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-002",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · s.61 alterations",
+      "stem": "State the ways in which a company may alter its share capital under section 61 of the Companies Act 2013, and the procedure required. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Procedure: authorisation in the articles + ordinary resolution in general meeting; no Tribunal confirmation; notice of alteration to the Registrar",
+          "marks": 1,
+          "citation": "Companies Act 2013, s.61(1), s.64"
+        },
+        {
+          "point": "Increase of authorised share capital",
+          "marks": 0.5,
+          "citation": "s.61(1)(a)"
+        },
+        {
+          "point": "Consolidation into larger denominations and sub-division into smaller denominations (paid/unpaid proportion preserved)",
+          "marks": 1,
+          "citation": "s.61(1)(b), (d)"
+        },
+        {
+          "point": "Conversion of fully paid shares into stock, and reconversion of that stock back into fully paid shares",
+          "marks": 0.75,
+          "citation": "s.61(1)(c)"
+        },
+        {
+          "point": "Cancellation of shares not taken or agreed to be taken — diminishes authorised capital; expressly NOT a reduction of share capital",
+          "marks": 0.75,
+          "citation": "s.61(1)(e), s.61(2)"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-003",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · Sub-division & consolidation",
+      "stem": "Explain the proportion rule applicable on sub-division or consolidation of shares, with an example and the accounting effect. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Rule: the proportion between paid-up and unpaid amounts on each share must remain the same before and after the repackaging",
+          "marks": 1.5,
+          "citation": "SM Ch 14 — sub-division and consolidation"
+        },
+        {
+          "point": "Example: a ₹100 share with ₹75 paid sub-divided into ₹10 shares → ten shares each ₹7.50 paid, ₹2.50 uncalled",
+          "marks": 1.5,
+          "citation": "SM Ch 14 — sub-division example"
+        },
+        {
+          "point": "Accounting effect: old capital account closed into the new one; total paid-up capital unchanged; no Capital Reduction Account",
+          "marks": 1,
+          "citation": "SM Ch 14 — entries"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-004",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · s.66 reduction",
+      "stem": "Describe the procedure and the three modes of reduction of share capital under section 66 of the Companies Act 2013. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Procedure: special resolution + application to the Tribunal; NCLT confirms after considering creditors' representations; confirmed order registered with the Registrar",
+          "marks": 2,
+          "citation": "Companies Act 2013, s.66(1)-(5)"
+        },
+        {
+          "point": "Mode 1: extinguish or reduce shareholders' liability for UNCALLED capital (e.g. ₹10 share ₹7.50 paid becomes ₹7.50 fully paid) — creates no Capital Reduction credit",
+          "marks": 1,
+          "citation": "s.66(1)(a); SM Ch 14 entries"
+        },
+        {
+          "point": "Mode 2: pay off paid-up capital in excess of the company's needs — cash returns to shareholders; again no reconstruction credit",
+          "marks": 1,
+          "citation": "s.66(1)(b)(i)"
+        },
+        {
+          "point": "Mode 3: cancel paid-up capital that is lost or unrepresented by available assets — the sacrifice is credited to the Capital Reduction Account and absorbs the write-offs",
+          "marks": 1,
+          "citation": "s.66(1)(b)(ii); SM Ch 14 entries"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-005",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · Capital Reduction Account",
+      "stem": "List the usual credits and debits to the Capital Reduction (Reconstruction) Account and state how its final balance is dealt with. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Credits: paid-up capital cancelled (equity and preference); reserves given up by shareholders; sacrifices by creditors and debenture holders under compromises; appreciation on revaluation of assets; unutilised surrendered shares cancelled",
+          "marks": 2,
+          "citation": "SM Ch 14 — entries on reconstruction"
+        },
+        {
+          "point": "Debits: P&L debit balance; goodwill and worthless intangibles; fictitious assets (preliminary expenses, discount on issue); overvaluation written off assets and inventory; expenses of the scheme",
+          "marks": 2,
+          "citation": "SM Ch 14 — entries on reconstruction"
+        },
+        {
+          "point": "Balance: a remaining credit is transferred to Capital Reserve; if write-offs exceed the credits, existing reserves in the books are applied to the shortfall",
+          "marks": 1,
+          "citation": "SM Ch 14 — balance of reconstruction account"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-006",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · Compromise entries",
+      "stem": "Give the journal entries when (a) equity shareholders give up their claim over reserves, and (b) creditors agree to accept a lesser amount in settlement. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "(a) Reserves A/c Dr (amount of reserves given up) → To Reconstruction A/c",
+          "marks": 1.5,
+          "citation": "SM Ch 14 — compromise/arrangements"
+        },
+        {
+          "point": "(b) Outside Liabilities (Creditors) A/c Dr (amount of sacrifice) and Provision A/c Dr (if any) → To Reconstruction A/c",
+          "marks": 1.5,
+          "citation": "SM Ch 14 — compromise/arrangements"
+        },
+        {
+          "point": "Both sacrifices enlarge the pool available to write off losses; the surviving liability continues at the settled figure",
+          "marks": 1,
+          "citation": "SM Ch 14 — compromise/arrangements"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-007",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · Surrender of shares",
+      "stem": "Explain the surrender-of-shares method of internal reconstruction and the treatment of surrendered shares. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Shares are first sub-divided into smaller denominations, and shareholders surrender an agreed proportion to the company for use in the scheme",
+          "marks": 1.5,
+          "citation": "SM Ch 14 — surrender of shares"
+        },
+        {
+          "point": "Surrendered shares are re-allotted to debenture holders and creditors in discharge of their claims, reducing outside liabilities; any shortfall accepted by them is their sacrifice, credited to the Reconstruction Account",
+          "marks": 1.5,
+          "citation": "SM Ch 14 — surrender of shares"
+        },
+        {
+          "point": "Surrendered shares NOT re-allotted are cancelled, the paid-up value being credited to the Reconstruction Account",
+          "marks": 1,
+          "citation": "SM Ch 14 — surrender of shares"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-008",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · Post-scheme presentation",
+      "stem": "State the special points to be kept in mind while preparing the balance sheet of a company after a scheme of internal reconstruction. (3 marks)",
+      "marks": 3,
+      "skeleton": [
+        {
+          "point": "\"and Reduced\" is added after the company's name ONLY if the Tribunal so orders",
+          "marks": 1,
+          "citation": "SM Ch 14 — presentation after reconstruction"
+        },
+        {
+          "point": "The amount written off fixed assets under the scheme must be disclosed for five years",
+          "marks": 1,
+          "citation": "SM Ch 14 — presentation after reconstruction"
+        },
+        {
+          "point": "New (reduced) share capital, capital reserve from the scheme surplus, and assets at written-down values presented per Schedule III; accumulated losses should no longer appear",
+          "marks": 1,
+          "citation": "Schedule III; SM Ch 14"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    },
+    {
+      "id": "d-i1c14-009",
+      "type": "descriptive",
+      "topic": "Ch 14 · Internal Reconstruction · Conversion to stock",
+      "stem": "Write a short note on conversion of shares into stock. (3 marks)",
+      "marks": 3,
+      "skeleton": [
+        {
+          "point": "Under s.61(1)(c) a company may convert its fully paid shares into stock, and reconvert that stock into fully paid shares; only FULLY PAID shares qualify",
+          "marks": 1.5,
+          "citation": "Companies Act 2013, s.61(1)(c)"
+        },
+        {
+          "point": "Stock is capital in fused form, transferable in any amount rather than in unit shares; members' rights otherwise continue",
+          "marks": 1,
+          "citation": "SM Ch 14 — conversion of shares into stock"
+        },
+        {
+          "point": "Entry: Equity Share Capital A/c Dr → To Equity Stock A/c (and the reverse on reconversion); no Capital Reduction Account involved",
+          "marks": 0.5,
+          "citation": "SM Ch 14 — entries"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-04"
+    }
+  ]
+}

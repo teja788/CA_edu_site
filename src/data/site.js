@@ -156,6 +156,13 @@ export const paper1Sections = [
         draft: true,
         notesHref: '/intermediate/advanced-accounting/amalgamation-of-companies/',
       },
+      {
+        number: 14,
+        slug: 'internal-reconstruction',
+        name: 'Internal Reconstruction',
+        draft: true,
+        notesHref: '/intermediate/advanced-accounting/internal-reconstruction/',
+      },
     ],
   },
 ];

@@ -1,0 +1,222 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Internal Reconstruction'
+description: 'CA Intermediate Advanced Accounting Ch 14 — internal reconstruction in plain language: s.61 alterations, s.66 capital reduction, the Capital Reduction Account, surrender of shares, and the reconstructed balance sheet.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 14 · Internal Reconstruction'
+chapterSlug: internal-reconstruction
+masteryId: i1-ch14
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, s.61 (alteration of share capital), s.66 (reduction of share capital), s.48 (variation of rights)'
+  - 'ICAI SM Ch 14 accounting treatment (Capital Reduction / Reconstruction Account)'
+  - 'Schedule III presentation ("and Reduced"; five-year disclosure of amounts written off)'
+sourceLabel: 'Companies Act 2013 ss. 61, 66 · ICAI SM Ch 14 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '4 Jul 2026'
+readTime: 'About 20 min read · 3 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=internal-reconstruction'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A company that has bled losses for years ends up with a balance sheet that lies politely:
+assets carried above what they could ever earn, a fat debit balance in the P&L, goodwill and
+preliminary expenses that represent nothing. Internal reconstruction is the surgery that makes
+the books honest again — writing the dead weight off against capital that shareholders (and
+sometimes creditors) agree to sacrifice — **without killing the company or forming a new one**.
+That last clause is the boundary with Ch 13: external reconstruction builds a new company and
+accounts under AS 14; internal reconstruction reorganises the same legal entity from inside.
+
+For the exam this chapter is one dependable pattern: build the **Capital Reduction (or
+Reconstruction) Account**, pour every sacrifice into its credit side, write off every hollow
+asset from its debit side, and sweep the balance to capital reserve. Everything else is the
+statutory frame around that account.
+
+## 1. What internal reconstruction is
+
+**Internal reconstruction** is the reorganisation of a company's capital structure — revaluing
+assets, reassessing liabilities, and writing off accumulated losses — through a write-down of
+the shares' paid-up value and/or a variation of class rights, all within the existing company.
+
+The tell-tale patient: continuous losses, a P&L debit balance carried forward, fictitious
+assets (preliminary expenses, discount on issue), unrepresented intangibles, and overvalued
+fixed assets. The company is over-capitalised: its stated capital is not represented by real
+assets. The cure is to admit the loss and make someone absorb it — usually the equity
+shareholders first, as the residual risk-takers.
+
+Contrast the two reconstructions:
+
+| | Internal reconstruction | External reconstruction |
+|---|---|---|
+| Entity | Same company survives | New company formed; old one wound up |
+| Governing law | ss. 61, 66 (and schemes) of the Companies Act 2013 | AS 14 accounting; s.232 machinery |
+| Losses | Written off against capital sacrifices via the Capital Reduction A/c | Left behind in the dying company |
+| Accounting | Capital Reduction / Reconstruction Account | Realisation A/c (transferor) + purchase-method entries (transferee) |
+
+## 2. Alteration of share capital (s.61)
+
+A limited company may alter its capital clause **if the articles authorise it, by an ordinary
+resolution** in general meeting — no tribunal involved. Four alterations matter here:
+
+1. **Increase** of authorised share capital.
+2. **Consolidation and sub-division** — repackaging shares into larger or smaller
+   denominations.
+3. **Conversion** of fully paid shares into stock, or stock back into shares.
+4. **Cancellation of unissued shares** — shares not taken or agreed to be taken by anyone.
+   This trims the *authorised* figure only; it touches nobody's money.
+
+<Callout kind="pointer">
+  <p>
+    <strong>None of these opens a Capital Reduction Account.</strong> Alterations rearrange
+    the packaging of capital; nobody sacrifices anything. The same is true of a variation of
+    shareholders' rights (s.48). The Capital Reduction Account enters only with s.66
+    reductions, compromises with outsiders, and surrender schemes — that mapping is a
+    standing MCQ.
+  </p>
+</Callout>
+
+### The proportion rule for sub-division
+
+On a sub-division or consolidation, the **ratio between paid-up and unpaid amounts must stay
+what it was**.
+
+### Worked Example 1 — sub-division arithmetic
+
+Tapti Sugars Ltd has 20,000 equity shares of ₹50 each, ₹40 paid up. It sub-divides them into
+shares of ₹10 each.
+
+**Working.** Each ₹50 share becomes 5 shares of ₹10 → 20,000 × 5 = **1,00,000 shares**. Paid-up
+proportion was 40/50 = 80%, so each new ₹10 share carries **₹8 paid up** (unpaid ₹2). Total
+paid-up capital is unchanged: 1,00,000 × 8 = ₹8,00,000 = 20,000 × 40. No journal beyond
+closing the old capital account into the new — and no Capital Reduction Account.
+
+## 3. Reduction of share capital (s.66)
+
+Reduction is the real surgery: paid-up money (or the obligation to pay it) is extinguished.
+Because creditors' cushion shrinks, s.66 demands a **special resolution** confirmed by the
+**Tribunal (NCLT)**. Three statutory modes:
+
+- **(a) Extinguish or reduce the liability for unpaid amounts.** ₹10 shares, ₹7.50 paid:
+  cancel the uncalled ₹2.50 and the shares become ₹7.50 fully paid. Nobody pays or receives
+  anything now; the *future* call disappears. Entry: `Share Capital (₹10 partly paid) Dr →
+  To Share Capital (₹7.50 fully paid)` — **no Capital Reduction credit arises**, because no
+  paid-up money was sacrificed.
+- **(b) Pay off capital in excess of needs.** A cash-rich company returns, say, ₹25 per ₹100
+  share: capital falls and cash leaves. This is a genuine reduction but produces no
+  reconstruction credit either — value went back to the shareholders.
+- **(c) Cancel paid-up capital that is lost** or unrepresented by available assets — the
+  reconstruction workhorse. The amount shareholders give up is credited to the **Capital
+  Reduction Account** (also called the Reconstruction Account).
+
+The rupee mechanics of mode (c), for a ₹100 share written down to ₹10:
+
+| Variant | Entry |
+|---|---|
+| Paid-up value reduced, face value retained | `Share Capital A/c Dr ₹90 → To Capital Reduction A/c ₹90` (per share) |
+| Both face and paid-up value reduced | `Share Capital (₹100) A/c Dr ₹100 → To Share Capital (₹10) A/c ₹10 → To Capital Reduction A/c ₹90` (per share) |
+
+<Callout kind="mistake">
+  <p>
+    <strong>Mode (a) creates NO reconstruction credit.</strong> Cancelling uncalled capital
+    swaps a partly paid share for a smaller fully paid one — no reserves are freed, nothing
+    is available to write losses against. Only mode (c) — cancelling PAID-UP capital — feeds
+    the Capital Reduction Account. Stems love asking "how much is credited to Capital
+    Reduction?" after a mode-(a) cancellation; the answer is nil.
+  </p>
+</Callout>
+
+## 4. Compromise, arrangement and surrender
+
+Shareholders are not the only ones who can absorb losses:
+
+- **Equity shareholders give up reserves** standing in the books:
+  `Reserves A/c Dr → To Reconstruction A/c`.
+- **Outside liabilities settle for less.** Creditors owed ₹4,80,000 accepting 75 paise in the
+  rupee sacrifice ₹1,20,000: `Trade Creditors A/c Dr (sacrifice) → To Reconstruction A/c`.
+  Debenture holders exchanging old debentures for a smaller amount of new ones do the same.
+- **Surrender of shares.** The scheme sub-divides shares into small denominations, has
+  shareholders surrender a slice of them to the company, and re-allots the surrendered
+  shares to debenture holders/creditors in discharge of their claims. Whatever surrendered
+  shares remain **unutilised are cancelled** — credited to the Reconstruction Account.
+
+### Worked Example 2 — a surrender scheme
+
+Krishna Textiles Ltd has 40,000 shares of ₹25 fully paid. The scheme: sub-divide into ₹5
+shares (2,00,000 shares); shareholders surrender 40% of their holdings; debenture holders
+owed ₹3,00,000 accept 56,000 of the surrendered shares in full settlement.
+
+**Working Note 1 — surrender.** Shares surrendered = 40% × 2,00,000 = 80,000 shares =
+₹4,00,000 of capital, held in trust for the scheme.
+
+**Working Note 2 — debenture settlement.** 56,000 shares (₹2,80,000) discharge a ₹3,00,000
+claim → debenture holders' sacrifice = **₹20,000** to the Reconstruction Account.
+
+**Working Note 3 — cancellation.** Unutilised surrendered shares = 80,000 − 56,000 = 24,000
+shares = **₹1,20,000**, cancelled and credited to the Reconstruction Account.
+
+## 5. The Capital Reduction Account at work
+
+Assemble the account in a fixed order:
+
+**Credit side (the sacrifices):** capital cancelled under mode (c); reserves given up by
+shareholders; sacrifices by creditors and debenture holders; **appreciation on revaluation
+of any asset** (debit the asset, credit Capital Reduction).
+
+**Debit side (the write-offs):** the P&L debit balance; goodwill and other worthless
+intangibles; fictitious assets (preliminary expenses, discount on issue); the overvalued
+slice of fixed assets and inventory; and the **expenses of the reconstruction scheme**
+itself.
+
+**The balance:** a credit left over goes to **Capital Reserve**. If the write-offs exceed the
+sacrifices, existing reserves in the books are drawn in to cover the gap.
+
+### Worked Example 3 — the full account
+
+Godavari Mills Ltd (and Reduced) implements: equity capital ₹10,00,000 (1,00,000 shares of
+₹10) written down to ₹6 per share (face value also ₹6); freehold land appreciated by
+₹80,000; creditors of ₹1,50,000 accept 90% in settlement; write off P&L debit balance
+₹3,90,000 and goodwill ₹70,000; scheme expenses ₹5,000.
+
+**Working Note 1 — credits.** Capital: 1,00,000 × (10 − 6) = ₹4,00,000. Land ₹80,000.
+Creditors 10% × 1,50,000 = ₹15,000. Total credits = **₹4,95,000**.
+
+**Working Note 2 — debits.** 3,90,000 + 70,000 + 5,000 = **₹4,65,000**.
+
+**Working Note 3 — balance.** 4,95,000 − 4,65,000 = **₹30,000 to Capital Reserve**. New
+paid-up capital: 1,00,000 × 6 = ₹6,00,000.
+
+<Callout kind="example" label="Working-note discipline = marks">
+  <p>
+    Structure every answer as: (1) capital sacrifice per class, (2) outsiders' sacrifices,
+    (3) revaluation credits, (4) write-off list, (5) the account itself with the balance to
+    capital reserve, (6) the post-scheme balance sheet. Examiners award the account and the
+    balance sheet separately — an arithmetic slip in one need not sink the other if the
+    working notes are labelled.
+  </p>
+</Callout>
+
+## 6. The reconstructed balance sheet
+
+Two presentation rules with statutory teeth:
+
+- **"and Reduced":** the company adds these words after its name **only if the Tribunal so
+  orders** — it is not automatic.
+- **Five-year disclosure:** the amount written off fixed assets under the scheme must be
+  **shown for five years** in the accounts, so readers can see the surgery scar while it
+  heals.
+
+Beyond that, the balance sheet is ordinary Schedule III: the new (smaller) share capital,
+the capital reserve from the scheme's surplus, assets at their written-down honest values —
+and, if the scheme did its job, no accumulated-loss line at all.
+
+That's the chapter. Sort every scheme instruction into one of four buckets — alteration
+(§2, no reduction account), reduction (§3), outsider sacrifice or surrender (§4) — then run
+the Capital Reduction Account (§5) and present the result (§6).
