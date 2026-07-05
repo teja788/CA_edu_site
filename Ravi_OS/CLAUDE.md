@@ -5,9 +5,14 @@ This is a local-first personal command center. See `ARCHITECTURE.md` for design,
 
 ## Start here every session
 
-Read `memory/MEMORY.md` and the memory files it links — they hold the owner's
-profile, working preferences, and project context. Keep them updated as things
-change (one fact per file, update the index).
+1. Read `memory/MEMORY.md` and the files it links — starting with
+   `memory/current-focus.md`, which says what's in flight right now. The owner
+   should never have to re-explain context; if he does, this system failed.
+2. For priorities, trust the DB: the ⭐ Top-10 ranking is live, and the current
+   strategy brief is an item in the `personal` module (search "quarter brief").
+3. Before the session ends — or whenever focus shifts — update
+   `memory/current-focus.md` and the index so the next session resumes cleanly.
+   Keep memories one-fact-per-file.
 
 ## Hard rules
 
