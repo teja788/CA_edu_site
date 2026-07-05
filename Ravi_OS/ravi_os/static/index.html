@@ -88,7 +88,8 @@
 const $ = (sel, el=document) => el.querySelector(sel);
 const state = { view: 'ideas', items: [], selected: null, config: null, reviews: [] };
 const MODULE_ICONS = { ideas:'💡', projects:'📌', research:'📚', prompts:'🧠',
-                       stocks:'📈', sanskrit:'🕉', animals:'🐾', learning:'🎓' };
+                       stocks:'📈', sanskrit:'🕉', animals:'🐾', learning:'🎓',
+                       travel:'🧳', health:'💪', personal:'🔒' };
 const VIEWS = [ ['top','⭐ Top 10'], ['review','🌅 Daily Review'], ['export','📦 Export Center'], ['settings','⚙️ Settings'] ];
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

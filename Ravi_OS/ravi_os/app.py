@@ -58,6 +58,21 @@ ACTION_TEMPLATES = {
         "Define the capstone: what you will build to prove the skill",
         "Set a weekly time budget and a 30-day checkpoint",
     ],
+    "travel": [
+        "Pick tentative dates and check season/weather",
+        "Shortlist stays and estimate a budget",
+        "List the 3 must-do experiences for this place",
+    ],
+    "health": [
+        "Define the measurable outcome and how to track it",
+        "Check evidence quality: who recommends this and why",
+        "Schedule the first concrete step (appointment, order, session)",
+    ],
+    "personal": [
+        "Decide: is this actionable now, scheduled, or reference?",
+        "Set a deadline or reminder date if it matters",
+        "Identify who else is involved and inform them",
+    ],
 }
 
 

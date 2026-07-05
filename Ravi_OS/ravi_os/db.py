@@ -16,6 +16,9 @@ MODULES = {
     "sanskrit": "Sanskrit / Hindu Thought",
     "animals": "Animal Welfare",
     "learning": "Learning Roadmap",
+    "travel": "Travel & Places",
+    "health": "Health & Fitness",
+    "personal": "Personal",
 }
 STATUSES = ["inbox", "active", "someday", "done", "archived"]
 TAG_KINDS = ["domain", "urgency", "monetization", "spiritual", "public_good", "difficulty", "custom"]
