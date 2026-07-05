@@ -200,3 +200,43 @@ Triage rules:
 - [ ] **AS 10 testing proceeds** — q-008 nets sale proceeds of test output
   against testing costs per AS 10 (Revised). Confirm the SM presents net
   testing cost the same way.
+
+## liabilities-based-as — VERIFY 2026-07-05
+
+- [ ] **Definitional quotations kept on purpose** — the ※ clusters in the
+  citations file: the AS 15 short-term-benefit definition ("fall due wholly
+  within twelve months after the end of the period in which the service is
+  rendered"), the AS 29 definitions block (provision, liability, the
+  contingent-liability/contingent-asset "confirmed only by the occurrence or
+  non-occurrence…" limbs), AS 29's best-estimate measurement sentence, and
+  AS 29's discount-rate wording ("current market assessments of the time
+  value of money and the risks specific to the liability"). Confirm each
+  matches the notified AS text exactly.
+- [ ] **Stale Level-based applicability in SM Ch 6 U1 §1.2** — the SM still
+  says AS 15 "applies from April 1, 2006 in its entirety for all Level 1
+  enterprises" with a 50-employee relaxation, and the non-vesting-absences
+  exception names "Levels IV, III and II non-corporate entities". The site
+  states the revised Aug-2024 MSME/Large scheme instead (per Ch 3): SMC/MSME
+  exemption for non-vesting accumulating short-term absences; SMC keeps PUC
+  actuarial for DB with disclosure relief; non-company MSME may use any
+  rational method. Sight the ICAI announcement/Rules and initial the mapping.
+- [ ] **AS 15 paragraph numbers quoted via the SM** — para 7.2 (falls due),
+  para 8(b) (expected to occur), para 49 (schemes with estimation
+  difficulty), para 59(b) (asset ceiling), para 61 (P&L components),
+  para 129 (other long-term benefits). Confirm the numbering against the
+  notified standard before anyone cites it in an answer.
+- [ ] **AS 29 discounting exception** — notes/bank state that
+  decommissioning/restoration-type liabilities recognised as part of PPE
+  cost are discounted (pre-tax market rate; unwinding to P&L) while all
+  other provisions stay undiscounted. This wording entered AS 29 by
+  amendment; sight the current notified text (2021 Rules print) and initial.
+- [ ] **Contingent-asset disclosure route** — q-029/notes assert a
+  contingent asset is not disclosed in the financial statements at all and
+  appears only in the report of the approving authority when inflow is
+  probable. That is AS 29's Indian position (contrast IAS 37); sight the
+  paragraph and initial.
+- [ ] **cs-i1c06-002 drafting note** — "she will receive 4 yearly
+  increments" over a 4-year term mirrors the SM's own Illustration 9
+  convention (final salary = current × 1.1⁴). The blind solver flagged the
+  timeline drafting as slightly unusual though internally corroborated;
+  reviewer may want to re-read the stem once.

@@ -300,6 +300,32 @@ export const decks = [
       { id: 'ab-18', front: 'AS 28 CGU loss order + reversal ceiling:', back: 'GOODWILL first, then PRO-RATA on carrying amounts (floor: highest of NSP/VIU/zero). Reversal ≤ depreciated no-impairment carrying; goodwill reversal needs an EXCEPTIONAL external event.' },
     ],
   },
+  {
+    id: 'inter-p1-liabilities-as',
+    name: 'Liabilities Based AS — AS 15 & AS 29',
+    paper: 'Inter P1 · Ch 6',
+    applicableAttempts: ['Sept 2026', 'Jan 2027'],
+    cards: [
+      { id: 'lb-1', front: 'AS 15 four families of employee benefits:', back: 'SHORT-TERM (due wholly ≤12m of period end) · POST-EMPLOYMENT (gratuity, pension, PF) · OTHER LONG-TERM (sabbatical, jubilee, deferred bonus) · TERMINATION (VRS). Carve-out: employee SHARE-BASED payments.' },
+      { id: 'lb-2', front: 'AS 15 reaches which employees?', back: 'ALL: full-time, part-time, permanent, casual, temporary — incl. WHOLE-TIME DIRECTORS. Cash or kind; dependents count; payable to anyone. Contract OF service (obey orders) in; contract FOR services out.' },
+      { id: 'lb-3', front: 'Short-term benefit recognition rule:', back: 'UNDISCOUNTED amount for service already rendered = expense; unpaid gap = liability, excess paid = prepayment. No actuarial assumptions, ever.' },
+      { id: 'lb-4', front: 'Compensated absences taxonomy:', back: 'ACCUMULATING (carry forward): vesting = encashable on exit, non-vesting = lapses (same recognition; leaving-probability in measurement). Liability = EXTRA amount expected from unused entitlement at BS date. NON-ACCUMULATING (maternity): expense when absence OCCURS.' },
+      { id: 'lb-5', front: 'Carried-forward earned leave is short-term only if…', back: 'It has FALLEN DUE (encashable/available within 12m — no restrictive caps) AND is EXPECTED TO BE UTILISED in that window. Else long-term (discounted). Judge by OVERALL pattern of all employees, never individually.' },
+      { id: 'lb-6', front: 'Profit-sharing/bonus recognition needs:', back: 'PRESENT OBLIGATION from past events + RELIABLE ESTIMATE (a formula in the plan). Book the amount EXPECTED to be paid — trim for staff turnover. It is an EXPENSE, not an appropriation.' },
+      { id: 'lb-7', front: 'DC vs DB plans — obligation & risk:', back: 'DC: fixed contributions, nothing more; actuarial + investment risk on EMPLOYEE (e.g. provident fund); charge = contribution. DB: everything else; both risks on EMPLOYER; full actuarial computation (e.g. gratuity).' },
+      { id: 'lb-8', front: 'Insured plan is DC unless…', back: 'The enterprise must (a) pay benefits DIRECTLY when due, or (b) TOP UP what the insurer fails to pay — either residual obligation makes it DB. Premiums alone buy no exit.' },
+      { id: 'lb-9', front: 'DB balance-sheet liability formula + ceiling:', back: 'PV of obligation − PAST SERVICE COST not yet recognised − FV of PLAN ASSETS. Surplus capped at LOWER of computed amount and PV of refunds/future-contribution cuts.' },
+      { id: 'lb-10', front: 'Plan assets vs reimbursement rights:', back: 'Both at FAIR VALUE — but plan assets NET against the obligation; reimbursement rights sit GROSS (separate asset + full liability), making the balance sheet heavy on both sides.' },
+      { id: 'lb-11', front: 'Seven DB cost components in P&L:', back: 'Current service cost · interest cost · EXPECTED return on plan assets/reimbursement rights · actuarial G/L · past service cost · curtailment/settlement effects · asset-ceiling effect.' },
+      { id: 'lb-12', front: 'Actuarial assumptions + G/L treatment:', back: 'UNBIASED & MUTUALLY COMPATIBLE; demographic + financial; market expectations AT BS DATE. Gains/losses → IMMEDIATELY to P&L (no corridor, no spreading, no reserves — contrast Ind AS 19 OCI).' },
+      { id: 'lb-13', front: 'Settlement vs curtailment:', back: 'SETTLEMENT eliminates obligations (commuted pension). CURTAILMENT shrinks the plan — fewer employees or reduced future benefits (segment closed, no further accrual). Gain/loss WHEN IT OCCURS. Curtailment gain = obligation cut − proportionate unamortised past service cost.' },
+      { id: 'lb-14', front: 'Termination benefits recognised when… measured how?', back: 'DETAILED FORMAL PLAN duly approved + RELIABLE ESTIMATE (crystallised — e.g. sign-ups). Due ≤12m: undiscounted; >12m: DISCOUNTED. VRS: measure by expected acceptances; uncertainty → contingent liability (AS 29).' },
+      { id: 'lb-15', front: 'AS 29 provision recognition triple test:', back: 'PRESENT obligation from PAST event (exists independently of future conduct) + PROBABLE outflow (more likely than not; judge warranty-type obligations as a CLASS) + RELIABLE estimate (fails only in extremely rare cases).' },
+      { id: 'lb-16', front: 'Contingent liability vs contingent asset:', back: 'CL: never recognised — DISCLOSE unless remote; joint & several: co-obligors\' share is CL, own probable share provided. CA: never recognised, NOT in FS notes — approving authority\'s report if probable; recognise when VIRTUALLY CERTAIN.' },
+      { id: 'lb-17', front: 'AS 29 measurement rules:', back: 'BEST ESTIMATE at BS date, PRE-tax. NO discounting except decommissioning/restoration liabilities capitalised into PPE (pre-tax rate, unwinding → P&L). No gains from expected disposals. Reimbursement: separate asset when VIRTUALLY CERTAIN, ≤ provision; P&L may net.' },
+      { id: 'lb-18', front: 'Restructuring provision in/out + housekeeping:', back: 'Sale of operation: only on BINDING agreement. IN: direct costs necessarily entailed + not ongoing-activity. OUT: retraining/relocating continuing staff, marketing, new systems, FUTURE OPERATING LOSSES (never provided). Review yearly; reverse when not probable; use only for ORIGINAL purpose.' },
+    ],
+  },
 ];
 
 export const allCards = decks.flatMap((d) => d.cards.map((c) => ({ ...c, deckId: d.id, deckName: d.name })));
