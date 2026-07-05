@@ -240,3 +240,33 @@ Triage rules:
   convention (final salary = current × 1.1⁴). The blind solver flagged the
   timeline drafting as slightly unusual though internally corroborated;
   reviewer may want to re-read the stem once.
+
+## other-accounting-standards — VERIFY 2026-07-05
+
+- [ ] **Definitional quotations kept on purpose** — the ※ clusters in the
+  citations file: the AS 12 grant-definition head ("assistance by government
+  in cash or kind"), the Method II release rule ("systematic and rational
+  basis over the useful life"), the nominal-value trigger ("whole, or
+  virtually the whole"), AS 14's acquisition-scope sentence, the five-year
+  goodwill rule, the key-personnel goodwill factor, and the AS 14
+  disclosure-list items (names/general nature; percentage of equity shares
+  exchanged). Confirm each against the notified AS texts.
+- [ ] **AS 12 paragraph numbers quoted via the SM** — para 10 (promoters'
+  contribution → capital reserve), para 14 (deferred grant released in
+  depreciation proportions), para 21 (refund mechanics). Confirm numbering
+  against the notified standard.
+- [ ] **Refund as extraordinary item** — AS 12 read with AS 5. The site's
+  Ch 7 (AS 5) is not yet written; when it is, keep the extraordinary-items
+  treatment consistent with what Ch 9 states here.
+- [ ] **AS 14 disclosure paragraphs** — the three disclosure lists are
+  stated per SM Ch 9 U2 (which cites paras 43–46). Sight the notified AS 14
+  text and initial.
+- [ ] **AS 14 not applicable to MSMEs** — the intro repeats Ch 3's position
+  that AS 14 is treated as not applicable to MSMEs because such
+  transactions rarely occur (applies if one does). Sight the revised-scheme
+  announcement wording and initial.
+- [ ] **Division of labour with Ch 13** — Ch 9's AS 14 content deliberately
+  covers only standard-text angles (scope/acquisitions, post-balance-sheet
+  date, contingent consideration, goodwill factors, P&L balance,
+  disclosures); all computation mechanics remain in Ch 13. Reviewer should
+  confirm no contradiction between the two chapters' statements.

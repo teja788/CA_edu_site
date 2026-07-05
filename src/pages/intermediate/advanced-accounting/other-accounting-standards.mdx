@@ -1,0 +1,232 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Other Accounting Standards'
+description: 'CA Intermediate Advanced Accounting Ch 9 — AS 12 and AS 14 in plain language: recognising and presenting government grants, refunds of grants, and the AS 14 standard text — scope, contingent consideration, disclosures and amalgamations after the balance sheet date.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 9 · Other Accounting Standards'
+chapterSlug: other-accounting-standards
+masteryId: i1-ch9
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI SM Ch 9 Units 1–2 (May 2026 ed.)'
+  - 'AS 12, AS 14 (Revised)'
+sourceLabel: 'ICAI SM Ch 9 U1–U2 · AS 12/14 (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '5 Jul 2026'
+readTime: 'About 22 min read · 3 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=other-accounting-standards'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Two standards share this chapter, and they could hardly be less alike. AS 12 answers a
+question every subsidised enterprise faces: **when a government hands you money (or
+land), is that income — and if so, whose year is it?** Its machinery is small — two
+recognition conditions, two presentation methods for asset grants, a special berth for
+promoters'-contribution grants, and a refund rule for each — but the exam mines every
+corner of it. AS 14 governs **amalgamations in the books of the transferee**; its full
+working mechanics — merger vs purchase, purchase consideration, pooling and purchase
+entries, statutory reserves — already have a chapter of their own
+([Ch 13 · Amalgamation of Companies](/intermediate/advanced-accounting/amalgamation-of-companies/)),
+so here we cover **the standard's own text**: what it scopes out, contingent
+consideration, the goodwill amortisation factors, the disclosure lists, and what
+happens when the amalgamation lands after the balance sheet date.
+
+Applicability shorthand (regime in
+[Ch 3](/intermediate/advanced-accounting/applicability-of-accounting-standards/)):
+**AS 12 binds every entity in full** — it appears on no SMC or MSME relief list.
+AS 14 is treated as **not applicable to MSMEs** only because amalgamations rarely
+occur there; if one does occur, the standard applies.
+
+## 1. AS 12: Accounting for Government Grants
+
+### What is a government grant
+
+Government grants are **assistance by government in cash or kind** for **past or
+future compliance with certain conditions** — subsidies, cash incentives, duty
+drawbacks. Two things fail the definition: assistance that **cannot reasonably be
+valued** (free technical advice, guarantees), and transactions **indistinguishable
+from normal trading** (government as a customer). The standard also leaves out three
+neighbouring problems: grant accounting under changing-price regimes, government
+assistance other than grants, and **government participation in the ownership** of
+the enterprise.
+
+### Recognition: two assurances, and receipt proves neither
+
+Recognise a grant only when there is **reasonable assurance** that:
+
+1. the enterprise **will comply with the conditions** attached to it; **and**
+2. the grant **will be received**.
+
+Mere receipt is **not conclusive evidence** that the conditions have been or will be
+fulfilled — cash in the bank with doubtful compliance is still no recognition.
+
+### The two approaches
+
+The **capital approach** treats a grant as part of shareholders' funds; the **income
+approach** takes it to income over one or more periods. AS 12 splits by nature:
+grants with the character of **promoters' contribution** follow the capital approach;
+everything else follows the income approach — matched against the related costs.
+
+### Grants related to specific fixed assets
+
+These are grants whose **primary condition** is that the qualifying enterprise
+should **purchase, construct or otherwise acquire** the asset. Two presentations are
+acceptable:
+
+- **Method I — deduct from the asset.** The grant comes off the gross value; the
+  P&L feels it as a **reduced depreciation charge** over the life. Where the grant
+  equals the whole (or virtually the whole) cost, the asset sits in the balance
+  sheet at a **nominal value**.
+- **Method II — deferred income.** The grant is credited to **Deferred Government
+  Grant** and released to the P&L on a **systematic and rational basis over the
+  useful life** — in practice, in the proportions in which depreciation is charged.
+  Grants against **non-depreciable** assets go to **capital reserve** instead
+  (unless attached obligations make income recognition over the obligation period
+  appropriate).
+
+**Worked example 1 — one asset, both methods.** Plant costs ₹25,00,000 (life 5
+years, no salvage); grant ₹5,00,000. *Method I*: asset recorded at 20,00,000;
+depreciation ₹4,00,000 a year — the grant surfaces as ₹1,00,000 of depreciation
+saved annually. *Method II*: asset at 25,00,000, depreciation ₹5,00,000, and
+₹1,00,000 of deferred grant credited to the P&L each year. Same net charge
+(₹4,00,000) either way — the difference is presentation.
+
+### Grants related to revenue
+
+Presented either **as a credit in the P&L** — separately or under "Other Income" —
+or **deducted from the related expense**. Both are acceptable; a multi-year support
+grant is spread on a straight-line basis over the years it compensates.
+
+A grant that compensates **expenses or losses already incurred**, or gives
+**immediate financial support with no further related costs**, is recognised in the
+P&L **in the period it becomes receivable** — as an **extraordinary item where
+appropriate (AS 5)**. There is nothing to defer: the cost it matches is already
+behind you.
+
+### Grants in the nature of promoters' contribution
+
+Given **with reference to the total investment or capital outlay** (a central
+investment subsidy), with **no repayment ordinarily expected**: credit to **capital
+reserve** — **neither distributable as dividend nor deferred income**. Recognising
+such a grant in the P&L is wrong precisely because it is not earned — it is an
+incentive without related costs.
+
+<Callout kind="mistake">
+A grant received for a specific purpose cannot be routed elsewhere — a factory-setup
+grant spent partly as dividend violates AS 12. And a non-monetary grant received
+free is not "nothing happened": record the asset at a **nominal value**. Land at a
+concessional price is recorded at its **acquisition cost**, not fair value.
+</Callout>
+
+### Refunds: undo the original treatment, prospectively
+
+A grant that becomes refundable (conditions breached) is treated as an
+**extraordinary item (AS 5)**. The unwinding tracks how the grant first went in:
+
+- **Revenue grant** — apply the refund **first against any unamortised deferred
+  credit**; the excess (or the whole amount, if nothing is deferred) hits the
+  **P&L immediately**.
+- **Asset grant** — either **increase the book value** of the asset or reduce the
+  deferred income balance. Where the book value goes up, depreciation on the
+  **revised** book value runs **prospectively over the residual life** — never a
+  retrospective rework of past depreciation.
+- **Promoters'-contribution grant** — the refundable amount is **reduced from
+  capital reserve**.
+
+**Worked example 2 — refund under the deduction method.** Machine ₹30,00,000, grant
+₹6,00,000, residual value ₹6,00,000, life 4 years, SLM, asset shown net. Year 1:
+asset 24,00,000, depreciation (24 − 6)/4 = ₹4,50,000, book value 19,50,000. Early in
+year 2 the grant becomes refundable to the extent of ₹4,00,000: book value rises to
+23,50,000, and depreciation for each remaining year is (23,50,000 − 6,00,000)/3 =
+**₹5,83,333** — prospective only; year 1's charge stays untouched.
+
+**Worked example 3 — refund of a revenue grant.** A ₹60,00,000 grant supports salary
+costs over 4 years — ₹15,00,000 credited to the P&L annually from the deferred
+account. At the start of year 3 the whole grant becomes refundable: the remaining
+deferred credit of ₹30,00,000 absorbs the first half of the repayment and the other
+**₹30,00,000 is debited straight to the P&L** as an extraordinary item.
+
+### Disclosure
+
+Two items: the **accounting policy** adopted (including presentation methods), and
+the **nature and extent** of grants recognised — expressly including **non-monetary
+grants at concessional rates or free of cost**.
+
+## 2. AS 14: Accounting for Amalgamations
+
+The full mechanics — merger vs purchase conditions, purchase consideration by net
+payment and net assets, pooling and purchase entries, statutory reserves and the
+Amalgamation Adjustment Reserve, closing the transferor's books — live in
+[Ch 13](/intermediate/advanced-accounting/amalgamation-of-companies/) and are not
+repeated here. What this unit adds is the standard's own frame:
+
+**Scope.** AS 14 governs the **transferee company's books** in an amalgamation
+pursuant to the Companies Act 2013 or another applicable statute — the **transferor
+dissolves**. It does **not deal with acquisitions**: the distinguishing feature of an
+acquisition is that the **acquired company is not dissolved and its separate entity
+continues to exist**. *Transferor* = the company amalgamated into another;
+*transferee* = the company it merges into.
+
+**Consideration and later adjustments.** Consideration is the aggregate of shares,
+other securities and payments (cash or other assets) made **to the shareholders of
+the transferor** — measured at fair value. Where a scheme provides for adjustment
+in the light of future events: include the additional payment in consideration at
+the date of amalgamation **if it is probable and can reasonably be estimated**;
+otherwise, recognise it **as soon as the amount is determinable**.
+
+**Goodwill on amalgamation.** Amortise over a period **not exceeding five years**
+unless a somewhat longer period can be justified. Estimating useful life weighs: the
+foreseeable life of the business or industry; product obsolescence and demand
+changes; the service-life expectancies of key individuals or groups; expected
+competitor actions; and legal, regulatory or contractual provisions.
+
+**The P&L balance.** In a **merger**, the transferor's Profit and Loss Account
+balance is **aggregated** with the transferee's (or transferred to General
+Reserve). In a **purchase**, it **loses its identity** — debit or credit.
+
+**Amalgamation after the balance sheet date.** Effected after the year end but
+before the financial statements are issued → **disclose under AS 4**; do **not**
+incorporate it into the year's statements. It may still inform the year's numbers —
+for instance, where the scheme is what lets the **going concern** assumption stand.
+
+**Disclosures — three lists.** For **all** amalgamations, in the first financial
+statements after it: names and general nature of the amalgamating businesses,
+effective date for accounting, the method used, and particulars of the sanctioned
+scheme. **Pooling adds**: description and number of shares issued with the
+**percentage of each company's equity shares exchanged**, and the difference between
+consideration and net identifiable assets with its treatment. **Purchase adds**: the
+consideration (including any **contingently payable** element) and the
+consideration/net-assets difference with its treatment — **including the goodwill
+amortisation period**.
+
+<Callout kind="pointer">
+Exam sorting rule: computation questions on amalgamation belong to Ch 13's toolkit;
+this unit's marks come from the standard's text — scope (acquisitions stay out),
+the five-year goodwill presumption and its factors, the three disclosure lists,
+contingent consideration, and the AS 4 route for post-year-end schemes.
+</Callout>
+
+## 3. The chapter in one paragraph
+
+AS 12 recognises a government grant only on twin reasonable assurances — condition
+compliance and receipt, with receipt itself proving nothing — then presents it by
+nature: asset grants either shrink the asset (reduced depreciation) or sit as
+deferred income released over the life; revenue grants credit the P&L or net against
+the expense; past-cost compensation lands in the P&L when receivable; and
+promoters'-contribution grants rest in capital reserve, unavailable for dividend.
+Refunds are extraordinary items that reverse the original route — deferred credit
+first for revenue grants, book-value increase with prospective depreciation for
+asset grants, capital-reserve reduction for promoters' grants. AS 14, beyond the
+Ch 13 mechanics, scopes out acquisitions (no dissolution), includes contingent
+consideration when probable and estimable, amortises amalgamation goodwill within
+five years on listed factors, aggregates the P&L balance in a merger but erases it
+in a purchase, sends post-balance-sheet-date schemes to AS 4 disclosure, and
+prescribes disclosure lists for all amalgamations plus method-specific extras.

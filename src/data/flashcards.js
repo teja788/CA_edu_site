@@ -326,6 +326,28 @@ export const decks = [
       { id: 'lb-18', front: 'Restructuring provision in/out + housekeeping:', back: 'Sale of operation: only on BINDING agreement. IN: direct costs necessarily entailed + not ongoing-activity. OUT: retraining/relocating continuing staff, marketing, new systems, FUTURE OPERATING LOSSES (never provided). Review yearly; reverse when not probable; use only for ORIGINAL purpose.' },
     ],
   },
+  {
+    id: 'inter-p1-other-as',
+    name: 'Other AS — AS 12 grants & AS 14 standard text',
+    paper: 'Inter P1 · Ch 9',
+    applicableAttempts: ['Sept 2026', 'Jan 2027'],
+    cards: [
+      { id: 'oa-1', front: 'AS 12 government grant definition + scope-outs:', back: 'Assistance in CASH OR KIND for past/future compliance with conditions. OUT of the definition: unvaluable assistance, normal trading transactions. OUT of scope: changing-price effects, non-grant assistance, government OWNERSHIP participation.' },
+      { id: 'oa-2', front: 'AS 12 recognition twin test:', back: 'Reasonable assurance that (1) CONDITIONS will be complied with AND (2) grant WILL BE RECEIVED. Receipt is NOT conclusive evidence of compliance.' },
+      { id: 'oa-3', front: 'Capital vs income approach:', back: 'PROMOTERS\' CONTRIBUTION grants (vs total investment/capital outlay, no repayment expected) → CAPITAL RESERVE: no dividend, not deferred income. Everything else → income approach, matched with related costs.' },
+      { id: 'oa-4', front: 'Asset grant — two presentations:', back: 'METHOD I: deduct from cost → reduced depreciation; grant ≈ whole cost → asset at NOMINAL VALUE. METHOD II: Deferred Grant → P&L systematically over useful life (depreciation proportions). Non-depreciable asset → capital reserve (unless obligations → income over obligation period).' },
+      { id: 'oa-5', front: 'Non-monetary grants:', back: 'Concessional rate → record at ACQUISITION COST. Free of cost → NOMINAL VALUE (never unrecorded, never fair value).' },
+      { id: 'oa-6', front: 'Revenue grant presentation + past-cost grants:', back: 'Credit P&L (separate/Other Income) OR deduct from the related expense; multi-year support spread STRAIGHT-LINE. Compensation for PAST losses / immediate support: P&L when RECEIVABLE, extraordinary per AS 5 if appropriate.' },
+      { id: 'oa-7', front: 'Refund of grant — all three routes:', back: 'Always EXTRAORDINARY item (AS 5). Revenue: first vs unamortised DEFERRED CREDIT, excess → P&L. Asset: ADD to book value (depreciate revised amount PROSPECTIVELY over residual life — no retrospective rework) or cut deferred income. Promoters\': reduce CAPITAL RESERVE.' },
+      { id: 'oa-8', front: 'AS 12 disclosures:', back: 'Accounting POLICY incl. presentation methods + NATURE AND EXTENT of grants recognised, expressly incl. non-monetary grants at concession/free.' },
+      { id: 'oa-9', front: 'AS 12 applicability:', back: 'Binds EVERYONE in full — AS 12 sits on no SMC or MSME exemption/relaxation list.' },
+      { id: 'oa-10', front: 'AS 14 scope:', back: 'TRANSFEREE company\'s books, amalgamations under Companies Act 2013/other statutes. ACQUISITIONS excluded — acquired company NOT dissolved, separate entity continues. (Full mechanics: Ch 13 deck.)' },
+      { id: 'oa-11', front: 'AS 14 contingent consideration:', back: 'Adjustment PROBABLE + REASONABLY ESTIMABLE at amalgamation date → include in consideration NOW. Otherwise → recognise as soon as the amount is DETERMINABLE.' },
+      { id: 'oa-12', front: 'AS 14 goodwill life factors (≤5 yrs unless justified):', back: 'Foreseeable BUSINESS/INDUSTRY life · product OBSOLESCENCE/demand · KEY-PEOPLE service lives · COMPETITOR actions · LEGAL/regulatory/contractual limits.' },
+      { id: 'oa-13', front: 'Transferor P&L balance + post-year-end scheme:', back: 'MERGER: aggregate with transferee\'s P&L or → General Reserve. PURCHASE: loses identity. Amalgamation AFTER BS date, before issuance: AS 4 DISCLOSURE only, not incorporated (may support going concern).' },
+      { id: 'oa-14', front: 'AS 14 disclosure lists:', back: 'ALL: names/nature, effective date, METHOD, scheme particulars. POOLING adds: shares issued + % equity EXCHANGED, difference & treatment. PURCHASE adds: consideration (incl. CONTINGENT part), difference & treatment incl. goodwill AMORTISATION PERIOD.' },
+    ],
+  },
 ];
 
 export const allCards = decks.flatMap((d) => d.cards.map((c) => ({ ...c, deckId: d.id, deckName: d.name })));
