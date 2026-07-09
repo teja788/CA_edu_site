@@ -1,0 +1,26 @@
+# Secrets — never commit
+.env
+*.pem
+kite_token*.json
+
+# Data — local only, never commit
+data/
+artifacts/
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.sqlite3
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+uv.lock
