@@ -70,6 +70,10 @@ class Settings(BaseSettings):
         return self.data_dir / "paper_ledger.sqlite"
 
     @property
+    def live_db_path(self) -> Path:
+        return self.data_dir / "live.sqlite"  # live order journal (reuses the paper schema)
+
+    @property
     def token_cache_path(self) -> Path:
         return self.data_dir / "kite_token.json"
 

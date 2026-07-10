@@ -195,6 +195,272 @@ When an assumption changes, update the owning code and this file together.
   heatmap's first calendar month is a partial-period return measured from
   the curve's first observation.
 
+## Walk-forward & robustness (analytics/walkforward.py, robustness.py)
+
+- Walk-forward windows tile the calendar: train [k·test, k·test+train), test
+  the next test_bars, step = test_bars. Selection uses ONLY the train window;
+  the final partial test window is evaluated (real OOS data is never thrown
+  away). Engines warm indicators up on pre-window (past) data — that is
+  correct, not a leak.
+- The stitched OOS curve chain-links each test segment's RETURNS from
+  base.capital (levels are discarded); each seam is a genuine flat cash bar
+  (every test run restarts from cash). OOS trade-derived metrics are NaN by
+  construction. Windows where every variant scores NaN are skipped and leave
+  an honest gap.
+- Robustness is a ONE-AT-A-TIME ±step neighborhood (not a cartesian grid);
+  int perturbations that collapse onto the base value are skipped; invalid
+  or erroring perturbations are recorded as rows, never raised. The
+  fragility flag (worst neighbor < 50% of base score) is only meaningful for
+  a positive base score — otherwise False with an explanatory note.
+
+## Experiments (experiments/, cli/experiments_cmds.py)
+
+- **Train/holdout split**: train_end = (max bar ts − holdout_years × 365.25
+  calendar days), tightened per variant to its own config.end if earlier.
+  Train runs execute clamped to end=train_end; `config_json` stores the
+  UNCLAMPED config and the `train_end` column records the clamp. The holdout
+  window is [train_end + 1 day, config.end].
+- **Holdout lockout**: `score_holdout` is the only door to the holdout
+  window. The quota (default 3 accesses per family) is checked BEFORE any
+  scoring — no partial scoring past it; every access writes a HoldoutAccess
+  audit row and a WARNING log. A FAILED holdout run still consumes quota
+  (the access happened). The check-then-insert is not atomic across
+  concurrent processes, and max_evals is caller-supplied — the lockout is a
+  discipline guard for a single user, not a security boundary.
+- **DSR is computed at query time, per family, never stored** (it depends on
+  the family's trial count N, which grows). n_trials counts non-holdout DONE
+  runs; per-period Sharpe = sharpe/sqrt(252); sr variance across trials is
+  ddof=1 over the finite per-period Sharpes (< 2 finite → DSR NaN);
+  `ret_kurt` is stored non-excess (normal = 3).
+- A failing grid variant is recorded as status="error" and never aborts the
+  grid. Workers receive primitives only and reload data from the store (no
+  frame pickling); all DB writes happen in the parent process.
+- `code_git_hash` records HEAD of the enclosing repository — coarse
+  provenance (the platform lives in a subfolder of a larger repo).
+- Direct-script callers of `run_grid` with parallel > 1 must guard with
+  `if __name__ == "__main__":` (spawn semantics).
+
+## Paper trading (paper/, broker/risk.py, broker/killswitch.py)
+
+- **Whole-order fills only.** A paper order either fills in full against a
+  matching quote or stays working — no partial fills / volume participation
+  (a single last-traded tick carries no reliable resting-depth signal; the
+  backtest engine does model participation).
+- **Fill prices**: market BUY at `round(ask·(1+slip), 2)`, market SELL at
+  `round(bid·(1−slip), 2)`, falling back to last-traded when depth is absent.
+  Slippage default = the cost schedule's non-large-cap bps unless overridden.
+  LIMIT orders fill at the limit exactly (no extra slippage), touch mode by
+  default (last ≤/≥ limit fills; "cross" requires strictly through). SL /
+  SL-M are rejected at placement ("not supported in paper") — no intrabar
+  path exists to trigger a stop off one tick.
+- **No T+1 settlement**: a CNC buy can be sold the same day (Zerodha would
+  block this). Long-only CNC — oversell is rejected pre-trade.
+- **Immediate matching requires a same-day quote.** An order placed while
+  the last known quote is stale (previous session) rests OPEN and matches on
+  the day's first tick for its symbol — filling a market order at
+  yesterday's close would be systematically wrong across overnight gaps; the
+  first tick of the day is the paper analogue of "at the open" (mirrors the
+  backtest's signals-at-close-of-T → fill-at-T+1-open). The stale quote is
+  still used as the pre-trade risk/cash *estimate* (best reference
+  available pre-open). The scheduler's session-open job therefore runs as an
+  idempotent retry window (each minute 09:15–09:25) rather than a single
+  09:15 shot that could beat the day's first ticks.
+- **Working orders reserve what they commit** (mirrors Zerodha blocking
+  funds/stock at placement): the BUY cash check runs against cash minus
+  working-BUY commitments (limit value for LIMIT, latest-quote estimate for
+  a resting MARKET, plus estimated charges); the oversell guard against
+  holdings minus resting SELL quantity. Because a resting MARKET's
+  reservation is only an estimate, a fill whose actual cost exceeds cash at
+  match time is REJECTED then (like a real margin shortfall) — the ledger
+  can never go negative.
+- **Session close marks to the day's official closes** (last completed bar
+  ≤ 15:30) before the 15:30 equity snapshot and target sizing, so a
+  replayed broker that saw no ticks (report-only / `--once` runs) never
+  values positions at stale fill prices.
+- **`place_planned` is per-order fault tolerant**: a risk-rejected planned
+  order is skipped (persisted REJECTED), one with no price reference stays
+  PENDING for a later retry, and an engaged kill switch halts the batch
+  (remainder stays PENDING).
+- **Restart safety**: positions/cash are never stored — they are rebuilt by
+  replaying the append-only fill log through the same `Ledger` used by the
+  event engine (charges read off stored fills, never recomputed). A fill and
+  its order's post-fill state are persisted in ONE SQLite transaction — a
+  crash can never leave a replayable fill beside a still-OPEN order row
+  (which would double-fill after restart). The ChargeCalculator's
+  once-per-scrip-per-day DP bookkeeping is re-warmed from the last fill day.
+- **Day-start equity** (the max_daily_loss basis) is snapshotted lazily at
+  the day's first activity, stamped 09:15, exactly once — a mid-day restart
+  never overwrites the day's baseline.
+- **Risk checks** are inclusive-pass (only strictly-over violates), checked
+  in order: restricted symbol → trading day/market hours → orders-per-day →
+  order value → daily loss (BUYs only; SELLs always de-risk) → position %
+  of equity post-order (BUYs only). Rejected orders are persisted REJECTED
+  (they count toward the day's order tally) and the violation re-raised.
+- **Modifications are re-validated like fresh placements** (Zerodha re-runs
+  its checks on modify): the risk rules, the BUY cash check and the SELL
+  oversell guard all run against the modified values, with the order's OWN
+  current reservation excluded from working-order commitments (it is being
+  replaced, not added). The orders-per-day rule is skipped — a modification
+  is not a new placement. A violating modification raises and leaves the
+  order working exactly as previously accepted.
+- **PaperBroker is thread-safe via one reentrant lock** over every public
+  entry point: in `--schedule` mode the websocket thread (`on_tick`) and the
+  APScheduler job threads (`place_planned`, `mark_to_market`, `snapshot`)
+  share the broker, and check-then-mutate sequences (cash check → fill) must
+  not interleave. Consequence: a synchronous Telegram alert inside a fill
+  holds the lock for up to its 5 s timeout, stalling other threads too.
+- **A close-job re-run cancels its own stale queue entries**: planned
+  (PENDING, tag="rebalance") orders for the next open that the freshly
+  computed delta set no longer contains are CANCELLED (a symbol that dropped
+  out — or flipped side — would otherwise still fire at the open alongside
+  the new orders). Re-issued ids are upserted; orders queued by anything
+  other than the runner are never touched.
+- **Kill switch** is file-presence-based and shared across processes; a
+  corrupt/unreadable file still counts as engaged (presence, not content,
+  is the signal).
+- **Ticks**: bid/ask come from the first market-depth level (None if absent
+  or zero); tick ts from `exchange_timestamp`, falling back to
+  `last_trade_time`, then wall clock, normalized to tz-naive IST. Ticks are
+  persisted append-only as per-day Parquet parts. `on_tick` exceptions are
+  logged, never kill the stream. 3000 instruments/connection (Kite cap)
+  enforced.
+- **Telegram alerts** never raise and are bounded by a 5 s HTTP timeout, but
+  are sent synchronously inside the fill path — a Telegram outage can delay
+  tick processing by up to that timeout per fill. Disabled unless both bot
+  token and chat id are configured.
+- **EOD divergence** joins paper and reference equity on common *dates*
+  (inner join; last snapshot wins within a day); returns are `pct_change`
+  of the joined series; `cum_diff_pct` normalizes both curves to their first
+  common date. Paper gross equity = net equity + as-of-aligned cumulative
+  fill charges (same identity as the event engine).
+- **The paper equity curve is collapsed to one point per day** (each day's
+  last snapshot, original timestamp kept) before it enters `BacktestResult`
+  / `compute_metrics`: the store holds ~2 snapshots per trading day (09:15
+  day-start risk baseline + 15:30 close) but all metric arithmetic assumes
+  one equity point per trading day (252/yr annualization) — the raw
+  snapshot pairs would double the period count and distort every annualized
+  metric.
+
+## Live broker (live/broker.py)
+
+- **`dry_run` defaults to `True`.** Going live is always an explicit opt-in
+  (`dry_run=False`). In dry-run, order-*mutating* Kite calls (place / modify /
+  cancel) are NOT issued: the intent is journalled (order goes OPEN with a
+  synthetic `broker_order_id="DRY-<n>"`) and the exact `kite.place_order`
+  kwargs are appended to the public `intended_calls` list for the CLI to print.
+  Read calls (ltp / quote / positions / holdings / margins / orders) DO still
+  run in dry-run so the full pre-trade pipeline is exercised against real
+  account state. Every suppression is logged with a `DRY-RUN:` prefix at
+  WARNING level.
+- **Idempotency / never double-place.** `place_order` for a `client_order_id`
+  already present in the journal in any non-PENDING state returns the stored
+  order unchanged and issues NO API call. The journal (the reused paper
+  SQLite schema, keyed on `settings.live_db_path`) is the single source of
+  "did we already send this?", so a process restart mid-flight (new broker
+  instance, same journal) cannot double-place — the reloaded row
+  short-circuits the retry.
+- **Reconciliation tag.** Kite order *tags* are capped at 20 alphanumeric
+  characters, shorter than our 16-hex `client_order_id`, so the tag is derived
+  as `sha1(client_order_id).hexdigest()[:18]` (18 lowercase-hex chars,
+  deterministic, ≤20). `place_order` records both the returned
+  `broker_order_id` and this tag on the journal row; `sync_orders` matches
+  `kite.orders()` rows to journal orders by `broker_order_id` first, by tag as
+  a defensive fallback.
+- **Charges are ESTIMATES until contract-note ingestion.** A fill journalled by
+  `sync_orders` on a newly-COMPLETE order carries a cost estimate from
+  `CostModel.order_charges(side, product, value).total` (the single charge
+  seam) evaluated at the broker's `average_price` — NOT the broker's actual
+  contract-note charges (STT/stamp are whole-rupee-rounded per note, DP is
+  once-per-scrip-per-day, etc.). Live P&L that leans on `Fill.charges` is
+  therefore approximate until contract notes are ingested (future work). A
+  COMPLETE order emits exactly ONE Fill for the full filled quantity; PARTIAL
+  states update `filled_qty` only (no interim Fill).
+- **Kite status mapping** (`kite.orders()[i]["status"]` → `OrderStatus`):
+  `COMPLETE`→COMPLETE, `REJECTED`→REJECTED, `CANCELLED`→CANCELLED; every other
+  (OPEN-ish) status — `OPEN`, `TRIGGER PENDING`, `VALIDATION PENDING`,
+  `PUT ORDER REQ RECEIVED` and any *unrecognised* non-terminal status — maps to
+  OPEN, except an OPEN-ish status with `filled_quantity > 0` maps to PARTIAL.
+  Unknown statuses are deliberately treated as still-working, never terminal
+  (fail safe: never silently drop an order). `sync_orders` is idempotent —
+  journal orders already in a terminal state are skipped, so a second sync
+  never re-records a fill.
+- **Equity** = `margins.cash_available` (Kite `available.live_balance`, falling
+  back to `available.cash`) + Σ(qty·last_price) over holdings + Σ(qty·last_price)
+  over positions, `last_price` falling back to `avg_price` only if the broker
+  omitted it. Holdings and positions never overlap for the CNC delivery flow,
+  so there is no double-counting. Holdings qty = `quantity + t1_quantity` (T1
+  shares bought yesterday are ours and back a sell).
+- **No local cash / oversell guard.** Unlike `PaperBroker`, the live broker
+  runs no simulated ledger and therefore no local funds/holdings guard —
+  Zerodha enforces margins and long-only holdings server-side and rejects the
+  order. Such a rejection surfaces via the exception mapping (BrokerError) at
+  placement and via `sync_orders` on reconciliation.
+- **Exception mapping.** A `kiteconnect.exceptions.TokenException` on any call
+  → `alerter.alert_token_expiry` + `AuthError`; on placement the order is NOT
+  journalled REJECTED (a token expiry is transient — re-auth and retry the same
+  idempotent `client_order_id`). Any other Kite exception on placement →
+  journal REJECTED + `alert_rejection` + `BrokerError`.
+- **Cancel marks CANCELLED on request acceptance.** `cancel_order` (and
+  `cancel_all_open`, its per-order-fault-tolerant batch form used by the
+  kill-switch CLI) marks the journal order CANCELLED once Kite *accepts* the
+  cancel request. In the rare cancel/fill race the order may still fill at the
+  broker; `sync_orders` reconciles from `kite.orders()` and is the source of
+  truth — but because CANCELLED is terminal it is skipped by a later sync, so
+  an operator wanting certainty should `sync_orders` before assuming a cancel
+  is final.
+- **Day-start equity** (the max_daily_loss basis) is snapshotted into the
+  journal lazily at the day's first order, stamped 09:15, exactly once — a
+  mid-day restart recognises the existing snapshot and never overwrites it.
+  The kill-switch check runs *before* the snapshot, so a halted broker touches
+  no Kite API at all.
+- `stream_ticks` is not implemented (raises `NotImplementedError` pointing at
+  `paper.ticks.TickStreamer`); live tick ingestion is the paper stack's job.
+- **Modifications are re-validated like fresh placements** (mirrors the paper
+  broker): the pre-trade risk rules run against the modified values before any
+  `kite.modify_order` call; a violation raises and leaves the order working
+  exactly as previously accepted (no journal write, no API call — the order is
+  still live at the broker). The orders-per-day rule is skipped (a modification
+  is not a new placement). There is no local cash/oversell re-check — Zerodha
+  enforces funds/holdings server-side.
+
+## Live reconciliation & session runner (live/reconcile.py, live/runner.py, cli/live_cmds.py)
+
+- **Reconciliation is detection-only** and runs `sync_orders` first; it then
+  flags what sync cannot fix: `missing_at_broker` (journal OPEN/PARTIAL with
+  no matching kite row — the dangerous direction), `qty_drift` (a matched row
+  disagreeing on symbol/side/qty), and `status_drift` (matched pair still
+  disagreeing after sync — this is how the cancel/fill race surfaces:
+  journal CANCELLED vs kite COMPLETE). Kite rows matching NO journal
+  broker_order_id/tag are deliberately NOT flagged — opaque hash tags cannot
+  attribute them (another strategy on the same account, or a manual order);
+  `unknown_at_broker` is reserved in the contract but never emitted today.
+  In dry-run both reconcile passes short-circuit to `[]` with zero Kite calls.
+- **One consolidated Telegram alert per reconcile pass** listing every
+  mismatch — never one alert per mismatch (a drifted book must not flood).
+- **The live planned-order queue lives in the runner, not the broker**
+  (`ZerodhaLiveBroker` has no queue API): the runner reads/writes the same
+  journal store (`save_order(planned_for=…)` / `planned_orders(day)`) and
+  replicates paper's per-order fault tolerance at the open (kill switch halts
+  the batch; risk rejection skips; broker/auth errors leave PENDING for the
+  09:15–09:25 retry window).
+- **Cancelling a stale planned (never-placed) order is journal-only**: it has
+  no `broker_order_id`, so it is transitioned CANCELLED directly on the store
+  row — routing it through `broker.cancel_order` would hit the Kite API for
+  an order that was never placed.
+- **Live produces no EOD/divergence report in Phase 6** — that comparison is
+  paper's job; live's acceptance bar is order-flow correctness (a dry-run
+  session shows the exact intended `kite.place_order` kwargs).
+- **The reconcile cron job window is enforced in the job body** (trading day
+  + 09:15–15:30), not by the cron expression (`hour="9-15", minute="*/5"` is
+  a superset that fires outside the session and no-ops).
+- CLI safety split: `live status` always builds the broker with
+  `dry_run=True` (can never mutate an order); `live reconcile` builds with
+  `dry_run=False` (sync against the real book is the point); `live run`
+  defaults to dry-run — `--live` is the explicit opt-in and prints a loud
+  warning. `live killswitch engage` writes the kill-switch file FIRST, then
+  best-effort cancels open orders (auth failure → a clear "handle it in
+  Kite's web console" warning, never a crash).
+
 ## Rate limiting (data/ratelimit.py)
 
 - Kite historical API: 3 requests/second token bucket. `acquire()` treats a
