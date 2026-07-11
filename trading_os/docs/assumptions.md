@@ -195,9 +195,16 @@ When an assumption changes, update the owning code and this file together.
   day of each calendar period on the engine's own trading calendar, clamped
   to the period's last day when the period is shorter than N (a partial
   first period still trades).
-- **Overlay vs rebalance precedence**: on a rebalance day, stop exits queued
-  at that close are cancel-and-replaced by the rebalance decision (the
-  rebalance re-decides the whole book); the drawdown kill switch always wins
+- **Overlay vs rebalance precedence — risk exits win**: a rebalance's
+  cancel-and-replace (`cancel_for_rebalance`) cancels working BUYs and
+  rebalance-tagged sells but PRESERVES risk-exit sells (any SELL not tagged
+  "rebalance": trailing stops etc.), and a symbol with a pending risk exit
+  receives no rebalance order that bar — no competing sell (oversell), no
+  same-bar re-buy fighting the stop. It is flat and re-selectable from the
+  next rebalance onward. (The previous semantics — the rebalance
+  cancel-and-replacing same-close stop exits — meant overlays could never
+  act on daily-rebalance strategies; a 50-stock × 5-year daily-rebalance run
+  produced exactly zero stop exits.) The drawdown kill switch always wins
   and skips the rebalance. Between rebalances, stops execute at next open.
 - **Delisting fills carry normal sell charges but no slippage** (the haircut
   already penalizes the exit).

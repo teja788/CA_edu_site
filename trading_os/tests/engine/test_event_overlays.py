@@ -1,10 +1,14 @@
 """Trailing-stop overlays: engineered paths trigger exactly once at the right
 bar and exit at the next open; and stops never loosen (monotone).
 
-Stops are tested two ways:
+Stops are tested three ways:
 
-* end-to-end through the engine (a MONTHLY rebalance is used so the daily bars
-  do not cancel-and-replace the stop's exit order before it can fill);
+* end-to-end through the engine with a MONTHLY rebalance (stop fires between
+  rebalance dates);
+* end-to-end with a DAILY rebalance — regression for the same-bar
+  cancel-and-replace eating the stop's exit order (risk-exit sells must
+  survive `cancel_for_rebalance`, and the exiting symbol gets no rebalance
+  order that bar);
 * directly at the overlay level, advancing a DataView bar by bar to assert the
   internal stop level is monotone non-decreasing and fires exactly once.
 """
@@ -167,6 +171,53 @@ def test_stop_exit_cancels_working_buy_and_does_not_pingpong() -> None:
     # BUY was cancelled, so the falling price can no longer move equity.
     tail = res.equity.iloc[6:]
     assert (tail == tail.iloc[0]).all(), "position was refilled after the stop exit"
+
+
+def test_stop_survives_same_bar_daily_rebalance() -> None:
+    """Regression: with DAILY rebalancing, the rebalance's cancel-and-replace
+    on the same bar used to cancel the stop's just-queued SELL and re-target
+    the still-selected symbol — overlays could never act on daily-rebalance
+    strategies. The risk-exit sell must survive the rebalance, fill at the
+    next open, and the symbol must get no competing rebalance order that bar
+    (no oversell, no same-bar re-buy)."""
+    dates = pd.date_range(date(2021, 1, 1), periods=10, freq="B")
+    closes = [100.0, 110.0, 120.0, 130.0, 130.0, 114.0, 114.0, 114.0, 114.0, 114.0]
+    frame = pd.DataFrame(
+        {
+            "open": closes,
+            "high": [c + 2 for c in closes],
+            "low": [c - 2 for c in closes],
+            "close": closes,
+            "volume": [10_000_000] * len(dates),
+        },
+        index=dates,
+    )
+    data = MarketData({"YYY": frame}, timeframe=Timeframe.DAY, snapshot_id="daily_stop")
+
+    cfg = StrategyConfig(
+        name="daily_stop",
+        start=date(2021, 1, 1),
+        end=date(2021, 1, 31),
+        capital=1_000_000,
+        universe=UniverseSpec(symbols=["YYY"], point_in_time=False),
+        selection=SelectionSpec(method="top_n", n=1, exit_rank=1),
+        sizing=SizingSpec(method="equal_weight", max_position_pct=0.9),
+        overlays=[OverlaySpec(name="trailing_stop_pct", params={"pct": 0.10})],
+        rebalance=RebalanceSpec(frequency="daily"),
+        execution=ExecutionSpec(timing="next_open", slippage_bps=0.0, max_participation=1.0),
+    )
+    res = EventEngine().run(cfg, data, StaticUniverseResolver())
+
+    # peak close 130 -> stop 117; close 114 on the 6th bar fires the stop
+    # EXACTLY once despite the same-bar daily rebalance.
+    stops = [t for t in res.trades if t.exit_reason == "trailing_stop"]
+    assert len(stops) == 1, (
+        f"expected exactly 1 trailing_stop trade, got {len(stops)} — "
+        "the daily rebalance cancelled (or duplicated) the stop exit"
+    )
+    assert stops[0].qty > 0
+    # full exit, no oversell from a competing rebalance sell on the same bar
+    assert not any("clipped" in w or "no open long" in w for w in res.warnings)
 
 
 # ---------------------------------------------------------------------------

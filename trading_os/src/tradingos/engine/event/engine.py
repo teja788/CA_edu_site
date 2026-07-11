@@ -160,6 +160,18 @@ class EventEngine:
             working.clear()
             id_to_order.clear()
 
+        def cancel_for_rebalance() -> None:
+            """Cancel-and-replace scope of a rebalance: every working order
+            EXCEPT risk-exit sells (overlay stops etc. — any SELL not tagged
+            "rebalance"). A risk exit queued at this bar's close must survive
+            the same-bar rebalance, or frequent (e.g. daily) rebalancing
+            cancels every stop before it can fill and overlays never act."""
+            for o in working:
+                if o.side == Side.SELL and o.tag != "rebalance":
+                    continue
+                o.transition(OrderStatus.CANCELLED)
+            _prune_working()
+
         def cancel_symbol(symbol: str) -> None:
             for o in working:
                 if o.symbol == symbol:
@@ -300,7 +312,13 @@ class EventEngine:
 
             # 5. REBALANCE (cancel-and-replace) on scheduled days.
             if (t in rebalance_dates) and not halted:
-                cancel_all()
+                cancel_for_rebalance()
+                # After cancel_for_rebalance the only survivors are risk-exit
+                # sells; those symbols are mid-exit and get NO rebalance order
+                # this bar (neither a competing sell that would oversell the
+                # position, nor a re-buy that would fight the stop). They are
+                # flat and re-selectable from the next rebalance onward.
+                risk_exit_syms = {o.symbol for o in working}
                 targets = evaluate_targets(
                     config,
                     dv_t,
@@ -311,7 +329,9 @@ class EventEngine:
                     warnings,
                     run_end=calendar[-1],  # enables delisting exclusion (backtests only)
                 )
-                new_orders = delta_orders(targets, t)
+                new_orders = [
+                    o for o in delta_orders(targets, t) if o.symbol not in risk_exit_syms
+                ]
                 for o in new_orders:
                     queue(o)
                 if config.execution.timing == "same_close":
