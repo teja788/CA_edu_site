@@ -121,6 +121,10 @@ Window Jul 2021 – Jul 2026, ₹2L per stock, current constituents:
 | 2020-vintage top-200 (traded-value proxy, `nse200_2020.csv`): m1 SMA gate | +155.0%, DD −26.8%, Sharpe 0.97 | vs +389.6% on current constituents |
 | — m2 returns-only | **+183.2%, DD −26.8%, Sharpe 1.04** | — |
 | — m3 / m4 (+3×ATR stop) | +50.8% / +51.2%, Sharpe ~0.55 | — |
+| m2 universe-size scaling, 2020-vintage top-N by traded value: N=200 | +183.2%, DD −26.8%, Sharpe 1.04 | families `adhoc_m2_returns_only_nse{N}v2020` |
+| — N=500 | +133.6%, DD −34.5%, Sharpe 0.81 | — |
+| — N=1000 | +267.1%, DD −33.2%, Sharpe 1.15 | — |
+| — N=1224 (all Kite names with full 2020 history; "2000/4000" not constructible) | +242.6%, DD −33.2%, Sharpe 1.09 | — |
 
 Takeaways so far: the 3×ATR stop halved returns without reducing drawdown
 (shaken out on V-recoveries); the SMA filter's value is drawdown control
