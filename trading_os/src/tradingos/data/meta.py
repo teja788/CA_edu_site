@@ -29,14 +29,19 @@ def _import_table_models() -> None:
 
 
 def meta_engine(db_path: Path) -> Engine:
+    """Return (creating on first use) the engine for this metadata DB. Cached
+    per resolved path; table-model imports and ``create_all`` run only on the
+    cache miss — every meta table model lives in the three modules imported by
+    ``_import_table_models``, so no model can register after the engine is
+    cached."""
     path = Path(db_path).resolve()
     eng = _engines.get(path)
     if eng is None:
         path.parent.mkdir(parents=True, exist_ok=True)
         eng = create_engine(f"sqlite:///{path}")
+        _import_table_models()
+        SQLModel.metadata.create_all(eng)
         _engines[path] = eng
-    _import_table_models()
-    SQLModel.metadata.create_all(eng)
     return eng
 
 

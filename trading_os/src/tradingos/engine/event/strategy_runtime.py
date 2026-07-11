@@ -231,22 +231,23 @@ def _apply_filters(
     evaluated on that symbol's own frame: latest value False sends the whole book
     to cash (``to_cash=True``). Otherwise it is an *eligibility* filter evaluated
     per-candidate on its own frame: latest value False drops that candidate.
+
+    Filter series are read through ``dv.filter_series`` — computed once per
+    (filter, params, symbol) per run and sliced at ``now`` (filters are causal,
+    same contract as signals), instead of recomputed on the truncated frame at
+    every rebalance (which was quadratic in run length).
     """
     eligible = set(candidates)
     for fspec in config.filters:
         params = dict(fspec.params)
         routed = params.pop("symbol", None)  # reserved key popped by the ENGINE
-        fdef = get_filter(fspec.name)
+        get_filter(fspec.name)  # unknown names must fail here, even with no reads below
         if routed is not None:
-            df = dv.history(routed)
-            passed = _latest_bool(fdef.fn(df, **params)) if not df.empty else False
-            if not passed:
+            if not _latest_bool(dv.filter_series(routed, fspec.name, params)):
                 return [], True
         else:
             for sym in list(eligible):
-                df = dv.history(sym)
-                ok = _latest_bool(fdef.fn(df, **params)) if not df.empty else False
-                if not ok:
+                if not _latest_bool(dv.filter_series(sym, fspec.name, params)):
                     eligible.discard(sym)
     return sorted(eligible), False
 

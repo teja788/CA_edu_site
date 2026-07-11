@@ -143,3 +143,17 @@ def get_filter(name: str) -> FilterDef:
     if key not in _FILTERS:
         raise ConfigError(f"unknown filter {name!r}. Registered: {sorted(_FILTERS)}")
     return _FILTERS[key]
+
+
+def compute_filter(name: str, df: pd.DataFrame, params: dict[str, Any]) -> pd.Series:
+    """Compute one filter on one symbol's OHLCV frame (mirrors
+    ``compute_signal``; filters have no per-def defaults — defaults live on the
+    function signature, see ``strategies/filters.py``)."""
+    fdef = get_filter(name)
+    out = fdef.fn(df, **params)
+    if not isinstance(out, pd.Series):
+        raise ConfigError(f"filter {name!r} returned {type(out).__name__}, expected pd.Series")
+    if len(out) != len(df):
+        raise ConfigError(f"filter {name!r} returned wrong length {len(out)} != {len(df)}")
+    out.index = df.index
+    return out

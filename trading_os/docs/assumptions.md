@@ -136,6 +136,12 @@ When an assumption changes, update the owning code and this file together.
   through `DataView`'s visibility cutoff; precomputation cannot leak the
   future *given* the per-signal causality certification above
   (`engine/dataview.py`).
+- Filters follow the same pattern since Jul 2026: `FilterStore`
+  (`engine/dataview.py`) computes each (filter, params, symbol) series once
+  per run and `_apply_filters` reads the value at `now` through the same
+  visibility cutoff — equivalent to recomputing on the truncated frame
+  *given* filter causality (parity + call-count tests in
+  `tests/engine/test_filter_store.py`).
 - **Excluded as non-causal** (`strategies/signals/builtin.py`): ichimoku's
   chikou span (row t holds close[t+kijun]); DPO's default centered mode
   (the wrapper always forces `centered=False` and a YAML cannot re-enable

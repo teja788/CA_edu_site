@@ -32,9 +32,9 @@ def get_engine(settings: Settings) -> Engine:
     if eng is None:
         path.parent.mkdir(parents=True, exist_ok=True)
         eng = create_engine(f"sqlite:///{path}")
+        SQLModel.metadata.create_all(eng)
+        _migrate_columns(eng)
         _engines[path] = eng
-    SQLModel.metadata.create_all(eng)
-    _migrate_columns(eng)
     return eng
 
 

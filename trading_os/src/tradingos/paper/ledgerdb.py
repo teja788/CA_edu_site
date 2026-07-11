@@ -17,11 +17,11 @@ from __future__ import annotations
 
 from collections.abc import Iterator
 from contextlib import contextmanager
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import pandas as pd
-from sqlalchemy import UniqueConstraint
+from sqlalchemy import UniqueConstraint, func
 from sqlalchemy.engine import Engine
 from sqlmodel import Field, Session, SQLModel, create_engine, select
 
@@ -40,17 +40,27 @@ DRY_ORDER_ID_PREFIX = "DRY-"
 _engines: dict[Path, Engine] = {}
 
 
+def _day_bounds(day: date) -> tuple[datetime, datetime]:
+    """Half-open [00:00 of ``day``, 00:00 of ``day``+1) window for SQL-side
+    date filtering of the naive-IST datetime columns. Equivalent to
+    ``value.date() == day`` (and excludes NULLs, as the Python-side filters
+    did)."""
+    start = datetime(day.year, day.month, day.day)
+    return start, start + timedelta(days=1)
+
+
 def paper_engine(db_path: Path) -> Engine:
     """Return (creating on first use) the SQLAlchemy engine for this paper
     ledger DB. Cached per resolved path. Creates parent dirs and the paper
-    tables idempotently."""
+    tables on first use only — a cached engine skips the DDL, so the
+    per-order hot path never re-runs ``create_all``."""
     path = Path(db_path).resolve()
     eng = _engines.get(path)
     if eng is None:
         path.parent.mkdir(parents=True, exist_ok=True)
         eng = create_engine(f"sqlite:///{path}")
+        SQLModel.metadata.create_all(eng)
         _engines[path] = eng
-    SQLModel.metadata.create_all(eng)
     return eng
 
 
@@ -295,13 +305,14 @@ class PaperStore:
             stmt = select(PaperOrderRow).where(PaperOrderRow.strategy_id == self.strategy_id)
             if status is not None:
                 stmt = stmt.where(PaperOrderRow.status == status.value)
+            if day is not None:
+                start, end = _day_bounds(day)
+                stmt = stmt.where(
+                    PaperOrderRow.created_at >= start, PaperOrderRow.created_at < end
+                )
             stmt = stmt.order_by(PaperOrderRow.created_at, PaperOrderRow.id)
             rows = session.exec(stmt).all()
-            return [
-                _row_to_order(r)
-                for r in rows
-                if day is None or (r.created_at is not None and r.created_at.date() == day)
-            ]
+            return [_row_to_order(r) for r in rows]
 
     def planned_orders(self, day: date, *, include_dry_placed: bool = False) -> list[Order]:
         """PENDING orders queued for the next-open on ``day``, ordered by id.
@@ -338,17 +349,21 @@ class PaperStore:
 
     def orders_placed_count(self, day: date) -> int:
         """Count of orders whose created_at falls on ``day`` AND whose status
-        is not PENDING (planned-but-not-yet-placed orders are excluded)."""
+        is not PENDING (planned-but-not-yet-placed orders are excluded).
+        Counted SQL-side — this runs inside every pre-trade risk check."""
+        start, end = _day_bounds(day)
         with paper_db_session(self.db_path) as session:
-            stmt = select(PaperOrderRow).where(PaperOrderRow.strategy_id == self.strategy_id)
-            rows = session.exec(stmt).all()
-            return sum(
-                1
-                for r in rows
-                if r.created_at is not None
-                and r.created_at.date() == day
-                and r.status != OrderStatus.PENDING.value
+            stmt = (
+                select(func.count())
+                .select_from(PaperOrderRow)
+                .where(
+                    PaperOrderRow.strategy_id == self.strategy_id,
+                    PaperOrderRow.created_at >= start,  # NULL created_at never matches
+                    PaperOrderRow.created_at < end,
+                    PaperOrderRow.status != OrderStatus.PENDING.value,
+                )
             )
+            return int(session.exec(stmt).one())
 
     # -- fills ----------------------------------------------------------
 
@@ -389,10 +404,11 @@ class PaperStore:
                 .where(PaperFillRow.strategy_id == self.strategy_id)
                 .order_by(PaperFillRow.ts, PaperFillRow.id)
             )
+            if day is not None:
+                start, end = _day_bounds(day)
+                stmt = stmt.where(PaperFillRow.ts >= start, PaperFillRow.ts < end)
             rows = session.exec(stmt).all()
-            return [
-                _row_to_fill(r) for r in rows if day is None or r.ts.date() == day
-            ]
+            return [_row_to_fill(r) for r in rows]
 
     def all_fills(self) -> list[Fill]:
         """All fills for this strategy, ordered by ts, id — the replay
@@ -443,20 +459,34 @@ class PaperStore:
 
     def day_start_equity(self, day: date) -> float | None:
         """Fallback chain: earliest snapshot ON `day` -> latest snapshot
-        BEFORE `day` -> stored run capital -> None."""
+        BEFORE `day` -> stored run capital -> None. Both lookups are
+        SQL-side (ORDER BY + LIMIT 1) — this runs inside every pre-trade
+        risk check."""
+        start, end = _day_bounds(day)
         with paper_db_session(self.db_path) as session:
-            stmt = (
+            on_day = session.exec(
                 select(PaperEquitySnapshotRow)
-                .where(PaperEquitySnapshotRow.strategy_id == self.strategy_id)
-                .order_by(PaperEquitySnapshotRow.ts)
-            )
-            rows = session.exec(stmt).all()
-            on_day = [r.equity for r in rows if r.ts.date() == day]
-            before = [r.equity for r in rows if r.ts.date() < day]
-        if on_day:
-            return on_day[0]  # rows sorted ascending by ts -> first is earliest
-        if before:
-            return before[-1]  # rows sorted ascending by ts -> last is latest-before
+                .where(
+                    PaperEquitySnapshotRow.strategy_id == self.strategy_id,
+                    PaperEquitySnapshotRow.ts >= start,
+                    PaperEquitySnapshotRow.ts < end,
+                )
+                .order_by(PaperEquitySnapshotRow.ts)  # earliest ON day
+                .limit(1)
+            ).first()
+            if on_day is not None:
+                return on_day.equity
+            before = session.exec(
+                select(PaperEquitySnapshotRow)
+                .where(
+                    PaperEquitySnapshotRow.strategy_id == self.strategy_id,
+                    PaperEquitySnapshotRow.ts < start,
+                )
+                .order_by(PaperEquitySnapshotRow.ts.desc())  # latest BEFORE day  # type: ignore[attr-defined]
+                .limit(1)
+            ).first()
+            if before is not None:
+                return before.equity
         return self.capital()
 
     # -- lifecycle ----------------------------------------------------------

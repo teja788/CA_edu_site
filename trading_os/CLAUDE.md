@@ -33,7 +33,7 @@ Package is `src/tradingos/` (the spec's `platform/` name shadows the stdlib modu
 
 ## Commands
 
-- `uv sync` — install deps. `uv run pytest` — tests. `uv run ruff check src tests` — lint.
+- `uv sync` — install deps. `uv run pytest` — tests (`uv run pytest -n auto` — parallel fast path via pytest-xdist). `uv run ruff check src tests` — lint.
 - `uv run platform --help` — CLI. Subcommands: `data`, `backtest`, `experiments`, `paper`, `live`.
 
 ## Conventions

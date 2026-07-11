@@ -24,7 +24,7 @@ import pandas as pd
 from tradingos.core.errors import DataError, LookAheadError
 from tradingos.core.models import Timeframe
 from tradingos.core.timeutils import MARKET_CLOSE
-from tradingos.strategies.registry import compute_signal, signal_cache_key
+from tradingos.strategies.registry import compute_filter, compute_signal, signal_cache_key
 
 
 class MarketData:
@@ -88,6 +88,35 @@ class SignalStore:
         return self._cache[key]
 
 
+class FilterStore:
+    """Per-run cache of precomputed filter series (symbol x filter-instance).
+
+    Mirrors :class:`SignalStore`. Filters share signals' causality contract —
+    row *t* uses only rows <= *t*, certified per registered filter by the
+    look-ahead detector suite — so computing the full-history series once and
+    slicing it through the DataView visibility guard is equivalent to
+    recomputing the filter on the truncated frame at every rebalance (which
+    was quadratic in run length).
+    """
+
+    def __init__(self, data: MarketData) -> None:
+        self._data = data
+        self._cache: dict[str, pd.Series] = {}
+
+    def series(self, symbol: str, name: str, params: dict[str, Any]) -> pd.Series:
+        key = signal_cache_key(symbol, f"filter:{name}", params, self._data.snapshot_id)
+        if key not in self._cache:
+            df = self._data.full_frame(symbol)
+            if df.empty:
+                # A filter fn is never invoked on an empty frame (the uncached
+                # path never called it when no bars were visible); an empty
+                # series makes every downstream `_latest_bool` read False.
+                self._cache[key] = pd.Series(dtype=bool)
+            else:
+                self._cache[key] = compute_filter(name, df, params)
+        return self._cache[key]
+
+
 def bar_completion_time(bar_ts: pd.Timestamp, timeframe: Timeframe) -> pd.Timestamp:
     """Wall-clock time at which the bar stamped bar_ts is fully known."""
     if timeframe == Timeframe.DAY:
@@ -112,6 +141,7 @@ class DataView:
     ) -> None:
         self._data = data
         self._signals = signals
+        self._filters = FilterStore(data)
         self._now = pd.Timestamp(now)
         self._aux = aux or {}
         self._aux_signals = {tf: SignalStore(md) for tf, md in self._aux.items()}
@@ -194,6 +224,19 @@ class DataView:
         series = store.series(symbol, name, params or {})
         return series.loc[: self._visible_cutoff(tf)]
 
+    def filter_series(
+        self, symbol: str, name: str, params: dict[str, Any] | None = None
+    ) -> pd.Series:
+        """Visible slice of a precomputed (cached once per run) filter series.
+
+        Filters are causal exactly like signals, so the full-history series is
+        computed once per (symbol, filter, params) and read through the same
+        visibility guard — its last value at or before ``now`` equals the last
+        value of the filter recomputed on the truncated frame. Filters are
+        evaluated on the run's base timeframe only."""
+        series = self._filters.series(symbol, name, params or {})
+        return series.loc[: self._visible_cutoff(self._data.timeframe)]
+
     def assert_visible(self, ts: datetime, timeframe: Timeframe | None = None) -> None:
         """Raise LookAheadError if a bar stamped ts is not yet visible at now."""
         tf = timeframe or self._data.timeframe
@@ -207,6 +250,7 @@ class DataView:
         view = DataView.__new__(DataView)
         view._data = self._data
         view._signals = self._signals
+        view._filters = self._filters  # shared: filter cache is per run
         view._now = pd.Timestamp(now)
         view._aux = self._aux
         view._aux_signals = self._aux_signals

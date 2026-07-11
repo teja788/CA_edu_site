@@ -3,13 +3,14 @@ session-close rebalance evaluation + next-open queueing, and the cron
 scheduler (open / close / reconciliation) that drives all three automatically.
 
 Design mirrors :class:`~tradingos.paper.runner.PaperSessionRunner` closely --
-same session-open / session-close split, the same
+the shared skeleton (session-open / session-close split, the
 :func:`~tradingos.engine.event.strategy_runtime.evaluate_targets` pipeline
 bound to a :class:`~tradingos.engine.dataview.DataView` pinned to the day's
-15:30 close, the same SELLs-then-BUYs delta ordering with deterministic
-``client_order_id``\\ s, and the same stale-planned-order cancellation on a
-close re-run. Two things differ because :class:`~tradingos.live.broker.ZerodhaLiveBroker`
-is a thinner adapter than :class:`~tradingos.paper.broker.PaperBroker`:
+15:30 close, the SELLs-then-BUYs delta ordering with deterministic
+``client_order_id``\\ s, and stale-planned-order cancellation on a close
+re-run) lives in :class:`~tradingos.broker.session.BaseSessionRunner`. Two
+things differ because :class:`~tradingos.live.broker.ZerodhaLiveBroker` is a
+thinner adapter than :class:`~tradingos.paper.broker.PaperBroker`:
 
 * **The runner owns the planned-order queue.** ``PaperBroker`` has
   ``queue_for_open`` / ``place_planned`` built in; ``ZerodhaLiveBroker`` does
@@ -59,30 +60,19 @@ from datetime import date, datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 
+from tradingos.broker.session import TAG_REBALANCE, BaseSessionRunner
 from tradingos.config.schemas import StrategyConfig
 from tradingos.config.settings import Settings
 from tradingos.core.alerts import TelegramAlerter
 from tradingos.core.errors import AuthError, BrokerError, KillSwitchActive, RiskViolation
 from tradingos.core.logging import get_logger
-from tradingos.core.models import Order, OrderStatus, OrderType, Position, Side
+from tradingos.core.models import Order, OrderStatus
 from tradingos.core.timeutils import IST, now_ist, session_bounds
 from tradingos.data.calendar import NSECalendar
-from tradingos.data.store import BarStore
-from tradingos.engine.base import StaticUniverseResolver
-from tradingos.engine.dataview import DataView, MarketData, SignalStore
-from tradingos.engine.event.strategy_runtime import evaluate_targets
 from tradingos.live.broker import ZerodhaLiveBroker
 from tradingos.paper.ledgerdb import PaperStore
 
 logger = get_logger(__name__)
-
-# Same rationale as paper/runner.py: after 15:30 (MARKET_CLOSE) so a data sync
-# job has a window to land the day's closing bars before the rebalance
-# evaluates them.
-_CLOSE_JOB_HOUR = 15
-_CLOSE_JOB_MINUTE = 35
-
-_TAG_REBALANCE = "rebalance"
 
 
 def _reconcile_once(broker: ZerodhaLiveBroker, alerter: TelegramAlerter) -> list[object]:
@@ -98,11 +88,13 @@ def _reconcile_once(broker: ZerodhaLiveBroker, alerter: TelegramAlerter) -> list
     return reconcile_once(broker, alerter=alerter)
 
 
-class LiveSessionRunner:
+class LiveSessionRunner(BaseSessionRunner[ZerodhaLiveBroker]):
     """Drives one strategy's live session: place the day's queued orders at
     the open, evaluate the rebalance and queue tomorrow's delta orders at the
-    close, and (via :meth:`build_scheduler`) do both automatically -- plus a
+    close, and (via ``build_scheduler``) do both automatically -- plus a
     periodic reconciliation pass -- on trading days."""
+
+    _logger = logger  # session events keep logging as tradingos.live.runner
 
     def __init__(
         self,
@@ -115,16 +107,12 @@ class LiveSessionRunner:
         alerter: TelegramAlerter | None = None,
         now_fn: Callable[[], datetime] | None = None,
     ) -> None:
-        self._settings = settings
-        self._config = config
-        self._broker = broker
-        self._calendar = calendar
-        self._store = store
+        super().__init__(settings, config, broker, calendar=calendar, store=store)
         # Used only by the reconciliation cron job (reconcile_once's alerter
         # kwarg); the broker owns its own alerter for order-flow alerts.
         self._alerter = alerter or TelegramAlerter.from_settings(settings)
         # Injectable clock (tests pin it) for the queue-mechanics timestamps
-        # this runner writes itself (see _queue_for_open / _cancel_stale_planned).
+        # this runner writes itself (see _queue_planned / _cancel_stale_planned).
         self._now = now_fn or now_ist
 
     # -- session open ---------------------------------------------------
@@ -208,27 +196,7 @@ class LiveSessionRunner:
         data = self._load_market_data()
         targets = self._evaluate_targets(day, data, current_holdings, equity)
 
-        next_day = self._calendar.next_trading_day(day)
-        orders = self._diff_orders(targets, current_holdings, next_day)
-        self._cancel_stale_planned(next_day, {o.client_order_id for o in orders})
-        if orders:
-            for order in orders:
-                self._queue_for_open(order, next_day)
-                logger.info(
-                    "session close %s: queued %s %s %d %s for %s open",
-                    day.isoformat(),
-                    order.client_order_id,
-                    order.side.value,
-                    order.qty,
-                    order.symbol,
-                    next_day.isoformat(),
-                )
-        else:
-            logger.info(
-                "session close %s: holdings already match targets, nothing queued",
-                day.isoformat(),
-            )
-        return orders
+        return self._queue_rebalance_delta(day, targets, current_holdings)
 
     def _snapshot_close_equity(self, day: date) -> float | None:
         """Snapshot ``day``'s 15:30 close equity into the journal, mirroring
@@ -239,7 +207,7 @@ class LiveSessionRunner:
         Reads equity BEFORE margins so a margins-only failure still leaves a
         usable equity value in hand: the snapshot itself needs both equity
         and cash and is skipped if either read fails, but the already-fetched
-        equity is returned regardless and reused by :meth:`_evaluate_targets`
+        equity is returned regardless and reused by ``_evaluate_targets``
         for sizing instead of re-reading it (avoids a second, likely
         identically-failing, broker round trip).
 
@@ -264,7 +232,7 @@ class LiveSessionRunner:
 
     # -- planned (next-open) queue, owned by the runner --------------------
 
-    def _queue_for_open(self, order: Order, on_day: date) -> None:
+    def _queue_planned(self, order: Order, on_day: date) -> None:
         """Persist ``order`` as a planned (PENDING) order for ``on_day``, in
         the SAME journal store the broker journals live orders to.
 
@@ -293,7 +261,7 @@ class LiveSessionRunner:
         the Kite API for an order the broker never placed. Transitioning the
         journal row directly is correct and touches no API."""
         for stale in self._store.planned_orders(next_day):
-            if stale.tag != _TAG_REBALANCE or stale.client_order_id in new_ids:
+            if stale.tag != TAG_REBALANCE or stale.client_order_id in new_ids:
                 continue
             stale.transition(OrderStatus.CANCELLED)
             stale.updated_at = self._now()
@@ -308,166 +276,25 @@ class LiveSessionRunner:
                 next_day.isoformat(),
             )
 
-    def _current_positions(self) -> list[Position]:
-        # Zerodha semantics split CNC (holdings) from MIS (positions); pulling
-        # both means this works unmodified for either product.
-        return [*self._broker.get_holdings(), *self._broker.get_positions()]
-
-    def _load_market_data(self) -> MarketData:
-        """Load bar data exactly as ``cli/backtest_cmds.py`` / ``paper/runner.py``
-        do (same universe-symbol resolution, adjusted prices, full history for
-        indicator warm-up)."""
-        bar_store = BarStore(self._settings)
-        load_symbols: set[str] = set(self._config.universe.symbols or [])
-        if not load_symbols:
-            load_symbols = set(bar_store.symbols(self._config.timeframe))
-        for fspec in self._config.filters:
-            routed = fspec.params.get("symbol")
-            if routed:
-                load_symbols.add(str(routed))
-
-        return bar_store.load_market_data(
-            sorted(load_symbols), self._config.timeframe, start=None, end=None, adjusted=True
-        )
-
-    def _evaluate_targets(
-        self,
-        day: date,
-        data: MarketData,
-        current_holdings: dict[str, int],
-        equity: float | None = None,
-    ) -> dict[str, int]:
-        """Build a DataView bound to ``day`` 15:30 over pre-loaded ``data`` and
-        delegate to ``evaluate_targets`` -- the exact same pipeline the
-        backtest engine and paper trading use.
-
-        ``equity`` lets a caller (:meth:`on_session_close`) reuse an already
-        -fetched equity value (see :meth:`_snapshot_close_equity`) instead of
-        this method reading it again; ``None`` (the default, e.g. called
-        directly by a test, or when the close snapshot's own equity read
-        failed) falls back to reading it here."""
-        latest_idx = data.union_index()
-        if latest_idx.empty or latest_idx.max().date() < day:
-            latest_desc = (
-                "no data at all" if latest_idx.empty else latest_idx.max().date().isoformat()
-            )
-            logger.warning(
-                "STALE DATA: %s has no %s bar in the store dated %s (latest available: %s) -- "
-                "rebalance targets are being computed from stale data; data sync is a "
-                "separate concern -- proceeding anyway",
-                self._config.name,
-                self._config.timeframe.value,
-                day.isoformat(),
-                latest_desc,
-            )
-
-        resolver = StaticUniverseResolver()
-        signals = SignalStore(data)
-        dv = DataView(data, signals, session_bounds(day)[1])
-        warnings: list[str] = []
-        if equity is None:
-            equity = self._broker.equity()
-        targets = evaluate_targets(
-            self._config, dv, resolver, data, current_holdings, equity, warnings
-        )
-        for w in [*warnings, *resolver.warnings]:
-            logger.warning(w)
-        return targets
-
-    def _diff_orders(
-        self, targets: dict[str, int], current_holdings: dict[str, int], next_day: date
-    ) -> list[Order]:
-        """Delta orders: SELLs first, then BUYs, each group sorted by symbol
-        (deterministic queue order, deterministic client_order_ids)."""
-        symbols = sorted(set(targets) | set(current_holdings))
-        sells: list[Order] = []
-        buys: list[Order] = []
-        for symbol in symbols:
-            delta = targets.get(symbol, 0) - current_holdings.get(symbol, 0)
-            if delta < 0:
-                sells.append(self._build_order(symbol, Side.SELL, -delta, next_day))
-            elif delta > 0:
-                buys.append(self._build_order(symbol, Side.BUY, delta, next_day))
-        return [*sells, *buys]
-
-    def _build_order(self, symbol: str, side: Side, qty: int, next_day: date) -> Order:
-        return Order(
-            client_order_id=f"{self._config.name}-{next_day.isoformat()}-{symbol}-{side.value}",
-            symbol=symbol,
-            side=side,
-            qty=qty,
-            order_type=OrderType.MARKET,
-            product=self._config.costs.product,
-            strategy_id=self._config.name,
-            tag=_TAG_REBALANCE,
-        )
-
     # -- scheduler ----------------------------------------------------------
 
-    def build_scheduler(self) -> BackgroundScheduler:
-        """A ``BackgroundScheduler`` with three Mon-Fri IST cron jobs: 09:15-09:25
-        each minute (session open, retried because the first firing can beat
-        the broker having any usable quote), 15:35 (session close, after a
-        data-sync job has a window to land the day's closing bars), and every
-        5 minutes across the trading session (reconciliation -- the job body
-        itself gates the exact 09:15-15:30 window so a single simple cron
-        expression suffices). Not started -- the caller starts/shuts it down
-        (see ``cli/live_cmds.py``)."""
-        scheduler = BackgroundScheduler(timezone=IST)
-        scheduler.add_job(
-            self._run_open_job,
-            CronTrigger(day_of_week="mon-fri", hour=9, minute="15-25", timezone=IST),
-            id=f"{self._config.name}-session-open",
-            name=f"{self._config.name} session open",
-        )
-        scheduler.add_job(
-            self._run_close_job,
-            CronTrigger(
-                day_of_week="mon-fri",
-                hour=_CLOSE_JOB_HOUR,
-                minute=_CLOSE_JOB_MINUTE,
-                timezone=IST,
-            ),
-            id=f"{self._config.name}-session-close",
-            name=f"{self._config.name} session close",
-        )
+    def _add_scheduler_jobs(self, scheduler: BackgroundScheduler) -> None:
+        """Add live's third cron job to the base's open/close pair: every 5
+        minutes across the trading session (reconciliation -- the job body
+        itself gates the exact 09:15-15:30 window, see
+        :meth:`_run_reconcile_job`, so a single simple cron expression
+        suffices)."""
         scheduler.add_job(
             self._run_reconcile_job,
             CronTrigger(day_of_week="mon-fri", hour="9-15", minute="*/5", timezone=IST),
             id=f"{self._config.name}-reconcile",
             name=f"{self._config.name} reconciliation",
         )
-        return scheduler
-
-    def _run_open_job(self, now: datetime | None = None) -> None:
-        """The scheduler's 09:15 callback. A non-trading day is a logged
-        no-op; any exception is logged and swallowed -- a bad open must never
-        kill the scheduler. ``now`` is overridable for tests."""
-        day = (now or now_ist()).date()
-        if not self._calendar.is_trading_day(day):
-            logger.info("session open %s skipped: not an NSE trading day", day.isoformat())
-            return
-        try:
-            self.on_session_open(day)
-        except Exception:
-            logger.exception("session open job failed for %s", day.isoformat())
-
-    def _run_close_job(self, now: datetime | None = None) -> None:
-        """The scheduler's 15:35 callback. Same no-op / exception-swallowing
-        contract as :meth:`_run_open_job`."""
-        day = (now or now_ist()).date()
-        if not self._calendar.is_trading_day(day):
-            logger.info("session close %s skipped: not an NSE trading day", day.isoformat())
-            return
-        try:
-            self.on_session_close(day)
-        except Exception:
-            logger.exception("session close job failed for %s", day.isoformat())
 
     def _run_reconcile_job(self, now: datetime | None = None) -> None:
         """The scheduler's every-5-minutes callback. A non-trading day, or a
         firing outside the 09:15-15:30 session window (the cron expression
-        itself is coarser than that -- see :meth:`build_scheduler`), is a
+        itself is coarser than that -- see :meth:`_add_scheduler_jobs`), is a
         silent no-op. Any exception (including
         ``tradingos.live.reconcile`` not existing yet) is logged and
         swallowed -- reconciliation must never kill the scheduler."""
