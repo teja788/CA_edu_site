@@ -122,6 +122,31 @@ def test_backtest_run_out_override_and_vectorized_engine(env: tuple[Settings, Pa
     assert (out / "trades.json").exists()
 
 
+def test_backtest_run_uses_pit_resolver_and_warns_without_membership_data(
+    env: tuple[Settings, Path],
+) -> None:
+    """A direct `backtest run` goes through the SAME point-in-time universe
+    resolver as the experiments paths (hard rule 4): a point-in-time universe
+    with no membership table must surface a LOUD survivorship warning in the
+    run summary, not silently fall back."""
+    settings, _ = env
+    # Point-in-time universe, no explicit symbols: the resolver must consult the
+    # (absent) membership table and warn.
+    pit_yaml = _YAML.replace(
+        "universe:\n  symbols: [AAA, BBB, CCC]\n  point_in_time: false",
+        "universe:\n  index: NIFTY500\n  point_in_time: true",
+    )
+    assert "point_in_time: true" in pit_yaml  # guard against a silent no-op replace
+    yaml_path = settings.artifacts_dir / "pit_strategy.yaml"
+    yaml_path.write_text(pit_yaml)
+
+    result = runner.invoke(cli_main.app, ["backtest", "run", str(yaml_path)])
+
+    assert result.exit_code == 0, result.output
+    assert "SURVIVORSHIP BIAS" in result.output
+    assert "no point-in-time membership data" in result.output
+
+
 def test_missing_yaml_exits_nonzero_without_stacktrace(env: tuple[Settings, Path]) -> None:
     _settings, _yaml = env
     result = runner.invoke(cli_main.app, ["backtest", "run", "does_not_exist.yaml"])

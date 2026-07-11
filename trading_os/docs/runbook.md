@@ -136,7 +136,11 @@ goes back to paper, not to "smaller live position as a compromise."
 4. `uv run platform live run <strategy.yaml> --once` (dry-run, no
    `--live`). Read the intended orders line by line — symbols, sides,
    quantities, estimated prices — against your own mental model before
-   proceeding.
+   proceeding. The rehearsal journals its intents with synthetic `DRY-*`
+   order ids but does NOT consume the day's planned queue for the real
+   session: the live session re-reads dry-consumed queue rows and
+   supersedes the dry intents with real placements, so running the dry
+   rehearsal first never causes the real session to place nothing.
 5. Only then: `uv run platform live run <strategy.yaml> --schedule --live`,
    started with **small capital** relative to the strategy's eventual
    target allocation. `--live` (without `--yes`) prompts an interactive
@@ -199,6 +203,28 @@ becomes ongoing monitoring, it doesn't end at go-live.
 - The platform never double-places on restart: every order carries a
   deterministic `client_order_id`, and `place_order` treats one already
   stored as non-PENDING as a re-place, not a new order.
+- **Crash mid-placement (write-ahead journal):** the live broker persists
+  the placement intent BEFORE calling `kite.place_order` and the returned
+  order id after, so a crash between the two leaves an *unconfirmed* row
+  (OPEN, no broker order id). On the next live-broker startup those rows
+  are resolved against `kite.orders()` by the order's deterministic tag
+  before anything new is placed: found at the broker → the real order is
+  adopted (id, status, any fill); confirmed absent → rolled back to
+  PENDING so the 09:15–09:25 open retry window (or the next run) places it
+  for real (the rollback also fires a Telegram risk alert). If the order
+  book is unreadable at startup (token expired, outage) the rows stay
+  unconfirmed and are deliberately **blocked from blind re-placement**
+  until a later `sync_orders` / `live reconcile` pass succeeds. After any
+  crash: re-auth if needed, restart, then run `live reconcile` and read
+  its output before assuming the day's orders are in.
+- **Cancel/fill races and partial fills self-heal via sync:** an order
+  marked CANCELLED locally (cancel request accepted) that the broker
+  actually filled — in full or in part — is corrected on the next
+  `sync_orders` pass (the reconcile cron job, the session close, or
+  `live reconcile`), including journalling the estimated fill for the
+  executed quantity. Until that pass runs, the local journal may
+  understate today's fills — another reason reconcile-after-restart and
+  the periodic reconcile job are not optional.
 
 ## 7. Incidents
 
@@ -207,7 +233,9 @@ becomes ongoing monitoring, it doesn't end at go-live.
 uv run platform live killswitch engage --reason "runaway orders" --strategy <strategy.yaml>
 ```
 Halts all new placement platform-wide (not just one strategy) and — because
-`--strategy` is given — cancels that strategy's open orders. Without
+`--strategy` is given — cancels that strategy's open orders. While engaged,
+the switch blocks order **modifications** too (paper and live: a qty bump is
+an exposure increase); cancels stay allowed, since they only reduce risk. Without
 `--strategy` the switch still engages but open orders are NOT touched (the
 command prints a warning; handle them in Kite's web console). It works by
 writing `{"engaged_at": ..., "reason": ...}` to the kill-switch file. **Default path: `<data_dir>/KILL_SWITCH`**

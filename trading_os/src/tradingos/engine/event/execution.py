@@ -64,13 +64,23 @@ class ChargeCalculator:
             self._sold_today.clear()
 
     def charges(self, side: Side, symbol: str, value: float, ts: datetime) -> float:
-        """All-in charges (rupees) for one executed order of ``value`` turnover."""
+        """All-in charges (rupees) for one executed order of ``value`` turnover.
+
+        ``ts`` is the execution timestamp of the fill; its DATE is forwarded to
+        :meth:`CostModel.order_charges` as ``trade_date`` so the order is priced
+        at the charge schedule in force on that bar date, not at the pinned
+        (latest) schedule.
+        """
         self._roll_day(ts)
         first_sell = True
         if side == Side.SELL:
             first_sell = symbol not in self._sold_today
         breakdown = self._cost.order_charges(
-            side, self._product, value, first_sell_of_scrip_today=first_sell
+            side,
+            self._product,
+            value,
+            first_sell_of_scrip_today=first_sell,
+            trade_date=self._day,
         )
         if side == Side.SELL:
             self._sold_today.add(symbol)

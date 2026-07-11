@@ -26,6 +26,22 @@ absence of surprise beat cleverness):
   (new broker instance, same ``live_db_path``) cannot double-place -- the
   reloaded journal row short-circuits the retry.
 
+* **Write-ahead placement journal.** The placement intent (status OPEN, the
+  deterministic reconciliation tag, NO ``broker_order_id`` yet) is persisted
+  BEFORE ``kite.place_order`` is called, and the learned ``broker_order_id``
+  is persisted after. A crash anywhere between the two writes therefore leaves
+  an *unconfirmed* row (OPEN, ``broker_order_id is None``) rather than nothing
+  -- and an unconfirmed row is never blindly re-placed. It is resolved against
+  ``kite.orders()`` by tag (on broker startup, in ``sync_orders`` and at the
+  idempotency gate): found -> the broker's row is adopted (order id, status,
+  fill); confirmed absent -> the request never reached Kite, so the row is
+  rolled back to PENDING and the normal planned-open retry loop places it for
+  real; order book unreadable -> it stays unconfirmed (and keeps blocking a
+  re-place) until a later resolution succeeds. The same resolution runs when
+  ``kite.place_order`` itself raises ambiguously (e.g. a timeout after Kite
+  accepted the order): REJECTED is only ever journalled once the tag is
+  confirmed absent from the broker's book.
+
 * **Reconciliation via the tag.** Kite order *tags* are <=20 alphanumeric
   characters, far shorter than our 16-hex ``client_order_id``. We derive the
   tag as ``sha1(client_order_id).hexdigest()[:18]`` (18 lowercase-hex chars =
@@ -96,11 +112,12 @@ from tradingos.core.models import (
     OrderType,
     Position,
     Quote,
+    Side,
 )
 from tradingos.core.timeutils import MARKET_OPEN, now_ist, session_bounds, to_naive_ist
 from tradingos.costs.model import CostModel
 from tradingos.data.calendar import NSECalendar
-from tradingos.paper.ledgerdb import PaperStore
+from tradingos.paper.ledgerdb import DRY_ORDER_ID_PREFIX, PaperStore
 
 logger = get_logger(__name__)
 
@@ -189,6 +206,12 @@ class ZerodhaLiveBroker(Broker):
         # Days whose 09:15 day-start-equity snapshot is already written.
         self._day_start_done: set[date] = set()
         self._seed_day_start_done()
+
+        # Crash recovery: resolve any unconfirmed write-ahead placements (see
+        # module docstring) against the Kite order book BEFORE this broker can
+        # place anything. Live only -- a dry-run broker never sent anything.
+        if not self._dry_run:
+            self._recover_unconfirmed_on_startup()
 
     @property
     def dry_run(self) -> bool:
@@ -340,6 +363,94 @@ class ZerodhaLiveBroker(Broker):
         self._store.snapshot_equity(ts, equity, cash)
         self._day_start_done.add(day)
 
+    # -- unconfirmed-placement (write-ahead journal) resolution -------------
+
+    @staticmethod
+    def _is_unconfirmed(order: Order) -> bool:
+        """True for a write-ahead journal row whose Kite outcome was never
+        learned: journalled OPEN (intent persisted) with no ``broker_order_id``
+        -- the shape a crash between the write-ahead save and the
+        post-placement save leaves behind. Dry-run rows never look like this
+        (they always carry a synthetic ``DRY-n`` id)."""
+        return order.status == OrderStatus.OPEN and order.broker_order_id is None
+
+    @staticmethod
+    def _is_dry_intent(order: Order) -> bool:
+        """True for a journal row written by a DRY-RUN session (synthetic
+        ``DRY-n`` broker order id) -- nothing exists at the real broker for
+        such a row."""
+        return str(order.broker_order_id or "").startswith(DRY_ORDER_ID_PREFIX)
+
+    def _find_kite_row_by_tag(self, tag: str | None) -> dict | None:
+        """The ``kite.orders()`` row carrying ``tag``, or None if absent.
+        Raises AuthError/BrokerError if the order book cannot be read."""
+        if not tag:
+            return None
+        rows = self._read("orders")
+        rows = rows if isinstance(rows, list) else []
+        for row in rows:
+            if row.get("tag") == tag:
+                return row
+        return None
+
+    def _resolve_unconfirmed(self, order: Order) -> Order | None:
+        """Resolve an unconfirmed placement against the Kite order book by tag.
+
+        Returns the updated order if it DID reach the broker (``broker_order_id``
+        learned; status/fill synced through :meth:`_apply_sync`), or ``None``
+        if the tag is confirmed absent (the request never created an order --
+        safe to place). Raises AuthError/BrokerError if the order book cannot
+        be read; the journal row is left untouched (still unconfirmed, still
+        blocking any blind re-place) in that case."""
+        row = self._find_kite_row_by_tag(order.tag)
+        if row is None:
+            logger.warning(
+                "unconfirmed placement %s (tag=%s) is NOT in the Kite order book; "
+                "it never reached the broker",
+                order.client_order_id,
+                order.tag,
+            )
+            return None
+        order.broker_order_id = str(row.get("order_id"))
+        filled = int(row.get("filled_quantity", 0) or 0)
+        new_status = self._map_status(row.get("status"), filled)
+        logger.warning(
+            "resolved unconfirmed placement %s to Kite order %s (status=%s)",
+            order.client_order_id,
+            order.broker_order_id,
+            new_status.value,
+        )
+        if new_status == order.status and filled == order.filled_qty:
+            self._store.save_order(order)  # persist the learned broker_order_id
+        else:
+            self._apply_sync(order, row, new_status, filled)
+        return order
+
+    def _recover_unconfirmed_on_startup(self) -> None:
+        """Resolve unconfirmed write-ahead rows left by a crash mid-placement,
+        via one ``sync_orders`` pass, before this (live) broker instance can
+        place anything new. A failed resolution is logged and swallowed: the
+        rows stay unconfirmed, which is safe -- the idempotency gate keeps
+        them from being blindly re-placed until a later sync succeeds."""
+        unconfirmed = [
+            o for o in self._store.orders(status=OrderStatus.OPEN) if o.broker_order_id is None
+        ]
+        if not unconfirmed:
+            return
+        logger.warning(
+            "startup: %d unconfirmed placement(s) in the journal (crash mid-placement?); "
+            "reconciling against the Kite order book before anything new is placed",
+            len(unconfirmed),
+        )
+        try:
+            self.sync_orders()
+        except (AuthError, BrokerError):
+            logger.exception(
+                "startup reconciliation of unconfirmed placements failed; they stay "
+                "journalled OPEN (blind re-placement stays blocked) until a later "
+                "sync_orders succeeds"
+            )
+
     # -- placement ---------------------------------------------------------
 
     def _reject(self, order: Order, message: str, now: datetime) -> None:
@@ -382,15 +493,42 @@ class ZerodhaLiveBroker(Broker):
     def _place_order_locked(self, order: Order) -> Order:
         # (a) idempotency -- a stored, non-PENDING order is a completed placement
         # (or a rejection). Return it verbatim; issue NO API call. This is what
-        # makes a restart / retry safe from double-placing.
+        # makes a restart / retry safe from double-placing. Two live-mode
+        # exceptions, both resolved here rather than blindly short-circuited:
+        #
+        # * an UNCONFIRMED write-ahead row (crash / network failure between the
+        #   write-ahead save and the post-placement save): resolve it against
+        #   the Kite order book by tag FIRST. Found -> adopt it (no second
+        #   placement); confirmed absent -> place it for real below; order book
+        #   unreadable -> the resolution raises, and the row keeps blocking a
+        #   blind re-place.
+        # * a DRY-RUN intent (synthetic ``DRY-n`` broker id): nothing exists at
+        #   the real broker, so a live session must supersede it -- otherwise a
+        #   morning dry-run rehearsal would consume the day's orders and the
+        #   real session would silently place nothing.
         stored = self._store.get_order(order.client_order_id)
         if stored is not None and stored.status != OrderStatus.PENDING:
-            logger.info(
-                "idempotent place_order: %s already in journal as %s; no API call",
-                order.client_order_id,
-                stored.status.value,
-            )
-            return stored
+            if not self._dry_run and self._is_unconfirmed(stored):
+                resolved = self._resolve_unconfirmed(stored)
+                if resolved is not None:
+                    return resolved
+                order = stored  # confirmed absent at the broker: place it for real
+            elif not self._dry_run and not stored.status.is_terminal and self._is_dry_intent(
+                stored
+            ):
+                logger.warning(
+                    "superseding dry-run intent %s (%s) with a live placement",
+                    stored.client_order_id,
+                    stored.broker_order_id,
+                )
+                order = stored
+            else:
+                logger.info(
+                    "idempotent place_order: %s already in journal as %s; no API call",
+                    order.client_order_id,
+                    stored.status.value,
+                )
+                return stored
 
         now = self._now()
         today = now.date()
@@ -433,7 +571,7 @@ class ZerodhaLiveBroker(Broker):
         # (e) dry-run: journal the intent, never call the API.
         if self._dry_run:
             self._dry_seq += 1
-            order.broker_order_id = f"DRY-{self._dry_seq}"
+            order.broker_order_id = f"{DRY_ORDER_ID_PREFIX}{self._dry_seq}"
             order.created_at = now
             order.updated_at = now
             order.transition(OrderStatus.OPEN)
@@ -442,29 +580,85 @@ class ZerodhaLiveBroker(Broker):
             logger.warning("DRY-RUN: would call kite.place_order(**%r)", kwargs)
             return order
 
-        # (f) live: send it.
+        # (f) live: journal the placement intent BEFORE the API call (the
+        # write-ahead journal -- see module docstring). A crash between this
+        # save and the post-placement save below leaves an unconfirmed row
+        # (OPEN, no broker_order_id) that a restart resolves against the Kite
+        # order book by tag instead of re-placing -- the double-order window
+        # this ordering exists to close.
+        order.created_at = now
+        order.updated_at = now
+        order.broker_order_id = None
+        order.filled_qty = 0
+        if order.status == OrderStatus.PENDING:
+            order.transition(OrderStatus.OPEN)
+        else:
+            # Re-placing a confirmed-absent unconfirmed row / superseding a
+            # dry-run intent: the row is already OPEN in the journal. Keeping
+            # it OPEN is a journal-level reset, not a lifecycle transition.
+            order.status = OrderStatus.OPEN
+        self._store.save_order(order)
+
         logger.info("calling kite.place_order(**%r)", kwargs)
         try:
             resp = self._kite.place_order(**kwargs)  # type: ignore[attr-defined]
         except Exception as exc:
-            if _is_token_exception(exc):
-                # A token expiry is transient: alert + AuthError, but do NOT burn
-                # the order as REJECTED -- the operator re-auths and retries the
-                # same client_order_id (idempotent).
-                self._alerter.alert_token_expiry(f"place_order: {exc}")
-                raise AuthError(f"Kite access token expired placing order: {exc}") from exc
-            # Any other broker failure (margin shortfall, bad symbol, ...):
-            # persist REJECTED so the journal reflects reality, alert, re-raise.
-            self._reject(order, str(exc), now)
-            raise BrokerError(f"kite.place_order failed: {exc}") from exc
+            return self._handle_place_failure(order, exc, now)
 
         logger.info("kite.place_order response: %r", resp)
         order.broker_order_id = str(resp)  # place_order returns the order_id
-        order.created_at = now
         order.updated_at = now
-        order.transition(OrderStatus.OPEN)
         self._store.save_order(order)
         return order
+
+    def _handle_place_failure(self, order: Order, exc: Exception, now: datetime) -> Order:
+        """Decide what a ``kite.place_order`` exception means for the
+        write-ahead journal row.
+
+        * Token expiry: the request was refused at the auth gate, so nothing
+          was placed. Roll the row back to PENDING (do NOT burn it as
+          REJECTED) so a re-auth'd retry of the same ``client_order_id``
+          places normally.
+        * Anything else is AMBIGUOUS -- e.g. a timeout after Kite accepted the
+          order -- so consult the order book by tag before deciding: found ->
+          the order IS live at the broker; adopt and return it. Confirmed
+          absent -> a genuine placement failure; journal REJECTED, alert,
+          re-raise. Order book unreadable -> leave the row OPEN/unconfirmed
+          (the idempotency gate blocks a blind retry) and raise.
+        """
+        if _is_token_exception(exc):
+            # Journal rollback, not a lifecycle transition -- OPEN -> PENDING
+            # is deliberately not a legal Order.transition.
+            order.status = OrderStatus.PENDING
+            order.broker_order_id = None
+            order.updated_at = now
+            self._store.save_order(order)
+            self._alerter.alert_token_expiry(f"place_order: {exc}")
+            raise AuthError(f"Kite access token expired placing order: {exc}") from exc
+
+        try:
+            resolved = self._resolve_unconfirmed(order)
+        except (AuthError, BrokerError):
+            msg = (
+                f"kite.place_order failed ({exc}) and the order book could not be read "
+                f"to confirm the outcome; {order.client_order_id} left journalled OPEN "
+                f"(unconfirmed) for reconciliation -- it will NOT be blindly re-placed"
+            )
+            logger.error(msg)
+            self._alerter.alert_risk(msg)
+            raise BrokerError(msg) from exc
+        if resolved is not None:
+            logger.warning(
+                "kite.place_order raised (%s) but the order DID reach the broker as %s; "
+                "adopted from the order book",
+                exc,
+                resolved.broker_order_id,
+            )
+            return resolved
+        # Confirmed absent at the broker (margin shortfall, bad symbol, ...):
+        # persist REJECTED so the journal reflects reality, alert, re-raise.
+        self._reject(order, str(exc), now)
+        raise BrokerError(f"kite.place_order failed: {exc}") from exc
 
     # -- modify / cancel ---------------------------------------------------
 
@@ -481,6 +675,23 @@ class ZerodhaLiveBroker(Broker):
                 raise BrokerError(f"unknown order {client_order_id!r}")
             if order.status.is_terminal:
                 raise OrderStateError(f"cannot modify a {order.status.value} order")
+            # Kill switch: a modification can INCREASE exposure (qty up), so an
+            # engaged switch blocks it exactly like a fresh placement. The order
+            # keeps working at the broker exactly as previously accepted -- no
+            # journal write, no REJECTED (mirrors the risk-violation contract
+            # below). Cancels stay allowed: they only reduce risk.
+            self._kill_switch.check()
+            if not self._dry_run and (
+                order.broker_order_id is None or self._is_dry_intent(order)
+            ):
+                # PENDING planned rows, unconfirmed write-ahead rows and dry-run
+                # intents were never (confirmedly) placed at Kite; a modify call
+                # would send a None / "DRY-n" order id to the API.
+                raise OrderStateError(
+                    f"cannot modify {client_order_id!r}: not (confirmed) placed at the "
+                    f"broker (status {order.status.value}, broker_order_id "
+                    f"{order.broker_order_id!r})"
+                )
             new_qty = qty if qty is not None else order.qty
             new_limit = limit_price if limit_price is not None else order.limit_price
             new_trigger = trigger_price if trigger_price is not None else order.trigger_price
@@ -580,6 +791,40 @@ class ZerodhaLiveBroker(Broker):
             )
             return order
 
+        # Orders that never reached Kite are cancelled in the journal only --
+        # there is nothing at the broker to cancel, and kite.cancel_order with
+        # a None / "DRY-n" order id would hit the API with garbage.
+        if order.status == OrderStatus.PENDING or self._is_dry_intent(order):
+            prior_status = order.status.value
+            order.transition(OrderStatus.CANCELLED)
+            order.updated_at = now
+            self._store.save_order(order)
+            logger.info(
+                "cancelled %s journal-only (never sent to the broker: was %s, "
+                "broker_order_id=%r)",
+                client_order_id,
+                prior_status,
+                order.broker_order_id,
+            )
+            return order
+
+        if self._is_unconfirmed(order):
+            # Placement outcome unknown: resolve against the order book FIRST
+            # (raises if the book is unreadable -- never guess about a
+            # possibly-live order). Confirmed absent -> journal-only cancel.
+            resolved = self._resolve_unconfirmed(order)
+            if resolved is None:
+                order.transition(OrderStatus.CANCELLED)
+                order.updated_at = now
+                self._store.save_order(order)
+                return order
+            order = resolved
+            if order.status.is_terminal:
+                raise OrderStateError(
+                    f"cannot cancel {client_order_id!r}: resolved at the broker as "
+                    f"{order.status.value}"
+                )
+
         kwargs = {"variety": "regular", "order_id": order.broker_order_id}
         logger.info("calling kite.cancel_order(**%r)", kwargs)
         try:
@@ -642,20 +887,65 @@ class ZerodhaLiveBroker(Broker):
             by_tag = {o.tag: o for o in journal if o.tag}
 
             changed: list[Order] = []
+            found_at_broker: set[str] = set()
             for row in rows:
                 order = by_broker_id.get(str(row.get("order_id")))
                 if order is None:
                     order = by_tag.get(row.get("tag"))  # defensive fallback
-                if order is None or order.status.is_terminal:
-                    # Not one of ours, or already reconciled to a terminal state
-                    # (skipping terminal orders is what makes sync idempotent --
-                    # a second sync never re-records a fill).
-                    continue
+                if order is None:
+                    continue  # not one of ours
+                found_at_broker.add(order.client_order_id)
                 filled = int(row.get("filled_quantity", 0) or 0)
                 new_status = self._map_status(row.get("status"), filled)
-                if new_status == order.status and filled == order.filled_qty:
+                adopted = order.broker_order_id is None and row.get("order_id") is not None
+                if adopted:
+                    # Tag-only match (unconfirmed write-ahead row): learn the
+                    # broker order id so later cancel/modify calls carry a real
+                    # id, not None.
+                    order.broker_order_id = str(row.get("order_id"))
+                if order.status.is_terminal:
+                    # Terminal journal rows are normally skipped -- that is what
+                    # makes sync idempotent (a second sync never re-records a
+                    # fill). The ONE exception is a journal-CANCELLED order: we
+                    # mark CANCELLED as soon as Kite ACCEPTS the cancel request,
+                    # but the broker may still have filled it in the cancel/fill
+                    # race -- correct it when Kite reports COMPLETE, or more
+                    # filled quantity than the journal has covered.
+                    if order.status != OrderStatus.CANCELLED:
+                        continue
+                    if new_status != OrderStatus.COMPLETE and filled <= order.filled_qty:
+                        continue
+                elif new_status == order.status and filled == order.filled_qty:
+                    if adopted:
+                        # Nothing else changed, but the learned broker id must
+                        # be persisted (it confirms the placement).
+                        self._store.save_order(order)
+                        changed.append(order)
                     continue
                 self._apply_sync(order, row, new_status, filled)
+                changed.append(order)
+
+            # Unconfirmed write-ahead rows (OPEN, no broker_order_id -- a crash
+            # between the write-ahead save and the post-placement save) that
+            # are NOT in the order book never reached Kite: roll them back to
+            # PENDING so the planned-open retry loop (or a direct re-place of
+            # the same client_order_id) can place them for real. Rows that DID
+            # reach Kite were adopted above via the tag match.
+            for order in journal:
+                if order.client_order_id in found_at_broker or not self._is_unconfirmed(
+                    order
+                ):
+                    continue
+                msg = (
+                    f"unconfirmed placement {order.client_order_id} (tag={order.tag}) is "
+                    f"not in the Kite order book; rolled back to PENDING for re-placement"
+                )
+                logger.warning("sync_orders: %s", msg)
+                # Journal rollback, not a lifecycle transition (see place path).
+                order.status = OrderStatus.PENDING
+                order.updated_at = self._now()
+                self._store.save_order(order)
+                self._alerter.alert_risk(msg)
                 changed.append(order)
             return changed
 
@@ -684,12 +974,25 @@ class ZerodhaLiveBroker(Broker):
 
     def _apply_sync(self, order: Order, row: dict, new_status: OrderStatus, filled: int) -> None:
         ts = _parse_kite_ts(row.get("order_timestamp")) or self._now()
+        # Fills are journalled only when an order reaches a terminal state (one
+        # estimated Fill covering everything filled by then), so the quantity
+        # already covered by recorded fills is order.filled_qty if the journal
+        # row is already terminal (the cancel/fill-race correction path), else 0.
+        already_covered = order.filled_qty if order.status.is_terminal else 0
 
         if new_status == OrderStatus.COMPLETE:
-            order.filled_qty = filled or order.qty
-            order.transition(OrderStatus.COMPLETE)
+            total = filled or order.qty
+            if order.status == OrderStatus.CANCELLED:
+                # Cancel/fill race correction: the broker filled the order after
+                # our cancel request was accepted. A journal correction, not a
+                # lifecycle transition (CANCELLED is terminal in the state
+                # machine), hence the direct assignment.
+                order.status = OrderStatus.COMPLETE
+            else:
+                order.transition(OrderStatus.COMPLETE)
+            order.filled_qty = total
             order.updated_at = ts
-            fill = self._fill_for_complete(order, row, ts)
+            fill = self._estimated_fill(order, row, ts, total - already_covered)
             if fill is not None:
                 # One transaction: a persisted fill beside a still-non-terminal
                 # order row would double-count on a subsequent sync/restart.
@@ -701,41 +1004,75 @@ class ZerodhaLiveBroker(Broker):
 
         if new_status in (OrderStatus.CANCELLED, OrderStatus.REJECTED):
             message = row.get("status_message")
-            order.transition(new_status, message)
+            status_changed = new_status != order.status
+            if status_changed:
+                order.transition(new_status, message)
+            order.filled_qty = max(filled, order.filled_qty)
             order.updated_at = ts
-            self._store.save_order(order)
-            self._alerter.alert_rejection(order, message or new_status.value)
+            # A partial fill learned at (or after) the terminal state must
+            # still be journalled -- those shares/rupees are real. Without
+            # this, "partially filled then cancelled/rejected" would leave a
+            # position the ledger never heard about.
+            fill = None
+            if filled - already_covered > 0:
+                fill = self._estimated_fill(order, row, ts, filled - already_covered)
+            if fill is not None:
+                self._store.record_fill_and_order(fill, order)
+                self._alerter.alert_fill(fill)
+            else:
+                self._store.save_order(order)
+            if status_changed:
+                self._alerter.alert_rejection(order, message or new_status.value)
             return
 
         # Still working: OPEN -> PARTIAL (a new partial fill) or a filled_qty
         # bump within OPEN/PARTIAL. Only transition when the status actually
         # changes (OPEN->OPEN / PARTIAL->PARTIAL with a bigger fill just updates
-        # filled_qty). PARTIAL fills are NOT journalled as Fills -- only a
-        # COMPLETE emits the (single, full-quantity) estimated Fill.
+        # filled_qty). PARTIAL fills are NOT journalled as Fills while the order
+        # is working -- the (single) estimated Fill is emitted once the order
+        # reaches a terminal state (COMPLETE, or CANCELLED/REJECTED with a
+        # partial fill).
         if new_status != order.status:
             order.transition(new_status)
         order.filled_qty = filled
         order.updated_at = ts
         self._store.save_order(order)
 
-    def _fill_for_complete(self, order: Order, row: dict, ts: datetime) -> Fill | None:
-        """Build the estimated Fill for a newly-COMPLETE order, or None if the
-        broker reported a non-positive quantity/price (anomalous -- journalled
-        COMPLETE without a Fill and logged)."""
-        qty = order.filled_qty
+    def _estimated_fill(self, order: Order, row: dict, ts: datetime, qty: int) -> Fill | None:
+        """Build the estimated Fill for ``qty`` shares of a synced order, or
+        None if the quantity/price is non-positive (anomalous -- journalled
+        without a Fill and logged).
+
+        Charges are ESTIMATES from the cost model, NOT the broker's
+        contract-note charges (see module docstring / docs/assumptions.md),
+        priced at the schedule in force on the fill date. The DP charge
+        applies once per scrip per day on the sell side; it is deduplicated
+        against the fills already journalled for that day (restart-safe: the
+        journal, not process memory, is the record)."""
         price = _opt_float(row.get("average_price")) or 0.0
         if qty <= 0 or price <= 0:
             logger.warning(
-                "sync_orders: %s COMPLETE with qty=%s price=%s; no Fill recorded",
+                "sync_orders: %s %s with qty=%s price=%s; no Fill recorded",
                 order.client_order_id,
+                order.status.value,
                 qty,
                 price,
             )
             return None
         value = qty * price
-        # Charges here are ESTIMATES from the cost model, NOT the broker's
-        # contract-note charges (see module docstring / docs/assumptions.md).
-        charges = self._cost_model.order_charges(order.side, order.product, value).total
+        first_sell = True
+        if order.side == Side.SELL:
+            sold_today = {
+                f.symbol for f in self._store.fills(day=ts.date()) if f.side == Side.SELL
+            }
+            first_sell = order.symbol not in sold_today
+        charges = self._cost_model.order_charges(
+            order.side,
+            order.product,
+            value,
+            first_sell_of_scrip_today=first_sell,
+            trade_date=ts.date(),
+        ).total
         return Fill(
             client_order_id=order.client_order_id,
             symbol=order.symbol,

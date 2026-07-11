@@ -151,6 +151,46 @@ def test_on_session_open_places_queued_orders_in_dry_run(settings: Settings) -> 
         assert kw["order_type"] == "MARKET"
 
 
+def test_on_session_open_after_dry_rehearsal_still_places_for_real(
+    settings: Settings,
+) -> None:
+    """A morning dry-run rehearsal consumes the planned queue (rows go OPEN
+    with DRY-n ids). The real session for the same day must still place those
+    orders at Kite -- the runner re-reads them via
+    ``planned_orders(include_dry_placed=True)`` and the broker supersedes the
+    dry intents. Without the fix the real session silently places nothing."""
+    config = _make_config("live-runner-dry-then-live")
+    store = PaperStore(settings.live_db_path, config.name)
+    day = date(2024, 2, 7)
+    now = datetime.combine(day, time(9, 20))
+    store.save_order(_planned_order("dl-a", "AAA", Side.BUY, 10), planned_for=day)
+    store.save_order(_planned_order("dl-b", "BBB", Side.BUY, 5), planned_for=day)
+
+    # 1. dry-run rehearsal consumes the queue.
+    dry_runner, _dry_broker, _ = _make_runner(
+        settings, config, store, FakeKite(ltp_price=100.0), now=now, dry_run=True
+    )
+    rehearsed = dry_runner.on_session_open(day)
+    assert len(rehearsed) == 2
+    assert store.get_order("dl-a").broker_order_id.startswith("DRY-")
+
+    # 2. the real session must still place both orders at Kite, exactly once.
+    live_kite = FakeKite(ltp_price=100.0)
+    live_runner, _live_broker, _ = _make_runner(
+        settings, config, store, live_kite, now=now, dry_run=False
+    )
+    placed = live_runner.on_session_open(day)
+
+    assert len(placed) == 2
+    assert {o.symbol for o in placed} == {"AAA", "BBB"}
+    assert all(o.broker_order_id.startswith("KITE") for o in placed)
+    assert len(live_kite.place_calls) == 2
+
+    # 3. a scheduler re-fire (09:16 etc.) must not re-place anything.
+    assert live_runner.on_session_open(day) == []
+    assert len(live_kite.place_calls) == 2
+
+
 def test_on_session_open_with_nothing_queued_returns_empty(settings: Settings) -> None:
     config = _make_config("live-runner-open-empty")
     store = PaperStore(settings.live_db_path, config.name)

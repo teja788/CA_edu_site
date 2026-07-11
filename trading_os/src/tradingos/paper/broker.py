@@ -266,7 +266,7 @@ class PaperBroker(Broker):
                 ref = ask * (1.0 + self._slip)
             value = (o.qty - o.filled_qty) * ref
             total += value + self._cost_model.order_charges(
-                Side.BUY, self._product, value
+                Side.BUY, self._product, value, trade_date=self._now().date()
             ).total
         return total
 
@@ -305,7 +305,10 @@ class PaperBroker(Broker):
         # can carry a BUY's cost above the pre-trade check. Reject like a real
         # margin shortfall rather than let the ledger go negative.
         if order.side == Side.BUY:
-            est = round(value + self._cost_model.order_charges(Side.BUY, self._product, value).total, 2)
+            est_charges = self._cost_model.order_charges(
+                Side.BUY, self._product, value, trade_date=ts.date()
+            ).total
+            est = round(value + est_charges, 2)
             if est - self._ledger.cash > 0.005:
                 msg = (
                     f"insufficient cash at fill: need {est:.2f} for {qty} {order.symbol}, "
@@ -430,7 +433,9 @@ class PaperBroker(Broker):
         if order.side == Side.BUY:
             fill_price = self._estimated_buy_price(order, quote)
             value = order.qty * fill_price
-            est_charges = self._cost_model.order_charges(Side.BUY, self._product, value).total
+            est_charges = self._cost_model.order_charges(
+                Side.BUY, self._product, value, trade_date=today
+            ).total
             est_cost = round(value + est_charges, 2)
             available = round(self._ledger.cash - self._reserved_cash(), 2)
             if est_cost > available:
@@ -494,7 +499,9 @@ class PaperBroker(Broker):
         )
         if order.side == Side.BUY:
             value = new_qty * round(new_limit, 2)
-            est_charges = self._cost_model.order_charges(Side.BUY, self._product, value).total
+            est_charges = self._cost_model.order_charges(
+                Side.BUY, self._product, value, trade_date=today
+            ).total
             est_cost = round(value + est_charges, 2)
             available = round(
                 self._ledger.cash - self._reserved_cash(exclude=order.client_order_id), 2
@@ -529,6 +536,11 @@ class PaperBroker(Broker):
                 raise BrokerError(f"unknown order {client_order_id!r}")
             if order.status.is_terminal:
                 raise OrderStateError(f"cannot modify a {order.status.value} order")
+            # Kill switch: a modification can INCREASE exposure (qty up), so an
+            # engaged switch blocks it exactly like a fresh placement. The
+            # order keeps working exactly as previously accepted -- no journal
+            # write, no REJECTED. Cancels stay allowed: they only reduce risk.
+            self._kill_switch.check()
             if order.order_type != OrderType.LIMIT:
                 raise BrokerError("only LIMIT orders can be modified in paper")
             new_qty = qty if qty is not None else order.qty

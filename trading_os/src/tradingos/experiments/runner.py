@@ -105,7 +105,8 @@ def make_universe_resolver(settings: Settings) -> Any:
 def resolve_symbols(config: StrategyConfig, store: Any, timeframe: Timeframe) -> list[str]:
     """Symbols to load for ``config``: its explicit universe (else every symbol
     in the store for the timeframe) plus any symbol-routed regime-filter targets
-    — the same convention as ``cli/backtest_cmds.py``."""
+    — shared with ``cli/backtest_cmds.py`` so direct and experiments runs load
+    identically."""
     load: set[str] = set(config.universe.symbols or [])
     if not load:
         load = set(store.symbols(timeframe))

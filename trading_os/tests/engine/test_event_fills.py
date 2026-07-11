@@ -29,7 +29,7 @@ from tradingos.config.schemas import (
     UniverseSpec,
 )
 from tradingos.core.models import Order, OrderStatus, OrderType, Product, Side, Timeframe
-from tradingos.costs.model import CostModel
+from tradingos.costs.model import CostModel, CostSchedule, ProductCharges
 from tradingos.engine.base import StaticUniverseResolver
 from tradingos.engine.dataview import MarketData
 from tradingos.engine.event.engine import EventEngine
@@ -253,6 +253,74 @@ def test_engine_entry_fills_at_next_open_price() -> None:
     assert first.entry_price == pytest.approx(100.25)
     assert first.entry_ts.time() == time(9, 15)
     assert first.entry_ts.date() == dates[1].date()
+
+
+# ---------------------------------------------------------------------------
+# trade_date plumbing: fills are priced at the schedule in force on the bar date
+# ---------------------------------------------------------------------------
+
+
+def _dated_schedule(name: str, effective: date, exchange_txn_rate: float) -> CostSchedule:
+    """A CNC-only synthetic schedule; only exchange_txn_rate differs by version."""
+    return CostSchedule(
+        name=name,
+        effective_date=effective,
+        delivery=ProductCharges(
+            brokerage_rate=0.0,
+            stt_buy_rate=0.001,
+            stt_sell_rate=0.001,
+            exchange_txn_rate=exchange_txn_rate,
+            sebi_rate=0.000001,
+            stamp_buy_rate=0.00015,
+            gst_rate=0.18,
+            dp_charge_per_sell_day=15.93,
+        ),
+        intraday=ProductCharges(),
+    )
+
+
+def test_charge_calculator_prices_fills_at_the_schedule_in_force_on_the_bar_date() -> None:
+    """Regression (audit M1): backtest fills must carry ``trade_date`` into
+    ``CostModel.order_charges`` so an old bar is charged per the schedule then
+    in force, not silently repriced at the pinned (latest) schedule.
+
+    Known-answer arithmetic for a 1,00,000 CNC BUY (per-component paisa
+    rounding, ROUND_HALF_UP):
+      old (exchange 0.00345%): STT 100.00; exch 3.45; SEBI 0.10; stamp 15.00;
+          GST 18% x (3.45 + 0.10) = 0.639 -> 0.64;   total = 119.19
+      new (exchange 0.00297%): STT 100.00; exch 2.97; SEBI 0.10; stamp 15.00;
+          GST 18% x (2.97 + 0.10) = 0.5526 -> 0.55;  total = 118.62
+    """
+    old = _dated_schedule("fills_test_2024", date(2024, 10, 1), 0.0000345)
+    new = _dated_schedule("fills_test_2026", date(2026, 1, 1), 0.0000297)
+    calc = ChargeCalculator(CostModel(new, history=[old, new]), Product.CNC)
+
+    # A fill on a bar dated BEFORE the new schedule's effective date -> old rates.
+    charged_old = calc.charges(Side.BUY, "X", 100_000.0, datetime(2025, 6, 2, 9, 15))
+    assert charged_old == pytest.approx(119.19)
+
+    # A fill on a bar dated ON/AFTER the boundary -> new rates.
+    charged_new = calc.charges(Side.BUY, "X", 100_000.0, datetime(2026, 3, 2, 9, 15))
+    assert charged_new == pytest.approx(118.62)
+
+
+def test_fill_simulator_charges_follow_the_fill_timestamp_across_schedules() -> None:
+    """End-to-end through FillSimulator: the same order executed on bars either
+    side of a schedule boundary carries different (date-correct) charges."""
+    old = _dated_schedule("fills_test_2024", date(2024, 10, 1), 0.0000345)
+    new = _dated_schedule("fills_test_2026", date(2026, 1, 1), 0.0000297)
+    calc = ChargeCalculator(CostModel(new, history=[old, new]), Product.CNC)
+    sim = FillSimulator(calc, 0.0, 1.0, Product.CNC)
+    bar = _bar(100.0, 101.0, 99.0, 100.0, 1_000_000)  # 1000 sh @ 100 -> 1,00,000 turnover
+
+    order_old = _open_order("X", Side.BUY, 1000, OrderType.MARKET)
+    (fill_old,) = sim.execute([order_old], {"X": bar}, datetime(2025, 6, 2, 9, 15))
+    order_new = _open_order("X", Side.BUY, 1000, OrderType.MARKET)
+    (fill_new,) = sim.execute([order_new], {"X": bar}, datetime(2026, 3, 2, 9, 15))
+
+    assert fill_old.charges == pytest.approx(119.19)  # old schedule (see arithmetic above)
+    assert fill_new.charges == pytest.approx(118.62)  # new schedule
+    assert fill_old.charges != fill_new.charges
 
 
 def test_engine_is_deterministic_across_runs() -> None:

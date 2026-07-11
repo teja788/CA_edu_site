@@ -116,6 +116,60 @@ def test_atr_trailing_stop_triggers_once_and_exits_next_open() -> None:
 
 
 # ---------------------------------------------------------------------------
+# engine-level: a stop exit must cancel the symbol's working BUY orders
+# ---------------------------------------------------------------------------
+
+
+def test_stop_exit_cancels_working_buy_and_does_not_pingpong() -> None:
+    """Regression: a trailing stop fired while a participation-capped BUY was
+    still working; the exit filled at the next open and the leftover BUY then
+    REFILLED the position on the same bar — stop/re-buy ping-pong bleeding
+    charges. The stop must cancel that symbol's working buys."""
+    dates = pd.date_range(date(2021, 1, 1), periods=12, freq="B")
+    closes = [100.0, 105.0, 110.0, 115.0, 120.0, 80.0, 80.0, 70.0, 60.0, 55.0, 50.0, 45.0]
+    # tiny volume through the crash keeps the rebalance BUY partially filled
+    # (cap = 5% of 20k = 1000 sh/bar); huge volume afterwards lets any working
+    # remainder fill instantly — which is exactly how the ping-pong manifested.
+    volumes = [20_000] * 6 + [10_000_000] * 6
+    frame = pd.DataFrame(
+        {
+            "open": closes,
+            "high": [c + 2 for c in closes],
+            "low": [c - 2 for c in closes],
+            "close": closes,
+            "volume": volumes,
+        },
+        index=dates,
+    )
+    data = MarketData({"XXX": frame}, timeframe=Timeframe.DAY, snapshot_id="pingpong")
+
+    cfg = StrategyConfig(
+        name="pingpong",
+        start=date(2021, 1, 1),
+        end=date(2021, 1, 31),
+        capital=1_000_000,
+        universe=UniverseSpec(symbols=["XXX"], point_in_time=False),
+        selection=SelectionSpec(method="top_n", n=1, exit_rank=1),
+        sizing=SizingSpec(method="equal_weight", max_position_pct=0.9),
+        overlays=[OverlaySpec(name="trailing_stop_pct", params={"pct": 0.10})],
+        rebalance=RebalanceSpec(frequency="monthly", trading_day=1),
+        execution=ExecutionSpec(timing="next_open", slippage_bps=0.0, max_participation=0.05),
+    )
+    res = EventEngine().run(cfg, data, StaticUniverseResolver())
+
+    # peak close 120 -> stop 108; the d6 close at 80 fires the stop EXACTLY
+    # once, exiting the 5000 shares accumulated so far at open(d7).
+    stops = [t for t in res.trades if t.exit_reason == "trailing_stop"]
+    assert len(stops) == 1, f"stop/re-buy ping-pong: {len(stops)} trailing_stop trades"
+    assert stops[0].qty == 5000
+
+    # From d7 (index 6) onward the book is flat cash: the partially-filled
+    # BUY was cancelled, so the falling price can no longer move equity.
+    tail = res.equity.iloc[6:]
+    assert (tail == tail.iloc[0]).all(), "position was refilled after the stop exit"
+
+
+# ---------------------------------------------------------------------------
 # overlay-level: monotonicity + single trigger
 # ---------------------------------------------------------------------------
 

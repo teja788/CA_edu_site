@@ -59,12 +59,13 @@ from tradingos.core.logging import get_logger
 from tradingos.core.models import Product, Side, Timeframe
 from tradingos.core.timeutils import MARKET_CLOSE
 from tradingos.costs.model import CostModel
-from tradingos.engine.base import UniverseResolver
+from tradingos.engine.base import UniverseResolver, clip_calendar
 from tradingos.engine.dataview import DataView, MarketData, SignalStore
 from tradingos.engine.event.engine import _rebalance_dates
 from tradingos.engine.event.execution import ChargeCalculator
 from tradingos.engine.event.strategy_runtime import (
     _apply_filters,
+    _exclude_delisted,
     _liquidity_filter,
     _score,
     _select,
@@ -119,13 +120,8 @@ class VectorizedEngine:
             names = ", ".join(o.name for o in config.overlays)
             warnings.append(f"IGNORED overlays on the fast engine: {names}.")
 
-        # -- calendar (identical semantics to the event engine) ----------------
-        calendar = data.union_index()
-        if config.start is not None:
-            calendar = calendar[calendar >= pd.Timestamp(config.start)]
-        if config.end is not None:
-            calendar = calendar[calendar < pd.Timestamp(config.end) + pd.Timedelta(days=1)]
-        calendar = calendar.sort_values()
+        # -- calendar (shared helper keeps both engines identical) -------------
+        calendar = clip_calendar(data.union_index(), config.start, config.end)
 
         if len(calendar) == 0:
             return self._empty_result(config, data, warnings)
@@ -143,7 +139,9 @@ class VectorizedEngine:
             if t not in rebalance_dates:
                 continue
             dv_t = base_dv.at((t.normalize() + _CLOSE_OFFSET).to_pydatetime())
-            w = self._target_weights(config, dv_t, universe, data, prev_selected, warnings)
+            w = self._target_weights(
+                config, dv_t, universe, data, prev_selected, warnings, run_end=calendar[-1]
+            )
             weights_by_date[t] = w
             prev_selected = {s for s, wi in w.items() if wi > 0.0}
 
@@ -234,15 +232,21 @@ class VectorizedEngine:
         data: MarketData,
         prev_selected: set[str],
         warnings: list[str],
+        run_end: pd.Timestamp | None = None,
     ) -> dict[str, float]:
         """Mirror ``strategy_runtime.evaluate_targets`` but stop at rupee weights.
 
         Returns ``{symbol: weight}`` (fractions of equity); an empty dict means the
         whole book is in cash (nothing qualified or a regime filter gated to cash).
+        ``run_end`` (the run's final calendar bar) enables the same delisting
+        exclusion the event engine applies: a symbol whose frame ended is dropped
+        from the candidate set, so its frozen final score cannot hold a phantom
+        flat-priced position until the end of the run.
         """
         resolved = resolver.resolve(config.universe, dv.now.date(), data)
         available = set(data.symbols)
         candidates = sorted(s for s in resolved if s in available)
+        candidates = _exclude_delisted(candidates, data, dv.now, run_end)
         if not candidates:
             return {}
 

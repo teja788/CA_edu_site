@@ -87,6 +87,16 @@ When an assumption changes, update the owning code and this file together.
   (`strategies/signals/factors.py::_price_series`) — momentum computed on
   frames without dividend data is price-return momentum, slightly
   understating total-return momentum for dividend payers.
+  `BarStore.load_market_data` derives the column at load time for daily
+  frames of symbols with dividend records (never persisted — raw and
+  adjusted parquet stay pure OHLCV, hard rule 8). Dividend amounts are
+  applied at their recorded per-share rupee value against the loaded
+  (usually split-adjusted) close: a dividend whose ex-date precedes a later
+  split is NOT rescaled by that split's factor, slightly overstating the
+  dividend yield of pre-split bars. Also note the chain-link anchors at the
+  first loaded bar, so a `start`-clipped load reproduces total returns only
+  from that bar onward (relative ranking, which is what factors consume, is
+  unaffected).
 - **Delisting exit**: a held symbol whose data ends mid-backtest is exited
   at its last traded close minus a configurable haircut, default 20%
   (`config/schemas.py::DelistingSpec`, event engine).
@@ -406,13 +416,22 @@ When an assumption changes, update the owning code and this file together.
   run in dry-run so the full pre-trade pipeline is exercised against real
   account state. Every suppression is logged with a `DRY-RUN:` prefix at
   WARNING level.
-- **Idempotency / never double-place.** `place_order` for a `client_order_id`
-  already present in the journal in any non-PENDING state returns the stored
-  order unchanged and issues NO API call. The journal (the reused paper
-  SQLite schema, keyed on `settings.live_db_path`) is the single source of
-  "did we already send this?", so a process restart mid-flight (new broker
-  instance, same journal) cannot double-place — the reloaded row
-  short-circuits the retry.
+- **Idempotency / never double-place — write-ahead journal.** The placement
+  intent is journalled (OPEN, deterministic tag, `broker_order_id=None`)
+  BEFORE `kite.place_order` is called; the returned id is persisted after. A
+  crash anywhere in that window leaves an *unconfirmed* row (OPEN, no broker
+  id) that is resolved against the Kite order book **by tag** — at broker
+  startup, inside `sync_orders`, and at the `place_order` idempotency gate —
+  instead of being re-placed blind: found → adopt id/status/fills; confirmed
+  absent → roll back to PENDING (+ risk alert) for retry, or place for real
+  when resolution happens at the idempotency gate; order book unreadable →
+  the row stays unconfirmed and BLOCKS any re-place. For every other
+  non-PENDING journal state, `place_order` returns the stored order verbatim
+  with NO API call — except a non-terminal `DRY-<n>` intent in live mode,
+  which is superseded by a real placement (a morning dry-run rehearsal must
+  not consume the day's real orders). The journal (the reused paper SQLite
+  schema, keyed on `settings.live_db_path`) is the single source of "did we
+  already send this?".
 - **Reconciliation tag.** Kite order *tags* are capped at 20 alphanumeric
   characters, shorter than our 16-hex `client_order_id`, so the tag is derived
   as `sha1(client_order_id).hexdigest()[:18]` (18 lowercase-hex chars,
@@ -424,20 +443,31 @@ When an assumption changes, update the owning code and this file together.
   `sync_orders` on a newly-COMPLETE order carries a cost estimate from
   `CostModel.order_charges(side, product, value).total` (the single charge
   seam) evaluated at the broker's `average_price` — NOT the broker's actual
-  contract-note charges (STT/stamp are whole-rupee-rounded per note, DP is
-  once-per-scrip-per-day, etc.). Live P&L that leans on `Fill.charges` is
-  therefore approximate until contract notes are ingested (future work). A
-  COMPLETE order emits exactly ONE Fill for the full filled quantity; PARTIAL
-  states update `filled_qty` only (no interim Fill).
+  contract-note charges (STT/stamp are whole-rupee-rounded per note, etc.).
+  The estimate IS date-aware (`trade_date` = fill date picks the charge
+  schedule in force) and dedupes the once-per-scrip-per-day DP charge against
+  the same day's already-journalled sell fills (restart-safe). Live P&L that
+  leans on `Fill.charges` is therefore approximate until contract notes are
+  ingested (future work). **Fills are recorded only at a terminal
+  transition**, for the not-yet-covered filled quantity: a COMPLETE order
+  emits one Fill for the full quantity; a CANCELLED/REJECTED order with
+  `filled_quantity > 0` (partial-then-terminal) emits a Fill for the filled
+  part — owned shares are never invisible to the ledger. PARTIAL states
+  update `filled_qty` only (no interim Fill); the covered-quantity delta
+  keeps re-syncs idempotent.
 - **Kite status mapping** (`kite.orders()[i]["status"]` → `OrderStatus`):
   `COMPLETE`→COMPLETE, `REJECTED`→REJECTED, `CANCELLED`→CANCELLED; every other
   (OPEN-ish) status — `OPEN`, `TRIGGER PENDING`, `VALIDATION PENDING`,
   `PUT ORDER REQ RECEIVED` and any *unrecognised* non-terminal status — maps to
   OPEN, except an OPEN-ish status with `filled_quantity > 0` maps to PARTIAL.
   Unknown statuses are deliberately treated as still-working, never terminal
-  (fail safe: never silently drop an order). `sync_orders` is idempotent —
-  journal orders already in a terminal state are skipped, so a second sync
-  never re-records a fill.
+  (fail safe: never silently drop an order). `sync_orders` is idempotent via
+  the covered-quantity delta (a second sync never re-records a fill).
+  Journal-terminal rows are normally skipped, with one deliberate exception:
+  a journal-CANCELLED row whose Kite row shows COMPLETE or a larger
+  `filled_quantity` is re-processed — the cancel/fill race self-heals (status
+  corrected as a journal correction, missing fill recorded) instead of the
+  filled shares staying invisible behind a terminal skip.
 - **Equity** = `margins.cash_available` (Kite `available.live_balance`, falling
   back to `available.cash`) + Σ(qty·last_price) over holdings + Σ(qty·last_price)
   over positions, `last_price` falling back to `avg_price` only if the broker
@@ -449,19 +479,25 @@ When an assumption changes, update the owning code and this file together.
   Zerodha enforces margins and long-only holdings server-side and rejects the
   order. Such a rejection surfaces via the exception mapping (BrokerError) at
   placement and via `sync_orders` on reconciliation.
-- **Exception mapping.** A `kiteconnect.exceptions.TokenException` on any call
-  → `alerter.alert_token_expiry` + `AuthError`; on placement the order is NOT
-  journalled REJECTED (a token expiry is transient — re-auth and retry the same
-  idempotent `client_order_id`). Any other Kite exception on placement →
-  journal REJECTED + `alert_rejection` + `BrokerError`.
+- **Exception mapping.** A `kiteconnect.exceptions.TokenException` on any
+  call → `alerter.alert_token_expiry` + `AuthError`; on placement the
+  write-ahead row is rolled back to PENDING (a token expiry is refused at the
+  auth gate — nothing was placed; re-auth and retry the same idempotent
+  `client_order_id`). Any OTHER placement exception is AMBIGUOUS (e.g. a
+  timeout after Kite accepted) and is resolved against the order book by tag:
+  found → the order IS live, adopt it and return normally; confirmed absent →
+  journal REJECTED + `alert_rejection` + `BrokerError`; order book unreadable
+  → leave the row OPEN/unconfirmed (blocks blind retry), risk-alert, raise.
 - **Cancel marks CANCELLED on request acceptance.** `cancel_order` (and
   `cancel_all_open`, its per-order-fault-tolerant batch form used by the
   kill-switch CLI) marks the journal order CANCELLED once Kite *accepts* the
-  cancel request. In the rare cancel/fill race the order may still fill at the
-  broker; `sync_orders` reconciles from `kite.orders()` and is the source of
-  truth — but because CANCELLED is terminal it is skipped by a later sync, so
-  an operator wanting certainty should `sync_orders` before assuming a cancel
-  is final.
+  cancel request. In the rare cancel/fill race the order may still fill at
+  the broker; `sync_orders` reconciles from `kite.orders()` and is the source
+  of truth — and (see the status-mapping entry) re-processes a
+  journal-CANCELLED row when the broker shows fill evidence, so the race
+  self-heals on the next sync instead of hiding behind the terminal skip. A
+  never-placed row (PENDING planned / unconfirmed / DRY intent) is cancelled
+  journal-only — no Kite call with a `None` or synthetic order id.
 - **Day-start equity** (the max_daily_loss basis) is snapshotted into the
   journal lazily at the day's first order, stamped 09:15, exactly once — a
   mid-day restart recognises the existing snapshot and never overwrites it.
@@ -470,12 +506,17 @@ When an assumption changes, update the owning code and this file together.
 - `stream_ticks` is not implemented (raises `NotImplementedError` pointing at
   `paper.ticks.TickStreamer`); live tick ingestion is the paper stack's job.
 - **Modifications are re-validated like fresh placements** (mirrors the paper
-  broker): the pre-trade risk rules run against the modified values before any
-  `kite.modify_order` call; a violation raises and leaves the order working
-  exactly as previously accepted (no journal write, no API call — the order is
-  still live at the broker). The orders-per-day rule is skipped (a modification
-  is not a new placement). There is no local cash/oversell re-check — Zerodha
-  enforces funds/holdings server-side.
+  broker): the kill switch is checked FIRST (an engaged switch blocks modify
+  in both paper and live — a qty increase can raise exposure; cancels stay
+  allowed because the engage flow depends on them), then the pre-trade risk
+  rules run against the modified values before any `kite.modify_order` call;
+  a violation raises and leaves the order working exactly as previously
+  accepted (no journal write, no API call — the order is still live at the
+  broker). Modifying a never-placed/unconfirmed/DRY row raises
+  `OrderStateError` in live mode (there is nothing at Kite to modify). The
+  orders-per-day rule is skipped (a modification is not a new placement).
+  There is no local cash/oversell re-check — Zerodha enforces funds/holdings
+  server-side.
 
 ## Live reconciliation & session runner (live/reconcile.py, live/runner.py, cli/live_cmds.py)
 
@@ -488,7 +529,10 @@ When an assumption changes, update the owning code and this file together.
   broker_order_id/tag are deliberately NOT flagged — opaque hash tags cannot
   attribute them (another strategy on the same account, or a manual order);
   `unknown_at_broker` is reserved in the contract but never emitted today.
-  In dry-run both reconcile passes short-circuit to `[]` with zero Kite calls.
+  Journal rows with a synthetic `DRY-<n>` broker id are skipped — a dry-run
+  rehearsal must not raise `missing_at_broker` noise on a later live
+  reconcile. In dry-run both reconcile passes short-circuit to `[]` with zero
+  Kite calls.
 - **One consolidated Telegram alert per reconcile pass** listing every
   mismatch — never one alert per mismatch (a drifted book must not flood).
 - **The live planned-order queue lives in the runner, not the broker**
@@ -496,7 +540,11 @@ When an assumption changes, update the owning code and this file together.
   journal store (`save_order(planned_for=…)` / `planned_orders(day)`) and
   replicates paper's per-order fault tolerance at the open (kill switch halts
   the batch; risk rejection skips; broker/auth errors leave PENDING for the
-  09:15–09:25 retry window).
+  09:15–09:25 retry window). A LIVE session reads the queue with
+  `planned_orders(day, include_dry_placed=True)`, so planned rows a morning
+  dry-run rehearsal marked OPEN/`DRY-<n>` are still handed to the broker
+  (which supersedes the dry intent with a real placement) — the runbook's
+  "dry-run first, then --live" procedure places the day's real orders.
 - **Cancelling a stale planned (never-placed) order is journal-only**: it has
   no `broker_order_id`, so it is transitioned CANCELLED directly on the store
   row — routing it through `broker.cancel_order` would hit the Kite API for

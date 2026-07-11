@@ -57,6 +57,9 @@ class Ledger:
         self.cash: float = _paisa(capital)
         self.positions: dict[str, Position] = {}
         self.total_costs: float = 0.0
+        # Accounting anomalies (oversell clips, ignored sells) — surfaced by the
+        # engine on BacktestResult.warnings, not just logged.
+        self.warnings: list[str] = []
         self._lots: dict[str, _Lot] = {}
         self._strategy_id = strategy_id
 
@@ -131,21 +134,31 @@ class Ledger:
         pos = self.positions.get(fill.symbol)
         if pos is None or pos.qty <= 0:
             # No long to reduce — CNC has no shorting, so this is a defensive
-            # guard; log loudly and drop the fill rather than fabricate a short.
-            logger.warning("sell fill for %s with no open long — ignored", fill.symbol)
+            # guard; warn loudly and drop the fill (no cash, no costs) rather
+            # than fabricate a short.
+            msg = f"sell fill for {fill.symbol} with no open long — ignored"
+            logger.warning(msg)
+            self.warnings.append(msg)
             return None
 
         qty = min(fill.qty, pos.qty)
+        charges = fill.charges
         if qty < fill.qty:
-            logger.warning(
-                "sell fill for %s exceeds held qty (%d > %d) — clipped",
-                fill.symbol,
-                fill.qty,
-                pos.qty,
+            # Charges on the fill were computed on the REQUESTED turnover;
+            # only the clipped quantity actually trades, so apportion the
+            # charges pro-rata onto it (the CostModel stays the single place
+            # charges are computed — this is allocation, not recomputation).
+            charges = _paisa(fill.charges * (qty / fill.qty))
+            msg = (
+                f"sell fill for {fill.symbol} exceeds held qty "
+                f"({fill.qty} > {pos.qty}) — clipped to {qty}; "
+                f"charges prorated to the clipped quantity"
             )
+            logger.warning(msg)
+            self.warnings.append(msg)
 
-        self.cash = _paisa(self.cash + (qty * fill.price - fill.charges))
-        self.total_costs = _paisa(self.total_costs + fill.charges)
+        self.cash = _paisa(self.cash + (qty * fill.price - charges))
+        self.total_costs = _paisa(self.total_costs + charges)
         pos.realized_pnl += (fill.price - pos.avg_price) * qty
 
         lot = self._lots[fill.symbol]
@@ -160,7 +173,7 @@ class Ledger:
             entry_price=pos.avg_price,
             exit_price=fill.price,
             entry_costs=entry_cost_alloc,
-            exit_costs=fill.charges,
+            exit_costs=charges,
             exit_reason=reason,
             strategy_id=self._strategy_id,
         )

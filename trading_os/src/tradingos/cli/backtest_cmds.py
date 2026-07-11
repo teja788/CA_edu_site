@@ -62,7 +62,7 @@ def run(
     from tradingos.config.settings import get_settings
     from tradingos.core.errors import TradingOSError
     from tradingos.data.store import BarStore
-    from tradingos.engine.base import StaticUniverseResolver
+    from tradingos.experiments.runner import make_universe_resolver, resolve_symbols
 
     # -- load + apply overrides -------------------------------------------
     try:
@@ -96,21 +96,16 @@ def run(
     # -- resolve which symbols to load ------------------------------------
     settings = get_settings()
     store = BarStore(settings)
-    load_symbols: set[str] = set(config.universe.symbols or [])
-    if not load_symbols:
-        # No explicit universe: fall back to everything the store holds so the run
-        # can proceed for ad-hoc use (point-in-time membership is out of scope here).
-        load_symbols = set(store.symbols(config.timeframe))
-    # Always include any symbol-routed regime-filter target(s).
-    for fspec in config.filters:
-        routed = fspec.params.get("symbol")
-        if routed:
-            load_symbols.add(str(routed))
+    # Same convention as the experiments runner: explicit universe (else every
+    # symbol the store holds) plus symbol-routed regime-filter targets. Which
+    # of those are CANDIDATES on each rebalance date is decided by the
+    # point-in-time resolver below, not here.
+    load_symbols = resolve_symbols(config, store, config.timeframe)
     if not load_symbols:
         _fail("no symbols to load: give --symbols, an explicit universe, or sync data first")
 
     data = store.load_market_data(
-        sorted(load_symbols),
+        load_symbols,
         config.timeframe,
         start=None,
         end=None,
@@ -132,8 +127,12 @@ def run(
 
         eng = EventEngine()
 
+    # Direct runs get the SAME point-in-time universe resolver as every
+    # experiments path (hard rule 4 — survivorship-bias defense): membership is
+    # resolved as of each rebalance date, and a run without PIT data falls back
+    # to all available symbols with a LOUD warning surfaced in the summary below.
     try:
-        result = eng.run(config, data, StaticUniverseResolver())  # type: ignore[attr-defined]
+        result = eng.run(config, data, make_universe_resolver(settings))  # type: ignore[attr-defined]
     except TradingOSError as exc:
         _fail(str(exc))
 

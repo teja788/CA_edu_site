@@ -111,6 +111,45 @@ def test_dp_charge_applies_once_per_scrip_per_day() -> None:
     assert cc.charges(Side.SELL, "Y", 1100.00, day2) == 17.07
 
 
+def test_oversell_clip_charges_only_the_clipped_quantity_and_warns() -> None:
+    """Regression: a clipped SELL (oversell protection) used to debit the
+    charges computed on the UNCLIPPED quantity. The ledger must charge the
+    quantity that actually traded (pro-rata) and record a warning."""
+    ledger = Ledger(capital=100_000.0)
+    ledger.apply_fill(
+        Fill(client_order_id="b", symbol="X", side=Side.BUY, qty=5, price=100.00,
+             ts=_BUY_TS, charges=1.19)
+    )
+    cash_before = ledger.cash
+    costs_before = ledger.total_costs
+
+    # SELL 10 with only 5 held; 10.00 of charges were computed on the full 10.
+    trade = ledger.apply_fill(
+        Fill(client_order_id="s", symbol="X", side=Side.SELL, qty=10, price=110.00,
+             ts=_SELL_TS, charges=10.00),
+        reason="rebalance",
+    )
+    assert trade is not None
+    assert trade.qty == 5
+    # charges prorated to the clipped half: 10.00 * 5/10 = 5.00
+    assert trade.exit_costs == 5.00
+    assert ledger.cash == round(cash_before + 5 * 110.00 - 5.00, 2)
+    assert ledger.total_costs == round(costs_before + 5.00, 2)
+    assert any("clipped" in w for w in ledger.warnings)
+
+
+def test_ignored_sell_with_no_open_long_records_warning() -> None:
+    ledger = Ledger(capital=1_000.0)
+    out = ledger.apply_fill(
+        Fill(client_order_id="s", symbol="Y", side=Side.SELL, qty=1, price=10.00,
+             ts=_SELL_TS, charges=0.50)
+    )
+    assert out is None
+    assert ledger.cash == 1_000.0  # fill dropped entirely — no cash or costs
+    assert ledger.total_costs == 0.0
+    assert any("no open long" in w for w in ledger.warnings)
+
+
 def test_partial_sell_prorates_entry_costs_across_two_trades() -> None:
     cc = _charges()
     ledger = Ledger(capital=1_000_000.0)

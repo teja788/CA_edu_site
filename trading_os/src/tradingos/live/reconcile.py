@@ -42,6 +42,7 @@ from tradingos.core.alerts import TelegramAlerter
 from tradingos.core.logging import get_logger
 from tradingos.core.models import Order, OrderStatus
 from tradingos.live.broker import ZerodhaLiveBroker
+from tradingos.paper.ledgerdb import DRY_ORDER_ID_PREFIX
 
 logger = get_logger(__name__)
 
@@ -102,6 +103,11 @@ def reconcile_orders(broker: ZerodhaLiveBroker) -> list[Mismatch]:
     # record of it.
     for order in journal:
         if order.status not in (OrderStatus.OPEN, OrderStatus.PARTIAL):
+            continue
+        if str(order.broker_order_id or "").startswith(DRY_ORDER_ID_PREFIX):
+            # A dry-run rehearsal's journalled intent: nothing was ever sent
+            # to the broker, so its absence from the kite book is expected,
+            # not drift.
             continue
         found = order.broker_order_id in kite_by_broker_id or (
             order.tag is not None and order.tag in kite_by_tag

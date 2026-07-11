@@ -31,6 +31,12 @@ from tradingos.core.timeutils import now_ist
 
 logger = get_logger(__name__)
 
+# Prefix of the synthetic broker_order_ids a DRY-RUN live session journals
+# ("DRY-1", "DRY-2", ...). Defined here (not in live/broker.py) because the
+# store must recognise them too and live already imports from this module --
+# the reverse import would be circular.
+DRY_ORDER_ID_PREFIX = "DRY-"
+
 _engines: dict[Path, Engine] = {}
 
 
@@ -297,20 +303,38 @@ class PaperStore:
                 if day is None or (r.created_at is not None and r.created_at.date() == day)
             ]
 
-    def planned_orders(self, day: date) -> list[Order]:
-        """PENDING orders queued for the next-open on ``day``, ordered by id."""
+    def planned_orders(self, day: date, *, include_dry_placed: bool = False) -> list[Order]:
+        """PENDING orders queued for the next-open on ``day``, ordered by id.
+
+        ``include_dry_placed``: also return non-terminal queue rows that a
+        DRY-RUN live session already "placed" (journalled OPEN/PARTIAL with a
+        synthetic ``DRY-*`` broker_order_id). Nothing exists at the real
+        broker for those, so a real (non-dry-run) live session must still see
+        them as due for placement -- otherwise a morning dry-run rehearsal
+        would consume the planned queue and the real session would silently
+        place nothing."""
+        working_dry = {OrderStatus.OPEN.value, OrderStatus.PARTIAL.value}
         with paper_db_session(self.db_path) as session:
             stmt = (
                 select(PaperOrderRow)
                 .where(
                     PaperOrderRow.strategy_id == self.strategy_id,
-                    PaperOrderRow.status == OrderStatus.PENDING.value,
                     PaperOrderRow.planned_for == day,
                 )
                 .order_by(PaperOrderRow.id)
             )
             rows = session.exec(stmt).all()
-            return [_row_to_order(r) for r in rows]
+            out: list[Order] = []
+            for r in rows:
+                if r.status == OrderStatus.PENDING.value:
+                    out.append(_row_to_order(r))
+                elif (
+                    include_dry_placed
+                    and r.status in working_dry
+                    and (r.broker_order_id or "").startswith(DRY_ORDER_ID_PREFIX)
+                ):
+                    out.append(_row_to_order(r))
+            return out
 
     def orders_placed_count(self, day: date) -> int:
         """Count of orders whose created_at falls on ``day`` AND whose status
@@ -447,6 +471,7 @@ class PaperStore:
 
 
 __all__ = [
+    "DRY_ORDER_ID_PREFIX",
     "paper_engine",
     "paper_db_session",
     "PaperRunRow",

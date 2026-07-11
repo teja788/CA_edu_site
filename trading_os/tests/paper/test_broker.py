@@ -1531,3 +1531,75 @@ class TestThreadSafety:
         assert sum(f.qty for f in fills) == sum(o.qty for o in complete)
         cancelled = store.orders(status=OrderStatus.CANCELLED)
         assert len(cancelled) == 50  # every churned order ended CANCELLED, none filled
+
+
+# --------------------------------------------------------------------------
+# 18. Kill switch covers modify (audit fix: an engaged switch must block
+#     exposure increases via modification, not just fresh placements)
+# --------------------------------------------------------------------------
+
+
+class TestKillSwitchBlocksModify:
+    def test_modify_raises_while_engaged_and_leaves_order_working(
+        self, settings: Settings, tmp_path: Path
+    ) -> None:
+        store = PaperStore(tmp_path / "paper.sqlite", "ks-modify")
+        ks = KillSwitch(tmp_path / "KILL_SWITCH")
+        broker = make_broker(settings, store, kill_switch=ks)
+        broker.on_tick(make_tick("AAA", T0, last=100.0, bid=99.9, ask=100.1))
+        broker.place_order(
+            Order(
+                client_order_id="ksm-1",
+                symbol="AAA",
+                side=Side.BUY,
+                qty=10,
+                order_type=OrderType.LIMIT,
+                limit_price=95.0,
+            )
+        )
+
+        ks.engage("halt")
+        with pytest.raises(KillSwitchActive):
+            broker.modify_order("ksm-1", qty=100)
+
+        stored = store.get_order("ksm-1")
+        assert stored.qty == 10  # untouched, still working exactly as accepted
+        assert stored.status == OrderStatus.OPEN
+
+        # Cancels must STAY allowed while engaged (they only reduce risk).
+        assert broker.cancel_order("ksm-1").status == OrderStatus.CANCELLED
+
+
+# --------------------------------------------------------------------------
+# 19. Charge estimates carry trade_date (audit fix: estimates must price at
+#     the charge schedule in force on the order/fill day)
+# --------------------------------------------------------------------------
+
+
+class TestChargeEstimatesCarryTradeDate:
+    def test_pre_trade_and_fill_guard_estimates_pass_the_days_date(
+        self, settings: Settings, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        store = PaperStore(tmp_path / "paper.sqlite", "chg-date")
+        broker = make_broker(settings, store)
+        broker.on_tick(make_tick("AAA", T0, last=100.0, bid=99.9, ask=100.1))
+
+        recorded: list[dict] = []
+        real = broker._cost_model.order_charges  # noqa: SLF001 -- spy on the seam
+
+        def spy(*args: object, **kwargs: object):
+            recorded.append(dict(kwargs))
+            return real(*args, **kwargs)
+
+        monkeypatch.setattr(broker._cost_model, "order_charges", spy)  # noqa: SLF001
+        broker.place_order(
+            Order(client_order_id="chg-1", symbol="AAA", side=Side.BUY, qty=10)
+        )
+
+        assert store.get_order("chg-1").status == OrderStatus.COMPLETE
+        # Every estimate call that carries trade_date must carry the order
+        # day; the calls without it come from the ChargeCalculator fill seam
+        # (engine-owned, pinned schedule) and are out of scope here.
+        dated = [k["trade_date"] for k in recorded if "trade_date" in k]
+        assert dated, "no order_charges estimate carried trade_date"
+        assert set(dated) == {DAY0}

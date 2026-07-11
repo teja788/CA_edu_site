@@ -296,6 +296,47 @@ def test_pit_survivorship_warning_propagates_into_result() -> None:
 # ---------------------------------------------------------------------------
 
 
+def test_clip_calendar_shared_helper_clips_inclusively() -> None:
+    """Both engines clip the union calendar through one shared helper."""
+    from tradingos.engine.base import clip_calendar
+
+    cal = pd.date_range(date(2021, 1, 1), date(2021, 3, 31), freq="B")
+    out = clip_calendar(cal, date(2021, 2, 1), date(2021, 2, 25))
+    assert out.min() >= pd.Timestamp("2021-02-01")
+    # end is inclusive of bars stamped ON the end date, exclusive of end+1
+    assert out.max() == pd.Timestamp("2021-02-25")
+    assert clip_calendar(cal, None, None).equals(cal)
+
+
+# ---------------------------------------------------------------------------
+# forced holds surface as warnings on the result
+# ---------------------------------------------------------------------------
+
+
+def test_unfilled_working_orders_surface_as_result_warning() -> None:
+    """A participation-capped order still working when the run ends is a
+    forced hold the caller must be able to see on the result object."""
+    dates = pd.date_range(date(2021, 1, 1), periods=10, freq="B")
+    # volume 1000, participation 5% -> only 50 shares fill per bar; the
+    # ~9000-share target BUY is nowhere near filled when the run ends.
+    frame = _flat(dates, [100.0] * 10, volume=1_000)
+    data = MarketData({"AAA": frame}, timeframe=Timeframe.DAY, snapshot_id="holds")
+
+    cfg = StrategyConfig(
+        name="holds",
+        start=date(2021, 1, 1),
+        end=date(2021, 1, 31),
+        capital=1_000_000,
+        universe=UniverseSpec(symbols=["AAA"], point_in_time=False),
+        selection=SelectionSpec(method="top_n", n=1, exit_rank=1),
+        sizing=SizingSpec(method="equal_weight", max_position_pct=0.9),
+        rebalance=RebalanceSpec(frequency="monthly", trading_day=1),
+        execution=ExecutionSpec(timing="next_open", slippage_bps=0.0, max_participation=0.05),
+    )
+    res = EventEngine().run(cfg, data, StaticUniverseResolver())
+    assert any("unfilled working order" in w and "AAA" in w for w in res.warnings)
+
+
 def test_run_never_extends_past_config_end() -> None:
     """Regression: `end` clipping must be exclusive of end+1. With daily bars
     stamped at midnight, a bar dated end+1 satisfies `<= end + 1 day` exactly,

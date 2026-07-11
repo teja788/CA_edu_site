@@ -140,12 +140,20 @@ class LiveSessionRunner:
           stay PENDING for a retry once the switch disengages.
         - ``RiskViolation`` -> the order is already persisted REJECTED by the
           broker; skip it and continue with the rest.
-        - ``BrokerError`` (e.g. no quote yet, or a transient broker failure)
-          -> the order stays PENDING for a later retry.
+        - ``BrokerError`` -> the order was not (confirmedly) placed this
+          attempt; it stays in the journal as the broker left it -- PENDING
+          for a scheduler retry, REJECTED (a confirmed broker rejection), or
+          OPEN/unconfirmed awaiting reconciliation (an ambiguous failure the
+          broker could not resolve against the Kite order book; see
+          ``ZerodhaLiveBroker``'s write-ahead journal).
+
+        ``include_dry_placed`` (real sessions only): planned rows a DRY-RUN
+        rehearsal already consumed (journalled OPEN with a ``DRY-*`` id) are
+        still due for real placement -- the broker supersedes the dry intent.
 
         Returns the orders actually run through ``place_order`` (including
         pre-trade-rejected ones, which don't raise out of here)."""
-        planned = self._store.planned_orders(day)
+        planned = self._store.planned_orders(day, include_dry_placed=not self._broker.dry_run)
         placed: list[Order] = []
         for order in planned:
             try:
@@ -160,7 +168,10 @@ class LiveSessionRunner:
                 continue
             except BrokerError as exc:
                 logger.warning(
-                    "planned order %s left PENDING for retry: %s", order.client_order_id, exc
+                    "planned order %s not placed this attempt (journal state decides the "
+                    "retry: PENDING retries, OPEN/unconfirmed awaits reconciliation): %s",
+                    order.client_order_id,
+                    exc,
                 )
                 continue
             placed.append(result)

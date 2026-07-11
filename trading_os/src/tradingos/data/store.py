@@ -356,6 +356,15 @@ class BarStore:
         DataError is raised instead of serving it. Symbols with no data at
         all (neither adjusted nor raw, or no raw when adjusted=False) are
         skipped with a warning.
+
+        Daily frames additionally carry a derived ``total_return_close``
+        column (dividends chain-linked into close — see
+        ``data/actions.py::total_return_close``) whenever dividend records
+        exist for the symbol; signal code prefers it for momentum ranking
+        (``strategies/signals/factors.py::_price_series``). The column is
+        computed here at load time only — never written back to raw or
+        adjusted storage (hard rule 8) — and is simply absent when no
+        dividends are recorded.
         """
         frames: dict[str, pd.DataFrame] = {}
         for sym in symbols:
@@ -375,6 +384,8 @@ class BarStore:
 
             pandas_df = pdf.to_pandas().set_index("ts")[list(_OHLCV_COLS)]
             pandas_df.index.name = "ts"
+            if timeframe == Timeframe.DAY:
+                self._attach_total_return_close(sym, pandas_df)
             frames[sym] = pandas_df
 
         return MarketData(
@@ -382,6 +393,25 @@ class BarStore:
             timeframe=timeframe,
             snapshot_id=self.snapshot_id(symbols, timeframe),
         )
+
+    def _attach_total_return_close(self, symbol: str, frame: pd.DataFrame) -> None:
+        """Add the derived ``total_return_close`` column in place, when dividends
+        exist for ``symbol`` (daily frames only — dividend ex-dates are dates).
+
+        DERIVED AT LOAD TIME ONLY: raw market data is immutable (hard rule 8)
+        and even the adjusted parquet stays pure OHLCV — this column lives
+        exclusively in the in-memory signal-seam frame. Point-in-time safe by
+        construction: the value at row t chain-links only closes and dividend
+        ex-dates <= t (see ``actions.total_return_close``), and DataView slices
+        the column like any other (bars <= now). When no dividends are recorded
+        the column is absent and signal code falls back to plain close.
+        """
+        from tradingos.data.actions import get_dividends, total_return_close
+
+        dividends = get_dividends(symbol, self._settings)
+        if not dividends:
+            return
+        frame["total_return_close"] = total_return_close(frame["close"], dividends)
 
     def _warn_if_adjustments_stale(self, symbol: str, timeframe: Timeframe) -> None:
         """Loudly warn when the corporate-actions table has changed since the

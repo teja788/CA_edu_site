@@ -230,6 +230,99 @@ class TestLoadMarketData:
         assert md.full_frame("TEST")["close"].iloc[0] == pytest.approx(100.5)
 
 
+class TestTotalReturnCloseColumn:
+    """`load_market_data` derives `total_return_close` for daily frames with
+    dividend records (audit D8): computed at load time only, never persisted."""
+
+    @staticmethod
+    def _add_dividend(settings, symbol: str, ex_date, amount: float) -> None:
+        from tradingos.data.actions import Dividend
+        from tradingos.data.meta import meta_session
+
+        with meta_session(settings.meta_db_path) as s:
+            s.add(Dividend(symbol=symbol, ex_date=ex_date, amount=amount))
+            s.commit()
+
+    def test_column_present_and_matches_actions_total_return_close(self, settings) -> None:
+        from tradingos.data.actions import get_dividends, total_return_close
+
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.DAY, bars())
+        self._add_dividend(settings, "TEST", DAY2.date(), 1.5)
+
+        md = store.load_market_data(["TEST"], Timeframe.DAY, adjusted=True)
+        frame = md.full_frame("TEST")
+
+        assert "total_return_close" in frame.columns
+        expected = total_return_close(frame["close"], get_dividends("TEST", settings))
+        pd.testing.assert_series_equal(
+            frame["total_return_close"], expected, check_names=False
+        )
+        # The dividend on DAY2 lifts every bar from its ex-date onward above
+        # plain close; the pre-dividend bar is identical to close.
+        assert frame["total_return_close"].iloc[0] == pytest.approx(frame["close"].iloc[0])
+        assert (frame["total_return_close"].iloc[1:] > frame["close"].iloc[1:]).all()
+        # Derived only — the parquet on disk stays pure OHLCV (hard rule 8).
+        on_disk = store.read_raw("TEST", Timeframe.DAY)
+        assert "total_return_close" not in on_disk.columns
+
+    def test_column_absent_without_dividends(self, settings) -> None:
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.DAY, bars())
+        md = store.load_market_data(["TEST"], Timeframe.DAY, adjusted=True)
+        assert list(md.full_frame("TEST").columns) == ["open", "high", "low", "close", "volume"]
+
+    def test_momentum_signal_through_dataview_sees_the_column(self, settings) -> None:
+        """End-to-end (D8): a dividend must change `return_over_window` as seen
+        through the DataView, and the look-ahead guard must slice the derived
+        column exactly like every other (bars <= now only)."""
+        from datetime import date as _date
+
+        from fixtures.synthetic import synthetic_daily
+
+        from tradingos.data.actions import get_dividends, total_return_close
+        from tradingos.engine.dataview import DataView, SignalStore
+
+        pdf = synthetic_daily("TEST", start=_date(2021, 1, 1), end=_date(2021, 3, 31))
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.DAY, pl.from_pandas(pdf.reset_index(names="ts")))
+        div_date = pdf.index[10].date()
+        self._add_dividend(settings, "TEST", div_date, 5.0)
+
+        md = store.load_market_data(["TEST"], Timeframe.DAY, adjusted=True)
+        frame = md.full_frame("TEST")
+        now = datetime.combine(frame.index[20].date(), datetime.min.time().replace(hour=16))
+        dv = DataView(md, SignalStore(md), now)
+
+        # Look-ahead guard: the derived column is sliced like any other.
+        visible = dv.history("TEST")
+        assert "total_return_close" in visible.columns
+        assert visible.index.max() <= pd.Timestamp(now)
+        assert len(visible) == 21
+
+        # The signal value at `now` is the total-return construction, not the
+        # price-return one: the window straddles the ex-date, so they differ.
+        got = dv.signal("TEST", "return_over_window", {"window": 15})
+        trc = total_return_close(frame["close"], get_dividends("TEST", settings))
+        expected_tr = trc.iloc[20] / trc.iloc[5] - 1.0
+        expected_price = frame["close"].iloc[20] / frame["close"].iloc[5] - 1.0
+        assert got == pytest.approx(expected_tr)
+        assert got != pytest.approx(expected_price)
+
+    def test_minute_frames_never_carry_the_column(self, settings) -> None:
+        from datetime import date as _date
+
+        from fixtures.synthetic import synthetic_minute
+
+        pdf = synthetic_minute("TEST", day=_date(2024, 1, 15))
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.MINUTE, pl.from_pandas(pdf.reset_index(names="ts")))
+        self._add_dividend(settings, "TEST", _date(2024, 1, 10), 2.0)
+
+        md = store.load_market_data(["TEST"], Timeframe.MINUTE, adjusted=True)
+        assert "total_return_close" not in md.full_frame("TEST").columns
+
+
 class TestDuckDB:
     def test_views_queryable_and_counts_rows_per_symbol(self, settings) -> None:
         store = BarStore(settings)

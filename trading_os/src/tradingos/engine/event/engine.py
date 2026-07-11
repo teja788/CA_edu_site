@@ -275,6 +275,15 @@ class EventEngine:
                     halted = True
                 else:
                     halted = halted or halt
+                    # A risk exit must also cancel the symbol's working BUYs
+                    # (e.g. a participation-capped rebalance remainder), or the
+                    # leftover buy refills the position right after the stop
+                    # fills — stop/re-buy ping-pong bleeding charges.
+                    if exits_all:
+                        for o in working:
+                            if o.symbol in exits_all and o.side == Side.BUY:
+                                o.transition(OrderStatus.CANCELLED)
+                        _prune_working()
                     for sym in sorted(exits_all):
                         qty = ledger.holdings().get(sym, 0)
                         # A stop that fired on an earlier bar may still be
@@ -293,7 +302,14 @@ class EventEngine:
             if (t in rebalance_dates) and not halted:
                 cancel_all()
                 targets = evaluate_targets(
-                    config, dv_t, universe, data, ledger.holdings(), ledger.equity(), warnings
+                    config,
+                    dv_t,
+                    universe,
+                    data,
+                    ledger.holdings(),
+                    ledger.equity(),
+                    warnings,
+                    run_end=calendar[-1],  # enables delisting exclusion (backtests only)
                 )
                 new_orders = delta_orders(targets, t)
                 for o in new_orders:
@@ -315,6 +331,22 @@ class EventEngine:
             equity = ledger.equity()
             equity_records[t] = equity
             gross_records[t] = round(equity + ledger.total_costs, 2)
+
+        # Orders still working at run end (e.g. participation-capped fills that
+        # never completed) are forced holds the caller must see on the result.
+        for o in working:
+            if not o.status.is_terminal:
+                msg = (
+                    f"unfilled working order at run end: {o.side.value} "
+                    f"{o.remaining_qty}/{o.qty} {o.symbol} ({o.tag or 'untagged'})"
+                )
+                logger.warning(msg)
+                warnings.append(msg)
+
+        # Ledger accounting anomalies (oversell clips, ignored sells) surface too.
+        for w in ledger.warnings:
+            if w not in warnings:
+                warnings.append(w)
 
         for w in universe.warnings:
             if w not in warnings:

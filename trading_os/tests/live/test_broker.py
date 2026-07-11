@@ -96,6 +96,8 @@ class FakeKite:
         orders_response: list | None = None,
         raises: dict[str, BaseException] | None = None,
         fail_cancel_ids: set[str] | None = None,
+        register_placements: bool = False,
+        crash_after_place: BaseException | None = None,
     ) -> None:
         self._ltp_price = ltp_price
         self._margins = margins_response or {
@@ -108,6 +110,16 @@ class FakeKite:
         self._orders = [] if orders_response is None else orders_response
         self._raises = raises or {}
         self._fail_cancel_ids = fail_cancel_ids or set()
+        # register_placements: like the real broker, register every accepted
+        # place_order in the orders() book (status OPEN) -- needed by tests
+        # exercising the tag-based crash-recovery reconciliation.
+        # crash_after_place: raised AFTER the order is registered in the book
+        # (one-shot) -- simulates "Kite accepted the order but the response
+        # never came back" (an Exception) or a hard process crash between the
+        # API call and the journal write (a non-Exception BaseException, which
+        # the broker code deliberately does not catch).
+        self._register_placements = register_placements
+        self._crash_after_place = crash_after_place
         self.calls: list[tuple[str, dict]] = []
         self.place_calls: list[dict] = []
         self._seq = 0
@@ -119,6 +131,14 @@ class FakeKite:
 
     def set_orders(self, rows: list[dict]) -> None:
         self._orders = rows
+
+    def clear_raises(self) -> None:
+        """Stop raising on every method ('the outage is over')."""
+        self._raises = {}
+
+    def kite_rows_for_tests(self) -> list[dict]:
+        """The current orders() book (registered placements + set_orders rows)."""
+        return list(self._orders)
 
     # -- reads --
     def ltp(self, instruments: list[str]) -> dict:
@@ -155,9 +175,30 @@ class FakeKite:
     def place_order(self, **kwargs: object) -> str:
         self.calls.append(("place_order", kwargs))
         self.place_calls.append(kwargs)
-        self._maybe_raise("place_order")
+        self._maybe_raise("place_order")  # raises BEFORE registration: never reached Kite
         self._seq += 1
-        return f"KITE{self._seq}"
+        order_id = f"KITE{self._seq}"
+        if self._register_placements:
+            self._orders.append(
+                {
+                    "order_id": order_id,
+                    "tag": kwargs.get("tag"),
+                    "tradingsymbol": kwargs.get("tradingsymbol"),
+                    "transaction_type": kwargs.get("transaction_type"),
+                    "status": "OPEN",
+                    "filled_quantity": 0,
+                    "quantity": kwargs.get("quantity"),
+                    "average_price": 0.0,
+                    "product": kwargs.get("product"),
+                    "order_timestamp": None,
+                    "status_message": None,
+                }
+            )
+        if self._crash_after_place is not None:
+            exc = self._crash_after_place
+            self._crash_after_place = None  # one-shot
+            raise exc
+        return order_id
 
     def modify_order(self, **kwargs: object) -> str:
         self.calls.append(("modify_order", kwargs))
@@ -483,8 +524,32 @@ class TestTokenExpiry:
             broker.place_order(_order("tok-1"))
 
         assert len(alerter.token_expiries) == 1
-        # A transient token expiry must NOT burn the order as REJECTED.
-        assert store.get_order("tok-1") is None
+        # A transient token expiry must NOT burn the order as REJECTED. With
+        # the write-ahead placement journal the intent row exists, rolled back
+        # to PENDING (retryable after re-auth), with no broker order id.
+        stored = store.get_order("tok-1")
+        assert stored is not None
+        assert stored.status == OrderStatus.PENDING
+        assert stored.broker_order_id is None
+
+    def test_token_expiry_then_retry_places_exactly_once(
+        self, settings: Settings, tmp_path: Path
+    ) -> None:
+        """The re-auth'd retry of the SAME client_order_id must place normally
+        (the rolled-back PENDING row does not short-circuit idempotency)."""
+        store = PaperStore(tmp_path / "live.sqlite", "tok-retry")
+        kite = FakeKite(raises={"place_order": TokenException("token invalid")})
+        broker = make_broker(settings, store, kite, dry_run=False)
+
+        with pytest.raises(AuthError):
+            broker.place_order(_order("tok-r1"))
+
+        kite.clear_raises()  # operator re-authenticated
+        placed = broker.place_order(_order("tok-r1"))
+
+        assert placed.status == OrderStatus.OPEN
+        assert placed.broker_order_id == "KITE1"
+        assert len(kite.place_calls) == 2  # first attempt + the retry, no more
 
     def test_token_exception_on_a_read_alerts_and_raises_autherror(
         self, settings: Settings, tmp_path: Path
