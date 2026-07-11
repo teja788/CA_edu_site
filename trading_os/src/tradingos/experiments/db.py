@@ -34,7 +34,24 @@ def get_engine(settings: Settings) -> Engine:
         eng = create_engine(f"sqlite:///{path}")
         _engines[path] = eng
     SQLModel.metadata.create_all(eng)
+    _migrate_columns(eng)
     return eng
+
+
+def _migrate_columns(eng: Engine) -> None:
+    """Additive, idempotent column migrations for pre-existing registry files.
+
+    ``create_all`` never alters existing tables, so columns added to
+    :class:`ExperimentRun` after a DB was created must be back-filled here or
+    every SELECT against an old registry fails.
+    """
+    with eng.connect() as conn:
+        cols = {row[1] for row in conn.exec_driver_sql("PRAGMA table_info(experimentrun)")}
+        if cols and "warnings_json" not in cols:
+            conn.exec_driver_sql(
+                "ALTER TABLE experimentrun ADD COLUMN warnings_json TEXT NOT NULL DEFAULT '[]'"
+            )
+            conn.commit()
 
 
 @contextmanager

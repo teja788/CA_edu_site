@@ -250,9 +250,17 @@ class VectorizedEngine:
         if not candidates:
             return {}
 
-        scores = _score(config, dv, candidates)
-        if not scores:
+        if config.score is None:
+            # No score configured is legal (e.g. a single-symbol trend strategy):
+            # every candidate scores 0 and selection falls back to symbol order.
             scores = {s: 0.0 for s in candidates}
+        else:
+            scores = _score(config, dv, candidates)  # excludes NaN-signal symbols
+            if not scores:
+                # A score IS configured but not one candidate has a valid value
+                # (indicator warm-up window): hold cash, mirroring
+                # strategy_runtime.evaluate_targets.
+                return {}
 
         eligible, to_cash = _apply_filters(config, dv, list(scores.keys()))
         if to_cash or not eligible:

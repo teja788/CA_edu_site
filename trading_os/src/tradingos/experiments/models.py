@@ -20,9 +20,33 @@ rebuild and re-run any row bit-for-bit.
 
 from __future__ import annotations
 
+import json
 from datetime import date, datetime
 
 from sqlmodel import Field, SQLModel
+
+# Markers of bias-critical engine/universe warnings (survivorship, universe
+# coverage, look-ahead). A run whose persisted warnings carry any of these is
+# TAINTED: its metrics overstate performance and the leaderboard must say so.
+# Routine engine notices (e.g. the fast-engine approximation warning) do not
+# taint a run.
+BIAS_WARNING_MARKERS: tuple[str, ...] = ("SURVIVORSHIP BIAS", "DATA COVERAGE", "LOOK-AHEAD")
+
+
+def parse_warnings(warnings_json: str | None) -> list[str]:
+    """Decode an ExperimentRun.warnings_json payload (tolerant of legacy rows)."""
+    if not warnings_json:
+        return []
+    try:
+        data = json.loads(warnings_json)
+    except (json.JSONDecodeError, TypeError):
+        return []
+    return [str(w) for w in data] if isinstance(data, list) else []
+
+
+def is_bias_tainted(warnings: list[str]) -> bool:
+    """True when any persisted warning is bias-critical (see BIAS_WARNING_MARKERS)."""
+    return any(marker in w for w in warnings for marker in BIAS_WARNING_MARKERS)
 
 
 class ExperimentRun(SQLModel, table=True):
@@ -69,6 +93,13 @@ class ExperimentRun(SQLModel, table=True):
 
     metrics_json: str  # full compute_metrics dict as JSON
 
+    # -- engine/universe warnings (bias audit trail) ----------------------
+    # JSON list of the BacktestResult.warnings strings this run produced
+    # (survivorship-bias fallbacks, universe data-coverage gaps, engine
+    # approximations, ...). Persisted so the leaderboard can flag tainted
+    # runs instead of silently presenting them as clean.
+    warnings_json: str = Field(default="[]")
+
 
 class HoldoutAccess(SQLModel, table=True):
     """Audit log: one row per holdout run scored. This is the record the
@@ -81,4 +112,10 @@ class HoldoutAccess(SQLModel, table=True):
     note: str
 
 
-__all__ = ["ExperimentRun", "HoldoutAccess"]
+__all__ = [
+    "BIAS_WARNING_MARKERS",
+    "ExperimentRun",
+    "HoldoutAccess",
+    "is_bias_tainted",
+    "parse_warnings",
+]

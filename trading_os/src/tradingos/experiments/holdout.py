@@ -30,6 +30,7 @@ from tradingos.experiments.runner import (
     _skew_kurt,
     code_git_hash,
     make_engine,
+    make_universe_resolver,
     resolve_symbols,
 )
 
@@ -148,7 +149,6 @@ def _score_one(
 ) -> int:
     """Run one source run on its holdout window, persist the run + audit row."""
     from tradingos.analytics.metrics import compute_metrics
-    from tradingos.engine.base import StaticUniverseResolver
 
     train_end = src["train_end"]
     holdout_start = train_end + timedelta(days=1)
@@ -173,9 +173,11 @@ def _score_one(
     metrics: dict[str, float] = {}
     n_bars = 0
     ret_skew = ret_kurt = None
+    run_warnings: list[str] = []
     try:
         engine = make_engine(EngineMode(src["engine"]))
-        result = engine.run(holdout_cfg, data, StaticUniverseResolver())
+        result = engine.run(holdout_cfg, data, make_universe_resolver(settings))
+        run_warnings = list(result.warnings)
         metrics = compute_metrics(result)
         returns = result.equity.pct_change().dropna()
         n_bars = int(len(returns))
@@ -217,6 +219,7 @@ def _score_one(
             ret_skew=_opt(ret_skew),
             ret_kurt=_opt(ret_kurt),
             metrics_json=json.dumps(metrics),
+            warnings_json=json.dumps(run_warnings),
         )
         session.add(run)
         session.flush()

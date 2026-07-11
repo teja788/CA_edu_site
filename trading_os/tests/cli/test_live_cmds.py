@@ -25,8 +25,8 @@ from typer.testing import CliRunner
 
 from tradingos.cli import main as cli_main
 from tradingos.config.settings import Settings
-from tradingos.core.models import Order, OrderStatus, OrderType, Product, Side, Timeframe
-from tradingos.core.timeutils import now_ist
+from tradingos.core.models import Fill, Order, OrderStatus, OrderType, Product, Side, Timeframe
+from tradingos.core.timeutils import MARKET_CLOSE, now_ist
 from tradingos.data.store import BarStore
 from tradingos.paper.ledgerdb import PaperStore
 from tradingos.strategies.registry import register_signal
@@ -189,13 +189,137 @@ def test_live_run_once_live_flag_prints_loud_warning_and_sends_no_dry_run_line(
     kite = FakeKite(ltp_price=100.0)
     dry_run_flags = _install_fake_broker(monkeypatch, kite)
 
-    result = cli_runner.invoke(cli_main.app, ["live", "run", str(yaml_path), "--live"])
+    # --live (without --yes) prompts for confirmation; answer "y".
+    result = cli_runner.invoke(
+        cli_main.app, ["live", "run", str(yaml_path), "--live"], input="y\n"
+    )
 
     assert result.exit_code == 0, result.output
     assert dry_run_flags == [False]
     assert "LIVE TRADING ENABLED" in result.output
     assert "real orders WILL be sent to Zerodha" in result.output
+    assert "Send REAL orders to Zerodha?" in result.output
     assert "DRY RUN" not in result.output
+
+
+def test_live_run_once_live_flag_without_yes_aborts_on_no_confirmation(
+    env: tuple[Settings, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """--live without --yes must require interactive confirmation; declining
+    it must exit non-zero having built no broker and placed nothing."""
+    settings, yaml_path = env
+    kite = FakeKite(ltp_price=100.0)
+    dry_run_flags = _install_fake_broker(monkeypatch, kite)
+
+    result = cli_runner.invoke(
+        cli_main.app, ["live", "run", str(yaml_path), "--live"], input="n\n"
+    )
+
+    assert result.exit_code != 0
+    assert dry_run_flags == []  # aborted before the broker seam was ever called
+    assert kite.place_calls == []
+    assert kite.calls == []
+
+
+def test_live_run_once_live_flag_with_yes_skips_confirmation_prompt(
+    env: tuple[Settings, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """--live --yes must send real orders without prompting at all -- no
+    stdin input is supplied, so a stray prompt would hang/fail the test."""
+    settings, yaml_path = env
+    bar_store = BarStore(settings)
+    today = now_ist().date()
+    _seed_bar(bar_store, "AAA", today, 100.0)
+    _seed_bar(bar_store, "BBB", today, 200.0)
+    _seed_bar(bar_store, "CCC", today, 300.0)
+
+    kite = FakeKite(ltp_price=100.0)
+    dry_run_flags = _install_fake_broker(monkeypatch, kite)
+
+    result = cli_runner.invoke(cli_main.app, ["live", "run", str(yaml_path), "--live", "--yes"])
+
+    assert result.exit_code == 0, result.output
+    assert dry_run_flags == [False]
+    assert "Send REAL orders to Zerodha?" not in result.output
+    assert "LIVE TRADING ENABLED" in result.output
+
+
+def test_live_run_once_dry_run_never_prompts_for_confirmation(
+    env: tuple[Settings, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """--dry-run (the default, no --live) must never prompt -- no stdin
+    input is supplied, so a stray confirmation would hang/fail the test."""
+    settings, yaml_path = env
+    bar_store = BarStore(settings)
+    today = now_ist().date()
+    _seed_bar(bar_store, "AAA", today, 100.0)
+    _seed_bar(bar_store, "BBB", today, 200.0)
+    _seed_bar(bar_store, "CCC", today, 300.0)
+
+    kite = FakeKite(ltp_price=100.0)
+    dry_run_flags = _install_fake_broker(monkeypatch, kite)
+
+    result = cli_runner.invoke(cli_main.app, ["live", "run", str(yaml_path)])
+
+    assert result.exit_code == 0, result.output
+    assert dry_run_flags == [True]
+    assert "Send REAL orders to Zerodha?" not in result.output
+
+
+# ---------------------------------------------------------------------------
+# live report
+# ---------------------------------------------------------------------------
+
+
+def test_live_report_writes_report_for_explicit_date(
+    env: tuple[Settings, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    settings, yaml_path = env
+    store = PaperStore(settings.live_db_path, _STRATEGY_NAME)
+    day = date(2024, 2, 8)
+    store.snapshot_equity(datetime.combine(day, MARKET_CLOSE), 100_000.0, cash=100_000.0)
+    store.record_fill(
+        Fill(
+            client_order_id="seed",
+            symbol="AAA",
+            side=Side.BUY,
+            qty=10,
+            price=100.0,
+            ts=datetime.combine(day, time(9, 20)),
+            charges=0.0,
+            product=Product.CNC,
+        )
+    )
+
+    kite = FakeKite()
+    _install_fake_broker(monkeypatch, kite)
+
+    result = cli_runner.invoke(
+        cli_main.app, ["live", "report", str(yaml_path), "--date", day.isoformat()]
+    )
+
+    assert result.exit_code == 0, result.output
+    # run_eod writes under artifacts_dir/paper/<name>/ regardless of whether
+    # the journal is live's or paper's -- it's a generic journal reporter.
+    report_path = settings.artifacts_dir / "paper" / _STRATEGY_NAME / f"eod-{day.isoformat()}.html"
+    assert report_path.exists()
+    assert str(report_path) in result.output
+
+
+def test_live_report_no_snapshots_exits_nonzero(
+    env: tuple[Settings, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """A journal with no equity snapshots yet -> run_eod's ValueError is
+    caught and surfaced as a clean CLI failure (mirrors
+    ``test_paper_report_no_snapshots_exits_nonzero``)."""
+    _settings, yaml_path = env
+    kite = FakeKite()
+    _install_fake_broker(monkeypatch, kite)
+
+    result = cli_runner.invoke(cli_main.app, ["live", "report", str(yaml_path)])
+
+    assert result.exit_code != 0
+    assert "error:" in result.output
 
 
 # ---------------------------------------------------------------------------

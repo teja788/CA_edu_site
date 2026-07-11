@@ -1,6 +1,7 @@
 """live CLI commands (typer sub-app): run a live trading session (dry-run by
-default), inspect account/journal state, reconcile the journal against Kite,
-and operate the global kill switch.
+default), inspect account/journal state, rebuild an EOD equity report from
+the live journal on demand, reconcile the journal against Kite, and operate
+the global kill switch.
 
 Heavy imports (broker, engine, data store, Kite auth) are deferred inside each
 command so ``platform --help`` stays instant, mirroring ``cli/paper_cmds.py``.
@@ -9,6 +10,7 @@ command so ``platform --help`` stays instant, mirroring ``cli/paper_cmds.py``.
 from __future__ import annotations
 
 import time
+from datetime import date
 from pathlib import Path
 from typing import Annotated
 
@@ -110,6 +112,16 @@ def run(
             "kwargs are printed instead.",
         ),
     ] = False,
+    yes: Annotated[
+        bool,
+        typer.Option(
+            "--yes",
+            "-y",
+            help="Skip the interactive '--live' confirmation prompt. Needed for "
+            "unattended '--schedule --live' starts (e.g. from a systemd unit or a "
+            "wrapper script with no attached terminal); has no effect without --live.",
+        ),
+    ] = False,
 ) -> None:
     """Run STRATEGY as a live trading session."""
     from tradingos.config.settings import get_settings
@@ -128,6 +140,10 @@ def run(
         typer.echo(
             "*** LIVE TRADING ENABLED -- real orders WILL be sent to Zerodha. ***", err=True
         )
+        if not yes:
+            # abort=True: a "no" (or a closed/non-interactive stdin) raises
+            # typer.Abort -- exit code 1, nothing built or placed below.
+            typer.confirm("Send REAL orders to Zerodha?", abort=True)
 
     try:
         broker = _build_broker(settings, config, store, calendar, dry_run=not live)
@@ -162,6 +178,64 @@ def _run_schedule(config, runner) -> None:
         typer.echo("stopping...")
     finally:
         scheduler.shutdown(wait=False)
+
+
+# ---------------------------------------------------------------------------
+# live report
+# ---------------------------------------------------------------------------
+
+
+@app.command()
+def report(
+    strategy: Annotated[Path, typer.Argument(help="Path to a strategy YAML file.")],
+    date_: Annotated[
+        str | None,
+        typer.Option("--date", help="ISO date to report on (default: last snapshot day)."),
+    ] = None,
+) -> None:
+    """Rebuild and write an EOD equity report for STRATEGY off the LIVE
+    journal, without placing any orders.
+
+    Reuses ``paper/eod.py::run_eod`` (mirrors ``paper report``) -- the same
+    HTML/JSON report paper trading produces, built from the live journal's
+    equity snapshots (written by :meth:`~tradingos.live.runner.LiveSessionRunner.on_session_close`)
+    and fills. Charges shown are the cost-model ESTIMATES ``sync_orders``
+    records, not broker-confirmed contract-note charges -- see
+    docs/assumptions.md."""
+    from tradingos.config.settings import get_settings
+    from tradingos.core.errors import TradingOSError
+    from tradingos.data.calendar import NSECalendar
+    from tradingos.paper.eod import run_eod
+    from tradingos.paper.ledgerdb import PaperStore
+
+    config = _load_config(strategy)
+
+    day: date | None = None
+    if date_ is not None:
+        try:
+            day = date.fromisoformat(date_)
+        except ValueError:
+            _fail(f"invalid --date {date_!r}: expected ISO date YYYY-MM-DD")
+
+    settings = get_settings()
+    calendar = NSECalendar(settings)
+    store = PaperStore(settings.live_db_path, config.name)
+    # dry_run=True: report generation is read-only and must never place or
+    # mutate an order (mirrors `live status`).
+    try:
+        broker = _build_broker(settings, config, store, calendar, dry_run=True)
+    except TradingOSError as exc:
+        _fail(str(exc))
+        return
+    positions = [*broker.get_holdings(), *broker.get_positions()]
+
+    try:
+        report_path = run_eod(settings, config, store, positions, day=day)
+    except ValueError as exc:
+        _fail(str(exc))
+        return
+
+    typer.echo(f"EOD report: {report_path}")
 
 
 # ---------------------------------------------------------------------------

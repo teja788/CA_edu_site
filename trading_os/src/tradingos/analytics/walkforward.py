@@ -39,7 +39,7 @@ from cash, that first bar is genuinely flat, so this loses no real return.
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date
 
 import pandas as pd
@@ -81,12 +81,23 @@ class WalkForwardWindow:
 
 @dataclass
 class WalkForwardResult:
-    """Full walk-forward output: per-window records plus the stitched OOS curve."""
+    """Full walk-forward output: per-window records plus the stitched OOS curve.
+
+    Cost honesty: ``oos_total_costs`` is the REAL aggregate — the sum of the
+    per-window test runs' ``total_costs`` (each test run starts from
+    ``base.capital``, so the rupee figures are on a common scale) — and
+    ``oos_gross_equity`` is the test runs' gross (pre-cost) curves chain-linked
+    exactly like ``oos_equity``. When a test run does not provide a gross curve
+    aligned to its net curve, ``oos_gross_equity`` is an EMPTY series — gross is
+    explicitly unavailable, never fabricated from the net curve.
+    """
 
     windows: list[WalkForwardWindow]
     oos_equity: pd.Series
     oos_metrics: dict[str, float]
     metric: str
+    oos_gross_equity: pd.Series = field(default_factory=lambda: pd.Series(dtype="float64"))
+    oos_total_costs: float = 0.0
 
 
 def _make_engine(mode: EngineMode) -> EventEngine | VectorizedEngine:
@@ -245,6 +256,9 @@ def walk_forward(
 
     windows: list[WalkForwardWindow] = []
     oos_segments: list[pd.Series] = []
+    oos_gross_segments: list[pd.Series] = []
+    gross_available = True
+    oos_total_costs = 0.0
 
     for train_idx, test_idx in slices:
         train_start, train_end = train_idx[0], train_idx[-1]
@@ -294,6 +308,12 @@ def walk_forward(
 
         if len(test_result.equity) >= 1:
             oos_segments.append(test_result.equity)
+            oos_total_costs += float(test_result.total_costs)
+            gross = test_result.gross_equity
+            if gross is not None and len(gross) and gross.index.equals(test_result.equity.index):
+                oos_gross_segments.append(gross)
+            else:  # no aligned gross for this segment -> gross is unavailable overall
+                gross_available = False
 
         windows.append(
             WalkForwardWindow(
@@ -313,24 +333,42 @@ def walk_forward(
         )
 
     oos_equity = _stitch(oos_segments, base.capital)
-    oos_metrics = _oos_metrics(oos_equity, base, engine_mode)
+    if gross_available:
+        oos_gross_equity = _stitch(oos_gross_segments, base.capital)
+    else:
+        logger.warning(
+            "walk-forward: a test segment carried no gross curve aligned to its "
+            "net curve; the stitched gross curve is marked unavailable (empty)"
+        )
+        oos_gross_equity = pd.Series(dtype="float64")
+    oos_total_costs = round(oos_total_costs, 2)
+    oos_metrics = _oos_metrics(oos_equity, oos_gross_equity, oos_total_costs, base, engine_mode)
 
     return WalkForwardResult(
         windows=windows,
         oos_equity=oos_equity,
         oos_metrics=oos_metrics,
         metric=metric,
+        oos_gross_equity=oos_gross_equity,
+        oos_total_costs=oos_total_costs,
     )
 
 
 def _oos_metrics(
-    oos_equity: pd.Series, base: StrategyConfig, engine_mode: EngineMode
+    oos_equity: pd.Series,
+    oos_gross_equity: pd.Series,
+    oos_total_costs: float,
+    base: StrategyConfig,
+    engine_mode: EngineMode,
 ) -> dict[str, float]:
     """Metrics of the stitched OOS curve via a minimal synthetic BacktestResult.
 
     ``trades=[]`` so trade-derived metrics (hit_rate, turnover, exposure, ...) are
     NaN — the stitched curve has no trade ledger, and that is documented as
-    correct, not a bug.
+    correct, not a bug. ``total_costs`` and ``gross_equity`` carry the REAL
+    aggregates from the test runs (so e.g. ``total_costs_pct`` is honest);
+    ``gross_equity`` is the possibly-empty stitched gross curve, never a copy of
+    the net curve masquerading as gross.
     """
     if len(oos_equity):
         start = oos_equity.index[0].date()
@@ -345,9 +383,9 @@ def _oos_metrics(
         end=end,
         capital=base.capital,
         equity=oos_equity,
-        gross_equity=oos_equity,
+        gross_equity=oos_gross_equity,
         trades=[],
-        total_costs=0.0,
+        total_costs=oos_total_costs,
         warnings=["walk-forward stitched out-of-sample curve; trades not carried"],
         meta={"kind": "walk_forward_oos"},
     )

@@ -179,6 +179,52 @@ def test_oos_metrics_have_full_key_set_and_finite_sharpe(wf: WalkForwardResult) 
     assert math.isnan(wf.oos_metrics["hit_rate"])
 
 
+def test_stitched_result_carries_real_costs_and_gross(wf: WalkForwardResult) -> None:
+    """The stitched result must not claim to be costless: it carries the sum of
+    the per-window test runs' real costs and their chain-linked gross curve
+    (before the fix it stored net-as-gross with total_costs=0.0)."""
+    base = _base()
+    data = _data()
+
+    # Re-run each recorded winner on its test span to get the true aggregates.
+    expected_costs = 0.0
+    gross_segments: list[pd.Series] = []
+    for w in wf.windows:
+        assert not w.skipped
+        variant = expand_grid(base, {k: [v] for k, v in w.best_overrides.items()})[0]
+        cfg = variant.config.model_copy(
+            update={"start": w.test_start.date(), "end": w.test_end.date()}
+        )
+        res = EventEngine().run(cfg, data, StaticUniverseResolver())
+        expected_costs += res.total_costs
+        gross_segments.append(res.gross_equity)
+
+    # Aggregate costs are the real per-window test costs, and they are not zero.
+    assert wf.oos_total_costs == pytest.approx(round(expected_costs, 2))
+    assert wf.oos_total_costs > 0.0
+    assert wf.oos_metrics["total_costs_pct"] == pytest.approx(
+        wf.oos_total_costs / base.capital
+    )
+    assert wf.oos_metrics["total_costs_pct"] > 0.0
+
+    # The gross curve is stitched from the segments' own gross curves, exactly
+    # like the net curve — same index, chained growth, and (costs being
+    # positive) it ends strictly above the net curve.
+    assert wf.oos_gross_equity.index.equals(wf.oos_equity.index)
+    prev_end = base.capital
+    pieces: list[pd.Series] = []
+    for g in gross_segments:
+        contribution = prev_end * (g / g.iloc[0])
+        pieces.append(contribution)
+        prev_end = float(contribution.iloc[-1])
+    pd.testing.assert_series_equal(
+        wf.oos_gross_equity, pd.concat(pieces), check_names=False
+    )
+    assert wf.oos_gross_equity.iloc[-1] > wf.oos_equity.iloc[-1]
+    # And it is genuinely gross, not the net curve relabelled.
+    assert not wf.oos_gross_equity.equals(wf.oos_equity)
+
+
 def test_walk_forward_is_deterministic() -> None:
     kwargs = dict(train_bars=_TRAIN_BARS, test_bars=_TEST_BARS, metric="sharpe",
                   engine_mode=EngineMode.EVENT)

@@ -34,6 +34,8 @@ def test_dsr_present_and_finite_sorting_and_holdout_excluded(
         "calmar",
         "total_costs_pct",
         "n_trades",
+        "tainted",
+        "n_warnings",
         "overrides",
     ]
     assert len(board) == 4

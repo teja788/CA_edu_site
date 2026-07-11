@@ -78,6 +78,30 @@ def make_engine(mode: EngineMode) -> Any:
     return EventEngine()
 
 
+def make_universe_resolver(settings: Settings) -> Any:
+    """Universe resolver for EVERY experiments run path (train, holdout,
+    reproduce): the point-in-time resolver backed by the membership table
+    (hard rule 4 — survivorship bias defense).
+
+    Gating happens inside the resolver on the existing config shape and on
+    data availability, so no schema change is needed:
+
+    * ``universe.symbols`` set -> the explicit list is used as-is (tests /
+      small runs; no membership lookup, no warning).
+    * ``universe.point_in_time`` and no explicit symbols -> membership is
+      resolved AS OF each rebalance date. If the membership table has no data
+      for the index (or the date is outside coverage) the resolver falls back
+      to all available symbols and LOUDLY warns — the warning is persisted on
+      the run row and flags it as tainted on the leaderboard.
+    * delisted/suspended symbols are dropped from candidacy as of their
+      corporate-action date, and the liquidity filter only ever sees bars
+      dated on/before the rebalance date.
+    """
+    from tradingos.data.universe import PITUniverseResolver
+
+    return PITUniverseResolver(settings)
+
+
 def resolve_symbols(config: StrategyConfig, store: Any, timeframe: Timeframe) -> list[str]:
     """Symbols to load for ``config``: its explicit universe (else every symbol
     in the store for the timeframe) plus any symbol-routed regime-filter targets
@@ -131,12 +155,12 @@ def _run_variant(payload: dict[str, Any]) -> dict[str, Any]:
         "is_holdout": payload["is_holdout"],
         "train_end": date.fromisoformat(payload["train_end"]) if payload["train_end"] else None,
         "artifacts_path": payload["artifacts_path"],
+        "warnings_json": "[]",  # overwritten with the engine's warnings on success
     }
 
     try:
         from tradingos.analytics.metrics import compute_metrics
         from tradingos.data.store import BarStore
-        from tradingos.engine.base import StaticUniverseResolver
 
         settings = Settings(
             data_dir=Path(payload["data_dir"]),
@@ -157,7 +181,7 @@ def _run_variant(payload: dict[str, Any]) -> dict[str, Any]:
             )
 
         engine = make_engine(EngineMode(payload["engine"]))
-        result = engine.run(config, data, StaticUniverseResolver())
+        result = engine.run(config, data, make_universe_resolver(settings))
 
         metrics = compute_metrics(result)
         returns = result.equity.pct_change().dropna()
@@ -182,6 +206,10 @@ def _run_variant(payload: dict[str, Any]) -> dict[str, Any]:
                 "ret_skew": _opt(ret_skew),
                 "ret_kurt": _opt(ret_kurt),
                 "metrics_json": json.dumps(metrics),
+                # Bias audit trail: survivorship/coverage/look-ahead warnings
+                # must reach the DB, not just the console (leaderboard flags
+                # tainted runs from this field).
+                "warnings_json": json.dumps(result.warnings),
             }
         )
     except Exception as exc:  # noqa: BLE001 — a failing combo must not kill the grid
@@ -280,6 +308,16 @@ def run_grid(
     The last ``holdout_years`` of data are withheld from every train run (the
     lockout's train side); :func:`experiments.holdout.score_holdout` is the only
     door to that out-of-sample window.
+
+    MULTIPLE-TESTING BOUNDARY — ``family = grid.name`` is defined HERE, and it
+    is the unit the Deflated Sharpe Ratio deflates over: every non-holdout
+    variant ever registered under the same family name counts toward the
+    family's ``n_trials``, INCLUDING errored variants (an attempt that crashed
+    was still a draw from the search process). Re-running or extending a grid
+    under the same name therefore correctly accumulates the burden; registering
+    related sweeps under a NEW name resets the deflation, so never rename a
+    family to make its DSR look better — group every variant of one research
+    question under one family name.
     """
     variants = expand_gridspec(grid)
     family = grid.name
@@ -370,6 +408,7 @@ __all__ = [
     "run_grid",
     "resolve_symbols",
     "make_engine",
+    "make_universe_resolver",
     "code_git_hash",
     "project_root",
 ]

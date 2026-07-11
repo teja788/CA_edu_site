@@ -237,6 +237,28 @@ def test_turnover_exposure_holding_hand_computed() -> None:
     assert m["avg_holding_days"] == pytest.approx(2.0)
 
 
+def test_exposure_counts_bars_by_session_close_for_intraday_fill_stamps() -> None:
+    # Real fills carry intraday times (09:15 open) while daily bars are
+    # midnight-stamped; exposure must compare at each bar's 15:30 session
+    # close, not the midnight stamp.
+    idx = pd.date_range("2020-01-06", periods=5, freq="D")  # Mon..Fri
+    eq = pd.Series([1000.0] * 5, index=idx)
+    # Entered Mon 09:15, exited Tue 09:15 -> open at Mon's close only.
+    t_first = _trade(qty=10, entry=100, exit_=100,
+                     entry_ts=datetime(2020, 1, 6, 9, 15),
+                     exit_ts=datetime(2020, 1, 7, 9, 15))
+    # Entered Fri (final bar) 09:15, force-closed at the next session open
+    # after the backtest end -> open at Fri's close. The naive
+    # `bar >= entry_ts` mask on midnight stamps never counts this trade.
+    t_last = _trade(qty=10, entry=100, exit_=100,
+                    entry_ts=datetime(2020, 1, 10, 9, 15),
+                    exit_ts=datetime(2020, 1, 13, 9, 15))
+    m = compute_metrics(_result(eq, trades=[t_first, t_last]))
+    # Open at Mon and Fri closes: mean([1, 0, 0, 0, 1]) = 0.4
+    # (was 0.2 pre-fix: Mon's bar shifted to Tue, Fri's dropped entirely)
+    assert m["exposure"] == pytest.approx(0.4)
+
+
 # --------------------------------------------------------------------------- #
 # Benchmark regression                                                         #
 # --------------------------------------------------------------------------- #

@@ -7,7 +7,13 @@ Two halves, per initial_prompt.md MODULE 2:
       on that frame truncated at several probe timestamps; the value at each
       probe point must be identical whether or not later rows existed. Any
       registered signal/filter that fails is a genuine look-ahead leak and
-      the test fails loudly, naming it.
+      the test fails loudly, naming it. Probe points span BOTH the early
+      (warm-up) region and the tail of the frame: warm-up-only leaks (e.g. a
+      bfill that copies a future value back over the warm-up window) are
+      invisible to late probes. Signals/filters are certified with their
+      DEFAULT params AND with every param set actually used by the shipped
+      strategies in strategies/examples/*.yaml — a leak enabled purely
+      through YAML params is caught too.
 
   (b) Framework blocking — a deliberately-leaky signal registered inside
       this test must be CAUGHT by (a)'s checker; the DataView-level API must
@@ -22,12 +28,15 @@ with real signal names.
 from __future__ import annotations
 
 from datetime import date
+from pathlib import Path
+from typing import Any
 
 import numpy as np
 import pandas as pd
 import pytest
 from fixtures.synthetic import synthetic_daily
 
+from tradingos.config.loader import load_strategy
 from tradingos.core.errors import DataError, LookAheadError
 from tradingos.core.models import Timeframe
 from tradingos.engine.dataview import DataView, MarketData, SignalStore
@@ -41,7 +50,22 @@ from tradingos.strategies.registry import register_signal
 _SKIP: frozenset[str] = frozenset()
 
 _N_BARS = 400
-_N_PROBES = 5
+_N_PROBES = 10
+
+# The earliest probe position. Early probes sit INSIDE typical indicator
+# warm-up windows, where backfill-style leaks live (a bfill'd warm-up copies a
+# FUTURE value over rows before it — invisible to any probe past the warm-up).
+# The floor cannot be arbitrarily low: several pandas_ta_classic indicators
+# cannot compute AT ALL on very short frames (ta.trix raises below ~91 rows;
+# supertrend/ichimoku return None below their window lengths, making a causal
+# warm-up value on the full frame look like a mismatch). 100 bars is the
+# smallest truncated length every registered indicator computes on, verified
+# empirically against the whole registry.
+_EARLY_PROBE_FLOOR = 100
+
+_EXAMPLES_DIR = (
+    Path(__file__).resolve().parents[2] / "src" / "tradingos" / "strategies" / "examples"
+)
 
 
 def _probe_frame() -> pd.DataFrame:
@@ -53,9 +77,9 @@ def _probe_frame() -> pd.DataFrame:
 
 
 def _probe_times(df: pd.DataFrame) -> list[pd.Timestamp]:
-    """K probe timestamps spread through the second half of df's index."""
+    """K probe timestamps from the early warm-up region through the frame end."""
     n = len(df)
-    positions = np.linspace(n // 2, n - 1, num=_N_PROBES, dtype=int)
+    positions = np.linspace(_EARLY_PROBE_FLOOR, n - 1, num=_N_PROBES, dtype=int)
     return [df.index[p] for p in sorted(set(positions))]
 
 
@@ -77,21 +101,35 @@ def _assert_values_match(full_val: object, trunc_val: object, where: str) -> Non
         raise AssertionError(f"{where}: full={full_val!r} != truncated={trunc_val!r}")
 
 
-def _certify_signal_causal(name: str, df: pd.DataFrame, probe_times: list[pd.Timestamp]) -> None:
-    full = registry.compute_signal(name, df, {})
+def _certify_signal_causal(
+    name: str,
+    df: pd.DataFrame,
+    probe_times: list[pd.Timestamp],
+    params: dict[str, Any] | None = None,
+) -> None:
+    params = params or {}
+    where = f"signal {name!r} (params={params})" if params else f"signal {name!r}"
+    full = registry.compute_signal(name, df, params)
     for t in probe_times:
         truncated = df.loc[:t]
-        trunc_series = registry.compute_signal(name, truncated, {})
-        _assert_values_match(full.loc[t], trunc_series.loc[t], f"signal {name!r} at t={t}")
+        trunc_series = registry.compute_signal(name, truncated, params)
+        _assert_values_match(full.loc[t], trunc_series.loc[t], f"{where} at t={t}")
 
 
-def _certify_filter_causal(name: str, df: pd.DataFrame, probe_times: list[pd.Timestamp]) -> None:
+def _certify_filter_causal(
+    name: str,
+    df: pd.DataFrame,
+    probe_times: list[pd.Timestamp],
+    params: dict[str, Any] | None = None,
+) -> None:
+    params = params or {}
+    where = f"filter {name!r} (params={params})" if params else f"filter {name!r}"
     filt = registry.get_filter(name)
-    full = filt.fn(df)
+    full = filt.fn(df, **params)
     for t in probe_times:
         truncated = df.loc[:t]
-        trunc_series = filt.fn(truncated)
-        _assert_values_match(full.loc[t], trunc_series.loc[t], f"filter {name!r} at t={t}")
+        trunc_series = filt.fn(truncated, **params)
+        _assert_values_match(full.loc[t], trunc_series.loc[t], f"{where} at t={t}")
 
 
 def _all_registered_filters() -> list[registry.FilterDef]:
@@ -161,6 +199,74 @@ def test_certifier_catches_a_shift_negative_leaky_signal() -> None:
     probe_times = _probe_times(df)
     with pytest.raises(AssertionError):
         _certify_signal_causal("test_lookahead_leaky_future_shift", df, probe_times)
+
+
+def test_certifier_catches_a_bfill_warmup_leak() -> None:
+    """Negative control for the EARLY probes: a rolling mean whose warm-up NaNs
+    are backfilled. Row t < window then holds the value computed at the first
+    complete window — data strictly AFTER t. The leak exists ONLY inside the
+    warm-up region, so it is invisible to second-half probes; the early probe
+    positions (< window) must catch it."""
+    window = _EARLY_PROBE_FLOOR + 150  # warm-up region safely spans the early probes
+
+    @register_signal("test_lookahead_leaky_bfill_warmup", tier="custom")
+    def _leaky_bfill(df: pd.DataFrame, **params: object) -> pd.Series:
+        return df["close"].rolling(window=window, min_periods=window).mean().bfill()
+
+    df = _probe_frame()
+    probe_times = _probe_times(df)
+    assert min(probe_times) < df.index[window], (
+        "probe positions no longer reach the warm-up region; early probing regressed"
+    )
+    with pytest.raises(AssertionError):
+        _certify_signal_causal("test_lookahead_leaky_bfill_warmup", df, probe_times)
+
+
+def test_certifier_probes_the_actual_params_used_by_example_strategies() -> None:
+    """Certify every signal and filter with the EXACT params the shipped
+    strategies/examples/*.yaml pass — a leak that only manifests under
+    non-default params (e.g. a future-shifting `offset`) must not hide behind
+    a defaults-only certification."""
+    example_paths = sorted(_EXAMPLES_DIR.glob("*.yaml"))
+    assert example_paths, f"no example strategies found under {_EXAMPLES_DIR}"
+
+    df = _probe_frame()
+    probe_times = _probe_times(df)
+    failures: list[str] = []
+
+    for path in example_paths:
+        cfg = load_strategy(path)
+        for spec in cfg.signals:
+            if spec.name in _SKIP:
+                continue
+            try:
+                _certify_signal_causal(spec.name, df, probe_times, params=spec.params)
+            except AssertionError as exc:
+                failures.append(f"{path.name}: SIGNAL {spec.name!r} LEAKS THE FUTURE: {exc}")
+            except Exception as exc:  # noqa: BLE001 - a crash is also a certification failure
+                failures.append(
+                    f"{path.name}: SIGNAL {spec.name!r} (params={spec.params}) raised "
+                    f"{type(exc).__name__}: {exc}"
+                )
+        for fspec in cfg.filters:
+            if fspec.name in _SKIP:
+                continue
+            # `symbol` is the engine's reserved routing key (which series the
+            # filter is evaluated on), popped before the filter fn is called.
+            params = {k: v for k, v in fspec.params.items() if k != "symbol"}
+            try:
+                _certify_filter_causal(fspec.name, df, probe_times, params=params)
+            except AssertionError as exc:
+                failures.append(f"{path.name}: FILTER {fspec.name!r} LEAKS THE FUTURE: {exc}")
+            except Exception as exc:  # noqa: BLE001
+                failures.append(
+                    f"{path.name}: FILTER {fspec.name!r} (params={params}) raised "
+                    f"{type(exc).__name__}: {exc}"
+                )
+
+    assert not failures, (
+        "look-ahead detector found leaks under example-YAML params:\n" + "\n".join(failures)
+    )
 
 
 def test_certifier_catches_a_full_sample_statistic_leaky_signal() -> None:

@@ -326,19 +326,23 @@ def _exposure(trades: list[Trade], equity: pd.Series) -> float:
     """Average gross exposure across bars.
 
     For each bar, sum the ENTRY notional (``qty * entry_price``) of trades open
-    on that bar (``entry_ts <= bar < exit_ts``), divide by that bar's equity,
-    and average over all bars. This is an entry-notional approximation: it holds
-    the position value at its cost basis rather than marking it to each bar's
-    price (avoids needing per-bar per-symbol prices here). NaN if no trades.
+    at that bar's session close (15:30 IST), divide by that bar's equity, and
+    average over all bars. Daily bars are midnight-stamped while fills carry
+    intraday times (e.g. 09:15 open), so each bar is compared at its session
+    close: a trade counts on bar ``d`` iff ``entry_ts <= close(d) < exit_ts``.
+    This is an entry-notional approximation: it holds the position value at its
+    cost basis rather than marking it to each bar's price (avoids needing
+    per-bar per-symbol prices here). NaN if no trades.
     """
     if not trades:
         return math.nan
     idx = equity.index
+    bar_close = idx.normalize() + pd.Timedelta(hours=15, minutes=30)
     open_notional = pd.Series(0.0, index=idx)
     for t in trades:
         entry = pd.Timestamp(t.entry_ts)
         exit_ = pd.Timestamp(t.exit_ts)
-        mask = (idx >= entry) & (idx < exit_)
+        mask = (bar_close >= entry) & (bar_close < exit_)
         open_notional.loc[mask] += t.qty * t.entry_price
     ratio = open_notional / equity
     return _f(float(ratio.mean()))

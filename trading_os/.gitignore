@@ -3,9 +3,11 @@
 *.pem
 kite_token*.json
 
-# Data — local only, never commit
-data/
-artifacts/
+# Data — local only, never commit. Anchored to this directory: an unanchored
+# "data/" also matches src/tradingos/data/ and tests/data/ (the data-layer
+# source), which silently kept the whole data layer out of git.
+/data/
+/artifacts/
 *.duckdb
 *.duckdb.wal
 *.sqlite

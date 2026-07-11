@@ -7,8 +7,9 @@ accuracy-relevant modeling assumption.
 
 Commands below assume the live CLI (`tradingos.cli.live_cmds`) exposes:
 
-- `uv run platform live run <strategy.yaml> --once|--schedule [--live]`
+- `uv run platform live run <strategy.yaml> --once|--schedule [--live] [--yes/-y]`
 - `uv run platform live status <strategy.yaml>`
+- `uv run platform live report <strategy.yaml> [--date YYYY-MM-DD]`
 - `uv run platform live reconcile <strategy.yaml>`
 - `uv run platform live killswitch status|engage|disengage`
 
@@ -138,8 +139,14 @@ goes back to paper, not to "smaller live position as a compromise."
    proceeding.
 5. Only then: `uv run platform live run <strategy.yaml> --schedule --live`,
    started with **small capital** relative to the strategy's eventual
-   target allocation. Watch the first fills as they happen and confirm
-   Telegram alerts are arriving.
+   target allocation. `--live` (without `--yes`) prompts an interactive
+   "Send REAL orders to Zerodha?" confirmation before anything is built or
+   sent — answer it yourself at the terminal for a first session; declining
+   exits non-zero having placed nothing. Only pass `--yes`/`-y` to skip that
+   prompt for an unattended `--schedule --live` restart (e.g. a systemd unit
+   or cron/wrapper script with no attached terminal) once you already trust
+   this strategy's live config — never on a first session. Watch the first
+   fills as they happen and confirm Telegram alerts are arriving.
 6. After the open settles, `uv run platform live reconcile
    <strategy.yaml>` to confirm the broker's order book matches what the
    platform believes it placed.
@@ -166,10 +173,16 @@ new orders for that strategy until you understand it; when in doubt,
 `killswitch engage` (Section 7) while you investigate.
 
 **Close (after 15:30 IST):** the session-close job (15:35 IST under
-`--schedule`) marks positions to the day's official closes, snapshots
-equity, and (paper) writes the EOD report. Review the EOD divergence report
-and re-check the Section 4 threshold even after go-live — the promotion
-gate becomes ongoing monitoring, it doesn't end at go-live.
+`--schedule`) marks positions to the day's official closes and snapshots
+equity into the journal — paper and live both. Paper additionally writes
+the EOD report automatically on every close; live does not generate one in
+the close job — run `uv run platform live report <strategy.yaml>` on demand
+(it reuses paper's EOD reporter off the live journal, same HTML/JSON
+output, under `<artifacts_dir>/paper/<strategy.name>/`; charges inside it
+are `sync_orders`'s cost-model *estimates*, not broker-confirmed
+contract-note charges). Review the EOD divergence/equity report and
+re-check the Section 4 threshold even after go-live — the promotion gate
+becomes ongoing monitoring, it doesn't end at go-live.
 
 **Restart-after-crash procedure:**
 - Positions and cash are never stored directly — the broker rebuilds state

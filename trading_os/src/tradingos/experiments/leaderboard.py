@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+from sqlalchemy import func
 from sqlmodel import Session, select
 
 from tradingos.config.schemas import EngineMode, StrategyConfig
@@ -22,7 +23,7 @@ from tradingos.core.errors import DataError
 from tradingos.core.logging import get_logger
 from tradingos.core.models import Timeframe
 from tradingos.experiments.db import get_engine
-from tradingos.experiments.models import ExperimentRun
+from tradingos.experiments.models import ExperimentRun, is_bias_tainted, parse_warnings
 
 logger = get_logger(__name__)
 
@@ -41,6 +42,8 @@ _LEADERBOARD_COLUMNS = [
     "calmar",
     "total_costs_pct",
     "n_trades",
+    "tainted",
+    "n_warnings",
     "overrides",
 ]
 
@@ -48,17 +51,27 @@ _LEADERBOARD_COLUMNS = [
 # --------------------------------------------------------------------------- #
 # DSR assembly (per family, at query time)                                     #
 # --------------------------------------------------------------------------- #
-def _family_dsr(rows: list[ExperimentRun]) -> dict[int, float]:
+def _family_dsr(rows: list[ExperimentRun], n_trials: int | None = None) -> dict[int, float]:
     """Map each row id -> its Deflated Sharpe Ratio within this family.
 
-    ``n_trials`` is the count of the family's non-holdout done runs. The
-    per-period trial Sharpes are ``sharpe / sqrt(252)``; their sample variance
-    (ddof=1) over the finite ones is ``sr_var_across_trials``. With fewer than 2
-    finite trial Sharpes the variance is undefined and every DSR is NaN.
+    MULTIPLE-TESTING BOUNDARY: the FAMILY NAME (``grid.name``, assigned in
+    :func:`experiments.runner.run_grid`) is the unit the DSR deflates over.
+    ``n_trials`` must therefore count EVERY non-holdout variant ever registered
+    under the family — including ``status="error"`` rows: an errored variant was
+    still a trial of the search process, and dropping it would understate the
+    selection burden. Callers pass that full count via ``n_trials``; when it is
+    omitted (or smaller than the rows provided) the length of ``rows`` is used
+    as a floor.
+
+    The per-period trial Sharpes are ``sharpe / sqrt(252)``; their sample
+    variance (ddof=1) over the finite ones is ``sr_var_across_trials`` (errored
+    trials carry no Sharpe, so they widen ``n_trials`` without entering the
+    variance). With fewer than 2 finite trial Sharpes the variance is undefined
+    and every DSR is NaN.
     """
     from tradingos.analytics.dsr import deflated_sharpe_ratio
 
-    n_trials = len(rows)
+    n_trials = max(n_trials or 0, len(rows))
     periodic = [
         r.sharpe / _SQRT_TRADING_DAYS
         for r in rows
@@ -105,9 +118,15 @@ def leaderboard(
 ) -> pd.DataFrame:
     """Leaderboard over non-holdout, done runs (optionally one ``family``).
 
-    DSR is computed per family at query time. Sorted by ``sort`` descending with
-    NaNs last; the top ``top`` rows are returned. Columns are fixed (both
-    ``sharpe`` and ``dsr`` always present)."""
+    DSR is computed per family at query time; its ``n_trials`` counts EVERY
+    non-holdout run registered for the family — errored variants included —
+    because an errored variant was still a trial (see :func:`_family_dsr` for
+    the family-name multiple-testing boundary). Sorted by ``sort`` descending
+    with NaNs last; the top ``top`` rows are returned. Columns are fixed (both
+    ``sharpe`` and ``dsr`` always present). ``tainted`` is True when the run
+    carries a bias-critical warning (survivorship fallback, universe coverage
+    gap, look-ahead) persisted at run time; ``n_warnings`` counts all persisted
+    engine/universe warnings."""
     with Session(get_engine(settings)) as session:
         stmt = (
             select(ExperimentRun)
@@ -118,6 +137,16 @@ def leaderboard(
             stmt = stmt.where(ExperimentRun.family == family)
         rows = list(session.exec(stmt).all())
 
+        # n_trials per family: ALL non-holdout attempts, errored included.
+        trials_stmt = (
+            select(ExperimentRun.family, func.count())  # type: ignore[call-overload]
+            .where(ExperimentRun.is_holdout == False)  # noqa: E712 — SQL identity
+            .group_by(ExperimentRun.family)
+        )
+        if family is not None:
+            trials_stmt = trials_stmt.where(ExperimentRun.family == family)
+        n_trials_by_family = {fam: int(n) for fam, n in session.exec(trials_stmt).all()}
+
     if not rows:
         return pd.DataFrame(columns=_LEADERBOARD_COLUMNS)
 
@@ -126,10 +155,11 @@ def leaderboard(
     families = {r.family for r in rows}
     for fam in families:
         fam_rows = [r for r in rows if r.family == fam]
-        dsr_by_id.update(_family_dsr(fam_rows))
+        dsr_by_id.update(_family_dsr(fam_rows, n_trials=n_trials_by_family.get(fam)))
 
-    records = [
-        {
+    def _record(r: ExperimentRun) -> dict[str, Any]:
+        warnings = parse_warnings(r.warnings_json)
+        return {
             "id": int(r.id),  # type: ignore[arg-type]
             "family": r.family,
             "variant_name": r.variant_name,
@@ -141,10 +171,12 @@ def leaderboard(
             "calmar": r.calmar,
             "total_costs_pct": r.total_costs_pct,
             "n_trades": r.n_trades,
+            "tainted": is_bias_tainted(warnings),
+            "n_warnings": len(warnings),
             "overrides": _compact_overrides(r.overrides_json),
         }
-        for r in rows
-    ]
+
+    records = [_record(r) for r in rows]
     frame = pd.DataFrame.from_records(records, columns=_LEADERBOARD_COLUMNS)
 
     if sort not in frame.columns:
@@ -251,9 +283,8 @@ def reproduce(
     from datetime import timedelta
 
     from tradingos.data.store import BarStore
-    from tradingos.engine.base import StaticUniverseResolver
     from tradingos.engine.result import BacktestResult
-    from tradingos.experiments.runner import make_engine, resolve_symbols
+    from tradingos.experiments.runner import make_engine, make_universe_resolver, resolve_symbols
 
     run = get_run(run_id, settings)
     config = StrategyConfig.model_validate(json.loads(run.config_json))
@@ -273,7 +304,7 @@ def reproduce(
         return False
 
     engine = make_engine(EngineMode(run.engine))
-    fresh = engine.run(config, data, StaticUniverseResolver())
+    fresh = engine.run(config, data, make_universe_resolver(settings))
     saved = BacktestResult.load(Path(run.artifacts_path)).equity
 
     try:

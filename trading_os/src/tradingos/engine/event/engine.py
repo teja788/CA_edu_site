@@ -48,7 +48,7 @@ from tradingos.core.models import (
 )
 from tradingos.core.timeutils import MARKET_CLOSE, MARKET_OPEN
 from tradingos.costs.model import CostModel
-from tradingos.engine.base import UniverseResolver
+from tradingos.engine.base import UniverseResolver, clip_calendar
 from tradingos.engine.dataview import DataView, MarketData, SignalStore
 from tradingos.engine.event.execution import ChargeCalculator, FillSimulator
 from tradingos.engine.event.overlays import OverlayContext, make_overlay
@@ -129,15 +129,8 @@ class EventEngine:
 
         warnings: list[str] = []
 
-        # -- calendar ------------------------------------------------------
-        calendar = data.union_index()
-        if config.start is not None:
-            calendar = calendar[calendar >= pd.Timestamp(config.start)]
-        if config.end is not None:
-            # strict <: include bars stamped anywhere ON the end date (00:00 for
-            # daily, intraday for minute) but never a bar dated end+1.
-            calendar = calendar[calendar < pd.Timestamp(config.end) + pd.Timedelta(days=1)]
-        calendar = calendar.sort_values()
+        # -- calendar (shared helper keeps both engines identical) ----------
+        calendar = clip_calendar(data.union_index(), config.start, config.end)
 
         frames = {s: data.full_frame(s) for s in data.symbols}
         last_ts = {s: df.index[-1] for s, df in frames.items() if len(df)}

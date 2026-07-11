@@ -13,20 +13,74 @@ When an assumption changes, update the owning code and this file together.
 - **Kite bar timestamps are bar-OPEN times.** A daily bar dated D is complete
   (fully knowable) at D 15:30 IST; a minute bar stamped T covers [T, T+1min)
   and is complete at T+1min (`engine/dataview.py::bar_completion_time`).
+- **`data sync` stores COMPLETED bars only** (`data/sync.py`). Kite serves
+  the still-forming candle for the in-progress period, and the raw store is
+  append-only and never re-fetched — a forming daily bar written intraday
+  would stay permanently wrong, and a forming minute bar would brick the
+  next sync with an immutability conflict. Daily fetches are therefore
+  clamped to the previous day until 15:30 IST; minute bars whose completion
+  time (ts + 1min) is still in the future at fetch time are dropped before
+  the write.
+- **Embedded NSE holiday table covers 2015–2026 only** (`data/calendar.py`);
+  2024 includes the two election holidays and Muharram (05-20, 07-17,
+  11-20). Outside covered years the calendar degrades to weekday-only logic
+  and logs a loud once-per-year WARNING; `data doctor` demotes missing-day
+  findings in uncovered years from error to warn (a "missing" weekday there
+  may simply be an unknown holiday). Extend coverage with
+  `<data_dir>/nse_holidays.csv`.
+- **Minute-session completeness** (`data/doctor.py`): every stored minute
+  session is expected to hold exactly 375 bars (09:15–15:29). The first
+  stored session (listing-day partial) and today (an intraday sync
+  legitimately holds a partial session) are exempt; other deviations warn.
 - **"52 weeks" / "one year" = 252 trading days**, and volatility is
   annualized with sqrt(252) (`strategies/signals/factors.py`). Trading-day
   approximations, not calendar conversions.
 
 ## Data adjustment and corporate actions
 
-- **Kite historical candles are assumed split/bonus-adjusted at source.**
-  `data/store.py::load_market_data(adjusted=True)` therefore falls back to
-  raw bars (with a warning) when adjusted parquet is missing. This fallback
-  would NOT be safe for an unadjusted vendor. The `data doctor` unadjusted-
-  jump check (>40% overnight gap) exists because this assumption is
-  validated, never trusted silently (`data/doctor.py`).
+- **Kite serves candles adjusted AS OF FETCH TIME — this does NOT make the
+  stored raw series adjusted.** In an append-only store, rows fetched before
+  a split/bonus keep the old price scale forever, while rows fetched after
+  arrive on the new scale: after any price-affecting action the raw series
+  is MIXED-SCALE until `data adjust` rebuilds the adjusted set from the
+  recorded actions. (Corollary — double-adjust hazard: never re-import Kite
+  history fetched post-action into a store whose corporate-actions table
+  already covers that action; the source-adjusted rows would be
+  back-adjusted a second time. `write_raw`'s immutability conflict is the
+  guard that surfaces such a re-import.) Consequences in
+  `data/store.py::load_market_data(adjusted=True)`:
+  - raw fallback when no adjusted series exists is allowed (with a warning)
+    ONLY when no price-affecting corporate action is recorded for the
+    symbol — then raw == adjusted under recorded knowledge;
+  - with recorded price actions but no adjusted series, the read RAISES
+    `DataError` (serving mixed-scale bars would silently corrupt every
+    backtest) and points at `platform data adjust`;
+  - every adjusted series carries a sidecar record of the action-set
+    signature it was built from (`build_adjusted` →
+    `write_adjustment_meta`); serving an adjusted series whose signature no
+    longer matches the corporate-actions table logs a loud STALE warning.
+  The `data doctor` unadjusted-jump check (>40% overnight gap) still runs on
+  raw data, and `data adjust` runs `validate_adjustments` over each freshly
+  rebuilt adjusted series — a gap that survives adjustment means a
+  missing/incorrect action and is printed as a `review:` line.
 - **Raw market data is immutable.** Adjusted series are derived and stored
   separately; raw parquet is never rewritten (`data/store.py`).
+- **Symbol reuse**: NSE reassigns tradingsymbols; `token_for` resolves a
+  reused symbol deterministically to the ACTIVE / most-recent listing
+  (greatest `last_seen`, then `first_seen`, then id —
+  `data/instruments.py`).
+- **Symbol renames**: `platform data migrate-symbol OLD NEW` relocates raw
+  history (append-only merge when both names hold bars), re-keys corporate
+  actions/dividends, rebuilds the adjusted series and records the rename in
+  the SymbolChange table. Point-in-time universe MEMBERSHIP rows are NOT
+  migrated — membership is recorded under the name the index used at the
+  time; a renamed symbol appearing in a historical universe must be resolved
+  through the SymbolChange table by the caller.
+- **`snapshot_id` includes adjustment state** (`data/store.py`): the store
+  fingerprint hashes raw extent AND the adjusted close-column content per
+  symbol, so two stores with identical raw data but different adjustment
+  passes never share a snapshot id (protects signal caches and experiment
+  provenance from serving results computed on differently-adjusted data).
 - **Total-return series**: `total_return_close` chain-links cash dividends
   back into close (`data/actions.py`). Factor signals prefer this column
   when present and silently fall back to plain `close` when absent
@@ -447,9 +501,25 @@ When an assumption changes, update the owning code and this file together.
   no `broker_order_id`, so it is transitioned CANCELLED directly on the store
   row — routing it through `broker.cancel_order` would hit the Kite API for
   an order that was never placed.
-- **Live produces no EOD/divergence report in Phase 6** — that comparison is
-  paper's job; live's acceptance bar is order-flow correctness (a dry-run
-  session shows the exact intended `kite.place_order` kwargs).
+- **Live's session close now snapshots the day's close equity into the
+  journal** (`LiveSessionRunner._snapshot_close_equity`, called from
+  `on_session_close`), exactly mirroring `PaperBroker`'s close snapshot, so
+  the live journal accumulates the same daily equity curve paper's does. It
+  reads equity before margins so a margins-only failure still leaves a
+  usable equity value on hand for sizing — the snapshot itself needs both
+  and is skipped (logged, non-fatal) if either read fails; the close
+  evaluation reuses the already-fetched equity rather than reading it a
+  second time. `cli/live_cmds.py`'s `live report <strategy.yaml>` command
+  builds an EOD report on demand from that journal by reusing
+  `paper/eod.py::run_eod` unmodified — same HTML/JSON output paper gets,
+  under `<artifacts_dir>/paper/<strategy.name>/`. Charges inside that report
+  are `sync_orders`'s `CostModel` **estimates**, not broker-confirmed
+  contract-note charges (see the charges assumption above). There is still
+  **no automatic report generated in the close job** — unlike paper, which
+  writes one on every close, live report generation stays an explicit,
+  on-demand CLI action; live's close-job acceptance bar remains order-flow
+  correctness (a dry-run session shows the exact intended
+  `kite.place_order` kwargs).
 - **The reconcile cron job window is enforced in the job body** (trading day
   + 09:15–15:30), not by the cron expression (`hour="9-15", minute="*/5"` is
   a superset that fires outside the session and no-ops).

@@ -1,5 +1,6 @@
-"""Engine-facing protocols. Engines depend on these, never on concrete
-data-layer or broker classes (no circular imports).
+"""Engine-facing protocols and small helpers shared by BOTH engines. Engines
+depend on these, never on concrete data-layer or broker classes (no circular
+imports).
 """
 
 from __future__ import annotations
@@ -7,9 +8,28 @@ from __future__ import annotations
 from datetime import date
 from typing import Protocol, runtime_checkable
 
+import pandas as pd
+
 from tradingos.config.schemas import StrategyConfig, UniverseSpec
 from tradingos.engine.dataview import MarketData
 from tradingos.engine.result import BacktestResult
+
+
+def clip_calendar(
+    calendar: pd.DatetimeIndex, start: date | None, end: date | None
+) -> pd.DatetimeIndex:
+    """Clip a union trading calendar to the config window, sorted ascending.
+
+    ``start`` is inclusive. ``end`` is inclusive of bars stamped anywhere ON
+    the end date (00:00 for daily, intraday for minute) but never a bar dated
+    end+1 — hence the strict ``<`` against ``end + 1 day``. The single shared
+    implementation keeps both engines' calendars identical by construction.
+    """
+    if start is not None:
+        calendar = calendar[calendar >= pd.Timestamp(start)]
+    if end is not None:
+        calendar = calendar[calendar < pd.Timestamp(end) + pd.Timedelta(days=1)]
+    return calendar.sort_values()
 
 
 @runtime_checkable

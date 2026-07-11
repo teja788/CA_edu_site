@@ -9,6 +9,7 @@ point-in-time safe by construction.
 Pipeline (each stage documented inline):
 
     candidates  (UniverseResolver.resolve, intersected with available data)
+      -> delisting exclusion     (frame ended before the run's final bar -> out)
       -> liquidity filter        (median close*volume >= min_median_traded_value)
       -> per-signal latest values (dv.signal)
       -> score                   (weighted cross-sectional z, or single raw value)
@@ -17,8 +18,9 @@ Pipeline (each stage documented inline):
       -> sizing                  (target rupee weights -> integer share targets)
 
 Cross-sectional z uses population std (ddof=0); std==0 -> z=0; any symbol with a
-NaN signal is dropped before ranking. Integer share targets use the last visible
-close: ``qty = floor(weight * equity / close)``.
+NaN signal is dropped before ranking — and when a score is configured but NO
+candidate has a valid value yet (warm-up), the whole book holds cash. Integer
+share targets use the last visible close: ``qty = floor(weight * equity / close)``.
 """
 
 from __future__ import annotations
@@ -48,16 +50,23 @@ def evaluate_targets(
     current_holdings: dict[str, int],
     equity: float,
     warnings: list[str],
+    run_end: pd.Timestamp | None = None,
 ) -> dict[str, int]:
     """Return desired holdings ``{symbol: share_qty}`` for this rebalance.
 
     An empty dict means "hold no positions" — either nothing qualified or a
     symbol-routed regime filter gated the whole book to cash.
+
+    ``run_end`` (backtests only; the final bar of the simulation calendar)
+    enables delisting exclusion: a symbol whose frame ends before the run does
+    is dropped from the candidate set from its last bar onward, so a frozen
+    final score can neither re-buy a delisted name nor hog a top-N slot.
     """
     # -- candidates ---------------------------------------------------------
     resolved = resolver.resolve(config.universe, dv.now.date(), data)
     available = set(data.symbols)
     candidates = sorted(s for s in resolved if s in available)
+    candidates = _exclude_delisted(candidates, data, dv.now, run_end)
     if not candidates:
         return {}
 
@@ -67,11 +76,17 @@ def evaluate_targets(
         return {}
 
     # -- signal values + score ---------------------------------------------
-    scores = _score(config, dv, candidates)  # excludes NaN-signal symbols
-    if not scores:
+    if config.score is None:
         # No score configured is legal (e.g. a single-symbol trend strategy):
         # every candidate scores 0 and selection falls back to symbol order.
         scores = {s: 0.0 for s in candidates}
+    else:
+        scores = _score(config, dv, candidates)  # excludes NaN-signal symbols
+        if not scores:
+            # A score IS configured but not one candidate has a valid value
+            # (indicator warm-up window): hold cash. Falling back to zeros
+            # here used to buy the alphabetically-first names at full weight.
+            return {}
 
     # -- regime / eligibility filters --------------------------------------
     eligible, to_cash = _apply_filters(config, dv, list(scores.keys()))
@@ -88,6 +103,40 @@ def evaluate_targets(
     # -- sizing -------------------------------------------------------------
     weights = _size(config, dv, selected, warnings)
     return _weights_to_shares(dv, weights, equity)
+
+
+# ---------------------------------------------------------------------------
+# delisting exclusion
+# ---------------------------------------------------------------------------
+
+
+def _exclude_delisted(
+    candidates: list[str],
+    data: MarketData,
+    now: pd.Timestamp,
+    run_end: pd.Timestamp | None,
+) -> list[str]:
+    """Drop symbols delisted as of ``now``: frame ends before the run does AND
+    the final bar is already behind us.
+
+    This mirrors the event engine's force-exit model (a frame ending at bar
+    ``t`` while the run continues is treated as a delisting effective ``t`` —
+    in reality delistings are announced in advance, so acting on it at that
+    bar's close is not look-ahead). ``run_end=None`` (paper/live) disables the
+    check: a live frame simply ends "today" for every symbol.
+    """
+    if run_end is None:
+        return candidates
+    kept: list[str] = []
+    for sym in candidates:
+        idx = data.full_frame(sym).index
+        if len(idx) == 0:
+            continue
+        last = idx[-1]
+        if last < run_end and last <= now:
+            continue  # delisted as of `now` — never a buy/selection candidate
+        kept.append(sym)
+    return kept
 
 
 # ---------------------------------------------------------------------------

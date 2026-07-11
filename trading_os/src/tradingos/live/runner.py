@@ -19,11 +19,20 @@ is a thinner adapter than :class:`~tradingos.paper.broker.PaperBroker`:
   (``PaperStore.save_order(planned_for=...)`` / ``PaperStore.planned_orders``)
   directly, and replicates ``PaperBroker.place_planned``'s per-order fault
   tolerance itself in :meth:`~LiveSessionRunner.on_session_open`.
-* **No EOD / divergence report.** Paper trading owns the backtest-vs-paper
-  divergence narrative (``paper/eod.py``); live trading's job in this phase is
-  correctness of the order flow (Phase 6 acceptance: a dry-run session shows
-  the correct intended orders), not a second P&L report. ``on_session_close``
-  therefore returns the queued orders, not a report path.
+* **No automatic EOD / divergence report.** Paper trading owns the
+  backtest-vs-paper divergence narrative (``paper/eod.py``) and writes a
+  report on every session close; live's job in this phase is correctness of
+  the order flow (Phase 6 acceptance: a dry-run session shows the correct
+  intended orders), so ``on_session_close`` still returns the queued orders,
+  not a report path, and no report is generated automatically in the close
+  job. It DOES, however, snapshot the day's close equity into the journal
+  (see :meth:`~LiveSessionRunner._snapshot_close_equity`), exactly as
+  ``PaperBroker`` does -- so the live journal accumulates the same daily
+  equity curve paper's does. ``cli/live_cmds.py``'s ``live report`` command
+  reuses ``paper/eod.py::run_eod`` on demand, off that live journal, to
+  render the same report paper gets (charges inside it are ``sync_orders``'s
+  cost-model *estimates*, not broker-confirmed contract-note charges -- see
+  this module's charges note and docs/assumptions.md).
 
 Cancelling stale planned orders on a close re-run is journal-only: a planned
 order that has not yet reached :meth:`~LiveSessionRunner.on_session_open` was
@@ -53,7 +62,7 @@ from apscheduler.triggers.cron import CronTrigger
 from tradingos.config.schemas import StrategyConfig
 from tradingos.config.settings import Settings
 from tradingos.core.alerts import TelegramAlerter
-from tradingos.core.errors import BrokerError, KillSwitchActive, RiskViolation
+from tradingos.core.errors import AuthError, BrokerError, KillSwitchActive, RiskViolation
 from tradingos.core.logging import get_logger
 from tradingos.core.models import Order, OrderStatus, OrderType, Position, Side
 from tradingos.core.timeutils import IST, now_ist, session_bounds
@@ -169,19 +178,24 @@ class LiveSessionRunner:
     # -- session close ----------------------------------------------------
 
     def on_session_close(self, day: date) -> list[Order]:
-        """Sync the day's fills from Kite, evaluate rebalance targets off
-        that day's completed bars (identical point-in-time-safe pipeline to
-        paper -- see module docstring), queue the delta orders for the next
-        trading day's open, and return them.
+        """Sync the day's fills from Kite, snapshot the day's close equity
+        into the journal, evaluate rebalance targets off that day's
+        completed bars (identical point-in-time-safe pipeline to paper --
+        see module docstring), queue the delta orders for the next trading
+        day's open, and return them.
 
-        No EOD / divergence report is produced here (see module docstring)."""
+        No automatic EOD / divergence report is produced here -- ``live
+        report`` (cli/live_cmds.py) builds one on demand off the journal this
+        method just wrote the close snapshot into (see module docstring)."""
         self._broker.sync_orders()  # pick up the day's fills before pricing holdings
 
         positions = self._current_positions()
         current_holdings = {p.symbol: p.qty for p in positions}
 
+        equity = self._snapshot_close_equity(day)
+
         data = self._load_market_data()
-        targets = self._evaluate_targets(day, data, current_holdings)
+        targets = self._evaluate_targets(day, data, current_holdings, equity)
 
         next_day = self._calendar.next_trading_day(day)
         orders = self._diff_orders(targets, current_holdings, next_day)
@@ -204,6 +218,38 @@ class LiveSessionRunner:
                 day.isoformat(),
             )
         return orders
+
+    def _snapshot_close_equity(self, day: date) -> float | None:
+        """Snapshot ``day``'s 15:30 close equity into the journal, mirroring
+        ``PaperSessionRunner.on_session_close``'s close snapshot -- so the
+        live journal accumulates the same daily equity curve paper's does
+        (consumed by ``paper/eod.py::run_eod`` via ``live report``).
+
+        Reads equity BEFORE margins so a margins-only failure still leaves a
+        usable equity value in hand: the snapshot itself needs both equity
+        and cash and is skipped if either read fails, but the already-fetched
+        equity is returned regardless and reused by :meth:`_evaluate_targets`
+        for sizing instead of re-reading it (avoids a second, likely
+        identically-failing, broker round trip).
+
+        Returns the equity value read (or ``None`` if the equity read itself
+        failed) -- ``AuthError``/``BrokerError`` are caught and logged as a
+        warning here so a broker read hiccup never blocks the close
+        evaluation that follows; it is not otherwise treated as fatal."""
+        equity: float | None = None
+        try:
+            equity = self._broker.equity()
+            cash = self._broker.get_margins().cash_available
+        except (AuthError, BrokerError) as exc:
+            logger.warning(
+                "session close %s: equity/margins read failed, skipping close "
+                "equity snapshot: %s",
+                day.isoformat(),
+                exc,
+            )
+            return equity
+        self._store.snapshot_equity(session_bounds(day)[1], equity, cash)
+        return equity
 
     # -- planned (next-open) queue, owned by the runner --------------------
 
@@ -274,11 +320,21 @@ class LiveSessionRunner:
         )
 
     def _evaluate_targets(
-        self, day: date, data: MarketData, current_holdings: dict[str, int]
+        self,
+        day: date,
+        data: MarketData,
+        current_holdings: dict[str, int],
+        equity: float | None = None,
     ) -> dict[str, int]:
         """Build a DataView bound to ``day`` 15:30 over pre-loaded ``data`` and
         delegate to ``evaluate_targets`` -- the exact same pipeline the
-        backtest engine and paper trading use."""
+        backtest engine and paper trading use.
+
+        ``equity`` lets a caller (:meth:`on_session_close`) reuse an already
+        -fetched equity value (see :meth:`_snapshot_close_equity`) instead of
+        this method reading it again; ``None`` (the default, e.g. called
+        directly by a test, or when the close snapshot's own equity read
+        failed) falls back to reading it here."""
         latest_idx = data.union_index()
         if latest_idx.empty or latest_idx.max().date() < day:
             latest_desc = (
@@ -298,7 +354,8 @@ class LiveSessionRunner:
         signals = SignalStore(data)
         dv = DataView(data, signals, session_bounds(day)[1])
         warnings: list[str] = []
-        equity = self._broker.equity()
+        if equity is None:
+            equity = self._broker.equity()
         targets = evaluate_targets(
             self._config, dv, resolver, data, current_holdings, equity, warnings
         )

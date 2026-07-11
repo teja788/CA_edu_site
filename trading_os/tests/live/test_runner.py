@@ -32,7 +32,9 @@ from tradingos.config.schemas import (
     UniverseSpec,
 )
 from tradingos.config.settings import Settings
+from tradingos.core.errors import BrokerError
 from tradingos.core.models import Order, OrderStatus, OrderType, Product, Side, Timeframe
+from tradingos.core.timeutils import session_bounds
 from tradingos.data.calendar import NSECalendar
 from tradingos.data.store import BarStore
 from tradingos.live.broker import ZerodhaLiveBroker
@@ -285,6 +287,111 @@ def test_on_session_close_no_delta_queues_nothing(settings: Settings) -> None:
     assert queued == []
     next_day = calendar.next_trading_day(day)
     assert store.planned_orders(next_day) == []
+
+
+def test_on_session_close_snapshots_close_equity(settings: Settings) -> None:
+    config = _make_config("live-runner-close-snapshot")
+    store = PaperStore(settings.live_db_path, config.name)
+    day = date(2024, 2, 8)  # Thursday
+    kite = FakeKite(
+        holdings_response=[
+            {
+                "tradingsymbol": "AAA",
+                "quantity": 100,
+                "t1_quantity": 0,
+                "average_price": 100.0,
+                "last_price": 100.0,
+            }
+        ],
+        margins_response={
+            "available": {"live_balance": 90_000.0, "cash": 90_000.0},
+            "utilised": {"debits": 0.0},
+        },
+    )
+    runner, _broker, _calendar = _make_runner(
+        settings, config, store, kite, now=datetime.combine(day, time(15, 35))
+    )
+    bar_store = BarStore(settings)
+    _seed_bar(bar_store, "AAA", day, 100.0)
+    _seed_bar(bar_store, "BBB", day, 200.0)
+    _seed_bar(bar_store, "CCC", day, 300.0)
+
+    runner.on_session_close(day)
+
+    close_ts = session_bounds(day)[1]
+    equity_curve = store.equity_curve()
+    cash_curve = store.cash_curve()
+    assert close_ts in equity_curve.index
+    # cash 90_000 + 100 * AAA last_price 100.0 = 100_000, mirroring paper's
+    # PaperBroker.snapshot close-equity convention.
+    assert equity_curve[close_ts] == pytest.approx(100_000.0)
+    assert cash_curve[close_ts] == pytest.approx(90_000.0)
+
+
+def test_on_session_close_skips_snapshot_when_margins_read_fails_but_close_still_completes(
+    settings: Settings, monkeypatch: pytest.MonkeyPatch, caplog: pytest.LogCaptureFixture
+) -> None:
+    """A margins-only read failure (the runner's SECOND, snapshot-only
+    ``get_margins()`` call, distinct from the equity read the runner already
+    made and reuses for sizing) must skip only the equity snapshot -- the
+    close evaluation must still complete using the equity value already
+    fetched, producing the exact same rebalance as the healthy-margins case,
+    without a third (also-failing) broker round trip."""
+    config = _make_config("live-runner-close-margins-fail")
+    store = PaperStore(settings.live_db_path, config.name)
+    day = date(2024, 2, 8)
+    kite = FakeKite(
+        holdings_response=[
+            {
+                "tradingsymbol": "AAA",
+                "quantity": 100,
+                "t1_quantity": 0,
+                "average_price": 100.0,
+                "last_price": 100.0,
+            }
+        ],
+        margins_response={
+            "available": {"live_balance": 90_000.0, "cash": 90_000.0},
+            "utilised": {"debits": 0.0},
+        },
+    )
+    runner, broker, calendar = _make_runner(
+        settings, config, store, kite, now=datetime.combine(day, time(15, 35))
+    )
+    bar_store = BarStore(settings)
+    _seed_bar(bar_store, "AAA", day, 100.0)
+    _seed_bar(bar_store, "BBB", day, 200.0)
+    _seed_bar(bar_store, "CCC", day, 300.0)
+
+    # The runner's `equity()` read (used for sizing) succeeds; its second,
+    # snapshot-only `get_margins()` read fails -- simulating a transient
+    # broker hiccup on that specific call.
+    real_get_margins = broker.get_margins
+    call_count = {"n": 0}
+
+    def flaky_get_margins():
+        call_count["n"] += 1
+        if call_count["n"] >= 2:
+            raise BrokerError("margins temporarily unavailable")
+        return real_get_margins()
+
+    monkeypatch.setattr(broker, "get_margins", flaky_get_margins)
+
+    with caplog.at_level(logging.WARNING, logger=_LOGGER_NAME):
+        queued = runner.on_session_close(day)
+
+    assert "skipping close equity snapshot" in caplog.text
+
+    close_ts = session_bounds(day)[1]
+    assert close_ts not in store.equity_curve().index  # snapshot was skipped
+
+    # Close evaluation still completed, using the already-fetched equity
+    # (100_000) for sizing -- identical result to the healthy-margins case.
+    next_day = calendar.next_trading_day(day)
+    assert [o.symbol for o in queued] == ["AAA", "BBB", "CCC"]
+    assert [o.side for o in queued] == [Side.SELL, Side.BUY, Side.BUY]
+    assert [o.qty for o in queued] == [100, 250, 166]
+    assert next_day == date(2024, 2, 9)
 
 
 def test_on_session_close_rerun_cancels_stale_planned_orders_without_kite_cancel(

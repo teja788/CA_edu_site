@@ -58,7 +58,42 @@ import numpy as np
 import pandas as pd
 import pandas_ta_classic as ta
 
+from tradingos.core.errors import ConfigError
 from tradingos.strategies.registry import SignalFn, register_signal
+
+# ---------------------------------------------------------------------------
+# PIT parameter guard: every pandas_ta_classic indicator accepts an `offset`
+# kwarg that shifts its OUTPUT by that many bars. A NEGATIVE offset shifts the
+# indicator INTO THE FUTURE — `rsi(close, offset=-1)` is bit-identical to
+# `rsi(close).shift(-1)`, i.e. row t holds tomorrow's value: a genuine
+# look-ahead leak a strategy YAML could otherwise enable via `params:`. The
+# look-ahead certifier probes registered signals, but a YAML-supplied param is
+# only exercised at run time, so the block must live here, at the one choke
+# point every builtin wrapper passes through. Positive offsets only LAG the
+# series (value at t comes from t-offset) and stay allowed.
+# ---------------------------------------------------------------------------
+
+
+def _guard_pit_params(params: dict[str, Any]) -> None:
+    """Reject params that would shift a builtin indicator into the future.
+
+    Raises :class:`ConfigError` (loudly, naming the offending param) for any
+    ``offset`` that is not a non-negative real number. Other future-shifting
+    knobs are neutralized in their specific wrappers: `dpo` force-disables
+    `centered`, and `ichimoku` never forwards `include_chikou` (the lagging
+    span is excluded outright).
+    """
+    if "offset" not in params:
+        return
+    offset = params["offset"]
+    ok = isinstance(offset, (int, float)) and not isinstance(offset, bool) and offset >= 0
+    if not ok:
+        raise ConfigError(
+            f"LOOK-AHEAD BLOCKED: builtin indicator param offset={offset!r} is rejected. "
+            "A negative offset shifts the indicator into the future (row t would hold the "
+            "value computed at row t+|offset|), violating the point-in-time contract "
+            "(row t may use only rows <= t). Builtin signals accept only offset >= 0."
+        )
 
 # ---------------------------------------------------------------------------
 # Input extractors: pull the positional Series arguments a given
@@ -114,6 +149,7 @@ def _wrap(ta_fn: Callable[..., Any], inputs: InputsFn, column: int | None = None
     """
 
     def _fn(df: pd.DataFrame, **params: Any) -> pd.Series:
+        _guard_pit_params(params)
         result = ta_fn(*inputs(df), **params)
         if result is None:
             # pandas_ta_classic returns None (rather than raising) when it
@@ -149,6 +185,11 @@ def _ichimoku_component(column: int, description: str) -> None:
     """
 
     def _fn(df: pd.DataFrame, **params: Any) -> pd.Series:
+        _guard_pit_params(params)
+        # `include_chikou` is never forwarded: the chikou span is close shifted
+        # BACKWARD — a genuine look-ahead — and must stay excluded no matter
+        # what a strategy YAML passes.
+        params.pop("include_chikou", None)
         ichimoku_df, _future_cloud = ta.ichimoku(
             df["high"], df["low"], df["close"], include_chikou=False, **params
         )
@@ -171,6 +212,7 @@ def _dpo(df: pd.DataFrame, **params: Any) -> pd.Series:
     a strategy YAML cannot re-enable the leaky mode by passing
     `centered: true`.
     """
+    _guard_pit_params(params)
     params.pop("centered", None)
     length = params.pop("length", 20)
     result = ta.dpo(df["close"], length=length, centered=False, **params)
@@ -184,6 +226,7 @@ def _psar_line(df: pd.DataFrame, **params: Any) -> pd.Series:
     short-stop where in a downtrend — pandas_ta_classic reports these as two
     mutually-exclusive columns; combining them pointwise stays causal since
     each input column already is)."""
+    _guard_pit_params(params)
     result = ta.psar(df["high"], df["low"], df["close"], **params)
     if result is None:
         return pd.Series(np.nan, index=df.index, dtype="float64")
@@ -196,6 +239,7 @@ def _psar_direction(df: pd.DataFrame, **params: Any) -> pd.Series:
     (uptrend), -1 while the short stop is active (downtrend), NaN before
     warmup. Derived from the same two mutually-exclusive columns as
     `psar`."""
+    _guard_pit_params(params)
     result = ta.psar(df["high"], df["low"], df["close"], **params)
     if result is None:
         return pd.Series(np.nan, index=df.index, dtype="float64")

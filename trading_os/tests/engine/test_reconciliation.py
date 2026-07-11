@@ -20,6 +20,7 @@ from __future__ import annotations
 from datetime import date
 
 import pandas as pd
+import pytest
 from fixtures.synthetic import synthetic_universe
 
 from tradingos.config.schemas import (
@@ -46,7 +47,7 @@ def _recon_mom(df: pd.DataFrame, **params: object) -> pd.Series:
     return df["close"].pct_change(int(params["window"]))
 
 
-def _recon_config() -> StrategyConfig:
+def _recon_config(slippage_bps: float = 0.0) -> StrategyConfig:
     # Monthly top-2 of 3 names with a one-rank retention buffer: real rebalancing
     # (costs land near ~1.7% of capital) yet the engines still track tightly.
     return StrategyConfig(
@@ -60,15 +61,20 @@ def _recon_config() -> StrategyConfig:
         selection=SelectionSpec(method="top_n", n=2, exit_rank=2),
         sizing=SizingSpec(method="equal_weight", max_position_pct=0.6),
         rebalance=RebalanceSpec(frequency="monthly", trading_day=1),
-        # Make the two execution models coincide:
-        execution=ExecutionSpec(timing="same_close", slippage_bps=0.0, max_participation=1.0),
+        # Make the two execution models coincide (same_close, no volume cap).
+        # Slippage is parametrized by the caller: BOTH engines apply it, and
+        # reconciliation must hold with the seam active, not just at zero.
+        execution=ExecutionSpec(
+            timing="same_close", slippage_bps=slippage_bps, max_participation=1.0
+        ),
     )
 
 
-def test_event_and_vectorized_engines_reconcile() -> None:
+@pytest.mark.parametrize("slippage_bps", [0.0, 25.0])
+def test_event_and_vectorized_engines_reconcile(slippage_bps: float) -> None:
     frames = synthetic_universe(["AAA", "BBB", "CCC"], start=date(2019, 1, 1), end=date(2021, 12, 31))
     data = MarketData(frames, timeframe=Timeframe.DAY, snapshot_id="recon")
-    cfg = _recon_config()
+    cfg = _recon_config(slippage_bps)
 
     ev = EventEngine().run(cfg, data, StaticUniverseResolver())
     vz = VectorizedEngine().run(cfg, data, StaticUniverseResolver())
