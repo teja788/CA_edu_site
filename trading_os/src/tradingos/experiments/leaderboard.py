@@ -8,6 +8,7 @@ more variants are registered, so a stored column would go stale. See
 
 from __future__ import annotations
 
+import fnmatch
 import json
 import math
 from pathlib import Path
@@ -198,6 +199,214 @@ def get_run(run_id: int, settings: Settings) -> ExperimentRun:
         return run
 
 
+# --------------------------------------------------------------------------- #
+# Marking (owner curation) — a marked run is the default baseline for          #
+# ``compare_runs`` / ``platform experiments compare --markdown``.              #
+# --------------------------------------------------------------------------- #
+def mark_run(run_id: int, settings: Settings, marked: bool = True) -> ExperimentRun:
+    """Set (``marked=True``) or clear (``marked=False``) ``is_marked`` on a run.
+
+    Returns the updated, detached row. Raises :class:`DataError` if the run
+    does not exist (mirrors :func:`get_run`)."""
+    with Session(get_engine(settings)) as session:
+        run = session.get(ExperimentRun, run_id)
+        if run is None:
+            raise DataError(f"no experiment run with id {run_id}")
+        run.is_marked = marked
+        session.add(run)
+        session.commit()
+        session.refresh(run)
+        session.expunge(run)
+        return run
+
+
+def latest_marked_run(settings: Settings) -> ExperimentRun | None:
+    """The most recently marked run (highest id among ``is_marked`` rows), or
+    ``None`` if nothing is marked. This is the implicit ``compare --baseline``
+    default."""
+    with Session(get_engine(settings)) as session:
+        stmt = (
+            select(ExperimentRun)
+            .where(ExperimentRun.is_marked == True)  # noqa: E712 — SQL identity
+            .order_by(ExperimentRun.id.desc())  # type: ignore[union-attr]
+        )
+        row = session.exec(stmt).first()
+        if row is not None:
+            session.expunge(row)
+        return row
+
+
+# --------------------------------------------------------------------------- #
+# Family / baseline comparison (markdown-friendly multi-run report)           #
+# --------------------------------------------------------------------------- #
+_COMPARE_COLUMNS = [
+    "id",
+    "family",
+    "variant_name",
+    "is_baseline",
+    "net_return_pct",
+    "max_drawdown_pct",
+    "sharpe",
+    "n_trades",
+    "total_costs_pct",
+    "delta_net_pp",
+    "delta_dd_pp",
+    "delta_sharpe",
+]
+
+
+def _pct(x: float | None) -> float:
+    """Fraction -> percentage points, tolerant of ``None``/NaN/non-finite."""
+    if x is None:
+        return math.nan
+    xf = float(x)
+    return xf * 100.0 if math.isfinite(xf) else math.nan
+
+
+def _metric_record(r: ExperimentRun) -> dict[str, float]:
+    """Derive the compare-table metric columns for one run.
+
+    ``net_return_pct`` prefers the stored ``metrics_json["total_return"]``
+    (computed once, net-of-cost, in :func:`analytics.metrics.compute_metrics`);
+    when that is missing/NaN it falls back to ``final_equity / capital - 1``
+    using the capital recorded in this run's own ``config_json`` (the
+    unclamped variant config), never a caller-supplied default.
+    """
+    try:
+        metrics: dict[str, Any] = json.loads(r.metrics_json or "{}")
+    except (json.JSONDecodeError, TypeError):
+        metrics = {}
+
+    total_return = metrics.get("total_return")
+    if not isinstance(total_return, (int, float)) or not math.isfinite(float(total_return)):
+        capital: float | None = None
+        try:
+            capital = json.loads(r.config_json or "{}").get("capital")
+        except (json.JSONDecodeError, TypeError):
+            capital = None
+        if capital and r.final_equity is not None:
+            total_return = r.final_equity / capital - 1.0
+        else:
+            total_return = math.nan
+
+    max_dd = r.max_drawdown if r.max_drawdown is not None else metrics.get("max_drawdown")
+    costs_pct = r.total_costs_pct if r.total_costs_pct is not None else metrics.get(
+        "total_costs_pct"
+    )
+
+    return {
+        "net_return_pct": _pct(float(total_return)),
+        "max_drawdown_pct": _pct(max_dd),
+        "sharpe": float(r.sharpe) if r.sharpe is not None else math.nan,
+        "n_trades": float(r.n_trades) if r.n_trades is not None else math.nan,
+        "total_costs_pct": _pct(costs_pct),
+    }
+
+
+def compare_runs(
+    settings: Settings,
+    families: str | None = None,
+    baseline: int | None = None,
+    all_runs: bool = False,
+) -> pd.DataFrame:
+    """Multi-run comparison table: one row per selected run plus Δ-vs-baseline
+    columns, for ``platform experiments compare --families/--baseline/--markdown``.
+
+    Selection
+    ---------
+    * ``families`` is an ``fnmatch`` glob against ``ExperimentRun.family``
+      (e.g. ``"adhoc_b2*"``); ``None`` matches every family.
+    * Only ``status == "done"`` runs are considered (errored runs carry no
+      metrics).
+    * Unless ``all_runs`` is True, only the latest run (by ``finished_at``,
+      ties broken by id) per family is kept.
+    * The baseline run — explicit ``baseline`` id, else :func:`latest_marked_run`
+      — is always included and labeled, even if it does not match ``families``
+      or would otherwise be excluded by the latest-per-family rule.
+
+    Columns: see ``_COMPARE_COLUMNS``. ``net_return_pct``/``max_drawdown_pct``/
+    ``total_costs_pct`` are percentage points; ``delta_*`` columns are the
+    row's value minus the baseline's (0.0 on the baseline's own row; NaN
+    throughout when there is no baseline).
+    """
+    with Session(get_engine(settings)) as session:
+        rows = list(session.exec(select(ExperimentRun).where(ExperimentRun.status == "done")).all())
+        session.expunge_all()
+
+    selected = (
+        [r for r in rows if fnmatch.fnmatch(r.family, families)] if families is not None else rows
+    )
+
+    if not all_runs:
+        latest_by_family: dict[str, ExperimentRun] = {}
+        for r in selected:
+            cur = latest_by_family.get(r.family)
+            if cur is None or (r.finished_at, r.id) > (cur.finished_at, cur.id):
+                latest_by_family[r.family] = r
+        selected = list(latest_by_family.values())
+
+    baseline_run: ExperimentRun | None
+    if baseline is not None:
+        baseline_run = get_run(baseline, settings)
+    else:
+        baseline_run = latest_marked_run(settings)
+
+    if baseline_run is not None and all(r.id != baseline_run.id for r in selected):
+        selected = [baseline_run, *selected]
+
+    selected.sort(key=lambda r: (r.family, r.variant_name))
+
+    baseline_metrics = _metric_record(baseline_run) if baseline_run is not None else None
+
+    records: list[dict[str, Any]] = []
+    for r in selected:
+        m = _metric_record(r)
+        is_base = baseline_run is not None and r.id == baseline_run.id
+        if baseline_metrics is None:
+            delta_net = delta_dd = delta_sharpe = math.nan
+        elif is_base:
+            delta_net = delta_dd = delta_sharpe = 0.0
+        else:
+            delta_net = m["net_return_pct"] - baseline_metrics["net_return_pct"]
+            delta_dd = m["max_drawdown_pct"] - baseline_metrics["max_drawdown_pct"]
+            delta_sharpe = m["sharpe"] - baseline_metrics["sharpe"]
+        records.append(
+            {
+                "id": int(r.id),  # type: ignore[arg-type]
+                "family": r.family,
+                "variant_name": r.variant_name + (" (baseline)" if is_base else ""),
+                "is_baseline": is_base,
+                **m,
+                "delta_net_pp": delta_net,
+                "delta_dd_pp": delta_dd,
+                "delta_sharpe": delta_sharpe,
+            }
+        )
+
+    return pd.DataFrame.from_records(records, columns=_COMPARE_COLUMNS)
+
+
+def to_markdown_table(frame: pd.DataFrame) -> str:
+    """Render a compare/leaderboard-style DataFrame as a GitHub-flavored
+    markdown table (no external markdown dependency)."""
+    if frame.empty:
+        return "(no runs to compare)"
+
+    def _cell(v: Any) -> str:
+        if isinstance(v, float):
+            return "nan" if math.isnan(v) else f"{v:.2f}"
+        return str(v)
+
+    headers = list(frame.columns)
+    lines = [
+        "| " + " | ".join(headers) + " |",
+        "| " + " | ".join("---" for _ in headers) + " |",
+    ]
+    for _, row in frame.iterrows():
+        lines.append("| " + " | ".join(_cell(row[h]) for h in headers) + " |")
+    return "\n".join(lines)
+
+
 def compare(
     run_id_a: int,
     run_id_b: int,
@@ -317,4 +526,13 @@ def reproduce(
     return True
 
 
-__all__ = ["leaderboard", "compare", "get_run", "reproduce"]
+__all__ = [
+    "leaderboard",
+    "compare",
+    "compare_runs",
+    "get_run",
+    "latest_marked_run",
+    "mark_run",
+    "reproduce",
+    "to_markdown_table",
+]

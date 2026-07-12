@@ -100,6 +100,12 @@ class ExperimentRun(SQLModel, table=True):
     # runs instead of silently presenting them as clean.
     warnings_json: str = Field(default="[]")
 
+    # -- owner curation ----------------------------------------------------
+    # Set/cleared via ``platform experiments mark``. Used as the DEFAULT
+    # baseline for ``platform experiments compare --markdown`` when no
+    # explicit ``--baseline`` run id is given (latest marked run wins).
+    is_marked: bool = Field(default=False, index=True)
+
 
 class HoldoutAccess(SQLModel, table=True):
     """Audit log: one row per holdout run scored. This is the record the

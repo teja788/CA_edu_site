@@ -52,6 +52,11 @@ def _migrate_columns(eng: Engine) -> None:
                 "ALTER TABLE experimentrun ADD COLUMN warnings_json TEXT NOT NULL DEFAULT '[]'"
             )
             conn.commit()
+        if cols and "is_marked" not in cols:
+            conn.exec_driver_sql(
+                "ALTER TABLE experimentrun ADD COLUMN is_marked BOOLEAN NOT NULL DEFAULT 0"
+            )
+            conn.commit()
 
 
 @contextmanager

@@ -101,27 +101,113 @@ def leaderboard(
 
 @app.command()
 def compare(
-    run_a: Annotated[int, typer.Argument(help="First run id.")],
-    run_b: Annotated[int, typer.Argument(help="Second run id.")],
+    run_a: Annotated[
+        int | None, typer.Argument(help="First run id (legacy two-run mode).")
+    ] = None,
+    run_b: Annotated[
+        int | None, typer.Argument(help="Second run id (legacy two-run mode).")
+    ] = None,
     out: Annotated[
         Path | None,
-        typer.Option("--out", help="Write a self-contained equity-overlay HTML here."),
+        typer.Option(
+            "--out", help="Write a self-contained equity-overlay HTML (legacy two-run mode)."
+        ),
     ] = None,
+    families: Annotated[
+        str | None,
+        typer.Option(
+            "--families", help="fnmatch glob filter on family name, e.g. 'adhoc_b2*'."
+        ),
+    ] = None,
+    baseline: Annotated[
+        int | None,
+        typer.Option(
+            "--baseline", help="Run id to diff against (default: latest marked run)."
+        ),
+    ] = None,
+    markdown: Annotated[
+        bool,
+        typer.Option("--markdown", help="Emit a markdown table with delta-vs-baseline columns."),
+    ] = False,
+    all_runs: Annotated[
+        bool,
+        typer.Option("--all", help="Include every matching run, not just latest per family."),
+    ] = False,
 ) -> None:
-    """Compare two runs' metrics; optionally write an equity-overlay report."""
+    """Compare runs' metrics.
+
+    Two modes:
+
+    * Legacy: ``compare RUN_A RUN_B [--out FILE]`` — two-column metric table,
+      optionally an equity-overlay HTML report.
+    * Multi-run: ``compare [--families GLOB] [--baseline RUN_ID] [--markdown]
+      [--all]`` — one row per selected run (latest per family unless
+      ``--all``) with Δ-vs-baseline columns; baseline defaults to the latest
+      run marked via ``platform experiments mark``.
+    """
     from tradingos.config.settings import get_settings
     from tradingos.core.errors import TradingOSError
-    from tradingos.experiments.leaderboard import compare as _compare
 
     settings = get_settings()
+    multi_mode = families is not None or baseline is not None or markdown or all_runs
+
+    if run_a is not None or run_b is not None:
+        if run_a is None or run_b is None:
+            _fail("legacy two-run mode requires both RUN_A and RUN_B")
+        if multi_mode:
+            _fail(
+                "cannot combine RUN_A/RUN_B with --families/--baseline/--markdown/--all"
+            )
+        from tradingos.experiments.leaderboard import compare as _compare
+
+        try:
+            table = _compare(run_a, run_b, settings, out_path=out)
+        except TradingOSError as exc:
+            _fail(str(exc))
+
+        typer.echo(table.to_string())
+        if out is not None:
+            typer.echo(f"\nreport: {out}")
+        return
+
+    from tradingos.experiments.leaderboard import compare_runs, to_markdown_table
+
     try:
-        table = _compare(run_a, run_b, settings, out_path=out)
+        board = compare_runs(settings, families=families, baseline=baseline, all_runs=all_runs)
     except TradingOSError as exc:
         _fail(str(exc))
 
-    typer.echo(table.to_string())
-    if out is not None:
-        typer.echo(f"\nreport: {out}")
+    if board.empty:
+        typer.echo("no runs matched.")
+        return
+
+    if markdown:
+        typer.echo(to_markdown_table(board))
+    else:
+        typer.echo(board.to_string(index=False))
+
+
+@app.command()
+def mark(
+    run_id: Annotated[int, typer.Argument(help="Run id to mark/unmark.")],
+    unset: Annotated[
+        bool, typer.Option("--unset", help="Clear the mark instead of setting it.")
+    ] = False,
+) -> None:
+    """Mark (or ``--unset`` to unmark) a run as the default baseline for
+    ``platform experiments compare --markdown``."""
+    from tradingos.config.settings import get_settings
+    from tradingos.core.errors import TradingOSError
+    from tradingos.experiments.leaderboard import mark_run
+
+    settings = get_settings()
+    try:
+        run = mark_run(run_id, settings, marked=not unset)
+    except TradingOSError as exc:
+        _fail(str(exc))
+
+    state = "marked" if run.is_marked else "unmarked"
+    typer.echo(f"run {run.id} ({run.family}/{run.variant_name}) {state}.")
 
 
 @app.command("score-holdout")
