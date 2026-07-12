@@ -265,3 +265,34 @@ backstop, judged per-episode); learning-to-rank ML (5y sample too short).
 
 Full agent reports with all citations: see session artifacts 2026-07-12;
 key sources inline above.
+
+---
+
+# Agreed test plan (2026-07-12, owner-approved) — "the batches"
+
+Baseline: m2 (12-1 momentum, top-25 equal-weight, monthly, dyn-1000)
+= net +296% / Sharpe 1.22 / DD −32.9%, Jul 2021–Jul 2026.
+
+Batch 1 — config-only, existing data (runner: scripts/adhoc/batch1_m2_improvements.py):
+  1. exit_rank 50 (vs 35)
+  2. exit_rank 60
+  3. NSE-style score: 50/50 z-blend of 6m + 12m risk_adjusted_momentum
+  4. #3 + exit_rank 50 combined
+  5. binary index_above_ma regime gate (NIFTYBEES proxy) on dyn-1000
+  6. 12m listing seasoning (universe eligibility 126 → 252 bars)
+  7. FIP smoothness in score (mom z + return_smoothness z), config-only
+
+Batch 2 — engine additions, tested on Batch-1 winner:
+  8. graded asymmetric regime gate: 3 index signals (100d SMA, 200d SMA,
+     12m return) → target exposure 0/⅓/⅔/1; blocks new buys, never
+     force-sells
+  9. portfolio-level vol target: exposure = min(1, 12% / σ̂_126d of own net
+     daily returns), stepped at rebalance
+  10. #8 + #9 stacked
+
+Batch 3 — new signal:
+  11. residual momentum: 12-1 momentum on rolling market-model residuals
+      (vs NIFTYBEES), standardized by residual σ
+
+Deliberately excluded: per-position stops (0/4), per-stock SMA gates (5/5
+redundant), weekly rebalance, 12-7 window, rank/inverse-vol weighting.
