@@ -64,6 +64,7 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 52 | 10 | b2d-ST, 9m replaces 6m | dyn-1000 | +267.9% | −25.9% | 1.29 | dropped |
 | 53 | 10 | pure 1m momentum | dyn-1000 | +65.8% | −19.9% | 0.61 | reject confirmed, 1463 trades |
 | 54 | 10 | 12m-heavy challenger on 2019-2020 | dyn-1000 | +55.6% (2y) | −33.0% | 1.20 | FAILS OOW exam; rejected |
+| 55 | 11 US port | **b2d-ST on US (S&P1500 pool, SPY gate)** | US dyn-1000 | +176.5% | −31.0% | 0.88 | survives the hardest market; ~2x SPY CAGR |
 
 ## MARKED FOR FUTURE (owner, re-marked 2026-07-12 after supertrend sweep)
 
@@ -105,6 +106,18 @@ mechanism (fast ATR-adaptive throttle + asymmetric non-forced-selling),
 consistent direction across three configurations — this is the real
 deal as far as one price path can show. Pending owner: re-mark champions
 as b2d+ST (growth) and b2e+ST (defensive).
+
+US port (row 55, runner `scripts/adhoc/us_b2dst.py`, isolated us_data/
+store, cost schedule `us_2026` = SEC+TAF only): the untouched champion
+design on the S&P 1500 pool with SPY as the gate benchmark earns +176.5%
+net / CAGR 22.7% / Sharpe 0.88 / DD −31.0% (trough Jul-2022) over the
+same Jul-2021..Jul-2026 window — roughly double SPY's ~11.5% CAGR, net,
+in the most efficient market on earth. Yearly: 2021 +1.9, 2022 −12.6,
+2023 +21.2, 2024 +34.7, 2025 +18.7, 2026H1 +60.2. Weaker than India
+(1.35 → 0.88 Sharpe) exactly as the EM-premium literature predicts.
+Caveats: current-constituent pool (survivorship), yfinance auto-adjust =
+total-return momentum (mildly flattering), charges $1,759 total (US costs
+are a rounding error — the strategy's cost sensitivity is India-specific).
 
 Window-geometry sweep (rows 46-53, runner
 `scripts/adhoc/window_sweep_b2dst.py`): a strikingly MONOTONE pattern —

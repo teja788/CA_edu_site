@@ -8,6 +8,7 @@ kite_token*.json
 # source), which silently kept the whole data layer out of git.
 /data/
 /artifacts/
+/us_data/
 *.duckdb
 *.duckdb.wal
 *.sqlite
