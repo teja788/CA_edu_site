@@ -50,7 +50,10 @@ class MarketData:
                 raise DataError(f"{sym}: frame index must be sorted ascending")
             if df.index.has_duplicates:
                 raise DataError(f"{sym}: duplicate timestamps in frame")
-            self._frames[sym] = df
+            # Own the frame instead of retaining a caller-controlled reference.
+            # pandas 3 copy-on-write makes shallow copies returned by
+            # ``full_frame`` cheap while isolating subsequent mutations.
+            self._frames[sym] = df.copy(deep=True)
 
     @property
     def symbols(self) -> list[str]:
@@ -61,13 +64,18 @@ class MarketData:
         Strategy code must go through DataView."""
         if symbol not in self._frames:
             raise DataError(f"no data for symbol {symbol}")
-        return self._frames[symbol]
+        return self._frames[symbol].copy(deep=False)
 
     def union_index(self) -> pd.DatetimeIndex:
-        idx = pd.DatetimeIndex([])
-        for df in self._frames.values():
-            idx = idx.union(df.index)
-        return idx
+        if not self._frames:
+            return pd.DatetimeIndex([])
+        # One concatenate/deduplicate/sort pass avoids repeated union copies as
+        # the symbol count grows.
+        values = pd.concat(
+            [pd.Series(df.index, copy=False) for df in self._frames.values()],
+            ignore_index=True,
+        ).unique()
+        return pd.DatetimeIndex(values).sort_values()
 
 
 def _join_benchmark_close(symbol_df: pd.DataFrame, bench_df: pd.DataFrame) -> pd.DataFrame:

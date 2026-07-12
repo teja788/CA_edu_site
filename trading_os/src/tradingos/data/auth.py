@@ -10,6 +10,9 @@ keyed by IST calendar date -- a cached token from a previous date is stale and
 from __future__ import annotations
 
 import json
+import os
+import stat
+import tempfile
 import webbrowser
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
@@ -104,6 +107,14 @@ class KiteAuth:
         if not path.exists():
             return None
         try:
+            mode = stat.S_IMODE(path.stat().st_mode)
+            if mode != 0o600:
+                path.chmod(0o600)
+                logger.warning(
+                    "corrected insecure permissions on token cache at %s from %04o to 0600",
+                    path,
+                    mode,
+                )
             return json.loads(path.read_text())
         except (json.JSONDecodeError, OSError) as exc:
             logger.warning("token cache at %s is unreadable: %s", path, exc)
@@ -112,7 +123,22 @@ class KiteAuth:
     def _write_cache(self, access_token: str) -> None:
         path = self._cache_path()
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps({"access_token": access_token, "date": self._today_ist()}))
+        payload = json.dumps({"access_token": access_token, "date": self._today_ist()})
+        fd, temporary_name = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+        temporary_path = Path(temporary_name)
+        try:
+            os.fchmod(fd, 0o600)
+            with os.fdopen(fd, "w", encoding="utf-8") as handle:
+                fd = -1
+                handle.write(payload)
+                handle.flush()
+                os.fsync(handle.fileno())
+            os.replace(temporary_path, path)
+            path.chmod(0o600)
+        finally:
+            if fd >= 0:
+                os.close(fd)
+            temporary_path.unlink(missing_ok=True)
 
     def get_access_token(self) -> str:
         """Return today's cached access token, or raise AuthError with an

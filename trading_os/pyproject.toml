@@ -2,7 +2,7 @@
 name = "tradingos"
 version = "0.1.0"
 description = "India equity (NSE) backtesting, paper and live trading platform"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.12,<3.13"
 dependencies = [
     "pydantic>=2.7",
     "pydantic-settings>=2.2",
@@ -45,7 +45,7 @@ packages = ["src/tradingos"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

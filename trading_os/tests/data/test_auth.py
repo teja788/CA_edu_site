@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import stat
 from datetime import timedelta
 
 import pytest
@@ -66,6 +67,40 @@ class TestLoginUrl:
 
 
 class TestTokenCache:
+    def test_write_cache_is_private(self, settings: Settings) -> None:
+        ka = KiteAuth(settings)
+        ka._write_cache("secret")
+        assert stat.S_IMODE(settings.token_cache_path.stat().st_mode) == 0o600
+
+    def test_read_cache_corrects_insecure_permissions(self, settings: Settings) -> None:
+        ka = KiteAuth(settings)
+        today = now_ist().date().isoformat()
+        settings.token_cache_path.parent.mkdir(parents=True, exist_ok=True)
+        settings.token_cache_path.write_text(
+            json.dumps({"access_token": "cached-tok", "date": today})
+        )
+        settings.token_cache_path.chmod(0o644)
+        assert ka.get_access_token() == "cached-tok"
+        assert stat.S_IMODE(settings.token_cache_path.stat().st_mode) == 0o600
+
+    def test_failed_atomic_replace_preserves_existing_cache(
+        self, settings: Settings, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        ka = KiteAuth(settings)
+        ka._write_cache("old-secret")
+        original = settings.token_cache_path.read_text()
+
+        def fail_replace(source, destination) -> None:
+            raise OSError("replace failed")
+
+        monkeypatch.setattr(auth_module.os, "replace", fail_replace)
+        with pytest.raises(OSError, match="replace failed"):
+            ka._write_cache("new-secret")
+        assert settings.token_cache_path.read_text() == original
+        assert list(
+            settings.token_cache_path.parent.glob(f".{settings.token_cache_path.name}.*")
+        ) == []
+
     def test_get_access_token_raises_when_no_cache(self, settings: Settings) -> None:
         ka = KiteAuth(settings)
         with pytest.raises(AuthError, match="platform data login"):

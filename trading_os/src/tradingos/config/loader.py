@@ -3,15 +3,13 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, TypeVar
+from typing import Any
 
 import yaml
 from pydantic import BaseModel, ValidationError
 
 from tradingos.config.schemas import GridSpec, StrategyConfig
 from tradingos.core.errors import ConfigError
-
-T = TypeVar("T", bound=BaseModel)
 
 
 def load_yaml(path: Path | str) -> dict[str, Any]:
@@ -28,7 +26,7 @@ def load_yaml(path: Path | str) -> dict[str, Any]:
     return data
 
 
-def parse_model(model: type[T], data: dict[str, Any], source: str = "<dict>") -> T:
+def parse_model[T: BaseModel](model: type[T], data: dict[str, Any], source: str = "<dict>") -> T:
     try:
         return model.model_validate(data)
     except ValidationError as e:

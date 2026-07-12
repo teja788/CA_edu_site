@@ -17,14 +17,19 @@ functions that need them so importing this module stays cheap.
 
 from __future__ import annotations
 
-import calendar
 import html as html_lib
-import math
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
 import pandas as pd
 
+from tradingos.analytics.metrics import (
+    TRADING_DAYS,
+    compute_metrics,
+    drawdown_series,
+    monthly_returns,
+    rolling_sharpe,
+)
 from tradingos.core.logging import get_logger
 
 if TYPE_CHECKING:
@@ -32,9 +37,6 @@ if TYPE_CHECKING:
     from tradingos.engine.result import BacktestResult
 
 logger = get_logger(__name__)
-
-_TRADING_DAYS = 252
-
 
 # ---------------------------------------------------------------------------
 # quantstats tearsheet
@@ -89,78 +91,6 @@ def quantstats_tearsheet(
         )
         return None
     return out_path
-
-
-# ---------------------------------------------------------------------------
-# local scalar/series math
-#
-# TODO(metrics): swap to analytics.metrics once landed (CLAUDE.md rule 5:
-# financial math belongs in one place; this duplication is temporary).
-# ---------------------------------------------------------------------------
-
-
-def _drawdown(equity: pd.Series) -> pd.Series:
-    running_max = equity.cummax()
-    return equity / running_max - 1.0
-
-
-def _scalar_stats(equity: pd.Series, returns: pd.Series) -> dict[str, float]:
-    n = len(equity)
-    if n < 2 or equity.iloc[0] == 0:
-        return {
-            "total_return": 0.0,
-            "cagr": 0.0,
-            "vol": 0.0,
-            "sharpe": 0.0,
-            "max_drawdown": 0.0,
-            "calmar": 0.0,
-        }
-    total_return = float(equity.iloc[-1] / equity.iloc[0] - 1.0)
-    bars = max(n - 1, 1)
-    base = equity.iloc[-1] / equity.iloc[0]
-    cagr = float(base ** (_TRADING_DAYS / bars) - 1.0) if base > 0 else -1.0
-    std = float(returns.std(ddof=1))
-    mean = float(returns.mean())
-    vol = std * math.sqrt(_TRADING_DAYS) if not math.isnan(std) else 0.0
-    sharpe = (mean / std * math.sqrt(_TRADING_DAYS)) if std and not math.isnan(std) else 0.0
-    dd = _drawdown(equity)
-    max_dd = float(dd.min()) if n else 0.0
-    calmar = float(cagr / abs(max_dd)) if max_dd < 0 else 0.0
-    return {
-        "total_return": total_return,
-        "cagr": cagr,
-        "vol": vol,
-        "sharpe": sharpe,
-        "max_drawdown": max_dd,
-        "calmar": calmar,
-    }
-
-
-def _rolling_sharpe(returns: pd.Series, window: int = _TRADING_DAYS) -> pd.Series:
-    roll_mean = returns.rolling(window).mean()
-    roll_std = returns.rolling(window).std(ddof=1)
-    return (roll_mean / roll_std) * math.sqrt(_TRADING_DAYS)
-
-
-def _monthly_returns_table(equity: pd.Series) -> pd.DataFrame:
-    """Year x month table of compounded returns, computed from the equity
-    curve (month-end values), first partial month measured from the curve's
-    first observation."""
-    if len(equity) < 2:
-        return pd.DataFrame()
-    monthly_last = equity.resample("ME").last().dropna()
-    if monthly_last.empty:
-        return pd.DataFrame()
-    prev_values = monthly_last.shift(1)
-    prev_values.iloc[0] = equity.iloc[0]
-    monthly_returns = monthly_last / prev_values - 1.0
-    frame = monthly_returns.to_frame("ret")
-    frame["year"] = frame.index.year
-    frame["month"] = frame.index.month
-    table = frame.pivot(index="year", columns="month", values="ret")
-    table = table.reindex(columns=range(1, 13))
-    table.columns = [calendar.month_abbr[m] for m in range(1, 13)]
-    return table
 
 
 def _trade_stats(trades: list[Trade]) -> dict[str, Any] | None:
@@ -243,7 +173,7 @@ def _equity_figure(
 def _drawdown_figure(result: BacktestResult, include_js: bool) -> str:
     import plotly.graph_objects as go
 
-    dd = _drawdown(result.equity)
+    dd = drawdown_series(result.equity)
     fig = go.Figure()
     fig.add_trace(
         go.Scatter(
@@ -291,7 +221,7 @@ def _costs_figure(result: BacktestResult, include_js: bool) -> str:
 def _monthly_heatmap_figure(result: BacktestResult, include_js: bool) -> str:
     import plotly.graph_objects as go
 
-    table = _monthly_returns_table(result.equity)
+    table = monthly_returns(result.equity)
     if table.empty:
         fig = go.Figure()
         fig.update_layout(title="Monthly returns (insufficient data)", template="plotly_white")
@@ -321,11 +251,11 @@ def _monthly_heatmap_figure(result: BacktestResult, include_js: bool) -> str:
 def _rolling_sharpe_figure(result: BacktestResult, include_js: bool) -> str:
     import plotly.graph_objects as go
 
-    rs = _rolling_sharpe(result.returns)
+    rs = rolling_sharpe(result.equity, window=TRADING_DAYS)
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=rs.index, y=rs, name="Rolling Sharpe", mode="lines"))
     fig.update_layout(
-        title=f"Rolling {_TRADING_DAYS}-bar Sharpe",
+        title=f"Rolling {TRADING_DAYS}-bar Sharpe",
         xaxis_title="Date",
         yaxis_title="Sharpe (annualized)",
         template="plotly_white",
@@ -505,7 +435,7 @@ def plotly_report(
     random ids are written into the body, so byte-identical output is
     produced across repeated calls on the same ``result``.
     """
-    stats = _scalar_stats(result.equity, result.returns)
+    stats = compute_metrics(result, benchmark=benchmark)
 
     header_html = _header_html(result, title)
     stats_html = _stats_html(stats)

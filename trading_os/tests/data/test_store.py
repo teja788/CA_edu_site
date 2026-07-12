@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 from datetime import datetime
+from pathlib import Path
 
 import pandas as pd
 import polars as pl
@@ -187,8 +188,84 @@ class TestMetadata:
             ["BBB", "AAA"], Timeframe.DAY
         )
 
+    def test_snapshot_reuses_persisted_adjusted_digest(self, settings, monkeypatch) -> None:
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.DAY, bars())
+        store.write_adjusted("TEST", Timeframe.DAY, bars())
+        expected = store.snapshot_id(["TEST"], Timeframe.DAY)
+
+        real_read = pl.read_parquet
+
+        def reject_adjusted_close(path, *args, **kwargs):
+            if Path(path) == store._adjusted_path("TEST", Timeframe.DAY):
+                raise AssertionError("adjusted close should come from persisted snapshot metadata")
+            return real_read(path, *args, **kwargs)
+
+        monkeypatch.setattr(pl, "read_parquet", reject_adjusted_close)
+        assert store.snapshot_id(["TEST"], Timeframe.DAY) == expected
+
+    def test_snapshot_digest_rebuilds_after_external_adjusted_change(self, settings) -> None:
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.DAY, bars())
+        store.write_adjusted("TEST", Timeframe.DAY, bars())
+        before = store.snapshot_id(["TEST"], Timeframe.DAY)
+
+        changed = bars().with_columns((pl.col("close") + 1.0).alias("close"))
+        changed.write_parquet(store._adjusted_path("TEST", Timeframe.DAY))
+
+        assert store.snapshot_id(["TEST"], Timeframe.DAY) != before
+
 
 class TestLoadMarketData:
+    def test_stale_adjusted_data_raises_by_default(self, settings) -> None:
+        from tradingos.data.actions import CorporateAction
+        from tradingos.data.meta import meta_session
+
+        store = BarStore(settings)
+        store.write_adjusted("TEST", Timeframe.DAY, bars())
+        with meta_session(settings.meta_db_path) as session:
+            session.add(
+                CorporateAction(
+                    symbol="TEST",
+                    action_type="split",
+                    ex_date=DAY2.date(),
+                    ratio_num=2.0,
+                    ratio_den=1.0,
+                )
+            )
+            session.commit()
+        with pytest.raises(DataError, match="is STALE"):
+            store.load_market_data(["TEST"], Timeframe.DAY, adjusted=True)
+
+    def test_stale_adjusted_data_requires_explicit_unsafe_override(
+        self, settings, caplog
+    ) -> None:
+        from tradingos.data.actions import CorporateAction
+        from tradingos.data.meta import meta_session
+
+        store = BarStore(settings)
+        store.write_adjusted("TEST", Timeframe.DAY, bars())
+        with meta_session(settings.meta_db_path) as session:
+            session.add(
+                CorporateAction(
+                    symbol="TEST",
+                    action_type="split",
+                    ex_date=DAY2.date(),
+                    ratio_num=2.0,
+                    ratio_den=1.0,
+                )
+            )
+            session.commit()
+        with caplog.at_level(logging.WARNING, logger="tradingos.data.store"):
+            md = store.load_market_data(
+                ["TEST"],
+                Timeframe.DAY,
+                adjusted=True,
+                allow_stale_adjusted=True,
+            )
+        assert md.symbols == ["TEST"]
+        assert "UNSAFE allow_stale_adjusted" in caplog.text
+
     def test_prefers_adjusted_when_present(self, settings) -> None:
         store = BarStore(settings)
         store.write_raw("TEST", Timeframe.DAY, bars())

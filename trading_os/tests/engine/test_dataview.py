@@ -36,6 +36,19 @@ def minute_frame() -> pd.DataFrame:
     return synthetic_minute("DV_MINUTE", day=date(2024, 1, 15), seed=1)
 
 
+def test_union_index_is_sorted_unique_across_overlapping_frames() -> None:
+    first = pd.DataFrame(
+        {"close": [1.0, 2.0]}, index=pd.to_datetime(["2024-01-01", "2024-01-03"])
+    )
+    second = pd.DataFrame(
+        {"close": [3.0, 4.0]}, index=pd.to_datetime(["2024-01-02", "2024-01-03"])
+    )
+
+    result = MarketData({"A": first, "B": second}).union_index()
+
+    assert result.equals(pd.date_range("2024-01-01", periods=3, freq="D"))
+
+
 # ---------------------------------------------------------------------------
 # daily visibility
 # ---------------------------------------------------------------------------
@@ -152,6 +165,20 @@ def test_close_and_last_bar_are_none_before_any_data_exists(daily_frame: pd.Data
     assert dv.close("D") is None
     assert dv.last_bar("D") is None
     assert dv.history("D").empty
+
+
+def test_market_data_isolated_from_source_and_returned_frame_mutations(
+    daily_frame: pd.DataFrame,
+) -> None:
+    original = float(daily_frame["close"].iloc[0])
+    data = MarketData({"D": daily_frame}, snapshot_id="immutable")
+
+    daily_frame.iloc[0, daily_frame.columns.get_loc("close")] = -1.0
+    assert float(data.full_frame("D")["close"].iloc[0]) == original
+
+    exposed = data.full_frame("D")
+    exposed.iloc[0, exposed.columns.get_loc("close")] = -2.0
+    assert float(data.full_frame("D")["close"].iloc[0]) == original
 
 
 # ---------------------------------------------------------------------------

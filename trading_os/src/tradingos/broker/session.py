@@ -35,7 +35,7 @@ from __future__ import annotations
 import abc
 import logging
 from datetime import date, datetime
-from typing import ClassVar, Generic, TypeVar
+from typing import ClassVar
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -65,10 +65,7 @@ TAG_REBALANCE = "rebalance"
 #: runners use broker surfaces beyond ``broker.base.Broker`` (``equity()``,
 #: paper's planned queue, live's ``sync_orders``), so the base only pins the
 #: shared calls and each subclass binds its own concrete type.
-BrokerT = TypeVar("BrokerT")
-
-
-class BaseSessionRunner(abc.ABC, Generic[BrokerT]):
+class BaseSessionRunner[BrokerT](abc.ABC):
     """Session-scheduling skeleton shared by the paper and live runners."""
 
     #: Subclass module's logger — see module docstring (log records keep their
@@ -277,6 +274,7 @@ class BaseSessionRunner(abc.ABC, Generic[BrokerT]):
 
     def _add_scheduler_jobs(self, scheduler: BackgroundScheduler) -> None:
         """Hook for subclass-specific cron jobs. Default: none."""
+        return None
 
     def _run_open_job(self, now: datetime | None = None) -> None:
         """The scheduler's 09:15 callback. A non-trading day is a logged

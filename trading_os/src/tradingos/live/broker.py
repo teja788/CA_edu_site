@@ -86,7 +86,6 @@ order-placing thread must not interleave their check-then-persist sequences.
 
 from __future__ import annotations
 
-import hashlib
 import threading
 from collections.abc import Callable
 from datetime import date, datetime
@@ -114,44 +113,21 @@ from tradingos.core.models import (
     Quote,
     Side,
 )
-from tradingos.core.timeutils import MARKET_OPEN, now_ist, session_bounds, to_naive_ist
+from tradingos.core.timeutils import MARKET_OPEN, now_ist, session_bounds
 from tradingos.costs.model import CostModel
 from tradingos.data.calendar import NSECalendar
+from tradingos.live import order_mapping
 from tradingos.paper.ledgerdb import DRY_ORDER_ID_PREFIX, PaperStore
 
 logger = get_logger(__name__)
 
-# Kite order statuses we treat as terminal, mapped to our OrderStatus.
-_TERMINAL_KITE_STATUS: dict[str, OrderStatus] = {
-    "COMPLETE": OrderStatus.COMPLETE,
-    "REJECTED": OrderStatus.REJECTED,
-    "CANCELLED": OrderStatus.CANCELLED,
-    "CANCELED": OrderStatus.CANCELLED,  # tolerate the US spelling defensively
-}
-
-
-def _tag_for(client_order_id: str) -> str:
-    """Deterministic Kite order tag for a client order id.
-
-    Kite tags are capped at 20 alphanumeric characters. sha1 hex digest is 40
-    lowercase-hex chars; the first 18 are well under the cap, collision-safe at
-    our order volumes, and stable across restarts -- so the tag is a usable
-    reconciliation join key when a ``broker_order_id`` was somehow never learned.
-    """
-    return hashlib.sha1(client_order_id.encode("utf-8")).hexdigest()[:18]
-
-
-def _is_token_exception(exc: BaseException) -> bool:
-    """True if ``exc`` is (or is named) a Kite ``TokenException`` -- a stale /
-    invalidated access token. Imported lazily so the module never hard-depends
-    on kiteconnect at import time; falls back to a class-name check if the
-    import is unavailable."""
-    try:
-        from kiteconnect.exceptions import TokenException
-    except Exception:  # pragma: no cover -- kiteconnect always present in this env
-        return type(exc).__name__ == "TokenException"
-    return isinstance(exc, TokenException)
-
+# Private compatibility aliases: existing callers and tests import ``_tag_for``
+# from this module, so the extraction must not break that established surface.
+_is_token_exception = order_mapping.is_token_exception
+_map_kite_status = order_mapping.map_status
+_opt_float = order_mapping.optional_float
+_parse_kite_ts = order_mapping.parse_timestamp
+_tag_for = order_mapping.tag_for
 
 class ZerodhaLiveBroker(Broker):
     """Live broker over Kite Connect. See the module docstring for the safety
@@ -963,14 +939,7 @@ class ZerodhaLiveBroker(Broker):
         return rows if isinstance(rows, list) else []
 
     def _map_status(self, kite_status: object, filled_qty: int) -> OrderStatus:
-        status = str(kite_status or "").upper()
-        terminal = _TERMINAL_KITE_STATUS.get(status)
-        if terminal is not None:
-            return terminal
-        # Any other status is OPEN-ish (OPEN / TRIGGER PENDING / VALIDATION
-        # PENDING / PUT ORDER REQ RECEIVED / unrecognised). A partial fill on a
-        # still-working order shows as PARTIAL.
-        return OrderStatus.PARTIAL if filled_qty > 0 else OrderStatus.OPEN
+        return _map_kite_status(kite_status, filled_qty)
 
     def _apply_sync(self, order: Order, row: dict, new_status: OrderStatus, filled: int) -> None:
         ts = _parse_kite_ts(row.get("order_timestamp")) or self._now()
@@ -1099,37 +1068,5 @@ class ZerodhaLiveBroker(Broker):
         raise NotImplementedError(
             "ZerodhaLiveBroker does not stream ticks; use tradingos.paper.ticks.TickStreamer"
         )
-
-
-def _opt_float(value: object) -> float | None:
-    """Coerce an optional numeric Kite field to float, treating 0 / None /
-    empty as absent (Kite reports missing depth levels as a 0 price)."""
-    if value is None or value == 0:
-        return None
-    try:
-        return float(value)  # type: ignore[arg-type]
-    except (TypeError, ValueError):
-        return None
-
-
-def _parse_kite_ts(value: object) -> datetime | None:
-    """Parse a Kite timestamp (a ``datetime`` from the SDK, or an ISO / Kite
-    ``"YYYY-MM-DD HH:MM:SS"`` string) into a tz-naive IST datetime, or None."""
-    if value is None:
-        return None
-    if isinstance(value, datetime):
-        return to_naive_ist(value)
-    if isinstance(value, str):
-        for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S"):
-            try:
-                return datetime.strptime(value, fmt)
-            except ValueError:
-                continue
-        try:
-            return to_naive_ist(datetime.fromisoformat(value))
-        except ValueError:
-            return None
-    return None
-
 
 __all__ = ["ZerodhaLiveBroker"]

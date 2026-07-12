@@ -116,14 +116,16 @@ def _merge_append_only(
     return merged, new_rows.height
 
 
-def _filter_range(
-    df: pl.DataFrame, start: datetime | None, end: datetime | None
+def _read_parquet_range(
+    path: Path, start: datetime | None, end: datetime | None
 ) -> pl.DataFrame:
+    """Read a date slice while allowing parquet predicate pushdown."""
+    query = pl.scan_parquet(path)
     if start is not None:
-        df = df.filter(pl.col("ts") >= start)
+        query = query.filter(pl.col("ts") >= start)
     if end is not None:
-        df = df.filter(pl.col("ts") <= end)
-    return df
+        query = query.filter(pl.col("ts") <= end)
+    return query.collect()
 
 
 class BarStore:
@@ -142,6 +144,9 @@ class BarStore:
 
     def _adjmeta_path(self, symbol: str, timeframe: Timeframe) -> Path:
         return self._settings.adjusted_dir / timeframe.value / f"{symbol}.adjmeta.json"
+
+    def _snapshot_meta_path(self, symbol: str, timeframe: Timeframe) -> Path:
+        return self._settings.adjusted_dir / timeframe.value / f"{symbol}.snapshot.json"
 
     @staticmethod
     def _atomic_write(df: pl.DataFrame, path: Path) -> None:
@@ -185,7 +190,7 @@ class BarStore:
         path = self._raw_path(symbol, timeframe)
         if not path.exists():
             raise DataError(f"no raw {timeframe.value} data stored for {symbol}")
-        return _filter_range(pl.read_parquet(path), start, end)
+        return _read_parquet_range(path, start, end)
 
     def has_raw(self, symbol: str, timeframe: Timeframe) -> bool:
         return self._raw_path(symbol, timeframe).exists()
@@ -196,7 +201,9 @@ class BarStore:
         """Full overwrite (adjusted data is derived/rebuildable from raw +
         corporate actions). Returns the row count written."""
         validated = validate_bars(df)
-        self._atomic_write(validated, self._adjusted_path(symbol, timeframe))
+        path = self._adjusted_path(symbol, timeframe)
+        self._atomic_write(validated, path)
+        self._write_snapshot_meta(symbol, timeframe, path, validated["close"])
         logger.info(
             "write_adjusted %s/%s: %d row(s) (full overwrite)",
             symbol,
@@ -215,7 +222,7 @@ class BarStore:
         path = self._adjusted_path(symbol, timeframe)
         if not path.exists():
             raise DataError(f"no adjusted {timeframe.value} data stored for {symbol}")
-        return _filter_range(pl.read_parquet(path), start, end)
+        return _read_parquet_range(path, start, end)
 
     def has_adjusted(self, symbol: str, timeframe: Timeframe) -> bool:
         return self._adjusted_path(symbol, timeframe).exists()
@@ -271,6 +278,7 @@ class BarStore:
         for sym in (old_symbol, new_symbol):
             self._adjusted_path(sym, timeframe).unlink(missing_ok=True)
             self._adjmeta_path(sym, timeframe).unlink(missing_ok=True)
+            self._snapshot_meta_path(sym, timeframe).unlink(missing_ok=True)
         logger.info(
             "migrate_symbol %s -> %s (%s): %d raw row(s) relocated; stale adjusted data dropped",
             old_symbol,
@@ -314,16 +322,19 @@ class BarStore:
         for sym in sorted(symbols):
             path = self._raw_path(sym, timeframe)
             if path.exists():
-                df = pl.read_parquet(path, columns=["ts"])
-                row_count = df.height
-                last = df["ts"].max() if row_count else None
+                # Parquet readers can answer these aggregates from row-group
+                # metadata/statistics without materialising the timestamp column.
+                facts = pl.scan_parquet(path).select(
+                    pl.len().alias("row_count"), pl.col("ts").max().alias("last")
+                ).collect().row(0, named=True)
+                row_count = facts["row_count"]
+                last = facts["last"]
             else:
                 row_count = 0
                 last = None
             adj_path = self._adjusted_path(sym, timeframe)
             if adj_path.exists():
-                adj_close = pl.read_parquet(adj_path, columns=["close"])["close"]
-                adj_fp = hashlib.sha256(adj_close.to_numpy().tobytes()).hexdigest()[:16]
+                adj_fp = self._adjusted_fingerprint(sym, timeframe, adj_path)
             else:
                 adj_fp = None
             rows.append(
@@ -331,6 +342,57 @@ class BarStore:
             )
         payload = json.dumps(rows, sort_keys=False)
         return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+    def _write_snapshot_meta(
+        self, symbol: str, timeframe: Timeframe, path: Path, close: pl.Series
+    ) -> str:
+        """Persist an adjusted-close digest keyed to the exact parquet file."""
+        digest = hashlib.sha256(close.to_numpy().tobytes()).hexdigest()[:16]
+        stat = path.stat()
+        payload = {
+            "size": stat.st_size,
+            "mtime_ns": stat.st_mtime_ns,
+            "ctime_ns": stat.st_ctime_ns,
+            "inode": stat.st_ino,
+            "close_sha256": digest,
+        }
+        meta_path = self._snapshot_meta_path(symbol, timeframe)
+        meta_path.parent.mkdir(parents=True, exist_ok=True)
+        fd, tmp_name = tempfile.mkstemp(
+            dir=meta_path.parent, prefix=f".{meta_path.name}.", suffix=".tmp"
+        )
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as fh:
+                json.dump(payload, fh, sort_keys=True)
+            os.replace(tmp_name, meta_path)
+        except BaseException:
+            Path(tmp_name).unlink(missing_ok=True)
+            raise
+        return digest
+
+    def _adjusted_fingerprint(
+        self, symbol: str, timeframe: Timeframe, path: Path
+    ) -> str:
+        """Return the persisted digest, rebuilding it if the parquet changed."""
+        stat = path.stat()
+        meta_path = self._snapshot_meta_path(symbol, timeframe)
+        if meta_path.exists():
+            try:
+                meta = json.loads(meta_path.read_text())
+                unchanged = (
+                    meta.get("size") == stat.st_size
+                    and meta.get("mtime_ns") == stat.st_mtime_ns
+                    and meta.get("ctime_ns") == stat.st_ctime_ns
+                    and meta.get("inode") == stat.st_ino
+                )
+                if unchanged:
+                    digest = meta.get("close_sha256")
+                    if isinstance(digest, str):
+                        return digest
+            except (OSError, json.JSONDecodeError):
+                pass
+        close = pl.read_parquet(path, columns=["close"])["close"]
+        return self._write_snapshot_meta(symbol, timeframe, path, close)
 
     # -- signal-seam access ------------------------------------------------
 
@@ -342,14 +404,17 @@ class BarStore:
         end: datetime | None = None,
         adjusted: bool = True,
         strict: bool = True,
+        allow_stale_adjusted: bool = False,
     ) -> MarketData:
         """Load per-symbol pandas frames (tz-naive DatetimeIndex named "ts",
         columns open/high/low/close/volume) into a MarketData container.
 
         When adjusted=True, adjusted parquet is preferred; a series whose
         recorded action signature no longer matches the corporate-actions
-        table (an action landed after the last `data adjust` pass) is served
-        with a loud STALE warning. If no adjusted series exists for a symbol,
+        table (an action landed after the last `data adjust` pass) raises a
+        DataError by default. ``allow_stale_adjusted=True`` is an explicit
+        unsafe diagnostic override that serves it with a loud warning. If no
+        adjusted series exists for a symbol,
         raw fallback is allowed (with a warning) ONLY when no price-affecting
         corporate action is recorded: Kite serves candles adjusted as of
         FETCH time, so in this append-only store the raw series is
@@ -382,7 +447,7 @@ class BarStore:
         for sym in symbols:
             pdf: pl.DataFrame | None = None
             if adjusted and self.has_adjusted(sym, timeframe):
-                self._warn_if_adjustments_stale(sym, timeframe)
+                self._guard_adjustments_stale(sym, timeframe, allow_stale_adjusted)
                 pdf = self.read_adjusted(sym, timeframe, start, end)
             elif adjusted and self.has_raw(sym, timeframe):
                 self._guard_raw_fallback(sym, timeframe)
@@ -436,27 +501,32 @@ class BarStore:
             return
         frame["total_return_close"] = total_return_close(frame["close"], dividends)
 
-    def _warn_if_adjustments_stale(self, symbol: str, timeframe: Timeframe) -> None:
-        """Loudly warn when the corporate-actions table has changed since the
+    def _guard_adjustments_stale(
+        self, symbol: str, timeframe: Timeframe, allow_stale: bool = False
+    ) -> None:
+        """Reject adjusted data when the corporate-actions table has changed since the
         adjusted series was last built: every bar before the new action's
         ex-date is mis-scaled until `platform data adjust` is re-run. A
         missing sidecar meta (adjusted data written outside build_adjusted)
-        is treated as 'built with zero actions'."""
+        is treated as 'built with zero actions'. ``allow_stale`` is an unsafe
+        diagnostics-only escape hatch and emits a warning when used."""
         from tradingos.data.actions import actions_signature, get_actions
 
         current_sig = actions_signature(get_actions(symbol, self._settings))
         meta = self.read_adjustment_meta(symbol, timeframe)
         built_sig = meta.get("actions_sig") if meta is not None else actions_signature([])
         if built_sig != current_sig:
+            message = (
+                f"adjusted {timeframe.value} data for {symbol} is STALE: the "
+                "corporate-actions table changed since the adjusted series was last "
+                "built (pre-action bars are mis-scaled until it is rebuilt) -- re-run "
+                f"`platform data adjust {symbol} --timeframe {timeframe.value}`"
+            )
+            if not allow_stale:
+                raise DataError(message)
             logger.warning(
-                "adjusted %s data for %s is STALE: the corporate-actions table changed "
-                "since the adjusted series was last built (pre-action bars are "
-                "mis-scaled until it is rebuilt) -- re-run `platform data adjust %s "
-                "--timeframe %s`",
-                timeframe.value,
-                symbol,
-                symbol,
-                timeframe.value,
+                "%s; UNSAFE allow_stale_adjusted override enabled for diagnostics",
+                message,
             )
 
     def _guard_raw_fallback(self, symbol: str, timeframe: Timeframe) -> None:

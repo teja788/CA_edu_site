@@ -217,14 +217,12 @@ class DynamicTopNResolver:
 
     def membership(self, on: date) -> list[str]:
         if on not in self._cache:
-            rows = self._panel.loc[: pd.Timestamp(on)]
-            if rows.empty:
+            position = self._panel.index.searchsorted(pd.Timestamp(on), side="right") - 1
+            if position < 0:
                 self._cache[on] = []
             else:
-                row = rows.iloc[-1].dropna()
-                self._cache[on] = sorted(
-                    row.sort_values(ascending=False).head(self._top_n).index
-                )
+                row = self._panel.iloc[position].dropna()
+                self._cache[on] = sorted(row.nlargest(self._top_n).index)
         return self._cache[on]
 
     def resolve(self, spec: UniverseSpec, on: date, data: MarketData) -> list[str]:

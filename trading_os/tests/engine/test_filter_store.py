@@ -151,7 +151,9 @@ def _spy_filter(df: pd.DataFrame) -> pd.Series:
     sweeps EVERY registered filter, this one included) that counts calls per
     known frame. Frames it does not recognise (e.g. the detector's own
     synthetic ones) are passed through uncounted."""
-    sym = next((s for s, f in _SPY_FRAMES.items() if f is df), None)
+    # MarketData owns defensive copies, so identify the corresponding fixture
+    # by value rather than relying on caller-frame object identity.
+    sym = next((s for s, f in _SPY_FRAMES.items() if f.equals(df)), None)
     if sym is not None:
         _SPY_CALLS[sym] = _SPY_CALLS.get(sym, 0) + 1
     return pd.Series(True, index=df.index)

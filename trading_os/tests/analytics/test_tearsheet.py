@@ -10,6 +10,7 @@ import pandas as pd
 import pytest
 from fixtures.synthetic import synthetic_universe
 
+import tradingos.analytics.tearsheet as tearsheet_module
 from tradingos.analytics.tearsheet import plotly_report, quantstats_tearsheet
 from tradingos.config.schemas import (
     EngineMode,
@@ -123,6 +124,61 @@ def test_plotly_report_empty_trades_renders_explanatory_note(tmp_path: Path) -> 
     text = out.read_text(encoding="utf-8")
     assert "No per-trade log" in text
     assert empty_result.warnings[0] in text
+
+
+def test_plotly_report_delegates_financial_math_to_metrics(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """The report must consume analytics.metrics instead of recomputing metrics."""
+    result = _empty_trades_result()
+    called: set[str] = set()
+
+    def fake_compute_metrics(
+        report_result: BacktestResult, benchmark: pd.Series | None = None
+    ) -> dict[str, float]:
+        assert report_result is result
+        assert benchmark is None
+        called.add("compute_metrics")
+        return {
+            "total_return": 0.1234,
+            "cagr": 0.2345,
+            "vol": 0.3456,
+            "sharpe": 1.234,
+            "max_drawdown": -0.1111,
+            "calmar": 2.345,
+        }
+
+    def fake_drawdown(equity: pd.Series) -> pd.Series:
+        assert equity is result.equity
+        called.add("drawdown_series")
+        return pd.Series(0.0, index=equity.index)
+
+    def fake_monthly(equity: pd.Series) -> pd.DataFrame:
+        assert equity is result.equity
+        called.add("monthly_returns")
+        return pd.DataFrame({"Jan": [0.01], "YTD": [0.01]}, index=[2022])
+
+    def fake_rolling(equity: pd.Series, window: int) -> pd.Series:
+        assert equity is result.equity
+        assert window == 252
+        called.add("rolling_sharpe")
+        return pd.Series(1.0, index=equity.index)
+
+    monkeypatch.setattr(tearsheet_module, "compute_metrics", fake_compute_metrics)
+    monkeypatch.setattr(tearsheet_module, "drawdown_series", fake_drawdown)
+    monkeypatch.setattr(tearsheet_module, "monthly_returns", fake_monthly)
+    monkeypatch.setattr(tearsheet_module, "rolling_sharpe", fake_rolling)
+
+    text = plotly_report(result, tmp_path / "delegation.html").read_text(encoding="utf-8")
+
+    assert called == {
+        "compute_metrics",
+        "drawdown_series",
+        "monthly_returns",
+        "rolling_sharpe",
+    }
+    assert "12.34%" in text
+    assert "23.45%" in text
 
 
 # ---------------------------------------------------------------------------
