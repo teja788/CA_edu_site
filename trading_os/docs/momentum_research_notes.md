@@ -129,3 +129,139 @@ Wave 3 — new signals:
   i. Residual momentum (market-model residuals, needs rolling regression
      signal).
   j. MAD auxiliary rank.
+
+---
+
+# Addendum (2026-07-12): gap-fill survey + own-data synthesis
+
+Second two-agent pass covering gaps the first survey left open (seasonality,
+concentration, weighting, dual momentum, crash prediction, 2024-26
+literature; India post-crash practitioner changes, sector caps, quality
+blends, rebalance staggering, universe construction, mid-2026 state of play).
+Grounding facts from our own runs: m2 dyn-1000 yearly net = 2021 +47.3%,
+2022 −8.6%, 2023 +72.0%, 2024 +56.7%, 2025 −10.0%, 2026 +14.4%; maxDD −32.9%
+troughed Feb-2023 (the 2022-23 grind, NOT the 2024-25 factor crash); win rate
+64%; top-25 trades = 51% of P&L; charges 10.0% of gross. v7 binary regime
+gate remains the only overlay to raise Sharpe (1.57→1.67); v8 inverse-vol
+diluted (346% vs 390%), consistent with MSCI's finding that inv-vol inside a
+momentum book is a low-vol tilt fighting the signal.
+
+## Strongest new findings
+
+1. **Turnover-chasing is directly, hugely costly in India** (BacktestIndia,
+   Mar 2026; NSE top-200, 2006-2025): top-30 momentum split by scaled
+   turnover (traded value / mcap) — LOW-churn winners 19.4% net CAGR vs
+   HIGH-churn 8.5% (below Nifty), base 14.6%. Largest single effect found
+   anywhere in this research, and our dynamic top-1000-by-traded-value
+   construction tilts toward the losing bucket (liquidity ranking = hype
+   ranking). Practitioner fix (Capitalmind): universe = mcap rank with a
+   traded-value FLOOR, never traded-value ranking. NSE indices additionally
+   impose ~12m listing age (12m signal + parent-index membership) and F&O
+   eligibility.
+2. **Graded trend states beat the binary gate** (Goulding-Harvey-Mazzoleni,
+   JFE 2023 + FAJ 2024 "Breaking Bad Trends"): classify market by agreement
+   of slow (12m) and fast (1m) trend → Bull/Correction/Rebound/Bear; scale
+   exposure by state instead of on/off. Higher Sharpe, shallower DD, positive
+   skew vs static trend. This is the published upgrade of our v7 result
+   (binary gate helped DD, cost return in V-recoveries). Also: cross-
+   sectional momentum + time-varying market beta replicates TSM — the
+   theoretically right overlay for our book is a scaled beta dial.
+3. **Persistence-aware selection cuts turnover and adds net return**
+   (Calluzzo-Moneta-Topaloglu, SSRN 5199701, 2025): the skip-month contains
+   information about which stocks will REMAIN momentum stocks; filtered
+   (drop predicted exits) and blended (current + anticipated score) variants
+   add up to +5pp net p.a. in US long-only at matched horizons. Price-only;
+   a smarter version of the Novy-Marx hysteresis band. Our charges are 10%
+   of gross — turnover reduction is worth real bp here.
+4. **Ex-ante crash dials that beat Daniel-Moskowitz**: momentum gap (Huang,
+   RFS 2022 — formation-period winner-loser spread negatively predicts
+   momentum profits, 20/21 non-US markets); cross-sectional return IQR (Liu
+   et al. 2025 — forecasts crashes OOS across 52 markets, dispersion-guided
+   rotation ~doubles Sharpe); beta+momentum-vol regime split (Dierkes-
+   Krupski, JEF 2022 — Sharpe 1.12 vs 0.94 Barroso-SC). Both gap and IQR are
+   one-liners on ranking data we already compute.
+5. **Rebalance timing matters, monthly cadence is settled**: Raju "Timing
+   the Tide" (India grid: universe × N × weighting × 1/2/3/6m) — shortest
+   rebalance captures the premium best, weighting second-order; Wright:
+   monthly 23.0% vs weekly 16.6% CAGR, AND mid-month rebalance (day 6-20)
+   Sharpe >0.9 vs 0.84 on the 1st (month-turn crowding); Quantpedia: ~350bp
+   CAGR dispersion across monthly rebalance dates. India month-of-year:
+   April is the momentum-hostile month (fiscal-year-end loser rebound,
+   strongest in mid/small caps — our universe).
+6. **Concentration and N: we're already at the optimum.** Raju (SSRN
+   4453680): concentration buys factor exposure but not risk-adjusted
+   return; larger universes win. Capitalmind: 20-30 names best on return
+   AND drawdown. Leave N=25; a 15/50 sweep is only a robustness checkbox.
+7. **India post-crash practice** (who changed what after N200M30's −31.8%):
+   nobody touched the 6m/12m signal. Changes: Capitalmind folded momentum
+   into a regime-rotating flexi-cap (momentum primary, quality/low-vol/value
+   alternates) and LOOSENED stock-level exits (tight exits whipsawed
+   2023-25); Wright added a hedged variant (trails unhedged since inception
+   — permanent put hedging did NOT pay) + hard 10%-portfolio-DD gradual
+   cash rule; Weekend Investing added crisis-only cash mode to rotational
+   strategies (best live Q1-2026 results: −2 to −8% vs Nifty −14.5%); Axis/
+   index funds changed nothing. Sector caps: NSE indices have NONE
+   (financials hit 49% of N200M30, May 2026); Capitalmind/Axis cap sectors
+   as cheap insurance; no Indian evidence caps cost return.
+8. **Permanent quality/low-vol blending dilutes** (Abacus 2024: a 50:50 mix
+   of two pure momentum indices matches the MQ blends with lower vol —
+   quality sleeve adds little). Regime-conditional rotation is the
+   defensible variant, permanent blend is not.
+9. **2021-26 window is now a 3-stress torture set**: slow grind (Sep-24→
+   Apr-25, −31.8%), crowding unwind (Oct-25), geopolitical gap (Q1-26 "US-
+   Iran", Nifty −14.5%). Plus OUR worst DD was the 2022-23 grind. Any
+   overlay must be judged per-episode, not on full-period Sharpe alone.
+
+## Revised test plan (supersedes "Proposed test waves" above)
+
+Wave 1 — config-only, existing signals (`risk_adjusted_momentum`,
+`return_smoothness`, `distance_from_52w_high` already registered):
+  W1a. Exit-buffer widening: exit_rank 50, 60 (vs 35). [turnover ↓]
+  W1b. Rebalance-day sweep: trading_day 1 vs 8 vs 15. [~free Sharpe]
+  W1c. NSE-style score: 50/50 z-blend of 6m+12m risk-adjusted momentum.
+  W1d. 12m listing age in dynamic universe (seasoning 126→252 bars).
+  W1e. FIP smoothness as score component (mom z + smoothness z) — engine
+       has no two-stage select; blend approximates the top-75→smoothest-25
+       screen.
+  W1f. (robustness checkbox) N=15 / N=50 arms.
+Wave 2 — small engine additions:
+  W2a. GHM 3-state graded exposure: Nifty 12m & 1m trend agreement →
+       1 / 0.5 / 0 gross exposure; asymmetric (blocks buys, doesn't force
+       sells). Replaces binary v7 gate. [highest-priority overlay]
+  W2b. Portfolio-level vol target: exposure = min(1, 12% / σ̂_126d of own
+       net returns), monthly step. (Existing `volatility_target` sizing is
+       per-position — this is a new portfolio-level scaler hook.)
+  W2c. Crash dials on the same scaler hook: momentum gap quintile + cross-
+       sectional IQR quintile → trim exposure when extreme.
+  W2d. Hype screen (price/volume-only scaled-turnover proxy until mcap data
+       exists): exclude names whose trailing 21d traded value > k× their own
+       trailing 252d median (k≈3-4 sweep) — targets the freshly-hyped-
+       near-peak failure mode directly.
+  W2e. Persistence blend (Calluzzo): score = w·mom(12-1) + (1−w)·anticipated
+       next-month mom (computable today from 11-1); w sweep {1.0, 0.7, 0.5}.
+       Expect similar gross, lower turnover, higher net.
+  W2f. Staggered half-tranches: two half-books rebalancing day 1 / day 11
+       (kills rebalance-timing luck; untested in India).
+Wave 3 — need new data first:
+  W3a. Shares outstanding / mcap (NSE securities master or bhavcopy) →
+       proper scaled-turnover screen + mcap-ranked universe with traded-
+       value floor. [biggest documented effect; data work first]
+  W3b. Sector table (NSE industry classification) → 25-30% sector cap
+       (schema's max_sector_pct exists, currently a warning no-op).
+  W3c. Residual momentum (rolling market-model regression signal) —
+       strongest EM-validated signal upgrade from first survey.
+  W3d. April-effect audit of our own monthly returns (analysis, not a run).
+
+## Skip list (evidence says don't)
+
+Permanent put hedging (Wright hedged trails unhedged live); permanent
+quality blend (Abacus); weekly/fortnightly rebalance (costs); tighter
+concentration than ~20 (worst DD, no risk-adjusted gain); inverse-vol
+weighting (our v8 + MSCI: low-vol tilt fights the signal); per-position
+stops of any flavor (our 4/4 + ASM/T2T frictions); 12-7 echo window
+(Goyal-Wahal); portfolio-DD-triggered de-risking as PRIMARY rule (slow
+proxy — but note Wright uses 10% DD as a live backstop; test only as
+backstop, judged per-episode); learning-to-rank ML (5y sample too short).
+
+Full agent reports with all citations: see session artifacts 2026-07-12;
+key sources inline above.
