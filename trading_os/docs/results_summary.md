@@ -52,6 +52,8 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 40 | 8 indicators | b2d + supertrend(10,3) 4th gate signal | dyn-1000 | **+291.8%** | **−24.3%** | **1.35** | beats b2d on all three |
 | 41 | 8 | b2d + MAD 0.25 score weight | dyn-1000 | +257.4% | −25.4% | 1.23 | dilutes; dropped |
 | 42 | 8 | b2d + both | dyn-1000 | +261.2% | −25.0% | 1.25 | MAD drag dominates; dropped |
+| 43 | 8 | b1d + supertrend-ONLY gate (binary) | dyn-1000 | +265.8% | −22.6% | 1.36 | vs b1d: DD −5.7pp, Sharpe 1.23→1.36 |
+| 44 | 8 | b2e + supertrend 4th gate signal | dyn-1000 | +203.7% | **−18.8%** | **1.41** | beats b2e on all three |
 
 ## MARKED FOR FUTURE (owner, 2026-07-12)
 
@@ -79,6 +81,16 @@ literature) does NOT transfer to this universe/window — pure residual
 ranking earns less than half the plain-momentum return at lower Sharpe even
 inside the champion structure. Dropped; plain + vol-adjusted price momentum
 stays the signal.
+
+Supertrend sweep across all marked strategies (rows 40, 43, 44): the
+supertrend gate improves EVERY strategy it touches — b2d+ST dominates b2d
+(+291.8/−24.3/1.35), b2e+ST dominates b2e (+203.7/−18.8/1.41, the best
+Sharpe of the whole campaign), and even as b1d's ONLY gate signal it
+trades 15pp of return for −5.7pp DD and Sharpe 1.23→1.36. Coherent
+mechanism (fast ATR-adaptive throttle + asymmetric non-forced-selling),
+consistent direction across three configurations — this is the real
+deal as far as one price path can show. Pending owner: re-mark champions
+as b2d+ST (growth) and b2e+ST (defensive).
 
 Indicator wave verdict (rows 40-42, runner `scripts/adhoc/stmad_b2d.py`,
 first run through the run-variants harness): adding supertrend(10,3) on
