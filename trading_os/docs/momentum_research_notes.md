@@ -296,3 +296,32 @@ Batch 3 — new signal:
 
 Deliberately excluded: per-position stops (0/4), per-stock SMA gates (5/5
 redundant), weekly rebalance, 12-7 window, rank/inverse-vol weighting.
+
+---
+
+# Deep-research verdict: "anything much better?" (2026-07-12, adversarially verified)
+
+Multi-agent fact-checked sweep (34 agents; every claim adversarially
+verified; bar = net Sharpe >1.5 or CAGR >40% at comparable DD, or
+uncorrelated net-Sharpe>1 sleeves). **RESULT: nothing verified beats
+b2d-ST.** No candidate cleared the primary bar net of realistic costs.
+
+Survivors / failures:
+1. **Only actionable lead:** Zarattini-Aziz-Barbon intraday momentum on
+   SPY (SSRN 4824172): net Sharpe 1.33, 19.6%/yr, 2007-2024 — clears the
+   SLEEVE bar and is plausibly uncorrelated with monthly cross-sectional
+   momentum. Caveats: working-paper backtest (not audited/live), intraday
+   leverage, third-party snooping-risk flags (CXO), and Indian-retail
+   accessibility (US intraday via LRS) unproven. Would need independent
+   replication before any capital.
+2. **FAILED verification:** Maróy extension (SSRN 5095349, "Sharpe >3,
+   >50%/yr") — in-sample optimization of ALL parameters + instrument-
+   selection bias (QQQ picked because it scored better); textbook overfit.
+3. **FAILED net-of-costs:** network/lead-lag momentum (arXiv 2308.11294,
+   gross Sharpe 1.51) — authors' own cost analysis goes NEGATIVE at 5bps;
+   independent study (arXiv 2501.07135) ~0.35 net.
+
+Standing conclusion: at retail-accessible cost structures, the validated
+b2d-ST (~Sharpe 1.35 net, two regimes + US + survivorship-corrected) was
+not beaten by anything the literature could produce under verification.
+Full cited report: session artifacts 2026-07-12 (deep-research workflow).
