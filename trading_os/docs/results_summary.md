@@ -49,6 +49,9 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 37 | 7 tier-2 | b2d on mcap-ranked universe | mcap-1000 | +247.4% | −24.3% | 1.23 | worse; dropped |
 | 38 | 7 | b2d + churn-quintile veto | dyn-1000 | +207.1% | −24.8% | 1.17 | worse; dropped |
 | 39 | 7 | b2d + both | mcap-1000 | +183.4% | −25.1% | 1.12 | worst; dropped |
+| 40 | 8 indicators | b2d + supertrend(10,3) 4th gate signal | dyn-1000 | **+291.8%** | **−24.3%** | **1.35** | beats b2d on all three |
+| 41 | 8 | b2d + MAD 0.25 score weight | dyn-1000 | +257.4% | −25.4% | 1.23 | dilutes; dropped |
+| 42 | 8 | b2d + both | dyn-1000 | +261.2% | −25.0% | 1.25 | MAD drag dominates; dropped |
 
 ## MARKED FOR FUTURE (owner, 2026-07-12)
 
@@ -76,6 +79,18 @@ literature) does NOT transfer to this universe/window — pure residual
 ranking earns less than half the plain-momentum return at lower Sharpe even
 inside the champion structure. Dropped; plain + vol-adjusted price momentum
 stays the signal.
+
+Indicator wave verdict (rows 40-42, runner `scripts/adhoc/stmad_b2d.py`,
+first run through the run-variants harness): adding supertrend(10,3) on
+NIFTYBEES as a FOURTH graded-gate signal (f now grades in quarters) beats
+b2d on return (+8.4pp), drawdown (−24.3 vs −24.8) and Sharpe (1.35 vs
+1.32) — the ATR-adaptive fast component reacts to vol-spike breaks
+(Q1-2026 type) faster than the fixed SMAs, exactly the GHM fast/slow
+blend prediction. Candidate to supersede b2d pending owner mark; caveat:
+~40th test on one 5y path, improvement is real but modest — treat as
+gate refinement, not new alpha. MAD in the score dilutes like every rank
+auxiliary tried (FIP, inv-vol, residual momentum) — the vol-adjusted
+momentum blend keeps winning as-is.
 
 Tier-2 verdict (rows 37-39, runner `scripts/adhoc/tier2_mcap_churn_b2d.py`):
 the mcap-ranked universe and the scaled-turnover (churn) veto — the
