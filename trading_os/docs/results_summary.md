@@ -43,6 +43,9 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 31 | 5 | b3c = residual mom in champion structure | dyn-1000 | +147.8% | −22.3% | 1.07 | dropped |
 | 32 | 6 sizing | b1d @ Rs 10k/position (capital Rs 2.5L) | dyn-1000 | +254.0% | −28.2% | 1.19 | viable at retail size |
 | 33 | 6 | b2d @ Rs 10k/position (capital Rs 2.5L) | dyn-1000 | +266.2% | −24.6% | 1.30 | viable at retail size |
+| 34 | 6 | b1d @ Rs 40k/position (capital Rs 10L) | dyn-1000 | +268.5% | −28.4% | 1.21 | Rs 10L → Rs 36.8L |
+| 35 | 6 | b2d @ Rs 40k/position (capital Rs 10L) | dyn-1000 | +276.7% | −24.8% | 1.31 | Rs 10L → Rs 37.7L |
+| 36 | 6 | b2e @ Rs 40k/position (capital Rs 10L) | dyn-1000 | +194.5% | −18.9% | 1.37 | Rs 10L → Rs 29.5L |
 
 ## MARKED FOR FUTURE (owner, 2026-07-12)
 

@@ -1,12 +1,15 @@
-"""The two marked strategies (b1d, b2d) at retail size: Rs 10k/position.
+"""Marked strategies (b1d, b2d, + b2e) at a chosen per-position size.
 
-Owner ask (Jul 12): rerun the strategies of record with Rs 10,000 per
-position instead of Rs 2L — capital 25 x 10k = Rs 2.5L. At this size the
-fixed cost floor (DP charge per scrip-day on sells) and integer-share
-constraints (high-priced stocks exceed a Rs 10k slot) actually bind, so
-this measures small-account viability, not just scaling.
+Owner ask (Jul 12): rerun the strategies of record at retail position
+sizes (originally Rs 10k/slot; argv[1] sets the per-slot rupees, default
+10000; argv[2] optionally comma-separates variants). Capital = 25 x slot.
+At small sizes the fixed cost floor (DP charge per scrip-day on sells) and
+integer-share constraints (high-priced stocks exceed the slot) actually
+bind, so this measures small-account viability, not just scaling. Equity
+compounds fully — targets are recomputed from current equity each
+rebalance, nothing is withdrawn.
 
-Families: adhoc_{variant}_10k_nse1000dyn.
+Families: adhoc_{variant}_{slot}k_nse1000dyn.
 """
 
 from __future__ import annotations
@@ -29,14 +32,19 @@ from batch2_m2_overlays import make_config as b2_config
 from nse200_dynamic import max_drawdown
 
 SCRATCH = Path(__file__).resolve().parent
-CAPITAL = 250_000.0  # 25 positions x Rs 10k
+PER_SLOT = float(sys.argv[1]) if len(sys.argv) > 1 else 10_000.0
+CAPITAL = 25 * PER_SLOT
+SLOT_TAG = f"{PER_SLOT / 1000:g}k"
 TOP_N = 1000
 TAG = "nse1000dyn"
 
 MARKED = {
     "b1d_score_exit50": b1_config,
     "b2d_graded_score": b2_config,
+    "b2e_full": b2_config,
 }
+if len(sys.argv) > 2:
+    MARKED = {k: v for k, v in MARKED.items() if k in sys.argv[2].split(",")}
 
 
 def main() -> None:
@@ -60,12 +68,12 @@ def main() -> None:
     comparison: list[dict] = []
 
     for variant, make in MARKED.items():
-        family = f"adhoc_{variant}_10k_{TAG}"
+        family = f"adhoc_{variant}_{SLOT_TAG}_{TAG}"
         run_dir = (settings.artifacts_dir / "adhoc" / family
                    / run_ts.strftime("%Y-%m-%d_%H%M%S"))
         run_dir.mkdir(parents=True, exist_ok=True)
         cfg = make(variant, universe).model_copy(
-            update={"name": f"{TAG}_{variant}_10k", "capital": CAPITAL})
+            update={"name": f"{TAG}_{variant}_{SLOT_TAG}", "capital": CAPITAL})
         started = datetime.now()
         res = EventEngine().run(cfg, md_all, resolver)
         finished = datetime.now()
@@ -82,7 +90,7 @@ def main() -> None:
             "net_pnl": round(t.net_pnl, 0), "exit_reason": t.exit_reason,
         } for t in res.trades])
         stats = {
-            "variant": f"{variant}_10k", "kind": "Rs 10k/position, 25 slots",
+            "variant": f"{variant}_{SLOT_TAG}", "kind": f"Rs {PER_SLOT:g}/position, 25 slots",
             "capital": CAPITAL,
             "net_return_pct": round(npnl / CAPITAL * 100, 1),
             "gross_return_pct": round(gpnl / CAPITAL * 100, 1),
@@ -105,7 +113,7 @@ def main() -> None:
         print(json.dumps(stats), flush=True)
 
     out = (settings.artifacts_dir / "adhoc"
-           / f"{TAG}_10k_marked_{run_ts.strftime('%Y-%m-%d_%H%M%S')}.json")
+           / f"{TAG}_{SLOT_TAG}_marked_{run_ts.strftime('%Y-%m-%d_%H%M%S')}.json")
     out.write_text(json.dumps({
         "run_at": run_ts.isoformat(timespec="seconds"),
         "reference_2L": {"b1d": "+280.7%/-28.3%/1.23",
