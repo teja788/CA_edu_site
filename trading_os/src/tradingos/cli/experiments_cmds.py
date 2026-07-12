@@ -73,6 +73,105 @@ def run(
     typer.echo(board.to_string(index=False))
 
 
+@app.command("run-variants")
+def run_variants_cmd(
+    base_yaml: Annotated[Path, typer.Argument(help="Path to a base strategy YAML file.")],
+    family_prefix: Annotated[
+        str,
+        typer.Option("--family-prefix", help="Names the batch (family + comparison file)."),
+    ],
+    variants_file: Annotated[
+        Path | None,
+        typer.Option(
+            "--variants-file",
+            help="YAML mapping variant name -> {dotted.path: value} overrides.",
+        ),
+    ] = None,
+    set_: Annotated[
+        list[str] | None,
+        typer.Option(
+            "--set",
+            help="Single-variant override 'dotted.path=value' (value parsed as YAML); "
+            "repeatable. Mutually exclusive with --variants-file.",
+        ),
+    ] = None,
+    name: Annotated[
+        str, typer.Option("--name", help="Variant name for the --set path.")
+    ] = "adhoc",
+    capital: Annotated[
+        float | None, typer.Option("--capital", help="Override the base config capital.")
+    ] = None,
+) -> None:
+    """Run one hypothesis' worth of variants off BASE_YAML.
+
+    ``--variants-file`` is the primary interface (a YAML mapping of variant name
+    to a flat ``{dotted.path: value}`` override dict). ``--set path=value``
+    (repeatable) instead defines a single variant named ``--name`` (default
+    "adhoc"). Each variant is re-validated, run on data loaded once, persisted
+    to the experiments DB, and summarized in ``{family_prefix}_comparison_*``.
+    """
+    import yaml
+
+    from tradingos.config.loader import load_strategy
+    from tradingos.config.schemas import StrategyConfig
+    from tradingos.config.settings import get_settings
+    from tradingos.core.errors import ConfigError, TradingOSError
+    from tradingos.experiments.variants import run_variants
+
+    if variants_file is not None and set_:
+        _fail("cannot combine --variants-file with --set")
+    if variants_file is None and not set_:
+        _fail("provide --variants-file or at least one --set path=value")
+
+    try:
+        base = load_strategy(base_yaml)
+        if capital is not None:
+            base = StrategyConfig.model_validate(
+                {**base.model_dump(mode="python"), "capital": capital}
+            )
+    except TradingOSError as exc:
+        _fail(str(exc))
+
+    variants: dict[str, dict[str, object]] = {}
+    if variants_file is not None:
+        try:
+            with open(variants_file) as fh:
+                loaded = yaml.safe_load(fh)
+        except (OSError, yaml.YAMLError) as exc:
+            _fail(f"could not read --variants-file: {exc}")
+        if not isinstance(loaded, dict) or not loaded:
+            _fail("--variants-file must be a non-empty YAML mapping of name -> overrides")
+        for vname, overrides in loaded.items():
+            if not isinstance(overrides, dict):
+                _fail(f"variant {vname!r}: overrides must be a mapping of path -> value")
+            variants[str(vname)] = dict(overrides)
+    else:
+        overrides = {}
+        for item in set_ or []:
+            if "=" not in item:
+                _fail(f"--set {item!r} must be 'dotted.path=value'")
+            path, _, raw = item.partition("=")
+            path = path.strip()
+            if not path:
+                _fail(f"--set {item!r} has an empty path")
+            overrides[path] = yaml.safe_load(raw)
+        variants[name] = overrides
+
+    settings = get_settings()
+    try:
+        stats = run_variants(base, variants, settings, family_prefix=family_prefix)
+    except (TradingOSError, ConfigError) as exc:
+        _fail(str(exc))
+
+    n_err = sum(1 for s in stats if s.get("status") == "error")
+    n_done = len(stats) - n_err
+    typer.echo(f"\nfamily_prefix : {family_prefix}")
+    typer.echo(f"variants      : {len(stats)}  (done: {n_done}, error: {n_err})")
+    for s in stats:
+        if s.get("status") == "error":
+            typer.echo(f"  {s['variant']:24} ERROR: {s['message']}")
+
+
 @app.command()
 def leaderboard(
     family: Annotated[
