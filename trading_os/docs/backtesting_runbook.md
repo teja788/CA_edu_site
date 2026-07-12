@@ -248,3 +248,18 @@ what our momentum was actually harvesting. Signal work is closed; b2d
 stands as champion. Retail-size check passed: both marked strategies hold
 their profile at ₹10k/position (integer-share slot misses cost ~15-25pp
 over 5y, charges stay ~5% of gross).
+
+Portfolio-size sweep on b2d-ST (Jul 12 evening, owner ask): N ∈
+{10,15,20,25,30}, exit 2×N, cap scaled 1.25/N. n20 = +313.2%/−25.6%/1.38
+vs champion n25 +291.8%/−24.3%/1.35 (control re-run reproduced run 1346
+exactly); n10/n15 add drawdown without return; n30 dilutes. 20–25 plateau
+confirmed; champion stays n25 (one-path delta, N never walk-forward
+validated). Gotcha for future sweeps: with n<20 the flat 5% position cap
+silently caps exposure at n×5% — scale `sizing.max_position_pct` with N
+(the engine sizes at min(1/N, cap), `strategy_runtime.py`). Full table:
+docs/results_summary.md; families `adhoc_n{N}[cap]_b2dst_topn`.
+
+n20 COVID exam (same evening): +63.2%/−28.9%/1.36 vs champion
++62.6%/−29.8%/1.35, same trough day (2020-03-23) — a wash; the in-window
+n20 edge doesn't repeat OOW. Champion stays n25. Runner
+`b2dst_n20_2019_2020.py`.

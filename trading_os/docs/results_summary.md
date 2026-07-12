@@ -262,3 +262,43 @@ the 2019-20 exam; (4) OOS Sharpe 1.65 > the fixed champion's 1.35: the
 selection discipline itself would have been worth running live. This
 completes the dossier: config-level (2 windows + US + survivorship),
 statistical (DSR/MC/perturbation), and process-level validation all pass.
+
+## Portfolio-size sweep on b2d-ST (owner ask, 2026-07-12 evening)
+
+Champion structure unchanged; only `selection.n` varies, exit buffer kept
+at 2×N, position cap scaled to keep the champion's 1.25× headroom
+(n10 → 12.5%, n15 → 8.33%, n20 → 6.25%; the flat-5%-cap first pass left
+n10/n15 only 50/75% invested — those exposure-dragged rows are in the
+experiments DB under the same family, first batch). Runner
+`scripts/adhoc/b2dst_topn_sweep.py` + `b2dst_topn_smallcap_fix.py`,
+families `adhoc_n{N}[cap]_b2dst_topn`. Net of charges, ₹4cr,
+2021-07-13 → 2026-07-10, dyn-1000 universe:
+
+| N (exit 2N) | Net | Max DD | Sharpe | Trades | Charges |
+|---|---|---|---|---|---|
+| 10 | +290.2% | −37.7% | 1.21 | 576 | ₹41.8L |
+| 15 | +236.2% | −33.6% | 1.16 | 694 | ₹37.3L |
+| **20** | **+313.2%** | −25.6% | **1.38** | 852 | ₹39.7L |
+| 25 (champion, control re-run — matches run 1346 exactly) | +291.8% | −24.3% | 1.35 | 994 | ₹39.7L |
+| 30 | +224.9% | −24.2% | 1.18 | 1106 | ₹33.4L |
+
+Reads: (1) the 20–25 plateau is real and matches the Indian evidence the
+champion was designed on (Raju/Capitalmind optimum 20–30); (2) below 20,
+concentration adds drawdown without adding return — n10 matches the
+champion's return at −37.7% DD (single-name risk dominates; and n15 < n10
+on return says the rank ordering of small-N rungs is noise); (3) n30
+dilutes into the momentum tail (−67pp return, Sharpe 1.18); (4) n20's
+edge over n25 (+21pp, +0.03 Sharpe, −1.3pp DD worse) is one path, ~48th
+test against it — directionally interesting, NOT enough to re-mark the
+champion; note the walk-forward sweep never offered N as a degree of
+freedom, so n20 has no process-level validation. Champion stays n25.
+
+**n20 OOW COVID exam (owner ask, same evening):** runner
+`scripts/adhoc/b2dst_n20_2019_2020.py`, family
+`adhoc_n20_2019_2020_oow_b2dst`. n20 on 2019-20: **+63.2% (2y), DD −28.9%
+(trough 2020-03-23, same day as champion), Sharpe 1.36** — vs champion's
++62.6%/−29.8%/1.35. Yearly: 2019 +5.6% (champ +9.0%), 2020 +54.6%
+(champ +48.5%). Verdict: a WASH — n20's in-window +21pp edge does not
+repeat out-of-window; the two sizes are statistically indistinguishable
+co-optima on the 20-25 plateau. Champion stays n25 (unchanged); n20 is a
+validated fallback if per-position size ever becomes a capacity concern.
