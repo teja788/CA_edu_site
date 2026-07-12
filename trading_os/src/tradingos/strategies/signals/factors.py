@@ -337,3 +337,32 @@ def residual_momentum(
     roll_e = resid_skip.rolling(window=window, min_periods=window)
     sigma = roll_e.std(ddof=1)
     return roll_e.sum() / sigma.replace(0.0, np.nan)
+
+
+@register_signal(
+    "ma_distance",
+    description=(
+        "Moving Average Distance (Avramov et al.): SMA(fast)/SMA(slow) - 1. "
+        "Positive when the short-horizon trend sits above the long-horizon "
+        "one; a price-only auxiliary momentum rank. Flagship params fast=21, "
+        "slow=200. NaN until the slow SMA is warm."
+    ),
+    tier="factor",
+    fast=21,
+    slow=200,
+)
+def ma_distance(df: pd.DataFrame, fast: int = 21, slow: int = 200) -> pd.Series:
+    """``SMA(close, fast) / SMA(close, slow) - 1`` as of row t.
+
+    Both SMAs are trailing windows ending at t (``min_periods`` = full
+    window), so the ratio at row t depends only on rows <= t. A zero slow
+    SMA (impossible for real prices, possible in synthetic data) yields NaN
+    rather than inf.
+    """
+    if fast < 1 or slow < 1:
+        raise ValueError(f"ma_distance windows must be >= 1, got fast={fast}, slow={slow}")
+    if fast >= slow:
+        raise ValueError(f"ma_distance requires fast < slow, got fast={fast}, slow={slow}")
+    sma_fast = df["close"].rolling(fast, min_periods=fast).mean()
+    sma_slow = df["close"].rolling(slow, min_periods=slow).mean()
+    return sma_fast / sma_slow.replace(0.0, float("nan")) - 1.0

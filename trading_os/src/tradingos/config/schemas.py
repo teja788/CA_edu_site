@@ -202,9 +202,13 @@ class RegimeSignalSpec(BaseModel):
     ``kind`` selects a causal boolean indicator; ``params`` are its knobs:
       * ``above_ma``        -> ``window`` (SMA length; default 200)
       * ``positive_return`` -> ``window`` (trailing-return lookback in bars, e.g. 252)
+      * ``supertrend``      -> ``period`` (ATR length; default 10),
+                               ``multiplier`` (band width in ATRs; default 3.0).
+                               An ATR-adaptive fast trend flag — flips quicker
+                               than a fixed SMA in volatility spikes.
     """
 
-    kind: Literal["above_ma", "positive_return"]
+    kind: Literal["above_ma", "positive_return", "supertrend"]
     params: dict[str, Any] = Field(default_factory=dict)
 
     @model_validator(mode="after")
@@ -212,6 +216,16 @@ class RegimeSignalSpec(BaseModel):
         window = self.params.get("window")
         if window is not None and (not isinstance(window, int) or window < 1):
             raise ValueError(f"regime signal window must be a positive int, got {window!r}")
+        period = self.params.get("period")
+        if period is not None and (not isinstance(period, int) or period < 1):
+            raise ValueError(f"regime signal period must be a positive int, got {period!r}")
+        multiplier = self.params.get("multiplier")
+        if multiplier is not None and (
+            not isinstance(multiplier, (int, float)) or multiplier <= 0
+        ):
+            raise ValueError(
+                f"regime signal multiplier must be a positive number, got {multiplier!r}"
+            )
         return self
 
 

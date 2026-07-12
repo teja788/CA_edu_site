@@ -186,3 +186,66 @@ def above_ma_confirm(df: pd.DataFrame, window: int = 200, days: int = 3) -> pd.S
                 state = False
         out.append(state)
     return pd.Series(out, index=df.index, dtype=bool)
+
+
+@register_filter(
+    "supertrend_bullish",
+    description=(
+        "Regime filter: true while the Supertrend indicator is in its up "
+        "state. Bands are (high+low)/2 +/- multiplier * ATR(period) (Wilder "
+        "smoothing), ratcheted the standard way; the state flips up when "
+        "close crosses above the ratcheted upper band and down when it "
+        "crosses below the ratcheted lower band. ATR-adaptive, so it reacts "
+        "faster than a fixed SMA in volatility spikes. NaN-safe: False until "
+        "the ATR is warm. Typically applied to a benchmark/index frame as a "
+        "fast regime-gate signal."
+    ),
+)
+def supertrend_bullish(
+    df: pd.DataFrame, period: int = 10, multiplier: float = 3.0
+) -> pd.Series:
+    """True where the Supertrend state at row t (from rows <= t only) is up.
+
+    Every input is trailing: TR/ATR use rows <= t, the band ratchet at t
+    reads only the bands and close at t-1, and the state at t reads the
+    state at t-1 — so the whole recursion is causal by construction.
+    """
+    if period < 1:
+        raise ValueError(f"supertrend period must be >= 1, got {period}")
+    if multiplier <= 0:
+        raise ValueError(f"supertrend multiplier must be > 0, got {multiplier}")
+
+    high, low, close = df["high"], df["low"], df["close"]
+    prev_close = close.shift(1)
+    tr = pd.concat(
+        [high - low, (high - prev_close).abs(), (low - prev_close).abs()], axis=1
+    ).max(axis=1)
+    atr = tr.ewm(alpha=1.0 / period, adjust=False, min_periods=period).mean()
+    hl2 = (high + low) / 2.0
+    basic_ub = (hl2 + multiplier * atr).to_numpy()
+    basic_lb = (hl2 - multiplier * atr).to_numpy()
+    close_a = close.to_numpy()
+
+    n = len(df)
+    out = [False] * n
+    final_ub = float("nan")
+    final_lb = float("nan")
+    state = False  # start bearish until price proves an uptrend
+    warm = False
+    for i in range(n):
+        bu, bl, c = basic_ub[i], basic_lb[i], close_a[i]
+        if bu != bu or bl != bl or c != c:  # NaN: ATR not warm / missing bar
+            out[i] = False
+            continue
+        if not warm:
+            final_ub, final_lb, warm = bu, bl, True
+        else:
+            prev_c = close_a[i - 1]
+            final_ub = bu if (bu < final_ub or prev_c > final_ub) else final_ub
+            final_lb = bl if (bl > final_lb or prev_c < final_lb) else final_lb
+        if not state and c > final_ub:
+            state = True
+        elif state and c < final_lb:
+            state = False
+        out[i] = state
+    return pd.Series(out, index=df.index, dtype=bool)

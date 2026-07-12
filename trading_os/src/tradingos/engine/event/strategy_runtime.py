@@ -469,7 +469,7 @@ def _apply_vol_target(
     return {s: w * exposure for s, w in weights.items()}
 
 
-def _regime_signal_to_filter(sig: RegimeSignalSpec) -> tuple[str, dict[str, int]]:
+def _regime_signal_to_filter(sig: RegimeSignalSpec) -> tuple[str, dict[str, float]]:
     """Map a regime signal to a registered filter name + params. Reuses the
     filter routing (``dv.filter_series(symbol, ...)``) that ``index_above_ma``
     uses, so regime signals are certified point-in-time by the same detector."""
@@ -477,6 +477,11 @@ def _regime_signal_to_filter(sig: RegimeSignalSpec) -> tuple[str, dict[str, int]
         return "index_above_ma", {"window": int(sig.params.get("window", 200))}
     if sig.kind == "positive_return":
         return "positive_trailing_return", {"window": int(sig.params.get("window", 252))}
+    if sig.kind == "supertrend":
+        return "supertrend_bullish", {
+            "period": int(sig.params.get("period", 10)),
+            "multiplier": float(sig.params.get("multiplier", 3.0)),
+        }
     raise ConfigError(f"unknown regime signal kind {sig.kind!r}")
 
 
