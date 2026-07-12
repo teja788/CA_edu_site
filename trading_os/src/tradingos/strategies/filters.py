@@ -52,6 +52,26 @@ def index_above_ma(df: pd.DataFrame, window: int = 200) -> pd.Series:
 
 
 @register_filter(
+    "positive_trailing_return",
+    description=(
+        "Regime filter: true where the trailing `window`-bar simple return "
+        "(close_t / close_{t-window} - 1) is strictly positive. NaN-safe: "
+        "emits False (not NaN) before `window` bars of history exist. "
+        "Typically applied to a benchmark/index frame (e.g. 252-bar TSMOM)."
+    ),
+)
+def positive_trailing_return(df: pd.DataFrame, window: int = 252) -> pd.Series:
+    """True where df['close'] at row t is above its close `window` bars earlier.
+
+    `close.shift(window)` at row t is close[t - window]; both operands are at
+    rows <= t, so the comparison is causal by construction.
+    """
+    close = df["close"]
+    ret = close / close.shift(window) - 1.0
+    return (ret > 0).fillna(False).astype(bool)
+
+
+@register_filter(
     "min_price",
     description=(
         "Eligibility filter: true where close >= threshold (e.g. penny-stock "

@@ -15,7 +15,10 @@ Pipeline (each stage documented inline):
       -> score                   (weighted cross-sectional z, or single raw value)
       -> regime / eligibility filters (symbol-routed => whole book to cash)
       -> selection               (top-N with an exit-rank buffer)
-      -> sizing                  (target rupee weights -> integer share targets)
+      -> sizing                  (target rupee weights)
+      -> exposure overlays       (vol_target scales whole book; regime f scales
+                                  NEW entries only — both causal, both optional)
+      -> shares                  (target rupee weights -> integer share targets)
 
 Cross-sectional z uses population std (ddof=0); std==0 -> z=0; any symbol with a
 NaN signal is dropped before ranking — and when a score is configured but NO
@@ -30,7 +33,13 @@ import math
 import numpy as np
 import pandas as pd
 
-from tradingos.config.schemas import SizingSpec, StrategyConfig
+from tradingos.config.schemas import (
+    RegimeSignalSpec,
+    RegimeSpec,
+    SizingSpec,
+    StrategyConfig,
+    VolTargetSpec,
+)
 from tradingos.core.errors import ConfigError
 from tradingos.core.logging import get_logger
 from tradingos.engine.base import UniverseResolver
@@ -51,6 +60,7 @@ def evaluate_targets(
     equity: float,
     warnings: list[str],
     run_end: pd.Timestamp | None = None,
+    equity_history: dict[pd.Timestamp, float] | None = None,
 ) -> dict[str, int]:
     """Return desired holdings ``{symbol: share_qty}`` for this rebalance.
 
@@ -61,6 +71,13 @@ def evaluate_targets(
     enables delisting exclusion: a symbol whose frame ends before the run does
     is dropped from the candidate set from its last bar onward, so a frozen
     final score can neither re-buy a delisted name nor hog a top-N slot.
+
+    ``equity_history`` (event engine only) is the strategy's running NET equity
+    for bars strictly before ``now`` (``{bar_ts: equity}``); combined with the
+    ``equity`` argument (this bar's mark-to-market equity) it feeds the
+    ``vol_target`` overlay's realized-vol estimate. Callers that do not track a
+    running equity curve (paper/live/vectorized) pass ``None`` and the overlay
+    stays in warm-up (exposure = ``max_exposure``).
     """
     # -- candidates ---------------------------------------------------------
     resolved = resolver.resolve(config.universe, dv.now.date(), data)
@@ -102,6 +119,17 @@ def evaluate_targets(
 
     # -- sizing -------------------------------------------------------------
     weights = _size(config, dv, selected, warnings)
+
+    # -- portfolio-level exposure overlays ---------------------------------
+    # Stacking order (documented in schemas.py + docs/assumptions.md):
+    #   1. vol_target scales the WHOLE book symmetrically (held AND new);
+    #   2. regime f then additionally scales NEW entries only (asymmetric).
+    # So a new-entry final weight = base * exposure * f, a held final weight
+    # = base * exposure. Order matters only in that both are multiplicative
+    # and regime is restricted to the new-entry subset.
+    weights = _apply_vol_target(config, weights, equity, equity_history, dv.now)
+    weights = _apply_regime(config, dv, weights, current_holdings)
+
     return _weights_to_shares(dv, weights, equity)
 
 
@@ -372,6 +400,117 @@ def _size_vol_target(dv: DataView, selected: list[str], sizing: SizingSpec) -> d
         scale = min(scale, 1.0 / base_sum)  # cap total exposure at 100% (no leverage)
     scale = max(scale, 0.0)
     return {s: w * scale for s, w in base.items()}
+
+
+# ---------------------------------------------------------------------------
+# portfolio-level exposure overlays
+# ---------------------------------------------------------------------------
+#
+# Both overlays are ENGINE capabilities configured from StrategyConfig, applied
+# to the target weights AFTER sizing and BEFORE integer share conversion. They
+# never redistribute freed capital — a scaled-down weight simply leaves more in
+# cash (min-a `_weights_to_shares` floors sub-lot weights to zero shares).
+
+
+def _build_equity_series(
+    equity_history: dict[pd.Timestamp, float] | None,
+    equity: float,
+    now: pd.Timestamp,
+) -> pd.Series:
+    """Net-equity series ending at ``now`` (bars <= now only, causal).
+
+    ``equity_history`` holds bars strictly before ``now``; ``equity`` is this
+    bar's mark-to-market equity — appended under ``now.normalize()`` (the daily
+    bar key the engine records under) so the series ends at the current bar.
+    """
+    key = now.normalize()
+    data = dict(equity_history) if equity_history else {}
+    data[key] = equity
+    return pd.Series(data, dtype="float64").sort_index()
+
+
+def _vol_target_exposure(spec: VolTargetSpec, equity_series: pd.Series) -> float:
+    """``min(max_exposure, target_annual_vol / sigma_hat)``.
+
+    ``sigma_hat`` = annualized std (ddof=1) of daily net equity returns over the
+    trailing ``lookback_bars`` equity observations. Warm-up (fewer than
+    ``lookback_bars`` observations) or a non-positive/degenerate vol -> no
+    scaling (``max_exposure``). De-lever only: the ``min`` never levers up.
+    """
+    eq = equity_series.dropna()
+    if len(eq) < spec.lookback_bars:
+        return spec.max_exposure
+    window = eq.tail(spec.lookback_bars)
+    rets = window.pct_change().dropna()
+    if len(rets) < 2:
+        return spec.max_exposure
+    sigma = float(rets.std(ddof=1)) * math.sqrt(_TRADING_DAYS_PER_YEAR)
+    if not math.isfinite(sigma) or sigma <= 0.0:
+        return spec.max_exposure
+    return min(spec.max_exposure, spec.target_annual_vol / sigma)
+
+
+def _apply_vol_target(
+    config: StrategyConfig,
+    weights: dict[str, float],
+    equity: float,
+    equity_history: dict[pd.Timestamp, float] | None,
+    now: pd.Timestamp,
+) -> dict[str, float]:
+    """Symmetric: scale ALL target weights (held AND new) by the vol-target
+    exposure. No-op when ``vol_target`` is unset or there is nothing to scale."""
+    spec = config.vol_target
+    if spec is None or not weights:
+        return weights
+    equity_series = _build_equity_series(equity_history, equity, now)
+    exposure = _vol_target_exposure(spec, equity_series)
+    if exposure >= 1.0:
+        return weights
+    return {s: w * exposure for s, w in weights.items()}
+
+
+def _regime_signal_to_filter(sig: RegimeSignalSpec) -> tuple[str, dict[str, int]]:
+    """Map a regime signal to a registered filter name + params. Reuses the
+    filter routing (``dv.filter_series(symbol, ...)``) that ``index_above_ma``
+    uses, so regime signals are certified point-in-time by the same detector."""
+    if sig.kind == "above_ma":
+        return "index_above_ma", {"window": int(sig.params.get("window", 200))}
+    if sig.kind == "positive_return":
+        return "positive_trailing_return", {"window": int(sig.params.get("window", 252))}
+    raise ConfigError(f"unknown regime signal kind {sig.kind!r}")
+
+
+def _regime_fraction(spec: RegimeSpec, dv: DataView) -> float:
+    """``f = (# true signals) / (# signals)`` on the benchmark frame at ``now``.
+
+    Each signal's latest visible value (bars <= now, via ``filter_series``) is
+    read; a warmed-up-but-False or not-yet-warm signal both count as False.
+    """
+    n_true = 0
+    for sig in spec.signals:
+        name, params = _regime_signal_to_filter(sig)
+        if _latest_bool(dv.filter_series(spec.symbol, name, params)):
+            n_true += 1
+    return n_true / len(spec.signals)
+
+
+def _apply_regime(
+    config: StrategyConfig,
+    dv: DataView,
+    weights: dict[str, float],
+    current_holdings: dict[str, int],
+) -> dict[str, float]:
+    """Asymmetric: scale NEW entries only by ``f``; held names keep their
+    weight (never force-sold — they exit via exit_rank / normal mechanics).
+    ``f == 0`` zeroes every new entry (blocks all new buys)."""
+    spec = config.regime
+    if spec is None or not weights:
+        return weights
+    f = _regime_fraction(spec, dv)
+    if f >= 1.0:
+        return weights  # full risk-on: nothing to scale
+    held = set(current_holdings)
+    return {s: (w if s in held else w * f) for s, w in weights.items()}
 
 
 def _weights_to_shares(dv: DataView, weights: dict[str, float], equity: float) -> dict[str, int]:

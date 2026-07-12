@@ -137,6 +137,66 @@ class SizingSpec(BaseModel):
         return self
 
 
+class RegimeSignalSpec(BaseModel):
+    """One benchmark regime signal, evaluated on the RegimeSpec's benchmark frame.
+
+    ``kind`` selects a causal boolean indicator; ``params`` are its knobs:
+      * ``above_ma``        -> ``window`` (SMA length; default 200)
+      * ``positive_return`` -> ``window`` (trailing-return lookback in bars, e.g. 252)
+    """
+
+    kind: Literal["above_ma", "positive_return"]
+    params: dict[str, Any] = Field(default_factory=dict)
+
+    @model_validator(mode="after")
+    def _check_window(self) -> RegimeSignalSpec:
+        window = self.params.get("window")
+        if window is not None and (not isinstance(window, int) or window < 1):
+            raise ValueError(f"regime signal window must be a positive int, got {window!r}")
+        return self
+
+
+class RegimeSpec(BaseModel):
+    """Graded, asymmetric regime exposure (engine overlay, not a strategy).
+
+    At each rebalance the engine evaluates every ``signals`` entry on the
+    ``symbol`` benchmark frame (point-in-time, via the same routing the
+    ``index_above_ma`` regime filter uses) and forms the fraction
+    ``f = (# true) / (# signals)``. ``f`` scales NEW entries only — held
+    positions keep their normal target weight and are never force-sold
+    (they still exit via exit_rank / normal rebalance mechanics). ``f == 0``
+    blocks all new buys; the freed capital stays in cash.
+    """
+
+    symbol: str
+    signals: list[RegimeSignalSpec] = Field(min_length=1)
+    mode: Literal["graded_asymmetric"] = "graded_asymmetric"
+
+    @field_validator("symbol")
+    @classmethod
+    def _symbol_non_blank(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("regime benchmark symbol must be non-blank")
+        return v
+
+
+class VolTargetSpec(BaseModel):
+    """Portfolio-level volatility targeting (Barroso & Santa-Clara 2015).
+
+    At each rebalance the engine scales the WHOLE book's target weights by
+    ``exposure = min(max_exposure, target_annual_vol / sigma_hat)`` where
+    ``sigma_hat`` is the annualized std of the strategy's OWN net daily equity
+    returns over the trailing ``lookback_bars`` bars. Long-only cash overlay:
+    de-lever only (``max_exposure <= 1``), never lever up; remainder is cash.
+    During warm-up (< ``lookback_bars`` equity observations) exposure is
+    ``max_exposure`` (no scaling).
+    """
+
+    target_annual_vol: float = Field(gt=0)  # e.g. 0.12
+    lookback_bars: int = Field(default=126, ge=2)  # a vol needs >= 2 returns
+    max_exposure: float = Field(default=1.0, gt=0, le=1)  # de-lever only
+
+
 class RebalanceSpec(BaseModel):
     frequency: Literal["daily", "weekly", "monthly", "quarterly", "event"] = "monthly"
     # Nth trading day of the period (1-based; 0 used to silently mean the LAST
@@ -216,6 +276,11 @@ class StrategyConfig(BaseModel):
     filters: list[FilterSpec] = Field(default_factory=list)
     selection: SelectionSpec = Field(default_factory=SelectionSpec)
     sizing: SizingSpec = Field(default_factory=SizingSpec)
+    # portfolio-level exposure overlays (engine capabilities, not strategies).
+    # When both are set the vol-target exposure scales the whole book and the
+    # regime fraction additionally scales new entries — see strategy_runtime.
+    regime: RegimeSpec | None = None
+    vol_target: VolTargetSpec | None = None
     rebalance: RebalanceSpec = Field(default_factory=RebalanceSpec)
     overlays: list[OverlaySpec] = Field(default_factory=list)
     execution: ExecutionSpec = Field(default_factory=ExecutionSpec)

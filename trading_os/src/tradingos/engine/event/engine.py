@@ -328,6 +328,9 @@ class EventEngine:
                     ledger.equity(),
                     warnings,
                     run_end=calendar[-1],  # enables delisting exclusion (backtests only)
+                    # running NET equity for bars < t (this bar not recorded until
+                    # step 6); feeds the vol_target overlay's realized-vol estimate.
+                    equity_history=equity_records,
                 )
                 new_orders = [
                     o for o in delta_orders(targets, t) if o.symbol not in risk_exit_syms

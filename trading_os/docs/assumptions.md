@@ -211,6 +211,38 @@ When an assumption changes, update the owning code and this file together.
 - **Minute timeframe is stubbed** in the event engine
   (`NotImplementedError`); daily bars only for now.
 
+## Portfolio-level exposure overlays (engine/event/strategy_runtime.py)
+
+Two optional overlays scale target weights AT REBALANCE, after sizing and
+before integer-share conversion. Both are engine capabilities configured from
+`StrategyConfig` (`regime`, `vol_target`), not strategies, and both are causal
+(read only bars/equity <= the rebalance decision date `t`). Neither
+redistributes freed capital — a scaled-down weight simply leaves more in cash.
+
+- **Graded asymmetric regime (`RegimeSpec`, mode `graded_asymmetric`)**: each
+  configured signal is evaluated on the benchmark `symbol` frame via the same
+  point-in-time filter routing `index_above_ma` uses (`above_ma` ->
+  `index_above_ma` filter; `positive_return` -> `positive_trailing_return`
+  filter). `f = (# true) / (# signals)` (3 signals -> f in {0, ⅓, ⅔, 1}).
+  ASYMMETRIC: `f` scales NEW entries only (`weight * f`); held positions keep
+  their normal target weight and are never force-sold — they still exit via
+  exit_rank / normal rebalance mechanics. `f == 0` blocks all new buys.
+- **Portfolio vol target (`VolTargetSpec`, Barroso & Santa-Clara 2015)**:
+  `exposure = min(max_exposure, target_annual_vol / sigma_hat)`, `sigma_hat` =
+  annualized std (ddof=1, ×√252) of the strategy's OWN net daily equity returns
+  over the trailing `lookback_bars` (default 126) equity observations ending at
+  `t`. SYMMETRIC: scales ALL target weights (held and new). Warm-up (< 
+  `lookback_bars` observations) or degenerate vol -> `max_exposure` (no
+  scaling). Long-only cash overlay: de-lever only (`max_exposure <= 1`), never
+  levers up. Equity history is supplied by the event engine only.
+- **Stacking order**: vol_target applies FIRST (whole book, symmetric), then
+  regime `f` (new entries only, asymmetric). A new-entry final weight =
+  `base * exposure * f`; a held final weight = `base * exposure`.
+- **Vectorized engine and paper/live do NOT apply these overlays**: the
+  vectorized engine's inline weight path is unchanged, and paper/live pass no
+  equity history (vol_target stays in warm-up). These overlays are an
+  event-engine backtest capability (Batch 2 of the momentum research plan).
+
 ## Vectorized (fast) engine (engine/vectorized/engine.py)
 
 - The fast engine shares the event engine's calendar, rebalance schedule and
