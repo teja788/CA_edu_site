@@ -65,6 +65,9 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 53 | 10 | pure 1m momentum | dyn-1000 | +65.8% | −19.9% | 0.61 | reject confirmed, 1463 trades |
 | 54 | 10 | 12m-heavy challenger on 2019-2020 | dyn-1000 | +55.6% (2y) | −33.0% | 1.20 | FAILS OOW exam; rejected |
 | 55 | 11 US port | **b2d-ST on US (S&P1500 pool, SPY gate)** | US dyn-1000 | +176.5% | −31.0% | 0.88 | survives the hardest market; ~2x SPY CAGR |
+| 56 | 12 adaptive | GHM adaptive weights, 2021-26 | dyn-1000 | +274.8% | −26.6% | 1.32 | worse than champion; rejected |
+| 57 | 12 | GHM adaptive weights, 2019-20 | dyn-1000 | +58.7% (2y) | −31.1% | 1.29 | worse on both windows; rejected |
+| 58 | 13 survivorship | **b2d-ST 2019-20, delisted names restored** | dyn-1000+133 | +61.1% (2y) | −29.9% | 1.33 | bias measured: −1.5pp/2y — small |
 
 ## MARKED FOR FUTURE (owner, re-marked 2026-07-12 after supertrend sweep)
 
@@ -106,6 +109,19 @@ mechanism (fast ATR-adaptive throttle + asymmetric non-forced-selling),
 consistent direction across three configurations — this is the real
 deal as far as one price path can show. Pending owner: re-mark champions
 as b2d+ST (growth) and b2e+ST (defensive).
+
+Adaptive signal-speed weights REJECTED (rows 56-57): the theoretically
+best-motivated upgrade (12m-heavy when gate fully on, faster blend in
+transitions — GHM) loses to the champion's static 50/50 on BOTH windows.
+Sixth consecutive score-modification failure; the score is closed.
+
+Survivorship bias, MEASURED (row 58, expanded pool with 133 bhavcopy-
+recovered delisted names): the 2019-20 exam moves from +62.6%/−29.8%/1.35
+to +61.1%/−29.9%/1.33 — a 1.5pp haircut over two years. Why so small:
+momentum-with-vol-adjustment rarely ranks dying names into the top 25
+(they fade before they die), and the worst blowups (DHFL, JETAIRWAYS +17
+others) were CA-excluded from ingestion, so the true bias is somewhat
+larger than measured but same order. The COVID-exam conclusion stands.
 
 US port (row 55, runner `scripts/adhoc/us_b2dst.py`, isolated us_data/
 store, cost schedule `us_2026` = SEC+TAF only): the untouched champion
