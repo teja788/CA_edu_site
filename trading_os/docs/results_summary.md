@@ -46,6 +46,9 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 34 | 6 | b1d @ Rs 40k/position (capital Rs 10L) | dyn-1000 | +268.5% | −28.4% | 1.21 | Rs 10L → Rs 36.8L |
 | 35 | 6 | b2d @ Rs 40k/position (capital Rs 10L) | dyn-1000 | +276.7% | −24.8% | 1.31 | Rs 10L → Rs 37.7L |
 | 36 | 6 | b2e @ Rs 40k/position (capital Rs 10L) | dyn-1000 | +194.5% | −18.9% | 1.37 | Rs 10L → Rs 29.5L |
+| 37 | 7 tier-2 | b2d on mcap-ranked universe | mcap-1000 | +247.4% | −24.3% | 1.23 | worse; dropped |
+| 38 | 7 | b2d + churn-quintile veto | dyn-1000 | +207.1% | −24.8% | 1.17 | worse; dropped |
+| 39 | 7 | b2d + both | mcap-1000 | +183.4% | −25.1% | 1.12 | worst; dropped |
 
 ## MARKED FOR FUTURE (owner, 2026-07-12)
 
@@ -73,6 +76,17 @@ literature) does NOT transfer to this universe/window — pure residual
 ranking earns less than half the plain-momentum return at lower Sharpe even
 inside the champion structure. Dropped; plain + vol-adjusted price momentum
 stays the signal.
+
+Tier-2 verdict (rows 37-39, runner `scripts/adhoc/tier2_mcap_churn_b2d.py`):
+the mcap-ranked universe and the scaled-turnover (churn) veto — the
+literature's biggest documented effects — are NEGATIVE on top of b2d. Every
+variant lost 36-100pp of return for zero drawdown improvement. Best
+explanation: b2d's vol-adjusted score + graded gate already neutralize the
+hyped-junk channel these screens target, so the screens only remove the
+high-churn WINNERS (the MAZDOCK/BSE-type multibaggers that drove 2021-26);
+the published 19.4%-vs-8.5% split was measured on raw momentum without
+those defenses, on 2006-2025. Also mcap here is a non-PIT snapshot
+reconstruction. Champion remains b2d unchanged.
 
 Rs 10k/position sizing check (rows 32-33): both marked strategies survive
 retail sizing — b2d turns Rs 2.5L into Rs 9.16L (5y) vs the pro-rata Rs
