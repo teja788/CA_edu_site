@@ -1,0 +1,46 @@
+# Momentum campaign — consolidated results (updated 2026-07-12)
+
+All returns NET of brokerage + charges, ₹4cr portfolio, Jul 2021 – Jul 2026.
+Caveats on every row: delisted names absent from Kite data, price returns
+(no dividends), zerodha_2026 charge schedule applied to all years.
+Full detail: docs/backtesting_runbook.md (log), docs/momentum_research_notes.md
+(research + test plan), experiments DB families named in the runbook.
+
+m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
+
+| # | Phase | Variant | Universe | Net | MaxDD | Sharpe | Verdict |
+|---|---|---|---|---|---|---|---|
+| 1 | 1 SMA-family | v1 weekly SMA cross (per-stock) | N200 current | +119.8% | −14.2% | — | dropped |
+| 2 | 1 | v2 golden cross | N200 current | +135.5% | −13.1% | — | dropped |
+| 3 | 1 | v3 SMA band | N200 current | +120.9% | −14.6% | — | dropped |
+| 4 | 1 | v4 SMA + confirm | N200 current | +126.8% | −13.4% | — | dropped |
+| 5 | 1 | v5 wide ATR stop | N200 current | +96.6% | −15.4% | — | dropped |
+| 6 | 1 momentum | v6 momentum top-25 | N200 current | +389.6% | −26.0% | 1.57 | survivorship-inflated |
+| 7 | 1 | v7 = v6 + binary regime gate | N200 current | +320.5% | −20.1% | 1.67 | gate validated |
+| 8 | 1 | v8 = v6 + inverse-vol weights | N200 current | +345.6% | −25.3% | 1.55 | inv-vol dropped |
+| 9 | 2 universe | m2 | static-2020 top-200 | +183.2% | −26.8% | 1.04 | |
+| 10 | 2 | m2 | static-2020 top-500 | +133.6% | −34.5% | 0.81 | |
+| 11 | 2 | m2 | static-2020 top-1000 | +267.1% | −33.2% | 1.15 | |
+| 12 | 2 | m2 | static-2020 top-1224 | +242.6% | −33.2% | 1.09 | |
+| 13 | 2 | m2 | dynamic top-200 | +141.5% | −33.4% | 0.82 | dyn-200 = peak-chasing outlier |
+| 14 | 2 | m2 | dynamic top-500 | +245.7% | −37.6% | 1.08 | |
+| 15 | 2 | **m2 (BASELINE)** | **dynamic top-1000** | **+296.3%** | **−32.9%** | **1.22** | 1000 = sweet spot |
+| 16 | 2 | m2 | dynamic all (~1930) | +259.7% | −32.9% | 1.15 | dilutes past 1000 |
+| 17 | 3 batch 1 | b1a exit_rank 50 | dyn-1000 | +287.4% | −34.6% | 1.20 | buffer alone hurts |
+| 18 | 3 | b1b exit_rank 60 | dyn-1000 | +268.1% | −35.0% | 1.16 | dropped |
+| 19 | 3 | b1c NSE vol-adjusted score | dyn-1000 | +248.6% | −28.0% | 1.15 | DD tool |
+| 20 | 3 | b1d = b1c + exit 50 | dyn-1000 | +280.7% | −28.3% | 1.23 | balanced base |
+| 21 | 3 | b1e binary regime gate | dyn-1000 | +257.7% | −33.6% | 1.38 | v7 transfers |
+| 22 | 3 | b1f 12m listing seasoning | dyn-1000 | +285.5% | −32.9% | 1.20 | neutral, dropped |
+| 23 | 3 | b1g FIP smoothness blend | dyn-1000 | +245.2% | −39.1% | 1.12 | fails, dropped |
+| 24 | 4 batch 2 | b2a = m2 + graded gate | dyn-1000 | +287.6% | −33.6% | 1.27 | +30pp vs binary gate |
+| 25 | 4 | b2b = m2 + vol target 12% | dyn-1000 | +205.0% | −23.5% | 1.33 | DD tool, return cost |
+| 26 | 4 | b2c = m2 + both | dyn-1000 | +207.6% | −23.8% | 1.38 | |
+| 27 | 4 | **b2d = b1d + graded gate (CHAMPION)** | dyn-1000 | **+283.4%** | **−24.8%** | **1.32** | ~+30.7%/yr net |
+| 28 | 4 | b2e = b1d + both (DEFENSIVE) | dyn-1000 | +196.5% | −19.0% | 1.38 | ~+24%/yr net |
+
+Settled negatives (multiple tests each): per-position ATR/chandelier stops
+(0/4), per-stock SMA gates (0/5 vs m2), inverse-vol weighting, FIP blend,
+exit-buffer widening without vol-adjusted scoring, weekly rebalance.
+
+Batch 3 (residual momentum vs NIFTYBEES) pending — rows to be appended.
