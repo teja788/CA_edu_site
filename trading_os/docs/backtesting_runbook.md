@@ -202,3 +202,27 @@ binary regime gate's Sharpe gain transfers from NIFTY200 to dyn-1000
 (1.22→1.38) and remains the strongest single overlay — the graded/asymmetric
 version (Batch 2) starts from a confirmed base. FIP and 12m seasoning:
 dropped.
+
+Batch 2 (Jul 12, exposure overlays via new engine sections `regime` /
+`vol_target`, commit e36e320; runner `scripts/adhoc/batch2_m2_overlays.py`,
+families `adhoc_b2*_nse1000dyn`; graded gate = NIFTYBEES 100SMA + 200SMA +
+12m return -> f∈{0,⅓,⅔,1} on NEW buys only; vol target = 12%/126d de-lever
+only):
+
+| Variant | Net | DD | Sharpe | Note |
+|---|---|---|---|---|
+| b2a m2 + graded gate | +287.6% | −33.6% | 1.27 | vs binary gate +257.7%/1.38: asymmetry preserves return (+30pp), gives up Sharpe |
+| b2b m2 + vol target | +205.0% | −23.5% | 1.33 | classic long-only vol targeting: −9.4pp DD for −91pp return |
+| b2c m2 + both | +207.6% | −23.8% | **1.38** | matches binary gate's Sharpe at 10pp less DD |
+| b2d b1d + graded gate | **+283.4%** | **−24.8%** | 1.32 | **best all-rounder**: near-baseline return, −8.1pp DD, Sharpe 1.22→1.32 |
+| b2e b1d + both | +196.5% | **−19.0%** | 1.38 | max-defense profile: ~24%/yr net at DD −19% |
+
+Takeaways: the graded asymmetric gate does exactly what GHM promise — b2a
+keeps +30pp more return than the binary gate by never force-selling, at a
+smaller Sharpe gain; vol targeting is the drawdown tool (every vol-target
+variant lands DD −19 to −24%). The composition matters more than any single
+overlay: vol-adjusted score + exit 50 + graded gate (b2d) is the new
+implementable base case (~+30.7%/yr net, Sharpe 1.32, DD −24.8%), and
+adding vol targeting (b2e) offers a defensive alternative at ~24%/yr net,
+DD −19.0% for capital that can't stomach −25%. All standing caveats apply
+(no delisted names, price returns, 2026 charge schedule throughout).
