@@ -100,6 +100,24 @@ When an assumption changes, update the owning code and this file together.
 - **Delisting exit**: a held symbol whose data ends mid-backtest is exited
   at its last traded close minus a configurable haircut, default 20%
   (`config/schemas.py::DelistingSpec`, event engine).
+- **Historical market cap uses a CURRENT share-count snapshot, not a
+  point-in-time one** (`data/shares.py`, `SharesOutstanding` in
+  `data/actions.py`). The `SharesOutstanding` table stores current
+  shares-outstanding snapshots `(symbol, as_of, shares, source)`, latest
+  `as_of` per symbol winning; historical market cap is reconstructed as
+  `mcap(t) = latest_snapshot_shares × adjusted_close(t)`. This is CORRECT
+  through splits/bonuses because the store's Kite prices are back-adjusted: a
+  split multiplies the share count and divides the adjusted price by the same
+  factor, so the two cancel (the `mcap_series` split-invariance identity —
+  halving the adjusted close while doubling `shares` yields an identical
+  series). The residual error is genuine ISSUANCE DRIFT (QIPs, buybacks,
+  ESOPs, rights) between snapshot dates — accepted, and it means these are
+  NOT point-in-time share counts. The intended consumers are therefore
+  DECILE / QUANTILE screens (universe construction, the `scaled_turnover`
+  churn screen = rolling-median `close×volume` ÷ mcap), NOT exact-value
+  logic. `mcap_panel` / `scaled_turnover_panel` OMIT symbols with no
+  snapshot entirely (no zero/NaN-filled placeholder column); both are causal
+  (element-wise product / trailing rolling window only).
 
 ## Universe / survivorship bias
 

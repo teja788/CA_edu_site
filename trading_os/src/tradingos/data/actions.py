@@ -116,6 +116,28 @@ class Dividend(SQLModel, table=True):
     amount: float  # per share, rupees
 
 
+class SharesOutstanding(SQLModel, table=True):
+    """A CURRENT shares-outstanding snapshot for one symbol.
+
+    NOT a point-in-time share count: ``as_of`` records when the snapshot was
+    taken (from a filing / data vendor), and one-or-more rows may exist per
+    symbol (distinct ``as_of`` dates form a coarse history; the latest ``as_of``
+    is the one consumers use). Historical market cap is reconstructed as
+    ``latest_snapshot_shares × adjusted close(t)`` — correct through
+    splits/bonuses because the store's Kite prices are back-adjusted (a split
+    multiplies shares and divides adjusted price by the same factor, so they
+    cancel), with residual error only from genuine issuance drift (QIPs,
+    buybacks, ESOPs, rights) between snapshot dates. Intended for decile /
+    quantile screens, not exact-value logic. See docs/assumptions.md.
+    """
+
+    id: int | None = Field(default=None, primary_key=True)
+    symbol: str = Field(index=True)
+    as_of: date
+    shares: int  # total shares outstanding (count), must be > 0
+    source: str = ""
+
+
 # --------------------------------------------------------------------------- #
 # CSV import (validation + clear errors + idempotency)
 # --------------------------------------------------------------------------- #
@@ -239,6 +261,65 @@ def import_dividends_csv(path: Path | str, settings: Settings) -> int:
         session.commit()
     logger.info("imported %d dividend(s) from %s", inserted, path)
     return inserted
+
+
+def import_shares_csv(path: Path | str, settings: Settings) -> dict[str, int]:
+    """Import shares-outstanding snapshots from a CSV.
+
+    Columns: ``symbol,shares,as_of,source``. Upsert semantics on the
+    (symbol, as_of) key: an existing row for that pair is REPLACED (shares +
+    source overwritten), while distinct ``as_of`` dates for a symbol are kept
+    as separate rows (a coarse history). Rows that fail validation — empty
+    symbol, unparseable ``as_of`` or ``shares``, or ``shares <= 0`` — are
+    skipped (never abort the batch). Returns counts
+    ``{"imported": n, "replaced": n, "skipped": n}``.
+
+    Missing required columns is still a hard ``DataError`` (structural), matching
+    the other importers.
+    """
+    rows = _read_rows(path, required={"symbol", "shares", "as_of"})
+    imported = replaced = skipped = 0
+    with meta_session(settings.meta_db_path) as session:
+        existing: dict[tuple[str, date], SharesOutstanding] = {
+            (r.symbol, r.as_of): r for r in session.exec(select(SharesOutstanding)).all()
+        }
+        for row in rows:
+            symbol = (row.get("symbol") or "").strip()
+            if not symbol:
+                skipped += 1
+                continue
+            try:
+                as_of = date.fromisoformat((row.get("as_of") or "").strip())
+            except ValueError:
+                skipped += 1
+                continue
+            try:
+                shares = int((row.get("shares") or "").strip())
+            except ValueError:
+                skipped += 1
+                continue
+            if shares <= 0:
+                skipped += 1
+                continue
+            source = (row.get("source") or "").strip()
+            key = (symbol, as_of)
+            found = existing.get(key)
+            if found is not None:
+                found.shares = shares
+                found.source = source
+                session.add(found)
+                replaced += 1
+            else:
+                created = SharesOutstanding(
+                    symbol=symbol, as_of=as_of, shares=shares, source=source
+                )
+                session.add(created)
+                existing[key] = created
+                imported += 1
+        session.commit()
+    counts = {"imported": imported, "replaced": replaced, "skipped": skipped}
+    logger.info("imported shares from %s: %s", path, counts)
+    return counts
 
 
 # --------------------------------------------------------------------------- #

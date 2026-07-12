@@ -442,6 +442,41 @@ def test_import_dividends_missing_file_is_clean_failure(_cli_settings: Settings)
     assert "Traceback" not in result.output
 
 
+def test_import_shares_reports_counts(_cli_settings: Settings, tmp_path: Path) -> None:
+    csv_path = tmp_path / "shares.csv"
+    csv_path.write_text(
+        "symbol,shares,as_of,source\n"
+        "AAA,1000,2020-01-01,filing\n"
+        "BBB,2000,2020-01-01,vendor\n"
+        "CCC,0,2020-01-01,invalid\n"  # skipped: shares <= 0
+    )
+
+    result = runner.invoke(cli_main.app, ["data", "import-shares", str(csv_path)])
+
+    assert result.exit_code == 0, result.output
+    assert "imported 2, replaced 0, skipped 1 row(s)" in result.output
+
+
+def test_import_shares_upsert_reports_replaced(_cli_settings: Settings, tmp_path: Path) -> None:
+    csv_path = tmp_path / "shares.csv"
+    csv_path.write_text("symbol,shares,as_of,source\nAAA,1000,2020-01-01,filing\n")
+    runner.invoke(cli_main.app, ["data", "import-shares", str(csv_path)])
+
+    csv_path.write_text("symbol,shares,as_of,source\nAAA,1500,2020-01-01,corrected\n")
+    result = runner.invoke(cli_main.app, ["data", "import-shares", str(csv_path)])
+
+    assert result.exit_code == 0, result.output
+    assert "imported 0, replaced 1, skipped 0 row(s)" in result.output
+
+
+def test_import_shares_missing_file_is_clean_failure(_cli_settings: Settings) -> None:
+    result = runner.invoke(cli_main.app, ["data", "import-shares", "does_not_exist.csv"])
+
+    assert result.exit_code == 1
+    assert "error:" in result.output
+    assert "Traceback" not in result.output
+
+
 # ---------------------------------------------------------------------------
 # data adjust
 # ---------------------------------------------------------------------------

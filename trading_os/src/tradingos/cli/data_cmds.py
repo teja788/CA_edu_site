@@ -244,6 +244,32 @@ def import_dividends(
     typer.echo(f"imported {n} row(s)")
 
 
+@app.command("import-shares")
+def import_shares(
+    csv_path: Annotated[Path, typer.Argument(help="Path to a shares-outstanding CSV.")],
+) -> None:
+    """Import shares-outstanding snapshots (symbol,shares,as_of,source).
+
+    Upsert on (symbol, as_of): an existing snapshot for that pair is replaced,
+    distinct as_of dates are kept as history. Rows with an empty symbol, an
+    unparseable as_of/shares, or shares <= 0 are skipped and counted.
+    """
+    from tradingos.config.settings import get_settings
+    from tradingos.core.errors import DataError
+    from tradingos.data.actions import import_shares_csv
+
+    settings = get_settings()
+    try:
+        counts = import_shares_csv(csv_path, settings)
+    except DataError as exc:
+        _fail(str(exc))
+        return
+    typer.echo(
+        f"imported {counts['imported']}, replaced {counts['replaced']}, "
+        f"skipped {counts['skipped']} row(s)"
+    )
+
+
 # ---------------------------------------------------------------------------
 # data adjust
 # ---------------------------------------------------------------------------
