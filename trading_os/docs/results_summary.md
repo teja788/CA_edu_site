@@ -55,6 +55,14 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 43 | 8 | b1d + supertrend-ONLY gate (binary) | dyn-1000 | +265.8% | −22.6% | 1.36 | vs b1d: DD −5.7pp, Sharpe 1.23→1.36 |
 | 44 | 8 | b2e + supertrend 4th gate signal | dyn-1000 | +203.7% | **−18.8%** | **1.41** | beats b2e on all three |
 | 45 | 9 out-of-window | **b2d-ST on 2019-2020 (COVID exam)** | dyn-1000 | +62.6% (2y) | −29.8% | **1.35** | survivors-only upper bound; see note |
+| 46 | 10 window sweep | b2d-ST, skip 21→0 | dyn-1000 | +191.2% | −27.6% | 1.05 | skip-month EARNS its keep in India too |
+| 47 | 10 | b2d-ST, skip 21→10 | dyn-1000 | +221.3% | −26.2% | 1.16 | dropped |
+| 48 | 10 | b2d-ST, 6m-heavy 70/30 | dyn-1000 | +238.2% | −23.8% | 1.22 | dropped |
+| 49 | 10 | **b2d-ST, 12m-heavy 30/70** | dyn-1000 | **+308.9%** | −24.8% | **1.37** | challenger; OOW validation pending |
+| 50 | 10 | b2d-ST + 3m component | dyn-1000 | +265.4% | −24.4% | 1.30 | dropped |
+| 51 | 10 | b2d-ST + 9m component | dyn-1000 | +286.6% | −23.9% | 1.33 | dropped |
+| 52 | 10 | b2d-ST, 9m replaces 6m | dyn-1000 | +267.9% | −25.9% | 1.29 | dropped |
+| 53 | 10 | pure 1m momentum | dyn-1000 | +65.8% | −19.9% | 0.61 | reject confirmed, 1463 trades |
 
 ## MARKED FOR FUTURE (owner, re-marked 2026-07-12 after supertrend sweep)
 
@@ -96,6 +104,16 @@ mechanism (fast ATR-adaptive throttle + asymmetric non-forced-selling),
 consistent direction across three configurations — this is the real
 deal as far as one price path can show. Pending owner: re-mark champions
 as b2d+ST (growth) and b2e+ST (defensive).
+
+Window-geometry sweep (rows 46-53, runner
+`scripts/adhoc/window_sweep_b2dst.py`): a strikingly MONOTONE pattern —
+every change that speeds the signal up (drop/halve the skip, 6m-heavy,
++3m, pure 1m) hurts, every slowdown helps; 12m-heavy 30/70 weighting is
+the sweep winner (+308.9%/−24.8%/1.37, +17pp return and +0.02 Sharpe over
+the champion at −0.5pp DD). The skip-month question is settled AGAINST
+the NSE-index convention: skip 0 loses 100pp — India's 1-month reversal
+is alive in this universe. 12m-heavy is a CHALLENGER, not champion, until
+it passes the 2019-2020 out-of-window exam (running).
 
 Out-of-window COVID exam (row 45, runner `scripts/adhoc/b2dst_2019_2020.py`
 after a 2017-07 Kite backfill of 722k rows): the champion earned +9.0% in
