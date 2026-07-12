@@ -108,6 +108,18 @@ When an assumption changes, update the owning code and this file together.
   survivorship-bias warning** in `BacktestResult.warnings`
   (`engine/base.py::StaticUniverseResolver`); results with that warning
   overstate performance and must not be trusted for go-live decisions.
+- Dynamic traded-value universes (`universe.dynamic_top_n`,
+  `data/universe.py::DynamicTopNResolver`): membership on date D is the
+  top-N of the explicit `symbols` pool by trailing `rank_lookback`-bar
+  (default 126) rolling median of close*volume, computed from bars <= D
+  only (min_periods = the full window, so a name is unrankable until
+  seasoned); `min_history` (default = `rank_lookback`) additionally masks
+  a name until it has that many total bars — a listing-age gate akin to
+  index seasoning rules. Extra frames in MarketData that are not in the
+  pool (e.g. a benchmark ETF loaded for regime signals) never enter the
+  ranking. Caveat: the POOL itself is a present-day symbol list, so names
+  delisted before the data snapshot can never rank — a smaller but
+  non-zero survivorship bias remains versus a true PIT membership table.
 
 ## Costs (costs/model.py, costs/schedules/*.yaml)
 

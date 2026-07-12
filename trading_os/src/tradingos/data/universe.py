@@ -159,6 +159,79 @@ def delisting_date(symbol: str, settings: Settings) -> date | None:
 
 
 # --------------------------------------------------------------------------- #
+# Dynamic traded-value resolver
+# --------------------------------------------------------------------------- #
+class DynamicTopNResolver:
+    """Point-in-time universe by trailing traded value, ranked over a POOL.
+
+    The candidate pool is the explicit ``symbols`` list (never the extra frames
+    a ``MarketData`` may carry for regime/benchmark signals). For each pool
+    symbol the rank metric is ``(close * volume)`` as a rolling median over
+    ``rank_lookback`` bars (``min_periods = rank_lookback`` -> NaN until
+    seasoned). An optional ``min_history`` (defaults to ``rank_lookback``) masks
+    the metric to NaN until the symbol has that many bars of history — a longer
+    listing-age gate than the ranking window, akin to real index seasoning.
+
+    ``membership(on)`` takes the last panel row with index <= ``on``, drops NaNs,
+    keeps the top ``top_n`` by value, and returns that as a SORTED symbol list
+    (empty when there is no row yet). Results are cached per date. This resolver
+    ranks only; the ``min_median_traded_value`` liquidity threshold and delisting
+    / data-availability exclusion are applied downstream (in the engine's
+    strategy runtime), exactly as for any other resolver.
+
+    Look-ahead safety: every cell in the panel is a trailing aggregate ending at
+    its own row, and ``membership`` only ever reads rows dated <= ``on``, so bars
+    after ``on`` cannot change the answer.
+    """
+
+    def __init__(
+        self,
+        data: MarketData,
+        top_n: int,
+        symbols: list[str],
+        rank_lookback: int = 126,
+        min_history: int | None = None,
+    ) -> None:
+        if min_history is None:
+            min_history = rank_lookback
+        available = set(data.symbols)
+        panel: dict[str, pd.Series] = {}
+        for sym in symbols:
+            if sym not in available:
+                continue  # can't rank what we have no bars for (warned downstream)
+            f = data.full_frame(sym)
+            metric = (f["close"] * f["volume"]).rolling(
+                rank_lookback, min_periods=rank_lookback
+            ).median()
+            if min_history > rank_lookback:
+                metric = metric.where(f["close"].expanding().count() >= min_history)
+            panel[sym] = metric
+        self._panel = pd.DataFrame(panel).sort_index()
+        self._top_n = top_n
+        self._cache: dict[date, list[str]] = {}
+        self._warnings: list[str] = []
+
+    @property
+    def warnings(self) -> list[str]:
+        return self._warnings
+
+    def membership(self, on: date) -> list[str]:
+        if on not in self._cache:
+            rows = self._panel.loc[: pd.Timestamp(on)]
+            if rows.empty:
+                self._cache[on] = []
+            else:
+                row = rows.iloc[-1].dropna()
+                self._cache[on] = sorted(
+                    row.sort_values(ascending=False).head(self._top_n).index
+                )
+        return self._cache[on]
+
+    def resolve(self, spec: UniverseSpec, on: date, data: MarketData) -> list[str]:
+        return self.membership(on)
+
+
+# --------------------------------------------------------------------------- #
 # Resolver
 # --------------------------------------------------------------------------- #
 class PITUniverseResolver:
@@ -179,6 +252,8 @@ class PITUniverseResolver:
         # coverage/delisting facts never change within one backtest.
         self._coverage_cache: dict[str, tuple[date, date] | None] = {}
         self._delisting_cache: dict[str, date | None] = {}
+        # Lazily built once per run when the spec asks for a dynamic universe.
+        self._dynamic: DynamicTopNResolver | None = None
 
     @property
     def warnings(self) -> list[str]:
@@ -190,6 +265,22 @@ class PITUniverseResolver:
             logger.warning(msg)
 
     def resolve(self, spec: UniverseSpec, on: date, data: MarketData) -> list[str]:
+        # (0) dynamic traded-value universe: rank the pool and return the top-N
+        # membership as-of `on`. The pool, seasoning, and look-ahead safety live
+        # in DynamicTopNResolver; delisting/data/liquidity filtering happens
+        # downstream in the strategy runtime (same as any resolver), so we do
+        # NOT run the point-in-time steps below for this branch.
+        if spec.dynamic_top_n is not None:
+            if self._dynamic is None:
+                self._dynamic = DynamicTopNResolver(
+                    data,
+                    spec.dynamic_top_n,
+                    list(spec.symbols or []),
+                    rank_lookback=spec.rank_lookback,
+                    min_history=spec.min_history,
+                )
+            return self._dynamic.resolve(spec, on, data)
+
         # (1) explicit symbol list overrides point-in-time membership.
         if spec.symbols is not None:
             candidates: list[str] = list(spec.symbols)

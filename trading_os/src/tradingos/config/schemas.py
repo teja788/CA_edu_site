@@ -15,6 +15,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
+from tradingos.core.errors import ConfigError
 from tradingos.core.models import Product, Timeframe
 
 
@@ -34,6 +35,20 @@ class UniverseSpec(BaseModel):
     # liquidity filter: minimum median daily traded value in rupees over lookback
     min_median_traded_value: float | None = Field(default=None, gt=0)
     liquidity_lookback_days: int = Field(default=63, ge=1)
+    # Dynamic traded-value universe: rank the `symbols` POOL by trailing median
+    # close*volume each rebalance and keep the top `dynamic_top_n`. This is a
+    # point-in-time-safe alternative to index membership for pools that have no
+    # historical constituent table (e.g. a broad NSE list). It composes with
+    # `min_median_traded_value` (that threshold is applied downstream, as usual)
+    # and is MUTUALLY EXCLUSIVE with index/point-in-time membership — see
+    # `_check_dynamic`. When set, `symbols` is the candidate pool.
+    dynamic_top_n: int | None = Field(default=None, ge=1)
+    # trailing window (bars) for the rank metric; also the seasoning minimum.
+    rank_lookback: int = Field(default=126, ge=1)
+    # listing-age gate: the rank metric is masked to NaN until a symbol has this
+    # many bars of history. Defaults to `rank_lookback` when unset; if set it
+    # must be >= `rank_lookback` (a shorter gate would be a no-op).
+    min_history: int | None = Field(default=None, ge=1)
 
     @field_validator("index")
     @classmethod
@@ -41,6 +56,34 @@ class UniverseSpec(BaseModel):
         if not v.strip():
             raise ValueError("universe index must be non-blank")
         return v
+
+    @model_validator(mode="after")
+    def _check_dynamic(self) -> UniverseSpec:
+        """Gate the dynamic-universe knobs (raises ConfigError on bad combos).
+
+        `dynamic_top_n` derives candidates by ranking an explicit pool, so it
+        needs `symbols` and cannot also resolve from an index / point-in-time
+        membership table. `min_history` must not undercut `rank_lookback`.
+        """
+        if self.dynamic_top_n is None:
+            return self  # the other knobs are inert without dynamic_top_n
+        if self.symbols is None:
+            raise ConfigError(
+                "universe.dynamic_top_n requires an explicit `symbols` pool to "
+                "rank; it cannot derive candidates from index membership"
+            )
+        if self.point_in_time:
+            raise ConfigError(
+                "universe.dynamic_top_n is incompatible with point-in-time index "
+                "membership; set point_in_time: false (the dynamic rank IS the "
+                "point-in-time universe here)"
+            )
+        if self.min_history is not None and self.min_history < self.rank_lookback:
+            raise ConfigError(
+                f"universe.min_history ({self.min_history}) must be >= "
+                f"rank_lookback ({self.rank_lookback})"
+            )
+        return self
 
 
 class SignalSpec(BaseModel):
