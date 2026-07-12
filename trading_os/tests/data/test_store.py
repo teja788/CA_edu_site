@@ -230,6 +230,55 @@ class TestLoadMarketData:
         assert md.full_frame("TEST")["close"].iloc[0] == pytest.approx(100.5)
 
 
+class TestLoadMarketDataFailsLoudOnEmptyResult:
+    """A non-empty request that finds ZERO loadable symbols is (almost
+    always) a misconfigured store -- e.g. a script launched from the wrong
+    cwd that silently resolved an empty data directory -- not a legitimate
+    empty universe, so it raises DataError instead of the historical
+    "warn per symbol and return an empty MarketData" behavior. A PARTIAL
+    hit stays a warning (covered by TestLoadMarketData above)."""
+
+    def test_empty_store_non_empty_request_raises_data_error(self, settings) -> None:
+        store = BarStore(settings)  # nothing ever written
+        with pytest.raises(DataError, match="found 0 of 2 requested symbol"):
+            store.load_market_data(["AAA", "BBB"], Timeframe.DAY, adjusted=True)
+
+    def test_error_message_includes_store_path_and_hints(self, settings) -> None:
+        store = BarStore(settings)
+        with pytest.raises(DataError) as excinfo:
+            store.load_market_data(["AAA"], Timeframe.DAY, adjusted=True)
+        message = str(excinfo.value)
+        assert str(settings.raw_dir / Timeframe.DAY.value) in message
+        assert "data sync" in message
+        assert "cwd" in message or ".env" in message
+
+    def test_populated_store_but_none_of_requested_symbols_present_raises(self, settings) -> None:
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.DAY, bars())  # store is non-empty...
+        with pytest.raises(DataError, match="found 0 of 2 requested symbol"):
+            store.load_market_data(["AAA", "BBB"], Timeframe.DAY, adjusted=True)  # ...but not for these
+
+    def test_partial_hit_still_only_warns_not_raises(self, settings, caplog) -> None:
+        store = BarStore(settings)
+        store.write_raw("TEST", Timeframe.DAY, bars())
+        with caplog.at_level(logging.WARNING, logger="tradingos.data.store"):
+            md = store.load_market_data(["TEST", "GHOST"], Timeframe.DAY, adjusted=True)
+        assert md.symbols == ["TEST"]
+        assert "GHOST" in caplog.text
+
+    def test_empty_symbols_request_does_not_raise(self, settings) -> None:
+        store = BarStore(settings)
+        md = store.load_market_data([], Timeframe.DAY, adjusted=True)
+        assert md.symbols == []
+
+    def test_empty_store_constructor_and_symbols_stay_valid(self, settings) -> None:
+        """Hard requirement: the emptiness check lives only in
+        load_market_data -- an empty store must remain usable for
+        first-ever `data sync` (constructor + symbols() never raise)."""
+        store = BarStore(settings)
+        assert store.symbols(Timeframe.DAY) == []
+
+
 class TestTotalReturnCloseColumn:
     """`load_market_data` derives `total_return_close` for daily frames with
     dividend records (audit D8): computed at load time only, never persisted."""

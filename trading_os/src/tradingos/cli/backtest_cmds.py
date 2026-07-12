@@ -104,13 +104,16 @@ def run(
     if not load_symbols:
         _fail("no symbols to load: give --symbols, an explicit universe, or sync data first")
 
-    data = store.load_market_data(
-        load_symbols,
-        config.timeframe,
-        start=None,
-        end=None,
-        adjusted=adjusted,
-    )
+    try:
+        data = store.load_market_data(
+            load_symbols,
+            config.timeframe,
+            start=None,
+            end=None,
+            adjusted=adjusted,
+        )
+    except TradingOSError as exc:
+        _fail(str(exc))
     if not data.symbols:
         _fail(
             f"no {config.timeframe.value} data found for symbols "

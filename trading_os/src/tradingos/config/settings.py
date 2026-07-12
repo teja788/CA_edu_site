@@ -7,14 +7,53 @@ from __future__ import annotations
 
 from functools import lru_cache
 from pathlib import Path
+from typing import Any
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+def _resolve_env_file() -> str | Path:
+    """Locate the ``.env`` to load, tolerant of the CLI being launched from a
+    subdirectory (e.g. ``scripts/adhoc/``) rather than the project root.
+
+    Precedence (highest first): explicit ``TOS_*`` environment variables
+    (pydantic-settings always prefers real env vars over any dotenv value, so
+    that ordering falls out of the source priority and needs no help here) >
+    a ``.env`` in the current working directory (pydantic-settings' existing,
+    cwd-relative default -- unchanged, and what every normal "run from repo
+    root" invocation already hits) > a ``.env`` at the project root, found by
+    walking up from cwd to the nearest ancestor containing ``pyproject.toml``.
+
+    Returns a bare ``".env"`` (resolved by pydantic-settings relative to cwd,
+    same as the old hardcoded default) when cwd already has one, or when no
+    project root / project-root .env can be found -- i.e. this only ever
+    *adds* a fallback, never changes behavior for a cwd that already has a
+    ``.env`` (including the common case of running from the project root).
+    """
+    cwd = Path.cwd()
+    if (cwd / ".env").exists():
+        return ".env"
+
+    for parent in (cwd, *cwd.parents):
+        if (parent / "pyproject.toml").exists():
+            root_env = parent / ".env"
+            return root_env if root_env.exists() else ".env"
+
+    return ".env"
 
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env", env_file_encoding="utf-8", env_prefix="TOS_", extra="ignore"
     )
+
+    def __init__(self, **data: Any) -> None:
+        # Only compute a resolved default when the caller didn't pass
+        # `_env_file` themselves -- tests pass `_env_file=None` to opt out of
+        # dotenv loading entirely, and that must keep working unchanged.
+        if "_env_file" not in data:
+            data["_env_file"] = _resolve_env_file()
+        super().__init__(**data)
 
     # --- paths (all relative to project root by default) ---
     data_dir: Path = Path("data")

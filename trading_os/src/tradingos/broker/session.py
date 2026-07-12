@@ -167,8 +167,11 @@ class BaseSessionRunner(abc.ABC, Generic[BrokerT]):
             if routed:
                 load_symbols.add(str(routed))
 
+        # strict=False: an empty historical store is legitimate for a live
+        # session — bars are only indicator warm-up; quotes come from the feed.
         return bar_store.load_market_data(
-            sorted(load_symbols), self._config.timeframe, start=None, end=None, adjusted=True
+            sorted(load_symbols), self._config.timeframe, start=None, end=None,
+            adjusted=True, strict=False,
         )
 
     def _evaluate_targets(

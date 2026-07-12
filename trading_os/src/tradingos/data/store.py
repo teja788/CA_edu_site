@@ -341,6 +341,7 @@ class BarStore:
         start: datetime | None = None,
         end: datetime | None = None,
         adjusted: bool = True,
+        strict: bool = True,
     ) -> MarketData:
         """Load per-symbol pandas frames (tz-naive DatetimeIndex named "ts",
         columns open/high/low/close/volume) into a MarketData container.
@@ -365,6 +366,17 @@ class BarStore:
         computed here at load time only — never written back to raw or
         adjusted storage (hard rule 8) — and is simply absent when no
         dividends are recorded.
+
+        Fails loudly when a non-empty ``symbols`` request yields ZERO
+        loadable symbols (every one skipped) — this is almost always a
+        misconfigured store (e.g. a script launched from a subdirectory that
+        silently resolved a different/empty data directory) rather than a
+        legitimately empty universe, and left unchecked it surfaces much
+        later as a confusing "empty universe" error deep in strategy/engine
+        code. A PARTIAL hit (some symbols found, some missing) stays a
+        per-symbol warning, unchanged. Paper/live sessions pass
+        ``strict=False``: an empty historical store is legitimate there
+        (bars are only indicator warm-up; quotes arrive from the live feed).
         """
         frames: dict[str, pd.DataFrame] = {}
         for sym in symbols:
@@ -387,6 +399,17 @@ class BarStore:
             if timeframe == Timeframe.DAY:
                 self._attach_total_return_close(sym, pandas_df)
             frames[sym] = pandas_df
+
+        if strict and symbols and not frames:
+            store_path = self._settings.raw_dir / timeframe.value
+            raise DataError(
+                f"load_market_data found 0 of {len(symbols)} requested symbol(s) "
+                f"({timeframe.value}) in the store at {store_path}; if this is "
+                "unexpected, check that you're running from the project root (or that "
+                "TOS_DATA_DIR / .env resolves to the right data directory -- a wrong "
+                "cwd is a common cause of an empty-looking store) and that data has "
+                "actually been ingested (`platform data sync`)"
+            )
 
         return MarketData(
             frames=frames,
