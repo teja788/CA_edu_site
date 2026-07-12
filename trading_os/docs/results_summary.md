@@ -233,3 +233,32 @@ and assume no other income offsets.
   → 302d) still Sharpe 0.95. Graceful degradation, no knife-edge. Note:
   no neighbor beats base — champion sits at its neighborhood's top, mild
   in-sample-peak evidence, acceptable given the OOW/US validations.
+
+## Walk-forward (process-level validation, owner-approved evening run)
+
+Rolling 3y-train / 1y-test, 12-combo sweep (weights x gate x exit_rank),
+6 windows, test segments tile Feb-2021..Jul-2026 — every test year unseen
+by its own selection. Runner `scripts/adhoc/b2dst_walkforward.py`.
+
+**Stitched OOS curve: +532% total, CAGR 41.4%, Sharpe 1.65, maxDD −25.5%.**
+
+| Test year | Picked | OOS Sharpe | OOS DD |
+|---|---|---|---|
+| 2021-22 | no gate, 50/50, exit 50 | 3.20 | −9.3% |
+| 2022-23 | no gate, 30/70 | −0.19 | −25.5% |
+| 2023-24 | ST4 gate, 30/70, exit 35 | 4.33 | −8.6% |
+| 2024-25 | ST4 gate, 30/70, exit 50 | 0.56 | −21.7% |
+| 2025-26 | ST4 gate, 30/70, exit 50 | 1.00 | −12.1% |
+| 2026 H1 | ST4 gate, 30/70, exit 50 | 2.96 | −5.2% |
+
+Reads: (1) the LAST FOUR windows independently rediscover the supertrend
+4-signal gate — the champion's core design is process-stable, not
+window-fit; (2) the one bad year (2022-23) came from the discipline
+picking an aggressive ungated 12m-heavy config off the 2021 bull train
+window — the gate's absence, not the signal, caused the OOS max DD;
+(3) windows prefer 30/70 weights WITH the gate — consistent with the
+adaptive-weights intuition even though static-30/70-everywhere failed
+the 2019-20 exam; (4) OOS Sharpe 1.65 > the fixed champion's 1.35: the
+selection discipline itself would have been worth running live. This
+completes the dossier: config-level (2 windows + US + survivorship),
+statistical (DSR/MC/perturbation), and process-level validation all pass.
