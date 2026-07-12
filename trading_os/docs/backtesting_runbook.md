@@ -125,6 +125,12 @@ Window Jul 2021 – Jul 2026, ₹2L per stock, current constituents:
 | — N=500 | +133.6%, DD −34.5%, Sharpe 0.81 | — |
 | — N=1000 | +267.1%, DD −33.2%, Sharpe 1.15 | — |
 | — N=1224 (all Kite names with full 2020 history; "2000/4000" not constructible) | +242.6%, DD −33.2%, Sharpe 1.09 | — |
+| DYNAMIC top-200 (recomputed monthly, trailing 126d traded value, new listings after seasoning; `nse200_dynamic.py`): m1 | +140.5%, DD −34.2%, Sharpe 0.83 | families `adhoc_m*_nse200dyn` |
+| — m2 returns-only | +141.5%, DD −33.4%, Sharpe 0.82 | — |
+| — m3 / m4 (+3×ATR stop) | +24.4% / +20.5%, Sharpe ~0.3 | — |
+| m2 on DYNAMIC top-N: N=500 | +245.7%, DD −37.6%, Sharpe 1.08 | static-2020 counterpart +133.6% |
+| — N=1000 | **+296.3%, DD −32.9%, Sharpe 1.22** | static +267.1% |
+| — N=all seasoned (~1,930 ever) | +259.7%, DD −32.9%, Sharpe 1.15 | static 1224 +242.6% |
 
 Takeaways so far: the 3×ATR stop halved returns without reducing drawdown
 (shaken out on V-recoveries); the SMA filter's value is drawdown control
@@ -152,3 +158,24 @@ Delisted names are still absent from Kite data, so even these numbers are
 optimistic. The 12-1 momentum edge survives (still ~+20%/yr net with 2023-24
 concentration) but the case for `data import-universe` + PIT membership is now
 empirical, not theoretical.
+
+The DYNAMIC monthly top-200 (the most honest configuration constructible from
+Kite data — no hindsight anywhere in universe construction) landed BELOW the
+frozen 2020 universe: +141.5% vs +183.2% (m2). Universe churn averaged 7
+adds/drops a month (371 names ever member over 60 months); names that migrated
+in mid-run earned 2/3 of closed-trade P&L (MAZDOCK, BSE, RVNL...) but the
+rotation also kept buying freshly-hot liquidity near peaks (traded-value
+ranking is itself a momentum screen — stacking it on 12-1 momentum doubles the
+peak-chasing) and gave the deepest 2025 bleed. Realistic expectation for the
+implementable strategy: ~+19%/yr net, Sharpe ~0.8, DD ~-33%. Chandelier stops
+were worst-ever here (+20-24%, Sharpe 0.3) — fourth consecutive negative
+result, now on the most realistic universe.
+
+Dynamic-universe scaling resolved the earlier ambiguity: the top-200 rung is
+the outlier (dynamic mega-liquid ranking = peak-chasing), and ~1000 names is
+the sweet spot on BOTH universe constructions (static +267%/1.22... dynamic
++296%/Sharpe 1.22 — the two 1000-rungs nearly coincide, which is the
+robustness signal). Beyond 1000, more names dilute slightly. Implementable
+base case upgrades to ~+31%/yr net, Sharpe ~1.2, DD ~-33% (momentum top-25
+over a dynamic ~1000-name liquid universe) — still price returns, still no
+delisted names, still one 5y path.
