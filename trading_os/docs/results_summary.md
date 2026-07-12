@@ -54,6 +54,7 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 42 | 8 | b2d + both | dyn-1000 | +261.2% | −25.0% | 1.25 | MAD drag dominates; dropped |
 | 43 | 8 | b1d + supertrend-ONLY gate (binary) | dyn-1000 | +265.8% | −22.6% | 1.36 | vs b1d: DD −5.7pp, Sharpe 1.23→1.36 |
 | 44 | 8 | b2e + supertrend 4th gate signal | dyn-1000 | +203.7% | **−18.8%** | **1.41** | beats b2e on all three |
+| 45 | 9 out-of-window | **b2d-ST on 2019-2020 (COVID exam)** | dyn-1000 | +62.6% (2y) | −29.8% | **1.35** | survivors-only upper bound; see note |
 
 ## MARKED FOR FUTURE (owner, re-marked 2026-07-12 after supertrend sweep)
 
@@ -95,6 +96,16 @@ mechanism (fast ATR-adaptive throttle + asymmetric non-forced-selling),
 consistent direction across three configurations — this is the real
 deal as far as one price path can show. Pending owner: re-mark champions
 as b2d+ST (growth) and b2e+ST (defensive).
+
+Out-of-window COVID exam (row 45, runner `scripts/adhoc/b2dst_2019_2020.py`
+after a 2017-07 Kite backfill of 722k rows): the champion earned +9.0% in
+2019 (mid/small bear — correctly quiet) and +48.5% in 2020, with the COVID
+drawdown bottoming at −29.8% on 2020-03-23 (the market's exact low) vs
+Nifty ~−38% peak-to-trough and momentum indices worse — the 4-signal gate
+cut the crash AND the asymmetric design caught the V-recovery. Sharpe 1.35,
+numerically identical to the 2021-26 window — strategy behavior is stable
+across two very different regimes. Caveat: survivors-only pool (delisted
+2019-20 names invisible) — an upper bound; bhavcopy-restored rerun pending.
 
 Indicator wave verdict (rows 40-42, runner `scripts/adhoc/stmad_b2d.py`,
 first run through the run-variants harness): adding supertrend(10,3) on
