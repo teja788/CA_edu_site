@@ -179,3 +179,26 @@ robustness signal). Beyond 1000, more names dilute slightly. Implementable
 base case upgrades to ~+31%/yr net, Sharpe ~1.2, DD ~-33% (momentum top-25
 over a dynamic ~1000-name liquid universe) — still price returns, still no
 delisted names, still one 5y path.
+
+Batch 1 (Jul 12, momentum improvement plan — config-only variants on
+dyn-1000 m2; runner `scripts/adhoc/batch1_m2_improvements.py`, families
+`adhoc_b1*_nse1000dyn`, baseline +296.3% / Sharpe 1.22 / DD −32.9%):
+
+| Variant | Net | DD | Sharpe | Note |
+|---|---|---|---|---|
+| b1a exit_rank 50 | +287.4% | −34.6% | 1.20 | charges ₹40L→₹33L but return fell more |
+| b1b exit_rank 60 | +268.1% | −35.0% | 1.16 | wider is worse again |
+| b1c NSE vol-adj score (6m+12m) | +248.6% | −28.0% | 1.15 | DD −5pp, return −48pp |
+| b1d = b1c + exit 50 | +280.7% | −28.3% | **1.23** | best balanced: DD −4.6pp at ~baseline Sharpe |
+| b1e binary regime gate (NIFTYBEES 200SMA) | +257.7% | −33.6% | **1.38** | v7 TRANSFERS: biggest Sharpe jump, usual return cost, DD barely moved |
+| b1f 12m listing seasoning | +285.5% | −32.9% | 1.20 | ~neutral; hyped-IPO channel wasn't the edge OR the drag |
+| b1g FIP smoothness blend | +245.2% | −39.1% | 1.12 | fails on this universe — smooth winners underperformed |
+
+Takeaways: exit-buffer widening HURTS here (opposite of Novy-Marx/NSE
+prediction — on a dynamic liquid universe, decaying names bleed faster than
+turnover costs); the buffer only pays when paired with the vol-adjusted
+score (b1d), which is also the only variant to cut drawdown materially. The
+binary regime gate's Sharpe gain transfers from NIFTY200 to dyn-1000
+(1.22→1.38) and remains the strongest single overlay — the graded/asymmetric
+version (Batch 2) starts from a confirmed base. FIP and 12m seasoning:
+dropped.
