@@ -68,6 +68,9 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 56 | 12 adaptive | GHM adaptive weights, 2021-26 | dyn-1000 | +274.8% | −26.6% | 1.32 | worse than champion; rejected |
 | 57 | 12 | GHM adaptive weights, 2019-20 | dyn-1000 | +58.7% (2y) | −31.1% | 1.29 | worse on both windows; rejected |
 | 58 | 13 survivorship | **b2d-ST 2019-20, delisted names restored** | dyn-1000+133 | +61.1% (2y) | −29.9% | 1.33 | bias measured: −1.5pp/2y — small |
+| 59 | 14 fast test | 60d/no-skip/weekly + supertrend gate | dyn-1000 | +77.6% | −37.6% | 0.61 | rejected |
+| 60 | 14 | 60d/no-skip/weekly + 3-signal gate | dyn-1000 | +70.7% | −38.2% | 0.57 | rejected |
+| 61 | 14 | 60d/no-skip/weekly, no gate | dyn-1000 | +65.0% | −41.8% | 0.53 | rejected; ₹64L charges |
 
 ## MARKED FOR FUTURE (owner, re-marked 2026-07-12 after supertrend sweep)
 
@@ -109,6 +112,13 @@ mechanism (fast ATR-adaptive throttle + asymmetric non-forced-selling),
 consistent direction across three configurations — this is the real
 deal as far as one price path can show. Pending owner: re-mark champions
 as b2d+ST (growth) and b2e+ST (defensive).
+
+Fast-geometry test (rows 59-61, owner ask): 60d lookback / no skip /
+weekly rebalance is destroyed by churn+reversal (~3,900 trades, ₹62-64L
+charges, Sharpe 0.53-0.61 vs champion 1.35). Clean monotone gate gradient
+inside the wreckage (no gate 0.53 → 3-signal 0.57 → +supertrend 0.61) —
+the gate helps at every speed, but geometry dominates. Confirms weekly/
+fast/no-skip are each independently wrong for this universe.
 
 Adaptive signal-speed weights REJECTED (rows 56-57): the theoretically
 best-motivated upgrade (12m-heavy when gate fully on, faster blend in
