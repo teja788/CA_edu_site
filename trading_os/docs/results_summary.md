@@ -38,6 +38,11 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 26 | 4 | b2c = m2 + both | dyn-1000 | +207.6% | −23.8% | 1.38 | |
 | 27 | 4 | **b2d = b1d + graded gate (CHAMPION)** | dyn-1000 | **+283.4%** | **−24.8%** | **1.32** | ~+30.7%/yr net |
 | 28 | 4 | b2e = b1d + both (DEFENSIVE) | dyn-1000 | +196.5% | −19.0% | 1.38 | ~+24%/yr net |
+| 29 | 5 batch 3 | b3a residual momentum (vs NIFTYBEES) | dyn-1000 | +123.6% | −32.6% | 0.88 | signal fails here |
+| 30 | 5 | b3b = b3a + graded gate | dyn-1000 | +110.1% | −25.3% | 0.91 | dropped |
+| 31 | 5 | b3c = residual mom in champion structure | dyn-1000 | +147.8% | −22.3% | 1.07 | dropped |
+| 32 | 6 sizing | b1d @ Rs 10k/position (capital Rs 2.5L) | dyn-1000 | +254.0% | −28.2% | 1.19 | viable at retail size |
+| 33 | 6 | b2d @ Rs 10k/position (capital Rs 2.5L) | dyn-1000 | +266.2% | −24.6% | 1.30 | viable at retail size |
 
 ## MARKED FOR FUTURE (owner, 2026-07-12)
 
@@ -60,4 +65,14 @@ Settled negatives (multiple tests each): per-position ATR/chandelier stops
 (0/4), per-stock SMA gates (0/5 vs m2), inverse-vol weighting, FIP blend,
 exit-buffer widening without vol-adjusted scoring, weekly rebalance.
 
-Batch 3 (residual momentum vs NIFTYBEES) pending — rows to be appended.
+Batch 3 verdict: residual momentum (Blitz et al., EM-validated in the
+literature) does NOT transfer to this universe/window — pure residual
+ranking earns less than half the plain-momentum return at lower Sharpe even
+inside the champion structure. Dropped; plain + vol-adjusted price momentum
+stays the signal.
+
+Rs 10k/position sizing check (rows 32-33): both marked strategies survive
+retail sizing — b2d turns Rs 2.5L into Rs 9.16L (5y) vs the pro-rata Rs
+9.6L at Rs 2L/position sizing. Costs stay ~5% of gross P&L; the drag is
+mostly integer-share slot misses (770 vs 1010 trades — high-priced stocks
+exceed a Rs 10k slot). Campaign COMPLETE: all planned batches run.

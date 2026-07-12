@@ -226,3 +226,25 @@ implementable base case (~+30.7%/yr net, Sharpe 1.32, DD −24.8%), and
 adding vol targeting (b2e) offers a defensive alternative at ~24%/yr net,
 DD −19.0% for capital that can't stomach −25%. All standing caveats apply
 (no delisted names, price returns, 2026 charge schedule throughout).
+
+Batch 3 + sizing check (Jul 12, closes out the agreed test plan; runners
+`scripts/adhoc/batch3_residual_momentum.py`,
+`scripts/adhoc/smallcap_marked_strategies.py`; engine gained benchmark-aware
+signals + residual_momentum factor in c339ae2):
+
+| Variant | Net | DD | Sharpe | Note |
+|---|---|---|---|---|
+| b3a residual momentum | +123.6% | −32.6% | 0.88 | less than half of m2's return |
+| b3b + graded gate | +110.1% | −25.3% | 0.91 | — |
+| b3c in champion structure | +147.8% | −22.3% | 1.07 | best resid variant, still far below b2d's 1.32 |
+| b1d @ ₹10k/slot (₹2.5L capital) | +254.0% | −28.2% | 1.19 | charges 5.6% of gross P&L |
+| b2d @ ₹10k/slot (₹2.5L capital) | +266.2% | −24.6% | 1.30 | ₹2.5L → ₹9.16L in 5y |
+
+Residual momentum is the campaign's clearest negative surprise: the most
+EM-validated signal upgrade in the literature underperforms plain momentum
+by >150pp here. Plausible mechanism: 2021-26 NSE returns were dominated by
+high-beta broad rallies — stripping the market component removes most of
+what our momentum was actually harvesting. Signal work is closed; b2d
+stands as champion. Retail-size check passed: both marked strategies hold
+their profile at ₹10k/position (integer-share slot misses cost ~15-25pp
+over 5y, charges stay ~5% of gross).
