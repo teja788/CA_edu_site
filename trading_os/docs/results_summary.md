@@ -55,15 +55,19 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 43 | 8 | b1d + supertrend-ONLY gate (binary) | dyn-1000 | +265.8% | −22.6% | 1.36 | vs b1d: DD −5.7pp, Sharpe 1.23→1.36 |
 | 44 | 8 | b2e + supertrend 4th gate signal | dyn-1000 | +203.7% | **−18.8%** | **1.41** | beats b2e on all three |
 
-## MARKED FOR FUTURE (owner, 2026-07-12)
+## MARKED FOR FUTURE (owner, re-marked 2026-07-12 after supertrend sweep)
 
-Two strategies of record going forward — candidates for paper trading and
-any further overlay work. Exact reproduction records (experiments DB):
+Strategies of record (also flagged `is_marked` in the experiments DB via
+`platform experiments mark` — `compare` uses the latest as its default
+baseline). Full champion write-up: docs/champion_strategy_b2dst.md.
 
 | Strategy | Spec | Run id | config_hash | code commit | Rerun |
 |---|---|---|---|---|---|
-| **b1d** (no-overlay base) | vol-adj score (6m+12m, vol_window 252) + exit_rank 50, top-25 monthly, dyn-1000 | 1326 | `b024895df6bc440c` | 8956038 | `uv run python scripts/adhoc/batch1_m2_improvements.py b1d_score_exit50` |
-| **b2d** (champion) | b1d + graded asymmetric regime gate (NIFTYBEES 100SMA/200SMA/12m-ret) | 1333 | `9524dc5441b10f8d` | e36e320 | `uv run python scripts/adhoc/batch2_m2_overlays.py b2d_graded_score` |
+| **b2d-ST (CHAMPION, growth)** | vol-adj 6m+12m score + exit 50 + 4-signal graded gate (100/200SMA, 12m ret, supertrend 10/3) | 1346 | `698951d560855d83` | b80bb38 | `uv run python scripts/adhoc/stmad_b2d.py` (st_gate) |
+| **b2e-ST (defensive)** | b2d-ST + vol target 12%/126d | 1350 | see DB | b80bb38 | `uv run python scripts/adhoc/st_all_marked.py` (st4_b2e) |
+| **b1d** (no-overlay base) | vol-adj score + exit_rank 50, top-25 monthly, dyn-1000 | 1326 | `b024895df6bc440c` | 8956038 | `uv run python scripts/adhoc/batch1_m2_improvements.py b1d_score_exit50` |
+
+Superseded marks: b2d (run 1333) — replaced by b2d-ST.
 
 Full config JSON for both is in the experiments DB (`config_json` on the
 run ids above). Note: the dynamic top-1000 universe lives in the runners'
