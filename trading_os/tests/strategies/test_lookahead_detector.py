@@ -69,11 +69,22 @@ _EXAMPLES_DIR = (
 
 
 def _probe_frame() -> pd.DataFrame:
-    """~400-bar synthetic daily OHLCV frame, deterministic."""
+    """~400-bar synthetic daily OHLCV frame, deterministic.
+
+    Carries a `benchmark_close` column (an independent synthetic path, the same
+    column the engine's `benchmark` routing injects) so benchmark-aware signals
+    such as `residual_momentum` are certified by the generic sweep too. The
+    extra column is harmless to every other signal (each selects its own
+    columns explicitly)."""
     df = synthetic_daily(
         "LOOKAHEAD_PROBE", start=date(2019, 1, 1), end=date(2021, 12, 31), seed=42
-    )
-    return df.iloc[:_N_BARS]
+    ).iloc[:_N_BARS]
+    bench = synthetic_daily(
+        "LOOKAHEAD_PROBE_BENCH", start=date(2019, 1, 1), end=date(2021, 12, 31), seed=99
+    ).iloc[:_N_BARS]
+    df = df.copy()
+    df["benchmark_close"] = bench["close"].to_numpy()
+    return df
 
 
 def _probe_times(df: pd.DataFrame) -> list[pd.Timestamp]:

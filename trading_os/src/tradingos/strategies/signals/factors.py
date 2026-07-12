@@ -31,16 +31,20 @@ function below is built exclusively from `.shift(+n)` (n >= 0) and
 look-ahead detector (`tests/strategies/test_lookahead_detector.py`)
 certifies this for every one of them on every test run.
 
-Deferred: `beta` and `residual_momentum` (regression of a symbol's returns
-against a benchmark/index) are intentionally NOT implemented here. A signal
-fn as invoked by `registry.compute_signal` receives only the traded
-symbol's own frame — there is no channel today for a signal to also see a
-second (benchmark) frame. Routing "which second frame does this signal
-need" is an engine-level concern (Phase 3, the same category of deferral
-`strategies/filters.py` notes for regime-filter frame routing), not this
-module's; adding these two factors now would mean either silently ignoring
-the benchmark or reaching outside `df`, both worse than leaving them
-unregistered until the engine can supply a benchmark frame.
+Benchmark-aware signals: `residual_momentum` (below) needs the benchmark
+index's returns as well as the stock's own. The engine now supplies them
+through the SignalSpec `benchmark` field: when a signal spec sets
+`benchmark`, the engine joins that symbol's close onto the traded frame as a
+causal `benchmark_close` column (aligned on the frame's index, NaN where the
+benchmark has no bar) BEFORE `registry.compute_signal` calls the signal fn —
+the same second-frame routing the `index_above_ma`/regime filters use for
+their `symbol` key. A benchmark-aware signal therefore still receives one
+DataFrame; it simply reads the extra `benchmark_close` column and raises a
+clear error if it is absent (i.e. the spec forgot to set `benchmark`).
+
+Deferred: `beta` (the rolling market beta on its own) is not registered — it
+is available as the intermediate of `residual_momentum` but nothing consumes
+a standalone beta factor yet.
 """
 
 from __future__ import annotations
@@ -245,3 +249,91 @@ def return_smoothness(df: pd.DataFrame, window: int = 252) -> pd.Series:
     return r.rolling(window=window, min_periods=window).apply(
         _neg_information_discreteness, raw=True
     )
+
+
+@register_signal(
+    "residual_momentum",
+    description=(
+        "Residual (idiosyncratic) 12-1 momentum (Blitz, Huij & Martens 2011): "
+        "regress the stock's daily returns on the benchmark's daily returns over a "
+        "trailing beta_window (rolling OLS, beta/alpha as of each bar), take the "
+        "12-1 momentum of the residuals (sum of residuals over [t-window+1-skip, "
+        "t-skip]) and standardize it by the same window's residual std (ddof=1). "
+        "Requires the SignalSpec `benchmark` field set (routes a `benchmark_close` "
+        "column onto the frame); raises if that column is absent."
+    ),
+    tier="factor",
+    window=252,
+    skip=21,
+    beta_window=252,
+)
+def residual_momentum(
+    df: pd.DataFrame, window: int = 252, skip: int = 21, beta_window: int = 252
+) -> pd.Series:
+    """Standardized 12-1 momentum of market-model residuals (Blitz et al. 2011).
+
+    Needs the benchmark's close routed onto the frame as ``benchmark_close``
+    (via the SignalSpec ``benchmark`` field). Steps, all causal — the value at
+    row t depends only on rows <= t:
+
+    1. Daily simple returns ``r_stock = close.pct_change()`` and
+       ``r_bench = benchmark_close.pct_change()``.
+    2. Rolling OLS of ``r_stock`` on ``r_bench`` over the trailing
+       ``beta_window`` return observations (``min_periods=beta_window``), all
+       ending at row t so only bars <= t enter the estimate::
+
+           beta_t  = cov(r_stock, r_bench) / var(r_bench)   (both ddof=1)
+           alpha_t = mean(r_stock) - beta_t * mean(r_bench)
+
+       These reduce to `.rolling(beta_window).cov()/.var()/.mean()`, each a
+       trailing window ending at t — no per-row Python loop, no future rows.
+    3. Residual at t using the coefficients estimated AS OF t::
+
+           e_t = r_stock,t - (alpha_t + beta_t * r_bench,t)
+
+    4. 12-1 residual momentum, standardized by residual sigma over the SAME
+       window (``e_skip = e.shift(skip)``; the trailing ``window`` of ``e_skip``
+       ending at t spans residuals ``e[t-window+1-skip .. t-skip]``)::
+
+           signal_t = sum(e_skip[t-window+1 .. t]) / std(e_skip[t-window+1 .. t], ddof=1)
+
+    ``.shift(skip)`` (skip >= 0) and windows ending at t are backward-only, so
+    the whole chain is causal. ``min_periods`` gates every rolling reduction to
+    a full, NaN-free window, so the value is NaN until warmed up (roughly
+    ``beta_window + skip + window`` bars). Where the trailing residuals have
+    exactly zero dispersion (std == 0) the standardization is NaN rather than a
+    divide-by-zero.
+
+    Raises:
+        ValueError: if ``benchmark_close`` is absent (the SignalSpec must set
+            ``benchmark``), or if not ``window > skip >= 0`` or ``beta_window
+            >= 2`` (a variance needs >= 2 observations).
+    """
+    if "benchmark_close" not in df.columns:
+        raise ValueError(
+            "residual_momentum requires a 'benchmark_close' column, which the engine "
+            "joins onto the frame only when the SignalSpec sets `benchmark` (e.g. "
+            "benchmark: NIFTYBEES). It is absent here — set the spec's benchmark field."
+        )
+    if not (window > skip >= 0):
+        raise ValueError(
+            f"residual_momentum requires window > skip >= 0, got window={window}, skip={skip}"
+        )
+    if beta_window < 2:
+        raise ValueError(f"residual_momentum requires beta_window >= 2, got {beta_window}")
+
+    r_stock = df["close"].pct_change()
+    r_bench = df["benchmark_close"].pct_change()
+
+    roll_s = r_stock.rolling(window=beta_window, min_periods=beta_window)
+    roll_b = r_bench.rolling(window=beta_window, min_periods=beta_window)
+    cov = roll_s.cov(r_bench)  # ddof=1
+    var_b = roll_b.var()  # ddof=1
+    beta = cov / var_b.replace(0.0, np.nan)  # flat benchmark window -> NaN, not inf
+    alpha = roll_s.mean() - beta * roll_b.mean()
+
+    resid = r_stock - (alpha + beta * r_bench)
+    resid_skip = resid.shift(skip)
+    roll_e = resid_skip.rolling(window=window, min_periods=window)
+    sigma = roll_e.std(ddof=1)
+    return roll_e.sum() / sigma.replace(0.0, np.nan)

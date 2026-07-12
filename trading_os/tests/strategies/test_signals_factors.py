@@ -305,3 +305,165 @@ def test_return_smoothness_min_periods_gates_the_structural_nan() -> None:
     out = compute_signal("return_smoothness", df, {"window": 4})
     assert out.iloc[:4].isna().all()
     assert not math.isnan(out.iloc[4])
+
+
+# ---------------------------------------------------------------------------
+# residual_momentum (Blitz, Huij & Martens 2011): 12-1 momentum of
+# market-model residuals, standardized by residual sigma. Needs a
+# `benchmark_close` column (routed by the engine from the SignalSpec
+# `benchmark` field).
+# ---------------------------------------------------------------------------
+
+
+def _closes_from_returns(r: np.ndarray, s0: float = 100.0) -> np.ndarray:
+    """Price path whose simple returns are exactly ``r`` (r[0] is ignored)."""
+    c = np.empty(len(r), dtype="float64")
+    c[0] = s0
+    for i in range(1, len(r)):
+        c[i] = c[i - 1] * (1.0 + r[i])
+    return c
+
+
+def _resid_mom_frame(r_bench: np.ndarray, r_stock: np.ndarray) -> pd.DataFrame:
+    idx = _idx(len(r_bench))
+    return pd.DataFrame(
+        {
+            "close": _closes_from_returns(r_stock),
+            "benchmark_close": _closes_from_returns(r_bench),
+        },
+        index=idx,
+    )
+
+
+def _resid_mom_oracle(
+    df: pd.DataFrame, window: int, skip: int, beta_window: int
+) -> np.ndarray:
+    """Independent brute-force oracle: an explicit per-window OLS + 12-1
+    aggregation, deliberately written with Python loops (allowed in tests) so
+    it shares no code path with the vectorized implementation under test."""
+    rs = df["close"].pct_change().to_numpy()
+    rb = df["benchmark_close"].pct_change().to_numpy()
+    n = len(df)
+    resid = np.full(n, np.nan)
+    for t in range(n):
+        lo = t - beta_window + 1
+        if lo < 0:
+            continue
+        ys, xs = rs[lo : t + 1], rb[lo : t + 1]
+        if np.isnan(ys).any() or np.isnan(xs).any():
+            continue
+        xbar, ybar = xs.mean(), ys.mean()
+        varx = ((xs - xbar) ** 2).sum() / (len(xs) - 1)
+        if varx == 0:
+            continue
+        beta = ((xs - xbar) * (ys - ybar)).sum() / (len(xs) - 1) / varx
+        alpha = ybar - beta * xbar
+        resid[t] = ys[-1] - (alpha + beta * xs[-1])
+    e_skip = pd.Series(resid).shift(skip).to_numpy()
+    out = np.full(n, np.nan)
+    for t in range(n):
+        lo = t - window + 1
+        if lo < 0:
+            continue
+        w = e_skip[lo : t + 1]
+        if np.isnan(w).any():
+            continue
+        sd = w.std(ddof=1)
+        if sd == 0:
+            continue
+        out[t] = w.sum() / sd
+    return out
+
+
+def test_residual_momentum_registered_as_factor_tier() -> None:
+    registry.ensure_discovered()
+    registered = {d.name: d for d in registry.list_signals()}
+    assert "residual_momentum" in registered
+    assert registered["residual_momentum"].tier == "factor"
+
+
+def test_residual_momentum_matches_an_independent_ols_oracle() -> None:
+    # Known-answer via an oracle: the vectorized rolling-OLS implementation must
+    # reproduce an explicit per-window ordinary-least-squares fit + 12-1
+    # aggregation on a seeded frame, everywhere the oracle is defined.
+    rng = np.random.default_rng(0)
+    n = 400
+    r_bench = 0.01 * rng.standard_normal(n)
+    r_bench[0] = 0.0
+    r_stock = 1.3 * r_bench + 0.003 * rng.standard_normal(n)
+    r_stock[0] = 0.0
+    df = _resid_mom_frame(r_bench, r_stock)
+
+    params = {"window": 60, "skip": 5, "beta_window": 40}
+    out = compute_signal("residual_momentum", df, params).to_numpy()
+    oracle = _resid_mom_oracle(df, **params)
+
+    valid = ~np.isnan(oracle)
+    assert valid.sum() > 250  # the oracle is defined over most of the frame
+    np.testing.assert_allclose(out[valid], oracle[valid], rtol=1e-9, atol=1e-11)
+    # NaN structure agrees too (warm-up region)
+    assert np.array_equal(np.isnan(out), np.isnan(oracle))
+
+
+def test_residual_momentum_recovers_the_residual_drift_direction() -> None:
+    # Construct r_stock = beta*r_bench + residual. A residual that RAMPS UP over
+    # time leaves recent residuals above their trailing mean (which alpha
+    # absorbs) -> positive residual momentum; a ramp DOWN -> negative. A
+    # pure-beta stock whose only residual is a zero-drift alternation scores ~0.
+    rng = np.random.default_rng(0)
+    n = 400
+    r_bench = 0.01 * rng.standard_normal(n)
+    r_bench[0] = 0.0
+    params = {"window": 120, "skip": 10, "beta_window": 120}
+
+    ramp = np.linspace(0.0, 0.02, n)
+    up = _resid_mom_frame(r_bench, 1.3 * r_bench + ramp)
+    down = _resid_mom_frame(r_bench, 1.3 * r_bench - ramp)
+    # zero-drift residual: a mean-zero alternation (nonzero dispersion so the
+    # standardization is defined, but its trailing sum ~cancels).
+    alt = 0.005 * ((-1.0) ** np.arange(n))
+    flat = _resid_mom_frame(r_bench, 1.3 * r_bench + alt)
+
+    s_up = compute_signal("residual_momentum", up, params).iloc[-1]
+    s_down = compute_signal("residual_momentum", down, params).iloc[-1]
+    s_flat = compute_signal("residual_momentum", flat, params).iloc[-1]
+
+    assert s_up > 100.0  # strongly positive: recent residuals sit above trend
+    assert s_down < -100.0  # symmetric, strongly negative
+    assert s_up == pytest.approx(-s_down, rel=1e-3)  # the two are mirror images
+    # the pure-beta (zero residual DRIFT) stock scores near zero, orders of
+    # magnitude smaller than the drifted stocks.
+    assert abs(s_flat) < 5.0
+
+
+def test_residual_momentum_raises_without_a_benchmark_close_column() -> None:
+    df = _frame([100.0, 101.0, 102.0, 103.0, 104.0])  # no benchmark_close
+    with pytest.raises(ValueError, match="benchmark_close"):
+        compute_signal("residual_momentum", df, {"window": 3, "skip": 0, "beta_window": 3})
+
+
+def test_residual_momentum_rejects_bad_windows() -> None:
+    df = _resid_mom_frame(np.zeros(6), np.zeros(6))
+    with pytest.raises(ValueError, match="window > skip >= 0"):
+        compute_signal("residual_momentum", df, {"window": 3, "skip": 3, "beta_window": 3})
+    with pytest.raises(ValueError, match="beta_window >= 2"):
+        compute_signal("residual_momentum", df, {"window": 3, "skip": 0, "beta_window": 1})
+
+
+def test_residual_momentum_nan_until_warmed_up() -> None:
+    rng = np.random.default_rng(1)
+    n = 300
+    r_bench = 0.01 * rng.standard_normal(n)
+    r_bench[0] = 0.0
+    df = _resid_mom_frame(r_bench, 1.1 * r_bench + 0.002 * rng.standard_normal(n))
+    window, skip, beta_window = 100, 5, 80
+    out = compute_signal(
+        "residual_momentum", df, {"window": window, "skip": skip, "beta_window": beta_window}
+    )
+    # first fully-warmed row: beta_window returns start at index 1 (row 0's
+    # return is NaN), so residuals begin at index beta_window; shift(skip)
+    # pushes that to beta_window+skip; a full `window` of them ends at
+    # beta_window + skip + window - 1.
+    first_valid = beta_window + skip + window - 1
+    assert out.iloc[:first_valid].isna().all()
+    assert not math.isnan(out.iloc[first_valid])

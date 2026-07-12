@@ -47,18 +47,34 @@ class SignalSpec(BaseModel):
     """One indicator/signal instance: registry name + params.
 
     `id` is how the score/filters refer to it. `timeframe` allows cross-timeframe
-    use (e.g. daily indicator consumed by an intraday strategy)."""
+    use (e.g. daily indicator consumed by an intraday strategy).
+
+    `benchmark` (optional) names a second symbol whose close the engine joins
+    onto the traded symbol's frame as a `benchmark_close` column — aligned on
+    the frame's index, NaN where the benchmark has no bar, and causal (the
+    joined value at row t is the benchmark's bar at ts <= that row's ts) —
+    before the signal function is called. Signals that need a benchmark frame
+    (e.g. `residual_momentum`, which regresses the stock on the index) declare
+    it here; signals without `benchmark` see no change to their input frame."""
 
     id: str
     name: str  # registered signal name, e.g. "rsi", "return_over_window"
     params: dict[str, Any] = Field(default_factory=dict)
     timeframe: Timeframe = Timeframe.DAY
+    benchmark: str | None = None  # second-frame routing (see docstring)
 
     @field_validator("id", "name")
     @classmethod
     def _non_empty(cls, v: str) -> str:
         if not v.strip():
             raise ValueError("must be non-empty")
+        return v
+
+    @field_validator("benchmark")
+    @classmethod
+    def _benchmark_non_blank(cls, v: str | None) -> str | None:
+        if v is not None and not v.strip():
+            raise ValueError("benchmark, when set, must be a non-blank symbol")
         return v
 
 

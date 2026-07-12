@@ -90,9 +90,21 @@ def compute_signal(name: str, df: pd.DataFrame, params: dict[str, Any]) -> pd.Se
     return out.astype("float64")
 
 
-def signal_cache_key(symbol: str, name: str, params: dict[str, Any], snapshot_id: str) -> str:
-    """Stable cache key so parameter-grid runs never recompute identical signals."""
-    payload = json.dumps({"n": name.lower(), "p": params}, sort_keys=True, default=str)
+def signal_cache_key(
+    symbol: str,
+    name: str,
+    params: dict[str, Any],
+    snapshot_id: str,
+    benchmark: str | None = None,
+) -> str:
+    """Stable cache key so parameter-grid runs never recompute identical signals.
+
+    ``benchmark`` (the second-frame routing target, if any) is part of the
+    identity: the same signal on the same symbol computed against different
+    benchmark frames must not collide in the cache."""
+    payload = json.dumps(
+        {"n": name.lower(), "p": params, "b": benchmark}, sort_keys=True, default=str
+    )
     h = hashlib.sha256(f"{symbol}|{payload}|{snapshot_id}".encode()).hexdigest()[:20]
     return f"{symbol}_{name.lower()}_{h}"
 

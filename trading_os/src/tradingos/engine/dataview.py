@@ -70,21 +70,45 @@ class MarketData:
         return idx
 
 
+def _join_benchmark_close(symbol_df: pd.DataFrame, bench_df: pd.DataFrame) -> pd.DataFrame:
+    """Return a copy of ``symbol_df`` with a causal ``benchmark_close`` column.
+
+    The benchmark's close is aligned onto the symbol frame's own index by exact
+    timestamp (``reindex``): row t carries the benchmark bar stamped exactly t,
+    or NaN where the benchmark has no bar there. Exact alignment can only ever
+    read the benchmark's bar at ts == t (never a later one), so the join is
+    causal — altering benchmark bars at ts > t cannot change ``benchmark_close``
+    at row t. The original frames are never mutated (``assign`` copies)."""
+    return symbol_df.assign(benchmark_close=bench_df["close"].reindex(symbol_df.index))
+
+
 class SignalStore:
     """Per-run cache of precomputed signal series (symbol x signal-instance).
 
-    Computed once per (symbol, signal name, params, data snapshot) — parameter
-    grids that share signals never recompute them.
+    Computed once per (symbol, signal name, params, benchmark, data snapshot) —
+    parameter grids that share signals never recompute them.
     """
 
     def __init__(self, data: MarketData) -> None:
         self._data = data
         self._cache: dict[str, pd.Series] = {}
 
-    def series(self, symbol: str, name: str, params: dict[str, Any]) -> pd.Series:
-        key = signal_cache_key(symbol, name, params, self._data.snapshot_id)
+    def series(
+        self,
+        symbol: str,
+        name: str,
+        params: dict[str, Any],
+        benchmark: str | None = None,
+    ) -> pd.Series:
+        key = signal_cache_key(symbol, name, params, self._data.snapshot_id, benchmark)
         if key not in self._cache:
-            self._cache[key] = compute_signal(name, self._data.full_frame(symbol), params)
+            df = self._data.full_frame(symbol)
+            if benchmark is not None:
+                # Route the benchmark's close onto the symbol frame (causally)
+                # BEFORE the signal fn sees it — the same second-frame path the
+                # `symbol`-routed regime filters use, but for signals.
+                df = _join_benchmark_close(df, self._data.full_frame(benchmark))
+            self._cache[key] = compute_signal(name, df, params)
         return self._cache[key]
 
 
@@ -198,9 +222,10 @@ class DataView:
         name: str,
         params: dict[str, Any] | None = None,
         timeframe: Timeframe | None = None,
+        benchmark: str | None = None,
     ) -> float | None:
         """Latest visible value of a registered signal for a symbol."""
-        s = self.signal_series(symbol, name, params, timeframe)
+        s = self.signal_series(symbol, name, params, timeframe, benchmark)
         s = s.dropna()
         if s.empty:
             return None
@@ -212,8 +237,15 @@ class DataView:
         name: str,
         params: dict[str, Any] | None = None,
         timeframe: Timeframe | None = None,
+        benchmark: str | None = None,
     ) -> pd.Series:
-        """Visible slice of a precomputed signal series."""
+        """Visible slice of a precomputed signal series.
+
+        ``benchmark`` routes a second symbol's close onto the symbol frame as a
+        ``benchmark_close`` column (see :func:`_join_benchmark_close`) before
+        the signal is computed — for signals such as ``residual_momentum`` that
+        regress the stock against an index. The benchmark frame is read from the
+        same ``MarketData`` (and timeframe) as the traded symbol."""
         tf = timeframe or self._data.timeframe
         if tf == self._data.timeframe:
             store = self._signals
@@ -221,7 +253,7 @@ class DataView:
             store = self._aux_signals[tf]
         else:
             raise DataError(f"no {tf.value} data attached to this run")
-        series = store.series(symbol, name, params or {})
+        series = store.series(symbol, name, params or {}, benchmark)
         return series.loc[: self._visible_cutoff(tf)]
 
     def filter_series(

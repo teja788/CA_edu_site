@@ -208,7 +208,7 @@ def _score(config: StrategyConfig, dv: DataView, candidates: list[str]) -> dict[
     for sig in config.signals:
         col: dict[str, float] = {}
         for sym in candidates:
-            v = dv.signal(sym, sig.name, sig.params, sig.timeframe)
+            v = dv.signal(sym, sig.name, sig.params, sig.timeframe, sig.benchmark)
             if v is None or (isinstance(v, float) and math.isnan(v)):
                 excluded.add(sym)
             else:
