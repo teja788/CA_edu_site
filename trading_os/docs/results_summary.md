@@ -79,3 +79,22 @@ retail sizing — b2d turns Rs 2.5L into Rs 9.16L (5y) vs the pro-rata Rs
 9.6L at Rs 2L/position sizing. Costs stay ~5% of gross P&L; the drag is
 mostly integer-share slot misses (770 vs 1010 trades — high-priced stocks
 exceed a Rs 10k slot). Campaign COMPLETE: all planned batches run.
+
+## Tax & dividend estimates — ₹40k/position runs (rows 34–36)
+
+STCG computed from actual trade ledgers (FY netting, loss carry-forward,
+15% before 2024-07-23 / 20% after, on net realized P&L; all FYs were net
+positive so no carry-forward triggered). Dividends estimated at 0.8–1.5%
+yield on average invested equity (dividend table is empty — no per-stock
+data; price-return backtests exclude dividends, so these would ADD):
+
+| Strategy | STCG owed (5y) | Dividends est (5y) | Final equity net of tax (approx) |
+|---|---|---|---|
+| b1d | ₹3.81L | +₹0.91–1.71L | ~₹33.9L |
+| b2d | ₹4.22L | +₹0.91–1.70L | ~₹34.8L |
+| b2e | ₹2.89L | +₹0.66–1.25L | ~₹27.6L |
+
+Peak STCG year is FY2024 (the +72% 2023 run): ₹1.3–1.7L owed in one year —
+advance-tax planning needed. Estimates ignore compounding drag from paying
+tax out of the pot (real net-of-tax equity would be a few % lower still)
+and assume no other income offsets.
