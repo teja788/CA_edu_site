@@ -63,6 +63,7 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 51 | 10 | b2d-ST + 9m component | dyn-1000 | +286.6% | −23.9% | 1.33 | dropped |
 | 52 | 10 | b2d-ST, 9m replaces 6m | dyn-1000 | +267.9% | −25.9% | 1.29 | dropped |
 | 53 | 10 | pure 1m momentum | dyn-1000 | +65.8% | −19.9% | 0.61 | reject confirmed, 1463 trades |
+| 54 | 10 | 12m-heavy challenger on 2019-2020 | dyn-1000 | +55.6% (2y) | −33.0% | 1.20 | FAILS OOW exam; rejected |
 
 ## MARKED FOR FUTURE (owner, re-marked 2026-07-12 after supertrend sweep)
 
@@ -112,8 +113,13 @@ every change that speeds the signal up (drop/halve the skip, 6m-heavy,
 the sweep winner (+308.9%/−24.8%/1.37, +17pp return and +0.02 Sharpe over
 the champion at −0.5pp DD). The skip-month question is settled AGAINST
 the NSE-index convention: skip 0 loses 100pp — India's 1-month reversal
-is alive in this universe. 12m-heavy is a CHALLENGER, not champion, until
-it passes the 2019-2020 out-of-window exam (running).
+is alive in this universe. 12m-heavy CHALLENGER REJECTED (row 54): on
+2019-2020 it loses to the 50/50 champion on all three metrics (+55.6% vs
++62.6%, DD −33.0% vs −29.8%, Sharpe 1.20 vs 1.35). The 30/70 edge was
+specific to 2021-26's long-duration trends; 50/50 is the robust setting
+across both regimes. Champion stays b2d-ST unchanged — and this is the
+multiple-testing discipline doing exactly what it exists to do: the
+sweep's best in-sample cell did not generalize.
 
 Out-of-window COVID exam (row 45, runner `scripts/adhoc/b2dst_2019_2020.py`
 after a 2017-07 Kite backfill of 722k rows): the champion earned +9.0% in
