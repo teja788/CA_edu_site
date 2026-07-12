@@ -217,3 +217,19 @@ Peak STCG year is FY2024 (the +72% 2023 run): ₹1.3–1.7L owed in one year —
 advance-tax planning needed. Estimates ignore compounding drag from paying
 tax out of the pot (real net-of-tax equity would be a few % lower still)
 and assume no other income offsets.
+
+## Statistical validation of b2d-ST (run 1346)
+
+- **Deflated Sharpe:** PSR vs zero = 99.8%; DSR = **90.8%** against the
+  58-config selection search (trial count audited from the experiments DB;
+  skew −0.95, kurt 6.5, 1,237 daily obs). Strong, shy of the 95% bar —
+  the core edge is unambiguous, the last refinement points partly noise.
+- **Monte Carlo (2,000 paths, 994 trades):** shuffle DD bands p5/p50/p95 =
+  −14.1/−7.9/−5.0% (trade-sequence basis; realized ordering not lucky);
+  skip-10% final equity p5..p95 = ₹12.6–14.3cr vs realized ₹14.4cr — no
+  dependence on a few lucky trades.
+- **Perturbation grid (±20% on 7 numeric params, 14 backtests):** Sharpe
+  range 0.95–1.35, only 2/14 cells below 1.2; worst neighbor (12m window
+  → 302d) still Sharpe 0.95. Graceful degradation, no knife-edge. Note:
+  no neighbor beats base — champion sits at its neighborhood's top, mild
+  in-sample-peak evidence, acceptable given the OOW/US validations.
