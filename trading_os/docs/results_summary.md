@@ -39,6 +39,23 @@ m2 = 12-1 momentum, top-25 equal-weight, monthly rebalance.
 | 27 | 4 | **b2d = b1d + graded gate (CHAMPION)** | dyn-1000 | **+283.4%** | **−24.8%** | **1.32** | ~+30.7%/yr net |
 | 28 | 4 | b2e = b1d + both (DEFENSIVE) | dyn-1000 | +196.5% | −19.0% | 1.38 | ~+24%/yr net |
 
+## MARKED FOR FUTURE (owner, 2026-07-12)
+
+Two strategies of record going forward — candidates for paper trading and
+any further overlay work. Exact reproduction records (experiments DB):
+
+| Strategy | Spec | Run id | config_hash | code commit | Rerun |
+|---|---|---|---|---|---|
+| **b1d** (no-overlay base) | vol-adj score (6m+12m, vol_window 252) + exit_rank 50, top-25 monthly, dyn-1000 | 1326 | `b024895df6bc440c` | 8956038 | `uv run python scripts/adhoc/batch1_m2_improvements.py b1d_score_exit50` |
+| **b2d** (champion) | b1d + graded asymmetric regime gate (NIFTYBEES 100SMA/200SMA/12m-ret) | 1333 | `9524dc5441b10f8d` | e36e320 | `uv run python scripts/adhoc/batch2_m2_overlays.py b2d_graded_score` |
+
+Full config JSON for both is in the experiments DB (`config_json` on the
+run ids above). Note: the dynamic top-1000 universe lives in the runners'
+`DynamicTopNResolver`/`SeasonedTopNResolver`, not in the YAML universe spec
+— promoting these to `strategies/examples/` YAMLs needs the dynamic
+traded-value universe as a first-class UniverseSpec option first (open
+engine item).
+
 Settled negatives (multiple tests each): per-position ATR/chandelier stops
 (0/4), per-stock SMA gates (0/5 vs m2), inverse-vol weighting, FIP blend,
 exit-buffer widening without vol-adjusted scoring, weekly rebalance.
