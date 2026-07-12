@@ -92,13 +92,23 @@ def evaluate_targets(
     if not candidates:
         return {}
 
+    # -- regime fraction (computed ONCE per rebalance) ---------------------
+    # f feeds two consumers below: regime-conditioned score weights (here) and
+    # the new-entry exposure scaling (_apply_regime, at the end). Compute it
+    # once and thread the value through so the benchmark filter series is not
+    # evaluated twice. None when no regime overlay is configured.
+    regime_f = _regime_fraction(config.regime, dv) if config.regime is not None else None
+
     # -- signal values + score ---------------------------------------------
     if config.score is None:
         # No score configured is legal (e.g. a single-symbol trend strategy):
         # every candidate scores 0 and selection falls back to symbol order.
         scores = {s: 0.0 for s in candidates}
     else:
-        scores = _score(config, dv, candidates)  # excludes NaN-signal symbols
+        # Regime-conditioned weights (Goulding-Harvey-Mazzoleni signal speed):
+        # None -> use ScoreSpec.weights unchanged (byte-identical to no overlay).
+        weights_override = _adaptive_score_weights(config, regime_f)
+        scores = _score(config, dv, candidates, weights_override)  # excludes NaN-signal symbols
         if not scores:
             # A score IS configured but not one candidate has a valid value
             # (indicator warm-up window): hold cash. Falling back to zeros
@@ -128,7 +138,7 @@ def evaluate_targets(
     # = base * exposure. Order matters only in that both are multiplicative
     # and regime is restricted to the new-entry subset.
     weights = _apply_vol_target(config, weights, equity, equity_history, dv.now)
-    weights = _apply_regime(config, dv, weights, current_holdings)
+    weights = _apply_regime(config, dv, weights, current_holdings, regime_f)
 
     return _weights_to_shares(dv, weights, equity)
 
@@ -193,11 +203,21 @@ def _liquidity_filter(config: StrategyConfig, dv: DataView, candidates: list[str
 # ---------------------------------------------------------------------------
 
 
-def _score(config: StrategyConfig, dv: DataView, candidates: list[str]) -> dict[str, float]:
+def _score(
+    config: StrategyConfig,
+    dv: DataView,
+    candidates: list[str],
+    weights_override: dict[str, float] | None = None,
+) -> dict[str, float]:
     """Latest signal values -> per-symbol score. NaN-signal symbols are dropped.
 
     Returns ``{}`` when no score is configured (the caller then defaults every
     candidate to 0).
+
+    ``weights_override`` (weighted_zscore only) replaces ``config.score.weights``
+    for the weighted sum — the regime-conditioned adaptive weights. None means
+    use ``config.score.weights`` unchanged. The per-signal value collection and
+    NaN exclusion are unaffected (they always cover every configured signal).
     """
     if config.score is None:
         return {}
@@ -225,8 +245,9 @@ def _score(config: StrategyConfig, dv: DataView, candidates: list[str]) -> dict[
         return {s: values[only][s] for s in ranked}
 
     # weighted_zscore
+    active_weights = weights_override if weights_override is not None else config.score.weights
     scores: dict[str, float] = {s: 0.0 for s in ranked}
-    for sig_id, weight in config.score.weights.items():
+    for sig_id, weight in active_weights.items():
         xs = np.array([values[sig_id][s] for s in ranked], dtype="float64")
         mean = float(xs.mean())
         std = float(xs.std(ddof=0))  # population std per spec
@@ -485,6 +506,24 @@ def _regime_signal_to_filter(sig: RegimeSignalSpec) -> tuple[str, dict[str, floa
     raise ConfigError(f"unknown regime signal kind {sig.kind!r}")
 
 
+def _adaptive_score_weights(
+    config: StrategyConfig, regime_f: float | None
+) -> dict[str, float] | None:
+    """Regime-conditioned score weights, or None to use ``ScoreSpec.weights``.
+
+    Picks the ``"full"`` bucket at full risk-on (``f >= 1``) and ``"reduced"``
+    when the regime is risk-off/transitional (``f < 1``) — the point where a
+    slow momentum window is stale and faster windows see the new leaders. Only
+    active when a regime overlay with ``adaptive_weights`` is configured; None
+    otherwise (byte-identical to a config without the field). Weight keys were
+    validated as configured signal ids at StrategyConfig construction.
+    """
+    if config.regime is None or config.regime.adaptive_weights is None or regime_f is None:
+        return None
+    buckets = config.regime.adaptive_weights
+    return buckets["full"] if regime_f >= 1.0 else buckets["reduced"]
+
+
 def _regime_fraction(spec: RegimeSpec, dv: DataView) -> float:
     """``f = (# true signals) / (# signals)`` on the benchmark frame at ``now``.
 
@@ -504,14 +543,21 @@ def _apply_regime(
     dv: DataView,
     weights: dict[str, float],
     current_holdings: dict[str, int],
+    f: float | None = None,
 ) -> dict[str, float]:
     """Asymmetric: scale NEW entries only by ``f``; held names keep their
     weight (never force-sold — they exit via exit_rank / normal mechanics).
-    ``f == 0`` zeroes every new entry (blocks all new buys)."""
+    ``f == 0`` zeroes every new entry (blocks all new buys).
+
+    ``f`` may be precomputed by the caller (``evaluate_targets`` computes the
+    regime fraction once per rebalance and threads it through both here and the
+    adaptive score weights). When None it is computed from the benchmark frame,
+    preserving the standalone call contract used in tests."""
     spec = config.regime
     if spec is None or not weights:
         return weights
-    f = _regime_fraction(spec, dv)
+    if f is None:
+        f = _regime_fraction(spec, dv)
     if f >= 1.0:
         return weights  # full risk-on: nothing to scale
     held = set(current_holdings)

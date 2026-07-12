@@ -239,11 +239,26 @@ class RegimeSpec(BaseModel):
     positions keep their normal target weight and are never force-sold
     (they still exit via exit_rank / normal rebalance mechanics). ``f == 0``
     blocks all new buys; the freed capital stays in cash.
+
+    ``adaptive_weights`` (optional) makes the weighted_zscore SCORE weights
+    regime-conditioned (Goulding-Harvey-Mazzoleni "signal speed" adaptation):
+    when the market is risk-off/transitional (``f < 1``) a slow 12-month
+    momentum window is stale and the post-crash leaders are only visible to
+    faster windows, so the score reweights toward them. Exactly two buckets are
+    allowed: ``"full"`` (applied when ``f == 1``) and ``"reduced"`` (applied
+    when ``f < 1``); both must be present if the field is set, each a non-empty
+    ``{signal_id: weight}`` dict with finite weights. The weight KEYS must be
+    configured signal ids — validated at StrategyConfig construction against the
+    strategy's ``signals`` (a loud ConfigError), exactly as ScoreSpec.weights
+    are. When ``adaptive_weights`` is None the score uses ScoreSpec.weights
+    unchanged (results are byte-identical to a config without this field).
     """
 
     symbol: str
     signals: list[RegimeSignalSpec] = Field(min_length=1)
     mode: Literal["graded_asymmetric"] = "graded_asymmetric"
+    # regime-conditioned score weights; keys subset-and-both-of {"full","reduced"}
+    adaptive_weights: dict[str, dict[str, float]] | None = None
 
     @field_validator("symbol")
     @classmethod
@@ -251,6 +266,38 @@ class RegimeSpec(BaseModel):
         if not v.strip():
             raise ValueError("regime benchmark symbol must be non-blank")
         return v
+
+    @model_validator(mode="after")
+    def _check_adaptive_weights(self) -> RegimeSpec:
+        """Validate the SHAPE of adaptive_weights (bucket keys, presence, finite
+        weights). Signal-id membership is cross-checked at StrategyConfig level
+        (it needs the strategy's `signals`), mirroring ScoreSpec.weights."""
+        if self.adaptive_weights is None:
+            return self
+        allowed = {"full", "reduced"}
+        keys = set(self.adaptive_weights)
+        unknown = keys - allowed
+        if unknown:
+            raise ValueError(
+                f"regime.adaptive_weights keys must be a subset of {sorted(allowed)}, "
+                f"got unknown {sorted(unknown)}"
+            )
+        missing = allowed - keys
+        if missing:
+            raise ValueError(
+                f"regime.adaptive_weights requires both 'full' and 'reduced' buckets; "
+                f"missing {sorted(missing)}"
+            )
+        for bucket, weights in self.adaptive_weights.items():
+            if not weights:
+                raise ValueError(f"regime.adaptive_weights[{bucket!r}] must be non-empty")
+            for sig_id, w in weights.items():
+                if not math.isfinite(w):
+                    raise ValueError(
+                        f"regime.adaptive_weights[{bucket!r}] weight for {sig_id!r} "
+                        f"must be finite, got {w}"
+                    )
+        return self
 
 
 class VolTargetSpec(BaseModel):
@@ -369,6 +416,15 @@ class StrategyConfig(BaseModel):
             unknown = set(self.score.weights) - set(ids)
             if unknown:
                 raise ValueError(f"score references unknown signal ids: {sorted(unknown)}")
+        if self.regime is not None and self.regime.adaptive_weights is not None:
+            id_set = set(ids)
+            for bucket, weights in self.regime.adaptive_weights.items():
+                unknown = set(weights) - id_set
+                if unknown:
+                    raise ConfigError(
+                        f"regime.adaptive_weights[{bucket!r}] references unknown "
+                        f"signal ids: {sorted(unknown)}"
+                    )
         return self
 
     def config_hash(self) -> str:
