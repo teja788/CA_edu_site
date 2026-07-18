@@ -91,7 +91,7 @@ import { attempt } from '../data/site.js';
       const hours = Number(data.get('hours'));
 
       const papers = groupKey === 'both' ? [...PAPERS.g1, ...PAPERS.g2] : PAPERS[groupKey];
-      const weeks = Math.floor((examDate.getTime() - Date.now()) / (7 * 86400000));
+      const weeks = Math.max(0, Math.floor((examDate.getTime() - Date.now()) / (7 * 86400000)));
 
       // Effort needed: roughly 350 study-hours per paper-group of 3 at Inter,
       // scaled by weekly hours available.
@@ -110,6 +110,34 @@ import { attempt } from '../data/site.js';
         warning.querySelector('[data-plan-warning-text]').innerHTML =
           `At ~${hours}h/day this scope usually needs about <strong>${weeksNeeded} weeks</strong>; you have <strong>${weeks}</strong>. ` +
           'The plan below compresses revision, not learning. Options: increase daily hours, or attempt one group instead of both.';
+      }
+
+      // Under 4 weeks the 4-phase split can't fit (each phase needs ≥1 week)
+      // — collapse to a single revision sprint instead of promising phases
+      // that sum to more weeks than exist.
+      if (weeks < 4) {
+        const sprintWeeks = Math.max(1, weeks);
+        document.querySelector('[data-plan-headline]').textContent =
+          weeks === 0
+            ? `The exam is this week · ${papers.length} papers`
+            : `${weeks} week${weeks === 1 ? '' : 's'} to the exam · ${papers.length} papers · revision sprint`;
+        document.querySelector('[data-plan-summary]').textContent =
+          'Too close for a learn-then-revise cycle — this is a single revision sprint.';
+        const phasesEl = document.querySelector('[data-plan-phases]');
+        phasesEl.innerHTML = '';
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        card.innerHTML =
+          `<div style="font-size: 16px; font-weight: 700; margin-bottom: 10px;">Revision sprint — week${sprintWeeks > 1 ? `s 1 to ${sprintWeeks}` : ' 1'}</div>` +
+          '<ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.75; color: var(--text-2);">' +
+          '<li>Chapter summaries + your Mistake notebook only — no new material.</li>' +
+          '<li>The RTP for your attempt first: it carries the amendments the SM doesn’t.</li>' +
+          '<li>One timed MTP paper per remaining slot, graded against suggested answers.</li>' +
+          '</ul>';
+        phasesEl.appendChild(card);
+        out.hidden = false;
+        out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
       }
 
       // Phase split: learn 55%, revise-1 20%, revise-2 15%, mocks 10% (min 1 week each).

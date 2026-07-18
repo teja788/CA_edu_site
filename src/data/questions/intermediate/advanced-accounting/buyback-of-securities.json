@@ -1,6 +1,7 @@
 {
   "level": "intermediate",
   "paper": "Paper 1 — Advanced Accounting",
+  "paperSlug": "advanced-accounting",
   "chapterSlug": "buyback-of-securities",
   "chapter": "Ch 12 — Buyback of Securities",
   "questions": [
@@ -298,6 +299,7 @@
       "id": "q-i1c12-015",
       "topic": "Ch 12 · Buyback · Sources",
       "type": "mcq",
+      "numerical": false,
       "stem": "Which of the following is NOT a permitted source for buyback under s.68(1)?",
       "options": [
         { "key": "A", "text": "Free reserves", "explanation": "Expressly permitted — s.68(1)(a)." },
@@ -318,6 +320,7 @@
       "id": "q-i1c12-016",
       "topic": "Ch 12 · Buyback · Approval route",
       "type": "mcq",
+      "numerical": false,
       "stem": "A buyback of 18% of (paid-up capital + free reserves) requires:",
       "options": [
         { "key": "A", "text": "A board resolution only", "explanation": "The board alone can authorise only up to 10% of the base — 18% exceeds it." },
@@ -337,6 +340,7 @@
       "id": "q-i1c12-017",
       "topic": "Ch 12 · Buyback · Completion timeline",
       "type": "mcq",
+      "numerical": false,
       "stem": "Every buyback must be completed within what period from the date of the special resolution (or board resolution)?",
       "options": [
         { "key": "A", "text": "Six months", "explanation": "Six months is the post-buyback ban on issuing the same kind of shares — a different clock." },
@@ -356,6 +360,7 @@
       "id": "q-i1c12-018",
       "topic": "Ch 12 · Buyback · Extinguishment",
       "type": "mcq",
+      "numerical": false,
       "stem": "Shares bought back must be extinguished and physically destroyed within:",
       "options": [
         { "key": "A", "text": "7 days of the last date of completion of the buyback", "explanation": "s.68(7) — seven days from the last date of completion. Bought-back shares can never be reissued or held." },
@@ -375,6 +380,7 @@
       "id": "q-i1c12-019",
       "topic": "Ch 12 · Buyback · Fresh-issue ban",
       "type": "mcq",
+      "numerical": false,
       "stem": "After completing a buyback of equity shares, a company may NOT make a further issue of equity shares within six months — EXCEPT by way of:",
       "options": [
         { "key": "A", "text": "A rights issue at a premium", "explanation": "A rights issue is still a fresh issue of the same kind — barred within the six months." },
@@ -394,6 +400,7 @@
       "id": "q-i1c12-020",
       "topic": "Ch 12 · Buyback · Gap between offers",
       "type": "mcq",
+      "numerical": false,
       "stem": "The minimum gap between the closure of one buyback offer and the next buyback offer is:",
       "options": [
         { "key": "A", "text": "No gap — multiple buybacks may run in a year within the 25% ceiling", "explanation": "The proviso to s.68(2) forbids a fresh offer within one year of the preceding offer's closure — the 25% ceiling is a separate constraint." },
@@ -413,6 +420,7 @@
       "id": "q-i1c12-021",
       "topic": "Ch 12 · Buyback · Eligible shares",
       "type": "mcq",
+      "numerical": false,
       "stem": "Ganga Chemicals Ltd wants to include its partly paid-up shares in a buyback offer. This is:",
       "options": [
         { "key": "A", "text": "Permitted, if the unpaid calls are adjusted against the buyback price", "explanation": "No such adjustment mechanism exists — the condition is absolute." },
@@ -432,6 +440,7 @@
       "id": "q-i1c12-022",
       "topic": "Ch 12 · Buyback · Prohibitions — s.70",
       "type": "mcq",
+      "numerical": false,
       "stem": "Which of these buyback routes is prohibited by s.70(1)?",
       "options": [
         { "key": "A", "text": "Purchase from the open market", "explanation": "Open-market purchase is a recognised buyback METHOD (subject to SEBI rules for listed companies) — not prohibited by s.70." },
@@ -451,6 +460,7 @@
       "id": "q-i1c12-023",
       "topic": "Ch 12 · Buyback · Default and the cooling period",
       "type": "mcq",
+      "numerical": false,
       "stem": "A company defaulted in repaying its deposits but remedied the default fully. It may undertake a buyback:",
       "options": [
         { "key": "A", "text": "Immediately on remedying the default", "explanation": "The proviso to s.70(1) imposes a further waiting period after the default ceases." },
@@ -470,6 +480,7 @@
       "id": "q-i1c12-024",
       "topic": "Ch 12 · Buyback · CRR utilisation",
       "type": "mcq",
+      "numerical": false,
       "stem": "The Capital Redemption Reserve created on buyback may be applied ONLY for:",
       "options": [
         { "key": "A", "text": "Issuing fully paid bonus shares", "explanation": "s.69(2) permits exactly one use: paying up unissued shares to be issued as fully paid bonus shares." },
@@ -489,6 +500,7 @@
       "id": "q-i1c12-025",
       "topic": "Ch 12 · Buyback · CRR rationale",
       "type": "mcq",
+      "numerical": false,
       "stem": "The requirement to create a CRR equal to the nominal value of shares bought back out of free reserves exists primarily to:",
       "options": [
         { "key": "A", "text": "Protect creditors by keeping the capital base intact in substance", "explanation": "Distributable reserves equal to the cancelled capital are converted into a non-distributable reserve — the capital cushion creditors relied on survives in another name." },
@@ -508,6 +520,7 @@
       "id": "q-i1c12-026",
       "topic": "Ch 12 · Buyback · Securities premium — two layers",
       "type": "mcq",
+      "numerical": false,
       "stem": "For BUYBACK purposes, the securities premium account is:",
       "options": [
         { "key": "A", "text": "Excluded from free reserves, because s.2(43) says so", "explanation": "s.2(43) is the general rule — but the Explanation to s.68 expressly includes securities premium in free reserves for buyback." },
@@ -527,6 +540,7 @@
       "id": "q-i1c12-027",
       "topic": "Ch 12 · Buyback · Meaning of debt",
       "type": "mcq",
+      "numerical": false,
       "stem": "In the post-buyback 2:1 debt-equity test, 'debt' means:",
       "options": [
         { "key": "A", "text": "Secured debt only", "explanation": "The test counts ALL debt — secured and unsecured alike." },
@@ -546,6 +560,7 @@
       "id": "q-i1c12-028",
       "topic": "Ch 12 · Buyback · Declaration of solvency",
       "type": "mcq",
+      "numerical": false,
       "stem": "Before making a buyback, the company must file a declaration of solvency affirming that it can meet its liabilities and will stay solvent for the year ahead. This declaration is:",
       "options": [
         { "key": "A", "text": "Form SH-9, signed by at least two directors (one being the managing director, if any)", "explanation": "s.68(6) read with Rule 17 — the solvency declaration in Form SH-9, verified by an affidavit." },
@@ -565,6 +580,7 @@
       "id": "q-i1c12-029",
       "topic": "Ch 12 · Buyback · Register of buyback",
       "type": "mcq",
+      "numerical": false,
       "stem": "The register of shares bought back (securities extinguished, consideration paid, dates) is maintained in:",
       "options": [
         { "key": "A", "text": "Form SH-9", "explanation": "SH-9 is the declaration of solvency filed BEFORE the buyback." },
@@ -584,6 +600,7 @@
       "id": "q-i1c12-030",
       "topic": "Ch 12 · Buyback · Buyback vs capital reduction",
       "type": "mcq",
+      "numerical": false,
       "stem": "The key difference between a buyback (s.68) and a reduction of capital (s.66) is:",
       "options": [
         { "key": "A", "text": "Buyback needs NCLT confirmation; reduction does not", "explanation": "Exactly reversed — s.66 reduction is the tribunal-supervised route." },
@@ -603,6 +620,7 @@
       "id": "q-i1c12-031",
       "topic": "Ch 12 · Buyback · Treasury shares",
       "type": "mcq",
+      "numerical": false,
       "stem": "Can an Indian company hold the shares it bought back as treasury stock for later resale?",
       "options": [
         { "key": "A", "text": "Yes, for up to one year", "explanation": "No holding window exists — extinguishment is mandatory within seven days of completion." },
@@ -622,6 +640,7 @@
       "id": "q-i1c12-032",
       "topic": "Ch 12 · Buyback · s.70(2) compliance bar",
       "type": "mcq",
+      "numerical": false,
       "stem": "Apart from the s.70(1) prohibitions, a company cannot buy back its shares while it has not complied with which of these sets of provisions?",
       "options": [
         { "key": "A", "text": "Sections 92, 123, 127 and 128 (annual return; declaration of dividend; failure to pay declared dividend; books of account)", "explanation": "s.70(2) lists precisely these four compliance gates — a company in default of basic governance cannot return capital." },
@@ -705,6 +724,7 @@
         {
           "id": "cs-i1c12-001-e",
           "type": "mcq",
+          "numerical": false,
           "stem": "The CFO asks why securities premium entered the limit computation at all, since s.2(43) excludes it from free reserves. The correct response:",
           "options": [
             { "key": "A", "text": "It was an error — premium should be excluded from the base", "explanation": "Not an error: the Explanation to s.68 overrides the general definition for buyback purposes." },
@@ -757,6 +777,7 @@
         {
           "id": "cs-i1c12-002-c",
           "type": "mcq",
+          "numerical": false,
           "stem": "If the board wants a buyback larger than ₹6,00,00,000, the company must:",
           "options": [
             { "key": "A", "text": "Pass a special resolution in general meeting, subject to the overall 25% ceiling", "explanation": "Above 10% and up to 25% of the base, s.68(2)(b) requires shareholder approval by special resolution." },
@@ -770,6 +791,7 @@
         {
           "id": "cs-i1c12-002-d",
           "type": "mcq",
+          "numerical": false,
           "stem": "Nimbus completes this buyback in November. The earliest it can OPEN its next buyback offer is:",
           "options": [
             { "key": "A", "text": "Immediately, if within the 25% yearly ceiling", "explanation": "The ceiling and the gap are separate rules — the one-year gap applies regardless of unused headroom." },
@@ -794,6 +816,7 @@
         {
           "id": "cs-i1c12-003-a",
           "type": "mcq",
+          "numerical": false,
           "stem": "Can Deccan Agro lawfully undertake the buyback in September 2026?",
           "options": [
             { "key": "A", "text": "Yes — the deposit default has been fully remedied", "explanation": "Remedying the default starts a THREE-YEAR cooling clock; it does not immediately restore the buyback power." },
@@ -807,6 +830,7 @@
         {
           "id": "cs-i1c12-003-b",
           "type": "mcq",
+          "numerical": false,
           "stem": "The prohibition that catches the deposit default is found in:",
           "options": [
             { "key": "A", "text": "Section 68(2)(d)", "explanation": "That is the debt-equity ceiling — a limit, not the default prohibition." },
@@ -820,6 +844,7 @@
         {
           "id": "cs-i1c12-003-c",
           "type": "mcq",
+          "numerical": false,
           "stem": "The investment subsidiary's offer to purchase the parent's shares 'on its behalf' is:",
           "options": [
             { "key": "A", "text": "A lawful workaround while the parent waits out the cooling period", "explanation": "Buying through a subsidiary or investment company is exactly what s.70(1)(a)–(b) prohibits — indirect routes are closed." },
@@ -833,6 +858,7 @@
         {
           "id": "cs-i1c12-003-d",
           "type": "mcq",
+          "numerical": false,
           "stem": "Even after 30 June 2027, one more fact in the case would still block the buyback until cured:",
           "options": [
             { "key": "A", "text": "The unfiled annual return under s.92", "explanation": "s.70(2) bars buyback while defaults in ss. 92, 123, 127 or 128 compliance subsist — the annual return must be filed first." },
@@ -913,6 +939,7 @@
         {
           "id": "cs-i1c12-004-e",
           "type": "mcq",
+          "numerical": false,
           "stem": "Two years later, Kaveri wants to use the CRR it created. The only permitted application is:",
           "options": [
             { "key": "A", "text": "Issuing fully paid bonus shares", "explanation": "s.69(2) — CRR may be applied only in paying up unissued shares issued as fully paid bonus shares." },
@@ -951,6 +978,7 @@
         {
           "id": "cs-i1c12-005-b",
           "type": "mcq",
+          "numerical": false,
           "stem": "Could Sagar Marine have funded this equity buyback from the proceeds of a fresh issue of EQUITY shares instead?",
           "options": [
             { "key": "A", "text": "Yes — any fresh issue qualifies as a source", "explanation": "The proviso to s.68(1) disqualifies money raised by earlier issuing the SAME kind of shares." },
@@ -978,6 +1006,7 @@
         {
           "id": "cs-i1c12-005-d",
           "type": "mcq",
+          "numerical": false,
           "stem": "After the buyback completes, the bought-back share certificates must be:",
           "options": [
             { "key": "A", "text": "Held in a treasury account for reissue", "explanation": "Indian law forbids treasury holding — extinguishment is mandatory." },
@@ -991,6 +1020,7 @@
         {
           "id": "cs-i1c12-005-e",
           "type": "mcq",
+          "numerical": false,
           "stem": "Three months after completing the buyback, the board proposes a fresh public issue of equity shares to fund expansion. This is:",
           "options": [
             { "key": "A", "text": "Permitted — the buyback is complete", "explanation": "s.68(8) bars a further issue of the SAME kind of shares within six months of completion." },
@@ -1006,6 +1036,7 @@
     {
       "id": "d-i1c12-001",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Conditions",
       "stem": "State the conditions that must be satisfied under section 68(2) of the Companies Act 2013 before a company can buy back its own shares. (5 marks)",
       "marks": 5,
@@ -1024,6 +1055,7 @@
     {
       "id": "d-i1c12-002",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Maximum buyback computation",
       "stem": "Chandra Auto Ltd has paid-up equity capital of ₹30,00,000 (3,00,000 shares of ₹10), free reserves including securities premium of ₹30,00,000, and total debt of ₹80,00,000. A special resolution authorises a buyback at ₹20 per share. Compute the maximum number of shares the company can buy back, showing each statutory test as a separate working note. (10 marks)",
       "marks": 10,
@@ -1044,6 +1076,7 @@
     {
       "id": "d-i1c12-003",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · CRR",
       "stem": "Why does the law require a Capital Redemption Reserve on buyback, how is it created, and how may it be used? (4 marks)",
       "marks": 4,
@@ -1061,6 +1094,7 @@
     {
       "id": "d-i1c12-004",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Prohibitions",
       "stem": "State the circumstances in which a company is prohibited from buying back its own shares under section 70 of the Companies Act 2013. (4 marks)",
       "marks": 4,
@@ -1078,6 +1112,7 @@
     {
       "id": "d-i1c12-005",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Journal entries",
       "stem": "Nalanda Papers Ltd buys back 40,000 equity shares of ₹10 each at ₹22 per share. Securities premium stands at ₹3,00,000 and general reserve at ₹15,00,000; there is no fresh issue. Pass journal entries with working notes for the amounts. (8 marks)",
       "marks": 8,
@@ -1099,6 +1134,7 @@
     {
       "id": "d-i1c12-006",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Buyback vs reduction of capital",
       "stem": "Distinguish between buyback of shares under section 68 and reduction of share capital under section 66 of the Companies Act 2013. (4 marks)",
       "marks": 4,
@@ -1116,6 +1152,7 @@
     {
       "id": "d-i1c12-007",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Sources",
       "stem": "From which sources may a company buy back its securities, and what is the one source-related prohibition? Illustrate the prohibition with an example. (4 marks)",
       "marks": 4,
@@ -1133,6 +1170,7 @@
     {
       "id": "d-i1c12-008",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Post-buyback obligations",
       "stem": "List the obligations and restrictions that follow the completion of a buyback, with their time limits. (4 marks)",
       "marks": 4,
@@ -1150,6 +1188,7 @@
     {
       "id": "d-i1c12-009",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Approval routes",
       "stem": "Compare the board-resolution route and the special-resolution route for a buyback: ceilings, when each is available, and one practical reason a company might prefer each. (4 marks)",
       "marks": 4,
@@ -1167,6 +1206,7 @@
     {
       "id": "d-i1c12-010",
       "type": "descriptive",
+      "numerical": false,
       "topic": "Ch 12 · Buyback · Free reserves",
       "stem": "\"Free reserves\" means different things inside and outside section 68. Explain, stating the treatment of securities premium and revaluation reserve in the buyback limit computations. (4 marks)",
       "marks": 4,

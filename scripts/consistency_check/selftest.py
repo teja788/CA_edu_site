@@ -62,6 +62,13 @@ def main() -> int:
         answered_path.write_text(json.dumps(fresh_ok))
         if run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path)).returncode != 0:
             problems.append("diff should exit 0 when every answer agrees")
+
+        # Case/whitespace must not manufacture mismatches: "b " for key "B"
+        # is agreement. Real disagreements (tested above) must still fail.
+        fresh_lower = {"answers": {qid: a.lower() + " " for qid, a in fresh_ok["answers"].items()}}
+        answered_path.write_text(json.dumps(fresh_lower))
+        if run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path)).returncode != 0:
+            problems.append("diff wrongly treats a lowercase/padded fresh answer as a mismatch")
         answered_path.write_text(json.dumps({"answers": {"q-dep-001": "B"}}))
         if run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path)).returncode != 2:
             problems.append("diff should exit 2 on unanswered questions")

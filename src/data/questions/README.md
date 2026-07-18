@@ -12,6 +12,7 @@ new banks land here.)
 {
   "level": "foundation",
   "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
   "chapterSlug": "time-value-of-money",
   "chapter": "Ch 4 — Time Value of Money",
   "questions": [ ... ]
@@ -20,6 +21,11 @@ new banks land here.)
 
 `chapterSlug` must match the filename (minus `.json`) — the verification runner
 uses it to find `scripts/verify_numerical/verify_<chapterSlug>.py`.
+
+`paperSlug` is the canonical route slug for the paper (the `<paper-slug>`
+directory this file lives in, e.g. `advanced-accounting`). Practice pages build
+links from it directly — never by slugifying the display `paper` string, which
+mangles names like "Corporate & Other Laws".
 
 ## Question shape
 

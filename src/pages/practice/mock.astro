@@ -45,7 +45,7 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
       <label style="flex: 1; min-width: 220px; font-size: 13px; color: var(--text-2);">
         Paper
         <select data-paper style="display: block; width: 100%; margin-top: 6px; font: inherit; font-size: 15px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text);">
-          {paperOptions.map((p) => <option value={p.number}>{p.name}</option>)}
+          {paperOptions.map((p) => <option value={p.number} data-slug={p.slug}>{p.name}</option>)}
         </select>
       </label>
       <label style="min-width: 180px; font-size: 13px; color: var(--text-2);">
@@ -92,6 +92,15 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
       return !Array.isArray(q.applicableAttempts) || q.applicableAttempts.includes(attemptName);
     }
 
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
     function compose() {
       const paperNumber = Number($('[data-paper]').value);
       const attemptName = $('[data-attempt]').value;
@@ -99,8 +108,9 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
 
       // Part I — 30 marks of MCQs. Case sets first (they ARE the Inter
       // pattern), whole sets only; standalone MCQs fill the remainder.
-      const caseSets = inPaper.filter((q) => q.type === 'case_mcq_set' && Array.isArray(q.questions));
-      const singles = inPaper.filter((q) => q.type === 'mcq');
+      // Pools are shuffled per click so every compose is a fresh paper.
+      const caseSets = shuffle(inPaper.filter((q) => q.type === 'case_mcq_set' && Array.isArray(q.questions)));
+      const singles = shuffle(inPaper.filter((q) => q.type === 'mcq'));
       let mcqMarks = 0;
       const partI = [];
       for (const set of caseSets) {
@@ -120,9 +130,9 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
       // Part II — 70 marks descriptive, greedy pack.
       let descMarks = 0;
       const partII = [];
-      const descriptives = inPaper
+      const descriptives = shuffle(inPaper
         .filter((q) => q.type === 'descriptive' && Array.isArray(q.skeleton))
-        .map((q) => ({ ...q, totalMarks: q.marks ?? q.skeleton.reduce((s, p) => s + (p.marks ?? 1), 0) }));
+        .map((q) => ({ ...q, totalMarks: q.marks ?? q.skeleton.reduce((s, p) => s + (p.marks ?? 1), 0) })));
       for (const q of descriptives) {
         if (descMarks + q.totalMarks <= 70) {
           partII.push(q);
@@ -187,8 +197,9 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
       }
       if (partII.length === 0) descList.innerHTML = '<div class="empty-state" style="font-size: 14px; color: var(--text-3);">No descriptive items in the bank for this paper/attempt yet — practice against the rubrics in Descriptive practice once they land.</div>';
 
-      const paperSlugs = { 1: 'advanced-accounting', 2: 'corporate-and-other-laws', 3: 'taxation', 4: 'cost-and-management-accounting', 5: 'auditing-and-ethics', 6: 'fm-and-sm' };
-      $('[data-quiz-link]').href = `/practice/quiz/?level=intermediate&paper=${paperSlugs[paperNumber]}&mode=mixed`;
+      // Canonical slug rides on the <option> — no duplicate slug map here.
+      const paperSlug = $('[data-paper]').selectedOptions[0].dataset.slug;
+      $('[data-quiz-link]').href = `/practice/quiz/?level=intermediate&paper=${paperSlug}&mode=mixed`;
     }
 
     function renderMcq(q, no) {
@@ -196,7 +207,7 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
       wrap.style.cssText = 'font-size: 15px; line-height: 1.6; margin-top: 8px;';
       const stem = document.createElement('div');
       stem.style.fontWeight = '600';
-      stem.textContent = `Q${no}. ${q.stem} (${2} marks)`;
+      stem.textContent = `Q${no}. ${q.stem} (${MCQ_MARKS} marks)`;
       wrap.appendChild(stem);
       const opts = document.createElement('div');
       opts.style.cssText = 'font-size: 14px; color: var(--text-2); margin-top: 6px; display: flex; flex-direction: column; gap: 3px;';

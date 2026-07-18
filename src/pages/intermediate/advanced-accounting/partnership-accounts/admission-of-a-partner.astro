@@ -134,15 +134,4 @@ import { attempt } from '../../../../data/site.js';
     }
   </style>
 
-  <script>
-    import { getMastery } from '../../../../scripts/store.js';
-    const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
-    const el = document.querySelector('[data-mastery="p1-ch4-admission"]');
-    if (el) {
-      const level = getMastery('p1-ch4-admission');
-      el.querySelectorAll('.seg').forEach((seg, i) => seg.classList.toggle('on', i < level));
-      const label = el.querySelector('[data-mastery-label]');
-      if (label) label.textContent = labels[level];
-    }
-  </script>
 </Base>

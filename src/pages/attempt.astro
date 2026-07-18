@@ -32,7 +32,7 @@ const milestones = [
       </div>
       <div class="tnum" style="text-align: right; font-size: 14px; color: var(--text-2);">
         <div>Exams begin <strong style="color: var(--text);">{attempt.beginsLabel}</strong></div>
-        <div style="color: var(--text-3);"><span data-days-left></span></div>
+        <div style="color: var(--text-3);"><span data-days-left data-begins={attempt.beginsOn}></span></div>
       </div>
     </div>
     <TrustRow attempt={attempt.name} updated="28 Jun 2026" source="ICAI exam notifications" />
@@ -88,8 +88,10 @@ const milestones = [
   </main>
 
   <script>
-    const begins = new Date('2026-09-08T00:00:00+05:30');
+    // Date rides on the element from site.js — no hardcoded copy to go stale.
+    const el = document.querySelector('[data-days-left]');
+    const begins = new Date(`${el.dataset.begins}T00:00:00+05:30`);
     const days = Math.max(0, Math.ceil((begins.getTime() - Date.now()) / 86400000));
-    document.querySelector('[data-days-left]').textContent = `${days} days from today`;
+    el.textContent = `${days} days from today`;
   </script>
 </Base>

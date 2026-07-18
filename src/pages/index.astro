@@ -32,7 +32,7 @@ const group2 = papers.filter((p) => p.group === 2);
       <div class="overline" style="margin-bottom: 12px;">CA Intermediate · {attempt.name} attempt · Group I</div>
       <div class="list-card">
         {group1.map((p) => (
-          <a class="list-row" href={p.status === 'live' ? `/intermediate/${p.slug}/` : '/intermediate/'}>
+          <a class="list-row" href={`/intermediate/${p.slug}/`}>
             <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
             <span class="row-title">{p.name}</span>
             {p.status === 'live' ? (

@@ -54,7 +54,7 @@ const resources = interPaper?.resources ?? level.resources;
 
     <div class="tabs" role="tablist">
       <span class="active">Chapters</span>
-      <span style="color: var(--text-3);">Practice</span>
+      <a href={`/practice/quiz/?level=${level.id}&paper=${paper.slug}`}>Practice</a>
       <a href="#resources">Resources</a>
     </div>
 

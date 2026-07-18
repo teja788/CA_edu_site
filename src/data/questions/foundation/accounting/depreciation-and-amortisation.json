@@ -1,6 +1,7 @@
 {
   "level": "foundation",
   "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
   "chapterSlug": "depreciation-and-amortisation",
   "chapter": "Ch 5 — Depreciation and Amortisation",
   "questions": [
@@ -488,6 +489,7 @@
       "id": "q-f1c5-025",
       "topic": "Ch 5 · Depreciation · Nature",
       "type": "mcq",
+      "numerical": false,
       "stem": "Depreciation accounting is best described as a process of:",
       "options": [
         { "key": "A", "text": "Valuation of the asset at market price each year", "explanation": "Depreciation does NOT track market value — a van's book value can differ wildly from its resale price." },
@@ -507,6 +509,7 @@
       "id": "q-f1c5-026",
       "topic": "Ch 5 · Depreciation · Causes",
       "type": "mcq",
+      "numerical": false,
       "stem": "A GST-billing machine at Iyer Stores works perfectly, but a new UPI-linked model makes it uneconomic to keep using. The machine's loss of usefulness is caused by:",
       "options": [
         { "key": "A", "text": "Wear and tear", "explanation": "The machine works perfectly — nothing has physically worn out." },
@@ -526,6 +529,7 @@
       "id": "q-f1c5-027",
       "topic": "Ch 5 · Depreciation · Scope",
       "type": "mcq",
+      "numerical": false,
       "stem": "Which of the following is NOT depreciated or amortised?",
       "options": [
         { "key": "A", "text": "Freehold land", "explanation": "Correct. Freehold land has an unlimited useful life, so there is nothing to spread. (A leasehold, by contrast, IS amortised over the lease term.)" },
@@ -545,6 +549,7 @@
       "id": "q-f1c5-028",
       "topic": "Ch 5 · Depreciation · Nature",
       "type": "mcq",
+      "numerical": false,
       "stem": "Mehta & Co. made a heavy loss this year, and its machinery stood idle for four months. Regarding depreciation for the year, the firm must:",
       "options": [
         { "key": "A", "text": "Skip it — there is no profit to charge it against", "explanation": "Depreciation is not a profit-sharing item; it is a cost of using (and holding) the asset, charged in loss years too." },
@@ -564,6 +569,7 @@
       "id": "q-f1c5-029",
       "topic": "Ch 5 · Depreciation · Nature",
       "type": "mcq",
+      "numerical": false,
       "stem": "Depreciation is called a 'non-cash expense' because:",
       "options": [
         { "key": "A", "text": "No cash leaves the business when depreciation is recorded", "explanation": "Correct. The cash went out when the asset was purchased; the yearly depreciation entry only allocates that old cost — no fresh cash moves." },
@@ -583,6 +589,7 @@
       "id": "q-f1c5-030",
       "topic": "Ch 5 · Terminology",
       "type": "mcq",
+      "numerical": false,
       "stem": "Match the write-off to the asset: a coal mine, a patent, and a lathe machine are written off respectively through:",
       "options": [
         { "key": "A", "text": "Depletion, amortisation, depreciation", "explanation": "Correct. Natural resources are DEPLETED as they are extracted; intangibles are AMORTISED; tangible machines are DEPRECIATED. Same idea, three names." },
@@ -602,6 +609,7 @@
       "id": "q-f1c5-031",
       "topic": "Ch 5 · Depreciation · Method properties",
       "type": "mcq",
+      "numerical": false,
       "stem": "Which statement about the two main methods is CORRECT?",
       "options": [
         { "key": "A", "text": "Under SLM the carrying amount reaches exactly the residual value at the end of the useful life", "explanation": "Correct. SLM removes the same slice of the depreciable amount every year, so after the last year the book value equals the residual value exactly — a handy self-check." },
@@ -621,6 +629,7 @@
       "id": "q-f1c5-032",
       "topic": "Ch 5 · Depreciation · Method choice",
       "type": "mcq",
+      "numerical": false,
       "stem": "WDV is often preferred for vehicles and machinery because:",
       "options": [
         { "key": "A", "text": "High early depreciation plus rising later repair costs keeps the total yearly burden roughly even", "explanation": "Correct. New machines need few repairs (high depreciation year); old machines need many repairs (low depreciation year) — WDV balances the two." },
@@ -640,6 +649,7 @@
       "id": "q-f1c5-033",
       "topic": "Ch 5 · Depreciation · Change of method",
       "type": "mcq",
+      "numerical": false,
       "stem": "Under AS 10, a change in the METHOD of depreciation (e.g., WDV to SLM) is accounted for as:",
       "options": [
         { "key": "A", "text": "A change in accounting estimate — applied prospectively", "explanation": "Correct. AS 10 treats the depreciation method as an estimate of how the asset's benefits are consumed; a change applies from now on, with no reopening of past years." },
@@ -659,6 +669,7 @@
       "id": "q-f1c5-034",
       "topic": "Ch 5 · Depreciation · Change in estimate",
       "type": "mcq",
+      "numerical": false,
       "stem": "Three years into an asset's 10-year estimated life, management revises the total life to 7 years. The correct treatment is:",
       "options": [
         { "key": "A", "text": "Spread the current carrying amount (less residual) over the remaining 4 years", "explanation": "Correct. Prospective treatment: take the book value as it stands and spread it over the REMAINING revised life (7 − 3 = 4 years)." },
@@ -678,6 +689,7 @@
       "id": "q-f1c5-035",
       "topic": "Ch 5 · Depreciation · Sale of asset",
       "type": "mcq",
+      "numerical": false,
       "stem": "Profit or loss on the sale of a depreciable asset is measured as the difference between the sale price and:",
       "options": [
         { "key": "A", "text": "The written-down value on the date of sale", "explanation": "Correct. The books carry the asset at WDV, so WDV is the benchmark. Selling below cost but above WDV still yields a profit." },
@@ -697,6 +709,7 @@
       "id": "q-f1c5-036",
       "topic": "Ch 5 · Depreciation · Provision method",
       "type": "mcq",
+      "numerical": false,
       "stem": "When a firm uses a Provision for Depreciation account, the Machinery account in the ledger shows:",
       "options": [
         { "key": "A", "text": "The original cost of the machinery", "explanation": "Correct. The whole point of the provision method: the asset account stays at cost, and accumulated depreciation collects separately in the provision account." },
@@ -716,6 +729,7 @@
       "id": "q-f1c5-037",
       "topic": "Ch 5 · Depreciation · Journal entries",
       "type": "mcq",
+      "numerical": false,
       "stem": "Under the DIRECT method (no provision account), the yearly depreciation entry is:",
       "options": [
         { "key": "A", "text": "Depreciation A/c Dr — To Asset A/c", "explanation": "Correct. The expense account is debited and the asset itself is credited, so the asset's balance falls to WDV each year. (Depreciation A/c is then closed to P&L.)" },
@@ -735,6 +749,7 @@
       "id": "q-f1c5-038",
       "topic": "Ch 5 · Terminology",
       "type": "mcq",
+      "numerical": false,
       "stem": "'Depreciable amount' means:",
       "options": [
         { "key": "A", "text": "Cost of the asset minus its residual value", "explanation": "Correct. This is the amount actually spread over the useful life — the recoverable residual is never depreciated." },
@@ -754,6 +769,7 @@
       "id": "q-f1c5-039",
       "topic": "Ch 5 · Terminology",
       "type": "mcq",
+      "numerical": false,
       "stem": "The 'useful life' of an asset, for depreciation purposes, is:",
       "options": [
         { "key": "A", "text": "The period over which the BUSINESS expects to use it (or the output it expects from it)", "explanation": "Correct. Useful life is an entity-specific estimate — it can be expressed in years OR in units/hours of output, and it is usually shorter than the asset's total physical life." },
@@ -773,6 +789,7 @@
       "id": "q-f1c5-040",
       "topic": "Ch 5 · Depreciation · Reasoning",
       "type": "mcq",
+      "numerical": false,
       "stem": "Other things equal, a HIGHER estimated residual value results in:",
       "options": [
         { "key": "A", "text": "Lower yearly depreciation", "explanation": "Correct. A higher residual shrinks the depreciable amount (cost − residual), so each year's slice is smaller." },
@@ -792,6 +809,7 @@
       "id": "q-f1c5-041",
       "topic": "Ch 5 · Depreciation · Pro-rata",
       "type": "mcq",
+      "numerical": false,
       "stem": "A machine was delivered on 1 May, installed and ready for use on 1 June, but actual production started on 1 August. Depreciation begins from:",
       "options": [
         { "key": "A", "text": "1 June — when the asset was ready for use", "explanation": "Correct. Depreciation runs from the date the asset is AVAILABLE for use — waiting for production to start does not postpone it." },
@@ -811,6 +829,7 @@
       "id": "q-f1c5-042",
       "topic": "Ch 5 · Depreciation · Rationale",
       "type": "mcq",
+      "numerical": false,
       "stem": "Charging depreciation every year, instead of expensing the whole asset in the purchase year, follows which accounting idea?",
       "options": [
         { "key": "A", "text": "Matching — cost should sit against the income it helps earn", "explanation": "Correct. The asset earns income for many years, so its cost is matched against those years, not dumped on year one." },
@@ -830,6 +849,7 @@
       "id": "q-f1c5-043",
       "topic": "Ch 5 · Depreciation · Method properties",
       "type": "mcq",
+      "numerical": false,
       "stem": "A firm using WDV notices the asset's book value never becomes zero. This is because:",
       "options": [
         { "key": "A", "text": "Each year's charge is a percentage of a shrinking balance, so a remainder always survives", "explanation": "Correct. Multiplying by (1 − rate) repeatedly approaches, but never reaches, zero — mathematically the book value only tends toward the residual value." },
@@ -849,6 +869,7 @@
       "id": "q-f1c5-044",
       "topic": "Ch 5 · Depreciation · Capital vs revenue",
       "type": "mcq",
+      "numerical": false,
       "stem": "Which of these amounts spent on a newly purchased second-hand lorry is NOT added to its cost for depreciation purposes?",
       "options": [
         { "key": "A", "text": "Overhauling the engine before first use", "explanation": "Pre-use overhaul brings the lorry to working condition — capitalised." },
@@ -868,6 +889,7 @@
       "id": "q-f1c5-045",
       "topic": "Ch 5 · Depreciation · Regulatory context",
       "type": "mcq",
+      "numerical": false,
       "stem": "For companies registered under the Companies Act 2013, indicative useful lives of assets for computing depreciation are given in:",
       "options": [
         { "key": "A", "text": "Schedule II of the Companies Act 2013", "explanation": "Correct. Schedule II ('Useful Lives to Compute Depreciation') gives the useful-life framework companies follow — Foundation needs only this mapping." },
@@ -887,6 +909,7 @@
       "id": "d-f1c5-01",
       "topic": "Ch 5 · Depreciation · Theory",
       "type": "descriptive",
+      "numerical": false,
       "stem": "Define depreciation. State its three main causes and explain why depreciation must be charged even in a year of loss. (5 marks)",
       "skeleton": [
         { "point": "Definition: systematic allocation of the depreciable amount (cost − residual value) of an asset over its useful life; allocation, not valuation", "marks": 1, "citation": "AS 10 concept; Companies Act 2013 Sch II Part A defines the same idea" },
@@ -905,6 +928,7 @@
       "id": "d-f1c5-02",
       "topic": "Ch 5 · Depreciation · Theory",
       "type": "descriptive",
+      "numerical": false,
       "stem": "Distinguish between the Straight Line Method and the Written Down Value method of depreciation (any four points), and state one type of asset each method suits. (5 marks)",
       "skeleton": [
         { "point": "Base: SLM — on original cost (constant); WDV — on opening book value (reducing)", "marks": 1, "citation": "formula" },
@@ -923,6 +947,7 @@
       "id": "d-f1c5-03",
       "topic": "Ch 5 · Depreciation · Practical",
       "type": "descriptive",
+      "numerical": false,
       "stem": "On 1 April 2023 Rathi Mills bought machinery for ₹6,00,000 (SLM, 10% p.a. on cost, year end 31 March). On 1 October 2025, one-third of the machinery (original cost ₹2,00,000) was sold for ₹1,42,000. Prepare the Machinery Account for 2023–24 to 2025–26. (10 marks)",
       "skeleton": [
         { "point": "2023–24: full-year depreciation 60,000 (10% × 6,00,000); closing balance 5,40,000", "marks": 2, "citation": "SLM on cost" },
@@ -941,6 +966,7 @@
       "id": "d-f1c5-04",
       "topic": "Ch 5 · Depreciation · Theory",
       "type": "descriptive",
+      "numerical": false,
       "stem": "What is the accounting treatment when (a) the useful life of an asset is revised, and (b) the method of depreciation is changed? Illustrate (a) with a simple example. (5 marks)",
       "skeleton": [
         { "point": "(a) Change in estimate → prospective: (carrying amount − revised residual) ÷ remaining revised life; past years untouched", "marks": 2, "citation": "AS 10 estimate-change concept" },
@@ -957,6 +983,7 @@
       "id": "d-f1c5-05",
       "topic": "Ch 5 · Depreciation · Practical",
       "type": "descriptive",
+      "numerical": false,
       "stem": "Explain the Provision for Depreciation method. Pass the journal entries for (i) the yearly depreciation charge and (ii) transfer of the relevant balances when the asset is sold. (5 marks)",
       "skeleton": [
         { "point": "Concept: asset account remains at original cost; yearly charges accumulate in a separate Provision for Depreciation (accumulated depreciation) account", "marks": 1, "citation": "provision method" },
@@ -974,6 +1001,7 @@
       "id": "d-f1c5-06",
       "topic": "Ch 5 · Depreciation · Theory",
       "type": "descriptive",
+      "numerical": false,
       "stem": "When is the units-of-production (or machine-hour) method more appropriate than time-based methods? Give the formula and one business example. (4 marks)",
       "skeleton": [
         { "point": "Appropriate when wear depends on USAGE, not time — output/hours drive the loss of usefulness", "marks": 1, "citation": "concept" },

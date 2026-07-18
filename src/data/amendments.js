@@ -27,7 +27,7 @@ export const amendments = [
     now: 'Pending human decision — SEBI has amended the 2018 buyback regulations repeatedly (incl. phasing down the open-market route). Confirm per attempt whether the Inter P1 syllabus expects SEBI-layer detail, and update Ch 12 notes §3 if so (AMENDMENT-CHECK marker in the notes; also in review_queue.md)',
     source: 'SEBI regulations page',
     sourceUrl: 'https://www.sebi.gov.in/legal/regulations',
-    affected: [{ label: 'Ch 12 Buyback — §3', href: '/intermediate/advanced-accounting/buyback-of-securities/#s3' }],
+    affected: [{ label: 'Ch 12 Buyback — §3', href: '/intermediate/advanced-accounting/buyback-of-securities/#3-after-the-cheque-extinguishment-and-the-quiet-period' }],
     todo: true,
   },
   {

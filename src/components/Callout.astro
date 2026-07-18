@@ -9,11 +9,15 @@ const defaults: Record<string, { glyph: string; label: string }> = {
   mistake: { glyph: '✕', label: 'Common mistake' },
   pointer: { glyph: '★', label: 'Exam pointer' },
   amendment: { glyph: '!', label: 'Amendment alert' },
+  note: { glyph: '✎', label: 'Note' },
 };
-const meta = defaults[kind];
+// Unknown kind (typo in content) degrades to the plain note style
+// instead of crashing the build on meta.glyph.
+const safeKind = kind in defaults ? kind : 'note';
+const meta = defaults[safeKind];
 ---
 
-<aside class={`callout callout-${kind}`}>
+<aside class={`callout callout-${safeKind}`}>
   <div class="callout-head">
     <span class="callout-glyph" aria-hidden="true">{meta.glyph}</span>
     <span class="callout-label">{label ?? meta.label}</span>

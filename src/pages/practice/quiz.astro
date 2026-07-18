@@ -35,6 +35,9 @@ const bankQuestions = Object.values(bankModules).flatMap((mod) => {
     meta: {
       level: bank.level,
       paper: bank.paper,
+      // Canonical route slug carried by the bank; slugifying the display
+      // string loses "&" → "and" and breaks ?paper= filters.
+      paperSlug: bank.paperSlug ?? null,
       chapterSlug: bank.chapterSlug,
       negative,
       masteryId:
@@ -44,7 +47,21 @@ const bankQuestions = Object.values(bankModules).flatMap((mod) => {
     },
   }));
 });
-const allQuestions = [...questions, ...bankQuestions];
+// The 12 launch questions in site.js are Inter P1 — give them the same meta
+// shape (incl. their per-question masteryId) so every filter treats the deck
+// uniformly.
+const legacyQuestions = questions.map((q) => ({
+  ...q,
+  meta: {
+    level: 'intermediate',
+    paper: 'Paper 1 — Advanced Accounting',
+    paperSlug: 'advanced-accounting',
+    chapterSlug: null,
+    negative: false,
+    masteryId: q.masteryId ?? null,
+  },
+}));
+const allQuestions = [...legacyQuestions, ...bankQuestions];
 ---
 
 <Base title="Practice quiz" bare>
@@ -134,22 +151,27 @@ const allQuestions = [...questions, ...bankQuestions];
     if (params.get('paper')) {
       const slug = params.get('paper').toLowerCase();
       base = base.filter((q) =>
-        (q.meta?.paper ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(slug)
+        q.meta?.paperSlug
+          ? q.meta.paperSlug === slug
+          : (q.meta?.paper ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(slug)
       );
     }
     if (params.get('chapter')) {
       base = base.filter((q) => q.meta?.chapterSlug === params.get('chapter'));
     }
     let deck = base;
+    // An empty mistakes/topic deck shows an honest empty state — silently
+    // serving the full deck would break the "Retry all" promise.
+    let emptyReason = null;
     if (params.get('mode') === 'mistakes') {
       const saved = JSON.parse(localStorage.getItem('adh-progress') ?? '{}').mistakes ?? [];
       const ids = new Set(saved.map((m) => m.questionId));
       deck = base.filter((q) => ids.has(q.id));
-      if (deck.length === 0) deck = base;
+      if (deck.length === 0) emptyReason = 'mistakes';
     } else if (params.get('topic')) {
       const t = params.get('topic').toLowerCase();
       deck = base.filter((q) => q.topic.toLowerCase().includes(t));
-      if (deck.length === 0) deck = base;
+      if (deck.length === 0) emptyReason = 'topic';
     } else if (params.get('mode') === 'mixed') {
       // Shuffle at block level: a case-scenario set's linked MCQs must stay
       // together and in order, so each set travels as one block.
@@ -170,8 +192,8 @@ const allQuestions = [...questions, ...bankQuestions];
     // from the bank metadata, or explicitly via ?scoring=foundation.
     const scoring = JSON.parse(document.querySelector('[data-scoring]').textContent);
     const negativeMode =
-      params.get('scoring') === 'foundation' ||
-      (deck.length > 0 && deck.every((q) => q.meta?.negative));
+      deck.length > 0 &&
+      (params.get('scoring') === 'foundation' || deck.every((q) => q.meta?.negative));
     if (negativeMode) document.querySelector('[data-negative-chip]').hidden = false;
 
     // Intermediate profile: +1 / 0 / 0 — no negative marking anywhere at
@@ -182,12 +204,13 @@ const allQuestions = [...questions, ...bankQuestions];
         (deck.length > 0 && deck.every((q) => (q.meta?.level ?? 'intermediate') === 'intermediate')));
     if (interMode) document.querySelector('[data-inter-chip]').hidden = false;
 
+    let timerHandle = null;
     if (params.get('timed') === '1') {
       const chip = document.querySelector('[data-timer]');
       const value = document.querySelector('[data-timer-value]');
       chip.hidden = false;
       const start = Date.now();
-      setInterval(() => {
+      timerHandle = setInterval(() => {
         const s = Math.floor((Date.now() - start) / 1000);
         value.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
       }, 1000);
@@ -204,6 +227,24 @@ const allQuestions = [...questions, ...bankQuestions];
     let selected = null;
     // Case sets score as a unit — per-set tallies for the summary.
     const caseScores = new Map();
+    // Mastery streaks are per topic: three corrects on THIS topic mean
+    // proficient; a session-wide count would promote the wrong topic.
+    const topicCorrect = new Map();
+
+    // Options render shuffled with positional letters (authored keys skew
+    // toward A/B); correctness still compares authored keys underneath.
+    const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
+    function displayOptions(q) {
+      if (!q._opts) {
+        const shuffled = [...q.options];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        q._opts = shuffled.map((opt, i) => ({ ...opt, display: LETTERS[i] ?? opt.key }));
+      }
+      return q._opts;
+    }
 
     function renderQuestion() {
       const q = deck[index];
@@ -232,12 +273,22 @@ const allQuestions = [...questions, ...bankQuestions];
 
       const wrap = $('[data-options]');
       wrap.innerHTML = '';
-      q.options.forEach((opt) => {
+      displayOptions(q).forEach((opt) => {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'option';
         btn.dataset.key = opt.key;
-        btn.innerHTML = `<span class="opt-letter">${opt.key}</span><span class="tnum">${opt.text}</span><span class="opt-state" hidden>Selected</span>`;
+        const letter = document.createElement('span');
+        letter.className = 'opt-letter';
+        letter.textContent = opt.display;
+        const text = document.createElement('span');
+        text.className = 'tnum';
+        text.textContent = opt.text;
+        const state = document.createElement('span');
+        state.className = 'opt-state';
+        state.hidden = true;
+        state.textContent = 'Selected';
+        btn.append(letter, text, state);
         btn.addEventListener('click', () => {
           if (answered) return;
           selected = opt.key;
@@ -284,7 +335,12 @@ const allQuestions = [...questions, ...bankQuestions];
       if (isCorrect) {
         correctCount += 1;
         clearMistake(q.id);
-        bumpMastery(q.meta?.masteryId ?? 'p1-ch4-admission', correctCount >= 3 ? 2 : 1);
+        const mid = q.meta?.masteryId;
+        if (mid) {
+          const streak = (topicCorrect.get(mid) ?? 0) + 1;
+          topicCorrect.set(mid, streak);
+          bumpMastery(mid, streak >= 3 ? 2 : 1);
+        }
       } else {
         wrongCount += 1;
         addMistake({ questionId: q.id, topic: q.topic });
@@ -299,27 +355,50 @@ const allQuestions = [...questions, ...bankQuestions];
         : `<span class="rb-glyph" aria-hidden="true">✕</span><span class="rb-word">Not this time.</span><span class="rb-note">${negativeMode ? '−0.25 marks · ' : ''}Saved to your Mistake notebook for review.</span>`;
 
       // Re-render options as result cards — EVERY option gets an explanation.
+      // Built with DOM APIs, not innerHTML: bank text must never execute.
       const wrap = document.querySelector('[data-options]');
       wrap.innerHTML = '';
-      q.options.forEach((opt) => {
+      displayOptions(q).forEach((opt) => {
         const div = document.createElement('div');
         const isAnswer = opt.key === q.correct;
         const isChosenWrong = opt.key === selected && !isAnswer;
         div.className = `result-option ${isAnswer ? 'is-correct' : ''} ${isChosenWrong ? 'is-wrong' : ''}`;
-        const glyph = isAnswer
-          ? `<span class="opt-letter" style="background: var(--correct); color: var(--on-correct); border-color: var(--correct);" aria-hidden="true">✓</span>`
-          : isChosenWrong
-            ? `<span class="opt-letter" style="background: var(--incorrect); color: var(--on-incorrect); border-color: var(--incorrect);" aria-hidden="true">✕</span>`
-            : `<span class="opt-letter">${opt.key}</span>`;
-        const tag = isAnswer
-          ? `<span class="opt-tag">${opt.key === selected ? 'Yours ✓' : 'Correct answer'}</span>`
-          : isChosenWrong
-            ? `<span class="opt-tag">Your answer</span>`
-            : '';
-        const readLink = isAnswer && q.readLink
-          ? ` <a href="${q.readLink.href}" style="font-weight: 650;">${q.readLink.label}</a>`
-          : '';
-        div.innerHTML = `<div class="opt-row">${glyph}<span class="tnum">${opt.text}</span>${tag}</div><div class="opt-expl">${opt.explanation}${readLink}</div>`;
+        const row = document.createElement('div');
+        row.className = 'opt-row';
+        const glyph = document.createElement('span');
+        glyph.className = 'opt-letter';
+        glyph.setAttribute('aria-hidden', 'true');
+        if (isAnswer) {
+          glyph.style.cssText = 'background: var(--correct); color: var(--on-correct); border-color: var(--correct);';
+          glyph.textContent = '✓';
+        } else if (isChosenWrong) {
+          glyph.style.cssText = 'background: var(--incorrect); color: var(--on-incorrect); border-color: var(--incorrect);';
+          glyph.textContent = '✕';
+        } else {
+          glyph.textContent = opt.display;
+        }
+        const text = document.createElement('span');
+        text.className = 'tnum';
+        text.textContent = opt.text;
+        row.append(glyph, text);
+        if (isAnswer || isChosenWrong) {
+          const tag = document.createElement('span');
+          tag.className = 'opt-tag';
+          tag.textContent = isAnswer ? (opt.key === selected ? 'Yours ✓' : 'Correct answer') : 'Your answer';
+          row.appendChild(tag);
+        }
+        const expl = document.createElement('div');
+        expl.className = 'opt-expl';
+        expl.textContent = opt.explanation;
+        if (isAnswer && q.readLink) {
+          expl.append(' ');
+          const link = document.createElement('a');
+          link.href = q.readLink.href;
+          link.style.fontWeight = '650';
+          link.textContent = q.readLink.label;
+          expl.appendChild(link);
+        }
+        div.append(row, expl);
         wrap.appendChild(div);
       });
 
@@ -341,6 +420,7 @@ const allQuestions = [...questions, ...bankQuestions];
     function next() {
       index += 1;
       if (index >= deck.length) {
+        clearInterval(timerHandle);
         document.querySelector('[data-progress]').style.width = '100%';
         root.hidden = true;
         summary.hidden = false;
@@ -403,7 +483,16 @@ const allQuestions = [...questions, ...bankQuestions];
     if (deck.length === 0) {
       root.hidden = true;
       summary.hidden = false;
-      if (scoped) {
+      document.querySelector('[data-counter]').textContent = '';
+      if (emptyReason === 'mistakes') {
+        document.querySelector('[data-summary-title]').textContent = 'Mistake notebook is empty';
+        document.querySelector('[data-summary-note]').textContent =
+          'Nothing waiting for a retry — that is the good outcome. New mistakes are saved here automatically as you practise.';
+      } else if (emptyReason === 'topic') {
+        document.querySelector('[data-summary-title]').textContent = 'No questions for this topic yet';
+        document.querySelector('[data-summary-note]').textContent =
+          'Topic drills fill in as the question bank grows chapter by chapter.';
+      } else if (scoped) {
         document.querySelector('[data-summary-title]').textContent = 'No questions here yet';
         document.querySelector('[data-summary-note]').textContent =
           'Question banks ship chapter by chapter. Until then, the official ICAI resources on the paper page cover this paper completely.';

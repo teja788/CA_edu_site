@@ -3,6 +3,20 @@ import Base from '../../layouts/Base.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import Badge from '../../components/Badge.astro';
 import { attempt, questions } from '../../data/site.js';
+
+// Real deck size for the P1 set: legacy launch questions + every Inter P1
+// bank MCQ (case-set sub-questions count individually, as in the quiz).
+const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: true });
+let interP1Mcqs = 0;
+for (const mod of Object.values(bankModules)) {
+  const bank = mod.default ?? mod;
+  if (!Array.isArray(bank.questions) || bank.paperSlug !== 'advanced-accounting') continue;
+  for (const q of bank.questions) {
+    if (q.type === 'mcq') interP1Mcqs += 1;
+    else if (q.type === 'case_mcq_set' && Array.isArray(q.questions)) interP1Mcqs += q.questions.length;
+  }
+}
+const p1SetCount = questions.length + interP1Mcqs;
 ---
 
 <Base title="Practice" active="practice">
@@ -17,10 +31,10 @@ import { attempt, questions } from '../../data/site.js';
     </p>
 
     <div class="list-card" style="max-width: 720px;">
-      <a class="list-row" href="/practice/quiz/">
+      <a class="list-row" href="/practice/quiz/?level=intermediate&paper=advanced-accounting">
         <span style="flex: 1;">
           <span style="display: block; font-size: 16px; font-weight: 600;">Paper 1 · full practice set</span>
-          <span style="font-size: 13px; color: var(--text-2);">{questions.length} questions · AS + partnership · per-option explanations</span>
+          <span style="font-size: 13px; color: var(--text-2);">{p1SetCount} questions · accounting standards + company accounts · per-option explanations</span>
         </span>
         <Badge kind="verified">{attempt.name}</Badge>
         <span class="chev" aria-hidden="true">›</span>

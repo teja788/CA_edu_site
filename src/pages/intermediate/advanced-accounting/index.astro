@@ -5,9 +5,22 @@ import Badge from '../../../components/Badge.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Mastery from '../../../components/Mastery.astro';
 import TrustRow from '../../../components/TrustRow.astro';
-import { attempt, papers, paper1Sections, paper1Resources } from '../../../data/site.js';
+import { attempt, papers, partnershipRefresherTopics, paper1Resources } from '../../../data/site.js';
+import { intermediatePapers } from '../../../data/intermediate.js';
 
 const paper = papers.find((p) => p.id === 'p1');
+// Chapter list: the verified ICAI SM taxonomy (intermediate.js) is the single
+// source of truth; which chapters have published notes comes from the MDX
+// files actually present in this directory.
+const interP1 = intermediatePapers.find((p) => p.id === 'p1');
+const noteFiles = import.meta.glob('./*.mdx');
+const noteSlugs = new Set(Object.keys(noteFiles).map((f) => f.replace('./', '').replace('.mdx', '')));
+const firstNoteChapter = interP1.sections
+  .flatMap((s) => s.chapters)
+  .find((ch) => noteSlugs.has(ch.slug));
+// Progress denominator: 15 syllabus chapters + 3 partnership refresher topics.
+const trackedTopics =
+  interP1.sections.reduce((n, s) => n + s.chapters.length, 0) + partnershipRefresherTopics.length;
 ---
 
 <Base title={`Paper 1: ${paper.name}`} active="papers">
@@ -25,54 +38,74 @@ const paper = papers.find((p) => p.id === 'p1');
           Paper 1: {paper.name}
         </h1>
         <div style="margin-top: 12px;">
-          <TrustRow attempt={attempt.name} updated="14 Jun 2026" source="ICAI Study Material (2025 ed.)" />
+          <TrustRow attempt={attempt.name} updated="3 Jul 2026" source={`ICAI Study Material (${interP1.edition})`} />
         </div>
       </div>
       <div style="flex-shrink: 0;" data-paper-cta>
-        <a href="/intermediate/advanced-accounting/partnership-accounts/admission-of-a-partner/" class="btn btn-primary">Continue Chapter 4</a>
-        <div class="tnum" style="font-size: 13px; color: var(--text-2); margin-top: 8px;" data-paper-progress-text>0 of {paper.topics} topics done</div>
+        <a href={`/intermediate/advanced-accounting/${firstNoteChapter.slug}/`} class="btn btn-primary">Start: Ch {firstNoteChapter.number} · {firstNoteChapter.name}</a>
+        <div class="tnum" style="font-size: 13px; color: var(--text-2); margin-top: 8px;" data-paper-progress-text data-total={trackedTopics}>0 of {trackedTopics} topics done</div>
       </div>
     </div>
 
     <!-- tabs -->
     <div class="tabs" role="tablist">
       <span class="active">Chapters</span>
-      <a href="/practice/">Practice</a>
+      <a href="/practice/quiz/?level=intermediate&paper=advanced-accounting">Practice</a>
       <a href="#resources">Resources</a>
     </div>
 
-    {paper1Sections.map((section, i) => (
+    {interP1.sections.map((section, i) => (
       <>
         <div class="overline" style="margin: 24px 0 12px;">{section.name}</div>
         <div class="list-card">
           {section.chapters.map((ch) => (
-            <>
-              <a
-                class="list-row"
-                href={ch.notesHref ?? (ch.slug === 'partnership-accounts' ? '/intermediate/advanced-accounting/partnership-accounts/goodwill-nature-valuation/' : '#')}
-                aria-disabled={!ch.notesHref && ch.slug !== 'partnership-accounts'}
-              >
+            noteSlugs.has(ch.slug) ? (
+              <a class="list-row" href={`/intermediate/advanced-accounting/${ch.slug}/`}>
                 <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
                 <span class="row-title">
                   {ch.name}
-                  {ch.slug === 'partnership-accounts' && <span class="badge badge-progress" style="margin-left: 8px;">In progress</span>}
-                  {ch.draft && <span class="badge badge-draft" style="margin-left: 8px;">✎ Community draft</span>}
+                  {ch.units && (
+                    <span style="display: block; font-size: 13px; font-weight: 400; color: var(--text-3); margin-top: 2px;">{ch.units.join(' · ')}</span>
+                  )}
+                  <span class="badge badge-draft" style="margin-left: 8px;">✎ Community draft</span>
                 </span>
-                <Mastery level={0} topicId={`ch-${ch.number}`} />
+                <Mastery level={0} topicId={`i1-ch${ch.number}`} />
                 <span class="chev" aria-hidden="true">›</span>
               </a>
-              {(ch.topics ?? []).filter((t) => t.hasNotes).map((t) => (
-                <a class="list-row" href={`/intermediate/advanced-accounting/${ch.slug}/${t.slug}/`} style="padding-left: 48px;">
-                  <span class="row-title" style="font-weight: 500; font-size: 15px;">{t.name}</span>
-                  <span class="chev" aria-hidden="true">›</span>
-                </a>
-              ))}
-            </>
+            ) : (
+              <div class="list-row">
+                <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
+                <span class="row-title">
+                  {ch.name}
+                  {ch.units && (
+                    <span style="display: block; font-size: 13px; font-weight: 400; color: var(--text-3); margin-top: 2px;">{ch.units.join(' · ')}</span>
+                  )}
+                </span>
+                <Badge kind="neutral">Notes soon</Badge>
+                <Mastery level={0} topicId={`i1-ch${ch.number}`} />
+              </div>
+            )
           ))}
         </div>
         {i === 0 && <AdSlot />}
       </>
     ))}
+
+    <!-- partnership refresher: deep-dive topic notes kept outside the syllabus list -->
+    <div class="overline" style="margin: 32px 0 12px;">Refresher · Partnership accounts (pre-Inter foundations)</div>
+    <div class="list-card">
+      {partnershipRefresherTopics.map((t) => (
+        <a class="list-row" href={`/intermediate/advanced-accounting/partnership-accounts/${t.slug}/`}>
+          <span class="row-title">{t.name}</span>
+          <Mastery level={0} topicId={t.masteryId} />
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+      ))}
+    </div>
+    <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; max-width: 640px;">
+      Partnership accounts are not a chapter of the new-scheme Inter Paper 1 — these notes stay here
+      because the mechanics (ratios, goodwill, revaluation) keep paying off across company accounts.
+    </p>
 
     <!-- analysis -->
     <div class="overline" style="margin: 32px 0 12px;">Analysis</div>
@@ -107,7 +140,8 @@ const paper = papers.find((p) => p.id === 'p1');
     import { getPaperProgress } from '../../../scripts/store.js';
     const el = document.querySelector('[data-paper-progress-text]');
     if (el) {
-      const { done, total, pct } = getPaperProgress('p1', 96);
+      const total = Number(el.dataset.total);
+      const { done, pct } = getPaperProgress(['i1-ch', 'p1-ch4-'], total);
       el.textContent = done > 0 ? `${done} of ${total} topics done · ${pct}%` : `0 of ${total} topics done`;
     }
   </script>

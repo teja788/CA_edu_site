@@ -51,7 +51,6 @@ import { allCards } from '../../data/flashcards.js';
 
     const allCards = JSON.parse(document.querySelector('[data-cards]').textContent);
     let queue = getDueCards(allCards);
-    const total = queue.length;
     let seen = 0;
 
     const root = document.querySelector('[data-review-root]');
@@ -67,7 +66,10 @@ import { allCards } from '../../data/flashcards.js';
       }
       const card = queue[0];
       document.querySelector('[data-counter]').textContent = `${queue.length} card${queue.length === 1 ? '' : 's'} due`;
-      document.querySelector('[data-progress]').style.width = `${total ? (seen / total) * 100 : 0}%`;
+      // Denominator tracks the live queue: "Again" re-queues cards, so a
+      // fixed initial total would push the bar past 100%.
+      const remaining = seen + queue.length;
+      document.querySelector('[data-progress]').style.width = `${remaining ? (seen / remaining) * 100 : 0}%`;
       document.querySelector('[data-deck]').textContent = card.deckName;
       document.querySelector('[data-front]').textContent = card.front;
       document.querySelector('[data-back]').textContent = card.back;
@@ -95,7 +97,7 @@ import { allCards } from '../../data/flashcards.js';
           b.className = `btn ${r.cls}`;
           b.textContent = r.label;
           b.addEventListener('click', () => {
-            const state = rateCard(queue[0].id, r.key);
+            rateCard(queue[0].id, r.key);
             const card = queue.shift();
             seen += 1;
             // "Again" cards return to the back of today's queue.

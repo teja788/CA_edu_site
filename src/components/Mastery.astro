@@ -17,3 +17,17 @@ const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
   </span>
   {showLabel && <span class="label" data-mastery-label>{labels[level]}</span>}
 </span>
+
+<script>
+  // Hydrate every mastery widget on the page from local progress. Astro
+  // dedupes component scripts, so this runs once per page.
+  import { getMastery } from '../scripts/store.js';
+  const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
+  document.querySelectorAll('[data-mastery]').forEach((el) => {
+    const level = getMastery(el.dataset.mastery);
+    if (!level) return;
+    el.querySelectorAll('.seg').forEach((seg, i) => seg.classList.toggle('on', i < level));
+    const label = el.querySelector('[data-mastery-label]');
+    if (label) label.textContent = labels[level];
+  });
+</script>

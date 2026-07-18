@@ -40,21 +40,32 @@ const nav = [
     <meta property="og:title" content={`${title} · Adhyayan`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={new URL('/og-image.png', Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={new URL('/og-image.png', Astro.site)} />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
     <script is:inline>
       // Set theme/text-size before paint to avoid a flash.
       (function () {
-        var theme = localStorage.getItem('adh-theme');
-        if (!theme) {
-          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        try {
+          var theme = localStorage.getItem('adh-theme');
+          if (!theme) {
+            theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.dataset.theme = theme;
+          var ts = localStorage.getItem('adh-textsize');
+          if (ts === 'large') document.documentElement.dataset.textsize = 'large';
+        } catch (e) {
+          /* Storage blocked (private mode / disabled) — fall back to defaults. */
         }
-        document.documentElement.dataset.theme = theme;
-        var ts = localStorage.getItem('adh-textsize');
-        if (ts === 'large') document.documentElement.dataset.textsize = 'large';
       })();
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     {!bare && (
       <header class="site-header">
         <a class="brand" href="/">
@@ -69,14 +80,16 @@ const nav = [
         <span class="spacer"></span>
         <a href="/search/" class="icon-btn" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;" aria-label="Search topics">⌕</a>
         <span class="textsize" role="group" aria-label="Text size">
-          <button type="button" data-textsize-btn="normal" aria-label="Normal text size">A</button>
-          <button type="button" data-textsize-btn="large" aria-label="Larger text size">A+</button>
+          <button type="button" data-textsize-btn="normal" aria-pressed="true" aria-label="Normal text size">A</button>
+          <button type="button" data-textsize-btn="large" aria-pressed="false" aria-label="Larger text size">A+</button>
         </span>
-        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">☾</button>
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">☾</button>
       </header>
     )}
 
-    <slot />
+    <div id="main">
+      <slot />
+    </div>
 
     {!bare && (
       <nav class="bottom-nav" aria-label="Main, mobile">
@@ -124,13 +137,15 @@ const nav = [
       (function () {
         document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
           var sync = function () {
-            btn.textContent = document.documentElement.dataset.theme === 'dark' ? '☀' : '☾';
+            var dark = document.documentElement.dataset.theme === 'dark';
+            btn.textContent = dark ? '☀' : '☾';
+            btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
           };
           sync();
           btn.addEventListener('click', function () {
             var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
             document.documentElement.dataset.theme = next;
-            localStorage.setItem('adh-theme', next);
+            try { localStorage.setItem('adh-theme', next); } catch (e) {}
             sync();
           });
         });
@@ -138,7 +153,9 @@ const nav = [
         var syncSize = function () {
           var large = document.documentElement.dataset.textsize === 'large';
           sizeBtns.forEach(function (b) {
-            b.classList.toggle('active', (b.dataset.textsizeBtn === 'large') === large);
+            var on = (b.dataset.textsizeBtn === 'large') === large;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
           });
         };
         syncSize();
@@ -146,10 +163,10 @@ const nav = [
           b.addEventListener('click', function () {
             if (b.dataset.textsizeBtn === 'large') {
               document.documentElement.dataset.textsize = 'large';
-              localStorage.setItem('adh-textsize', 'large');
+              try { localStorage.setItem('adh-textsize', 'large'); } catch (e) {}
             } else {
               delete document.documentElement.dataset.textsize;
-              localStorage.setItem('adh-textsize', 'normal');
+              try { localStorage.setItem('adh-textsize', 'normal'); } catch (e) {}
             }
             syncSize();
           });

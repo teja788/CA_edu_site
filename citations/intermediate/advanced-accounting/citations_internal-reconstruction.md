@@ -20,8 +20,8 @@ Reviewer: ☐ initials/date per row once spot-checked against the bare Act.
 | s.48 | Variation of shareholders' rights (no reconstruction account) | notes §2 callout; q-022; ir-3 |
 | s.66(1), (3) | Reduction needs special resolution + Tribunal (NCLT) confirmation; creditors heard | notes §3; q-006, q-026; cs-001 case; d-004; ir-2 |
 | s.66(1)(a) | Mode: extinguish/reduce liability for uncalled capital — no Capital Reduction credit arises (SM entry: partly paid shares become smaller fully paid shares) | notes §3; q-008, q-024; d-004; ir-5, ir-6 |
-| s.66(1)(b)(i) | Mode: pay off capital in excess of needs — cash out, no reconstruction credit | notes §3; q-024, q-025; d-004; ir-5 |
-| s.66(1)(b)(ii) | Mode: cancel paid-up capital lost/unrepresented — sacrifice credited to Capital Reduction A/c | notes §3; q-005, q-007, q-020; cs-001-a; cs-004-a; d-004; ir-5 |
+| s.66(1)(b)(ii) | Mode: pay off capital in excess of needs — cash out, no reconstruction credit | notes §3; q-024, q-025; d-004; ir-5 |
+| s.66(1)(b)(i) | Mode: cancel paid-up capital lost/unrepresented — sacrifice credited to Capital Reduction A/c | notes §3; q-005, q-007, q-020; cs-001-a; cs-004-a; d-004; ir-5 |
 | SM Ch 14 — entries | Reduction entries (paid-up only vs both values); appreciation credited to Capital Reduction; write-offs (P&L debit, goodwill, fictitious assets, overvaluations, scheme expenses) debited | notes §3, §5, WE 3; q-011, q-012, q-019; cs-001-b/c; cs-004-b/c; d-005; ir-7, ir-8, ir-14 |
 | SM Ch 14 — compromise/arrangements | Reserves given up: Reserves Dr → To Reconstruction; liabilities settled short: Liability Dr (sacrifice) → To Reconstruction | notes §4; q-009, q-010, q-023; cs-003-b; d-006; ir-7 |
 | SM Ch 14 — surrender of shares | Sub-divide → surrender → re-allot to claimants → cancel unutilised balance to Reconstruction A/c | notes §4, WE 2; q-017, q-018; cs-003 set; d-007; ir-10 |

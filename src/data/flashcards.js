@@ -92,7 +92,7 @@ export const decks = [
     applicableAttempts: ['Sept 2026', 'Jan 2027'],
     cards: [
       { id: 'ir-1', front: 'Internal vs external reconstruction — the one-line test:', back: 'Internal: SAME company reorganises capital and absorbs its losses (ss. 61/66, Capital Reduction A/c). External: a NEW company takes over the business and the old one winds up (AS 14).' },
-      { id: 'ir-2', front: 's.61 alteration needs…; s.66 reduction needs…', back: 'Alteration: articles authorisation + ORDINARY resolution, no tribunal. Reduction: SPECIAL resolution + NCLT confirmation (creditors heard).', lawAsOnDate: '2026-02-28' },
+      { id: 'ir-2', front: 's.61 alteration needs…; s.66 reduction needs…', back: 'Alteration: articles authorisation + ORDINARY resolution — no tribunal, EXCEPT consolidation/division that changes voting % needs NCLT approval (proviso to s.61(1)(b)). Reduction: SPECIAL resolution + NCLT confirmation (creditors heard).', lawAsOnDate: '2026-02-28' },
       { id: 'ir-3', front: 'The four s.61 alterations are…', back: 'Increase authorised capital · consolidation/sub-division · conversion of fully paid shares ↔ stock · cancellation of UNISSUED shares (which is expressly NOT a reduction — s.61(2)).' },
       { id: 'ir-4', front: 'Proportion rule on sub-division:', back: 'The paid/unpaid ratio per share must survive the split. ₹100 share ₹75 paid → ten ₹10 shares each ₹7.50 paid. Total paid-up capital unchanged.' },
       { id: 'ir-5', front: 'The three s.66 reduction modes:', back: '(a) extinguish liability for UNCALLED capital · (b) pay off EXCESS capital in cash · (c) cancel LOST capital. Only (c) credits the Capital Reduction Account.' },

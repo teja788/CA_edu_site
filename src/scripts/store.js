@@ -14,7 +14,13 @@ function read() {
 }
 
 function write(state) {
-  localStorage.setItem(KEY, JSON.stringify(state));
+  // Safari private mode / full quota throws — losing one update is fine,
+  // crashing mid-quiz is not.
+  try {
+    localStorage.setItem(KEY, JSON.stringify(state));
+  } catch {
+    /* storage unavailable */
+  }
 }
 
 /** Mastery: 0 not started · 1 familiar · 2 proficient · 3 mastered */
@@ -25,14 +31,34 @@ export function getMastery(topicId) {
 export function bumpMastery(topicId, level) {
   const state = read();
   state.mastery = state.mastery ?? {};
-  state.mastery[topicId] = Math.max(state.mastery[topicId] ?? 0, level);
+  state.masteryAt = state.masteryAt ?? {};
+  const prev = state.mastery[topicId] ?? 0;
+  let next = Math.max(prev, level);
+  // Mastered (3) needs spaced evidence: proficiency demonstrated again on a
+  // later day, not three quick corrects in one sitting.
+  const today = new Date().toDateString();
+  if (prev >= 2 && level >= 2 && state.masteryAt[topicId] && state.masteryAt[topicId] !== today) {
+    next = 3;
+  }
+  if (level >= 2) state.masteryAt[topicId] = today;
+  state.mastery[topicId] = next;
   write(state);
 }
 
-export function getPaperProgress(paperId, totalTopics) {
+/**
+ * Paper progress: topics at Proficient or above, over the paper's tracked
+ * topics. `prefixes` — one or more mastery-key prefixes belonging to the
+ * paper (e.g. ['i1-', 'p1-ch4-'] for Inter P1 chapters + the partnership
+ * refresher topics).
+ */
+export function getPaperProgress(prefixes, totalTopics) {
+  const list = Array.isArray(prefixes) ? prefixes : [prefixes];
   const mastery = read().mastery ?? {};
-  const done = Object.entries(mastery).filter(([k, v]) => k.startsWith(paperId) && v >= 2).length;
-  return { done, total: totalTopics, pct: Math.round((done / totalTopics) * 100) };
+  const done = Object.entries(mastery).filter(
+    ([k, v]) => list.some((p) => k.startsWith(p)) && v >= 2
+  ).length;
+  const total = totalTopics || 0;
+  return { done, total, pct: total ? Math.min(100, Math.round((done / total) * 100)) : 0 };
 }
 
 /** Mistake notebook: wrong answers auto-collected, tagged by topic. */

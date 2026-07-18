@@ -184,6 +184,28 @@ h1, h2, h3 { line-height: 1.3; }
   white-space: nowrap;
 }
 
+/* Skip link: hidden like .visually-hidden until keyboard focus lands on it. */
+.skip-link {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  width: auto; height: auto;
+  clip: auto;
+  z-index: 100;
+  top: 8px; left: 8px;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-2);
+}
+
 /* ============ buttons ============ */
 
 .btn {
@@ -249,7 +271,7 @@ h1, h2, h3 { line-height: 1.3; }
 .badge-draft, .badge-amended { background: var(--warning-tint); color: var(--warning-text); border-color: var(--warning-border); }
 .badge-login { background: var(--info-tint); color: var(--info-text); border-color: var(--info-border); }
 .badge-neutral { background: var(--surface-2); color: var(--text-2); border-color: var(--border); }
-.badge-progress { background: var(--accent-tint); color: var(--accent); border-color: var(--accent-tint); }
+.badge-progress { background: var(--accent-tint); color: var(--accent); border-color: var(--accent-tint-border); }
 
 /* ============ trust row ============ */
 
@@ -424,6 +446,11 @@ a.list-row:hover { background: var(--row-alt); }
 .callout-pointer .callout-glyph { background: var(--info); color: var(--on-info); }
 .callout-pointer .callout-label { color: var(--info-text); }
 
+/* Neutral fallback style for unrecognised callout kinds. */
+.callout-note { background: var(--surface-2); border-color: var(--border); }
+.callout-note .callout-glyph { background: var(--text-3); color: var(--surface); }
+.callout-note .callout-label { color: var(--text-2); }
+
 .callout-amendment { background: var(--warning-tint); border-color: var(--warning-border); }
 .callout-amendment .callout-glyph { background: var(--warning); color: var(--on-warning); }
 .callout-amendment .callout-label { color: var(--warning-text); }
@@ -552,7 +579,7 @@ a.list-row:hover { background: var(--row-alt); }
 /* ============ quiz ============ */
 
 .quiz-bar {
-  background: #232B3A;
+  background: var(--inkbar);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -567,7 +594,7 @@ a.list-row:hover { background: var(--row-alt); }
   align-items: center;
   min-height: 44px;
 }
-.quiz-bar .counter { font-size: 14px; color: #C6CBD8; font-variant-numeric: tabular-nums; }
+.quiz-bar .counter { font-size: 14px; color: var(--inkbar-dim); font-variant-numeric: tabular-nums; }
 .quiz-progress { height: 4px; background: var(--track); }
 .quiz-progress .fill { height: 100%; background: var(--accent); transition: width 0.2s; }
 

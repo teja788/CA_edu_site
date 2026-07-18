@@ -100,7 +100,9 @@ def cmd_diff(args) -> int:
         fresh = got.get("answer")
         if not fresh:
             unanswered.append(q["id"])
-        elif fresh != q.get("correct"):
+        # Normalize both sides: a fresh pass returning "b" for key "B" is
+        # agreement, not a mismatch — only real disagreements get quarantined.
+        elif str(fresh).strip().upper() != str(q.get("correct") or "").strip().upper():
             mismatches.append((q, fresh, got))
         else:
             agreed += 1
@@ -143,7 +145,9 @@ def main(argv=None) -> int:
     d = sub.add_parser("diff", help="compare fresh answers to the key; quarantine mismatches")
     d.add_argument("bank", type=Path)
     d.add_argument("answered", type=Path)
-    d.add_argument("--queue", type=Path, default=Path("review_queue.md"))
+    # Anchor the default queue to the repo root, not the CWD — running from a
+    # subdirectory must not scatter review_queue.md copies around the tree.
+    d.add_argument("--queue", type=Path, default=Path(__file__).resolve().parents[2] / "review_queue.md")
     d.add_argument("--allow-missing", action="store_true", help="don't fail on unanswered questions")
     d.set_defaults(fn=cmd_diff)
 

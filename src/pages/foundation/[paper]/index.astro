@@ -130,15 +130,4 @@ const chapterCount = paper.sections.reduce((n, s) => n + s.chapters.length, 0);
     </p>
   </main>
 
-  <script>
-    import { getMastery } from '../../../scripts/store.js';
-    const labels = ['Not started', 'Familiar', 'Proficient', 'Mastered ✓'];
-    document.querySelectorAll('[data-mastery]').forEach((el) => {
-      const level = getMastery(el.dataset.mastery);
-      if (!level) return;
-      el.querySelectorAll('.seg').forEach((seg, i) => seg.classList.toggle('on', i < level));
-      const label = el.querySelector('[data-mastery-label]');
-      if (label) label.textContent = labels[level];
-    });
-  </script>
 </Base>

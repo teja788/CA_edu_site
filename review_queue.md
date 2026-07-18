@@ -65,9 +65,15 @@ Triage rules:
   old Schedule VI note) should be confirmed against current Schedule III /
   NCLT practice, and the citations row initialled. The blind pass flagged the
   same question as its one medium-confidence answer — same reason.
-- [ ] **s.66 clause labels** — content cites s.66(1)(a) / s.66(1)(b)(i)-(ii)
+- [x] **s.66 clause labels** — content cites s.66(1)(a) / s.66(1)(b)(i)-(ii)
   for the three reduction modes. Verify the exact clause lettering in the
   current consolidated Act (India Code) and initial the citations rows.
+  **Resolved 2026-07-19** — the citations file had the (b) sub-clauses
+  swapped: the Act reads s.66(1)(b)(i) = cancel paid-up capital which is lost
+  or unrepresented by available assets, s.66(1)(b)(ii) = pay off paid-up
+  capital in excess of the wants of the company. Ref labels fixed in
+  citations_internal-reconstruction.md (notes/bank describe the modes without
+  sub-clause letters, so no other content was affected).
 
 ## branches-including-foreign — VERIFY 2026-07-04
 
@@ -114,6 +120,13 @@ Triage rules:
 - [ ] **NFRA vs NACAS wording in s.133** — content says CG notifies "in
   consultation with NFRA". Confirm the current s.133 text and the SM edition
   agree (older editions referenced NACAS).
+- [ ] **AS count restated frame-proof (added 2026-07-19)** — notes §3, the
+  pointer callout and §7 now say: 32 standards issued by the ICAI over time;
+  AS 6, AS 8 and AS 30–32 withdrawn; 27 in force — exactly the set the 2021
+  Rules notify — with the SM's "29 issued, minus two, equals 27" preserved as
+  the notified-series frame. Sight the current SM Ch 1 §3 wording and confirm
+  the exam still expects 29/27 in count questions (the bank's q-007–q-009/
+  q-026 answer keys should be re-read against the new framing).
 
 ## framework-for-preparation-and-presentation-of-fs — VERIFY 2026-07-04
 
@@ -145,6 +158,15 @@ Triage rules:
 - [ ] **Legacy Level I-IV references** — the site must nowhere else imply
   the four-level non-company scheme still operates (superseded for periods
   from 1 Apr 2024).
+- [ ] **AS 15 sub-50-employee SMC carve-out (added 2026-07-19)** — the 2026-07
+  audit softened Ch 3 §1 (AS 15 bullet + summary) and the Ch 6 intro, which
+  had stated flatly that every SMC must use the Projected Unit Credit Method
+  for defined benefit plans: an SMC with an average of fewer than 50 employees
+  may instead use another rational method for the accrued liability. A human
+  should sight the AS 15 text annexed to the Companies (AS) Rules 2021 for the
+  exact carve-out wording (average-employee test, "accrued liability" scope)
+  and initial the corresponding rows in citations_applicability-of-accounting-
+  standards.md and citations_liabilities-based-as.md.
 
 ## presentation-and-disclosures-based-as — VERIFY 2026-07-04
 
@@ -270,3 +292,34 @@ Triage rules:
   date, contingent consideration, goodwill factors, P&L balance,
   disclosures); all computation mechanics remain in Ch 13. Reviewer should
   confirm no contradiction between the two chapters' statements.
+
+## revenue-based-as — VERIFY 2026-07-19
+
+- [ ] **Citations file created retroactively** — the chapter's notes shipped
+  without a citations file; citations_revenue-based-as.md was written during
+  the 2026-07 content audit from the notes as they stand. No shingle/overlap
+  pass was run for this chapter, and there is no question bank, flashcard set
+  or numerical verify script yet. A reviewer should spot-check the rows
+  against SM Ch 8 Units 1–2 and the notified AS 7/AS 9 texts, and the overlap
+  check must be run when the bank is built.
+- [ ] **Definitional quotations kept on purpose** — the ※ clusters in the
+  citations file: the AS 7 construction-contract definitional tail ("closely
+  interrelated or interdependent in terms of their design, technology and
+  function or their ultimate purpose or use"), the cost-plus definition
+  ("allowable or otherwise defined costs, plus a percentage of these costs or
+  a fixed fee"), the AS 9 revenue definition ("gross inflow of cash,
+  receivables or other consideration…"), and the sale-of-goods recognition
+  heads. Confirm each matches the notified AS text exactly.
+- [ ] **Reliable-estimate condition counts** — notes §1 states FOUR conditions
+  for a fixed price contract's outcome and TWO for cost-plus. Sight the AS 7
+  paragraphs (SM Ch 8 U1) and confirm the four/two split and the
+  "compared with prior estimates" tail.
+- [ ] **WE 1 escalation stem reworded (2026-07-19)** — the labour clause now
+  reads "passes on labour cost increases in full provided the rise in minimum
+  wages does not exceed 30%", so the solution's full ₹30 lakh pass-through is
+  unambiguous (numbers and answer unchanged, ₹9,75,00,000). Re-read the stem
+  once against SM-style escalation problems and confirm the intended reading.
+- [ ] **WE 2 cost-to-complete clause (2026-07-19)** — the stem now states the
+  further ₹600 lakh includes consuming the ₹20 lakh of materials at site, so
+  total cost is unambiguously ₹1,000 lakh (numbers unchanged). Confirm this
+  matches the SM's convention for materials-at-site adjustments.

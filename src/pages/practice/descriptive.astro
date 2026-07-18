@@ -21,7 +21,7 @@ const items = Object.values(bankModules).flatMap((mod) => {
     .map((q) => ({
       ...q,
       totalMarks: q.marks ?? q.skeleton.reduce((s, p) => s + (p.marks ?? 1), 0),
-      meta: { level: bank.level, paper: bank.paper, chapterSlug: bank.chapterSlug },
+      meta: { level: bank.level, paper: bank.paper, paperSlug: bank.paperSlug ?? null, chapterSlug: bank.chapterSlug },
     }));
 });
 ---
@@ -95,7 +95,11 @@ const items = Object.values(bankModules).flatMap((mod) => {
     if (params.get('level')) deck = deck.filter((q) => q.meta?.level === params.get('level'));
     if (params.get('paper')) {
       const slug = params.get('paper').toLowerCase();
-      deck = deck.filter((q) => (q.meta?.paper ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(slug));
+      deck = deck.filter((q) =>
+        q.meta?.paperSlug
+          ? q.meta.paperSlug === slug
+          : (q.meta?.paper ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(slug)
+      );
     }
     if (params.get('chapter')) deck = deck.filter((q) => q.meta?.chapterSlug === params.get('chapter'));
 
@@ -165,8 +169,14 @@ const items = Object.values(bankModules).flatMap((mod) => {
         box.addEventListener('change', updateSelfScore);
         const body = document.createElement('span');
         body.style.flex = '1';
-        const cite = p.citation ? ` <span style="color: var(--text-3); font-size: 13px;">[${p.citation}]</span>` : '';
-        body.innerHTML = `${p.point}${cite}`;
+        body.textContent = p.point;
+        if (p.citation) {
+          body.append(' ');
+          const cite = document.createElement('span');
+          cite.style.cssText = 'color: var(--text-3); font-size: 13px;';
+          cite.textContent = `[${p.citation}]`;
+          body.appendChild(cite);
+        }
         const marks = document.createElement('span');
         marks.className = 'tnum';
         marks.style.cssText = 'color: var(--text-2); font-size: 14px; white-space: nowrap;';

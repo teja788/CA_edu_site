@@ -110,97 +110,17 @@ export const papers = [
 ];
 
 /**
- * Paper 1 chapter map (seed — sectioned as in the hub template).
- * Only Ch 4 "Partnership accounts" carries live topics/notes so far.
+ * Partnership-accounts refresher topics (pre-Inter foundations bridge).
+ * Partnership is NOT a chapter of Inter P1 under the new scheme — the hub
+ * chapter list comes from intermediate.js (verified ICAI taxonomy); these
+ * three deep-dive topic pages are kept as a clearly-labelled refresher.
  */
-export const paper1Sections = [
-  {
-    name: 'Section A · Accounting standards',
-    chapters: [
-      { number: 1, slug: 'intro-accounting-standards', name: 'Introduction to Accounting Standards', draft: false },
-      { number: 2, slug: 'framework-fs', name: 'Framework for preparation of FS', draft: false },
-      { number: 3, slug: 'as-1-2-3', name: 'AS 1, 2, 3 — Disclosure, Inventories, Cash flow', draft: false },
-    ],
-  },
-  {
-    name: 'Section B · Special transactions',
-    chapters: [
-      {
-        number: 4,
-        slug: 'partnership-accounts',
-        name: 'Partnership accounts',
-        draft: false,
-        topics: [
-          { slug: 'goodwill-nature-valuation', name: 'Goodwill: nature & valuation', hasNotes: true },
-          { slug: 'admission-of-a-partner', name: 'Admission of a partner', hasNotes: true },
-          { slug: 'retirement-of-a-partner', name: 'Retirement of a partner', hasNotes: true },
-        ],
-      },
-      { number: 5, slug: 'branch-accounting', name: 'Branch accounting', draft: true },
-    ],
-  },
-  {
-    name: 'Section C · Company accounts (ICAI Module 3)',
-    chapters: [
-      {
-        number: 1,
-        slug: 'introduction-to-accounting-standards',
-        name: 'Introduction to Accounting Standards',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/introduction-to-accounting-standards/',
-      },
-      {
-        number: 2,
-        slug: 'framework-for-preparation-and-presentation-of-fs',
-        name: 'Framework for Preparation & Presentation of Financial Statements',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/framework-for-preparation-and-presentation-of-fs/',
-      },
-      {
-        number: 3,
-        slug: 'applicability-of-accounting-standards',
-        name: 'Applicability of Accounting Standards',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/applicability-of-accounting-standards/',
-      },
-      {
-        number: 11,
-        slug: 'financial-statements-of-companies',
-        name: 'Financial Statements of Companies',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/financial-statements-of-companies/',
-      },
-      {
-        number: 12,
-        slug: 'buyback-of-securities',
-        name: 'Buyback of Securities',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/buyback-of-securities/',
-      },
-      {
-        number: 13,
-        slug: 'amalgamation-of-companies',
-        name: 'Amalgamation of Companies',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/amalgamation-of-companies/',
-      },
-      {
-        number: 14,
-        slug: 'internal-reconstruction',
-        name: 'Internal Reconstruction',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/internal-reconstruction/',
-      },
-      {
-        number: 15,
-        slug: 'branches-including-foreign',
-        name: 'Accounting for Branches including Foreign Branches',
-        draft: true,
-        notesHref: '/intermediate/advanced-accounting/branches-including-foreign/',
-      },
-    ],
-  },
+export const partnershipRefresherTopics = [
+  { slug: 'goodwill-nature-valuation', name: 'Goodwill: nature & valuation', masteryId: 'p1-ch4-goodwill' },
+  { slug: 'admission-of-a-partner', name: 'Admission of a partner', masteryId: 'p1-ch4-admission' },
+  { slug: 'retirement-of-a-partner', name: 'Retirement of a partner', masteryId: 'p1-ch4-retirement' },
 ];
+
 
 /**
  * ResourceLink — deep links to official free sources only.
@@ -258,7 +178,8 @@ export const paper1Resources = [
 export const questions = [
   {
     id: 'q-adm-001',
-    topic: 'Ch 4 · Partnership · Admission of a partner',
+    masteryId: 'p1-ch4-admission',
+    topic: 'Refresher · Partnership · Admission of a partner',
     type: 'mcq',
     stem: 'A and B share profits in the ratio 3:2. C is admitted for a 1/5th share, which he acquires equally from A and B. What is the new profit-sharing ratio?',
     options: [
@@ -276,7 +197,8 @@ export const questions = [
   },
   {
     id: 'q-adm-002',
-    topic: 'Ch 4 · Partnership · Admission of a partner',
+    masteryId: 'p1-ch4-admission',
+    topic: 'Refresher · Partnership · Admission of a partner',
     type: 'mcq',
     stem: 'Revaluation profit arising on admission of a partner is shared by:',
     options: [
@@ -294,7 +216,8 @@ export const questions = [
   },
   {
     id: 'q-adm-003',
-    topic: 'Ch 4 · Partnership · Admission of a partner',
+    masteryId: 'p1-ch4-admission',
+    topic: 'Refresher · Partnership · Admission of a partner',
     type: 'mcq',
     stem: 'X and Y share profits 7:3. Z is admitted and the new ratio is agreed as 5:3:2. The sacrificing ratio of X and Y is:',
     options: [
@@ -312,7 +235,8 @@ export const questions = [
   },
   {
     id: 'q-as2-001',
-    topic: 'Ch 3 · AS 2 · Inventories',
+    masteryId: 'i1-ch5',
+    topic: 'Ch 5 · AS 2 · Inventories',
     type: 'mcq',
     stem: 'Raw material was bought at ₹100/kg; its replacement cost has fallen to ₹80/kg. The finished goods made from it still sell above their total cost. Under AS 2, the raw material is valued at:',
     options: [
@@ -329,7 +253,8 @@ export const questions = [
   },
   {
     id: 'q-as3-001',
-    topic: 'Ch 3 · AS 3 · Cash flow statements',
+    masteryId: 'i1-ch4',
+    topic: 'Ch 4 · AS 3 · Cash flow statements',
     type: 'mcq',
     stem: 'For a finance company, interest paid on borrowings is classified in the cash flow statement as:',
     options: [
@@ -346,7 +271,8 @@ export const questions = [
   },
   {
     id: 'q-as1-001',
-    topic: 'Ch 3 · AS 1 · Disclosure of accounting policies',
+    masteryId: 'i1-ch4',
+    topic: 'Ch 4 · AS 1 · Disclosure of accounting policies',
     type: 'mcq',
     stem: 'Which of these is NOT a fundamental accounting assumption under AS 1?',
     options: [
@@ -363,7 +289,8 @@ export const questions = [
   },
   {
     id: 'q-ret-001',
-    topic: 'Ch 4 · Partnership · Retirement of a partner',
+    masteryId: 'p1-ch4-retirement',
+    topic: 'Refresher · Partnership · Retirement of a partner',
     type: 'mcq',
     stem: 'On retirement of a partner, the continuing partners compensate the outgoing partner for goodwill in the:',
     options: [
@@ -381,7 +308,8 @@ export const questions = [
   },
   {
     id: 'q-s37-001',
-    topic: 'Ch 4 · Partnership · Retirement of a partner',
+    masteryId: 'p1-ch4-retirement',
+    topic: 'Refresher · Partnership · Retirement of a partner',
     type: 'mcq',
     stem: 'A partner retires and the firm delays paying the amount due, with the partnership deed silent on the point. Under Section 37 of the Indian Partnership Act 1932, the outgoing partner may claim:',
     options: [
@@ -399,7 +327,8 @@ export const questions = [
   },
   {
     id: 'q-gw-001',
-    topic: 'Ch 4 · Partnership · Goodwill: nature & valuation',
+    masteryId: 'p1-ch4-goodwill',
+    topic: 'Refresher · Partnership · Goodwill: nature & valuation',
     type: 'mcq',
     stem: 'Average profit ₹95,000; capital employed ₹5,00,000; normal rate of return 10%. Goodwill by capitalisation of super profits is:',
     options: [
@@ -417,7 +346,8 @@ export const questions = [
   },
   {
     id: 'q-adm-005',
-    topic: 'Ch 4 · Partnership · Admission of a partner',
+    masteryId: 'p1-ch4-admission',
+    topic: 'Refresher · Partnership · Admission of a partner',
     type: 'mcq',
     stem: 'C is admitted for a 1/4th share and brings ₹3,00,000 as capital (no goodwill premium). The adjusted capitals of A and B total ₹6,00,000. The hidden goodwill of the firm is:',
     options: [
@@ -434,7 +364,8 @@ export const questions = [
   },
   {
     id: 'q-as10-001',
-    topic: 'Ch 3 · AS 10 · Property, plant & equipment',
+    masteryId: 'i1-ch5',
+    topic: 'Ch 5 · AS 10 · Property, plant & equipment',
     type: 'mcq',
     stem: 'Which cost is NOT capitalised into the cost of a machine under AS 10?',
     options: [
@@ -451,7 +382,8 @@ export const questions = [
   },
   {
     id: 'q-adm-004',
-    topic: 'Ch 4 · Partnership · Admission of a partner',
+    masteryId: 'p1-ch4-admission',
+    topic: 'Refresher · Partnership · Admission of a partner',
     type: 'mcq',
     stem: 'Under AS 26, goodwill of the firm is recorded in the books at the time of admission:',
     options: [
