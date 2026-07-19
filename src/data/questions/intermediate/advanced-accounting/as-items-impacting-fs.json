@@ -1,0 +1,2401 @@
+{
+  "level": "intermediate",
+  "paper": "advanced-accounting",
+  "paperSlug": "advanced-accounting",
+  "chapterSlug": "as-items-impacting-fs",
+  "chapter": "Ch 7 · Accounting Standards Based on Items Impacting Financial Statements",
+  "questions": [
+    {
+      "id": "q-i1c07-001",
+      "topic": "Ch 7 · AS 4 · Definition",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 4, 'events occurring after the balance sheet date' are significant events, favourable and unfavourable, that occur between:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — definition of events after the balance sheet date",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "The balance sheet date and the date on which the financial statements are approved by the Board of Directors (or corresponding approving authority)",
+          "explanation": "That is the exact window — approval by the Board for a company, the corresponding approving authority for others."
+        },
+        {
+          "key": "B",
+          "text": "The balance sheet date and the date of the annual general meeting",
+          "explanation": "The AGM comes after approval — the AS 4 window closes when the approving authority approves the statements."
+        },
+        {
+          "key": "C",
+          "text": "The balance sheet date and the date the auditor signs the report",
+          "explanation": "The audit report date is not the test — the approving authority's approval date is."
+        },
+        {
+          "key": "D",
+          "text": "The start and end of the accounting period",
+          "explanation": "Events within the period are ordinary transactions, not 'events after the balance sheet date'."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-002",
+      "topic": "Ch 7 · AS 4 · Adjusting events",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following, occurring between the balance sheet date and approval of the accounts, is an ADJUSTING event?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — adjusting vs non-adjusting events",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "A flood destroying a warehouse in April",
+          "explanation": "The flood is a condition that arose AFTER the balance sheet date — non-adjusting."
+        },
+        {
+          "key": "B",
+          "text": "A fall in the market value of investments after the year end",
+          "explanation": "The fall reflects post-year-end market conditions — it does not clarify the year-end position."
+        },
+        {
+          "key": "C",
+          "text": "The insolvency of a customer whose account receivable stood in the books at the balance sheet date",
+          "explanation": "The customer's inability to pay existed at the year end; the insolvency merely confirms it — adjust the receivable."
+        },
+        {
+          "key": "D",
+          "text": "A business combination agreed in the new financial year",
+          "explanation": "A combination struck after the year end is a new condition — non-adjusting, disclosed if material."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-003",
+      "topic": "Ch 7 · AS 4 · Adjusting event measurement",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A debtor owing ₹5,00,000 at 31 March is declared insolvent on 20 April, before the accounts are approved; the official liquidator expects a recovery of 30 paise per rupee. In the 31 March accounts the enterprise should provide:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — insolvency of a debtor as an adjusting event",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,00,000",
+          "explanation": "That writes off the whole debt — 30 paise per rupee (₹1,50,000) is still expected to be recovered."
+        },
+        {
+          "key": "B",
+          "text": "₹3,50,000",
+          "explanation": "Expected recovery = 5,00,000 × 0.30 = ₹1,50,000; the irrecoverable ₹3,50,000 is provided — the insolvency confirms a condition existing at the balance sheet date."
+        },
+        {
+          "key": "C",
+          "text": "₹1,50,000",
+          "explanation": "₹1,50,000 is the amount expected to be RECOVERED — the provision is for the slice that will not be."
+        },
+        {
+          "key": "D",
+          "text": "Nil — the insolvency occurred after the balance sheet date",
+          "explanation": "The event is adjusting: the debtor's financial trouble existed at the year end, and the insolvency merely evidences it."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-004",
+      "topic": "Ch 7 · AS 4 · Non-adjusting events",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A fire on 10 May destroys a godown (going concern unaffected); the accounts for the year ended 31 March are approved on 30 June. The correct treatment is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — non-adjusting events and their disclosure",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Adjust the accounts by writing off the godown at 31 March",
+          "explanation": "The godown stood intact at the balance sheet date — the loss belongs to the NEXT year's accounts."
+        },
+        {
+          "key": "B",
+          "text": "Provide for the loss as a contingency under AS 29",
+          "explanation": "There was no present obligation or asset impairment at the year end — the condition arose afterwards."
+        },
+        {
+          "key": "C",
+          "text": "Disclose the fire in the notes to the financial statements",
+          "explanation": "Under AS 4, material non-adjusting events are disclosed in the report of the approving authority, not the notes."
+        },
+        {
+          "key": "D",
+          "text": "Make no adjustment; being material, disclose the event in the report of the approving authority",
+          "explanation": "A condition arising after the balance sheet date is non-adjusting; material changes and commitments go to the approving authority's report (e.g. Directors' Report)."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-005",
+      "topic": "Ch 7 · AS 4 · Proposed dividends",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Board recommends a dividend on 25 May for the year ended 31 March; shareholders declare it at the AGM in September. Under AS 4 (as amended), at 31 March the dividend is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — dividends declared after the balance sheet date",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Recognised as a liability, being a statutory appropriation",
+          "explanation": "That is the PRE-amendment position — since the 2016 amendment, proposed dividends are no longer provided for."
+        },
+        {
+          "key": "B",
+          "text": "Not recognised as a liability; disclosed in the notes, and recognised as a liability in the year of declaration",
+          "explanation": "Declaration (shareholder approval) has not happened at the balance sheet date, so no present obligation exists — notes disclosure now, liability on declaration."
+        },
+        {
+          "key": "C",
+          "text": "Recognised as a liability because the Board's recommendation is a past event",
+          "explanation": "A recommendation creates no obligation — shareholders may reduce or reject it; only declaration binds."
+        },
+        {
+          "key": "D",
+          "text": "Neither recognised nor disclosed anywhere",
+          "explanation": "AS 4 expressly requires disclosure of such dividends in the notes to the financial statements."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-006",
+      "topic": "Ch 7 · AS 4 · Going concern exception",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "After the balance sheet date but before approval, a fire destroys the enterprise's only production plant and the enterprise will not continue in business. Although the condition arose after the year end, the enterprise should:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — going concern and events after the balance sheet date",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Account for the event — the going concern assumption no longer holds, so the statements are redrawn on an appropriate basis",
+          "explanation": "Events indicating the enterprise ceases to be a going concern displace the fundamental assumption and change the statements themselves, even though the condition arose after the year end."
+        },
+        {
+          "key": "B",
+          "text": "Disclose the fire in the report of the approving authority and change nothing",
+          "explanation": "Report-only disclosure is for non-adjusting events that leave the going concern intact — this one does not."
+        },
+        {
+          "key": "C",
+          "text": "Provide for the plant's carrying amount as a contingency",
+          "explanation": "This is not a contingency question — the going concern basis of the whole statements fails."
+        },
+        {
+          "key": "D",
+          "text": "Adjust only the plant's carrying amount and leave other items on the going concern basis",
+          "explanation": "Once going concern fails, the BASIS of preparation changes — not merely one asset's number."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-007",
+      "topic": "Ch 7 · AS 4 · NRV evidence",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Finished goods costing ₹8,00,000 at 31 March are sold in April, before approval of the accounts, for ₹6,50,000 — the fall in value reflecting market conditions existing at the year end. In the 31 March balance sheet the inventory is carried at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — post-year-end sale evidencing year-end NRV",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,00,000",
+          "explanation": "That ignores an adjusting event — the April sale evidences the net realisable value that existed at the year end."
+        },
+        {
+          "key": "B",
+          "text": "₹7,25,000",
+          "explanation": "Averaging cost and NRV has no basis — AS 2 carries inventory at the LOWER of the two."
+        },
+        {
+          "key": "C",
+          "text": "₹6,50,000",
+          "explanation": "The post-year-end sale provides additional evidence of the year-end NRV; the ₹1,50,000 write-down is made in the 31 March accounts."
+        },
+        {
+          "key": "D",
+          "text": "₹1,50,000",
+          "explanation": "₹1,50,000 is the write-down, not the carrying amount of the inventory."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-008",
+      "topic": "Ch 7 · AS 4 · Disclosure content",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Where a material non-adjusting event is disclosed, AS 4 requires the disclosure to state:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U1 — disclosure requirements for events after the balance sheet date",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only the nature of the event",
+          "explanation": "Nature alone is incomplete — the reader also needs the financial effect or the reason it cannot be given."
+        },
+        {
+          "key": "B",
+          "text": "Only an estimate of the financial effect",
+          "explanation": "An amount without the event's nature tells the reader nothing useful."
+        },
+        {
+          "key": "C",
+          "text": "The probability of the event recurring in future periods",
+          "explanation": "Recurrence probability is no part of the AS 4 disclosure."
+        },
+        {
+          "key": "D",
+          "text": "The nature of the event and an estimate of its financial effect, or a statement that such an estimate cannot be made",
+          "explanation": "Both limbs are required — and where quantification is impossible, that fact itself is disclosed."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-009",
+      "topic": "Ch 7 · AS 5 · Components of net profit",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 5, the net profit or loss for the period comprises which components, each to be disclosed on the face of the statement of profit and loss?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — components of net profit or loss",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Operating profit and non-operating profit",
+          "explanation": "AS 5 does not split profit on operating lines — that is a management-reporting split."
+        },
+        {
+          "key": "B",
+          "text": "Profit or loss from ordinary activities, and extraordinary items",
+          "explanation": "Those are the two components AS 5 names, each disclosed on the face of the statement."
+        },
+        {
+          "key": "C",
+          "text": "Profit before tax and profit after tax",
+          "explanation": "Tax presentation is not the AS 5 classification of net profit's components."
+        },
+        {
+          "key": "D",
+          "text": "Ordinary activities, extraordinary items and prior period items",
+          "explanation": "Prior period items are separately disclosed but are not a defined component of net profit — the standard names two components."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-010",
+      "topic": "Ch 7 · AS 5 · Extraordinary items",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A manufacturing company in a seismically quiet region loses stock in an earthquake. Under AS 5 the loss is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — extraordinary items",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "An extraordinary item — clearly distinct from ordinary activities and not expected to recur frequently or regularly — disclosed separately within net profit",
+          "explanation": "Earthquake losses are the standard's own example; the nature and amount appear separately in the statement of profit and loss."
+        },
+        {
+          "key": "B",
+          "text": "An ordinary item of abnormal size, disclosed separately",
+          "explanation": "Abnormal-size ordinary items arise FROM ordinary activities (inventory write-downs, litigation settlements) — an earthquake does not."
+        },
+        {
+          "key": "C",
+          "text": "A prior period item",
+          "explanation": "Nothing was misstated in an earlier year — prior period items are errors and omissions."
+        },
+        {
+          "key": "D",
+          "text": "Charged directly against reserves to avoid distorting profit",
+          "explanation": "Extraordinary items pass THROUGH net profit with separate disclosure — never around it."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-011",
+      "topic": "Ch 7 · AS 5 · Abnormal ordinary items",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A litigation settlement of a size material to the year's results is paid. Under AS 5 it is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — items requiring separate disclosure within ordinary activities",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "An extraordinary item",
+          "explanation": "Litigation arises from carrying on the business — the standard lists settlements among the ORDINARY items needing separate disclosure."
+        },
+        {
+          "key": "B",
+          "text": "A prior period item",
+          "explanation": "A settlement is not an error or omission of an earlier year's statements."
+        },
+        {
+          "key": "C",
+          "text": "Absorbed within ordinary expenses without any separate disclosure",
+          "explanation": "Size, nature or incidence relevant to explaining performance triggers separate disclosure of nature and amount."
+        },
+        {
+          "key": "D",
+          "text": "Part of profit from ordinary activities, with its nature and amount disclosed separately",
+          "explanation": "AS 5's list of such items includes litigation settlements, inventory write-downs, restructuring provisions and fixed-asset disposals — separately disclosed, still ordinary."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-012",
+      "topic": "Ch 7 · AS 5 · Prior period items",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 5, prior period items are:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — definition of prior period items",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "All expenses of earlier years paid in the current year",
+          "explanation": "Paying last year's accrued expense this year involves no error — the accrual was made when due."
+        },
+        {
+          "key": "B",
+          "text": "Revisions of estimates made in earlier years",
+          "explanation": "Estimate revisions are the ordinary consequence of new information — expressly NOT prior period items."
+        },
+        {
+          "key": "C",
+          "text": "Income or expenses arising in the current period as a result of errors or omissions in the preparation of the financial statements of one or more prior periods",
+          "explanation": "Errors and omissions — mathematical mistakes, misapplied policies, misinterpreted facts, oversights — are the defining source."
+        },
+        {
+          "key": "D",
+          "text": "Extraordinary items of earlier years reversed in the current year",
+          "explanation": "Extraordinary items and prior period items are separate classifications with separate definitions."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-013",
+      "topic": "Ch 7 · AS 5 · Prior period treatment",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "During 20X2–X3 it is discovered that a repairs bill of ₹2,60,000 for 20X1–X2 was never recorded. Under AS 5 the correction is made by:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — treatment of prior period items",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Charging ₹2,60,000 in the 20X2–X3 statement of profit and loss as a prior period item, separately disclosed",
+          "explanation": "AS 5 corrects errors through the CURRENT period's profit or loss, with disclosure that lets the reader see the impact on current profit."
+        },
+        {
+          "key": "B",
+          "text": "Restating the published 20X1–X2 comparatives by ₹2,60,000",
+          "explanation": "Retrospective restatement is the Ind AS 8 route — AS 5 leaves prior-year published figures alone."
+        },
+        {
+          "key": "C",
+          "text": "Adjusting ₹2,60,000 against opening reserves",
+          "explanation": "Routing errors through reserves hides them from every profit figure — AS 5 sends them through the current P&L."
+        },
+        {
+          "key": "D",
+          "text": "Disclosing ₹2,60,000 as an extraordinary item",
+          "explanation": "An omitted repairs bill arises from ordinary activities and from an ERROR — it is a prior period item, not extraordinary."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-014",
+      "topic": "Ch 7 · AS 5 · Change in estimate",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A machine costing ₹12,00,000 is depreciated straight-line over ten years (nil residual value). At the start of year 6, the remaining useful life is reassessed at two years. Depreciation for year 6 is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — change in accounting estimate applied prospectively",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,20,000",
+          "explanation": "That continues the original charge — a revised life changes depreciation from the period of change onwards."
+        },
+        {
+          "key": "B",
+          "text": "₹2,40,000",
+          "explanation": "That divides original cost by the five years already elapsed — neither the base nor the divisor is right."
+        },
+        {
+          "key": "C",
+          "text": "₹3,00,000",
+          "explanation": "Carrying amount after five years = 12,00,000 − 5 × 1,20,000 = ₹6,00,000, spread over the revised remaining life of two years — prospectively, with no catch-up for earlier years."
+        },
+        {
+          "key": "D",
+          "text": "₹6,00,000",
+          "explanation": "That divides the original COST by the two remaining years, ignoring the ₹6,00,000 already depreciated."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-015",
+      "topic": "Ch 7 · AS 5 · Policy change grounds",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 5, a change in an accounting policy should be made ONLY if:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — when a change in accounting policy is permitted",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "The change would report a higher profit for the year",
+          "explanation": "Result-shopping is precisely what the three permitted grounds exclude."
+        },
+        {
+          "key": "B",
+          "text": "It is required by statute, required for compliance with an accounting standard, or would result in a more appropriate presentation",
+          "explanation": "Those are the only three grounds AS 5 admits."
+        },
+        {
+          "key": "C",
+          "text": "The auditor concurs with the change",
+          "explanation": "Auditor concurrence is not a recognised ground — the three tests are statute, standard, or more appropriate presentation."
+        },
+        {
+          "key": "D",
+          "text": "The change is approved by shareholders in general meeting",
+          "explanation": "Accounting policies are management's responsibility within the three permitted grounds — no shareholder vote features."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-016",
+      "topic": "Ch 7 · AS 5 · Estimate vs policy",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An enterprise raises its provision for doubtful debts from 2% to 4% of receivables based on worsening collection experience. Under AS 5 this is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — change in estimate vs change in policy",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "A change in accounting policy requiring quantified disclosure of the impact",
+          "explanation": "The POLICY (providing for doubtful debts) is unchanged — only the estimate of how much moved."
+        },
+        {
+          "key": "B",
+          "text": "A prior period item, since 2% was evidently wrong",
+          "explanation": "An estimate later revised is not an error — the 2% was the best estimate on the information then available."
+        },
+        {
+          "key": "C",
+          "text": "Impermissible unless required by statute",
+          "explanation": "The statute/standard/presentation gates apply to POLICY changes; estimates are revised whenever information improves."
+        },
+        {
+          "key": "D",
+          "text": "A change in accounting estimate, recognised prospectively — and where a change cannot be cleanly classed as policy or estimate, it is treated as a change in estimate",
+          "explanation": "New information revising an approximation is the definition of an estimate change; AS 5's tie-breaker also defaults to estimate."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-017",
+      "topic": "Ch 7 · AS 5 · Policy change disclosure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For a more appropriate presentation, an enterprise changes its inventory cost formula from weighted average to FIFO. Closing inventory is ₹15,40,000 under weighted average and ₹16,10,000 under FIFO. The AS 5 consequence is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U2 — disclosure of the impact of a policy change",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Profit for the year is higher by ₹70,000, and the change and its ₹70,000 impact must be disclosed",
+          "explanation": "16,10,000 − 15,40,000 = ₹70,000 more closing inventory = ₹70,000 more profit; a material policy change is disclosed with its quantified impact."
+        },
+        {
+          "key": "B",
+          "text": "Profit for the year is lower by ₹70,000, and the impact must be disclosed",
+          "explanation": "Higher closing inventory means LOWER cost of goods sold — profit rises, not falls."
+        },
+        {
+          "key": "C",
+          "text": "No disclosure is needed because both formulas are permitted by AS 2",
+          "explanation": "Permissibility of the new policy does not waive AS 5's disclosure of a material change and its impact."
+        },
+        {
+          "key": "D",
+          "text": "Only the new closing inventory figure of ₹16,10,000 is disclosed",
+          "explanation": "The reader needs the change and its IMPACT (₹70,000), not merely the resulting balance."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-018",
+      "topic": "Ch 7 · AS 11 · Monetary items",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a MONETARY item under AS 11?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — monetary vs non-monetary items",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Inventories purchased from a foreign supplier",
+          "explanation": "Inventory is not receivable or payable in a fixed amount of money — non-monetary, carried at the transaction-date rate."
+        },
+        {
+          "key": "B",
+          "text": "Trade receivables denominated in US dollars",
+          "explanation": "An asset to be received in a fixed or determinable amount of money is the definition of a monetary item — restated at the closing rate."
+        },
+        {
+          "key": "C",
+          "text": "Plant and machinery imported and paid for",
+          "explanation": "A fixed asset carried at cost is non-monetary — the closing rate never touches it."
+        },
+        {
+          "key": "D",
+          "text": "An investment in the equity shares of a foreign company",
+          "explanation": "Equity shares carry no fixed money entitlement — non-monetary."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-019",
+      "topic": "Ch 7 · AS 11 · Monetary restatement",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Goods costing $80,000 are imported when the rate is ₹82.50; the creditor is unpaid at the year end when the closing rate is ₹84.00. The exchange difference is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — restatement of monetary items at closing rate",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nil — no difference arises until the creditor is actually paid",
+          "explanation": "Monetary items are restated at EACH balance sheet date; settlement is not the only trigger."
+        },
+        {
+          "key": "B",
+          "text": "A loss of ₹1,20,000, added to the cost of the inventory",
+          "explanation": "Under AS 11 exchange differences on monetary items go to the P&L — they are never loaded onto inventory cost."
+        },
+        {
+          "key": "C",
+          "text": "A gain of ₹1,20,000 in the profit and loss statement",
+          "explanation": "The rupee weakened — a larger rupee amount is now payable, which is a LOSS."
+        },
+        {
+          "key": "D",
+          "text": "A loss of ₹1,20,000, recognised in the profit and loss statement",
+          "explanation": "(84.00 − 82.50) × 80,000 = ₹1,20,000; restating the creditor at closing rate books the loss as expense of the period."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-020",
+      "topic": "Ch 7 · AS 11 · Non-monetary items",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Land abroad was bought for $2,00,000 when the rate was ₹75, and is carried at historical cost. At the year end the closing rate is ₹84. In the balance sheet the land appears at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — non-monetary items at transaction-date rate",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,50,00,000 — the transaction-date rate, with no exchange difference",
+          "explanation": "A non-monetary item carried at historical cost stays at 2,00,000 × 75; the closing rate is irrelevant to it."
+        },
+        {
+          "key": "B",
+          "text": "₹1,68,00,000 — restated at the closing rate",
+          "explanation": "Closing-rate restatement is for MONETARY items; land at cost keeps its transaction-date rate."
+        },
+        {
+          "key": "C",
+          "text": "₹1,50,00,000, with ₹18,00,000 credited to a translation reserve",
+          "explanation": "No difference arises at all on a cost-carried non-monetary item — there is nothing to park in a reserve."
+        },
+        {
+          "key": "D",
+          "text": "₹1,68,00,000, with an ₹18,00,000 gain in the P&L",
+          "explanation": "Recognising unrealised appreciation on a non-monetary item has no basis in AS 11."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-021",
+      "topic": "Ch 7 · AS 11 · Average rate",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For initially recording foreign currency transactions, an average rate for a week or a month may be used:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — initial recognition and use of average rate",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Never — the exact transaction-date rate is always mandatory",
+          "explanation": "AS 11 itself permits an approximating average as a practical expedient."
+        },
+        {
+          "key": "B",
+          "text": "Always, at the enterprise's option",
+          "explanation": "The permission is conditional — it fails when rates fluctuate significantly."
+        },
+        {
+          "key": "C",
+          "text": "If the exchange rate does not fluctuate significantly during that period",
+          "explanation": "The average approximates the actual rates only in stable conditions — significant fluctuation forces the transaction-date rate."
+        },
+        {
+          "key": "D",
+          "text": "Only with prior approval of the Reserve Bank of India",
+          "explanation": "No regulatory approval features — the test is the behaviour of the exchange rate."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-022",
+      "topic": "Ch 7 · AS 11 · Integral vs non-integral",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which feature points to a foreign operation being NON-INTEGRAL?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — indicators of a non-integral foreign operation",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "It sells only goods imported from the reporting enterprise and remits the proceeds to it",
+          "explanation": "That is the textbook INTEGRAL operation — an extension of the reporting enterprise's own business."
+        },
+        {
+          "key": "B",
+          "text": "Its activities directly affect the reporting enterprise's day-to-day cash flows",
+          "explanation": "Direct cash-flow linkage marks an integral operation."
+        },
+        {
+          "key": "C",
+          "text": "Transactions with the reporting enterprise form a high proportion of its activities",
+          "explanation": "Heavy intercompany dependence points to integral — non-integral operations transact mostly with their local market."
+        },
+        {
+          "key": "D",
+          "text": "It accumulates cash, incurs expenses, earns income and arranges borrowings substantially in its own local currency",
+          "explanation": "Local-currency autonomy is the defining indicator — rate changes then affect the net investment, not individual cash flows."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-023",
+      "topic": "Ch 7 · AS 11 · Non-integral translation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A NON-INTEGRAL foreign subsidiary holds fixed assets of FC 1,00,000 acquired when the rate was ₹60; the closing rate is ₹70. In the translated financial statements the fixed assets appear at:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — translation of a non-integral foreign operation",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹60,00,000, at the rate on the acquisition date",
+          "explanation": "Transaction-date rates for non-monetary items belong to the INTEGRAL method — non-integral operations translate everything at closing."
+        },
+        {
+          "key": "B",
+          "text": "₹70,00,000, translated at the closing rate, with the resulting difference taken to the foreign currency translation reserve",
+          "explanation": "For a non-integral operation ALL assets and liabilities — monetary and non-monetary — go at the closing rate, and differences accumulate in FCTR."
+        },
+        {
+          "key": "C",
+          "text": "₹65,00,000, at the average rate for the year",
+          "explanation": "Average rates approximate transaction-date rates for INCOME and EXPENSES, not for balance sheet items."
+        },
+        {
+          "key": "D",
+          "text": "₹70,00,000, with the difference recognised in the profit and loss statement",
+          "explanation": "P&L recognition of translation differences is the integral-operation rule — a non-integral operation's differences rest in FCTR until disposal."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-024",
+      "topic": "Ch 7 · AS 11 · FCTR",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Exchange differences arising on translating the financial statements of a non-integral foreign operation are:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — foreign currency translation reserve",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Recognised in the profit and loss statement of the period",
+          "explanation": "That is the treatment for transactions and INTEGRAL operations — not for a non-integral one."
+        },
+        {
+          "key": "B",
+          "text": "Adjusted against the cost of the operation's fixed assets",
+          "explanation": "Asset-cost adjustment is the narrow para 46A election for long-term monetary items — nothing to do with translation of a non-integral operation."
+        },
+        {
+          "key": "C",
+          "text": "Accumulated in a foreign currency translation reserve until the disposal of the net investment",
+          "explanation": "The differences affect the net investment, not current cash flows — so they wait in FCTR and hit income only on disposal."
+        },
+        {
+          "key": "D",
+          "text": "Ignored, as they are unrealised",
+          "explanation": "They are recognised — in FCTR — not ignored; being unrealised routes them away from the P&L, not out of the accounts."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-025",
+      "topic": "Ch 7 · AS 11 · Disposal of non-integral operation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On the disposal of a non-integral foreign operation, the cumulative balance in the foreign currency translation reserve relating to it is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — disposal of a non-integral foreign operation",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Recognised as income or expense in the same period in which the gain or loss on disposal is recognised",
+          "explanation": "The deferred translation differences are released to the P&L together with the disposal result."
+        },
+        {
+          "key": "B",
+          "text": "Transferred directly to general reserve",
+          "explanation": "A reserve-to-reserve shuffle would keep the accumulated differences out of income for ever — the standard releases them to the P&L."
+        },
+        {
+          "key": "C",
+          "text": "Retained in the reserve indefinitely",
+          "explanation": "The reserve exists only until disposal of the net investment it relates to."
+        },
+        {
+          "key": "D",
+          "text": "Adjusted against the carrying amount of the investment before computing the disposal gain",
+          "explanation": "The disposal gain and the FCTR release are recognised as separate elements in the same period, not netted into the carrying amount."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-026",
+      "topic": "Ch 7 · AS 11 · Forward contract premium",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 1 January (year end 31 March) an enterprise hedging a payable buys $50,000 six months forward at ₹83.72 when the spot rate is ₹83.00. The premium charged to the P&L for the year ended 31 March is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — amortisation of forward premium (hedging)",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹36,000",
+          "explanation": "₹36,000 is the FULL premium — it is amortised over the six-month contract life, and only three months fall in this year."
+        },
+        {
+          "key": "B",
+          "text": "Nil — the premium is recognised on maturity of the contract",
+          "explanation": "Waiting for maturity is exactly what amortisation over the contract life forbids."
+        },
+        {
+          "key": "C",
+          "text": "₹18,000",
+          "explanation": "Premium = (83.72 − 83.00) × 50,000 = ₹36,000, amortised over six months; January–March takes 36,000 × 3/6 = ₹18,000."
+        },
+        {
+          "key": "D",
+          "text": "₹6,000",
+          "explanation": "₹6,000 is one month's amortisation (36,000/6) — three months of the contract life have expired by 31 March."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-027",
+      "topic": "Ch 7 · AS 11 · Speculative forward contract",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A forward contract to buy $1,00,000, entered when the spot rate was ₹83.60 at a contracted forward rate of ₹84.00, matures on 30 June. It is held for SPECULATION. At 31 March the spot rate is ₹84.50 and the forward rate available for the remaining three-month maturity is ₹84.90. The P&L for the year ended 31 March recognises:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — forward contracts for trading or speculation",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "A gain of ₹50,000",
+          "explanation": "₹50,000 uses the closing SPOT rate (84.50 − 84.00) — a speculative contract is marked against the FORWARD rate for the remaining maturity."
+        },
+        {
+          "key": "B",
+          "text": "A gain of ₹90,000",
+          "explanation": "(84.90 − 84.00) × 1,00,000 = ₹90,000 — the difference between the forward rate available for the remaining maturity and the contracted forward rate, with no premium amortisation at all."
+        },
+        {
+          "key": "C",
+          "text": "Nothing until the contract matures on 30 June",
+          "explanation": "Speculative contracts are marked to market at each reporting date — recognition does not wait for maturity."
+        },
+        {
+          "key": "D",
+          "text": "A gain of ₹1,30,000",
+          "explanation": "₹1,30,000 measures against the inception SPOT rate (84.90 − 83.60), wrongly mixing the premium into the gain — the benchmark is the CONTRACTED forward rate."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-028",
+      "topic": "Ch 7 · AS 11 · Para 46A option",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company elects the AS 11 para 46A option for its long-term foreign currency monetary items. Exchange differences on a long-term loan taken to acquire a depreciable capital asset are then:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U3 — para 46A option for long-term foreign currency monetary items",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Recognised in the P&L of the period, as for any monetary item",
+          "explanation": "P&L recognition is the DEFAULT — the whole point of the 46A election is to route these differences elsewhere."
+        },
+        {
+          "key": "B",
+          "text": "Accumulated in FCTR until the loan is repaid",
+          "explanation": "FCTR belongs to non-integral operation translation — 46A uses the asset's cost or the FCMITDA."
+        },
+        {
+          "key": "C",
+          "text": "Ignored until settlement of the loan",
+          "explanation": "The differences are recognised each period — the election changes their destination, not their timing."
+        },
+        {
+          "key": "D",
+          "text": "Added to or deducted from the cost of the asset and depreciated over its remaining life; differences on other long-term monetary items go to FCMITDA and are amortised over the balance period of the item",
+          "explanation": "That is the irrevocable 46A machinery: capitalise against depreciable assets, otherwise park in the Foreign Currency Monetary Item Translation Difference Account and amortise."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-029",
+      "topic": "Ch 7 · AS 22 · Tax expense",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 22, the tax expense for a period comprises:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — tax expense: current plus deferred",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Current tax and deferred tax, both included in determining the net profit or loss for the period",
+          "explanation": "AS 22 applies matching to income tax — the period bears the tax EFFECT of its transactions, current and deferred."
+        },
+        {
+          "key": "B",
+          "text": "Only the income tax actually payable on the period's taxable income",
+          "explanation": "Cash-payable tax alone ignores the timing differences whose tax effects belong to this period."
+        },
+        {
+          "key": "C",
+          "text": "Current tax, deferred tax and the tax effect of permanent differences shown separately",
+          "explanation": "Permanent differences carry NO separate tax effect — they simply alter the effective rate."
+        },
+        {
+          "key": "D",
+          "text": "Advance tax paid during the year",
+          "explanation": "Advance tax is a payment on account — an asset until adjusted, not the measure of the expense."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-030",
+      "topic": "Ch 7 · AS 22 · Timing vs permanent",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following creates a TIMING difference under AS 22?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — timing vs permanent differences",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "A penalty for breach of law, disallowed for tax purposes",
+          "explanation": "A penalty is disallowed for ever — it originates and never reverses: permanent."
+        },
+        {
+          "key": "B",
+          "text": "Agricultural income exempt from tax",
+          "explanation": "Exempt income never enters taxable income in any period — permanent."
+        },
+        {
+          "key": "C",
+          "text": "A bonus provided in the accounts but deductible for tax under section 43B only in the year of actual payment",
+          "explanation": "Disallowed now, allowed on payment later — it originates in one period and reverses in another: the definition of a timing difference."
+        },
+        {
+          "key": "D",
+          "text": "Personal expenditure of the proprietor disallowed for tax",
+          "explanation": "A disallowance that no future period will ever reverse is permanent."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-031",
+      "topic": "Ch 7 · AS 22 · Deferred tax computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the year, depreciation is ₹2,40,000 in the books and ₹3,60,000 under the Income-tax Act; the enacted tax rate is 30%. The deferred tax consequence of this difference is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — deferred tax liability on depreciation timing difference",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "A deferred tax asset of ₹36,000",
+          "explanation": "Tax depreciation running AHEAD of book depreciation lowers taxable income now and raises it later — that is a LIABILITY, not an asset."
+        },
+        {
+          "key": "B",
+          "text": "A deferred tax liability of ₹36,000",
+          "explanation": "Timing difference = 3,60,000 − 2,40,000 = ₹1,20,000; × 30% = ₹36,000 of tax postponed to future periods."
+        },
+        {
+          "key": "C",
+          "text": "A deferred tax liability of ₹1,20,000",
+          "explanation": "₹1,20,000 is the timing DIFFERENCE — the deferred tax is its tax effect at 30%."
+        },
+        {
+          "key": "D",
+          "text": "Nil, because the difference will reverse in later years",
+          "explanation": "Future reversal is exactly WHY deferred tax is recognised — reversibility is the trigger, not an exemption."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-032",
+      "topic": "Ch 7 · AS 22 · Permanent differences",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A fine paid for infraction of law is debited in the accounts and permanently disallowed under the Income-tax Act. The deferred tax consequence is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — no deferred tax on permanent differences",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "A deferred tax asset, if realisation is reasonably certain",
+          "explanation": "There is no future deduction to realise — the disallowance never reverses."
+        },
+        {
+          "key": "B",
+          "text": "A deferred tax liability at the enacted rate",
+          "explanation": "No future taxable amount arises from a permanent disallowance."
+        },
+        {
+          "key": "C",
+          "text": "A deferred tax asset only on virtual certainty",
+          "explanation": "The virtual-certainty ladder applies to unabsorbed depreciation and carried-forward losses — a permanent difference creates no deferred tax at any certainty level."
+        },
+        {
+          "key": "D",
+          "text": "None — permanent differences do not result in deferred tax assets or liabilities",
+          "explanation": "The difference originates and never reverses; it merely raises the year's effective tax rate."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-033",
+      "topic": "Ch 7 · AS 22 · Prudence ladder",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 22, a deferred tax asset arising from ordinary timing differences (e.g. provision for doubtful debts), versus one arising from unabsorbed depreciation or carried-forward losses, is recognised on:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — reasonable vs virtual certainty",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reasonable certainty for the former; virtual certainty supported by convincing evidence for the latter",
+          "explanation": "That is the two-step prudence ladder — the existence of unabsorbed depreciation or losses is itself evidence that future profit is doubtful, so the bar rises."
+        },
+        {
+          "key": "B",
+          "text": "Virtual certainty for both",
+          "explanation": "Ordinary timing differences need only REASONABLE certainty of sufficient future taxable income."
+        },
+        {
+          "key": "C",
+          "text": "Reasonable certainty for both",
+          "explanation": "Unabsorbed depreciation and carried-forward losses demand the higher, virtual-certainty standard with convincing evidence."
+        },
+        {
+          "key": "D",
+          "text": "No certainty test — all deferred tax assets are recognised in full",
+          "explanation": "Unrestricted recognition is exactly what the prudence paragraphs of AS 22 prevent."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-034",
+      "topic": "Ch 7 · AS 22 · DTA on losses",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An enterprise has a carried-forward business loss of ₹8,00,000 (tax rate 30%). Convincing evidence — a binding export order — supports future taxable profit of only ₹5,00,000. The deferred tax asset recognised is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — virtual certainty limits the DTA",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,40,000",
+          "explanation": "30% of the full ₹8,00,000 loss ignores the limit — recognition extends only as far as the virtually certain future income."
+        },
+        {
+          "key": "B",
+          "text": "Nil — no deferred tax asset is ever recognised on carried-forward losses",
+          "explanation": "Losses CAN support a DTA — but only to the extent of virtual certainty backed by convincing evidence, which exists here for ₹5,00,000."
+        },
+        {
+          "key": "C",
+          "text": "₹90,000",
+          "explanation": "₹90,000 is 30% of the ₹3,00,000 slice that is NOT supported by evidence — precisely the part that stays unrecognised."
+        },
+        {
+          "key": "D",
+          "text": "₹1,50,000",
+          "explanation": "DTA = 30% × ₹5,00,000, the future taxable income supported by convincing evidence; the remaining ₹3,00,000 of loss waits for the evidence to improve."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c07-035",
+      "topic": "Ch 7 · AS 22 · Measurement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Deferred tax assets and liabilities are measured:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — measurement of deferred tax",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "At the tax rates expected to prevail when the differences reverse, discounted to present value",
+          "explanation": "Both limbs fail — expected FUTURE rates are not used, and discounting is prohibited."
+        },
+        {
+          "key": "B",
+          "text": "Using the tax rates and laws enacted or substantively enacted by the balance sheet date, and never discounted to present value",
+          "explanation": "Enacted or substantively enacted rates, average rates where slabs differ, and an express bar on discounting."
+        },
+        {
+          "key": "C",
+          "text": "At the current year's effective tax rate",
+          "explanation": "The effective rate blends permanent differences into the measure — AS 22 uses the enacted statutory rates."
+        },
+        {
+          "key": "D",
+          "text": "At rates announced in the Finance Bill regardless of enactment",
+          "explanation": "A Bill must be enacted or substantively enacted by the balance sheet date to count."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c07-036",
+      "topic": "Ch 7 · AS 22 · Tax holiday",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An undertaking enjoys a tax holiday under section 80-IA. Under AS 22, deferred tax on its timing differences is recognised as follows:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — deferred tax in a tax holiday period",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "No deferred tax is recognised at all during the holiday",
+          "explanation": "Differences that will reverse AFTER the holiday do carry deferred tax, recognised when they originate."
+        },
+        {
+          "key": "B",
+          "text": "All timing differences carry deferred tax, recognised when the holiday ends",
+          "explanation": "Recognition is in the year of ORIGINATION for post-holiday reversals — and never for within-holiday reversals."
+        },
+        {
+          "key": "C",
+          "text": "Differences that originate and reverse within the holiday are ignored; differences reversing after the holiday are recognised in the year they originate, taking earlier-originating differences to reverse first",
+          "explanation": "Within-holiday reversals are tax-free so no deferred tax arises; post-holiday reversals are provided at origination, on a FIFO ordering."
+        },
+        {
+          "key": "D",
+          "text": "Deferred tax is recognised only on permanent differences during the holiday",
+          "explanation": "Permanent differences NEVER produce deferred tax — inside or outside a holiday."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c07-037",
+      "topic": "Ch 7 · AS 22 · Review of DTA",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The carrying amount of deferred tax assets is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — review of deferred tax assets",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reviewed at each balance sheet date, written down when the certainty of sufficient future taxable income falls away, and the write-down reversed if that certainty returns",
+          "explanation": "The review works both ways — down when the certainty test fails, back up when it is met again."
+        },
+        {
+          "key": "B",
+          "text": "Fixed at initial recognition until the timing difference reverses",
+          "explanation": "A DTA is only as good as the future income behind it — the annual review is mandatory."
+        },
+        {
+          "key": "C",
+          "text": "Written down when certainty falls, with no reinstatement ever permitted",
+          "explanation": "AS 22 expressly allows the write-down to be reversed when it becomes reasonably or virtually certain (as applicable) that sufficient income will be available."
+        },
+        {
+          "key": "D",
+          "text": "Amortised over the expected reversal period",
+          "explanation": "Deferred tax balances reverse with their timing differences — they are not amortised on a schedule."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c07-038",
+      "topic": "Ch 7 · AS 22 · Offsetting",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An enterprise may offset deferred tax assets against deferred tax liabilities in the balance sheet only if:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 7 U4 — offsetting conditions",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both balances will reverse in the same accounting period",
+          "explanation": "Reversal timing is not the test — the legal right of set-off and the governing tax law are."
+        },
+        {
+          "key": "B",
+          "text": "It has a legally enforceable right to set off current tax assets against current tax liabilities, and both relate to taxes on income levied by the same governing taxation laws",
+          "explanation": "Both conditions must hold — different tax regimes cannot be netted against each other."
+        },
+        {
+          "key": "C",
+          "text": "Management intends to present a leaner balance sheet",
+          "explanation": "Presentation preference is no basis — offsetting is a matter of legal right and common tax law."
+        },
+        {
+          "key": "D",
+          "text": "The net amount is immaterial",
+          "explanation": "Materiality does not create a right of set-off."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "cs-i1c07-001",
+      "type": "case_mcq_set",
+      "topic": "Ch 7 · AS 4 · Case: Godavari Chemicals (events after the balance sheet date)",
+      "case": "Godavari Chemicals Ltd closes its books on 31 March 20X2; the Board of Directors approves the financial statements on 30 June 20X2. Four events occur in between: (i) a customer owing ₹4,50,000 at the year end is declared insolvent on 20 April 20X2, and the liquidator expects a recovery of 20 paise per rupee; (ii) a fire on 15 May 20X2 destroys a godown, causing an uninsured loss of ₹12,00,000 — the going concern assumption is unaffected; (iii) on 30 June 20X2 the Board recommends a dividend of ₹3,00,000, to be declared by shareholders at the AGM in September 20X2; (iv) a damages suit pending at the year end, for which a provision of ₹2,50,000 stood in the books at 31 March, is settled by the court on 10 June 20X2 at ₹3,10,000.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 4 — Events After the Balance Sheet Date →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#1-as-4-contingencies-and-events-occurring-after-the-balance-sheet-date"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c07-001-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "For the insolvent customer, the provision to be made in the accounts for the year ended 31 March 20X2 is:",
+          "sourceRef": "SM Ch 7 U1 — insolvency as an adjusting event",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹4,50,000",
+              "explanation": "The liquidator still expects 20 paise per rupee — ₹90,000 will be recovered."
+            },
+            {
+              "key": "B",
+              "text": "₹90,000",
+              "explanation": "₹90,000 (4,50,000 × 0.20) is the RECOVERY — the provision is for what will not come back."
+            },
+            {
+              "key": "C",
+              "text": "₹3,60,000",
+              "explanation": "Recovery = 4,50,000 × 0.20 = ₹90,000; provide the balance ₹3,60,000 — the insolvency confirms a condition existing at the balance sheet date."
+            },
+            {
+              "key": "D",
+              "text": "Nil — the insolvency is an event of the next financial year",
+              "explanation": "The customer's inability to pay existed at the year end; the April insolvency is additional evidence of it — an adjusting event."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c07-001-b",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The fire loss of ₹12,00,000 on 15 May 20X2 should be:",
+          "sourceRef": "SM Ch 7 U1 — non-adjusting events",
+          "options": [
+            {
+              "key": "A",
+              "text": "Left out of the 20X1–X2 accounts; being material, disclosed in the report of the approving authority",
+              "explanation": "The condition arose after the balance sheet date and going concern is intact — non-adjusting, disclosed in the Board's report."
+            },
+            {
+              "key": "B",
+              "text": "Provided in the 20X1–X2 accounts",
+              "explanation": "The godown stood intact at 31 March — the loss belongs to 20X2–X3."
+            },
+            {
+              "key": "C",
+              "text": "Disclosed as a contingent liability in the notes",
+              "explanation": "There is no obligation to a third party at all — and non-adjusting events are disclosed in the approving authority's report, not the notes."
+            },
+            {
+              "key": "D",
+              "text": "Adjusted against general reserve",
+              "explanation": "No basis exists for routing a next-year loss through this year's reserves."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i1c07-001-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The dividend of ₹3,00,000 recommended on 30 June 20X2 is, in the accounts for the year ended 31 March 20X2:",
+          "sourceRef": "SM Ch 7 U1 — dividends declared after the balance sheet date",
+          "options": [
+            {
+              "key": "A",
+              "text": "Recognised as a liability, being an appropriation of this year's profits",
+              "explanation": "Since the 2016 amendment, a dividend not yet declared at the balance sheet date is no longer provided for."
+            },
+            {
+              "key": "B",
+              "text": "Recognised as a liability at 50% pending shareholder approval",
+              "explanation": "Partial recognition has no basis — until declaration there is NO present obligation."
+            },
+            {
+              "key": "C",
+              "text": "Ignored entirely",
+              "explanation": "AS 4 requires disclosure of such proposed dividends in the notes."
+            },
+            {
+              "key": "D",
+              "text": "Not recognised as a liability; disclosed in the notes, with the liability recorded on declaration at the AGM",
+              "explanation": "Declaration by shareholders creates the obligation — until then, notes disclosure only."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c07-001-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "For the damages suit settled at ₹3,10,000 on 10 June 20X2, the accounts for the year ended 31 March 20X2 should:",
+          "sourceRef": "SM Ch 7 U1 — settlement of a court case as an adjusting event",
+          "options": [
+            {
+              "key": "A",
+              "text": "Change nothing — the judgment came after the year end",
+              "explanation": "The obligation existed at the balance sheet date; the settlement CONFIRMS its amount — an adjusting event."
+            },
+            {
+              "key": "B",
+              "text": "Charge an additional ₹60,000, raising the provision to the settled amount of ₹3,10,000",
+              "explanation": "The court fixed the year-end obligation at ₹3,10,000; the provision of ₹2,50,000 is topped up by 3,10,000 − 2,50,000 = ₹60,000."
+            },
+            {
+              "key": "C",
+              "text": "Charge the full ₹3,10,000 in addition to the existing provision",
+              "explanation": "₹2,50,000 already stands provided — charging ₹3,10,000 again double-counts."
+            },
+            {
+              "key": "D",
+              "text": "Disclose a contingent liability of ₹60,000",
+              "explanation": "Nothing is contingent any more — the court has settled both existence and amount."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c07-002",
+      "type": "case_mcq_set",
+      "topic": "Ch 7 · AS 11 · Case: Narmada Exports (foreign currency transaction and forward cover)",
+      "case": "Narmada Exports Ltd (year end 31 March) imports raw materials worth $40,000 on 1 February 20X2 when the spot rate is ₹83.00 per dollar; the supplier is payable on 31 May 20X2. On 1 March 20X2, to hedge the payable, the company enters a three-month forward contract (maturing 31 May 20X2) to buy $40,000 at a forward rate of ₹84.20, the spot rate on that day being ₹83.60. The spot rate on 31 March 20X2 is ₹84.00.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 11 — Foreign Exchange Rates →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#3-as-11-the-effects-of-changes-in-foreign-exchange-rates"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c07-002-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The purchase (and the creditor) is initially recorded at:",
+          "sourceRef": "SM Ch 7 U3 — initial recognition at the transaction-date rate",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹33,68,000",
+              "explanation": "That uses the FORWARD rate of ₹84.20 — initial recording uses the spot rate on the transaction date."
+            },
+            {
+              "key": "B",
+              "text": "₹33,44,000",
+              "explanation": "₹83.60 is the spot rate on the date of the FORWARD CONTRACT (1 March), not of the purchase (1 February)."
+            },
+            {
+              "key": "C",
+              "text": "₹33,60,000",
+              "explanation": "₹84.00 is the closing rate — restatement comes later; initial recording uses the 1 February rate."
+            },
+            {
+              "key": "D",
+              "text": "₹33,20,000",
+              "explanation": "40,000 × 83.00 — the exchange rate on the date of the transaction governs initial recognition."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c07-002-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "At 31 March 20X2 the creditor is restated, and the exchange difference on it is:",
+          "sourceRef": "SM Ch 7 U3 — restatement of the monetary item at closing rate",
+          "options": [
+            {
+              "key": "A",
+              "text": "A loss of ₹40,000, recognised in the profit and loss statement",
+              "explanation": "Creditor restated to 40,000 × 84.00 = ₹33,60,000; loss = (84.00 − 83.00) × 40,000 = ₹40,000, an expense of the period."
+            },
+            {
+              "key": "B",
+              "text": "A loss of ₹48,000",
+              "explanation": "₹48,000 uses the contracted forward rate (84.20 − 83.00) — the payable itself is restated at the CLOSING SPOT rate."
+            },
+            {
+              "key": "C",
+              "text": "Nil, because the payable is fully hedged",
+              "explanation": "A hedge does not suspend restatement — the payable and the forward contract are accounted for separately under AS 11."
+            },
+            {
+              "key": "D",
+              "text": "A loss of ₹40,000, added to the cost of the raw materials",
+              "explanation": "Exchange differences on monetary items go to the P&L, never onto inventory cost."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i1c07-002-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The forward premium charged to the P&L for the year ended 31 March 20X2 is:",
+          "sourceRef": "SM Ch 7 U3 — premium amortised over the life of the contract",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹24,000",
+              "explanation": "₹24,000 is the FULL premium (84.20 − 83.60) × 40,000 — only one of the three contract months falls before 31 March."
+            },
+            {
+              "key": "B",
+              "text": "₹12,000",
+              "explanation": "That amortises half the premium — the contract ran one month out of three by the year end."
+            },
+            {
+              "key": "C",
+              "text": "₹8,000",
+              "explanation": "Premium = (84.20 − 83.60) × 40,000 = ₹24,000 over three months (1 March – 31 May); March alone takes 24,000 × 1/3 = ₹8,000."
+            },
+            {
+              "key": "D",
+              "text": "Nil — the premium is recognised on settlement on 31 May",
+              "explanation": "For a hedging contract the premium is amortised over the contract's life, not held to maturity."
+            }
+          ],
+          "correct": "C"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c07-003",
+      "type": "case_mcq_set",
+      "topic": "Ch 7 · AS 22 · Case: Tungabhadra Engineering (current and deferred tax)",
+      "case": "Tungabhadra Engineering Ltd reports an accounting profit of ₹10,00,000 for the year ended 31 March 20X2. The profit is after debiting: (i) a penalty of ₹50,000 for breach of pollution norms, permanently disallowed under the Income-tax Act; (ii) a provision for doubtful debts of ₹80,000, deductible for tax only on actual write-off. Depreciation charged in the books is ₹2,70,000, while depreciation allowable under the Income-tax Act is ₹4,00,000. The enacted tax rate is 30%. There are no other differences.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 22 — Taxes on Income →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#4-as-22-accounting-for-taxes-on-income"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c07-003-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The current tax for the year is:",
+          "sourceRef": "SM Ch 7 U4 — computation of taxable income and current tax",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹2,85,000",
+              "explanation": "That forgets to add back the permanently disallowed penalty of ₹50,000."
+            },
+            {
+              "key": "B",
+              "text": "₹3,00,000",
+              "explanation": "Taxable income = 10,00,000 + 50,000 (penalty) + 80,000 (doubtful debts) − 1,30,000 (extra tax depreciation) = ₹10,00,000; × 30% = ₹3,00,000."
+            },
+            {
+              "key": "C",
+              "text": "₹3,15,000",
+              "explanation": "₹3,15,000 taxes book profit plus the penalty (10,50,000 × 30%) and ignores both timing differences."
+            },
+            {
+              "key": "D",
+              "text": "₹3,78,000",
+              "explanation": "That ADDS the extra tax depreciation of ₹1,30,000 instead of deducting it (12,60,000 × 30%)."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i1c07-003-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The net deferred tax charge (credit) for the year is:",
+          "sourceRef": "SM Ch 7 U4 — DTL and DTA from the year's timing differences",
+          "options": [
+            {
+              "key": "A",
+              "text": "A charge of ₹39,000",
+              "explanation": "₹39,000 is the DTL on depreciation alone — the ₹24,000 DTA on doubtful debts nets against it."
+            },
+            {
+              "key": "B",
+              "text": "A credit of ₹24,000",
+              "explanation": "₹24,000 is only the DTA on doubtful debts, ignoring the larger DTL on depreciation."
+            },
+            {
+              "key": "C",
+              "text": "A charge of ₹63,000",
+              "explanation": "That adds the DTL and the DTA as if both were charges — the DTA is a CREDIT."
+            },
+            {
+              "key": "D",
+              "text": "A charge of ₹15,000",
+              "explanation": "DTL = 1,30,000 × 30% = ₹39,000; DTA = 80,000 × 30% = ₹24,000; net charge ₹15,000. The penalty, being permanent, creates no deferred tax."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c07-003-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The total tax expense recognised in the statement of profit and loss is:",
+          "sourceRef": "SM Ch 7 U4 — tax expense equals current plus deferred",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹3,15,000",
+              "explanation": "Current ₹3,00,000 + deferred ₹15,000 = ₹3,15,000 — exactly 30% of (10,00,000 + 50,000), since only the permanent difference escapes matching."
+            },
+            {
+              "key": "B",
+              "text": "₹3,00,000",
+              "explanation": "Current tax alone — AS 22 requires the deferred component in the same period's tax expense."
+            },
+            {
+              "key": "C",
+              "text": "₹3,39,000",
+              "explanation": "That treats the doubtful-debt provision as permanent too (11,30,000 × 30%) — it is a timing difference that reverses on write-off."
+            },
+            {
+              "key": "D",
+              "text": "₹2,85,000",
+              "explanation": "That drops the penalty add-back from current tax and takes no deferred tax at all."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c07-004",
+      "type": "case_mcq_set",
+      "topic": "Ch 7 · AS 5 · Case: Bhima Industries (classification in the P&L)",
+      "case": "While finalising the accounts of Bhima Industries Ltd for the year ended 31 March 20X2, three matters arise: (i) wages of ₹1,80,000 for March 20X1 were never recorded in the 20X0–X1 accounts, an omission discovered in July 20X1; (ii) a machine that cost ₹9,00,000 has been depreciated straight-line over nine years (nil residual value); at the start of 20X1–X2, its fifth year, the remaining useful life is reassessed at two years; (iii) stock worth ₹6,00,000, uninsured, is destroyed in an earthquake — the region has no history of seismic activity.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 5 — Profit or Loss, Prior Period Items & Policy Changes →",
+        "href": "/intermediate/advanced-accounting/as-items-impacting-fs/#2-as-5-net-profit-or-loss-for-the-period-prior-period-items-and-changes-in-accounting-policies"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c07-004-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The unrecorded wages of ₹1,80,000 are dealt with by:",
+          "sourceRef": "SM Ch 7 U2 — prior period item through the current P&L",
+          "options": [
+            {
+              "key": "A",
+              "text": "Restating the 20X0–X1 comparative figures",
+              "explanation": "AS 5 never restates prior-year published figures — that is the Ind AS 8 route."
+            },
+            {
+              "key": "B",
+              "text": "Adjusting ₹1,80,000 against opening reserves",
+              "explanation": "Routing the error through reserves keeps it out of every profit figure — AS 5 requires it in the current P&L."
+            },
+            {
+              "key": "C",
+              "text": "Charging ₹1,80,000 in the 20X1–X2 profit and loss statement as a prior period item, separately disclosed",
+              "explanation": "An omission in preparing an earlier year's statements is a prior period item — corrected through the current period with disclosure that shows its impact."
+            },
+            {
+              "key": "D",
+              "text": "Treating it as a change in estimate applied prospectively",
+              "explanation": "Nothing was estimated — the wages were simply omitted, which is an error."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c07-004-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Depreciation on the machine for 20X1–X2 is:",
+          "sourceRef": "SM Ch 7 U2 — revised useful life applied prospectively",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,00,000",
+              "explanation": "That continues the original nine-year schedule — the revised remaining life governs from the period of change."
+            },
+            {
+              "key": "B",
+              "text": "₹4,50,000",
+              "explanation": "That divides the original COST by two years, ignoring the ₹4,00,000 already depreciated."
+            },
+            {
+              "key": "C",
+              "text": "₹1,66,667",
+              "explanation": "That spreads the carrying amount over three years — the reassessed remaining life is two."
+            },
+            {
+              "key": "D",
+              "text": "₹2,50,000",
+              "explanation": "Carrying amount after four years = 9,00,000 − 4 × 1,00,000 = ₹5,00,000, over the revised remaining life of two years = ₹2,50,000 — a change in estimate, prospective only."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c07-004-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The earthquake loss of ₹6,00,000 is presented as:",
+          "sourceRef": "SM Ch 7 U2 — extraordinary items",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ordinary expense with no separate disclosure",
+              "explanation": "An earthquake in a seismically quiet region is clearly distinct from ordinary activities — burying it misstates ordinary performance."
+            },
+            {
+              "key": "B",
+              "text": "An extraordinary item, disclosed separately as part of net profit or loss",
+              "explanation": "Clearly distinct from ordinary activities and not expected to recur regularly — the standard's own example, shown with its nature and amount."
+            },
+            {
+              "key": "C",
+              "text": "A prior period item",
+              "explanation": "No earlier year's statements contain any error — the loss belongs entirely to this year."
+            },
+            {
+              "key": "D",
+              "text": "A charge directly against reserves",
+              "explanation": "Extraordinary items pass through the profit and loss statement — never around it."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "d-i1c07-001",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 4 · Events after the balance sheet date",
+      "stem": "Define 'events occurring after the balance sheet date' under AS 4. Distinguish adjusting from non-adjusting events with two examples of each, and state how each category is dealt with. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Definition: significant events, favourable and unfavourable, between the balance sheet date and the date the financial statements are approved by the Board of Directors (or corresponding approving authority)",
+          "marks": 1,
+          "citation": "SM Ch 7 U1"
+        },
+        {
+          "point": "Adjusting: provide additional evidence of / further clarify conditions existing at the balance sheet date — adjust assets and liabilities (e.g. insolvency of a year-end debtor; post-year-end sale evidencing year-end NRV; settlement of a pending suit)",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U1"
+        },
+        {
+          "point": "Non-adjusting: conditions arising after the balance sheet date — no adjustment (e.g. fire/flood after year end; fall in market value of investments; post-year-end business combination)",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U1"
+        },
+        {
+          "point": "Disclosure of material non-adjusting events in the report of the approving authority: nature of the event + estimate of financial effect, or a statement that an estimate cannot be made",
+          "marks": 1,
+          "citation": "SM Ch 7 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c07-002",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 4 · Dividends and going concern",
+      "stem": "State the treatment under AS 4 (as amended) of dividends declared after the balance sheet date, and explain the going concern exception for events occurring after the balance sheet date. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Dividends declared after the balance sheet date: NOT recognised as a liability at the balance sheet date — no present obligation exists before declaration",
+          "marks": 1,
+          "citation": "SM Ch 7 U1"
+        },
+        {
+          "point": "Such proposed dividends are disclosed in the notes; the liability is recognised in the year of declaration (shareholder approval at the AGM); pre-2016 practice of providing for proposed dividends no longer applies",
+          "marks": 1,
+          "citation": "SM Ch 7 U1"
+        },
+        {
+          "point": "Going concern exception: events after the balance sheet date indicating the enterprise ceases to be a going concern (e.g. destruction of a major production plant; severe deterioration in results and financial position) are accounted for even though the condition arose after the year end",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U1"
+        },
+        {
+          "point": "Effect: the fundamental going concern assumption is displaced and the statements are redrawn on an appropriate basis — not merely a disclosure",
+          "marks": 0.5,
+          "citation": "SM Ch 7 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c07-003",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 5 · Extraordinary and prior period items",
+      "stem": "Explain, with examples, the distinction under AS 5 between (a) extraordinary items, (b) ordinary items requiring separate disclosure, and (c) prior period items, stating how each is presented. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Extraordinary: income/expenses from events clearly distinct from ordinary activities, not expected to recur frequently or regularly (earthquake loss, government seizure of assets) — disclosed in the P&L as part of net profit, nature and amount separately",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U2"
+        },
+        {
+          "point": "Ordinary items of abnormal size/nature/incidence: inventory write-downs and reversals, restructuring provisions, fixed-asset and long-term investment disposals, retrospective legislation, litigation settlements — separate disclosure of nature and amount, but still ordinary",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U2"
+        },
+        {
+          "point": "Prior period items: income/expenses arising in the current period from errors or omissions in preparing prior periods' statements (mathematical mistakes, misapplied policies, misinterpreted facts, oversights) — estimate revisions excluded",
+          "marks": 1,
+          "citation": "SM Ch 7 U2"
+        },
+        {
+          "point": "Presentation of prior period items: included in the CURRENT period's net profit with separate disclosure showing the impact — no restatement of prior-year comparatives",
+          "marks": 1,
+          "citation": "SM Ch 7 U2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c07-004",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 5 · Policy vs estimate",
+      "stem": "When may an accounting policy be changed under AS 5, and what disclosures follow? Distinguish a change in accounting policy from a change in accounting estimate, stating how a change of depreciation method is classified. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Policy change permitted only if: required by statute; required for compliance with an accounting standard; or it would result in a more appropriate presentation",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U2"
+        },
+        {
+          "point": "Disclosure: any material change disclosed with the impact and resulting adjustments to the extent ascertainable (else that fact); changes material only in later periods disclosed in the period of adoption; not policy changes — policies for substantively different or first-time/immaterial transactions",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U2"
+        },
+        {
+          "point": "Estimate change: revision of an approximation on new information (doubtful debts, useful lives) — recognised prospectively in the period of change (and future periods if both affected), same classification as before; if policy/estimate indistinguishable, treat as estimate",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U2"
+        },
+        {
+          "point": "Change of depreciation method = change in accounting ESTIMATE per AS 10 (2016) — applied prospectively with AS 5 estimate disclosure",
+          "marks": 0.5,
+          "citation": "SM Ch 7 U2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c07-005",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 11 · Transactions and balances",
+      "stem": "State the AS 11 rules for (a) initial recognition of a foreign currency transaction, (b) reporting foreign currency items at each balance sheet date, and (c) recognition of exchange differences, including the para 46A option. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Initial recognition at the exchange rate on the date of the transaction; a weekly/monthly average may approximate if rates do not fluctuate significantly",
+          "marks": 1,
+          "citation": "SM Ch 7 U3"
+        },
+        {
+          "point": "Balance sheet date: monetary items at closing rate (realisable rate if remittance restrictions make closing rate unrealistic); non-monetary at historical cost at transaction-date rate; non-monetary at fair value at the rate when fair value was determined",
+          "marks": 2,
+          "citation": "SM Ch 7 U3"
+        },
+        {
+          "point": "Exchange differences on monetary items (settlement or restatement) recognised as income/expense in the period they arise",
+          "marks": 1,
+          "citation": "SM Ch 7 U3"
+        },
+        {
+          "point": "Para 46A option (irrevocable, disclosed) for long-term FC monetary items: differences on depreciable capital assets added to/deducted from cost and depreciated; others accumulated in FCMITDA and amortised over the item's balance period",
+          "marks": 1,
+          "citation": "SM Ch 7 U3"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c07-006",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 11 · Foreign operations and forwards",
+      "stem": "Distinguish integral from non-integral foreign operations under AS 11, stating the translation method for each and the treatment of the resulting exchange differences, including on disposal. Add the accounting for forward exchange contracts held for hedging and for speculation. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Integral: extension of the reporting enterprise's operations (sales branch remitting proceeds) — translate as if the enterprise's own transactions: monetary at closing, non-monetary at transaction-date/fair-value-date rates, income/expenses at transaction-date rates; differences to P&L",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U3"
+        },
+        {
+          "point": "Non-integral: local-currency autonomy (cash, income, expenses, borrowings substantially local; low intercompany proportion) — ALL assets and liabilities at closing rate, income/expenses at transaction-date/average rates; differences accumulated in FCTR",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U3"
+        },
+        {
+          "point": "On disposal of a non-integral operation, cumulative FCTR recognised as income/expense in the same period as the disposal gain/loss; net-investment monetary items → FCTR in consolidated statements",
+          "marks": 1,
+          "citation": "SM Ch 7 U3"
+        },
+        {
+          "point": "Forwards — hedging: premium/discount (forward vs spot at inception) amortised over contract life; exchange differences to P&L as rates change; cancellation/renewal P&L. Speculation: no amortisation; mark to market against the forward rate for remaining maturity",
+          "marks": 1,
+          "citation": "SM Ch 7 U3"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c07-007",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 22 · Differences and prudence",
+      "stem": "Distinguish timing differences from permanent differences under AS 22 with two examples of each, and state the recognition criteria for deferred tax assets, including where unabsorbed depreciation or carried-forward losses exist. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Timing: originate in one period, capable of reversal in subsequent periods (book vs tax depreciation; s.43B items allowed on payment; doubtful-debt provisions allowed on write-off; unabsorbed depreciation/losses) — deferred tax recognised",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U4"
+        },
+        {
+          "point": "Permanent: originate and never reverse (penalties disallowed; exempt agricultural income; disallowed slice of donations) — no deferred tax ever",
+          "marks": 1,
+          "citation": "SM Ch 7 U4"
+        },
+        {
+          "point": "DTL recognised for all timing differences; DTA only to the extent of reasonable certainty of sufficient future taxable income",
+          "marks": 1,
+          "citation": "SM Ch 7 U4"
+        },
+        {
+          "point": "Unabsorbed depreciation / carry-forward losses: DTA only on VIRTUAL certainty supported by convincing evidence (e.g. binding orders/contracts); unrecognised DTAs re-assessed and recognised DTAs reviewed (write down / reverse write-down) at each balance sheet date",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U4"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c07-008",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 7 · AS 22 · Measurement, holidays, presentation",
+      "stem": "State the AS 22 rules on: measurement of current and deferred tax; deferred tax in a tax holiday period; and presentation and offsetting of tax balances in the balance sheet. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Measurement: current tax at applicable rates/laws; deferred tax at rates enacted or substantively enacted by the balance sheet date (average rates across slabs); DTA/DTL never discounted; where MAT applies, the MAT amount is the current tax",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U4"
+        },
+        {
+          "point": "Tax holiday: no deferred tax on timing differences originating and reversing within the holiday; differences reversing after the holiday recognised in the year of origination; first-originated treated as first-reversing (FIFO)",
+          "marks": 1.5,
+          "citation": "SM Ch 7 U4"
+        },
+        {
+          "point": "Presentation: DTA/DTL distinguished from current assets/liabilities and from advance tax, shown under a separate heading; disclose break-up of major components and, where unabsorbed depreciation/losses exist, the nature of evidence supporting DTA recognition",
+          "marks": 1,
+          "citation": "SM Ch 7 U4"
+        },
+        {
+          "point": "Offsetting: current tax assets vs liabilities — legally enforceable right + intention to settle net; DTA vs DTL — legally enforceable right on current amounts + same governing taxation laws",
+          "marks": 1,
+          "citation": "SM Ch 7 U4"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    }
+  ]
+}

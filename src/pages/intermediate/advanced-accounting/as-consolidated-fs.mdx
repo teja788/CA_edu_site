@@ -1,0 +1,422 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Accounting Standards for Consolidated Financial Statements'
+description: 'CA Intermediate Advanced Accounting Ch 10 — AS 21, AS 23 and AS 27 in plain language: when a group consolidates line by line, when an associate rides the equity method, and when a joint venture is proportionately consolidated.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 1 · Advanced Accounting'
+paperSlug: advanced-accounting
+chapter: 'Ch 10 · Accounting Standards for Consolidated Financial Statements'
+chapterSlug: as-consolidated-fs
+masteryId: i1-ch10
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI SM Ch 10 Units 1–3 (May 2026 ed.)'
+  - 'AS 21, AS 23, AS 27'
+sourceLabel: 'ICAI SM Ch 10 U1–U3 · AS 21/23/27 (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '19 Jul 2026'
+readTime: 'About 35 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=intermediate&paper=advanced-accounting&chapter=as-consolidated-fs'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+One economic entity can hide behind many legal ones. A parent that parks debt, stock
+or losses in a subsidiary shows its shareholders a separate balance sheet that is
+technically true and economically misleading — which is why the law makes the group
+report **as if it were a single enterprise**. Three standards divide the territory by
+**how much say the investor has**. **Control** → AS 21: consolidate the subsidiary
+**line by line**, showing outsiders' slice as minority interest. **Significant
+influence** (typically 20%+) → AS 23: carry the associate by the **equity method** —
+one line that grows with the investor's share of profits. **Joint control** → AS 27:
+bring in the venturer's **proportionate share of each line** of a jointly controlled
+entity. Same three questions each time: what relationship exists, what goes into the
+consolidated statements, and what happens to profits the group has only made against
+itself.
+
+Applicability shorthand (the regime lives in
+[Ch 3](/intermediate/advanced-accounting/applicability-of-accounting-standards/)):
+none of the three standards itself compels anyone to prepare CFS — each **applies
+when an enterprise presents consolidated financial statements**. The compulsion is
+statutory: **section 129(3)** of the Companies Act, 2013 requires a company with one
+or more **subsidiaries** — the Explanation extends the word to **associate companies
+and joint ventures** — to prepare CFS, subject to the Rule 6 carve-outs (most
+famously the unlisted intermediate wholly-owned subsidiary whose parent files CFS in
+India). Non-company entities under the revised ICAI scheme face no CFS mandate, but
+the moment any enterprise chooses (or is told) to present CFS, AS 21/23/27 govern it
+in full — these standards carry **no SMC/MSME measurement relaxations**.
+
+## 1. AS 21: Consolidated Financial Statements
+
+### Control, parent, subsidiary
+
+**Control** under AS 21 has two alternative limbs:
+
+1. ownership, **directly or indirectly through subsidiary(ies)**, of **more than
+   one-half of the voting power** of an enterprise; **or**
+2. **control of the composition of the board of directors** (or corresponding
+   governing body) **so as to obtain economic benefits** from its activities.
+
+Either limb alone is enough. A **parent** is an enterprise with one or more
+subsidiaries; a **subsidiary** is an enterprise controlled by a parent; the **group**
+is a parent with all its subsidiaries. Board composition is controlled when the
+enterprise can **appoint or remove all or a majority of directors without the consent
+or concurrence of any other person** — including where a person's appointment as
+director follows necessarily from his appointment in the parent, or where the
+director is a nominee of the enterprise or its subsidiary.
+
+Two consequences the exam probes. First, **control can run through a chain**: if H
+holds 60% of A and A holds 55% of B, then B is a subsidiary of H — through A — even
+though H's *economic* interest in B is only 33%. Voting control, not effective
+shareholding, decides who consolidates. Second, in **rare cases both limbs can point
+to two different enterprises** — one holding the majority voting power, another
+controlling the board. AS 21 accepts the oddity: **both are parents, and both
+consolidate** the same subsidiary.
+
+Consolidation sweeps in **all subsidiaries, domestic and foreign**, with exactly
+**two exclusions**:
+
+- **control is intended to be temporary** — the subsidiary was acquired and is held
+  **exclusively with a view to its subsequent disposal in the near future**
+  (ordinarily **not more than twelve months** from acquisition, unless a longer
+  period can be justified on the facts); or
+- the subsidiary operates under **severe long-term restrictions which significantly
+  impair its ability to transfer funds to the parent**.
+
+An excluded subsidiary is carried in the CFS as an **investment under AS 13**, with
+the reason for non-consolidation disclosed. Nothing else excuses exclusion — a
+subsidiary whose business is **dissimilar** to the group's is still consolidated;
+better information comes from consolidating and explaining through **AS 17 segment
+disclosures**, not from leaving it out.
+
+CFS are presented **in addition to, not instead of,** the parent's separate financial
+statements — the statute wants both sets, and in the parent's **separate** books the
+subsidiary remains an AS 13 investment.
+
+### The mechanics: line by line, then three cuts
+
+Consolidation starts by **combining like items line by line** — assets, liabilities,
+income, expenses of parent and subsidiaries added together — and then makes three
+surgical adjustments so the group isn't counting itself:
+
+1. **Eliminate the parent's investment against its portion of the subsidiary's equity
+   at the date the investment was made.** The difference is **goodwill** (cost above
+   the share of equity — an asset in the CFS) or **capital reserve** (share of equity
+   above cost). Where the investment came in tranches, the comparison is made
+   **step by step** at each date. If statements as at the acquisition date are
+   impracticable, the immediately preceding financial statements are used, adjusted
+   for significant intervening transactions.
+2. **Minority interest in the year's profit or loss** is identified and adjusted
+   against the group's income, so the consolidated P&L attributes to the parent's
+   owners only what belongs to them.
+3. **Minority interest in net assets** is computed and shown in the consolidated
+   balance sheet **separately from liabilities and from the equity of the parent's
+   shareholders**. It consists of the minority's share of equity **at the date of
+   investment** plus its share of **movements in equity since** that date.
+
+<Callout kind="example">
+H Ltd acquires 80% of S Ltd on 1 April 20X1 for ₹6,00,000, when S's share capital is
+₹5,00,000 and its reserves and surplus stand at ₹1,50,000. S's equity at acquisition
+= 5,00,000 + 1,50,000 = ₹6,50,000; H's 80% share = ₹5,20,000. **Goodwill = 6,00,000 −
+5,20,000 = ₹80,000**, shown as an asset in the CFS. Had H paid only ₹4,80,000 for the
+same stake, the ₹40,000 by which its share of equity exceeds cost would be a
+**capital reserve** instead.
+</Callout>
+
+### Pre-acquisition vs post-acquisition profits
+
+The acquisition date slices the subsidiary's reserves in two. Profits earned **up to
+the date of investment** are **capital profits** for the group: the parent effectively
+bought them, so they enter the cost-of-control computation (and the minority's share
+of them sits inside minority interest) — they never reach consolidated revenue
+reserves. Profits earned **after** acquisition are **revenue profits**: the parent's
+share joins consolidated reserves and the consolidated P&L; the minority's share
+joins minority interest. Where the parent acquires mid-year and the subsidiary's
+profit accrues evenly, the year's profit is **time-apportioned** around the
+acquisition date. A **dividend received out of pre-acquisition profits** follows the
+same logic — it is a **recovery of cost**, credited against the investment, never
+income of the parent.
+
+<Callout kind="example">
+Continuing the H–S example: at 31 March 20X3, S's share capital is ₹5,00,000 and its
+reserves ₹2,70,000, of which ₹1,50,000 existed at acquisition. **Minority interest =
+20% × (5,00,000 + 2,70,000) = ₹1,54,000** — the minority takes its share of the
+subsidiary's *entire* equity at the balance sheet date, pre- and post-acquisition
+alike. Of the post-acquisition growth of ₹1,20,000, the parent's 80% share of
+**₹96,000** flows into consolidated reserves; the pre-acquisition ₹1,50,000 stays
+locked in the goodwill computation done at acquisition.
+</Callout>
+
+<Callout kind="mistake">
+Two date errors sink more consolidation answers than anything else. Goodwill is
+measured against the subsidiary's equity **at the date of investment** — recomputing
+it with balance-sheet-date reserves manufactures a fictitious capital reserve as the
+subsidiary earns profits. Minority interest is the opposite: it is the minority's
+share of equity **at the balance sheet date** — freezing it at acquisition-date
+equity strips the minority of its share of post-acquisition growth.
+</Callout>
+
+### Intragroup elimination — in full
+
+Intragroup balances (mutual owings, loans) and intragroup transactions (sales,
+expenses, dividends) are **eliminated in full**, together with **unrealised profits**
+sitting in assets the group still holds — closing stock bought from a fellow group
+member, fixed assets transferred at a markup. Under AS 21 the elimination is **in
+full whether the sale ran downstream (parent to subsidiary) or upstream (subsidiary
+to parent)** — the group as a single entity has simply moved goods from one pocket to
+another. **Unrealised losses** are also eliminated in full, **unless the cost cannot
+be recovered** — a genuine fall in value stays recognised.
+
+<Callout kind="example">
+S Ltd (an 80% subsidiary) sold goods to H Ltd at cost plus 25%. H's closing stock
+includes ₹1,00,000 of these goods. Unrealised profit = 1,00,000 × 25/125 =
+**₹20,000**, eliminated **in full** against consolidated stock (carried at
+₹80,000 — its cost to the group) even though the sale was upstream and outsiders own
+20% of the seller. The margin fraction matters: 25% *on cost* is 25/125 of the
+invoice value, not 25% of it.
+</Callout>
+
+### Housekeeping rules the exam loves
+
+- **Uniform accounting policies.** Consolidation uses uniform policies for like
+  transactions; if that is **not practicable**, the CFS disclose **that fact together
+  with the proportions of the items** to which different policies were applied.
+- **Reporting dates.** The statements consolidated should be drawn up to the same
+  date; where they are not, adjust for **significant events** between the dates, and
+  the gap may **never exceed six months**.
+- **Taxes.** The parent's and each subsidiary's tax expenses are simply
+  **aggregated** — no notional recomputation for the group.
+- **Losses and the minority.** Losses applicable to the minority may **exceed the
+  minority's interest** in the subsidiary's equity. The excess (and further losses)
+  is **adjusted against the majority interest**, unless the minority has a **binding
+  obligation to make good the losses** and can do so. If the subsidiary later turns
+  profitable, **all profits are allocated to the majority until the minority's share
+  of previously absorbed losses is recovered**. So: minority interest of ₹80,000
+  facing a minority loss share of ₹1,10,000 is reported at **nil**, ₹30,000 falls on
+  the majority, and of a later minority profit share of ₹50,000 the first ₹30,000
+  restores the majority — minority interest re-emerges at ₹20,000.
+- **Cessation.** Consolidation of a subsidiary's results runs **until the date the
+  parent-subsidiary relationship ceases**; the gain or loss on disposal is the
+  difference between the proceeds and the carrying amount of the net assets disposed
+  of (with related goodwill). From that date the retained investment follows
+  **AS 13**, and its **carrying amount on that date is regarded as cost thereafter**.
+- **Disclosure.** A list of all subsidiaries with country of
+  incorporation/residence, proportion of ownership and (if different) of voting
+  power; the nature of the relationship where the parent holds one-half or less of
+  the voting power; the effect of acquisitions and disposals during the period; and
+  the reporting dates used where they differ from the parent's.
+
+## 2. AS 23: Accounting for Investments in Associates in Consolidated Financial Statements
+
+### Significant influence and the associate
+
+An **associate** is an enterprise in which the investor has **significant
+influence** and which is **neither a subsidiary nor a joint venture** of the
+investor. Significant influence is the **power to participate in the financial
+and/or operating policy decisions** of the investee **without control** over those
+policies. The working presumption: holding **20% or more of the voting power**,
+directly or **indirectly through subsidiary(ies)**, indicates significant influence
+**unless clearly demonstrated otherwise**; below 20%, the presumption runs the other
+way — again **rebuttable**. Another investor's majority stake does not by itself
+destroy significant influence. Evidence that can rebut either way: **representation
+on the board**, **participation in policy-making**, **material transactions** between
+the parties, **interchange of managerial personnel**, or **provision of essential
+technical information**.
+
+Scope is the standard's sharpest edge: AS 23 operates **only when the investor
+prepares and presents consolidated financial statements**. A **non-company** investor
+with no subsidiary prepares no CFS, so it never applies the equity method — its
+associates sit at **cost under AS 13** in its own statements. A **company** cannot
+use that escape: s.129(3) read with its Explanation compels CFS even where the only
+group relationship is an associate, and the associate is equity-accounted in those
+CFS. Even an investor that does prepare
+CFS carries associates at AS 13 cost **in its separate financial statements**; the
+equity method lives exclusively in the consolidated set.
+
+### The equity method
+
+Under the **equity method** the investment is **initially recorded at cost**,
+identifying any **goodwill or capital reserve** arising at acquisition (cost versus
+the investor's share of the associate's net assets). Thereafter the carrying amount
+moves with the investor's world:
+
+> carrying amount = cost
+> **plus** the investor's share of post-acquisition profits (or minus losses)
+> **plus/minus** the investor's share of post-acquisition reserve movements
+> (revaluations, foreign-exchange translation)
+> **minus** distributions (dividends) received from the associate.
+
+The consolidated P&L shows the **investor's share of the associate's results** —
+one line, presented separately, with the share of any extraordinary or prior period
+items also separately disclosed. The goodwill or capital reserve identified at
+acquisition is **included in the carrying amount of the investment** — never shown as
+a separate balance-sheet asset — but **disclosed separately**. The investment itself
+appears as a **long-term investment** in the consolidated balance sheet.
+
+<Callout kind="example">
+A Ltd (which prepares CFS) acquires 30% of B Ltd on 1 April 20X1 for ₹4,00,000 when
+B's net assets are ₹12,00,000. Share of net assets = 30% × 12,00,000 = ₹3,60,000, so
+the cost includes **goodwill of ₹40,000** (disclosed, not separated). In 20X1–X2 B
+earns ₹2,00,000 and pays dividends of ₹50,000. Carrying amount at 31 March 20X2 =
+4,00,000 + 30% × 2,00,000 − 30% × 50,000 = 4,00,000 + 60,000 − 15,000 =
+**₹4,45,000**. The consolidated P&L carries ₹60,000 as share of the associate's
+profit; the ₹15,000 dividend is not income — it shrinks the investment.
+</Callout>
+
+Two exemptions mirror AS 21: an associate acquired and held **exclusively for
+disposal in the near future**, or operating under **severe long-term restrictions
+impairing fund transfers to the investor**, is not equity-accounted — it stays at
+**AS 13 cost even in the CFS**, with the reason disclosed. The equity method is also
+**discontinued** from the date the investor **ceases to have significant influence**
+(or such restrictions arise): the carrying amount on that date becomes **cost**
+thereafter.
+
+### Losses, eliminations, mechanics
+
+When the investor's **share of losses equals or exceeds the carrying amount**, the
+investment is reported at **nil** and the investor **discontinues recognising further
+losses** — additional losses are provided only to the extent the investor has
+**incurred obligations or made payments on the associate's behalf** (guarantees and
+the like). If the associate returns to profit, the investor resumes recognition
+**only after its share of profits equals the share of net losses not recognised**.
+
+**Unrealised profits** on transactions with an associate — upstream or downstream —
+are eliminated **only to the extent of the investor's interest** in the associate
+(the associate is an outsider for the rest); unrealised losses likewise, unless the
+cost of the transferred asset cannot be recovered. The most recent available
+financial statements of the associate are used, drawn where practicable to the
+investor's reporting date, with adjustments for significant events in any gap; for
+uniform policies, adjust — and where that is impracticable, **disclose the fact**.
+
+<Callout kind="mistake">
+Two directions to keep straight against AS 21. First, the elimination fraction:
+subsidiaries lose intragroup profit **in full**; associates only **to the extent of
+the investor's interest** — carrying the 100% habit into AS 23 overstates the
+elimination. Second, the venue: the equity method **never appears in separate
+financial statements** — an investor that equity-accounts its associate in its own
+standalone books has confused AS 23 with AS 13.
+</Callout>
+
+## 3. AS 27: Financial Reporting of Interests in Joint Ventures
+
+### Joint control and the three forms
+
+A **joint venture** is a contractual arrangement whereby two or more parties
+undertake an economic activity **subject to joint control** — the **contractually
+agreed sharing of control**, such that no single venturer can control the activity
+unilaterally. The **contractual arrangement** (a contract, minutes, articles —
+usually in writing) is what separates a joint venture from an associate: it
+typically covers the activity and duration, appointments to the governing body,
+capital contributions, and the sharing of output, income, expenses or results. A
+**venturer** is a party with joint control; an **investor in a joint venture** is a
+party without it.
+
+AS 27 sorts every joint venture into **three forms**, each with its own accounting —
+and for the first two the treatment is identical in the venturer's **separate and
+consolidated** statements, because the items involved are already the venturer's own:
+
+1. **Jointly controlled operations (JCO)** — each venturer uses its **own** assets
+   and resources (an aircraft built by consortium members, each making a part). The
+   venturer recognises **the assets it controls and the liabilities and expenses it
+   incurs**, plus **its share of the income** from the joint activity.
+2. **Jointly controlled assets (JCA)** — joint ownership of one asset (a pipeline
+   shared by oil companies). The venturer recognises its **share of the joint
+   assets, classified by the nature of the asset** — not as an investment — any
+   **liabilities it has incurred** and its **share of joint liabilities**, its
+   **share of the output or income** together with its **share of joint expenses**,
+   and expenses it incurred itself.
+3. **Jointly controlled entities (JCE)** — a separate company, partnership or other
+   entity in which each venturer holds an interest.
+
+### The JCE split: AS 13 alone, proportionate consolidation in CFS
+
+For a JCE the venue decides the method. In the venturer's **separate financial
+statements**, the interest is an **investment accounted for under AS 13**. In the
+venturer's **consolidated financial statements**, the interest is reported by
+**proportionate consolidation**: the venturer's **share of each of the assets,
+liabilities, income and expenses** of the JCE is included, **line by line** — either
+combined with the venturer's own like items or shown as separate line items — on a
+**gross basis, with no offsetting** of assets against liabilities or income against
+expenses. A **non-company** venturer with no subsidiary prepares no CFS, so it never
+proportionately consolidates — but a company venturer is pulled into CFS by
+s.129(3)'s Explanation (joint ventures count) and proportionately consolidates
+there. Proportionate consolidation starts when joint control begins and
+**ceases from the date joint control ends** — thereafter AS 21, AS 23 or AS 13
+applies according to what relationship survives. The AS 21-style exemptions repeat:
+an interest held **exclusively for near-future disposal**, or a JCE under **severe
+long-term restrictions**, stays at AS 13 cost.
+
+<Callout kind="example">
+V Ltd (which prepares CFS) holds a 40% interest in W Ltd, a jointly controlled
+entity. W's statements show fixed assets ₹10,00,000, inventories ₹4,00,000,
+creditors ₹3,00,000 and revenue ₹20,00,000. V's CFS include **₹4,00,000 of fixed
+assets, ₹1,60,000 of inventories, ₹1,20,000 of creditors and ₹8,00,000 of
+revenue** — 40% of every line, merged with (or shown beside) V's own figures. No
+one-line "investment in W" and no single "share of W's profit" caption: the whole
+skeleton of W enters at 40%.
+</Callout>
+
+<Callout kind="mistake">
+Under AS 27 a jointly controlled entity in CFS takes **proportionate consolidation,
+not the equity method** — equity-accounting a JCE is the classic cross-standard
+error (it is Ind AS 111 that abolished proportionate consolidation; the AS regime
+keeps it). The mirror-image error also costs marks: applying proportionate
+consolidation in the venturer's **separate** statements, where AS 13 alone governs.
+</Callout>
+
+### Transactions with the venture, investors, operators
+
+When a venturer **contributes or sells assets to** a joint venture and the assets
+are retained by the venture, substance rules: while the significant risks and
+rewards have passed, the venturer recognises **only that portion of the gain
+attributable to the interests of the other venturers**. Its own share of the profit
+is unrealised — it has partly sold to itself. A **loss**, though, is recognised **in
+full** when it evidences a reduction in net realisable value or an impairment. When
+a venturer **purchases assets from** a joint venture, it does not recognise **its
+share of the venture's profit** on the sale **until it resells the asset to an
+independent party** — losses again immediately if they reflect NRV declines or
+impairment.
+
+An **investor** in a joint venture — a participant without joint control — stands
+outside these rules: it reports its interest under **AS 13** (or, if it in fact has
+control or significant influence, under AS 21 or AS 23). **Operators or managers**
+of a venture treat their fees as **revenue under AS 9**; to the venture the fee is
+an expense.
+
+Disclosures: the venturer's **contingent liabilities and capital commitments**
+relating to its joint-venture interests, shown separately; a **list of joint
+ventures** with a description of interests and the proportion of ownership in each
+JCE; and, for proportionately consolidated JCEs, the **aggregate amounts of each of
+current assets, long-term assets, current liabilities, long-term liabilities, income
+and expenses** related to those interests.
+
+## 4. The chapter in one paragraph
+
+AS 21 consolidates every controlled enterprise — control being majority voting power
+(directly or through subsidiaries) or command of the board, with only
+temporary-control and severe-restriction subsidiaries left out as AS 13
+investments — by adding line items in full, cancelling the parent's investment
+against acquisition-date equity to throw up goodwill or capital reserve, splitting
+the subsidiary's reserves into capital (pre-acquisition) and revenue
+(post-acquisition) profits, carrying the minority's balance-sheet-date share of
+equity separately from liabilities and parent equity, eliminating intragroup
+balances and unrealised profits in full both ways, demanding uniform policies (or
+disclosure), capping reporting-date gaps at six months, and pushing minority losses
+beyond the minority's equity onto the majority unless the minority is bound to make
+them good. AS 23 takes the 20%-presumption associate and, only inside CFS, runs the
+equity method — cost plus post-acquisition share of profits and reserves minus
+dividends, goodwill or capital reserve buried in the carrying amount but disclosed,
+losses recognised only down to nil (then only against obligations), unrealised
+profits eliminated only to the investor's interest — while separate statements keep
+AS 13 cost. AS 27 splits joint ventures three ways: jointly controlled operations
+and assets put each venturer's own items and shares straight into its books
+everywhere, while a jointly controlled entity is an AS 13 investment in separate
+statements and proportionately consolidated — line-by-line share, never the equity
+method — in CFS; gains on sales to the venture are recognised only for the other
+venturers' portion, purchases hold profit until resale outside, investors without
+joint control fall back to AS 13/21/23, and operators' fees are AS 9 revenue.

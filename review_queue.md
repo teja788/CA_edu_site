@@ -323,3 +323,33 @@ Triage rules:
   further ₹600 lakh includes consuming the ₹20 lakh of materials at site, so
   total cost is unambiguously ₹1,000 lakh (numbers unchanged). Confirm this
   matches the SM's convention for materials-at-site adjustments.
+
+## as-items-impacting-fs — VERIFY 2026-07-19
+
+- [ ] **New chapter (Ch 7, AS 4/5/11/22) authored 19 Jul 2026** — notes, bank
+  (38 MCQs · 8 descriptives · 4 case sets, 22 machine-verified numericals) and
+  citations file shipped together. A reviewer should spot-check the citations
+  rows against SM Ch 7 (May 2026 ed.) and the notified AS texts.
+- [ ] **MAT one-liner (AS 22)** — stated per ASI-6: MAT amount is the current
+  tax; deferred tax still measured at regular enacted rates. Sight the May
+  2026 SM to confirm it still carries this position.
+- [ ] **Para 46A** — presented as a live irrevocable election for long-term
+  foreign-currency monetary items without its 2011 insertion history; confirm
+  the SM's current framing.
+- [ ] **AS 4 disclosure split** — strict line taken: non-adjusting events →
+  report of the approving authority; proposed dividends → notes. Verify the
+  SM does not soften this.
+
+## as-consolidated-fs — VERIFY 2026-07-19
+
+- [ ] **New chapter (Ch 10, AS 21/23/27) authored 19 Jul 2026** — notes, bank
+  (38 MCQs · 8 descriptives · 4 case sets, 24 machine-verified numericals) and
+  citations file shipped together. Spot-check citations rows against SM Ch 10
+  (May 2026 ed.) and the notified AS texts.
+- [ ] **"Near future" ≈ 12 months** for the AS 21/23 temporary-holding
+  exclusion — per the ICAI explanation; confirm SM wording.
+- [ ] **Reporting-date gap** — 6-month cap asserted only for AS 21; confirm
+  whether the SM extends it to AS 23 associates.
+- [ ] **AS 23 unrealised-profit elimination** to the extent of the investor's
+  interest (both directions) — follows the ASI-derived explanation; confirm
+  against current SM text.

@@ -96,9 +96,10 @@ examples recompute correctly**
 1. **Real domain** — `astro.config.mjs` still has the placeholder
    `https://adhyayan.example` (robots.txt/sitemap/canonicals derive from it).
    One-line change once a domain is chosen. BLOCKING for publish.
-2. **Content coverage** — Inter P1 Ch 7 (AS 4/5/11/22) and Ch 10 (AS 21/23/27)
-   notes + banks; more Foundation chapters; question banks for the other 5
-   Inter papers.
+2. **Content coverage** — ~~Inter P1 Ch 7 and Ch 10~~ DONE 19 Jul 2026: both
+   chapters shipped (notes + citations + ~50-question banks + computed
+   verifiers, adversarially reviewed — 2 findings fixed). Still open: more
+   Foundation chapters; question banks for the other 5 Inter papers.
 3. **Human review pass** — the ※ rows in citations files and the VERIFY
    sections in review_queue.md still need a CA's initials (by design).
 4. **Analytics** — none present; decide (Plausible/GoatCounter fit the

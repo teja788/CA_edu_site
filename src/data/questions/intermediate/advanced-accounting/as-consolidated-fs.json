@@ -1,0 +1,2491 @@
+{
+  "level": "intermediate",
+  "paper": "advanced-accounting",
+  "paperSlug": "advanced-accounting",
+  "chapterSlug": "as-consolidated-fs",
+  "chapter": "Ch 10 · Accounting Standards for Consolidated Financial Statements",
+  "questions": [
+    {
+      "id": "q-i1c10-001",
+      "topic": "Ch 10 · AS 21 · Scope and mandate",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement best captures the relationship between AS 21 and the legal requirement to prepare consolidated financial statements (CFS)?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — objective and scope of AS 21",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "AS 21 itself requires every enterprise with a subsidiary to prepare CFS",
+          "explanation": "AS 21 does not mandate preparation — it prescribes the principles to be applied WHEN CFS are presented."
+        },
+        {
+          "key": "B",
+          "text": "CFS are required only of listed companies, and AS 21 applies to them alone",
+          "explanation": "Section 129(3) applies to every company with a subsidiary (including associates and joint ventures), listed or not."
+        },
+        {
+          "key": "C",
+          "text": "AS 21 does not mandate CFS; it applies when an enterprise presents CFS — for companies the mandate comes from section 129(3) of the Companies Act, 2013",
+          "explanation": "The standard is a how-to, not a whether-to: the statute compels preparation; AS 21 governs the preparation."
+        },
+        {
+          "key": "D",
+          "text": "A parent presenting CFS is exempted from preparing its separate financial statements",
+          "explanation": "CFS are presented IN ADDITION to separate financial statements, never as a substitute."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-002",
+      "topic": "Ch 10 · AS 21 · Control definition",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 21, 'control' means:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — definition of control",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ownership of more than one-half of the share capital of an enterprise",
+          "explanation": "The test is VOTING power, not share capital — and there is a second, alternative limb on board composition."
+        },
+        {
+          "key": "B",
+          "text": "Ownership, directly or indirectly through subsidiary(ies), of more than one-half of the voting power; OR control of the composition of the board of directors (or governing body) so as to obtain economic benefits",
+          "explanation": "Two alternative limbs — either one alone establishes control."
+        },
+        {
+          "key": "C",
+          "text": "The power to participate in the financial and operating policy decisions of an enterprise",
+          "explanation": "Participation without control is SIGNIFICANT INFLUENCE — that is AS 23's associate territory."
+        },
+        {
+          "key": "D",
+          "text": "The contractually agreed sharing of control over an economic activity",
+          "explanation": "That is JOINT control, the defining mark of an AS 27 joint venture."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-003",
+      "topic": "Ch 10 · AS 21 · Control through a subsidiary",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "H Ltd holds 60% of the voting power of A Ltd, and A Ltd holds 55% of the voting power of B Ltd. H holds no shares in B directly, so its effective economic interest in B is only 33%. In H's CFS, B Ltd is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — indirect control through subsidiaries",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Not consolidated, because H's effective interest of 33% is below one-half",
+          "explanation": "Control looks at voting power held directly or THROUGH SUBSIDIARIES — A's 55% of B is at H's command, whatever the arithmetic product says."
+        },
+        {
+          "key": "B",
+          "text": "Consolidated only in A Ltd's CFS, never in H's",
+          "explanation": "A consolidates B — and H, controlling A, consolidates both. A parent consolidates ALL its subsidiaries, direct and indirect."
+        },
+        {
+          "key": "C",
+          "text": "An associate of H, since 33% exceeds the 20% significant-influence threshold",
+          "explanation": "Where control exists, the associate question never arises — B is controlled through the chain."
+        },
+        {
+          "key": "D",
+          "text": "A subsidiary of H through the chain of control, and is consolidated in H's CFS",
+          "explanation": "H controls A, and through A commands 55% of B's voting power — B is a subsidiary of both A and H."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-004",
+      "topic": "Ch 10 · AS 21 · Exclusion for temporary control",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "P Ltd acquires 90% of Q Ltd in January, exclusively with a view to selling the entire stake within ten months. In P's CFS, Q Ltd is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — exclusions from consolidation",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Not consolidated — control is intended to be temporary ('near future' is ordinarily not more than twelve months), and the investment is accounted for under AS 13 with the reason disclosed",
+          "explanation": "Acquisition held exclusively for near-future disposal is the first of AS 21's two exclusions."
+        },
+        {
+          "key": "B",
+          "text": "Consolidated, because P holds more than one-half of the voting power",
+          "explanation": "Majority voting power normally consolidates — but the temporary-control exclusion overrides it here."
+        },
+        {
+          "key": "C",
+          "text": "Proportionately consolidated at 90%",
+          "explanation": "Proportionate consolidation belongs to AS 27's jointly controlled entities, not to subsidiaries."
+        },
+        {
+          "key": "D",
+          "text": "Accounted for by the equity method",
+          "explanation": "The equity method is AS 23's tool for associates — an excluded subsidiary goes to AS 13, not AS 23."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-005",
+      "topic": "Ch 10 · AS 21 · Dissimilar activities",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "H Ltd, a manufacturer, controls S Ltd, a finance company with a very different business. Under AS 21, S Ltd is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — no exclusion for dissimilar activities",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Excluded from consolidation, since combining dissimilar activities would mislead users",
+          "explanation": "AS 21 rejects exactly this argument — only temporary control and severe long-term restrictions justify exclusion."
+        },
+        {
+          "key": "B",
+          "text": "Consolidated — dissimilarity of business is no ground for exclusion; better information comes from consolidating and providing AS 17 segment information",
+          "explanation": "The two exclusions are exhaustive; segment disclosures, not exclusion, deal with dissimilarity."
+        },
+        {
+          "key": "C",
+          "text": "Excluded if a majority of H's members approve the exclusion",
+          "explanation": "Shareholder approval cannot override the standard's consolidation requirement."
+        },
+        {
+          "key": "D",
+          "text": "Consolidated only if its activities are similar to those of at least one other group member",
+          "explanation": "No similarity test exists anywhere in AS 21."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-006",
+      "topic": "Ch 10 · AS 21 · Goodwill on consolidation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "P Ltd acquired 70% of S Ltd on 1 April 20X1 for ₹7,50,000. On that date S's share capital was ₹6,00,000 and its reserves ₹3,00,000; by 31 March 20X2 the reserves had grown to ₹4,50,000. Goodwill in the CFS is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — cost of control at acquisition date",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,20,000",
+          "explanation": "Cost 7,50,000 − 70% of acquisition-date equity 9,00,000 (= 6,30,000). Goodwill is fixed at the date of investment."
+        },
+        {
+          "key": "B",
+          "text": "₹15,000",
+          "explanation": "That uses balance-sheet-date equity (70% × 10,50,000 = 7,35,000) — post-acquisition profits never enter the cost-of-control computation."
+        },
+        {
+          "key": "C",
+          "text": "₹3,30,000",
+          "explanation": "That compares cost with 70% of share capital alone (4,20,000), ignoring the pre-acquisition reserves the parent also bought."
+        },
+        {
+          "key": "D",
+          "text": "A capital reserve of ₹1,20,000",
+          "explanation": "Cost EXCEEDS the share of equity here — the excess is goodwill, not capital reserve."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-007",
+      "topic": "Ch 10 · AS 21 · Capital reserve",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Q Ltd acquired 60% of R Ltd for ₹3,90,000 when R's share capital was ₹5,00,000 and its reserves ₹2,00,000. The consolidation throws up:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — goodwill vs capital reserve",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Goodwill of ₹30,000",
+          "explanation": "The share of equity (60% × 7,00,000 = 4,20,000) EXCEEDS cost — the ₹30,000 difference runs the other way."
+        },
+        {
+          "key": "B",
+          "text": "Capital reserve of ₹30,000",
+          "explanation": "60% of acquisition-date equity is ₹4,20,000 against cost of ₹3,90,000 — equity above cost is a capital reserve."
+        },
+        {
+          "key": "C",
+          "text": "Goodwill of ₹90,000",
+          "explanation": "That compares cost only with 60% of share capital (₹3,00,000), forgetting that the parent's share of reserves was also acquired."
+        },
+        {
+          "key": "D",
+          "text": "Capital reserve of ₹3,10,000",
+          "explanation": "That deducts cost from 100% of R's equity — only the parent's 60% share enters the cost-of-control computation."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-008",
+      "topic": "Ch 10 · AS 21 · Minority interest computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "H Ltd holds 75% of S Ltd. At the balance sheet date S's share capital is ₹4,00,000, other reserves ₹1,60,000 (of which ₹1,00,000 existed at acquisition) and P&L balance ₹80,000 (nil at acquisition). Minority interest is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — minority interest at balance sheet date",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,00,000",
+          "explanation": "That is 25% of share capital alone — the minority also owns its share of every reserve."
+        },
+        {
+          "key": "B",
+          "text": "₹1,25,000",
+          "explanation": "That freezes the minority at acquisition-date equity (25% × 5,00,000) — minority interest grows with post-acquisition equity too."
+        },
+        {
+          "key": "C",
+          "text": "₹1,40,000",
+          "explanation": "That omits the P&L balance — minority interest takes ALL components of equity, including the credit balance of profit and loss."
+        },
+        {
+          "key": "D",
+          "text": "₹1,60,000",
+          "explanation": "25% × (4,00,000 + 1,60,000 + 80,000) = 25% × 6,40,000. The minority's slice is of the subsidiary's ENTIRE equity at the balance sheet date, pre- and post-acquisition alike."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-009",
+      "topic": "Ch 10 · AS 21 · Pre-acquisition dividend",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Shortly after acquiring 80% of S Ltd, H Ltd receives a dividend which S declared out of profits earned BEFORE the acquisition. In H's books the dividend is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — dividends out of pre-acquisition profits",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Credited to the investment account as a recovery of cost",
+          "explanation": "The parent effectively paid for those profits when it bought the shares — receiving them back is a return OF the investment, not a return ON it."
+        },
+        {
+          "key": "B",
+          "text": "Recognised as dividend income, since it was legally declared after H became a shareholder",
+          "explanation": "Legal form does not decide — the profits pre-date the acquisition, so the receipt merely refunds part of the price paid."
+        },
+        {
+          "key": "C",
+          "text": "Credited directly to consolidated revenue reserves",
+          "explanation": "Pre-acquisition profits are capital profits — they never reach revenue reserves in any guise."
+        },
+        {
+          "key": "D",
+          "text": "Split between income (80%) and minority interest (20%)",
+          "explanation": "The minority's dividend goes to the minority shareholders outside the group; H's own receipt is a cost recovery, not income to be split."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-010",
+      "topic": "Ch 10 · AS 21 · Capital vs revenue profits",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a consolidation, the subsidiary's profits earned UP TO the date of acquisition are treated as:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — pre-acquisition profits are capital profits",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Revenue profits, credited to consolidated reserves along with the year's results",
+          "explanation": "Only POST-acquisition profits are revenue profits of the group."
+        },
+        {
+          "key": "B",
+          "text": "Belonging entirely to the minority shareholders",
+          "explanation": "The minority takes only its proportionate share; the parent's share enters the cost-of-control computation."
+        },
+        {
+          "key": "C",
+          "text": "Capital profits — the parent's share enters the cost-of-control (goodwill/capital reserve) computation, and the minority's share forms part of minority interest",
+          "explanation": "The parent bought those profits; they can never be distributed as group earnings."
+        },
+        {
+          "key": "D",
+          "text": "Distributable profits of the parent once the subsidiary declares a dividend",
+          "explanation": "A dividend out of pre-acquisition profits is a recovery of the investment's cost, not distributable income."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-011",
+      "topic": "Ch 10 · AS 21 · Upstream unrealised profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "S Ltd, a 75% subsidiary, sells goods to H Ltd at cost plus 20%. H's closing stock includes ₹1,80,000 of such goods. In the CFS the unrealised profit eliminated is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — unrealised intragroup profits eliminated in full",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹22,500",
+          "explanation": "That eliminates only the parent's 75% share — AS 21 eliminates intragroup unrealised profit IN FULL; proportionate elimination belongs to AS 23 associates."
+        },
+        {
+          "key": "B",
+          "text": "₹30,000",
+          "explanation": "1,80,000 × 20/120 — the stock is valued at invoice price, so the cost-plus margin is 20/120 of it, eliminated in full even on an upstream sale."
+        },
+        {
+          "key": "C",
+          "text": "₹36,000",
+          "explanation": "That applies 20% straight to the invoice value, as though the margin were 20% ON SELLING PRICE — the markup here is on cost."
+        },
+        {
+          "key": "D",
+          "text": "₹7,500",
+          "explanation": "That eliminates only the minority's 25% share — exactly backwards, and AS 21 does not apportion the elimination at all."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-012",
+      "topic": "Ch 10 · AS 21 · Downstream unrealised profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "H Ltd sells goods to its 70% subsidiary S Ltd at a margin of 25% ON SELLING PRICE. S's closing stock includes ₹2,40,000 of these goods. The unrealised profit eliminated in the CFS is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — downstream elimination in full",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹60,000",
+          "explanation": "25% of the ₹2,40,000 invoice value — the margin is on selling price — eliminated in FULL: the group cannot profit by selling to itself."
+        },
+        {
+          "key": "B",
+          "text": "₹48,000",
+          "explanation": "That treats the margin as cost-plus 25% (25/125 of invoice value) — the stem says 25% on selling price."
+        },
+        {
+          "key": "C",
+          "text": "₹42,000",
+          "explanation": "That eliminates only the parent's 70% share — AS 21 requires full elimination for both downstream and upstream transfers."
+        },
+        {
+          "key": "D",
+          "text": "Nil, because the sale was to a separate legal entity at arm's length",
+          "explanation": "Separate legal personality is precisely what consolidation looks through — the profit is unrealised until the goods leave the group."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-013",
+      "topic": "Ch 10 · AS 21 · Uniform accounting policies",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A subsidiary values inventory on a basis different from the parent's, and restatement to a uniform policy is NOT practicable. In the CFS the group should:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — uniform accounting policies",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Make no adjustment and no disclosure, since each entity's own policy complies with the standards",
+          "explanation": "Individually compliant policies still leave the CFS mixing unlike measurements — the standard demands at least disclosure."
+        },
+        {
+          "key": "B",
+          "text": "Exclude the subsidiary from consolidation until policies are aligned",
+          "explanation": "Policy differences are not among the two permitted grounds of exclusion."
+        },
+        {
+          "key": "C",
+          "text": "Qualify the consolidated accounts",
+          "explanation": "Qualification is the auditor's tool, not the preparer's remedy under AS 21."
+        },
+        {
+          "key": "D",
+          "text": "Disclose the fact that uniform policies were impracticable, together with the proportions of the items to which the different policies were applied",
+          "explanation": "Uniform policies are the rule; where impracticable, the fact AND the affected proportions must be disclosed."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-014",
+      "topic": "Ch 10 · AS 21 · Reporting dates",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The parent's year ends 31 March; a subsidiary's statements are drawn up to 31 December. For consolidation, AS 21 permits:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — different reporting dates",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Any gap between reporting dates, provided it is disclosed",
+          "explanation": "Disclosure alone is not enough — the gap itself is capped."
+        },
+        {
+          "key": "B",
+          "text": "Using the 31 December statements with adjustments for the effects of significant transactions or events between the two dates — the gap may never exceed six months",
+          "explanation": "Three-month gap here is fine: adjust for significant intervening events; six months is the outer limit."
+        },
+        {
+          "key": "C",
+          "text": "A gap of at most three months",
+          "explanation": "Three months is Ind AS 110's discipline — AS 21 allows up to SIX months."
+        },
+        {
+          "key": "D",
+          "text": "No gap at all — the subsidiary must redraw its statements to 31 March",
+          "explanation": "Same-date statements are preferred, but AS 21 expressly tolerates a gap of up to six months with adjustments."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-015",
+      "topic": "Ch 10 · AS 21 · Minority interest presentation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the consolidated balance sheet, minority interest is presented:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — presentation of minority interest",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Within the equity of the parent's shareholders",
+          "explanation": "Minority shareholders are outsiders to the parent's owners — merging the two overstates the parent's equity."
+        },
+        {
+          "key": "B",
+          "text": "Under non-current liabilities",
+          "explanation": "The minority holds equity in a group member, not a claim repayable by the group — it is not a liability."
+        },
+        {
+          "key": "C",
+          "text": "Separately from liabilities and from the equity of the parent's shareholders",
+          "explanation": "AS 21's exact requirement: a third category of its own, between neither camp."
+        },
+        {
+          "key": "D",
+          "text": "As a deduction from goodwill arising on consolidation",
+          "explanation": "Goodwill and minority interest are independent products of the consolidation — never netted."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-016",
+      "topic": "Ch 10 · AS 21 · Minority losses",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Minority interest in S Ltd stands at ₹90,000. The minority's share of the current year's loss is ₹1,30,000, and the minority shareholders have no binding obligation to make losses good. The amount adjusted against the MAJORITY interest is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — losses applicable to minority",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹40,000",
+          "explanation": "The minority absorbs losses only down to its equity of ₹90,000; the ₹40,000 excess falls on the majority (absent a binding minority obligation). Future profits go to the majority until this is recouped."
+        },
+        {
+          "key": "B",
+          "text": "Nil — minority interest is simply reported as a negative ₹40,000",
+          "explanation": "AS 21 does not carry a negative minority interest unless the minority is bound (and able) to make good the losses."
+        },
+        {
+          "key": "C",
+          "text": "₹1,30,000",
+          "explanation": "The minority's own equity of ₹90,000 absorbs losses first — only the excess crosses to the majority."
+        },
+        {
+          "key": "D",
+          "text": "₹90,000",
+          "explanation": "₹90,000 is the part the MINORITY absorbs — the question asks for the excess borne by the majority."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-017",
+      "topic": "Ch 10 · AS 21 · CFS and separate FS",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Once H Ltd presents consolidated financial statements, its SEPARATE financial statements:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — CFS in addition to separate FS",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Need no longer be prepared",
+          "explanation": "The statute requires both sets — consolidation never displaces the parent's own accounts."
+        },
+        {
+          "key": "B",
+          "text": "Continue to be prepared in full — CFS are presented IN ADDITION to separate financial statements, in which the subsidiary remains an AS 13 investment",
+          "explanation": "Two parallel sets: consolidated for the group as one enterprise, separate for the parent as a legal entity carrying its investment at cost."
+        },
+        {
+          "key": "C",
+          "text": "May be replaced by abridged accounts",
+          "explanation": "No such relaxation exists in AS 21 or the Companies Act for a consolidating parent."
+        },
+        {
+          "key": "D",
+          "text": "Are merged into the CFS as an additional column",
+          "explanation": "Columnar presentation of the parent inside the CFS is not the standard's scheme — the two sets stand apart."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-018",
+      "topic": "Ch 10 · AS 21 · Cessation of control",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "H Ltd holds 80% of S Ltd. On 30 September it sells a 70% stake, retaining 10% with no significant influence. In the CFS for the year:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U1 — disposal and cessation of the relationship",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "S's results are consolidated for the full year, with a year-end adjustment for the disposal",
+          "explanation": "Consolidation stops the day control stops — the second half belongs to the buyer's group."
+        },
+        {
+          "key": "B",
+          "text": "S is removed retrospectively from the beginning of the year",
+          "explanation": "The group DID control S for six months; those results are the group's results."
+        },
+        {
+          "key": "C",
+          "text": "The retained 10% is accounted for by the equity method",
+          "explanation": "10% without significant influence is no associate — the equity method has no basis."
+        },
+        {
+          "key": "D",
+          "text": "S's results are consolidated up to 30 September; from that date the retained investment follows AS 13, with its carrying amount on that date regarded as cost",
+          "explanation": "Consolidate until the parent-subsidiary relationship ceases; the residual holding starts a fresh AS 13 life at its cessation-date carrying amount."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-019",
+      "topic": "Ch 10 · AS 23 · Significant influence presumption",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 23, an investor holding 20% or more of the voting power of an investee (directly or through subsidiaries) is presumed:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — significant influence, 20% presumption",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "To have significant influence, unless it can be clearly demonstrated otherwise — the presumption is rebuttable",
+          "explanation": "20% raises a presumption of significant influence, and evidence can defeat it either way."
+        },
+        {
+          "key": "B",
+          "text": "To control the investee",
+          "explanation": "Control needs a MAJORITY of voting power or command of the board — 20% establishes only influence."
+        },
+        {
+          "key": "C",
+          "text": "To share joint control with the other shareholders",
+          "explanation": "Joint control requires a contractual arrangement — a shareholding percentage alone never creates it."
+        },
+        {
+          "key": "D",
+          "text": "Conclusively to have significant influence, with no rebuttal possible",
+          "explanation": "The presumption yields to clear demonstration to the contrary — it is not conclusive."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-020",
+      "topic": "Ch 10 · AS 23 · Rebutting the presumption",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "I Ltd holds 18% of the voting power of J Ltd, has two seats on J's board, participates in its policy-making and transacts materially with it. J Ltd is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — evidence of significant influence below 20%",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Not an associate — below 20%, the absence of significant influence is conclusive",
+          "explanation": "The sub-20% presumption is REBUTTABLE, and I's board seats and policy participation rebut it."
+        },
+        {
+          "key": "B",
+          "text": "A subsidiary of I Ltd",
+          "explanation": "18% voting power with board seats is nowhere near control of a majority of voting power or of board composition."
+        },
+        {
+          "key": "C",
+          "text": "Capable of being I's associate — the sub-20% presumption is rebuttable, and board representation, policy participation and material transactions are precisely the evidence that rebuts it",
+          "explanation": "AS 23's evidence list (board seat, policy participation, material transactions, managerial interchange, technical information) can establish influence below 20%."
+        },
+        {
+          "key": "D",
+          "text": "A joint venture of I Ltd",
+          "explanation": "No contractual sharing of control exists — influence, however real, is not joint control."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-021",
+      "topic": "Ch 10 · AS 23 · Equity method venue",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "K & Associates, a partnership firm outside any statutory CFS mandate, holds 30% of an associate but has NO subsidiary. Under AS 23, the firm:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — AS 23 applies only in CFS",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Must prepare CFS in order to apply the equity method to the associate",
+          "explanation": "AS 23 imposes no duty to prepare CFS — for a non-company with no subsidiary, no CFS are presented and the equity method never starts. (Contrast a COMPANY: s.129(3)'s Explanation drags associates into a mandatory CFS, where equity accounting does apply.)"
+        },
+        {
+          "key": "B",
+          "text": "Prepares no CFS, so the equity method never applies — the associate is carried at cost under AS 13 in the firm's financial statements",
+          "explanation": "The equity method lives only inside consolidated statements; an investor without subsidiaries stays with AS 13."
+        },
+        {
+          "key": "C",
+          "text": "Applies proportionate consolidation to the associate",
+          "explanation": "Proportionate consolidation is AS 27's method for jointly controlled entities — never for associates."
+        },
+        {
+          "key": "D",
+          "text": "Applies the equity method in its separate financial statements",
+          "explanation": "The equity method is barred from separate financial statements — there the investment sits at AS 13 cost."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-022",
+      "topic": "Ch 10 · AS 23 · Separate financial statements",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the SEPARATE financial statements of an investor which also presents CFS, an investment in an associate is carried:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — separate FS treatment",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "At cost under AS 13, reduced for any decline in value that is other than temporary",
+          "explanation": "The equity method belongs exclusively to the consolidated statements — separately, AS 13 governs."
+        },
+        {
+          "key": "B",
+          "text": "By the equity method, mirroring the CFS",
+          "explanation": "Mirroring is exactly what AS 23 forbids — the two sets deliberately measure the associate differently."
+        },
+        {
+          "key": "C",
+          "text": "By proportionate consolidation of the associate's line items",
+          "explanation": "Line-by-line sharing is for AS 27 jointly controlled entities, and even then only in CFS."
+        },
+        {
+          "key": "D",
+          "text": "At fair value, remeasured at each balance sheet date",
+          "explanation": "No AS in this chapter measures associates at recurring fair value."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-023",
+      "topic": "Ch 10 · AS 23 · Equity method build-up",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An investor (which prepares CFS) acquired 40% of an associate for ₹6,00,000. During the year the associate earned profits of ₹3,00,000 and paid total dividends of ₹1,00,000. The carrying amount of the investment at the year end is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — equity method carrying amount",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹7,20,000",
+          "explanation": "That adds the 40% profit share but forgets that the ₹40,000 dividend received REDUCES the carrying amount."
+        },
+        {
+          "key": "B",
+          "text": "₹6,20,000",
+          "explanation": "That deducts the associate's FULL dividend of ₹1,00,000 — only the investor's 40% share flows to the investor."
+        },
+        {
+          "key": "C",
+          "text": "₹6,80,000",
+          "explanation": "6,00,000 + 40% × 3,00,000 − 40% × 1,00,000 = 6,00,000 + 1,20,000 − 40,000. Profits grow the investment; distributions shrink it."
+        },
+        {
+          "key": "D",
+          "text": "₹6,00,000",
+          "explanation": "Frozen cost is the AS 13 answer for SEPARATE statements — in the CFS the equity method moves the carrying amount."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-024",
+      "topic": "Ch 10 · AS 23 · Goodwill within carrying amount",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An investor pays ₹3,50,000 for 25% of an associate whose net assets total ₹12,00,000. The ₹50,000 excess of cost over the investor's share of net assets is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — goodwill identified but not separated",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Shown as a separate goodwill asset in the consolidated balance sheet",
+          "explanation": "Only CONSOLIDATION of a subsidiary produces a separate goodwill line — associate goodwill stays inside the one-line investment."
+        },
+        {
+          "key": "B",
+          "text": "Written off immediately against consolidated reserves",
+          "explanation": "AS 23 neither writes it off nor amortises it on recognition — it simply travels inside the carrying amount."
+        },
+        {
+          "key": "C",
+          "text": "A capital reserve",
+          "explanation": "Capital reserve arises when the share of net assets EXCEEDS cost — here cost is the higher figure, so it is goodwill."
+        },
+        {
+          "key": "D",
+          "text": "Goodwill included in the carrying amount of the investment, but disclosed separately",
+          "explanation": "25% × 12,00,000 = 3,00,000 against cost 3,50,000: goodwill of ₹50,000, identified and disclosed — never a separate asset."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-025",
+      "topic": "Ch 10 · AS 23 · Dividends from an associate",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the consolidated financial statements, a dividend received from an associate accounted for by the equity method is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — distributions reduce carrying amount",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Recognised as income in the consolidated statement of profit and loss",
+          "explanation": "The investor's share of the associate's PROFIT was already recognised — counting the dividend too would double-count."
+        },
+        {
+          "key": "B",
+          "text": "Deducted from the carrying amount of the investment",
+          "explanation": "Distributions received reduce the carrying amount — the profit behind them entered the P&L when earned by the associate."
+        },
+        {
+          "key": "C",
+          "text": "Credited to capital reserve",
+          "explanation": "Nothing routes ordinary associate dividends to capital reserve."
+        },
+        {
+          "key": "D",
+          "text": "Ignored until the investment is sold",
+          "explanation": "The cash has arrived and the investment's net assets have shrunk — the carrying amount must move now."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-026",
+      "topic": "Ch 10 · AS 23 · Losses to nil",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The carrying amount of an associate is ₹80,000. The investor's share of the associate's losses is ₹55,000 in year 1 and ₹45,000 in year 2. The investor has guaranteed none of the associate's obligations. The loss recognised in year 2 is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — discontinuing loss recognition at nil",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹45,000",
+          "explanation": "That drives the carrying amount to a negative ₹20,000 — recognition stops once the investment reaches nil."
+        },
+        {
+          "key": "B",
+          "text": "₹25,000",
+          "explanation": "After year 1 the carrying amount is 80,000 − 55,000 = 25,000; year 2 losses are recognised only down to nil. The remaining ₹20,000 goes unrecognised (no guaranteed obligations)."
+        },
+        {
+          "key": "C",
+          "text": "Nil",
+          "explanation": "₹25,000 of carrying amount remained at the start of year 2 — losses are recognised until that cushion is gone."
+        },
+        {
+          "key": "D",
+          "text": "₹20,000",
+          "explanation": "₹20,000 is the UNRECOGNISED portion of the year-2 share — the recognised figure is the ₹25,000 that exhausts the carrying amount."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-027",
+      "topic": "Ch 10 · AS 23 · Resuming profit recognition",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An investor discontinued recognising its share of an associate's losses when the investment reached nil, leaving unrecognised losses of ₹20,000. In the following year the investor's share of the associate's profit is ₹35,000. The profit recognised is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — resumption after unrecognised losses",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹35,000",
+          "explanation": "The first slice of profit must first absorb the ₹20,000 of losses never recognised — only the balance is income."
+        },
+        {
+          "key": "B",
+          "text": "Nil",
+          "explanation": "The profit share EXCEEDS the unrecognised losses — the excess is recognised now, not deferred."
+        },
+        {
+          "key": "C",
+          "text": "₹20,000",
+          "explanation": "₹20,000 is the amount ABSORBED by past unrecognised losses — the recognised profit is what remains."
+        },
+        {
+          "key": "D",
+          "text": "₹15,000",
+          "explanation": "Recognition resumes only after profits equal the ₹20,000 of unrecognised losses: 35,000 − 20,000 = 15,000."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-028",
+      "topic": "Ch 10 · AS 23 · Unrealised profits with an associate",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "H Ltd (which prepares CFS) holds 30% of an associate. During the year H sold goods to the associate at a profit of ₹60,000; all the goods remain in the associate's closing stock. The unrealised profit eliminated in the CFS is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — elimination to the extent of the investor's interest",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹18,000",
+          "explanation": "30% × 60,000 — with an associate, unrealised profits are eliminated only TO THE EXTENT OF THE INVESTOR'S INTEREST; the other 70% is a genuine sale to outsiders."
+        },
+        {
+          "key": "B",
+          "text": "₹60,000",
+          "explanation": "Full elimination is AS 21's rule for SUBSIDIARIES — an associate is not part of the group, so only the investor's share is unrealised."
+        },
+        {
+          "key": "C",
+          "text": "Nil, since the associate is outside the group",
+          "explanation": "The associate is outside the group for consolidation, but the investor's 30% slice of the profit is still profit made against itself."
+        },
+        {
+          "key": "D",
+          "text": "₹42,000",
+          "explanation": "That eliminates the OTHER shareholders' 70% — precisely the portion that IS realised."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-029",
+      "topic": "Ch 10 · AS 23 · Exemptions from the equity method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Even in CFS, the equity method is NOT applied to an associate when:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U2 — exemptions and discontinuation",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "The associate's business is dissimilar to the investor's",
+          "explanation": "Dissimilarity excuses nothing under AS 23, just as it excuses nothing under AS 21."
+        },
+        {
+          "key": "B",
+          "text": "The associate is loss-making",
+          "explanation": "Losses are handled inside the equity method (down to nil) — they never switch the method off by themselves."
+        },
+        {
+          "key": "C",
+          "text": "The investment was acquired and is held exclusively for disposal in the near future, or the associate operates under severe long-term restrictions impairing fund transfers to the investor — it is then carried at cost under AS 13",
+          "explanation": "The two exemptions mirror AS 21's exclusions; the investment stays at AS 13 cost with the reason disclosed."
+        },
+        {
+          "key": "D",
+          "text": "The investor holds less than 25% of the voting power",
+          "explanation": "The threshold concept sits at 20%, and it creates a rebuttable presumption — not an equity-method exemption at 25%."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-030",
+      "topic": "Ch 10 · AS 27 · Joint control",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 27, 'joint control' is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — joint control and the contractual arrangement",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ownership of more than half the voting power shared between two shareholders",
+          "explanation": "Majority ownership describes CONTROL under AS 21 — and mere shareholding, however split, creates no joint control."
+        },
+        {
+          "key": "B",
+          "text": "The power to participate in financial and operating policy decisions",
+          "explanation": "Participation without control is significant influence — the associate test, not the joint-venture test."
+        },
+        {
+          "key": "C",
+          "text": "Any arrangement where two venturers each hold more than 20%",
+          "explanation": "Percentages are irrelevant — without a contractual sharing of control there is no joint venture."
+        },
+        {
+          "key": "D",
+          "text": "The contractually agreed sharing of control over an economic activity, such that no single venturer can control it unilaterally",
+          "explanation": "The CONTRACT is the essence — it is what distinguishes a joint venture from an associate."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-031",
+      "topic": "Ch 10 · AS 27 · Three forms",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "AS 27 identifies the three broad forms of joint venture as:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — forms of joint venture",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jointly controlled operations, jointly controlled assets and jointly controlled entities",
+          "explanation": "Each form gets its own accounting; only the jointly controlled ENTITY involves a separate enterprise."
+        },
+        {
+          "key": "B",
+          "text": "Subsidiaries, associates and joint ventures",
+          "explanation": "That is the map of the whole chapter across three standards — not AS 27's internal classification."
+        },
+        {
+          "key": "C",
+          "text": "Incorporated ventures, partnership ventures and contractual ventures",
+          "explanation": "Legal form of the vehicle is not the classification axis — the pattern of control over operations, assets or an entity is."
+        },
+        {
+          "key": "D",
+          "text": "Jointly controlled operations and jointly controlled assets only",
+          "explanation": "The third and most examined form — the jointly controlled entity — is missing."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-032",
+      "topic": "Ch 10 · AS 27 · Jointly controlled operations",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a jointly controlled operation (say, consortium members each building part of an aircraft with their own resources), each venturer recognises:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — accounting for JCOs",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Its proportionate share of every asset, liability, income and expense of the arrangement",
+          "explanation": "Proportionate consolidation belongs to jointly controlled ENTITIES — a JCO has no pooled balance sheet to share."
+        },
+        {
+          "key": "B",
+          "text": "The assets it controls, the liabilities and expenses it incurs, and its share of the income earned from the joint activity",
+          "explanation": "Each venturer's own items stay its own; only the income of the venture is shared — the same treatment in separate and consolidated statements."
+        },
+        {
+          "key": "C",
+          "text": "An investment accounted for by the equity method",
+          "explanation": "There is no entity to hold an interest in — the venturer's own assets do the work."
+        },
+        {
+          "key": "D",
+          "text": "Nothing until the joint product is sold",
+          "explanation": "Assets, liabilities and expenses are recognised as they arise, not parked until sale."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-033",
+      "topic": "Ch 10 · AS 27 · Jointly controlled assets",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Oil companies jointly own and operate a pipeline, each taking a share of its capacity and bearing a share of its costs. Each venturer recognises:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — accounting for JCAs",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Its interest as a single investment line item",
+          "explanation": "An investment caption hides the substance — the venturer directly owns a share of a pipeline, not a security."
+        },
+        {
+          "key": "B",
+          "text": "The full pipeline as its asset, with a liability to the co-venturers for their shares",
+          "explanation": "Grossing up assets the venturer does not own misstates the balance sheet — only the SHARE is the venturer's."
+        },
+        {
+          "key": "C",
+          "text": "Its share of the jointly controlled asset, classified according to the NATURE of the asset, any liabilities it has incurred, its share of joint liabilities, its share of the output or income together with its share of joint expenses",
+          "explanation": "The share of a pipeline is shown as pipeline (PPE), not as an investment — classification follows the asset's nature."
+        },
+        {
+          "key": "D",
+          "text": "Nothing until its share of output is sold to third parties",
+          "explanation": "The asset share, liabilities and expenses exist now — recognition does not wait for sales."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-034",
+      "topic": "Ch 10 · AS 27 · JCE in consolidated FS",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the CONSOLIDATED financial statements of a venturer, an interest in a jointly controlled entity is reported using:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — proportionate consolidation in CFS",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Proportionate consolidation — the venturer's share of each asset, liability, income and expense, line by line, on a gross basis",
+          "explanation": "AS 27 mandates proportionate consolidation for JCEs in CFS — either merged with like items or as separate line items, never offset."
+        },
+        {
+          "key": "B",
+          "text": "The equity method",
+          "explanation": "The equity method is Ind AS 111's answer — under the AS regime it is a classic wrong-standard trap for JCEs."
+        },
+        {
+          "key": "C",
+          "text": "Full line-by-line consolidation with a minority interest for the co-venturers",
+          "explanation": "Full consolidation needs CONTROL — a venturer has only joint control, so only its share comes in."
+        },
+        {
+          "key": "D",
+          "text": "Cost under AS 13",
+          "explanation": "AS 13 cost is the SEPARATE-statement treatment; the CFS demand proportionate consolidation."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i1c10-035",
+      "topic": "Ch 10 · AS 27 · Proportionate consolidation amounts",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "V Ltd (which prepares CFS) holds a 30% interest in a jointly controlled entity whose financial statements show creditors of ₹9,00,000 and revenue of ₹30,00,000. V's CFS include, in respect of the JCE:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — proportionate line-item amounts",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Creditors ₹9,00,000 and revenue ₹30,00,000",
+          "explanation": "100% of the line items is FULL consolidation — that needs control, not joint control."
+        },
+        {
+          "key": "B",
+          "text": "No creditors and no revenue — only a one-line investment",
+          "explanation": "A one-line carrying amount is the equity method (or AS 13) — the CFS of a venturer must bring in the line items."
+        },
+        {
+          "key": "C",
+          "text": "Creditors ₹2,70,000 and revenue ₹9,00,000",
+          "explanation": "30% of each line: 0.30 × 9,00,000 and 0.30 × 30,00,000 — every asset, liability, income and expense enters at the venturer's share."
+        },
+        {
+          "key": "D",
+          "text": "Creditors ₹2,70,000 but no revenue, with a single 'share of profit' line instead",
+          "explanation": "Cherry-picking balance-sheet lines while collapsing the P&L into one line is neither proportionate consolidation nor the equity method."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i1c10-036",
+      "topic": "Ch 10 · AS 27 · Separate FS of the venturer",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the SEPARATE financial statements of a venturer, an interest in a jointly controlled entity is:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — separate FS treatment of a JCE",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "Proportionately consolidated, exactly as in the CFS",
+          "explanation": "Proportionate consolidation is confined to the CONSOLIDATED statements — separately, the interest is just an investment."
+        },
+        {
+          "key": "B",
+          "text": "Accounted for by the equity method",
+          "explanation": "The equity method appears nowhere in the AS regime's treatment of a JCE — in either set of statements."
+        },
+        {
+          "key": "C",
+          "text": "Derecognised, with the venturer's share of each asset recognised instead",
+          "explanation": "Share-of-asset recognition describes jointly controlled ASSETS — a JCE is a separate enterprise in which shares are held."
+        },
+        {
+          "key": "D",
+          "text": "Carried as an investment in accordance with AS 13",
+          "explanation": "Separate statements see the legal entity: shares in the JCE, at AS 13 cost."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i1c10-037",
+      "topic": "Ch 10 · AS 27 · Venturer vs investor",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A party holds 25% of a jointly controlled entity but is NOT a party to the contractual arrangement sharing control. In its CFS this party reports the interest:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — investor in a joint venture",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "By proportionate consolidation, since it holds more than 20%",
+          "explanation": "Proportionate consolidation is reserved for VENTURERS — parties with joint control under the contract."
+        },
+        {
+          "key": "B",
+          "text": "Under AS 13 as an investment — or under AS 23 (or AS 21) if it in fact has significant influence (or control)",
+          "explanation": "Without joint control the party is an 'investor in a joint venture': the ordinary standards apply according to the influence actually held — here 25% would typically make the JCE its associate under AS 23."
+        },
+        {
+          "key": "C",
+          "text": "By the equity method, because AS 27 prescribes it for all JV participants",
+          "explanation": "AS 27 prescribes the equity method for nobody — and its own rules bind only venturers."
+        },
+        {
+          "key": "D",
+          "text": "Not at all, since it lacks joint control",
+          "explanation": "The interest is still an asset — it simply falls to AS 13/21/23 rather than AS 27's proportionate consolidation."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i1c10-038",
+      "topic": "Ch 10 · AS 27 · Sale of an asset to the JV",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "V Ltd, a 40% venturer, sells equipment to the jointly controlled entity at a profit of ₹90,000. The significant risks and rewards pass, and the JCE retains the equipment. The profit V recognises immediately is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "SM Ch 10 U3 — transactions between venturer and JV",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹54,000",
+          "explanation": "Only the portion attributable to the interests of the OTHER venturers (60% × 90,000) is realised — V's own 40% slice is profit made against itself while the JCE holds the asset."
+        },
+        {
+          "key": "B",
+          "text": "₹90,000",
+          "explanation": "Full recognition ignores that V still, through its 40% interest, owns part of the asset it 'sold'."
+        },
+        {
+          "key": "C",
+          "text": "₹36,000",
+          "explanation": "That recognises V's OWN 40% share and defers the other venturers' — exactly inverted."
+        },
+        {
+          "key": "D",
+          "text": "Nil, until the JCE sells the equipment to an independent party",
+          "explanation": "Complete deferral is the rule for a venturer's share of profit on PURCHASES from the venture — on a sale TO the venture, the other venturers' portion is realised at once."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "d-i1c10-001",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 21 · Control and consolidation duty",
+      "stem": "Define 'control' under AS 21. Can an enterprise be a subsidiary of two parents at the same time? State the source of the legal obligation to prepare consolidated financial statements. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Control: (a) ownership, directly or indirectly through subsidiary(ies), of more than one-half of the voting power; or (b) control of the composition of the board of directors/governing body so as to obtain economic benefits",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Board composition controlled where the enterprise can appoint or remove all or a majority of directors without the consent or concurrence of any other person (including nominee and consequential appointments)",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Either limb alone suffices; control can run through a chain of subsidiaries regardless of the parent's lower effective economic interest",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Rare case: one enterprise holds majority voting power while another controls the board — BOTH are parents and both consolidate",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "AS 21 applies when an enterprise presents CFS; the mandate for companies is section 129(3), Companies Act 2013 (subsidiary includes associate company and joint venture), CFS presented in addition to separate FS",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c10-002",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 21 · Exclusions from consolidation",
+      "stem": "State the circumstances in which a subsidiary is excluded from consolidation under AS 21, and how such an investment is then accounted for. Is dissimilarity of business a valid ground? (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Exclusion 1: control intended to be temporary — subsidiary acquired and held exclusively with a view to disposal in the near future (ordinarily not more than twelve months from acquisition unless a longer period is justified)",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Exclusion 2: subsidiary operates under severe long-term restrictions which significantly impair its ability to transfer funds to the parent",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Excluded subsidiary accounted for as an investment under AS 13 in the CFS, with the reason for non-consolidation disclosed",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Dissimilar activities are NOT a ground for exclusion — consolidate and give AS 17 segment information instead",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c10-003",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 21 · Consolidation procedure",
+      "stem": "Outline the steps in preparing a consolidated balance sheet and statement of profit and loss under AS 21. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Combine the financial statements of parent and subsidiaries line by line — adding like items of assets, liabilities, income and expenses",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Eliminate the cost of the parent's investment against the parent's portion of the subsidiary's equity AT THE DATE OF INVESTMENT; excess of cost = goodwill (asset); excess of equity share = capital reserve; step-by-step where acquired in tranches",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Identify minority interest in the year's net income and adjust it against group income; compute minority interest in net assets (equity at date of investment + share of subsequent movements) and present it separately from liabilities and parent shareholders' equity",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Eliminate intragroup balances and transactions and resulting unrealised profits IN FULL (both upstream and downstream); unrealised losses also in full unless cost cannot be recovered",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Use uniform accounting policies (or disclose the fact and proportions); reporting-date gap at most six months with adjustment for significant events; tax expenses simply aggregated",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c10-004",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 21 · Minority interest and losses",
+      "stem": "How is minority interest computed and presented under AS 21? How are losses applicable to the minority dealt with when they exceed the minority's interest? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Minority interest = that part of the net results and net assets of a subsidiary attributable to interests not owned, directly or indirectly through subsidiaries, by the parent",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Composition: minority's share of equity at the date of investment PLUS minority's share of movements in equity since that date — i.e. the minority's share of the subsidiary's entire equity at the balance sheet date",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Presentation: in the consolidated balance sheet separately from liabilities and from the equity of the parent's shareholders; minority share of income adjusted against group income",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "Losses applicable to the minority in excess of the minority's interest are adjusted against the MAJORITY interest, except to the extent the minority has a binding obligation to, and is able to, make good the losses",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        },
+        {
+          "point": "If the subsidiary subsequently reports profits, all such profits are allocated to the majority until the minority's share of losses previously absorbed by the majority is recovered",
+          "marks": 1,
+          "citation": "SM Ch 10 U1"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c10-005",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 23 · Significant influence and the equity method",
+      "stem": "Define 'significant influence' and describe the equity method under AS 23. In which set of financial statements is the equity method applied? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Significant influence = power to participate in the financial and/or operating policy decisions of the investee without control over those policies; associate = enterprise with significant influence that is neither a subsidiary nor a joint venture",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        },
+        {
+          "point": "20% or more of voting power (directly or indirectly through subsidiaries) → rebuttable presumption of significant influence; below 20% → rebuttable presumption of its absence; evidence: board representation, policy participation, material transactions, interchange of managerial personnel, provision of essential technical information",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        },
+        {
+          "point": "Equity method: investment initially recorded at cost, identifying goodwill/capital reserve (included in carrying amount, disclosed separately); carrying amount adjusted for post-acquisition change in the investor's share of net assets (profits, losses, reserve movements)",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        },
+        {
+          "point": "Distributions received from the associate reduce the carrying amount; consolidated P&L shows the investor's share of the associate's results (extraordinary/prior period items separately)",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        },
+        {
+          "point": "Applied ONLY in consolidated financial statements; in separate FS (and where no CFS are prepared) the associate is carried at cost per AS 13",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c10-006",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 23 · Discontinuing the equity method",
+      "stem": "When does an investor discontinue the equity method under AS 23? How are losses in excess of the carrying amount dealt with? (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Discontinue from the date the investor ceases to have significant influence (but retains the investment), or when severe long-term restrictions significantly impair the associate's ability to transfer funds to the investor — thereafter AS 13 cost, with the carrying amount on that date regarded as cost",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        },
+        {
+          "point": "Also never applied where the investment was acquired and is held exclusively for disposal in the near future — AS 13 cost even in CFS, with disclosure",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        },
+        {
+          "point": "Losses: once the share of losses equals or exceeds the carrying amount, report the investment at nil and discontinue further loss recognition — additional losses provided only to the extent of obligations incurred or payments made on the associate's behalf (e.g. guarantees)",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        },
+        {
+          "point": "Resumption: share of subsequent profits recognised only after it equals the share of net losses not recognised",
+          "marks": 1,
+          "citation": "SM Ch 10 U2"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c10-007",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 27 · Three forms of joint venture",
+      "stem": "Describe the three forms of joint venture identified by AS 27 and the accounting for each in the venturer's financial statements. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Joint venture = contractual arrangement whereby two or more parties undertake an economic activity subject to JOINT CONTROL (contractually agreed sharing of control); the written contractual arrangement distinguishes a JV from an associate",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Jointly controlled operations: venturer recognises the assets it controls, the liabilities and expenses it incurs, and its share of income from the joint activity — same in separate and consolidated FS",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Jointly controlled assets: venturer recognises its share of the joint assets classified by the NATURE of the assets (not as an investment), liabilities it has incurred, its share of joint liabilities, its share of output/income with its share of joint expenses, and own expenses",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Jointly controlled entities — separate FS: investment under AS 13; consolidated FS: proportionate consolidation (share of each asset, liability, income, expense, line by line or as separate line items, gross with no offsetting)",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Exceptions: interest held exclusively for near-future disposal, or JCE under severe long-term restrictions → AS 13; proportionate consolidation ceases when joint control ceases (then AS 21/AS 23/AS 13 as appropriate)",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "d-i1c10-008",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 10 · AS 27 · Transactions with the venture; investors and operators",
+      "stem": "How does a venturer account for (i) a sale or contribution of assets to a joint venture and (ii) a purchase of assets from a joint venture? How do an 'investor in a joint venture' and an operator report their interests? (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Sale/contribution to JV (asset retained by JV, significant risks and rewards passed): recognise only that portion of the gain attributable to the interests of the OTHER venturers",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Recognise the FULL amount of a loss on such a sale when it evidences a reduction in net realisable value or an impairment loss",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Purchase from JV: do not recognise the venturer's share of the JV's profit on the transaction until the assets are resold to an independent party; share of losses recognised immediately where they reflect an NRV reduction or impairment",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Investor in a joint venture (no joint control): reports the interest per AS 13 — or AS 21/AS 23 where it in fact has control/significant influence",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        },
+        {
+          "point": "Operators/managers of a JV: fees recognised as revenue per AS 9 (an expense of the venture); disclosures — contingent liabilities and commitments separately, list of JVs with interest proportions, aggregate amounts of each of current/long-term assets and liabilities, income and expenses for JCE interests",
+          "marks": 1,
+          "citation": "SM Ch 10 U3"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-07-19"
+    },
+    {
+      "id": "cs-i1c10-001",
+      "type": "case_mcq_set",
+      "topic": "Ch 10 · AS 21 · Case: Himgiri Fabricators (first consolidation)",
+      "case": "Himgiri Fabricators Ltd acquired 75% of the equity shares of Sindhu Castings Ltd on 1 July 20X1 for ₹4,65,000. On 1 April 20X1 Sindhu's balance sheet showed share capital ₹4,00,000, general reserve ₹80,000 and profit & loss account ₹40,000. Sindhu earned a profit of ₹96,000 for the year ended 31 March 20X2, accruing evenly through the year, and declared no dividend. Himgiri prepares its first consolidated financial statements at 31 March 20X2.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c10-001-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Sindhu's PRE-acquisition (capital) profits for the consolidation are:",
+          "sourceRef": "SM Ch 10 U1 — time-apportioning the year of acquisition",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,20,000",
+              "explanation": "That takes only the opening reserve and P&L balances — the profit earned from 1 April to 1 July (3/12 × 96,000 = ₹24,000) is also pre-acquisition."
+            },
+            {
+              "key": "B",
+              "text": "₹1,44,000",
+              "explanation": "General reserve 80,000 + opening P&L 40,000 + current-year profit up to 1 July (96,000 × 3/12 = 24,000). Everything earned before the parent stepped in is capital profit."
+            },
+            {
+              "key": "C",
+              "text": "₹2,16,000",
+              "explanation": "That throws the WHOLE year's profit of ₹96,000 into the pre-acquisition pot — nine months of it was earned under the parent's control."
+            },
+            {
+              "key": "D",
+              "text": "₹1,08,000",
+              "explanation": "That is 75% of the correct figure — the capital/revenue split is made on the subsidiary's FULL profits before any ownership share is applied."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i1c10-001-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Goodwill arising on consolidation is:",
+          "sourceRef": "SM Ch 10 U1 — cost of control",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹75,000",
+              "explanation": "That uses equity WITHOUT the ₹24,000 profit slice up to 1 July (75% × 5,20,000 = 3,90,000) — equity at the DATE OF INVESTMENT includes profits accrued to that date."
+            },
+            {
+              "key": "B",
+              "text": "A capital reserve of ₹57,000",
+              "explanation": "Cost (4,65,000) exceeds the share of acquisition-date equity (4,08,000) — the difference is goodwill, not capital reserve."
+            },
+            {
+              "key": "C",
+              "text": "₹3,000",
+              "explanation": "That measures against balance-sheet-date equity (75% × 6,16,000 = 4,62,000) — post-acquisition profits never enter the goodwill computation."
+            },
+            {
+              "key": "D",
+              "text": "₹57,000",
+              "explanation": "Equity at 1 July = 4,00,000 + 1,44,000 = 5,44,000; Himgiri's 75% share = 4,08,000; goodwill = 4,65,000 − 4,08,000."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c10-001-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Minority interest at 31 March 20X2 is:",
+          "sourceRef": "SM Ch 10 U1 — minority interest at balance sheet date",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹1,54,000",
+              "explanation": "25% × (4,00,000 + 80,000 + 40,000 + 96,000) = 25% × 6,16,000 — the minority takes its share of the ENTIRE equity at the balance sheet date."
+            },
+            {
+              "key": "B",
+              "text": "₹1,36,000",
+              "explanation": "That is 25% of acquisition-date equity (5,44,000) — the minority also shares the post-acquisition profits."
+            },
+            {
+              "key": "C",
+              "text": "₹1,30,000",
+              "explanation": "That stops at the opening balances (25% × 5,20,000), giving the minority no share of the current year's profit at all."
+            },
+            {
+              "key": "D",
+              "text": "₹1,00,000",
+              "explanation": "That is 25% of share capital alone — reserves and profits belong to the minority in the same proportion."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i1c10-001-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Himgiri's share of Sindhu's POST-acquisition profit, credited to consolidated profit and loss, is:",
+          "sourceRef": "SM Ch 10 U1 — revenue profits",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹72,000",
+              "explanation": "₹72,000 is the FULL post-acquisition profit (96,000 × 9/12) — only the parent's 75% of it reaches consolidated P&L."
+            },
+            {
+              "key": "B",
+              "text": "₹96,000",
+              "explanation": "That takes the whole year at 100% — three months of the profit is pre-acquisition, and 25% of the rest belongs to the minority."
+            },
+            {
+              "key": "C",
+              "text": "₹54,000",
+              "explanation": "Post-acquisition profit = 96,000 × 9/12 = 72,000; parent's share = 75% × 72,000. The other ₹18,000 sits in minority interest."
+            },
+            {
+              "key": "D",
+              "text": "₹18,000",
+              "explanation": "₹18,000 is the MINORITY's share of the post-acquisition profit, not the parent's."
+            }
+          ],
+          "correct": "C"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c10-002",
+      "type": "case_mcq_set",
+      "topic": "Ch 10 · AS 21 · Case: Vaigai Group (intragroup eliminations)",
+      "case": "Vaigai Ltd holds 80% of Tunga Ltd. During the year ended 31 March 20X2: (i) Tunga sold goods to Vaigai at cost plus 25%; Vaigai's closing stock includes ₹1,50,000 of these goods. (ii) Vaigai sold goods to Tunga at a margin of 20% on selling price; Tunga's closing stock includes ₹1,00,000 of these goods. (iii) At the year end Tunga owed Vaigai ₹60,000 on account of these purchases.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 21 — Consolidated Financial Statements →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#1-as-21-consolidated-financial-statements"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c10-002-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The unrealised profit eliminated in respect of the UPSTREAM sale (Tunga to Vaigai) is:",
+          "sourceRef": "SM Ch 10 U1 — upstream unrealised profit",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹37,500",
+              "explanation": "That applies 25% straight to the invoice value — the markup is on COST, so the profit inside ₹1,50,000 is 25/125 of it."
+            },
+            {
+              "key": "B",
+              "text": "₹24,000",
+              "explanation": "That eliminates only the parent's 80% share — AS 21 eliminates the whole of the unrealised profit, whoever made it."
+            },
+            {
+              "key": "C",
+              "text": "₹30,000",
+              "explanation": "1,50,000 × 25/125 — and it is eliminated IN FULL although the seller is a partly-owned subsidiary."
+            },
+            {
+              "key": "D",
+              "text": "₹6,000",
+              "explanation": "That is the minority's 20% share of the profit — the elimination is never restricted to (or by) the minority's slice."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c10-002-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The unrealised profit eliminated in respect of the DOWNSTREAM sale (Vaigai to Tunga) is:",
+          "sourceRef": "SM Ch 10 U1 — downstream unrealised profit",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹20,000",
+              "explanation": "The margin is 20% ON SELLING PRICE, so the profit inside ₹1,00,000 of stock is simply 20% of it — eliminated in full."
+            },
+            {
+              "key": "B",
+              "text": "₹16,667",
+              "explanation": "That converts the margin to cost-plus (20/120) — the stem fixes it as a percentage of selling price."
+            },
+            {
+              "key": "C",
+              "text": "₹16,000",
+              "explanation": "That eliminates 80% of the profit — proportionate elimination is the AS 23 associate rule, not AS 21's."
+            },
+            {
+              "key": "D",
+              "text": "Nil, since the parent (not the subsidiary) made the profit",
+              "explanation": "Direction never matters under AS 21 — the group cannot earn a profit selling to itself, downstream or upstream."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i1c10-002-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The ₹60,000 owed by Tunga to Vaigai at the year end is:",
+          "sourceRef": "SM Ch 10 U1 — intragroup balances",
+          "options": [
+            {
+              "key": "A",
+              "text": "Shown as a debtor in the CFS, since Vaigai will genuinely collect it",
+              "explanation": "Within the group the 'debt' is money owed to oneself — the consolidated entity has no claim against an outsider."
+            },
+            {
+              "key": "B",
+              "text": "Eliminated only to the extent of 80%, Vaigai's interest in Tunga",
+              "explanation": "Intragroup BALANCES are eliminated in full — the 80/20 split never fragments a mutual owing."
+            },
+            {
+              "key": "C",
+              "text": "Disclosed as a related party balance but retained in the balance sheet",
+              "explanation": "AS 18 disclosure operates in the separate statements; in the CFS the balance is simply removed."
+            },
+            {
+              "key": "D",
+              "text": "Eliminated in full — both the debtor in Vaigai's books and the creditor in Tunga's books are removed",
+              "explanation": "Mutual indebtedness inside the group cancels completely: one entity cannot owe itself."
+            }
+          ],
+          "correct": "D"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c10-003",
+      "type": "case_mcq_set",
+      "topic": "Ch 10 · AS 23 · Case: Aravali Industries (equity method)",
+      "case": "Aravali Industries Ltd, which has two subsidiaries and prepares consolidated financial statements, acquired 25% of the voting power of Chenab Ltd on 1 April 20X1 for ₹5,00,000, obtaining significant influence. Chenab's net assets on that date were ₹16,00,000. For the year ended 31 March 20X2 Chenab earned a profit of ₹2,40,000 and paid total dividends of ₹80,000. In the year ended 31 March 20X3 Chenab suffered a heavy loss, Aravali's share of which was ₹5,90,000. Aravali has not guaranteed any obligation of Chenab.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 23 — Investments in Associates →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#2-as-23-accounting-for-investments-in-associates-in-consolidated-financial-statements"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c10-003-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The goodwill arising on the acquisition of the associate is:",
+          "sourceRef": "SM Ch 10 U2 — goodwill within the equity-method carrying amount",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nil — goodwill arises only on consolidating a subsidiary",
+              "explanation": "The equity method identifies goodwill too — cost is compared with the investor's share of the associate's net assets."
+            },
+            {
+              "key": "B",
+              "text": "₹1,00,000, included in the carrying amount of the investment and disclosed separately",
+              "explanation": "Cost 5,00,000 − 25% × 16,00,000 (= 4,00,000). It stays inside the one-line investment, disclosed but never shown as a separate asset."
+            },
+            {
+              "key": "C",
+              "text": "A capital reserve of ₹1,00,000",
+              "explanation": "Cost EXCEEDS the share of net assets — that direction produces goodwill; capital reserve needs the reverse."
+            },
+            {
+              "key": "D",
+              "text": "₹4,00,000",
+              "explanation": "₹4,00,000 is the share of net assets itself, not the excess of cost over it."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i1c10-003-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The carrying amount of the investment in Chenab at 31 March 20X2 is:",
+          "sourceRef": "SM Ch 10 U2 — equity-method build-up",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹5,60,000",
+              "explanation": "That adds the profit share but ignores the dividend — distributions received reduce the carrying amount."
+            },
+            {
+              "key": "B",
+              "text": "₹5,00,000",
+              "explanation": "Frozen cost is the treatment in SEPARATE statements (AS 13) — in the CFS the equity method moves the carrying amount."
+            },
+            {
+              "key": "C",
+              "text": "₹4,80,000",
+              "explanation": "That deducts Chenab's FULL dividend of ₹80,000 — only Aravali's 25% share (₹20,000) came to Aravali."
+            },
+            {
+              "key": "D",
+              "text": "₹5,40,000",
+              "explanation": "5,00,000 + 25% × 2,40,000 − 25% × 80,000 = 5,00,000 + 60,000 − 20,000."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c10-003-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "In Aravali's SEPARATE financial statements at 31 March 20X2, the investment in Chenab appears at:",
+          "sourceRef": "SM Ch 10 U2 — separate FS at cost",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹5,00,000 — cost under AS 13",
+              "explanation": "The equity method never enters separate financial statements; there the associate is an AS 13 long-term investment at cost."
+            },
+            {
+              "key": "B",
+              "text": "₹5,40,000 — the equity-method amount",
+              "explanation": "That is the CFS figure — carrying it into the separate statements confuses AS 23 with AS 13."
+            },
+            {
+              "key": "C",
+              "text": "₹4,00,000 — the share of net assets at acquisition",
+              "explanation": "Neither set of statements carries the investment at the bare share of net assets."
+            },
+            {
+              "key": "D",
+              "text": "₹5,20,000 — cost plus the profit share, ignoring dividends",
+              "explanation": "No standard produces this hybrid: separate statements hold cost; the CFS deduct the dividend as well."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i1c10-003-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "For the year ended 31 March 20X3 (share of loss ₹5,90,000 against a carrying amount of ₹5,40,000), Aravali recognises:",
+          "sourceRef": "SM Ch 10 U2 — losses limited to the carrying amount",
+          "options": [
+            {
+              "key": "A",
+              "text": "A loss of ₹5,90,000, taking the investment to a negative ₹50,000",
+              "explanation": "The equity method stops at nil — a negative investment would book losses Aravali has no obligation to fund."
+            },
+            {
+              "key": "B",
+              "text": "No loss, since an associate's losses belong to the associate",
+              "explanation": "The equity method exists precisely to bring in the investor's share of results — losses included, down to nil."
+            },
+            {
+              "key": "C",
+              "text": "A loss of ₹5,40,000, reporting the investment at nil; the remaining ₹50,000 goes unrecognised (no guaranteed obligations)",
+              "explanation": "Losses are recognised only until the carrying amount is exhausted; the unrecognised ₹50,000 must be absorbed by future profits before profit recognition resumes."
+            },
+            {
+              "key": "D",
+              "text": "A loss of ₹5,40,000 plus a provision of ₹50,000",
+              "explanation": "A provision for the excess needs an obligation — Aravali guaranteed nothing, so nothing beyond nil is recognised."
+            }
+          ],
+          "correct": "C"
+        }
+      ]
+    },
+    {
+      "id": "cs-i1c10-004",
+      "type": "case_mcq_set",
+      "topic": "Ch 10 · AS 27 · Case: Netravati Ventures (jointly controlled entity)",
+      "case": "Netravati Ltd, which prepares consolidated financial statements, holds a 40% interest in Wainganga Ltd under a contractual arrangement by which Netravati and two co-venturers share control; no venturer can take decisions unilaterally. Wainganga's financial statements for the year ended 31 March 20X2 show: property, plant and equipment ₹12,50,000; revenue ₹25,00,000; total expenses ₹20,00,000. During the year Netravati also purchased goods from Wainganga on which Wainganga earned a profit of ₹50,000; all these goods remain in Netravati's closing inventory.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: AS 27 — Interests in Joint Ventures →",
+        "href": "/intermediate/advanced-accounting/as-consolidated-fs/#3-as-27-financial-reporting-of-interests-in-joint-ventures"
+      },
+      "questions": [
+        {
+          "id": "cs-i1c10-004-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The amount of Wainganga's property, plant and equipment included in Netravati's CFS is:",
+          "sourceRef": "SM Ch 10 U3 — proportionate consolidation of assets",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹12,50,000, with the co-venturers' 60% shown as minority interest",
+              "explanation": "Full consolidation with minority interest needs CONTROL — joint control brings in only the venturer's share, with no minority."
+            },
+            {
+              "key": "B",
+              "text": "Nil — the interest appears as a single investment line",
+              "explanation": "A one-line investment is the SEPARATE-statement (AS 13) picture; the CFS must carry the proportionate line items."
+            },
+            {
+              "key": "C",
+              "text": "₹7,50,000",
+              "explanation": "That is the co-venturers' 60% — Netravati includes its OWN 40% share."
+            },
+            {
+              "key": "D",
+              "text": "₹5,00,000",
+              "explanation": "40% × 12,50,000 — the venturer's share of each asset enters the CFS line by line."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i1c10-004-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Through proportionate consolidation, the net effect of Wainganga on Netravati's consolidated profit (before the inventory adjustment below) is:",
+          "sourceRef": "SM Ch 10 U3 — proportionate consolidation of income and expenses",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹5,00,000",
+              "explanation": "That takes 100% of Wainganga's profit (25,00,000 − 20,00,000) — only the 40% share belongs in the venturer's CFS."
+            },
+            {
+              "key": "B",
+              "text": "₹2,00,000, arriving as revenue of ₹10,00,000 and expenses of ₹8,00,000 included line by line",
+              "explanation": "40% of each of revenue and expenses: gross inclusion, netting to the venturer's 40% share of the ₹5,00,000 profit."
+            },
+            {
+              "key": "C",
+              "text": "₹3,00,000",
+              "explanation": "That is the co-venturers' 60% share of the profit — the mirror image of Netravati's."
+            },
+            {
+              "key": "D",
+              "text": "Nil — profit is recognised only when Wainganga distributes it",
+              "explanation": "Waiting for distribution is cost-method thinking (AS 13) — proportionate consolidation brings the results in as earned."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i1c10-004-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Netravati's method for its interest in Wainganga in the CFS is:",
+          "sourceRef": "SM Ch 10 U3 — proportionate consolidation, not equity method",
+          "options": [
+            {
+              "key": "A",
+              "text": "The equity method, since 40% confers significant influence",
+              "explanation": "The contractual sharing of control makes Wainganga a jointly controlled ENTITY — AS 27 prescribes proportionate consolidation, not AS 23's equity method."
+            },
+            {
+              "key": "B",
+              "text": "Full consolidation under AS 21",
+              "explanation": "No venturer controls Wainganga — without control there is no parent and no full consolidation."
+            },
+            {
+              "key": "C",
+              "text": "Proportionate consolidation — the 40% share of each asset, liability, income and expense, reported gross with no offsetting",
+              "explanation": "The AS regime keeps proportionate consolidation for JCEs (it is Ind AS 111 that replaced it with the equity method)."
+            },
+            {
+              "key": "D",
+              "text": "Cost under AS 13, as in the separate financial statements",
+              "explanation": "AS 13 cost is only for the separate statements (or where the AS 27 exemptions apply) — the CFS must proportionately consolidate."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i1c10-004-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "In respect of the goods purchased from Wainganga and still in inventory, Netravati must defer profit of:",
+          "sourceRef": "SM Ch 10 U3 — purchases from the joint venture",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹20,000 — its 40% share of Wainganga's ₹50,000 profit, until the goods are resold to an independent party",
+              "explanation": "On a PURCHASE from the venture, the venturer must not recognise its own share of the venture's profit until independent resale."
+            },
+            {
+              "key": "B",
+              "text": "₹50,000 — the whole of Wainganga's profit on the sale",
+              "explanation": "The co-venturers' 60% of the profit is genuinely earned from Netravati as an outsider — only the venturer's own share waits."
+            },
+            {
+              "key": "C",
+              "text": "₹30,000 — the other venturers' share",
+              "explanation": "Exactly inverted: the OTHER venturers' share needs no deferral in Netravati's statements; its own 40% does."
+            },
+            {
+              "key": "D",
+              "text": "Nil — the purchase was at arm's length",
+              "explanation": "Arm's-length pricing does not stop 40% of the 'profit' being money Netravati made from itself while the goods sit in its inventory."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}
