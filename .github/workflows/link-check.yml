@@ -20,10 +20,15 @@ jobs:
 
       - name: Extract URLs from data files
         run: |
-          grep -rhoE "https?://[^'\"]+" src/data/ | sort -u > urls.txt
+          # Exclude quotes, backticks and whitespace so JS template literals
+          # don't bleed past their closing backtick, and drop template-literal
+          # URLs (`...${expr}...`) entirely — they aren't fetchable as-is and
+          # would guarantee false lychee failures.
+          grep -rhoE "https?://[^'\"\`[:space:]]+" src/data/ | grep -v '\${' | sort -u > urls.txt
           echo "Checking $(wc -l < urls.txt) unique URLs"
 
       - name: Check links
+        id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
           args: --no-progress --max-retries 3 --timeout 20 urls.txt
@@ -42,8 +47,10 @@ jobs:
             git push
           }
 
+      # Gate on the lychee step specifically: a failure in URL extraction or
+      # the lastChecked commit must not open a misleading "dead link" issue.
       - name: Open issue on failure
-        if: failure()
+        if: failure() && steps.lychee.outcome == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
