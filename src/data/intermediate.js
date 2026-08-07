@@ -209,8 +209,8 @@ export const intermediatePapers = [
       {
         name: 'Part I · Company Law & LLP Law — Module 1',
         chapters: [
-          { number: 1, slug: 'preliminary', name: 'Preliminary' },
-          { number: 2, slug: 'incorporation-of-company', name: 'Incorporation of Company and Matters Incidental Thereto' },
+          { number: 1, slug: 'preliminary', name: 'Preliminary', hasNotes: true },
+          { number: 2, slug: 'incorporation-of-company', name: 'Incorporation of Company and Matters Incidental Thereto', hasNotes: true },
           { number: 3, slug: 'prospectus-and-allotment', name: 'Prospectus and Allotment of Securities' },
           { number: 4, slug: 'share-capital-and-debentures', name: 'Share Capital and Debentures' },
           { number: 5, slug: 'acceptance-of-deposits', name: 'Acceptance of Deposits by Companies' },

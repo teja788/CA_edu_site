@@ -1,0 +1,590 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Preliminary'
+description: 'CA Intermediate Corporate & Other Laws Ch 1 — the Companies Act 2013 in plain language: where the Act applies (s.1), the definitions that decide everything (company, private, public, OPC, small, holding, subsidiary, associate), and lifting the corporate veil.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate &amp; Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 1 · Preliminary'
+chapterSlug: preliminary
+masteryId: i2-ch1
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, s. 1 (extent and application)'
+  - 'Companies Act 2013, s. 2 — cll. (6) associate, (11) body corporate, (20) company, (41) financial year, (42) foreign company, (45) Government company, (46) holding, (52) listed, (62) OPC, (68) private, (71) public, (85) small, (87) subsidiary'
+  - 'Companies (Specification of Definitions Details) Rules 2014, Rules 2A and 2(1)(t) (small-company thresholds, listed-company carve-outs)'
+  - 'Companies (Restriction on Number of Layers) Rules 2017'
+  - 'Case law by name and proposition only: Salomon; Lee; Daimler; Gilford; Jones v Lipman; Dinshaw Maneckjee Petit; Workmen of Associated Rubber; LIC v Escorts'
+sourceLabel: 'Companies Act 2013 ss. 1–2 · ICAI SM Paper 2 Ch 1 scope (May 2026 ed.) · law stated as on 28 Feb 2026'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 24 min read · 5 application vignettes'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=preliminary'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Company law looks like a wall of sections, but almost every dispute in the Companies Act 2013
+starts one step earlier, in the dictionary. Is this entity a *company* at all? If it is, is it
+*private* or *public*? Is it *small*? Is that other company its *subsidiary*, or merely an
+*associate*? Answer those questions wrongly and every downstream answer — how many directors,
+which resolutions, whether an auditor must rotate, whether consolidated accounts are needed —
+goes wrong with it. That is why the syllabus opens here, and why examiners love this chapter:
+one badly-read definition costs a whole question.
+
+So treat Chapter 1 as a set of **tests you apply**, not paragraphs you recite. Each definition
+below is broken into its ingredients, the ingredients are then run against a short scenario
+(the vignettes), and the traps — joint holders, employee-members, voting power versus share
+capital, the deemed-public rule — are pulled out where you will meet them. The law here is
+stated **as it stands on 28 February 2026**, which is the cut-off for the **Sept 2026** and
+**Jan 2027** attempts. Two things in this chapter live in the Rules rather than the Act and
+therefore move more often than the rest: the small-company thresholds and the listed-company
+carve-outs. Both are flagged where they appear.
+
+## 1. Where the Act applies — section 1
+
+The Companies Act 2013 **extends to the whole of India** (s.1(2)). Its sections were brought
+into force in tranches by notification, which is why you still meet references to "the date of
+commencement" of a particular provision.
+
+The application list in **s.1(4)** is the one that gets examined. The Act applies to:
+
+| Applies to | Carve-in condition |
+|---|---|
+| Companies incorporated under this Act **or under any previous company law** | Unconditional — a 1956 Act company is governed by the 2013 Act today |
+| **Insurance companies** | Except in so far as the 2013 Act is inconsistent with the Insurance Act 1938 / IRDA Act 1999 |
+| **Banking companies** | Except in so far as inconsistent with the Banking Regulation Act 1949 |
+| Companies engaged in the **generation or supply of electricity** | Except in so far as inconsistent with the Electricity Act 2003 |
+| Any **other company governed by a special Act** for the time being in force | Except in so far as inconsistent with that special Act |
+| Such **body corporate incorporated by any Act** as the Central Government may notify | Subject to the exceptions, modifications and adaptations in the notification |
+
+Read the pattern, not the list. Banks, insurers and electricity companies are **not outside**
+the Companies Act — they are **inside it**, with their sectoral statute winning wherever the two
+collide, and only to the extent of the inconsistency. The rest of the Act applies to them.
+
+<Callout kind="pointer">
+  <p>
+    <strong>"Governed by a special Act" appears twice in this chapter, doing two different
+    jobs.</strong> In s.1(4) it decides how much of the Companies Act applies to such a
+    company. In s.2(85) it is an outright <em>disqualification</em> from small-company status.
+    A stem about a banking company can therefore be testing either point — read whether it
+    asks "does the Act apply?" or "is it a small company?"
+  </p>
+</Callout>
+
+## 2. What a company is — sections 2(20) and 2(11)
+
+**Company — s.2(20):** a company incorporated **under this Act or under any previous company
+law**. The definition is deliberately circular and therefore strict: incorporation under the
+company-law statute is the *only* route in. A partnership firm, an LLP, a co-operative society,
+a Hindu Undivided Family business or a trust is never a "company" for the Act, however large it
+is and however corporate it looks.
+
+**Body corporate (or corporation) — s.2(11):** a wider bucket. It **includes a company
+incorporated outside India**, but it **does not include** (i) a co-operative society registered
+under any law relating to co-operative societies, and (ii) any other body corporate, not being
+a company as defined in the Act, which the Central Government may notify.
+
+So the concentric picture is:
+
+- **Body corporate** = everything with corporate personality — Indian companies, foreign
+  companies, LLPs, statutory corporations created by an Act — minus the two exclusions above.
+- **Company** = the Indian, Companies-Act-registered slice of that.
+
+Every company is a body corporate; most bodies corporate are not companies. Wherever the Act
+wants to catch foreign parents and LLPs it says "body corporate" — which is exactly why the
+Explanation to s.2(46) and s.2(87) tells you that, for the holding and subsidiary definitions,
+"company" **includes any body corporate**.
+
+## 3. The features that follow from incorporation
+
+1. **Separate legal entity.** The company is a person in law distinct from its members. This is
+   the foundation stone laid in *Salomon v A Salomon &amp; Co Ltd* (1897): a trader who converted
+   his business into a company and took secured debentures for the price ranked ahead of the
+   company's unsecured creditors, because the company — though he owned virtually all of it —
+   was a different person from him.
+2. **Perpetual succession.** Members die, become insolvent, or sell out; the company continues
+   until it is wound up or struck off. "Members may come and members may go, but the company
+   goes on" is the classroom line, and it is why a company's contracts survive a change of
+   ownership.
+3. **Limited liability** (for a company limited by shares): a member's exposure is capped at
+   the unpaid amount on the shares held. Fully-paid shares mean no further liability at all. In
+   a company limited by guarantee the cap is the guaranteed amount; an unlimited company gives
+   no cap at all.
+4. **Separate property.** The company's assets belong to the company, not to the members
+   proportionately: a member with 99% of the shares has **no insurable interest** in a
+   particular company asset and cannot sell it.
+5. **Capacity to sue and be sued** in its own name — and conversely a member cannot generally
+   sue for a wrong done to the company, the company being the proper plaintiff.
+6. **Common seal — now optional.** The Companies (Amendment) Act 2015 made the common seal
+   optional. Where a company has no seal, documents that would have been sealed are signed by
+   **two directors, or by one director and the company secretary** where one is appointed. The
+   seal is therefore no longer a defining feature; do not list it as one.
+7. **Transferability of shares (s.44).** Shares are movable property, transferable in the
+   manner provided by the articles. A **public** company's shares are freely transferable; a
+   **private** company's articles must **restrict** transfer — but "restrict" means regulate
+   (pre-emption, board refusal), not prohibit outright.
+8. **Separation of ownership and management.** Members own; the Board manages. A member has no
+   authority, as member, to act for the company.
+
+<Callout kind="pointer">
+  <p>
+    <strong>The employee-shareholder point.</strong> Separate personality runs so deep that a
+    person can be the controlling shareholder, the sole working director, <em>and</em> an
+    employee of the same company at once — the position taken in <em>Lee v Lee's Air
+    Farming</em> (1961), where the widow of a pilot who was the company's governing director
+    still recovered as the widow of a "worker", because the contract was between two distinct
+    persons. Expect this as a one-line MCQ.
+  </p>
+</Callout>
+
+## 4. Private company — section 2(68)
+
+A **private company** is a company which, **by its articles**, does three things:
+
+1. **restricts the right to transfer its shares**;
+2. **limits its number of members to 200** (this limb does not apply to a One Person Company);
+   and
+3. **prohibits any invitation to the public** to subscribe for any securities of the company.
+
+The clause also opens with "having a minimum paid-up share capital as may be prescribed" — the
+fixed ₹1 lakh figure was **omitted by the Companies (Amendment) Act 2015** and nothing has been
+prescribed since, so **there is no minimum paid-up capital** for a private company today.
+
+Two counting rules sit inside limb 2 and they are the entire trap:
+
+- **Joint holders count as ONE member.** Where two or more persons hold one or more shares
+  jointly, they are treated as a single member for this clause.
+- **Employee-members are EXCLUDED.** Persons who are in the employment of the company are not
+  counted; and persons who were formerly employees, were members while employed, and have
+  *continued* as members after the employment ceased, are also not counted.
+
+Three further points that decide MCQs: the cap counts **members**, not shareholdings (one
+person with 5,000 shares is one member); **debenture-holders are not members** and never enter
+the count; and it is the restriction on transfer plus the ban on public invitation — not size —
+that earn a private company its exemptions.
+
+### Vignette 1 — counting members for the 200 cap
+
+*Nivara Interiors Private Limited* has on its register: 148 individual members holding in their
+own names; 12 shareholdings each held jointly by 3 persons; 26 current employees who hold
+shares; 9 ex-employees who acquired their shares while employed and have kept them since
+resigning; and 40 debenture-holders. Has the company breached s.2(68)(ii)?
+
+**Working note — build the count from the clause, not from the register.**
+
+| Category | On the register | Counted | Why |
+|---|---|---|---|
+| Individual members | 148 | 148 | Ordinary members |
+| 12 joint holdings × 3 persons | 36 persons | 12 | First proviso: joint holders = one member |
+| Current employees who are members | 26 | 0 | Second proviso (A) |
+| Ex-employees, members while employed, still members | 9 | 0 | Second proviso (B) |
+| Debenture-holders | 40 | 0 | Not members at all |
+| **Total for s.2(68)(ii)** | | **160** | |
+
+**Answer.** 160 counted members, comfortably inside 200. Read literally off the register the
+figure would look like 219 and the company would appear to have breached the cap — which is
+exactly the wrong answer the examiner has priced into the options.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The ex-employee exclusion has three conditions, and stems break one of them.</strong>
+    The person must (a) have been in the employment of the company, (b) have become a member
+    <em>while in that employment</em>, and (c) have continued as a member after leaving. A
+    retired employee who buys shares <em>after</em> resigning fails condition (b) and
+    <strong>counts</strong> towards the 200.
+  </p>
+</Callout>
+
+## 5. Public company — section 2(71)
+
+A **public company** is defined negatively and then extended:
+
+- it is a company **which is not a private company**; and
+- it has such **minimum paid-up share capital as may be prescribed** — again, the ₹5 lakh
+  figure was omitted in 2015 and nothing is currently prescribed.
+
+Then the proviso that produces more exam questions than the definition itself:
+
+> A company which is a **subsidiary of a company, not being a private company**, shall be
+> **deemed to be a public company** for the purposes of the Act even where such subsidiary
+> company continues to be a private company **in its articles**.
+
+Unpack it carefully. The parent must be a company that is *not* a private company — i.e. a
+public company. If it is, its subsidiary is public for the Act's purposes **whatever its own
+articles or its name say**. The subsidiary keeps its restrictive articles and its "Private
+Limited" name; it simply loses the private-company relaxations — directors, quorum,
+related-party and deposit provisions and the rest — because the Act now treats it as public.
+
+### Vignette 2 — the private company that is really public
+
+*Harita Ventures Limited* (a public, unlisted company) holds 68% of the equity share capital
+and voting power of *Sunbeam Logistics Private Limited*, whose articles restrict share
+transfer, cap members at 200 and prohibit public invitations. Sunbeam has 41 members. Which is
+Sunbeam: private or public?
+
+**Working note.** Step 1 — is Harita a private company? No; it is public. Step 2 — is Sunbeam a
+subsidiary of Harita? Harita controls more than one-half of the total voting power (68% > 50%),
+so yes, s.2(87)(ii) is satisfied. Step 3 — apply the proviso to s.2(71).
+
+**Answer.** Sunbeam is a **public company for the purposes of the Companies Act 2013**, even
+though its articles remain those of a private company and its name still ends in "Private
+Limited". Its 41 members and its restrictive articles are irrelevant to the deeming; only the
+identity of its holding company matters. Had Harita itself been a *private* company, the
+proviso would not bite and Sunbeam would remain private.
+
+## 6. One Person Company — section 2(62)
+
+An **OPC** is "a company which has only **one person as a member**". It is a species of private
+company, not a third category: it is formed as a private company, and it carries "(OPC)
+Private Limited" in its name. The memorandum must name a **nominee** who, with prior written
+consent, becomes the member on the subscriber's death or incapacity to contract.
+
+For Chapter 1 you need the classification consequences:
+
+- An OPC **is** a private company, so wherever the Act gives private companies an exemption the
+  OPC gets it too, plus OPC-specific relaxations (no AGM, cash-flow statement not required in
+  its financial statements, one director suffices).
+- The **200-member limb of s.2(68) is expressly disapplied** to an OPC — an OPC could never
+  satisfy it, because it has exactly one member.
+- An OPC can be a **small company** if it meets the s.2(85) thresholds and is not caught by the
+  exclusions; the two labels are independent and can sit on the same company.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · OPC eligibility and conversion (Rules level)">
+  <p>
+    The residency requirement for the promoter/nominee and the thresholds that once forced an
+    OPC to convert into a private or public company live in the <strong>Companies
+    (Incorporation) Rules 2014</strong>, which were relaxed in 2021 (residency reduced to 120
+    days, NRIs permitted, and the paid-up-capital/turnover conversion triggers omitted). The
+    <em>definition</em> in s.2(62) is stable; the Rules around it are not. Verify the current
+    Rule text before answering any OPC eligibility or forced-conversion question, and note that
+    incorporation and conversion mechanics belong to Chapter 2, not here.
+  </p>
+</Callout>
+
+## 7. Small company — section 2(85)
+
+A **small company** is a company, **other than a public company**, which satisfies **both**
+tests:
+
+1. **paid-up share capital** does not exceed the prescribed amount; **and**
+2. **turnover, as per the profit and loss account for the immediately preceding financial
+   year**, does not exceed the prescribed amount.
+
+The **currently prescribed limits are ₹4 crore paid-up capital and ₹40 crore turnover**. The
+Act itself caps how high those prescriptions may go (₹10 crore and ₹100 crore respectively);
+the operative figures sit in the Companies (Specification of Definitions Details) Rules.
+
+And the exclusion list — **nothing in the clause applies to**:
+
+- **(A) a holding company or a subsidiary company;**
+- **(B) a company registered under section 8** (charitable objects); or
+- **(C) a company or body corporate governed by any special Act.**
+
+The exclusions are absolute. A subsidiary with ₹2 lakh of capital and no turnover at all is not
+a small company, because it is a subsidiary. Small-company status is worth having: abridged
+board's report, two board meetings a year, no mandatory auditor rotation, no cash-flow
+statement, and lower penalties under s.446B.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · ₹4 crore / ₹40 crore are Rules-level figures">
+  <p>
+    The ₹4 crore and ₹40 crore thresholds were set by the Companies (Specification of
+    Definitions Details) Amendment Rules 2022 and are stated here as the position on
+    <strong>28 February 2026</strong>. They have already been raised twice since 2013
+    (₹50 lakh/₹2 crore in the Act, then ₹2 crore/₹20 crore, then ₹4 crore/₹40 crore) and can be
+    raised again by notification without any amendment to the Act. Before the attempt, confirm
+    the figures in force; the <em>structure</em> of the test (both limbs, plus the three
+    exclusions) is what is stable and what carries most of the marks.
+  </p>
+</Callout>
+
+### Vignette 3 — is it a small company?
+
+Test each on the position as on 28 February 2026:
+
+| Company | Paid-up capital | Turnover (preceding FY) | Other facts | Small? |
+|---|---|---|---|---|
+| Amrut Foods Pvt Ltd | ₹3.60 crore | ₹36 crore | None | **Yes** — both limbs met, no exclusion |
+| Bellary Tools Pvt Ltd | ₹1.20 crore | ₹47 crore | None | **No** — turnover limb fails, though capital passes |
+| Chandra Poly Pvt Ltd | ₹0.50 crore | ₹6 crore | Wholly-owned subsidiary of Deccan Ltd | **No** — a subsidiary is excluded outright |
+| Drishti Foundation | ₹0.10 crore | ₹1 crore | Registered under s.8 | **No** — s.8 companies are excluded |
+| Everest Textiles Ltd | ₹1.00 crore | ₹5 crore | Unlisted **public** company | **No** — the clause opens "other than a public company" |
+
+**Working note.** The order of checking matters. First ask "is it a public company?" — if yes,
+stop. Then run the three exclusions. Only then compute the two numerical limbs, and remember
+they are cumulative: **both** must be satisfied, and turnover is measured for the **immediately
+preceding** financial year, not the current one.
+
+## 8. Government company, foreign company, listed company
+
+**Government company — s.2(45).** A company in which **not less than 51%** of the paid-up share
+capital is held by the Central Government, or by any State Government or Governments, or partly
+by the Central and partly by one or more State Governments — **and includes a subsidiary
+company of such a Government company**. Note the three details: the test is 51% of *paid-up
+share capital*; Central and State holdings are **aggregated**; and the subsidiary of a
+Government company is itself a Government company by inclusion, not by deeming.
+
+**Foreign company — s.2(42).** Any **company or body corporate incorporated outside India**
+which (a) has a **place of business in India**, whether by itself or through an agent,
+physically or through **electronic mode**; **and** (b) **conducts any business activity in
+India** in any other manner. Both limbs are needed. A foreign body corporate with a liaison
+presence but no business activity, or one that sells into India with no place of business here,
+falls outside — which is precisely what stems test.
+
+**Listed company — s.2(52).** A company which has **any of its securities listed on any
+recognised stock exchange**. "Any securities" — so a company whose debentures alone are listed
+is prima facie a listed company; equity listing is not required. But the proviso (inserted by
+the Companies (Amendment) Act 2020) lets the Central Government prescribe classes of companies
+which, though listed, are **not to be considered listed companies**. The Rules currently carve
+out, broadly:
+
+- public companies that have **not** listed equity shares but have listed **non-convertible
+  debt securities** or **non-convertible redeemable preference shares** issued on a **private
+  placement** basis (or both);
+- **private companies** that have listed their **non-convertible debt securities** on a private
+  placement basis; and
+- public companies whose equity shares are listed only on a **stock exchange in a permissible
+  foreign jurisdiction** under s.23(3).
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · listed-company carve-outs sit in Rule 2A">
+  <p>
+    The carve-out list is Rules-level (Companies (Specification of Definitions Details) Rules
+    2014, Rule 2A, inserted 2021) and is drafted in consultation with SEBI. It is summarised
+    above in substance, not reproduced. Confirm the current text before answering a
+    listed-status question about privately-placed debt.
+  </p>
+</Callout>
+
+## 9. Holding, subsidiary and associate — the control definitions
+
+This is the heart of the chapter and the source of most of its numerical questions.
+
+**Holding company — s.2(46):** in relation to one or more other companies, a company **of which
+such companies are subsidiary companies**. The Explanation adds that "company" here **includes
+any body corporate** — so a foreign parent, or an LLP-style body corporate, can be a holding
+company.
+
+**Subsidiary company — s.2(87):** in relation to another company (the holding company), a
+company in which the holding company —
+
+- **(i) controls the composition of the Board of Directors**; **or**
+- **(ii) exercises or controls more than one-half of the TOTAL VOTING POWER**, either on its
+  own or together with one or more of its subsidiary companies.
+
+The two limbs are **alternatives**. Either alone makes the company a subsidiary.
+
+<Callout kind="mistake">
+  <p>
+    <strong>It is total VOTING POWER, not total share capital.</strong> The Companies
+    (Amendment) Act 2017 replaced "total share capital" in s.2(87)(ii) with "total voting
+    power". So non-voting preference shares (which carry votes only on resolutions directly
+    affecting them, s.47(2)) sit in the capital base but <em>not</em> in the voting base. A
+    stem that gives you equity capital, preference capital and a percentage is asking you to
+    strip the preference capital out before dividing. Answering off paid-up capital is the
+    single most common error in this chapter.
+  </p>
+</Callout>
+
+Three more pieces of s.2(87):
+
+- **Board-composition control (Explanation (b)):** a company controls the composition of
+  another's Board if it can, by exercising some power at its discretion, **appoint or remove
+  all or a majority of the directors**. The right to appoint 4 of 9 directors is not control;
+  the right to appoint 5 of 9 is.
+- **The deemed chain (Explanation (a)):** a company is a subsidiary of the holding company
+  **even if the control is exercised by another subsidiary** of that holding company. So if A
+  controls B, and B controls C, then C is a subsidiary of A — without A holding a single share
+  in C. Note what is *not* multiplied: you do not compute 60% × 55% = 33% and conclude "not a
+  subsidiary". Control is tested step by step down the chain, not diluted through it.
+- **The layers proviso:** prescribed classes of holding companies may not have layers of
+  subsidiaries beyond the prescribed number. Under the Companies (Restriction on Number of
+  Layers) Rules 2017 the ceiling is **two layers** of subsidiaries, with carve-outs (one layer
+  consisting of a wholly-owned subsidiary is not counted; acquiring a foreign company with more
+  layers permitted by that country's law is not a breach; banking, NBFC, insurance and
+  Government companies are exempt). "Layer" means a subsidiary or subsidiaries.
+
+**Associate company — s.2(6):** in relation to another company, a company in which that other
+company has **significant influence**, but which is **not a subsidiary** of the company having
+such influence — **and includes a joint venture company**. Significant influence means:
+
+- **control of at least 20% of total voting power**; **or**
+- **control of, or participation in, business decisions under an agreement.**
+
+Read the three moving parts. "At least 20%" makes exactly 20.00% an associate — the boundary is
+inclusive. The **"but not a subsidiary"** exclusion means the tests run in order: subsidiary
+first, associate only if the subsidiary test fails. And the agreement limb means a 5% holding
+with a contractual say in business decisions can still create an associate relationship.
+
+### Vignette 4 — a shareholding chain
+
+*Aravalli Holdings Ltd* holds 62% of the equity shares of *Bhima Ltd*. *Bhima Ltd* holds 55% of
+the equity shares of *Chenab Ltd*. *Aravalli* separately holds 8% of *Chenab*. All equity
+shares carry one vote each; none of the companies has issued preference shares. Classify each
+relationship.
+
+**Working note 1 — Aravalli and Bhima.** Aravalli controls 62% of Bhima's total voting power;
+62% is more than one-half, so **Bhima is a subsidiary of Aravalli** under s.2(87)(ii).
+
+**Working note 2 — Bhima and Chenab.** Bhima controls 55% of Chenab's voting power; more than
+one-half, so **Chenab is a subsidiary of Bhima**.
+
+**Working note 3 — Aravalli and Chenab.** Do **not** multiply 62% × 55% (= 34.1%) and conclude
+"associate". Explanation (a) to s.2(87) deems a company a subsidiary of the holding company
+where the control is that of another subsidiary of that holding company. Chenab is controlled
+by Bhima, which is Aravalli's subsidiary; therefore **Chenab is a subsidiary of Aravalli**. The
+direct 8% is irrelevant to the conclusion — and because Chenab *is* a subsidiary, it cannot
+simultaneously be Aravalli's associate: s.2(6) excludes subsidiaries expressly.
+
+**Answer.** Aravalli is the holding company of both Bhima and Chenab; Chenab is a
+second-layer subsidiary; there is no associate relationship anywhere in the chain.
+
+### Vignette 5 — voting power versus paid-up capital
+
+*Kaveri Ltd* has issued 10,00,000 equity shares of ₹10 each (one vote per share) and 6,00,000
+non-cumulative preference shares of ₹10 each carrying no voting rights except on resolutions
+directly affecting preference shareholders. *Malwa Ltd* holds 5,40,000 equity shares and all
+6,00,000 preference shares. Is Kaveri a subsidiary or an associate of Malwa?
+
+**Working note 1 — the wrong base.** Paid-up share capital = ₹1,00,00,000 equity +
+₹60,00,000 preference = ₹1,60,00,000. Malwa's holding by capital = ₹54,00,000 + ₹60,00,000 =
+₹1,14,00,000, i.e. **71.25%**. This figure is a distractor: s.2(87)(ii) has not spoken of share
+capital since the 2017 amendment.
+
+**Working note 2 — the right base.** Total voting power = 10,00,000 votes (equity only; the
+preference shares carry no ordinary vote). Malwa controls 5,40,000 of them = **54.00%**, which
+is more than one-half.
+
+**Answer.** Kaveri is a **subsidiary** of Malwa — on the correct base as well as the wrong one,
+here. Change the facts so that Malwa holds 4,80,000 equity shares (48% of voting power) plus
+all the preference shares: the capital base would still read 67.5% and tempt you into
+"subsidiary", but the voting base is 48% — not more than one-half, so **not a subsidiary**;
+and 48% is at least 20%, so Kaveri would be Malwa's **associate** instead. That single switch
+is the examiner's favourite version of this question.
+
+## 10. Financial year — section 2(41)
+
+For **any company or body corporate**, the financial year is the period **ending on 31 March
+every year**, in respect of which the financial statement is made up. Where the company is
+incorporated **on or after 1 January**, its first financial year runs to the **31 March of the
+following year** — so a company incorporated on 12 February 2026 has a first financial year of
+roughly fourteen months, ending 31 March 2027. A company incorporated on 20 December 2025 gets
+no such extension: its first financial year ends 31 March 2026.
+
+The single exception is the **foreign-alignment proviso**. Where a company or body corporate is
+a **holding company, a subsidiary or an associate company of a company incorporated outside
+India**, and is required to follow a different financial year for **consolidation of its
+accounts outside India**, it may apply to be allowed **any period as its financial year,
+whether or not that period is a year**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · who grants the different financial year">
+  <p>
+    On the position as on <strong>28 February 2026</strong>, the application under the proviso
+    to s.2(41) is made to the <strong>Central Government</strong>. Older notes, and any
+    coaching material printed before the Companies (Amendment) Act 2019 was notified, say
+    <em>Tribunal (NCLT)</em> — the jurisdiction was shifted from the Tribunal to the Central
+    Government, with a transitional proviso preserving applications already pending before the
+    Tribunal. The class of applicants also widened over time to include an <em>associate</em>
+    company of a foreign company, alongside a holding company and a subsidiary. Both points are
+    flagged for reviewer confirmation against the notified text before this chapter is marked
+    verified; state the Central Government position in the exam.
+  </p>
+</Callout>
+
+Two consequences worth remembering: the 1 April–31 March year is **mandatory** — a company
+cannot adopt a calendar year merely because its foreign parent does, unless it goes through the
+proviso; and the proviso is available **only** for the foreign-consolidation reason, never for
+commercial convenience, seasonality or tax planning.
+
+## 11. Lifting the corporate veil
+
+The separate-entity principle is a shield, and courts remove it only when it is being used as a
+sword. "Lifting" (or piercing) the veil means looking past the company at the persons behind it
+— fixing them with liability, or attributing their characteristics to the company. The grounds
+fall into two families.
+
+**A. Judicial (case-law) grounds**, named by case and proposition only, facts summarised:
+
+| Ground | Proposition | Anchor |
+|---|---|---|
+| **Fraud or improper conduct** | Where a company is formed or used as a device to evade an existing legal obligation, the court disregards it. An employee bound by a non-compete set up a company to solicit his old employer's customers; the company was treated as a mere cloak for him. | *Gilford Motor Co v Horne* (1933) |
+| **Sham / façade to evade a contract** | A seller who had agreed to sell land transferred it to a company he controlled to defeat specific performance; the court ordered performance against both, the company being a mask for the seller. | *Jones v Lipman* (1962) |
+| **Evasion of tax or revenue** | Where a company exists only to reduce the tax of its controller — income routed through companies whose funds returned to him as loans — the arrangement is disregarded for tax purposes. | *Sir Dinshaw Maneckjee Petit* (1927) |
+| **Enemy character** | A company incorporated in one country but controlled by residents of an enemy country in wartime can be treated as an enemy for trading purposes; the court looked at the nationality of those in control. | *Daimler Co Ltd v Continental Tyre &amp; Rubber Co* (1916) |
+| **Avoidance of welfare/statutory liability** | A subsidiary created to divert turnover and depress a bonus entitlement was ignored, the two entities being treated as one. | *Workmen of Associated Rubber Industry Ltd* (1985) |
+| **Agency or economic-reality reasoning** | Where the statutory or regulatory context requires it, a court may look at who really owns and controls the company, while emphasising that the corporate veil is lifted only where the statute or the justice of the case demands. | *LIC v Escorts Ltd* (1986) |
+
+**B. Statutory grounds.** The Act itself pierces in specific places — misstatement in a
+prospectus (ss.34–35), incorporation obtained by furnishing false or incorrect information
+(s.7(7)), fraudulent conduct of business in winding up (s.339), and the investigation
+provisions that let the Registrar or an inspector reach beneficial owners (ss.216 and 219). In
+these cases you do not argue equity: you cite the section.
+
+<Callout kind="mistake">
+  <p>
+    <strong>"Lifting the veil" is the exception, and the exam wants you to say so.</strong> The
+    default answer to "can the members be made liable?" is <em>no</em> — <em>Salomon</em>.
+    Only after stating the rule do you turn to the ground on which the facts justify departing
+    from it, and name it precisely: fraud, evasion of an existing obligation, enemy character,
+    revenue evasion, or an express statutory provision. A commercial failure, a
+    one-man company, or a wholly-owned subsidiary is <strong>not</strong> by itself a reason to
+    lift.
+  </p>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+1. **Counting joint holders separately.** Two or more persons holding shares jointly are ONE
+   member for the 200-member cap — a proviso inside s.2(68)(ii), not a general rule of company
+   law.
+2. **Counting employee-members.** Current employees who hold shares, and ex-employees who
+   became members while employed and stayed on, are excluded. An ex-employee who buys in after
+   leaving is counted.
+3. **Using paid-up capital for s.2(87)(ii).** The test has been **total voting power** since
+   the 2017 amendment. Strip out non-voting preference capital before you divide.
+4. **Multiplying down a chain.** 60% of B and B's 55% of C does not make 33% of C. Explanation
+   (a) deems C a subsidiary of A outright. Percentages are never multiplied under s.2(87).
+5. **Calling a chain company an "associate".** s.2(6) excludes subsidiaries. Test subsidiary
+   first; only if that fails do you ask about 20% significant influence.
+6. **Reading "at least 20%" as "more than 20%".** Exactly 20.00% of total voting power creates
+   an associate relationship. Compare s.2(87), which needs **more than** one-half — the two
+   clauses use deliberately different comparators.
+7. **Forgetting the deemed-public proviso.** A "Private Limited" subsidiary of a public company
+   is a public company for the Act. Its name and its articles do not save it.
+8. **Treating small-company status as purely numerical.** A holding or subsidiary company, a
+   s.8 company, a special-Act company and any public company are out regardless of size.
+9. **Applying the small-company turnover test to the current year.** The clause says the
+   **immediately preceding** financial year, per the profit and loss account.
+10. **Saying the Companies Act does not apply to banks and insurers.** It applies; the sectoral
+    Act prevails only to the extent of inconsistency.
+11. **Listing the common seal as an essential feature.** Optional since the 2015 amendment.
+12. **Reading s.2(42) with "or".** A foreign company needs a place of business in India **and**
+    business activity in India.
+
+## One-page revision summary
+
+| Concept | The test, in one line | Clause |
+|---|---|---|
+| Application of the Act | Whole of India; companies under this or any previous company law; banks, insurers, electricity and special-Act companies **subject to** their own statutes | s.1(2), s.1(4) |
+| Company | Incorporated under this Act or any previous company law | s.2(20) |
+| Body corporate | Wider; includes foreign companies; excludes co-operative societies and notified bodies | s.2(11) |
+| Private company | Articles: restrict transfer + cap members at 200 (joint holders = 1; employee/ex-employee members excluded) + bar public invitation | s.2(68) |
+| Public company | Not private; **plus** a subsidiary of a non-private company is deemed public whatever its articles say | s.2(71) |
+| OPC | One member only; a private company by species; nominee named in the memorandum | s.2(62) |
+| Small company | Not public; paid-up capital ≤ ₹4 crore **and** turnover (preceding FY) ≤ ₹40 crore; never a holding/subsidiary, s.8 or special-Act company | s.2(85) + Rules |
+| Government company | ≥ 51% of paid-up capital with Central and/or State Government(s); includes its subsidiary | s.2(45) |
+| Foreign company | Incorporated outside India **and** place of business in India **and** business activity in India | s.2(42) |
+| Listed company | Any securities listed on a recognised stock exchange, minus the prescribed carve-outs (privately-placed debt, etc.) | s.2(52) + Rule 2A |
+| Holding company | A company whose subsidiaries the others are; "company" includes any body corporate | s.2(46) |
+| Subsidiary | Control of Board composition **OR** more than one-half of **total voting power**; control through another subsidiary counts; max 2 layers | s.2(87) |
+| Associate | Significant influence = **at least 20%** of total voting power **or** control of/participation in business decisions by agreement; not a subsidiary; includes a joint venture | s.2(6) |
+| Financial year | Ends 31 March; incorporated on/after 1 January → first FY ends 31 March of the following year; foreign-consolidation exception on application to the **Central Government** | s.2(41) |
+| Corporate veil | Rule: separate entity (*Salomon*). Exceptions: fraud/evasion of obligation, revenue evasion, enemy character, agency/façade, plus express statutory provisions | Case law + ss.7(7), 34–35, 339 |
+
+Learn the tests in the order the Act applies them — public first, then the exclusions, then the
+numbers; subsidiary first, then associate — and this chapter becomes procedural rather than
+memorial. The two figures to re-check before the attempt are ₹4 crore and ₹40 crore.
