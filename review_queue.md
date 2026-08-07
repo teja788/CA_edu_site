@@ -552,3 +552,108 @@ _No factual corrections were needed to the MDX or the bank during this citations
 - [ ] **Penalty figures deliberately excluded from the bank.** The s. 8(11) fine range and the fund named in s. 8(9) are stated only qualitatively in the notes because both have been recast by amendment; the s. 12(8), s. 15(2) and s. 17(2) figures appear in the notes but in no question. If a reviewer wants them examined, verify the current amounts first.
 
 - [ ] **Frontmatter deviation to confirm.** `paper` is written as `'Paper 2 · Corporate & Other Laws'` with a raw ampersand, matching `src/data/intermediate.js` (`name: 'Corporate & Other Laws'`). The brief specified `&amp;`; YAML frontmatter is rendered as escaped text by NotesLayout, so `&amp;` would display literally. Ampersands inside the MDX **body** are escaped as `&amp;` per house style.
+## indian-regulatory-framework — VERIFY 2026-08-07
+
+- [ ] **New chapter (Foundation P2 Ch 1, Indian Regulatory Framework) authored 7 Aug 2026 — FIRST chapter of Paper 2** — notes (`src/pages/foundation/business-laws/indian-regulatory-framework.mdx`, 587 lines, 14 numbered sections + 3 vignettes), bank (`src/data/questions/foundation/business-laws/indian-regulatory-framework.json` — 40 standalone MCQs, 6 descriptives, 2 case_mcq_sets of 3 subs each = 46 keyed MCQs; key split A 12 / B 12 / C 11 / D 11), verifier (`scripts/verify_numerical/verify_indian-regulatory-framework.py`, 3 numerical questions, runner reports 0 failures), citations (`citations/foundation/business-laws/citations_indian-regulatory-framework.md`). Reviewer should spot-check the whole chapter against **ICAI SM Paper 2 Ch 1 (May 2026 ed.)**, which was **not read** while drafting — the section list follows the well-known scope of the chapter, not a verified table of contents.
+
+- [ ] **Every constitutional and statutory line was transcribed from memory — nothing was fetched.** No India Code or official Constitution text was consulted in this session. The citations file carries a prominent provenance warning and marks five rows **CHECK CLOSELY**: Art. 13 (the notes blend the 13(1) "inconsistency" and 13(2) "contravention" formulas into one sentence); the Seventh Schedule List entries (given by subject name only, with **no entry numbers**, because they were not verified); the Art. 136(2) carve-out (rendered as "other than a court martial", which is a simplification of the Armed Forces wording); s. 469 of the Companies Act 2013 as the Companies (Incorporation) Rules' parent section; and the 1 July 2024 commencement of the three new criminal codes.
+
+- [ ] **Judgment call — the chapter uses the new criminal codes (BNS / BNSS / BSA), not IPC / CrPC / Evidence Act.** As on 28 Feb 2026 that is the correct law, and §11, the amendment callout and d-f2c1-05 are drafted on it. **But the May 2026 SM edition may still print the old names.** If it does, decide whether to (a) keep the new names with the existing amendment callout that flags the change, which is what has been done, or (b) mirror the SM. No MCQ key turns on the *name* of the code — q-f2c1-032 and q-f2c1-033 examine standard of proof and the party/document/outcome vocabulary — so a change here is a prose edit only.
+
+- [ ] **Judgment call — pecuniary-jurisdiction figures are hypothetical and stated inside each stem.** Real pecuniary limits are fixed State by State, so asserting any would date the chapter and be wrong for most students. Every routing stem (q-f2c1-030, cs-f2c1-01) therefore supplies its own limits, and `verify_indian-regulatory-framework.py` takes those limits as **parameters** rather than hard-coding a State's figures. Related call: these three questions were flagged `"numerical": true` and given verifier functions even though the answer is a court name rather than a rupee figure, because the routing genuinely turns on arithmetic (₹15,00,000 + ₹1,80,000 vs a ₹15,00,000 ceiling). If house convention would treat threshold-routing as non-numerical, unflag them and delete the verifier module — the keys are unaffected.
+
+- [ ] **Judgment call — conciliator "may propose terms" vs mediator "facilitates only" is the pivot of q-f2c1-035 and of the ADR pointer callout.** The distinction is standard (Arbitration and Conciliation Act 1996 Part III vs the Mediation Act 2023), but SM treatments vary in how sharply they draw it, and the Mediation Act 2023 is recent enough that older material describes mediation and conciliation as interchangeable. Confirm the SM's line before the question goes live; if the SM does not draw the distinction, q-f2c1-035 option A/C should be rewritten around a different contrast.
+
+- [ ] **Judgment call — length.** The brief asked for ~260–330 lines; the file is 587 (≈5,500 words), close to the Inter P2 Ch 1 exemplar's 590. The mandated scope covers 12 distinct topics plus 3 vignettes, traps and a revision summary, and cutting to 330 lines would reduce most topics to two sentences. Trim if the house standard for a Foundation intro chapter is firm — the most compressible parts are §14 (statutes/regulators table) and the one-page revision summary.
+
+- [ ] **Two institutional numbers are stated in prose and will age:** the Supreme Court's sanctioned strength (**34**) and the number of High Courts (**25**). Both are stated with hedging in §9 and repeated in the revision summary, and **no question in the bank turns on either** — deliberately. Confirm both, or drop them to "a Chief Justice and other judges" / "one for each State, some serving more than one".
+
+- [ ] **All illustrative statutory provisions in §6, §13, vignettes 1 and 3, and cs-f2c1-02 are FICTIONAL** ("section 12", "section 14", "sections 30 and 41") and are labelled as such in the text. Check that every occurrence still reads as invented, so that no student cites them as real law. This was chosen over using a real section because the bare-act-reading skill needs a provision with a proviso, an explanation and an illustration all visible at once.
+## indian-contract-act-1872 — VERIFY 2026-08-07
+
+- [ ] **New chapter (Foundation P2 Ch 2, The Indian Contract Act 1872) authored
+  7 Aug 2026** — notes (six SM units mapped to 24 numbered sections, 6 worked
+  scenarios), bank (48 standalone MCQs, 4 case_mcq_sets with 15 sub-MCQs,
+  8 descriptives; 10 numericals, all verifier-proven; answer keys A16/B16/C16/D15),
+  citations (`citations/foundation/business-laws/citations_indian-contract-act-1872.md`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 2 Ch 2
+  (May 2026 ed.)** and the notified text of Act 9 of 1872 on India Code. This is
+  the heaviest chapter in the paper (roughly 30–40% of marks), so nothing here
+  should go live unreviewed.
+
+- [ ] **Postal-rule statements as examined (ss. 4 and 5)** — three numericals and
+  one case set turn on the exact deadlines. Confirm all four propositions as the
+  SM states them: (i) an acceptance is complete against the PROPOSER when posted;
+  (ii) it is complete against the ACCEPTOR when it reaches the proposer; (iii) the
+  proposer may revoke *before or at the moment* the acceptance is posted, and his
+  revocation binds the offeree only when it REACHES him; (iv) the acceptor may
+  revoke *before or at the moment* the acceptance reaches the proposer. The
+  verifier treats deadlines (iii) and (iv) as **inclusive** of the posting and
+  delivery dates. Affected: q-f2c2-009, q-f2c2-010, q-f2c2-011, cs-f2c2-01-c,
+  cs-f2c2-01-d, notes §5 and worked scenario 1. If the SM phrases any deadline
+  differently, question, option set and `verify_indian-contract-act-1872.py` must
+  move together — never edit the key alone.
+
+- [ ] **The s. 74 Indian-position phrasing** — the notes say: no distinction
+  between liquidated damages and a penalty; the court awards *reasonable
+  compensation not exceeding* the sum named; the named sum is a **ceiling, never
+  an automatic entitlement**; and the words "whether or not actual damage or loss
+  is proved" relieve a claimant whose loss is hard to quantify but do not hand
+  the named sum to a claimant with no loss at all. **That last sentence is the
+  most contestable proposition in the chapter** and SM editions summarise it
+  differently. Affected: q-f2c2-043 (numerical, capped award ₹8,00,000),
+  cs-f2c2-04-d, notes §21, d-f2c2-07 points 5–6. Also confirm the Exception
+  (bail bonds and bonds under a Government direction recover the whole sum) and
+  the Explanation on increased interest as a penalty.
+
+- [ ] **Minor and necessaries nuances (ss. 11, 68 and the Majority Act)** — four
+  points to verify against the SM, each of which a question depends on: (i) the
+  age of majority is stated as **18 for everyone**, with a note that the 21-year
+  limb for court-appointed guardianship was removed by the Indian Majority
+  (Amendment) Act 1999 — **several SM editions still print 21**, so decide which
+  the notes should lead with (no question turns on the figure, by design);
+  (ii) s. 68 gives a claim **against the incapable person's property only, never a
+  personal decree** (q-f2c2-020, worked scenario 2 point 4); (iii) **no estoppel**
+  against a minor who misrepresents his age, but equity may order restoration of
+  what is **still traceable** in his hands and nothing more (q-f2c2-021 option B,
+  worked scenario 2 point 3 — the ₹50,000 spent on the holiday is stated as
+  irrecoverable); (iv) **no ratification** after majority without fresh
+  consideration (q-f2c2-019).
+
+- [ ] **Every transcription warning in the citations file** — all bare-act lines
+  and all nine quoted illustrations were transcribed from the Act, **not
+  re-fetched from India Code in this session**. Diff each quoted row against
+  indiacode.nic.in (Act 9 of 1872) and initial the "Spot-checked by" line. Give
+  particular attention to: the illustration **letters** (the chapter avoids
+  letters everywhere except in the citations commentary, deliberately); the
+  **₹500 horse-race threshold** in s. 30; the **one-year floor** in Exception 3 to
+  s. 28 (inserted 2013); and the **s. 15 / Indian Penal Code** reference now read
+  as the Bharatiya Nyaya Sanhita 2023 (in force 1 July 2024) — the notes carry an
+  amendment callout in §11, and **no question turns on the name of the penal
+  statute**.
+
+- [ ] **Unit-scope doubts against the SM** — five judgment calls where the SM's
+  own arrangement should decide: (i) the **presumption table** of relationships
+  under s. 16(2) in notes §11 is the SM's list, not the Act's — confirm the
+  entries, especially "creditor and debtor in urgent need: yes" and "husband and
+  wife: no" (q-f2c2-025 examines only the husband-and-wife negative);
+  (ii) *Chikham Amiraju* (threat of suicide = coercion) is mentioned in notes §11
+  as a case anchor but **deliberately not examined**, because it rests on the
+  pre-2024 penal law — check whether the notified SM still carries it;
+  (iii) the **wagers are void but not illegal** point and the **Gujarat and
+  Maharashtra** carve-out in notes §15 rest on State legislation, not this Act —
+  confirm the SM covers it and that no question depends on it (none does);
+  (iv) the **finder of goods** detail in notes §24 (lien, reward, power of sale,
+  two-thirds-of-value threshold) actually comes from **ss. 168–169** in the
+  bailment chapter — decide whether it belongs here or should be trimmed to
+  "same responsibility as a bailee"; (v) the **anticipatory-breach election** in
+  q-f2c2-041 (contract stays alive for both parties, so intervening frustration
+  saves the guilty party, and damages then run from the performance date) is case
+  law rather than statute — confirm the SM states it in those terms.
+
+- [ ] **Length and readTime** — the notes run ~1,650 lines / ~18,000 words, well
+  beyond the ~700–800 lines the chapter brief estimated, because the six SM units
+  span ss. 2 to 75. `readTime` is set to "About 65 min read". A human should
+  decide whether to keep it as one long chapter, split it into two pages (Units
+  1–3 and Units 4–6), or trim §§16–18 (performance detail), which is the densest
+  and least heavily examined stretch.
