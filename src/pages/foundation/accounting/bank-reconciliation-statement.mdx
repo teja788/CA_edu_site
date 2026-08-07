@@ -1,0 +1,403 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Bank Reconciliation Statement'
+description: 'CA Foundation Accounting Ch 3 — bank reconciliation in plain language: the four balances, timing differences vs errors, the sign discipline, the amended cash book, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 3 · Bank Reconciliation Statement'
+chapterSlug: bank-reconciliation-statement
+masteryId: f1-ch3
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI Foundation Study Material, Paper 1, Ch 3 — Bank Reconciliation Statement (May 2026 ed.), concepts paraphrased'
+sourceLabel: 'ICAI SM Ch 3 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 19 min read · 4 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=bank-reconciliation-statement'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Manju runs a general store in Mysuru. She keeps a cash book with a bank column: every cheque she
+deposits goes on the debit side, every cheque she issues goes on the credit side. The bank keeps
+its own record of the same account and hands her a copy — the pass book. On 31 March her cash
+book says one figure and the pass book says another. Nobody has stolen anything, and usually
+nobody has even made a mistake: the two records simply move at different speeds. The **bank
+reconciliation statement (BRS)** is the short statement that explains the gap, rupee by rupee.
+
+In the exam this chapter is generous: every numerical reuses one skill — start from one book's
+balance and walk item by item to the other book's balance — dressed up in four different starting
+points. Master the direction logic once and every permutation (favourable or overdraft, cash book
+or pass book, with or without errors) becomes the same question.
+
+## 1. Two records of the same money
+
+Two books describe one bank account. In *your* books, the **bank column of the cash book**:
+debit side for money in (cheques deposited, cash banked), credit side for money out (cheques
+issued, withdrawals). In the *bank's* books, your account sits in the bank's own ledger — and
+the **pass book** (today, the bank statement — same thing) is simply a copy of that account
+given to you.
+
+Here is the twist that explains the whole chapter: **the two books look at the same money from
+opposite sides.** To you, money at the bank is an asset — a debit balance. To the bank, that
+same money is money it *owes you* — you are the bank's creditor, so the bank shows your money
+as a *credit* balance. Deposit ₹5,000 and you debit your cash book while the bank credits your
+account. Every entry is mirrored.
+
+<Callout kind="pointer">
+  <p>
+    Fix this pair permanently: <strong>your debit is the bank's credit.</strong> A debit balance
+    in the cash book and a credit balance in the pass book mean the same happy thing — money
+    lying at the bank. Neither book is "right"; they are two viewpoints of one account.
+  </p>
+</Callout>
+
+## 2. The four balances and their signs
+
+| Book | Balance | What it means |
+|---|---|---|
+| Cash book (bank column) | Debit | **Favourable** — money at the bank |
+| Cash book (bank column) | Credit | **Overdraft** — you owe the bank |
+| Pass book | Credit | **Favourable** |
+| Pass book | Debit | **Overdraft** |
+
+An **overdraft** is the bank letting you draw more than you have: the account turns negative and
+the roles flip — the bank becomes *your* creditor. In your cash book that shows as a credit
+balance in the bank column; in the pass book, as a debit balance.
+
+<Callout kind="mistake">
+  <p>
+    Everyday instinct says "credit means money came in". In your <em>own</em> cash book the bank
+    column follows asset rules: <strong>debit balance = favourable</strong>. It is in the
+    <em>pass book</em> — the bank's mirror — that credit = favourable. A large share of the
+    theory marks in this chapter is just keeping these four labels straight.
+  </p>
+</Callout>
+
+## 3. Why the balances differ: timing differences
+
+On any given date, some transactions stand recorded in one book but not yet in the other. These
+**timing differences** need no correction — time cures them. Group them by *who moved first*:
+
+**You recorded first; the bank has not caught up:**
+
+- **Cheques issued but not yet presented** — you credited the cash book the day you posted the
+  cheque; the bank debits your account only when the payee presents it, days or weeks later.
+- **Cheques deposited but not yet collected or credited** — you debited the cash book the day
+  you banked them; the bank credits you only when the clearing actually brings the money in.
+
+**The bank recorded first; you learn only when the statement arrives:**
+
+- **Bank charges** — collection charges, folio or SMS charges, debited by the bank on its own.
+- **Interest charged by the bank** on an overdraft.
+- **Interest allowed by the bank** on your balance or linked deposits.
+- **Standing instructions** — insurance premium, loan instalment or rent the bank pays
+  automatically on your mandate.
+- **Direct deposits by customers** — a debtor pays straight into your account.
+- **Interest or dividends collected by the bank** on your investments.
+- **Dishonour of a cheque deposited or a bill discounted** — the cheque you banked bounced, so
+  the bank removes the credit and usually debits its charges too.
+
+<Callout kind="pointer">
+  <p>
+    Every timing item is a one-book entry <em>so far</em>. The entire BRS technique is asking,
+    item by item: <strong>which book already contains this, and which does not?</strong>
+  </p>
+</Callout>
+
+## 4. Why the balances differ: errors
+
+The second family of causes is **errors** — and unlike timing items, errors do need correcting
+(yours in the cash book; the bank's by the bank).
+
+**Your errors (in the cash book):** omitting a banked cheque entirely; a wrong amount (the
+transposition ₹2,470 written as ₹2,740); the **wrong side** (a receipt entered on the credit
+side); the **wrong column** (a cheque payment entered in the cash column); overcasting or
+undercasting a side.
+
+**The bank's errors (in the pass book):** debiting your account with another customer's cheque,
+crediting someone else's deposit to you, or posting a wrong figure.
+
+Two rules make error items painless:
+
+1. Ask **which book is wrong**, and by how much the error moves *that book's* balance away from
+   the truth.
+2. A wrong-**side** error moves the balance by **twice** the amount — the correct entry is
+   missing *and* an opposite entry sits in its place. A wrong-**amount** error moves it only by
+   the *difference*. An omission or wrong-**column** error moves it by the full amount, once.
+
+<Callout kind="mistake">
+  <p>
+    A receipt of ₹3,000 entered on the payment side leaves the cash book ₹6,000 too low — not
+    ₹3,000. The missing debit is 3,000 and the intruding credit is another 3,000. Doubling
+    belongs to wrong-side errors only; never double a transposition difference.
+  </p>
+</Callout>
+
+## 5. Preparing the BRS: the direction discipline
+
+A BRS starts from one book's balance on a date, adjusts for every item the two books currently
+disagree on, and lands on the other book's balance. It is headed **"as on"** a date — a
+snapshot, not a statement *for* a period.
+
+The whole technique is one question per item: **does this item leave the target book's balance
+higher or lower than my starting figure?**
+
+The cleanest way to never slip on signs: call favourable balances **plus** and overdrafts
+**minus**. Then a single line covers all four starting points:
+
+<div class="formula">Balance as per pass book = Balance as per cash book + Cheques issued but not presented − Cheques deposited but not yet credited + Bank credits not yet in the cash book (interest allowed, direct deposits, collections) − Bank debits not yet in the cash book (charges, interest on overdraft, standing orders, dishonours)</div>
+
+Why the first plus: you have already reduced your book for a cheque the bank has not yet paid,
+so the bank's figure stands *higher* than yours. Why the first minus: you have already added a
+deposit the bank has not yet credited, so the bank's figure stands *lower*. Reason out every
+other item — including errors — the same way: find which way the wrong (or waiting) book leans,
+and push the figure the other way.
+
+Going from the pass book back to the cash book is the same line run backwards — **flip every
+sign**:
+
+<div class="formula">Balance as per cash book = Balance as per pass book − Cheques issued but not presented + Cheques deposited but not yet credited − Bank credits not yet in the cash book + Bank debits not yet in the cash book</div>
+
+The ICAI Study Material presents the BRS with plus and minus columns; older books use Add/Less
+rows. The arithmetic is identical — the columns are simply the signs written sideways.
+
+<Callout kind="pointer">
+  <p>
+    In MCQs, the three wrong options are usually this very computation with one sign flipped,
+    the whole direction reversed, or one item ignored. Finished early? Re-derive the answer
+    starting from the <em>other</em> book — landing back on your starting figure proves every
+    sign in one pass.
+  </p>
+</Callout>
+
+## 6. Starting from an overdraft
+
+Nothing new is needed for overdrafts — only discipline. Write the overdraft as a **minus**
+figure, run the same formula, and read the sign of the result.
+
+Mini example: the cash book shows an overdraft of ₹20,000. Cheques issued but not presented
+₹6,000; cheques deposited but not yet credited ₹9,000; bank charges ₹500 not yet in the cash
+book.
+
+<div class="formula">Balance as per pass book = (−20,000) + 6,000 − 9,000 − 500 = −23,500 → overdraft of ₹23,500</div>
+
+Read it in words to build trust: the bank has not yet paid out ₹6,000 you already deducted — the
+bank's picture is *less* overdrawn than yours. The bank has not yet received ₹9,000 you already
+counted in — the bank's picture is *more* overdrawn. Charges the bank has already taken deepen
+its overdraft further.
+
+<Callout kind="mistake">
+  <p>
+    Rote grids ("add this if favourable, less if overdraft…") are exactly where marks die. One
+    honest minus sign replaces the whole memorised table — and survives an examiner who mixes an
+    overdraft start with three errors.
+  </p>
+</Callout>
+
+## 7. The amended cash book approach
+
+By the time the statement arrives, the bank-first items of §3 are *known* — so a well-kept cash
+book should simply record them. That is the **amended (adjusted) cash book** approach: first
+bring the cash book up to date, then reconcile only what is left.
+
+**Record in the cash book (these belong in your books):**
+
+- bank charges, interest charged by the bank, interest allowed by the bank;
+- standing-instruction payments (premium, instalment, rent);
+- direct deposits by customers; interest and dividends collected by the bank;
+- dishonoured cheques and bills — credit the bank column, debit the customer who let you down;
+- **your own errors**, corrected in your book, where they live.
+
+**Keep for the BRS (nothing to record — your book is already right):**
+
+- cheques issued but not yet presented;
+- cheques deposited but not yet credited;
+- **the bank's errors** — only the bank can fix its own ledger.
+
+<div class="formula">Adjusted cash book balance = Given cash book balance + bank credits now recorded − bank debits now recorded ± correction of your own errors</div>
+<div class="formula">Balance as per pass book = Adjusted cash book balance + Cheques issued but not presented − Cheques deposited but not credited ± the bank's errors</div>
+
+At the year end this split is not a matter of style: the **balance sheet must show the adjusted
+cash book balance** as cash at bank, so the amendment entries must actually be passed.
+
+<Callout kind="pointer">
+  <p>
+    Read the requirement line carefully. "Prepare a BRS <strong>without adjusting</strong> the
+    cash book" — every item goes straight into the statement. "Prepare the <strong>amended cash
+    book and then</strong> a BRS" — split the items as above. Same facts, two different answers;
+    the wording decides.
+  </p>
+</Callout>
+
+## 8. What a BRS is, and what it is not
+
+A BRS is a **statement, not an account**. It sits outside the double-entry system: nothing is
+posted from it, it has no debit and credit sides, and it is not part of the ledger. (The
+*amendment entries* of §7 are ordinary cash book entries — the statement itself records
+nothing.)
+
+It is prepared by **the customer** — you, not the bank — usually whenever a statement arrives
+(monthly, or more often for busy accounts) and always at the year end.
+
+Why prepare it, beyond the exam:
+
+- it **explains the difference** on a date, item by item, so neither book is blindly "trusted";
+- it **catches errors** in both books early;
+- it **discourages embezzlement** — a cashier who pockets a cheque shows up as a deposit that
+  never reaches the pass book;
+- it reveals **slow collections** and **stale cheques** — a cheque unpresented for months needs
+  chasing or reversing;
+- it fixes the **true bank position** for the final accounts.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — from a favourable cash book balance (easy)">
+  <p>
+    On 31 March 2026 the bank column of Rao Stores' cash book shows a debit balance of ₹52,400.
+    Comparison with the pass book shows: (a) cheques issued of ₹9,800 not presented by 31 March;
+    (b) cheques of ₹14,500 deposited on 29–30 March credited by the bank only in April; (c) bank
+    charges of ₹350 debited by the bank; (d) interest of ₹1,150 allowed by the bank — (c) and
+    (d) not yet in the cash book. Find the balance as per the pass book.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — set each direction</div>
+    Start: cash book (Dr, favourable) +52,400<br />
+    (a) bank has not yet paid these out → pass book stands higher: +9,800<br />
+    (b) bank has not yet received these → pass book stands lower: −14,500<br />
+    (c) bank has already taken the charges: −350<br />
+    (d) bank has already allowed the interest: +1,150
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — assemble</div>
+    52,400 + 9,800 − 14,500 − 350 + 1,150 = <strong>₹48,500 favourable as per pass book</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — from an overdraft per pass book (moderate)">
+  <p>
+    On 30 June 2026 the pass book of Kale Traders shows an overdraft of ₹31,700. (a) Cheques
+    issued but not presented ₹12,000; (b) cheques deposited but not yet collected ₹18,600;
+    (c) bank charges ₹400 and (d) an insurance premium of ₹2,500 paid under standing
+    instruction appear only in the pass book; (e) a customer deposited ₹6,000 directly into the
+    bank, not yet in the cash book. Find the balance as per the cash book.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — walking pass book → cash book flips every sign</div>
+    Start: pass book overdraft −31,700<br />
+    (a) the cash book was already reduced for these: −12,000<br />
+    (b) the cash book already contains these deposits: +18,600<br />
+    (e) the cash book does not yet contain this money: −6,000<br />
+    (c) + (d) the cash book has not yet been reduced for these: +2,900
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — assemble and check</div>
+    −31,700 − 12,000 + 18,600 − 6,000 + 2,900 = <strong>−28,200 → overdraft as per cash book ₹28,200</strong><br />
+    Check (run forward): −28,200 + 12,000 − 18,600 + 6,000 − 2,900 = −31,700 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — amended cash book, then BRS (moderate-hard)">
+  <p>
+    On 31 March 2026 the cash book of Desai &amp; Co. shows a debit bank balance of ₹36,900. The
+    pass book reveals: (a) bank charges ₹300 and locker rent ₹1,200 debited by the bank;
+    (b) interest allowed ₹900; (c) LIC premium ₹3,600 paid under standing instruction; (d) a
+    customer, Firoz, paid ₹8,000 directly into the account; (e) a cheque of ₹4,700 deposited
+    earlier was returned dishonoured — none of these entered in the cash book yet. Further:
+    (f) cheques issued but not presented ₹11,300; (g) cheques deposited but not yet credited
+    ₹16,400. Prepare the amended cash book, then the BRS.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — amend the cash book: items (a)–(e) belong in it</div>
+    36,900 − 300 − 1,200 + 900 − 3,600 + 8,000 − 4,700 = <strong>₹36,000 (Dr)</strong><br />
+    This ₹36,000 is the figure the balance sheet shows as cash at bank.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — BRS with only the timing items (f) and (g)</div>
+    36,000 + 11,300 − 16,400 = <strong>₹30,900 favourable as per pass book</strong><br />
+    (f) and (g) never enter the cash book — they are the bank's pending work, not yours.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — overdraft with a nest of errors (hard: the examiner's favourite)">
+  <p>
+    On 31 December 2025 the bank column of Bhalla Brothers' cash book shows an overdraft of
+    ₹22,150. Investigation reveals: (a) cheques of ₹15,600 issued in December, of which cheques
+    of ₹9,700 were presented by 31 December; (b) cheques of ₹13,800 deposited, of which only
+    ₹8,200 had been credited; (c) a receipt of ₹2,600 from Mohan entered on the credit side of
+    the bank column (the cheque was banked and duly collected); (d) a cheque issued for ₹3,190
+    entered as ₹3,910 (presented and paid at the correct figure); (e) a payment by cheque of
+    ₹1,800 entered in the cash column (the cheque was presented in December); (f) interest on
+    overdraft ₹640 debited by the bank, not in the cash book; (g) the bank wrongly debited the
+    account with another customer's cheque of ₹1,500. Find the balance as per the pass book.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — compute the timing slices</div>
+    Unpresented cheques = 15,600 − 9,700 = 5,900 → +5,900<br />
+    Uncredited deposits = 13,800 − 8,200 = 5,600 → −5,600
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — size each error</div>
+    (c) wrong side: cash book is 2 × 2,600 = 5,200 too low → +5,200<br />
+    (d) wrong amount: payment over-recorded by 3,910 − 3,190 = 720 → cash book 720 too low → +720<br />
+    (e) wrong column: bank column missed a payment of 1,800 → cash book 1,800 too high → −1,800<br />
+    (f) bank debit not yet recorded by the trader → −640<br />
+    (g) the bank's own wrong debit → pass book stands 1,500 lower → −1,500
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — assemble</div>
+    −22,150 + 5,900 − 5,600 + 5,200 + 720 − 1,800 − 640 − 1,500 = <strong>−19,870 → overdraft as per pass book ₹19,870</strong>
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Running the statement in the wrong direction.** Starting from the pass book but applying
+  cash-book-start signs. Every reverse question flips *every* sign — re-derive, don't recall.
+- **Treating an overdraft like a favourable balance.** Write it as a minus figure first; the
+  wrong option computed "positively" is nearly always present.
+- **Doubling the wrong error.** Only wrong-*side* errors move the balance by twice the amount.
+  A transposition moves it by the difference; an omission or wrong column by the amount, once.
+- **Stuffing timing items into the amended cash book.** Cheques not presented and deposits not
+  credited never get cash book entries — they are the bank's pending work.
+- **Correcting the bank's error in your own book.** The bank's wrong debit stays a BRS line
+  until the bank fixes its ledger; passing a cash book entry for it is double-wrong.
+- **Missing the dishonour charges.** A bounced cheque usually costs the cheque amount *plus*
+  the bank's charges — deduct both when starting from the cash book.
+- **Reading "issued" as "presented".** When the stem gives cheques issued ₹15,600 and presented
+  ₹9,700, the BRS item is the unpresented slice ₹5,900 — never the full issue.
+- **Reading Dr/Cr with the wrong book's eyes.** A debit balance in the *pass book* is an
+  overdraft, not money at bank.
+
+## One-page revision summary
+
+**The mirror:** your debit = the bank's credit · pass book = copy of your account in the bank's
+ledger · to the bank you are a creditor (favourable) or debtor (overdraft).
+
+**Four balances:** cash book Dr = favourable · cash book Cr = overdraft · pass book Cr =
+favourable · pass book Dr = overdraft.
+
+**Causes of difference:** timing (cheques issued not presented; deposits not credited; bank
+charges/interest; standing instructions; direct deposits; collections; dishonours) vs errors
+(trader's or bank's). Timing heals itself; errors need fixing by whoever made them.
+
+**Formulas (favourable = plus, overdraft = minus):**
+
+<div class="formula">Pass book balance = Cash book balance + cheques not presented − deposits not credited + bank credits not in cash book − bank debits not in cash book</div>
+<div class="formula">Cash book balance = Pass book balance with every sign flipped</div>
+<div class="formula">Adjusted cash book = given balance ± bank-first items and own errors; then BRS carries only timing items and the bank's errors</div>
+
+**Error sizing:** wrong side = twice the amount · wrong amount = the difference · omission or
+wrong column = the amount once · always ask which book is wrong, and which way it leans.
+
+**Rules that answer theory MCQs:** BRS is a statement, not an account — outside double entry ·
+prepared by the customer, periodically and at year end · can start from any of the four
+balances · balance sheet shows the *adjusted* cash book balance · purposes: explain the
+difference, catch errors, deter embezzlement, expose collection delays and stale cheques.

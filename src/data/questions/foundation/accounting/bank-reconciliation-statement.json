@@ -1,0 +1,2146 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "bank-reconciliation-statement",
+  "chapter": "Ch 3 — Bank Reconciliation Statement",
+  "questions": [
+    {
+      "id": "q-f1c3-001",
+      "topic": "Ch 3 · BRS · CB favourable to PB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 31 March 2026 the bank column of Hegde Stores' (Udupi) cash book shows a debit balance of ₹45,000. Cheques issued but not yet presented at Canara Bank total ₹8,000; cheques deposited but not yet credited total ₹12,000. The balance as per the pass book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹41,000 favourable",
+          "explanation": "Correct. Start +45,000; the bank has not yet paid the issued cheques, so the pass book stands higher: +8,000; the bank has not yet received the deposits, so it stands lower: −12,000. 45,000 + 8,000 − 12,000 = ₹41,000."
+        },
+        {
+          "key": "B",
+          "text": "₹65,000 favourable",
+          "explanation": "This adds BOTH items (45,000 + 8,000 + 12,000). Deposits the bank has not yet credited leave the pass book LOWER than the cash book — the ₹12,000 must be deducted."
+        },
+        {
+          "key": "C",
+          "text": "₹49,000 favourable",
+          "explanation": "This swaps both signs — it SUBTRACTS the unpresented cheques and ADDS the uncredited deposits (45,000 − 8,000 + 12,000). Reason each item out: unpresented cheques leave the pass book higher, not lower."
+        },
+        {
+          "key": "D",
+          "text": "₹25,000 favourable",
+          "explanation": "This subtracts BOTH items (45,000 − 8,000 − 12,000). The unpresented cheques of ₹8,000 must be ADDED when starting from the cash-book favourable balance — the bank has not yet reduced your account for them."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "PB = CB + unpresented cheques − uncredited deposits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-002",
+      "topic": "Ch 3 · BRS · CB favourable to PB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The cash book of Arora Textiles, Ludhiana, shows a favourable bank balance of ₹60,000 on 31 March 2026. Cheques issued but not presented ₹15,000; cheques deposited but not yet credited ₹9,500; bank charges of ₹500 and interest allowed by Punjab National Bank of ₹1,200 appear only in the pass book. The pass book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹67,200 favourable",
+          "explanation": "This ADDS the bank charges (…+ 500 instead of − 500). Charges are a debit the bank has already made — the pass book stands lower by ₹500."
+        },
+        {
+          "key": "B",
+          "text": "₹66,200 favourable",
+          "explanation": "Correct. 60,000 + 15,000 (not yet presented) − 9,500 (not yet credited) − 500 (charges the bank already took) + 1,200 (interest the bank already allowed) = ₹66,200."
+        },
+        {
+          "key": "C",
+          "text": "₹63,800 favourable",
+          "explanation": "This SUBTRACTS the interest allowed (60,000 + 15,000 − 9,500 − 500 − 1,200). Interest ALLOWED is money the bank has credited to you — the pass book stands higher by ₹1,200."
+        },
+        {
+          "key": "D",
+          "text": "₹53,800 favourable",
+          "explanation": "This runs the WHOLE statement in reverse (60,000 − 15,000 + 9,500 + 500 − 1,200) — the signs used are for a pass-book start. Starting from the cash book, unpresented cheques are ADDED."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "PB = CB + unpresented − uncredited + bank credits − bank debits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-003",
+      "topic": "Ch 3 · BRS · CB favourable to PB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Fernandes Bakery, Panaji, has a cash book (bank column) debit balance of ₹38,400 on 31 March 2026. Cheques issued but not presented ₹7,600; cheques deposited but not credited ₹11,000; a customer paid ₹5,000 directly into the Bank of Baroda account; a cheque of ₹3,200 deposited earlier was dishonoured and the bank debited ₹200 as dishonour charges — none of the last three items is in the cash book. The pass book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹40,000 favourable",
+          "explanation": "This IGNORES the dishonour and its charges (38,400 + 7,600 − 11,000 + 5,000). The bank has already removed the bounced cheque's ₹3,200 and taken ₹200 charges — both pull the pass book down."
+        },
+        {
+          "key": "B",
+          "text": "₹36,800 favourable",
+          "explanation": "This deducts the dishonoured cheque but MISSES the ₹200 dishonour charges. A bounced cheque usually costs the cheque amount PLUS the bank's charges — deduct both."
+        },
+        {
+          "key": "C",
+          "text": "₹36,600 favourable",
+          "explanation": "Correct. 38,400 + 7,600 − 11,000 + 5,000 (direct deposit already credited by the bank) − 3,200 (dishonour) − 200 (dishonour charges) = ₹36,600."
+        },
+        {
+          "key": "D",
+          "text": "₹26,600 favourable",
+          "explanation": "This SUBTRACTS the direct deposit of ₹5,000 (a 10,000 swing from the correct answer). A customer's direct payment is already IN the pass book — it stands higher, so the item is added when walking from the cash book."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Timing differences, §3 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#3-why-the-balances-differ-timing-differences"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Dishonour = cheque amount + charges, both bank debits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-004",
+      "topic": "Ch 3 · BRS · CB overdraft to PB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 31 March 2026 the cash book of Meena Agencies, Jaipur, shows a bank overdraft of ₹25,000 with State Bank of India. Cheques issued but not presented ₹10,000; cheques deposited but not yet credited ₹6,000. The balance as per the pass book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹29,000",
+          "explanation": "This flips both timing signs (−25,000 − 10,000 + 6,000 = −29,000). Unpresented cheques make the bank's picture LESS overdrawn (+10,000), not more."
+        },
+        {
+          "key": "B",
+          "text": "Overdraft ₹9,000",
+          "explanation": "This treats the overdraft as a POSITIVE figure and subtracts both items (25,000 − 10,000 − 6,000 = 9,000). An overdraft must enter the formula as a minus figure first."
+        },
+        {
+          "key": "C",
+          "text": "Favourable ₹21,000",
+          "explanation": "The arithmetic is right but the SIGN of the result is misread — the computation ends at MINUS 21,000, which is an overdraft, not money at the bank."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹21,000",
+          "explanation": "Correct. Write the overdraft as minus: −25,000 + 10,000 (bank has not yet paid these out) − 6,000 (bank has not yet received these) = −21,000 → overdraft ₹21,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Starting from an overdraft, §6 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#6-starting-from-an-overdraft"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Overdraft = minus figure; same formula, read the sign",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-005",
+      "topic": "Ch 3 · BRS · CB overdraft to PB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Reddy Hardware, Vijayawada, shows a cash book overdraft of ₹42,500 on 31 March 2026. Cheques issued but not presented ₹13,000; cheques deposited but not credited ₹18,700; Union Bank debited interest on overdraft ₹1,900; a customer deposited ₹8,000 directly into the account — the last two items are not in the cash book. The pass book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹42,100",
+          "explanation": "Correct. −42,500 + 13,000 (not presented) − 18,700 (not credited) − 1,900 (interest the bank already charged) + 8,000 (direct deposit already credited) = −42,100 → overdraft ₹42,100."
+        },
+        {
+          "key": "B",
+          "text": "Overdraft ₹58,100",
+          "explanation": "This SUBTRACTS the ₹8,000 direct deposit (a 16,000 swing). Money a customer paid straight into the bank is already in the pass book — it makes the overdraft there smaller, so it is added."
+        },
+        {
+          "key": "C",
+          "text": "Overdraft ₹38,300",
+          "explanation": "This treats the ₹1,900 as interest ALLOWED and adds it (a 3,800 swing). Interest on an overdraft is a bank DEBIT — it deepens the pass-book overdraft."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹42,900",
+          "explanation": "This flips EVERY sign (−42,500 − 13,000 + 18,700 + 1,900 − 8,000) — the whole statement was run in the pass-book-to-cash-book direction."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Starting from an overdraft, §6 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#6-starting-from-an-overdraft"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "OD start: −OD + unpresented − uncredited + bank credits − bank debits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-006",
+      "topic": "Ch 3 · BRS · CB overdraft to PB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The cash book of Bhandari Auto Parts, Indore, shows an overdraft of ₹30,000 with Bank of India on 31 December 2025. During December, cheques of ₹24,000 were issued, of which cheques of ₹16,500 were presented by 31 December; cheques of ₹20,000 were deposited, of which ₹12,000 had been credited. Bank charges of ₹350 appear only in the pass book. The pass book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹42,850",
+          "explanation": "This uses the FULL deposit of ₹20,000 instead of the uncredited slice (−30,000 + 7,500 − 20,000 − 350). Only 20,000 − 12,000 = 8,000 is still awaiting credit."
+        },
+        {
+          "key": "B",
+          "text": "Overdraft ₹30,850",
+          "explanation": "Correct. Unpresented = 24,000 − 16,500 = 7,500; uncredited = 20,000 − 12,000 = 8,000. Then −30,000 + 7,500 − 8,000 − 350 = −30,850 → overdraft ₹30,850."
+        },
+        {
+          "key": "C",
+          "text": "Overdraft ₹29,850",
+          "explanation": "This flips the two timing signs (−30,000 − 7,500 + 8,000 − 350). From ANY starting point, unpresented cheques push the pass-book figure up and uncredited deposits push it down."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹14,350",
+          "explanation": "This uses the FULL issue of ₹24,000 instead of the unpresented slice (−30,000 + 24,000 − 8,000 − 350). Cheques already presented are in BOTH books — only the 24,000 − 16,500 = 7,500 still outstanding belongs in the BRS."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Worked examples →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#fully-worked-examples"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "BRS uses only the unpresented/uncredited slices",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-007",
+      "topic": "Ch 3 · BRS · PB favourable to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The pass book of Joshi Medicals, Pune, shows a credit balance of ₹52,000 with HDFC Bank on 31 March 2026. Cheques issued but not presented ₹9,000; cheques deposited but not yet credited ₹14,000. The balance as per the cash book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹75,000 favourable",
+          "explanation": "This adds BOTH items (52,000 + 9,000 + 14,000). The cash book was already reduced for the issued cheques — the ₹9,000 must come off, not go on."
+        },
+        {
+          "key": "B",
+          "text": "₹29,000 favourable",
+          "explanation": "This subtracts BOTH items (52,000 − 9,000 − 14,000). Deposits not yet credited are ALREADY in the cash book — walking to the cash book, they are added back."
+        },
+        {
+          "key": "C",
+          "text": "₹57,000 favourable",
+          "explanation": "Correct. 52,000 − 9,000 (the cash book was already reduced for these cheques) + 14,000 (the cash book already contains these deposits) = ₹57,000."
+        },
+        {
+          "key": "D",
+          "text": "₹47,000 favourable",
+          "explanation": "This keeps the CASH-BOOK-start signs (52,000 + 9,000 − 14,000) even though the walk begins at the pass book. Going pass book → cash book flips every sign."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "CB = PB − unpresented + uncredited (signs flipped)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-008",
+      "topic": "Ch 3 · BRS · PB favourable to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 31 March 2026 the pass book of Sethi Paper Mart, Ambala, shows a favourable balance of ₹67,500. Cheques issued but not presented ₹12,400; cheques deposited but not credited ₹8,900; bank charges ₹600 and interest allowed by the bank ₹2,100 appear only in the pass book. The cash book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹66,700 favourable",
+          "explanation": "This ADDS the interest allowed (…+ 2,100). The pass book already contains that credit and the cash book does not — walking backwards, the ₹2,100 comes off."
+        },
+        {
+          "key": "B",
+          "text": "₹72,500 favourable",
+          "explanation": "This runs the statement in the FORWARD direction (67,500 + 12,400 − 8,900 − 600 + 2,100) though the start is the pass book. Every sign must flip when the walk is reversed."
+        },
+        {
+          "key": "C",
+          "text": "₹61,300 favourable",
+          "explanation": "This SUBTRACTS the bank charges (…− 600) when walking to the cash book. The cash book has NOT yet been reduced for the charges, so it stands ₹600 higher than a charges-included figure — add them back."
+        },
+        {
+          "key": "D",
+          "text": "₹62,500 favourable",
+          "explanation": "Correct. 67,500 − 12,400 (cash book already reduced) + 8,900 (cash book already contains) + 600 (charges not yet in cash book) − 2,100 (interest not yet in cash book) = ₹62,500."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "CB = PB with every BRS sign flipped",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-009",
+      "topic": "Ch 3 · BRS · PB favourable to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The pass book of Nair Provision Stores, Thrissur, shows a credit balance of ₹40,000 on 31 March 2026. An insurance premium of ₹4,500 paid by Federal Bank under standing instruction and a direct deposit of ₹6,000 by a customer appear only in the pass book. Cheques issued but not presented ₹11,000; cheques deposited but not credited ₹5,500. The cash book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹33,000 favourable",
+          "explanation": "Correct. 40,000 − 11,000 + 5,500 + 4,500 (the cash book has not yet been reduced for the premium) − 6,000 (the cash book does not yet contain the direct deposit) = ₹33,000."
+        },
+        {
+          "key": "B",
+          "text": "₹47,000 favourable",
+          "explanation": "This runs the whole walk in the FORWARD (cash book → pass book) direction: 40,000 + 11,000 − 5,500 − 4,500 + 6,000. Starting from the pass book, every sign flips."
+        },
+        {
+          "key": "C",
+          "text": "₹36,000 favourable",
+          "explanation": "This swaps the signs of the premium and the direct deposit only (…− 4,500 + 6,000). The premium is a bank DEBIT the cash book has not yet recorded (add back), and the direct deposit is a bank CREDIT the cash book lacks (deduct)."
+        },
+        {
+          "key": "D",
+          "text": "₹44,000 favourable",
+          "explanation": "This flips only the two bank items and keeps forward signs on the timing items (40,000 + 11,000 − 5,500 + 4,500 − 6,000). ALL four items flip together when the direction reverses."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Standing instructions = bank debits; direct deposits = bank credits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-010",
+      "topic": "Ch 3 · BRS · PB overdraft to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The pass book of Chawla Electricals, Delhi, shows a debit balance of ₹18,000 with Indian Bank on 31 March 2026. Cheques issued but not presented ₹5,000; cheques deposited but not yet credited ₹7,500. The balance as per the cash book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹30,500",
+          "explanation": "This subtracts BOTH items (−18,000 − 5,000 − 7,500). The uncredited deposits are already in the cash book — they REDUCE the cash-book overdraft relative to the pass book."
+        },
+        {
+          "key": "B",
+          "text": "Overdraft ₹15,500",
+          "explanation": "Correct. A pass-book DEBIT balance is an overdraft: start −18,000, then −5,000 (cash book already reduced for the cheques) + 7,500 (cash book already holds the deposits) = −15,500 → overdraft ₹15,500."
+        },
+        {
+          "key": "C",
+          "text": "Favourable ₹15,500",
+          "explanation": "The arithmetic is right but a pass-book DEBIT balance was read as favourable. In the pass book — the bank's mirror — debit means you owe the bank; the result stays an overdraft."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹20,500",
+          "explanation": "This keeps FORWARD signs (−18,000 + 5,000 − 7,500). The walk starts at the pass book, so both timing signs must flip."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The four balances, §2 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#2-the-four-balances-and-their-signs"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "PB debit = overdraft; flip signs walking to CB",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-011",
+      "topic": "Ch 3 · BRS · PB overdraft to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 31 March 2026 the pass book of Banerjee Traders, Kolkata, shows an overdraft of ₹56,000 with UCO Bank. Cheques issued but not presented ₹21,000; cheques deposited but not credited ₹13,400; the pass book alone shows bank charges ₹900 and interest on overdraft ₹2,700. The cash book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹44,800",
+          "explanation": "This keeps forward signs on the timing items and flips only the bank items (−56,000 + 21,000 − 13,400 + 900 + 2,700). The direction flip applies to every item, not just some."
+        },
+        {
+          "key": "B",
+          "text": "Overdraft ₹52,000",
+          "explanation": "This runs the FORWARD direction (−56,000 + 21,000 − 13,400 − 900 − 2,700). Starting from the pass book, every one of the four signs flips."
+        },
+        {
+          "key": "C",
+          "text": "Overdraft ₹60,000",
+          "explanation": "Correct. −56,000 − 21,000 (cash book already reduced for these cheques) + 13,400 (deposits already in the cash book) + 900 + 2,700 (charges and interest not yet in the cash book) = −60,000 → overdraft ₹60,000."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹67,200",
+          "explanation": "This SUBTRACTS the charges and interest (…− 900 − 2,700, a 7,200 swing). Walking to the cash book, bank debits the trader has not yet recorded are added back — the cash book is not yet reduced for them."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Starting from an overdraft, §6 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#6-starting-from-an-overdraft"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "PB OD → CB: flip all signs of the standard line",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-012",
+      "topic": "Ch 3 · BRS · PB overdraft to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The pass book of Kulkarni Agencies, Belagavi, shows an overdraft of ₹27,300 with Karnataka Bank on 31 March 2026. Cheques issued but not presented ₹9,800; cheques deposited but not credited ₹12,500; a customer paid ₹7,000 directly into the account; the bank collected a dividend of ₹1,500; bank charges were ₹450 — the last three items appear only in the pass book. The cash book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹15,650",
+          "explanation": "This ADDS the direct deposit and the dividend (…+ 7,000 + 1,500, a 17,000 swing). The cash book does NOT yet contain those credits — walking to the cash book they come off."
+        },
+        {
+          "key": "B",
+          "text": "Overdraft ₹33,550",
+          "explanation": "This SUBTRACTS the bank charges (…− 450, a 900 swing). The cash book has not yet been reduced for the charges — they are added back on the walk to the cash book."
+        },
+        {
+          "key": "C",
+          "text": "Overdraft ₹21,950",
+          "explanation": "This runs the whole statement in the FORWARD direction (−27,300 + 9,800 − 12,500 + 7,000 + 1,500 − 450). From a pass-book start every sign flips."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹32,650",
+          "explanation": "Correct. −27,300 − 9,800 + 12,500 − 7,000 (credit the cash book lacks) − 1,500 (collection the cash book lacks) + 450 (debit the cash book has not made) = −32,650 → overdraft ₹32,650."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Starting from an overdraft, §6 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#6-starting-from-an-overdraft"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Reverse walk: bank credits deducted, bank debits added",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-013",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 31 March 2026 the cash book of Gokhale Stationers, Nashik, shows a debit bank balance of ₹48,000. The Bank of Maharashtra pass book reveals: bank charges ₹400; interest allowed ₹1,100; insurance premium ₹3,000 paid under standing instruction; a direct deposit of ₹9,000 by a customer. Cheques issued but not presented total ₹6,000 and cheques deposited but not credited total ₹10,000. The balance of the AMENDED cash book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹54,700 (Dr)",
+          "explanation": "Correct. Only the bank-first items enter the cash book: 48,000 − 400 + 1,100 − 3,000 + 9,000 = ₹54,700. The two cheque items are timing differences — they stay in the BRS, never in the cash book."
+        },
+        {
+          "key": "B",
+          "text": "₹36,700 (Dr)",
+          "explanation": "This SUBTRACTS the ₹9,000 direct deposit (an 18,000 swing). A customer's money received into the bank is a DEBIT in your cash book — it increases the balance."
+        },
+        {
+          "key": "C",
+          "text": "₹60,700 (Dr)",
+          "explanation": "This ADDS the ₹3,000 standing-instruction premium (a 6,000 swing). The bank PAID the premium on your behalf — the cash book must be credited (reduced), not debited."
+        },
+        {
+          "key": "D",
+          "text": "₹50,700 (Dr)",
+          "explanation": "This pulls the two TIMING items into the cash book as well (54,700 + 6,000 − 10,000). Cheques not presented and deposits not credited are the bank's pending work — the cash book entries for them already exist."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Amend for bank-first items only; timing items stay BRS-only",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-014",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Prakash Traders, Salem, has a cash book debit bank balance of ₹52,500 on 31 March 2026. The Indian Overseas Bank pass book shows: bank charges ₹250; a loan instalment of ₹5,000 paid under standing instruction; interest allowed ₹750; a deposited cheque of ₹6,500 returned dishonoured — none yet in the cash book. Cheques issued but not presented ₹9,000; cheques deposited but not credited ₹13,500. After preparing the amended cash book, the balance as per the pass book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹41,500",
+          "explanation": "This is the AMENDED CASH BOOK balance (52,500 − 250 − 5,000 + 750 − 6,500) — the question asks you to continue to the pass book with the two timing items."
+        },
+        {
+          "key": "B",
+          "text": "₹37,000",
+          "explanation": "Correct. Amended cash book = 52,500 − 250 − 5,000 + 750 − 6,500 = 41,500. Then BRS with only the timing items: 41,500 + 9,000 − 13,500 = ₹37,000."
+        },
+        {
+          "key": "C",
+          "text": "₹46,000",
+          "explanation": "This flips the two timing signs in the second step (41,500 − 9,000 + 13,500). From the (amended) cash book, unpresented cheques are ADDED and uncredited deposits DEDUCTED."
+        },
+        {
+          "key": "D",
+          "text": "₹43,500",
+          "explanation": "This IGNORES the ₹6,500 dishonoured cheque in the amendment. A dishonour is known from the statement and belongs in the cash book — credit the bank column, debit the customer."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Two-step: amend first, then BRS with timing items only",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-015",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "At the year end 31 March 2026, Dutta Brothers, Guwahati, has a cash book debit bank balance of ₹29,800. The SBI pass book shows bank charges ₹300 and interest allowed ₹900, neither in the cash book. Cheques issued but not presented ₹4,000; cheques deposited but not credited ₹6,500. The figure to be shown as 'cash at bank' in the balance sheet is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹27,900",
+          "explanation": "This is the PASS BOOK balance (30,400 + 4,000 − 6,500). The balance sheet shows the trader's own (adjusted) cash book figure, not the bank's figure."
+        },
+        {
+          "key": "B",
+          "text": "₹31,000",
+          "explanation": "This ADDS the bank charges (29,800 + 300 + 900). Charges are a bank debit — the cash book is credited (reduced) by ₹300 when amending."
+        },
+        {
+          "key": "C",
+          "text": "₹30,400",
+          "explanation": "Correct. Adjusted cash book = 29,800 − 300 + 900 = ₹30,400 — the balance sheet must show the adjusted cash book balance as cash at bank; the timing items never enter the cash book."
+        },
+        {
+          "key": "D",
+          "text": "₹29,800",
+          "explanation": "This is the UNADJUSTED cash book balance. At the year end the amendment entries must actually be passed — charges and interest are known and belong in the books."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Balance sheet shows the adjusted cash book balance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-016",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The cash book of Wadhwa Garments, Amritsar, shows a bank overdraft of ₹15,600 on 31 March 2026. The PNB pass book shows: interest on overdraft ₹840; a direct deposit of ₹12,000 by a customer; an insurance premium of ₹2,400 paid under standing instruction. It is also found that a cheque of ₹3,500 deposited and duly collected was never entered in the cash book. The balance of the amended cash book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹6,840",
+          "explanation": "This forgets to correct the trader's OWN error — the omitted ₹3,500 deposit (−3,340 − 3,500 = −6,840). Your own errors are corrected in your own book during the amendment."
+        },
+        {
+          "key": "B",
+          "text": "Overdraft ₹1,660",
+          "explanation": "This treats the ₹840 as interest ALLOWED and adds it (a 1,680 swing). Interest on an overdraft is charged BY the bank — the cash book is credited, deepening the overdraft."
+        },
+        {
+          "key": "C",
+          "text": "Overdraft ₹27,340",
+          "explanation": "This SUBTRACTS the ₹12,000 direct deposit (a 24,000 swing). Money received into the account is a cash book DEBIT — it shrinks the overdraft."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹3,340",
+          "explanation": "Correct. −15,600 − 840 (interest charged) + 12,000 (direct deposit) − 2,400 (premium paid) + 3,500 (omitted deposit now entered) = −3,340 → overdraft ₹3,340."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Amendment covers bank-first items AND the trader's own errors",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-017",
+      "topic": "Ch 3 · BRS · Effect of errors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The cashier of Iqbal Traders, Lucknow, entered a receipt of ₹4,200 (cheque banked and duly collected) on the CREDIT side of the bank column of the cash book. As a result, the cash book bank balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Too low by ₹8,400",
+          "explanation": "Correct. The correct entry (Dr 4,200) is absent and an opposite entry (Cr 4,200) intrudes — the balance is 2 × 4,200 = ₹8,400 too low."
+        },
+        {
+          "key": "B",
+          "text": "Too high by ₹4,200",
+          "explanation": "Direction reversed — a receipt wrongly CREDITED pushes the balance DOWN, not up. And the size is double the amount, not the amount."
+        },
+        {
+          "key": "C",
+          "text": "Too low by ₹4,200",
+          "explanation": "This counts only the missing debit. A wrong-SIDE error hurts twice: the ₹4,200 debit is missing AND a wrong ₹4,200 credit sits in its place."
+        },
+        {
+          "key": "D",
+          "text": "Too high by ₹8,400",
+          "explanation": "The doubling is right but the direction is reversed. Crediting a receipt reduces the book balance — it ends too LOW by ₹8,400."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Errors, §4 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#4-why-the-balances-differ-errors"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Wrong-side error = twice the amount",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-018",
+      "topic": "Ch 3 · BRS · Effect of errors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Menon & Co., Kochi, issued a cheque for ₹5,630 but recorded it in the cash book as ₹6,530; the bank paid the correct ₹5,630. In a BRS starting from the cash book's favourable balance, this error is treated as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Less ₹900",
+          "explanation": "Direction flipped — the cash book was reduced by MORE than the bank actually paid, so the cash book is too LOW and the pass book stands higher: add, don't deduct."
+        },
+        {
+          "key": "B",
+          "text": "Add ₹900",
+          "explanation": "Correct. The payment is over-recorded by 6,530 − 5,630 = 900, so the cash book balance is ₹900 too low — the pass book stands ₹900 higher. A wrong-AMOUNT error moves the balance by the difference only."
+        },
+        {
+          "key": "C",
+          "text": "Less ₹1,800",
+          "explanation": "Both slips at once: the difference is doubled (wrong-side rule misapplied) AND the direction is flipped."
+        },
+        {
+          "key": "D",
+          "text": "Add ₹1,800",
+          "explanation": "This DOUBLES the difference — doubling belongs to wrong-SIDE errors only. A transposition moves the balance by the difference (₹900), once."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Errors, §4 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#4-why-the-balances-differ-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Wrong-amount error = the difference, once",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-019",
+      "topic": "Ch 3 · BRS · Effect of errors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Tandon Sports, Kanpur, paid a supplier by cheque ₹2,750 but the cashier entered the payment in the CASH column of the cash book. The cheque was presented and paid within the month. In a BRS from the cash book's favourable bank balance, the treatment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Add ₹2,750",
+          "explanation": "Direction reversed. The bank column MISSED a payment, so the bank-column balance is ₹2,750 too HIGH — the pass book stands lower; deduct."
+        },
+        {
+          "key": "B",
+          "text": "Less ₹5,500",
+          "explanation": "This doubles the amount — the wrong-SIDE rule misapplied. In a wrong-column error nothing sits on the wrong side of the bank column; the entry is simply absent from it, so the effect is the amount, once."
+        },
+        {
+          "key": "C",
+          "text": "Less ₹2,750",
+          "explanation": "Correct. The bank column never recorded the ₹2,750 payment, so its balance is ₹2,750 too high; the bank has already paid the cheque, so the pass book stands ₹2,750 lower. A wrong-COLUMN error moves the balance by the full amount, once."
+        },
+        {
+          "key": "D",
+          "text": "No adjustment needed",
+          "explanation": "This assumes the cash-column entry 'still counts'. The BANK column drives the bank balance — an entry parked in the cash column leaves the bank column wrong until corrected."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Errors, §4 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#4-why-the-balances-differ-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Wrong-column error = full amount, once",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-020",
+      "topic": "Ch 3 · BRS · Effect of errors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "While balancing the cash book of Saxena Book Depot, Bhopal, the receipts (debit) side of the bank column was overcast by ₹1,000. In a BRS starting from the cash book's favourable balance, the treatment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Less ₹2,000",
+          "explanation": "This doubles the amount — the wrong-SIDE rule misapplied. A casting slip has no intruding opposite entry; the effect is the overcast amount, once."
+        },
+        {
+          "key": "B",
+          "text": "Add ₹2,000",
+          "explanation": "Doubled AND reversed — two slips at once. The effect of an overcast is single-sized and pushes the pass-book figure down."
+        },
+        {
+          "key": "C",
+          "text": "Add ₹1,000",
+          "explanation": "Direction reversed — OVERcasting the receipts side makes the book balance too HIGH, so the walk to the pass book deducts; adding is the treatment for an UNDERcast debit side."
+        },
+        {
+          "key": "D",
+          "text": "Less ₹1,000",
+          "explanation": "Correct. An overcast debit side inflates the cash book balance by ₹1,000 — it is ₹1,000 too high, so the pass book stands ₹1,000 lower. A casting error moves the balance by the amount of the overcast, once."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Errors, §4 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#4-why-the-balances-differ-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Overcast debit side → balance too high by the overcast",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-021",
+      "topic": "Ch 3 · BRS · Effect of errors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The cash book of Grover Dairy, Karnal, shows a favourable bank balance of ₹50,000 on 31 March 2026, and the only difference with the SBI pass book is that the bank has WRONGLY debited the firm's account with another customer's cheque of ₹3,600. The pass book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹46,400",
+          "explanation": "Correct. The bank's wrong debit makes the pass book ₹3,600 lower than it should be: 50,000 − 3,600 = ₹46,400. The firm passes NO cash book entry — only the bank can reverse its own error."
+        },
+        {
+          "key": "B",
+          "text": "₹50,000",
+          "explanation": "This assumes a bank error 'does not count'. Until the bank corrects its ledger, the wrong debit is really sitting in the pass book — the two balances genuinely differ by ₹3,600."
+        },
+        {
+          "key": "C",
+          "text": "₹42,800",
+          "explanation": "This DOUBLES the error (50,000 − 2 × 3,600). Doubling is for wrong-SIDE errors in one's own book; the bank simply posted one wrong debit — the effect is the amount, once."
+        },
+        {
+          "key": "D",
+          "text": "₹53,600",
+          "explanation": "This ADDS the wrong debit. The bank took money OUT of the account by mistake — the pass book stands lower, not higher."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Errors, §4 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#4-why-the-balances-differ-errors"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Bank's error stays a BRS line until the bank fixes it",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-022",
+      "topic": "Ch 3 · BRS · Errors combined",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 31 March 2026 the cash book of Oberoi Furnishers, Chandigarh, shows a debit bank balance of ₹33,000. It is found that (i) a receipt of ₹2,900 (cheque duly collected) was entered on the credit side of the bank column; (ii) a cheque issued for ₹4,180 was recorded as ₹4,810 (the bank paid ₹4,180); (iii) cheques issued but not presented total ₹7,000; (iv) cheques deposited but not credited total ₹9,400. The pass book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹41,830",
+          "explanation": "This flips the two timing signs (…− 7,000 + 9,400). The error corrections are right, but unpresented cheques still push the pass-book figure UP and uncredited deposits push it DOWN."
+        },
+        {
+          "key": "B",
+          "text": "₹37,030",
+          "explanation": "Correct. 33,000 + 5,800 (wrong side: 2 × 2,900, cash book too low) + 630 (payment over-recorded by 4,810 − 4,180, cash book too low) + 7,000 (not presented) − 9,400 (not credited) = ₹37,030."
+        },
+        {
+          "key": "C",
+          "text": "₹35,770",
+          "explanation": "This SUBTRACTS the transposition difference of ₹630 (a 1,260 swing). The payment was recorded at MORE than the bank paid, so the cash book is too low — the correction adds."
+        },
+        {
+          "key": "D",
+          "text": "₹34,130",
+          "explanation": "This treats the wrong-side receipt as a single-sized error (+2,900 instead of +5,800). A wrong-SIDE error moves the balance by TWICE the amount — the missing debit plus the intruding credit."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Worked examples →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#fully-worked-examples"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Size each error, then run the standard signed walk",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-023",
+      "topic": "Ch 3 · BRS · PB favourable to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The pass book of Mishra Cements, Varanasi, shows a credit balance of ₹75,000 with Bank of Baroda on 31 March 2026. Cheques issued but not presented ₹10,000; cheques deposited but not credited ₹6,000; bank charges of ₹500 appear only in the pass book. The cash book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹70,500 favourable",
+          "explanation": "This SUBTRACTS the charges (…− 500, a 1,000 swing). The cash book is not yet reduced for the charges, so it stands ₹500 HIGHER than the charges-included pass book picture."
+        },
+        {
+          "key": "B",
+          "text": "₹78,500 favourable",
+          "explanation": "This keeps the FORWARD signs (75,000 + 10,000 − 6,000 − 500). The start is the pass book — every sign flips on the walk back."
+        },
+        {
+          "key": "C",
+          "text": "₹71,500 favourable",
+          "explanation": "Correct. 75,000 − 10,000 (cash book already reduced) + 6,000 (already in the cash book) + 500 (charges the cash book has not yet recorded) = ₹71,500."
+        },
+        {
+          "key": "D",
+          "text": "₹59,500 favourable",
+          "explanation": "This subtracts BOTH timing items (75,000 − 10,000 − 6,000 + 500). The ₹6,000 of deposits already sits in the cash book — walking back, it is added."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Reverse walk adds back bank debits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-024",
+      "topic": "Ch 3 · BRS · Bank-first items",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Manju General Stores, Mysuru, shows a cash book debit bank balance of ₹22,000 on 31 March 2026. The Canara Bank pass book alone shows: bank charges ₹150; interest allowed ₹600; shop rent of ₹2,000 paid under standing instruction. There are no other differences. The pass book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹23,550",
+          "explanation": "This flips ALL three signs (22,000 + 150 − 600 + 2,000). Reason each out: charges and the rent are money the bank already took (deduct); interest allowed is money it already credited (add)."
+        },
+        {
+          "key": "B",
+          "text": "₹19,250",
+          "explanation": "This SUBTRACTS the interest allowed too (22,000 − 150 − 600 − 2,000). Interest ALLOWED is a bank credit — the pass book stands ₹600 higher for it."
+        },
+        {
+          "key": "C",
+          "text": "₹24,450",
+          "explanation": "This ADDS the ₹2,000 rent (a 4,000 swing). A standing-instruction payment is money going OUT of the account — the pass book stands lower."
+        },
+        {
+          "key": "D",
+          "text": "₹20,450",
+          "explanation": "Correct. 22,000 − 150 (charges taken) + 600 (interest credited) − 2,000 (rent paid on the standing instruction) = ₹20,450."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Timing differences, §3 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#3-why-the-balances-differ-timing-differences"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Bank credits add, bank debits deduct (CB start)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-025",
+      "topic": "Ch 3 · BRS · PB overdraft to CB",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The pass book of Qureshi Hides, Kanpur, shows an overdraft of ₹12,400 with Union Bank on 31 March 2026. A deposited cheque of ₹5,000 was dishonoured and the bank charged ₹100 as dishonour charges — both entries appear only in the pass book. Cheques issued but not presented total ₹3,800. The cash book balance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Overdraft ₹11,100",
+          "explanation": "Correct. −12,400 + 5,000 + 100 (dishonour and charges not yet in the cash book, added back on the reverse walk) − 3,800 (cash book already reduced for these cheques) = −11,100 → overdraft ₹11,100."
+        },
+        {
+          "key": "B",
+          "text": "Favourable ₹11,100",
+          "explanation": "The arithmetic is right but the sign is misread — the walk ends at MINUS 11,100, an overdraft. The pass book's debit-balance start keeps the account in overdraft territory throughout."
+        },
+        {
+          "key": "C",
+          "text": "Overdraft ₹11,200",
+          "explanation": "This forgets the ₹100 dishonour charges (−12,400 + 5,000 − 3,800). The bank debited the cheque amount AND its charges — both are missing from the cash book."
+        },
+        {
+          "key": "D",
+          "text": "Overdraft ₹13,700",
+          "explanation": "This runs the FORWARD direction (−12,400 − 5,000 − 100 + 3,800). Starting from the pass book, the dishonour and its charges are added BACK (the cash book has not been reduced yet) and the unpresented cheques are deducted."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Starting from an overdraft, §6 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#6-starting-from-an-overdraft"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Reverse walk: bank debits (incl. dishonour + charges) added back",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-026",
+      "topic": "Ch 3 · BRS · Four balances",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A DEBIT balance in the bank column of the cash book means:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The pass book must also show a debit balance",
+          "explanation": "The pass book mirrors the cash book — a favourable position shows as a CREDIT balance there, not a debit."
+        },
+        {
+          "key": "B",
+          "text": "The trader has money lying at the bank (favourable balance)",
+          "explanation": "Correct. The bank column is an asset in the trader's books: debit balance = money at the bank = favourable."
+        },
+        {
+          "key": "C",
+          "text": "The bank has allowed interest on the balance",
+          "explanation": "Interest allowed is one possible ENTRY, not what a debit balance MEANS — the balance label describes the overall position."
+        },
+        {
+          "key": "D",
+          "text": "The trader owes money to the bank (overdraft)",
+          "explanation": "Reversed — in the trader's own book the bank column follows asset rules, so a CREDIT balance is the overdraft."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The four balances, §2 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#2-the-four-balances-and-their-signs"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "CB Dr = favourable; CB Cr = overdraft",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-027",
+      "topic": "Ch 3 · BRS · Four balances",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A DEBIT balance in the pass book indicates:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An error committed by the bank",
+          "explanation": "A debit balance is a normal position label, not evidence of an error — banks routinely permit overdrafts."
+        },
+        {
+          "key": "B",
+          "text": "A favourable balance — money at the bank",
+          "explanation": "This reads the pass book with the cash book's eyes. In the bank's mirror the labels flip: pass book CREDIT is favourable."
+        },
+        {
+          "key": "C",
+          "text": "An overdraft — the customer owes the bank",
+          "explanation": "Correct. The pass book is the customer's account in the bank's ledger; when the customer draws more than they have, the roles flip and the account shows a debit balance — an overdraft."
+        },
+        {
+          "key": "D",
+          "text": "Cheques deposited but not yet collected",
+          "explanation": "Uncredited cheques are one CAUSE of difference between the books — they do not define what a pass-book debit balance means."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The four balances, §2 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#2-the-four-balances-and-their-signs"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "PB Dr = overdraft; PB Cr = favourable",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-028",
+      "topic": "Ch 3 · BRS · The mirror",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When a trader has money lying at the bank, the pass book shows it as a CREDIT balance because:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Credit always means an increase in any book",
+          "explanation": "No — in the trader's own cash book (an asset record) an increase is a DEBIT. Whether credit means 'more' depends on whose book it is."
+        },
+        {
+          "key": "B",
+          "text": "It is a legal requirement with no accounting logic",
+          "explanation": "There is solid logic: every deposit that is a debit in your book is, symmetrically, a liability (credit) in the bank's book."
+        },
+        {
+          "key": "C",
+          "text": "Banks follow a special single-entry system",
+          "explanation": "Banks follow ordinary double entry — the flip comes from viewpoint, not from a different system."
+        },
+        {
+          "key": "D",
+          "text": "The bank owes that money to the trader — the trader is the bank's creditor",
+          "explanation": "Correct. The pass book is written from the BANK's viewpoint: money you deposit is money the bank owes you, so your account is credited in the bank's ledger."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Two records, §1 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#1-two-records-of-the-same-money"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Your debit = the bank's credit (mirror principle)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-029",
+      "topic": "Ch 3 · BRS · The mirror",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The pass book (bank statement) is best described as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A copy of the customer's account as it appears in the bank's own ledger",
+          "explanation": "Correct. The bank maintains the customer's account in its ledger and hands over a copy — that copy is the pass book or bank statement."
+        },
+        {
+          "key": "B",
+          "text": "A part of the trader's ledger",
+          "explanation": "It belongs to the bank's record-keeping; the trader's own record of the bank is the bank column of the cash book."
+        },
+        {
+          "key": "C",
+          "text": "A summary of the trader's cash book prepared by the trader",
+          "explanation": "The pass book is written by the BANK, from its own records — the trader's summary of their own book would just repeat the cash book."
+        },
+        {
+          "key": "D",
+          "text": "A statement prepared to reconcile the two balances",
+          "explanation": "That is the BRS itself — the pass book is one of the two records being reconciled, not the reconciliation."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Two records, §1 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#1-two-records-of-the-same-money"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Pass book = copy of the account in the bank's ledger",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-030",
+      "topic": "Ch 3 · BRS · Timing vs errors",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a TIMING difference (and not an error)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A receipt entered on the credit side of the bank column",
+          "explanation": "A wrong-side entry is an ERROR in the trader's book — it needs correction; time will not cure it."
+        },
+        {
+          "key": "B",
+          "text": "Cheques deposited but not yet collected and credited by the bank",
+          "explanation": "Correct. Both books will agree once clearing completes — no correction is needed, only time. That is the mark of a timing difference."
+        },
+        {
+          "key": "C",
+          "text": "The bank debiting the account with another customer's cheque",
+          "explanation": "That is the BANK's error — it needs the bank's correction, not the passage of time."
+        },
+        {
+          "key": "D",
+          "text": "A cheque issued for ₹2,470 recorded as ₹2,740",
+          "explanation": "A transposition is an ERROR — the book must be corrected by the ₹270 difference."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Timing differences, §3 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#3-why-the-balances-differ-timing-differences"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Timing heals itself; errors need correcting",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-031",
+      "topic": "Ch 3 · BRS · Timing vs errors",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about the causes of difference between the cash book and the pass book is CORRECT?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both timing differences and errors correct themselves with time",
+          "explanation": "Errors never self-heal — a receipt on the wrong side stays on the wrong side until someone fixes it."
+        },
+        {
+          "key": "B",
+          "text": "Both timing differences and errors require correction entries",
+          "explanation": "Timing items need NO entry — the entries already exist in one book and will appear in the other in due course."
+        },
+        {
+          "key": "C",
+          "text": "Timing differences correct themselves with time; errors must be corrected by whoever made them",
+          "explanation": "Correct. Unpresented cheques and uncollected deposits vanish once the bank catches up; but a wrong entry stays wrong until the trader (or the bank, for its own errors) corrects it."
+        },
+        {
+          "key": "D",
+          "text": "A difference between the two books always means someone made a mistake",
+          "explanation": "Usually nobody has erred — the two records simply move at different speeds; timing differences are normal."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Errors, §4 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#4-why-the-balances-differ-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Two families of causes with opposite remedies",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-032",
+      "topic": "Ch 3 · BRS · Effect of errors",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which type of cash book error moves the bank-column balance by TWICE the amount involved?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A wrong-column error (bank entry in the cash column)",
+          "explanation": "The bank column simply lacks the entry — full amount, once. There is no wrong-side intruder inside the bank column."
+        },
+        {
+          "key": "B",
+          "text": "A transposition error in the amount",
+          "explanation": "A wrong-amount error moves the balance by the DIFFERENCE between the wrong and right figures, once."
+        },
+        {
+          "key": "C",
+          "text": "Complete omission of an entry",
+          "explanation": "An omission moves the balance by the full amount, ONCE — nothing intrudes on the opposite side."
+        },
+        {
+          "key": "D",
+          "text": "A wrong-side error (e.g. a receipt entered on the credit side)",
+          "explanation": "Correct. The correct entry is missing AND an opposite entry sits in its place — twice the amount. Never double any other error type."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Errors, §4 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#4-why-the-balances-differ-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Only wrong-side errors double",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-033",
+      "topic": "Ch 3 · BRS · Nature of the statement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following statements about a bank reconciliation statement is CORRECT?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is a memorandum statement outside the double-entry system",
+          "explanation": "Correct. A BRS has no debit or credit sides, nothing is posted from it, and it is not part of the ledger — it only EXPLAINS the difference between the two balances on a date."
+        },
+        {
+          "key": "B",
+          "text": "It forms part of the final accounts",
+          "explanation": "The BRS is a working document for control — it is not a component of the trading account, P&L, or balance sheet."
+        },
+        {
+          "key": "C",
+          "text": "It is an account in the trader's ledger",
+          "explanation": "It is a STATEMENT, not an account — it has no two sides and no postings flow from it."
+        },
+        {
+          "key": "D",
+          "text": "Entries are posted from the BRS to the cash book",
+          "explanation": "Nothing is ever posted FROM a BRS. Amendment entries (for bank charges etc.) are ordinary cash book entries made from the statement's information, not postings from the BRS."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: What a BRS is, §8 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#8-what-a-brs-is-and-what-it-is-not"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "BRS = statement, not an account; outside double entry",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-034",
+      "topic": "Ch 3 · BRS · Nature of the statement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A bank reconciliation statement is normally prepared by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The Registrar of Companies",
+          "explanation": "The ROC has no role in a trader's day-to-day bank control."
+        },
+        {
+          "key": "B",
+          "text": "The customer (trader), periodically and at the year end",
+          "explanation": "Correct. The trader prepares it — usually whenever a statement arrives, and always at the year end — to explain the gap between their cash book and the bank's record."
+        },
+        {
+          "key": "C",
+          "text": "The auditor, as part of the audit report",
+          "explanation": "An auditor may CHECK the reconciliation, but preparing it is the trader's routine bookkeeping control."
+        },
+        {
+          "key": "D",
+          "text": "The bank, whenever the customer asks",
+          "explanation": "The bank only supplies the pass book/statement — reconciling it with the cash book is the customer's own control exercise."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What a BRS is, §8 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#8-what-a-brs-is-and-what-it-is-not"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Prepared by the customer, periodically and at year end",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-035",
+      "topic": "Ch 3 · BRS · Nature of the statement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A bank reconciliation statement is headed 'as ON 31 March 2026' rather than 'for the year ENDED 31 March 2026' because:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The bank closes its books daily",
+          "explanation": "The bank's bookkeeping frequency is irrelevant — the heading reflects the snapshot nature of the reconciliation itself."
+        },
+        {
+          "key": "B",
+          "text": "It records only that day's transactions",
+          "explanation": "The items in a BRS may be weeks old (a stale unpresented cheque, say) — what matters is that the BALANCES compared are of one date."
+        },
+        {
+          "key": "C",
+          "text": "It is a snapshot of the difference between two balances on a particular date",
+          "explanation": "Correct. A BRS reconciles two balances AS THEY STAND on one date — it is not a flow statement covering a period."
+        },
+        {
+          "key": "D",
+          "text": "The wording makes no difference",
+          "explanation": "The wording is the point: 'as on' marks a position statement; 'for the year' would wrongly suggest a period statement like the P&L."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "BRS headed 'as on' a date — a snapshot",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-036",
+      "topic": "Ch 3 · BRS · Purposes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The cashier of a firm pockets a cheque received from a customer instead of banking it, while recording a deposit in the cash book. How would regular bank reconciliation expose this?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The BRS would automatically correct the cash book",
+          "explanation": "A BRS corrects nothing — it is a statement outside double entry; it only EXPOSES the unmatched item for investigation."
+        },
+        {
+          "key": "B",
+          "text": "It would not be detected, since the cash book entry looks genuine",
+          "explanation": "It IS detected — the entry looks genuine in isolation, but reconciliation compares both records, and the bank's silence gives the fraud away."
+        },
+        {
+          "key": "C",
+          "text": "The pass book would show a debit entry for the theft",
+          "explanation": "The bank never saw the cheque — its records show nothing at all, which is precisely the clue."
+        },
+        {
+          "key": "D",
+          "text": "The cash book would show a deposit that never appears in the pass book",
+          "explanation": "Correct. The recorded deposit never reaches the bank, so it lingers as an ever-unexplained 'cheque deposited but not credited' — a reconciliation prepared regularly flags exactly such items. Deterring embezzlement is a classic purpose of the BRS."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: What a BRS is, §8 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#8-what-a-brs-is-and-what-it-is-not"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "BRS purposes: discourage embezzlement, catch errors",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-037",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "While preparing an AMENDED (adjusted) cash book, which of the following items should NOT be entered in the cash book?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cheques issued but not yet presented",
+          "explanation": "Correct. The cash book entry for these cheques ALREADY exists (made when the cheques were issued) — the delay is the bank's pending work. They remain a BRS-only line."
+        },
+        {
+          "key": "B",
+          "text": "Bank charges debited by the bank",
+          "explanation": "Charges are known from the statement and belong in the trader's books — the cash book is credited for them."
+        },
+        {
+          "key": "C",
+          "text": "A customer's direct deposit into the bank",
+          "explanation": "The trader's book lacks this receipt — it must be debited into the cash book during the amendment."
+        },
+        {
+          "key": "D",
+          "text": "Interest charged by the bank on an overdraft",
+          "explanation": "A known bank debit — the cash book must be credited to bring the book up to date."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Timing items never enter the amended cash book",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-038",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The bank has wrongly debited a firm's account with another customer's cheque. The correct treatment in the firm's books is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Debit the bank column to cancel the bank's debit",
+          "explanation": "No cash book entry is called for in either direction — the error lives in the bank's ledger, not the trader's."
+        },
+        {
+          "key": "B",
+          "text": "Pass no entry; show it as a reconciling item in the BRS until the bank corrects its ledger",
+          "explanation": "Correct. Only the bank can fix its own ledger. Until then the item explains part of the difference, so it appears in the BRS — and nowhere in the cash book."
+        },
+        {
+          "key": "C",
+          "text": "Write it off as a bank charge",
+          "explanation": "It is not a charge at all — it is a recoverable error the bank must reverse."
+        },
+        {
+          "key": "D",
+          "text": "Credit the bank column of the cash book with the amount",
+          "explanation": "Passing an entry for the BANK's mistake makes the trader's book wrong too — 'double-wrong'. The trader's book is already correct."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Bank's errors: no cash book entry; BRS line only",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-039",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "At the year end, the figure shown as 'cash at bank' in the balance sheet should be:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The balance as per the pass book",
+          "explanation": "The pass book is the BANK's record; the trader's statements are drawn from the trader's own (properly updated) books."
+        },
+        {
+          "key": "B",
+          "text": "The unadjusted cash book balance",
+          "explanation": "An unadjusted balance omits known items — charges, standing instructions, dishonours — so it misstates the true position."
+        },
+        {
+          "key": "C",
+          "text": "The adjusted (amended) cash book balance",
+          "explanation": "Correct. At the year end the amendment entries must actually be passed, and the balance sheet shows the adjusted cash book balance as cash at bank."
+        },
+        {
+          "key": "D",
+          "text": "The average of the cash book and pass book balances",
+          "explanation": "Averaging two records that differ for known reasons has no accounting meaning."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Balance sheet shows the adjusted cash book balance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-040",
+      "topic": "Ch 3 · BRS · Amended cash book",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A cheque of ₹9,000 received from customer Ganesh, deposited into the bank, is returned dishonoured. The entry in the trader's amended cash book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Debit the bank column ₹9,000 and credit Ganesh's account",
+          "explanation": "Reversed — this would INCREASE the bank balance and discharge Ganesh, the opposite of what a bounce means."
+        },
+        {
+          "key": "B",
+          "text": "Debit Bad Debts account ₹9,000",
+          "explanation": "A bounced cheque is not yet a bad debt — Ganesh still owes the money; only if it later proves irrecoverable is it written off."
+        },
+        {
+          "key": "C",
+          "text": "No entry; show ₹9,000 only in the BRS",
+          "explanation": "A dishonour is KNOWN from the statement and is the trader's own bookkeeping to record — it belongs in the cash book, unlike timing items."
+        },
+        {
+          "key": "D",
+          "text": "Credit the bank column ₹9,000 and debit Ganesh's account",
+          "explanation": "Correct. The money never arrived, so the earlier bank-column debit is reversed (credit bank), and Ganesh owes the amount again (debit Ganesh)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Dishonour: credit bank column, debit the customer",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-041",
+      "topic": "Ch 3 · BRS · Timing differences",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An insurance premium paid by the bank under the trader's standing instruction usually causes a difference between the two books because:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The bank records it first; the trader learns of it only when the statement arrives",
+          "explanation": "Correct. Standing-instruction payments belong to the 'bank moved first' family of timing items — the bank debits the account on the mandate, and the trader's cash book catches up after seeing the statement."
+        },
+        {
+          "key": "B",
+          "text": "It is an error committed by the bank",
+          "explanation": "Paying on a mandate is exactly what the trader instructed — no error is involved; it is a timing difference."
+        },
+        {
+          "key": "C",
+          "text": "Insurance premiums are never routed through bank accounts",
+          "explanation": "They routinely are — that is what the standing instruction achieves."
+        },
+        {
+          "key": "D",
+          "text": "The trader records it first and the bank delays the payment",
+          "explanation": "Reversed — the whole point of a standing instruction is that the BANK acts on its own; the trader has made no entry yet."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Timing differences, §3 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#3-why-the-balances-differ-timing-differences"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Standing instructions: bank-recorded-first timing item",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-042",
+      "topic": "Ch 3 · BRS · Timing differences",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "During March, Tripathi Traders, Prayagraj, issued cheques totalling ₹40,000, of which cheques of ₹31,000 were presented and paid by 31 March. The amount to be taken in the BRS as 'cheques issued but not presented' is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹40,000",
+          "explanation": "This reads 'issued' as the BRS item. Cheques already presented sit in BOTH books and cause no difference — only the outstanding slice belongs in the statement."
+        },
+        {
+          "key": "B",
+          "text": "₹9,000",
+          "explanation": "Correct. Unpresented = 40,000 − 31,000 = ₹9,000 — only the cheques the bank has not yet paid separate the two books."
+        },
+        {
+          "key": "C",
+          "text": "₹31,000",
+          "explanation": "This picks the PRESENTED slice — the portion on which the two books already agree. The reconciling amount is what the bank has NOT yet paid."
+        },
+        {
+          "key": "D",
+          "text": "₹71,000",
+          "explanation": "This ADDS the two figures — 31,000 of the 40,000 issued were presented; the figures overlap and are never summed."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Common mistakes →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#common-mistakes--examiner-traps"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "BRS item = issued − presented (the outstanding slice)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-043",
+      "topic": "Ch 3 · BRS · Four balances",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When a trader's bank account is OVERDRAWN, the relationship between the trader and the bank is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "There is no debtor–creditor relationship with a bank",
+          "explanation": "Banking is BUILT on that relationship — deposits make the bank your debtor; an overdraft makes it your creditor."
+        },
+        {
+          "key": "B",
+          "text": "Both are debtors to each other",
+          "explanation": "One net account cannot leave both owing each other — the sign of the balance decides who owes whom."
+        },
+        {
+          "key": "C",
+          "text": "The trader is the debtor and the bank is the creditor",
+          "explanation": "Correct. An overdraft means the trader has drawn more than they had — they now owe the bank, so the roles flip: the bank becomes the trader's creditor."
+        },
+        {
+          "key": "D",
+          "text": "The trader is the creditor and the bank is the debtor",
+          "explanation": "That is the FAVOURABLE-balance relationship — the bank owes the trader their deposits. Overdraft reverses it."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The four balances, §2 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#2-the-four-balances-and-their-signs"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Overdraft flips the debtor–creditor roles",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-044",
+      "topic": "Ch 3 · BRS · Direction logic",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Before any catching-up entries are made, which item leaves the PASS BOOK balance HIGHER than the cash book balance?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A cheque deposited earlier returned dishonoured",
+          "explanation": "The bank has removed the credit; the cash book still contains it — pass book lower."
+        },
+        {
+          "key": "B",
+          "text": "Bank charges debited by the bank",
+          "explanation": "Charges are already OUT of the pass book but still in the cash book figure — pass book lower."
+        },
+        {
+          "key": "C",
+          "text": "Cheques deposited but not yet credited",
+          "explanation": "These are in the cash book but not yet in the pass book — they leave the pass book LOWER."
+        },
+        {
+          "key": "D",
+          "text": "Cheques issued but not yet presented",
+          "explanation": "Correct. The trader has already reduced the cash book, but the bank has not yet paid — so the pass book stands HIGHER by the unpresented amount."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Direction discipline, §5 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#5-preparing-the-brs-the-direction-discipline"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Unpresented cheques: PB stands higher than CB",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c3-045",
+      "topic": "Ch 3 · BRS · Reading the requirement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An exam question says: 'Prepare a bank reconciliation statement WITHOUT adjusting the cash book.' This instruction means:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Every given item — bank charges, standing instructions, errors and all — goes directly into the BRS",
+          "explanation": "Correct. 'Without adjusting' means no cash book entries are passed, so the statement itself must carry every item, starting from the given (unadjusted) balance."
+        },
+        {
+          "key": "B",
+          "text": "The pass book should be adjusted instead",
+          "explanation": "Nobody outside the bank can adjust the pass book — it is the bank's ledger copy."
+        },
+        {
+          "key": "C",
+          "text": "Only timing items are shown and the rest are ignored",
+          "explanation": "Nothing is ignored — the bank-first items still explain part of the gap; they simply appear in the statement instead of the cash book."
+        },
+        {
+          "key": "D",
+          "text": "The cash book must first be brought up to date",
+          "explanation": "That is the AMENDED cash book approach — the opposite of what this requirement asks. Same facts, two different answers; the wording decides."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Amended cash book, §7 →",
+        "href": "/foundation/accounting/bank-reconciliation-statement/#7-the-amended-cash-book-approach"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Requirement wording decides the item split",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c3-01",
+      "topic": "Ch 3 · BRS · Theory",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "What is a bank reconciliation statement? Explain the main reasons why the balance shown by the cash book may differ from the balance shown by the pass book on the same date. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Definition: a statement (not an account, outside double entry) prepared by the customer 'as on' a date, explaining item by item the difference between the cash book (bank column) balance and the pass book balance",
+          "marks": 1,
+          "citation": "BRS nature — notes §5, §8"
+        },
+        {
+          "point": "Trader-recorded-first timing items: cheques issued but not yet presented; cheques deposited but not yet collected/credited",
+          "marks": 1,
+          "citation": "timing taxonomy — notes §3"
+        },
+        {
+          "point": "Bank-recorded-first timing items: bank charges, interest charged/allowed, standing-instruction payments",
+          "marks": 1,
+          "citation": "timing taxonomy — notes §3"
+        },
+        {
+          "point": "More bank-first items: direct deposits by customers, interest/dividends collected by the bank, dishonour of deposited cheques or discounted bills (plus charges)",
+          "marks": 1,
+          "citation": "timing taxonomy — notes §3"
+        },
+        {
+          "point": "Errors — a separate family: trader's errors (omission, wrong amount, wrong side, wrong column, casting) and the bank's errors; unlike timing items, errors need correction by whoever made them",
+          "marks": 1,
+          "citation": "error taxonomy — notes §4"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "BRS definition + causes of difference",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c3-02",
+      "topic": "Ch 3 · BRS · Theory",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the four possible balances of the cash book (bank column) and the pass book, indicating which are favourable and which represent an overdraft. Why does a favourable balance appear as a debit in one book but a credit in the other? (4 marks)",
+      "skeleton": [
+        {
+          "point": "Cash book bank column: debit balance = favourable (money at bank); credit balance = overdraft",
+          "marks": 1,
+          "citation": "four balances — notes §2"
+        },
+        {
+          "point": "Pass book: credit balance = favourable; debit balance = overdraft",
+          "marks": 1,
+          "citation": "four balances — notes §2"
+        },
+        {
+          "point": "Mirror principle: the two books view the same account from opposite sides — to the trader the bank balance is an asset (debit); to the bank the same money is owed to the customer, who is its creditor (credit)",
+          "marks": 1,
+          "citation": "mirror principle — notes §1"
+        },
+        {
+          "point": "In overdraft the roles flip: the trader becomes the bank's debtor, so the trader's book shows a credit balance and the bank's ledger (pass book) shows a debit balance",
+          "marks": 1,
+          "citation": "overdraft role-flip — notes §2"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Four balance labels + mirror logic",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c3-03",
+      "topic": "Ch 3 · BRS · Practical",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "On 31 March 2026 the cash book of Trivedi & Sons, Rajkot, shows a debit bank balance of ₹58,300. On comparison with the pass book it is found that: (a) cheques issued but not presented ₹12,600; (b) cheques deposited but not yet credited ₹17,900; (c) bank charges ₹450 and (d) interest allowed by the bank ₹1,050 appear only in the pass book; (e) a customer paid ₹4,000 directly into the bank account. Prepare a bank reconciliation statement as on 31 March 2026. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Proper heading ('BRS as on 31 March 2026') and correct starting point: balance as per cash book (Dr, favourable) +58,300",
+          "marks": 1,
+          "citation": "format — notes §5"
+        },
+        {
+          "point": "Add cheques issued but not presented +12,600 (bank has not yet paid them, so the pass book stands higher)",
+          "marks": 1,
+          "citation": "direction logic — notes §5"
+        },
+        {
+          "point": "Less cheques deposited but not credited −17,900 (bank has not yet received them)",
+          "marks": 1,
+          "citation": "direction logic — notes §5"
+        },
+        {
+          "point": "Less bank charges −450; add interest allowed +1,050 (bank debits/credits already in the pass book only)",
+          "marks": 1,
+          "citation": "bank-first items — notes §3"
+        },
+        {
+          "point": "Add direct deposit +4,000; balance as per pass book = 58,300 + 12,600 − 17,900 − 450 + 1,050 + 4,000 = ₹57,600 favourable",
+          "marks": 1,
+          "citation": "assembled walk — notes §5"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "BRS from CB favourable; answer ₹57,600",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c3-04",
+      "topic": "Ch 3 · BRS · Theory",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the amended (adjusted) cash book approach to bank reconciliation. Which items are recorded in the cash book and which are carried only to the BRS, and why must the balance sheet show the adjusted cash book balance? (5 marks)",
+      "skeleton": [
+        {
+          "point": "Concept: first bring the cash book up to date with everything now KNOWN from the statement, then reconcile only what remains — a two-step discipline",
+          "marks": 1,
+          "citation": "amended approach — notes §7"
+        },
+        {
+          "point": "Recorded in the cash book: bank charges, interest charged/allowed, standing-instruction payments, direct deposits, interest/dividends collected, dishonoured cheques and bills (credit bank, debit customer)",
+          "marks": 1.5,
+          "citation": "item split — notes §7"
+        },
+        {
+          "point": "Also recorded: the trader's OWN errors, corrected in the trader's book where they live",
+          "marks": 0.5,
+          "citation": "item split — notes §7"
+        },
+        {
+          "point": "Carried only to the BRS: cheques issued but not presented, cheques deposited but not credited (the bank's pending work), and the BANK's errors (only the bank can fix its ledger)",
+          "marks": 1,
+          "citation": "item split — notes §7"
+        },
+        {
+          "point": "At year end the amendment entries must actually be passed because the balance sheet must show the ADJUSTED cash book balance as cash at bank — the unadjusted figure omits known items",
+          "marks": 1,
+          "citation": "balance sheet figure — notes §7"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Amended cash book split + balance sheet rule",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c3-05",
+      "topic": "Ch 3 · BRS · Practical",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "On 31 March 2026 the cash book of Lamba Textiles, Panipat, shows a bank overdraft of ₹34,800. Investigation reveals: (a) cheques of ₹22,000 issued in March, of which cheques of ₹15,000 were presented by 31 March; (b) cheques of ₹18,500 deposited, of which ₹11,300 had been credited; (c) a receipt of ₹3,100 from Suresh was entered on the credit side of the bank column (the cheque was duly collected); (d) a cheque issued for ₹2,860 was entered as ₹2,680 (the bank paid ₹2,860); (e) interest on overdraft of ₹720 appears only in the pass book; (f) the bank wrongly credited the firm's account with ₹1,900 belonging to another customer. Prepare a bank reconciliation statement and find the balance as per the pass book. (10 marks)",
+      "skeleton": [
+        {
+          "point": "Timing slices: unpresented cheques = 22,000 − 15,000 = 7,000 (+); uncredited deposits = 18,500 − 11,300 = 7,200 (−) — only the outstanding slices enter the BRS",
+          "marks": 2,
+          "citation": "slices — notes §5, worked example 4"
+        },
+        {
+          "point": "(c) wrong-side error: cash book is 2 × 3,100 = 6,200 too low → +6,200 (wrong-side errors move the balance by twice the amount)",
+          "marks": 2,
+          "citation": "error sizing — notes §4"
+        },
+        {
+          "point": "(d) wrong-amount error: payment under-recorded by 2,860 − 2,680 = 180 → cash book 180 too high → −180 (difference only, never doubled)",
+          "marks": 2,
+          "citation": "error sizing — notes §4"
+        },
+        {
+          "point": "(e) interest on overdraft −720 (bank debit not yet in the cash book)",
+          "marks": 1,
+          "citation": "bank-first items — notes §3"
+        },
+        {
+          "point": "(f) bank's wrong credit → pass book stands 1,900 higher → +1,900; no cash book entry — only the bank can reverse it",
+          "marks": 2,
+          "citation": "bank's errors — notes §4, §7"
+        },
+        {
+          "point": "Assemble: −34,800 + 7,000 − 7,200 + 6,200 − 180 − 720 + 1,900 = −27,800 → overdraft as per pass book ₹27,800",
+          "marks": 1,
+          "citation": "signed walk — notes §6"
+        }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "OD start + errors; answer OD ₹27,800",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c3-06",
+      "topic": "Ch 3 · BRS · Theory",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the purposes served by preparing a bank reconciliation statement regularly. Also state, with reason, whether the BRS forms part of the double-entry system. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Explains the difference between the two balances on a date, item by item, so neither record is blindly trusted",
+          "marks": 1,
+          "citation": "purposes — notes §8"
+        },
+        {
+          "point": "Catches errors in both books early, and discourages embezzlement (a pocketed cheque shows up as a deposit that never reaches the pass book)",
+          "marks": 1,
+          "citation": "purposes — notes §8"
+        },
+        {
+          "point": "Reveals slow collections and stale unpresented cheques needing chasing or reversal; fixes the true bank position for the final accounts",
+          "marks": 1,
+          "citation": "purposes — notes §8"
+        },
+        {
+          "point": "Not part of double entry: it is a memorandum STATEMENT, not an account — no debit/credit sides, nothing posted from it, not part of the ledger (the amendment entries are ordinary cash book entries, not postings from the BRS)",
+          "marks": 1,
+          "citation": "nature — notes §8"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Purposes of BRS + statement-not-account",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}

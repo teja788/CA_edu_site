@@ -353,3 +353,47 @@ Triage rules:
 - [ ] **AS 23 unrealised-profit elimination** to the extent of the investor's
   interest (both directions) — follows the ASI-derived explanation; confirm
   against current SM text.
+## theoretical-framework — VERIFY 2026-08-07
+
+- [ ] **New chapter (Ch 1, Theoretical Framework) authored 7 Aug 2026** — notes
+  (473-line MDX), bank (53 questions: 45 MCQs · 6 descriptives · 2 case items,
+  9 machine-verified numericals) and citations file shipped together. Reviewer
+  should spot-check the citations rows against SM Ch 1 (May 2026 ed.).
+- [ ] **AS 1 three-assumptions rule** — bank and notes state exactly three
+  fundamental assumptions (going concern, consistency, accrual) with the
+  disclose-only-if-departed rule. Sight the AS 1 text/SM wording.
+- [ ] **Policy vs estimate line** — depreciation METHOD treated as an accounting
+  policy while useful life is an estimate (prospective revision). Confirm the SM
+  Ch 1 framing matches (this interacts with the AS 10 position used in Ch 5).
+- [ ] **Qualitative characteristics set** — four principal characteristics
+  (understandability, relevance, reliability, comparability) with materiality as
+  a threshold of relevance, per the ICAI Framework as summarised for Foundation.
+  Confirm the SM presents the same four-way split at Foundation level.
+- [ ] **Capital vs revenue classification battery** — the classification calls in
+  the MCQs follow SM conventions (e.g. carriage on new machinery capitalised,
+  heavy advertising as deferred revenue expenditure treatment). Re-check any row
+  the reviewer finds arguable against the SM's own classification examples.
+- [ ] **AICPA definition fragment** — used as a short attributed fragment (as the
+  SM itself does). Confirm the attribution stays and no longer quote crept in.
+## accounting-process — VERIFY 2026-08-07
+
+- [ ] **New chapter (Ch 2, Accounting Process) authored 7 Aug 2026** — notes (530-line MDX), bank (51 questions, 22 machine-verified numericals), citations; reviewer should spot-check citations rows against SM Ch 2 (May 2026 ed.).
+- [ ] **Answer-key distribution is badly skewed** — 34 of the 45 MCQs key to option **A**, 7 to B, 4 to C and **none to D**; among the 22 numericals it is 21 A / 1 B. Nothing is factually wrong (all 22 numericals recompute correctly), but a student who guesses "A" scores ~75% on this chapter. Recommend reshuffling option order across roughly half the bank and re-running `scripts/verify_numerical/run.py` afterwards, since the verifier maps computed values to option keys.
+- [ ] **q-f1c2-002 — Outstanding Salaries A/c classified as a *representative personal* account.** This is the ICAI SM line and the notes §2 line, but some textbooks treat outstanding-expense accounts as liability/nominal under the modern map. Confirm the SM Ch 2 wording still supports the representative-personal answer, and that option B's explanation (salary expense = nominal, outstanding amount = personal) reads as the SM does.
+- [ ] **q-f1c2-039 and q-f1c2-041 — the "zero effect on net profit" treatment of stationery wrongly debited to Purchases A/c.** Both questions assume the stationery is a revenue expense of the *same* year, so removing it from Purchases and charging it to Stationery leaves net profit untouched (gross profit alone moves). Confirm a CA is comfortable with this being asserted as an exact zero, and with q-f1c2-039's direction on error (i) — capitalised **repairs** *reduce* corrected profit, the mirror image of q-f1c2-040's capitalisable installation wages, which *raise* it. This capital/revenue direction pair is the highest-risk judgment call in the chapter.
+- [ ] **q-f1c2-036 and q-f1c2-042 — the one-sided/two-sided calls on subsidiary-book casting errors.** Both treat "the purchases book was overcast/undercast" as a purely **one-sided** error (only the periodic total posted to Purchases A/c is wrong; the individual suppliers' accounts, posted entry by entry, are unaffected), so the correction must run through Suspense. Confirm this is how the SM frames it, since q-f1c2-042's whole answer ("Suspense closes to nil") depends on it, as does q-f1c2-036's claim that a book overcast IS caught by the trial balance.
+- [ ] **q-f1c2-030 — "a credit balance in the cash column is impossible" stated as an absolute.** Notes §6 says the same. Confirm the reviewer is happy with the unqualified phrasing (the usual textbook justification is that you cannot pay out more physical cash than you hold).
+- [ ] **q-f1c2-015 / q-f1c2-017 — the "goods vs assets" filter applied to a specific trade.** Both turn on the firm being a *cloth merchant*, so a computer / office furniture bought on credit goes to the journal proper rather than the purchases book. Confirm the stems make the firm's line of business unambiguous enough for an examiner-grade question, and that q-f1c2-015's distractor D (which adds the computer) is framed as an error of principle consistently with notes §5's callout.
+- [ ] **No bank corrections were needed** — all 22 numerical questions recomputed to the bank's existing keys on the first verifier run (`22 numerical question(s) verified, 0 failure(s)`), and descriptive question d-f1c2-06's stem is internally consistent (debit column short ₹2,700 = ₹3,500 sales overcast − ₹800 short credit to Hari). No key or explanation was edited.
+## bank-reconciliation-statement — VERIFY 2026-08-07
+
+- [ ] **New chapter (Ch 3, Bank Reconciliation Statement) authored 7 Aug 2026** — notes (403-line MDX), bank (51 questions, 26 machine-verified numericals), citations; reviewer should spot-check citations rows against SM Ch 3 (May 2026 ed.).
+- [ ] **Signed plus/minus convention replaces the SM's Add/Less case tables.** Notes §5–§6 and every numerical write favourable balances positive and overdrafts negative, then run ONE formula for all four starting points (reverse walk = flip every sign), instead of the four separate "add if favourable / less if overdraft" grids many texts print. Confirm this is presentationally acceptable for ICAI answer-writing and arithmetically equivalent in every case the SM tabulates — especially the overdraft-start cases (q-f1c3-004 to q-f1c3-006, q-f1c3-010 to q-f1c3-012, q-f1c3-016, q-f1c3-025, d-f1c3-05), where the answer is reported by reading the sign of the result ("−23,500 → overdraft ₹23,500").
+- [ ] **Amended-cash-book item split.** The convention used (notes §7, q-f1c3-013/014/016/037/040/045, d-f1c3-04): bank-first items the trader did not know about (charges, interest charged and allowed, standing instructions, direct deposits, collections, dishonours) AND the trader's own errors go INTO the cash book; cheques issued-not-presented, deposits not credited, and the BANK's errors stay BRS-only. Confirm ICAI treats the trader's own errors as amended-cash-book items (rather than BRS lines) under this heading.
+- [ ] **Own-error correction inside an amended cash book from an overdraft — q-f1c3-016.** A deposit of ₹3,500 duly collected but never entered in the cash book is treated as the trader's OWN omission and added into the amended cash book (answer: overdraft ₹3,340). A reader could instead classify it as a timing/bank item and leave it in the BRS, giving a different amended balance. Confirm the omission reading is the intended one on the stem's wording ("deposited and duly collected was never entered in the cash book").
+- [ ] **Bank's own error kept out of the trader's books — q-f1c3-021, q-f1c3-038, d-f1c3-05(f).** Position taken: pass NO cash book entry; the bank's wrong debit/credit stays a BRS reconciling item until the bank reverses its ledger, and its effect is single-sized (not doubled). Confirm ICAI does not expect a memorandum correction in the trader's books.
+- [ ] **Error-sizing rules (the doubling boundary) — notes §4, q-f1c3-017/018/019/020/022/032, d-f1c3-05.** Wrong SIDE = twice the amount; transposition/wrong amount = the difference only; omission, wrong COLUMN (bank entry parked in the cash column) and casting over/undercast = the amount ONCE. The wrong-column case (q-f1c3-019: ₹2,750 payment entered in the cash column, treated as −2,750, single-sized) is the one most often mis-taught as a doubled error — confirm the single-sized treatment.
+- [ ] **Dishonour treated as cheque amount PLUS the bank's dishonour charges as two separate reconciling amounts** — q-f1c3-003 (₹3,200 + ₹200), q-f1c3-025 (₹5,000 + ₹100), q-f1c3-014, notes §3 and Common mistakes. Confirm both components are expected, and that on the reverse (pass book → cash book) walk they are added back rather than deducted.
+- [ ] **Requirement-line dependency — q-f1c3-045, notes §7 pointer.** Position taken: "prepare a BRS WITHOUT adjusting the cash book" sends every given item (charges, standing instructions, errors and all) straight into the statement, producing a different presentation from the amended-cash-book route on identical facts. Confirm this is how ICAI marks the two wordings.
+
+_No factual corrections were needed to the MDX or the bank during this citations pass; `scripts/verify_numerical/run.py` re-run on 7 Aug 2026 reports 26 numericals verified, 0 failures._

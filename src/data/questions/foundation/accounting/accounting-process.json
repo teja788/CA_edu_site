@@ -1,0 +1,2141 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "accounting-process",
+  "chapter": "Ch 2 — Accounting Process",
+  "questions": [
+    {
+      "id": "q-f1c2-001",
+      "topic": "Ch 2 · Accounting Process · Double entry",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the double entry system of book-keeping:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Every transaction is recorded with a debit in one account and an equal credit in another",
+          "explanation": "Correct. Every transaction has a two-sided character — benefit received and benefit given — so one account is debited and another credited with an equal amount, always."
+        },
+        {
+          "key": "B",
+          "text": "Every transaction is recorded in two different books",
+          "explanation": "Two ACCOUNTS, not two books — both aspects can even sit in the same book (a contra entry lives entirely inside the cash book)."
+        },
+        {
+          "key": "C",
+          "text": "Only cash transactions are recorded in full; credit transactions wait for settlement",
+          "explanation": "That is single-entry (incomplete records) thinking. Double entry records credit transactions immediately and completely."
+        },
+        {
+          "key": "D",
+          "text": "Every transaction is recorded twice in the same account, once on each side",
+          "explanation": "That would cancel the entry to nothing. The two aspects go to two DIFFERENT accounts, one on each side."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Double entry, §1 →",
+        "href": "/foundation/accounting/accounting-process/#1-one-transaction-two-effects-the-double-entry-system"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Double entry: every debit has an equal and corresponding credit",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-002",
+      "topic": "Ch 2 · Accounting Process · Account classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the traditional classification, Outstanding Salaries A/c is best classified as a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Real account",
+          "explanation": "Real accounts cover properties and possessions (cash, machinery, goodwill) — an amount owed to employees is not a possession."
+        },
+        {
+          "key": "B",
+          "text": "Representative personal account",
+          "explanation": "Correct. It LOOKS like an expense but actually stands for the employees to whom salary is owed — a group of persons — so it is personal (representative), not nominal."
+        },
+        {
+          "key": "C",
+          "text": "Artificial personal account",
+          "explanation": "Artificial personal accounts are bodies like firms, banks and clubs. Outstanding salaries REPRESENTS natural persons collectively — that makes it representative, not artificial."
+        },
+        {
+          "key": "D",
+          "text": "Nominal account",
+          "explanation": "The salary EXPENSE is nominal; the OUTSTANDING amount represents the persons still to be paid — the classic representative-personal trap."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Kinds of accounts, §2 →",
+        "href": "/foundation/accounting/accounting-process/#2-kinds-of-accounts-and-the-rules-of-debit-and-credit"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Representative personal accounts: outstanding/prepaid items stand for persons",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-003",
+      "topic": "Ch 2 · Accounting Process · Account classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Capital A/c and Drawings A/c are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both nominal accounts",
+          "explanation": "Neither is an expense or income of the business — both belong to the owner, a person. This is one of the most-missed classifications in the section."
+        },
+        {
+          "key": "B",
+          "text": "Both real accounts",
+          "explanation": "Real accounts are properties and possessions. Capital is what the business OWES the owner — a personal account relationship."
+        },
+        {
+          "key": "C",
+          "text": "Both personal accounts",
+          "explanation": "Correct. Both accounts belong to the owner — a person — so both are personal accounts, even though drawings feels like an 'expense' and capital feels like a 'fund'."
+        },
+        {
+          "key": "D",
+          "text": "Capital personal, drawings nominal",
+          "explanation": "Drawings is money the OWNER takes out — it reduces what the business owes the owner. It is personal, not a business expense."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Kinds of accounts, §2 →",
+        "href": "/foundation/accounting/accounting-process/#2-kinds-of-accounts-and-the-rules-of-debit-and-credit"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Capital and Drawings = personal accounts of the owner",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-004",
+      "topic": "Ch 2 · Accounting Process · Account classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Meena General Stores keeps an account with Nashik Urban Co-operative Bank. In Meena's books, the Bank A/c is a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Representative personal account",
+          "explanation": "Representative personal accounts stand for a GROUP of persons behind an item (outstanding salaries). The bank is itself one artificial person, dealt with directly."
+        },
+        {
+          "key": "B",
+          "text": "Real account, because bank balance is money",
+          "explanation": "It FEELS like money, but the account records a relationship with the bank — an artificial person that owes Meena her balance. That makes it personal."
+        },
+        {
+          "key": "C",
+          "text": "Nominal account",
+          "explanation": "Nominal accounts are expenses, losses, incomes and gains — a bank balance is none of these."
+        },
+        {
+          "key": "D",
+          "text": "Artificial personal account",
+          "explanation": "Correct. The bank is an artificial person (like a firm or a club); the account tracks what it owes Meena (or what she owes it, on overdraft)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Kinds of accounts, §2 →",
+        "href": "/foundation/accounting/accounting-process/#2-kinds-of-accounts-and-the-rules-of-debit-and-credit"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Bank = artificial personal account, not real",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-005",
+      "topic": "Ch 2 · Accounting Process · Golden rules",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The golden rule for NOMINAL accounts is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Debit all expenses and losses, credit all incomes and gains",
+          "explanation": "Correct. Nominal accounts are the expense/loss and income/gain accounts, and this rule sets their directions."
+        },
+        {
+          "key": "B",
+          "text": "Debit what comes in, credit what goes out",
+          "explanation": "That is the rule for REAL accounts — it needs a property or possession to move."
+        },
+        {
+          "key": "C",
+          "text": "Debit the receiver, credit the giver",
+          "explanation": "That is the rule for PERSONAL accounts — it needs a person to receive or give."
+        },
+        {
+          "key": "D",
+          "text": "Debit all incomes and gains, credit all expenses and losses",
+          "explanation": "Reversed — this would show rent paid as a credit. Expenses and losses are DEBITED."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Kinds of accounts, §2 →",
+        "href": "/foundation/accounting/accounting-process/#2-kinds-of-accounts-and-the-rules-of-debit-and-credit"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Golden rules — nominal: debit expenses/losses, credit incomes/gains",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-006",
+      "topic": "Ch 2 · Accounting Process · Modern classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the modern (accounting equation) classification, an INCREASE in a liability is recorded as a ______ and a DECREASE in an asset as a ______:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Debit; credit",
+          "explanation": "The asset half is right, but liabilities INCREASE on the credit side — debiting a liability reduces it."
+        },
+        {
+          "key": "B",
+          "text": "Credit; credit",
+          "explanation": "Correct. Liabilities rise by credit; assets rise by debit, so a FALL in an asset is a credit. (Example: buying goods on credit — creditor up (credit), and when later paid, cash down (credit).)"
+        },
+        {
+          "key": "C",
+          "text": "Credit; debit",
+          "explanation": "The liability half is right, but a decrease in an asset is a CREDIT — debit is the direction in which assets grow."
+        },
+        {
+          "key": "D",
+          "text": "Debit; debit",
+          "explanation": "Both reversed — this applies the asset rule to liabilities and the liability rule to assets."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Kinds of accounts, §2 →",
+        "href": "/foundation/accounting/accounting-process/#2-kinds-of-accounts-and-the-rules-of-debit-and-credit"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Modern map: liability increase = credit; asset decrease = credit",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-007",
+      "topic": "Ch 2 · Accounting Process · Opening entry",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 1 April 2026 the books of Sethi Kirana Stores, Indore show: cash ₹12,000, bank ₹58,000, stock ₹90,000, debtors ₹45,000, furniture ₹35,000, creditors ₹60,000 and a bank loan of ₹30,000. In the opening entry, Capital A/c is credited with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,40,000",
+          "explanation": "This credits the whole of the assets to Capital and forgets that the creditors and the loan take their own credits of ₹90,000 in the same compound entry."
+        },
+        {
+          "key": "B",
+          "text": "₹1,15,000",
+          "explanation": "This also deducts the furniture of ₹35,000, treating a fixed asset as if it were a liability. Furniture is debited in the opening entry like every other asset."
+        },
+        {
+          "key": "C",
+          "text": "₹1,50,000",
+          "explanation": "Correct. Total assets = 12,000 + 58,000 + 90,000 + 45,000 + 35,000 = 2,40,000; total liabilities = 60,000 + 30,000 = 90,000; opening capital = 2,40,000 − 90,000 = ₹1,50,000 — the balancing figure of the opening entry."
+        },
+        {
+          "key": "D",
+          "text": "₹3,30,000",
+          "explanation": "This ADDS the liabilities to the assets instead of deducting them — capital is assets MINUS liabilities."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The journal, §3 →",
+        "href": "/foundation/accounting/accounting-process/#3-the-journal-where-every-transaction-enters-first"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Opening capital = total assets − total liabilities",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-008",
+      "topic": "Ch 2 · Accounting Process · Compound entries",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Meena buys a weighing machine from Zenith Engineering for ₹84,000, paying ₹50,000 by cheque and leaving the balance on credit. In the compound journal entry, Zenith Engineering's account is credited with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹84,000",
+          "explanation": "This credits Zenith with the full price — but Bank already takes a credit of ₹50,000 in the same entry, so total credits (1,34,000) would exceed the debit of 84,000."
+        },
+        {
+          "key": "B",
+          "text": "₹50,000",
+          "explanation": "This swaps the two credits — ₹50,000 is what went out of the BANK; Zenith is owed only the unpaid balance."
+        },
+        {
+          "key": "C",
+          "text": "₹42,000",
+          "explanation": "This splits the price into equal halves instead of using the actual cheque figure given — the balance owed is 84,000 − 50,000, not 84,000 ÷ 2."
+        },
+        {
+          "key": "D",
+          "text": "₹34,000",
+          "explanation": "Correct. Machinery A/c Dr 84,000 — To Bank A/c 50,000, To Zenith Engineering A/c 34,000 (84,000 − 50,000). Total debits still equal total credits."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The journal, §3 →",
+        "href": "/foundation/accounting/accounting-process/#3-the-journal-where-every-transaction-enters-first"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Compound entry: one debit, several credits; balance to supplier",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-009",
+      "topic": "Ch 2 · Accounting Process · Journal",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Divya Traders, Pune journalises for April 2026: business started with cash ₹2,50,000; goods bought for cash ₹30,000; goods sold on credit to Farhan ₹42,000; rent paid in cash ₹8,000. The total of the DEBIT column of these journal entries is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,30,000",
+          "explanation": "Correct. Debits: Cash 2,50,000 + Purchases 30,000 + Farhan 42,000 + Rent 8,000 = ₹3,30,000 — and the credit column must total the same before you move on."
+        },
+        {
+          "key": "B",
+          "text": "₹2,88,000",
+          "explanation": "This omits the credit sale to Farhan (2,50,000 + 30,000 + 8,000) — treating a transaction with no cash movement as unrecordable. Double entry records credit transactions immediately."
+        },
+        {
+          "key": "C",
+          "text": "₹6,60,000",
+          "explanation": "This adds the debit AND credit columns together — each column separately totals 3,30,000; the question asks for one column."
+        },
+        {
+          "key": "D",
+          "text": "₹3,22,000",
+          "explanation": "This omits the rent payment of ₹8,000 — an expense is debited like any other aspect (3,30,000 − 8,000)."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The journal, §3 →",
+        "href": "/foundation/accounting/accounting-process/#3-the-journal-where-every-transaction-enters-first"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "In any batch of entries, total debits = total credits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-010",
+      "topic": "Ch 2 · Accounting Process · Journal",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about the journal is CORRECT?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The L.F. column records the invoice number of the transaction",
+          "explanation": "L.F. (ledger folio) records the PAGE of the ledger where each account lives — the cross-reference between journal and ledger."
+        },
+        {
+          "key": "B",
+          "text": "It is the book of original entry, recording transactions chronologically with a narration for each",
+          "explanation": "Correct. Transactions enter the journal (or the relevant subsidiary book) FIRST, in date order, and are then posted to the ledger."
+        },
+        {
+          "key": "C",
+          "text": "It is the principal book, showing each account's complete story in one place",
+          "explanation": "That describes the LEDGER. The journal records both aspects of each transaction together; the ledger separates them account by account."
+        },
+        {
+          "key": "D",
+          "text": "Transactions are first recorded in the ledger and then journalised",
+          "explanation": "Reversed — the flow is journal → ledger (posting), never the other way."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The journal, §3 →",
+        "href": "/foundation/accounting/accounting-process/#3-the-journal-where-every-transaction-enters-first"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Journal = chronological book of original entry; L.F. = ledger page",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-011",
+      "topic": "Ch 2 · Accounting Process · Ledger balancing",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Divya Traders sold goods on credit to Farhan for ₹42,000. Farhan later returned goods worth ₹4,000 and paid ₹25,000 in cash. On balancing, Farhan's account shows:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A debit balance of ₹9,000",
+          "explanation": "This deducts the returns twice (42,000 − 4,000 − 4,000 − 25,000) — each aspect is posted once."
+        },
+        {
+          "key": "B",
+          "text": "A credit balance of ₹13,000",
+          "explanation": "Side flipped. The c/d entry does sit on the credit side, but the balance is NAMED by the b/d side — here the debit side was heavier, so it is a debit balance."
+        },
+        {
+          "key": "C",
+          "text": "A debit balance of ₹13,000",
+          "explanation": "Correct. 42,000 − 4,000 − 25,000 = ₹13,000; the debit side is heavier, so Farhan is a debtor for ₹13,000. Balance c/d sits on the credit (lighter) side; b/d reopens on the debit side."
+        },
+        {
+          "key": "D",
+          "text": "A debit balance of ₹17,000",
+          "explanation": "This forgets the sales returns of ₹4,000 (42,000 − 25,000) — returned goods reduce what Farhan owes."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The ledger, §4 →",
+        "href": "/foundation/accounting/accounting-process/#4-the-ledger-posting-and-balancing"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Balancing: difference on lighter side as c/d; b/d side names the balance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-012",
+      "topic": "Ch 2 · Accounting Process · Ledger balancing",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A ledger account has: debit side — opening balance ₹10,000 and sales ₹35,000; credit side — cash received ₹28,000 and returns ₹2,000. After writing the Balance c/d and ruling off, EACH side of the account totals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹75,000",
+          "explanation": "This adds both sides together (45,000 + 30,000) — each side is totalled separately, and both are made to agree at 45,000."
+        },
+        {
+          "key": "B",
+          "text": "₹15,000",
+          "explanation": "That is the Balance c/d itself (45,000 − 30,000), not the ruled-off total of each side."
+        },
+        {
+          "key": "C",
+          "text": "₹30,000",
+          "explanation": "This totals only the credit entries (28,000 + 2,000) — after the c/d is inserted, both sides are made equal to the HEAVIER side's total."
+        },
+        {
+          "key": "D",
+          "text": "₹45,000",
+          "explanation": "Correct. The heavier (debit) side totals 10,000 + 35,000 = 45,000; the c/d of 15,000 is written on the lighter (credit) side so that BOTH sides total ₹45,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The ledger, §4 →",
+        "href": "/foundation/accounting/accounting-process/#4-the-ledger-posting-and-balancing"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Ruled-off totals = heavier side's total, both sides",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-013",
+      "topic": "Ch 2 · Accounting Process · Ledger",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In ledger accounts, the prefixes 'To' and 'By':",
+      "options": [
+        {
+          "key": "A",
+          "text": "Are pure convention — 'To' before entries on the debit side, 'By' on the credit side",
+          "explanation": "Correct. The prefixes carry no meaning beyond marking the side; each entry names the OTHER account of the double entry."
+        },
+        {
+          "key": "B",
+          "text": "Identify the receiver and the giver under the personal-account rule",
+          "explanation": "The golden rules decide WHICH account is debited; 'To'/'By' merely decorate the entries once the side is chosen."
+        },
+        {
+          "key": "C",
+          "text": "Mean money paid TO someone and received BY someone",
+          "explanation": "Tempting, but no — 'To Sales A/c' in a debtor's account involves nobody being paid. The words are tradition only."
+        },
+        {
+          "key": "D",
+          "text": "Are compulsory under the Companies Act",
+          "explanation": "No law prescribes them — this chapter quotes no statute; the prefixes are bookkeeping custom."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The ledger, §4 →",
+        "href": "/foundation/accounting/accounting-process/#4-the-ledger-posting-and-balancing"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "'To' = debit side, 'By' = credit side — convention only",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-014",
+      "topic": "Ch 2 · Accounting Process · Ledger",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "At year end, which accounts are NOT balanced and carried forward to the next year?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bank accounts",
+          "explanation": "The bank account is a personal account and its balance certainly carries forward — you do not lose your bank balance at midnight on 31 March."
+        },
+        {
+          "key": "B",
+          "text": "Nominal accounts",
+          "explanation": "Correct. Expenses and incomes are closed by transfer to the Trading and Profit & Loss Account — a fresh year starts them at nil. Only personal and real accounts carry balances forward."
+        },
+        {
+          "key": "C",
+          "text": "Personal accounts",
+          "explanation": "Debtors, creditors, capital — all personal accounts carry forward; the relationships continue into the new year."
+        },
+        {
+          "key": "D",
+          "text": "Real accounts",
+          "explanation": "Real accounts (cash, machinery, stock) carry their balances forward — they feed the next year's opening entry."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The ledger, §4 →",
+        "href": "/foundation/accounting/accounting-process/#4-the-ledger-posting-and-balancing"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Nominal accounts close to Trading/P&L; personal and real carry forward",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-015",
+      "topic": "Ch 2 · Accounting Process · Subsidiary books",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sethi Stores, a cloth merchant, had these March transactions: (i) cloth bought on credit from Anand Mills, list price ₹40,000 less 10% trade discount; (ii) cloth bought for cash ₹12,000; (iii) a computer bought on credit from Digitek ₹25,000; (iv) cloth bought on credit from Bharat Textiles ₹18,000. The total of the PURCHASES BOOK is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹66,000",
+          "explanation": "This includes the cash purchase of ₹12,000 — cash purchases belong to the cash book, never the purchases book."
+        },
+        {
+          "key": "B",
+          "text": "₹79,000",
+          "explanation": "This includes the computer (54,000 + 25,000) — a credit purchase of an ASSET goes to the journal proper, because computers are not what a cloth merchant trades in."
+        },
+        {
+          "key": "C",
+          "text": "₹54,000",
+          "explanation": "Correct. Only credit purchases of GOODS qualify: Anand Mills net of trade discount (40,000 − 4,000 = 36,000) + Bharat Textiles 18,000 = ₹54,000. The cash purchase goes to the cash book; the computer goes to the journal proper."
+        },
+        {
+          "key": "D",
+          "text": "₹58,000",
+          "explanation": "This records Anand Mills at the gross list price of 40,000 — trade discount is deducted on the invoice and the entry is made NET; it never appears in any account."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Subsidiary books, §5 →",
+        "href": "/foundation/accounting/accounting-process/#5-subsidiary-books-splitting-the-journal"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Purchases book: credit purchases of goods only, net of trade discount",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-016",
+      "topic": "Ch 2 · Accounting Process · Trade vs cash discount",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Rhea Fabrics sells goods to Kanchan on credit: list price ₹50,000 less 15% trade discount, with a further 2% cash discount offered for payment within 10 days. The amount entered in the SALES BOOK is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹50,000",
+          "explanation": "This records the gross list price — trade discount is deducted on the invoice itself and never appears in any account."
+        },
+        {
+          "key": "B",
+          "text": "₹7,500",
+          "explanation": "That is the trade discount itself — the one figure guaranteed never to appear in any account or book."
+        },
+        {
+          "key": "C",
+          "text": "₹41,650",
+          "explanation": "This deducts the cash discount too (42,500 × 0.98) — but at the point of sale no payment has happened; cash discount belongs to the settlement, not the sale."
+        },
+        {
+          "key": "D",
+          "text": "₹42,500",
+          "explanation": "Correct. Entries are made NET of trade discount: 50,000 − 7,500 = ₹42,500. The cash discount is recorded only if and when Kanchan actually pays within the period — nothing about it enters the sales book."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Subsidiary books, §5 →",
+        "href": "/foundation/accounting/accounting-process/#5-subsidiary-books-splitting-the-journal"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Trade discount: recorded net; cash discount: recorded at settlement",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-017",
+      "topic": "Ch 2 · Accounting Process · Subsidiary books",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Office furniture bought on credit from Modern Furnishers by a cloth merchant should be recorded in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The journal proper",
+          "explanation": "Correct. Credit purchases and sales of ASSETS are among the leftovers the journal proper keeps — furniture is not what a cloth merchant trades in."
+        },
+        {
+          "key": "B",
+          "text": "The purchases book",
+          "explanation": "The purchases book takes only credit purchases of GOODS traded in. Left here, Furniture ends up debited to Purchases A/c — an error of principle that overstates expenses and understates assets."
+        },
+        {
+          "key": "C",
+          "text": "The cash book",
+          "explanation": "No cash or bank moved — the purchase is on credit. The cash book records only cash and bank movements."
+        },
+        {
+          "key": "D",
+          "text": "The sales book",
+          "explanation": "Nothing was sold — and the sales book takes only credit sales of goods anyway."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Subsidiary books, §5 →",
+        "href": "/foundation/accounting/accounting-process/#5-subsidiary-books-splitting-the-journal"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Credit purchase of an asset → journal proper",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-018",
+      "topic": "Ch 2 · Accounting Process · Subsidiary books",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The source document for recording entries in the SALES RETURNS (returns inward) book is the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pay-in slip",
+          "explanation": "Pay-in slips evidence bank deposits and support the cash book."
+        },
+        {
+          "key": "B",
+          "text": "Credit note",
+          "explanation": "Correct. When a customer sends goods back, the seller issues a credit note (the customer's account will be credited) — that document feeds the sales returns book."
+        },
+        {
+          "key": "C",
+          "text": "Outward invoice",
+          "explanation": "The outward invoice supports the SALES book — the original sale, not the return."
+        },
+        {
+          "key": "D",
+          "text": "Debit note",
+          "explanation": "A debit note supports the PURCHASE RETURNS book — the buyer 'debits' the supplier when sending goods back."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Subsidiary books, §5 →",
+        "href": "/foundation/accounting/accounting-process/#5-subsidiary-books-splitting-the-journal"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sales returns book ← credit note; purchase returns book ← debit note",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-019",
+      "topic": "Ch 2 · Accounting Process · Subsidiary books",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The purchases book records:",
+      "options": [
+        {
+          "key": "A",
+          "text": "All purchases made by the firm, whether of goods or assets",
+          "explanation": "Two filters apply, and this fails both: only GOODS (things traded in), and only on CREDIT."
+        },
+        {
+          "key": "B",
+          "text": "Credit purchases of goods and of assets",
+          "explanation": "A machine bought on credit is not 'purchases' — assets on credit go to the journal proper."
+        },
+        {
+          "key": "C",
+          "text": "Only credit purchases of goods dealt in by the firm",
+          "explanation": "Correct. Both filters are strict: credit transactions only, and goods (the firm's trading stock) only. Cash purchases → cash book; credit asset purchases → journal proper."
+        },
+        {
+          "key": "D",
+          "text": "Cash and credit purchases of goods",
+          "explanation": "Cash purchases go to the cash book — the purchases book never sees them."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Subsidiary books, §5 →",
+        "href": "/foundation/accounting/accounting-process/#5-subsidiary-books-splitting-the-journal"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Goods books take only credit transactions of goods",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-020",
+      "topic": "Ch 2 · Accounting Process · Trade vs cash discount",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about TRADE discount is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It appears in the discount columns of the triple-column cash book",
+          "explanation": "The discount columns hold CASH discount (allowed on the receipts side, received on the payments side) — never trade discount."
+        },
+        {
+          "key": "B",
+          "text": "It is debited to Discount Allowed A/c when granted",
+          "explanation": "Discount Allowed A/c records CASH discount on prompt receipts — trade discount never reaches any account."
+        },
+        {
+          "key": "C",
+          "text": "It is credited to the customer's account at year end",
+          "explanation": "There is nothing to credit — the sale was recorded net from the start."
+        },
+        {
+          "key": "D",
+          "text": "It is never recorded separately — transactions are entered net of it",
+          "explanation": "Correct. Trade discount is a deduction from the list price shown on the invoice; the books see only the net figure."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Subsidiary books, §5 →",
+        "href": "/foundation/accounting/accounting-process/#5-subsidiary-books-splitting-the-journal"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Trade discount never recorded; entries net of it",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-021",
+      "topic": "Ch 2 · Accounting Process · Cash book discount columns",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In March, Anand Traders received ₹19,600 from Bela in full settlement of her account of ₹20,000, and ₹14,550 from Chirag in full settlement of ₹15,000. At month end, the discount-allowed column of the triple-column cash book is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Totalled at ₹850, the total being posted to the debit of Discount Allowed A/c",
+          "explanation": "Correct. Bela's discount 400 + Chirag's 450 = ₹850. Discount columns are memoranda columns — totalled, never balanced — and the period total posts in one stroke to Discount Allowed A/c (a loss, so debit)."
+        },
+        {
+          "key": "B",
+          "text": "Totalled at ₹450",
+          "explanation": "This picks up only Chirag's discount and misses Bela's ₹400 (20,000 − 19,600)."
+        },
+        {
+          "key": "C",
+          "text": "Totalled at ₹400",
+          "explanation": "This picks up only Bela's discount and misses Chirag's ₹450 (15,000 − 14,550)."
+        },
+        {
+          "key": "D",
+          "text": "Totalled at ₹1,700",
+          "explanation": "This counts each discount twice (850 × 2) — as if a leg were entered on both sides. Each discount sits once, in the debit-side discount column only."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Discount columns: totalled not balanced; total → Discount Allowed A/c (Dr)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-022",
+      "topic": "Ch 2 · Accounting Process · Cash book",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Anand Traders' cash book for March 2026: opening cash ₹9,000; cash sales ₹26,500; deposited ₹15,000 cash into the bank; paid wages ₹4,800 in cash; withdrew ₹3,000 from the bank for shop use; paid electricity ₹2,200 in cash. The closing balance of the CASH column is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹31,500",
+          "explanation": "This ignores the cash leg of the ₹15,000 deposit — a contra entry has a leg in BOTH columns: bank debited AND cash credited."
+        },
+        {
+          "key": "B",
+          "text": "₹16,500",
+          "explanation": "Correct. 9,000 + 26,500 − 15,000 (contra: cash to bank) − 4,800 + 3,000 (contra: bank to cash) − 2,200 = ₹16,500."
+        },
+        {
+          "key": "C",
+          "text": "₹10,500",
+          "explanation": "This treats the ₹3,000 withdrawal as a cash PAYMENT instead of a receipt — the money came INTO the till from the bank, so the cash column is debited."
+        },
+        {
+          "key": "D",
+          "text": "₹13,500",
+          "explanation": "This drops the ₹3,000 withdrawal entirely, as if marking it 'C' meant no entry — the 'C' only means no ledger posting; both cash-book legs are still made."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cash column with contra entries both ways",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-023",
+      "topic": "Ch 2 · Accounting Process · Cash book",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Continuing Anand Traders' March 2026 cash book: opening bank balance ₹42,000; cheque of ₹14,700 from Bela banked the same day; ₹15,000 cash deposited into the bank; paid Prakash by cheque ₹9,800; withdrew ₹3,000 from the bank for shop use; bank charges ₹250. The closing balance of the BANK column is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹61,650",
+          "explanation": "This misses the bank leg of the ₹3,000 withdrawal — when cash is drawn for office use, the bank column is credited even though the entry is a contra."
+        },
+        {
+          "key": "B",
+          "text": "₹58,900",
+          "explanation": "This ignores the bank charges of ₹250 — charges are a real payment through the bank column (and NOT a contra; the bank is the other party, not the till)."
+        },
+        {
+          "key": "C",
+          "text": "₹58,650",
+          "explanation": "Correct. 42,000 + 14,700 + 15,000 (contra in) − 9,800 − 3,000 (contra out) − 250 = ₹58,650."
+        },
+        {
+          "key": "D",
+          "text": "₹43,650",
+          "explanation": "This misses the bank leg of the ₹15,000 deposit — the deposit debits the bank column; only the ledger posting is dispensed with."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Bank column: cheques in, contras both ways, charges out",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-024",
+      "topic": "Ch 2 · Accounting Process · Bank overdraft",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nikhil Traders' bank column opens with an OVERDRAFT of ₹12,000. During the month, cheques of ₹30,000 were deposited and payments of ₹26,500 were made by cheque. The closing bank column shows:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A favourable (debit) balance of ₹8,500",
+          "explanation": "The arithmetic is right but the reading is wrong — a net CREDIT of 8,500 means the firm still owes the bank; that is an overdraft, not money in the bank."
+        },
+        {
+          "key": "B",
+          "text": "An overdraft of ₹15,500",
+          "explanation": "This reverses deposits and payments (−12,000 − 30,000 + 26,500) — deposits reduce an overdraft; payments deepen it."
+        },
+        {
+          "key": "C",
+          "text": "A favourable (debit) balance of ₹15,500",
+          "explanation": "This treats the opening overdraft as a favourable balance of 12,000 (12,000 + 30,000 − 26,500) — an overdraft opens on the CREDIT side."
+        },
+        {
+          "key": "D",
+          "text": "An overdraft (credit balance) of ₹8,500",
+          "explanation": "Correct. −12,000 + 30,000 − 26,500 = −8,500 — still a credit balance, i.e. an overdraft of ₹8,500. The bank column is the one cash-book column that CAN sit in credit."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Bank column may show credit balance = overdraft",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-025",
+      "topic": "Ch 2 · Accounting Process · Contra entries",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Meena's double-column cash book shows cash ₹5,000 and bank ₹40,000. She withdraws ₹10,000 from the bank for office use and marks both legs 'C'. Immediately after this entry, the cash and bank balances are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cash ₹15,000; bank ₹30,000",
+          "explanation": "Correct. The contra debits the cash column ₹10,000 (money into the till) and credits the bank column ₹10,000 — both legs inside the cash book, nothing posted to any ledger account."
+        },
+        {
+          "key": "B",
+          "text": "Cash ₹15,000; bank ₹40,000",
+          "explanation": "This records only the cash leg — the money did not appear from nowhere; the bank column must be credited."
+        },
+        {
+          "key": "C",
+          "text": "Cash ₹5,000; bank ₹40,000",
+          "explanation": "This treats 'C' as meaning 'entered elsewhere, skip the cash book' — the 'C' means the OPPOSITE: both legs live inside the cash book, and only the ledger posting is skipped."
+        },
+        {
+          "key": "D",
+          "text": "Cash ₹5,000; bank ₹30,000",
+          "explanation": "This records only the bank leg — the withdrawal reduces the bank AND swells the till; a contra always has two legs."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Contra: debit cash column, credit bank column (or vice versa), no posting",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-026",
+      "topic": "Ch 2 · Accounting Process · Cash discount",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Meena received a cheque of ₹9,750 from Dinesh in full settlement of his account of ₹10,000. The amount entered in the discount-allowed column is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹500",
+          "explanation": "This doubles the discount, as if it were entered on both sides — the discount sits once, in the debit-side column only."
+        },
+        {
+          "key": "B",
+          "text": "₹250",
+          "explanation": "Correct. 10,000 − 9,750 = ₹250 — a cash discount for prompt settlement, entered in the discount-allowed column on the receipts side; Dinesh's account is credited with the full ₹10,000."
+        },
+        {
+          "key": "C",
+          "text": "Nil — settlement discounts are never recorded",
+          "explanation": "This confuses cash discount with TRADE discount. Trade discount is never recorded; CASH discount is — Discount Allowed is a real loss account."
+        },
+        {
+          "key": "D",
+          "text": "₹9,750",
+          "explanation": "That is the cheque amount, which goes in the BANK (or cash) column — the discount column takes only the ₹250 concession."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Cash discount = amount due − amount accepted in full settlement",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-027",
+      "topic": "Ch 2 · Accounting Process · Cash book",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The cash book is unusual among the books of account because it is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only a memorandum record with no place in the double entry",
+          "explanation": "Its columns ARE the cash and bank accounts — fully part of the double entry. (Only the discount columns are memoranda.)"
+        },
+        {
+          "key": "B",
+          "text": "A subsidiary book whose total is posted monthly to the Cash A/c",
+          "explanation": "The goods books work by totals posted to ledger accounts; the cash book IS the ledger account — nothing is posted to any Cash A/c."
+        },
+        {
+          "key": "C",
+          "text": "Both a book of original entry and the ledger account for cash and bank",
+          "explanation": "Correct. Cash transactions are recorded here FIRST (original entry), and no separate Cash A/c is opened in the ledger — the cash book plays both roles at once."
+        },
+        {
+          "key": "D",
+          "text": "Only a book of original entry — a separate Cash A/c is kept in the ledger",
+          "explanation": "No separate Cash A/c exists when a cash book is kept — that would duplicate every entry."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cash book = book of original entry + ledger account",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-028",
+      "topic": "Ch 2 · Accounting Process · Contra entries",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a CONTRA entry in a double or triple-column cash book?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bank charges debited by the bank",
+          "explanation": "The other leg is Bank Charges A/c (an expense) — the bank is charging for services, not moving money between the till and the account."
+        },
+        {
+          "key": "B",
+          "text": "A cheque received from a customer and banked the same day",
+          "explanation": "One leg (bank) is in the cash book, but the other leg is the CUSTOMER's account — a normal entry, not cash-to-bank movement."
+        },
+        {
+          "key": "C",
+          "text": "Cash withdrawn from the bank for the proprietor's personal use",
+          "explanation": "That is Drawings — a real posting to Drawings A/c is needed, so it is not a contra even though it looks similar."
+        },
+        {
+          "key": "D",
+          "text": "Cash withdrawn from the bank for office use",
+          "explanation": "Correct. Money moved BETWEEN cash and bank — both legs sit inside the cash book, marked 'C', with no ledger posting."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Contra = movement between cash and bank; personal withdrawal = Drawings",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-029",
+      "topic": "Ch 2 · Accounting Process · Cash book discount columns",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The discount columns of a triple-column cash book are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Totalled, never balanced — the totals are posted to Discount Allowed A/c (Dr) and Discount Received A/c (Cr)",
+          "explanation": "Correct. They are memoranda columns: each period's totals go in one stroke to the two discount accounts in the ledger."
+        },
+        {
+          "key": "B",
+          "text": "Posted entry by entry to each customer's and supplier's account only",
+          "explanation": "The personal accounts do get their full-settlement credits/debits, but the COLUMN totals must still reach the two discount accounts — that is the posting the question asks about."
+        },
+        {
+          "key": "C",
+          "text": "Balanced like the cash and bank columns, and the balance carried down",
+          "explanation": "The discount columns are not accounts — there is no balance to carry. Only the cash and bank columns are balanced."
+        },
+        {
+          "key": "D",
+          "text": "Netted against each other, only the difference being posted",
+          "explanation": "Discount allowed is a loss and discount received a gain — two different accounts; netting them would bury both figures."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Discount columns are memoranda: totalled, not balanced",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-030",
+      "topic": "Ch 2 · Accounting Process · Cash book balances",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following balances is IMPOSSIBLE in a cash book?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A debit balance in the cash column",
+          "explanation": "The normal state — cash in hand."
+        },
+        {
+          "key": "B",
+          "text": "A credit balance in the cash column",
+          "explanation": "Correct — impossible. You cannot pay out more physical cash than the till holds; the cash column can only show a debit balance. Any option showing a credit cash balance is self-condemned."
+        },
+        {
+          "key": "C",
+          "text": "A debit balance in the bank column",
+          "explanation": "The normal state — a favourable bank balance."
+        },
+        {
+          "key": "D",
+          "text": "A credit balance in the bank column",
+          "explanation": "Perfectly possible — that is an overdraft, where the bank lets you pay out more than you deposited."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The cash book, §6 →",
+        "href": "/foundation/accounting/accounting-process/#6-the-cash-book-single-double-and-triple-column"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Cash column: debit balance only; bank column may be overdrawn",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-031",
+      "topic": "Ch 2 · Accounting Process · Petty cash imprest",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sethi Stores runs petty cash on the imprest system with a float of ₹6,000. During April the petty cashier paid: postage ₹1,240, cartage ₹860, stationery ₹1,375 and staff refreshments ₹525. On 1 May the chief cashier reimburses:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹10,000",
+          "explanation": "This adds the imprest and the expenses together (6,000 + 4,000) — the chief cashier replaces only what left the box."
+        },
+        {
+          "key": "B",
+          "text": "₹6,000",
+          "explanation": "This advances the full imprest again — added to the ₹2,000 still in hand, the petty cashier would hold ₹8,000, breaking the fixed-float rule."
+        },
+        {
+          "key": "C",
+          "text": "₹4,000",
+          "explanation": "Correct. Reimbursement = total petty expenses of the period = 1,240 + 860 + 1,375 + 525 = ₹4,000 — exactly what was spent, restoring the float to the ₹6,000 imprest."
+        },
+        {
+          "key": "D",
+          "text": "₹2,000",
+          "explanation": "That is the cash still IN HAND (6,000 − 4,000), not the reimbursement — topping up by the in-hand amount would leave the float at ₹4,000."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Petty cash, §7 →",
+        "href": "/foundation/accounting/accounting-process/#7-petty-cash-and-the-imprest-system"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Imprest: reimbursement = period's petty expenses",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-032",
+      "topic": "Ch 2 · Accounting Process · Petty cash imprest",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A petty cash float of ₹5,000 is maintained on the imprest system. Expenses of ₹3,720 were paid during the month. The cash with the petty cashier just BEFORE reimbursement, and just AFTER, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,000 before; ₹5,000 after",
+          "explanation": "Before reimbursement the cashier holds only what expenses left behind — ₹1,280 in cash; the other ₹3,720 exists as vouchers, not cash."
+        },
+        {
+          "key": "B",
+          "text": "₹1,280 before; ₹1,280 after",
+          "explanation": "This forgets the reimbursement entirely — the whole point of the imprest system is that the float is restored to ₹5,000 each period."
+        },
+        {
+          "key": "C",
+          "text": "₹3,720 before; ₹5,000 after",
+          "explanation": "₹3,720 is what was SPENT, not what remains — in-hand cash is the float minus the spending."
+        },
+        {
+          "key": "D",
+          "text": "₹1,280 before; ₹5,000 after",
+          "explanation": "Correct. Before: 5,000 − 3,720 = ₹1,280 in hand (plus vouchers for 3,720 — together always equal to the imprest). After the chief cashier reimburses ₹3,720, the float returns to ₹5,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Petty cash, §7 →",
+        "href": "/foundation/accounting/accounting-process/#7-petty-cash-and-the-imprest-system"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Cash in hand = imprest − expenses; restored to imprest on reimbursement",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-033",
+      "topic": "Ch 2 · Accounting Process · Petty cash imprest",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT a feature of the imprest system of petty cash?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The float grows every period by the amount reimbursed",
+          "explanation": "Correct — this is NOT a feature. The float stays FIXED: reimbursement equals what was spent, so the cashier starts every period with the same imprest amount."
+        },
+        {
+          "key": "B",
+          "text": "The chief cashier reviews every voucher before reimbursing",
+          "explanation": "This IS a feature — the reimbursement step doubles as a control check."
+        },
+        {
+          "key": "C",
+          "text": "The petty cashier always holds cash plus vouchers equal to the imprest",
+          "explanation": "This IS a feature — it makes the system self-policing at any moment."
+        },
+        {
+          "key": "D",
+          "text": "The analytical columns give ready-made totals for posting each expense head",
+          "explanation": "This IS a feature of the analytical petty cash book — one column per expense head (postage, cartage, stationery…)."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Petty cash, §7 →",
+        "href": "/foundation/accounting/accounting-process/#7-petty-cash-and-the-imprest-system"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Imprest = fixed float; self-policing; analytical columns",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-034",
+      "topic": "Ch 2 · Accounting Process · Trial balance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The ledger balances of Lakshmi Traders on 31 March: capital ₹2,00,000; purchases ₹1,50,000; sales ₹2,40,000; returns inward ₹5,000; returns outward ₹4,000; cash ₹30,000; debtors ₹80,000; creditors ₹50,000; wages ₹39,000; machinery ₹1,90,000. If every balance is placed on its correct side, the trial balance totals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹9,88,000",
+          "explanation": "This adds the two columns together — each column separately totals 4,94,000; the 'total' of a trial balance means one column's figure."
+        },
+        {
+          "key": "B",
+          "text": "₹4,94,000",
+          "explanation": "Correct. Debit column: purchases 1,50,000 + returns inward 5,000 + cash 30,000 + debtors 80,000 + wages 39,000 + machinery 1,90,000 = 4,94,000. Credit column: capital 2,00,000 + sales 2,40,000 + returns outward 4,000 + creditors 50,000 = 4,94,000 — the two columns agree."
+        },
+        {
+          "key": "C",
+          "text": "₹4,89,000",
+          "explanation": "This puts returns inward in the CREDIT column (4,94,000 − 5,000). Returns inward (sales returns) carries a debit balance — 'returns' does not automatically mean credit."
+        },
+        {
+          "key": "D",
+          "text": "₹4,98,000",
+          "explanation": "This puts returns outward in the DEBIT column (4,94,000 + 4,000) — purchase returns carry a credit balance, sitting opposite purchases."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Trial balance, §8 →",
+        "href": "/foundation/accounting/accounting-process/#8-trial-balance-the-arithmetic-checkpoint"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Debit column: assets, expenses, drawings, returns inward; credit: liabilities, capital, incomes, returns outward",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-035",
+      "topic": "Ch 2 · Accounting Process · Trial balance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An agreed trial balance is conclusive proof of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The completeness of the records",
+          "explanation": "A transaction completely omitted disturbs NOTHING — both its debit and its credit are missing equally."
+        },
+        {
+          "key": "B",
+          "text": "The accuracy of the profit for the year",
+          "explanation": "An error of principle (say, repairs capitalised) distorts profit while the trial balance agrees happily."
+        },
+        {
+          "key": "C",
+          "text": "Arithmetical accuracy only — and even then several classes of error survive it",
+          "explanation": "Correct. The trial balance is a statement (not an account) prepared on a date; agreement proves debits equal credits, nothing more. Complete omission, principle, compensating, wrong-account and original-entry errors all leave it perfectly balanced."
+        },
+        {
+          "key": "D",
+          "text": "The correctness of every entry in the books",
+          "explanation": "Five whole families of two-sided error keep the columns equal while the books stay wrong."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Trial balance, §8 →",
+        "href": "/foundation/accounting/accounting-process/#8-trial-balance-the-arithmetic-checkpoint"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Agreed TB = arithmetical accuracy only, never conclusive",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-036",
+      "topic": "Ch 2 · Accounting Process · Trial balance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following errors will an agreed trial balance FAIL to disclose?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The discount-allowed column total never posted to Discount Allowed A/c",
+          "explanation": "Disclosed. The customers' credits are all in place but the answering debit is missing — one aspect unposted is a one-sided error."
+        },
+        {
+          "key": "B",
+          "text": "A sale of ₹4,500 posted to the customer's account as ₹5,400",
+          "explanation": "Disclosed. The sales book (and Sales A/c) carry 4,500 but the customer's debit is 5,400 — a wrong amount on ONE side throws the columns out by 900."
+        },
+        {
+          "key": "C",
+          "text": "The purchases book overcast by ₹1,000",
+          "explanation": "Disclosed. An overcast inflates only the debit posting to Purchases A/c — one-sided, so the columns disagree by ₹1,000."
+        },
+        {
+          "key": "D",
+          "text": "Repairs to a scooter debited to Vehicles A/c",
+          "explanation": "Correct — not disclosed. An error of principle hits the wrong CLASS of account but keeps a debit against a credit, so both columns stay equal."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Trial balance, §8 →",
+        "href": "/foundation/accounting/accounting-process/#8-trial-balance-the-arithmetic-checkpoint"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "TB catches one-sided errors; errors of principle survive",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-037",
+      "topic": "Ch 2 · Accounting Process · Suspense account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Gopal Traders' trial balance disagreed and the difference was placed in a Suspense Account. Three errors were later found: (i) the purchases book was undercast by ₹3,000; (ii) a credit sale to Ravi of ₹5,400 was posted to his account as ₹4,500; (iii) the discount-allowed column total of ₹800 was never posted to Discount Allowed A/c. The Suspense Account must have been opened with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A debit balance of ₹4,700",
+          "explanation": "Correct. Each error left the DEBIT side short: purchases debit short 3,000 + Ravi's debit short 900 (5,400 − 4,500) + discount debit short 800 = 4,700. The debit column was the shorter one, so Suspense sits there with ₹4,700."
+        },
+        {
+          "key": "B",
+          "text": "A debit balance of ₹3,900",
+          "explanation": "This misses error (iii) — an unposted discount-column total (3,000 + 900) is itself a one-sided error that feeds the difference."
+        },
+        {
+          "key": "C",
+          "text": "A credit balance of ₹4,700",
+          "explanation": "Right figure, wrong side — Suspense goes on the SHORTER column, and here every error starved the debit column, so the suspense balance is a debit."
+        },
+        {
+          "key": "D",
+          "text": "A debit balance of ₹2,900",
+          "explanation": "This treats error (ii) as an EXCESS debit of 900 to be deducted (3,000 + 800 − 900) — Ravi was debited 4,500 instead of 5,400, so his debit is SHORT by 900, adding to the shortfall."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Suspense = net one-sided difference, placed on the shorter column",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-038",
+      "topic": "Ch 2 · Accounting Process · Rectification",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A credit purchase of ₹6,200 from Karan, correctly entered in the purchases book, was posted to the DEBIT of Karan's account. In the rectification entry (through Suspense), Karan's account is credited with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nil — the error is two-sided and needs no suspense entry",
+          "explanation": "The purchases DEBIT was posted correctly from the book; only Karan's posting went wrong — a one-sided error, which is exactly what Suspense exists to absorb."
+        },
+        {
+          "key": "B",
+          "text": "₹12,400",
+          "explanation": "Correct. Karan should have a credit of 6,200 but instead carries a debit of 6,200 — so the correction must be 6,200 to cancel the wrong debit PLUS 6,200 to create the missing credit: Suspense A/c Dr 12,400 — To Karan A/c 12,400."
+        },
+        {
+          "key": "C",
+          "text": "₹6,200",
+          "explanation": "This rectifies only one side — it cancels the wrong debit but never records the credit that should have existed; Karan would still show nil instead of owing-to-him 6,200."
+        },
+        {
+          "key": "D",
+          "text": "₹3,100",
+          "explanation": "This halves the amount, as if the error were shared between two accounts — the purchases book (and Purchases A/c) were correct; the whole error lives in Karan's account."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Wrong-side posting: rectify with DOUBLE the amount",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-039",
+      "topic": "Ch 2 · Accounting Process · Effect on profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kartik Traders reports a draft net profit of ₹1,80,000. Before finalisation, five errors surface: (i) repairs of ₹12,000 were debited to Machinery A/c; (ii) the sales book was overcast by ₹5,000; (iii) the purchases book was overcast by ₹7,000; (iv) a credit sale of ₹15,000 was completely omitted; (v) stationery of ₹2,500 was debited to Purchases A/c. The corrected net profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,09,000",
+          "explanation": "This flips error (i), ADDING 12,000 instead of deducting — capitalised REPAIRS mean an expense is missing from the P&L, so rectification reduces profit (unlike capitalisable wages wrongly expensed, which raise it)."
+        },
+        {
+          "key": "B",
+          "text": "₹1,70,000",
+          "explanation": "This ignores the omitted credit sale of 15,000 — a completely omitted transaction still changes profit once recorded, even though it never disturbed the trial balance."
+        },
+        {
+          "key": "C",
+          "text": "₹1,85,000",
+          "explanation": "Correct. 1,80,000 − 12,000 (repairs expense was omitted from P&L, hidden in Machinery) − 5,000 (sales income overstated) + 7,000 (purchases expense overstated) + 15,000 (sale income omitted) + 0 (stationery-in-purchases moves gross profit only) = ₹1,85,000."
+        },
+        {
+          "key": "D",
+          "text": "₹1,82,500",
+          "explanation": "This also deducts the stationery of 2,500 — but a swap between two expense heads charged against profit leaves NET profit unchanged; only the gross profit moves."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Corrected profit = draft + overstated expenses + omitted incomes − omitted expenses − overstated incomes",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-040",
+      "topic": "Ch 2 · Accounting Process · Effect on profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sharma Fabricators' draft profit is ₹96,000. It is then found that wages of ₹20,000 paid for installing a new lathe were debited to Wages A/c. The corrected profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,36,000",
+          "explanation": "This adds the 20,000 twice (96,000 + 40,000) — one rectification entry, one effect."
+        },
+        {
+          "key": "B",
+          "text": "₹96,000",
+          "explanation": "This treats it as a zero-effect swap between expense heads — but this swap crosses the capital/revenue line (an error of principle), so profit genuinely changes."
+        },
+        {
+          "key": "C",
+          "text": "₹76,000",
+          "explanation": "Direction flipped — this deducts 20,000, treating the error as an omitted expense; the expense was OVERSTATED, so rectifying adds it back."
+        },
+        {
+          "key": "D",
+          "text": "₹1,16,000",
+          "explanation": "Correct. Installation wages are capital expenditure (part of the lathe's cost) — the P&L carried an expense it should not have, so profit was UNDERSTATED: 96,000 + 20,000 = ₹1,16,000. Rectification: Machinery A/c Dr 20,000 — To Wages A/c 20,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Capital expenditure in a revenue head understates profit by that amount",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-041",
+      "topic": "Ch 2 · Accounting Process · Effect on profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Verma Stores' draft NET profit is ₹1,25,000. It is discovered that stationery of ₹3,000 was debited to Purchases A/c. After rectification, the net profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,25,000 — unchanged",
+          "explanation": "Correct. Removing 3,000 from Purchases raises gross profit by 3,000, but charging the same 3,000 as Stationery takes it straight back — the examiner's favourite zero-effect trap. Only the GROSS profit moves."
+        },
+        {
+          "key": "B",
+          "text": "₹1,28,000",
+          "explanation": "This rectifies the purchases side but forgets that the stationery expense must now be charged — the 3,000 does not vanish; it changes address."
+        },
+        {
+          "key": "C",
+          "text": "₹1,31,000",
+          "explanation": "This adds the 3,000 twice (once out of purchases, once as an imagined income) — no income is involved anywhere in this error."
+        },
+        {
+          "key": "D",
+          "text": "₹1,22,000",
+          "explanation": "This charges the stationery again WITHOUT removing it from purchases — double-counting the same 3,000 of expense."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Swap between expense heads: gross profit moves, net profit unchanged",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-042",
+      "topic": "Ch 2 · Accounting Process · Suspense account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Mahesh Traders opened a Suspense Account with a debit balance of ₹600. Two errors were then found: (i) the purchases book was overcast by ₹3,400; (ii) a credit sale to Meera of ₹4,000, correctly entered in the sales book, was never posted to her account. After both rectifications, the Suspense Account shows:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A debit balance of ₹4,000",
+          "explanation": "This rectifies only (i) (600 + 3,400) and leaves Meera's missing posting uncorrected — the account cannot close until every one-sided error is fixed."
+        },
+        {
+          "key": "B",
+          "text": "Nil — it closes exactly",
+          "explanation": "Correct. (i) is one-sided (excess purchases debit): Suspense A/c Dr 3,400 — To Purchases A/c. (ii) is one-sided (Meera's debit missing): Meera A/c Dr 4,000 — To Suspense A/c. Suspense: Dr 600 + 3,400 = 4,000 against Cr 4,000 — closes to nil, proving the hunt is over."
+        },
+        {
+          "key": "C",
+          "text": "A credit balance of ₹3,400",
+          "explanation": "This treats the overcast (i) as two-sided and routes only (ii) through Suspense (600 Dr − 4,000 Cr) — an overcast book is the textbook ONE-sided error; its correction must pass through Suspense."
+        },
+        {
+          "key": "D",
+          "text": "A debit balance of ₹600",
+          "explanation": "This routes NEITHER error through Suspense, treating both as two-sided — but each disturbed only one side of the books, which is exactly why the trial balance disagreed in the first place."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Suspense closes to nil when all one-sided errors are rectified",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-043",
+      "topic": "Ch 2 · Accounting Process · Error classes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Repairs to a delivery van debited to Vehicles A/c is an example of an error of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compensating error",
+          "explanation": "No second error cancels this one — it stands alone, silently overstating profit."
+        },
+        {
+          "key": "B",
+          "text": "Commission",
+          "explanation": "Commission errors stay within the same class — wrong amount, wrong account of the SAME kind, wrong side, or wrong casting. Here the error crosses from revenue to capital."
+        },
+        {
+          "key": "C",
+          "text": "Principle",
+          "explanation": "Correct. Right amount, wrong CLASS of account — revenue expenditure (repairs) treated as capital (an asset). The trial balance still agrees, but expenses are understated and assets overstated."
+        },
+        {
+          "key": "D",
+          "text": "Partial omission",
+          "explanation": "Nothing was left half-recorded — both a debit and a credit exist; they simply sit in the wrong class of account."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Error of principle = capital/revenue confusion; TB unaffected",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-044",
+      "topic": "Ch 2 · Accounting Process · Error classes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Compensating errors are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Errors of principle committed in two accounts at once",
+          "explanation": "Compensating errors can be of any kind — what defines them is the mutual cancellation, not the class of account involved."
+        },
+        {
+          "key": "B",
+          "text": "One-sided errors that the Suspense Account compensates for",
+          "explanation": "Suspense parks the net difference of one-sided errors; compensating errors, by definition, produce NO difference for suspense to hold."
+        },
+        {
+          "key": "C",
+          "text": "Errors corrected by paying compensation to the affected party",
+          "explanation": "No party is compensated — 'compensating' describes the errors offsetting EACH OTHER arithmetically."
+        },
+        {
+          "key": "D",
+          "text": "Two or more errors whose effects cancel each other, leaving the trial balance agreed",
+          "explanation": "Correct. An excess debit of ₹500 in one account offset by an excess credit of ₹500 elsewhere — each error is real, but their net effect on the columns is nil."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Compensating errors: mutual cancellation, TB agreed",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c2-045",
+      "topic": "Ch 2 · Accounting Process · Rectification after final accounts",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An error affecting a nominal account is discovered in the NEXT year, after the final accounts have been prepared and closed. The rectification entry uses:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The Profit & Loss Adjustment A/c in place of the nominal account, its final balance going to Capital A/c",
+          "explanation": "Correct. Last year's nominal accounts are already closed into last year's profit and cannot be reopened — P&L Adjustment stands in for them, and its balance transfers to Capital."
+        },
+        {
+          "key": "B",
+          "text": "The Suspense Account in every case",
+          "explanation": "Suspense handles the missing leg of ONE-sided errors; the P&L Adjustment route answers a different problem — closed nominal accounts. (A one-sided error found now may touch both.)"
+        },
+        {
+          "key": "C",
+          "text": "The same nominal account, reopened for the correction",
+          "explanation": "The nominal account was closed to Trading/P&L at year end — debiting or crediting it now would distort THIS year's expenses with LAST year's error."
+        },
+        {
+          "key": "D",
+          "text": "The current year's Trading Account",
+          "explanation": "Feeding last year's error into this year's Trading Account misstates this year's gross profit — the whole point of P&L Adjustment is to keep it out."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Rectification, §9 →",
+        "href": "/foundation/accounting/accounting-process/#9-rectification-of-errors"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Stage 3 rectification: P&L Adjustment A/c → Capital A/c",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c2-01",
+      "topic": "Ch 2 · Accounting Process · Golden rules",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the three golden rules of debit and credit under the traditional classification, and classify each of the following accounts: (a) Outstanding Rent A/c, (b) Goodwill A/c, (c) Drawings A/c, (d) Nashik Urban Co-operative Bank A/c. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Personal accounts: debit the receiver, credit the giver",
+          "marks": 1,
+          "citation": "golden rules, traditional classification"
+        },
+        {
+          "point": "Real accounts: debit what comes in, credit what goes out",
+          "marks": 1,
+          "citation": "golden rules"
+        },
+        {
+          "point": "Nominal accounts: debit all expenses and losses, credit all incomes and gains",
+          "marks": 1,
+          "citation": "golden rules"
+        },
+        {
+          "point": "(a) Outstanding Rent — representative personal (stands for the landlord owed); (b) Goodwill — intangible real",
+          "marks": 1,
+          "citation": "classification of accounts"
+        },
+        {
+          "point": "(c) Drawings — personal (the owner's account, not nominal); (d) the bank — artificial personal, not real",
+          "marks": 1,
+          "citation": "classification of accounts"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Golden rules + classification traps",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c2-02",
+      "topic": "Ch 2 · Accounting Process · Trade vs cash discount",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Distinguish between trade discount and cash discount (any four points of difference), and state how each is treated in the books of account. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Purpose: trade discount — deduction from LIST price for bulk orders/dealers; cash discount — reward for PROMPT payment",
+          "marks": 1,
+          "citation": "trade vs cash discount"
+        },
+        {
+          "point": "Recording: trade discount never appears in any account (entries made net); cash discount IS recorded — Discount Allowed A/c (loss) or Discount Received A/c (gain)",
+          "marks": 1,
+          "citation": "recording treatment"
+        },
+        {
+          "point": "Where shown: trade discount on the invoice only; cash discount in the discount columns of the triple-column cash book (allowed on debit side, received on credit side)",
+          "marks": 1,
+          "citation": "cash book discount columns"
+        },
+        {
+          "point": "Timing/base: trade discount at the time of sale, on the list price; cash discount at the time of settlement, on the amount due",
+          "marks": 1,
+          "citation": "timing of each discount"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Trade vs cash discount distinctions",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c2-03",
+      "topic": "Ch 2 · Accounting Process · Cash book",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Prepare the triple-column cash book of Nirmal Traders for June 2026: Jun 1 — cash in hand ₹8,000, bank balance ₹25,000. Jun 4 — received a cheque of ₹19,600 from Nisha in full settlement of her account of ₹20,000, banked the same day. Jun 8 — cash sales ₹14,500. Jun 12 — deposited ₹10,000 cash into the bank. Jun 18 — paid Prakash by cheque ₹7,840 in full settlement of ₹8,000. Jun 22 — withdrew ₹2,500 from the bank for office use. Jun 27 — paid shop rent ₹3,000 in cash. Balance the cash and bank columns and total the discount columns. (8 marks)",
+      "skeleton": [
+        {
+          "point": "Jun 4: bank column Dr 19,600; discount-allowed column 400 (20,000 − 19,600); Nisha's account credited with the full 20,000",
+          "marks": 2,
+          "citation": "full settlement → cash discount in discount column"
+        },
+        {
+          "point": "Jun 12 and Jun 22 are contra entries marked 'C': Jun 12 cash Cr 10,000 / bank Dr 10,000; Jun 22 bank Cr 2,500 / cash Dr 2,500 — neither posted to any ledger account",
+          "marks": 2,
+          "citation": "contra entries within the cash book"
+        },
+        {
+          "point": "Cash column: 8,000 + 14,500 − 10,000 + 2,500 − 3,000 = ₹12,000 (debit balance)",
+          "marks": 1.5,
+          "citation": "cash column balancing"
+        },
+        {
+          "point": "Bank column: 25,000 + 19,600 + 10,000 − 7,840 − 2,500 = ₹44,260 (debit balance)",
+          "marks": 1.5,
+          "citation": "bank column balancing"
+        },
+        {
+          "point": "Discount columns TOTALLED, not balanced: allowed 400 → Discount Allowed A/c (Dr); received 160 (8,000 − 7,840) → Discount Received A/c (Cr)",
+          "marks": 1,
+          "citation": "memoranda columns; totals posted"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Triple-column cash book with contras and both discounts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c2-04",
+      "topic": "Ch 2 · Accounting Process · Trial balance",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "What is a trial balance? State its purposes, the methods of preparing it, and the errors an agreed trial balance fails to disclose. (5 marks)",
+      "skeleton": [
+        {
+          "point": "A STATEMENT (not an account, not part of the double entry) listing every ledger balance — debits in one column, credits in the other — on a particular date",
+          "marks": 1,
+          "citation": "nature of the trial balance"
+        },
+        {
+          "point": "Purposes: checks arithmetical accuracy; supplies the raw material for final accounts; gives a bird's-eye view of all accounts",
+          "marks": 1.5,
+          "citation": "purposes of TB"
+        },
+        {
+          "point": "Methods: balance method (standard — closing balances), total method (gross totals of each side), compound method (both sets of columns)",
+          "marks": 1,
+          "citation": "methods of preparation"
+        },
+        {
+          "point": "Errors NOT disclosed: complete omission; errors of principle; compensating errors; posting to the wrong account on the right side with the right amount; wrong amount in the book of original entry",
+          "marks": 1.5,
+          "citation": "two-sided errors survive an agreed TB"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "TB nature, purposes, methods, limits",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c2-05",
+      "topic": "Ch 2 · Accounting Process · Error classes",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the classes of errors in accounting with one example of each, and state which of them disturb the agreement of the trial balance. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Error of principle: right amount, wrong CLASS of account (capital/revenue confused) — e.g. repairs debited to Machinery A/c; TB not disturbed",
+          "marks": 1,
+          "citation": "error taxonomy"
+        },
+        {
+          "point": "Error of omission: complete (credit sale never recorded anywhere — TB not disturbed) vs partial (entered in sales book, never posted to the customer — TB disturbed)",
+          "marks": 1,
+          "citation": "complete vs partial omission"
+        },
+        {
+          "point": "Error of commission: wrong amount, wrong account of the SAME class, wrong side, or wrong casting — e.g. sale to Mohan posted to Sohan; purchases book overcast",
+          "marks": 1,
+          "citation": "commission errors"
+        },
+        {
+          "point": "Compensating errors: two or more errors cancelling each other — e.g. excess debit of ₹500 offset by an excess credit of ₹500; TB not disturbed",
+          "marks": 1,
+          "citation": "compensating errors"
+        },
+        {
+          "point": "Working rule: ONE-SIDED errors (overcast/undercast, wrong-side or wrong-amount posting on one side, one aspect unposted) disturb the TB; TWO-SIDED errors keep it agreed",
+          "marks": 1,
+          "citation": "one-sided vs two-sided distinction"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Error classification and TB effect",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c2-06",
+      "topic": "Ch 2 · Accounting Process · Suspense account",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "The trial balance of Hari Om Stores was short on the DEBIT side by ₹2,700 and the difference was placed in a Suspense Account. Later, three errors were found: (i) the sales book was overcast by ₹3,500; (ii) a credit purchase from Hari of ₹4,200 was posted to his account as ₹3,400; (iii) repairs of ₹900 to the shop building were debited to Building A/c. Pass rectification entries and prepare the Suspense Account. (8 marks)",
+      "skeleton": [
+        {
+          "point": "(i) Sales A/c Dr 3,500 — To Suspense A/c 3,500 (the sales book total posts to the CREDIT of Sales; an overcast is 3,500 of excess credit — one-sided, so Suspense takes the other leg)",
+          "marks": 2,
+          "citation": "overcast sales book = one-sided excess credit"
+        },
+        {
+          "point": "(ii) Suspense A/c Dr 800 — To Hari A/c 800 (Hari credited 3,400 instead of 4,200 — a short credit of 800, one-sided)",
+          "marks": 2,
+          "citation": "short posting rectified through suspense"
+        },
+        {
+          "point": "(iii) Repairs A/c Dr 900 — To Building A/c 900 (error of principle, two-sided — Suspense is NOT touched)",
+          "marks": 2,
+          "citation": "two-sided errors bypass suspense"
+        },
+        {
+          "point": "Suspense Account: debit side — opening balance b/d 2,700 + Hari 800 = 3,500; credit side — Sales 3,500; the account closes to nil, proving all one-sided errors are found",
+          "marks": 1.5,
+          "citation": "suspense closes to nil"
+        },
+        {
+          "point": "Consistency check: (i) put 3,500 excess in the credit column, (ii) left it 800 short — net credit excess 2,700, matching the debit-side shortfall of 2,700",
+          "marks": 0.5,
+          "citation": "difference reconciliation"
+        }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Suspense rectification with mixed one- and two-sided errors",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}

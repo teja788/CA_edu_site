@@ -1,0 +1,530 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Accounting Process'
+description: 'CA Foundation Accounting Ch 2 — the accounting process in plain language: journal, ledger, subsidiary books, cash book, trial balance and rectification of errors, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 2 · Accounting Process'
+chapterSlug: accounting-process
+masteryId: f1-ch2
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI Foundation SM Paper 1, Ch 2 (Accounting Process) — journal to trial balance, subsidiary books, cash book, rectification; concepts paraphrased'
+  - 'No statute is quoted in this chapter — bookkeeping procedure only'
+sourceLabel: 'ICAI SM Ch 2 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 26 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=accounting-process'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Meena runs a general store in Nashik. Every day money moves: stock arrives from wholesalers,
+customers pay at the counter, the electricity bill goes out, cash gets deposited in the bank.
+This chapter is the assembly line that turns each of those events into dependable accounts —
+record it first in a **journal** or day book, sort it into the **ledger**, prove the arithmetic
+with a **trial balance**, and when a mistake slips through, **rectify** it without tearing pages
+out of the books.
+
+In the exam this is the workhorse chapter: expect quick classification MCQs (which account, which
+rule), short numericals on cash book and ledger balances, and at least one rectification question —
+the examiner's favourite, because one error tests journal, ledger and trial balance in a single
+stroke. Learn the five worked patterns below and every variant becomes familiar.
+
+## 1. One transaction, two effects: the double entry system
+
+Buy goods worth ₹5,000 for cash, and two things happen at the same instant: goods come in, cash
+goes out. Every transaction has this two-sided character — a benefit received and a benefit
+given. **Double entry** records both sides, every time: one account is **debited** and another is
+**credited** with an equal amount. Nothing is ever recorded only once.
+
+- **Debit (Dr)** — an entry on the *left* side of an account.
+- **Credit (Cr)** — an entry on the *right* side of an account.
+
+Neither word means good or bad, gain or loss. They are directions, nothing more — which direction
+increases an account depends on the *kind* of account (§2).
+
+Because every debit has an equal and opposite credit, the totals of all debits and all credits in
+the books must always agree — this is the fact the trial balance (§8) exploits. The same idea in
+equation form:
+
+<div class="formula">Assets = Liabilities + Capital (every transaction keeps this equation in balance)</div>
+
+When Meena starts her store with ₹3,00,000 of her own money, assets (cash) rise by ₹3,00,000 and
+capital rises by ₹3,00,000 — the equation balances. When she buys a fridge for ₹40,000 cash, one
+asset rises and another falls — still balanced. There is no transaction that breaks it.
+
+<Callout kind="pointer">
+  <p>
+    Double entry is a complete, self-checking <strong>system</strong>. Its half-hearted cousin —
+    recording only some transactions or only one aspect — is called <strong>single entry</strong>
+    (incomplete records), and it offers no arithmetic check at all. Exam one-liner: every debit
+    has an equal and corresponding credit.
+  </p>
+</Callout>
+
+## 2. Kinds of accounts and the rules of debit and credit
+
+Two classification maps exist. Both describe the same city; the exam tests both.
+
+**The traditional (British) map — three kinds of accounts:**
+
+| Kind | What it covers | Sub-types |
+|---|---|---|
+| Personal | Accounts of persons and bodies the business deals with | Natural (Ravi's A/c), artificial (a firm, a bank, a club), representative (outstanding salaries, prepaid insurance) |
+| Real | Properties and possessions of the business | Tangible (cash, machinery, stock), intangible (goodwill, patents) |
+| Nominal | Expenses, losses, incomes and gains | Rent A/c, wages A/c, commission received A/c |
+
+Each kind has its **golden rule**:
+
+<div class="formula">Personal: Debit the receiver, credit the giver</div>
+<div class="formula">Real: Debit what comes in, credit what goes out</div>
+<div class="formula">Nominal: Debit all expenses and losses, credit all incomes and gains</div>
+
+A **representative personal** account deserves a second look: Outstanding Salaries A/c *looks*
+like an expense, but it actually stands for the employees to whom salary is owed — a group of
+persons — so it is personal, not nominal. Prepaid insurance similarly represents the insurer who
+owes the business cover for the months paid in advance.
+
+**The modern (accounting equation) map — five classes**, each with a fixed debit/credit effect:
+
+| Class | Increase | Decrease |
+|---|---|---|
+| Asset | Debit | Credit |
+| Liability | Credit | Debit |
+| Capital | Credit | Debit |
+| Income / gain | Credit | Debit |
+| Expense / loss | Debit | Credit |
+
+Both maps always produce the same entry. Goods bought for cash: traditional says debit Purchases
+(nominal — an expense of buying), credit Cash (real — it goes out); modern says expense up →
+debit, asset down → credit. Same result.
+
+<Callout kind="mistake">
+  <p>
+    Capital A/c and Drawings A/c are <strong>personal accounts</strong> — they belong to the
+    owner, a person — not nominal accounts. And a bank account is a personal account (the bank is
+    an artificial person), not a real account, even though it feels like money. These two
+    classifications are the most-missed MCQs in this section.
+  </p>
+</Callout>
+
+## 3. The journal: where every transaction enters first
+
+The **journal** is the book of original (first) entry: transactions go in **chronologically**, as
+they happen, each with its debit, its credit and a one-line **narration** explaining the event.
+From here the amounts are copied — *posted* — into the ledger. The standard format:
+
+| Date | Particulars | L.F. | Debit ₹ | Credit ₹ |
+|---|---|---|---|---|
+| 2026 Apr 5 | Purchases A/c … Dr | 14 | 40,000 | |
+| | To Cash A/c | 2 | | 40,000 |
+| | (Being goods bought for cash) | | | |
+
+**L.F.** (ledger folio) records the page of the ledger where each account lives — the
+cross-reference that lets an auditor walk from journal to ledger and back.
+
+**Compound entries.** When one event touches more than two accounts, write a single entry with
+several debits or credits. Meena buys a weighing machine for ₹24,000, pays ₹10,000 by cheque and
+owes the rest: debit Machinery ₹24,000, credit Bank ₹10,000 *and* credit the supplier ₹14,000.
+Total debits still equal total credits — that discipline never relaxes.
+
+**The opening entry.** On the first day of a new year, the closing balances of the old year are
+brought in through one compound entry: debit every asset, credit every liability, and credit the
+balancing figure to Capital:
+
+<div class="formula">Opening capital = Total assets − Total liabilities</div>
+
+<Callout kind="pointer">
+  <p>
+    The journal records <strong>both aspects together</strong> in one place; the ledger shows
+    each account's story separately. When a question asks where a transaction is
+    <strong>first</strong> recorded, the answer is the journal (or the relevant subsidiary book,
+    §5) — never the ledger, and never the trial balance.
+  </p>
+</Callout>
+
+## 4. The ledger: posting and balancing
+
+The **ledger** is the principal book: one account per head, each shaped like a **T** with a debit
+(left) and credit (right) side. **Posting** copies each journal line into the affected accounts —
+and the naming convention flips: in the account being debited, write the *other* account's name
+prefixed **"To"**; in the account being credited, write the other account's name prefixed
+**"By"**. The prefixes are pure tradition — they carry no meaning beyond marking the side.
+
+**Balancing an account**, step by step:
+
+1. Total both sides (rough work).
+2. Find the difference between the two totals.
+3. Write the difference on the **lighter** side as **"Balance c/d"** (carried down) — now both
+   sides total the same, and the account is ruled off.
+4. Bring the same figure down on the **opposite** side next period as **"Balance b/d"**
+   (brought down).
+
+If the debit side was heavier, the account has a **debit balance** (the b/d appears on the debit
+side). Assets and expenses normally show debit balances; liabilities, capital and incomes show
+credit balances.
+
+<Callout kind="pointer">
+  <p>
+    Not every account is balanced. <strong>Nominal accounts are not carried forward</strong> —
+    at year end they are closed by transfer to the Trading and Profit &amp; Loss Account. Only
+    personal and real accounts carry balances into the next year (and those balances feed the
+    opening entry, §3).
+  </p>
+</Callout>
+
+## 5. Subsidiary books: splitting the journal
+
+A busy firm cannot push hundreds of daily transactions through one journal — one book means one
+clerk and an unmanageable queue. So the journal is split into **subsidiary books** (books of
+original entry), each taking one high-volume class of transaction, with the leftovers going to
+the **journal proper**:
+
+| Book | What goes in | Source document |
+|---|---|---|
+| Purchases book | Credit purchases of goods (things traded in) | Inward invoice |
+| Sales book | Credit sales of goods | Outward invoice |
+| Purchase returns (returns outward) book | Goods sent back to suppliers | Debit note |
+| Sales returns (returns inward) book | Goods customers send back | Credit note |
+| Cash book (§6) | All cash and bank movements | Receipts, pay-in slips |
+| Journal proper | Everything the other books cannot take | Vouchers |
+
+The four goods books take **only credit transactions of goods**. Two filters, both strict:
+
+- **Cash purchases and cash sales go to the cash book**, never to the purchases or sales book.
+- **Assets bought or sold on credit go to the journal proper** — a machine bought on credit is
+  not "purchases", because machines are not what the firm trades in.
+
+**Trade discount vs cash discount** — the distinction the examiner never tires of:
+
+- **Trade discount** is a deduction from the *list price* (for bulk orders, for being a
+  dealer). It is shown on the invoice and the transaction is recorded **net** — trade discount
+  itself never appears in any account.
+- **Cash discount** is a reward for *prompt payment*. It IS recorded — Discount Allowed A/c (a
+  loss, on receipts) or Discount Received A/c (a gain, on payments) — and it appears in the
+  discount columns of the cash book (§6).
+
+**The journal proper** keeps: opening entries, closing entries, rectification entries (§9),
+adjusting entries, transfer entries, credit purchases and sales of assets, and rare items such as
+goods lost by fire or given as charity.
+
+<Callout kind="mistake">
+  <p>
+    "Furniture bought on credit from Modern Furnishers, recorded in the purchases book" — this
+    single line hides <strong>two</strong> exam points: the entry belongs in the journal proper,
+    and if it is left in the purchases book, Furniture ends up debited to Purchases A/c — an
+    <strong>error of principle</strong> (§9) that overstates expenses and understates assets.
+  </p>
+</Callout>
+
+## 6. The cash book: single, double and triple column
+
+The cash book is a hybrid: it is a **book of original entry AND the ledger account** for cash
+(and bank) at the same time — cash transactions are recorded here first, and no separate Cash A/c
+is opened in the ledger. Receipts go on the debit side, payments on the credit side.
+
+Three sizes:
+
+1. **Single column** — cash column only.
+2. **Double column** — cash and bank columns on each side.
+3. **Triple column** — cash, bank *and* discount columns on each side: discount **allowed** on
+   the debit (receipts) side, discount **received** on the credit (payments) side.
+
+**Contra entries.** When money moves *between* cash and bank — cash deposited into the bank, or
+cash withdrawn from the bank **for office use** — both the debit and the credit of the entry sit
+inside the cash book itself. Mark both legs with **"C"** in the L.F. column; nothing is posted to
+any ledger account. (Cash withdrawn for the owner's *personal* use is not a contra — that is
+Drawings, a real posting.)
+
+**Discount columns are memoranda columns.** They are **totalled, never balanced** — the discount
+column is not an account. The period's total of the discount-allowed column is posted in one
+stroke to the debit of Discount Allowed A/c; the discount-received total to the credit of
+Discount Received A/c.
+
+**Balances.** The cash column can only ever show a **debit balance** (you cannot pay out more
+physical cash than you have). The bank column can show either — a credit balance in the bank
+column is an **overdraft**.
+
+Cheques received and deposited into the bank the same day are entered straight into the bank
+column. A cheque held back is treated as cash first, with a contra entry when it is later banked.
+
+## 7. Petty cash and the imprest system
+
+Stamps, autos, tea, courier — payments too small for the main cash book. A **petty cashier**
+handles them from a fixed float. Under the **imprest system**:
+
+1. The chief cashier advances a round sum — the **imprest** (say ₹6,000) — at the start of the
+   period.
+2. The petty cashier pays small expenses from it, recording each in an **analytical petty cash
+   book** (one column per expense head: postage, cartage, stationery…).
+3. At the period's end the chief cashier reimburses **exactly what was spent** — restoring the
+   float to the original imprest.
+
+<div class="formula">Reimbursement = total petty expenses of the period (so the float returns to the imprest amount)</div>
+
+The system is self-policing: the petty cashier always holds cash + vouchers equal to the imprest,
+the chief cashier reviews every voucher before reimbursing, and the analytical columns give
+ready-made totals for posting each expense head to the ledger.
+
+## 8. Trial balance: the arithmetic checkpoint
+
+A **trial balance** is a *statement* (not an account, and not part of the double entry itself)
+listing every ledger balance — debit balances in one column, credit balances in the other — **on
+a particular date**. Because every debit in the system has an equal credit, the two columns must
+agree. Its purposes: check arithmetical accuracy, provide the raw material for the final
+accounts, and give a bird's-eye view of every account at once.
+
+Three ways to prepare it: the **balance method** (list closing balances — the standard method),
+the **total method** (list the gross totals of each side of every account), and the **compound**
+method (both sets of columns). Exams assume the balance method unless told otherwise.
+
+Which side does a balance go? The pattern follows §4:
+
+| Debit column | Credit column |
+|---|---|
+| Assets — cash, bank, debtors, stock, machinery | Liabilities — creditors, loans, bank overdraft |
+| Expenses and losses — purchases, wages, rent paid | Capital |
+| Drawings | Incomes and gains — sales, commission received |
+| Returns inward (sales returns) | Returns outward (purchase returns) |
+
+**Errors a trial balance catches** — anything that disturbs one side only (one-sided errors):
+a subsidiary book overcast or undercast, an amount posted to the wrong side, a wrong amount
+posted on one side, one aspect not posted at all, an account balanced wrongly.
+
+**Errors it never catches** — anything that hits both sides equally: complete omission of a
+transaction, errors of principle, compensating errors, posting to the *wrong account* on the
+right side with the right amount, and recording a wrong amount in the book of original entry
+(both postings carry the same wrong figure).
+
+<Callout kind="pointer">
+  <p>
+    An agreed trial balance proves <strong>arithmetical accuracy only</strong>. It is never
+    conclusive proof that the books are correct — five whole families of error (§9) leave it
+    perfectly balanced. This exact sentence, as an MCQ, appears attempt after attempt.
+  </p>
+</Callout>
+
+## 9. Rectification of errors
+
+Never erase, never overwrite. An error, once found, is cancelled by a fresh **rectification
+entry**. First, know the enemy — four classes:
+
+| Class | Meaning | Example | TB disturbed? |
+|---|---|---|---|
+| Error of principle | Right amount, wrong *class* of account — capital and revenue confused | Repairs debited to Machinery A/c | No |
+| Error of omission — complete | Transaction skipped entirely | Credit sale never recorded anywhere | No |
+| Error of omission — partial | One aspect recorded, the other missed | Sale entered in sales book, never posted to the customer | Yes |
+| Error of commission | Wrong amount, wrong account of the *same* class, wrong side, or wrong casting | Sale to Mohan posted to Sohan; purchases book overcast | One-sided ones, yes |
+| Compensating errors | Two or more errors cancelling each other's effect | An excess debit of ₹500 offset elsewhere by an excess credit of ₹500 | No |
+
+The working distinction is **one-sided vs two-sided**: a one-sided error disturbs a single
+account (or a single side) and throws the trial balance out; a two-sided error keeps debits equal
+to credits and the trial balance agreed.
+
+**Stage 1 — error found before the trial balance.** A two-sided error is fixed with a normal
+journal entry (debit the account short of debits, credit the account short of credits). A
+one-sided error needs no journal entry at this stage — post the correction directly into the one
+affected account with a note ("difference in amount posted on…").
+
+**Stage 2 — error found after the trial balance, suspense account in use.** When the trial
+balance refuses to agree and the final accounts cannot wait, the difference is parked in a
+**Suspense Account**:
+
+<div class="formula">Suspense goes on the SHORTER column of the trial balance — debit column short → suspense debit balance; credit column short → suspense credit balance</div>
+
+Now every **one-sided** rectification runs *through* suspense: correct the affected account, and
+let Suspense absorb the other leg. Two-sided errors are still rectified by ordinary entries that
+never touch Suspense. When every error is found, the Suspense Account closes to nil — the
+built-in proof that the hunt is over.
+
+**Stage 3 — error found in the next year, after final accounts.** Last year's nominal accounts
+are already closed into last year's profit, so they cannot be debited or credited again. Their
+place is taken by a **Profit &amp; Loss Adjustment Account**: rectification entries that would
+have touched a nominal account touch P&amp;L Adjustment instead, and its final balance is
+transferred to Capital A/c. The companion skill is computing the **effect on profit**:
+
+<div class="formula">Corrected profit = draft profit + expenses wrongly overstated + incomes wrongly omitted − expenses wrongly omitted − incomes wrongly overstated</div>
+
+Two cross-links close the loop. A **capital-vs-revenue misclassification is an error of
+principle**: installation wages debited to Wages A/c overstates expenses and understates the
+asset, so profit is *understated* until rectified. And a swap **between two expense heads of the
+same statement side** (stationery debited to Purchases) moves gross profit but leaves **net
+profit unchanged** — the examiner's favourite zero-effect trap.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — journalising a batch of transactions (easy)">
+  <p>
+    Journalise for Meena General Stores, April 2026: (1) Apr 1 — Meena starts business with cash
+    ₹3,00,000. (2) Apr 3 — opens a bank account, depositing ₹2,00,000. (3) Apr 5 — buys goods for
+    cash ₹40,000. (4) Apr 9 — sells goods on credit to Farhan for ₹35,000. (5) Apr 12 — buys a
+    weighing machine from Zaveri Traders for ₹24,000, paying ₹10,000 by cheque, balance on
+    credit. (6) Apr 18 — pays shop rent ₹9,000 by cheque.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the entries with their reasons</div>
+    Apr 1: Cash A/c Dr 3,00,000 — To Capital A/c 3,00,000 <em>(cash comes in — debit; the owner, a personal account, gives — credit)</em><br />
+    Apr 3: Bank A/c Dr 2,00,000 — To Cash A/c 2,00,000 <em>(the bank, a personal account, is the receiver; cash goes out)</em><br />
+    Apr 5: Purchases A/c Dr 40,000 — To Cash A/c 40,000 <em>(expense of buying goods — debit; cash goes out)</em><br />
+    Apr 9: Farhan A/c Dr 35,000 — To Sales A/c 35,000 <em>(Farhan receives the goods' benefit; sales is an income-type nominal account)</em><br />
+    Apr 12: Machinery A/c Dr 24,000 — To Bank A/c 10,000, To Zaveri Traders A/c 14,000 <em>(a compound entry: one debit, two credits; the machine is an asset, never Purchases)</em><br />
+    Apr 18: Rent A/c Dr 9,000 — To Bank A/c 9,000 <em>(expense — debit)</em>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the self-check</div>
+    Total debits = 3,00,000 + 2,00,000 + 40,000 + 35,000 + 24,000 + 9,000 = <strong>₹6,08,000</strong> = total credits. In every batch of journal entries, this equality must hold before you move on.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — posting and balancing a ledger account (moderate)">
+  <p>
+    Continue from Worked example 1. On Apr 15 Farhan returns goods worth ₹5,000; on Apr 25 he
+    pays ₹20,000 in cash. Prepare Farhan's Account for April 2026 and balance it.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Farhan's Account (Dr side | Cr side)</div>
+    Debit side: Apr 9 To Sales A/c 35,000<br />
+    Credit side: Apr 15 By Sales Returns A/c 5,000 · Apr 25 By Cash A/c 20,000 · Apr 30 By Balance c/d <strong>10,000</strong><br />
+    Both sides total ₹35,000; on May 1 the account reopens with "To Balance b/d ₹10,000".
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — reading the balance</div>
+    35,000 − 5,000 − 20,000 = <strong>₹10,000 debit balance</strong> — Farhan still owes Meena
+    ₹10,000; he is a debtor (an asset). The c/d entry sits on the credit (lighter) side, and the
+    b/d entry on the debit side — the b/d side names the balance.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — triple-column cash book (moderate)">
+  <p>
+    Prepare the triple-column cash book of Anand Traders for March 2026: Mar 1 — cash in hand
+    ₹7,500, bank balance ₹36,000. Mar 5 — received a cheque from Bela for ₹14,700 in full
+    settlement of her account of ₹15,000, banked the same day. Mar 8 — cash sales ₹21,500.
+    Mar 12 — deposited ₹18,000 cash into the bank. Mar 17 — paid Chirag by cheque ₹9,800 in full
+    settlement of ₹10,000. Mar 22 — withdrew ₹4,000 from the bank for shop use. Mar 26 — paid
+    electricity bill ₹2,300 in cash. Mar 31 — bank charges ₹150.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — classify before you compute</div>
+    Bela: bank +14,700, discount ALLOWED column 300 (14,700 accepted against 15,000).<br />
+    Chirag: bank −9,800, discount RECEIVED column 200.<br />
+    Mar 12 and Mar 22 are CONTRA entries ("C"): Mar 12 — cash −18,000, bank +18,000; Mar 22 —
+    bank −4,000, cash +4,000. Neither is posted to any ledger account.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the column balances</div>
+    Cash: 7,500 + 21,500 − 18,000 + 4,000 − 2,300 = <strong>₹12,700</strong><br />
+    Bank: 36,000 + 14,700 + 18,000 − 9,800 − 4,000 − 150 = <strong>₹54,750</strong><br />
+    Discount columns: allowed total ₹300, received total ₹200 — totalled only, never balanced;
+    the totals go to Discount Allowed A/c (Dr) and Discount Received A/c (Cr).
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — rectification through a suspense account (moderate-hard)">
+  <p>
+    The trial balance of Gopal Stores did not agree — the debit column was short by ₹1,900, and
+    the difference was placed in a Suspense Account. Later, three errors surfaced: (i) the sales
+    book was overcast by ₹2,500; (ii) a credit purchase from Hari of ₹3,200, correctly entered in
+    the purchases book, was posted to Hari's account as ₹2,600; (iii) repairs to the delivery
+    scooter ₹1,100 were debited to Vehicles A/c. Rectify and close the Suspense Account.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the rectification entries</div>
+    (i) Sales A/c Dr 2,500 — To Suspense A/c 2,500 <em>(sales book total posts to the CREDIT of Sales; an overcast means 2,500 excess credit — one-sided, so Suspense takes the other leg)</em><br />
+    (ii) Suspense A/c Dr 600 — To Hari A/c 600 <em>(Hari was credited 2,600 instead of 3,200 — short credit of 600, one-sided)</em><br />
+    (iii) Repairs A/c Dr 1,100 — To Vehicles A/c 1,100 <em>(error of principle, two-sided — Suspense is NOT touched)</em>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Suspense Account closes to nil</div>
+    Debit side: opening balance b/d 1,900 + Hari 600 = 2,500<br />
+    Credit side: Sales 2,500<br />
+    Both sides total <strong>₹2,500</strong> — the account closes exactly, proving all
+    trial-balance errors have been found. (Check the opening: error (i) put 2,500 excess in the
+    credit column, error (ii) left the credit column 600 short — net credit excess 1,900, so the
+    debit column was short by 1,900. Consistent.)
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — effect of errors on profit (hard: the examiner's favourite)">
+  <p>
+    Kabir Electricals reports a draft net profit of ₹2,40,000 for 2025–26. Before the accounts
+    are finalised, five errors are found: (i) wages of ₹15,000 for installing a new machine were
+    debited to Wages A/c; (ii) a credit sale of ₹18,000 was completely omitted; (iii) the
+    purchases book was overcast by ₹6,000; (iv) old furniture sold for ₹10,000 was credited to
+    Sales A/c; (v) stationery of ₹2,000 was debited to Purchases A/c. Find the corrected net
+    profit.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — effect of each error on net profit</div>
+    (i) Installation wages are capital expenditure — expense overstated → rectifying ADDS 15,000<br />
+    (ii) Omitted credit sale — income omitted → ADDS 18,000<br />
+    (iii) Purchases overcast — expense overstated → ADDS 6,000<br />
+    (iv) Furniture sale is not sales revenue — income overstated → LESS 10,000 <em>(the credit belongs to Furniture A/c, an asset)</em><br />
+    (v) Stationery inside Purchases — both are expenses against profit: gross profit is understated but NET profit is unchanged → <strong>nil effect</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — corrected profit</div>
+    2,40,000 + 15,000 + 18,000 + 6,000 − 10,000 = <strong>₹2,69,000</strong><br />
+    (Error (iv)'s full rectification: Sales A/c Dr 10,000 — To Furniture A/c 10,000, assuming
+    sale at book value as Foundation problems do unless told otherwise.)
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Trade discount in the books.** Trade discount is never recorded as a separate item — entries
+  are made net of it. Only *cash* discount reaches the discount columns and the Discount
+  Allowed/Received accounts. Options showing the gross list price are planted for this slip.
+- **Assets in the goods books.** Machinery or furniture bought on credit belongs in the journal
+  proper. Left in the purchases book, it becomes an error of principle too.
+- **Contra entries posted to the ledger.** The "C"-marked pair lives entirely inside the cash
+  book — posting it anywhere doubles the entry.
+- **Balancing the discount columns.** They are totalled, never balanced — they are memoranda
+  columns, not accounts.
+- **Suspense for two-sided errors.** Suspense absorbs only the missing leg of *one-sided*
+  errors. A rectification of a two-sided error that routes through Suspense is always a wrong
+  option.
+- **Reading an agreed trial balance as proof of accuracy.** Complete omission, principle,
+  compensating, wrong-account and original-entry errors all survive an agreed trial balance.
+- **Overcast/undercast direction.** An overcast purchases book means *excess debit* (profit
+  understated); an overcast sales book means *excess credit*. Half the wrong options in
+  rectification MCQs just flip this direction.
+- **Zero-effect swaps.** Stationery debited to Purchases changes gross profit but not net
+  profit. When a question asks for the effect on *net* profit, the swap between two P&amp;L-side
+  expense heads contributes nothing.
+- **Cash column with a credit balance.** Impossible — only the bank column can run into
+  overdraft. Any option showing a credit cash balance is self-condemned.
+
+## One-page revision summary
+
+**The chain:** transaction → journal / subsidiary book (first record) → ledger (posting) →
+balancing → trial balance (arithmetic check) → final accounts. Errors found later are
+rectified — never erased.
+
+**Rules and formulas:**
+
+<div class="formula">Assets = Liabilities + Capital · Opening capital = Assets − Liabilities</div>
+<div class="formula">Personal: debit the receiver, credit the giver · Real: debit what comes in, credit what goes out · Nominal: debit expenses and losses, credit incomes and gains</div>
+<div class="formula">Modern map: assets and expenses rise by DEBIT; liabilities, capital and incomes rise by CREDIT</div>
+<div class="formula">Suspense = trial balance difference, parked on the shorter column; closes to nil when all one-sided errors are rectified</div>
+<div class="formula">Petty cash reimbursement = expenses of the period (imprest restored)</div>
+<div class="formula">Corrected profit = draft profit + overstated expenses + omitted incomes − omitted expenses − overstated incomes</div>
+
+**Rules that answer theory MCQs:** journal = chronological book of original entry; ledger =
+principal book · "To" on the debit side, "By" on the credit side — convention only · nominal
+accounts close to Trading/P&amp;L, not carried forward · subsidiary goods books take only credit
+transactions of goods; cash → cash book, credit assets → journal proper · trade discount never
+recorded, cash discount recorded · contra entries marked "C", not posted · discount columns
+totalled, not balanced · cash column: debit balance only; bank column can be overdrawn · trial
+balance = a statement on a date, arithmetic proof only · one-sided errors disturb it, two-sided
+errors do not · suspense on the shorter side; closes when the hunt ends · after final accounts,
+rectify through P&amp;L Adjustment A/c (balance to Capital) · capital-vs-revenue confusion =
+error of principle.

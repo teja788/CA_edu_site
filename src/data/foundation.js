@@ -91,9 +91,9 @@ export const foundationPapers = [
       {
         name: 'Module 1',
         chapters: [
-          { number: 1, slug: 'theoretical-framework', name: 'Theoretical Framework' },
-          { number: 2, slug: 'accounting-process', name: 'Accounting Process (Journal, Ledger, Trial Balance, Rectification)' },
-          { number: 3, slug: 'bank-reconciliation-statement', name: 'Bank Reconciliation Statement' },
+          { number: 1, slug: 'theoretical-framework', name: 'Theoretical Framework', hasNotes: true },
+          { number: 2, slug: 'accounting-process', name: 'Accounting Process (Journal, Ledger, Trial Balance, Rectification)', hasNotes: true },
+          { number: 3, slug: 'bank-reconciliation-statement', name: 'Bank Reconciliation Statement', hasNotes: true },
           { number: 4, slug: 'inventories', name: 'Inventories' },
           { number: 5, slug: 'depreciation-and-amortisation', name: 'Depreciation and Amortisation', hasNotes: true },
           { number: 6, slug: 'bills-of-exchange-and-promissory-notes', name: 'Bills of Exchange and Promissory Notes' },
