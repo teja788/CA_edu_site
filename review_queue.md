@@ -657,3 +657,143 @@ _No factual corrections were needed to the MDX or the bank during this citations
   decide whether to keep it as one long chapter, split it into two pages (Units
   1–3 and Units 4–6), or trim §§16–18 (performance detail), which is the densest
   and least heavily examined stretch.
+## sale-of-goods-act-1930 — VERIFY 2026-08-07
+
+- [ ] **New chapter (Foundation P2 Ch 3, The Sale of Goods Act 1930) authored
+  7 Aug 2026** — notes (18 numbered sections plus mistakes list and one-page
+  summary, 5 application vignettes with working notes), bank (44 standalone
+  MCQs, 3 case_mcq_sets with 11 sub-MCQs, 7 descriptives; 7 numericals, all
+  verifier-proven; answer keys A14/B14/C13/D14 over 55 MCQs), citations
+  (`citations/foundation/business-laws/citations_sale-of-goods-act-1930.md`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 2 Ch 3
+  (May 2026 ed.)** and the notified text of Act 3 of 1930 on India Code. The
+  bare-act lines were transcribed, not re-fetched, so the sub-section lettering
+  of ss. 16, 17, 24, 25, 30, 37, 47, 49, 51 and 64, and the whole of the s. 2
+  definition numbering, need a line-by-line diff.
+
+- [ ] **Day-counting on a fixed sale-or-return period (s. 24(b)).** Two answers
+  depend on it: q-f2c3-031 (20 days from delivery on 6 March 2026 → property
+  passes 26 March 2026) and step 1 of vignette 4 (15 days from 2 March 2026 →
+  17 March 2026). The chapter counts a period expressed in days **from and
+  excluding** the trigger date, matching the convention used for offer-lapse in
+  the Contract Act chapter. The Act itself says only "on the expiration of such
+  time", so if the SM or a past ICAI answer counts inclusively, both dates move
+  back one day and the verifier's `_add_days` must change with them.
+
+- [ ] **s. 54(2) — who takes the profit, and whether expenses ride along.**
+  q-f2c3-042 (notice given, seller keeps the ₹75,000 surplus), q-f2c3-043 (no
+  notice, buyer takes the ₹54,000 profit) and cs-f2c3-03-b (notice given,
+  seller recovers a ₹60,000 deficiency) all rest on reading the second half of
+  s. 54(2) as a genuine forfeiture rule rather than as a mere evidential
+  presumption. cs-f2c3-03-b additionally **excludes the ₹22,000 redelivery cost
+  of the stoppage** from the recoverable deficiency, on the strength of s. 52(2)
+  putting those expenses on the seller; the wrong option is exactly ₹82,000.
+  If the SM treats redelivery costs as recoverable damages under s. 54(2)
+  instead, that key flips.
+
+- [ ] **Insolvency without adjudication (s. 2(8)) as the trigger for stoppage.**
+  Vignette 3 and cs-f2c3-03-a both hold that bounced cheques and stopped
+  payments are enough, with no petition filed. That follows the statutory
+  definition, but the facts are deliberately thin (three cheques, supplier
+  payments stopped) and a reviewer may want the vignette to state a clearer
+  cessation of payment before students are taught to stop goods on that much.
+
+- [ ] **The hire-purchase / s. 30(2) proposition.** q-f2c3-036, cs-f2c3-01-d and
+  the §3 comparison table all turn on a hirer having an **option** to buy and so
+  not being a person who has "agreed to buy". Settled law, but it is stated from
+  the case law as the SM presents it, not from statutory words, and it is the
+  single point on which an innocent third party loses everything. Confirm the SM
+  still teaches it this way and that the Hire Purchase Act 1972 is the reference
+  the May 2026 edition uses.
+
+- [ ] **Scope calls made without the SM in front of me.** (i) The chapter treats
+  **s. 64A** (change in duty or tax) at the level of principle only, because its
+  post-GST wording needs checking — confirm whether the SM examines it at all.
+  (ii) **s. 53** (sub-sale or pledge by the buyer, with the document-of-title
+  provisos) is stated in full in §16 although it is often skipped at Foundation
+  level; drop it if the SM does. (iii) The **nine** exceptions to s. 27 include
+  the finder (Contract Act s. 169), the pawnee (s. 176) and sales under statute
+  or court order, which some presentations leave out; d-f2c3-05 marks them at
+  only 0.5 of 6 so the skeleton survives either way. (iv) The notes are
+  **1,402 lines**, roughly double the 600–750 the brief suggested — the scope
+  list (every s. 27 exception, ss. 31–44 and ss. 45–56 in full, five vignettes)
+  did not compress further without dropping content, but a trim pass is
+  available if length is a hard constraint.
+## indian-partnership-act-1932 — VERIFY 2026-08-07
+
+- [ ] **New chapter (Foundation P2 Ch 4, The Indian Partnership Act 1932)
+  authored 7 Aug 2026** — notes (22 numbered sections plus mistakes list and
+  one-page summary, 5 application vignettes with working notes, 1,424 lines),
+  bank (44 standalone MCQs, 3 case_mcq_sets with 12 sub-MCQs, 7 descriptives;
+  7 numericals, all verifier-proven; answer keys A14/B14/C14/D14 over 56 MCQs),
+  citations (`citations/foundation/business-laws/citations_indian-partnership-act-1932.md`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 2 Ch 4
+  (May 2026 ed.)** and the notified text of Act 9 of 1932 on India Code. The
+  bare-act lines were transcribed, not re-fetched, so the sub-section numbering
+  of ss. 19, 30, 32, 44, 48 and 69 needs a line-by-line diff.
+
+- [ ] **The eight exclusions in s. 19(2), as transcribed.** §13.1 lists them in
+  order and letters them (a) arbitration, (b) banking account in his own name,
+  (c) compromise or relinquish a claim, (d) withdraw a suit, (e) admit liability,
+  (f) acquire immovable property, (g) transfer immovable property, (h) enter into
+  partnership. Four questions (q-f2c4-024, q-f2c4-025, q-f2c4-027 and d-f2c4-03,
+  which carries 3.5 of its 7 marks on the list) depend on both the membership and
+  the lettering. If the notified text orders the clauses differently, the
+  citations in the skeleton and in the option explanations must move with it.
+  Also confirm that the chapter is right to treat **engaging a lawyer to defend a
+  suit against the firm** as inside implied authority (the correct answer to
+  q-f2c4-024) — the list bars withdrawing, compromising and admitting, not
+  defending, but the SM may state this differently.
+
+- [ ] **The s. 69 exception list in §18.3.** Eight exceptions are given: third
+  party suing the firm; dissolution; accounts of a dissolved firm; realisation of
+  the property of a dissolved firm; powers of an Official Assignee, Receiver or
+  Court; claims not exceeding **₹100**; notified areas under s. 56; and claims
+  arising otherwise than out of a contract. Two of those need care. The **₹100
+  figure** is the only rupee amount in the chapter taken from the Act and is the
+  likeliest to have drifted or to be presented by the SM with the Presidency
+  Small Cause Court qualification spelt out. And the **non-contractual claim**
+  exception is stated as a general proposition rather than from a sub-clause; if
+  the SM does not teach it, drop the eighth bullet — no question depends on it
+  alone, though d-f2c4-04 gives it 0.5 of 8 marks. Separately, the chapter states
+  flatly that **registration after institution does not cure the defect**
+  (q-f2c4-034 option D, cs-f2c4-03-a option D); that is settled law but is stated
+  from principle, not from statutory words.
+
+- [ ] **The s. 48(b) order and the rateable abatement.** Three questions and one
+  vignette turn on it. q-f2c4-041 pays Deepa ₹17,00,000 on the full waterfall,
+  and q-f2c4-042 abates capital **rateably** where ₹9,00,000 is available against
+  capitals of ₹12,00,000, giving Q ₹3,00,000 rather than his full ₹4,00,000.
+  The rateable reading comes from the words "rateably" in s. 48(b)(ii) and (iii);
+  if the SM instead teaches the *Garner v Murray* style treatment for a capital
+  deficiency at Foundation level, q-f2c4-042 needs rewriting. Note that this
+  chapter deliberately keeps the accounting treatment out: the realisation
+  account, capital-account adjustments and Garner v Murray belong to **Foundation
+  P1 Ch 10 (Partnership and LLP Accounts)** and are not repeated or linked here.
+
+- [ ] **The boundary against the P1 accounting chapter.** Only the headings of
+  `src/pages/foundation/accounting/partnership-and-llp-accounts.mdx` were read,
+  to avoid duplication. Three topics sit close to the seam and are treated here
+  as **law only**: interest on capital and on advances (§11 gives the s. 13(c)
+  and 13(d) rules and one arithmetic example, but no P&amp;L appropriation
+  account), goodwill (§20 gives s. 55 only, no valuation methods), and the
+  outgoing partner (§17 gives the s. 37 option, not the retirement entries).
+  Confirm that this is the split the site wants, and that nothing in P1 now
+  contradicts the 6% figures used here.
+
+- [ ] **Two propositions stated from drafting or principle rather than from
+  quoted words.** (i) That **ss. 9 and 10 are absolute** while ss. 12 and 13 are
+  "subject to contract" — this chapter infers it from the opening words of the
+  sections and from s. 23 of the Contract Act, and q-f2c4-029 (an option in the
+  bank) and the §10 pointer both rest on it. (ii) That a **firm cannot be a
+  partner in another firm** while a company can (q-f2c4-004 was dropped from the
+  final bank but the proposition survives in §2 and in the one-page summary).
+  Both are standard, neither is quoted.
+
+- [ ] **Length.** The notes run to **1,424 lines** against the 600–800 the brief
+  suggested. The scope list (ss. 4 to 55 plus registration, four comparison
+  tables, the full s. 19(2) and s. 44 lists, five vignettes, a 20-item mistakes
+  list and a one-page summary) did not compress further without dropping
+  examinable content, but a trim pass on §4 (the four comparison tables) and §20
+  (ss. 49 to 53, which some presentations skip at Foundation level) is available
+  if length is a hard constraint.

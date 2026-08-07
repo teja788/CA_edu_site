@@ -127,8 +127,8 @@ export const foundationPapers = [
         chapters: [
           { number: 1, slug: 'indian-regulatory-framework', name: 'Indian Regulatory Framework', hasNotes: true },
           { number: 2, slug: 'indian-contract-act-1872', name: 'The Indian Contract Act, 1872', hasNotes: true },
-          { number: 3, slug: 'sale-of-goods-act-1930', name: 'The Sale of Goods Act, 1930' },
-          { number: 4, slug: 'indian-partnership-act-1932', name: 'The Indian Partnership Act, 1932' },
+          { number: 3, slug: 'sale-of-goods-act-1930', name: 'The Sale of Goods Act, 1930', hasNotes: true },
+          { number: 4, slug: 'indian-partnership-act-1932', name: 'The Indian Partnership Act, 1932', hasNotes: true },
           { number: 5, slug: 'llp-act-2008', name: 'The Limited Liability Partnership Act, 2008' },
           { number: 6, slug: 'companies-act-2013', name: 'The Companies Act, 2013' },
           { number: 7, slug: 'negotiable-instruments-act-1881', name: 'The Negotiable Instruments Act, 1881' },
