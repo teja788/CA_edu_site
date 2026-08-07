@@ -97,13 +97,13 @@ export const foundationPapers = [
           { number: 4, slug: 'inventories', name: 'Inventories' },
           { number: 5, slug: 'depreciation-and-amortisation', name: 'Depreciation and Amortisation', hasNotes: true },
           { number: 6, slug: 'bills-of-exchange-and-promissory-notes', name: 'Bills of Exchange and Promissory Notes' },
-          { number: 7, slug: 'final-accounts-of-sole-proprietors', name: 'Preparation of Final Accounts of Sole Proprietors' },
+          { number: 7, slug: 'final-accounts-of-sole-proprietors', name: 'Preparation of Final Accounts of Sole Proprietors', hasNotes: true },
         ],
       },
       {
         name: 'Module 2',
         chapters: [
-          { number: 8, slug: 'financial-statements-of-not-for-profit-organisations', name: 'Financial Statements of Not-for-Profit Organisations' },
+          { number: 8, slug: 'financial-statements-of-not-for-profit-organisations', name: 'Financial Statements of Not-for-Profit Organisations', hasNotes: true },
           { number: 9, slug: 'accounts-from-incomplete-records', name: 'Accounts from Incomplete Records' },
           { number: 10, slug: 'partnership-and-llp-accounts', name: 'Partnership and LLP Accounts' },
           { number: 11, slug: 'company-accounts', name: 'Company Accounts' },

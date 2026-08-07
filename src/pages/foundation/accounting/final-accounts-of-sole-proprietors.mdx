@@ -1,0 +1,502 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Final Accounts of Sole Proprietors'
+description: 'CA Foundation Accounting Ch 7 — trading account, profit and loss account, balance sheet, and the full adjustments engine in plain language, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 7 · Final Accounts'
+chapterSlug: final-accounts-of-sole-proprietors
+masteryId: f1-ch7
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI Foundation SM, Paper 1 Ch 7 — Preparation of Final Accounts of Sole Proprietors (scope and conventions)'
+  - 'Generally accepted trading vs profit-and-loss classification conventions'
+  - 'AS 1 (Disclosure of Accounting Policies) — prudence behind provisions, mentioned only'
+sourceLabel: 'ICAI SM Ch 7 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 25 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=final-accounts-of-sole-proprietors'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Meera runs a readymade-garments shop in Surat. All year she has bought stock, sold it, paid wages,
+rent and carriage — and on 31 March she asks her accountant the only question that matters:
+**"did I actually make money this year, and where does my business stand?"** Final accounts are
+the answer, in three parts: a Trading Account for the margin on goods, a Profit &amp; Loss Account
+for the overall profit, and a Balance Sheet for the position. Everything you learnt in Chapters 1
+to 6 — journal, ledger, trial balance, rectification, depreciation — was preparation for this.
+
+The exam tests the chapter in two ways: quick one-adjustment MCQs (where does carriage inwards
+go? what is the provision charge?) and longer computations threading four or five adjustments
+together. Every adjustment obeys one rule — **it hits the books in exactly two places** — so once
+the table in §6 is yours, the chapter turns mechanical.
+
+## 1. One question, three statements
+
+Final accounts are prepared **from the trial balance plus a list of adjustments**, always in the
+same order:
+
+1. **Trading Account** → finds **gross profit**: what the goods themselves earned, before office
+   and selling costs.
+2. **Profit &amp; Loss Account** → starts with gross profit, absorbs all indirect expenses and
+   other incomes, and ends at **net profit**.
+3. **Balance Sheet** → net profit joins capital, and everything the business owns and owes is
+   listed **as at** the closing date.
+
+The order is forced: gross profit feeds the P&amp;L, and net profit feeds capital in the balance
+sheet. Note the wording on top of each statement — Trading and P&amp;L are made **"for the year
+ended…"** (they cover a period), while the balance sheet is **"as at…"** (a photograph of one
+day).
+
+One more distinction examiners like: Trading and P&amp;L are genuine **accounts** — part of the
+double-entry system, closing off all nominal accounts. The balance sheet is **not an account** at
+all; it is a **statement** listing the real and personal account balances that remain open. It
+has no debit and credit sides in the ledger sense — "Liabilities" and "Assets" are customary
+headings.
+
+## 2. Capital vs revenue: what goes where
+
+Chapter 2 taught the capital-vs-revenue test; final accounts are where it bites. In placement
+terms:
+
+- **Revenue expenditure** (benefit consumed this year — wages, rent, repairs, carriage) → debit
+  of **Trading or P&amp;L**.
+- **Capital expenditure** (benefit lasts years — machinery, furniture, installation costs) →
+  **asset in the balance sheet**, entering the P&amp;L only slowly, as depreciation.
+- **Revenue receipts** (sales, discount received, rent received) → credit of Trading or P&amp;L.
+- **Capital receipts** (fresh capital, a loan taken) → **balance sheet**, as capital or
+  liability. A loan is never income.
+
+Misplace one item and *two* statements go wrong at once: repairs capitalised overstate both net
+profit and assets. Classification is the quiet half of every final-accounts question.
+
+## 3. The Trading Account: gross profit
+
+The Trading Account isolates one thing: **the margin on goods bought and sold**. Only costs of
+getting goods to a saleable state belong here — everything about running the office or finding
+customers waits for the P&amp;L.
+
+| Debit side | Credit side |
+|---|---|
+| Opening stock | Sales less sales returns (returns inward) |
+| Purchases less purchase returns (returns outward) | Closing stock |
+| Direct expenses: wages, carriage inwards, freight inwards, octroi, customs/import duty, factory fuel and power | Abnormal loss of stock, at cost (§9) |
+| Gross profit c/d (balancing figure) | — or Gross loss c/d appears on the credit side instead |
+
+**Direct expenses** are those incurred to buy the goods and bring them to the shop in saleable
+condition: carriage **inwards**, freight **inwards**, octroi and import duty on purchases, wages
+of loaders and factory workers, fuel and power of the workshop. What does **not** belong here:
+**carriage outwards** (a delivery-to-customer cost — selling expense), salaries of office staff,
+rent, insurance, advertising. All of those are indirect and go to the P&amp;L.
+
+<div class="formula">Gross profit = Net sales − Cost of goods sold</div>
+<div class="formula">Cost of goods sold = Opening stock + Net purchases + Direct expenses − Closing stock</div>
+
+If cost of goods sold exceeds net sales, the balancing figure is a **gross loss**, carried to the
+debit of the P&amp;L instead.
+
+<Callout kind="pointer">
+  <p>
+    A combined trial-balance item <strong>"Wages and salaries"</strong> goes to the
+    <strong>Trading Account</strong>, while <strong>"Salaries and wages"</strong> goes to the
+    <strong>P&amp;L</strong> — by convention the first word tells you which element dominates.
+    This is a presentation convention the SM follows, not a law; state it and move on.
+  </p>
+</Callout>
+
+**Adjusted purchases.** Some trial balances show "Adjusted purchases" *and* closing stock inside
+the trial balance. Adjusted purchases = opening stock + purchases − closing stock, meaning
+closing stock has **already been absorbed**. In that case closing stock is **not** credited to
+Trading again — it appears **only** in the balance sheet (see §6's once/twice rule).
+
+## 4. The Profit and Loss Account: net profit
+
+The P&amp;L opens with gross profit brought down on the credit side (or gross loss on the debit
+side) and then collects every **indirect** expense and income:
+
+- **Office and administration:** salaries, office rent, printing and stationery, insurance,
+  audit fees, telephone.
+- **Selling and distribution:** carriage outwards, advertising, salesmen's commission, bad
+  debts, packing for delivery.
+- **Finance and provisions:** interest on loans, discount allowed, provision for doubtful debts
+  (the chain in §7), depreciation.
+- **Abnormal items:** the uninsured part of stock lost by fire or theft (§9).
+- **Credit side:** gross profit b/d, discount received, commission received, rent received,
+  interest received, and any provision written back.
+
+The closing balance is **net profit** — credited (added) to the capital account — or **net
+loss**, deducted from capital.
+
+<Callout kind="mistake">
+  <p>
+    Three things never enter the P&amp;L of a sole trader: <strong>drawings</strong>, the
+    proprietor's <strong>income tax</strong>, and the proprietor's <strong>personal LIC
+    premium</strong>. Income tax on a sole trader's income is a personal cost of the owner, so
+    all three are treated as <strong>drawings</strong> and deducted from capital. An option that
+    debits them to P&amp;L is a planted trap.
+  </p>
+</Callout>
+
+## 5. The Balance Sheet: what you own and owe
+
+The balance sheet lists, as at the closing date, every balance still open after Trading and
+P&amp;L have swallowed the nominal accounts: assets on one side; capital and liabilities on the
+other. Both sides must agree — the double-entry system guarantees it if every adjustment was
+posted to both its places.
+
+**There is no statutory format for a sole proprietor's balance sheet.** Companies must follow
+Schedule III of the Companies Act 2013; a sole trader follows only custom. What custom does
+prescribe is **marshalling** — arranging items in a deliberate order:
+
+| Order of permanence | Order of liquidity |
+|---|---|
+| Most lasting first: goodwill, land and building, machinery, furniture … stock, debtors, bank, cash last | Most liquid first: cash, bank, debtors, stock … goodwill last |
+| Preferred by most trading concerns | Preferred by banks and financial businesses |
+
+On the liabilities side the same logic runs: under permanence, capital comes first, then
+long-term loans, then current liabilities (creditors, bills payable, outstanding expenses);
+under liquidity, the order reverses. Capital itself is shown as a working:
+**opening capital + additional capital + net profit − drawings** (− net loss, if any).
+
+## 6. The adjustments engine: every adjustment hits two places
+
+Why two places? Items already **inside the trial balance** have had both legs of their double
+entry posted — in final accounts they appear **once**. An **adjustment** is an entry the books
+have *not yet* passed (stock counted after closing, salary unpaid, depreciation not recorded).
+When you give effect to it, you are passing a fresh double entry — a debit *and* a credit — so
+it must land in **two places**.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Trial-balance item → once. Adjustment → twice.</strong> The reverse trap also
+    appears: if "Outstanding wages" is already <em>inside</em> the trial balance, the adjusting
+    entry was already passed — wages already include it, so the outstanding amount shows
+    <strong>only once more, as a liability</strong> in the balance sheet. Never add it to wages
+    again.
+  </p>
+</Callout>
+
+The classic adjustments, with both effects:
+
+| Adjustment | First effect | Second effect |
+|---|---|---|
+| Closing stock | Credit Trading | Asset in BS |
+| Outstanding expense | Add to that expense (Trading/P&amp;L debit) | Liability in BS |
+| Prepaid expense | Deduct from that expense | Asset in BS |
+| Accrued income (earned, not received) | Add to that income (P&amp;L credit) | Asset in BS |
+| Income received in advance | Deduct from that income | Liability in BS |
+| Depreciation | Debit P&amp;L | Deduct from the asset in BS |
+| Further bad debts | Add to bad debts (P&amp;L, via §7 chain) | Deduct from debtors in BS |
+| New provision for doubtful debts | P&amp;L charge by the §7 formula | Deduct from debtors in BS |
+| Provision for discount on debtors | Debit P&amp;L | Deduct from debtors (after the doubtful-debts provision) |
+| Manager's commission payable | Debit P&amp;L (§8) | Liability (commission payable) in BS |
+| Goods withdrawn by proprietor | Deduct from purchases, at cost | Add to drawings → deduct from capital |
+| Goods given as free samples | Deduct from purchases | Advertising expense in P&amp;L |
+| Interest on capital | Debit P&amp;L | Add to capital |
+| Interest on drawings | Credit P&amp;L | Deduct from capital (add to drawings) |
+
+Work every adjustment through this table and tick both boxes. In a full problem, a missed second
+effect is exactly why a balance sheet refuses to tally.
+
+## 7. Bad debts and the provision chain
+
+Three layers, in order:
+
+1. **Bad debts in the trial balance** — customers already written off during the year. Debtors
+   in the trial balance are *already reduced* by these; the amount just sits in P&amp;L (once —
+   it is a trial-balance item).
+2. **Further bad debts** (adjustment) — write-offs decided at year end, *after* the trial
+   balance. Two effects: add to bad debts, deduct from debtors.
+3. **Provision for doubtful debts** — a prudence cushion for debts *likely* to fail, created as
+   a percentage of **closing debtors after deducting further bad debts**.
+
+The P&amp;L charge threads them together:
+
+<div class="formula">P&amp;L charge = Bad debts (TB) + Further bad debts + New provision − Old provision</div>
+
+The **old provision** (the credit balance in the trial balance) is money already set aside in
+earlier years — so it is *deducted*. If the formula turns **negative**, the excess old provision
+is **written back**: the amount appears as a **credit** in the P&amp;L, not a debit.
+
+In the balance sheet: **Debtors − further bad debts − new provision**. The bad debts already in
+the trial balance are *not* deducted again — the ledger did that when they were written off.
+
+**Provision for discount on debtors** comes last in the chain. Cash discounts will only ever be
+allowed to debtors who actually *pay* — so this provision is computed on **good debtors**:
+debtors after deducting further bad debts *and* the doubtful-debts provision. It is a P&amp;L
+debit and a further deduction from debtors in the balance sheet.
+
+<Callout kind="mistake">
+  <p>
+    Two classic slips power most wrong options: <strong>adding</strong> the old provision
+    instead of deducting it, and computing the new provision on debtors <strong>before</strong>
+    removing further bad debts. Sequence is everything: write off first, then provide, then (if
+    asked) provide for discount on what is left.
+  </p>
+</Callout>
+
+## 8. Manager's commission: before vs after charging
+
+A manager is often entitled to a percentage of profit — and the exam's favourite twist is
+*which* profit.
+
+**Case 1 — % of net profit *before* charging such commission.** The base is simply the net
+profit before any commission:
+
+<div class="formula">Commission = Net profit before commission × Rate ÷ 100</div>
+
+**Case 2 — % of net profit *after* charging such commission.** Now the commission is a
+percentage of a profit that has *already been reduced by the commission itself*. If profit after
+charging is 100, commission is *rate*, so profit before charging must be 100 + rate:
+
+<div class="formula">Commission = Net profit before commission × Rate ÷ (100 + Rate)</div>
+
+Self-check the after-charging case every time: the commission you computed should equal rate %
+of (net profit before commission − commission). If it does not, you divided by the wrong base.
+
+Both cases have the same two effects: **debit P&amp;L**, and — since it is still unpaid — show
+**commission payable** as a current liability in the balance sheet.
+
+<Callout kind="example" label="Mini check — 10% after charging">
+  <p>
+    Net profit before commission ₹1,10,000; manager gets 10% of net profit after charging his
+    commission. Commission = 1,10,000 × 10 ÷ 110 = <strong>₹10,000</strong>. Check: profit after
+    charging = 1,00,000, and 10% of 1,00,000 = 10,000 ✓. The lazy answer, 10% × 1,10,000 =
+    ₹11,000, fails the check.
+  </p>
+</Callout>
+
+## 9. Goods that leave without being sold
+
+Four situations where stock exits without a normal sale. None of them is revenue — so none may
+inflate sales; each is removed **at cost**.
+
+**1. Goods withdrawn by the proprietor (drawings in kind).** The owner taking stock home is not
+a customer buying it. Effects: **deduct cost from purchases** and **add cost to drawings**
+(reducing capital). Always at **cost** — a business earns no profit selling to itself.
+
+**2. Goods distributed as free samples.** Marketing, not sales. Effects: deduct cost from
+purchases; debit **advertisement expense** in P&amp;L.
+
+**3. Abnormal loss of stock (fire, theft).** The goods are gone for reasons that have nothing to
+do with trading skill, so the Trading Account is protected: **credit Trading with the full cost
+of the goods lost** (some solutions deduct from purchases instead — same effect on gross
+profit). Then split the loss:
+
+- Insurance claim **admitted** → shown as an **asset** (Insurance company account) in the BS.
+- The **uninsured remainder** → **debit P&amp;L** as an abnormal loss.
+
+Mini numbers: stock costing ₹40,000 burns; insurer admits ₹30,000. Trading credit 40,000; asset
+30,000; P&amp;L debit 10,000. If nothing is insured, the whole ₹40,000 goes to P&amp;L.
+
+**4. Goods sent on approval, wrongly treated as sales.** Sale-or-return goods still awaiting
+customer approval at year end are *not* sales yet. Two reversals, each with two effects:
+
+- Remove at **selling price**: deduct from **Sales** and from **Debtors**.
+- Bring back at **cost**: add to **closing stock** (both Trading credit and BS asset).
+
+Mini numbers: sales include ₹30,000 sent on approval (cost ₹24,000), customer silent on 31
+March. Sales 7,50,000 → 7,20,000; debtors fall ₹30,000; closing stock rises ₹24,000.
+
+## 10. Interest on capital and drawings
+
+For a sole trader these are book adjustments that separate the owner's return from operating
+profit:
+
+- **Interest on capital** — the business "pays" the owner for the funds locked in: **debit
+  P&amp;L**, **add to capital**.
+- **Interest on drawings** — the owner "pays" the business for money pulled out early: **credit
+  P&amp;L**, **deduct from capital** (equivalently, add to drawings).
+
+Both are internal: no cash moves. The capital account working in the balance sheet becomes:
+opening capital + additional capital + interest on capital + net profit − drawings − interest on
+drawings.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — Trading Account to gross profit (easy)">
+  <p>
+    Prasad Stores, year ended 31 March 2026: opening stock ₹80,000; purchases ₹6,40,000;
+    purchase returns ₹15,000; carriage inwards ₹18,000; wages ₹42,000; octroi ₹5,000; carriage
+    outwards ₹12,000; sales ₹9,10,000; sales returns ₹10,000; closing stock ₹95,000. Find the
+    gross profit.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Net figures and what belongs</div>
+    Net purchases = 6,40,000 − 15,000 = 6,25,000 · Net sales = 9,10,000 − 10,000 = 9,00,000<br />
+    Direct expenses = 18,000 + 42,000 + 5,000 = 65,000. Carriage <strong>outwards</strong> is a
+    selling expense — it waits for the P&amp;L.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Gross profit</div>
+    Debit side = 80,000 + 6,25,000 + 65,000 = 7,70,000<br />
+    Credit side = 9,00,000 + 95,000 = 9,95,000<br />
+    Gross profit = 9,95,000 − 7,70,000 = <strong>₹2,25,000</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — P&amp;L with outstanding and prepaid items (moderate)">
+  <p>
+    Farida Boutique: gross profit ₹1,80,000; salaries ₹48,000 (₹4,000 for March still unpaid);
+    rent ₹36,000 (₹6,000 relates to April–June 2026); advertising ₹14,000; depreciation on
+    furniture ₹8,000; sundry expenses ₹11,000; discount received ₹5,000; commission received
+    ₹9,000, of which ₹2,000 relates to 2026–27. Find the net profit and list the balance-sheet
+    effects.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Adjusted expense and income lines</div>
+    Salaries = 48,000 + 4,000 outstanding = 52,000<br />
+    Rent = 36,000 − 6,000 prepaid = 30,000<br />
+    Commission income = 9,000 − 2,000 received in advance = 7,000
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Net profit</div>
+    Credit side = 1,80,000 + 5,000 + 7,000 = 1,92,000<br />
+    Debit side = 52,000 + 30,000 + 14,000 + 8,000 + 11,000 = 1,15,000<br />
+    Net profit = <strong>₹77,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Second effects in the balance sheet</div>
+    Outstanding salaries 4,000 → liability · Prepaid rent 6,000 → asset · Commission received
+    in advance 2,000 → liability. Every adjustment: two places.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — the provision-for-doubtful-debts chain (moderate-hard)">
+  <p>
+    Govind Traders' trial balance shows: sundry debtors ₹2,04,000; bad debts ₹6,000; provision
+    for doubtful debts ₹10,000. Adjustments: write off further bad debts ₹4,000 and maintain the
+    provision at 5% of debtors. Find the P&amp;L charge and the balance-sheet figure.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Write off first, then provide</div>
+    Debtors after further bad debts = 2,04,000 − 4,000 = 2,00,000<br />
+    New provision = 5% × 2,00,000 = 10,000
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — P&amp;L charge (the chain)</div>
+    Charge = 6,000 (TB bad debts) + 4,000 (further) + 10,000 (new) − 10,000 (old) =
+    <strong>₹10,000 debit</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Balance sheet, and the write-back variant</div>
+    Debtors = 2,00,000 − 10,000 = <strong>₹1,90,000</strong><br />
+    Variant: had the old provision been 22,000, the chain gives 6,000 + 4,000 + 10,000 − 22,000
+    = −2,000 → a <strong>credit of ₹2,000</strong> to P&amp;L (excess provision written back).
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — manager's commission, both variants (hard)">
+  <p>
+    Hemant Stores earns a net profit of ₹2,20,000 before any manager's commission. Compute the
+    commission if the manager is allowed (a) 10% of net profit before charging such commission,
+    and (b) 10% of net profit after charging such commission.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Before charging</div>
+    Commission = 2,20,000 × 10 ÷ 100 = <strong>₹22,000</strong> · Net profit after = 1,98,000
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — After charging</div>
+    Commission = 2,20,000 × 10 ÷ (100 + 10) = <strong>₹20,000</strong><br />
+    Check: profit after charging = 2,20,000 − 20,000 = 2,00,000; 10% of 2,00,000 = 20,000 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Two places</div>
+    Either way: debit P&amp;L; show the unpaid amount as <strong>commission payable</strong>
+    (current liability) in the balance sheet.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — trial balance to balance sheet (hard)">
+  <p>
+    Nilesh Traders' trial balance, 31 March 2026 — debits: machinery 2,50,000; sundry debtors
+    80,000; cash at bank 34,000; opening stock 40,000; purchases 4,20,000; wages 30,000;
+    salaries 46,000; drawings 36,000. Credits: capital 3,00,000; sundry creditors 60,000; sales
+    5,76,000. Adjustments: (i) closing stock ₹55,000; (ii) depreciate machinery 10%; (iii) goods
+    costing ₹6,000 withdrawn by the proprietor, unrecorded; (iv) outstanding wages ₹3,000.
+    Prepare the final accounts.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Trading Account</div>
+    Purchases = 4,20,000 − 6,000 (drawings in kind, at cost) = 4,14,000<br />
+    Wages = 30,000 + 3,000 outstanding = 33,000<br />
+    Debit side = 40,000 + 4,14,000 + 33,000 = 4,87,000 · Credit side = 5,76,000 + 55,000 =
+    6,31,000<br />
+    Gross profit = <strong>₹1,44,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — P&amp;L</div>
+    Net profit = 1,44,000 − 46,000 (salaries) − 25,000 (depreciation @10% × 2,50,000) =
+    <strong>₹73,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Balance sheet (both sides ₹3,94,000)</div>
+    Capital = 3,00,000 + 73,000 − drawings (36,000 + 6,000) = 3,31,000; creditors 60,000;
+    outstanding wages 3,000 → total 3,94,000<br />
+    Assets: machinery 2,25,000; closing stock 55,000; debtors 80,000; bank 34,000 → total
+    3,94,000 ✓ tallies
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Carriage direction.** Carriage/freight **inwards** → Trading; carriage **outwards** →
+  P&amp;L. The wrong-side figure is always among the options.
+- **Closing stock inside the trial balance.** With "adjusted purchases", closing stock is
+  already absorbed — it goes **only** to the balance sheet. Crediting Trading again counts it
+  twice.
+- **Old provision added instead of deducted.** The chain is + new − old. An option roughly
+  "your answer + 2 × old provision" is this trap.
+- **Providing before writing off.** New provision is a % of debtors **after** further bad
+  debts; the discount provision is computed after the doubtful-debts provision too.
+- **After-charging commission on the wrong base.** Rate ÷ (100 + rate), and self-check against
+  the reduced profit. Plain rate % of profit is the planted wrong option.
+- **Drawings in kind at selling price.** Goods withdrawn or given as samples leave at **cost**;
+  no business profits by consuming its own stock.
+- **Approval goods left in sales.** Reverse sales *and* debtors at selling price; add stock at
+  **cost** — mixing the two prices up moves gross profit by exactly the margin.
+- **Abnormal loss netted silently.** Credit Trading with the **full cost**; the claim is an
+  asset and only the uninsured part hits P&amp;L. Skipping the Trading credit understates gross
+  profit.
+- **Trial-balance items doubled.** Outstanding or prepaid amounts already inside the trial
+  balance get their balance-sheet slot and nothing else — adjusting the expense again double
+  counts.
+- **Proprietor's income tax in P&amp;L.** It is drawings. So is the personal LIC premium paid
+  from the business bank account.
+
+## One-page revision summary
+
+**Sequence:** Trading (gross profit) → P&amp;L (net profit) → Balance sheet (position). Trading
+and P&amp;L are accounts for a period; the balance sheet is a statement as at a date. No
+statutory format for a sole trader — marshal by permanence or liquidity.
+
+**Formulas:**
+
+<div class="formula">Cost of goods sold = Opening stock + Net purchases + Direct expenses − Closing stock</div>
+<div class="formula">Gross profit = Net sales − Cost of goods sold</div>
+<div class="formula">Adjusted purchases = Opening stock + Purchases − Closing stock (stock then appears only in the BS)</div>
+<div class="formula">Provision chain charge = Bad debts (TB) + Further bad debts + New provision − Old provision (negative → P&amp;L credit)</div>
+<div class="formula">Commission before charging = NP × Rate ÷ 100 · Commission after charging = NP × Rate ÷ (100 + Rate)</div>
+<div class="formula">Closing capital = Opening + Additional capital + Interest on capital + Net profit − Drawings − Interest on drawings</div>
+
+**The engine:** trial-balance item → once; adjustment → twice. Closing stock: Trading credit +
+BS asset. Outstanding expense: add + liability. Prepaid: deduct + asset. Accrued income: add +
+asset. Income in advance: deduct + liability. Depreciation: P&amp;L + off the asset. Further bad
+debts: chain + off debtors. Drawings in kind: off purchases at cost + into drawings. Samples:
+off purchases + advertising. Interest on capital: P&amp;L debit + add to capital; on drawings:
+P&amp;L credit + off capital.
+
+**Rules that answer theory MCQs:** wages-and-salaries → Trading, salaries-and-wages → P&amp;L
+(convention) · discount provision only on good debtors, after the doubtful-debts provision ·
+abnormal loss credited to Trading at cost · approval goods out of sales and debtors at selling
+price, into stock at cost · proprietor's income tax = drawings · balance sheet is a statement,
+not an account · a loan taken is a capital receipt, never income.

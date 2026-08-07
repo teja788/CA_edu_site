@@ -1,0 +1,2146 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "final-accounts-of-sole-proprietors",
+  "chapter": "Ch 7 — Final Accounts of Sole Proprietors",
+  "questions": [
+    {
+      "id": "q-f1c7-001",
+      "topic": "Ch 7 · Final Accounts · Sequence of the three statements",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Final accounts are prepared in a fixed order. Which sequence is correct, and for the right reason?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Balance Sheet → Trading Account → Profit and Loss Account, because the position must be known before the profit",
+          "explanation": "The balance sheet cannot come first: it needs net profit before capital can be stated. The position is the OUTPUT of the exercise, not its starting point."
+        },
+        {
+          "key": "B",
+          "text": "Trading Account → Profit and Loss Account → Balance Sheet, because gross profit feeds the P&L and net profit feeds capital",
+          "explanation": "Correct. The order is forced by the arithmetic: the Trading Account produces gross profit, which is brought down into the P&L; the P&L produces net profit, which is added to capital in the balance sheet."
+        },
+        {
+          "key": "C",
+          "text": "Profit and Loss Account → Trading Account → Balance Sheet, because indirect expenses are settled first",
+          "explanation": "The P&L opens with gross profit brought down — it has no opening figure until the Trading Account is closed. Indirect expenses cannot be 'settled first'."
+        },
+        {
+          "key": "D",
+          "text": "Trading Account → Balance Sheet → Profit and Loss Account, because assets are known once gross profit is found",
+          "explanation": "This stops one step too early. Capital in the balance sheet needs NET profit, so the P&L must be completed before the balance sheet is drawn up."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Three statements, §1 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#1-one-question-three-statements"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Trading → P&L → Balance Sheet; gross profit feeds P&L, net profit feeds capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-002",
+      "topic": "Ch 7 · Final Accounts · Nature of the balance sheet",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about a sole proprietor's balance sheet is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is an account, and 'Liabilities' and 'Assets' are its debit and credit sides",
+          "explanation": "'Liabilities' and 'Assets' are customary headings, not ledger sides. The balance sheet is outside the double-entry system, so it has no debit or credit side in the ledger sense."
+        },
+        {
+          "key": "B",
+          "text": "It is prepared 'for the year ended', exactly like the Trading and Profit and Loss Account",
+          "explanation": "This confuses a period statement with a point-in-time one. Trading and P&L cover a period ('for the year ended…'); the balance sheet is a photograph of one day ('as at…')."
+        },
+        {
+          "key": "C",
+          "text": "It is a statement, not an account, listing the real and personal balances still open as at the closing date",
+          "explanation": "Correct. Trading and P&L are genuine accounts that close off the nominal accounts; what is left open — real and personal balances — is simply LISTED in a statement as at the closing date."
+        },
+        {
+          "key": "D",
+          "text": "It closes off the nominal accounts, which is why both sides agree",
+          "explanation": "The nominal accounts are closed by the Trading and P&L Accounts, not by the balance sheet. Both sides of the balance sheet agree because every adjustment was posted to both of its places."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Three statements, §1 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#1-one-question-three-statements"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Balance sheet is a statement, not an account; 'as at' a date",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-003",
+      "topic": "Ch 7 · Final Accounts · Capital vs revenue receipts",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "During the year Ashwin borrowed ₹5,00,000 from his bank for the business and also earned ₹40,000 as commission. In the final accounts:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the loan is a capital receipt shown as a liability; only the commission is credited as income",
+          "explanation": "Correct. Money borrowed has to be repaid — it creates an obligation, not a gain, so it is a capital receipt and sits on the liabilities side. Commission earned is a revenue receipt and is credited to the P&L."
+        },
+        {
+          "key": "B",
+          "text": "both are incomes credited to the Profit and Loss Account",
+          "explanation": "This treats a loan as income. Crediting ₹5,00,000 to the P&L would overstate net profit by the whole borrowing and leave the liability off the balance sheet."
+        },
+        {
+          "key": "C",
+          "text": "the loan is credited to the Trading Account and the commission to the Profit and Loss Account",
+          "explanation": "Nothing but sales, closing stock and stock removed otherwise than by sale is credited to the Trading Account. A borrowing is neither a sale nor an income of any kind."
+        },
+        {
+          "key": "D",
+          "text": "the loan is added to capital and the commission is a capital receipt",
+          "explanation": "Both halves are wrong. A bank loan is outside capital — the bank is a creditor, not the owner — and commission earned in the ordinary course is a revenue receipt."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Capital vs revenue, §2 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#2-capital-vs-revenue-what-goes-where"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A loan taken is a capital receipt, never income",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-004",
+      "topic": "Ch 7 · Final Accounts · Capital vs revenue expenditure",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "₹30,000 spent on ordinary repairs to machinery was debited to the Machinery Account. Ignoring depreciation, the effect on the final accounts is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "net profit understated by ₹30,000 and assets understated by ₹30,000",
+          "explanation": "Both directions are reversed. Charging an expense to an asset account keeps it OUT of the P&L, so profit is too high, and puts it INTO machinery, so assets are too high."
+        },
+        {
+          "key": "B",
+          "text": "net profit overstated by ₹30,000 and assets understated by ₹30,000",
+          "explanation": "The profit half is right but the asset half is not: the ₹30,000 was added to Machinery, so the asset figure is inflated, not reduced."
+        },
+        {
+          "key": "C",
+          "text": "no effect on net profit; only the asset figure is wrong",
+          "explanation": "This is the error-of-principle trap read only half-way. The repair never reached the P&L, so an expense of ₹30,000 is missing and profit is genuinely overstated."
+        },
+        {
+          "key": "D",
+          "text": "net profit overstated by ₹30,000 and assets overstated by ₹30,000",
+          "explanation": "Correct. Misplacing one item across the capital-revenue line spoils TWO statements at once: the P&L loses an expense (profit up ₹30,000) and the balance sheet gains a non-existent asset (machinery up ₹30,000)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Capital vs revenue, §2 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#2-capital-vs-revenue-what-goes-where"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Repairs capitalised overstate both net profit and assets",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-005",
+      "topic": "Ch 7 · Final Accounts · Direct vs indirect expenses",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Carriage inwards ₹18,000 and carriage outwards ₹11,000 appear in the trial balance. They are debited respectively to the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trading Account and the Profit and Loss Account",
+          "explanation": "Correct. Carriage INWARDS brings the goods to the shop, so it is part of the cost of goods; carriage OUTWARDS takes them to the customer, which is a selling and distribution cost belonging to the P&L."
+        },
+        {
+          "key": "B",
+          "text": "Profit and Loss Account and the Trading Account",
+          "explanation": "The direction is inverted. Placing carriage inwards in the P&L understates cost of goods sold and overstates gross profit by ₹18,000, while carriage outwards in the Trading Account understates it by ₹11,000."
+        },
+        {
+          "key": "C",
+          "text": "Trading Account and the Trading Account",
+          "explanation": "Carriage outwards has nothing to do with bringing goods to a saleable condition — it is incurred only after a sale is made, so it can never sit in the Trading Account."
+        },
+        {
+          "key": "D",
+          "text": "Profit and Loss Account and the Profit and Loss Account",
+          "explanation": "Carriage inwards is a classic DIRECT expense listed on the debit of the Trading Account. Sending it to the P&L inflates gross profit while leaving net profit unchanged."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Trading Account, §3 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#3-the-trading-account-gross-profit"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Carriage inwards → Trading; carriage outwards → P&L",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-006",
+      "topic": "Ch 7 · Final Accounts · Wages and salaries convention",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A trial balance shows a single combined line, 'Wages and salaries ₹96,000'. Following the presentation convention the Study Material adopts, this amount is debited to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the Profit and Loss Account, because salaries are an office cost",
+          "explanation": "That reads the second word instead of the first. 'Salaries and wages' goes to the P&L; 'Wages and salaries' — wages first — goes to the Trading Account."
+        },
+        {
+          "key": "B",
+          "text": "the Trading Account and the Profit and Loss Account in equal halves",
+          "explanation": "Nothing in the question supports a 50:50 split, and the convention exists precisely so that no split has to be invented. Splitting ₹48,000 each moves gross profit by ₹48,000 without authority."
+        },
+        {
+          "key": "C",
+          "text": "the Trading Account, because the first word 'wages' signals that the direct element dominates",
+          "explanation": "Correct. By convention the leading word tells you which element dominates: 'Wages and salaries' → Trading Account, 'Salaries and wages' → P&L. It is a presentation convention, not a rule of law — state it and move on."
+        },
+        {
+          "key": "D",
+          "text": "the balance sheet, because the split between the two elements is unknown",
+          "explanation": "An expense head can never be parked in the balance sheet. Wages and salaries is a nominal account and must be closed into Trading or P&L in the year it is incurred."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Trading Account, §3 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#3-the-trading-account-gross-profit"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "'Wages and salaries' → Trading; 'Salaries and wages' → P&L (convention)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-007",
+      "topic": "Ch 7 · Final Accounts · Gross profit computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vasant Traders, year ended 31 March 2026: opening stock ₹62,000; purchases ₹4,85,000; purchase returns ₹12,000; carriage inwards ₹14,000; wages ₹38,000; sales ₹7,20,000; sales returns ₹8,000; closing stock ₹71,000. The gross profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,34,000",
+          "explanation": "This leaves wages ₹38,000 out of the Trading Account, treating them as an office cost. Wages of shop and factory hands are a direct expense and belong on the debit of the Trading Account."
+        },
+        {
+          "key": "B",
+          "text": "₹1,96,000",
+          "explanation": "Correct. Net purchases = 4,85,000 − 12,000 = 4,73,000; net sales = 7,20,000 − 8,000 = 7,12,000; direct expenses = 14,000 + 38,000 = 52,000. Cost of goods sold = 62,000 + 4,73,000 + 52,000 − 71,000 = 5,16,000, so gross profit = 7,12,000 − 5,16,000 = ₹1,96,000."
+        },
+        {
+          "key": "C",
+          "text": "₹1,72,000",
+          "explanation": "This ADDS the purchase returns of ₹12,000 to purchases instead of deducting them, so cost of goods sold is overstated by ₹24,000 (2 × 12,000) and gross profit falls by the same amount."
+        },
+        {
+          "key": "D",
+          "text": "₹1,25,000",
+          "explanation": "This omits the closing stock of ₹71,000 from the credit of the Trading Account. Unsold goods are not a cost of the year's sales — the whole point of the closing-stock adjustment."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Trading Account, §3 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#3-the-trading-account-gross-profit"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Gross profit = Net sales − Cost of goods sold",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-008",
+      "topic": "Ch 7 · Final Accounts · Cost of goods sold",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening stock ₹45,000; purchases ₹3,10,000; returns outward ₹10,000; carriage inwards ₹9,000; carriage outwards ₹7,000; closing stock ₹52,000. The cost of goods sold is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,54,000",
+          "explanation": "This never deducts the closing stock of ₹52,000. Goods still on the shelf on 31 March were not sold, so their cost cannot form part of the cost of goods SOLD."
+        },
+        {
+          "key": "B",
+          "text": "₹3,09,000",
+          "explanation": "This drags carriage OUTWARDS ₹7,000 into the computation. Delivery to the customer happens after the sale — it is a selling expense of the P&L, never a component of cost of goods sold."
+        },
+        {
+          "key": "C",
+          "text": "₹2,84,000",
+          "explanation": "This DEDUCTS carriage inwards ₹9,000 instead of adding it, moving the figure by ₹18,000. Freight paid to bring goods in raises their cost."
+        },
+        {
+          "key": "D",
+          "text": "₹3,02,000",
+          "explanation": "Correct. Net purchases = 3,10,000 − 10,000 = 3,00,000. Cost of goods sold = opening stock 45,000 + net purchases 3,00,000 + direct expenses 9,000 (carriage inwards) − closing stock 52,000 = ₹3,02,000. Carriage outwards is excluded."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Trading Account, §3 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#3-the-trading-account-gross-profit"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "COGS = Opening stock + Net purchases + Direct expenses − Closing stock",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-009",
+      "topic": "Ch 7 · Final Accounts · Gross profit with classification traps",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Suman Fabrics, year ended 31 March 2026: opening stock ₹90,000; purchases ₹5,60,000; purchase returns ₹20,000; freight inwards ₹16,000; octroi ₹6,000; factory fuel and power ₹12,000; carriage outwards ₹15,000; advertising ₹22,000; office salaries ₹55,000; sales ₹8,40,000; sales returns ₹15,000; closing stock ₹1,05,000. The gross profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,66,000",
+          "explanation": "Correct. Net purchases = 5,60,000 − 20,000 = 5,40,000; net sales = 8,40,000 − 15,000 = 8,25,000; direct expenses = freight inwards 16,000 + octroi 6,000 + factory fuel and power 12,000 = 34,000. Trading debit = 90,000 + 5,40,000 + 34,000 = 6,64,000; credit = 8,25,000 + 1,05,000 = 9,30,000; gross profit = ₹2,66,000. Carriage outwards, advertising and office salaries all wait for the P&L."
+        },
+        {
+          "key": "B",
+          "text": "₹2,51,000",
+          "explanation": "This pulls carriage outwards ₹15,000 into the Trading Account. It is a delivery-to-customer cost — a selling expense — so gross profit is understated by exactly that ₹15,000."
+        },
+        {
+          "key": "C",
+          "text": "₹2,29,000",
+          "explanation": "This treats both carriage outwards ₹15,000 and advertising ₹22,000 as direct expenses, understating gross profit by ₹37,000. Advertising finds customers; it does not bring goods to a saleable state."
+        },
+        {
+          "key": "D",
+          "text": "₹2,78,000",
+          "explanation": "This leaves factory fuel and power ₹12,000 out of the Trading Account. Workshop fuel and power is a direct expense of putting goods into saleable condition and belongs on the Trading debit."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Trading Account, §3 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#3-the-trading-account-gross-profit"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Direct expenses: freight inwards, octroi, factory fuel and power",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-010",
+      "topic": "Ch 7 · Final Accounts · Adjusted purchases",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A trial balance shows 'Adjusted purchases ₹6,40,000' and, separately on the debit side, 'Closing stock ₹85,000'. In the final accounts the closing stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "credited to the Trading Account and also shown as an asset in the balance sheet",
+          "explanation": "That is the treatment for closing stock given as an ADJUSTMENT. Here it is already inside the trial balance and already absorbed by adjusted purchases, so crediting Trading again counts it twice and inflates gross profit by ₹85,000."
+        },
+        {
+          "key": "B",
+          "text": "credited to the Trading Account only",
+          "explanation": "Not only does this double-count the stock in the Trading Account, it also loses the asset — the balance sheet would omit ₹85,000 of goods the business actually holds."
+        },
+        {
+          "key": "C",
+          "text": "shown in the balance sheet only, because adjusted purchases have already absorbed it",
+          "explanation": "Correct. Adjusted purchases = opening stock + purchases − closing stock, so the closing-stock entry has already been passed. It is now a trial-balance item, and a trial-balance item appears ONCE — here, as an asset."
+        },
+        {
+          "key": "D",
+          "text": "deducted from sales in the Trading Account",
+          "explanation": "Closing stock is never netted against sales. Deducting it from sales would reduce turnover by ₹85,000 and distort every ratio built on it."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Adjusted purchases, §3 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#3-the-trading-account-gross-profit"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Adjusted purchases absorb closing stock; stock then appears only in the BS",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-011",
+      "topic": "Ch 7 · Final Accounts · Adjusted purchases computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nandini Stores' trial balance shows adjusted purchases ₹6,15,000, closing stock ₹84,000 (appearing inside the trial balance), sales ₹8,50,000, wages ₹40,000 and carriage inwards ₹12,000. The gross profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,67,000",
+          "explanation": "This credits the closing stock of ₹84,000 to the Trading Account as well as showing it as an asset. Adjusted purchases have already absorbed it, so gross profit is overstated by exactly ₹84,000."
+        },
+        {
+          "key": "B",
+          "text": "₹1,83,000",
+          "explanation": "Correct. With adjusted purchases, no opening or closing stock enters the Trading Account. Debit = 6,15,000 + wages 40,000 + carriage inwards 12,000 = 6,67,000; credit = sales 8,50,000 alone; gross profit = ₹1,83,000. The ₹84,000 stock goes only to the balance sheet."
+        },
+        {
+          "key": "C",
+          "text": "₹1,95,000",
+          "explanation": "This leaves carriage inwards ₹12,000 out of the Trading Account. Adjusted purchases absorb stock, not direct expenses — carriage inwards is still a Trading debit."
+        },
+        {
+          "key": "D",
+          "text": "₹99,000",
+          "explanation": "This deducts the closing stock ₹84,000 from sales instead of leaving it in the balance sheet — the double-count trap run in the wrong direction, understating gross profit by ₹84,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Adjusted purchases, §3 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#3-the-trading-account-gross-profit"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Adjusted purchases: no stock in Trading; direct expenses still debited",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-012",
+      "topic": "Ch 7 · Final Accounts · Items that never enter the P&L",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "During the year the business bank account paid the proprietor's income tax ₹24,000 and his personal LIC premium ₹18,000. In the final accounts these are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "both debited to the Profit and Loss Account as business expenses",
+          "explanation": "Neither is a cost of running the business. Debiting them understates net profit by ₹42,000 and leaves capital overstated by the same amount."
+        },
+        {
+          "key": "B",
+          "text": "income tax debited to the Profit and Loss Account; LIC premium treated as drawings",
+          "explanation": "A sole trader's income tax is levied on the OWNER's income, not on the firm — there is no separate business tax to charge. Both items are personal."
+        },
+        {
+          "key": "C",
+          "text": "both debited to the Trading Account",
+          "explanation": "The Trading Account takes only direct costs of goods. Personal payments of the proprietor cannot touch gross profit at all."
+        },
+        {
+          "key": "D",
+          "text": "both treated as drawings and deducted from capital",
+          "explanation": "Correct. Income tax on a sole trader's income and a personal LIC premium are private costs of the owner. Paying them from business money is simply the owner taking money out — drawings, deducted from capital, with no effect on profit."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Profit and Loss Account, §4 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#4-the-profit-and-loss-account-net-profit"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Drawings, proprietor's income tax and personal LIC premium never enter the P&L",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-013",
+      "topic": "Ch 7 · Final Accounts · Free samples",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Goods costing ₹14,000 were distributed as free samples during the year and no entry has been made. The two effects of the adjustment are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "credit Sales with ₹14,000 and debit Advertisement with ₹14,000",
+          "explanation": "Nothing was sold, so sales must not move. Inflating sales by ₹14,000 turns a marketing giveaway into revenue and distorts gross profit."
+        },
+        {
+          "key": "B",
+          "text": "deduct ₹14,000 from purchases and add ₹14,000 to drawings",
+          "explanation": "This is the treatment for goods withdrawn by the PROPRIETOR. Samples went to potential customers, not to the owner, so capital is untouched and the cost is a business expense."
+        },
+        {
+          "key": "C",
+          "text": "deduct ₹14,000 from purchases and debit Advertisement Account in the Profit and Loss Account",
+          "explanation": "Correct. The goods never reached a customer as a sale, so their cost leaves the Trading Account by way of a deduction from purchases; the spend is a marketing cost, so it is debited to advertisement in the P&L."
+        },
+        {
+          "key": "D",
+          "text": "debit Advertisement with ₹14,000 and show ₹14,000 as an asset in the balance sheet",
+          "explanation": "The goods are gone — there is no asset left. This also leaves purchases untouched, so the cost is counted twice: once in cost of goods sold and once as advertising."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Adjustments engine, §6 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#6-the-adjustments-engine-every-adjustment-hits-two-places"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Free samples: deduct from purchases; debit advertisement",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-014",
+      "topic": "Ch 7 · Final Accounts · Net profit with outstanding and prepaid items",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Farhan Enterprises, year ended 31 March 2026: gross profit ₹2,40,000; salaries ₹60,000 (the March salary of ₹5,000 is still unpaid); rent ₹48,000 (including ₹8,000 paid for April–June 2026); insurance ₹12,000 (of which ₹3,000 is prepaid); carriage outwards ₹14,000; discount received ₹6,000; commission received ₹15,000, of which ₹4,000 relates to 2026–27. The net profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,29,000",
+          "explanation": "Correct. Salaries = 60,000 + 5,000 = 65,000; rent = 48,000 − 8,000 = 40,000; insurance = 12,000 − 3,000 = 9,000; carriage outwards 14,000 → total expenses ₹1,28,000. Credits = 2,40,000 + 6,000 + (15,000 − 4,000 = 11,000) = ₹2,57,000. Net profit = 2,57,000 − 1,28,000 = ₹1,29,000."
+        },
+        {
+          "key": "B",
+          "text": "₹1,27,000",
+          "explanation": "This uses every figure exactly as given and applies no adjustment at all: expenses 1,34,000 against credits 2,61,000. The four adjustments net to ₹2,000 of extra profit, which is the gap."
+        },
+        {
+          "key": "C",
+          "text": "₹1,25,000",
+          "explanation": "This reverses the signs: it DEDUCTS the outstanding salary and ADDS the prepaid rent and insurance, and adds back the advance commission as income. Outstanding is added to an expense; prepaid is deducted from it."
+        },
+        {
+          "key": "D",
+          "text": "₹1,33,000",
+          "explanation": "The expense side is handled correctly but the ₹4,000 commission received in advance is left in income. It belongs to next year — deduct it from commission and show it as a liability."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Profit and Loss Account, §4 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#4-the-profit-and-loss-account-net-profit"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Outstanding added to expense; prepaid deducted; income in advance deducted from income",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-015",
+      "topic": "Ch 7 · Final Accounts · Net profit with depreciation and accrued income",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Gross profit ₹3,10,000; office salaries ₹72,000; printing and stationery ₹9,000; machinery ₹4,00,000 to be depreciated at 10%; furniture ₹60,000 to be depreciated at 15%; interest on loan paid ₹8,000 with a further ₹2,000 still outstanding; rent received ₹24,000, with ₹3,000 more accrued but not yet received. The net profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,94,000",
+          "explanation": "This omits the ₹3,000 of accrued rent. Rent earned but not yet received is still income of this year — add it to rent received and show it as an asset."
+        },
+        {
+          "key": "B",
+          "text": "₹1,97,000",
+          "explanation": "Correct. Expenses = 72,000 + 9,000 + depreciation 40,000 (10% × 4,00,000) + 9,000 (15% × 60,000) + interest 10,000 (8,000 + 2,000 outstanding) = ₹1,40,000. Credits = 3,10,000 + rent 27,000 (24,000 + 3,000 accrued) = ₹3,37,000. Net profit = ₹1,97,000."
+        },
+        {
+          "key": "C",
+          "text": "₹1,99,000",
+          "explanation": "This charges only the ₹8,000 of interest actually paid and ignores the ₹2,000 outstanding. Interest for the year is a cost of the year whether or not the cheque has gone out."
+        },
+        {
+          "key": "D",
+          "text": "₹2,00,000",
+          "explanation": "This depreciates the furniture at 10% (₹6,000) instead of the stated 15% (₹9,000), understating the charge by ₹3,000. Each asset carries its own rate."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Profit and Loss Account, §4 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#4-the-profit-and-loss-account-net-profit"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Depreciation, outstanding expense and accrued income in the P&L",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-016",
+      "topic": "Ch 7 · Final Accounts · Format and marshalling",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Regarding the form of a sole proprietor's balance sheet:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Schedule III of the Companies Act 2013 must be followed",
+          "explanation": "Schedule III binds COMPANIES. A sole proprietorship is not a company and is under no statutory obligation as to the form of its balance sheet."
+        },
+        {
+          "key": "B",
+          "text": "the order of liquidity is compulsory for all trading concerns",
+          "explanation": "Nothing is compulsory here, and the preference runs the other way: trading concerns usually adopt the order of PERMANENCE, while banks and financial businesses favour liquidity."
+        },
+        {
+          "key": "C",
+          "text": "no order at all is followed; items are simply listed in the sequence in which they appear in the trial balance",
+          "explanation": "Absence of a statutory format is not absence of order. Custom prescribes marshalling — a deliberate sequence — which trial-balance order would not give."
+        },
+        {
+          "key": "D",
+          "text": "there is no statutory format; custom prescribes marshalling, either in order of permanence or in order of liquidity",
+          "explanation": "Correct. A sole trader follows custom, not statute. Marshalling arranges items deliberately: permanence puts the most lasting first (goodwill, land and building, machinery … cash last); liquidity reverses it, most liquid first."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Balance Sheet, §5 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#5-the-balance-sheet-what-you-own-and-owe"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "No statutory format for a sole trader; marshalling by permanence or liquidity",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-017",
+      "topic": "Ch 7 · Final Accounts · Assets side of the balance sheet",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kavya Traders, 31 March 2026: machinery ₹3,00,000, to be depreciated at 10%; closing stock ₹96,000; sundry debtors ₹1,50,000, against which a provision for doubtful debts of 5% is to be created; cash at bank ₹38,000; insurance prepaid ₹4,000. The total of the assets side of the balance sheet is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,80,500",
+          "explanation": "This shows machinery at its full ₹3,00,000. Depreciation has two effects — a P&L debit AND a deduction from the asset — and the second one has been skipped, overstating assets by ₹30,000."
+        },
+        {
+          "key": "B",
+          "text": "₹5,58,000",
+          "explanation": "This shows debtors at the full ₹1,50,000. The new provision of ₹7,500 must be deducted from debtors in the balance sheet as well as charged in the P&L."
+        },
+        {
+          "key": "C",
+          "text": "₹5,50,500",
+          "explanation": "Correct. Machinery 3,00,000 − 30,000 = 2,70,000; closing stock 96,000; debtors 1,50,000 − 7,500 (5%) = 1,42,500; bank 38,000; prepaid insurance 4,000. Total = ₹5,50,500."
+        },
+        {
+          "key": "D",
+          "text": "₹5,46,500",
+          "explanation": "This leaves out the prepaid insurance of ₹4,000. A prepayment is the second effect of the adjustment and is an asset — the business has paid for a service it has yet to receive."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Balance Sheet, §5 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#5-the-balance-sheet-what-you-own-and-owe"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Assets shown net of depreciation and provisions; prepayments are assets",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-018",
+      "topic": "Ch 7 · Final Accounts · Closing capital",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening capital ₹5,00,000; additional capital introduced during the year ₹80,000; drawings ₹96,000; net profit for the year ₹1,42,000. The capital shown in the balance sheet as at 31 March 2026 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6,26,000",
+          "explanation": "Correct. Closing capital = opening 5,00,000 + additional capital 80,000 + net profit 1,42,000 − drawings 96,000 = ₹6,26,000."
+        },
+        {
+          "key": "B",
+          "text": "₹8,18,000",
+          "explanation": "This ADDS the drawings of ₹96,000 instead of deducting them, an error of ₹1,92,000. Drawings are money taken OUT by the owner — they reduce what the business owes him."
+        },
+        {
+          "key": "C",
+          "text": "₹4,66,000",
+          "explanation": "This deducts the ₹80,000 of additional capital instead of adding it. Fresh capital brought in increases the owner's stake by ₹80,000; the swing is ₹1,60,000."
+        },
+        {
+          "key": "D",
+          "text": "₹5,46,000",
+          "explanation": "This ignores the additional capital of ₹80,000 altogether. Capital introduced mid-year is a capital receipt and forms part of the closing capital working."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Balance Sheet, §5 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#5-the-balance-sheet-what-you-own-and-owe"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Closing capital = Opening + Additional + Net profit − Drawings",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-019",
+      "topic": "Ch 7 · Final Accounts · Trial-balance item vs adjustment",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "'Outstanding wages ₹7,000' already appears as a credit balance inside the trial balance. In the final accounts this amount:",
+      "options": [
+        {
+          "key": "A",
+          "text": "is added to wages in the Trading Account and shown as a liability in the balance sheet",
+          "explanation": "That is the treatment when outstanding wages come as an ADJUSTMENT. Here the entry has already been passed — wages in the trial balance already include the ₹7,000 — so adding it again double counts the expense."
+        },
+        {
+          "key": "B",
+          "text": "is shown only as a liability in the balance sheet; the wages figure already includes it",
+          "explanation": "Correct. A trial-balance item has had both legs of its double entry posted, so it appears ONCE. The credit balance 'Outstanding wages' takes its balance-sheet slot as a liability and nothing more."
+        },
+        {
+          "key": "C",
+          "text": "is deducted from wages in the Trading Account and shown as a liability",
+          "explanation": "Deducting reverses an entry that was correctly made. Wages would then be understated by ₹7,000 and gross profit overstated by the same amount."
+        },
+        {
+          "key": "D",
+          "text": "is ignored altogether, being an internal adjustment",
+          "explanation": "It is a genuine amount owed to the workers on 31 March. Dropping it would leave the balance sheet short by ₹7,000 of liabilities and out of balance."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Adjustments engine, §6 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#6-the-adjustments-engine-every-adjustment-hits-two-places"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Trial-balance item → once; adjustment → twice",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-020",
+      "topic": "Ch 7 · Final Accounts · Prepaid expense",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Insurance of ₹18,000 was paid during the year, of which ₹4,500 relates to the year 2026–27. The two effects of this adjustment are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "add ₹4,500 to insurance in the Profit and Loss Account; show ₹4,500 as a liability",
+          "explanation": "Both halves are inverted. A prepayment means too much has been paid, so the charge must come DOWN, and the unused portion is something owed TO the business — an asset."
+        },
+        {
+          "key": "B",
+          "text": "deduct ₹4,500 from insurance in the Profit and Loss Account; show ₹4,500 as a liability",
+          "explanation": "The P&L half is right, but the balance-sheet half is wrong. The insurer owes the business cover it has not yet given — that is an asset, not a liability."
+        },
+        {
+          "key": "C",
+          "text": "add ₹4,500 to insurance in the Profit and Loss Account; show ₹4,500 as an asset",
+          "explanation": "This is the outstanding-expense treatment applied to a prepayment. Adding ₹4,500 charges ₹22,500 for a year in which only ₹13,500 of cover was consumed."
+        },
+        {
+          "key": "D",
+          "text": "deduct ₹4,500 from insurance in the Profit and Loss Account (charging ₹13,500); show ₹4,500 as an asset",
+          "explanation": "Correct. Only the ₹13,500 relating to this year is an expense of this year; the ₹4,500 paid in advance is a benefit still to come, so it appears on the assets side as prepaid insurance."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Adjustments engine, §6 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#6-the-adjustments-engine-every-adjustment-hits-two-places"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Prepaid expense: deduct from the expense; asset in the balance sheet",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-021",
+      "topic": "Ch 7 · Final Accounts · Income received in advance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Rent received ₹36,000 includes ₹6,000 received in advance for April 2026. The two effects are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "credit the Profit and Loss Account with ₹30,000; show ₹6,000 as a liability in the balance sheet",
+          "explanation": "Correct. Only ₹30,000 has been earned this year. The ₹6,000 covers a month the tenant has not yet had, so the business owes either the accommodation or the money back — a liability, 'rent received in advance'."
+        },
+        {
+          "key": "B",
+          "text": "credit the Profit and Loss Account with ₹42,000; show ₹6,000 as an asset",
+          "explanation": "This ADDS the advance instead of deducting it, treating it like accrued income, and overstates this year's rent income by ₹12,000 in total."
+        },
+        {
+          "key": "C",
+          "text": "credit the Profit and Loss Account with ₹30,000; show ₹6,000 as an asset",
+          "explanation": "The income half is right but the second effect is inverted. Money received for a service not yet given is an obligation of the business, not something it owns."
+        },
+        {
+          "key": "D",
+          "text": "credit the Profit and Loss Account with ₹36,000; show ₹6,000 as a liability",
+          "explanation": "This shows the liability but forgets its matching effect on income, so the ₹6,000 is counted both as this year's revenue and as an amount still owed."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Adjustments engine, §6 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#6-the-adjustments-engine-every-adjustment-hits-two-places"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Income received in advance: deduct from income; liability in the balance sheet",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-022",
+      "topic": "Ch 7 · Final Accounts · Purchases after goods removed otherwise than by sale",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Purchases ₹4,80,000; returns outward ₹18,000. During the year the proprietor took goods costing ₹9,000 (selling price ₹12,000) for his household, and goods costing ₹6,000 were given away as free samples; neither event has been recorded. The purchases figure carried to the Trading Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,53,000",
+          "explanation": "This deducts the drawings in kind but leaves the free samples of ₹6,000 inside purchases, so the cost of goods sold carries ₹6,000 of goods that were never sold."
+        },
+        {
+          "key": "B",
+          "text": "₹4,44,000",
+          "explanation": "This removes the proprietor's goods at their SELLING price of ₹12,000 rather than cost ₹9,000. A business earns no profit selling to itself — goods withdrawn always leave at cost."
+        },
+        {
+          "key": "C",
+          "text": "₹4,47,000",
+          "explanation": "Correct. Purchases 4,80,000 − returns outward 18,000 − drawings in kind at cost 9,000 − free samples at cost 6,000 = ₹4,47,000. Both removals leave purchases at COST."
+        },
+        {
+          "key": "D",
+          "text": "₹4,62,000",
+          "explanation": "This deducts only the returns outward and neither removal. The ₹15,000 of goods that left without a sale would then be buried in cost of goods sold, understating gross profit."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Goods leaving without a sale, §9 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#9-goods-that-leave-without-being-sold"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Drawings in kind and free samples: deduct from purchases at cost",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-023",
+      "topic": "Ch 7 · Final Accounts · Total drawings",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "During 2025–26 Girish withdrew ₹84,000 in cash, took goods costing ₹11,000 (selling price ₹14,000) for personal use, and had his income tax ₹18,000 and his personal LIC premium ₹9,000 paid out of the business bank account. The total drawings to be deducted from capital are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹95,000",
+          "explanation": "This treats the income tax ₹18,000 and the LIC premium ₹9,000 as business expenses of the P&L. Both are personal costs of the proprietor and are drawings."
+        },
+        {
+          "key": "B",
+          "text": "₹1,22,000",
+          "explanation": "Correct. Cash 84,000 + goods at cost 11,000 + income tax 18,000 + LIC premium 9,000 = ₹1,22,000. Goods withdrawn leave at cost, and both personal payments are drawings, not expenses."
+        },
+        {
+          "key": "C",
+          "text": "₹1,25,000",
+          "explanation": "This values the goods withdrawn at the selling price of ₹14,000 instead of cost ₹11,000, inflating drawings by the ₹3,000 margin the business never earned."
+        },
+        {
+          "key": "D",
+          "text": "₹1,04,000",
+          "explanation": "This leaves out the income tax of ₹18,000, treating it as a charge on the business. A sole trader's income tax is assessed on the owner, so it is drawings."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Adjustments engine, §6 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#6-the-adjustments-engine-every-adjustment-hits-two-places"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Drawings include goods at cost, proprietor's income tax and personal LIC premium",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-024",
+      "topic": "Ch 7 · Final Accounts · Base for the doubtful-debts provision",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Sundry debtors are ₹4,00,000. The adjustments are: write off further bad debts ₹16,000 and create a provision for doubtful debts at 5%. The provision is computed on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,00,000, the debtors figure in the trial balance",
+          "explanation": "This provides on debts already known to be bad. Write off first, then provide — otherwise the ₹16,000 is both written off and provided against."
+        },
+        {
+          "key": "B",
+          "text": "₹4,16,000, debtors plus the further bad debts",
+          "explanation": "The further bad debts are already inside the ₹4,00,000; adding them again inflates the base by ₹16,000 twice over."
+        },
+        {
+          "key": "C",
+          "text": "₹3,80,000, debtors less 5%",
+          "explanation": "This deducts the provision from the base before computing the provision — circular reasoning. The 5% is applied to good debtors, not to a figure already net of itself."
+        },
+        {
+          "key": "D",
+          "text": "₹3,84,000, debtors after writing off the further bad debts",
+          "explanation": "Correct. Sequence is everything: write off the ₹16,000 known to be lost, leaving ₹3,84,000 of debts that may still fail, and provide 5% (₹19,200) on that."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "New provision = % of closing debtors after further bad debts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-025",
+      "topic": "Ch 7 · Final Accounts · Bad debts already in the trial balance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Bad debts of ₹8,000 already appear as a debit in the trial balance. When the balance sheet is drawn up, these bad debts are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "deducted from sundry debtors, along with any further bad debts",
+          "explanation": "This deducts them a second time. When the write-off was passed during the year, the Debtors Account was already credited — the trial-balance debtors figure is net of it."
+        },
+        {
+          "key": "B",
+          "text": "added back to sundry debtors, because they may still be recovered",
+          "explanation": "A write-off is a decision that the debt is gone. Anything later recovered is credited to Bad Debts Recovered in the P&L; it does not revive the old debtor balance."
+        },
+        {
+          "key": "C",
+          "text": "not deducted from sundry debtors again — the ledger reduced debtors when they were written off; the amount only enters the Profit and Loss Account",
+          "explanation": "Correct. A trial-balance item appears once. Bad debts inside the trial balance have already reduced debtors, so in final accounts they show up solely as a debit in the P&L (through the provision chain)."
+        },
+        {
+          "key": "D",
+          "text": "deducted from the provision for doubtful debts shown in the balance sheet",
+          "explanation": "The old provision is dealt with inside the P&L charge formula, not by netting the year's write-offs against it in the balance sheet. Debtors are shown at debtors − further bad debts − new provision."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Bad debts in the trial balance are not deducted from debtors again",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-026",
+      "topic": "Ch 7 · Final Accounts · Provision for discount on debtors",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A provision for discount on debtors is computed on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "debtors after deducting further bad debts and the provision for doubtful debts — only good debtors will ever take a cash discount",
+          "explanation": "Correct. A cash discount is allowed only to a debtor who actually pays, so the base must exclude both the debts written off and the debts provided against as doubtful. This provision comes LAST in the chain."
+        },
+        {
+          "key": "B",
+          "text": "debtors as they stand in the trial balance",
+          "explanation": "This provides for discount on debts that will never be collected — both the amounts written off and the doubtful ones — overstating the provision."
+        },
+        {
+          "key": "C",
+          "text": "debtors after deducting further bad debts but before the provision for doubtful debts",
+          "explanation": "Half of the sequence is applied. Doubtful debtors are, by assumption, unlikely to pay at all, so no discount will ever be allowed to them; the doubtful-debts provision must come off first."
+        },
+        {
+          "key": "D",
+          "text": "the provision for doubtful debts itself",
+          "explanation": "The two provisions are computed on the same population of debtors in sequence, not one on the other. A percentage of a provision has no economic meaning."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Discount provision on good debtors only, after the doubtful-debts provision",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-027",
+      "topic": "Ch 7 · Final Accounts · Provision chain charge",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nirmal Traders' trial balance shows sundry debtors ₹3,05,000, bad debts ₹9,000 and provision for doubtful debts ₹12,000. Adjustments: write off further bad debts ₹5,000 and maintain the provision at 5% of debtors. The amount debited to the Profit and Loss Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹41,000",
+          "explanation": "This ADDS the old provision of ₹12,000 instead of deducting it — the single commonest slip in the chapter. The gap from the right answer is exactly 2 × ₹12,000."
+        },
+        {
+          "key": "B",
+          "text": "₹17,000",
+          "explanation": "Correct. Debtors after further bad debts = 3,05,000 − 5,000 = 3,00,000; new provision = 5% × 3,00,000 = 15,000. Charge = bad debts 9,000 + further 5,000 + new provision 15,000 − old provision 12,000 = ₹17,000."
+        },
+        {
+          "key": "C",
+          "text": "₹17,250",
+          "explanation": "This computes the 5% on the trial-balance debtors of ₹3,05,000 (₹15,250) instead of on ₹3,00,000. Write off first, then provide — the ₹250 difference is the provision on debts already written off."
+        },
+        {
+          "key": "D",
+          "text": "₹8,000",
+          "explanation": "This leaves the ₹9,000 of bad debts already in the trial balance out of the charge. Those write-offs are an expense of the year and form the first term of the chain."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "P&L charge = Bad debts (TB) + Further bad debts + New provision − Old provision",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-028",
+      "topic": "Ch 7 · Final Accounts · Provision written back",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Trial balance: sundry debtors ₹2,50,000; bad debts ₹4,000; provision for doubtful debts ₹26,000. Adjustments: write off further bad debts ₹10,000; the provision is to be maintained at 4% of debtors. The Profit and Loss Account will show:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹49,600 debited",
+          "explanation": "This adds the old provision of ₹26,000 instead of deducting it: 4,000 + 10,000 + 9,600 + 26,000. The chain is plus NEW, minus OLD."
+        },
+        {
+          "key": "B",
+          "text": "₹2,400 debited",
+          "explanation": "The magnitude is right but the side is wrong. A negative result means the cushion already held is more than enough — the excess is released to the P&L as a credit, not charged as a debit."
+        },
+        {
+          "key": "C",
+          "text": "₹2,000 credited",
+          "explanation": "This computes the 4% on the trial-balance debtors of ₹2,50,000 (₹10,000) instead of on ₹2,40,000 after the further write-off, understating the write-back by ₹400."
+        },
+        {
+          "key": "D",
+          "text": "₹2,400 credited — the excess old provision written back",
+          "explanation": "Correct. Debtors after further bad debts = 2,50,000 − 10,000 = 2,40,000; new provision = 4% × 2,40,000 = 9,600. Chain = 4,000 + 10,000 + 9,600 − 26,000 = −2,400. A negative charge is a CREDIT of ₹2,400 in the P&L."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Negative chain result → excess provision written back as a P&L credit",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-029",
+      "topic": "Ch 7 · Final Accounts · Debtors in the balance sheet",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Trial balance: sundry debtors ₹1,86,000; bad debts ₹4,000; provision for doubtful debts ₹7,000. Adjustments: further bad debts ₹6,000 and a provision for doubtful debts at 5% of debtors. Sundry debtors appear in the balance sheet at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,67,000",
+          "explanation": "This deducts the trial-balance bad debts of ₹4,000 as well. Those write-offs already reduced the ledger balance of debtors — deducting them again removes the same ₹4,000 twice."
+        },
+        {
+          "key": "B",
+          "text": "₹1,73,000",
+          "explanation": "This deducts the OLD provision of ₹7,000 from debtors instead of the new one of ₹9,000. The balance sheet always carries the provision now required, not the one carried forward."
+        },
+        {
+          "key": "C",
+          "text": "₹1,71,000",
+          "explanation": "Correct. Debtors 1,86,000 − further bad debts 6,000 = 1,80,000; new provision = 5% × 1,80,000 = 9,000; balance-sheet figure = 1,80,000 − 9,000 = ₹1,71,000."
+        },
+        {
+          "key": "D",
+          "text": "₹1,70,700",
+          "explanation": "This computes the 5% on ₹1,86,000 (₹9,300) instead of on ₹1,80,000, providing against debts already written off. The base must be debtors after the further bad debts."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Balance sheet: Debtors − further bad debts − new provision",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-030",
+      "topic": "Ch 7 · Final Accounts · Provision for discount on debtors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sundry debtors ₹2,60,000 include ₹10,000 due from a customer now insolvent, from whom nothing is recoverable. A provision for doubtful debts is to be maintained at 5% and a provision for discount on debtors at 2%. The trial balance already carries a provision for discount on debtors of ₹2,000. The amount debited to the Profit and Loss Account for the discount provision is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,750",
+          "explanation": "Correct. Debtors after the irrecoverable ₹10,000 = 2,50,000; doubtful-debts provision = 5% × 2,50,000 = 12,500; good debtors = 2,37,500; new discount provision = 2% × 2,37,500 = 4,750. Charge = 4,750 − old provision 2,000 = ₹2,750."
+        },
+        {
+          "key": "B",
+          "text": "₹4,750",
+          "explanation": "This is the new provision itself, with the old provision of ₹2,000 never deducted. Only the incremental amount needs to be charged this year."
+        },
+        {
+          "key": "C",
+          "text": "₹3,000",
+          "explanation": "This computes the 2% on ₹2,50,000 — BEFORE deducting the doubtful-debts provision — giving ₹5,000 less the old ₹2,000. Doubtful debtors will not pay, so they will never claim a discount."
+        },
+        {
+          "key": "D",
+          "text": "₹5,200",
+          "explanation": "This applies 2% to the full trial-balance debtors of ₹2,60,000, skipping both the insolvent debt and the doubtful-debts provision, and ignores the old provision as well."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Discount provision computed after the doubtful-debts provision; net of the old provision",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-031",
+      "topic": "Ch 7 · Final Accounts · Total charge for the debtors block",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Trial balance: sundry debtors ₹3,20,000; bad debts ₹5,000; provision for doubtful debts ₹14,000. Adjustments: write off further bad debts ₹20,000; maintain the provision for doubtful debts at 5%; create a provision for discount on debtors at 2% (no discount provision exists at present). The total amount debited to the Profit and Loss Account in respect of debtors is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹59,700",
+          "explanation": "This adds the old provision of ₹14,000 instead of deducting it, overstating the charge by ₹28,000. The chain deducts the cushion already set aside in earlier years."
+        },
+        {
+          "key": "B",
+          "text": "₹32,000",
+          "explanation": "This computes the discount provision as 2% of ₹3,00,000 (₹6,000) instead of 2% of the good debtors ₹2,85,000 (₹5,700). The doubtful-debts provision must come off the base first."
+        },
+        {
+          "key": "C",
+          "text": "₹26,700",
+          "explanation": "This omits the ₹5,000 of bad debts already in the trial balance. Those write-offs are the first term of the chain and are an expense of the year."
+        },
+        {
+          "key": "D",
+          "text": "₹31,700",
+          "explanation": "Correct. Debtors after write-off = 3,00,000; doubtful provision = 5% × 3,00,000 = 15,000; good debtors = 2,85,000; discount provision = 2% × 2,85,000 = 5,700. Total charge = 5,000 + 20,000 + 15,000 − 14,000 + 5,700 = ₹31,700."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Full debtors-block charge: chain + discount provision on good debtors",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-032",
+      "topic": "Ch 7 · Final Accounts · Debtors net of both provisions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sundry debtors ₹4,50,000. Adjustments: write off further bad debts ₹25,000; create a provision for doubtful debts at 6% and a provision for discount on debtors at 2%. Debtors appear in the balance sheet at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,91,000",
+          "explanation": "This computes the 2% discount provision on ₹4,25,000 (₹8,500) instead of on the good debtors ₹3,99,500 (₹7,990) — the discount provision must come after the doubtful-debts provision."
+        },
+        {
+          "key": "B",
+          "text": "₹3,91,510",
+          "explanation": "Correct. Debtors after write-off = 4,50,000 − 25,000 = 4,25,000; doubtful provision = 6% × 4,25,000 = 25,500; good debtors = 3,99,500; discount provision = 2% × 3,99,500 = 7,990. Balance sheet = 4,25,000 − 25,500 − 7,990 = ₹3,91,510."
+        },
+        {
+          "key": "C",
+          "text": "₹3,99,500",
+          "explanation": "This stops after the doubtful-debts provision and never deducts the ₹7,990 discount provision. Both provisions are deductions from debtors on the assets side."
+        },
+        {
+          "key": "D",
+          "text": "₹3,89,540",
+          "explanation": "This computes both provisions on the pre-write-off debtors of ₹4,50,000 (₹27,000 and ₹8,460). Write off first, then provide — twice over, in sequence."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Provision chain, §7 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#7-bad-debts-and-the-provision-chain"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Debtors − further bad debts − doubtful provision − discount provision",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-033",
+      "topic": "Ch 7 · Final Accounts · Manager's commission — two effects",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The manager's commission for the year, ₹40,000, has been computed but not yet paid. Its two effects in the final accounts are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "debit the Trading Account; show commission payable as a liability",
+          "explanation": "The manager's remuneration is an indirect, office-level cost. Charging it to the Trading Account would wrongly reduce gross profit by ₹40,000."
+        },
+        {
+          "key": "B",
+          "text": "debit the Profit and Loss Account; deduct it from capital",
+          "explanation": "The P&L debit is right, but the commission is owed to the MANAGER, an outsider — it is a liability of the business, not a withdrawal by the proprietor."
+        },
+        {
+          "key": "C",
+          "text": "debit the Profit and Loss Account; show commission payable as a current liability",
+          "explanation": "Correct. Like every adjustment it hits two places: an expense of the year in the P&L, and — since it is still unpaid on 31 March — an amount owed, shown as commission payable among the current liabilities."
+        },
+        {
+          "key": "D",
+          "text": "deduct it from gross profit in the Trading Account; show it as an asset",
+          "explanation": "Both halves fail. The Trading Account has already closed at gross profit, and money the business OWES cannot be an asset."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Manager's commission, §8 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#8-managers-commission-before-vs-after-charging"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Manager's commission: debit P&L; commission payable as a current liability",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-034",
+      "topic": "Ch 7 · Final Accounts · Commission before charging",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Net profit before charging any commission is ₹4,20,000. The manager is entitled to 5% of the net profit before charging such commission. His commission is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹21,000",
+          "explanation": "Correct. 'Before charging' means the base is the profit as it stands: commission = 4,20,000 × 5 ÷ 100 = ₹21,000. Net profit after commission then becomes ₹3,99,000."
+        },
+        {
+          "key": "B",
+          "text": "₹20,000",
+          "explanation": "This applies the AFTER-charging formula, rate ÷ (100 + rate) = 5 ÷ 105. That formula is only used when the entitlement is a percentage of the profit remaining after the commission."
+        },
+        {
+          "key": "C",
+          "text": "₹19,950",
+          "explanation": "This first deducts a ₹21,000 commission and then takes 5% of the reduced ₹3,99,000 — mixing the two bases. Either take 5% of the full profit, or use the rate ÷ (100 + rate) formula, never both."
+        },
+        {
+          "key": "D",
+          "text": "₹22,105",
+          "explanation": "This divides by (100 − rate) = 95 instead of by 100. Dividing by 100 − rate would be the formula for grossing UP a net figure, which is not what is asked here."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Manager's commission, §8 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#8-managers-commission-before-vs-after-charging"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Commission before charging = Net profit × Rate ÷ 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-035",
+      "topic": "Ch 7 · Final Accounts · Commission after charging",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Net profit before charging any commission is ₹4,62,000. The manager is entitled to 10% of the net profit remaining after charging such commission. His commission is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹46,200",
+          "explanation": "This computes 10% of the profit BEFORE charging the commission. Test it: profit after would be ₹4,15,800 and 10% of that is ₹41,580, not ₹46,200 — the self-check fails."
+        },
+        {
+          "key": "B",
+          "text": "₹42,000",
+          "explanation": "Correct. Commission = 4,62,000 × 10 ÷ (100 + 10) = ₹42,000. Self-check: profit after charging = 4,62,000 − 42,000 = 4,20,000, and 10% of 4,20,000 = ₹42,000 ✓."
+        },
+        {
+          "key": "C",
+          "text": "₹41,580",
+          "explanation": "This takes 10% of the before-charging profit, deducts it, and then takes 10% of the reduced figure — one iteration of a loop instead of the closed formula rate ÷ (100 + rate)."
+        },
+        {
+          "key": "D",
+          "text": "₹51,333",
+          "explanation": "This divides by (100 − rate) = 90 rather than (100 + rate) = 110. That gives a commission larger than 10% of the pre-commission profit, which cannot be right when the base is a REDUCED profit."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Manager's commission, §8 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#8-managers-commission-before-vs-after-charging"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Commission after charging = Net profit × Rate ÷ (100 + Rate)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-036",
+      "topic": "Ch 7 · Final Accounts · Net profit after commission",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Gross profit ₹5,00,000; total indirect expenses, before the manager's commission, ₹1,64,000. The manager is entitled to a commission of 12% of the net profit after charging such commission. The net profit finally carried to the capital account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,36,000",
+          "explanation": "This is the profit BEFORE the commission — the commission has been computed (or not) but never deducted. The manager's commission is a P&L expense like any other."
+        },
+        {
+          "key": "B",
+          "text": "₹2,95,680",
+          "explanation": "This deducts 12% of ₹3,36,000 (₹40,320), i.e. the before-charging commission. The self-check fails: 12% of ₹2,95,680 is ₹35,482, not ₹40,320."
+        },
+        {
+          "key": "C",
+          "text": "₹2,64,000",
+          "explanation": "This computes the ₹36,000 commission correctly but deducts it twice — once in arriving at the profit and once again from the result."
+        },
+        {
+          "key": "D",
+          "text": "₹3,00,000",
+          "explanation": "Correct. Net profit before commission = 5,00,000 − 1,64,000 = 3,36,000. Commission = 3,36,000 × 12 ÷ 112 = ₹36,000. Net profit = 3,36,000 − 36,000 = ₹3,00,000, and 12% of ₹3,00,000 is ₹36,000 ✓."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Manager's commission, §8 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#8-managers-commission-before-vs-after-charging"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Net profit after an after-charging commission, with the self-check",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-037",
+      "topic": "Ch 7 · Final Accounts · Abnormal loss treatment",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Stock costing ₹60,000 was destroyed by fire and the insurance company admitted a claim of ₹45,000. The correct treatment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "credit the Trading Account with ₹60,000, show ₹45,000 as an asset (insurance claim receivable) and debit ₹15,000 to the Profit and Loss Account",
+          "explanation": "Correct. The goods left for reasons unconnected with trading skill, so the Trading Account is protected by a credit of the FULL cost ₹60,000. The loss is then split: ₹45,000 admitted becomes a receivable asset and the uninsured ₹15,000 is an abnormal loss in the P&L."
+        },
+        {
+          "key": "B",
+          "text": "debit the Profit and Loss Account with ₹60,000 and show ₹45,000 as an asset",
+          "explanation": "This charges the whole cost to the P&L while also recognising the claim, so the loss is effectively counted at ₹60,000 when only ₹15,000 was actually borne. It also leaves the Trading Account carrying goods that were never sold."
+        },
+        {
+          "key": "C",
+          "text": "credit the Trading Account with ₹15,000 and show ₹45,000 as an asset",
+          "explanation": "This nets the claim against the loss before crediting the Trading Account. Gross profit would be understated by ₹45,000 — the Trading credit is always the FULL cost of the goods lost."
+        },
+        {
+          "key": "D",
+          "text": "debit the Profit and Loss Account with ₹15,000 only; the Trading Account is not touched",
+          "explanation": "The P&L half is right but the Trading credit is missing, so the cost of the burnt goods stays inside cost of goods sold and gross profit is understated by ₹60,000."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Goods leaving without a sale, §9 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#9-goods-that-leave-without-being-sold"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Abnormal loss: Trading credited at full cost; claim an asset; balance to P&L",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-038",
+      "topic": "Ch 7 · Final Accounts · Abnormal loss charged to P&L",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Goods costing ₹85,000 were destroyed by fire. The insurer admitted a claim of ₹58,000. The abnormal loss debited to the Profit and Loss Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹85,000",
+          "explanation": "This charges the whole cost to the P&L and ignores the admitted claim. ₹58,000 will be recovered, so only the shortfall is a real loss."
+        },
+        {
+          "key": "B",
+          "text": "₹58,000",
+          "explanation": "This is the claim admitted, which is an ASSET (insurance company account) in the balance sheet — the amount recoverable, not the amount lost."
+        },
+        {
+          "key": "C",
+          "text": "₹27,000",
+          "explanation": "Correct. Cost of the goods lost 85,000 − claim admitted 58,000 = ₹27,000 uninsured, and only that uninsured remainder is debited to the P&L as an abnormal loss. The full ₹85,000 is credited to the Trading Account."
+        },
+        {
+          "key": "D",
+          "text": "Nil — the whole ₹85,000 is credited to the Trading Account and nothing reaches the P&L",
+          "explanation": "The Trading credit only keeps the loss out of gross profit; it does not make the loss disappear. The uninsured ₹27,000 must still be borne, in the P&L."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Goods leaving without a sale, §9 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#9-goods-that-leave-without-being-sold"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Uninsured part of an abnormal loss is debited to the P&L",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-039",
+      "topic": "Ch 7 · Final Accounts · Gross profit with an abnormal loss",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening stock ₹70,000; purchases ₹5,20,000; wages ₹30,000; sales ₹7,10,000; closing stock ₹60,000. Stock costing ₹40,000 was stolen during the year and the insurer admitted ₹25,000. The gross profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,50,000",
+          "explanation": "This never credits the Trading Account with the stolen goods, so their ₹40,000 cost stays inside cost of goods sold and gross profit is understated by exactly that amount."
+        },
+        {
+          "key": "B",
+          "text": "₹1,90,000",
+          "explanation": "Correct. Trading debit = 70,000 + 5,20,000 + 30,000 = 6,20,000. Credit = sales 7,10,000 + closing stock 60,000 + abnormal loss at cost 40,000 = 8,10,000. Gross profit = ₹1,90,000. (The ₹15,000 uninsured balance is then a P&L debit and ₹25,000 an asset — neither touches gross profit.)"
+        },
+        {
+          "key": "C",
+          "text": "₹1,65,000",
+          "explanation": "This credits the Trading Account with only the uninsured ₹15,000. The split between claim and uninsured loss happens AFTER the Trading Account; the Trading credit is the full ₹40,000 cost."
+        },
+        {
+          "key": "D",
+          "text": "₹1,75,000",
+          "explanation": "This credits the Trading Account with only the admitted claim of ₹25,000. The claim is a recovery, not a measure of the goods that left the shelf."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Goods leaving without a sale, §9 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#9-goods-that-leave-without-being-sold"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Trading credited with the full cost of stock lost abnormally",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-040",
+      "topic": "Ch 7 · Final Accounts · Goods sent on approval",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Goods sent to a customer on sale-or-return, invoiced at ₹80,000 (cost ₹64,000), were still awaiting the customer's approval on 31 March 2026 but have been recorded as a sale. The reversal requires that you:",
+      "options": [
+        {
+          "key": "A",
+          "text": "deduct ₹64,000 from sales and from debtors, and add ₹64,000 to closing stock",
+          "explanation": "Sales and debtors were both recorded at the INVOICE value of ₹80,000, so that is what must come out. Removing only ₹64,000 leaves ₹16,000 of phantom revenue and debtors behind."
+        },
+        {
+          "key": "B",
+          "text": "deduct ₹80,000 from sales and from debtors, and add ₹80,000 to closing stock",
+          "explanation": "Stock must always come back at COST. Bringing it in at ₹80,000 values unsold goods at a profit the business has not earned and overstates gross profit by ₹16,000."
+        },
+        {
+          "key": "C",
+          "text": "deduct ₹16,000 from sales, and add ₹64,000 to closing stock",
+          "explanation": "This removes only the margin from sales. The whole transaction is not a sale at all, so the entire ₹80,000 must leave sales and debtors."
+        },
+        {
+          "key": "D",
+          "text": "deduct ₹80,000 from sales and from debtors, and add ₹64,000 to closing stock",
+          "explanation": "Correct. Two reversals, each with two effects: remove the goods at SELLING price from sales and from debtors, and bring them back at COST into closing stock — a Trading credit and a balance-sheet asset."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Goods leaving without a sale, §9 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#9-goods-that-leave-without-being-sold"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Approval goods: out of sales and debtors at selling price; into stock at cost",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-041",
+      "topic": "Ch 7 · Final Accounts · Corrected sales figure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sales per the trial balance ₹9,60,000 include goods sent on approval at an invoice value of ₹45,000 (cost ₹36,000) on which the customer had given no decision by 31 March 2026. The sales figure credited to the Trading Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹9,24,000",
+          "explanation": "This deducts the cost ₹36,000 instead of the invoice value ₹45,000. Sales were recorded at invoice value, so it is invoice value that must be reversed out."
+        },
+        {
+          "key": "B",
+          "text": "₹9,60,000",
+          "explanation": "This leaves the approval goods in sales. Until the customer approves (or the return period expires), no sale has taken place — recognising it breaches the realisation principle."
+        },
+        {
+          "key": "C",
+          "text": "₹9,15,000",
+          "explanation": "Correct. Sales 9,60,000 − goods on approval at invoice value 45,000 = ₹9,15,000. Debtors also fall by ₹45,000 and closing stock rises by the cost, ₹36,000."
+        },
+        {
+          "key": "D",
+          "text": "₹9,51,000",
+          "explanation": "This removes only the ₹9,000 profit element. The whole transaction is unrecognised, not merely its margin."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Goods leaving without a sale, §9 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#9-goods-that-leave-without-being-sold"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Approval goods removed from sales at selling price",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-042",
+      "topic": "Ch 7 · Final Accounts · Approval goods in the balance sheet",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Closing stock, physically valued on 31 March 2026, is ₹1,28,000 and excludes goods lying with customers on approval. Sundry debtors are ₹2,15,000. Sales include ₹50,000 of goods sent on approval (cost ₹40,000) on which no approval had been received. The closing stock and the debtors shown in the balance sheet are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "stock ₹1,68,000; debtors ₹1,65,000",
+          "explanation": "Correct. The goods are still the seller's, so stock = 1,28,000 + cost 40,000 = ₹1,68,000; and since no sale occurred, debtors = 2,15,000 − invoice value 50,000 = ₹1,65,000."
+        },
+        {
+          "key": "B",
+          "text": "stock ₹1,78,000; debtors ₹1,65,000",
+          "explanation": "This brings the unsold goods back into stock at their selling price of ₹50,000. Stock is always carried at cost — the ₹10,000 margin has not been earned."
+        },
+        {
+          "key": "C",
+          "text": "stock ₹1,68,000; debtors ₹1,75,000",
+          "explanation": "This deducts the cost ₹40,000 from debtors instead of the invoice value ₹50,000. The customer's account was debited with ₹50,000, so that is what has to be reversed."
+        },
+        {
+          "key": "D",
+          "text": "stock ₹1,28,000; debtors ₹1,65,000",
+          "explanation": "This reverses the debtor but never brings the goods back into stock, so ₹40,000 of the trader's own inventory disappears from the balance sheet and gross profit is understated."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Goods leaving without a sale, §9 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#9-goods-that-leave-without-being-sold"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Approval goods: debtors down at selling price, stock up at cost",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-043",
+      "topic": "Ch 7 · Final Accounts · Interest on drawings",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Interest on drawings of ₹5,000 is to be charged for the year. Its two effects are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "debit the Profit and Loss Account; deduct from capital",
+          "explanation": "The capital half is right but the P&L side is inverted. The owner is paying the BUSINESS for money pulled out early, so the business gains — a credit, not a debit."
+        },
+        {
+          "key": "B",
+          "text": "debit the Profit and Loss Account; add to capital",
+          "explanation": "This is the treatment of interest on CAPITAL, where the business pays the owner. Interest on drawings runs in the opposite direction on both legs."
+        },
+        {
+          "key": "C",
+          "text": "credit the Profit and Loss Account; add to capital",
+          "explanation": "The P&L half is right, but adding to capital contradicts it. If the owner is charged ₹5,000, his stake must fall, not rise."
+        },
+        {
+          "key": "D",
+          "text": "credit the Profit and Loss Account; deduct from capital (equivalently, add to drawings)",
+          "explanation": "Correct. Interest on drawings is a gain to the business — credited in the P&L — and a charge on the proprietor, so it is deducted from capital (or, identically, added to drawings). No cash actually moves."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Interest on capital and drawings, §10 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#10-interest-on-capital-and-drawings"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Interest on drawings: credit P&L; deduct from capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-044",
+      "topic": "Ch 7 · Final Accounts · Closing capital with interest adjustments",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening capital ₹6,00,000; additional capital introduced during the year ₹1,00,000; cash drawings ₹1,20,000; goods costing ₹15,000 withdrawn for personal use; interest on capital ₹36,000; interest on drawings ₹4,500. The net profit for the year, before charging interest on capital and before crediting interest on drawings, is ₹2,30,000. The capital shown in the balance sheet as at 31 March 2026 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,10,000",
+          "explanation": "This omits the ₹15,000 of goods withdrawn. Drawings in kind reduce capital exactly as cash drawings do — at cost."
+        },
+        {
+          "key": "B",
+          "text": "₹7,95,000",
+          "explanation": "Correct. Net profit after the interest adjustments = 2,30,000 − 36,000 + 4,500 = 1,98,500. Capital = 6,00,000 + 1,00,000 + interest on capital 36,000 + 1,98,500 − drawings (1,20,000 + 15,000) − interest on drawings 4,500 = ₹7,95,000. (Both interest items are internal, so they cancel: 6,00,000 + 1,00,000 + 2,30,000 − 1,35,000 = ₹7,95,000.)"
+        },
+        {
+          "key": "C",
+          "text": "₹7,59,000",
+          "explanation": "This charges the ₹36,000 interest on capital to the P&L but never adds it back to capital — the second effect of the adjustment is missing, and the capital account is short by exactly ₹36,000."
+        },
+        {
+          "key": "D",
+          "text": "₹8,04,000",
+          "explanation": "This ADDS the ₹4,500 interest on drawings to capital instead of deducting it, a swing of ₹9,000. The proprietor is being charged that interest, so his stake falls."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Interest on capital and drawings, §10 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#10-interest-on-capital-and-drawings"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Closing capital = Opening + Additional + Interest on capital + Net profit − Drawings − Interest on drawings",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c7-045",
+      "topic": "Ch 7 · Final Accounts · Full adjustment battery",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Rohit Traders' trial balance as at 31 March 2026 — debits: furniture ₹1,00,000; sundry debtors ₹1,65,000; cash at bank ₹46,000; opening stock ₹74,000; purchases ₹5,30,000; wages ₹46,000; salaries ₹68,000; rent ₹24,000; drawings ₹45,000. Credits: capital ₹2,40,000; sundry creditors ₹92,000; sales ₹7,60,000; provision for doubtful debts ₹6,000. Adjustments: (i) closing stock ₹88,000; (ii) depreciate furniture at 10%; (iii) outstanding wages ₹4,000; (iv) rent prepaid ₹3,000; (v) write off further bad debts ₹5,000 and maintain the provision for doubtful debts at 5% of debtors; (vi) the manager is entitled to a commission of 10% of the net profit after charging such commission. The net profit for the year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹88,000",
+          "explanation": "This is the profit before the manager's commission — adjustment (vi) has not been given effect. The commission is a P&L expense and a liability."
+        },
+        {
+          "key": "B",
+          "text": "₹79,200",
+          "explanation": "This deducts 10% of ₹88,000 (₹8,800), i.e. the BEFORE-charging commission. The self-check fails: 10% of ₹79,200 is ₹7,920, not ₹8,800."
+        },
+        {
+          "key": "C",
+          "text": "₹80,000",
+          "explanation": "Correct. Trading: debit 74,000 + 5,30,000 + wages 50,000 (46,000 + 4,000 outstanding) = 6,54,000; credit 7,60,000 + 88,000 = 8,48,000 → gross profit ₹1,94,000. P&L: less salaries 68,000, rent 21,000 (24,000 − 3,000 prepaid), depreciation 10,000, and the debtors block 7,000 [further bad debts 5,000 + new provision 8,000 (5% × 1,60,000) − old provision 6,000] → ₹88,000 before commission. Commission = 88,000 × 10 ÷ 110 = ₹8,000, so net profit = ₹80,000 (and 10% of 80,000 = 8,000 ✓)."
+        },
+        {
+          "key": "D",
+          "text": "₹35,000",
+          "explanation": "This deducts the drawings of ₹45,000 from net profit. Drawings never enter the Profit and Loss Account — they are deducted from capital in the balance sheet."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Adjustments engine, §6 →",
+        "href": "/foundation/accounting/final-accounts-of-sole-proprietors/#6-the-adjustments-engine-every-adjustment-hits-two-places"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Trial balance plus six adjustments to net profit",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c7-01",
+      "topic": "Ch 7 · Final Accounts · Trading vs Profit and Loss Account",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Distinguish between the Trading Account and the Profit and Loss Account of a sole proprietor, and state where each of the following is shown, with a reason: (a) carriage inwards, (b) carriage outwards, (c) factory fuel and power, (d) audit fees. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Trading Account isolates the margin on goods: it carries opening stock, net purchases and direct expenses on the debit, and net sales, closing stock and stock lost otherwise than by sale on the credit; the balancing figure is gross profit (or gross loss)",
+          "marks": 1,
+          "citation": "Trading Account, scope and contents"
+        },
+        {
+          "point": "Profit and Loss Account opens with gross profit b/d, absorbs all indirect expenses (office, selling, finance, provisions, abnormal items) and other incomes, and ends at net profit, which is added to capital",
+          "marks": 1,
+          "citation": "P&L Account, scope and contents"
+        },
+        {
+          "point": "(a) Carriage inwards → Trading Account debit: it is a direct expense of bringing purchased goods to the shop in a saleable condition. (b) Carriage outwards → P&L debit: delivery to the customer is a selling and distribution cost incurred after the sale",
+          "marks": 1,
+          "citation": "direct vs indirect expenses"
+        },
+        {
+          "point": "(c) Factory fuel and power → Trading Account debit: workshop power is consumed in putting goods into a saleable state, so it forms part of the cost of goods",
+          "marks": 1,
+          "citation": "direct expenses"
+        },
+        {
+          "point": "(d) Audit fees → P&L debit: an office and administration cost, unconnected with the purchase or manufacture of goods",
+          "marks": 1,
+          "citation": "office and administration expenses"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Trading vs P&L classification conventions",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c7-02",
+      "topic": "Ch 7 · Final Accounts · The two-places rule",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "'Every adjustment hits the books in exactly two places.' Explain why this is so, and state both effects of each of the following adjustments: closing stock, outstanding expense, prepaid expense, depreciation, interest on capital. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Reason: an item already inside the trial balance has had both legs of its double entry posted, so it appears in the final accounts ONCE. An adjustment is an entry the books have not yet passed, so giving it effect means passing a fresh double entry — a debit and a credit — which must land in two places",
+          "marks": 2,
+          "citation": "trial-balance item → once; adjustment → twice"
+        },
+        {
+          "point": "Closing stock: credit the Trading Account, and show it as an asset in the balance sheet (unless adjusted purchases have already absorbed it, when it appears only in the balance sheet)",
+          "marks": 1,
+          "citation": "closing stock, both effects"
+        },
+        {
+          "point": "Outstanding expense: add it to that expense on the Trading/P&L debit, and show it as a liability. Prepaid expense: deduct it from that expense, and show it as an asset",
+          "marks": 1,
+          "citation": "outstanding and prepaid expenses"
+        },
+        {
+          "point": "Depreciation: debit the P&L, and deduct the same amount from the asset in the balance sheet",
+          "marks": 1,
+          "citation": "depreciation, both effects"
+        },
+        {
+          "point": "Interest on capital: debit the P&L, and add it to capital in the balance sheet; a missed second effect is exactly why a balance sheet refuses to tally",
+          "marks": 1,
+          "citation": "interest on capital, both effects"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "The adjustments engine — both effects of each adjustment",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c7-03",
+      "topic": "Ch 7 · Final Accounts · Bad debts and the provision chain",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the treatment of bad debts and the provision for doubtful debts in final accounts. State the formula for the Profit and Loss charge, the balance-sheet presentation, and what happens when the formula yields a negative figure. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Bad debts appearing in the trial balance are write-offs already passed during the year; debtors in the trial balance are already reduced by them, so the amount appears once — as a debit in the P&L",
+          "marks": 1,
+          "citation": "bad debts as a trial-balance item"
+        },
+        {
+          "point": "Further bad debts are an adjustment decided at year end: add them to bad debts in the P&L and deduct them from debtors in the balance sheet",
+          "marks": 1,
+          "citation": "further bad debts, both effects"
+        },
+        {
+          "point": "The new provision for doubtful debts is a prudence cushion, computed as a percentage of closing debtors AFTER deducting further bad debts — write off first, then provide",
+          "marks": 1,
+          "citation": "base for the doubtful-debts provision"
+        },
+        {
+          "point": "P&L charge = bad debts (trial balance) + further bad debts + new provision − old provision; the old provision is deducted because it was set aside in earlier years",
+          "marks": 1,
+          "citation": "provision-chain formula"
+        },
+        {
+          "point": "Balance sheet: debtors − further bad debts − new provision (the trial-balance bad debts are not deducted again). If the formula turns negative, the excess old provision is written back and appears as a CREDIT in the P&L, not a debit",
+          "marks": 1,
+          "citation": "balance-sheet presentation and write-back"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Provision chain: formula, presentation, write-back",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c7-04",
+      "topic": "Ch 7 · Final Accounts · Manager's commission",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "A manager is entitled to a commission on profit. Distinguish between a commission at a percentage of profit 'before charging such commission' and one 'after charging such commission', give the formula for each, and illustrate both where the net profit before commission is ₹1,10,000 and the rate is 10%. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Before charging: the base is simply the net profit as computed before any commission — Commission = Net profit before commission × Rate ÷ 100",
+          "marks": 1,
+          "citation": "commission before charging, formula"
+        },
+        {
+          "point": "After charging: the entitlement is a percentage of a profit that has already been reduced by the commission itself; if profit after charging is 100 the commission is 'rate', so profit before charging is (100 + rate) — Commission = Net profit before commission × Rate ÷ (100 + Rate)",
+          "marks": 1,
+          "citation": "commission after charging, derivation and formula"
+        },
+        {
+          "point": "Illustration: before charging = 1,10,000 × 10 ÷ 100 = ₹11,000; after charging = 1,10,000 × 10 ÷ 110 = ₹10,000. Self-check the second: profit after charging = ₹1,00,000 and 10% of that is ₹10,000",
+          "marks": 1,
+          "citation": "worked illustration and self-check"
+        },
+        {
+          "point": "Both cases have identical effects: debit the P&L with the commission, and show the unpaid amount as commission payable, a current liability in the balance sheet",
+          "marks": 1,
+          "citation": "two effects of the commission"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Commission before vs after charging, with the self-check",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c7-05",
+      "topic": "Ch 7 · Final Accounts · Goods leaving without a sale",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the accounting treatment, in the final accounts of a sole proprietor, of goods leaving the business otherwise than by a normal sale: (a) goods withdrawn by the proprietor, (b) goods distributed as free samples, (c) stock destroyed by fire and partly insured, and (d) goods sent on approval that have been wrongly recorded as sales. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Common principle: none of these is revenue, so none may inflate sales, and each is removed at COST — a business earns no profit by consuming, giving away or losing its own stock",
+          "marks": 1,
+          "citation": "goods removed otherwise than by sale — the cost principle"
+        },
+        {
+          "point": "(a) Goods withdrawn by the proprietor (drawings in kind): deduct the cost from purchases in the Trading Account, and add the cost to drawings, which are deducted from capital. Never at selling price",
+          "marks": 1,
+          "citation": "drawings in kind at cost"
+        },
+        {
+          "point": "(b) Free samples: deduct the cost from purchases, and debit Advertisement Account in the P&L — the spend is marketing, not a sale",
+          "marks": 1,
+          "citation": "free samples"
+        },
+        {
+          "point": "(c) Abnormal loss of stock by fire or theft: credit the Trading Account with the FULL cost of the goods lost, so that gross profit is not distorted by an event unconnected with trading (equivalently, deduct it from purchases)",
+          "marks": 1,
+          "citation": "abnormal loss — Trading credit at cost"
+        },
+        {
+          "point": "(c) contd: the insurance claim admitted is shown as an asset (insurance company account) in the balance sheet, and the uninsured remainder is debited to the P&L as an abnormal loss; if nothing is insured the whole cost goes to the P&L",
+          "marks": 1,
+          "citation": "abnormal loss — insured/uninsured split"
+        },
+        {
+          "point": "(d) Goods on approval: deduct the invoice (selling) value from sales and from debtors, and add the cost to closing stock — a Trading credit and a balance-sheet asset. Mixing the two prices moves gross profit by exactly the margin",
+          "marks": 1,
+          "citation": "approval goods — reversal at selling price, stock at cost"
+        }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Drawings in kind, samples, abnormal loss, approval goods",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c7-06",
+      "topic": "Ch 7 · Final Accounts · The balance sheet",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "'The balance sheet of a sole proprietor is a statement, not an account, and has no statutory format.' Explain this, describe what marshalling means and the two orders in which it is done, and give the working by which the capital figure is arrived at. (4 marks)",
+      "skeleton": [
+        {
+          "point": "It is a statement listing the real and personal balances that remain open after the Trading and P&L Accounts have closed off the nominal accounts; it is outside the double-entry system, so 'Liabilities' and 'Assets' are customary headings, not ledger sides. It is drawn up 'as at' a date, unlike Trading and P&L, which are 'for the year ended'",
+          "marks": 1,
+          "citation": "nature of the balance sheet"
+        },
+        {
+          "point": "No statutory format binds a sole proprietor: Schedule III of the Companies Act 2013 applies to companies alone, and a sole trader follows only custom",
+          "marks": 1,
+          "citation": "no statutory format for a sole trader"
+        },
+        {
+          "point": "Marshalling is the deliberate ordering of items. Order of permanence lists the most lasting first (goodwill, land and building, machinery, furniture … stock, debtors, bank, cash last) and is preferred by trading concerns; order of liquidity reverses it (cash, bank, debtors, stock … goodwill last) and is preferred by banks and financial businesses. Liabilities follow the same logic — capital and long-term loans first under permanence, current liabilities first under liquidity",
+          "marks": 1,
+          "citation": "marshalling — permanence and liquidity"
+        },
+        {
+          "point": "Capital working: opening capital + additional capital introduced + interest on capital + net profit − drawings (cash and in kind, at cost) − interest on drawings; a net loss is deducted instead of profit being added",
+          "marks": 1,
+          "citation": "capital account working"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Balance sheet: nature, format, marshalling, capital working",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}

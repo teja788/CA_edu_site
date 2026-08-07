@@ -1,0 +1,1993 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "financial-statements-of-not-for-profit-organisations",
+  "chapter": "Ch 8 — Financial Statements of Not-for-Profit Organisations",
+  "questions": [
+    {
+      "id": "q-f1c8-001",
+      "topic": "Ch 8 · NPO · Nature of a not-for-profit organisation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a distinguishing feature of a not-for-profit organisation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Any excess of income over expenditure is called a surplus and is ploughed back into the organisation, never distributed to members",
+          "explanation": "Correct. The service motive is what defines an NPO: the excess is a surplus (not profit), and because there are no proprietors there is nobody to distribute it to — it stays in the organisation."
+        },
+        {
+          "key": "B",
+          "text": "It is owned by proprietors, whose stake is recorded in a Capital Account",
+          "explanation": "An NPO has members and a managing committee or trustees, not owners. There is no Capital Account — the corresponding head is the Capital Fund (General or Accumulated Fund)."
+        },
+        {
+          "key": "C",
+          "text": "Its main source of finance is the sale of goods at a profit margin",
+          "explanation": "That describes a trading concern. An NPO is financed mainly by subscriptions, donations, legacies, grants and entrance fees."
+        },
+        {
+          "key": "D",
+          "text": "It prepares a Profit & Loss Account to arrive at the net profit for the year",
+          "explanation": "The labels change: the NPO's equivalent statement is the Income & Expenditure Account, and its result is a surplus or a deficit, not net profit or net loss."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: What an NPO is, §1 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#1-what-a-not-for-profit-organisation-is"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Service motive; surplus never distributed",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-002",
+      "topic": "Ch 8 · NPO · Capital fund",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the books of a not-for-profit organisation, the head that takes the place of the proprietor's Capital Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The Receipts & Payments Account",
+          "explanation": "That is a summarised cash book — a statement of cash movements, not an ownership balance."
+        },
+        {
+          "key": "B",
+          "text": "The Surplus Account",
+          "explanation": "There is no such account. The surplus is the result of the Income & Expenditure Account, and it is transferred into the capital fund; it is not itself the ownership head."
+        },
+        {
+          "key": "C",
+          "text": "The Capital Fund, also called the General Fund or Accumulated Fund",
+          "explanation": "Correct. With no proprietors there is no Capital Account; the accumulated surpluses and capitalised receipts sit in the Capital Fund on the liabilities side."
+        },
+        {
+          "key": "D",
+          "text": "The Specific Donation Fund",
+          "explanation": "A specific fund holds only earmarked money for one purpose. The general ownership balance of the organisation is the Capital Fund, shown separately from every specific fund."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What an NPO is, §1 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#1-what-a-not-for-profit-organisation-is"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Capital Fund replaces Capital A/c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-003",
+      "topic": "Ch 8 · NPO · Nature of the Receipts & Payments Account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Receipts & Payments Account of a club is best described as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A nominal account prepared on the accrual basis",
+          "explanation": "That describes the Income & Expenditure Account. The R&P Account never accrues anything."
+        },
+        {
+          "key": "B",
+          "text": "A real account — the club's cash book for the year, totalled item-wise",
+          "explanation": "Correct. It is nothing more than a summary of the cash book, so it is a real account: it opens with the opening cash and bank balances and closes with the closing balances."
+        },
+        {
+          "key": "C",
+          "text": "A statement of the assets and liabilities of the club on the closing date",
+          "explanation": "That is the balance sheet. The R&P Account reports movements of cash during the year, not the position at its end."
+        },
+        {
+          "key": "D",
+          "text": "A personal account of the members who have paid their subscriptions",
+          "explanation": "Members' dues are tracked in the Subscriptions Account and in the balance sheet. The R&P Account is impersonal — a cash summary."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: R&P Account, §3 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#3-receipts--payments-account-the-summarised-cash-book"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "R&P = summarised cash book, a real account",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-004",
+      "topic": "Ch 8 · NPO · Scope of the Receipts & Payments Account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following WILL appear in a club's Receipts & Payments Account for the year ended 31 March 2026?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Subscriptions still outstanding on 31 March 2026",
+          "explanation": "No cash has been received for them, so the summarised cash book cannot show them. They are an asset in the balance sheet and an addition in the subscriptions computation."
+        },
+        {
+          "key": "B",
+          "text": "Depreciation on the clubhouse furniture for the year",
+          "explanation": "Depreciation is a non-cash charge; it can never appear in an R&P Account. It belongs only to the I&E Account."
+        },
+        {
+          "key": "C",
+          "text": "Sports material bought on credit in March 2026 and still unpaid at the year end",
+          "explanation": "A credit purchase involves no payment during the year, so the cash book — and therefore the R&P Account — never records it."
+        },
+        {
+          "key": "D",
+          "text": "Subscriptions collected in March 2026 that relate to the year 2026–27",
+          "explanation": "Correct. The R&P Account takes any period's money: cash received this year is recorded in full, whether it belongs to last year, this year or next year."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: R&P Account, §3 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#3-receipts--payments-account-the-summarised-cash-book"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "R&P: any period, any nature, cash only",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-005",
+      "topic": "Ch 8 · NPO · Non-cash items",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Depreciation on a club's building is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Shown on the payments side of the Receipts & Payments Account",
+          "explanation": "Nothing was paid. The payments side records only cash going out of the club's cash and bank balances."
+        },
+        {
+          "key": "B",
+          "text": "Never shown in the Receipts & Payments Account; it is debited to the Income & Expenditure Account",
+          "explanation": "Correct. The R&P Account carries cash items only, so a non-cash charge is invisible to it. The I&E Account is accrual-based, so depreciation must be charged there."
+        },
+        {
+          "key": "C",
+          "text": "Shown on the receipts side of the Receipts & Payments Account, being a recovery of cost",
+          "explanation": "Depreciation is not a receipt of any kind — no cash comes in when an asset wears out."
+        },
+        {
+          "key": "D",
+          "text": "Shown in both statements, so that the cash and accrual pictures agree",
+          "explanation": "The two statements are deliberately different. Forcing a non-cash charge into the R&P Account would make its closing balance stop agreeing with the actual cash and bank balances."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: R&P Account, §3 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#3-receipts--payments-account-the-summarised-cash-book"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "No non-cash items in R&P; depreciation to I&E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-006",
+      "topic": "Ch 8 · NPO · Reading the R&P closing balance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A club's Receipts & Payments Account for 2025–26 closes with a balance of ₹94,000. That figure represents:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The surplus of income over expenditure for 2025–26",
+          "explanation": "The surplus lives only in the Income & Expenditure Account. A club can hold plenty of cash and still run a deficit — for instance if a legacy came in during the year."
+        },
+        {
+          "key": "B",
+          "text": "The capital fund of the club at 31 March 2026",
+          "explanation": "The capital fund is a balance-sheet figure covering all the club's net assets, not just its till and its bank account."
+        },
+        {
+          "key": "C",
+          "text": "The surplus for the year after adjusting outstanding and advance items",
+          "explanation": "The R&P Account never makes any outstanding or advance adjustment — that is precisely what distinguishes it from the I&E Account."
+        },
+        {
+          "key": "D",
+          "text": "Cash and bank balances at 31 March 2026, which say nothing about surplus or deficit",
+          "explanation": "Correct. The R&P Account starts and ends with cash. Its closing balance is the money in hand and at bank, and it can never tell you whether the club lived within its means."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: R&P Account, §3 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#3-receipts--payments-account-the-summarised-cash-book"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "R&P closing balance is cash, not surplus",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-007",
+      "topic": "Ch 8 · NPO · Nature of the Income & Expenditure Account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Income & Expenditure Account of a not-for-profit organisation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A nominal account prepared on the accrual basis — the NPO's version of the Profit & Loss Account",
+          "explanation": "Correct. Expenditure sits on the debit side, income on the credit side, and the balance is a surplus or deficit carried to the capital fund."
+        },
+        {
+          "key": "B",
+          "text": "A real account prepared on the cash basis",
+          "explanation": "That is the Receipts & Payments Account. The I&E Account is nominal and accrual-based."
+        },
+        {
+          "key": "C",
+          "text": "A summarised cash book showing all receipts and payments of a revenue nature",
+          "explanation": "The I&E Account is not a cash record at all. It includes incomes not yet received, expenses not yet paid, and non-cash charges such as depreciation."
+        },
+        {
+          "key": "D",
+          "text": "A part of the balance sheet showing the movement in the capital fund",
+          "explanation": "The movement in the capital fund is a balance-sheet working. The I&E Account is a separate nominal account whose result feeds that working."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: I&E Account, §4 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#4-income--expenditure-account-the-accrual-statement"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "I&E = nominal account, accrual basis",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-008",
+      "topic": "Ch 8 · NPO · What enters the I&E Account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which one of the following will NOT be taken to the Income & Expenditure Account of a club for the year?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Honorarium paid to the visiting badminton coach",
+          "explanation": "An honorarium is a payment for services and is revenue expenditure of the year — it is debited to the I&E Account."
+        },
+        {
+          "key": "B",
+          "text": "Depreciation on sports equipment",
+          "explanation": "Depreciation is a non-cash revenue charge, and the accrual-based I&E Account must carry it even though no cash moved."
+        },
+        {
+          "key": "C",
+          "text": "The cost of a new billiards table bought during the year",
+          "explanation": "Correct. This is capital expenditure — the table is an asset in the balance sheet. Only its depreciation ever reaches the I&E Account."
+        },
+        {
+          "key": "D",
+          "text": "Loss on the sale of an old motor van",
+          "explanation": "The loss on sale is a revenue charge of the year and is debited to the I&E Account, even though the sale proceeds themselves are a capital receipt."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: I&E Account, §4 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#4-income--expenditure-account-the-accrual-statement"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Revenue items only in I&E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-009",
+      "topic": "Ch 8 · NPO · R&P vs I&E natures",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement pairs the two accounts correctly?",
+      "options": [
+        {
+          "key": "A",
+          "text": "R&P: current period, revenue nature, accrual · I&E: any period, any nature, cash only",
+          "explanation": "This is the mirror image reversed — the two descriptions have been swapped between the statements."
+        },
+        {
+          "key": "B",
+          "text": "Both are prepared on the cash basis; the I&E Account simply drops the capital items",
+          "explanation": "Dropping capital items is only the first of the two filters. The I&E Account also re-times every item to the current year and adds non-cash charges, so it is not a cash statement at all."
+        },
+        {
+          "key": "C",
+          "text": "R&P: any period, any nature, cash only · I&E: current period, revenue nature, accrual, non-cash items included",
+          "explanation": "Correct. Those six phrases are the whole distinction, and nearly every theory MCQ on the two statements is one of them, straight or twisted."
+        },
+        {
+          "key": "D",
+          "text": "R&P: any period, revenue nature only, cash · I&E: current period, any nature, accrual",
+          "explanation": "Both halves are wrong on nature: the R&P Account takes capital receipts and payments as readily as revenue ones, and the I&E Account excludes capital items entirely."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: I&E Account, §4 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#4-income--expenditure-account-the-accrual-statement"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Mirror-image test for the two statements",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-010",
+      "topic": "Ch 8 · NPO · Subscriptions Account format",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When the subscriptions computation is laid out as a Subscriptions Account, the arrears of subscription at the beginning of the year (\"Subscriptions Outstanding b/d\") are written:",
+      "options": [
+        {
+          "key": "A",
+          "text": "On the debit side, the income for the year then emerging as the balancing figure of the account",
+          "explanation": "Correct. Opening arrears are an asset brought down, so they open on the debit side; cash received and closing arrears go to the credit side, and the transfer to the I&E Account balances the account."
+        },
+        {
+          "key": "B",
+          "text": "On the credit side, immediately below the cash received during the year",
+          "explanation": "The credit side carries the opening advance, the cash received and the closing arrears. Putting opening arrears there is the ledger-format version of adding them instead of deducting them."
+        },
+        {
+          "key": "C",
+          "text": "Only in the following year's account, never in the current year's",
+          "explanation": "They are brought down at the start of the current year — that is what \"b/d\" means. They were carried down at the end of the previous year."
+        },
+        {
+          "key": "D",
+          "text": "Nowhere in the Subscriptions Account; arrears appear only in the balance sheet",
+          "explanation": "Arrears appear in both. The balance sheet shows them as an asset; the Subscriptions Account needs them to isolate the income belonging to the year."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Subscriptions Account: income as balancing figure",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-011",
+      "topic": "Ch 8 · NPO · Subscriptions — all four adjustments",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vasant Vihar Recreation Club received ₹2,46,000 as subscriptions during 2025–26. Subscriptions outstanding were ₹15,000 on 1 April 2025 and ₹21,000 on 31 March 2026; subscriptions received in advance were ₹8,000 on 1 April 2025 and ₹5,000 on 31 March 2026. The subscription income credited to the Income & Expenditure Account for 2025–26 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,85,000",
+          "explanation": "This ADDS the opening outstanding ₹15,000 instead of deducting it (2,46,000 + 15,000 + 21,000 + 8,000 − 5,000). Those arrears are last year's income collected in this year's cash, so they must come out."
+        },
+        {
+          "key": "B",
+          "text": "₹2,49,000",
+          "explanation": "This reverses both advance adjustments — deducting the opening advance and adding the closing advance (2,46,000 − 15,000 + 21,000 − 8,000 + 5,000). The closing advance is next year's income and must be deducted."
+        },
+        {
+          "key": "C",
+          "text": "₹2,37,000",
+          "explanation": "Every sign is flipped: opening items added and closing items deducted (2,46,000 + 15,000 − 21,000 − 8,000 + 5,000). Anything at the start carries the opposite sign to the same thing at the end."
+        },
+        {
+          "key": "D",
+          "text": "₹2,55,000",
+          "explanation": "Correct. 2,46,000 − 15,000 (opening outstanding: last year's income) + 21,000 (closing outstanding: this year's income not yet received) + 8,000 (opening advance: this year's income received last year) − 5,000 (closing advance: next year's income) = ₹2,55,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Income = Received − Outstanding at start + Outstanding at end + Advance at start − Advance at end",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-012",
+      "topic": "Ch 8 · NPO · Subscriptions — outstanding at both ends",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nehru Library received subscriptions of ₹1,72,000 during 2025–26. Members owed ₹9,500 on 1 April 2025 and ₹14,000 on 31 March 2026. No subscriptions had been received in advance at either date. The subscription income for 2025–26 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,67,500",
+          "explanation": "The signs of the two outstanding figures have been interchanged (1,72,000 + 9,500 − 14,000). The opening arrears are deducted and the closing arrears added, not the other way round."
+        },
+        {
+          "key": "B",
+          "text": "₹1,76,500",
+          "explanation": "Correct. 1,72,000 − 9,500 (opening arrears belong to last year) + 14,000 (closing arrears are this year's income still to come) = ₹1,76,500."
+        },
+        {
+          "key": "C",
+          "text": "₹1,95,500",
+          "explanation": "This ADDS both outstanding amounts (1,72,000 + 9,500 + 14,000), counting last year's arrears as this year's income as well."
+        },
+        {
+          "key": "D",
+          "text": "₹1,48,500",
+          "explanation": "This DEDUCTS both outstanding amounts (1,72,000 − 9,500 − 14,000), throwing away this year's earned-but-unreceived income along with last year's arrears."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Outstanding at start deducted, outstanding at end added",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-013",
+      "topic": "Ch 8 · NPO · Subscriptions — advances at both ends",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ekta Welfare Association received ₹3,10,000 as subscriptions during 2025–26. Subscriptions received in advance were ₹12,000 on 1 April 2025 and ₹18,000 on 31 March 2026; nothing was outstanding at either date. The subscription income for 2025–26 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,16,000",
+          "explanation": "The signs of the two advances have been interchanged (3,10,000 − 12,000 + 18,000). The opening advance is added and the closing advance deducted."
+        },
+        {
+          "key": "B",
+          "text": "₹2,80,000",
+          "explanation": "This DEDUCTS both advances (3,10,000 − 12,000 − 18,000). The opening advance was received last year for this year, so it is income of this year and must be added."
+        },
+        {
+          "key": "C",
+          "text": "₹3,40,000",
+          "explanation": "This ADDS both advances (3,10,000 + 12,000 + 18,000), keeping next year's ₹18,000 inside this year's income."
+        },
+        {
+          "key": "D",
+          "text": "₹3,04,000",
+          "explanation": "Correct. 3,10,000 + 12,000 (opening advance: this year's income, received last year) − 18,000 (closing advance: next year's income, sitting in this year's cash) = ₹3,04,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Advance at start added, advance at end deducted",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-014",
+      "topic": "Ch 8 · NPO · Subscriptions — receipts split by year",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "During 2025–26 Shakti Sports Club received subscriptions of ₹2,15,000, which include ₹12,000 relating to 2024–25 and ₹9,000 relating to 2026–27. Subscriptions for 2025–26 still unpaid at the year end were ₹17,000, and no subscription had been received in advance at the beginning of the year. The subscription income for 2025–26 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,94,000",
+          "explanation": "This strips out both other-year amounts correctly but then FORGETS the ₹17,000 closing arrears (2,15,000 − 12,000 − 9,000). Those arrears are income of 2025–26 that has simply not been collected."
+        },
+        {
+          "key": "B",
+          "text": "₹2,11,000",
+          "explanation": "Correct. 2,15,000 − 12,000 (2024–25 arrears collected this year) − 9,000 (received in advance for 2026–27) + 17,000 (2025–26 arrears still due) = ₹2,11,000."
+        },
+        {
+          "key": "C",
+          "text": "₹2,35,000",
+          "explanation": "This ADDS the ₹12,000 of last year's arrears instead of deducting them (2,15,000 + 12,000 − 9,000 + 17,000), counting last year's income twice over."
+        },
+        {
+          "key": "D",
+          "text": "₹2,29,000",
+          "explanation": "This ADDS the ₹9,000 received for 2026–27 instead of deducting it (2,15,000 − 12,000 + 9,000 + 17,000), leaving next year's income inside this year's."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Receipts stated inclusive of other years' subscriptions",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-015",
+      "topic": "Ch 8 · NPO · Subscriptions — full permutation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Rotary Sewa Samiti's subscription data for 2025–26: cash received ₹1,96,000 (including ₹11,000 of 2024–25 arrears and ₹7,500 received for 2026–27); subscriptions in arrear at 31 March 2026 ₹13,500; subscriptions received in advance on 1 April 2025, relating to 2025–26, ₹6,000. The subscription income for 2025–26 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,83,500",
+          "explanation": "This handles the three cash adjustments but DROPS the ₹13,500 closing arrears (1,96,000 − 11,000 − 7,500 + 6,000). Income earned but not yet received still belongs to the year."
+        },
+        {
+          "key": "B",
+          "text": "₹2,19,000",
+          "explanation": "This ADDS the ₹11,000 of prior-year arrears instead of deducting them (1,96,000 + 11,000 − 7,500 + 13,500 + 6,000), so 2024–25's income is counted as 2025–26's."
+        },
+        {
+          "key": "C",
+          "text": "₹1,97,000",
+          "explanation": "Correct. 1,96,000 − 11,000 (2024–25 arrears) − 7,500 (2026–27 advance) + 13,500 (2025–26 arrears still due) + 6,000 (advance received last year for this year) = ₹1,97,000."
+        },
+        {
+          "key": "D",
+          "text": "₹1,85,000",
+          "explanation": "This DEDUCTS the ₹6,000 opening advance instead of adding it (1,96,000 − 11,000 − 7,500 + 13,500 − 6,000). That money was received last year but is income of this year."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "All four subscription adjustments in one stem",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-016",
+      "topic": "Ch 8 · NPO · Subscriptions — reverse computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The Income & Expenditure Account of Mahila Mandal shows subscription income of ₹2,90,000 for 2025–26. Subscriptions outstanding were ₹16,000 on 1 April 2025 and ₹11,000 on 31 March 2026; subscriptions received in advance were ₹7,000 on 1 April 2025 and ₹9,000 on 31 March 2026. The subscriptions actually received in cash during 2025–26 were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,97,000",
+          "explanation": "Correct. Re-arranging the same equation: Received = Income + Outstanding at start − Outstanding at end − Advance at start + Advance at end = 2,90,000 + 16,000 − 11,000 − 7,000 + 9,000 = ₹2,97,000."
+        },
+        {
+          "key": "B",
+          "text": "₹2,83,000",
+          "explanation": "This runs the forward equation on the income figure (2,90,000 − 16,000 + 11,000 + 7,000 − 9,000) — every one of the four adjustments is on the wrong side, because the computation is going the other way."
+        },
+        {
+          "key": "C",
+          "text": "₹2,93,000",
+          "explanation": "This reverses the two outstanding adjustments but leaves the two advance adjustments in their forward direction (2,90,000 + 16,000 − 11,000 + 7,000 − 9,000)."
+        },
+        {
+          "key": "D",
+          "text": "₹2,87,000",
+          "explanation": "This reverses the two advance adjustments but leaves the two outstanding adjustments in their forward direction (2,90,000 − 16,000 + 11,000 − 7,000 + 9,000)."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Reverse direction: cash received from income",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-017",
+      "topic": "Ch 8 · NPO · Subscriptions — arrears from members and rate",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Gyan Ganga Library has 500 members, each liable to pay an annual subscription of ₹600. During 2025–26 the library received ₹2,88,000 in subscriptions, of which ₹9,000 related to 2024–25 and ₹6,000 to 2026–27. Subscriptions outstanding at 31 March 2026 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹27,000",
+          "explanation": "Correct. Income for the year = 500 × 600 = 3,00,000. Cash belonging to 2025–26 = 2,88,000 − 9,000 (last year) − 6,000 (next year) = 2,73,000. Outstanding = 3,00,000 − 2,73,000 = ₹27,000."
+        },
+        {
+          "key": "B",
+          "text": "₹12,000",
+          "explanation": "This compares the year's dues with the WHOLE ₹2,88,000 received (3,00,000 − 2,88,000), ignoring that ₹15,000 of that cash belongs to other years and so cannot settle 2025–26 dues."
+        },
+        {
+          "key": "C",
+          "text": "₹21,000",
+          "explanation": "This strips out only the ₹9,000 of prior-year arrears (3,00,000 − 2,79,000) and leaves the ₹6,000 received for 2026–27 inside this year's collections."
+        },
+        {
+          "key": "D",
+          "text": "₹18,000",
+          "explanation": "This strips out only the ₹6,000 advance (3,00,000 − 2,82,000) and leaves the ₹9,000 of 2024–25 arrears inside this year's collections."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Subscriptions, §5 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#5-subscriptions-the-computation-the-examiner-loves"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Members × rate gives accrued income; arrears as the gap",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-018",
+      "topic": "Ch 8 · NPO · Consumables consumed with creditors",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Rangoli Sports Club paid ₹1,12,000 to its creditors for sports material during 2025–26 and bought a further ₹18,000 of material for cash. Stock of sports material was ₹14,000 on 1 April 2025 and ₹11,000 on 31 March 2026; creditors for sports material were ₹16,000 on 1 April 2025 and ₹21,500 on 31 March 2026. The sports material consumed, debited to the Income & Expenditure Account, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,27,500",
+          "explanation": "The two creditor figures have been interchanged in the credit-purchases step (1,12,000 + 16,000 − 21,500 = 1,06,500), giving purchases of 1,24,500 and consumption of 1,27,500. Closing creditors are added, opening creditors deducted."
+        },
+        {
+          "key": "B",
+          "text": "₹1,32,500",
+          "explanation": "The two stock figures have been interchanged in the consumption step (1,35,500 − 14,000 + 11,000). Opening stock is added to purchases and closing stock deducted."
+        },
+        {
+          "key": "C",
+          "text": "₹1,38,500",
+          "explanation": "Correct. Credit purchases = 1,12,000 + 21,500 − 16,000 = 1,17,500; total purchases = 1,17,500 + 18,000 = 1,35,500; consumed = 14,000 + 1,35,500 − 11,000 = ₹1,38,500."
+        },
+        {
+          "key": "D",
+          "text": "₹1,33,000",
+          "explanation": "This treats the ₹1,12,000 PAID to creditors as the credit purchases of the year (14,000 + 1,12,000 + 18,000 − 11,000), skipping the ₹5,500 net increase in creditors."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Consumables consumed, §6 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#6-consumables-consumed-sports-material-medicines-stationery"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Credit purchases then consumption",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-019",
+      "topic": "Ch 8 · NPO · Consumables consumed",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Jeevan Jyoti Charitable Hospital held medicines worth ₹22,000 on 1 April 2025 and ₹19,500 on 31 March 2026, and bought medicines for cash of ₹1,45,000 during the year (there were no creditors for medicines at either date). The medicines consumed, debited to the Income & Expenditure Account, are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,42,500",
+          "explanation": "The two stock figures have been interchanged (1,45,000 − 22,000 + 19,500): opening stock must be ADDED to purchases and closing stock DEDUCTED."
+        },
+        {
+          "key": "B",
+          "text": "₹1,47,500",
+          "explanation": "Correct. Consumed = 22,000 (opening stock) + 1,45,000 (purchases) − 19,500 (closing stock) = ₹1,47,500. The closing stock is an asset in the balance sheet."
+        },
+        {
+          "key": "C",
+          "text": "₹1,86,500",
+          "explanation": "This ADDS both stock figures (1,45,000 + 22,000 + 19,500), charging the year with medicines that are still on the shelf."
+        },
+        {
+          "key": "D",
+          "text": "₹1,03,500",
+          "explanation": "This DEDUCTS both stock figures (1,45,000 − 22,000 − 19,500), leaving out the opening stock that was actually used up during the year."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Consumables consumed, §6 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#6-consumables-consumed-sports-material-medicines-stationery"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Consumed = Opening stock + Purchases − Closing stock",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-020",
+      "topic": "Ch 8 · NPO · Credit purchases of consumables",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Shanti Vidyalaya paid ₹58,000 to its stationery suppliers during 2025–26. Creditors for stationery were ₹9,000 on 1 April 2025 and ₹6,500 on 31 March 2026. The credit purchases of stationery for the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹60,500",
+          "explanation": "The two creditor figures have been interchanged (58,000 + 9,000 − 6,500). Closing creditors are added to the payments and opening creditors deducted."
+        },
+        {
+          "key": "B",
+          "text": "₹73,500",
+          "explanation": "This ADDS both creditor balances (58,000 + 9,000 + 6,500), counting last year's unpaid bills as this year's purchases as well."
+        },
+        {
+          "key": "C",
+          "text": "₹42,500",
+          "explanation": "This DEDUCTS both creditor balances (58,000 − 9,000 − 6,500), dropping the bills of this year that are still unpaid."
+        },
+        {
+          "key": "D",
+          "text": "₹55,500",
+          "explanation": "Correct. Credit purchases = 58,000 (paid) + 6,500 (closing creditors) − 9,000 (opening creditors) = ₹55,500 — the creditors fell by ₹2,500, so purchases were less than the payments."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Consumables consumed, §6 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#6-consumables-consumed-sports-material-medicines-stationery"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Credit purchases = Payments + Closing creditors − Opening creditors",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-021",
+      "topic": "Ch 8 · NPO · Entrance fees",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A club receives entrance fees of ₹40,000 during the year and the question gives no direction about their treatment. Following the Study Material convention adopted in these notes, the entrance fees are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Capitalised in full and added to the capital fund, like life membership fees",
+          "explanation": "Capitalisation is the treatment only where the question expressly directs it. Because new members join every year, entrance fees are recurring in practice, so the default is income."
+        },
+        {
+          "key": "B",
+          "text": "Treated as income and credited to the Income & Expenditure Account",
+          "explanation": "Correct. The convention these notes follow is that entrance or admission fees are income unless the question directs capitalisation; if a question is silent, state the assumption you used."
+        },
+        {
+          "key": "C",
+          "text": "Credited to a separate Entrance Fees Fund and released to income over ten years",
+          "explanation": "There is no such deferral convention in this chapter. A separate fund is created only for money that is earmarked, such as a specific donation or a building grant."
+        },
+        {
+          "key": "D",
+          "text": "Half taken to income and half capitalised, as a rule of thumb",
+          "explanation": "No such split is prescribed. The treatment is all-or-nothing and depends on the direction in the question, with income as the default."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Entrance fees: income unless the question directs capitalisation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-022",
+      "topic": "Ch 8 · NPO · Life membership fees",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Life membership fees received by a club are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Credited to the Income & Expenditure Account as income of the year of receipt",
+          "explanation": "This is the classic error of the chapter. One payment buys services for the member's whole life, so treating it as income of a single year overstates that year's surplus."
+        },
+        {
+          "key": "B",
+          "text": "Credited to income to the extent of one year's ordinary subscription, the balance being capitalised",
+          "explanation": "Some books use such a split, but it is not the convention these notes follow. Here the whole of the life membership fee is capitalised."
+        },
+        {
+          "key": "C",
+          "text": "Shown on the assets side of the balance sheet as a receivable from life members",
+          "explanation": "The money has already come in — nothing is receivable. A receipt can never be an asset by itself; it either becomes income or increases a fund."
+        },
+        {
+          "key": "D",
+          "text": "Capitalised — added to the capital fund, and never income of the year of receipt",
+          "explanation": "Correct. A life membership fee is a non-recurring receipt that buys services for life, so it is added to the capital fund in the balance sheet."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Life membership fees are capitalised",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-023",
+      "topic": "Ch 8 · NPO · General vs specific donation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A club receives (i) a general donation of ₹25,000 with no conditions attached and (ii) a donation of ₹3,00,000 given specifically for building a new pavilion. The correct treatment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(i) income of the year in the I&E Account; (ii) credited to a Pavilion Fund on the liabilities side, being a capital receipt whatever its amount",
+          "explanation": "Correct. A general donation has no strings attached and is a revenue receipt; a specific donation is tied to a purpose, not to a year, and is credited to that fund."
+        },
+        {
+          "key": "B",
+          "text": "Both credited to the Income & Expenditure Account as income of the year",
+          "explanation": "The ₹3,00,000 is earmarked for a capital purpose. Sending it to the I&E Account would inflate the surplus with money the club is not free to spend on running costs."
+        },
+        {
+          "key": "C",
+          "text": "Both capitalised and added to the capital fund",
+          "explanation": "The general donation carries no purpose and is a recurring revenue receipt, so it is income. Only the specific donation is capitalised — and to its own fund, not the capital fund."
+        },
+        {
+          "key": "D",
+          "text": "(i) capitalised because it is a donation; (ii) income, because ₹3,00,000 is large enough to be recurring",
+          "explanation": "This inverts both tests. Treatment turns on whether the money is earmarked, never on the size of the receipt."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "General donation = income; specific donation = its own fund",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-024",
+      "topic": "Ch 8 · NPO · Legacies",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A club receives a legacy of ₹5,00,000 under the will of a deceased member, the will directing that it be used for the club's library. The legacy is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Income of the year, because it was received during the year",
+          "explanation": "Receipt during the year is the R&P Account's test, not the I&E Account's. A legacy is a non-recurring receipt under a will, not income earned by the club's activities."
+        },
+        {
+          "key": "B",
+          "text": "Credited to the I&E Account and simultaneously added to the capital fund",
+          "explanation": "That would count the same ₹5,00,000 twice — once through the surplus and once directly. A receipt goes to one place only."
+        },
+        {
+          "key": "C",
+          "text": "Capitalised — credited to a Library Fund, being a specific legacy received under a will",
+          "explanation": "Correct. A legacy is capitalised, and a legacy tied to a purpose goes to that specific fund. (The Study Material does note that a small GENERAL legacy may be treated as income.)"
+        },
+        {
+          "key": "D",
+          "text": "Shown on the assets side of the balance sheet as a library asset",
+          "explanation": "The money received is cash; the library books are bought later. A receipt is never itself an asset caption — the cash is the asset and the fund is the liability."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Legacy capitalised; specific legacy to its fund",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-025",
+      "topic": "Ch 8 · NPO · Government grants",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A charitable hospital receives a government grant of ₹8,00,000 towards the cost of a new operation theatre block and ₹1,20,000 towards its running expenses. The treatment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both credited to the Income & Expenditure Account as grants of the year",
+          "explanation": "The ₹8,00,000 meets a capital cost and cannot be income. Only the maintenance grant, which meets revenue expenses, is income."
+        },
+        {
+          "key": "B",
+          "text": "Both capitalised, one to a Building Fund and one to the capital fund",
+          "explanation": "A maintenance grant is intended to meet the year's revenue expenses, so capitalising it would leave those expenses uncovered in the I&E Account."
+        },
+        {
+          "key": "C",
+          "text": "₹8,00,000 capitalised to a Building Fund; ₹1,20,000 credited to the I&E Account as income",
+          "explanation": "Correct. A grant follows the nature of the cost it meets: a building grant is a capital receipt held in the building fund, a maintenance grant is revenue income of the year."
+        },
+        {
+          "key": "D",
+          "text": "₹8,00,000 credited to the I&E Account and ₹1,20,000 capitalised",
+          "explanation": "This inverts the test exactly — the capital grant is sent to income and the revenue grant is locked into a fund."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Maintenance grant = income; building grant = capitalised",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-026",
+      "topic": "Ch 8 · NPO · Sale of consumables vs sale of an asset",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Why are the full proceeds of a sale of old sports material credited to the Income & Expenditure Account, while only the profit or loss is taken to that account when an old fixed asset is sold?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Because the sports material was already charged to the I&E Account when consumed, so its scrap proceeds recover a revenue item; the fixed asset was never charged as an expense, so only the result of its sale is a revenue item",
+          "explanation": "Correct. The test is whether the item has already passed through the I&E Account. Consumables have; a fixed asset has not, and its proceeds are a capital receipt."
+        },
+        {
+          "key": "B",
+          "text": "Because sports material is a current asset and fixed assets are non-current, and current assets are always revenue in nature",
+          "explanation": "The current/non-current label is not the reason. Stock of sports material is itself an asset in the balance sheet; what matters is that its cost has already been expensed."
+        },
+        {
+          "key": "C",
+          "text": "Because the sale of sports material recurs every year while the sale of a fixed asset does not, and only recurring receipts enter the I&E Account",
+          "explanation": "Recurrence is a useful hint elsewhere, but it is not the reason here — the profit or loss on a fixed asset also enters the I&E Account despite being non-recurring."
+        },
+        {
+          "key": "D",
+          "text": "There is no such difference; the proceeds of both are credited in full to the I&E Account",
+          "explanation": "Crediting an asset's full proceeds to the I&E Account is the classic error of this chapter: it treats the recovery of capital as income of the year."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Consumable scrap = full proceeds; asset sale = result only",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-027",
+      "topic": "Ch 8 · NPO · Honorarium",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An honorarium paid by a literary society to a guest lecturer is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Capitalised, because it buys goodwill for the society",
+          "explanation": "Nothing of lasting value is acquired that could be shown as an asset. The lecture is consumed as it is delivered."
+        },
+        {
+          "key": "B",
+          "text": "Deducted directly from the capital fund",
+          "explanation": "Only capital items touch the capital fund directly. A revenue payment must pass through the I&E Account, and it will reach the fund through the surplus or deficit."
+        },
+        {
+          "key": "C",
+          "text": "Shown on the assets side of the balance sheet as a prepayment",
+          "explanation": "A prepayment arises only where the service has been paid for but not yet received. Here the lecture has already been delivered."
+        },
+        {
+          "key": "D",
+          "text": "Debited to the Income & Expenditure Account as expenditure of the year",
+          "explanation": "Correct. An honorarium is a payment for the services of a person who is not an employee — revenue expenditure of the year in which the services were rendered."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Honorarium is revenue expenditure",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-028",
+      "topic": "Ch 8 · NPO · Sale of a fixed asset",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sunder Club sold an old lawn mower for ₹24,500. Its book value on the date of sale was ₹32,000. The amount appearing in the Income & Expenditure Account in respect of this sale is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹24,500 credited, the sale proceeds being income of the year",
+          "explanation": "This credits the whole capital receipt to income. The mower's cost was never charged to the I&E Account, so its proceeds are a recovery of capital, not income."
+        },
+        {
+          "key": "B",
+          "text": "₹7,500 debited, being the loss on sale",
+          "explanation": "Correct. 24,500 (proceeds) − 32,000 (book value) = −7,500, a loss, so ₹7,500 is debited to the I&E Account. The ₹24,500 itself is a capital receipt and stays out of the account."
+        },
+        {
+          "key": "C",
+          "text": "₹32,000 debited, being the book value written off",
+          "explanation": "Writing off the whole book value ignores the ₹24,500 recovered on sale. Only the shortfall between the two figures is a charge against the year."
+        },
+        {
+          "key": "D",
+          "text": "₹7,500 credited, the difference being treated as a gain",
+          "explanation": "The arithmetic is right but the sign is backwards: the club received less than the book value, so the ₹7,500 is a loss to be debited, not a gain to be credited."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Only profit or loss on sale reaches I&E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-029",
+      "topic": "Ch 8 · NPO · Two kinds of sale in one year",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "During 2025–26 Deccan Gymkhana sold old sports material (already charged to the Income & Expenditure Account when consumed) for ₹6,200, and sold old furniture of book value ₹18,000 for ₹21,000. The total amount credited to the Income & Expenditure Account in respect of these two sales is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹27,200",
+          "explanation": "This credits the full proceeds of BOTH sales (6,200 + 21,000). The furniture's ₹21,000 is a capital receipt — only the ₹3,000 by which it exceeds book value is income."
+        },
+        {
+          "key": "B",
+          "text": "₹6,200",
+          "explanation": "This correctly credits the sports material but OMITS the ₹3,000 profit on the furniture (21,000 − 18,000), which is a gain of the year and must be credited."
+        },
+        {
+          "key": "C",
+          "text": "₹3,000",
+          "explanation": "This credits the profit on the furniture but treats the ₹6,200 sports-material proceeds as a capital receipt. That material was already expensed when consumed, so its scrap value is income in full."
+        },
+        {
+          "key": "D",
+          "text": "₹9,200",
+          "explanation": "Correct. 6,200 (full proceeds of the consumable, already expensed) + (21,000 − 18,000) = 6,200 + 3,000 profit on sale of furniture = ₹9,200 credited."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Special receipts, §7 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#7-how-each-special-receipt-is-treated"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Consumable scrap in full; asset sale result only",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-030",
+      "topic": "Ch 8 · NPO · Fund-based accounting",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A club maintains a Tournament Fund. Donations received for the tournament and interest earned on tournament fund investments during the year are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Credited to the Income & Expenditure Account as incomes of the year",
+          "explanation": "That is the error fund-based accounting exists to prevent. Money earmarked for the tournament — including what the earmarked investments earn — is not free income of the club."
+        },
+        {
+          "key": "B",
+          "text": "Credited (added) to the Tournament Fund itself; they never enter the Income & Expenditure Account",
+          "explanation": "Correct. Under fund-based accounting the fund's incomes are added to the fund and the fund's expenses are deducted from it, so the fund's whole story stays out of the I&E Account."
+        },
+        {
+          "key": "C",
+          "text": "Credited to the capital fund, since all earmarked money is eventually general money",
+          "explanation": "The fund keeps its separate identity on the liabilities side. Only the building fund makes a transfer to the capital fund, and only to the extent actually utilised on construction."
+        },
+        {
+          "key": "D",
+          "text": "Shown on the assets side of the balance sheet alongside the tournament fund investments",
+          "explanation": "The investments are the asset; the fund is the matching liability. Incomes of the fund increase that liability — they are not themselves assets."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Special funds, §8 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#8-special-funds-tournament-prize-and-building-funds"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fund incomes and expenses live inside the fund",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-031",
+      "topic": "Ch 8 · NPO · Building fund utilised",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A club's Building Fund stands at ₹10,00,000 and the club spends ₹6,00,000 of it during the year on constructing a new hall, which is complete. Besides showing the hall as an asset, the club must:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Debit ₹6,00,000 to the Income & Expenditure Account as expenditure of the year",
+          "explanation": "Construction cost is capital expenditure; the hall is an asset. The I&E Account will only ever carry the hall's depreciation."
+        },
+        {
+          "key": "B",
+          "text": "Leave the Building Fund untouched at ₹10,00,000, since the donors' money has not been returned",
+          "explanation": "Leaving the fund intact while also showing the hall as an asset counts the same money twice on the liabilities side. Once spent as intended, that part of the earmarking has done its work."
+        },
+        {
+          "key": "C",
+          "text": "Transfer ₹6,00,000 from the Building Fund to the Capital Fund, leaving ₹4,00,000 in the Building Fund",
+          "explanation": "Correct. The amount utilised is transferred from the specific fund to the capital fund — the earmarking has served its purpose — and the unspent ₹4,00,000 remains earmarked."
+        },
+        {
+          "key": "D",
+          "text": "Transfer the whole ₹10,00,000 to the Capital Fund and close the Building Fund",
+          "explanation": "Only the amount actually spent on construction is transferred. The unspent ₹4,00,000 is still tied to the building purpose and stays in the fund."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Special funds, §8 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#8-special-funds-tournament-prize-and-building-funds"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Amount of building fund utilised is transferred to capital fund",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-032",
+      "topic": "Ch 8 · NPO · Tournament fund balance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ashoka Club's Tournament Fund stood at ₹72,000 on 1 April 2025. During 2025–26 the club received tournament donations of ₹34,000 and interest of ₹6,500 on tournament fund investments, and spent ₹88,000 on conducting the tournament. The Tournament Fund shown on the liabilities side at 31 March 2026 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹24,500",
+          "explanation": "Correct. 72,000 + 34,000 (tournament donations) + 6,500 (interest on the fund's investments) − 88,000 (tournament expenses) = ₹24,500. Nothing touches the I&E Account, because the fund covered its own expenses."
+        },
+        {
+          "key": "B",
+          "text": "₹1,12,500",
+          "explanation": "This adds the year's two fund incomes but never DEDUCTS the ₹88,000 of tournament expenses (72,000 + 34,000 + 6,500), sending those expenses to the I&E Account instead."
+        },
+        {
+          "key": "C",
+          "text": "₹18,000",
+          "explanation": "This routes the ₹6,500 interest to the I&E Account instead of adding it to the fund (72,000 + 34,000 − 88,000). Interest earned on the fund's own investments belongs to the fund."
+        },
+        {
+          "key": "D",
+          "text": "₹72,000",
+          "explanation": "This leaves the fund untouched and sends both the year's fund incomes and the ₹88,000 of expenses to the I&E Account — precisely what fund-based accounting forbids."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Special funds, §8 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#8-special-funds-tournament-prize-and-building-funds"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fund balance = opening + fund incomes − fund expenses",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-033",
+      "topic": "Ch 8 · NPO · Fund exhausted — excess to I&E",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Shivaji Club's Prize Fund stood at ₹40,000 on 1 April 2025. During 2025–26 the club received prize-fund donations of ₹15,000 and interest of ₹3,000 on prize fund investments, and awarded prizes costing ₹71,000. The amount debited to the Income & Expenditure Account in respect of the prizes is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹13,000",
+          "explanation": "Correct. Available in the fund = 40,000 + 15,000 + 3,000 = 58,000; prizes 71,000; excess = 71,000 − 58,000 = ₹13,000 debited to the I&E Account. The fund is exhausted and disappears from the balance sheet — it is never shown negative."
+        },
+        {
+          "key": "B",
+          "text": "₹71,000",
+          "explanation": "This debits the whole cost of the prizes to the I&E Account and ignores the fund altogether. Fund expenses die inside the fund first; only the excess reaches the I&E Account."
+        },
+        {
+          "key": "C",
+          "text": "₹31,000",
+          "explanation": "This sets off only the OPENING fund of ₹40,000 (71,000 − 40,000) and forgets the ₹15,000 donations and ₹3,000 interest credited to the fund during the year."
+        },
+        {
+          "key": "D",
+          "text": "₹16,000",
+          "explanation": "This sets off the opening fund and the donations but forgets the ₹3,000 interest (71,000 − 40,000 − 15,000), which is also an income of the fund."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Special funds, §8 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#8-special-funds-tournament-prize-and-building-funds"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Excess of fund expenses over the fund is debited to I&E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-034",
+      "topic": "Ch 8 · NPO · Building fund balance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kalyani Trust's Building Fund was ₹6,00,000 on 1 April 2025. During 2025–26 it received a further building donation of ₹1,50,000 and spent ₹5,20,000 on construction, which was completed and capitalised during the year. The Building Fund appearing on the liabilities side at 31 March 2026 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹7,50,000",
+          "explanation": "This adds the donation but never transfers the ₹5,20,000 utilised out of the fund (6,00,000 + 1,50,000), so the fund and the new building are both shown at full value."
+        },
+        {
+          "key": "B",
+          "text": "₹80,000",
+          "explanation": "This deducts the construction cost from the OPENING fund only (6,00,000 − 5,20,000) and forgets the ₹1,50,000 building donation credited to the fund during the year."
+        },
+        {
+          "key": "C",
+          "text": "₹2,30,000",
+          "explanation": "Correct. 6,00,000 + 1,50,000 (building donation) − 5,20,000 (amount utilised, transferred to the capital fund) = ₹2,30,000 still earmarked for the building."
+        },
+        {
+          "key": "D",
+          "text": "₹5,20,000",
+          "explanation": "This shows the amount UTILISED as though it were the fund balance. The amount utilised leaves the fund — it is the ₹2,30,000 not yet spent that remains earmarked."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Special funds, §8 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#8-special-funds-tournament-prize-and-building-funds"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Building fund after transfer of the amount utilised",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-035",
+      "topic": "Ch 8 · NPO · Balance sheet sides",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a club's balance sheet:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Outstanding subscriptions are a liability and subscriptions received in advance are an asset",
+          "explanation": "Both are on the wrong side. Money owed TO the club is an asset; money received for services the club has yet to render is a liability."
+        },
+        {
+          "key": "B",
+          "text": "Outstanding subscriptions are an asset and subscriptions received in advance are a liability",
+          "explanation": "Correct. Members owing the club gives the club a receivable; the club owing next year's service to a member who has already paid is an obligation."
+        },
+        {
+          "key": "C",
+          "text": "Both are liabilities, because both relate to members",
+          "explanation": "The relationship with members does not decide the side. The direction of the obligation does: one is owed to the club, the other by the club."
+        },
+        {
+          "key": "D",
+          "text": "Both are assets, because both are subscriptions",
+          "explanation": "Subscriptions received in advance are money the club holds for a service not yet given, so they are an obligation, not a resource it has earned."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Balance sheet & capital fund, §9 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#9-the-balance-sheet-and-the-capital-fund"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Outstanding subscriptions = asset; advance = liability",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-036",
+      "topic": "Ch 8 · NPO · Opening capital fund",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A question gives a club's assets and liabilities on the first day of the year but does not give its capital fund. The opening capital fund is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Taken as nil, because a club has no proprietor to contribute capital",
+          "explanation": "The club's accumulated net assets are real, and they belong to the capital fund. A nil fund would leave the opening statement of affairs out of balance."
+        },
+        {
+          "key": "B",
+          "text": "The total of the assets on that date",
+          "explanation": "This forgets that some of those assets are financed by outsiders — outstanding expenses, advance subscriptions and specific funds all have to be deducted."
+        },
+        {
+          "key": "C",
+          "text": "The previous year's surplus",
+          "explanation": "A single year's surplus is only the latest addition to the fund. The fund itself is the accumulation of every past surplus and every capitalised receipt."
+        },
+        {
+          "key": "D",
+          "text": "The balancing figure of an opening statement of affairs: total assets − total liabilities on that date",
+          "explanation": "Correct. Prepare a statement of affairs on the first day, listing every asset (including outstanding subscriptions and stock of consumables) and every liability (including advance subscriptions and outstanding expenses); the fund is what balances it."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Balance sheet & capital fund, §9 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#9-the-balance-sheet-and-the-capital-fund"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Opening capital fund as balancing figure",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-037",
+      "topic": "Ch 8 · NPO · Opening capital fund computed",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 1 April 2025 Vidya Mandir Society's position was: cash ₹18,500; investments ₹1,50,000; furniture ₹62,000; books ₹90,000; subscriptions outstanding ₹11,000; subscriptions received in advance ₹4,500; salaries outstanding ₹7,000; Building Fund ₹50,000. Its opening capital fund is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,57,000",
+          "explanation": "This swaps the two subscription items — treating the ₹11,000 outstanding as a liability and the ₹4,500 advance as an asset (assets 3,25,000 − liabilities 68,000). Members owing the society is an asset."
+        },
+        {
+          "key": "B",
+          "text": "₹2,70,000",
+          "explanation": "Correct. Assets = 18,500 + 1,50,000 + 62,000 + 90,000 + 11,000 (outstanding subscriptions) = 3,31,500. Liabilities = 4,500 (advance subscriptions) + 7,000 (outstanding salaries) + 50,000 (Building Fund) = 61,500. Capital fund = 3,31,500 − 61,500 = ₹2,70,000."
+        },
+        {
+          "key": "C",
+          "text": "₹3,20,000",
+          "explanation": "This leaves the ₹50,000 Building Fund out of the liabilities (3,31,500 − 11,500). A specific fund is a separate liability, not part of the capital fund."
+        },
+        {
+          "key": "D",
+          "text": "₹2,59,000",
+          "explanation": "This omits the ₹11,000 outstanding subscriptions from the assets altogether (3,20,500 − 61,500) — the classic sneaky opening item."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Balance sheet & capital fund, §9 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#9-the-balance-sheet-and-the-capital-fund"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Opening capital fund = assets − liabilities at start",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-038",
+      "topic": "Ch 8 · NPO · Opening capital fund with a special fund",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 1 April 2025 Sahyadri Trekkers' Club had: cash at bank ₹26,000; sports equipment ₹84,000; stock of sports material ₹4,000; subscriptions outstanding ₹6,500; subscriptions received in advance ₹3,000; rent outstanding ₹5,500; Tournament Fund ₹30,000. Its opening capital fund is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,12,000",
+          "explanation": "This treats the ₹30,000 Tournament Fund as part of the capital fund instead of as a separate liability (1,20,500 − 8,500). Earmarked money is never merged into the general fund."
+        },
+        {
+          "key": "B",
+          "text": "₹75,000",
+          "explanation": "This swaps the two subscription items — the ₹6,500 outstanding is put among the liabilities and the ₹3,000 advance among the assets (1,17,000 − 42,000)."
+        },
+        {
+          "key": "C",
+          "text": "₹1,59,000",
+          "explanation": "This ADDS the liabilities to the assets instead of deducting them (1,20,500 + 38,500). The capital fund is the excess of assets OVER liabilities."
+        },
+        {
+          "key": "D",
+          "text": "₹82,000",
+          "explanation": "Correct. Assets = 26,000 + 84,000 + 4,000 + 6,500 = 1,20,500. Liabilities = 3,000 + 5,500 + 30,000 = 38,500. Capital fund = 1,20,500 − 38,500 = ₹82,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Balance sheet & capital fund, §9 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#9-the-balance-sheet-and-the-capital-fund"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Special fund is a liability in the statement of affairs",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-039",
+      "topic": "Ch 8 · NPO · Closing capital fund",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Konark Cultural Society's capital fund was ₹2,70,000 on 1 April 2025. Its Income & Expenditure Account for 2025–26 shows a surplus of ₹46,500, arrived at after crediting entrance fees of ₹18,000 as income. During the year the society also received life membership fees of ₹25,000 and a legacy of ₹40,000, both capitalised. The capital fund at 31 March 2026 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,81,500",
+          "explanation": "Correct. 2,70,000 + 46,500 (surplus) + 25,000 (life membership fees, capitalised) + 40,000 (legacy, capitalised) = ₹3,81,500. The entrance fees are already inside the surplus."
+        },
+        {
+          "key": "B",
+          "text": "₹3,99,500",
+          "explanation": "This adds the ₹18,000 entrance fees a SECOND time, although the stem says they were already credited as income in arriving at the ₹46,500 surplus."
+        },
+        {
+          "key": "C",
+          "text": "₹3,41,500",
+          "explanation": "This omits the ₹40,000 legacy. A capitalised receipt of the year never passes through the surplus, so it must be added to the fund separately."
+        },
+        {
+          "key": "D",
+          "text": "₹3,56,500",
+          "explanation": "This leaves out the ₹25,000 life membership fees, treating them as though they were income already inside the surplus. They are capitalised, so they must be added here."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Balance sheet & capital fund, §9 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#9-the-balance-sheet-and-the-capital-fund"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Closing fund = opening + surplus + amounts capitalised",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-040",
+      "topic": "Ch 8 · NPO · Closing capital fund with a deficit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nari Shakti Mahila Mandal's capital fund was ₹1,58,000 on 1 April 2025. Its Income & Expenditure Account for 2025–26 shows a deficit of ₹12,400, and life membership fees of ₹9,000 were received during the year. The capital fund at 31 March 2026 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,79,400",
+          "explanation": "This ADDS the ₹12,400 deficit instead of deducting it (1,58,000 + 12,400 + 9,000). A deficit is an excess of expenditure over income and reduces the fund."
+        },
+        {
+          "key": "B",
+          "text": "₹1,45,600",
+          "explanation": "This deducts the deficit correctly but leaves out the ₹9,000 life membership fees, which are capitalised and therefore add to the fund."
+        },
+        {
+          "key": "C",
+          "text": "₹1,54,600",
+          "explanation": "Correct. 1,58,000 − 12,400 (deficit) + 9,000 (life membership fees, capitalised) = ₹1,54,600."
+        },
+        {
+          "key": "D",
+          "text": "₹1,36,600",
+          "explanation": "This DEDUCTS the ₹9,000 life membership fees as though they were an outgoing (1,58,000 − 12,400 − 9,000). They are money received and are added to the fund."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Balance sheet & capital fund, §9 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#9-the-balance-sheet-and-the-capital-fund"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Deficit reduces the capital fund",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-041",
+      "topic": "Ch 8 · NPO · Converting R&P into I&E",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In converting a Receipts & Payments Account into an Income & Expenditure Account, which of the following describes what is done?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The opening and closing cash and bank balances are carried into the I&E Account as the first income and the last expenditure",
+          "explanation": "Cash balances belong to the R&P Account alone. The I&E Account has no opening or closing cash balance at all."
+        },
+        {
+          "key": "B",
+          "text": "Every receipt is credited and every payment debited, and outstanding items are ignored because the R&P Account is already complete",
+          "explanation": "That would simply relabel the cash statement. The whole purpose of the conversion is to strip capital items and to re-time every revenue item to the current year."
+        },
+        {
+          "key": "C",
+          "text": "Cash balances are dropped, capital receipts and payments are stripped out, every revenue item is re-timed for outstanding and prepaid amounts at both ends, and non-cash charges are added",
+          "explanation": "Correct. Those four steps, run in order, turn a cash summary into an accrual statement whose balance is the surplus or deficit for the year."
+        },
+        {
+          "key": "D",
+          "text": "Only the payments side is adjusted; the receipts side of the R&P Account is copied unchanged",
+          "explanation": "The receipts side needs at least as much work — legacies, life membership fees, specific donations and asset sale proceeds all have to be removed, and subscriptions re-timed."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Converting R&P to I&E, §10 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#10-converting-receipts--payments-into-income--expenditure"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "The four conversion steps",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-042",
+      "topic": "Ch 8 · NPO · Expense re-timing — outstanding",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nirmala Nursing Home paid salaries of ₹3,36,000 during 2025–26. Salaries outstanding were ₹24,000 on 1 April 2025 and ₹31,000 on 31 March 2026. The salaries debited to the Income & Expenditure Account for 2025–26 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,43,000",
+          "explanation": "Correct. 3,36,000 − 24,000 (last year's salaries paid this year) + 31,000 (this year's salaries still unpaid) = ₹3,43,000."
+        },
+        {
+          "key": "B",
+          "text": "₹3,29,000",
+          "explanation": "The two outstanding figures have been interchanged (3,36,000 + 24,000 − 31,000). The opening arrear is deducted and the closing arrear added."
+        },
+        {
+          "key": "C",
+          "text": "₹3,91,000",
+          "explanation": "This ADDS both outstanding amounts (3,36,000 + 24,000 + 31,000), charging last year's salaries to this year as well."
+        },
+        {
+          "key": "D",
+          "text": "₹2,81,000",
+          "explanation": "This DEDUCTS both outstanding amounts (3,36,000 − 24,000 − 31,000), leaving out this year's salaries that are still to be paid."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Converting R&P to I&E, §10 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#10-converting-receipts--payments-into-income--expenditure"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Expense = Paid − Outstanding at start + Outstanding at end",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-043",
+      "topic": "Ch 8 · NPO · Expense re-timing — prepaid",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Prerna Club paid rent of ₹96,000 during 2025–26. Rent prepaid was ₹6,000 on 1 April 2025 and ₹9,000 on 31 March 2026. The rent debited to the Income & Expenditure Account for 2025–26 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹99,000",
+          "explanation": "The two prepaid figures have been interchanged (96,000 − 6,000 + 9,000). The opening prepayment is added and the closing prepayment deducted."
+        },
+        {
+          "key": "B",
+          "text": "₹1,11,000",
+          "explanation": "This ADDS both prepayments (96,000 + 6,000 + 9,000), charging the year with rent that has been paid for next year."
+        },
+        {
+          "key": "C",
+          "text": "₹81,000",
+          "explanation": "This DEDUCTS both prepayments (96,000 − 6,000 − 9,000), leaving out the rent paid last year that was consumed this year."
+        },
+        {
+          "key": "D",
+          "text": "₹93,000",
+          "explanation": "Correct. 96,000 + 6,000 (rent paid last year for this year) − 9,000 (rent paid this year for next year) = ₹93,000; the ₹9,000 is an asset in the closing balance sheet."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Converting R&P to I&E, §10 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#10-converting-receipts--payments-into-income--expenditure"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Expense = Paid + Prepaid at start − Prepaid at end",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-044",
+      "topic": "Ch 8 · NPO · Full conversion to a surplus",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sunrise Welfare Club's Receipts & Payments Account for the year ended 31 March 2026 shows — Receipts: subscriptions ₹4,20,000; entrance fees ₹30,000; sale of old sports material ₹5,000; sale of old furniture of book value ₹12,000 for ₹9,500; legacy ₹50,000; interest on investments ₹14,000; general donations ₹20,000. Payments: salaries ₹2,10,000; rent ₹84,000; sports material purchased ₹66,000; new equipment ₹75,000; honorarium ₹18,000; printing ₹12,000. Adjustments: subscriptions outstanding ₹14,000 at the start and ₹19,000 at the end; salaries outstanding at the end ₹9,000; stock of sports material ₹7,000 at the start and ₹10,000 at the end; depreciation on equipment ₹11,000; entrance fees are income and the legacy is capitalised. The surplus for the year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,34,500",
+          "explanation": "This credits the ₹50,000 legacy to the I&E Account although the stem directs that it be capitalised — a capital receipt smuggled into income (84,500 + 50,000)."
+        },
+        {
+          "key": "B",
+          "text": "₹84,500",
+          "explanation": "Correct. Income: subscriptions 4,20,000 − 14,000 + 19,000 = 4,25,000; entrance fees 30,000; old sports material 5,000; interest 14,000; donations 20,000 = 4,94,000. Expenditure: salaries 2,10,000 + 9,000 = 2,19,000; rent 84,000; material consumed 7,000 + 66,000 − 10,000 = 63,000; honorarium 18,000; printing 12,000; depreciation 11,000; loss on furniture 12,000 − 9,500 = 2,500 → 4,09,500. Surplus = 4,94,000 − 4,09,500 = ₹84,500."
+        },
+        {
+          "key": "C",
+          "text": "₹96,500",
+          "explanation": "This credits the ₹9,500 furniture proceeds as income instead of debiting the ₹2,500 loss on sale (84,500 + 9,500 + 2,500) — the full-proceeds error on a fixed asset."
+        },
+        {
+          "key": "D",
+          "text": "₹98,000",
+          "explanation": "This omits the two non-cash charges — depreciation ₹11,000 and loss on sale ₹2,500 (84,500 + 13,500) — on the ground that no cash was paid. The I&E Account is accrual-based and must carry them."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Converting R&P to I&E, §10 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#10-converting-receipts--payments-into-income--expenditure"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Full R&P → I&E conversion; surplus",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c8-045",
+      "topic": "Ch 8 · NPO · R&P closing balance with an overdraft",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Adarsh Club's bank account was overdrawn by ₹15,000 on 1 April 2025. Receipts during 2025–26 totalled ₹3,40,000 and payments ₹3,02,000. The closing bank balance shown in the Receipts & Payments Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An overdraft of ₹23,000",
+          "explanation": "The arithmetic is right but the sign is read backwards: receipts of ₹3,40,000 exceed the opening overdraft plus the payments (₹3,17,000), so the account is in credit with the bank, not overdrawn."
+        },
+        {
+          "key": "B",
+          "text": "A favourable balance of ₹53,000",
+          "explanation": "This treats the opening overdraft as though it were a favourable opening balance (+15,000 + 3,40,000 − 3,02,000). An overdraft is money owed to the bank and starts the computation negative."
+        },
+        {
+          "key": "C",
+          "text": "An overdraft of ₹53,000",
+          "explanation": "This makes both slips at once — the opening overdraft is added as a positive figure and the resulting balance is then labelled an overdraft."
+        },
+        {
+          "key": "D",
+          "text": "A favourable balance of ₹23,000",
+          "explanation": "Correct. −15,000 (opening overdraft) + 3,40,000 (receipts) − 3,02,000 (payments) = +₹23,000, a favourable balance, carried down on the payments side of the account."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: R&P Account, §3 →",
+        "href": "/foundation/accounting/financial-statements-of-not-for-profit-organisations/#3-receipts--payments-account-the-summarised-cash-book"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "R&P starts and ends with cash; overdraft is a credit balance",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c8-01",
+      "topic": "Ch 8 · NPO · R&P vs I&E",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Distinguish between a Receipts & Payments Account and an Income & Expenditure Account on any five bases. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Nature: R&P is a real account — a summarised cash book; I&E is a nominal account — the NPO's Profit & Loss Account",
+          "marks": 1,
+          "citation": "nature of the two statements"
+        },
+        {
+          "point": "Basis: R&P is prepared on the cash basis; I&E on the accrual basis, adjusting outstanding and advance/prepaid amounts at both ends of the year",
+          "marks": 1,
+          "citation": "cash vs accrual"
+        },
+        {
+          "point": "Period: R&P records cash of any period (last year's arrears, next year's advances); I&E records income and expenditure of the current year only",
+          "marks": 1,
+          "citation": "any period vs current period"
+        },
+        {
+          "point": "Nature of items: R&P takes capital and revenue items alike; I&E takes revenue items only, and additionally carries non-cash charges such as depreciation and loss on sale",
+          "marks": 1,
+          "citation": "capital vs revenue; non-cash items"
+        },
+        {
+          "point": "Balances and result: R&P opens and closes with cash and bank balances, and its closing balance is cash — not surplus; I&E has no cash balances and its result is a surplus or deficit carried to the capital fund",
+          "marks": 1,
+          "citation": "opening/closing balances; surplus vs cash"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "The six contrasting phrases from §3–§4",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c8-02",
+      "topic": "Ch 8 · NPO · Treatment of special receipts",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State, with a reason in each case, how the following receipts of a club are treated in its final accounts: (a) entrance fees, the question giving no direction; (b) life membership fees; (c) a general donation of ₹10,000; (d) a donation of ₹5,00,000 given for a new library building; (e) a legacy received under a member's will. (5 marks)",
+      "skeleton": [
+        {
+          "point": "(a) Entrance fees — treated as income and credited to the I&E Account unless the question directs capitalisation, because new members join every year and the receipt is recurring in practice; where the question is silent, state the assumption used",
+          "marks": 1,
+          "citation": "entrance fees convention (SM)"
+        },
+        {
+          "point": "(b) Life membership fees — capitalised and added to the capital fund, never income of the year of receipt, because one payment buys services for the member's whole life",
+          "marks": 1,
+          "citation": "life membership fees"
+        },
+        {
+          "point": "(c) General donation ₹10,000 — income of the year in the I&E Account, being a revenue receipt with no strings attached",
+          "marks": 1,
+          "citation": "general donation"
+        },
+        {
+          "point": "(d) Library building donation ₹5,00,000 — credited to a Library Building Fund on the liabilities side, being a specific (earmarked) donation and therefore a capital receipt whatever its amount; the amount later utilised on construction is transferred from that fund to the capital fund",
+          "marks": 1,
+          "citation": "specific donation; building fund utilisation"
+        },
+        {
+          "point": "(e) Legacy — capitalised, being a non-recurring receipt under a will; a specific legacy is credited to the fund named in the will, and a small general legacy may be treated as income per the Study Material",
+          "marks": 1,
+          "citation": "legacy convention (SM)"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "§7 treatment table and its pointer callout",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c8-03",
+      "topic": "Ch 8 · NPO · Subscriptions equation",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Write the equation that converts subscriptions received in cash into the subscription income of the year, and explain why each of the four adjustments carries the sign it does. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Equation: Subscription income = Received during the year − Outstanding at start + Outstanding at end + Advance at start − Advance at end",
+          "marks": 1,
+          "citation": "subscriptions equation"
+        },
+        {
+          "point": "Outstanding at start is deducted because it is last year's income collected in this year's cash; outstanding at end is added because it is this year's income not yet received",
+          "marks": 1,
+          "citation": "belongs-to-this-year test — arrears"
+        },
+        {
+          "point": "Advance at start is added because it is this year's income received in last year's cash; advance at end is deducted because it is next year's income sitting in this year's cash",
+          "marks": 1,
+          "citation": "belongs-to-this-year test — advances"
+        },
+        {
+          "point": "Mirror-sign rule: anything at the start carries the opposite sign to the same item at the end; the same equation re-arranged gives the reverse computation (cash received when the income is given), and the whole computation can equally be laid out as a Subscriptions Account with the income as the balancing figure",
+          "marks": 1,
+          "citation": "mirror signs; ledger route"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "§5 equation and the belongs-to-this-year test",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c8-04",
+      "topic": "Ch 8 · NPO · Fund-based accounting",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain fund-based accounting with reference to a club's Tournament Fund: how are the fund's incomes and expenses treated, where does the fund appear in the balance sheet, and what is done if the tournament expenses exceed the fund? (4 marks)",
+      "skeleton": [
+        {
+          "point": "Principle: money earmarked for a stated purpose is accounted for separately, so that the fund's own story is kept out of the Income & Expenditure Account",
+          "marks": 1,
+          "citation": "fund-based accounting"
+        },
+        {
+          "point": "Incomes of the fund — donations for the tournament and interest on tournament fund investments — are credited (added) to the fund, not to the I&E Account",
+          "marks": 1,
+          "citation": "fund incomes"
+        },
+        {
+          "point": "Expenses of the fund — the cost of conducting the tournament — are debited (deducted) from the fund; the net balance is shown on the liabilities side, with the fund's investments on the assets side",
+          "marks": 1,
+          "citation": "fund expenses; presentation"
+        },
+        {
+          "point": "If the expenses exceed the fund, the fund is exhausted and only the excess is debited to the I&E Account; a fund is never shown as a negative figure",
+          "marks": 1,
+          "citation": "excess over the fund"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "§8 fund-based accounting rules",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c8-05",
+      "topic": "Ch 8 · NPO · Capital fund",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain how the opening capital fund of a not-for-profit organisation is ascertained when the question does not give it, list the items commonly overlooked in that computation, and state how the closing capital fund is arrived at. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Prepare an opening statement of affairs listing every asset and every liability existing on the first day of the year",
+          "marks": 1,
+          "citation": "opening statement of affairs"
+        },
+        {
+          "point": "The capital fund is the balancing figure: Opening capital fund = Total assets at start − Total liabilities at start",
+          "marks": 1,
+          "citation": "opening capital fund formula"
+        },
+        {
+          "point": "Assets commonly overlooked: subscriptions outstanding, accrued interest, stock of consumables (sports material, medicines, stationery), prepaid expenses",
+          "marks": 1,
+          "citation": "sneaky opening assets"
+        },
+        {
+          "point": "Liabilities commonly overlooked: subscriptions received in advance, outstanding expenses, and every specific fund (tournament, prize, building), which is a liability separate from the capital fund",
+          "marks": 1,
+          "citation": "sneaky opening liabilities; specific funds"
+        },
+        {
+          "point": "Closing capital fund = Opening capital fund + Surplus (or − Deficit) + items capitalised during the year, such as life membership fees, legacies and entrance fees where the question directs capitalisation",
+          "marks": 1,
+          "citation": "closing capital fund formula"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "§9 opening and closing capital fund",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c8-06",
+      "topic": "Ch 8 · NPO · Conversion of R&P into I&E",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Set out the steps for converting a Receipts & Payments Account into an Income & Expenditure Account, and state the treatment of (i) depreciation, (ii) the purchase of a new asset and (iii) the sale of an old asset. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Step 1 — drop the cash frame: the opening and closing cash and bank balances belong to the R&P Account only and never enter the I&E Account",
+          "marks": 1,
+          "citation": "conversion step 1"
+        },
+        {
+          "point": "Step 2 — strip the capital receipts: legacies, life membership fees, specific donations, building grants and the sale proceeds of assets are parked for the balance sheet",
+          "marks": 1,
+          "citation": "conversion step 2 (receipts)"
+        },
+        {
+          "point": "Step 3 — strip the capital payments: assets bought and investments made are shown in the balance sheet, not as expenditure",
+          "marks": 1,
+          "citation": "conversion step 2 (payments)"
+        },
+        {
+          "point": "Step 4 — re-time every revenue item at both ends: Expense for the year = Paid − Outstanding at start + Outstanding at end + Prepaid at start − Prepaid at end, and the mirror equation for incomes",
+          "marks": 1,
+          "citation": "conversion step 3 (re-timing)"
+        },
+        {
+          "point": "(i) Depreciation is a non-cash charge that the R&P Account can never show; being accrual-based, the I&E Account must be debited with it. (ii) The purchase of a new asset is capital expenditure — asset in the balance sheet, only its depreciation in the I&E Account",
+          "marks": 1,
+          "citation": "depreciation; asset purchase"
+        },
+        {
+          "point": "(iii) On the sale of an old asset only the profit or loss reaches the I&E Account (proceeds − book value); the proceeds themselves are a capital receipt. In contrast, the sale of old sports material or newspapers is income in full, the cost having already been expensed",
+          "marks": 1,
+          "citation": "sale of asset vs sale of consumables"
+        }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "§10 four steps plus §7 sale conventions",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}
