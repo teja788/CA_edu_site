@@ -415,3 +415,59 @@ _No factual corrections were needed to the MDX or the bank during this citations
 - [ ] **Life membership fees — full capitalisation, no split.** The notes and bank capitalise the whole receipt. q-f1c8-022 option B offers the "one year's ordinary subscription to income, balance capitalised" split found in some books and marks it wrong. Confirm the SM does not use that split.
 - [ ] **Sale of old sports material credited in full.** q-f1c8-026, q-f1c8-029 and q-f1c8-044 credit the full proceeds of old sports material to I&E on the ground that the material was already expensed when consumed, while an asset sale yields only profit/loss. Where a question instead states that sports material is carried as stock and sold out of stock, the treatment would differ — confirm the SM states the full-proceeds rule for consumable scrap without that qualification.
 - [ ] **q-f1c8-017 assumes every member is liable for the full year.** Accrued income is taken as 500 members × ₹600 with no allowance for members joining mid-year or for irrecoverable arrears. Confirm this is the standard SM/exam framing for the "members × rate" pattern before the question is treated as settled.
+## inventories — VERIFY 2026-08-07
+
+- [ ] **New chapter (Ch 4, Inventories) authored 7 Aug 2026** — notes, bank
+  (counts), citations; reviewer should spot-check citations rows against SM Ch 4
+  (May 2026 ed.). Shipped together: a 474-line MDX, a 51-question bank
+  (45 MCQs · 6 descriptives, 25 machine-verified numericals, answer keys
+  A 12 / B 11 / C 11 / D 11) and `citations/foundation/accounting/citations_inventories.md`.
+- [ ] **Cash discount NOT deducted from the cost of inventories** — the chapter
+  states this flatly (notes §4 pointer callout, worked example 3 working note 2,
+  q-f1c4-015 option D, q-f1c4-017, d-f1c4-02 skeleton point 5). AS 2 names trade
+  discounts, rebates and duty drawbacks as deductions and is silent on cash
+  discount; the treatment taken here follows the Ch 2 financing-item position.
+  Confirm the SM Ch 4 worked examples treat it the same way, since a full mark
+  in an exam answer can turn on it.
+- [ ] **Normal-wastage arithmetic in q-f1c4-021** — the ₹6,00,000 pool is spread
+  over the 9,600 surviving kg (₹62.50/kg) so that the normal 400 kg carries no
+  cost of its own, and the abnormal 600 kg is expensed at that rate. Confirm SM
+  Ch 4 uses the same "normal loss absorbed by good units" convention rather than
+  simply expensing the abnormal quantity at the gross rate of ₹60/kg (the B
+  distractor).
+- [ ] **Fixed-overhead allocation on normal capacity** (notes §4, q-f1c4-019,
+  d-f1c4-02 skeleton point 3) — this is an AS 2 conversion-cost position but sits
+  at the edge of Foundation depth. Confirm the SM Ch 4 states it at this level of
+  detail; if it does not, the question can be softened to a pure inclusion test.
+- [ ] **Cut-off: "sold and invoiced, awaiting collection" is EXCLUDED**
+  (notes §10 table, q-f1c4-043 item (iv), d-f1c4-06 point (e)). This assumes
+  title passed on invoicing rather than on delivery. Confirm the SM frames it the
+  same way — a stem that turned on a retention-of-title clause would flip the
+  answer.
+- [ ] **AS 2 cited by subject, not by paragraph number** — the citations file
+  deliberately names paragraphs by subject ("cost-of-purchase paragraph") rather
+  than by number, to avoid asserting numbering the drafter could not verify
+  against the current text. If the reviewer wants paragraph numbers in the
+  citations file, they must be added from the ICAI text by hand.
+- [ ] **MDX length** — 474 lines against a 320–380 brief. The overrun is content
+  (10 numbered sections plus 5 worked examples), not padding; trim §1's scope
+  callout or §8 if the house style is strict on length.
+## bills-of-exchange-and-promissory-notes — VERIFY 2026-08-07
+
+- [ ] **New chapter (Ch 6, Bills of Exchange and Promissory Notes) authored 7 Aug 2026** — notes (570-line MDX, 14 sections, 5 worked examples), bank (51 questions: 45 MCQs + 6 descriptives, 22 machine-verified numericals, key split A 12 / B 12 / C 11 / D 10), citations; reviewer should spot-check citations rows against SM Ch 6 (May 2026 ed.) and the NI Act text. **Every bare-act line in the citations file was transcribed rather than re-fetched from India Code in this session** — it must be diffed against Act 26 of 1881 on indiacode.nic.in before the chapter leaves `unreviewed`.
+
+- [ ] **The rebate income/expense direction is asserted, and a whole cluster of answers depends on it.** Notes §11 and q-f1c6-041 state that a rebate allowed on retirement is an **expense in the holder's books** (Rebate on Bills / Discount Allowed A/c debited) and an **income in the acceptor's books** (Rebate A/c credited), on the reasoning that whoever grants the concession takes the debit. The same direction is stated in d-f1c6-05 skeleton point 5, and it is deliberately contrasted with renewal interest, which runs the other way (cost to the acceptor, income to the drawer, q-f1c6-040). Some texts label the holder's side "Rebate on Bills Discounted", which in a bank's books is a *liability* for unearned discount — a different animal entirely. Please confirm the SM's account names and direction for a non-bank trader, since reversing it would flip q-f1c6-041, d-f1c6-05 and the §11 callout together.
+
+- [ ] **The exact holiday dates assumed, and the Saturday convention.** Every holiday question assumes **26 January, 15 August and 2 October** are notified public holidays (stated in the stems), plus Sundays under the s. 25 Explanation. It also assumes **Saturdays are ordinary business days** — notes §5 says so expressly, and q-f1c6-017's answer of **3 October 2026 (a Saturday)** depends entirely on it: 1 June + 4 months + 3 days grace = 4 October 2026, a Sunday, so s. 25 pulls it back one day to the Saturday. If the reviewer prefers the alternative convention, q-f1c6-017 and the verifier's `is_public_holiday()` must change together. Also confirm the ordering rule the whole set rests on: **grace is added first, and the holiday test is applied to the post-grace date** — q-f1c6-012 relies on this (28 February 2027 is itself a Sunday, but the answer is 3 March 2027 because only the post-grace date is tested).
+
+- [ ] **The emergency-holiday rule has no quoted statutory authority.** q-f1c6-019 answers 7 August 2026 (next *succeeding* business day) for a maturity of 6 August 2026 declared an emergency holiday, and the same convention supplies the "moved forward" distractor in q-f1c6-015 to q-f1c6-018. Notes §5 presents it as settled commercial practice and the SM's treatment; the citations file flags it as a convention rather than a quoted provision because no line of the NI Act was found stating it in those words. Please either supply the authority or confirm that stating it as an SM/practice convention is acceptable at Foundation level.
+
+- [ ] **The noting-charge recovery chain in endorsement and discounting cases.** The chapter asserts throughout that noting charges are **paid by the holder but borne by the party ultimately liable**, so they are added to the amount debited to the acceptor and are never the drawer's expense (q-f1c6-038, d-f1c6-04). Two consequences are asserted as absolutes and should be checked: (a) on dishonour of a **discounted** bill the credit is to **Bank** for face value *plus* noting charges, with Bills Receivable untouched (q-f1c6-028 answers ₹60,500, q-f1c6-037); (b) on dishonour of an **endorsed** bill the credit is to the **endorsee** for the same combined figure (notes §9 table, d-f1c6-04 point 4). The citations file records that the statutory recovery rule sits in **s. 117** but the exact clause was not verified — that reference needs confirming or dropping.
+
+- [ ] **q-f1c6-030 computes the insolvency dividend on the amount owing INCLUDING noting charges.** Amount owing ₹25,000 + ₹300 = ₹25,300; dividend at 40 paise = ₹10,120; bad debts ₹15,180. The distractor at ₹15,000 is the version that works on face value alone. Notes §12 states the "whole amount owing" base explicitly. Confirm the SM computes the dividend on the same base, since a reviewer following the face-value convention would mark the keyed answer wrong.
+
+- [ ] **Accommodation bills: proceeds shared at the start, FACE VALUE shared at maturity.** q-f1c6-024 (₹29,100, not ₹30,000), q-f1c6-031 (₹28,500) and q-f1c6-025 (₹900) all rest on splitting the **net proceeds** and the **discount** in the agreed ratio, while q-f1c6-044 and Worked example 5 switch to splitting the **face value** on the due date. The reconciliation check built into both (the accommodating party's net outgo ends up equal to exactly his own share of the discount) is the strongest evidence the pair of conventions is internally consistent, but a CA should confirm the SM presents both steps the same way.
+
+- [ ] **No bank corrections were needed** — all 22 numerical questions recomputed to the bank's existing keys on the first verifier run (`22 numerical question(s) verified, 0 failure(s)`), including all 10 due-date questions, which the verifier derives with `datetime.date` arithmetic implementing ss. 22–25 rather than by lookup. Anchor self-check: `all 45 anchors ok against 17 headings`. No key or explanation was edited except a cosmetic reword of q-f1c6-012 option A, whose explanation had begun with the word "Correct" although it is a wrong option.
+
+- [ ] **Notes length overruns the house target.** The MDX is 570 lines against the ~320–380 the brief asked for. The overrun is content, not padding: the mandated scope for this chapter is 14 distinct topics plus 5 worked examples, against the 9 sections and 4 examples in the Ch 5 exemplar. If a trim is wanted, the cheapest cuts without losing scope are the §7 four-fates table (duplicated in condensed form in the revision summary) and Worked example 1, which carries six sub-cases where four would teach the same rules.

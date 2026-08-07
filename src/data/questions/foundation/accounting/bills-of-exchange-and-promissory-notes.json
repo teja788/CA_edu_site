@@ -1,0 +1,2151 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "bills-of-exchange-and-promissory-notes",
+  "chapter": "Ch 6 — Bills of Exchange and Promissory Notes",
+  "questions": [
+    {
+      "id": "q-f1c6-001",
+      "topic": "Ch 6 · Bills of Exchange · Definitions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A promissory note, as defined in section 4 of the Negotiable Instruments Act 1881, contains:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An unconditional order signed by the creditor directing the debtor to pay",
+          "explanation": "That is the definition of a BILL of exchange (s. 5). A note is written by the debtor, so it cannot contain an order to anybody."
+        },
+        {
+          "key": "B",
+          "text": "A conditional promise to pay, signed by the maker",
+          "explanation": "A promise subject to a condition destroys the instrument. Only a stated future date is permitted, because a date is certain to arrive."
+        },
+        {
+          "key": "C",
+          "text": "An unconditional undertaking, signed by the maker, to pay a certain sum of money only",
+          "explanation": "Correct. Section 4 requires an unconditional UNDERTAKING (a promise), signed by the maker, to pay a certain sum of money only to or to the order of a certain person, or to bearer — and it expressly excludes bank notes and currency notes."
+        },
+        {
+          "key": "D",
+          "text": "An unconditional promise to pay a certain sum of money or to deliver goods of equal value",
+          "explanation": "'A certain sum of money ONLY' is the statutory phrase. An option to deliver goods instead makes the instrument non-negotiable."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Two instruments, one idea, §1 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#1-two-instruments-one-idea"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 4 — promissory note defined",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-002",
+      "topic": "Ch 6 · Bills of Exchange · Definitions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The essential difference between a bill of exchange and a promissory note is that a bill contains:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An order to pay given by the creditor, whereas a note contains a promise to pay given by the debtor",
+          "explanation": "Correct. Section 5 speaks of an unconditional ORDER directing a certain person to pay; section 4 speaks of an unconditional UNDERTAKING by the maker. Who speaks, and in what voice, is the whole distinction — and every other difference (acceptance, number of parties) follows from it."
+        },
+        {
+          "key": "B",
+          "text": "A promise to pay given by the creditor, whereas a note contains an order given by the debtor",
+          "explanation": "Both halves are inverted. The creditor gives the order (bill); the debtor gives the promise (note)."
+        },
+        {
+          "key": "C",
+          "text": "An unconditional order, whereas a note may contain a conditional promise",
+          "explanation": "Both instruments must be unconditional. A conditional promise is not a promissory note at all."
+        },
+        {
+          "key": "D",
+          "text": "A promise payable only in money, whereas a note may be payable in money or goods",
+          "explanation": "Both are confined to 'a certain sum of money only'. Neither can be satisfied in goods."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Two instruments, one idea, §1 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#1-two-instruments-one-idea"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NI Act 1881, ss. 4 and 5 compared",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-003",
+      "topic": "Ch 6 · Bills of Exchange · Acceptance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about acceptance is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both a bill and a promissory note must be accepted before they become binding",
+          "explanation": "A note needs no acceptance — the person who must pay has already signed it as maker. There is nobody left to accept."
+        },
+        {
+          "key": "B",
+          "text": "A promissory note must be accepted by the payee",
+          "explanation": "The payee is the person who RECEIVES the money. Acceptance is an undertaking to pay, so a payee could never be the acceptor."
+        },
+        {
+          "key": "C",
+          "text": "A bill must be accepted by the drawer before it is sent to the drawee",
+          "explanation": "The drawer is the one giving the order; he signs as drawer, not as acceptor. Acceptance is the drawee's act."
+        },
+        {
+          "key": "D",
+          "text": "A bill requires acceptance by the drawee; a promissory note requires no acceptance at all",
+          "explanation": "Correct. A bill is an order given to somebody else, so it needs that person's consent — the drawee signs across its face and becomes the acceptor. A note is a self-made promise and needs no such consent."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Two instruments, one idea, §1 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#1-two-instruments-one-idea"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Acceptance: a bill only; the drawee becomes the acceptor",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-004",
+      "topic": "Ch 6 · Bills of Exchange · Essentials",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Rohit writes: 'I promise to pay Sameer ₹75,000 as soon as the consignment of yarn is sold. Sd/- Rohit.' This document is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A valid promissory note, because the amount and the payee are certain",
+          "explanation": "Certainty of amount and payee is not enough. The promise itself must be unconditional, and this one is not."
+        },
+        {
+          "key": "B",
+          "text": "Not a promissory note, because the promise is conditional on an uncertain event",
+          "explanation": "Correct. The yarn may never be sold, so the promise depends on an uncertain event. Section 4 requires an UNCONDITIONAL undertaking. A stated future date would have been acceptable (a date is certain to arrive); a sale is not."
+        },
+        {
+          "key": "C",
+          "text": "A valid bill of exchange, because Rohit has signed it",
+          "explanation": "A bill contains an order addressed to a third person. This is a promise by the writer himself, so it could only ever have been a note."
+        },
+        {
+          "key": "D",
+          "text": "Not a promissory note, because a promissory note must always be payable to bearer",
+          "explanation": "A note may be payable to a certain person, to his order, or to bearer. Naming Sameer is perfectly proper — the defect is the condition."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Two instruments, one idea, §1 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#1-two-instruments-one-idea"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 4 — the promise must be unconditional",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-005",
+      "topic": "Ch 6 · Bills of Exchange · Essentials",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT an essential feature of a promissory note?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It must state the rate of interest payable on the sum",
+          "explanation": "Correct. A note may carry interest or not; the Act does not require an interest clause. What it does require is writing, signature, an unconditional undertaking, a certain sum of money only, a certain payee or bearer, and proper stamping."
+        },
+        {
+          "key": "B",
+          "text": "It must be in writing and signed by the maker",
+          "explanation": "This is essential — an oral promise, however sincere, is not a promissory note."
+        },
+        {
+          "key": "C",
+          "text": "The sum payable must be a certain sum of money only",
+          "explanation": "Essential. 'A certain sum of money only' is the statutory phrase; goods or shares in lieu destroy negotiability."
+        },
+        {
+          "key": "D",
+          "text": "It must be properly stamped",
+          "explanation": "Essential under the Indian Stamp Act. An unstamped or understamped note is not enforceable as such."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Two instruments, one idea, §1 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#1-two-instruments-one-idea"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Essentials of a negotiable instrument",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-006",
+      "topic": "Ch 6 · Bills of Exchange · Parties",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Surat Textiles sells cloth on credit to Modi Garments and draws a bill on Modi Garments, payable to itself. In this bill:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Modi Garments is the drawer and Surat Textiles the drawee",
+          "explanation": "The DEBTOR is never the drawer of a trade bill. The seller who is owed the money gives the order, so Surat Textiles draws."
+        },
+        {
+          "key": "B",
+          "text": "Surat Textiles is the drawer and also the payee; Modi Garments is the drawee",
+          "explanation": "Correct. The seller gives the order (drawer), the buyer is ordered to pay (drawee, and acceptor once he signs), and because the bill is payable to the seller himself, the drawer and payee are the same person — the commonest arrangement in practice."
+        },
+        {
+          "key": "C",
+          "text": "Surat Textiles is the drawer and the acceptor; Modi Garments is the payee",
+          "explanation": "The acceptor is always the drawee who has signed. A drawer cannot accept his own order, and the buyer does not receive money on his own purchase."
+        },
+        {
+          "key": "D",
+          "text": "There are only two parties, since the drawer and the drawee are the same person",
+          "explanation": "The drawer and the PAYEE coincide here, not the drawer and the drawee. Modi Garments remains a distinct third party."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The parties, §2 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#2-the-parties-and-who-does-what"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Parties to a bill: drawer, drawee/acceptor, payee",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-007",
+      "topic": "Ch 6 · Bills of Exchange · Parties",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The same bill appears in two sets of books. In the drawer's books and in the acceptor's books respectively it is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bills Payable (a liability) and Bills Receivable (an asset)",
+          "explanation": "Exactly reversed. The person entitled to receive the money holds the asset."
+        },
+        {
+          "key": "B",
+          "text": "Bills Receivable (an asset) and Bills Payable (a liability)",
+          "explanation": "Correct. The drawer expects to receive, so the paper is an asset in his books; the acceptor must pay, so the same paper is a liability in his. Deciding whose books you are in is the first step in every entry in this chapter."
+        },
+        {
+          "key": "C",
+          "text": "Bills Receivable in both sets of books",
+          "explanation": "That would mean both parties expect to receive the money. Only one of them can."
+        },
+        {
+          "key": "D",
+          "text": "A nominal account in the drawer's books and a real account in the acceptor's",
+          "explanation": "Neither is nominal. Bills Receivable and Bills Payable are personal-in-substance accounts representing amounts receivable and payable; nothing here is an expense or income."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The parties, §2 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#2-the-parties-and-who-does-what"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Bills Receivable vs Bills Payable: one instrument, two books",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-008",
+      "topic": "Ch 6 · Bills of Exchange · Parties",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Anil holds a bill accepted by Bhaskar and signs it over to his own creditor Chetan. In that transfer, Anil and Chetan are respectively:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Drawee and acceptor",
+          "explanation": "Those roles belong to Bhaskar alone — he was ordered to pay and he signed. Transferring the paper does not create a new drawee."
+        },
+        {
+          "key": "B",
+          "text": "Maker and payee",
+          "explanation": "Maker and payee are the parties to a promissory NOTE. This is a bill, and in any case the transfer creates neither role."
+        },
+        {
+          "key": "C",
+          "text": "Endorser and endorsee",
+          "explanation": "Correct. Signing the back of an instrument to transfer it is endorsement: the person who signs is the endorser (Anil), the person it passes to is the endorsee (Chetan), who now becomes the holder."
+        },
+        {
+          "key": "D",
+          "text": "Holder and acceptor",
+          "explanation": "Anil was the holder BEFORE the transfer; after it Chetan is. Chetan certainly does not become the acceptor — Bhaskar remains liable to pay."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The parties, §2 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#2-the-parties-and-who-does-what"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Endorsement: endorser and endorsee",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-009",
+      "topic": "Ch 6 · Bills of Exchange · Tenor",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For a bill payable a stated number of months 'after sight', the period is reckoned from:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The date on which the drawee accepts the bill",
+          "explanation": "Correct. 'After sight' means after the bill has been seen and accepted, so the clock starts on the date of acceptance. If a question gives you an acceptance date at all, it almost always wants it used here."
+        },
+        {
+          "key": "B",
+          "text": "The date written on the bill by the drawer",
+          "explanation": "That is 'after date'. Using the bill's date on an after-sight bill is the single most-planted error in this chapter."
+        },
+        {
+          "key": "C",
+          "text": "The date on which the bill is presented for payment",
+          "explanation": "Presentment for PAYMENT happens at the end of the bill's life, not at the start. The relevant presentment is the one for acceptance."
+        },
+        {
+          "key": "D",
+          "text": "The date on which the bill is discounted with a bank",
+          "explanation": "Discounting is the holder's private financing decision. It changes nothing about the bill's maturity."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Tenor, §3 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#3-tenor-on-demand-after-date-after-sight"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 23 — months after date or after sight",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-010",
+      "topic": "Ch 6 · Bills of Exchange · Days of grace",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Days of grace are allowed on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Every negotiable instrument without exception",
+          "explanation": "Not every one. An instrument payable on demand, at sight or on presentment falls due the moment it is presented — there is nothing to postpone."
+        },
+        {
+          "key": "B",
+          "text": "Bills of exchange only, never on promissory notes",
+          "explanation": "Section 22 speaks of 'a promissory note OR bill of exchange'. Both get grace if they are time instruments."
+        },
+        {
+          "key": "C",
+          "text": "Time instruments — those not payable on demand, at sight or on presentment",
+          "explanation": "Correct. Section 22 makes a time instrument mature on the third day after the day it is expressed to be payable, and expressly excludes instruments payable on demand, at sight or on presentment. Grace is part of the legal due date, not a bank's courtesy."
+        },
+        {
+          "key": "D",
+          "text": "Instruments payable at sight, but not on instruments payable after date",
+          "explanation": "This is exactly inverted. At-sight instruments get no grace; after-date instruments do."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Tenor, §3 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#3-tenor-on-demand-after-date-after-sight"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 22 — maturity and days of grace",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-011",
+      "topic": "Ch 6 · Bills of Exchange · Due date",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 3 May 2026 is payable three months after date. Assuming no holiday intervenes, its due date is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3 August 2026",
+          "explanation": "This is the day the bill is EXPRESSED to be payable, before the three days of grace are added. Stopping here is the commonest one-mark loss in the paper."
+        },
+        {
+          "key": "B",
+          "text": "6 August 2026",
+          "explanation": "Correct. Three months from 3 May 2026 ends on the corresponding day, 3 August 2026 (s. 23); adding the three days of grace given by s. 22 gives 6 August 2026, which is neither a Sunday nor a notified holiday."
+        },
+        {
+          "key": "C",
+          "text": "6 July 2026",
+          "explanation": "This counts only two months. Read the tenor again — three months from 3 May reaches August, not July."
+        },
+        {
+          "key": "D",
+          "text": "5 August 2026",
+          "explanation": "Only two days of grace have been added. Section 22 gives three — maturity is on the third day after the day the bill is expressed to be payable."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Finding the due date, §4 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#4-finding-the-due-date"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NI Act 1881, ss. 22 and 23 — months after date plus grace",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-012",
+      "topic": "Ch 6 · Bills of Exchange · Due date",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 30 November 2026 is payable three months after date. Its due date is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "28 February 2027",
+          "explanation": "The month arithmetic is right — February 2027 has no 30th, so the period ends on the last day of the month — but the three days of grace have not been added."
+        },
+        {
+          "key": "B",
+          "text": "2 March 2027",
+          "explanation": "This rolls the missing '30 February' forward into March and then forgets the grace. Section 23 says the period ends on the LAST DAY of a month that has no corresponding day; it never spills over into the next month."
+        },
+        {
+          "key": "C",
+          "text": "5 March 2027",
+          "explanation": "This rolls '30 February' forward to 2 March and then adds grace. The overflow step is wrong: stop at 28 February and add grace to that."
+        },
+        {
+          "key": "D",
+          "text": "3 March 2027",
+          "explanation": "Correct. February 2027 has no 30th day, so under s. 23 the period ends on the last day of that month, 28 February 2027; adding the three days of grace gives 3 March 2027, a Wednesday. (28 February 2027 is itself a Sunday, but the holiday test applies only to the date AFTER grace.)"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Finding the due date, §4 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#4-finding-the-due-date"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 23 — no corresponding day means the last day of the month",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-013",
+      "topic": "Ch 6 · Bills of Exchange · Due date",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 12 May 2026 is payable 60 days after date. Its due date is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "14 July 2026",
+          "explanation": "Correct. Section 24 excludes the day of the date, so counting starts on 13 May: 19 days of May + 30 of June = 49, and 11 more days reach 11 July 2026. Adding the three days of grace gives 14 July 2026, a Tuesday."
+        },
+        {
+          "key": "B",
+          "text": "11 July 2026",
+          "explanation": "The 60 days have been counted correctly but the three days of grace have been left out."
+        },
+        {
+          "key": "C",
+          "text": "15 July 2026",
+          "explanation": "This treats 60 days as two months (12 July + 3 = 15 July). Days must be counted as actual calendar days — a two-month period here is 61 days long."
+        },
+        {
+          "key": "D",
+          "text": "13 July 2026",
+          "explanation": "This includes 12 May itself in the count, so the 60 days end a day early on 10 July. Section 24 expressly excludes the day of the date."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Finding the due date, §4 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#4-finding-the-due-date"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 24 — days after date, excluding the day of the date",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-014",
+      "topic": "Ch 6 · Bills of Exchange · Due date",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 1 June 2026 is accepted by the drawee on 8 June 2026 and is payable two months after sight. Its due date is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 August 2026",
+          "explanation": "This runs the two months from the bill's date, 1 June, instead of from acceptance. After SIGHT means after acceptance — the trap this question exists to catch."
+        },
+        {
+          "key": "B",
+          "text": "8 August 2026",
+          "explanation": "The starting point is right (8 June, the date of acceptance) but the three days of grace have not been added."
+        },
+        {
+          "key": "C",
+          "text": "11 August 2026",
+          "explanation": "Correct. After sight runs from the date of acceptance: 8 June 2026 + 2 months = 8 August 2026, and adding the three days of grace gives 11 August 2026, a Tuesday."
+        },
+        {
+          "key": "D",
+          "text": "1 August 2026",
+          "explanation": "Both slips at once — counted from the bill's date AND omitted the grace."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Finding the due date, §4 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#4-finding-the-due-date"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 23 — months after sight run from acceptance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-015",
+      "topic": "Ch 6 · Bills of Exchange · Holiday rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 12 May 2026 is payable three months after date. 15 August is a notified public holiday. The due date of the bill is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "15 August 2026",
+          "explanation": "This is the date grace produces, but it is Independence Day — a notified public holiday. Section 25 does not let a bill mature on such a day."
+        },
+        {
+          "key": "B",
+          "text": "12 August 2026",
+          "explanation": "The three days of grace have been omitted, which happens to dodge the holiday question altogether. Add grace first, then test the date."
+        },
+        {
+          "key": "C",
+          "text": "17 August 2026",
+          "explanation": "This moves the date FORWARD to the next working day (16 August 2026 is a Sunday). Forward movement is reserved for emergency holidays; a notified public holiday moves the date back."
+        },
+        {
+          "key": "D",
+          "text": "14 August 2026",
+          "explanation": "Correct. 12 May + 3 months = 12 August 2026; + 3 days of grace = 15 August 2026, a notified public holiday. Section 25 makes the instrument due on the next PRECEDING business day, 14 August 2026 (a Friday)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Holidays, §5 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#5-holidays-the-two-rules-that-move-a-due-date"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 25 — maturity on a public holiday",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-016",
+      "topic": "Ch 6 · Bills of Exchange · Holiday rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 29 June 2026 is payable three months after date. 2 October is a notified public holiday. Its due date is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 October 2026",
+          "explanation": "The arithmetic is right but the holiday has been ignored. 2 October 2026 is Gandhi Jayanti, a notified public holiday, so the bill cannot mature on it."
+        },
+        {
+          "key": "B",
+          "text": "1 October 2026",
+          "explanation": "Correct. 29 June + 3 months = 29 September 2026; + 3 days of grace = 2 October 2026, a notified public holiday. Section 25 moves it to the next preceding business day, 1 October 2026 (a Thursday)."
+        },
+        {
+          "key": "C",
+          "text": "3 October 2026",
+          "explanation": "This moves the date forward instead of back. A notified public holiday sends the due date to the PRECEDING business day; only an emergency holiday pushes it forward."
+        },
+        {
+          "key": "D",
+          "text": "29 September 2026",
+          "explanation": "The three days of grace have been omitted. Grace is added first, and only then is the resulting date tested against the holiday rules."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Holidays, §5 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#5-holidays-the-two-rules-that-move-a-due-date"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 25 — preceding business day",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-017",
+      "topic": "Ch 6 · Bills of Exchange · Holiday rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 1 June 2026 is payable four months after date. Sundays are public holidays; 2 October is also a notified holiday, and Saturdays are working days. The due date is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3 October 2026",
+          "explanation": "Correct. 1 June + 4 months = 1 October 2026; + 3 days of grace = 4 October 2026, which is a Sunday and therefore a public holiday under s. 25. The next preceding business day is Saturday 3 October 2026 — 2 October (Gandhi Jayanti) would have been skipped as well, but it is not reached."
+        },
+        {
+          "key": "B",
+          "text": "4 October 2026",
+          "explanation": "This ignores that 4 October 2026 falls on a Sunday. Sundays count as public holidays for s. 25, so the maturity date must move."
+        },
+        {
+          "key": "C",
+          "text": "5 October 2026",
+          "explanation": "This moves forward to the following Monday. Section 25 moves a due date BACK to the preceding business day; only an emergency holiday moves it forward."
+        },
+        {
+          "key": "D",
+          "text": "1 October 2026",
+          "explanation": "The three days of grace have been left out entirely."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Holidays, §5 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#5-holidays-the-two-rules-that-move-a-due-date"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 25 — Sundays are public holidays",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-018",
+      "topic": "Ch 6 · Bills of Exchange · Holiday rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill dated 23 October 2026 is payable three months after date. 26 January is a notified public holiday. Its due date is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "26 January 2027",
+          "explanation": "The arithmetic is right but Republic Day is a notified public holiday, so the bill cannot mature on it."
+        },
+        {
+          "key": "B",
+          "text": "27 January 2027",
+          "explanation": "This moves the date forward. A notified public holiday moves maturity to the preceding business day, not the following one."
+        },
+        {
+          "key": "C",
+          "text": "25 January 2027",
+          "explanation": "Correct. 23 October + 3 months = 23 January 2027; + 3 days of grace = 26 January 2027, Republic Day. Section 25 makes the bill due on the next preceding business day, Monday 25 January 2027."
+        },
+        {
+          "key": "D",
+          "text": "23 January 2027",
+          "explanation": "The three days of grace have been omitted."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Holidays, §5 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#5-holidays-the-two-rules-that-move-a-due-date"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 25 — 26 January as a notified holiday",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-019",
+      "topic": "Ch 6 · Bills of Exchange · Emergency holiday",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill would ordinarily have matured on 6 August 2026 (a Thursday). The Government suddenly declares an emergency holiday for that day. The bill now falls due on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5 August 2026",
+          "explanation": "This applies the preceding-business-day rule of s. 25, which is meant for holidays known in advance. An emergency holiday could not have been planned for, so payment is not accelerated."
+        },
+        {
+          "key": "B",
+          "text": "7 August 2026",
+          "explanation": "Correct. An emergency holiday was unknown when the bill was drawn, so the settled treatment is that the bill falls due on the next SUCCEEDING business day — Friday 7 August 2026."
+        },
+        {
+          "key": "C",
+          "text": "6 August 2026",
+          "explanation": "The declared holiday cannot be ignored; no instrument matures on a day the Government has closed."
+        },
+        {
+          "key": "D",
+          "text": "10 August 2026",
+          "explanation": "This jumps to the following Monday, as though 7 August were also a holiday. Friday 7 August 2026 is an ordinary working day."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Holidays, §5 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#5-holidays-the-two-rules-that-move-a-due-date"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Emergency holiday: next succeeding business day",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-020",
+      "topic": "Ch 6 · Bills of Exchange · Due date",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A promissory note made on 4 May 2026 is payable on demand. It is presented for payment on 20 May 2026. It falls due on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "23 May 2026",
+          "explanation": "Three days of grace have been added. Section 22 gives grace only to instruments NOT payable on demand, at sight or on presentment."
+        },
+        {
+          "key": "B",
+          "text": "7 May 2026",
+          "explanation": "This adds grace to the date of making, which gets both halves wrong — a demand instrument gets no grace, and it does not run from the date of making either."
+        },
+        {
+          "key": "C",
+          "text": "4 May 2026",
+          "explanation": "The date the note was made is not its maturity. A demand instrument matures when it is actually presented."
+        },
+        {
+          "key": "D",
+          "text": "20 May 2026",
+          "explanation": "Correct. An instrument payable on demand is at maturity on presentment itself, with no days of grace — so it falls due on 20 May 2026, the day it was presented."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Finding the due date, §4 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#4-finding-the-due-date"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NI Act 1881, s. 22 — no grace on demand instruments",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-021",
+      "topic": "Ch 6 · Bills of Exchange · Discounting",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 3 May 2026 Surat Textiles draws a bill on Modi Garments for ₹60,000 payable three months after date, accepted the same day. On 6 June 2026 the bill is discounted with the bank at 12% per annum. The discount charged by the bank is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,200",
+          "explanation": "Correct. Due date = 3 August + 3 days of grace = 6 August 2026. Discounting on 6 June leaves an unexpired period of exactly two months, so discount = 60,000 × 12% × 2/12 = ₹1,200."
+        },
+        {
+          "key": "B",
+          "text": "₹1,800",
+          "explanation": "This charges discount for the bill's whole three-month tenor. One month had already run before the bill was discounted — the bank charges only for the unexpired period."
+        },
+        {
+          "key": "C",
+          "text": "₹600",
+          "explanation": "This takes only one month. Count from the date of discounting (6 June) to the due date (6 August): two months."
+        },
+        {
+          "key": "D",
+          "text": "₹7,200",
+          "explanation": "This applies the 12% rate for a full year. The rate is per annum; it must be scaled to the unexpired months."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Discounting a bill, §8 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#8-discounting-a-bill"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Discount = face value × rate × unexpired months ÷ 12",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-022",
+      "topic": "Ch 6 · Bills of Exchange · Discounting",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In the facts of the previous question (₹60,000 bill due 6 August 2026, discounted 6 June 2026 at 12% p.a.), the amount credited by the bank to Surat Textiles is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹58,200",
+          "explanation": "This deducts three months' discount (₹1,800). The bill had already run for one month before it was discounted."
+        },
+        {
+          "key": "B",
+          "text": "₹60,000",
+          "explanation": "The bank never pays the full face value on discounting — that is precisely what makes it discounting rather than collection."
+        },
+        {
+          "key": "C",
+          "text": "₹58,800",
+          "explanation": "Correct. Discount for the two unexpired months = 60,000 × 12% × 2/12 = ₹1,200, so net proceeds = 60,000 − 1,200 = ₹58,800. The entry is Bank Dr 58,800, Discount on Bills Dr 1,200, To Bills Receivable 60,000."
+        },
+        {
+          "key": "D",
+          "text": "₹59,400",
+          "explanation": "This deducts only one month's discount (₹600). The unexpired period is 6 June to 6 August — two months."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Discounting a bill, §8 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#8-discounting-a-bill"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Net proceeds = face value − discount",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-023",
+      "topic": "Ch 6 · Bills of Exchange · Accommodation bills",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Anita draws a bill on Bharat for ₹90,000 for three months as an accommodation and discounts it immediately with her bank at 12% per annum. The net proceeds are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹90,000",
+          "explanation": "This is the face value. Discounting always costs something — the bank keeps its charge for the period it waits."
+        },
+        {
+          "key": "B",
+          "text": "₹88,200",
+          "explanation": "This deducts only two months' discount (₹1,800). The bill was discounted immediately, so the whole three-month tenor is unexpired."
+        },
+        {
+          "key": "C",
+          "text": "₹86,400",
+          "explanation": "This charges four months' discount (₹3,600). The bill runs for three months."
+        },
+        {
+          "key": "D",
+          "text": "₹87,300",
+          "explanation": "Correct. Discount = 90,000 × 12% × 3/12 = ₹2,700 (the whole tenor is unexpired, because the bill was discounted at once), so net proceeds = 90,000 − 2,700 = ₹87,300."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Accommodation bills, §13 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#13-accommodation-bills-the-accounting"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Accommodation bill: discount for the full tenor when discounted at once",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-024",
+      "topic": "Ch 6 · Bills of Exchange · Accommodation bills",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Continuing the previous question (₹90,000 bill, ₹2,700 discount, ₹87,300 proceeds), Anita and Bharat agreed to share the proceeds 2 : 1. The amount Anita must remit to Bharat is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹30,000",
+          "explanation": "This is one-third of the FACE VALUE. Remitting face value would mean Anita silently absorbed Bharat's ₹900 share of the discount. The parties share the cash actually received."
+        },
+        {
+          "key": "B",
+          "text": "₹29,100",
+          "explanation": "Correct. The parties share the NET PROCEEDS in the agreed ratio: Bharat's share = 87,300 × 1/3 = ₹29,100. Anita keeps 87,300 × 2/3 = ₹58,200."
+        },
+        {
+          "key": "C",
+          "text": "₹58,200",
+          "explanation": "This is Anita's own two-thirds share. The ratio has been read the wrong way round."
+        },
+        {
+          "key": "D",
+          "text": "₹43,650",
+          "explanation": "This splits the proceeds equally. The agreed ratio is 2 : 1, not 1 : 1."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Accommodation bills, §13 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#13-accommodation-bills-the-accounting"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Accommodation: share of NET PROCEEDS, not of face value",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-025",
+      "topic": "Ch 6 · Bills of Exchange · Accommodation bills",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On the same facts (₹2,700 total discount, shared 2 : 1 between Anita and Bharat), the discount to be borne by Bharat is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹900",
+          "explanation": "Correct. The discount follows the same ratio as the cash: Bharat's share = 2,700 × 1/3 = ₹900, which he debits to his own Discount A/c. Anita bears 2,700 × 2/3 = ₹1,800."
+        },
+        {
+          "key": "B",
+          "text": "₹1,800",
+          "explanation": "This is Anita's two-thirds share. The ratio has been applied to the wrong party."
+        },
+        {
+          "key": "C",
+          "text": "₹2,700",
+          "explanation": "This loads the whole discount on Bharat. He used only one-third of the money, so he bears only one-third of the cost."
+        },
+        {
+          "key": "D",
+          "text": "Nil, because Anita discounted the bill",
+          "explanation": "Who physically walked into the bank is irrelevant. In a mutual accommodation the discount is shared in the same ratio in which the proceeds were used."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Accommodation bills, §13 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#13-accommodation-bills-the-accounting"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Accommodation: discount shared in the same ratio as the proceeds",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-026",
+      "topic": "Ch 6 · Bills of Exchange · Renewal",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ravi's bill of ₹36,000 on Sunil is dishonoured; noting charges ₹400 are paid by Ravi. Sunil pays ₹16,400 in cash and accepts a fresh bill for the balance for three months with interest at 12% per annum. The interest charged is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,080",
+          "explanation": "This charges interest on the original face value of ₹36,000. Sunil has already paid part of it — interest runs only on what is actually carried forward."
+        },
+        {
+          "key": "B",
+          "text": "₹1,092",
+          "explanation": "This charges interest on ₹36,400, the whole amount owing including noting charges, ignoring the ₹16,400 cash Sunil has just paid."
+        },
+        {
+          "key": "C",
+          "text": "₹600",
+          "explanation": "Correct. Amount owing after dishonour = 36,000 + 400 = ₹36,400; less cash of ₹16,400 leaves ₹20,000 to be renewed. Interest = 20,000 × 12% × 3/12 = ₹600."
+        },
+        {
+          "key": "D",
+          "text": "₹2,400",
+          "explanation": "The base of ₹20,000 is right but the rate has been applied for a full year. The extension is three months."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Renewal of a bill, §10 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#10-renewal-of-a-bill"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Renewal interest runs on the balance carried forward",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-027",
+      "topic": "Ch 6 · Bills of Exchange · Renewal",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On the same facts (₹36,000 bill, ₹400 noting charges, ₹16,400 cash received, three-month renewal at 12% p.a.), the amount of the new bill is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹20,000",
+          "explanation": "This is the balance before interest. Unless the question says the interest is paid separately in cash, it is carried into the new bill."
+        },
+        {
+          "key": "B",
+          "text": "₹21,080",
+          "explanation": "This adds interest of ₹1,080 computed on the original ₹36,000 rather than on the ₹20,000 actually renewed."
+        },
+        {
+          "key": "C",
+          "text": "₹20,200",
+          "explanation": "This adds only one month's interest (₹200). The new bill runs for three months."
+        },
+        {
+          "key": "D",
+          "text": "₹20,600",
+          "explanation": "Correct. Balance renewed ₹20,000 + interest of 20,000 × 12% × 3/12 = ₹600 gives a new bill of ₹20,600. Check Sunil's account: debits 36,400 + 600 = 37,000; credits 16,400 + 20,600 = 37,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Renewal of a bill, §10 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#10-renewal-of-a-bill"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "New bill = balance renewed + interest for the extension",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-028",
+      "topic": "Ch 6 · Bills of Exchange · Dishonour",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Surat Textiles had discounted Modi Garments' ₹60,000 acceptance for ₹58,800. The bill is dishonoured on maturity and the bank pays noting charges of ₹500. The amount debited to Modi Garments in Surat Textiles' books is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹60,000",
+          "explanation": "The noting charges have been left out. They were incurred because Modi defaulted, so they are added to what Modi owes."
+        },
+        {
+          "key": "B",
+          "text": "₹60,500",
+          "explanation": "Correct. Face value 60,000 + noting charges 500 = ₹60,500, which is what the bank takes back from Surat Textiles' account. Entry: Modi Garments A/c Dr 60,500, To Bank A/c 60,500 — Bills Receivable is not credited, because it was cleared when the bill was discounted."
+        },
+        {
+          "key": "C",
+          "text": "₹59,500",
+          "explanation": "This deducts the noting charges instead of adding them. The holder recovers them from the defaulting acceptor."
+        },
+        {
+          "key": "D",
+          "text": "₹59,300",
+          "explanation": "This uses the discounted proceeds of ₹58,800 as the base. The bank recovers the full FACE value it will now not be paid, plus the noting charges — the discount it earned is not refunded."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Dishonour and noting charges, §9 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#9-dishonour-and-noting-charges"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Dishonour of a discounted bill: face value + noting charges recovered from the acceptor",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-029",
+      "topic": "Ch 6 · Bills of Exchange · Retirement under rebate",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill for ₹50,000 is due on 6 August 2026. The acceptor retires it on 6 July 2026 and the holder allows a rebate at 12% per annum. The rebate is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹500",
+          "explanation": "Correct. The unexpired period from 6 July to 6 August is one month, so rebate = 50,000 × 12% × 1/12 = ₹500. The acceptor pays ₹49,500 and the ₹500 is the holder's expense and the acceptor's income."
+        },
+        {
+          "key": "B",
+          "text": "₹1,500",
+          "explanation": "This takes three months. Rebate covers only the period by which payment is EARLY — here one month."
+        },
+        {
+          "key": "C",
+          "text": "₹6,000",
+          "explanation": "This applies the 12% rate for a full year. Scale the per-annum rate to the unexpired period."
+        },
+        {
+          "key": "D",
+          "text": "₹250",
+          "explanation": "This halves the rate to 6%. The rate given is 12% per annum."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Retirement under rebate, §11 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#11-retirement-under-rebate"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Rebate = bill amount × rate × unexpired months ÷ 12",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-030",
+      "topic": "Ch 6 · Bills of Exchange · Insolvency",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bill for ₹25,000 is dishonoured and noting charges of ₹300 are paid by the holder. The acceptor is declared insolvent and a first and final dividend of 40 paise in the rupee is received. The amount written off as bad debts is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹15,000",
+          "explanation": "This works on the bill's face value alone. The noting charges were added to the acceptor's account on dishonour, so the amount owing — and the amount ultimately unrecovered — includes them."
+        },
+        {
+          "key": "B",
+          "text": "₹10,120",
+          "explanation": "This is the amount RECEIVED from the estate (25,300 × 40/100), not the amount written off. The question asks for the shortfall."
+        },
+        {
+          "key": "C",
+          "text": "₹15,180",
+          "explanation": "Correct. Amount owing = 25,000 + 300 = ₹25,300. Dividend received = 25,300 × 40/100 = ₹10,120. Bad debts = 25,300 − 10,120 = ₹15,180, debited to Bad Debts A/c and closed to Profit and Loss."
+        },
+        {
+          "key": "D",
+          "text": "₹10,000",
+          "explanation": "This is 40% of the face value alone — and in any case it is a recovery figure, not a write-off."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Insolvency of the acceptor, §12 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#12-insolvency-of-the-acceptor"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Insolvency: dividend on the whole amount owing, balance to bad debts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-031",
+      "topic": "Ch 6 · Bills of Exchange · Accommodation bills",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A draws a bill on B for ₹1,20,000 payable four months after date as a mutual accommodation, and discounts it at once at 15% per annum. The proceeds are to be shared between A and B in the ratio 3 : 1. B's share of the proceeds is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹30,000",
+          "explanation": "This is one-quarter of the face value. The parties divide the cash the bank actually paid, which is net of the discount."
+        },
+        {
+          "key": "B",
+          "text": "₹28,500",
+          "explanation": "Correct. Discount = 1,20,000 × 15% × 4/12 = ₹6,000, so net proceeds = ₹1,14,000. B's share = 1,14,000 × 1/4 = ₹28,500 (and B's share of the discount is 6,000 × 1/4 = ₹1,500)."
+        },
+        {
+          "key": "C",
+          "text": "₹85,500",
+          "explanation": "This is A's three-quarters share. The ratio has been applied to the wrong party."
+        },
+        {
+          "key": "D",
+          "text": "₹24,000",
+          "explanation": "This deducts the WHOLE ₹6,000 discount from B's ₹30,000 face-value share. B bears only his own one-quarter of the discount, ₹1,500."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Accommodation bills, §13 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#13-accommodation-bills-the-accounting"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Accommodation: net proceeds split in the agreed ratio",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-032",
+      "topic": "Ch 6 · Bills of Exchange · Discounting",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A four-month bill for ₹48,000 is discounted with a bank exactly three months before its due date at 10% per annum. The net proceeds are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹48,000",
+          "explanation": "The bank always keeps its charge. Full face value is received only if the bill is held to maturity or sent for collection."
+        },
+        {
+          "key": "B",
+          "text": "₹46,400",
+          "explanation": "This charges discount for the bill's whole four-month tenor (₹1,600). One month had already run before the bill reached the bank."
+        },
+        {
+          "key": "C",
+          "text": "₹47,600",
+          "explanation": "This takes only one month's discount (₹400). The unexpired period stated in the question is three months."
+        },
+        {
+          "key": "D",
+          "text": "₹46,800",
+          "explanation": "Correct. Discount = 48,000 × 10% × 3/12 = ₹1,200, so net proceeds = 48,000 − 1,200 = ₹46,800. The charge covers the unexpired period only, whatever the bill's original tenor was."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Discounting a bill, §8 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#8-discounting-a-bill"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Discount runs from the date of discounting to maturity",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-033",
+      "topic": "Ch 6 · Bills of Exchange · Four fates",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When the holder of a bill discounts it with his bank, the entry in the ACCEPTOR's books is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "No entry at all",
+          "explanation": "Correct. What the holder does with the paper is none of the acceptor's business — his liability is the same amount whoever holds the bill. Discounting, endorsing and sending for collection all leave the acceptor's books completely untouched."
+        },
+        {
+          "key": "B",
+          "text": "Bills Payable A/c Dr · To Bank A/c",
+          "explanation": "That is the entry when the acceptor actually PAYS the bill at maturity. Nothing has been paid yet."
+        },
+        {
+          "key": "C",
+          "text": "Discount A/c Dr · To Bills Payable A/c",
+          "explanation": "The discount is the holder's financing cost, borne entirely by him. The acceptor neither pays nor records it."
+        },
+        {
+          "key": "D",
+          "text": "Bank A/c Dr · To Bills Payable A/c",
+          "explanation": "This shows the acceptor receiving money he never receives. The bank pays the holder, not the acceptor."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The four fates of a bill, §7 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#7-the-four-fates-of-a-bill"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "No entry in the acceptor's books on discounting/endorsement/collection",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-034",
+      "topic": "Ch 6 · Bills of Exchange · Four fates",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A holder endorses a bill of ₹40,000 to his creditor Chetan in settlement of Chetan's account. The entry in the holder's books is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bills Receivable A/c Dr 40,000 · To Chetan 40,000",
+          "explanation": "This is back to front. The bill is leaving the holder's books, so Bills Receivable must be CREDITED."
+        },
+        {
+          "key": "B",
+          "text": "Chetan A/c Dr 40,000 · To Bills Receivable A/c 40,000",
+          "explanation": "Correct. The debt to Chetan is discharged with the paper, so Chetan's account is debited and the asset Bills Receivable is credited and leaves the books."
+        },
+        {
+          "key": "C",
+          "text": "Bills sent for Collection A/c Dr 40,000 · To Bills Receivable A/c 40,000",
+          "explanation": "That entry belongs to the fourth fate — sending the bill to the bank for collection — not to endorsement to a creditor."
+        },
+        {
+          "key": "D",
+          "text": "Bank A/c Dr 40,000 · To Bills Receivable A/c 40,000",
+          "explanation": "No money has come in. The bill was used to settle a creditor, not to raise cash."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The four fates of a bill, §7 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#7-the-four-fates-of-a-bill"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Endorsement in the holder's books",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-035",
+      "topic": "Ch 6 · Bills of Exchange · Four fates",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A firm sends a bill to its bank for collection. Before the bank realises it, the account that appears in the firm's balance sheet is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bank A/c, because the bill is with the bank",
+          "explanation": "The bank is holding the paper, not the money. Nothing has been credited to the firm's bank balance yet."
+        },
+        {
+          "key": "B",
+          "text": "Discount on Bills A/c",
+          "explanation": "Sending a bill for collection is not discounting. No charge for early money arises, because no early money is taken."
+        },
+        {
+          "key": "C",
+          "text": "Bills sent for Collection A/c, an asset",
+          "explanation": "Correct. The entry is Bills sent for Collection A/c Dr · To Bills Receivable A/c — the asset simply changes its label until the bank realises the money, when Bank A/c is debited and the collection account is closed."
+        },
+        {
+          "key": "D",
+          "text": "Bills Payable A/c, a liability",
+          "explanation": "The firm is the one entitled to receive. A liability could only appear in the acceptor's books."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The four fates of a bill, §7 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#7-the-four-fates-of-a-bill"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Bills sent for collection: the asset changes label",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-036",
+      "topic": "Ch 6 · Bills of Exchange · Four fates",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT one of the four courses open to the holder of a bill?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Retain it till maturity and collect the money himself",
+          "explanation": "This is the first and simplest of the four."
+        },
+        {
+          "key": "B",
+          "text": "Discount it with a bank before maturity",
+          "explanation": "This is the second — cash now, less the bank's charge."
+        },
+        {
+          "key": "C",
+          "text": "Endorse it to one of his own creditors",
+          "explanation": "This is the third — settling his own debt with the paper."
+        },
+        {
+          "key": "D",
+          "text": "Cancel it unilaterally and re-debit the acceptor",
+          "explanation": "Correct — this is NOT one of the four. A holder cannot tear up a bill by himself. Cancellation happens only by agreement (renewal) or by operation of events (dishonour, retirement); the four courses are retain, discount, endorse and send for collection."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The four fates of a bill, §7 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#7-the-four-fates-of-a-bill"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "The four courses open to a holder",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-037",
+      "topic": "Ch 6 · Bills of Exchange · Dishonour",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On dishonour of a bill that the holder had DISCOUNTED with his bank, the credit in the holder's books goes to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bills Receivable A/c",
+          "explanation": "There is nothing left in it. Bills Receivable was credited and cleared on the day the bill was discounted — you cannot credit it a second time."
+        },
+        {
+          "key": "B",
+          "text": "Bank A/c",
+          "explanation": "Correct. The bank takes back the face value plus any noting charges it paid, so the entry is Acceptor A/c Dr (face + noting) · To Bank A/c. Had the bill been endorsed instead, the credit would have gone to the endorsee."
+        },
+        {
+          "key": "C",
+          "text": "Discount on Bills A/c",
+          "explanation": "The discount already earned by the bank is not refunded on dishonour, so that account is not touched."
+        },
+        {
+          "key": "D",
+          "text": "Bills Payable A/c",
+          "explanation": "Bills Payable is the ACCEPTOR's liability account. It never appears in the holder's books for this bill."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Dishonour and noting charges, §9 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#9-dishonour-and-noting-charges"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Dishonour of a discounted bill: credit Bank",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-038",
+      "topic": "Ch 6 · Bills of Exchange · Noting charges",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Noting charges on a dishonoured trade bill are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Paid in the first instance by the holder, but ultimately borne by the party liable on the bill",
+          "explanation": "Correct. The holder needs the notary's evidence, so he pays; but the default was the acceptor's, so the charge is recovered down the chain and added to the amount debited to him. It is not the drawer's expense at all."
+        },
+        {
+          "key": "B",
+          "text": "Paid and borne by the drawer, as the cost of protecting his own claim",
+          "explanation": "He pays, but he does not bear. Treating noting charges as the drawer's expense is one of the chapter's classic slips — they are added to the acceptor's debit."
+        },
+        {
+          "key": "C",
+          "text": "Paid by the bank and written off by it as a business cost",
+          "explanation": "A discounting bank does pay the notary, but it immediately debits the holder's account with the amount. Nobody in the chain absorbs it except the defaulting party."
+        },
+        {
+          "key": "D",
+          "text": "Shared equally between the drawer and the acceptor",
+          "explanation": "There is no sharing rule. The party whose default caused the noting bears the whole of it."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Dishonour and noting charges, §9 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#9-dishonour-and-noting-charges"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Noting charges: paid by the holder, borne by the party liable",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-039",
+      "topic": "Ch 6 · Bills of Exchange · Dishonour",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When a trade bill is dishonoured, the immediate effect in the drawer's books is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The amount is written off to Bad Debts A/c straight away",
+          "explanation": "Dishonour is not insolvency. The acceptor is still liable and may pay, renew or be sued. A write-off comes only if he is insolvent or the debt is genuinely irrecoverable."
+        },
+        {
+          "key": "B",
+          "text": "A loss equal to the face value is charged to Profit and Loss A/c",
+          "explanation": "No loss arises on dishonour by itself — the claim simply reverts to a debtor balance."
+        },
+        {
+          "key": "C",
+          "text": "Bills Receivable A/c is debited and the acceptor's account credited",
+          "explanation": "This is the reverse of the correct entry. On dishonour the bill leaves the books, so Bills Receivable is credited, not debited."
+        },
+        {
+          "key": "D",
+          "text": "The original debt revives — the acceptor's personal account is debited and the bill is removed",
+          "explanation": "Correct. The instrument dies and the underlying debtor/creditor relationship comes back to life: the acceptor is debited with the face value plus any noting charges, and Bills Receivable (or Bank, or the endorsee) is credited."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Dishonour and noting charges, §9 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#9-dishonour-and-noting-charges"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Dishonour revives the original debt",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-040",
+      "topic": "Ch 6 · Bills of Exchange · Renewal",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the ACCEPTOR's books, the interest payable on the renewal of a bill is recorded as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Interest A/c Dr · To Bills Payable A/c, at the time the old bill is cancelled",
+          "explanation": "The credit goes to the drawer's personal account first; Bills Payable is credited only when the NEW bill is accepted, and for the whole renewed amount."
+        },
+        {
+          "key": "B",
+          "text": "Drawer's A/c Dr · To Interest A/c, because the drawer must compensate him for the delay",
+          "explanation": "This makes the interest the acceptor's income. He is the one asking for time, so the interest is his cost, not his gain."
+        },
+        {
+          "key": "C",
+          "text": "Interest A/c Dr · To the Drawer's A/c — an expense of the acceptor",
+          "explanation": "Correct. The acceptor is keeping the drawer's money longer, so he pays for the privilege: Interest A/c is debited (expense) and the drawer's account credited. In the drawer's books the mirror entry debits the acceptor and credits Interest A/c as income."
+        },
+        {
+          "key": "D",
+          "text": "It is not recorded at all until the new bill matures",
+          "explanation": "The interest is charged when the renewal is agreed, and is usually built into the face value of the new bill."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Renewal of a bill, §10 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#10-renewal-of-a-bill"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Renewal interest: expense of the acceptor, income of the drawer",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-041",
+      "topic": "Ch 6 · Bills of Exchange · Retirement under rebate",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A rebate allowed on the retirement of a bill under discount is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An expense in the holder's books and an income in the acceptor's books",
+          "explanation": "Correct. The holder gives up part of what he was entitled to, so he debits Rebate on Bills (or Discount Allowed); the acceptor pays less than he owed, so he credits Rebate A/c. Whoever grants the concession takes the debit."
+        },
+        {
+          "key": "B",
+          "text": "An income in the holder's books and an expense in the acceptor's books",
+          "explanation": "Exactly inverted. The holder receives LESS than the face value — that cannot be an income to him."
+        },
+        {
+          "key": "C",
+          "text": "An expense in both sets of books",
+          "explanation": "One party's concession is always the other party's benefit. Both cannot be worse off on the same transaction."
+        },
+        {
+          "key": "D",
+          "text": "Not recorded at all, being merely a reduction in the bill's face value",
+          "explanation": "The face value of the bill is fixed. The difference between it and the cash actually passing must be accounted for by both parties."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Retirement under rebate, §11 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#11-retirement-under-rebate"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Rebate: holder debits (expense), acceptor credits (income)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-042",
+      "topic": "Ch 6 · Bills of Exchange · Insolvency",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When the acceptor of a bill is declared insolvent before the due date, the holder:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Must still wait for the due date and present the bill for payment before recording anything",
+          "explanation": "Presentment to a person already declared insolvent is pointless, and the law does not require a futile act."
+        },
+        {
+          "key": "B",
+          "text": "Treats the bill as dishonoured at once and passes the usual dishonour entry",
+          "explanation": "Correct. Insolvency of the acceptor amounts to dishonour without any presentment: the bill is reversed and the acceptor's account debited. Any dividend later received from his estate is credited to that account, and the shortfall goes to Bad Debts."
+        },
+        {
+          "key": "C",
+          "text": "Writes the whole amount off to Bad Debts immediately, since nothing can be recovered",
+          "explanation": "Something usually can be recovered — insolvent estates commonly pay a dividend of so many paise in the rupee. Only the shortfall is a bad debt."
+        },
+        {
+          "key": "D",
+          "text": "Transfers the bill to Bills sent for Collection A/c pending the insolvency proceedings",
+          "explanation": "That account is for bills lodged with a bank for collection in the ordinary course. It has nothing to do with insolvency."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Insolvency of the acceptor, §12 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#12-insolvency-of-the-acceptor"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Insolvency of the acceptor = dishonour without presentment",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-043",
+      "topic": "Ch 6 · Bills of Exchange · Trade vs accommodation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The distinguishing feature of an accommodation bill is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is drawn for a shorter period than a trade bill",
+          "explanation": "Tenor has nothing to do with it. Accommodation bills are commonly drawn for three or four months, exactly like trade bills."
+        },
+        {
+          "key": "B",
+          "text": "It does not require acceptance by the drawee",
+          "explanation": "It is still a bill of exchange, so it must be accepted — indeed the acceptance is the whole favour being done."
+        },
+        {
+          "key": "C",
+          "text": "There is no sale or purchase behind it; it is drawn only to raise finance",
+          "explanation": "Correct. The paper looks identical to a trade bill; only the purpose differs. No goods moved and no debt exists, so the parties owe each other only the cash they handed over, and the discount is shared in the ratio in which the money was used."
+        },
+        {
+          "key": "D",
+          "text": "It cannot be discounted with a bank",
+          "explanation": "Discounting it is precisely the point of drawing one — that is how the cash is raised."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Trade and accommodation bills, §6 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#6-trade-bills-and-accommodation-bills"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Accommodation bill: no underlying trade transaction",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-044",
+      "topic": "Ch 6 · Bills of Exchange · Accommodation bills",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a mutual accommodation bill, on the due date the acceptor pays the full face value to the bank. The drawer must then:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pay the acceptor nothing, because the acceptor accepted the bill voluntarily",
+          "explanation": "The acceptor did a favour with his signature, not with his money. He must be reimbursed for the part of the face value that the drawer used."
+        },
+        {
+          "key": "B",
+          "text": "Reimburse the acceptor the whole face value of the bill",
+          "explanation": "That would be right only if the drawer alone had been accommodated. In a MUTUAL accommodation the acceptor kept a share of the proceeds, so he funds the matching share of the payment."
+        },
+        {
+          "key": "C",
+          "text": "Reimburse the acceptor his own share of the NET PROCEEDS",
+          "explanation": "Proceeds were the basis for splitting the cash at the beginning. At the end it is the FACE VALUE that is being paid, so the drawer remits his share of the face value — otherwise the acceptor would silently absorb the drawer's discount."
+        },
+        {
+          "key": "D",
+          "text": "Remit the acceptor his own share of the FACE VALUE of the bill",
+          "explanation": "Correct. The acceptor pays 100% of the face value, so the drawer sends his agreed share of that face value. The reconciliation check: the acceptor's net outgo then equals exactly his own share of the discount."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Accommodation bills, §13 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#13-accommodation-bills-the-accounting"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Accommodation: proceeds shared at the start, face value shared at maturity",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c6-045",
+      "topic": "Ch 6 · Bills of Exchange · Subsidiary books",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A firm that deals in a large number of bills keeps a Bills Receivable Book. Its periodic total is posted to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The debit of Bills Receivable A/c, the individual names going to the personal accounts",
+          "explanation": "Correct. It works exactly like the purchases and sales books: the periodic total goes to the impersonal account (here, the debit of Bills Receivable A/c) while each drawee's name is posted to his own personal account."
+        },
+        {
+          "key": "B",
+          "text": "The credit of Bills Receivable A/c",
+          "explanation": "Bills received are an asset coming in, so the total is a debit. Credits arise later, when the bills are met, discounted, endorsed or dishonoured."
+        },
+        {
+          "key": "C",
+          "text": "The debit of Bills Payable A/c",
+          "explanation": "Bills the firm has ACCEPTED go in the Bills Payable Book. This book records bills the firm holds."
+        },
+        {
+          "key": "D",
+          "text": "The Profit and Loss A/c, since the book is a nominal record",
+          "explanation": "Nothing in a bills book is an expense or income. Only the discount and any bad debts ever reach Profit and Loss."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bills books, §14 →",
+        "href": "/foundation/accounting/bills-of-exchange-and-promissory-notes/#14-bills-receivable-and-bills-payable-books"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Bills Receivable Book: total to the impersonal account, names to personal accounts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c6-01",
+      "topic": "Ch 6 · Bills of Exchange · Definitions",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Distinguish between a bill of exchange and a promissory note, referring to the definitions in the Negotiable Instruments Act 1881. (5 marks)",
+      "skeleton": [
+        {
+          "point": "A promissory note (s. 4) contains an unconditional undertaking, signed by the maker, to pay a certain sum of money only; a bill of exchange (s. 5) contains an unconditional order, signed by the maker, directing a certain person to pay",
+          "marks": 1,
+          "citation": "NI Act 1881, ss. 4 and 5"
+        },
+        {
+          "point": "A note is written by the debtor and gives a promise; a bill is written by the creditor and gives an order",
+          "marks": 1,
+          "citation": "NI Act 1881, ss. 4 and 5"
+        },
+        {
+          "point": "A note has two parties (maker and payee); a bill has three (drawer, drawee who becomes acceptor, and payee), though the drawer and payee are often the same person",
+          "marks": 1,
+          "citation": "parties to the instruments"
+        },
+        {
+          "point": "A bill requires acceptance by the drawee before he is liable; a promissory note requires no acceptance, the maker being liable on his own signature",
+          "marks": 1,
+          "citation": "acceptance: bills only"
+        },
+        {
+          "point": "Common ground: both must be in writing, signed, unconditional, for a certain sum of money only, payable to a certain person or to bearer, and duly stamped; and both, if time instruments, get three days of grace",
+          "marks": 1,
+          "citation": "NI Act 1881, ss. 4, 5 and 22"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NI Act 1881, ss. 4 and 5",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c6-02",
+      "topic": "Ch 6 · Bills of Exchange · Due date",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the rules for determining the date of maturity of a bill of exchange, including days of grace and the effect of holidays. Illustrate with a bill dated 30 November 2026 payable three months after date. (5 marks)",
+      "skeleton": [
+        {
+          "point": "First find the day the bill is expressed to be payable: an after-date bill runs from the date of the bill, an after-sight bill from the date of acceptance",
+          "marks": 1,
+          "citation": "NI Act 1881, s. 23"
+        },
+        {
+          "point": "For a period stated in months, the period ends on the corresponding day of the later month; if that month has no corresponding day, it ends on the last day of that month. For a period stated in days, count actual days excluding the day of the date",
+          "marks": 1,
+          "citation": "NI Act 1881, ss. 23 and 24"
+        },
+        {
+          "point": "Add three days of grace: a time instrument is at maturity on the third day after the day it is expressed to be payable. No grace is allowed on an instrument payable on demand, at sight or on presentment",
+          "marks": 1,
+          "citation": "NI Act 1881, s. 22"
+        },
+        {
+          "point": "Test the resulting date: if it is a public holiday (including a Sunday or a day notified by the Central Government), the instrument is deemed due on the next preceding business day; if the day was declared an emergency holiday after the bill was drawn, payment falls due on the next succeeding business day",
+          "marks": 1,
+          "citation": "NI Act 1881, s. 25; emergency-holiday convention"
+        },
+        {
+          "point": "Illustration: February 2027 has no 30th day, so the period ends on 28 February 2027; adding three days of grace gives a due date of 3 March 2027, which is neither a Sunday nor a notified holiday",
+          "marks": 1,
+          "citation": "worked application of ss. 22, 23 and 25"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NI Act 1881, ss. 22–25",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c6-03",
+      "topic": "Ch 6 · Bills of Exchange · Four fates",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the four courses open to the holder of a bill of exchange, and give the journal entry in the holder's books for each, together with the corresponding entry (if any) in the acceptor's books. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Retain till maturity: on payment, Cash or Bank A/c Dr · To Bills Receivable A/c. In the acceptor's books, Bills Payable A/c Dr · To Cash or Bank A/c",
+          "marks": 1,
+          "citation": "retention and payment at maturity"
+        },
+        {
+          "point": "Discount with a bank: Bank A/c Dr (net proceeds) and Discount on Bills A/c Dr (the charge) · To Bills Receivable A/c (face value)",
+          "marks": 1,
+          "citation": "discounting in the holder's books"
+        },
+        {
+          "point": "Endorse to a creditor: the creditor's personal A/c Dr · To Bills Receivable A/c, the debt being settled with the paper",
+          "marks": 1,
+          "citation": "endorsement"
+        },
+        {
+          "point": "Send to the bank for collection: Bills sent for Collection A/c Dr · To Bills Receivable A/c; on realisation, Bank A/c Dr · To Bills sent for Collection A/c",
+          "marks": 1,
+          "citation": "bills sent for collection"
+        },
+        {
+          "point": "In the acceptor's books, discounting, endorsement and sending for collection require NO entry — his liability is unchanged whoever holds the bill; his books move only on payment, dishonour, renewal or retirement",
+          "marks": 1,
+          "citation": "no entry in the acceptor's books"
+        },
+        {
+          "point": "Discount is a finance expense of the holder charged to Profit and Loss; it is never adjusted against the customer's account, and it is not refunded if the bill is later dishonoured",
+          "marks": 1,
+          "citation": "treatment of discount"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "The four courses open to a holder and the resulting entries",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c6-04",
+      "topic": "Ch 6 · Bills of Exchange · Dishonour and noting charges",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "What are noting charges? State who pays them and who ultimately bears them, and give the entries on dishonour of a ₹50,000 bill with ₹500 noting charges where (i) the holder had retained the bill and (ii) the holder had discounted it. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Noting charges are the fee of a Notary Public for recording the fact of dishonour (and, for foreign bills, for protest), so that the holder has formal evidence of the default",
+          "marks": 1,
+          "citation": "noting and protest"
+        },
+        {
+          "point": "They are paid in the first instance by the holder, who needs the evidence, but are ultimately borne by the party liable on the bill — recovered down the chain until they reach the defaulting acceptor. They are therefore added to the amount debited to the acceptor, not treated as the drawer's expense",
+          "marks": 1,
+          "citation": "who pays and who bears"
+        },
+        {
+          "point": "Bill retained: Acceptor A/c Dr 50,500 · To Bills Receivable A/c 50,000 · To Cash A/c 500. In the acceptor's books, Bills Payable A/c Dr 50,000 and Noting Charges A/c Dr 500 · To Drawer 50,500",
+          "marks": 1,
+          "citation": "dishonour of a retained bill"
+        },
+        {
+          "point": "Bill discounted: Acceptor A/c Dr 50,500 · To Bank A/c 50,500 — Bills Receivable is not credited because it was cleared on discounting; had the bill been endorsed, the endorsee's account would take the credit instead",
+          "marks": 1,
+          "citation": "dishonour of a discounted or endorsed bill"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Noting charges and the dishonour entries",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c6-05",
+      "topic": "Ch 6 · Bills of Exchange · Renewal and retirement",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the accounting treatment of (a) the renewal of a bill and (b) the retirement of a bill under rebate, stating clearly in each case which party bears the charge. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Renewal step 1 — cancel the old bill exactly as though it were dishonoured: both parties reverse the bill and restore the personal account, adding noting charges if the bill was actually noted",
+          "marks": 1,
+          "citation": "renewal: cancellation of the old bill"
+        },
+        {
+          "point": "Renewal step 2 — charge interest for the period of extension on the amount actually carried forward (not on the original face value and not on any cash already received): Acceptor A/c Dr · To Interest A/c in the drawer's books; Interest A/c Dr · To Drawer in the acceptor's books",
+          "marks": 1,
+          "citation": "renewal: interest for the extension"
+        },
+        {
+          "point": "Renewal step 3 — draw the new bill for the balance now owing, including the interest where it is carried into the new bill rather than paid in cash: Bills Receivable A/c Dr · To Acceptor",
+          "marks": 1,
+          "citation": "renewal: the new bill"
+        },
+        {
+          "point": "Retirement under rebate — the acceptor pays before the due date and the holder allows a rebate = bill amount × rate per annum × unexpired months ÷ 12; the acceptor pays face value less the rebate",
+          "marks": 1,
+          "citation": "retirement: computation of rebate"
+        },
+        {
+          "point": "Direction of the rebate — the holder gives up the amount, so in his books it is an EXPENSE (Rebate on Bills A/c debited); the acceptor saves it, so in his books it is an INCOME (Rebate A/c credited). Renewal interest runs the other way: cost to the acceptor, income to the drawer",
+          "marks": 1,
+          "citation": "rebate: expense of the holder, income of the acceptor"
+        }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Renewal and retirement under rebate",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c6-06",
+      "topic": "Ch 6 · Bills of Exchange · Accommodation bills",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "What is an accommodation bill? Explain how the proceeds and the discount are dealt with when two parties are mutually accommodated, and what happens if the accommodating party becomes insolvent. (5 marks)",
+      "skeleton": [
+        {
+          "point": "An accommodation bill is drawn and accepted without any underlying sale or purchase, purely so that one or both parties can discount it and use the cash; the party who accepts without owing anything is the accommodating party, the party who uses the cash is the accommodated party",
+          "marks": 1,
+          "citation": "meaning of an accommodation bill"
+        },
+        {
+          "point": "Because no debt exists, the entries follow the cash rather than a debtor or creditor balance: the parties owe each other only what they actually handed over, and no personal account is settled by the bill itself",
+          "marks": 1,
+          "citation": "trade bill versus accommodation bill"
+        },
+        {
+          "point": "The bill is discounted and the NET PROCEEDS (face value less discount) are divided in the agreed ratio; remitting a share of the face value instead is the classic error, because it would make one party absorb the other's discount",
+          "marks": 1,
+          "citation": "sharing of net proceeds"
+        },
+        {
+          "point": "The discount is shared in the same ratio, each party debiting his own share to Discount A/c as an expense; on the due date the acceptor pays the full face value and the drawer remits his own share of the FACE VALUE, so that each party's net cost equals his share of the discount",
+          "marks": 1,
+          "citation": "sharing of discount and settlement at maturity"
+        },
+        {
+          "point": "If the accommodating party becomes insolvent, the other party proves in his estate for the amount owed, credits the dividend received (so many paise in the rupee on the whole amount owing) to his account, and writes the shortfall off to Bad Debts A/c",
+          "marks": 1,
+          "citation": "insolvency of a party to an accommodation bill"
+        }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Accommodation bills: proceeds, discount and insolvency",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}

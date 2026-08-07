@@ -1,0 +1,474 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Inventories'
+description: 'CA Foundation Accounting Ch 4 — inventory valuation in plain language: lower of cost and net realisable value, cost build-up, FIFO and weighted average, the retail method and year-end cut-offs, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 4 · Inventories'
+chapterSlug: inventories
+masteryId: f1-ch4
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'AS 2 (Valuation of Inventories) — concepts as summarised for Foundation'
+  - 'ICAI Foundation Study Material, Paper 1, Ch 4 (Inventories) — scope and worked patterns'
+sourceLabel: 'ICAI SM Ch 4 scope (May 2026 ed.) · AS 2'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 20 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=inventories'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+On the last night of March, the shutters of a cloth shop in Belagavi come down and the counting
+begins. Bales of shirting, half-finished school uniforms at the tailor's, three bundles that a
+customer took "on approval" last week, and one lot that the mills despatched but which is still on
+a truck somewhere near Hubballi. By morning the owner needs one number: **what is my closing stock
+worth?**
+
+That single number decides how much profit the shop reports and how big its balance sheet looks.
+This chapter teaches you how to build it: which goods to count, what they cost, when cost is too
+high a figure to use, and the formulas an examiner will ask you to apply. Expect one or two
+numericals — usually a FIFO or weighted-average closing stock, an item-by-item comparison of cost
+with net realisable value, or a list of cut-off adjustments to a physical stock figure — plus quick
+conceptual MCQs on what goes into cost.
+
+## 1. What inventories are
+
+**Inventories are the goods a business holds in order to sell them** (or in order to make the goods
+it sells). Three families:
+
+1. **Finished goods / stock-in-trade** — held for sale in the ordinary course of business. The
+   bales of shirting.
+2. **Work-in-progress (WIP)** — goods in the process of production for such sale. The half-stitched
+   uniforms.
+3. **Raw materials, stores, spares and loose tools** — materials and supplies to be consumed in
+   production or in rendering services. The cloth, thread and buttons.
+
+The test is **what the business does with the asset**, not what the asset is. A computer is a fixed
+asset to the cloth shop, and inventory to Digitek, the shop that sells computers. Land is a fixed
+asset to a factory and inventory to a property dealer who trades in plots.
+
+<Callout kind="pointer">
+  <p>
+    AS 2 does not apply to everything called "stock". It leaves out work-in-progress under
+    <strong>construction contracts</strong>, work-in-progress of <strong>service providers</strong>,
+    shares and debentures held as stock-in-trade, and producers' stocks of livestock, agricultural
+    and forest produce and mineral oils that trade practice measures at net realisable value. At
+    Foundation you only need to recognise these as exceptions — you are never asked to value them.
+  </p>
+</Callout>
+
+## 2. Why the closing stock figure matters twice
+
+Closing stock is one of the very few figures that lands in **both** final statements:
+
+- in the **Trading Account** it is credited (deducted from the cost of goods available), so a
+  bigger closing stock means a bigger gross profit;
+- in the **Balance Sheet** it stands as a current asset.
+
+So an error in it is an error in two places at once. Overstate closing stock by ₹50,000 and you
+overstate this year's profit by ₹50,000 *and* overstate current assets by ₹50,000.
+
+Now watch what happens next year. This year's closing stock becomes next year's **opening** stock,
+and opening stock is a *debit* in the Trading Account. The same ₹50,000 that inflated this year's
+profit deflates next year's profit by exactly ₹50,000.
+
+<div class="formula">Closing stock overstated → this year's profit overstated → next year's profit understated by the same amount</div>
+
+Over two years the two errors cancel: the error is **self-correcting** (counterbalancing). That is
+not a licence to be careless — both years' reported profits are wrong, the first year's balance
+sheet is wrong, and tax and dividends were decided on wrong numbers.
+
+<Callout kind="mistake">
+  <p>
+    "It self-corrects, so it does not matter" is a trap answer. What self-corrects is the
+    <strong>cumulative</strong> profit over the two years. Each individual year's profit, and the
+    first year's balance sheet, remain misstated.
+  </p>
+</Callout>
+
+## 3. The rule: lower of cost and net realisable value
+
+Everything in this chapter serves one sentence:
+
+<div class="formula">Inventories are valued at the LOWER of cost and net realisable value (NRV)</div>
+
+Why the lower? Because of **prudence**. An asset must never be carried at more than what the
+business can actually recover from it. If cloth that cost ₹900 a metre can now be sold for only
+₹800, holding it at ₹900 would parade a loss as an asset. Conversely, when goods can be sold for
+more than they cost, you still hold them at **cost** — profit is recognised when the sale happens,
+not while the goods sit in the godown.
+
+**The comparison is made item by item** (or, where items are similar or related, group by group) —
+never once for the stock as a whole. This matters more than students expect: a global comparison
+lets an item's unrealised gain hide another item's real loss, and prudence forbids exactly that.
+
+<Callout kind="mistake">
+  <p>
+    Adding up all costs, adding up all NRVs and taking the lower of the two totals is the single
+    most common error in this chapter. It always gives a <em>higher</em> figure than the correct
+    item-by-item answer (or the same figure, never lower). If your answer matches a "total vs
+    total" option, you have fallen into it.
+  </p>
+</Callout>
+
+## 4. What goes into cost
+
+<div class="formula">Cost = Cost of purchase + Cost of conversion + Other costs to bring the inventory to its present location and condition</div>
+
+**Cost of purchase** is built like this:
+
+- purchase price, **less trade discounts, rebates and duty drawbacks**;
+- **plus duties and taxes that are not recoverable** from the tax authorities (customs duty on an
+  import; GST where no input tax credit is available);
+- **plus** freight inward, carriage, transit insurance, loading and unloading, and other costs
+  directly attributable to acquiring the goods.
+
+**Cost of conversion** (for a manufacturer) is direct labour plus a systematic allocation of
+production overheads — variable overheads on actual production, fixed overheads on **normal
+capacity**. Fixed overheads left unabsorbed because the factory ran below normal capacity are
+charged to the Profit &amp; Loss Account, not buried in stock.
+
+**Other costs** are included only when they genuinely bring the goods to their present location and
+condition — for example, the cost of designing a product for a specific customer.
+
+<Callout kind="pointer">
+  <p>
+    Two discounts, two treatments. <strong>Trade discount</strong> is deducted — the goods never
+    cost the list price. <strong>Cash discount</strong> is a reward for paying early: it is a
+    financing item, recorded as income, and is <strong>not</strong> deducted from the cost of
+    inventory. GST for which input tax credit is available is likewise not part of cost; GST that
+    cannot be recovered is.
+  </p>
+</Callout>
+
+## 5. What is kept out of cost
+
+Four families of cost are excluded and charged to the Profit &amp; Loss Account of the year:
+
+| Excluded | Why |
+|---|---|
+| **Abnormal** wasted materials, labour and other production costs | Abnormal loss is a loss, not a cost of holding good stock |
+| **Storage costs** — unless storage is necessary in the production process before a further stage | Storing finished goods adds nothing to their condition |
+| **Administrative overheads** that do not bring the inventory to its present location and condition | Office salaries, audit fee, directors' fee |
+| **Selling and distribution costs** | These are costs of *selling*, incurred after the stock is ready |
+
+**Interest and other borrowing costs** are generally excluded too: the cost of financing the goods
+is not the cost of the goods. (AS 16 allows capitalisation only for a "qualifying asset" that takes
+a substantial period to get ready — rarely relevant to ordinary trading stock.)
+
+**Normal** wastage behaves differently from abnormal wastage. Normal, unavoidable loss in handling
+does not disappear from the accounts — its cost is absorbed by the **good units that survive**, so
+the cost per surviving unit rises. Only the *abnormal* part is thrown out to the P&amp;L.
+
+## 6. Net realisable value, and the raw material exception
+
+<div class="formula">NRV = Estimated selling price in the ordinary course of business − Estimated costs of completion − Estimated costs necessary to make the sale</div>
+
+Three things to notice. NRV uses the **selling price**, so it is entity-specific and
+forward-looking. Selling costs (commission, packing for despatch, freight outward) *are* deducted
+here even though they were kept out of cost — they are the price of realising the value. And an
+NRV that turns out to be *above* cost changes nothing: you still carry the goods at cost.
+
+**Raw materials get a special rule.** Materials are inputs, and inputs are only worth what the
+finished product they enter can fetch:
+
+- If the finished goods in which the material will be used are expected to be sold **at or above
+  cost**, the material is **not written down**, however far its market price has fallen.
+- Only when the decline means the finished goods will sell **below cost** is the material written
+  down — and then **replacement cost is the best available measure of its net realisable value**.
+
+<Callout kind="pointer">
+  <p>
+    So the examiner's raw-material question always has two halves: a fallen replacement cost, and a
+    sentence telling you what the finished goods will fetch. Read the second half first — it decides
+    whether the first half matters at all.
+  </p>
+</Callout>
+
+## 7. Cost formulas: FIFO, weighted average and specific identification
+
+When identical units were bought at different prices, which price sits in the closing stock? AS 2
+allows three formulas.
+
+**Specific identification** — used when the items are **not ordinarily interchangeable**, or are
+segregated for a specific project: a jeweller's individual necklaces, a car dealer's cars with
+distinct chassis numbers. Each item carries its own actual cost.
+
+**First-In, First-Out (FIFO)** — assume the oldest goods are sold first, so the **closing stock is
+made up of the most recent purchases**. In a rising market FIFO gives the highest closing stock and
+therefore the highest reported profit.
+
+**Weighted average** — every unit is treated as identical, and the closing stock is valued at an
+average cost:
+
+<div class="formula">Weighted average cost per unit = Total cost of goods available for sale ÷ Total units available for sale</div>
+
+The average may be struck in two ways. Under the **periodic (simple) weighted average**, one
+average is computed for the whole period at the end. Under the **moving (perpetual) weighted
+average**, a fresh average is struck **after every purchase**, and issues in between are priced at
+the average then ruling. The two give different answers — the question always tells you which
+system is in use.
+
+<Callout kind="mistake">
+  <p>
+    <strong>LIFO is not permitted</strong> by the revised AS 2. Older books teach it, and examiners
+    still plant a LIFO figure as a distractor. Compute it only if you are asked "what would LIFO
+    give" — never as the answer to "value the closing stock".
+  </p>
+</Callout>
+
+## 8. Techniques: standard cost and the retail method
+
+These are not new bases of valuation — they are shortcuts, permitted only if they give results that
+approximate actual cost.
+
+**Standard cost** takes the normal levels of materials, labour, efficiency and capacity utilisation,
+and prices stock at that predetermined figure. It must be **reviewed regularly** and revised when
+conditions have changed.
+
+**Retail method (adjusted selling price method)** suits a shop with a very large number of rapidly
+changing items sold at broadly similar margins, where finding the actual cost of each item is
+impractical. You take the stock at its **selling price** and strip out the gross margin:
+
+<div class="formula">Cost of closing stock = Sale value of closing stock − Appropriate percentage gross margin</div>
+
+An average percentage is usually applied for each department. The percentage must be applied as the
+question states it: a margin quoted **on selling price** is deducted from the selling value
+directly; a mark-up quoted **on cost** must first be converted.
+
+## 9. Periodic and perpetual inventory systems
+
+| | Periodic (physical) | Perpetual (continuous) |
+|---|---|---|
+| Stock records | None during the year | A stores/stock ledger updated with every receipt and issue |
+| Closing stock found by | Physically counting at the year end | Reading the balance in the records |
+| Cost of goods sold found by | A residual: opening + purchases − closing | Adding up the priced issues |
+| Losses and pilferage | Hidden — they silently swell the cost of goods sold | Revealed, as the gap between records and the physical count |
+| Cost | Cheap; but the shop usually has to shut for counting | Expensive to maintain; count can be staggered through the year |
+
+<div class="formula">Cost of goods sold = Opening stock + Net purchases + Direct expenses − Closing stock</div>
+
+Under the perpetual system the physical count does not disappear — it becomes a **check**. The
+records say ₹1,60,000, the floor says ₹1,52,000, and the ₹8,000 gap is written off as a stock
+shortage. The balance sheet always shows the **physically verified** figure.
+
+## 10. Year-end cut-off: whose goods are they
+
+The physical count answers "what is lying here?" The accounts need "what do we own?" The difference
+between the two questions is where marks are won.
+
+| Situation | In our closing stock? |
+|---|---|
+| **Goods in transit** — despatched by the supplier, title passed to us, invoice already booked in purchases | **Yes** — add at cost |
+| **Goods sent on consignment**, lying unsold with the consignee | **Yes** — they are the consignor's stock, at cost plus proportionate non-recurring expenses |
+| **Goods received on consignment** from someone else, lying in our godown | **No** — deduct; they belong to the consignor |
+| **Goods sent on sale or return**, not yet approved and the time limit not expired | **Yes** — at cost, and any "sale" recorded must be reversed |
+| **Goods sold and invoiced**, awaiting collection by the customer | **No** — the sale is complete; deduct from the count |
+| Customers' goods held for repair, or goods held as an agent | **No** — never ours |
+
+<Callout kind="pointer">
+  <p>
+    Sale-or-return goods carry a double correction: <strong>add the cost back to stock and take the
+    selling price out of sales</strong>. Doing only one half is the most frequent slip in cut-off
+    questions.
+  </p>
+</Callout>
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — FIFO vs weighted average (easy-moderate)">
+  <p>
+    Belagavi Cloth House deals in one quality of shirting. April 2025: <strong>1 Apr</strong> opening
+    stock 200 units @ ₹50; <strong>5 Apr</strong> purchase 300 @ ₹60; <strong>10 Apr</strong> issue
+    200 units; <strong>18 Apr</strong> purchase 500 @ ₹64; <strong>25 Apr</strong> issue 450 units.
+    Value the closing stock under (a) FIFO, (b) the periodic weighted average and (c) the moving
+    (perpetual) weighted average.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Quantities and the cost pool</div>
+    Units available = 200 + 300 + 500 = 1,000; issued = 200 + 450 = 650; <strong>closing = 350 units</strong><br />
+    Cost of goods available = (200 × 50) + (300 × 60) + (500 × 64) = 10,000 + 18,000 + 32,000 = <strong>₹60,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) FIFO</div>
+    The oldest units are treated as sold, so all 350 units left come from the 18 April lot at ₹64.<br />
+    Closing stock = 350 × 64 = <strong>₹22,400</strong> · Cost of goods sold = 60,000 − 22,400 = ₹37,600
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) Periodic weighted average</div>
+    Average cost = 60,000 ÷ 1,000 units = ₹60 per unit<br />
+    Closing stock = 350 × 60 = <strong>₹21,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) Moving (perpetual) weighted average</div>
+    After 5 Apr: 500 units costing 10,000 + 18,000 = 28,000 → average ₹56<br />
+    10 Apr issue of 200 @ 56 = 11,200 → balance 300 units, ₹16,800<br />
+    After 18 Apr: 800 units costing 16,800 + 32,000 = 48,800 → average ₹61<br />
+    25 Apr issue of 450 @ 61 = 27,450 → closing 350 × 61 = <strong>₹21,350</strong>
+  </div>
+  <p>
+    Three legitimate answers from one set of facts — ₹22,400, ₹21,000 and ₹21,350. Prices were
+    rising, so FIFO gives the highest stock and the highest profit. (LIFO would have given ₹19,000,
+    but LIFO is not permitted.)
+  </p>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — lower of cost and NRV, item by item (moderate)">
+  <p>
+    Nandini Traders' stock on 31 March 2026, each line given as (cost, net realisable value):
+    A — Shirting (₹60,000, ₹68,000); B — Damaged suiting (₹45,000, ₹39,000); C — Last season's
+    prints (₹30,000, ₹25,500); D — Lining cloth (₹25,000, ₹27,000). Totals: cost ₹1,60,000, NRV
+    ₹1,59,500. Value the closing stock.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Compare item by item, take the lower each time</div>
+    A: lower of 60,000 and 68,000 = 60,000<br />
+    B: lower of 45,000 and 39,000 = 39,000<br />
+    C: lower of 30,000 and 25,500 = 25,500<br />
+    D: lower of 25,000 and 27,000 = 25,000<br />
+    Closing stock = 60,000 + 39,000 + 25,500 + 25,000 = <strong>₹1,49,500</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The write-down, and the trap</div>
+    Write-down charged to the Profit &amp; Loss Account = 1,60,000 − 1,49,500 = <strong>₹10,500</strong><br />
+    Comparing the two <em>totals</em> would have given the lower of 1,60,000 and 1,59,500 = ₹1,59,500 —
+    ₹10,000 too high, because the unrealised gains on A and D would have been set off against the
+    real losses on B and C.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — building up the cost (moderate)">
+  <p>
+    Prakash Textiles bought a consignment of fabric. List price ₹5,00,000; trade discount 10%; GST
+    ₹81,000, for which full input tax credit is available; non-refundable customs duty ₹22,000;
+    freight inward ₹18,000; loading and unloading ₹5,000; cash discount of ₹4,000 received for
+    paying within seven days; storage of the finished bales in the godown before dispatch ₹12,000;
+    material destroyed in a godown fire ₹15,000; salesmen's commission ₹20,000; interest on the loan
+    taken to buy the goods ₹9,000. Find the cost of the consignment.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Included</div>
+    Purchase price net of trade discount = 5,00,000 − 50,000 = 4,50,000<br />
+    Add: non-refundable customs duty 22,000 + freight inward 18,000 + loading and unloading 5,000<br />
+    <strong>Cost of inventory = ₹4,95,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Excluded, and why</div>
+    GST ₹81,000 — recoverable as input tax credit, so never a cost<br />
+    Cash discount ₹4,000 — a financing gain, credited to income; cost is not reduced by it<br />
+    Storage ₹12,000 — storage of finished goods, not needed for a further production stage<br />
+    Fire loss ₹15,000 — abnormal loss, straight to the P&amp;L<br />
+    Salesmen's commission ₹20,000 — a selling cost<br />
+    Interest ₹9,000 — a borrowing cost, not a cost of the goods
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — retail (adjusted selling price) method (moderate)">
+  <p>
+    Ananya Garments cannot cost its 4,000 individual designs. Its records show, at
+    <em>selling</em> prices: opening stock ₹2,00,000, purchases ₹12,00,000 and sales ₹8,00,000. The
+    shop earns a uniform gross margin of 25% on selling price. Value the closing stock.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Closing stock at selling price</div>
+    2,00,000 + 12,00,000 − 8,00,000 = <strong>₹6,00,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Strip out the margin</div>
+    Margin is 25% <em>of selling price</em>, so cost is 75% of selling price.<br />
+    Cost of closing stock = 6,00,000 × 75% = <strong>₹4,50,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — If the 25% had been a mark-up on COST</div>
+    Cost would be 6,00,000 × 100/125 = ₹4,80,000. Read the wording before you multiply — this pair
+    of numbers is the examiner's favourite distractor set.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — year-end cut-off (hard: the examiner's favourite)">
+  <p>
+    Belagavi Cloth House counted stock on 31 March 2026 and arrived at ₹8,40,000 at cost. Then the
+    accountant found: (i) goods costing ₹60,000 despatched by a mill on 28 March, title passed, in
+    transit at the year end, the purchase already recorded; (ii) goods costing ₹45,000 sent to a
+    customer on sale or return on 25 March and treated as a sale at ₹55,000, approval not yet
+    received; (iii) goods costing ₹30,000 held on consignment from Modern Mills, included in the
+    count; (iv) goods costing ₹25,000 lying unsold with the firm's own consignee at Hubballi;
+    (v) goods costing ₹20,000 sold and invoiced on 30 March, still in the godown awaiting the
+    customer's truck, included in the count. Find the correct closing stock.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Adjust the physical figure</div>
+    Physical count 8,40,000<br />
+    (i) Goods in transit — ours, not counted → <strong>+60,000</strong><br />
+    (ii) Sale or return, not approved — still ours, and physically out → <strong>+45,000</strong><br />
+    (iii) Consignment inward — belongs to Modern Mills → <strong>−30,000</strong><br />
+    (iv) Stock with our consignee — the consignor owns it → <strong>+25,000</strong><br />
+    (v) Sold and invoiced — no longer ours though still here → <strong>−20,000</strong><br />
+    Correct closing stock = <strong>₹9,20,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The second leg of item (ii)</div>
+    The ₹55,000 wrongly recorded as a sale must be reversed. Net effect on profit of item (ii) alone
+    = −55,000 (sale reversed) + 45,000 (stock restored) = <strong>a fall of ₹10,000</strong> — which
+    is simply the unearned profit being removed.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Comparing totals instead of items.** Total cost against total NRV always flatters the answer.
+  Compare line by line (or by groups of similar items) and add up the winners.
+- **Writing down a raw material because its market price fell.** If the finished goods will still
+  sell at or above cost, the material stays at cost. Only then does replacement cost come in.
+- **Deducting cash discount from cost, or adding recoverable GST to it.** Trade discount is
+  deducted; cash discount is not. Non-recoverable duty is added; creditable GST is not.
+- **Putting selling costs into cost, then forgetting them in NRV.** They belong in exactly one
+  place — NRV — and are wrong in the other.
+- **Using LIFO.** It is not permitted by AS 2. It survives only as a wrong option.
+- **Mixing up the two averages.** Periodic weighted average strikes one rate for the whole period;
+  moving average strikes a new rate after every purchase. Read which system the question uses.
+- **Applying a "25% margin" to cost when it is quoted on selling price** (or the reverse) in the
+  retail method. 75% of selling price ≠ 100/125 of selling price.
+- **Cut-off half-corrections.** Sale-or-return goods need both legs — reverse the sale *and* put the
+  cost back. Goods sold but not yet collected must come *out*, however solidly they sit in the
+  godown.
+- **Treating normal wastage as abnormal.** Normal loss stays in the cost pool and raises the cost of
+  the surviving good units; only abnormal loss is expensed.
+
+## One-page revision summary
+
+**The rule:**
+
+<div class="formula">Value = Lower of (Cost, Net realisable value), compared item by item or group by group</div>
+<div class="formula">Cost = Purchase price − trade discount + non-refundable duties + freight inward and other acquisition costs + conversion costs + other costs to bring to present location and condition</div>
+<div class="formula">NRV = Estimated selling price − estimated costs of completion − estimated costs necessary to make the sale</div>
+<div class="formula">Weighted average rate = Cost of goods available for sale ÷ Units available for sale</div>
+<div class="formula">Cost of goods sold = Opening stock + Net purchases + Direct expenses − Closing stock</div>
+<div class="formula">Retail method: Cost = Sale value of the stock − appropriate percentage gross margin</div>
+
+**Excluded from cost:** abnormal wastage · storage (unless needed before a further production
+stage) · administrative overheads · selling and distribution costs · interest and borrowing costs
+(AS 16 exception apart) · recoverable GST · cash discount.
+
+**Cost formulas:** specific identification (non-interchangeable items or goods segregated for a
+project) · FIFO (closing stock at the newest prices) · weighted average, periodic or moving.
+**LIFO is not permitted.**
+
+**Raw materials:** never written below cost if the finished goods will sell at or above cost; when
+written down, replacement cost is the best available measure of NRV.
+
+**Cut-off:** in transit (title passed) — add · with our consignee — add · on sale or return, not
+approved — add at cost and reverse the sale · consignment received from others — deduct · sold and
+invoiced but not collected — deduct · customers' goods held for repair — never ours.
+
+**Systems:** periodic (count at the year end; cost of goods sold is a residual that swallows
+pilferage) · perpetual (running records; the physical count reveals the shortage, and the balance
+sheet carries the verified figure).

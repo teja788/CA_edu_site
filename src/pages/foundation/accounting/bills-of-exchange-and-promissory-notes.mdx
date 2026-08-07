@@ -1,0 +1,570 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Bills of Exchange and Promissory Notes'
+description: 'CA Foundation Accounting Ch 6 — bills and notes in plain language: due dates and days of grace, discounting, dishonour and noting charges, renewal, retirement under rebate, insolvency and accommodation bills, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 6 · Bills of Exchange'
+chapterSlug: bills-of-exchange-and-promissory-notes
+masteryId: f1-ch6
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Negotiable Instruments Act 1881, ss. 4 and 5 (promissory note and bill of exchange defined)'
+  - 'Negotiable Instruments Act 1881, s. 22 (maturity and the three days of grace) with ss. 23–24 (months and days after date or sight)'
+  - 'Negotiable Instruments Act 1881, s. 25 (due date falling on a public holiday)'
+sourceLabel: 'ICAI SM Ch 6 scope (May 2026 ed.) · NI Act 1881, ss. 4, 5, 22–25'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 22 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=bills-of-exchange-and-promissory-notes'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A cloth wholesaler in Surat sells ₹80,000 of fabric to a retailer who cannot pay today but will
+pay in three months. A verbal promise is worth nothing at the bank. What the wholesaler wants is
+a piece of paper the retailer has *signed*, with a fixed amount and a fixed date on it — paper
+solid enough that a bank will hand over cash for it tomorrow. That piece of paper is a **bill of
+exchange** or a **promissory note**.
+
+This chapter is two chapters wearing one coat. Half of it is **law**: what these instruments are,
+and the rules that decide the exact date money falls due. The other half is **accounting**: the
+journal entries in the two parties' books when the bill is held, discounted, endorsed, dishonoured,
+renewed or retired early. Examiners love this chapter because the due-date rules give them
+one-mark questions with exactly one right answer, and the accommodation-bill sums give them a
+full-length problem. Both halves are learnable in an afternoon.
+
+## 1. Two instruments, one idea
+
+Both instruments say "this much money, on this date, to this person". They differ in *who does the
+speaking*.
+
+A **promissory note** (s. 4) is a written **unconditional promise**, signed by the person who owes
+the money, to pay a certain sum to (or to the order of) a certain person or to the bearer. The
+debtor writes it. Two parties: **maker** (the debtor, who promises) and **payee** (the creditor).
+
+A **bill of exchange** (s. 5) is a written **unconditional order**, signed by the person who is
+owed the money, directing another person to pay a certain sum to (or to the order of) a certain
+person or to the bearer. The creditor writes it. Three parties: **drawer** (the creditor, who
+gives the order), **drawee** (the debtor, who is ordered to pay) and **payee** (whoever is to
+receive the money — very often the drawer himself).
+
+<Callout kind="pointer">
+  <p>
+    Hold on to the one-word difference: a note is a <strong>promise</strong> (made by the debtor);
+    a bill is an <strong>order</strong> (given by the creditor). Everything else follows from that.
+    Because a bill is an order given to somebody else, it needs that somebody's consent —
+    so <strong>a bill requires acceptance, a promissory note never does</strong>. The maker of a
+    note has already signed; there is nobody left to accept.
+  </p>
+</Callout>
+
+Five features both must have, or the paper is not a negotiable instrument at all: **in writing**
+and **signed**; **unconditional** ("I will pay ₹50,000 if the goods are sold" is not a promissory
+note — but a stated future date is allowed, because a date is certain to arrive); a **certain sum
+of money only** (not goods, not "₹50,000 and 200 metres of cloth"); payable **to a certain person,
+to his order, or to bearer**; and duly **stamped**. A bank note or currency note is expressly
+excluded from s. 4 — that is why the rupee note in your pocket is not a promissory note in law.
+
+## 2. The parties, and who does what
+
+| Role | On a promissory note | On a bill of exchange |
+|---|---|---|
+| Writes and signs it | Maker (the debtor) | Drawer (the creditor) |
+| Ordered to pay | — | Drawee; once he signs, he is the **acceptor** |
+| Receives the money | Payee | Payee (often the drawer) |
+| Acceptance needed? | No | **Yes** |
+
+Two more words: the **holder** is the person entitled to the instrument and to the money on it
+(the payee is the first holder), and **endorsement** is signing the back to transfer it — the
+signer is the **endorser**, the person it passes to the **endorsee**.
+
+The same bill has two names depending on whose books you are in. In the **drawer's/holder's**
+books it is a **Bills Receivable** (an asset). In the **acceptor's** books the very same paper is a
+**Bills Payable** (a liability). Every entry in this chapter is easier if you first ask: *whose
+books am I sitting in?*
+
+## 3. Tenor: on demand, after date, after sight
+
+**Tenor** is the period the instrument runs for. Three kinds:
+
+- **On demand** (or "at sight", "on presentment") — payable the moment it is presented. **No days
+  of grace.**
+- **After date** — the period runs from the **date written on the instrument**.
+- **After sight** — the period runs from the date the drawee **accepts** the bill (for a note,
+  from the date it is presented for sight). This is the single most-tested distinction in the
+  chapter.
+
+<Callout kind="mistake">
+  <p>
+    A bill dated 1 June and accepted on 8 June, payable "two months after sight", runs from
+    <strong>8 June</strong>, not 1 June. Every after-sight question plants an option computed from
+    the bill's date. If you have not been told an acceptance date, the bill cannot be an
+    after-sight bill — read again.
+  </p>
+</Callout>
+
+## 4. Finding the due date
+
+Three steps, in this order, every single time.
+
+**Step 1 — find the day the bill is *expressed* to be payable.**
+
+- *After date*: count from the date of the bill.
+- *After sight*: count from the date of acceptance.
+- **Months** (s. 23): the period ends on the **corresponding day** of the later month —
+  30 November plus three months ends on 28 February (or 29 February in a leap year), because
+  February has no 30th. The rule is: corresponding day, and if there is none, the **last day of
+  that month**. Never convert months into 30-day blocks.
+- **Days** (s. 24): count actual calendar days and **exclude the starting day**. 60 days from
+  12 May = 19 days left in May + 30 in June + 11 in July = 11 July.
+
+**Step 2 — add three days of grace.**
+
+<div class="formula">Due date = day the bill is expressed to be payable + 3 days of grace</div>
+
+Section 22 gives every time instrument three days of grace: it is at maturity "on the third day
+after the day on which it is expressed to be payable". Grace is not a favour a bank may withhold —
+it is part of the legal due date. But an instrument payable **on demand or at sight gets no
+grace at all**.
+
+**Step 3 — test the date you have landed on against the holiday rules** (next section).
+
+Notice the order. Grace is added *before* the holiday test, never after — you test the date the
+grace produced.
+
+## 5. Holidays: the two rules that move a due date
+
+**Public holiday → move BACK.** Section 25: when the day of maturity is a public holiday, the
+instrument is deemed due on the **next preceding business day**. Public holiday here includes
+Sundays and days notified by the Central Government. The three dates the examiner reaches for
+again and again are **26 January**, **15 August** and **2 October** — learn to spot them at the
+end of a calculation.
+
+**Emergency holiday → move FORWARD.** If the holiday was *not* known when the bill was drawn —
+an emergency holiday declared suddenly by the Government — the settled commercial practice, and
+the treatment the Study Material applies, is that payment falls due on the **next succeeding
+business day**.
+
+<Callout kind="pointer">
+  <p>
+    Two directions, one memory hook: a <strong>known</strong> holiday you could plan around, so the
+    law makes you pay <strong>early</strong> (preceding day). An <strong>emergency</strong> holiday
+    nobody could plan around, so payment waits for the <strong>next</strong> working day.
+  </p>
+</Callout>
+
+Unless a question says otherwise, treat Saturdays as ordinary working days for this purpose; only
+Sundays and notified holidays move a due date.
+
+## 6. Trade bills and accommodation bills
+
+A **trade bill** is drawn out of a **genuine sale or purchase**. Real goods moved, a real debt
+exists, and the bill merely records it in a stronger form.
+
+An **accommodation bill** is drawn with **no underlying trade at all**. Two parties who trust each
+other create a bill purely so that one (or both) can discount it and use the cash — "kite flying",
+in market slang. The paper looks identical; only the purpose differs. The party who accepts without
+owing anything is the **accommodating party**; the party who uses the cash is the **accommodated
+party**.
+
+The accounting difference is the point. A trade bill *settles a debtor/creditor balance*, so the
+entries run through the personal accounts of buyer and seller. In an accommodation bill there is no
+debt to settle, so the parties simply owe each other the **cash they handed over**, and the
+**discount charge is shared** in whatever ratio they used the money.
+
+## 7. The four fates of a bill
+
+Once a holder has a bill in hand, exactly four things can happen to it: he can **retain** it till
+maturity and collect it himself; **discount** it with a bank for cash now, less a charge;
+**endorse** it to a creditor of his own, settling that debt with the paper; or **send it to the
+bank for collection** on his behalf. Learn the four and the entry-writing half of this chapter
+collapses into one table. Assume A draws on B for ₹50,000.
+
+| Event | In A's books (drawer / holder) | In B's books (acceptor) |
+|---|---|---|
+| Bill drawn and accepted | Bills Receivable A/c Dr 50,000 · To B 50,000 | A A/c Dr 50,000 · To Bills Payable A/c 50,000 |
+| (1) Retained, met at maturity | Cash/Bank Dr 50,000 · To Bills Receivable A/c 50,000 | Bills Payable A/c Dr 50,000 · To Cash/Bank 50,000 |
+| (2) Discounted | Bank Dr (net) + Discount A/c Dr (charge) · To Bills Receivable A/c 50,000 | **No entry** |
+| (3) Endorsed to C | C A/c Dr 50,000 · To Bills Receivable A/c 50,000 | **No entry** |
+| (4) Sent for collection | Bills sent for Collection A/c Dr 50,000 · To Bills Receivable A/c 50,000 | **No entry** |
+| Collection realised | Bank Dr 50,000 · To Bills sent for Collection A/c 50,000 | Bills Payable A/c Dr 50,000 · To Bank 50,000 |
+
+<Callout kind="pointer">
+  <p>
+    Read the right-hand column again. What the holder does with the bill is <strong>none of the
+    acceptor's business</strong> — discounting, endorsing and sending for collection produce
+    <strong>no entry whatsoever</strong> in the acceptor's books. His liability is the same
+    ₹50,000 whoever ends up holding the paper. The acceptor's books wake up again only at payment,
+    or at dishonour.
+  </p>
+</Callout>
+
+## 8. Discounting a bill
+
+Discounting is borrowing against the bill. The bank pays the holder the face value **less a
+charge for the unexpired period** between the date of discounting and the due date.
+
+<div class="formula">Discount = Face value × Rate per annum × (Unexpired months ÷ 12)</div>
+<div class="formula">Net proceeds = Face value − Discount</div>
+
+Two things students get wrong. First, the period runs **from the date of discounting to the due
+date** — not from the date of the bill, and not for the bill's whole tenor. A three-month bill
+discounted one month after it was drawn carries only **two months** of discount. Second, the
+discount is a **finance expense of the holder** (debited to Discount on Bills A/c and written off
+to Profit &amp; Loss), not a reduction of the customer's debt.
+
+## 9. Dishonour and noting charges
+
+A bill is **dishonoured** when the acceptor fails to pay it on the due date. At that instant the
+bill dies as an instrument and the **original debt comes back to life** — so both parties reverse
+the bill and restore the personal account.
+
+To have proof of dishonour, the holder gets the bill **noted** (and, for foreign bills, protested)
+by a Notary Public. The small fee is called **noting charges**. Two rules: the **holder pays** the
+notary, because he is the one who needs the evidence; and the **party ultimately liable bears** it,
+so the holder recovers it back down the chain until it reaches the acceptor, whose default caused
+it. Noting charges are therefore **never an expense of the drawer** in an ordinary trade dishonour
+— they are added to the amount debited to the acceptor.
+
+Entries on dishonour of a ₹50,000 bill with ₹500 noting charges:
+
+| Situation | In the holder's books | In B's (acceptor's) books |
+|---|---|---|
+| Bill was **retained** | B A/c Dr 50,500 · To Bills Receivable A/c 50,000 · To Cash (noting) 500 | Bills Payable A/c Dr 50,000 · Noting Charges A/c Dr 500 · To A 50,500 |
+| Bill was **discounted** | B A/c Dr 50,500 · To Bank 50,500 | same as above |
+| Bill was **endorsed to C** | B A/c Dr 50,500 · To C 50,500 | same as above |
+| Bill was **sent for collection** | B A/c Dr 50,500 · To Bills sent for Collection 50,000 · To Cash 500 | same as above |
+
+<Callout kind="mistake">
+  <p>
+    On dishonour of a <strong>discounted</strong> bill, the credit goes to <strong>Bank</strong>,
+    not to Bills Receivable. The Bills Receivable A/c was already emptied when the bill was
+    discounted — there is nothing left in it to credit. The bank simply takes back the full face
+    value plus the noting charges it paid. The same logic gives Creditor C the credit in the
+    endorsement row.
+  </p>
+</Callout>
+
+## 10. Renewal of a bill
+
+Sometimes the acceptor knows in advance that he cannot pay and asks for more time. The parties
+**cancel the old bill and draw a fresh one** for a longer tenor. Because the acceptor is keeping
+the drawer's money longer, he pays **interest for the extension**.
+
+Three steps, always in this sequence. **(1) Cancel the old bill** exactly as though it were
+dishonoured — both parties reverse it and restore the personal account, adding the noting charges
+if it was actually noted first. **(2) Charge interest** for the extra period:
+
+<div class="formula">Interest = Amount carried forward × Rate p.a. × (Months of extension ÷ 12)</div>
+
+In the drawer's books, Acceptor A/c Dr · To Interest A/c (income); in the acceptor's books,
+Interest A/c Dr · To Drawer (expense). **(3) Draw the new bill** for the balance now owing,
+including the interest if it is being carried into the new bill rather than paid in cash.
+
+The trap is step 2's base. If the acceptor pays part in cash and renews only the rest, interest is
+charged on the **balance renewed**, not on the original face value — and never on the cash he has
+just paid.
+
+## 11. Retirement under rebate
+
+The mirror image of renewal. The acceptor has spare cash and pays **before** the due date. In
+return the holder allows him a **rebate** (also called a discount for early payment) for the period
+the money is being received early.
+
+<div class="formula">Rebate = Amount of the bill × Rate p.a. × (Unexpired months ÷ 12)</div>
+
+The acceptor pays face value **minus** the rebate; the bill is then said to be **retired**.
+
+<Callout kind="pointer">
+  <p>
+    Get the direction right, because it is worth a mark on its own. The <strong>holder gives up</strong>
+    the rebate, so in the drawer's/holder's books it is an <strong>expense</strong> —
+    Rebate on Bills Discounted (or Discount Allowed) A/c is <strong>debited</strong>. The
+    <strong>acceptor saves</strong> it, so in his books it is an <strong>income</strong> — Rebate
+    A/c is <strong>credited</strong>. Whoever gives the concession takes the debit.
+  </p>
+</Callout>
+
+Entries for a ₹50,000 bill retired one month early with a ₹500 rebate:
+
+- **Holder:** Bank A/c Dr 49,500 · Rebate on Bills A/c Dr 500 · To Bills Receivable A/c 50,000
+- **Acceptor:** Bills Payable A/c Dr 50,000 · To Bank 49,500 · To Rebate A/c 500
+
+## 12. Insolvency of the acceptor
+
+When the acceptor is declared insolvent, the bill is dishonoured automatically — no presentment is
+needed, because it is already known he cannot pay. The holder passes the ordinary dishonour entry,
+then receives whatever the estate can pay, quoted as so many **paise in the rupee** (₹25,000 owing
+with a first and final dividend of 40 paise in the rupee brings in ₹10,000), and writes the rest
+off as a bad debt:
+
+<div class="formula">Bad debts = Amount owing × (100 paise − dividend in paise) ÷ 100 paise</div>
+
+Here ₹15,000, debited to Bad Debts A/c and closed to Profit &amp; Loss. Note the base: the dividend
+is calculated on the **whole amount owing**, which includes any noting charges added on dishonour,
+not on the bill's face value alone.
+
+## 13. Accommodation bills: the accounting
+
+Because no goods moved, the accommodation entries follow the **cash**, not a trade debt.
+
+**One party accommodated.** A draws on B for ₹90,000 for three months purely for A's convenience,
+discounts it, and keeps all the money. A alone bears the discount, and A alone must remit the full
+₹90,000 to B before the due date so that B can meet the bill.
+
+**Both parties accommodated — the sum you will actually be set.** A and B agree to share the
+proceeds in an agreed ratio. Then:
+
+<div class="formula">Discount = Face value × Rate p.a. × (Tenor months ÷ 12)</div>
+<div class="formula">Each party's share of proceeds = Net proceeds × his ratio</div>
+<div class="formula">Each party's share of the discount = Total discount × his ratio</div>
+
+The party who discounted the bill remits the *other* party's share of the **net proceeds** — the
+cash actually received, not the face value. The other party's share of the discount is his own
+expense; he never gets it back. On the due date, the acceptor pays the whole face value and the
+drawer reimburses him with **his own share of the face value**.
+
+<Callout kind="mistake">
+  <p>
+    The classic accommodation slip is remitting a share of the <strong>face value</strong> instead
+    of a share of the <strong>net proceeds</strong>. If ₹90,000 is discounted for ₹87,300 and split
+    2 : 1, the drawer sends ₹29,100 (= 87,300 × 1/3), not ₹30,000. Sending ₹30,000 would mean the
+    drawer silently absorbed the other party's discount.
+  </p>
+</Callout>
+
+**If the accommodating party becomes insolvent**, the other party proves in his estate for the
+amount owed and receives a dividend, writing the shortfall off as a bad debt exactly as in §12.
+
+## 14. Bills receivable and bills payable books
+
+When bills are numerous, a firm keeps two subsidiary books instead of journalising each one: a
+**Bills Receivable Book** (bills drawn or received, with the drawee's name, date, tenor, due date
+and amount) and a **Bills Payable Book** (bills accepted). Their periodic totals are posted to
+Bills Receivable A/c and Bills Payable A/c, and the individual names are posted to the personal
+accounts — exactly the pattern you met in the purchases and sales books in Chapter 2.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — five due dates, every rule in one place (moderate)">
+  <p>
+    Find the due date of each of the following bills. Assume the Government has notified
+    26 January, 15 August and 2 October as public holidays, and treat Saturdays as working days.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">(a) Bill dated 3 May 2026, payable three months after date</div>
+    Corresponding day three months later = 3 August 2026 (a Monday)<br />
+    + 3 days of grace = <strong>6 August 2026</strong>. Not a Sunday, not a notified holiday — it stands.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">(b) Bill dated 30 November 2026, payable three months after date</div>
+    February 2027 has no 30th day, so under s. 23 the period ends on the <strong>last day</strong> of
+    the month = 28 February 2027<br />
+    + 3 days of grace = <strong>3 March 2027</strong> (a Wednesday).<br />
+    28 February 2027 happens to be a Sunday, but that is irrelevant — the holiday test applies to
+    the date <em>after</em> grace, not before it.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">(c) Bill dated 12 May 2026, payable 60 days after date</div>
+    Exclude 12 May. 19 days of May + 30 of June = 49; 11 more days reach 11 July 2026<br />
+    + 3 days of grace = <strong>14 July 2026</strong>.<br />
+    (Two months would have given 12 July + 3 = 15 July — a different answer. Days means days.)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">(d) Bill dated 1 June 2026, accepted on 8 June 2026, payable two months after sight</div>
+    After sight runs from acceptance: 8 June + 2 months = 8 August 2026<br />
+    + 3 days of grace = <strong>11 August 2026</strong>.<br />
+    (Counting from the bill's date would have given 4 August — the planted wrong answer.)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">(e) Bill dated 12 May 2026, payable three months after date</div>
+    12 August 2026 + 3 days of grace = 15 August 2026 — Independence Day, a notified public holiday.<br />
+    Section 25: move to the next <em>preceding</em> business day = <strong>14 August 2026</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">(f) Same bill as (e), but an emergency holiday is declared for 14 August 2026</div>
+    An emergency holiday was unknown when the bill was drawn, so the due date moves
+    <em>forward</em> to the next succeeding business day: <strong>17 August 2026</strong>
+    (15 August is the notified holiday and 16 August 2026 is a Sunday).
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — discounting: proceeds and the charge (easy)">
+  <p>
+    On 3 May 2026 Surat Textiles draws a bill on Modi Garments for ₹60,000 payable three months
+    after date; Modi accepts it the same day. On 6 June 2026 Surat Textiles discounts the bill with
+    its bank at 12% per annum. Find the due date, the discount and the net proceeds, and pass the
+    entry in Surat Textiles' books.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Due date and unexpired period</div>
+    3 May + 3 months = 3 August 2026; + 3 days of grace = <strong>6 August 2026</strong><br />
+    Discounted 6 June 2026 → unexpired period 6 June to 6 August = <strong>2 months</strong>
+    (not 3 — one month of the bill had already run)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Discount and proceeds</div>
+    Discount = 60,000 × 12% × 2/12 = <strong>₹1,200</strong><br />
+    Net proceeds = 60,000 − 1,200 = <strong>₹58,800</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Entry in Surat Textiles' books</div>
+    Bank A/c ................ Dr 58,800<br />
+    Discount on Bills A/c ... Dr 1,200<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;To Bills Receivable A/c 60,000<br />
+    In Modi Garments' books: <strong>no entry at all</strong>.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — dishonour of a discounted bill, with noting charges (moderate)">
+  <p>
+    Take the bill in Worked example 2 forward. On 6 August 2026 Modi Garments dishonours the bill.
+    The bank pays noting charges of ₹500 and debits Surat Textiles. Show the entries in both sets
+    of books.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — What the bank recovers</div>
+    Face value 60,000 + noting charges 500 = <strong>₹60,500</strong> taken back from Surat
+    Textiles' account.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — In Surat Textiles' books (drawer/holder)</div>
+    Modi Garments A/c ....... Dr 60,500<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;To Bank A/c 60,500<br />
+    Bills Receivable A/c is <em>not</em> credited — it was emptied on 6 June when the bill was
+    discounted. The noting charges are recovered from Modi, not borne by Surat.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — In Modi Garments' books (acceptor)</div>
+    Bills Payable A/c ....... Dr 60,000<br />
+    Noting Charges A/c ...... Dr 500<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;To Surat Textiles A/c 60,500<br />
+    The noting charges are Modi's expense — his default caused them.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — renewal with part payment and interest (hard)">
+  <p>
+    Ravi holds a bill of ₹36,000 accepted by Sunil, due 6 August 2026. On the due date Sunil cannot
+    pay. The bill is noted, noting charges ₹400. Sunil pays ₹16,400 in cash and accepts a fresh
+    bill for the balance for three months, together with interest at 12% per annum. Find the amount
+    of the new bill and pass the entries in Ravi's books.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Total owing after dishonour</div>
+    36,000 + 400 noting charges = <strong>₹36,400</strong><br />
+    Entry: Sunil A/c Dr 36,400 · To Bills Receivable A/c 36,000 · To Cash A/c 400
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Cash received and balance renewed</div>
+    Cash received ₹16,400 — this clears the ₹400 noting charges plus ₹16,000 of the bill<br />
+    Balance to be carried forward = 36,400 − 16,400 = <strong>₹20,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Interest for the extension</div>
+    Interest = 20,000 × 12% × 3/12 = <strong>₹600</strong><br />
+    Charged on the balance renewed, never on the original ₹36,000 and never on the cash already
+    received.<br />
+    Entry: Sunil A/c Dr 600 · To Interest A/c 600
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — The new bill</div>
+    New bill = 20,000 + 600 = <strong>₹20,600</strong><br />
+    Entry: Bills Receivable A/c Dr 20,600 · To Sunil A/c 20,600<br />
+    Sunil's account now closes: debits 36,400 + 600 = 37,000; credits 16,400 + 20,600 = 37,000.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — accommodation bill, proceeds and discount shared (hard)">
+  <p>
+    Needing funds, Anita draws a bill on Bharat for ₹90,000 for three months on 1 June 2026;
+    Bharat accepts it as an accommodation. Anita discounts it at once with her bank at 12% per
+    annum and the two agree to share the proceeds between Anita and Bharat in the ratio 2 : 1.
+    Find each party's cash and each party's discount, and show what happens on the due date.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Discount and net proceeds</div>
+    Discount = 90,000 × 12% × 3/12 = <strong>₹2,700</strong><br />
+    Net proceeds = 90,000 − 2,700 = <strong>₹87,300</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Sharing the cash</div>
+    Anita (2/3) = 87,300 × 2/3 = <strong>₹58,200</strong><br />
+    Bharat (1/3) = 87,300 × 1/3 = <strong>₹29,100</strong> — Anita remits this to Bharat<br />
+    She remits a share of the <em>proceeds</em>, not ₹30,000 (a share of the face value).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Sharing the discount</div>
+    Anita bears 2,700 × 2/3 = <strong>₹1,800</strong>; Bharat bears 2,700 × 1/3 = <strong>₹900</strong><br />
+    Each debits his own Discount A/c; each figure is a real expense of that party.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — On the due date, 4 September 2026 (1 June + 3 months = 1 September, + 3 days of grace)</div>
+    Bharat, as acceptor, pays the bank the full <strong>₹90,000</strong><br />
+    Anita remits Bharat her share of the <em>face value</em> = 90,000 × 2/3 = <strong>₹60,000</strong><br />
+    Bharat's net cost = 90,000 paid − 60,000 received − 29,100 taken earlier = ₹900, exactly his
+    share of the discount. That reconciliation is the best check you have on this sum.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Forgetting the three days of grace** — the commonest one-mark loss in the paper. Every *time*
+  bill gets grace; only on-demand and at-sight bills do not.
+- **Running an after-sight bill from the bill's date.** After sight runs from **acceptance**; if an
+  acceptance date is given at all, the examiner wants it used.
+- **Turning months into 30-day blocks.** Months use corresponding days (s. 23); only "days" bills
+  are counted day by day, excluding the first day (s. 24).
+- **Applying the holiday test before adding grace.** Add grace first, then test the date you landed
+  on.
+- **Moving a public holiday forward.** A notified public holiday moves the due date **back**; only
+  an **emergency** holiday moves it forward.
+- **Discounting for the bill's whole tenor.** The charge covers only **discounting date to
+  maturity**.
+- **Crediting Bills Receivable when a discounted bill is dishonoured.** Credit **Bank** (or the
+  endorsee, if it had been endorsed) — Bills Receivable was cleared when the bill left.
+- **Treating noting charges as the drawer's expense.** He *pays*; the defaulting acceptor *bears*.
+- **Charging renewal interest on the original face value** after a part payment. Interest runs on
+  the amount actually carried forward.
+- **Rebate on the wrong side.** The holder allows it and debits it as an expense; the acceptor
+  credits it as income.
+- **Remitting face value instead of proceeds** on an accommodation bill — and forgetting that the
+  discount splits in the same ratio as the cash.
+- **Passing an entry in the acceptor's books when the holder discounts or endorses.** There is
+  none. His books move only at payment, dishonour, renewal or retirement.
+
+## One-page revision summary
+
+**Definitions:** Promissory note (s. 4) = unconditional **promise** by the debtor; two parties
+(maker, payee); **no acceptance**. Bill of exchange (s. 5) = unconditional **order** by the
+creditor; three parties (drawer, drawee/acceptor, payee); **acceptance required**. Both must be in
+writing, signed, unconditional, for a certain sum of money only, and duly stamped.
+
+**Due date, in three steps:**
+
+<div class="formula">1. Expressed date — after date: from the bill's date · after sight: from acceptance · months: corresponding day, else last day of the month (s. 23) · days: count actual days, exclude the first (s. 24)</div>
+<div class="formula">2. Add 3 days of grace (s. 22) — but never on a demand or sight instrument</div>
+<div class="formula">3. Public holiday → PRECEDING business day (s. 25) · Emergency holiday → NEXT business day</div>
+
+**Money formulas:**
+
+<div class="formula">Discount = Face value × Rate p.a. × Unexpired months ÷ 12 · Proceeds = Face value − Discount</div>
+<div class="formula">Renewal interest = Balance carried forward × Rate p.a. × Months of extension ÷ 12</div>
+<div class="formula">Rebate on retirement = Bill amount × Rate p.a. × Unexpired months ÷ 12</div>
+<div class="formula">Insolvency: recovery = Amount owing × dividend in paise ÷ 100 · Bad debts = the balance</div>
+<div class="formula">Accommodation: each share of proceeds = Net proceeds × ratio · each share of discount = Total discount × ratio</div>
+
+**Rules that answer theory MCQs:** discounting, endorsing and sending for collection produce **no
+entry in the acceptor's books** · on dishonour of a discounted bill credit **Bank**, of an endorsed
+bill credit the **endorsee** · noting charges are paid by the holder and **borne by the party
+liable** · dishonour revives the **original debt** in the personal account · rebate is the holder's
+**expense** and the acceptor's **income** · accommodation bills split **proceeds** and **discount**
+in the agreed ratio, and the face value on the due date · Bills Receivable is an **asset** in the
+drawer's books and the same paper is Bills Payable, a **liability**, in the acceptor's.

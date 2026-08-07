@@ -1,0 +1,2003 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "inventories",
+  "chapter": "Ch 4 — Inventories",
+  "questions": [
+    {
+      "id": "q-f1c4-001",
+      "topic": "Ch 4 · Inventories · Meaning",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Digitek is a shop that buys and sells computers. Which of the following is INVENTORY in Digitek's books?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The delivery van used to carry computers to customers",
+          "explanation": "The van is used to run the business, not to be sold. It is a fixed asset."
+        },
+        {
+          "key": "B",
+          "text": "The air-conditioner installed in the showroom",
+          "explanation": "A showroom fitting held for use, not for sale — a fixed asset, however new it is."
+        },
+        {
+          "key": "C",
+          "text": "Fifty laptops lying in the godown awaiting sale",
+          "explanation": "Correct. Inventories are goods held for sale in the ordinary course of business. Selling computers is exactly what Digitek does, so the laptops are its stock-in-trade. The same laptop would be a fixed asset in a cloth shop's books — the test is what the business does with the asset."
+        },
+        {
+          "key": "D",
+          "text": "The computer on which the shop's accountant prepares bills",
+          "explanation": "Held for use in the business, so a fixed asset — even though an identical machine on the next shelf is inventory."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What inventories are, §1 →",
+        "href": "/foundation/accounting/inventories/#1-what-inventories-are"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Inventories: goods held for sale in the ordinary course of business",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-002",
+      "topic": "Ch 4 · Inventories · Categories",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Rolls of cloth lying with a garment manufacturer, to be cut and stitched into shirts, are classified as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Raw materials",
+          "explanation": "Correct. Materials and supplies to be consumed in the production process are the raw-material category of inventories. They become work-in-progress once cutting and stitching begins, and finished goods when the shirts are complete."
+        },
+        {
+          "key": "B",
+          "text": "Finished goods",
+          "explanation": "Finished goods are what the manufacturer sells — the shirts. Cloth is the input, not the output."
+        },
+        {
+          "key": "C",
+          "text": "Work-in-progress",
+          "explanation": "Work-in-progress is production already begun and not yet complete. Cloth still on the roll has not entered the process."
+        },
+        {
+          "key": "D",
+          "text": "A fixed asset",
+          "explanation": "The cloth will be consumed in making goods for sale within the operating cycle — it is inventory, not a fixed asset."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: What inventories are, §1 →",
+        "href": "/foundation/accounting/inventories/#1-what-inventories-are"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Three categories: finished goods, work-in-progress, raw materials and supplies",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-003",
+      "topic": "Ch 4 · Inventories · Scope",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "AS 2 does NOT apply to the valuation of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Finished goods of a garment manufacturer",
+          "explanation": "Ordinary finished goods are squarely within AS 2."
+        },
+        {
+          "key": "B",
+          "text": "Loose tools and stores held by a factory",
+          "explanation": "Stores, spares and loose tools are supplies to be consumed in production — inventories within AS 2."
+        },
+        {
+          "key": "C",
+          "text": "Stock-in-trade of a cloth merchant",
+          "explanation": "This is the central case AS 2 was written for."
+        },
+        {
+          "key": "D",
+          "text": "Work-in-progress arising under a construction contract",
+          "explanation": "Correct. AS 2 expressly leaves out work-in-progress under construction contracts (along with work-in-progress of service providers, shares and debentures held as stock-in-trade, and producers' stocks of livestock, agricultural and forest produce and mineral oils measured at net realisable value under established trade practice)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: What inventories are, §1 →",
+        "href": "/foundation/accounting/inventories/#1-what-inventories-are"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "AS 2 scope exclusions as summarised for Foundation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-004",
+      "topic": "Ch 4 · Inventories · Why valuation matters",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the final accounts of a trading concern, the closing stock figure appears:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only in the Trading Account",
+          "explanation": "It is credited to the Trading Account, but it does not stop there — the same figure is also a current asset."
+        },
+        {
+          "key": "B",
+          "text": "In the Trading Account and in the Balance Sheet",
+          "explanation": "Correct. Closing stock is credited in the Trading Account (raising gross profit) and shown as a current asset in the Balance Sheet. That is why one wrong stock figure misstates both profit and the balance sheet at the same time."
+        },
+        {
+          "key": "C",
+          "text": "Only in the Balance Sheet",
+          "explanation": "Then gross profit would be computed without any allowance for goods unsold — which is precisely what closing stock corrects."
+        },
+        {
+          "key": "D",
+          "text": "In the Profit and Loss Account and in the Balance Sheet",
+          "explanation": "The stock adjustment belongs to the Trading Account, above the gross profit line, not to the Profit and Loss Account."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Why the figure matters, §2 →",
+        "href": "/foundation/accounting/inventories/#2-why-the-closing-stock-figure-matters-twice"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Closing stock affects both the Trading Account and the Balance Sheet",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-005",
+      "topic": "Ch 4 · Inventories · Effect of an error",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "If the closing stock of the current year is UNDERSTATED, the immediate effect is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Profit for the year is understated and current assets are understated",
+          "explanation": "Correct. Closing stock is credited in the Trading Account, so a smaller figure means a smaller gross profit; and the same smaller figure is carried into the Balance Sheet as a current asset. Both move down together."
+        },
+        {
+          "key": "B",
+          "text": "Profit is overstated and current assets are understated",
+          "explanation": "The two cannot move in opposite directions — the identical figure does both jobs, so both are understated."
+        },
+        {
+          "key": "C",
+          "text": "Profit is understated but current assets are unaffected",
+          "explanation": "Closing stock IS the current asset. Understate it in the Trading Account and the Balance Sheet carries the same understated figure."
+        },
+        {
+          "key": "D",
+          "text": "Neither profit nor assets is affected, because the error self-corrects next year",
+          "explanation": "The self-correction happens over TWO years, in the cumulative profit. This year's profit, and this year's balance sheet, are both wrong right now."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Why the figure matters, §2 →",
+        "href": "/foundation/accounting/inventories/#2-why-the-closing-stock-figure-matters-twice"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Understated closing stock understates both profit and current assets",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-006",
+      "topic": "Ch 4 · Inventories · Write-down and profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Bharat Cloth House's draft profit for 2025–26 is ₹3,60,000, arrived at after taking closing stock at cost ₹1,80,000. It later emerges that a lot inside that stock, costing ₹70,000, has a net realisable value of only ₹45,000. The corrected profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,85,000",
+          "explanation": "The ₹25,000 write-down has been ADDED to profit. A fall in the value of stock reduces closing stock and therefore reduces profit."
+        },
+        {
+          "key": "B",
+          "text": "₹3,15,000",
+          "explanation": "This deducts the whole net realisable value of ₹45,000. Only the FALL of ₹25,000 (70,000 − 45,000) is a loss; the remaining ₹45,000 of value is still in the stock."
+        },
+        {
+          "key": "C",
+          "text": "₹3,35,000",
+          "explanation": "Correct. The lot must be carried at the lower of cost ₹70,000 and NRV ₹45,000, so ₹25,000 is written down. Revised closing stock = 1,80,000 − 25,000 = ₹1,55,000, and profit = 3,60,000 − 25,000 = ₹3,35,000."
+        },
+        {
+          "key": "D",
+          "text": "₹3,60,000",
+          "explanation": "Leaving profit unchanged treats the write-down as optional. Valuation at the lower of cost and NRV is compulsory, so the stock and the profit both fall by ₹25,000."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Lower of cost and NRV, §3 →",
+        "href": "/foundation/accounting/inventories/#3-the-rule-lower-of-cost-and-net-realisable-value"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Write-down to NRV reduces closing stock and profit by the fall",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-007",
+      "topic": "Ch 4 · Inventories · Self-correcting error",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Meera Traders reported profits of ₹4,00,000 for 2024–25 and ₹5,00,000 for 2025–26. It is now found that the closing stock of 2024–25 was overstated by ₹60,000; there is no other error. The corrected profits are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2024–25 ₹3,40,000 and 2025–26 ₹4,40,000",
+          "explanation": "The same ₹60,000 has been deducted twice. It inflated 2024–25 as closing stock and DEFLATED 2025–26 as opening stock, so the second year must be corrected upwards."
+        },
+        {
+          "key": "B",
+          "text": "2024–25 ₹3,40,000 and 2025–26 ₹5,60,000",
+          "explanation": "Correct. Overstated closing stock overstated 2024–25 profit: 4,00,000 − 60,000 = ₹3,40,000. That figure became 2025–26's opening stock, a debit in the Trading Account, so 2025–26 profit was understated: 5,00,000 + 60,000 = ₹5,60,000. Note that the two-year total (₹9,00,000) is unchanged — the error is self-correcting."
+        },
+        {
+          "key": "C",
+          "text": "2024–25 ₹4,60,000 and 2025–26 ₹4,40,000",
+          "explanation": "The direction is reversed in both years. An OVERSTATED closing stock overstates the first year's profit, so the first year must come down, not up."
+        },
+        {
+          "key": "D",
+          "text": "2024–25 ₹4,00,000 and 2025–26 ₹5,60,000",
+          "explanation": "Only the second year has been corrected. The error originated in 2024–25, whose profit is overstated by ₹60,000 and must be brought down to ₹3,40,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Why the figure matters, §2 →",
+        "href": "/foundation/accounting/inventories/#2-why-the-closing-stock-figure-matters-twice"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Closing-stock error is counterbalancing over two periods",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-008",
+      "topic": "Ch 4 · Inventories · Valuation rule",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under AS 2, inventories are valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cost",
+          "explanation": "Cost alone would leave damaged or unsaleable stock standing at a figure the business can never recover."
+        },
+        {
+          "key": "B",
+          "text": "Net realisable value",
+          "explanation": "NRV alone would let a business recognise profit on goods it has not yet sold, whenever NRV exceeds cost."
+        },
+        {
+          "key": "C",
+          "text": "The higher of cost and net realisable value",
+          "explanation": "The exact opposite of the rule. Taking the higher figure would overstate both the asset and the profit."
+        },
+        {
+          "key": "D",
+          "text": "The lower of cost and net realisable value",
+          "explanation": "Correct. Prudence: never carry an asset above what can be recovered from it, and never recognise a profit before the sale happens. The comparison is made item by item, or for groups of similar or related items."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Lower of cost and NRV, §3 →",
+        "href": "/foundation/accounting/inventories/#3-the-rule-lower-of-cost-and-net-realisable-value"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AS 2 measurement base: lower of cost and NRV",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-009",
+      "topic": "Ch 4 · Inventories · Item-by-item comparison",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nandini Traders' closing stock on 31 March 2026 consists of four lines, shown as (cost, net realisable value): A — Shirting (₹60,000, ₹68,000); B — Damaged suiting (₹45,000, ₹39,000); C — Last season's prints (₹30,000, ₹25,500); D — Lining cloth (₹25,000, ₹27,000). The closing stock is valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,60,000",
+          "explanation": "This is the total COST, with net realisable value ignored altogether. Items B and C cannot be carried above what they will fetch."
+        },
+        {
+          "key": "B",
+          "text": "₹1,59,500",
+          "explanation": "This compares total cost ₹1,60,000 with total NRV ₹1,59,500 and takes the lower — the global-netting trap. It lets the unrealised gains on A and D (₹8,000 and ₹2,000) absorb the real losses on B and C."
+        },
+        {
+          "key": "C",
+          "text": "₹1,49,500",
+          "explanation": "Correct. Take the lower for each line: A 60,000, B 39,000, C 25,500, D 25,000. Total = ₹1,49,500. Gains on A and D are not recognised; falls on B and C are."
+        },
+        {
+          "key": "D",
+          "text": "₹1,70,000",
+          "explanation": "This takes the HIGHER of cost and NRV for each item (68,000 + 45,000 + 30,000 + 27,000). The rule is the lower, not the higher."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Lower of cost and NRV, §3 →",
+        "href": "/foundation/accounting/inventories/#3-the-rule-lower-of-cost-and-net-realisable-value"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Item-by-item comparison of cost with NRV",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-010",
+      "topic": "Ch 4 · Inventories · Write-down amount",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On the same four lines — A (cost ₹60,000, NRV ₹68,000), B (₹45,000, ₹39,000), C (₹30,000, ₹25,500) and D (₹25,000, ₹27,000) — the write-down charged to the Profit and Loss Account for the year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹10,500",
+          "explanation": "Correct. Only the lines whose NRV is below cost are written down: B 45,000 − 39,000 = 6,000 and C 30,000 − 25,500 = 4,500, a total of ₹10,500. Equivalently, total cost 1,60,000 less the item-by-item value 1,49,500."
+        },
+        {
+          "key": "B",
+          "text": "₹500",
+          "explanation": "This is the difference between the two column totals (1,60,000 − 1,59,500) — the global-netting figure. It nets the gains on A and D against the losses on B and C, which prudence forbids."
+        },
+        {
+          "key": "C",
+          "text": "₹6,000",
+          "explanation": "Only item B's fall has been picked up. Item C has also fallen below cost, by ₹4,500, and must be written down too."
+        },
+        {
+          "key": "D",
+          "text": "₹4,500",
+          "explanation": "Only item C's fall has been picked up. Item B's fall of ₹6,000 is missing."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Lower of cost and NRV, §3 →",
+        "href": "/foundation/accounting/inventories/#3-the-rule-lower-of-cost-and-net-realisable-value"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Write-down equals the sum of the item-wise falls below cost",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-011",
+      "topic": "Ch 4 · Inventories · NRV above cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A firm holds 1,200 shirts costing ₹400 each. They can be sold at ₹460 each, but each shirt needs repacking costing ₹15 and the selling agent charges a commission of 5% of the selling price. The shirts are valued in the Balance Sheet at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,52,000",
+          "explanation": "This is the gross selling value (1,200 × ₹460). Selling price is never the valuation base — it is only the starting point for computing NRV."
+        },
+        {
+          "key": "B",
+          "text": "₹4,80,000",
+          "explanation": "Correct. NRV per shirt = 460 − 15 (repacking) − 23 (5% commission) = ₹422, which is ABOVE the cost of ₹400. The lower of the two is cost, so 1,200 × 400 = ₹4,80,000. No gain is recognised on goods still unsold."
+        },
+        {
+          "key": "C",
+          "text": "₹5,06,400",
+          "explanation": "This values the shirts at NRV, ₹422 each. NRV is used only when it is LOWER than cost; here it is higher, so cost prevails."
+        },
+        {
+          "key": "D",
+          "text": "₹4,62,000",
+          "explanation": "This deducts the repacking cost of ₹15 from the cost of ₹400. Repacking and commission are deducted in computing NRV — they are never deducted from cost."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net realisable value, §6 →",
+        "href": "/foundation/accounting/inventories/#6-net-realisable-value-and-the-raw-material-exception"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NRV above cost: carry at cost, recognise no gain",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-012",
+      "topic": "Ch 4 · Inventories · NRV below cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "500 sarees cost ₹900 each. A change in fashion means they can now be sold for only ₹840 each, and selling them will cost ₹40 a saree in commission and packing. The value of this stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,50,000",
+          "explanation": "This is cost (500 × ₹900), ignoring the fall. NRV is now below cost, so the stock must be written down."
+        },
+        {
+          "key": "B",
+          "text": "₹4,20,000",
+          "explanation": "This stops at the selling price (500 × ₹840) without deducting the ₹40 a saree it will cost to make the sale. NRV is net of those costs."
+        },
+        {
+          "key": "C",
+          "text": "₹4,30,000",
+          "explanation": "This deducts the ₹20,000 of selling costs from COST (4,50,000 − 20,000). Selling costs are deducted from the estimated selling price to get NRV; they never reduce cost."
+        },
+        {
+          "key": "D",
+          "text": "₹4,00,000",
+          "explanation": "Correct. NRV per saree = 840 − 40 = ₹800, which is below the cost of ₹900. Value = 500 × 800 = ₹4,00,000, and ₹50,000 is written off to the Profit and Loss Account."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Lower of cost and NRV, §3 →",
+        "href": "/foundation/accounting/inventories/#3-the-rule-lower-of-cost-and-net-realisable-value"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NRV = selling price less estimated costs necessary to make the sale",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-013",
+      "topic": "Ch 4 · Inventories · Unit of comparison",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The comparison of cost with net realisable value is made:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Item by item, or for groups of similar or related items",
+          "explanation": "Correct. Ordinarily each item is compared separately; grouping is allowed only where the items are similar or related (for example, items in the same product line with similar purposes and similar margins that cannot practicably be evaluated separately)."
+        },
+        {
+          "key": "B",
+          "text": "For the total of all inventories taken together",
+          "explanation": "A single global comparison lets an unrealised gain on one item cancel a real loss on another — exactly what prudence forbids, and always gives a higher figure than the correct one."
+        },
+        {
+          "key": "C",
+          "text": "Separately for each class — all raw materials together, all finished goods together",
+          "explanation": "Classifying inventories as raw materials or finished goods is a presentation matter. Valuation is not done on a whole-class basis."
+        },
+        {
+          "key": "D",
+          "text": "For the business as a whole, including its fixed assets",
+          "explanation": "Fixed assets are outside AS 2 entirely and are never pooled with stock for this comparison."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Lower of cost and NRV, §3 →",
+        "href": "/foundation/accounting/inventories/#3-the-rule-lower-of-cost-and-net-realisable-value"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Item-by-item or group-of-similar-items basis",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-014",
+      "topic": "Ch 4 · Inventories · Cost of purchase",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following IS added in arriving at the cost of purchase of inventories?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cash discount received for paying the supplier early",
+          "explanation": "Cash discount is a financing gain earned by paying early, not a reduction in what the goods cost. It is credited to income and does not touch the cost of inventory."
+        },
+        {
+          "key": "B",
+          "text": "GST paid on the purchase, for which full input tax credit is available",
+          "explanation": "A tax that will be recovered from the tax authorities is not a cost to the business. Only NON-recoverable duties and taxes are added."
+        },
+        {
+          "key": "C",
+          "text": "Non-refundable customs duty on imported material",
+          "explanation": "Correct. Duties and taxes that cannot be recovered from the tax authorities are a real, unrecoverable outflow to get the goods, so they form part of the cost of purchase — along with freight inward, transit insurance and other directly attributable acquisition costs."
+        },
+        {
+          "key": "D",
+          "text": "Commission paid to salesmen on goods sold",
+          "explanation": "A selling cost, incurred after the stock is ready. Selling and distribution costs are expressly excluded from the cost of inventories."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What goes into cost, §4 →",
+        "href": "/foundation/accounting/inventories/#4-what-goes-into-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Cost of purchase: non-recoverable duties in, recoverable taxes out",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-015",
+      "topic": "Ch 4 · Inventories · Cost build-up",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Prakash Textiles bought a consignment of fabric: list price ₹5,00,000, trade discount 10%; GST ₹81,000 (full input tax credit available); non-refundable customs duty ₹22,000; freight inward ₹18,000; loading and unloading ₹5,000; cash discount ₹4,000 received for paying within seven days; storage of the finished bales in the godown awaiting dispatch ₹12,000; material destroyed in a godown fire ₹15,000; salesmen's commission ₹20,000; interest on the loan taken to buy the goods ₹9,000. The cost of the consignment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,76,000",
+          "explanation": "This adds the GST of ₹81,000. GST for which input tax credit is available is recovered from the government and is therefore never part of the cost of inventory."
+        },
+        {
+          "key": "B",
+          "text": "₹4,95,000",
+          "explanation": "Correct. 5,00,000 − 50,000 trade discount = 4,50,000; add customs duty 22,000 + freight inward 18,000 + loading and unloading 5,000 = ₹4,95,000. Excluded: creditable GST, cash discount (a financing gain), storage of finished goods, the abnormal fire loss, salesmen's commission and interest."
+        },
+        {
+          "key": "C",
+          "text": "₹5,07,000",
+          "explanation": "This adds the ₹12,000 storage cost. Storage is included only when it is necessary in the production process before a further stage; storing finished bales before dispatch adds nothing to their condition."
+        },
+        {
+          "key": "D",
+          "text": "₹4,91,000",
+          "explanation": "This deducts the ₹4,000 cash discount from cost. Only TRADE discount is deducted; cash discount is a reward for early payment and is credited to income instead."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What goes into cost, §4 →",
+        "href": "/foundation/accounting/inventories/#4-what-goes-into-cost"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Full inclusion/exclusion build-up of the cost of inventories",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-016",
+      "topic": "Ch 4 · Inventories · Cost build-up",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kaveri Imports bought material at a list price of ₹2,40,000 with a trade discount of 12.5%, and paid: non-refundable import duty ₹15,000, freight inward ₹9,000, GST ₹37,800 (input tax credit available in full), insurance in transit ₹3,000, and godown rent of ₹6,000 for storing the material after arrival. The cost of the material is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,74,800",
+          "explanation": "This adds the ₹37,800 GST. Because full input tax credit is available, that GST is recoverable and is not a cost of the material."
+        },
+        {
+          "key": "B",
+          "text": "₹2,43,000",
+          "explanation": "This adds the ₹6,000 godown rent. Storage after arrival is excluded unless the storage is necessary in the production process before a further stage."
+        },
+        {
+          "key": "C",
+          "text": "₹2,10,000",
+          "explanation": "This is only the purchase price net of trade discount. The duty, freight inward and transit insurance are all directly attributable acquisition costs and must be added."
+        },
+        {
+          "key": "D",
+          "text": "₹2,37,000",
+          "explanation": "Correct. 2,40,000 × 87.5% = 2,10,000; add import duty 15,000 + freight inward 9,000 + transit insurance 3,000 = ₹2,37,000. Creditable GST and post-arrival godown rent are excluded."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: What goes into cost, §4 →",
+        "href": "/foundation/accounting/inventories/#4-what-goes-into-cost"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cost of purchase: trade discount, duty, freight, transit insurance",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-017",
+      "topic": "Ch 4 · Inventories · Discounts",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In arriving at the cost of inventories:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trade discount is deducted but cash discount is not",
+          "explanation": "Correct. Trade discount is an allowance off the list price — the goods never cost the list price, so the purchase is recorded net of it. Cash discount is earned by paying early; it is a financing gain credited to income and leaves the cost of the goods untouched."
+        },
+        {
+          "key": "B",
+          "text": "Both trade discount and cash discount are deducted",
+          "explanation": "Deducting cash discount would make the cost of identical goods depend on how quickly the buyer happened to pay — a financing decision, not a property of the goods."
+        },
+        {
+          "key": "C",
+          "text": "Cash discount is deducted but trade discount is not",
+          "explanation": "Exactly reversed. Trade discount never enters the books at all; cash discount is separately recorded as income."
+        },
+        {
+          "key": "D",
+          "text": "Neither is deducted",
+          "explanation": "Trade discount must be deducted — recording the goods at list price would overstate both purchases and closing stock."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: What goes into cost, §4 →",
+        "href": "/foundation/accounting/inventories/#4-what-goes-into-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Trade discount deducted from cost; cash discount is a financing item",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-018",
+      "topic": "Ch 4 · Inventories · Recoverable taxes",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A trader buys goods for ₹1,00,000 plus GST at 18% (₹18,000), for which full input tax credit is available, and pays freight inward of ₹4,000. The cost of these inventories is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,22,000",
+          "explanation": "This adds the recoverable GST to the price and the freight. GST that will be set off against output tax is recovered from the government, so it is not a cost."
+        },
+        {
+          "key": "B",
+          "text": "₹1,18,000",
+          "explanation": "This adds the GST but drops the freight inward — both moves are wrong. Freight inward IS part of the cost of purchase; creditable GST is not."
+        },
+        {
+          "key": "C",
+          "text": "₹1,04,000",
+          "explanation": "Correct. Purchase price ₹1,00,000 + freight inward ₹4,000 = ₹1,04,000. The ₹18,000 GST is recoverable as input tax credit and is debited to an input-tax account, not to the cost of the goods."
+        },
+        {
+          "key": "D",
+          "text": "₹1,00,000",
+          "explanation": "The GST is correctly excluded but the ₹4,000 freight inward has been dropped. Freight inward is a directly attributable cost of bringing the goods to their present location."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What goes into cost, §4 →",
+        "href": "/foundation/accounting/inventories/#4-what-goes-into-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Recoverable GST excluded; freight inward included",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-019",
+      "topic": "Ch 4 · Inventories · Cost of conversion",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Fixed production overheads are absorbed into the cost of conversion:",
+      "options": [
+        {
+          "key": "A",
+          "text": "On the basis of actual production in every case",
+          "explanation": "That is the rule for VARIABLE production overheads. Using actual production for fixed overheads would inflate unit cost in a slack month purely because the factory was idle."
+        },
+        {
+          "key": "B",
+          "text": "In full, whatever the level of production",
+          "explanation": "This is the trap. Absorbing all fixed overheads in a low-production year would push idle-capacity cost into stock, overstating both the asset and the profit."
+        },
+        {
+          "key": "C",
+          "text": "Only if the factory worked above normal capacity",
+          "explanation": "Fixed overheads are absorbed at every level. When actual production exceeds normal capacity, the allocation rate is reduced so that stock is not carried above actual cost."
+        },
+        {
+          "key": "D",
+          "text": "On the basis of normal capacity, with the unabsorbed portion charged to profit and loss",
+          "explanation": "Correct. Fixed production overheads are allocated on the normal capacity of the plant. In a period of abnormally low production the unallocated overhead is recognised as an expense of the period, so idle-capacity cost never enters the value of inventory."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: What goes into cost, §4 →",
+        "href": "/foundation/accounting/inventories/#4-what-goes-into-cost"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fixed production overheads allocated on normal capacity",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-020",
+      "topic": "Ch 4 · Inventories · Exclusions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT included in the cost of inventories?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Freight inward on raw material",
+          "explanation": "A directly attributable cost of bringing the material to its present location — squarely part of the cost of purchase."
+        },
+        {
+          "key": "B",
+          "text": "Selling and distribution expenses",
+          "explanation": "Correct. Selling and distribution costs are incurred to dispose of the goods, not to bring them to their present location and condition, so they are expensed in the year. They do reappear in one place — as a deduction in computing net realisable value."
+        },
+        {
+          "key": "C",
+          "text": "Direct labour employed in the factory",
+          "explanation": "Direct labour is the core of the cost of conversion and is included."
+        },
+        {
+          "key": "D",
+          "text": "Non-refundable import duty on the material",
+          "explanation": "An unrecoverable tax paid to acquire the goods — included in the cost of purchase."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What is kept out of cost, §5 →",
+        "href": "/foundation/accounting/inventories/#5-what-is-kept-out-of-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Selling and distribution costs excluded from the cost of inventories",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-021",
+      "topic": "Ch 4 · Inventories · Normal and abnormal wastage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Modern Mills bought 10,000 kg of yarn at ₹58 per kg and paid freight inward of ₹20,000. Of this, 400 kg was lost as normal, unavoidable wastage in handling and a further 600 kg was destroyed in a flood. The remaining 9,000 kg lies in stock at the year end. Its value is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,62,500",
+          "explanation": "Correct. Cost pool = (10,000 × 58) + 20,000 = ₹6,00,000. Normal wastage of 400 kg is absorbed by the units that survive, so the cost is spread over 9,600 good kg = ₹62.50 per kg. Closing stock = 9,000 × 62.50 = ₹5,62,500; the abnormal flood loss of 600 kg (₹37,500) goes to the Profit and Loss Account."
+        },
+        {
+          "key": "B",
+          "text": "₹5,40,000",
+          "explanation": "This spreads ₹6,00,000 over all 10,000 kg (₹60 per kg). That treats the normal wastage as if it had value — normal loss has no cost of its own; its cost is borne by the good units."
+        },
+        {
+          "key": "C",
+          "text": "₹5,22,000",
+          "explanation": "This is 9,000 kg at the bare purchase rate of ₹58, ignoring the ₹20,000 freight inward and the effect of normal wastage."
+        },
+        {
+          "key": "D",
+          "text": "₹6,00,000",
+          "explanation": "This is the whole cost pool, as if nothing had been lost. The 600 kg lost abnormally must be taken out of stock and charged to the Profit and Loss Account."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: What is kept out of cost, §5 →",
+        "href": "/foundation/accounting/inventories/#5-what-is-kept-out-of-cost"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Normal loss absorbed by good units; abnormal loss expensed",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-022",
+      "topic": "Ch 4 · Inventories · Storage costs",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Storage costs are included in the cost of inventories:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Always, because the goods must be stored somewhere",
+          "explanation": "Merely keeping goods somewhere does not improve their condition. General storage is a period cost."
+        },
+        {
+          "key": "B",
+          "text": "Never, in any circumstances",
+          "explanation": "Too absolute. There is one recognised case where storage genuinely forms part of the production process."
+        },
+        {
+          "key": "C",
+          "text": "Only when storage is necessary in the production process before a further stage of production",
+          "explanation": "Correct. Ageing or maturing that the product must undergo before the next stage — for example, storing a partly processed good that must rest before further processing — is part of bringing the inventory to its present condition. Ordinary warehousing of finished goods is not, and is expensed."
+        },
+        {
+          "key": "D",
+          "text": "Only if the goods are stored in the firm's own godown rather than a hired one",
+          "explanation": "Ownership of the godown is irrelevant. What matters is whether the storage is a necessary step in production."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What is kept out of cost, §5 →",
+        "href": "/foundation/accounting/inventories/#5-what-is-kept-out-of-cost"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Storage costs excluded unless necessary before a further production stage",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-023",
+      "topic": "Ch 4 · Inventories · Borrowing costs",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Interest on a loan taken specifically to buy trading stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Added to the cost of the inventory, because the loan was taken for that stock",
+          "explanation": "The purpose of the borrowing does not change its character. Interest is the cost of financing the goods, not a cost of the goods."
+        },
+        {
+          "key": "B",
+          "text": "Charged to the Profit and Loss Account, not added to the cost of the inventory",
+          "explanation": "Correct. Borrowing costs are ordinarily excluded from the cost of inventories. (AS 16 permits capitalisation only for a qualifying asset that necessarily takes a substantial period of time to get ready for its intended use or sale — rare for ordinary trading stock.)"
+        },
+        {
+          "key": "C",
+          "text": "Deducted from the cost of the inventory",
+          "explanation": "Interest is an expense, not a credit. Nothing is deducted from cost on account of it."
+        },
+        {
+          "key": "D",
+          "text": "Added to cost only for the part of the stock still unsold at the year end",
+          "explanation": "There is no such split. Interest is a period cost and is charged in full to the year in which it accrues."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What is kept out of cost, §5 →",
+        "href": "/foundation/accounting/inventories/#5-what-is-kept-out-of-cost"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Borrowing costs generally excluded from the cost of inventories",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-024",
+      "topic": "Ch 4 · Inventories · NRV meaning",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Net realisable value means:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The current market price of the goods",
+          "explanation": "Market price is a general figure; NRV is entity-specific and is net of what THIS business must still spend to complete and sell the goods."
+        },
+        {
+          "key": "B",
+          "text": "The price at which the goods could be replaced today",
+          "explanation": "That is replacement cost — an entry price. NRV is an exit value. Replacement cost appears in this chapter only as a measure of NRV for raw materials that must be written down."
+        },
+        {
+          "key": "C",
+          "text": "Estimated selling price less the normal profit margin",
+          "explanation": "Deducting the profit margin would give an estimate of cost, not of realisable value. NRV deducts the costs still to be incurred, not the profit."
+        },
+        {
+          "key": "D",
+          "text": "Estimated selling price in the ordinary course of business less estimated costs of completion and estimated costs necessary to make the sale",
+          "explanation": "Correct. Three elements: the selling price expected in the ordinary course of business, minus what it will still cost to finish the goods, minus what it will cost to sell them (commission, packing for despatch, freight outward)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Net realisable value, §6 →",
+        "href": "/foundation/accounting/inventories/#6-net-realisable-value-and-the-raw-material-exception"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Definition of net realisable value",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-025",
+      "topic": "Ch 4 · Inventories · Raw materials rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ganga Spinning holds raw cotton costing ₹4,50,000, whose replacement cost on 31 March 2026 has fallen to ₹3,90,000. The yarn to be made from this cotton is expected to be sold ABOVE its cost. The cotton is valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,50,000",
+          "explanation": "Correct. Materials are not written down below cost if the finished goods in which they will be incorporated are expected to be sold at or above cost. The fall in the cotton's replacement cost is therefore irrelevant, and the cotton stays at its cost of ₹4,50,000."
+        },
+        {
+          "key": "B",
+          "text": "₹3,90,000",
+          "explanation": "This applies replacement cost without first checking what the finished yarn will fetch. Replacement cost becomes relevant only once the finished goods are expected to sell below cost."
+        },
+        {
+          "key": "C",
+          "text": "₹4,20,000",
+          "explanation": "The average of cost and replacement cost. No rule in AS 2 ever averages two measures — the answer is always one or the other."
+        },
+        {
+          "key": "D",
+          "text": "₹60,000",
+          "explanation": "This is the fall in replacement cost, not a value for the stock at all."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Raw material exception, §6 →",
+        "href": "/foundation/accounting/inventories/#6-net-realisable-value-and-the-raw-material-exception"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Materials not written below cost if finished goods sell at or above cost",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-026",
+      "topic": "Ch 4 · Inventories · Raw materials write-down",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Take the same facts — raw cotton costing ₹4,50,000, replacement cost now ₹3,90,000 — but this time the yarn to be made from it will have to be sold BELOW its cost. The cotton is valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,50,000",
+          "explanation": "Cost can no longer be justified: the decline in the material's price now signals that the finished yarn will not recover its cost, which is exactly the trigger for a write-down."
+        },
+        {
+          "key": "B",
+          "text": "₹4,20,000",
+          "explanation": "The average of cost and replacement cost. AS 2 never averages the two measures."
+        },
+        {
+          "key": "C",
+          "text": "₹3,90,000",
+          "explanation": "Correct. Because the finished goods will sell below cost, the material is written down; and in these circumstances replacement cost is the best available measure of the material's net realisable value. Value = ₹3,90,000, with ₹60,000 charged to the Profit and Loss Account."
+        },
+        {
+          "key": "D",
+          "text": "₹3,30,000",
+          "explanation": "This deducts the ₹60,000 fall twice. The write-down takes the stock down to replacement cost, ₹3,90,000, and no further."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Raw material exception, §6 →",
+        "href": "/foundation/accounting/inventories/#6-net-realisable-value-and-the-raw-material-exception"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Replacement cost as the best available measure of NRV for materials",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-027",
+      "topic": "Ch 4 · Inventories · NRV with completion costs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A batch of semi-finished furniture has cost ₹7,00,000 so far. It can be completed for a further ₹1,20,000 and then sold for ₹8,00,000, on which the selling agent's commission will be 4%. The batch is valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹7,00,000",
+          "explanation": "This is cost. Cost is used only when it is the lower of the two — here net realisable value works out lower, so the batch must be written down."
+        },
+        {
+          "key": "B",
+          "text": "₹6,80,000",
+          "explanation": "This deducts the cost to complete but forgets the ₹32,000 commission. Costs necessary to make the sale are deducted in computing NRV just as completion costs are."
+        },
+        {
+          "key": "C",
+          "text": "₹7,68,000",
+          "explanation": "This deducts only the commission (8,00,000 − 32,000) and forgets the ₹1,20,000 still needed to finish the goods."
+        },
+        {
+          "key": "D",
+          "text": "₹6,48,000",
+          "explanation": "Correct. NRV = 8,00,000 − 1,20,000 (cost to complete) − 32,000 (4% commission) = ₹6,48,000, which is below the cost of ₹7,00,000. Value at NRV, writing ₹52,000 off to the Profit and Loss Account."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Net realisable value, §6 →",
+        "href": "/foundation/accounting/inventories/#6-net-realisable-value-and-the-raw-material-exception"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NRV of work-in-progress: selling price less completion and selling costs",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-028",
+      "topic": "Ch 4 · Inventories · Selling costs",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Selling commission payable on goods still in stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Included in cost and also deducted in computing net realisable value",
+          "explanation": "Counting it in both places would penalise the stock twice for the same expense."
+        },
+        {
+          "key": "B",
+          "text": "Excluded from cost, but deducted in computing net realisable value",
+          "explanation": "Correct. Selling costs do not bring the goods to their present location and condition, so they never enter cost; but they must be paid before the money can be realised, so they are deducted from the estimated selling price in arriving at NRV. One expense, exactly one place."
+        },
+        {
+          "key": "C",
+          "text": "Included in cost and ignored in computing net realisable value",
+          "explanation": "Exactly reversed — this is the classic mix-up between the two sides of the comparison."
+        },
+        {
+          "key": "D",
+          "text": "Excluded from cost and ignored in computing net realisable value",
+          "explanation": "The exclusion from cost is right, but ignoring the commission in NRV overstates what the goods will actually realise — the money the business finally receives is net of it."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net realisable value, §6 →",
+        "href": "/foundation/accounting/inventories/#6-net-realisable-value-and-the-raw-material-exception"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Selling costs: out of cost, into the NRV computation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-029",
+      "topic": "Ch 4 · Inventories · NRV above cost",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "If the net realisable value of an item of inventory exceeds its cost, then:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The item is carried at cost and no gain is recognised",
+          "explanation": "Correct. The rule takes the lower of the two, so cost prevails. Recognising the excess would book a profit on goods that have not been sold — precisely what prudence and the realisation concept prevent."
+        },
+        {
+          "key": "B",
+          "text": "The item is written up to net realisable value",
+          "explanation": "Writing stock up above cost would recognise an unrealised profit. It is never done under AS 2."
+        },
+        {
+          "key": "C",
+          "text": "The item is carried at the average of cost and net realisable value",
+          "explanation": "There is no averaging rule anywhere in AS 2."
+        },
+        {
+          "key": "D",
+          "text": "Half the excess is credited to the Profit and Loss Account as a prudent estimate",
+          "explanation": "Invented. No part of an unrealised gain on stock is recognised."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Lower of cost and NRV, §3 →",
+        "href": "/foundation/accounting/inventories/#3-the-rule-lower-of-cost-and-net-realisable-value"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "No write-up when NRV exceeds cost",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-030",
+      "topic": "Ch 4 · Inventories · FIFO",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Belagavi Cloth House records for April 2025: 1 Apr opening stock 200 units at ₹50; 5 Apr purchase 300 units at ₹60; 10 Apr issue 200 units; 18 Apr purchase 500 units at ₹64; 25 Apr issue 450 units. Under FIFO, the closing stock is valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹21,000",
+          "explanation": "This is the PERIODIC WEIGHTED AVERAGE answer (₹60,000 ÷ 1,000 units = ₹60, × 350). FIFO does not average — it assigns the newest prices to the stock left over."
+        },
+        {
+          "key": "B",
+          "text": "₹21,350",
+          "explanation": "This is the MOVING (perpetual) weighted average answer, striking a fresh rate after each purchase. It is not FIFO."
+        },
+        {
+          "key": "C",
+          "text": "₹19,000",
+          "explanation": "This is the LIFO figure — 200 units at ₹50 plus 150 at ₹60 — which assumes the OLDEST goods are left. LIFO is also not permitted by AS 2."
+        },
+        {
+          "key": "D",
+          "text": "₹22,400",
+          "explanation": "Correct. Units available 200 + 300 + 500 = 1,000; issued 200 + 450 = 650; closing 350 units. Under FIFO the oldest units are treated as sold, so all 350 remaining units come from the 18 April lot at ₹64: 350 × 64 = ₹22,400."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Cost formulas, §7 →",
+        "href": "/foundation/accounting/inventories/#7-cost-formulas-fifo-weighted-average-and-specific-identification"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "FIFO: closing stock carries the most recent purchase prices",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-031",
+      "topic": "Ch 4 · Inventories · Weighted average",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On the same April 2025 record — opening 200 units at ₹50; purchases 300 at ₹60 and 500 at ₹64; issues of 200 and 450 units — the closing stock under the PERIODIC weighted average method is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹22,400",
+          "explanation": "This is the FIFO figure (350 units all priced at the latest rate of ₹64). The weighted average blends every price in the period instead."
+        },
+        {
+          "key": "B",
+          "text": "₹21,000",
+          "explanation": "Correct. Cost of goods available = 10,000 + 18,000 + 32,000 = ₹60,000 for 1,000 units, so the weighted average rate is ₹60 per unit. Closing stock 350 units × ₹60 = ₹21,000."
+        },
+        {
+          "key": "C",
+          "text": "₹21,350",
+          "explanation": "This is the MOVING average (a new rate struck after each purchase: ₹56, then ₹61). The periodic method strikes a single rate for the whole period."
+        },
+        {
+          "key": "D",
+          "text": "₹20,300",
+          "explanation": "This uses the simple average of the three prices, (50 + 60 + 64) ÷ 3 = ₹58. The average must be WEIGHTED by quantities, not a plain average of rates."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cost formulas, §7 →",
+        "href": "/foundation/accounting/inventories/#7-cost-formulas-fifo-weighted-average-and-specific-identification"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Periodic weighted average = cost of goods available ÷ units available",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-032",
+      "topic": "Ch 4 · Inventories · Moving average",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On the same April 2025 record — opening 200 units at ₹50; 5 Apr purchase 300 at ₹60; 10 Apr issue 200; 18 Apr purchase 500 at ₹64; 25 Apr issue 450 — the firm uses a perpetual system with the MOVING weighted average. The closing stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹21,000",
+          "explanation": "This is the PERIODIC weighted average, one rate of ₹60 for the whole month. A perpetual system reprices after every receipt, so the answer differs."
+        },
+        {
+          "key": "B",
+          "text": "₹22,400",
+          "explanation": "This is FIFO. Under a moving average the units left carry a blended rate, not the newest purchase price."
+        },
+        {
+          "key": "C",
+          "text": "₹21,350",
+          "explanation": "Correct. After 5 Apr: 500 units costing ₹28,000, rate ₹56. Issue of 200 at ₹56 leaves 300 units at ₹16,800. After 18 Apr: 800 units costing ₹48,800, rate ₹61. Issue of 450 at ₹61 leaves 350 units × ₹61 = ₹21,350."
+        },
+        {
+          "key": "D",
+          "text": "₹19,000",
+          "explanation": "This is the LIFO figure, which AS 2 does not permit and which no averaging method produces."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cost formulas, §7 →",
+        "href": "/foundation/accounting/inventories/#7-cost-formulas-fifo-weighted-average-and-specific-identification"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Moving weighted average: fresh rate struck after every purchase",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-033",
+      "topic": "Ch 4 · Inventories · FIFO cost of goods sold",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On the same April 2025 record — opening 200 units at ₹50; purchases 300 at ₹60 and 500 at ₹64; issues of 200 and 450 units — the cost of goods sold under FIFO is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹37,600",
+          "explanation": "Correct. Cost of goods available = ₹60,000; FIFO closing stock = 350 × 64 = ₹22,400; cost of goods sold = 60,000 − 22,400 = ₹37,600. (Checking the issues directly gives the same: 200 × 50 + 300 × 60 + 150 × 64 = ₹37,600.)"
+        },
+        {
+          "key": "B",
+          "text": "₹39,000",
+          "explanation": "This deducts the weighted-average closing stock of ₹21,000 instead of the FIFO figure of ₹22,400."
+        },
+        {
+          "key": "C",
+          "text": "₹38,650",
+          "explanation": "This deducts the moving-average closing stock of ₹21,350 — the right subtraction under the wrong cost formula."
+        },
+        {
+          "key": "D",
+          "text": "₹41,000",
+          "explanation": "This deducts the LIFO closing stock of ₹19,000. LIFO is not permitted, and in any case the question asks for FIFO."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cost formulas, §7 →",
+        "href": "/foundation/accounting/inventories/#7-cost-formulas-fifo-weighted-average-and-specific-identification"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cost of goods sold = goods available less FIFO closing stock",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-034",
+      "topic": "Ch 4 · Inventories · FIFO",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ravi Electricals began the year with 40 fans costing ₹1,200 each and bought 60 fans at ₹1,250 and then 50 fans at ₹1,290. It sold 110 fans during the year. Under FIFO, the closing stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹48,000",
+          "explanation": "This prices the 40 remaining fans at the OLDEST rate of ₹1,200 — the LIFO assumption, which AS 2 does not permit."
+        },
+        {
+          "key": "B",
+          "text": "₹50,000",
+          "explanation": "This is the weighted-average answer: ₹1,87,500 ÷ 150 fans = ₹1,250, × 40. Correct arithmetic, wrong cost formula."
+        },
+        {
+          "key": "C",
+          "text": "₹1,35,900",
+          "explanation": "This is the FIFO COST OF GOODS SOLD (₹1,87,500 − ₹51,600) — the value of the 110 fans sold, not of the 40 left."
+        },
+        {
+          "key": "D",
+          "text": "₹51,600",
+          "explanation": "Correct. Units available 40 + 60 + 50 = 150; sold 110; closing 40 fans. Under FIFO those 40 come from the newest lot, at ₹1,290: 40 × 1,290 = ₹51,600."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Cost formulas, §7 →",
+        "href": "/foundation/accounting/inventories/#7-cost-formulas-fifo-weighted-average-and-specific-identification"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "FIFO closing stock from the latest lot",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-035",
+      "topic": "Ch 4 · Inventories · Permitted cost formulas",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For inventories that are ordinarily interchangeable, AS 2 permits the cost to be assigned using:",
+      "options": [
+        {
+          "key": "A",
+          "text": "FIFO or LIFO",
+          "explanation": "LIFO was withdrawn when AS 2 was revised. It survives in question papers only as a distractor."
+        },
+        {
+          "key": "B",
+          "text": "LIFO only",
+          "explanation": "LIFO is not permitted at all, let alone exclusively."
+        },
+        {
+          "key": "C",
+          "text": "FIFO or weighted average cost",
+          "explanation": "Correct. For ordinarily interchangeable items the permitted formulas are first-in first-out and weighted average cost. Specific identification is reserved for items that are NOT ordinarily interchangeable or that are segregated for a specific project."
+        },
+        {
+          "key": "D",
+          "text": "Any formula the enterprise chooses, including LIFO, if applied consistently",
+          "explanation": "Consistency does not cure an impermissible formula. The choice is confined to FIFO and weighted average."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cost formulas, §7 →",
+        "href": "/foundation/accounting/inventories/#7-cost-formulas-fifo-weighted-average-and-specific-identification"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Permitted cost formulas under AS 2; LIFO not permitted",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-036",
+      "topic": "Ch 4 · Inventories · Specific identification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Specific identification of cost is the appropriate method when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The items are identical and bought in bulk at varying prices",
+          "explanation": "Identical, interchangeable items are exactly the case where specific identification is inappropriate — and where FIFO or weighted average must be used instead."
+        },
+        {
+          "key": "B",
+          "text": "The items are not ordinarily interchangeable, or are goods segregated for a specific project",
+          "explanation": "Correct. A jeweller's individually made ornaments, or material earmarked for one customer's order, each carry their own actual cost. Applying specific identification to interchangeable items would let management pick which cost to leave in stock."
+        },
+        {
+          "key": "C",
+          "text": "Prices are rising steadily during the year",
+          "explanation": "The direction of prices affects which formula gives the higher figure; it never decides which formula is legally available."
+        },
+        {
+          "key": "D",
+          "text": "The enterprise maintains a perpetual inventory system",
+          "explanation": "The system of record-keeping and the cost formula are separate choices. A perpetual system can run FIFO or a moving average just as well."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cost formulas, §7 →",
+        "href": "/foundation/accounting/inventories/#7-cost-formulas-fifo-weighted-average-and-specific-identification"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Specific identification for non-interchangeable or segregated items",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-037",
+      "topic": "Ch 4 · Inventories · Retail method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The retail (adjusted selling price) method is appropriate for:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A retail business with a large number of rapidly changing items sold at broadly similar gross margins",
+          "explanation": "Correct. Where costing each of thousands of fast-moving lines is impracticable and margins are broadly uniform, the stock is taken at selling price and an appropriate percentage gross margin is deducted, usually an average percentage for each department."
+        },
+        {
+          "key": "B",
+          "text": "A jeweller valuing individually identified ornaments",
+          "explanation": "Distinct, non-interchangeable pieces call for specific identification, where each item's actual cost is known."
+        },
+        {
+          "key": "C",
+          "text": "A construction contractor's work-in-progress",
+          "explanation": "Work-in-progress under construction contracts is outside AS 2 altogether."
+        },
+        {
+          "key": "D",
+          "text": "A manufacturer valuing partly processed goods",
+          "explanation": "Partly processed goods have no selling price of their own to work back from; their cost is built up from materials and conversion cost."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Retail method, §8 →",
+        "href": "/foundation/accounting/inventories/#8-techniques-standard-cost-and-the-retail-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Retail method: scope and conditions of use",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-038",
+      "topic": "Ch 4 · Inventories · Retail method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ananya Garments' closing stock at selling prices is ₹6,00,000, and the shop earns a gross margin of 25% ON SELLING PRICE. Under the retail method the closing stock is valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6,00,000",
+          "explanation": "This leaves the stock at selling price, so the shop's own unearned profit of ₹1,50,000 would sit inside the asset."
+        },
+        {
+          "key": "B",
+          "text": "₹4,80,000",
+          "explanation": "This treats the 25% as a mark-up on COST (6,00,000 × 100/125). The question says the margin is on selling price, so cost is 75% of the selling value, not 100/125 of it."
+        },
+        {
+          "key": "C",
+          "text": "₹1,50,000",
+          "explanation": "This is the gross margin itself (25% of ₹6,00,000), which is the amount to be REMOVED, not the value that remains."
+        },
+        {
+          "key": "D",
+          "text": "₹4,50,000",
+          "explanation": "Correct. A margin of 25% on selling price leaves cost at 75% of selling price: 6,00,000 × 75% = ₹4,50,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Retail method, §8 →",
+        "href": "/foundation/accounting/inventories/#8-techniques-standard-cost-and-the-retail-method"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Retail method: cost = sale value less appropriate percentage gross margin",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-039",
+      "topic": "Ch 4 · Inventories · Retail method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A department's records, all at SELLING prices, show opening stock ₹2,00,000, purchases ₹12,00,000 and sales ₹8,00,000. The gross margin is 30% of selling price. Under the retail method the closing stock is valued at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6,00,000",
+          "explanation": "This is the closing stock at SELLING price. The whole point of the method is to strip the margin out of that figure."
+        },
+        {
+          "key": "B",
+          "text": "₹4,20,000",
+          "explanation": "Correct. Closing stock at selling price = 2,00,000 + 12,00,000 − 8,00,000 = ₹6,00,000. With a margin of 30% on selling price, cost is 70%: 6,00,000 × 70% = ₹4,20,000."
+        },
+        {
+          "key": "C",
+          "text": "₹5,60,000",
+          "explanation": "This applies the 70% to SALES (8,00,000 × 70%), giving the cost of goods sold rather than the cost of what is left."
+        },
+        {
+          "key": "D",
+          "text": "₹2,80,000",
+          "explanation": "This omits the opening stock from the retail build-up (12,00,000 − 8,00,000 = 4,00,000, × 70%). Goods available at retail include the opening stock."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Retail method, §8 →",
+        "href": "/foundation/accounting/inventories/#8-techniques-standard-cost-and-the-retail-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Retail method with a build-up of stock at selling prices",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-040",
+      "topic": "Ch 4 · Inventories · Periodic system",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kaveri Stores' books show opening stock ₹1,20,000, purchases ₹8,50,000, returns outward ₹20,000 and carriage inward ₹30,000. The physical count on 31 March 2026 values the closing stock at ₹1,52,000. Under the periodic system the cost of goods sold is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹9,80,000",
+          "explanation": "This is the cost of goods AVAILABLE for sale (1,20,000 + 8,50,000 − 20,000 + 30,000). The closing stock has not been deducted at all."
+        },
+        {
+          "key": "B",
+          "text": "₹8,20,000",
+          "explanation": "This deducts ₹1,60,000. The periodic system has no stock records to fall back on — the counted figure of ₹1,52,000 is the only closing stock there is."
+        },
+        {
+          "key": "C",
+          "text": "₹8,28,000",
+          "explanation": "Correct. Cost of goods sold = 1,20,000 + (8,50,000 − 20,000) + 30,000 − 1,52,000 = ₹8,28,000. Note that any pilferage is silently absorbed inside this figure — the periodic system cannot separate it out."
+        },
+        {
+          "key": "D",
+          "text": "₹8,68,000",
+          "explanation": "This ADDS the returns outward instead of deducting them. Goods returned to suppliers were never available for sale, so they come out of purchases."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Periodic and perpetual, §9 →",
+        "href": "/foundation/accounting/inventories/#9-periodic-and-perpetual-inventory-systems"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Periodic COGS = opening + net purchases + direct expenses − closing",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-041",
+      "topic": "Ch 4 · Inventories · Perpetual system",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kaveri Stores maintains a perpetual inventory system. On 31 March 2026 the stock ledger shows a balance of ₹1,60,000, but the physical count values the stock at ₹1,52,000. In the final accounts:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Closing stock is shown at ₹1,52,000 and ₹8,000 is charged to the Profit and Loss Account as stock shortage",
+          "explanation": "Correct. The physically verified figure goes into the Balance Sheet, and the ₹8,000 gap between records and reality is identified and written off as a shortage. Revealing that shortage separately is the whole advantage of the perpetual system."
+        },
+        {
+          "key": "B",
+          "text": "Closing stock is shown at ₹1,60,000, the stock ledger being the more reliable record",
+          "explanation": "Records cannot outrank the goods actually on the floor. Carrying ₹1,60,000 would keep ₹8,000 of stock that no longer exists on the Balance Sheet."
+        },
+        {
+          "key": "C",
+          "text": "Closing stock is shown at ₹1,52,000 and the ₹8,000 is added back to purchases",
+          "explanation": "Adjusting purchases would bury the shortage inside the cost of goods sold — which is what the perpetual system exists to prevent."
+        },
+        {
+          "key": "D",
+          "text": "Closing stock is shown at ₹1,68,000",
+          "explanation": "This adds the shortage to the counted figure instead of writing it off. The stock can never exceed what was counted."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Periodic and perpetual, §9 →",
+        "href": "/foundation/accounting/inventories/#9-periodic-and-perpetual-inventory-systems"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Perpetual system: physical count reveals the shortage",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-042",
+      "topic": "Ch 4 · Inventories · Periodic system",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A distinguishing feature of the PERIODIC inventory system is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The cost of goods sold is built up by adding together the priced issues for the year",
+          "explanation": "That is the perpetual system, which prices every issue as it is made. Under the periodic system there are no issue records."
+        },
+        {
+          "key": "B",
+          "text": "The stock figure is available at any moment without a physical count",
+          "explanation": "This is the perpetual system's advantage. Under the periodic system the stock figure exists only after a count."
+        },
+        {
+          "key": "C",
+          "text": "Pilferage and wastage are separately identified as they occur",
+          "explanation": "Reversed. Only a running record can reveal a shortage, by comparison with a physical count."
+        },
+        {
+          "key": "D",
+          "text": "Losses and pilferage are not separately identified — they are absorbed in the cost of goods sold",
+          "explanation": "Correct. Cost of goods sold is computed as a residual: opening + net purchases + direct expenses − closing stock. Anything that vanished silently reduces the closing stock and therefore inflates the cost of goods sold, with no separate trace."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Periodic and perpetual, §9 →",
+        "href": "/foundation/accounting/inventories/#9-periodic-and-perpetual-inventory-systems"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Periodic system: COGS as a residual absorbing losses",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-043",
+      "topic": "Ch 4 · Inventories · Cut-off",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A physical count on 31 March 2026 valued Suman Traders' stock at ₹6,50,000. It is then found that: (i) goods costing ₹40,000 despatched by a supplier before the year end, title having passed and the purchase already recorded, were still in transit; (ii) goods costing ₹25,000 held on consignment from Zenith Mills were included in the count; (iii) goods costing ₹35,000 sent to a customer on sale or return, approval not yet given and the time limit not expired, were not in the count; (iv) goods costing ₹18,000 sold and invoiced on 29 March but awaiting collection by the customer were included in the count. The correct closing stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6,50,000",
+          "explanation": "The raw physical count, with no adjustment. The count answers 'what is lying here?'; the accounts need 'what do we own?', and all four items differ between the two."
+        },
+        {
+          "key": "B",
+          "text": "₹6,82,000",
+          "explanation": "Correct. 6,50,000 + 40,000 (goods in transit, ours though not here) − 25,000 (consignment inward, Zenith's goods) + 35,000 (sale-or-return goods, still ours until approved) − 18,000 (sold and invoiced, no longer ours) = ₹6,82,000."
+        },
+        {
+          "key": "C",
+          "text": "₹7,32,000",
+          "explanation": "This ADDS the ₹25,000 of consignment stock instead of deducting it. Goods received on consignment belong to the consignor and must come out of the count."
+        },
+        {
+          "key": "D",
+          "text": "₹6,42,000",
+          "explanation": "This omits the ₹40,000 of goods in transit. Title has passed and the purchase is already in the books, so the goods must be added even though they are on a truck."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Year-end cut-off, §10 →",
+        "href": "/foundation/accounting/inventories/#10-year-end-cut-off-whose-goods-are-they"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Cut-off adjustments to a physical stock figure",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-044",
+      "topic": "Ch 4 · Inventories · Consignment",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Goods costing ₹1,20,000 were sent to a consignee during the year, of which three-fourths remained unsold with him on 31 March 2026. The consignor's closing stock includes, in respect of these goods:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nil, because the goods are physically with the consignee",
+          "explanation": "Possession is not ownership. A consignee holds goods as an agent; title stays with the consignor until the consignee sells them."
+        },
+        {
+          "key": "B",
+          "text": "₹1,20,000",
+          "explanation": "This counts the whole consignment. One-fourth has already been sold by the consignee, so only three-fourths is still stock."
+        },
+        {
+          "key": "C",
+          "text": "₹90,000",
+          "explanation": "Correct. The unsold three-fourths belongs to the consignor: 1,20,000 × 3/4 = ₹90,000 (in a full problem, plus the proportionate non-recurring expenses of sending the goods)."
+        },
+        {
+          "key": "D",
+          "text": "₹30,000",
+          "explanation": "This is the one-fourth the consignee has already SOLD — the part that is no longer stock at all."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Year-end cut-off, §10 →",
+        "href": "/foundation/accounting/inventories/#10-year-end-cut-off-whose-goods-are-they"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Unsold consignment stock belongs to the consignor",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c4-045",
+      "topic": "Ch 4 · Inventories · Sale or return",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 20 March 2026 goods costing ₹60,000 were sent to a customer on sale or return for ₹75,000 and were wrongly recorded as a sale. By 31 March the customer had neither approved them nor returned them, and the time limit had not expired. The draft profit is ₹5,00,000. The corrected profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,85,000",
+          "explanation": "Correct. Both legs are needed: reverse the sale of ₹75,000 and bring the goods back into closing stock at their cost of ₹60,000. Profit = 5,00,000 − 75,000 + 60,000 = ₹4,85,000, a fall of ₹15,000 — exactly the unearned profit that had been booked."
+        },
+        {
+          "key": "B",
+          "text": "₹5,00,000",
+          "explanation": "No adjustment at all. A sale on approval is not a sale until the customer approves it or the time limit expires, so the ₹15,000 profit was recognised too early."
+        },
+        {
+          "key": "C",
+          "text": "₹4,25,000",
+          "explanation": "This reverses the ₹75,000 sale but forgets to put the goods back into closing stock at cost. Only half the correction has been made."
+        },
+        {
+          "key": "D",
+          "text": "₹5,60,000",
+          "explanation": "This adds the cost of ₹60,000 to profit without reversing the sale — the correction has been applied in the wrong direction on the wrong leg."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Year-end cut-off, §10 →",
+        "href": "/foundation/accounting/inventories/#10-year-end-cut-off-whose-goods-are-they"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Sale or return: reverse the sale and restore the cost to stock",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c4-01",
+      "topic": "Ch 4 · Inventories · Meaning and basis",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Define inventories, state the three categories into which they fall with one example of each, and state the basis on which they are valued. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Inventories are assets held for sale in the ordinary course of business, in the process of production for such sale, or in the form of materials or supplies to be consumed in production or in rendering services",
+          "marks": 1,
+          "citation": "meaning of inventories"
+        },
+        {
+          "point": "Finished goods or stock-in-trade — goods held for sale, e.g. shirts in a garment shop; the classification depends on what the business does with the asset, not on the nature of the asset",
+          "marks": 1,
+          "citation": "categories of inventories"
+        },
+        {
+          "point": "Work-in-progress — goods in the process of production, e.g. partly stitched shirts; and raw materials, stores, spares and loose tools to be consumed, e.g. cloth and thread",
+          "marks": 1,
+          "citation": "categories of inventories"
+        },
+        {
+          "point": "Basis of valuation: the lower of cost and net realisable value, compared item by item or for groups of similar or related items, an application of prudence",
+          "marks": 1,
+          "citation": "AS 2 measurement base"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Meaning, categories and valuation base",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c4-02",
+      "topic": "Ch 4 · Inventories · Cost inclusions and exclusions",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the items that are included in, and the items that are excluded from, the cost of inventories. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Cost comprises the cost of purchase, the cost of conversion and other costs incurred in bringing the inventories to their present location and condition",
+          "marks": 1,
+          "citation": "components of cost"
+        },
+        {
+          "point": "Cost of purchase = purchase price less trade discounts, rebates and duty drawbacks, plus duties and taxes not recoverable from the tax authorities, plus freight inward, transit insurance and other directly attributable acquisition costs",
+          "marks": 1,
+          "citation": "cost of purchase"
+        },
+        {
+          "point": "Cost of conversion = direct labour plus a systematic allocation of production overheads, fixed overheads being allocated on normal capacity with the unallocated portion expensed",
+          "marks": 1,
+          "citation": "cost of conversion"
+        },
+        {
+          "point": "Excluded: abnormal amounts of wasted material, labour and other production costs; storage costs unless necessary in the production process before a further stage; administrative overheads that do not contribute to bringing the inventories to their present location and condition; selling and distribution costs",
+          "marks": 1,
+          "citation": "exclusions from cost"
+        },
+        {
+          "point": "Also excluded: interest and other borrowing costs (subject to the AS 16 exception for a qualifying asset), recoverable taxes such as creditable GST, and cash discount, which is a financing gain credited to income",
+          "marks": 1,
+          "citation": "exclusions from cost"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Inclusions in and exclusions from the cost of inventories",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c4-03",
+      "topic": "Ch 4 · Inventories · NRV and raw materials",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain net realisable value, state why inventories are written down to it, and state the special rule that applies to raw materials whose prices have fallen. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Net realisable value = estimated selling price in the ordinary course of business − estimated costs of completion − estimated costs necessary to make the sale",
+          "marks": 1,
+          "citation": "definition of NRV"
+        },
+        {
+          "point": "Inventories are written down because an asset must not be carried at more than the amount expected to be realised from it; the write-down is a charge to the Profit and Loss Account of the year",
+          "marks": 1,
+          "citation": "prudence and the write-down"
+        },
+        {
+          "point": "The comparison is made item by item, or for groups of similar or related items — never by netting total cost against total NRV, which would set unrealised gains against real losses; and where NRV exceeds cost, the item stays at cost and no gain is recognised",
+          "marks": 1,
+          "citation": "unit of comparison"
+        },
+        {
+          "point": "Materials held for use in production are not written down below cost if the finished goods in which they will be incorporated are expected to be sold at or above cost, however far the material's price has fallen",
+          "marks": 1,
+          "citation": "materials write-down rule"
+        },
+        {
+          "point": "Where the decline in material prices indicates that the cost of the finished goods will exceed their net realisable value, the materials are written down; in such circumstances replacement cost may be the best available measure of their net realisable value",
+          "marks": 1,
+          "citation": "replacement cost as a measure of NRV"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "NRV, the item-by-item rule and the materials exception",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c4-04",
+      "topic": "Ch 4 · Inventories · Cost formulas and techniques",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the cost formulas permitted by AS 2 and explain each briefly, and describe the retail method of measuring cost. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Specific identification: the actual cost of each item is assigned to it; used where the items are not ordinarily interchangeable or are goods segregated for a specific project",
+          "marks": 1,
+          "citation": "specific identification"
+        },
+        {
+          "point": "First-in first-out: the items purchased first are assumed to be sold first, so the closing stock consists of the most recent purchases",
+          "marks": 1,
+          "citation": "FIFO"
+        },
+        {
+          "point": "Weighted average cost: cost of goods available for sale ÷ units available for sale; the average may be struck periodically for the whole period or freshly after each purchase (moving average) under a perpetual system. LIFO is not permitted",
+          "marks": 1,
+          "citation": "weighted average; LIFO not permitted"
+        },
+        {
+          "point": "Standard cost as a technique: stock is priced at predetermined costs based on normal levels of materials, labour, efficiency and capacity utilisation, reviewed regularly and revised when conditions change; permitted only if the results approximate actual cost",
+          "marks": 1,
+          "citation": "standard cost technique"
+        },
+        {
+          "point": "Retail (adjusted selling price) method: used in retail trade with a large number of rapidly changing items of similar margins; cost = sale value of the stock less an appropriate percentage gross margin, usually an average percentage for each department",
+          "marks": 1,
+          "citation": "retail method"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Permitted cost formulas and measurement techniques",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c4-05",
+      "topic": "Ch 4 · Inventories · Inventory systems",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Distinguish between the periodic and the perpetual inventory systems on any four bases, and state one advantage of each. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Records: the periodic system keeps no continuous stock record; the perpetual system maintains a stores or stock ledger updated with every receipt and issue",
+          "marks": 1,
+          "citation": "periodic vs perpetual: records"
+        },
+        {
+          "point": "Determination of closing stock: periodic — by physically counting at the period end; perpetual — from the balance in the records, the physical count serving as a check",
+          "marks": 1,
+          "citation": "periodic vs perpetual: closing stock"
+        },
+        {
+          "point": "Cost of goods sold: periodic — a residual, opening stock + net purchases + direct expenses − closing stock; perpetual — the total of the priced issues",
+          "marks": 1,
+          "citation": "periodic vs perpetual: cost of goods sold"
+        },
+        {
+          "point": "Losses and pilferage: periodic — absorbed silently in the cost of goods sold; perpetual — revealed as the difference between the record balance and the physical count, and written off as a shortage",
+          "marks": 1,
+          "citation": "periodic vs perpetual: losses"
+        },
+        {
+          "point": "Advantage of the periodic system: it is simple and inexpensive, needing no continuous record-keeping",
+          "marks": 1,
+          "citation": "advantage of the periodic system"
+        },
+        {
+          "point": "Advantage of the perpetual system: stock figures and cost of goods sold are available at any time, interim accounts can be prepared without a full count, counting can be staggered without closing the business, and shortages are located",
+          "marks": 1,
+          "citation": "advantage of the perpetual system"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Periodic and perpetual inventory systems compared",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c4-06",
+      "topic": "Ch 4 · Inventories · Cut-off",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State, with reasons, how each of the following is treated in arriving at the closing stock of a trader on 31 March: (a) goods in transit despatched by a supplier before the year end, title having passed; (b) goods lying unsold with the trader's consignee; (c) goods received on consignment from another firm and lying in the trader's godown; (d) goods sent on sale or return and not yet approved; (e) goods sold and invoiced but awaiting collection by the customer; (f) a customer's machine lying in the trader's premises for repair. (6 marks)",
+      "skeleton": [
+        {
+          "point": "(a) Goods in transit: INCLUDED at cost, because title has passed to the trader and the purchase has been recorded; physical absence is irrelevant to ownership",
+          "marks": 1,
+          "citation": "goods in transit"
+        },
+        {
+          "point": "(b) Goods with the consignee: INCLUDED at cost plus proportionate non-recurring expenses, because a consignee holds goods as an agent and title remains with the consignor until sale",
+          "marks": 1,
+          "citation": "consignment outward"
+        },
+        {
+          "point": "(c) Goods received on consignment: EXCLUDED, because they belong to the consignor; if the physical count included them, they must be deducted",
+          "marks": 1,
+          "citation": "consignment inward"
+        },
+        {
+          "point": "(d) Goods on sale or return not yet approved: INCLUDED at cost, and any sale recorded must be reversed, because the sale is complete only on approval or on expiry of the time limit",
+          "marks": 1,
+          "citation": "sale or return"
+        },
+        {
+          "point": "(e) Goods sold and invoiced but not collected: EXCLUDED, because the sale is complete and title has passed to the customer, however solidly the goods sit in the godown",
+          "marks": 1,
+          "citation": "goods sold awaiting collection"
+        },
+        {
+          "point": "(f) Customer's machine held for repair: EXCLUDED, because it never belonged to the trader; goods held for others are not the trader's inventory in any circumstance",
+          "marks": 1,
+          "citation": "third-party goods"
+        }
+      ],
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Year-end cut-off and ownership tests",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}
