@@ -70,16 +70,30 @@ const resources = interPaper?.resources ?? level.resources;
             <div class="overline" style="margin: 28px 0 10px;">{section.name}</div>
             <div class="list-card" style="max-width: 720px;">
               {section.chapters.map((ch) => (
-                <div class="list-row">
-                  <span class="tnum" style="min-width: 34px; color: var(--text-3); font-size: 14px;">{ch.smNumber ?? `Ch ${ch.number}`}</span>
-                  <span style="flex: 1;">
-                    <span style="font-size: 15px; font-weight: 600;">{ch.name}</span>
-                    {ch.units && (
-                      <span style="display: block; font-size: 13px; color: var(--text-3); margin-top: 2px;">{ch.units.join(' · ')}</span>
-                    )}
-                  </span>
-                  <Badge kind="neutral">Notes soon</Badge>
-                </div>
+                ch.hasNotes ? (
+                  <a class="list-row" href={`/${level.id}/${paper.slug}/${ch.slug}/`}>
+                    <span class="tnum" style="min-width: 34px; color: var(--text-3); font-size: 14px;">{ch.smNumber ?? `Ch ${ch.number}`}</span>
+                    <span style="flex: 1;">
+                      <span style="font-size: 15px; font-weight: 600;">{ch.name}</span>
+                      {ch.units && (
+                        <span style="display: block; font-size: 13px; color: var(--text-3); margin-top: 2px;">{ch.units.join(' · ')}</span>
+                      )}
+                    </span>
+                    <span class="badge badge-draft">✎ Community draft</span>
+                    <span class="chev" aria-hidden="true">›</span>
+                  </a>
+                ) : (
+                  <div class="list-row">
+                    <span class="tnum" style="min-width: 34px; color: var(--text-3); font-size: 14px;">{ch.smNumber ?? `Ch ${ch.number}`}</span>
+                    <span style="flex: 1;">
+                      <span style="font-size: 15px; font-weight: 600;">{ch.name}</span>
+                      {ch.units && (
+                        <span style="display: block; font-size: 13px; color: var(--text-3); margin-top: 2px;">{ch.units.join(' · ')}</span>
+                      )}
+                    </span>
+                    <Badge kind="neutral">Notes soon</Badge>
+                  </div>
+                )
               ))}
             </div>
           </>
