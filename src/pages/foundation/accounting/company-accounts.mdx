@@ -1,0 +1,619 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Company Accounts'
+description: 'CA Foundation Accounting Ch 11 — company accounts in plain language: share capital ladder, issue at premium, pro-rata allotment, forfeiture and reissue, calls in arrears and advance, and issue of debentures, with five fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 11 · Company Accounts'
+chapterSlug: company-accounts
+masteryId: f1-ch11
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, s.43 (kinds of share capital)'
+  - 'Companies Act 2013, s.52 (securities premium and its permitted uses)'
+  - 'Companies Act 2013, s.53 (shares may not be issued at a discount) with s.54 (sweat equity)'
+  - 'Companies Act 2013, Schedule I Table F (interest on calls in arrears 10% p.a., on calls in advance 12% p.a.)'
+  - 'Forfeiture, reissue and debenture presentation conventions as summarised for Foundation'
+sourceLabel: 'ICAI SM Ch 11 scope (May 2026 ed., Units 1–3) · Companies Act 2013 ss.43, 52, 53 · Table F'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 26 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=company-accounts'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Sharma &amp; Sons has run a tile showroom in Indore for thirty years. To open a factory the family needs
+₹8 crore — far more than the family can put in, and more than any bank will lend against a proprietor's
+own name. So the family does what businesses have done for two centuries: it forms a **company**, splits
+the money it needs into small pieces called **shares**, and sells those pieces to hundreds of strangers.
+Each stranger risks only the price of his own pieces; nobody has to trust anybody personally.
+
+This chapter is the bookkeeping of that idea. How does a company record money coming in from shareholders
+(Units 1 and 2)? What happens when a shareholder does not pay (forfeiture and reissue)? And how does it
+record money *borrowed* through **debentures** (Unit 3)? Almost all of it is arithmetic with fixed
+patterns — learn six of them (issue at premium, pro-rata allotment, forfeiture, reissue, Table F interest,
+loss on issue of debentures) and very little can surprise you.
+
+## 1. What a company is, and the kinds you must know
+
+A company is an **artificial legal person** created by registration under the Companies Act 2013. Six
+features follow from that one sentence, and Unit 1 theory questions come from this list:
+
+- **Separate legal entity** — the company owns its property and owes its debts; a shareholder owns shares,
+  not the factory.
+- **Limited liability** — a member can be asked for the **unpaid amount on his shares and nothing more**;
+  on fully paid shares his liability is nil.
+- **Perpetual succession** — members die or sell out, the company continues until wound up by law.
+- **Transferability** — shares of a public company are freely transferable; a private company restricts
+  transfer by its articles.
+- **Separate property and capacity to sue** — it contracts, sues and is sued in its own name.
+- **Common seal, now optional** — no longer compulsory; the company may act through authorised signatories.
+
+**The kinds you must be able to tell apart:**
+
+| Kind | The defining test |
+|---|---|
+| **Private company** | Articles restrict transfer of shares, limit members to 200 (joint holders counted as one; employee-members excluded) and prohibit any invitation to the public. Minimum 2 members, 2 directors. |
+| **Public company** | Not a private company. Minimum 7 members, 3 directors; no upper limit on members; may invite the public to subscribe. |
+| **One Person Company (OPC)** | A private company with a **single member**, who must be a natural person, and who must name a **nominee** to step in on his death or incapacity. |
+| **Small company** | A private company below the prescribed paid-up capital and turnover limits (currently ₹4 crore and ₹40 crore). A public company, a holding or subsidiary company, a section 8 company and a company governed by a special Act can **never** be a small company, whatever their size. |
+| **Listed company** | A company whose securities are listed on a recognised stock exchange. Listing is about the *securities*, not about size. |
+
+<Callout kind="pointer">
+  <p>
+    "Small company" and "listed company" are traps in opposite directions. A small company is defined by
+    <strong>numbers plus exclusions</strong> — memorise the exclusion list, which the examiner tests more
+    often than the rupee limits. A listed company is defined by <strong>listing alone</strong>; the label
+    follows the securities, not the size.
+  </p>
+</Callout>
+
+## 2. The share capital ladder
+
+Five words describe the same money at five stages of its journey; questions live or die on keeping them
+straight.
+
+1. **Authorised (nominal / registered) capital** — the ceiling stated in the memorandum. A *permission*,
+   not money; it cannot be exceeded without altering the memorandum.
+2. **Issued capital** — the part of it actually offered to the public.
+3. **Subscribed capital** — the part of the issued capital applied for and allotted.
+4. **Called-up capital** — the part of the subscribed capital so far **demanded** from shareholders.
+5. **Paid-up capital** — the called-up capital **actually received**, i.e. called-up less calls in arrears.
+
+Two more terms hang off the ladder. **Uncalled capital** = Subscribed − Called-up: money the company can
+still ask for. **Reserve capital** is a portion of that *uncalled* capital which the company resolves, by
+special resolution, to call up **only on winding up** — not to be confused with **capital reserve**, a
+reserve created out of capital profits.
+
+<div class="formula">Paid-up capital = Called-up capital − Calls in arrears (calls in advance are not added)</div>
+
+Money received before a call is made is a **liability**, not paid-up capital, until the call is made.
+
+## 3. Equity and preference shares under section 43
+
+Section 43 says the share capital of a company limited by shares shall be of two kinds only: **equity share
+capital** — either with voting rights, or with differential rights as to dividend, voting or otherwise as
+prescribed — and **preference share capital**.
+
+**Preference shares** carry two preferential rights: a preference in **dividend** (a fixed amount or rate)
+and a preference in **repayment of capital** on winding up. That is the whole definition; the rest are
+varieties:
+
+- **Cumulative** — a dividend missed in a lean year is carried forward and must be paid before equity gets
+  anything; **non-cumulative** — a year missed is lost. Preference shares are presumed cumulative unless
+  the terms say otherwise.
+- **Participating** — after equity receives a stated rate, these shares also share in surplus profits (and
+  often surplus assets). **Non-participating** is the default.
+- **Convertible / non-convertible** — convertible into equity shares on stated terms.
+- **Redeemable** — repayable within the period the law allows. A company limited by shares **cannot issue
+  irredeemable preference shares**; the mechanics of redemption are an Intermediate topic.
+
+**Equity shares** take the residue: no fixed dividend, no preference, but the votes and the whole of
+whatever profit is left after the preference dividend.
+
+## 4. Shares versus debentures
+
+A share buys **ownership**; a debenture buys the company's **promise to repay a loan**. Every difference
+below follows from that one line.
+
+| | Share | Debenture |
+|---|---|---|
+| Status of holder | Owner (member) | Creditor |
+| Return | **Dividend** — an appropriation of profit, payable only if there is profit and only if declared | **Interest** — a **charge against profit**, payable whether or not the company earns profit |
+| Voting | Equity shares carry voting rights | No voting rights at general meetings |
+| Repayment | Capital is not normally returned during the company's life | Repayable on the due date (except perpetual debentures) |
+| Security | Unsecured by nature | May be secured by a charge on assets |
+| Issue at a discount | **Prohibited** (s.53), except sweat equity | **Permitted** — a debenture is a loan, not capital |
+| On winding up | Paid last | Paid before all shareholders |
+
+## 5. Issue of shares: application, allotment and calls
+
+Money comes in instalments, and each instalment gets **two entries** — one when it becomes *due*,
+one when it is *received*.
+
+| Stage | Entry |
+|---|---|
+| Application money received | Bank A/c **Dr** … To Share Application A/c |
+| Application money transferred on allotment | Share Application A/c **Dr** … To Share Capital A/c (and To Securities Premium A/c, if any premium is charged on application) |
+| Allotment money becomes due | Share Allotment A/c **Dr** … To Share Capital A/c … To Securities Premium A/c |
+| Allotment money received | Bank A/c **Dr** … To Share Allotment A/c |
+| Call becomes due | Share First Call A/c **Dr** … To Share Capital A/c |
+| Call received | Bank A/c **Dr** … To Share First Call A/c |
+
+Three rules govern the instalments:
+
+- **Minimum application money.** Section 39 requires the amount payable on application to be at least
+  **5% of the nominal value** of the security (SEBI requires a much higher 25% of the issue price for a
+  public issue).
+- **Minimum subscription.** No allotment may be made unless the minimum subscription stated in the
+  prospectus has been subscribed and that application money received; if it is not received within 30 days
+  of the issue of the prospectus, the application money must be **refunded**.
+- **Uniformity of calls (s.49).** Calls on shares of the same class must be made on a uniform basis. Table
+  F adds that no call exceed 25% of nominal value, that calls be a month apart, and that 14 days' notice
+  be given.
+
+<Callout kind="pointer">
+  <p>
+    Share Application, Allotment and Call accounts are <strong>temporary personal accounts</strong>, opened
+    to collect one instalment and closed the moment it is received. A balance left in Share Allotment A/c is
+    no mystery — it is the <em>allotment money nobody paid</em>, and it is exactly what you credit when
+    those shares are forfeited.
+  </p>
+</Callout>
+
+## 6. Securities premium and the ban on issue at a discount
+
+A share of ₹10 sold for ₹14 has a **face value** of ₹10 and a **premium** of ₹4. Only the ₹10 is share
+capital; the ₹4 is credited to the **Securities Premium Account**, and section 52 lists the only purposes
+it may be applied to:
+
+- issuing **fully paid bonus shares** to members;
+- writing off the **preliminary expenses** of the company;
+- writing off the **expenses of, commission paid on, or discount allowed on, any issue of shares
+  or debentures**;
+- providing for the **premium payable on redemption** of redeemable preference shares or
+  debentures;
+- **buying back** its own shares or other securities under section 68.
+
+<Callout kind="mistake">
+  <p>
+    Securities premium is <strong>never available for dividend</strong>. Any option that pays a dividend
+    out of it, or uses it to write off a trading or revenue loss, is wrong — those are the two distractors
+    the examiner plants.
+  </p>
+</Callout>
+
+Going the other way is barred. **Section 53: a company shall not issue shares at a discount**, and a share
+so issued is **void**. Two narrow doors exist: **sweat equity shares** under section 54 (to directors or
+employees for know-how or value addition), and shares issued to creditors on conversion of debt under a
+statutory resolution plan or debt-restructuring scheme. Debentures are unaffected — they may freely be
+issued at a discount.
+
+## 7. Oversubscription and pro-rata allotment
+
+When 90,000 shares are applied for and only 60,000 are on offer, the company must dispose of the extra
+applications. It has three tools, and a question usually mixes them: **reject** some applications outright
+(their money is **refunded** in full); **allot in full** to some applicants; and **allot pro-rata** to the
+rest, where the **excess application money is not refunded** but **adjusted against allotment** (and, if
+the articles permit and it still exceeds allotment, against the calls).
+
+<div class="formula">Pro-rata ratio = Shares allotted to the group ÷ Shares applied for by the group</div>
+<div class="formula">Shares applied for by a member = Shares allotted to him × (Shares applied for by the group ÷ Shares allotted to the group)</div>
+<div class="formula">Excess application money of a member = (Shares applied − Shares allotted) × Application money per share</div>
+<div class="formula">Allotment money still due from a member = (Shares allotted × Allotment per share) − His excess application money</div>
+
+<Callout kind="mistake">
+  <p>
+    The classic slip: computing the amount unpaid on allotment on the shares <strong>applied for</strong>
+    instead of the shares <strong>allotted</strong>, or forgetting that his excess application money is
+    already sitting against allotment. Both wrong figures will be among the four options.
+  </p>
+</Callout>
+
+## 8. Calls in arrears and calls in advance
+
+**Calls in arrears** — money called but not received. It is shown in the balance sheet as a **deduction
+from called-up capital**. Under **Table F** the directors may charge interest on arrears at a rate **not
+exceeding 10% per annum**, and may waive it wholly or in part.
+
+**Calls in advance** — money received before the call is made; section 50 allows a company to accept it if
+the articles authorise. Three consequences follow: it is a **liability** shown separately and **not** added
+to paid-up capital until the call falls due; it carries **no voting rights and no dividend**; and under
+**Table F** the company may pay interest on it at a rate **not exceeding 12% per annum**, payable **even if
+there is no profit**, because it is interest on a debt.
+
+<div class="formula">Interest = Amount × Rate × Months ÷ 12 — from the due date to the date of payment (arrears), or from the date of receipt to the date the call falls due (advance)</div>
+
+<Callout kind="pointer">
+  <p>
+    Remember the pair as <strong>"10 in, 12 out"</strong>: the company <em>charges</em> 10% on money owed to
+    it and <em>pays</em> 12% on money lent to it early. Both are Table F <strong>maximums</strong>, not
+    fixed rates — a question that states its own rate overrides Table F, and a question silent on the rate
+    is asking for the Table F ceiling.
+  </p>
+</Callout>
+
+## 9. Shares issued for consideration other than cash
+
+Shares need not be paid for in money. **To vendors**, for a business or asset bought: record the assets and
+liabilities taken over first — Sundry Assets A/c **Dr** … To Sundry Liabilities A/c … To Vendor A/c — then
+settle the vendor, Vendor A/c **Dr** … To Share Capital A/c … To Securities Premium A/c. **To promoters**,
+for services, know-how or formation costs: Goodwill A/c (or Incorporation Expenses A/c) **Dr** … To Share
+Capital A/c.
+
+<div class="formula">Number of shares to be issued = Purchase consideration ÷ Issue price per share (face value + premium)</div>
+
+Dividing by the **face value** when a premium is stated is the standard trap: ₹1,00,000 ÷ 10 gives 10,000
+shares, but at an issue price of ₹12.50 the right answer is 8,000 shares.
+
+## 10. Forfeiture of shares
+
+If a shareholder does not pay a call, the company may — after the notice its articles require — **forfeit**
+his shares. Forfeiture cancels the shares and confiscates what he has already paid.
+
+**Shares issued at par.** Debit Share Capital with the amount **called up** on those shares, credit the
+instalments **not received**, and credit the balance (what he did pay) to **Share Forfeiture A/c**:
+
+| Particulars | Dr | Cr |
+|---|---|---|
+| Share Capital A/c (shares × amount called up) | ✔ | |
+| To Share Allotment / Calls A/c (amounts unpaid) | | ✔ |
+| To Share Forfeiture A/c (amount actually received) | | ✔ |
+
+**Shares issued at a premium — the one rule that decides the question.** If the **premium has already been
+received**, it is **never cancelled**: leave the Securities Premium Account alone, because section 52
+protects premium once received; only the capital instalments come back. If the **premium was called but not
+received**, the **Securities Premium Account is debited** with that unreceived premium, alongside Share
+Capital.
+
+<Callout kind="mistake">
+  <p>
+    Debiting Securities Premium with the <em>whole</em> premium on the forfeited shares — including the part
+    already banked — is the commonest error in this chapter. Ask one question only: <strong>was the premium
+    received?</strong> Received premium stays; unreceived premium is reversed.
+  </p>
+</Callout>
+
+The credit balance in **Share Forfeiture A/c** is not profit yet. Until those shares are reissued it is
+shown in the balance sheet as an **addition to subscribed capital**.
+
+## 11. Reissue of forfeited shares and capital reserve
+
+Forfeited shares may be reissued at par, at a premium, or at a discount. The reissue entry credits Share
+Capital with the amount **credited as paid up**, debits Bank with what the new buyer pays, and puts the
+shortfall to **Share Forfeiture A/c**:
+
+| Particulars | Dr | Cr |
+|---|---|---|
+| Bank A/c (reissue proceeds) | ✔ | |
+| Share Forfeiture A/c (discount allowed on reissue) | ✔ | |
+| To Share Capital A/c (amount credited as paid up) | | ✔ |
+
+Two limits and one transfer. **The discount on reissue cannot exceed the amount forfeited on those very
+shares** — the company may give away the confiscated money, never more. If the shares are reissued **at a
+premium**, the excess is credited to Securities Premium; it is a fresh premium, not a recovery. And after
+reissue, the amount forfeited on the **reissued** shares, less the discount allowed on them, is a **capital
+profit** transferred to **Capital Reserve**:
+
+<div class="formula">Capital reserve = Amount forfeited on the shares reissued − Discount allowed on their reissue</div>
+
+<Callout kind="pointer">
+  <p>
+    When only some of the forfeited shares are reissued, apportion the forfeited amount <strong>per
+    share</strong> first. Only the reissued shares' portion reaches capital reserve; the rest stays in Share
+    Forfeiture A/c and continues to be shown with subscribed capital.
+  </p>
+</Callout>
+
+## 12. Debentures: kinds and terms of issue
+
+A **debenture** is an instrument of a company evidencing a **debt**, whether or not it creates a charge on
+the company's assets. Debentures carry **no voting rights**. They are classified four ways: **by security**
+— secured (a charge on assets) or unsecured / naked; **by tenure** — redeemable on a date, or perpetual /
+irredeemable; **by convertibility** — fully, partly or non-convertible into equity shares; and **by records
+and priority** — registered (transferable through the register) or bearer (by delivery), first or second by
+order of repayment.
+
+Because a debenture is a loan, a company may issue it **at par, at a premium or at a discount**, and may
+promise to redeem it **at par or at a premium**. That gives six combinations, and questions are built by
+picking one:
+
+| Issued | Redeemed | What the entry needs |
+|---|---|---|
+| At par | At par | Nothing extra |
+| At discount | At par | Discount on Issue of Debentures (debit) |
+| At premium | At par | Securities Premium (credit) |
+| At par | At premium | Loss on Issue of Debentures (debit) + Premium on Redemption (credit) |
+| At discount | At premium | Loss on Issue of Debentures = discount + redemption premium |
+| At premium | At premium | Securities Premium credited **and** Loss on Issue debited with the redemption premium |
+
+Discount on issue of debentures is a **capital loss**, not an expense of the year. It is written off over
+the life of the debentures — most conveniently against the Securities Premium Account, if one exists, and
+otherwise against the Statement of Profit and Loss.
+
+## 13. Loss on issue when debentures are redeemable at a premium
+
+When a debenture is issued below face value **and** promises to repay above face value, the company suffers
+at both ends. Both losses are recognised **at the time of issue**, in one account:
+
+<div class="formula">Loss on issue of debentures = Discount on issue + Premium payable on redemption</div>
+
+The full entry, for debentures issued at a discount and redeemable at a premium:
+
+| Particulars | Dr | Cr |
+|---|---|---|
+| Debenture Application &amp; Allotment A/c (money received) | ✔ | |
+| Loss on Issue of Debentures A/c (discount + redemption premium) | ✔ | |
+| To Debentures A/c (**face value**) | | ✔ |
+| To Premium on Redemption of Debentures A/c | | ✔ |
+
+Two points examiners test. **Debentures A/c is always credited with the face value**, never the issue
+price — the whole purpose of the discount and premium accounts is to keep the liability at face value. And
+**Premium on Redemption of Debentures A/c is a liability**, not an expense: the company will actually pay
+it years later, so it sits under long-term liabilities until redemption.
+
+## 14. Debentures as collateral security, and debenture interest
+
+A lender may want more comfort than a promise, so the company issues debentures to it as **collateral
+(secondary) security**: the lender holds them and returns them when the loan is repaid, and they become
+live only on default. There are **two accepted presentations**:
+
+- **Method 1 — no entry.** Nothing is recorded, because no liability has been created. The fact is
+  disclosed as a **note** under the loan: "Bank loan ₹5,00,000, secured by the issue of ₹7,00,000
+  debentures as collateral security."
+- **Method 2 — entry passed.** Debenture Suspense A/c **Dr** … To Debentures A/c. The debentures appear at
+  face value and **Debenture Suspense A/c is shown as a deduction from them**, so the net effect on the
+  balance sheet total is nil.
+
+<Callout kind="mistake">
+  <p>
+    Under method 2 the two accounts must be shown <strong>together and netted off</strong>. Showing
+    Debenture Suspense as an asset (the older presentation) inflates both sides of the balance sheet by the
+    collateral amount — that is the distractor to avoid.
+  </p>
+</Callout>
+
+**Interest on debentures** is calculated on the **face (nominal) value** at the coupon rate, never on the
+issue price, and it is a **charge against profit** — payable even in a loss year. Tax is deducted at source,
+so the entry is: Debenture Interest A/c **Dr** … To Debentureholders A/c (net) … To TDS Payable A/c.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — issue at a premium, in instalments (easy)">
+  <p>
+    Sunrise Ceramics Ltd issues 50,000 equity shares of ₹10 each at a premium of ₹4 per share,
+    payable: on application ₹5 (including ₹1 premium), on allotment ₹6 (including ₹3 premium), and
+    on first and final call ₹3. The issue is fully subscribed and all money is received. Show the
+    amounts at each stage and the two credit balances created.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — split each instalment into capital and premium</div>
+    Application ₹5 = capital ₹4 + premium ₹1 · Allotment ₹6 = capital ₹3 + premium ₹3 · Call ₹3 = capital ₹3<br />
+    Check: capital 4 + 3 + 3 = ₹10 (face value) ✔ · premium 1 + 3 = ₹4 ✔
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — money at each stage (50,000 shares)</div>
+    On application: 50,000 × 5 = ₹2,50,000 → Share Capital ₹2,00,000 + Securities Premium ₹50,000<br />
+    On allotment: 50,000 × 6 = ₹3,00,000 → Share Capital ₹1,50,000 + Securities Premium ₹1,50,000<br />
+    On call: 50,000 × 3 = ₹1,50,000 → Share Capital ₹1,50,000<br />
+    Total received = <strong>₹7,00,000</strong> = 50,000 × ₹14 ✔
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the two balances</div>
+    Share Capital A/c = 50,000 × ₹10 = <strong>₹5,00,000</strong> · Securities Premium A/c = 50,000 × ₹4 =
+    <strong>₹2,00,000</strong> (usable only for the five section 52 purposes)
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — oversubscription and pro-rata allotment (moderate)">
+  <p>
+    Meghdoot Steels Ltd offers 60,000 equity shares of ₹10 each at a premium of ₹2, payable: on
+    application ₹3, on allotment ₹5 (including the ₹2 premium), on first and final call ₹4.
+    Applications are received for 90,000 shares and the directors allot pro-rata to all applicants,
+    adjusting the excess application money against allotment. Mr Xavier, who applied for 1,200
+    shares, fails to pay the allotment money. Find (a) the ratio, (b) the cash received on
+    allotment from all shareholders, and (c) the amount unpaid by Mr Xavier.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — ratio, and where the application money goes</div>
+    Pro-rata ratio = 60,000 allotted ÷ 90,000 applied = <strong>2 : 3</strong> — 2 shares for every 3 applied for<br />
+    Received on application: 90,000 × 3 = ₹2,70,000<br />
+    Retained as application money on 60,000 allotted shares: 60,000 × 3 = ₹1,80,000<br />
+    Excess carried to allotment = 2,70,000 − 1,80,000 = <strong>₹90,000</strong> (nothing is
+    refunded — no application was rejected)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — cash due and received on allotment</div>
+    Allotment due = 60,000 × 5 = ₹3,00,000<br />
+    Less excess application money already held = ₹90,000<br />
+    Net receivable on allotment = ₹2,10,000<br />
+    Less Mr Xavier's unpaid amount (working note 3) = ₹2,800<br />
+    Cash actually received on allotment = <strong>₹2,07,200</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Mr Xavier</div>
+    Shares allotted = 1,200 × 2/3 = <strong>800 shares</strong><br />
+    Excess application money = (1,200 − 800) × 3 = ₹1,200<br />
+    Allotment due on 800 shares = 800 × 5 = ₹4,000<br />
+    Amount unpaid = 4,000 − 1,200 = <strong>₹2,800</strong><br />
+    (Computing on 1,200 shares, or forgetting the ₹1,200 already held, gives the two wrong answers
+    the examiner offers.)
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — forfeiture at a premium and reissue at a discount (hard)">
+  <p>
+    Nandi Auto Ltd issued shares of ₹10 each at ₹13, payable: on application ₹4 (including ₹1
+    premium), on allotment ₹5 (including ₹2 premium), on first and final call ₹4. Ravi, who held
+    500 shares, paid the application money and nothing more; his shares were forfeited. Later, 300
+    of them were reissued at ₹8 per share as fully paid. Pass the forfeiture and reissue entries
+    and find the capital reserve.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — what Ravi paid, split</div>
+    Received on application: 500 × ₹4 = ₹2,000, of which premium 500 × ₹1 = ₹500 and capital ₹1,500<br />
+    Unpaid: allotment 500 × ₹5 = ₹2,500 (of which premium ₹1,000) and call 500 × ₹4 = ₹2,000
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — forfeiture entry</div>
+    Share Capital A/c Dr ₹5,000 (500 × ₹10 called up)<br />
+    Securities Premium A/c Dr ₹1,000 (premium called on allotment but <em>not received</em>)<br />
+    &nbsp;&nbsp;To Share Allotment A/c ₹2,500<br />
+    &nbsp;&nbsp;To Share First and Final Call A/c ₹2,000<br />
+    &nbsp;&nbsp;To Share Forfeiture A/c <strong>₹1,500</strong><br />
+    The ₹500 premium <em>already received</em> is untouched — it stays in Securities Premium A/c.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — reissue of 300 shares at ₹8, fully paid</div>
+    Bank A/c Dr 300 × 8 = ₹2,400<br />
+    Share Forfeiture A/c Dr 300 × 2 = ₹600 (discount on reissue)<br />
+    &nbsp;&nbsp;To Share Capital A/c 300 × 10 = ₹3,000<br />
+    Permitted maximum discount = forfeited amount on these 300 shares = ₹900, so ₹600 is within the
+    limit ✔
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — capital reserve</div>
+    Forfeited amount per share = 1,500 ÷ 500 = ₹3<br />
+    On the 300 reissued shares = 300 × 3 = ₹900<br />
+    Less discount allowed on reissue = ₹600<br />
+    Capital reserve = <strong>₹300</strong><br />
+    Share Forfeiture A/c still carries 200 × ₹3 = <strong>₹600</strong>, shown with subscribed
+    capital until those shares are reissued.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — calls in arrears and calls in advance under Table F (moderate)">
+  <p>
+    Kaveri Textiles Ltd, which has adopted Table F, made a first call of ₹3 per share due on
+    1 September 2025. Anand, holding 2,000 shares, paid it only on 1 January 2026. Bhavna, holding
+    3,000 shares, paid the final call of ₹2 per share on 1 October 2025, although that call was made
+    due only on 1 April 2026. Compute the interest in each case and state how the two amounts appear
+    in the balance sheet on 31 December 2025.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Anand: calls in arrears at 10% p.a.</div>
+    Amount in arrears = 2,000 × ₹3 = ₹6,000<br />
+    Period 1 Sep 2025 to 1 Jan 2026 = 4 months<br />
+    Interest = 6,000 × 10/100 × 4/12 = <strong>₹200</strong>, receivable by the company
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Bhavna: calls in advance at 12% p.a.</div>
+    Amount in advance = 3,000 × ₹2 = ₹6,000<br />
+    Period 1 Oct 2025 to 1 Apr 2026 = 6 months<br />
+    Interest = 6,000 × 12/100 × 6/12 = <strong>₹360</strong>, payable by the company even if it
+    earns no profit
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — presentation on 31 December 2025</div>
+    Anand's ₹6,000 is deducted from called-up capital to give paid-up capital.<br />
+    Bhavna's ₹6,000 is a <strong>liability</strong>, shown separately as "Calls in advance"; it is
+    not added to paid-up capital, carries no vote and earns no dividend.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — debentures at a discount redeemable at a premium, plus collateral (hard)">
+  <p>
+    Godavari Cements Ltd issues 4,000 12% debentures of ₹100 each at ₹96, redeemable after five
+    years at ₹105. On the same day it takes a bank loan of ₹5,00,000 and issues ₹7,00,000 of
+    debentures to the bank as collateral security. Show the issue entry, the loss on issue, the
+    annual interest, and both collateral presentations.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the two losses</div>
+    Discount on issue = (100 − 96) × 4,000 = ₹16,000<br />
+    Premium payable on redemption = (105 − 100) × 4,000 = ₹20,000<br />
+    Loss on issue of debentures = 16,000 + 20,000 = <strong>₹36,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the issue entries</div>
+    Bank A/c Dr ₹3,84,000 (4,000 × ₹96) … To Debenture Application &amp; Allotment A/c ₹3,84,000<br />
+    Debenture Application &amp; Allotment A/c Dr ₹3,84,000<br />
+    Loss on Issue of Debentures A/c Dr ₹36,000<br />
+    &nbsp;&nbsp;To 12% Debentures A/c ₹4,00,000 (<strong>face value</strong>)<br />
+    &nbsp;&nbsp;To Premium on Redemption of Debentures A/c ₹20,000<br />
+    Both sides total ₹4,20,000 ✔
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — annual interest</div>
+    Interest = 12% × ₹4,00,000 (face value, not ₹3,84,000) = <strong>₹48,000 per year</strong>, a
+    charge against profit, paid net of tax deducted at source.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the collateral debentures</div>
+    <strong>Method 1:</strong> no entry. Under the bank loan of ₹5,00,000, a note records that
+    ₹7,00,000 debentures have been issued as collateral security.<br />
+    <strong>Method 2:</strong> Debenture Suspense A/c Dr ₹7,00,000 … To 12% Debentures A/c
+    ₹7,00,000. In the balance sheet the ₹7,00,000 debentures are shown with ₹7,00,000 Debenture
+    Suspense <em>deducted from them</em> — net effect nil. Either way, the liability the company
+    actually owes the bank is <strong>₹5,00,000</strong>.
+  </div>
+</Callout>
+
+## 15. What this chapter deliberately leaves out
+
+Three topics look as though they belong here and do not, at Foundation level: **redemption of preference
+shares**, **redemption of debentures** (including sinking-fund and Debenture Redemption Reserve mechanics),
+and **bonus and rights issues**. All three are Intermediate topics. You are still expected to know, from
+Units 1 and 3, that redeemable preference shares and redeemable debentures exist and that securities
+premium may be used to provide for the premium payable on redemption.
+
+## Common mistakes &amp; examiner traps
+
+- **Cancelling premium already received on forfeiture.** Debit Securities Premium only with premium
+  **called but not received**; money already banked is protected by section 52.
+- **Working allotment arrears on shares applied for.** The amount due is on the shares **allotted**, and
+  his excess application money is already adjusted against it.
+- **Refunding money in a pro-rata question.** If no application was rejected, nothing is refunded.
+- **Discount on reissue exceeding the forfeited amount** — the cap is the amount forfeited **on those very
+  shares**, computed per share when only some are reissued.
+- **Sending the whole forfeiture balance to capital reserve.** Only the reissued shares' portion, net of the
+  reissue discount, is transferred.
+- **Adding calls in advance to paid-up capital.** It is a liability until the call is made: interest yes,
+  dividend and vote no.
+- **Swapping the two Table F rates.** 10% on arrears (company receives), 12% on advance (company pays), both
+  ceilings rather than fixed rates.
+- **Crediting Debentures A/c with the issue price**, or **calculating debenture interest on the issue
+  price**. Both use the **face value**.
+- **Showing Debenture Suspense as an asset.** Net it against the debentures issued as collateral.
+- **Treating discount on issue of shares as merely irregular.** Section 53 prohibits it and the share so
+  issued is **void**; only sweat equity and a statutory debt conversion escape.
+
+## One-page revision summary
+
+**The ladder:** Authorised → Issued → Subscribed → Called-up → Paid-up · Uncalled = Subscribed − Called-up ·
+Reserve capital is callable only on winding up (not the same as capital reserve).
+
+**Statute:** s.43 — only two kinds of share capital, equity and preference · s.52 — securities premium usable
+only for bonus shares, preliminary expenses, issue expenses/commission/discount, premium on redemption and
+buy-back; **never for dividend** · s.53 — no issue of shares at a discount, such a share is void, exceptions
+sweat equity (s.54) and statutory debt conversion · s.49 — calls on a uniform basis · s.50 — calls in advance
+if the articles permit.
+
+**Table F:** interest on calls in arrears **up to 10% p.a.**; on calls in advance **up to 12% p.a.**; calls
+not exceeding 25% of nominal value, a month apart, on 14 days' notice.
+
+**Formulas:**
+
+<div class="formula">Paid-up capital = Called-up capital − Calls in arrears</div>
+<div class="formula">Shares applied by a member = Shares allotted × (Total applied ÷ Total allotted)</div>
+<div class="formula">Allotment due from a member = (Shares allotted × Allotment per share) − Excess application money</div>
+<div class="formula">Amount forfeited per share = Total received on those shares, excluding premium received</div>
+<div class="formula">Maximum discount on reissue = Amount forfeited on the shares being reissued</div>
+<div class="formula">Capital reserve = Forfeited amount on shares reissued − Discount allowed on their reissue</div>
+<div class="formula">Loss on issue of debentures = Discount on issue + Premium payable on redemption</div>
+<div class="formula">Debenture interest = Coupon rate × Face value (never the issue price)</div>
+
+**Rules that answer theory MCQs:** forfeiture cancels shares and confiscates money paid · premium
+received is never reversed, premium unreceived is · share forfeiture balance is added to subscribed
+capital until reissue · calls in advance is a liability, no vote, no dividend, interest payable
+even in a loss year · dividend is an appropriation, debenture interest is a charge · debentures may
+be issued at a discount, shares may not · Debentures A/c always at face value · Debenture Suspense
+is deducted from debentures, never shown as an asset · redemption and bonus issues belong to
+Intermediate.

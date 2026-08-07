@@ -64,3 +64,45 @@ Reviewer: ☐ initials/date per row once spot-checked against the AS texts / SM.
 - WE 3 (Sindhu, AS 9): 80,000 (bill and hold) + 1,40,000 (70% of consignment
   sold onward) + 60,000 (approved portion) + 4,80,000 (5,00,000 less 4%
   trade discount) = ₹7,60,000.
+
+## Bank addendum — 7 Aug 2026
+
+The question bank (`src/data/questions/intermediate/advanced-accounting/revenue-based-as.json`
+— 38 standalone MCQs, 8 descriptives, 4 case sets, 25 machine-verified
+numericals) was authored on 7 Aug 2026. Rows below cover only the positions the
+BANK newly relies on — mostly the computational and cut-off conventions the
+notes did not need to spell out. Positions already tabled above (scope,
+segmenting/combining, contract revenue and cost composition, the reliability
+conditions, the expected-loss rule, stage measures, AS 5 revisions, AS 7
+disclosures, the AS 9 definition and exclusions, agency, the sale-of-goods
+heads, the timing scenarios, services, interest/royalties/dividends, collection
+uncertainty) are relied on throughout the bank and are NOT repeated here. No new
+near-verbatim quotations were introduced; every option and skeleton point is in
+original words.
+
+| Ref | Position relied on | Used in | Spot-checked by |
+|---|---|---|---|
+| SM Ch 8 U1 (AS 7) | Escalation-clause arithmetic: where the clause passes on a stated PERCENTAGE of an input-cost increase, only that percentage enters contract revenue; where the labour pass-through is conditional on the minimum-wage rise not exceeding a stated ceiling, a rise within the ceiling passes the whole labour increase (the ceiling is read as a gate on the clause, not as a cap on the amount passed) | q-i1c8-007, q-i1c8-009 | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U1 (AS 7) | Aggregating a period's contract cost: incidental income not forming part of contract revenue (proceeds of surplus materials bought for the contract) is credited AGAINST contract costs rather than added to contract revenue; general administration without a reimbursement clause, selling costs and idle-plant depreciation are struck out of the aggregate | q-i1c8-011, d-i1c8-02 | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U1 (AS 7) | Loss-contract mechanics: the expected loss is measured as estimated total contract cost less total contract revenue and expensed in full at once; the PROVISION to be created is that loss less the loss the period's own figures already carry (period revenue at the stage of completion less the contract cost of the work performed) | q-i1c8-017, cs-i1c8-02-c, d-i1c8-03 | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U1 (AS 7) | Presentation of the net contract position on a LOSS contract: costs incurred for work performed + recognised profits − recognised losses − progress billings (billings taken gross, that is inclusive of retention money not yet due); advances received are disclosed separately and are not netted in the computation; a negative figure is the gross amount due TO customers | cs-i1c8-02-d, d-i1c8-05 | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U1 (AS 7) | Outcome not reliably estimable: contract costs whose recovery is NOT probable are expensed as incurred and may not be carried forward as contract work in progress — the asset treatment is available only to costs relating to future activity whose recovery is probable | q-i1c8-016, d-i1c8-01 | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U1 (AS 7) | Scope illustrations beyond the notes: supplying materials to a contractor at an agreed rate, hiring out plant to a contractor, and selling a completed unit from a builder's finished stock are all outside AS 7 (sale of goods or letting of equipment); services directly related to construction remain inside it | q-i1c8-002 | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U2 (AS 9) | Measuring an agent's revenue out of a single gross collection: the principal's share and the indirect tax collected on behalf of government both come out, leaving only the entity's own charge; conversely an intermediary that buys the goods or seats on its own account and bears the loss on unsold stock is a principal and reports the gross amount | q-i1c8-025, q-i1c8-026 | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U2 (AS 9) | Sale-or-return cut-off at a reporting date: goods on which the fixed rejection period has lapsed without rejection are sold even without formal acceptance; goods still inside the approval period are not sold and stay in the seller's closing inventory | q-i1c8-031, cs-i1c8-03-b | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U2 (AS 9) | Measuring consignment revenue: revenue is the amount at which the consignee sold to third parties, not the pro-forma invoice value of the goods despatched or of the goods sold; the consignee's commission is an expense of the consignor and is not deducted in arriving at revenue | q-i1c8-034, cs-i1c8-03-a | Spot-checked by: _(blank until a human checks)_ |
+| SM Ch 8 U2 (AS 9) | Part-year accruals: interest is accrued for the period the investment was actually held (amount outstanding × rate × time held), irrespective of the issuer's coupon dates or of anything having been received; royalty is accrued on the licensee's sales of the period per the agreed rate, irrespective of how much was collected by the reporting date | q-i1c8-037, q-i1c8-038, cs-i1c8-04-a, cs-i1c8-04-b | Spot-checked by: _(blank until a human checks)_ |
+| AS 9 disclosure requirement | An enterprise discloses the circumstances in which revenue recognition has been postponed pending the resolution of significant uncertainties (the notes state the postponement rule but not the disclosure that goes with it) | d-i1c8-08 | Spot-checked by: _(blank until a human checks)_ |
+
+### Bank numerical conventions (not statutory citations)
+
+- Every numerical question and case sub-question is recomputed from its stem's
+  parameters by `scripts/verify_numerical/verify_revenue-based-as.py`; the
+  runner reports 25 of 25 verified with 0 failures. The verifier never reads
+  the answer key — it computes a value and maps it onto the option amounts.
+- Amounts are in ₹ lakh for AS 7 contract questions and in rupees with Indian
+  digit grouping for AS 9 questions.
+- Cost-to-cost stages are computed on costs of work performed (materials
+  delivered to site but unused excluded from BOTH the numerator and the
+  estimated total cost, the cost-to-complete estimate being stated to include
+  consuming them), which is the convention of worked example 2 in the notes.

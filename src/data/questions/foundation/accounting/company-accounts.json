@@ -1,0 +1,2311 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "company-accounts",
+  "chapter": "Ch 11 — Company Accounts",
+  "questions": [
+    {
+      "id": "q-f1c11-001",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Limited liability",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Tejas holds 500 equity shares of ₹10 each in Ravi Alloys Ltd, on which ₹7 per share has been called and paid. The company is wound up owing ₹40 lakh to creditors. What can Tejas be asked to contribute?",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹40 lakh, shared rateably with the other members, because members ultimately own the company's debts",
+          "explanation": "Members are not liable for the company's debts at all. The company is a separate legal person; its creditors have a claim against it, not against the members' private wealth."
+        },
+        {
+          "key": "B",
+          "text": "Nothing, because his liability ended the moment the shares were allotted to him",
+          "explanation": "Allotment does not end liability — the uncalled ₹3 per share is still a live obligation. Only FULL payment of the face value extinguishes it."
+        },
+        {
+          "key": "C",
+          "text": "₹1,500, being the ₹3 per share still uncalled on his 500 shares",
+          "explanation": "Correct. Limited liability caps a member's exposure at the unpaid amount on his own shares: 500 × (₹10 − ₹7) = ₹1,500. Nothing more can be demanded, whatever the company owes."
+        },
+        {
+          "key": "D",
+          "text": "₹3,500, being the amount he has already paid, which is forfeited to the creditors",
+          "explanation": "Money already paid is the company's capital, not a fresh contribution; he is not asked to pay ₹3,500 again. The demand can only be for the UNPAID part of the face value."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What a company is, §1 →",
+        "href": "/foundation/accounting/company-accounts/#1-what-a-company-is-and-the-kinds-you-must-know"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Limited liability = unpaid amount on the member's own shares",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-002",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Small company exclusions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following can NEVER be a 'small company', however small its capital and turnover?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A private company whose paid-up capital is well below the prescribed limit but whose turnover is just above it",
+          "explanation": "This company fails the test on the turnover limb only, which is a question of size. The question asks which is excluded no matter how small it is."
+        },
+        {
+          "key": "B",
+          "text": "A public company, a holding or subsidiary company, a section 8 company, and a company governed by a special Act",
+          "explanation": "Correct. The definition excludes these four categories outright. They are disqualified by their character, not by their numbers, so shrinking their capital or turnover changes nothing."
+        },
+        {
+          "key": "C",
+          "text": "A one person company, because it has only one member",
+          "explanation": "An OPC is a private company and is not on the exclusion list; it can qualify as a small company if it is within the prescribed limits."
+        },
+        {
+          "key": "D",
+          "text": "Any company incorporated in the last two financial years",
+          "explanation": "Age is irrelevant to the definition. A newly incorporated private company can be a small company from its first year."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What a company is, §1 →",
+        "href": "/foundation/accounting/company-accounts/#1-what-a-company-is-and-the-kinds-you-must-know"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Small company: prescribed limits plus a fixed exclusion list",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-003",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · One Person Company",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about a One Person Company is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is a species of public company with a single shareholder and a single director",
+          "explanation": "An OPC is a PRIVATE company. A public company requires a minimum of seven members, which is the opposite of the OPC idea."
+        },
+        {
+          "key": "B",
+          "text": "Its single member may be an individual or another company, provided the holding is 100%",
+          "explanation": "The sole member of an OPC must be a natural person. A wholly owned subsidiary of a company is not an OPC."
+        },
+        {
+          "key": "C",
+          "text": "It has one member and therefore has no separate legal personality from him",
+          "explanation": "Separate legal personality follows from incorporation, not from the number of members. An OPC is as distinct from its member as any other company."
+        },
+        {
+          "key": "D",
+          "text": "It is a private company with a single member, who must be a natural person and must nominate someone to succeed him",
+          "explanation": "Correct. The single member must be a natural person, and the memorandum must name a nominee who becomes the member on the subscriber's death or incapacity — that nomination is what keeps perpetual succession workable with one member."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: What a company is, §1 →",
+        "href": "/foundation/accounting/company-accounts/#1-what-a-company-is-and-the-kinds-you-must-know"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "OPC: private company, natural-person member, compulsory nominee",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-004",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Ladder definitions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which pairing of ladder terms is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Paid-up capital is called-up capital less calls in arrears; uncalled capital is subscribed capital less called-up capital",
+          "explanation": "Correct. Paid-up is what has actually come in out of what was demanded, and uncalled is the part of the subscribed capital not yet demanded at all."
+        },
+        {
+          "key": "B",
+          "text": "Issued capital can exceed authorised capital if the members approve by ordinary resolution",
+          "explanation": "Authorised capital is an absolute ceiling. It can be raised only by altering the memorandum in the manner the Act prescribes — never simply exceeded."
+        },
+        {
+          "key": "C",
+          "text": "Subscribed capital is the part of the authorised capital offered to the public",
+          "explanation": "That is ISSUED capital. Subscribed capital is the narrower figure — the part of the issued capital people actually applied for and were allotted."
+        },
+        {
+          "key": "D",
+          "text": "Called-up capital equals paid-up capital plus calls in advance",
+          "explanation": "Calls in advance are not part of called-up capital at all; they are a liability until the call is made. The correct link is paid-up = called-up − calls in arrears."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Share capital ladder, §2 →",
+        "href": "/foundation/accounting/company-accounts/#2-the-share-capital-ladder"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Authorised → issued → subscribed → called-up → paid-up",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-005",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Paid-up capital computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nandini Foods Ltd has an authorised capital of ₹50,00,000 divided into 5,00,000 equity shares of ₹10 each. It issued 3,00,000 shares, of which 2,80,000 were subscribed and allotted. The company has called ₹8 per share. Calls of ₹3 per share on 5,000 shares remain unpaid. The paid-up capital is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹28,00,000",
+          "explanation": "This is the subscribed capital at face value (2,80,000 × ₹10). Two-tenths of it has never been called, so it cannot be the paid-up figure."
+        },
+        {
+          "key": "B",
+          "text": "₹22,40,000",
+          "explanation": "This is the CALLED-UP capital (2,80,000 × ₹8). The ₹15,000 of calls in arrears has not been received, so it must still come out."
+        },
+        {
+          "key": "C",
+          "text": "₹22,25,000",
+          "explanation": "Correct. Called-up = 2,80,000 × ₹8 = ₹22,40,000; calls in arrears = 5,000 × ₹3 = ₹15,000; paid-up = 22,40,000 − 15,000 = ₹22,25,000."
+        },
+        {
+          "key": "D",
+          "text": "₹22,55,000",
+          "explanation": "This ADDS the arrears instead of deducting them. Calls in arrears are money not received, so they reduce the paid-up figure."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Share capital ladder, §2 →",
+        "href": "/foundation/accounting/company-accounts/#2-the-share-capital-ladder"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Paid-up = called-up − calls in arrears",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-006",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Reserve capital",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sahyadri Cements Ltd has 60,000 equity shares of ₹10 each subscribed, on which ₹7 per share has been called up. By special resolution the members decide that ₹2 per share out of the amount remaining uncalled shall be called only in the event of winding up. The reserve capital is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,20,000",
+          "explanation": "Correct. Reserve capital is the part of the UNCALLED capital ring-fenced for winding up: 60,000 shares × ₹2 = ₹1,20,000."
+        },
+        {
+          "key": "B",
+          "text": "₹1,80,000",
+          "explanation": "This is the whole uncalled capital, 60,000 × ₹3. Only ₹2 of that ₹3 was reserved by the special resolution; the remaining ₹1 stays ordinarily callable."
+        },
+        {
+          "key": "C",
+          "text": "₹60,000",
+          "explanation": "This is the ₹1 per share left ordinarily callable after the resolution — the balance of the uncalled capital, not the reserve capital."
+        },
+        {
+          "key": "D",
+          "text": "₹4,20,000",
+          "explanation": "This is the called-up capital, 60,000 × ₹7. Reserve capital is carved out of what has NOT been called."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Share capital ladder, §2 →",
+        "href": "/foundation/accounting/company-accounts/#2-the-share-capital-ladder"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Reserve capital = uncalled capital reserved by special resolution for winding up",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-007",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Reserve capital vs capital reserve",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement correctly distinguishes reserve capital from capital reserve?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both are created out of capital profits; only the timing of their use differs",
+          "explanation": "Reserve capital is not a profit at all — it is share capital not yet called. Only capital reserve arises from capital profits."
+        },
+        {
+          "key": "B",
+          "text": "Reserve capital appears on the assets side; capital reserve appears on the equity side",
+          "explanation": "Neither appears on the assets side. Reserve capital is not shown as a figure in the balance sheet at all, and capital reserve sits within reserves and surplus."
+        },
+        {
+          "key": "C",
+          "text": "Capital reserve can be called up on winding up; reserve capital is available for dividend",
+          "explanation": "Both halves are inverted. Reserve capital is what is callable on winding up, and capital reserve — being a capital profit — is not available for dividend."
+        },
+        {
+          "key": "D",
+          "text": "Reserve capital is uncalled share capital callable only on winding up; capital reserve is a reserve created out of capital profits",
+          "explanation": "Correct. One is unpaid share capital held back for the creditors of a failed company; the other is a realised capital profit (for example the surplus on reissue of forfeited shares) sitting in reserves and surplus."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Share capital ladder, §2 →",
+        "href": "/foundation/accounting/company-accounts/#2-the-share-capital-ladder"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Reserve capital vs capital reserve",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-008",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Section 43",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 43 of the Companies Act 2013, the share capital of a company limited by shares:",
+      "options": [
+        {
+          "key": "A",
+          "text": "may be of any kind the articles create, including deferred, founders' and management shares",
+          "explanation": "Section 43 permits only two kinds. Historical classes such as deferred or founders' shares cannot be issued as a separate kind of share capital under the 2013 Act."
+        },
+        {
+          "key": "B",
+          "text": "shall be of two kinds only — equity share capital and preference share capital",
+          "explanation": "Correct. Section 43 recognises equity share capital (with voting rights, or with differential rights as to dividend, voting or otherwise as prescribed) and preference share capital, and nothing else."
+        },
+        {
+          "key": "C",
+          "text": "shall consist of equity share capital alone, preference capital being treated as borrowings",
+          "explanation": "Preference share capital is share capital, not borrowing. Its holders are members, not creditors, and their dividend is an appropriation of profit."
+        },
+        {
+          "key": "D",
+          "text": "shall be of three kinds — equity, preference and deferred share capital",
+          "explanation": "There is no third kind under section 43. Deferred shares belong to the pre-2013 vocabulary."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Equity and preference, §3 →",
+        "href": "/foundation/accounting/company-accounts/#3-equity-and-preference-shares-under-section-43"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "s.43 — two kinds of share capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-009",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Preference share defaults",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The terms of issue of a company's preference shares are silent on cumulation and participation. How are they treated?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cumulative and non-participating",
+          "explanation": "Correct. Arrears of preference dividend are presumed to accumulate unless the terms exclude it, while a right to participate in surplus profits must be expressly conferred."
+        },
+        {
+          "key": "B",
+          "text": "Non-cumulative and participating",
+          "explanation": "Both halves are the wrong way round. Silence favours the preference holder on arrears and the equity holder on surplus profits."
+        },
+        {
+          "key": "C",
+          "text": "Cumulative and participating",
+          "explanation": "The cumulation half is right, but participation is never presumed — sharing in surplus profits beyond the fixed rate has to be written into the terms."
+        },
+        {
+          "key": "D",
+          "text": "Non-cumulative and non-participating",
+          "explanation": "The participation half is right, but silence does NOT make preference shares non-cumulative; a missed dividend is carried forward."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Equity and preference, §3 →",
+        "href": "/foundation/accounting/company-accounts/#3-equity-and-preference-shares-under-section-43"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Preference shares presumed cumulative and non-participating",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-010",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Preference rights",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "What exactly makes a share a 'preference share'?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A guaranteed dividend every year, whether or not the company earns a profit",
+          "explanation": "No dividend of any kind is guaranteed. Dividend is an appropriation of profit; a preference share only ranks FIRST when a dividend is paid."
+        },
+        {
+          "key": "B",
+          "text": "A right to be redeemed within twenty years of issue",
+          "explanation": "Redeemability is a feature of a particular class of preference shares, not the defining test. A preference share is defined by its two preferential rights."
+        },
+        {
+          "key": "C",
+          "text": "A preferential right to dividend at a fixed amount or rate, and a preferential right to repayment of capital on winding up",
+          "explanation": "Correct. Those two preferences together are the whole statutory definition; cumulation, participation, convertibility and redeemability are optional varieties layered on top."
+        },
+        {
+          "key": "D",
+          "text": "A right to vote on every resolution placed before the general meeting",
+          "explanation": "That is the equity shareholder's normal position. Preference shareholders vote only on matters affecting their own rights, and in the other cases the law specifies."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Equity and preference, §3 →",
+        "href": "/foundation/accounting/company-accounts/#3-equity-and-preference-shares-under-section-43"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Preference share = preference in dividend + preference in repayment of capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-011",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Dividend vs interest",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a year in which a company makes a loss, which statement is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both the equity dividend and the debenture interest must be paid, because both are contractual",
+          "explanation": "Only the debenture interest is contractual. A dividend is declared out of profits and cannot be demanded by a shareholder as a debt."
+        },
+        {
+          "key": "B",
+          "text": "Debenture interest must still be paid because it is a charge against profit; the equity dividend need not be paid because it is an appropriation of profit",
+          "explanation": "Correct. Interest is the price of a loan and is payable whether or not the company earns anything; dividend is a distribution of profit and presupposes a profit to distribute."
+        },
+        {
+          "key": "C",
+          "text": "Neither is paid, since both come out of profits",
+          "explanation": "Debenture interest does not come out of profits — it is charged BEFORE arriving at profit and is payable out of the company's assets in any event."
+        },
+        {
+          "key": "D",
+          "text": "The equity dividend must be paid out of capital to preserve the shareholders' return",
+          "explanation": "Paying a dividend out of capital would return the members' own money to them and defraud creditors; the law does not permit it."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Shares vs debentures, §4 →",
+        "href": "/foundation/accounting/company-accounts/#4-shares-versus-debentures"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Dividend is an appropriation; debenture interest is a charge",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-012",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Debenture holder's position",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is true of a debenture holder but NOT of an equity shareholder?",
+      "options": [
+        {
+          "key": "A",
+          "text": "He receives a return only if the company earns a profit",
+          "explanation": "That describes the shareholder. The debenture holder's interest is payable whether or not there is a profit."
+        },
+        {
+          "key": "B",
+          "text": "His holding may be issued at a premium",
+          "explanation": "Both may be issued at a premium — that is not a point of difference. The real contrast is at a DISCOUNT, which debentures allow and shares do not."
+        },
+        {
+          "key": "C",
+          "text": "He may vote on ordinary resolutions at the annual general meeting",
+          "explanation": "Reversed. Debentures carry no voting rights at general meetings; equity shares do."
+        },
+        {
+          "key": "D",
+          "text": "He is a creditor of the company, is paid before all shareholders on winding up, and may hold an instrument issued at a discount",
+          "explanation": "Correct. All three follow from the debenture being a loan: creditor status, priority in repayment, and freedom from the section 53 ban on issue at a discount."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Shares vs debentures, §4 →",
+        "href": "/foundation/accounting/company-accounts/#4-shares-versus-debentures"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Debenture holder = creditor, priority on winding up, discount permitted",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-013",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Securities premium collected",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kalinga Ceramics Ltd issues 80,000 equity shares of ₹10 each at ₹13 per share, the premium being collected ₹1 on application and ₹2 on allotment. The issue is fully subscribed and every rupee is received. The total credited to Securities Premium Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,40,000",
+          "explanation": "Correct. Premium per share = ₹13 − ₹10 = ₹3, collected in two instalments (₹1 + ₹2). Total = 80,000 × ₹3 = ₹2,40,000."
+        },
+        {
+          "key": "B",
+          "text": "₹80,000",
+          "explanation": "This is only the premium collected on application (80,000 × ₹1). The ₹2 taken on allotment is premium as well and is credited to the same account."
+        },
+        {
+          "key": "C",
+          "text": "₹1,60,000",
+          "explanation": "This is only the allotment instalment of the premium (80,000 × ₹2), ignoring the ₹1 already collected on application."
+        },
+        {
+          "key": "D",
+          "text": "₹10,40,000",
+          "explanation": "This is the total money received on the issue, 80,000 × ₹13. Of it, ₹8,00,000 is share capital; only the excess over face value is premium."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Securities premium, §6 →",
+        "href": "/foundation/accounting/company-accounts/#6-securities-premium-and-the-ban-on-issue-at-a-discount"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Securities premium = (issue price − face value) × number of shares",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-014",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Allotment entry split",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ambika Textiles Ltd issues 40,000 shares of ₹10 each at a premium of ₹5, payable ₹4 on application (including ₹1 premium), ₹7 on allotment (including ₹4 premium) and ₹4 on first and final call. When the allotment money becomes due, Share Capital Account is credited with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,80,000",
+          "explanation": "This is the whole allotment instalment, 40,000 × ₹7. Of it, ₹4 per share is premium, which must go to Securities Premium, not Share Capital."
+        },
+        {
+          "key": "B",
+          "text": "₹1,60,000",
+          "explanation": "This is the premium element of the allotment (40,000 × ₹4). It is the SECURITIES PREMIUM credit; the Share Capital credit is the remaining ₹3 per share."
+        },
+        {
+          "key": "C",
+          "text": "₹1,20,000",
+          "explanation": "Correct. The ₹7 allotment instalment splits into ₹4 premium and ₹3 capital, so Share Capital is credited with 40,000 × ₹3 = ₹1,20,000 and Securities Premium with ₹1,60,000."
+        },
+        {
+          "key": "D",
+          "text": "₹4,00,000",
+          "explanation": "This is the entire face value of the issue (40,000 × ₹10), which reaches Share Capital across all three instalments, not on allotment alone."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Application, allotment, calls, §5 →",
+        "href": "/foundation/accounting/company-accounts/#5-issue-of-shares-application-allotment-and-calls"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Each instalment splits into a capital element and a premium element",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-015",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Application money transfer entry",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On allotment of a fully subscribed issue made at par, the entry passed for the application money already lying in Share Application Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bank A/c Dr … To Share Application A/c",
+          "explanation": "That is the entry passed when the application money was RECEIVED, and it has already been made. Repeating it would double-count the bank."
+        },
+        {
+          "key": "B",
+          "text": "Share Application A/c Dr … To Share Capital A/c",
+          "explanation": "Correct. Share Application is a temporary personal account holding money that is not yet capital; on allotment it is closed by transferring it to Share Capital."
+        },
+        {
+          "key": "C",
+          "text": "Share Capital A/c Dr … To Share Application A/c",
+          "explanation": "This reverses the transfer, debiting capital and leaving the application account open. Share Capital is credited, never debited, when capital is created."
+        },
+        {
+          "key": "D",
+          "text": "Share Allotment A/c Dr … To Share Application A/c",
+          "explanation": "Share Allotment is opened for the NEXT instalment becoming due; application money is not transferred into it unless there is excess money in an oversubscribed issue."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Application, allotment, calls, §5 →",
+        "href": "/foundation/accounting/company-accounts/#5-issue-of-shares-application-allotment-and-calls"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Share Application A/c Dr … To Share Capital A/c on allotment",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-016",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Minimum application money",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 39 of the Companies Act 2013, the amount payable on application on every security shall not be less than:",
+      "options": [
+        {
+          "key": "A",
+          "text": "25% of the issue price, in every case",
+          "explanation": "25% of the issue price is the SEBI requirement for a public issue, not the figure in section 39. The two requirements sit side by side and the higher governs a SEBI-regulated issue."
+        },
+        {
+          "key": "B",
+          "text": "100% of the nominal amount, since allotment cannot precede full payment",
+          "explanation": "Shares are routinely issued in instalments; there is no requirement to collect the whole nominal amount on application."
+        },
+        {
+          "key": "C",
+          "text": "₹5 per share, irrespective of face value",
+          "explanation": "The rule is a percentage, not a flat rupee amount. A ₹1 share and a ₹100 share cannot sensibly carry the same minimum."
+        },
+        {
+          "key": "D",
+          "text": "5% of the nominal amount of the security, or such other percentage as SEBI may specify",
+          "explanation": "Correct. Section 39(2) fixes the statutory floor at 5% of the nominal amount, leaving SEBI free to specify a higher percentage — which it does, at 25% of the issue price for public issues."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Application, allotment, calls, §5 →",
+        "href": "/foundation/accounting/company-accounts/#5-issue-of-shares-application-allotment-and-calls"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "s.39(2) — application money at least 5% of nominal value",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-017",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Minimum subscription",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A prospectus states a minimum subscription. If that amount is not subscribed and the application money not received within 30 days of the issue of the prospectus, the company must:",
+      "options": [
+        {
+          "key": "A",
+          "text": "allot the shares actually applied for and carry the shortfall as uncalled capital",
+          "explanation": "No allotment may be made at all when the minimum subscription fails. The shortfall cannot be reclassified as uncalled capital."
+        },
+        {
+          "key": "B",
+          "text": "allot to the applicants and approach the underwriters for the balance",
+          "explanation": "Underwriting arrangements do not cure a failure of minimum subscription; the statutory consequence is refund, not substitution of subscribers."
+        },
+        {
+          "key": "C",
+          "text": "refund the application money to the applicants within the prescribed period",
+          "explanation": "Correct. The protection is for the applicants: if the minimum subscription does not come in, the whole application money must be returned within the period prescribed, and no allotment may be made."
+        },
+        {
+          "key": "D",
+          "text": "retain the money in a separate account until a fresh prospectus is issued",
+          "explanation": "The money cannot be held over for a future issue. Applicants subscribed to THIS offer and are entitled to their money back."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Application, allotment, calls, §5 →",
+        "href": "/foundation/accounting/company-accounts/#5-issue-of-shares-application-allotment-and-calls"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "s.39 — no allotment without minimum subscription; refund follows",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-018",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Section 52 permitted uses",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which use of the Securities Premium Account is NOT permitted by section 52?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Paying a dividend to the equity shareholders in a year of inadequate profit",
+          "explanation": "Correct. Securities premium is not a free reserve and is never available for dividend. The permitted uses are bonus shares, preliminary expenses, issue expenses/commission/discount, premium on redemption, and buy-back under section 68."
+        },
+        {
+          "key": "B",
+          "text": "Issuing fully paid bonus shares to the members",
+          "explanation": "This is expressly permitted — indeed it is the most common use of the account."
+        },
+        {
+          "key": "C",
+          "text": "Writing off the preliminary expenses of the company",
+          "explanation": "This is one of the listed permitted applications."
+        },
+        {
+          "key": "D",
+          "text": "Providing for the premium payable on the redemption of redeemable preference shares or debentures",
+          "explanation": "This too is expressly permitted, and it is why a company issuing debentures at a redemption premium looks first to its securities premium."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Securities premium, §6 →",
+        "href": "/foundation/accounting/company-accounts/#6-securities-premium-and-the-ban-on-issue-at-a-discount"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "s.52 — permitted uses of securities premium; never for dividend",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-019",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Section 53",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about the issue of shares at a discount is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is permitted if the members approve by special resolution and the Tribunal sanctions it",
+          "explanation": "That was the position under the older law. Section 53 of the 2013 Act contains no such approval route."
+        },
+        {
+          "key": "B",
+          "text": "It is prohibited, and a share issued at a discount is void; sweat equity under section 54 and shares issued to creditors under a statutory resolution plan are the exceptions",
+          "explanation": "Correct. Section 53 bans the issue outright and declares any share so issued void, leaving only the sweat equity route and the statutory debt-conversion route open."
+        },
+        {
+          "key": "C",
+          "text": "It is permitted for debentures and shares alike, since both are securities",
+          "explanation": "Debentures may indeed be issued at a discount because they are loans, but section 53 applies specifically to SHARES and forbids it."
+        },
+        {
+          "key": "D",
+          "text": "It is permitted up to 10% of the nominal value without any approval",
+          "explanation": "There is no de minimis allowance. Any discount, however small, falls foul of section 53."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Securities premium, §6 →",
+        "href": "/foundation/accounting/company-accounts/#6-securities-premium-and-the-ban-on-issue-at-a-discount"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "s.53 prohibits issue of shares at a discount; s.54 sweat equity exception",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-020",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Securities premium balance after use",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Girija Pharma Ltd issued 20,000 equity shares of ₹100 each at ₹120. It then wrote off preliminary expenses of ₹1,20,000 and share issue expenses of ₹80,000 against the Securities Premium Account. The balance left in that account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,00,000",
+          "explanation": "This is the premium raised (20,000 × ₹20) before any of it was applied. Two permitted write-offs have since reduced it."
+        },
+        {
+          "key": "B",
+          "text": "₹2,80,000",
+          "explanation": "This deducts only the preliminary expenses. Share issue expenses are equally a permitted application of the premium and must also come out."
+        },
+        {
+          "key": "C",
+          "text": "₹3,20,000",
+          "explanation": "This deducts only the issue expenses and leaves the preliminary expenses standing."
+        },
+        {
+          "key": "D",
+          "text": "₹2,00,000",
+          "explanation": "Correct. Premium raised = 20,000 × (120 − 100) = ₹4,00,000; less preliminary expenses ₹1,20,000 and issue expenses ₹80,000, both permitted by section 52, leaves ₹2,00,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Securities premium, §6 →",
+        "href": "/foundation/accounting/company-accounts/#6-securities-premium-and-the-ban-on-issue-at-a-discount"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "s.52 write-offs reduce the securities premium balance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-021",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Excess application money",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Panchvati Papers Ltd offered 1,00,000 equity shares of ₹10 each, application money ₹2 per share. Applications were received for 1,50,000 shares and the directors allotted pro-rata to all applicants, no application being rejected. The excess application money carried forward to allotment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,00,000",
+          "explanation": "Correct. Received on application = 1,50,000 × ₹2 = ₹3,00,000; retained against the 1,00,000 shares allotted = ₹2,00,000; the excess of ₹1,00,000 is adjusted against allotment because nothing was rejected."
+        },
+        {
+          "key": "B",
+          "text": "₹2,00,000",
+          "explanation": "This is the application money RETAINED on the shares actually allotted (1,00,000 × ₹2), not the surplus that moves to allotment."
+        },
+        {
+          "key": "C",
+          "text": "₹3,00,000",
+          "explanation": "This is the whole application money received. Two-thirds of it belongs to shares actually allotted and stays where it is."
+        },
+        {
+          "key": "D",
+          "text": "₹50,000",
+          "explanation": "This applies ₹1 per share to the 50,000 excess shares. The application money is ₹2 per share, so the excess is double this figure."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Pro-rata allotment, §7 →",
+        "href": "/foundation/accounting/company-accounts/#7-oversubscription-and-pro-rata-allotment"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Excess application money = (shares applied − shares allotted) × application money",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-022",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Applied-versus-allotted back-calculation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Chandra Ispat Ltd offered 40,000 shares and received applications for 60,000, allotting pro-rata to every applicant. Mr Rao was allotted 600 shares. He must have applied for:",
+      "options": [
+        {
+          "key": "A",
+          "text": "400 shares",
+          "explanation": "This applies the ratio the wrong way round (600 × 2/3). Rao received FEWER shares than he applied for, so the number applied for must exceed 600."
+        },
+        {
+          "key": "B",
+          "text": "1,800 shares",
+          "explanation": "This multiplies by 3 instead of by 3/2. The ratio of applied to allotted is 60,000 : 40,000 = 3 : 2, not 3 : 1."
+        },
+        {
+          "key": "C",
+          "text": "900 shares",
+          "explanation": "Correct. Applied : allotted = 60,000 : 40,000 = 3 : 2, so shares applied for = 600 × 3/2 = 900."
+        },
+        {
+          "key": "D",
+          "text": "1,200 shares",
+          "explanation": "This doubles the allotment. It would be right only if the issue had been oversubscribed twice over, i.e. applications for 80,000 shares."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Pro-rata allotment, §7 →",
+        "href": "/foundation/accounting/company-accounts/#7-oversubscription-and-pro-rata-allotment"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Shares applied = shares allotted × (total applied ÷ total allotted)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-023",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Allotment unpaid by a pro-rata allottee",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sundar Marine Ltd offered 50,000 shares of ₹10 each at par, payable ₹3 on application and ₹4 on allotment, and allotted pro-rata against applications for 75,000 shares. Suresh applied for 1,500 shares and failed to pay the allotment money. The amount unpaid by him on allotment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹6,000",
+          "explanation": "This charges allotment on the 1,500 shares APPLIED for. He was allotted only 1,000 shares, and allotment money is demanded on shares allotted."
+        },
+        {
+          "key": "B",
+          "text": "₹4,500",
+          "explanation": "This starts from the ₹6,000 figure computed on shares applied for and then deducts the ₹1,500 excess. Both the base and the result are wrong."
+        },
+        {
+          "key": "C",
+          "text": "₹4,000",
+          "explanation": "This is the allotment money DUE on his 1,000 allotted shares, but it ignores the ₹1,500 of his own application money already sitting against allotment."
+        },
+        {
+          "key": "D",
+          "text": "₹2,500",
+          "explanation": "Correct. Shares allotted = 1,500 × 2/3 = 1,000. Excess application money = 500 × ₹3 = ₹1,500. Allotment due = 1,000 × ₹4 = ₹4,000, less ₹1,500 already held = ₹2,500 unpaid."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Pro-rata allotment, §7 →",
+        "href": "/foundation/accounting/company-accounts/#7-oversubscription-and-pro-rata-allotment"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Allotment due = (shares allotted × allotment per share) − excess application money",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-024",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Cash received on allotment",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Meghdoot Steels Ltd offered 80,000 shares of ₹10 each at ₹12, payable ₹4 on application, ₹5 on allotment (including the ₹2 premium) and ₹3 on first and final call. Applications came in for 1,20,000 shares and allotment was made pro-rata to all applicants, the excess being applied to allotment. Every allottee paid on time. The cash actually received on allotment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,00,000",
+          "explanation": "This is the allotment money DUE (80,000 × ₹5). The excess application money already with the company reduces the cash that has to be paid."
+        },
+        {
+          "key": "B",
+          "text": "₹2,40,000",
+          "explanation": "Correct. Excess application money = (1,20,000 − 80,000) × ₹4 = ₹1,60,000. Allotment due = 80,000 × ₹5 = ₹4,00,000, less ₹1,60,000 already held = ₹2,40,000 received in cash."
+        },
+        {
+          "key": "C",
+          "text": "₹2,00,000",
+          "explanation": "This deducts ₹2,00,000 of excess, which would be right only if the application money were ₹5 per share. It is ₹4."
+        },
+        {
+          "key": "D",
+          "text": "₹5,60,000",
+          "explanation": "This ADDS the excess application money to the allotment due instead of adjusting it against the amount payable."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Pro-rata allotment, §7 →",
+        "href": "/foundation/accounting/company-accounts/#7-oversubscription-and-pro-rata-allotment"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Cash on allotment = allotment due − excess application money adjusted",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-025",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Refund where applications are rejected",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ratnagiri Alloys Ltd offered 60,000 shares, application money ₹5 per share, and received applications for 1,00,000 shares. The directors rejected applications for 10,000 shares outright and allotted the remaining 90,000 applications pro-rata. The amount refunded to applicants is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹50,000",
+          "explanation": "Correct. Only the rejected applications are refunded: 10,000 × ₹5 = ₹50,000. The pro-rata group's surplus is not refunded — it is carried to allotment."
+        },
+        {
+          "key": "B",
+          "text": "₹2,00,000",
+          "explanation": "This refunds the application money on every share not allotted (40,000 × ₹5), which wrongly treats the pro-rata group's surplus as refundable."
+        },
+        {
+          "key": "C",
+          "text": "₹1,50,000",
+          "explanation": "This is the pro-rata group's excess, (90,000 − 60,000) × ₹5, which is adjusted against allotment rather than returned."
+        },
+        {
+          "key": "D",
+          "text": "₹5,00,000",
+          "explanation": "This is the entire application money received. Only the rejected applicants get their money back."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Pro-rata allotment, §7 →",
+        "href": "/foundation/accounting/company-accounts/#7-oversubscription-and-pro-rata-allotment"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Rejected applications refunded; pro-rata surplus adjusted to allotment",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-026",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Excess carried beyond allotment",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Devgiri Sugars Ltd offered 30,000 shares of ₹10 each at par, payable ₹4 on application, ₹3 on allotment and ₹3 on first and final call, and allotted pro-rata against applications for 60,000 shares, the articles permitting excess money to be applied to calls. Assuming everyone pays what is due, the cash received on the first and final call is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹90,000",
+          "explanation": "This is the call money DUE (30,000 × ₹3). Part of it is already covered by application money the company is holding."
+        },
+        {
+          "key": "B",
+          "text": "₹1,20,000",
+          "explanation": "This is the total excess application money, (60,000 − 30,000) × ₹4, not the cash that comes in on the call."
+        },
+        {
+          "key": "C",
+          "text": "₹60,000",
+          "explanation": "Correct. Excess = 30,000 × ₹4 = ₹1,20,000; allotment due 30,000 × ₹3 = ₹90,000 absorbs ₹90,000 of it, leaving ₹30,000 to go against the call. Call due ₹90,000 − ₹30,000 = ₹60,000 received in cash."
+        },
+        {
+          "key": "D",
+          "text": "₹30,000",
+          "explanation": "This is the excess left over AFTER allotment, which is applied against the call — not the cash the company receives."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Pro-rata allotment, §7 →",
+        "href": "/foundation/accounting/company-accounts/#7-oversubscription-and-pro-rata-allotment"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Excess application money is applied first to allotment, then to calls",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-027",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Interest on calls in arrears",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vinod holds 4,000 shares in a company that has adopted Table F. The second call of ₹4 per share fell due on 1 July 2025 and he paid on 1 October 2025. Charging the maximum rate Table F allows, the interest recoverable from him is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,600",
+          "explanation": "This charges a full year's interest on ₹16,000. The default lasted only three months, from 1 July to 1 October."
+        },
+        {
+          "key": "B",
+          "text": "₹400",
+          "explanation": "Correct. Arrears = 4,000 × ₹4 = ₹16,000; period 1 July to 1 October = 3 months; Table F maximum on calls in arrears is 10% p.a. Interest = 16,000 × 10/100 × 3/12 = ₹400."
+        },
+        {
+          "key": "C",
+          "text": "₹480",
+          "explanation": "This applies 12% — the rate the company PAYS on calls in advance. Money owed TO the company carries the 10% rate."
+        },
+        {
+          "key": "D",
+          "text": "₹200",
+          "explanation": "This takes only a month and a half, or applies 5%. The gap between the due date and the date of payment is a full three months."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Calls in arrears and advance, §8 →",
+        "href": "/foundation/accounting/company-accounts/#8-calls-in-arrears-and-calls-in-advance"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Table F: interest on calls in arrears up to 10% p.a.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-028",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Interest on calls in advance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Latha paid ₹90,000 to a Table F company on 1 August 2025 as calls in advance. The call in question was made due on 1 February 2026. At the maximum rate Table F allows, the interest payable to her is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,500",
+          "explanation": "This applies 10% — the rate for calls in ARREARS. Money the company holds early carries the higher 12% rate."
+        },
+        {
+          "key": "B",
+          "text": "₹10,800",
+          "explanation": "This is a full year's interest at 12%. She was out of pocket for six months only, from 1 August to 1 February."
+        },
+        {
+          "key": "C",
+          "text": "₹2,700",
+          "explanation": "This takes three months instead of six. The advance ran from 1 August 2025 to 1 February 2026."
+        },
+        {
+          "key": "D",
+          "text": "₹5,400",
+          "explanation": "Correct. ₹90,000 × 12/100 × 6/12 = ₹5,400 — and it is payable even if the company earns no profit, because it is interest on a debt, not a dividend."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Calls in arrears and advance, §8 →",
+        "href": "/foundation/accounting/company-accounts/#8-calls-in-arrears-and-calls-in-advance"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Table F: interest on calls in advance up to 12% p.a.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-029",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Nature of calls in advance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about calls in advance is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is added to paid-up capital and carries a proportionate voting right",
+          "explanation": "It is added to neither. Until the call is made the money is a liability, and it confers no vote."
+        },
+        {
+          "key": "B",
+          "text": "It ranks for dividend from the date of receipt",
+          "explanation": "No dividend is payable on calls in advance. The shareholder gets interest instead, precisely because the amount is not yet capital."
+        },
+        {
+          "key": "C",
+          "text": "It is a liability of the company until the call is made, carries no voting right and no dividend, but may carry interest payable even in a loss year",
+          "explanation": "Correct. Section 50 lets a company accept it if the articles permit; Table F allows interest up to 12% p.a., and that interest is a charge, payable whether or not there is profit."
+        },
+        {
+          "key": "D",
+          "text": "It can be accepted by any company, whether or not the articles authorise it",
+          "explanation": "The articles must authorise acceptance. Absent that authority the company cannot take the money as calls in advance."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Calls in arrears and advance, §8 →",
+        "href": "/foundation/accounting/company-accounts/#8-calls-in-arrears-and-calls-in-advance"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "s.50 and Table F — nature of calls in advance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-030",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Paid-up capital with arrears and advance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Aravalli Ltd has 1,00,000 equity shares of ₹10 each subscribed, of which ₹8 per share has been called up. Calls in arrears are ₹24,000 and calls in advance are ₹50,000. The paid-up capital shown in the balance sheet is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹7,76,000",
+          "explanation": "Correct. Called-up = 1,00,000 × ₹8 = ₹8,00,000, less calls in arrears ₹24,000 = ₹7,76,000. Calls in advance are a separate liability and are NOT added."
+        },
+        {
+          "key": "B",
+          "text": "₹8,26,000",
+          "explanation": "This deducts the arrears correctly but then adds the ₹50,000 of calls in advance to capital. That money relates to a call not yet made and remains a liability."
+        },
+        {
+          "key": "C",
+          "text": "₹8,00,000",
+          "explanation": "This is the called-up capital with the ₹24,000 of arrears ignored. Paid-up means actually received."
+        },
+        {
+          "key": "D",
+          "text": "₹8,50,000",
+          "explanation": "This both ignores the arrears and adds the advance — the two errors of this question combined."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Calls in arrears and advance, §8 →",
+        "href": "/foundation/accounting/company-accounts/#8-calls-in-arrears-and-calls-in-advance"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Paid-up = called-up − arrears; calls in advance excluded",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-031",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Shares issued to a vendor",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Konkan Mills Ltd buys machinery for ₹9,60,000 and settles the vendor by issuing equity shares of ₹100 each at a premium of 20%. The number of shares issued is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "9,600 shares",
+          "explanation": "This divides by the face value of ₹100 and ignores the premium. The vendor is being paid at ₹120 per share, so fewer shares are needed."
+        },
+        {
+          "key": "B",
+          "text": "11,520 shares",
+          "explanation": "This inflates the consideration by 20% and then divides by ₹100. The premium raises the price PER SHARE, which reduces the number of shares."
+        },
+        {
+          "key": "C",
+          "text": "12,000 shares",
+          "explanation": "This divides by ₹80, as though the shares were issued at a 20% discount — which section 53 forbids in any case."
+        },
+        {
+          "key": "D",
+          "text": "8,000 shares",
+          "explanation": "Correct. Issue price = ₹100 + 20% = ₹120. Number of shares = ₹9,60,000 ÷ ₹120 = 8,000, with ₹8,00,000 to Share Capital and ₹1,60,000 to Securities Premium."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Consideration other than cash, §9 →",
+        "href": "/foundation/accounting/company-accounts/#9-shares-issued-for-consideration-other-than-cash"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Shares issued = purchase consideration ÷ issue price",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-032",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Entry for a business purchase",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company takes over the assets and liabilities of a running business and settles the purchase consideration in fully paid shares. The correct pair of entries is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Share Capital A/c Dr … To Sundry Assets A/c; then Vendor A/c Dr … To Bank A/c",
+          "explanation": "Share Capital is credited when capital is raised, never debited to acquire assets, and the vendor is not paid in cash in this question."
+        },
+        {
+          "key": "B",
+          "text": "Sundry Assets A/c Dr … To Sundry Liabilities A/c … To Vendor A/c; then Vendor A/c Dr … To Share Capital A/c … To Securities Premium A/c",
+          "explanation": "Correct. The first entry brings in what was bought and creates the debt to the vendor; the second discharges that debt in shares, splitting the issue price between capital and premium."
+        },
+        {
+          "key": "C",
+          "text": "Goodwill A/c Dr … To Share Capital A/c, for the whole purchase consideration",
+          "explanation": "Goodwill is debited only with the excess of the consideration over the net assets taken over, and only when there is such an excess. The individual assets and liabilities must still be recorded."
+        },
+        {
+          "key": "D",
+          "text": "Vendor A/c Dr … To Bank A/c; then Bank A/c Dr … To Share Capital A/c",
+          "explanation": "This routes the transaction through cash twice. No money changes hands where the consideration is discharged in shares."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Consideration other than cash, §9 →",
+        "href": "/foundation/accounting/company-accounts/#9-shares-issued-for-consideration-other-than-cash"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Purchase of business settled in shares — two-entry sequence",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-033",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Forfeiture at par: forfeiture credit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "1,000 shares of ₹10 each, on which ₹8 had been called up, are forfeited. The holder had paid the application money of ₹3 and the allotment money of ₹2 but not the first call of ₹3. The amount credited to Share Forfeiture Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,000",
+          "explanation": "This is the amount CALLED UP on the shares, which is what Share Capital is debited with. Part of it was never received."
+        },
+        {
+          "key": "B",
+          "text": "₹10,000",
+          "explanation": "This is the full face value. Only ₹8 per share had been called, so the uncalled ₹2 never entered the books as capital."
+        },
+        {
+          "key": "C",
+          "text": "₹5,000",
+          "explanation": "Correct. He paid ₹3 + ₹2 = ₹5 per share, so Share Forfeiture is credited with 1,000 × ₹5 = ₹5,000, being the money confiscated."
+        },
+        {
+          "key": "D",
+          "text": "₹3,000",
+          "explanation": "This is the unpaid first call (1,000 × ₹3), which is CREDITED to the First Call Account to close it — not the amount forfeited."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Forfeiture of shares, §10 →",
+        "href": "/foundation/accounting/company-accounts/#10-forfeiture-of-shares"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Share Forfeiture credit = amount actually received on the forfeited shares",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-034",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Forfeiture where premium was received",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "800 shares of ₹10 each issued at ₹14 (₹6 on application including ₹4 premium, ₹5 on allotment, ₹3 on first and final call) are forfeited from a holder who paid only the application money. The amount credited to Share Forfeiture Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,600",
+          "explanation": "Correct. He paid 800 × ₹6 = ₹4,800, of which 800 × ₹4 = ₹3,200 is premium that stays in Securities Premium. Only the capital element, 800 × ₹2 = ₹1,600, is credited to Share Forfeiture."
+        },
+        {
+          "key": "B",
+          "text": "₹4,800",
+          "explanation": "This treats the whole application money as forfeited capital. The ₹3,200 of premium already received cannot be cancelled and is not part of the forfeiture credit."
+        },
+        {
+          "key": "C",
+          "text": "₹8,000",
+          "explanation": "This is the amount called up on the shares (800 × ₹10), which is what Share Capital is debited with."
+        },
+        {
+          "key": "D",
+          "text": "₹3,200",
+          "explanation": "This is the premium already received. Section 52 protects it — it is neither reversed nor moved into Share Forfeiture."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Forfeiture of shares, §10 →",
+        "href": "/foundation/accounting/company-accounts/#10-forfeiture-of-shares"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Premium already received is not cancelled on forfeiture",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-035",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Forfeiture where premium was not received",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "600 shares of ₹10 each issued at ₹13 (₹5 on application including ₹2 premium, ₹5 on allotment including ₹1 premium, ₹3 on first and final call) are forfeited from a holder who paid only the application money. Securities Premium Account is debited with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,200",
+          "explanation": "This is the premium already RECEIVED on application (600 × ₹2). Received premium is never written back."
+        },
+        {
+          "key": "B",
+          "text": "₹1,800",
+          "explanation": "This debits the whole premium on the shares (600 × ₹3), including the part already banked. Only the unreceived premium is reversed."
+        },
+        {
+          "key": "C",
+          "text": "Nil, because premium is never reversed",
+          "explanation": "The rule is narrower than that: premium already received is never reversed, but premium CALLED and not received must be, because it was credited when it fell due."
+        },
+        {
+          "key": "D",
+          "text": "₹600",
+          "explanation": "Correct. The premium called but not received is the ₹1 per share in the allotment instalment: 600 × ₹1 = ₹600. That much is debited to Securities Premium; the ₹1,200 received on application is untouched."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Forfeiture of shares, §10 →",
+        "href": "/foundation/accounting/company-accounts/#10-forfeiture-of-shares"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Premium called but not received is debited back on forfeiture",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-036",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Forfeiture premium rule",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which rule governs the Securities Premium Account when shares issued at a premium are forfeited?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The whole premium on those shares is written back, since the shares no longer exist",
+          "explanation": "The shares are cancelled but the money received is not returned. Premium already banked stays in the account."
+        },
+        {
+          "key": "B",
+          "text": "Premium already received is never cancelled; only premium called but not received is debited back",
+          "explanation": "Correct. This is the single rule that decides every forfeiture-at-premium question — ask only whether the premium had actually come in."
+        },
+        {
+          "key": "C",
+          "text": "The premium is transferred to Share Forfeiture Account along with the capital received",
+          "explanation": "Share Forfeiture receives only the CAPITAL element of what was paid. The premium remains where it is, in Securities Premium."
+        },
+        {
+          "key": "D",
+          "text": "The premium is transferred directly to Capital Reserve on forfeiture",
+          "explanation": "Capital Reserve is credited only on REISSUE, and only with the surplus of the forfeited amount over the reissue discount."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Forfeiture of shares, §10 →",
+        "href": "/foundation/accounting/company-accounts/#10-forfeiture-of-shares"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Received premium survives forfeiture; unreceived premium is reversed",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-037",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Share Capital debit on forfeiture",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "500 shares of ₹100 each, on which ₹75 per share had been called up and ₹50 per share received, are forfeited. Share Capital Account is debited with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹37,500",
+          "explanation": "Correct. Share Capital is debited with the amount CALLED UP on the forfeited shares: 500 × ₹75 = ₹37,500. The uncalled ₹25 per share never entered the account."
+        },
+        {
+          "key": "B",
+          "text": "₹50,000",
+          "explanation": "This is the face value of the shares (500 × ₹100). Capital that was never called was never credited, so it cannot be debited back."
+        },
+        {
+          "key": "C",
+          "text": "₹25,000",
+          "explanation": "This is the amount RECEIVED (500 × ₹50), which is credited to Share Forfeiture Account, not debited to Share Capital."
+        },
+        {
+          "key": "D",
+          "text": "₹12,500",
+          "explanation": "This is the amount unpaid (500 × ₹25), which is credited to the relevant call account to close it."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Forfeiture of shares, §10 →",
+        "href": "/foundation/accounting/company-accounts/#10-forfeiture-of-shares"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Forfeiture debits Share Capital with the called-up amount",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-038",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Capital reserve on full reissue",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "2,000 shares of ₹10 each are forfeited, ₹6 per share having been received on them (no premium was involved). All 2,000 are later reissued at ₹8 per share as fully paid. The amount transferred to Capital Reserve is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹12,000",
+          "explanation": "This is the whole amount forfeited (2,000 × ₹6). The ₹4,000 discount allowed on the reissue must be deducted before the balance becomes a capital profit."
+        },
+        {
+          "key": "B",
+          "text": "₹4,000",
+          "explanation": "This is the discount allowed on reissue (2,000 × ₹2), which is DEBITED to Share Forfeiture Account, not transferred to Capital Reserve."
+        },
+        {
+          "key": "C",
+          "text": "₹8,000",
+          "explanation": "Correct. Forfeited amount ₹12,000 less discount on reissue 2,000 × (₹10 − ₹8) = ₹4,000 leaves ₹8,000 to Capital Reserve, and the Share Forfeiture Account closes."
+        },
+        {
+          "key": "D",
+          "text": "₹16,000",
+          "explanation": "This adds the discount to the forfeited amount instead of deducting it, which would credit the company with a profit it never made."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Reissue and capital reserve, §11 →",
+        "href": "/foundation/accounting/company-accounts/#11-reissue-of-forfeited-shares-and-capital-reserve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Capital reserve = forfeited amount − discount on reissue",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-039",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Capital reserve on partial reissue",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "3,000 shares of ₹10 each are forfeited, ₹5 per share having been received on them. Of these, 1,800 shares are reissued at ₹9 per share as fully paid. The amount transferred to Capital Reserve is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹9,000",
+          "explanation": "This is the forfeited amount attributable to the 1,800 reissued shares (1,800 × ₹5) before deducting the ₹1,800 discount allowed on their reissue."
+        },
+        {
+          "key": "B",
+          "text": "₹7,200",
+          "explanation": "Correct. Forfeited amount per share = ₹5, so on 1,800 shares = ₹9,000; discount on reissue = 1,800 × (₹10 − ₹9) = ₹1,800; Capital Reserve = 9,000 − 1,800 = ₹7,200."
+        },
+        {
+          "key": "C",
+          "text": "₹13,200",
+          "explanation": "This takes the whole ₹15,000 forfeited on all 3,000 shares and deducts the discount. The 1,200 shares not yet reissued keep their ₹6,000 in Share Forfeiture Account."
+        },
+        {
+          "key": "D",
+          "text": "₹6,000",
+          "explanation": "This is the balance left in Share Forfeiture Account for the 1,200 shares still unissued — the amount that does NOT go to Capital Reserve."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Reissue and capital reserve, §11 →",
+        "href": "/foundation/accounting/company-accounts/#11-reissue-of-forfeited-shares-and-capital-reserve"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Only the reissued shares' forfeited amount reaches capital reserve",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-040",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Minimum reissue price",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "1,500 shares of ₹10 each stand forfeited, with ₹4,500 to their credit in Share Forfeiture Account. Reissuing them as fully paid, the lowest price per share the company may accept is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3",
+          "explanation": "This is the amount forfeited per share (₹4,500 ÷ 1,500), which is the maximum DISCOUNT allowed, not the price."
+        },
+        {
+          "key": "B",
+          "text": "₹10",
+          "explanation": "This assumes no discount may be given at all. The company may pass on the confiscated money, so it can accept less than face value."
+        },
+        {
+          "key": "C",
+          "text": "₹6",
+          "explanation": "This allows a discount of ₹4 per share, which is more than the ₹3 forfeited on each share and therefore exceeds the permitted limit."
+        },
+        {
+          "key": "D",
+          "text": "₹7",
+          "explanation": "Correct. Maximum discount on reissue = amount forfeited on those shares = ₹4,500 ÷ 1,500 = ₹3 per share, so the lowest acceptable price is ₹10 − ₹3 = ₹7."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Reissue and capital reserve, §11 →",
+        "href": "/foundation/accounting/company-accounts/#11-reissue-of-forfeited-shares-and-capital-reserve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Discount on reissue capped at the amount forfeited on those shares",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-041",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Reissue at a premium",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "1,000 forfeited shares of ₹10 each, carrying ₹7,000 in Share Forfeiture Account, are reissued at ₹12 per share as fully paid. The amount transferred to Capital Reserve is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,000",
+          "explanation": "This deducts the ₹2,000 reissue premium from the forfeited amount. A premium on reissue is a fresh credit to Securities Premium, not a reduction of the capital profit."
+        },
+        {
+          "key": "B",
+          "text": "₹9,000",
+          "explanation": "This adds the ₹2,000 reissue premium to the forfeited amount. The premium belongs to Securities Premium Account, which has its own statutory uses."
+        },
+        {
+          "key": "C",
+          "text": "₹7,000",
+          "explanation": "Correct. No discount was allowed on the reissue, so the entire ₹7,000 forfeited becomes a capital profit; the extra ₹2 per share is separately credited to Securities Premium."
+        },
+        {
+          "key": "D",
+          "text": "₹2,000",
+          "explanation": "This is the premium received on reissue (1,000 × ₹2), which goes to Securities Premium Account."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Reissue and capital reserve, §11 →",
+        "href": "/foundation/accounting/company-accounts/#11-reissue-of-forfeited-shares-and-capital-reserve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Reissue at a premium: full forfeited amount to capital reserve",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-042",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Presentation of the forfeiture balance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Shares stand forfeited but have not yet been reissued at the balance sheet date. The credit balance in Share Forfeiture Account is shown:",
+      "options": [
+        {
+          "key": "A",
+          "text": "as an addition to subscribed capital in the notes to the balance sheet",
+          "explanation": "Correct. Until reissue the amount is not a realised capital profit; it is shown with subscribed capital, and only on reissue does the surplus move to Capital Reserve."
+        },
+        {
+          "key": "B",
+          "text": "as a capital reserve within reserves and surplus",
+          "explanation": "The transfer to Capital Reserve happens only on REISSUE, and only for the shares actually reissued net of any discount allowed."
+        },
+        {
+          "key": "C",
+          "text": "as other income in the statement of profit and loss",
+          "explanation": "It is a capital receipt, not income. Routing it through profit would make it available for dividend, which it is not."
+        },
+        {
+          "key": "D",
+          "text": "as a current liability, being money that may have to be returned to the defaulting member",
+          "explanation": "The money is confiscated, not held for return. There is no liability to the former shareholder."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Reissue and capital reserve, §11 →",
+        "href": "/foundation/accounting/company-accounts/#11-reissue-of-forfeited-shares-and-capital-reserve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Forfeiture balance shown with subscribed capital until reissue",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-043",
+      "topic": "Ch 11 · Company Accounts · Unit 3 · Nature of a debenture",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about debentures is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A debenture always creates a charge on the assets of the company",
+          "explanation": "A debenture may be secured or naked. The instrument evidences a debt whether or not it creates a charge."
+        },
+        {
+          "key": "B",
+          "text": "Debentures carry voting rights proportionate to their face value at general meetings",
+          "explanation": "Debentures carry no voting rights at general meetings. Their holders are creditors, not members."
+        },
+        {
+          "key": "C",
+          "text": "A perpetual debenture is one that pays no interest",
+          "explanation": "A perpetual (irredeemable) debenture pays interest like any other; what makes it perpetual is that it is repayable only on winding up or a remote contingency."
+        },
+        {
+          "key": "D",
+          "text": "A debenture is an instrument evidencing a debt of the company, which may be secured or unsecured, redeemable or perpetual, and convertible or non-convertible",
+          "explanation": "Correct. The debt is the essence; security, tenure and convertibility are the three axes along which debentures are classified."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Debentures, §12 →",
+        "href": "/foundation/accounting/company-accounts/#12-debentures-kinds-and-terms-of-issue"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Definition and classification of debentures",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-044",
+      "topic": "Ch 11 · Company Accounts · Unit 3 · Credit to Debentures Account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Suvarna Chemicals Ltd issues 5,000 debentures of ₹100 each at ₹94, redeemable at par. Debentures Account is credited with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,70,000",
+          "explanation": "This is the money received (5,000 × ₹94). The liability the company must repay is the face value, so the ₹30,000 shortfall is carried in Discount on Issue of Debentures."
+        },
+        {
+          "key": "B",
+          "text": "₹5,00,000",
+          "explanation": "Correct. Debentures Account always carries the FACE value, 5,000 × ₹100 = ₹5,00,000; the ₹30,000 discount is debited to a separate account and written off over the life of the debentures."
+        },
+        {
+          "key": "C",
+          "text": "₹5,30,000",
+          "explanation": "This adds the discount to the face value. The discount is a loss to the company, not an addition to what it owes."
+        },
+        {
+          "key": "D",
+          "text": "₹30,000",
+          "explanation": "This is the discount on issue, 5,000 × ₹6, which is the DEBIT in the same entry."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Debentures, §12 →",
+        "href": "/foundation/accounting/company-accounts/#12-debentures-kinds-and-terms-of-issue"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Debentures A/c credited at face value; discount kept separate",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-045",
+      "topic": "Ch 11 · Company Accounts · Unit 3 · Loss on issue of debentures",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ganga Infra Ltd issues 3,000 12% debentures of ₹100 each at ₹95, redeemable after five years at ₹110. The amount debited to Loss on Issue of Debentures Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹15,000",
+          "explanation": "This is the discount on issue alone, 3,000 × ₹5. The premium promised on redemption is an equal and separate loss recognised at the same time."
+        },
+        {
+          "key": "B",
+          "text": "₹30,000",
+          "explanation": "This is the premium payable on redemption alone, 3,000 × ₹10, and it leaves out the ₹15,000 discount suffered on issue."
+        },
+        {
+          "key": "C",
+          "text": "₹45,000",
+          "explanation": "Correct. Loss on issue = discount on issue 3,000 × (100 − 95) = ₹15,000 plus premium payable on redemption 3,000 × (110 − 100) = ₹30,000, giving ₹45,000, recognised in full at the time of issue."
+        },
+        {
+          "key": "D",
+          "text": "₹60,000",
+          "explanation": "This overstates one of the two elements — most commonly by treating the redemption premium as ₹15 per debenture rather than ₹10."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Loss on issue, §13 →",
+        "href": "/foundation/accounting/company-accounts/#13-loss-on-issue-when-debentures-are-redeemable-at-a-premium"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Loss on issue = discount on issue + premium on redemption",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-046",
+      "topic": "Ch 11 · Company Accounts · Unit 3 · Debentures issued at a premium, redeemable at a premium",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Tungabhadra Power Ltd issues 2,500 debentures of ₹100 each at ₹102, redeemable at ₹105. The amount debited to Loss on Issue of Debentures Account is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹12,500",
+          "explanation": "Correct. The redemption premium of ₹5 per debenture is the loss: 2,500 × ₹5 = ₹12,500. The ₹2 per debenture received above par is a separate credit to Securities Premium and is not netted off."
+        },
+        {
+          "key": "B",
+          "text": "₹7,500",
+          "explanation": "This nets the ₹5,000 issue premium against the ₹12,500 redemption premium. The issue premium belongs to Securities Premium Account, which has its own statutory uses under section 52."
+        },
+        {
+          "key": "C",
+          "text": "₹17,500",
+          "explanation": "This adds the issue premium to the redemption premium. Money received above par is a gain to the company, not a loss."
+        },
+        {
+          "key": "D",
+          "text": "₹5,000",
+          "explanation": "This is the securities premium received on issue, 2,500 × ₹2, which is credited — the opposite side of the entry."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Loss on issue, §13 →",
+        "href": "/foundation/accounting/company-accounts/#13-loss-on-issue-when-debentures-are-redeemable-at-a-premium"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Issue premium is credited to Securities Premium; redemption premium is the loss",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-047",
+      "topic": "Ch 11 · Company Accounts · Unit 3 · Interest on debentures",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sabarmati Ltd has 6,000 9% debentures of ₹100 each, issued at ₹96 and redeemable at ₹102. The interest charged to the statement of profit and loss for a full year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹51,840",
+          "explanation": "This applies 9% to the money received, 6,000 × ₹96 = ₹5,76,000. Interest is contracted on the nominal value, not on the issue proceeds."
+        },
+        {
+          "key": "B",
+          "text": "₹54,000",
+          "explanation": "Correct. Interest = 9% × face value 6,000 × ₹100 = 9% × ₹6,00,000 = ₹54,000 for the year, and it is a charge against profit, payable even in a loss year."
+        },
+        {
+          "key": "C",
+          "text": "₹55,080",
+          "explanation": "This applies 9% to the redemption value, 6,000 × ₹102. The redemption premium affects the loss on issue, not the coupon."
+        },
+        {
+          "key": "D",
+          "text": "₹27,000",
+          "explanation": "This is half a year's interest. The question asks for a full year."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Collateral security, §14 →",
+        "href": "/foundation/accounting/company-accounts/#14-debentures-as-collateral-security-and-debenture-interest"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Debenture interest computed on face value",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c11-048",
+      "topic": "Ch 11 · Company Accounts · Unit 3 · Collateral security presentation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company takes a bank loan of ₹5,00,000 and issues ₹7,00,000 of debentures to the bank as collateral security. Which presentation is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The debentures are recorded as a liability of ₹7,00,000 and the bank loan is not shown separately",
+          "explanation": "The company owes the bank ₹5,00,000, not ₹7,00,000. Showing only the collateral debentures both overstates the liability and hides the loan."
+        },
+        {
+          "key": "B",
+          "text": "The collateral debentures are shown as an asset of ₹7,00,000",
+          "explanation": "Nothing has been received for them, so they are not an asset. This is the older Debenture Suspense presentation and it inflates both sides of the balance sheet."
+        },
+        {
+          "key": "C",
+          "text": "The bank loan is shown net, at ₹5,00,000 less ₹7,00,000 of collateral debentures",
+          "explanation": "A liability cannot be reduced by security given for it. The loan stands at ₹5,00,000 and the collateral is disclosed, not netted against it."
+        },
+        {
+          "key": "D",
+          "text": "Either no entry is passed and a note is given under the loan, or Debenture Suspense A/c is debited and shown as a deduction from the debentures issued",
+          "explanation": "Correct. Both presentations are accepted: method 1 records nothing and discloses the collateral by note, method 2 passes Debenture Suspense A/c Dr … To Debentures A/c and nets the suspense against the debentures, so the balance sheet total is unaffected either way."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Collateral security, §14 →",
+        "href": "/foundation/accounting/company-accounts/#14-debentures-as-collateral-security-and-debenture-interest"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Two accepted presentations of debentures issued as collateral security",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c11-01",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Shares vs debentures",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Distinguish between an equity share and a debenture under five heads, and state which of the two may be issued at a discount and why. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Status: a shareholder is a member and part-owner of the company, whereas a debenture holder is a creditor who has lent money to it",
+          "marks": 1,
+          "citation": "Ownership vs loan"
+        },
+        {
+          "point": "Return: dividend on shares is an appropriation of profit, payable only out of profits and only when declared, while debenture interest is a charge against profit, payable at the contracted rate whether or not the company earns a profit",
+          "marks": 1,
+          "citation": "Appropriation vs charge"
+        },
+        {
+          "point": "Control and repayment: equity shares carry voting rights at general meetings and the capital is not normally returned during the company's life, whereas debentures carry no voting rights and are repayable on the due date (except perpetual debentures)",
+          "marks": 1,
+          "citation": "Voting and repayment"
+        },
+        {
+          "point": "Security and priority: shares are unsecured by nature and rank last on winding up; debentures may be secured by a charge on the company's assets and are paid before all shareholders",
+          "marks": 1,
+          "citation": "Security and priority on winding up"
+        },
+        {
+          "point": "Issue at a discount: debentures may be issued at a discount, shares may not. Section 53 prohibits the issue of shares at a discount and declares any share so issued void (sweat equity under section 54 and shares issued to creditors under a statutory resolution plan being the exceptions), because share capital is the creditors' cushion; a debenture is merely a loan, so the lender and borrower may fix any price",
+          "marks": 1,
+          "citation": "s.53 prohibition; debentures unaffected"
+        }
+      ],
+      "readLink": {
+        "label": "Read: Shares vs debentures, §4 →",
+        "href": "/foundation/accounting/company-accounts/#4-shares-versus-debentures"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Shares vs debentures; s.53",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c11-02",
+      "topic": "Ch 11 · Company Accounts · Unit 1 · Share capital ladder",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the five stages of share capital from authorised to paid-up, and distinguish reserve capital from capital reserve. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Authorised (nominal or registered) capital is the maximum stated in the memorandum, which the company cannot exceed without altering the memorandum; issued capital is the part of it actually offered to the public",
+          "marks": 1,
+          "citation": "Authorised and issued capital"
+        },
+        {
+          "point": "Subscribed capital is the part of the issued capital applied for and allotted; called-up capital is the part of the subscribed capital the company has so far demanded from members",
+          "marks": 1,
+          "citation": "Subscribed and called-up capital"
+        },
+        {
+          "point": "Paid-up capital is the called-up capital actually received, that is called-up capital less calls in arrears; calls in advance are not added to it because the corresponding call has not yet been made",
+          "marks": 1,
+          "citation": "Paid-up capital; treatment of arrears and advance"
+        },
+        {
+          "point": "Uncalled capital is subscribed capital less called-up capital — money the company may still demand; reserve capital is that portion of the uncalled capital which the company resolves, by special resolution, to call up only in the event of winding up, and it is therefore not available to the company as a going concern",
+          "marks": 1,
+          "citation": "Uncalled capital and reserve capital"
+        },
+        {
+          "point": "Capital reserve, by contrast, is a reserve created out of capital profits — for example the surplus on reissue of forfeited shares — appearing within reserves and surplus and not available for distribution as dividend",
+          "marks": 1,
+          "citation": "Capital reserve distinguished"
+        }
+      ],
+      "readLink": {
+        "label": "Read: Share capital ladder, §2 →",
+        "href": "/foundation/accounting/company-accounts/#2-the-share-capital-ladder"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Share capital ladder; reserve capital vs capital reserve",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c11-03",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Securities premium and discount",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "State the purposes for which the Securities Premium Account may be applied under section 52, and explain the position under section 53 on the issue of shares at a discount. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Securities premium arises where shares are issued above face value; a sum equal to the aggregate premium received is credited to the Securities Premium Account, which is not a free reserve and is never available for the payment of dividend",
+          "marks": 1,
+          "citation": "s.52 — creation and character of the account"
+        },
+        {
+          "point": "Permitted use: issuing fully paid bonus shares to the members",
+          "marks": 1,
+          "citation": "s.52 permitted use — bonus shares"
+        },
+        {
+          "point": "Permitted uses: writing off the preliminary expenses of the company, and writing off the expenses of, the commission paid on, or the discount allowed on, any issue of shares or debentures",
+          "marks": 1,
+          "citation": "s.52 permitted uses — preliminary and issue expenses"
+        },
+        {
+          "point": "Permitted uses: providing for the premium payable on the redemption of redeemable preference shares or debentures, and buying back the company's own shares or other securities under section 68",
+          "marks": 1,
+          "citation": "s.52 permitted uses — redemption premium and buy-back"
+        },
+        {
+          "point": "Section 53 prohibits a company from issuing shares at a discount, and any share issued at a discount is void; the rule protects the capital that creditors rely on",
+          "marks": 1,
+          "citation": "s.53 prohibition"
+        },
+        {
+          "point": "The exceptions are sweat equity shares issued under section 54 to directors or employees for know-how or value addition, and shares issued to creditors on conversion of debt under a statutory resolution plan or debt-restructuring scheme; debentures are outside section 53 altogether and may be issued at a discount",
+          "marks": 1,
+          "citation": "s.54 and statutory debt conversion; debentures unaffected"
+        }
+      ],
+      "readLink": {
+        "label": "Read: Securities premium, §6 →",
+        "href": "/foundation/accounting/company-accounts/#6-securities-premium-and-the-ban-on-issue-at-a-discount"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "s.52 permitted uses; s.53 prohibition and exceptions",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c11-04",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Forfeiture and reissue",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the accounting treatment of the forfeiture of shares issued at a premium and of their subsequent reissue, stating clearly how the amount transferred to capital reserve is arrived at. (6 marks)",
+      "skeleton": [
+        {
+          "point": "On forfeiture, Share Capital Account is debited with the amount called up on the forfeited shares (not their face value and not the amount received), the instalments called but unpaid are credited to close the relevant allotment and call accounts, and the balance — the money actually received as capital — is credited to Share Forfeiture Account",
+          "marks": 1,
+          "citation": "Forfeiture entry at par"
+        },
+        {
+          "point": "Where the shares were issued at a premium, the premium already received is never cancelled: it remains in the Securities Premium Account, protected by section 52, and does not form part of the forfeiture credit",
+          "marks": 1,
+          "citation": "Premium received is not reversed"
+        },
+        {
+          "point": "Where the premium was called but not received, the Securities Premium Account is debited with that unreceived premium alongside Share Capital, because it had been credited when the instalment fell due",
+          "marks": 1,
+          "citation": "Premium called but unreceived is reversed"
+        },
+        {
+          "point": "Until reissue, the credit balance in Share Forfeiture Account is not a realised profit; it is shown in the balance sheet as an addition to subscribed capital",
+          "marks": 1,
+          "citation": "Presentation before reissue"
+        },
+        {
+          "point": "On reissue, Bank Account is debited with the proceeds, Share Forfeiture Account is debited with any discount allowed, and Share Capital Account is credited with the amount credited as paid up; the discount allowed may not exceed the amount forfeited on those very shares, and any excess over face value on reissue is credited to Securities Premium",
+          "marks": 1,
+          "citation": "Reissue entry and the discount cap"
+        },
+        {
+          "point": "Capital reserve equals the amount forfeited on the shares actually reissued less the discount allowed on their reissue; where only some of the forfeited shares are reissued, the forfeited amount is apportioned per share and the balance stays in Share Forfeiture Account",
+          "marks": 1,
+          "citation": "Capital reserve computation and partial reissue"
+        }
+      ],
+      "readLink": {
+        "label": "Read: Reissue and capital reserve, §11 →",
+        "href": "/foundation/accounting/company-accounts/#11-reissue-of-forfeited-shares-and-capital-reserve"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Forfeiture at premium; reissue; capital reserve",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c11-05",
+      "topic": "Ch 11 · Company Accounts · Unit 2 · Pro-rata allotment",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "A company's issue is oversubscribed. Explain the three ways the directors may deal with the applications and the treatment of the application money in each case. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Applications may be rejected outright, in which case the whole application money received on them is refunded to the applicants within the prescribed period",
+          "marks": 1,
+          "citation": "Rejection and refund"
+        },
+        {
+          "point": "Applications may be accepted in full, in which case the application money received on them is simply transferred to Share Capital (and to Securities Premium, if premium is collected on application)",
+          "marks": 1,
+          "citation": "Full acceptance"
+        },
+        {
+          "point": "Applications may be accepted in part on a pro-rata basis, every applicant in the group receiving shares in a fixed ratio; the excess application money of that group is not refunded but is adjusted against the allotment money, and if the articles so permit and it still exceeds the allotment, against the calls",
+          "marks": 1,
+          "citation": "Pro-rata allotment and adjustment of excess"
+        },
+        {
+          "point": "Consequently the allotment money still payable by a pro-rata allottee equals the shares allotted to him multiplied by the allotment money per share, less his own excess application money; and the number of shares he applied for is recovered as shares allotted multiplied by the ratio of total shares applied for to total shares allotted",
+          "marks": 1,
+          "citation": "Working the member's allotment due and shares applied for"
+        }
+      ],
+      "readLink": {
+        "label": "Read: Pro-rata allotment, §7 →",
+        "href": "/foundation/accounting/company-accounts/#7-oversubscription-and-pro-rata-allotment"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Oversubscription: rejection, full allotment, pro-rata",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c11-06",
+      "topic": "Ch 11 · Company Accounts · Unit 3 · Debenture issue and collateral security",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain how a company accounts for debentures issued at a discount and redeemable at a premium, and describe the two accepted presentations of debentures issued as collateral security. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Debentures Account is always credited with the face value of the debentures, because that is the amount the company is liable to repay; the money actually received is debited to Bank through the Debenture Application and Allotment Account",
+          "marks": 1,
+          "citation": "Debentures A/c credited at face value"
+        },
+        {
+          "point": "The discount on issue and the premium payable on redemption are both losses suffered at the moment of issue, and are debited together to Loss on Issue of Debentures Account: loss on issue = discount on issue + premium payable on redemption",
+          "marks": 1,
+          "citation": "Loss on issue formula"
+        },
+        {
+          "point": "The premium payable on redemption is credited to Premium on Redemption of Debentures Account, which is a liability carried until redemption, not an expense of the year of issue",
+          "marks": 1,
+          "citation": "Premium on redemption is a liability"
+        },
+        {
+          "point": "The loss (or the discount, where the debentures are redeemable at par) is a capital loss written off over the life of the debentures, against the Securities Premium Account where one exists and otherwise against the statement of profit and loss",
+          "marks": 1,
+          "citation": "Writing off the capital loss"
+        },
+        {
+          "point": "Debentures issued as collateral security are a secondary security for a loan: the lender holds them and returns them when the loan is repaid, and they become effective only on default. Under the first method no entry is passed and the fact is disclosed by a note under the loan",
+          "marks": 1,
+          "citation": "Collateral security — method 1"
+        },
+        {
+          "point": "Under the second method the entry Debenture Suspense A/c Dr … To Debentures A/c is passed, and Debenture Suspense is shown as a deduction from the debentures so issued, leaving the balance sheet total unaffected; the liability actually owed remains the amount of the loan",
+          "marks": 1,
+          "citation": "Collateral security — method 2"
+        }
+      ],
+      "readLink": {
+        "label": "Read: Collateral security, §14 →",
+        "href": "/foundation/accounting/company-accounts/#14-debentures-as-collateral-security-and-debenture-interest"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Loss on issue; collateral security presentations",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}

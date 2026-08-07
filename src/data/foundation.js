@@ -86,7 +86,7 @@ export const foundationPapers = [
     shortName: 'Accounting',
     marks: 100,
     pattern: { style: 'Descriptive', mcqPct: 0, descriptivePct: 100, negativeMarking: false },
-    status: 'coming-soon',
+    status: 'live',
     sections: [
       {
         name: 'Module 1',
@@ -106,7 +106,7 @@ export const foundationPapers = [
           { number: 8, slug: 'financial-statements-of-not-for-profit-organisations', name: 'Financial Statements of Not-for-Profit Organisations', hasNotes: true },
           { number: 9, slug: 'accounts-from-incomplete-records', name: 'Accounts from Incomplete Records', hasNotes: true },
           { number: 10, slug: 'partnership-and-llp-accounts', name: 'Partnership and LLP Accounts', hasNotes: true },
-          { number: 11, slug: 'company-accounts', name: 'Company Accounts' },
+          { number: 11, slug: 'company-accounts', name: 'Company Accounts', hasNotes: true },
         ],
       },
     ],
