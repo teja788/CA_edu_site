@@ -104,8 +104,8 @@ export const foundationPapers = [
         name: 'Module 2',
         chapters: [
           { number: 8, slug: 'financial-statements-of-not-for-profit-organisations', name: 'Financial Statements of Not-for-Profit Organisations', hasNotes: true },
-          { number: 9, slug: 'accounts-from-incomplete-records', name: 'Accounts from Incomplete Records' },
-          { number: 10, slug: 'partnership-and-llp-accounts', name: 'Partnership and LLP Accounts' },
+          { number: 9, slug: 'accounts-from-incomplete-records', name: 'Accounts from Incomplete Records', hasNotes: true },
+          { number: 10, slug: 'partnership-and-llp-accounts', name: 'Partnership and LLP Accounts', hasNotes: true },
           { number: 11, slug: 'company-accounts', name: 'Company Accounts' },
         ],
       },

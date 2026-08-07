@@ -1,0 +1,2146 @@
+{
+  "level": "foundation",
+  "paper": "Paper 1 — Accounting",
+  "paperSlug": "accounting",
+  "chapterSlug": "accounts-from-incomplete-records",
+  "chapter": "Ch 9 — Accounts from Incomplete Records",
+  "questions": [
+    {
+      "id": "q-f1c9-001",
+      "topic": "Ch 9 · Incomplete Records · Nature of single entry",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement best describes the so-called 'single entry system'?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A simplified form of double entry in which only one account is debited and one credited for each transaction",
+          "explanation": "That description fits ordinary double entry exactly — every entry has one debit and one credit. Single entry is not a shortened double entry; it is an incomplete record."
+        },
+        {
+          "key": "B",
+          "text": "A system in which only real and nominal accounts are maintained, personal accounts being dispensed with",
+          "explanation": "This reverses the position. Personal accounts are the ones such a trader does keep; real and nominal accounts are the ones that go unrecorded."
+        },
+        {
+          "key": "C",
+          "text": "Not a system at all, but a mixture — double entry for personal accounts, single entry for cash, and no entry for most real and nominal accounts",
+          "explanation": "Correct. The label is a misnomer. Debtors and creditors are recorded on both sides because the trader must know who owes what; cash is kept as a one-sided running memorandum; furniture, purchases, sales, rent and the rest are simply not accounted for at all."
+        },
+        {
+          "key": "D",
+          "text": "A statutory alternative to double entry available to any entity not required to be audited",
+          "explanation": "No statute sanctions it. It is a defective practice tolerated for small traders, not a permitted alternative; a company must keep proper double entry books whatever its size."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Incomplete records, §1 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#1-what-incomplete-records-are-and-who-keeps-them"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Single entry = double entry + single entry + no entry",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-002",
+      "topic": "Ch 9 · Incomplete Records · Defects of incomplete records",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under incomplete records no trial balance can be extracted. The most important consequence of that is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the business cannot know its cash balance",
+          "explanation": "Cash is one of the few things such a trader does record — the box is counted every evening. The defect lies in the accounts that are not kept."
+        },
+        {
+          "key": "B",
+          "text": "there is no arithmetical check on the books, and gross profit cannot be ascertained because no Trading Account can be drawn up",
+          "explanation": "Correct. The trial balance is the arithmetical proof of the ledger and the raw material of the final accounts. Without it nothing has to agree with anything, and the trader can never see his margin on goods."
+        },
+        {
+          "key": "C",
+          "text": "the assets cannot be physically verified",
+          "explanation": "A physical count needs no ledger. What is missing is the book figure to compare the count against."
+        },
+        {
+          "key": "D",
+          "text": "the proprietor's drawings cannot be traced",
+          "explanation": "Drawings can usually be traced through the cash book, and in many problems they are the figure the question gives you. This is a symptom, not the central defect."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Incomplete records, §1 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#1-what-incomplete-records-are-and-who-keeps-them"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Defects: no trial balance, no gross profit, no true and fair view",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-003",
+      "topic": "Ch 9 · Incomplete Records · Who may keep incomplete records",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following may maintain its accounts on the incomplete-records basis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A public company with a small turnover",
+          "explanation": "Size is irrelevant. A company is required to maintain proper books of account on the double entry basis; incomplete records are never open to it."
+        },
+        {
+          "key": "B",
+          "text": "A private company with only two members",
+          "explanation": "The number of members changes nothing. Every company must keep proper books on the double entry basis."
+        },
+        {
+          "key": "C",
+          "text": "Any entity whose accounts are subject to statutory audit",
+          "explanation": "An auditor cannot report on books that carry no arithmetical check. Entities under statutory audit must maintain complete double entry records."
+        },
+        {
+          "key": "D",
+          "text": "A small sole proprietor or small partnership firm whose volume of transactions does not justify a full set of books",
+          "explanation": "Correct. The practice survives among small traders for its cheapness, simplicity and privacy — and only because no statute compels them to do otherwise."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Incomplete records, §1 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#1-what-incomplete-records-are-and-who-keeps-them"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies must keep proper double entry books",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-004",
+      "topic": "Ch 9 · Incomplete Records · Statement of Affairs vs Balance Sheet",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The capital figure in a Statement of Affairs differs in nature from the capital in a Balance Sheet because:",
+      "options": [
+        {
+          "key": "A",
+          "text": "in a Statement of Affairs capital is the balancing figure (assets − liabilities), whereas in a Balance Sheet it comes from an independently maintained Capital Account",
+          "explanation": "Correct. That single difference explains everything else about the two documents — including why an omitted asset or liability in a Statement of Affairs silently changes capital and nothing complains, while the same omission would throw a trial balance out."
+        },
+        {
+          "key": "B",
+          "text": "a Statement of Affairs shows capital at market value while a Balance Sheet shows it at cost",
+          "explanation": "Neither document values capital directly at all — capital is a residue in both. Valuation differences may affect individual assets, but that is not what distinguishes the two."
+        },
+        {
+          "key": "C",
+          "text": "a Statement of Affairs excludes the proprietor's drawings while a Balance Sheet includes them",
+          "explanation": "Both show capital after drawings. Drawings are not a separate item on the face of either statement once capital has been arrived at."
+        },
+        {
+          "key": "D",
+          "text": "a Statement of Affairs is prepared only at the end of the year while a Balance Sheet is prepared twice",
+          "explanation": "It is the other way round in a net-worth question: statements of affairs are prepared at both the beginning and the end of the year — that is the whole method."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Statement of Affairs, §2 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#2-statement-of-affairs-versus-balance-sheet"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Capital = balancing figure vs capital from the Capital A/c",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-005",
+      "topic": "Ch 9 · Incomplete Records · Capital from a Statement of Affairs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On 1 April 2025 Ramesh, who keeps no ledger, had: cash ₹18,000; bank ₹62,000; debtors ₹1,45,000; stock ₹2,10,000; furniture ₹75,000; creditors ₹1,32,000; bills payable ₹28,000; rent outstanding ₹10,000. His capital on that date was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹3,40,000",
+          "explanation": "Correct. Assets = 18,000 + 62,000 + 1,45,000 + 2,10,000 + 75,000 = ₹5,10,000. Liabilities = 1,32,000 + 28,000 + 10,000 = ₹1,70,000. Capital = 5,10,000 − 1,70,000 = ₹3,40,000."
+        },
+        {
+          "key": "B",
+          "text": "₹5,10,000",
+          "explanation": "This is the total of the assets alone, with the ₹1,70,000 of liabilities ignored. Capital is what is left for the owner after outsiders are satisfied."
+        },
+        {
+          "key": "C",
+          "text": "₹3,50,000",
+          "explanation": "This leaves the ₹10,000 of outstanding rent out of the liabilities. An expense incurred but not paid is a liability of the business on the date of the statement."
+        },
+        {
+          "key": "D",
+          "text": "₹3,60,000",
+          "explanation": "This treats the ₹10,000 outstanding rent as though it were a prepaid expense — adding it to the assets instead of deducting it as a liability, a swing of ₹20,000."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Statement of Affairs, §2 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#2-statement-of-affairs-versus-balance-sheet"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Capital = Assets − Liabilities",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-006",
+      "topic": "Ch 9 · Incomplete Records · Net worth method — basic",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ganesh's capital was ₹5,00,000 on 1 April 2025 and ₹6,80,000 on 31 March 2026. He withdrew ₹1,20,000 during the year and brought in no fresh capital. His profit for the year was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,80,000",
+          "explanation": "This is simply the increase in capital (6,80,000 − 5,00,000) with the drawings ignored. The ₹1,20,000 he took out was earned during the year and must be added back."
+        },
+        {
+          "key": "B",
+          "text": "₹60,000",
+          "explanation": "This DEDUCTS the drawings instead of adding them (6,80,000 − 1,20,000 − 5,00,000), so the profit is understated by twice the drawings, ₹2,40,000."
+        },
+        {
+          "key": "C",
+          "text": "₹3,00,000",
+          "explanation": "Correct. Profit = Closing capital + Drawings − Further capital − Opening capital = 6,80,000 + 1,20,000 − 0 − 5,00,000 = ₹3,00,000. The closing capital is already net of the drawings, so they are added back."
+        },
+        {
+          "key": "D",
+          "text": "₹4,20,000",
+          "explanation": "This adds the drawings twice — once to the closing capital and again as a separate item. The drawings enter the computation once only."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Profit = Closing capital + Drawings − Further capital − Opening capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-007",
+      "topic": "Ch 9 · Incomplete Records · Net worth with monthly drawings and fresh capital",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Latha's capital was ₹3,60,000 on 1 April 2025 and ₹4,90,000 on 31 March 2026. She drew ₹8,000 per month throughout the year and introduced ₹50,000 of fresh capital in November 2025. Her profit for the year was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,76,000",
+          "explanation": "This ADDS the ₹50,000 of fresh capital instead of deducting it, overstating the profit by ₹1,00,000. Capital introduced swelled the closing capital without any trading behind it."
+        },
+        {
+          "key": "B",
+          "text": "₹1,76,000",
+          "explanation": "Correct. Drawings = 8,000 × 12 = ₹96,000. Profit = 4,90,000 + 96,000 − 50,000 − 3,60,000 = ₹1,76,000."
+        },
+        {
+          "key": "C",
+          "text": "₹80,000",
+          "explanation": "This ignores the drawings altogether (4,90,000 − 50,000 − 3,60,000). The ₹96,000 she took out was profit she had already earned."
+        },
+        {
+          "key": "D",
+          "text": "₹88,000",
+          "explanation": "This reads '₹8,000 per month' as ₹8,000 for the whole year, understating the drawings by ₹88,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Profit = Closing capital + Drawings − Further capital − Opening capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-008",
+      "topic": "Ch 9 · Incomplete Records · Net worth — fresh capital deducted",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A trader's capital rose from ₹2,40,000 on 1 April 2025 to ₹3,95,000 on 31 March 2026. During the year he introduced ₹75,000 of further capital and withdrew ₹60,000. His profit for the year was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,90,000",
+          "explanation": "This ADDS the ₹75,000 of further capital instead of deducting it, overstating the profit by ₹1,50,000 — the single most common slip in this chapter."
+        },
+        {
+          "key": "B",
+          "text": "₹20,000",
+          "explanation": "This DEDUCTS the ₹60,000 of drawings instead of adding them. Closing capital is already after drawings; deducting them again removes ₹1,20,000 of genuine profit."
+        },
+        {
+          "key": "C",
+          "text": "₹80,000",
+          "explanation": "This ignores the drawings entirely (3,95,000 − 75,000 − 2,40,000), understating the profit by the full ₹60,000 withdrawn."
+        },
+        {
+          "key": "D",
+          "text": "₹1,40,000",
+          "explanation": "Correct. Profit = 3,95,000 + 60,000 − 75,000 − 2,40,000 = ₹1,40,000. Of the ₹1,55,000 rise in capital, ₹75,000 came from his own pocket and is not profit; the ₹60,000 he took out is."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Further capital is deducted; drawings are added back",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-009",
+      "topic": "Ch 9 · Incomplete Records · Net worth — a loss year",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening capital ₹5,60,000; closing capital ₹4,10,000; drawings during the year ₹90,000; further capital introduced ₹40,000. The result for the year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Loss of ₹1,00,000",
+          "explanation": "Correct. 4,10,000 + 90,000 − 40,000 − 5,60,000 = −₹1,00,000. A negative answer from the net-worth formula is a loss; the formula itself does not change."
+        },
+        {
+          "key": "B",
+          "text": "Loss of ₹1,50,000",
+          "explanation": "This is only the fall in capital (5,60,000 − 4,10,000), ignoring both the drawings and the fresh capital. Those two items pull in opposite directions and both must be brought in."
+        },
+        {
+          "key": "C",
+          "text": "Loss of ₹20,000",
+          "explanation": "This ADDS the ₹40,000 of fresh capital instead of deducting it, understating the loss by ₹80,000."
+        },
+        {
+          "key": "D",
+          "text": "Profit of ₹1,00,000",
+          "explanation": "The arithmetic is right but the sign has been dropped. Capital fell by more than the drawings net of fresh capital, so the year produced a loss."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "A negative net-worth figure is a loss",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-010",
+      "topic": "Ch 9 · Incomplete Records · Treatment of capital introduced",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the net worth formula, further capital introduced by the proprietor during the year is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "shown as a liability of the business rather than as part of capital",
+          "explanation": "Money brought in by the proprietor is capital, not a liability owed to an outsider. Capital already IS the business's debt to its owner."
+        },
+        {
+          "key": "B",
+          "text": "deducted, because it raised the closing capital without any trading effort behind it",
+          "explanation": "Correct. Closing capital contains the money he brought in, so it must be stripped out before the remainder can be called profit. Drawings and capital introduced move capital in opposite directions and are treated in opposite ways."
+        },
+        {
+          "key": "C",
+          "text": "ignored entirely, because only revenue items affect profit",
+          "explanation": "Ignoring it overstates the profit by exactly the amount introduced, since the closing capital still contains it."
+        },
+        {
+          "key": "D",
+          "text": "added to the drawings, because both are movements on the Capital Account",
+          "explanation": "This adds it where it should be subtracted, overstating the profit by twice the amount introduced."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Profit = Closing capital + Drawings − Further capital − Opening capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-011",
+      "topic": "Ch 9 · Incomplete Records · Adjusted net-worth profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A first draft shows capital of ₹6,00,000 on 31 March 2026 against ₹4,50,000 on 1 April 2025; drawings were ₹1,00,000 and no fresh capital was brought in. Before finalising, it is found that depreciation of ₹15,000 on furniture has not been provided, ₹9,000 of the debtors are bad, ₹6,000 of loan interest is outstanding, and a bill receivable of ₹12,000 held on 31 March was left out of the assets. The corrected profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,50,000",
+          "explanation": "This is the unadjusted draft profit (6,00,000 + 1,00,000 − 4,50,000) with all four adjustments ignored. Every adjustment changes closing capital and therefore the profit."
+        },
+        {
+          "key": "B",
+          "text": "₹2,08,000",
+          "explanation": "This deducts the omitted bill receivable of ₹12,000 along with the three genuine deductions. An asset left out of the statement must be ADDED back — it increases capital."
+        },
+        {
+          "key": "C",
+          "text": "₹2,32,000",
+          "explanation": "Correct. Adjust the CLOSING capital first: 6,00,000 − 15,000 (depreciation) − 9,000 (bad debts) − 6,000 (outstanding interest) + 12,000 (omitted bill receivable) = ₹5,82,000. Profit = 5,82,000 + 1,00,000 − 0 − 4,50,000 = ₹2,32,000."
+        },
+        {
+          "key": "D",
+          "text": "₹1,32,000",
+          "explanation": "This omits the drawings of ₹1,00,000 from the formula, though the adjustments to closing capital are correctly made."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net-worth adjustments, §4 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#4-adjustments-before-you-sign-off-the-net-worth-profit"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Adjust closing capital item by item, then apply the formula once",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-012",
+      "topic": "Ch 9 · Incomplete Records · Closing capital from the formula",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening capital ₹3,20,000; profit for the year ₹1,45,000; drawings ₹85,000; further capital introduced ₹60,000. Closing capital is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,40,000",
+          "explanation": "Correct. Closing capital = Opening capital + Further capital + Profit − Drawings = 3,20,000 + 60,000 + 1,45,000 − 85,000 = ₹4,40,000."
+        },
+        {
+          "key": "B",
+          "text": "₹3,20,000",
+          "explanation": "This DEDUCTS the ₹60,000 of fresh capital instead of adding it. Rearranged, the formula adds capital introduced to opening capital; only drawings come off."
+        },
+        {
+          "key": "C",
+          "text": "₹6,10,000",
+          "explanation": "This ADDS the ₹85,000 of drawings instead of deducting them, overstating closing capital by ₹1,70,000."
+        },
+        {
+          "key": "D",
+          "text": "₹2,95,000",
+          "explanation": "This leaves the year's profit out altogether (3,20,000 + 60,000 − 85,000). Profit is the very item that builds capital."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Closing capital = Opening + Further capital + Profit − Drawings",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-013",
+      "topic": "Ch 9 · Incomplete Records · Drawings as the missing figure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening capital ₹2,80,000; closing capital ₹3,50,000; further capital introduced ₹45,000; profit for the year ₹1,60,000. Drawings during the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹45,000",
+          "explanation": "This DEDUCTS the ₹45,000 of fresh capital instead of adding it, understating the drawings by ₹90,000."
+        },
+        {
+          "key": "B",
+          "text": "₹2,75,000",
+          "explanation": "This swaps the opening and closing capital (3,50,000 + 45,000 + 1,60,000 − 2,80,000). The figure you start from is the opening capital."
+        },
+        {
+          "key": "C",
+          "text": "₹70,000",
+          "explanation": "This is merely the increase in capital (3,50,000 − 2,80,000), ignoring both the profit earned and the fresh capital brought in."
+        },
+        {
+          "key": "D",
+          "text": "₹1,35,000",
+          "explanation": "Correct. Drawings = Opening capital + Further capital + Profit − Closing capital = 2,80,000 + 45,000 + 1,60,000 − 3,50,000 = ₹1,35,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Drawings = Opening + Further capital + Profit − Closing",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-014",
+      "topic": "Ch 9 · Incomplete Records · Further capital as the missing figure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening capital ₹4,00,000; closing capital ₹6,10,000; drawings ₹1,20,000; profit for the year ₹1,80,000. The fresh capital introduced during the year was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹30,000",
+          "explanation": "This ignores the drawings (6,10,000 − 1,80,000 − 4,00,000). Because the ₹1,20,000 left the business, the owner must have put in that much more to reach the closing capital."
+        },
+        {
+          "key": "B",
+          "text": "₹1,50,000",
+          "explanation": "Correct. Further capital = Closing capital + Drawings − Profit − Opening capital = 6,10,000 + 1,20,000 − 1,80,000 − 4,00,000 = ₹1,50,000."
+        },
+        {
+          "key": "C",
+          "text": "₹5,10,000",
+          "explanation": "This ADDS the ₹1,80,000 profit instead of deducting it. Profit builds capital on its own; only the balance of the rise had to be financed by the proprietor."
+        },
+        {
+          "key": "D",
+          "text": "₹2,10,000",
+          "explanation": "This is only the rise in capital (6,10,000 − 4,00,000), with both the drawings and the profit left out of account."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Further capital = Closing + Drawings − Profit − Opening",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-015",
+      "topic": "Ch 9 · Incomplete Records · Limitation of the net worth method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The principal limitation of the net worth (statement of affairs) method is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "it cannot compute the net profit unless a trial balance is available",
+          "explanation": "The whole point of the method is that it works WITHOUT a trial balance — two statements of affairs and the capital movements are enough."
+        },
+        {
+          "key": "B",
+          "text": "it requires the closing stock to be valued at market price",
+          "explanation": "Stock is valued on the usual basis, at cost or net realisable value whichever is lower. No special rule applies because the records are incomplete."
+        },
+        {
+          "key": "C",
+          "text": "it yields only the net profit as one lump figure — neither gross profit nor the individual expenses can be seen, so no Trading and Profit and Loss Account can be prepared",
+          "explanation": "Correct. That is precisely why the conversion method exists. The net-worth figure answers 'how much?' but never 'how?', so it cannot support pricing decisions, expense control or a comparison of margins."
+        },
+        {
+          "key": "D",
+          "text": "it cannot be used when the proprietor has made drawings during the year",
+          "explanation": "Drawings are expressly built into the formula and are added back. They are an input to the method, not an obstacle."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net-worth adjustments, §4 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#4-adjustments-before-you-sign-off-the-net-worth-profit"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Net worth gives net profit only, never gross profit",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-016",
+      "topic": "Ch 9 · Incomplete Records · Credit sales — simple debtors account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Debtors on 1 April 2025 were ₹1,20,000 and on 31 March 2026 ₹1,55,000. Cash received from customers during the year was ₹8,40,000 and discount allowed ₹18,000. There were no bad debts, returns or bills. Credit sales for the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,93,000",
+          "explanation": "Correct. Credit sales = Receipts + Discount allowed + Closing debtors − Opening debtors = 8,40,000 + 18,000 + 1,55,000 − 1,20,000 = ₹8,93,000."
+        },
+        {
+          "key": "B",
+          "text": "₹8,75,000",
+          "explanation": "This ignores the ₹18,000 of discount allowed. Discount is a credit in the Total Debtors Account — it settled part of the debt without cash, so the sale behind it was that much larger."
+        },
+        {
+          "key": "C",
+          "text": "₹8,57,000",
+          "explanation": "This DEDUCTS the discount allowed instead of adding it, a swing of ₹36,000. Every item that reduces debtors is added when working back to credit sales."
+        },
+        {
+          "key": "D",
+          "text": "₹8,23,000",
+          "explanation": "This swaps the opening and closing debtors. The closing balance is a credit in the account (it is carried down) and so is added; the opening balance is a debit and is deducted."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Total Debtors A/c, §7 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#7-total-debtors-account-finding-credit-sales"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Credit sales = Receipts + Discount + Closing debtors − Opening debtors",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-017",
+      "topic": "Ch 9 · Incomplete Records · Credit sales — full debtors account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening debtors ₹2,40,000; closing debtors ₹2,85,000. During the year: cash received from customers ₹9,60,000; discount allowed ₹22,000; sales returns ₹35,000; bad debts written off ₹18,000; bills receivable received from customers ₹1,50,000. Credit sales were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹10,80,000",
+          "explanation": "This omits the ₹1,50,000 of bills receivable. A customer's acceptance settles the book debt, so it is a credit in the debtors account and must be added back to reach the sales figure."
+        },
+        {
+          "key": "B",
+          "text": "₹11,60,000",
+          "explanation": "This DEDUCTS the ₹35,000 of sales returns instead of adding them, a swing of ₹70,000. Returns reduce debtors, so they are added when working backwards."
+        },
+        {
+          "key": "C",
+          "text": "₹12,12,000",
+          "explanation": "This leaves out the ₹18,000 of bad debts. A debt written off still arose from a sale — it is a credit in the account like any other reduction in debtors."
+        },
+        {
+          "key": "D",
+          "text": "₹12,30,000",
+          "explanation": "Correct. Credit side of the Total Debtors A/c = 9,60,000 + 22,000 + 35,000 + 18,000 + 1,50,000 + 2,85,000 = ₹14,70,000. Less the opening debit balance of ₹2,40,000, credit sales = ₹12,30,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Total Debtors A/c, §7 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#7-total-debtors-account-finding-credit-sales"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Credit sales = all credits + closing − opening",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-018",
+      "topic": "Ch 9 · Incomplete Records · Closing debtors as the missing figure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening debtors ₹1,80,000; credit sales ₹11,40,000; cash received from customers ₹10,20,000; discount allowed ₹25,000; bad debts written off ₹15,000; returns inward from credit customers ₹40,000. Closing debtors are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,35,000",
+          "explanation": "This fails to deduct the ₹15,000 of bad debts. A debt written off no longer stands in the debtors figure."
+        },
+        {
+          "key": "B",
+          "text": "₹2,20,000",
+          "explanation": "Correct. Debits = 1,80,000 + 11,40,000 = ₹13,20,000. Credits before the balance = 10,20,000 + 25,000 + 15,000 + 40,000 = ₹11,00,000. Closing debtors = 13,20,000 − 11,00,000 = ₹2,20,000."
+        },
+        {
+          "key": "C",
+          "text": "₹2,60,000",
+          "explanation": "This fails to deduct the ₹40,000 of returns inward. Goods sent back reduce what the customer owes."
+        },
+        {
+          "key": "D",
+          "text": "₹2,45,000",
+          "explanation": "This fails to deduct the ₹25,000 of discount allowed. Discount extinguishes part of the debt just as effectively as cash."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Total Debtors A/c, §7 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#7-total-debtors-account-finding-credit-sales"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Closing debtors = Opening + Credit sales − all reductions",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-019",
+      "topic": "Ch 9 · Incomplete Records · Receipts from debtors as the missing figure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening debtors ₹95,000; credit sales ₹6,50,000; closing debtors ₹1,30,000; discount allowed ₹12,000; bad debts ₹8,000; bills receivable received from customers ₹75,000. Cash received from customers was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹5,95,000",
+          "explanation": "This ignores the ₹75,000 of bills receivable, so the debt settled by acceptances is wrongly shown as settled in cash."
+        },
+        {
+          "key": "B",
+          "text": "₹5,40,000",
+          "explanation": "This ignores both the ₹12,000 discount and the ₹8,000 of bad debts, treating ₹20,000 of non-cash reductions as cash."
+        },
+        {
+          "key": "C",
+          "text": "₹5,20,000",
+          "explanation": "Correct. Debits = 95,000 + 6,50,000 = ₹7,45,000. Other credits = 1,30,000 + 12,000 + 8,000 + 75,000 = ₹2,25,000. Cash received = 7,45,000 − 2,25,000 = ₹5,20,000."
+        },
+        {
+          "key": "D",
+          "text": "₹4,45,000",
+          "explanation": "This deducts the ₹75,000 of bills receivable twice — once as a credit in the account and again from the answer."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Total Debtors A/c, §7 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#7-total-debtors-account-finding-credit-sales"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Receipts = Opening + Credit sales − other credits − Closing",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-020",
+      "topic": "Ch 9 · Incomplete Records · Sides of the Total Debtors Account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following appears on the DEBIT side of the Total Debtors Account?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bills receivable received from customers",
+          "explanation": "These are a credit. A customer's acceptance settles the book debt — the debt has merely changed its clothes, from a book debt into a bill."
+        },
+        {
+          "key": "B",
+          "text": "Discount allowed to customers",
+          "explanation": "Discount allowed reduces what the customer owes, so it is a credit in the Total Debtors Account."
+        },
+        {
+          "key": "C",
+          "text": "Cash sales for the year",
+          "explanation": "Cash sales never enter the Total Debtors Account on either side, because they create no debtor. Putting them in inflates the computed credit sales by exactly that amount."
+        },
+        {
+          "key": "D",
+          "text": "A bill receivable dishonoured on maturity",
+          "explanation": "Correct. When the acceptance bounces the customer owes again, so the amount travels out of the Bills Receivable Account and back to the debit of debtors. Because it sits on the debit side, it REDUCES the credit sales computed as the balancing figure."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Total Debtors A/c, §7 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#7-total-debtors-account-finding-credit-sales"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Debit: opening balance, credit sales, B/R dishonoured",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-021",
+      "topic": "Ch 9 · Incomplete Records · Credit purchases — simple creditors account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening creditors ₹1,65,000; closing creditors ₹1,98,000; cash paid to suppliers ₹7,80,000; discount received ₹16,000; purchase returns ₹24,000. Credit purchases for the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,53,000",
+          "explanation": "Correct. Debit side of the Total Creditors A/c = 7,80,000 + 16,000 + 24,000 + 1,98,000 = ₹10,18,000. Less the opening credit balance of ₹1,65,000, credit purchases = ₹8,53,000."
+        },
+        {
+          "key": "B",
+          "text": "₹8,13,000",
+          "explanation": "This ignores both the ₹16,000 of discount received and the ₹24,000 of purchase returns. Each of them reduced the creditors without a payment, so each must be added back."
+        },
+        {
+          "key": "C",
+          "text": "₹8,05,000",
+          "explanation": "This DEDUCTS the ₹24,000 of purchase returns instead of adding them, a swing of ₹48,000."
+        },
+        {
+          "key": "D",
+          "text": "₹8,21,000",
+          "explanation": "This DEDUCTS the ₹16,000 of discount received instead of adding it, a swing of ₹32,000."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Total Creditors A/c, §8 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#8-total-creditors-account-finding-credit-purchases"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Credit purchases = Payments + Discount + Returns + Closing − Opening",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-022",
+      "topic": "Ch 9 · Incomplete Records · Payments to creditors as the missing figure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening creditors ₹2,10,000; credit purchases ₹9,45,000; closing creditors ₹2,45,000; discount received ₹18,000; purchase returns ₹32,000; bills payable accepted in favour of suppliers ₹1,60,000. Cash paid to suppliers was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,60,000",
+          "explanation": "This ignores the ₹1,60,000 of bills payable accepted, so debts settled by acceptance are wrongly shown as settled in cash."
+        },
+        {
+          "key": "B",
+          "text": "₹7,50,000",
+          "explanation": "This ignores the ₹18,000 discount and the ₹32,000 of returns, treating ₹50,000 of non-cash reductions as payments."
+        },
+        {
+          "key": "C",
+          "text": "₹7,00,000",
+          "explanation": "Correct. Credits = 2,10,000 + 9,45,000 = ₹11,55,000. Other debits = 2,45,000 + 18,000 + 32,000 + 1,60,000 = ₹4,55,000. Cash paid = 11,55,000 − 4,55,000 = ₹7,00,000."
+        },
+        {
+          "key": "D",
+          "text": "₹6,68,000",
+          "explanation": "This deducts the ₹32,000 of purchase returns twice — once inside the account and again from the answer."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Total Creditors A/c, §8 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#8-total-creditors-account-finding-credit-purchases"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Payments = Opening + Credit purchases − other debits − Closing",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-023",
+      "topic": "Ch 9 · Incomplete Records · Credit purchases with a dishonoured acceptance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening creditors ₹1,40,000; closing creditors ₹1,75,000. During the year: paid to suppliers ₹6,20,000; discount received ₹14,000; purchase returns ₹21,000; bills payable accepted ₹2,00,000; one bill payable for ₹30,000 was dishonoured on maturity and the supplier's account was credited again. Credit purchases were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹8,90,000",
+          "explanation": "This ignores the dishonour. The ₹30,000 came back to the credit of creditors without any purchase behind it, so it must be taken out before the purchases figure is read off."
+        },
+        {
+          "key": "B",
+          "text": "₹8,60,000",
+          "explanation": "Correct. Debit side = 6,20,000 + 14,000 + 21,000 + 2,00,000 + 1,75,000 = ₹10,30,000. Known credits = opening 1,40,000 + dishonoured bill 30,000 = ₹1,70,000. Credit purchases = 10,30,000 − 1,70,000 = ₹8,60,000."
+        },
+        {
+          "key": "C",
+          "text": "₹9,20,000",
+          "explanation": "This puts the ₹30,000 dishonour on the debit side as well as leaving it out of the credits, so the answer is out by ₹60,000."
+        },
+        {
+          "key": "D",
+          "text": "₹6,60,000",
+          "explanation": "This omits the ₹2,00,000 of bills payable accepted. An acceptance settles the book debt to the supplier, so it is a debit in the Total Creditors Account."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Total Creditors A/c, §8 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#8-total-creditors-account-finding-credit-purchases"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Dishonoured B/P returns to the credit of creditors",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-024",
+      "topic": "Ch 9 · Incomplete Records · Bills payable in the creditors account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the Total Creditors Account, bills payable accepted in favour of suppliers during the year are shown:",
+      "options": [
+        {
+          "key": "A",
+          "text": "on the credit side, because accepting a bill is an admission of the debt",
+          "explanation": "The debt was already admitted when the goods were bought on credit. The acceptance transfers the liability to another head; it does not create a fresh one."
+        },
+        {
+          "key": "B",
+          "text": "not at all, because a bill payable is a separate liability",
+          "explanation": "It is a separate liability, which is exactly why it must leave the creditors account — and it can only leave through the debit side."
+        },
+        {
+          "key": "C",
+          "text": "on the credit side, together with credit purchases, because both increase what the firm owes",
+          "explanation": "An acceptance does not increase what the firm owes; it changes the form in which the same amount is owed."
+        },
+        {
+          "key": "D",
+          "text": "on the debit side, because the book debt to the supplier has been settled by giving an acceptance",
+          "explanation": "Correct. The liability has not gone away, but it has moved out of the creditors figure and into bills payable. Leaving it out understates the computed credit purchases by the whole amount accepted."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Total Creditors A/c, §8 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#8-total-creditors-account-finding-credit-purchases"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "B/P accepted is a debit in the Total Creditors A/c",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-025",
+      "topic": "Ch 9 · Incomplete Records · Bills receivable received during the year",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Bills receivable on 1 April 2025 were ₹45,000 and on 31 March 2026 ₹62,000. During the year: cash collected on bills at maturity ₹3,10,000; bills endorsed to creditors ₹80,000; bills dishonoured ₹25,000. Bills receivable received from customers during the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,32,000",
+          "explanation": "Correct. Credit side of the Bills Receivable A/c = 3,10,000 + 80,000 + 25,000 + 62,000 = ₹4,77,000. Less the opening debit of ₹45,000, bills received = ₹4,32,000."
+        },
+        {
+          "key": "B",
+          "text": "₹4,07,000",
+          "explanation": "This ignores the ₹25,000 of dishonoured bills. A dishonour takes the bill out of the Bills Receivable Account just as surely as a collection does."
+        },
+        {
+          "key": "C",
+          "text": "₹3,52,000",
+          "explanation": "This ignores the ₹80,000 of bills endorsed to creditors. Endorsement passes the bill on, so it leaves the account on the credit side."
+        },
+        {
+          "key": "D",
+          "text": "₹5,22,000",
+          "explanation": "This ADDS the ₹45,000 opening balance instead of deducting it, overstating the answer by ₹90,000. Bills already on hand at the start were not received during the year."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bills accounts, §9 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#9-bills-receivable-and-bills-payable-accounts"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "B/R received = Collections + Endorsed + Dishonoured + Closing − Opening",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-026",
+      "topic": "Ch 9 · Incomplete Records · Bills accepted during the year",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Bills payable on 1 April 2025 were ₹58,000 and on 31 March 2026 ₹72,000. Cash paid on bills at maturity during the year was ₹2,45,000 and bills payable dishonoured amounted to ₹18,000. Bills accepted during the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹2,59,000",
+          "explanation": "This ignores the ₹18,000 of dishonoured bills, which left the Bills Payable Account on the debit side and went back to creditors."
+        },
+        {
+          "key": "B",
+          "text": "₹2,77,000",
+          "explanation": "Correct. Debit side of the Bills Payable A/c = 2,45,000 + 18,000 + 72,000 = ₹3,35,000. Less the opening credit of ₹58,000, bills accepted = ₹2,77,000."
+        },
+        {
+          "key": "C",
+          "text": "₹2,41,000",
+          "explanation": "This DEDUCTS the ₹18,000 dishonour instead of adding it, a swing of ₹36,000."
+        },
+        {
+          "key": "D",
+          "text": "₹3,35,000",
+          "explanation": "This is the debit-side total with the ₹58,000 opening balance never deducted. Bills outstanding at the start were accepted in an earlier year."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Bills accounts, §9 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#9-bills-receivable-and-bills-payable-accounts"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "B/P accepted = Payments + Dishonoured + Closing − Opening",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-027",
+      "topic": "Ch 9 · Incomplete Records · Credit sales with a dishonoured bill receivable",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening debtors ₹1,90,000; closing debtors ₹2,25,000. During the year: cash received from customers ₹7,40,000; discount allowed ₹20,000; bad debts ₹12,000; bills receivable received from customers ₹3,00,000; bills receivable dishonoured ₹35,000, charged back to the customers. Credit sales were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹11,07,000",
+          "explanation": "This ignores the ₹35,000 dishonour. The dishonoured bill is a DEBIT in the Total Debtors Account and so reduces the credit sales that fall out as the balancing figure."
+        },
+        {
+          "key": "B",
+          "text": "₹11,42,000",
+          "explanation": "This puts the ₹35,000 dishonour on the credit side instead of the debit side, an error of ₹70,000 in the answer."
+        },
+        {
+          "key": "C",
+          "text": "₹10,72,000",
+          "explanation": "Correct. Credit side = 7,40,000 + 20,000 + 12,000 + 3,00,000 + 2,25,000 = ₹12,97,000. Known debits = opening 1,90,000 + dishonour 35,000 = ₹2,25,000. Credit sales = 12,97,000 − 2,25,000 = ₹10,72,000."
+        },
+        {
+          "key": "D",
+          "text": "₹7,72,000",
+          "explanation": "This omits the ₹3,00,000 of bills receivable received from customers, which is a credit in the account because the acceptances settled the book debts."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Total Debtors A/c, §7 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#7-total-debtors-account-finding-credit-sales"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "B/R dishonoured is a debit and reduces computed credit sales",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-028",
+      "topic": "Ch 9 · Incomplete Records · Where a dishonour goes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A bill receivable earlier discounted with the bank is dishonoured on maturity. In a conversion exercise, the effect on the computation of credit sales is that the amount:",
+      "options": [
+        {
+          "key": "A",
+          "text": "is entered on the debit side of the Total Debtors Account and therefore REDUCES the credit sales computed as the balancing figure",
+          "explanation": "Correct. Discounting does not release the customer. On dishonour the firm must meet the bank and charge the amount back to the customer, so the debtor is debited once more — and every extra debit leaves less room for credit sales as the balancing figure."
+        },
+        {
+          "key": "B",
+          "text": "is entered on the credit side of the Total Debtors Account and therefore increases the computed credit sales",
+          "explanation": "The credit side records reductions in what customers owe. A dishonour increases what they owe, so it belongs on the debit."
+        },
+        {
+          "key": "C",
+          "text": "does not touch the Total Debtors Account at all, because the bank and not the customer is now the party concerned",
+          "explanation": "The bank is paid off, but the debt is recovered from the customer. The customer's account is debited again; the bank is not the debtor."
+        },
+        {
+          "key": "D",
+          "text": "is added to the bills receivable received during the year, because the bill has come back into the firm's hands",
+          "explanation": "A dishonoured bill is dead, not received afresh. It leaves the Bills Receivable Account on the credit side."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bills accounts, §9 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#9-bills-receivable-and-bills-payable-accounts"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Dishonour: out of the bills account, back into the personal account",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-029",
+      "topic": "Ch 9 · Incomplete Records · Missing cash sales",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A trader's cash and bank summary for 2025–26 shows: opening balances ₹64,000; received from debtors ₹5,80,000; cash sales (not separately recorded); paid to creditors ₹4,10,000; salaries ₹96,000; rent ₹48,000; drawings ₹72,000; furniture purchased ₹35,000; closing balances ₹85,000. Cash sales for the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,74,000",
+          "explanation": "This leaves the ₹72,000 of drawings out of the payments. Money taken by the proprietor still left the cash box and must be accounted for."
+        },
+        {
+          "key": "B",
+          "text": "₹67,000",
+          "explanation": "This leaves the ₹35,000 furniture purchase out of the payments. Capital expenditure paid in cash is still a payment in the cash book, even though it never reaches the Profit and Loss Account."
+        },
+        {
+          "key": "C",
+          "text": "₹2,30,000",
+          "explanation": "This ADDS the ₹64,000 opening balance instead of deducting it, overstating the takings by ₹1,28,000. The opening balance was money already in hand, not money received during the year."
+        },
+        {
+          "key": "D",
+          "text": "₹1,02,000",
+          "explanation": "Correct. Total payments = 4,10,000 + 96,000 + 48,000 + 72,000 + 35,000 = ₹6,61,000. Cash sales = Closing 85,000 + Payments 6,61,000 − Opening 64,000 − Receipts from debtors 5,80,000 = ₹1,02,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Cash book reconstruction, §6 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#6-reconstructing-the-cash-book"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Opening + Receipts − Payments = Closing",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-030",
+      "topic": "Ch 9 · Incomplete Records · Drawings as the balancing figure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Cash book summary: opening cash ₹22,000; cash sales ₹3,15,000; received from debtors ₹4,60,000; loan taken ₹1,00,000; paid to creditors ₹5,20,000; wages ₹1,30,000; general expenses ₹64,000; machinery bought ₹90,000; closing cash ₹18,000. The proprietor's drawings, which were never recorded, were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹93,000",
+          "explanation": "This forgets to leave the ₹18,000 closing balance in the box. Only what is left over AFTER the closing balance can have been withdrawn."
+        },
+        {
+          "key": "B",
+          "text": "₹75,000",
+          "explanation": "Correct. Receipts including the opening balance = 22,000 + 3,15,000 + 4,60,000 + 1,00,000 = ₹8,97,000. Recorded payments = 5,20,000 + 1,30,000 + 64,000 + 90,000 = ₹8,04,000. Drawings = 8,97,000 − 8,04,000 − 18,000 (closing) = ₹75,000."
+        },
+        {
+          "key": "C",
+          "text": "₹1,65,000",
+          "explanation": "This treats the ₹90,000 machinery payment as part of the drawings. Machinery bought for the business is an asset of the business, not a withdrawal."
+        },
+        {
+          "key": "D",
+          "text": "₹57,000",
+          "explanation": "This deducts the ₹18,000 closing balance twice, understating the drawings by that amount."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cash book reconstruction, §6 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#6-reconstructing-the-cash-book"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Drawings = Total receipts − Recorded payments − Closing balance",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-031",
+      "topic": "Ch 9 · Incomplete Records · Total sales in a conversion",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a conversion exercise, total sales for the year are arrived at as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the credit side total of the Total Debtors Account",
+          "explanation": "That total is a mixture of receipts, discounts, returns, bad debts, bills and the closing balance. It is not a sales figure at all."
+        },
+        {
+          "key": "B",
+          "text": "credit sales only, since cash sales create no debtor and so are not sales in the accounting sense",
+          "explanation": "A cash sale is every bit a sale; it simply settles instantly. Omitting cash sales understates both turnover and gross profit."
+        },
+        {
+          "key": "C",
+          "text": "cash sales taken from the cash book PLUS credit sales found as the balancing figure of the Total Debtors Account",
+          "explanation": "Correct. The two streams are recorded in two different places and neither account sees the other: a cash sale creates no debtor, and a credit sale produces no immediate cash. Adding them is the only way to a complete sales figure."
+        },
+        {
+          "key": "D",
+          "text": "the receipts from debtors plus the closing debtors",
+          "explanation": "This omits the opening debtors, the discounts, returns, bad debts and bills — and the cash sales as well."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cash book reconstruction, §6 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#6-reconstructing-the-cash-book"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Total sales = Cash sales + Credit sales",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-032",
+      "topic": "Ch 9 · Incomplete Records · Why cash sales are a balancing figure",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Why can cash sales usually be found only as a balancing figure in a reconstructed cash book?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Because no sales account is maintained: every other receipt and payment can be identified from vouchers or the counted balances, so the unexplained gap must be the takings",
+          "explanation": "Correct. Reconstruction is a process of elimination. Payments come from vouchers and counterfoils, receipts from debtors come from the debtors diary, and both balances are counted — so whatever is needed to make the account balance is the over-the-counter takings."
+        },
+        {
+          "key": "B",
+          "text": "Because cash sales are always deposited into the bank on the same day",
+          "explanation": "Whether takings are banked is a matter of habit and does not identify their amount. Many small traders spend part of the takings before banking anything."
+        },
+        {
+          "key": "C",
+          "text": "Because cash sales are recorded in the Total Debtors Account and must therefore be removed from it",
+          "explanation": "Cash sales never enter the Total Debtors Account — they create no debtor. That is a separate trap in this chapter."
+        },
+        {
+          "key": "D",
+          "text": "Because the gross profit ratio is applied to the cash column of the cash book",
+          "explanation": "The gross profit ratio is applied to sales in the memorandum trading account, not to a cash balance."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cash book reconstruction, §6 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#6-reconstructing-the-cash-book"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Cash sales as the cash book balancing figure",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-033",
+      "topic": "Ch 9 · Incomplete Records · Closing stock from the GP ratio",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sales for the year were ₹12,00,000 with a gross profit of 25% on sales; opening stock ₹1,40,000; purchases ₹9,20,000; carriage inwards ₹30,000. Closing stock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹1,60,000",
+          "explanation": "This leaves carriage inwards out of the goods available. Carriage on goods bought is a direct expense and forms part of the cost of the goods."
+        },
+        {
+          "key": "B",
+          "text": "₹1,30,000",
+          "explanation": "This applies the 25% as a mark-up ON COST: cost of goods sold = 12,00,000 × 100/125 = ₹9,60,000. The stem says 25% ON SALES, so the cost is ₹9,00,000."
+        },
+        {
+          "key": "C",
+          "text": "₹7,90,000",
+          "explanation": "This deducts the gross profit of ₹3,00,000 from the goods available instead of the cost of goods sold of ₹9,00,000."
+        },
+        {
+          "key": "D",
+          "text": "₹1,90,000",
+          "explanation": "Correct. Gross profit = 25% of 12,00,000 = ₹3,00,000, so cost of goods sold = ₹9,00,000. Goods available = 1,40,000 + 9,20,000 + 30,000 = ₹10,90,000. Closing stock = 10,90,000 − 9,00,000 = ₹1,90,000."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Memorandum trading, §10 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#10-gross-profit-ratio-and-the-memorandum-trading-account"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Closing stock = Opening + Purchases + Direct expenses − COGS",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-034",
+      "topic": "Ch 9 · Incomplete Records · Sales from a memorandum trading account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Opening stock ₹2,10,000; purchases ₹8,40,000; wages ₹60,000; closing stock ₹1,80,000. Gross profit is 20% on sales. Sales for the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹11,16,000",
+          "explanation": "This treats the 20% as a mark-up on cost (9,30,000 × 1.20). A 20% margin on sales is equivalent to a 25% mark-up on cost, not 20%."
+        },
+        {
+          "key": "B",
+          "text": "₹11,62,500",
+          "explanation": "Correct. Cost of goods sold = 2,10,000 + 8,40,000 + 60,000 − 1,80,000 = ₹9,30,000. If the margin is 20% of sales, cost is 80% of sales, so sales = 9,30,000 ÷ 0.80 = ₹11,62,500."
+        },
+        {
+          "key": "C",
+          "text": "₹7,44,000",
+          "explanation": "This takes 80% OF the cost of goods sold instead of treating the cost as 80% of sales — the ratio has been applied to the wrong side of the equation."
+        },
+        {
+          "key": "D",
+          "text": "₹16,12,500",
+          "explanation": "This ADDS the closing stock instead of deducting it, giving a cost of goods sold of ₹12,90,000 before the 0.80 division."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Memorandum trading, §10 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#10-gross-profit-ratio-and-the-memorandum-trading-account"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Sales = COGS ÷ (1 − GP ratio on sales)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-035",
+      "topic": "Ch 9 · Incomplete Records · Stock lost in a fire",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fire on 15 August 2025 destroyed the stock. Stock on 1 April 2025 ₹3,20,000; purchases to the date of the fire ₹14,50,000; purchase returns ₹50,000; sales to the date of the fire ₹18,00,000; gross profit is 30% on sales. Stock salvaged was ₹65,000. The loss of stock was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹4,60,000",
+          "explanation": "This is the stock on the date of the fire with the ₹65,000 of salvaged stock never deducted. Goods that survived the fire were not lost."
+        },
+        {
+          "key": "B",
+          "text": "₹4,45,000",
+          "explanation": "This ignores the ₹50,000 of purchase returns, overstating the goods available and hence the stock on the date of the fire."
+        },
+        {
+          "key": "C",
+          "text": "₹3,95,000",
+          "explanation": "Correct. Cost of goods sold = 18,00,000 × 70% = ₹12,60,000. Net purchases = 14,50,000 − 50,000 = ₹14,00,000. Stock on the date of the fire = 3,20,000 + 14,00,000 − 12,60,000 = ₹4,60,000. Loss = 4,60,000 − 65,000 salvage = ₹3,95,000."
+        },
+        {
+          "key": "D",
+          "text": "₹3,30,000",
+          "explanation": "This deducts the ₹65,000 salvage twice — once from the stock on the date of the fire and again from the loss."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Memorandum trading, §10 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#10-gross-profit-ratio-and-the-memorandum-trading-account"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Loss = Stock on date of fire − Salvage",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-036",
+      "topic": "Ch 9 · Incomplete Records · Sales from a mark-up on cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A trader sells goods at a mark-up of 25% on cost. Cost of goods sold for the year was ₹6,00,000. Sales for the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹7,50,000",
+          "explanation": "Correct. A mark-up is measured on cost: gross profit = 25% of 6,00,000 = ₹1,50,000, so sales = 6,00,000 + 1,50,000 = ₹7,50,000. (The same profit is a 20% margin on sales: 1,50,000 ÷ 7,50,000.)"
+        },
+        {
+          "key": "B",
+          "text": "₹8,00,000",
+          "explanation": "This treats the 25% as a MARGIN on sales (6,00,000 ÷ 0.75), so the cost is taken as 75% of sales. The stem says 25% on cost."
+        },
+        {
+          "key": "C",
+          "text": "₹4,50,000",
+          "explanation": "This DEDUCTS 25% from the cost. A mark-up is added to cost to arrive at the selling price, never subtracted."
+        },
+        {
+          "key": "D",
+          "text": "₹7,20,000",
+          "explanation": "This correctly converts the 25% mark-up into the equivalent 20% margin, but then applies the 20% to COST instead of to sales."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Mark-up vs margin, §11 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#11-mark-up-on-cost-versus-margin-on-sales"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Sales = Cost × (1 + mark-up)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-037",
+      "topic": "Ch 9 · Incomplete Records · Mark-up and margin compared",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about mark-up and margin is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mark-up and margin are two names for the same percentage",
+          "explanation": "They are the same rupee profit on two different bases. Only where profit is nil do the two percentages coincide, both being zero."
+        },
+        {
+          "key": "B",
+          "text": "Margin is always the larger of the two percentages, because sales exceed cost",
+          "explanation": "The reasoning is right but the conclusion is inverted. A larger base gives a SMALLER percentage for the same rupee profit."
+        },
+        {
+          "key": "C",
+          "text": "Mark-up is computed on sales and margin on cost",
+          "explanation": "The definitions are the wrong way round. Mark-up is on cost; margin is on sales."
+        },
+        {
+          "key": "D",
+          "text": "For the same rupee gross profit the mark-up percentage always exceeds the margin percentage, because the mark-up is measured on the smaller base (cost)",
+          "explanation": "Correct. Cost 100, profit 25, sales 125: the profit is 25% of cost but only 20% of sales. Since sales always exceed cost where there is a profit, the percentage on cost is always the larger of the two."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Mark-up vs margin, §11 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#11-mark-up-on-cost-versus-margin-on-sales"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Mark-up on cost; margin on sales; mark-up % > margin %",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-038",
+      "topic": "Ch 9 · Incomplete Records · Purchases from a memorandum trading account",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sales ₹15,00,000 with a gross profit of 20% on sales; opening stock ₹2,50,000; closing stock ₹3,10,000; carriage inwards ₹40,000. Purchases for the year were:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹12,60,000",
+          "explanation": "This omits the ₹40,000 of carriage inwards from the goods available, so the purchases figure absorbs it and is overstated by that amount."
+        },
+        {
+          "key": "B",
+          "text": "₹11,00,000",
+          "explanation": "This swaps the opening and closing stock. The opening stock is part of the goods available and so is deducted from the cost of goods sold; the closing stock is added back."
+        },
+        {
+          "key": "C",
+          "text": "₹12,20,000",
+          "explanation": "Correct. Cost of goods sold = 15,00,000 × 80% = ₹12,00,000. Purchases = COGS + Closing stock − Opening stock − Direct expenses = 12,00,000 + 3,10,000 − 2,50,000 − 40,000 = ₹12,20,000."
+        },
+        {
+          "key": "D",
+          "text": "₹12,70,000",
+          "explanation": "This reads the 20% as a mark-up on cost, giving a cost of goods sold of 15,00,000 × 100/120 = ₹12,50,000 instead of ₹12,00,000."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Memorandum trading, §10 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#10-gross-profit-ratio-and-the-memorandum-trading-account"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Purchases = COGS + Closing stock − Opening stock − Direct expenses",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-039",
+      "topic": "Ch 9 · Incomplete Records · Nature of a memorandum trading account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A memorandum trading account prepared in an incomplete-records question is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "a ledger account forming part of the double entry, closed by transfer to the Profit and Loss Account",
+          "explanation": "That describes the real Trading Account. The memorandum version is never posted to any ledger."
+        },
+        {
+          "key": "B",
+          "text": "a working only — outside the double entry — drawn up to release a missing figure such as closing stock, purchases or sales",
+          "explanation": "Correct. 'Memorandum' means exactly that: it is not posted, not balanced into the ledger and not part of the final accounts. It is a scaffolding that gives you one number and is then thrown away."
+        },
+        {
+          "key": "C",
+          "text": "the same as the Trading Account, but prepared for part of a year only and therefore posted to the ledger",
+          "explanation": "It is often prepared for part of a year — up to the date of a fire, for instance — but that is not what makes it a memorandum. It is a memorandum because it stays outside the books."
+        },
+        {
+          "key": "D",
+          "text": "a statement of the stock physically counted on the date of a fire",
+          "explanation": "The whole reason for preparing it is that the stock could NOT be counted — the goods were destroyed."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Memorandum trading, §10 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#10-gross-profit-ratio-and-the-memorandum-trading-account"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Memorandum trading account = a working outside the books",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-040",
+      "topic": "Ch 9 · Incomplete Records · Where cash purchases come from",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a conversion exercise, cash purchases are obtained from:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the payments side of the reconstructed cash book; they never pass through the Total Creditors Account",
+          "explanation": "Correct. A cash purchase creates no creditor, so it leaves no trace in the creditors account. Total purchases for the Trading Account = cash purchases from the cash book + credit purchases from the Total Creditors Account."
+        },
+        {
+          "key": "B",
+          "text": "the Total Creditors Account, where they appear on the credit side with credit purchases",
+          "explanation": "Only credit purchases appear there. Including cash purchases would inflate the computed credit purchases and then double-count them in the Trading Account."
+        },
+        {
+          "key": "C",
+          "text": "the Total Creditors Account, where they appear on the debit side with payments to suppliers",
+          "explanation": "Payments to suppliers settle earlier credit purchases. A cash purchase never became a supplier's balance in the first place."
+        },
+        {
+          "key": "D",
+          "text": "the memorandum trading account, as the balancing figure",
+          "explanation": "The memorandum trading account can yield TOTAL purchases when the gross profit ratio is given, but it cannot split them between cash and credit."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Total Creditors A/c, §8 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#8-total-creditors-account-finding-credit-purchases"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Total purchases = Cash purchases + Credit purchases",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-041",
+      "topic": "Ch 9 · Incomplete Records · Effect of an omitted opening liability",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A liability of ₹20,000 was omitted from the OPENING Statement of Affairs only. The profit computed by the net worth method is thereby:",
+      "options": [
+        {
+          "key": "A",
+          "text": "overstated by ₹20,000, because the opening capital is too low",
+          "explanation": "The omission makes opening capital too HIGH, not too low — dropping a liability increases the residue that is called capital."
+        },
+        {
+          "key": "B",
+          "text": "unaffected, because the same omission runs through both statements",
+          "explanation": "The liability was omitted from the opening statement ALONE. Had it been left out of both, the two errors would indeed cancel — which is precisely why the examiner omits it from one."
+        },
+        {
+          "key": "C",
+          "text": "understated by ₹40,000, twice the omitted amount",
+          "explanation": "Doubling is the remedy for a wrong-side error, not for an omission. Opening capital is out by ₹20,000 once, so the profit is out by ₹20,000 once."
+        },
+        {
+          "key": "D",
+          "text": "understated by ₹20,000, because the omission inflates the opening capital and profit is measured over and above the opening capital",
+          "explanation": "Correct. Capital = assets − liabilities, so leaving a liability out makes opening capital ₹20,000 too high. Since profit = closing capital + drawings − further capital − opening capital, a higher opening capital gives a lower profit."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Statement of Affairs, §2 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#2-statement-of-affairs-versus-balance-sheet"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Omitted opening liability overstates opening capital",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-042",
+      "topic": "Ch 9 · Incomplete Records · Net worth method vs conversion method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The essential difference between the net worth method and the conversion method is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the net worth method can be used only where a cash book exists, while the conversion method can be used without one",
+          "explanation": "It is the other way round. The net worth method needs no cash book at all; the conversion method leans heavily on one."
+        },
+        {
+          "key": "B",
+          "text": "the conversion method computes profit without preparing any statement of affairs",
+          "explanation": "The conversion method BEGINS with an opening statement of affairs, because it needs the opening capital and every opening balance."
+        },
+        {
+          "key": "C",
+          "text": "the net worth method produces the net profit alone, while the conversion method rebuilds enough double entry to produce a full Trading and Profit and Loss Account and a Balance Sheet",
+          "explanation": "Correct. Both answer 'how much profit?'; only the conversion method answers 'how did it arise?' — which is what a banker, a tax officer or an incoming partner actually wants to see."
+        },
+        {
+          "key": "D",
+          "text": "the two methods must give different profit figures, because the conversion method allows for adjustments the net worth method cannot",
+          "explanation": "Properly done, both give the SAME net profit on the same facts. A difference between the two is a signal that something has been missed, not a feature of the methods."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Conversion method, §5 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#5-the-conversion-method-what-it-is-and-the-order-of-work"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net worth = net profit only; conversion = full final accounts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-043",
+      "topic": "Ch 9 · Incomplete Records · Set-off between the two ledgers",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A person who is both a customer and a supplier has ₹9,000 transferred from his balance in the debtors ledger against his balance in the creditors ledger. In the two total accounts this transfer appears:",
+      "options": [
+        {
+          "key": "A",
+          "text": "on the debit of the Total Debtors Account and the credit of the Total Creditors Account",
+          "explanation": "This has both sides inverted, and would increase both balances instead of reducing them."
+        },
+        {
+          "key": "B",
+          "text": "on the credit of the Total Debtors Account and the debit of the Total Creditors Account",
+          "explanation": "Correct. The transfer reduces both balances, and a reduction is a credit in the debtors account and a debit in the creditors account. One transaction, two accounts, opposite sides — exactly as double entry requires."
+        },
+        {
+          "key": "C",
+          "text": "on the credit of both accounts, since both balances are reduced",
+          "explanation": "Both balances are indeed reduced, but the two accounts reduce on opposite sides: debtors on the credit, creditors on the debit."
+        },
+        {
+          "key": "D",
+          "text": "in neither account, being a transfer between ledgers rather than a transaction",
+          "explanation": "It is a genuine settlement by contra and must be recorded; omitting it understates both credit sales and credit purchases by ₹9,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Total Debtors A/c, §7 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#7-total-debtors-account-finding-credit-sales"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Set-off: credit of debtors, debit of creditors",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-044",
+      "topic": "Ch 9 · Incomplete Records · Goods withdrawn by the proprietor",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The proprietor took goods costing ₹18,000 (selling price ₹24,000) for his household during the year. In a conversion exercise the correct treatment is to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "credit sales with ₹24,000 and debit drawings, since goods left the business at selling price",
+          "explanation": "A proprietor cannot make a profit by selling to himself. Recording ₹24,000 would inflate both sales and gross profit by the ₹6,000 of unrealised margin."
+        },
+        {
+          "key": "B",
+          "text": "ignore the item, since no cash moved",
+          "explanation": "Goods left the business for the owner's benefit. Ignoring it overstates the cost of goods sold and understates both drawings and profit."
+        },
+        {
+          "key": "C",
+          "text": "deduct ₹24,000 from purchases and add ₹24,000 to drawings",
+          "explanation": "The base is wrong. Purchases are recorded at cost, so only the cost of ₹18,000 can be taken out of them."
+        },
+        {
+          "key": "D",
+          "text": "deduct ₹18,000 from purchases and treat ₹18,000 as drawings, since goods withdrawn are recorded at cost",
+          "explanation": "Correct. No sale has taken place, so no profit may be recognised. The goods leave the business at what they cost it, and the same ₹18,000 is added to the proprietor's drawings for the net-worth or capital computation."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Net worth method, §3 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#3-the-net-worth-method-profit-from-the-movement-in-capital"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Goods withdrawn are recorded at cost",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "q-f1c9-045",
+      "topic": "Ch 9 · Incomplete Records · The closing check on a conversion",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "At the end of a conversion exercise the closing capital is built up as opening capital + net profit + fresh capital − drawings, and is then compared with assets − liabilities in the Balance Sheet. The purpose of that comparison is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "it is the arithmetical check on the whole reconstruction — the two figures must agree, and a difference means a missing figure or a wrong side somewhere",
+          "explanation": "Correct. Since no trial balance exists, this agreement is the only proof available that the rebuilt double entry is complete and internally consistent. It is the conversion method's substitute for the trial balance."
+        },
+        {
+          "key": "B",
+          "text": "it establishes the market value of the business",
+          "explanation": "Neither figure is a valuation. Both are historical-cost residues, and they would agree just as well in a business worth nothing."
+        },
+        {
+          "key": "C",
+          "text": "it replaces the trial balance as a statutory requirement",
+          "explanation": "No statute requires either. It is a working check the accountant applies, not a legal obligation."
+        },
+        {
+          "key": "D",
+          "text": "it decides whether the Statement of Affairs or the Balance Sheet should be presented to the banker",
+          "explanation": "Once the conversion is complete a proper Balance Sheet is presented. The choice of document does not turn on this check."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conversion method, §5 →",
+        "href": "/foundation/accounting/accounts-from-incomplete-records/#5-the-conversion-method-what-it-is-and-the-order-of-work"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Capital A/c total must equal assets − liabilities",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c9-01",
+      "topic": "Ch 9 · Incomplete Records · Meaning, features and limitations",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain what is meant by 'accounts from incomplete records', state its salient features, and give any three limitations of maintaining accounts in this way. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Meaning: a situation in which the books are not maintained on the double entry basis throughout — some transactions are recorded on both sides, some on one side only, and some are not recorded at all; the popular name 'single entry system' is therefore a misnomer, since it is not a system",
+          "marks": 1,
+          "citation": "meaning of incomplete records"
+        },
+        {
+          "point": "Features: double entry is kept for personal accounts (debtors and creditors); cash is kept as a one-sided running record, often mixing business and private items; most real and nominal accounts are not maintained; the records vary from firm to firm with no uniform pattern",
+          "marks": 1,
+          "citation": "features of incomplete records"
+        },
+        {
+          "point": "Limitation 1: no trial balance can be extracted, so there is no arithmetical check on the accuracy of the books and errors go undetected",
+          "marks": 1,
+          "citation": "no trial balance"
+        },
+        {
+          "point": "Limitation 2: gross profit cannot be ascertained because no Trading Account can be prepared, so the margin cannot be compared year on year or used for pricing; the financial position shown is not reliable",
+          "marks": 1,
+          "citation": "no gross profit, no true and fair view"
+        },
+        {
+          "point": "Limitation 3: frauds are difficult to detect and the accounts are not accepted by banks, tax authorities or an incoming partner without reconstruction; a company can never use this basis, being required to keep proper double entry books",
+          "marks": 1,
+          "citation": "acceptability and legal position"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Nature, features and defects of incomplete records",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c9-02",
+      "topic": "Ch 9 · Incomplete Records · Statement of Affairs vs Balance Sheet",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Distinguish between a Statement of Affairs and a Balance Sheet on any four points. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Source of figures: a Statement of Affairs is built from estimates, physical counts, vouchers and the trader's memory, whereas a Balance Sheet is built from ledger balances that have already been proved by a trial balance",
+          "marks": 1,
+          "citation": "source of the figures"
+        },
+        {
+          "point": "Capital: in a Statement of Affairs capital is the balancing figure (assets − liabilities); in a Balance Sheet capital comes from an independently maintained Capital Account and the two sides then agree of their own accord",
+          "marks": 1,
+          "citation": "capital as balancing figure"
+        },
+        {
+          "point": "Reliability: an omitted asset or liability in a Statement of Affairs simply changes capital and nothing complains, so its reliability is lower; the same omission would throw a trial balance out before a Balance Sheet could be drawn",
+          "marks": 1,
+          "citation": "reliability"
+        },
+        {
+          "point": "Purpose and basis: a Statement of Affairs is prepared under incomplete records to FIND capital, generally as the first and last step of the net worth method; a Balance Sheet is prepared under double entry to PRESENT a position already known",
+          "marks": 1,
+          "citation": "purpose and accounting basis"
+        }
+      ],
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Statement of Affairs vs Balance Sheet",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c9-03",
+      "topic": "Ch 9 · Incomplete Records · Net worth method",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the net worth (statement of affairs) method of ascertaining profit under incomplete records. State the formula, explain why drawings and fresh capital are treated as they are, and mention the adjustments that must be made before the profit is finalised. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Method: prepare a Statement of Affairs at the beginning of the year to obtain opening capital and another at the end to obtain closing capital; the movement in capital, corrected for the proprietor's own dealings, is the profit",
+          "marks": 1,
+          "citation": "the two statements of affairs"
+        },
+        {
+          "point": "Formula: Profit = Closing capital + Drawings − Further capital introduced − Opening capital; a negative result is a loss",
+          "marks": 1,
+          "citation": "net worth formula"
+        },
+        {
+          "point": "Drawings are ADDED back because the closing capital is already net of them — the amounts withdrawn were earned during the year; fresh capital is DEDUCTED because it swelled the closing capital without any trading effort behind it",
+          "marks": 1,
+          "citation": "why drawings are added and capital deducted"
+        },
+        {
+          "point": "Adjustments are made to the CLOSING capital before the formula is applied: depreciation not yet provided, bad debts and any provision for doubtful debts, outstanding expenses, prepaid expenses and accrued income, and any asset or liability omitted from the first draft; interest on capital and on drawings are dealt with after the profit is found",
+          "marks": 1,
+          "citation": "adjustments to closing capital"
+        },
+        {
+          "point": "Limitation to be noted: the method yields the net profit as a single figure only — neither gross profit nor the individual expenses can be seen — so where a full Trading and Profit and Loss Account is required the conversion method must be used instead",
+          "marks": 1,
+          "citation": "limitation of the method"
+        }
+      ],
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net worth method, formula and adjustments",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c9-04",
+      "topic": "Ch 9 · Incomplete Records · Conversion method",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "What is meant by 'conversion' of single entry into double entry? Set out the steps in the order in which they are performed, and state the check that establishes that the conversion is complete. (6 marks)",
+      "skeleton": [
+        {
+          "point": "Meaning: conversion is the reconstruction of the missing double entry from whatever evidence survives — the cash book, the debtors and creditors diaries, the bill file, invoices and counterfoils — so that a proper Trading and Profit and Loss Account and Balance Sheet can be prepared",
+          "marks": 1,
+          "citation": "meaning of conversion"
+        },
+        {
+          "point": "Step 1: prepare the opening Statement of Affairs to obtain the opening capital and every opening balance needed later",
+          "marks": 1,
+          "citation": "opening statement of affairs"
+        },
+        {
+          "point": "Step 2: reconstruct the cash and bank summary; missing cash sales, missing drawings or a missing balance emerge as the balancing figure, remembering that capital payments and loans pass through the cash book and that contras must not be double-counted",
+          "marks": 1,
+          "citation": "cash book reconstruction"
+        },
+        {
+          "point": "Step 3 and 4: prepare the Total Debtors Account to find credit sales (or receipts, or closing debtors) and the Total Creditors Account to find credit purchases (or payments, or closing creditors), in each case letting the unknown be the balancing figure",
+          "marks": 1,
+          "citation": "total debtors and creditors accounts"
+        },
+        {
+          "point": "Step 5: prepare the Bills Receivable and Bills Payable Accounts where bills exist, since they supply the bills figures the debtors and creditors accounts need; a gross profit ratio and a memorandum trading account may be needed for any remaining missing figure such as closing stock or purchases",
+          "marks": 1,
+          "citation": "bills accounts and memorandum trading"
+        },
+        {
+          "point": "Step 6 and the check: prepare the Trading and Profit and Loss Account and the Balance Sheet; closing capital built as opening capital + net profit + fresh capital − drawings must equal assets − liabilities, and that agreement is the substitute for the missing trial balance",
+          "marks": 1,
+          "citation": "final accounts and the closing check"
+        }
+      ],
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Conversion method: steps and closing check",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c9-05",
+      "topic": "Ch 9 · Incomplete Records · Total accounts and missing figures",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain how the Total Debtors Account, the Total Creditors Account and the bills accounts are used to locate missing figures under incomplete records. State clearly the side on which bills received and bills accepted appear, and how a dishonour is dealt with. (5 marks)",
+      "skeleton": [
+        {
+          "point": "Principle: each total account is opened with every figure that is known, and the one figure that is not known is taken as the balancing figure; only CREDIT transactions pass through these accounts, so cash sales and cash purchases must be kept out of them",
+          "marks": 1,
+          "citation": "principle of the total accounts"
+        },
+        {
+          "point": "Total Debtors Account: debit with opening debtors, credit sales and bills receivable dishonoured; credit with cash received, discount allowed, sales returns, bad debts, bills receivable received, any set-off to the creditors ledger, and closing debtors — credit sales being the usual balancing figure",
+          "marks": 1,
+          "citation": "total debtors account structure"
+        },
+        {
+          "point": "Total Creditors Account: credit with opening creditors, credit purchases and bills payable dishonoured; debit with payments, discount received, purchase returns, bills payable accepted, any set-off from the debtors ledger, and closing creditors — credit purchases being the usual balancing figure",
+          "marks": 1,
+          "citation": "total creditors account structure"
+        },
+        {
+          "point": "Bills accounts: bills receivable RECEIVED from customers are a credit in the debtors account (the book debt has been converted into a bill) and a debit in the Bills Receivable Account; bills payable ACCEPTED are a debit in the creditors account and a credit in the Bills Payable Account; each bills account then yields the bills figure the personal account needs",
+          "marks": 1,
+          "citation": "bills received and accepted"
+        },
+        {
+          "point": "Dishonour: a dishonoured bill leaves the bills account and returns to the personal account — a dishonoured bill receivable to the DEBIT of debtors (thereby reducing the computed credit sales) and a dishonoured bill payable to the CREDIT of creditors (thereby reducing the computed credit purchases)",
+          "marks": 1,
+          "citation": "dishonour routing"
+        }
+      ],
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Total debtors, total creditors and bills accounts",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "d-f1c9-06",
+      "topic": "Ch 9 · Incomplete Records · Gross profit ratio and mark-up vs margin",
+      "type": "descriptive",
+      "numerical": false,
+      "stem": "Explain the use of the gross profit ratio and the memorandum trading account in finding missing figures, and distinguish between mark-up and margin with the conversion between them. (4 marks)",
+      "skeleton": [
+        {
+          "point": "Use: where purchases, sales or closing stock is missing and a gross profit ratio is given, a Trading Account is drawn up as a working — a memorandum trading account — with the three known figures entered so that the fourth falls out as the balancing figure",
+          "marks": 1,
+          "citation": "use of the memorandum trading account"
+        },
+        {
+          "point": "Nature: the memorandum trading account lies outside the double entry — it is never posted or balanced into the ledger; its commonest application is to find the stock on the date of a fire or theft, the loss of stock being that stock less any salvage, and the insurance claim the lower of the loss and the policy amount",
+          "marks": 1,
+          "citation": "nature and application"
+        },
+        {
+          "point": "Mark-up is gross profit expressed as a percentage of COST; margin is the same rupee gross profit expressed as a percentage of SALES; since sales exceed cost, the mark-up percentage is always the larger of the two",
+          "marks": 1,
+          "citation": "mark-up vs margin"
+        },
+        {
+          "point": "Conversion: Margin = Mark-up ÷ (100 + Mark-up) and Mark-up = Margin ÷ (100 − Margin); thus a 25% mark-up on cost is a 20% margin on sales, and a 33⅓% mark-up on cost is a 25% margin on sales",
+          "marks": 1,
+          "citation": "conversion formulas"
+        }
+      ],
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "GP ratio, memorandum trading, mark-up vs margin",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-07"
+    }
+  ]
+}

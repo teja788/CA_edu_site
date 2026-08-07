@@ -1,0 +1,748 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Partnership and LLP Accounts'
+description: 'CA Foundation Accounting Ch 10 — partnership accounts in plain language: the deed and the rules when there is none, appropriation account, interest on drawings, guarantee, past adjustments, goodwill, admission, retirement, death, and LLP basics, with five fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 10 · Partnership &amp; LLP'
+chapterSlug: partnership-and-llp-accounts
+masteryId: f1-ch10
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Indian Partnership Act 1932, s.4 (definition of partnership) and s.13 (mutual rights — no remuneration, equal shares, 6% p.a. on advances)'
+  - 'Limited Liability Partnership Act 2008 — separate legal entity, perpetual succession, designated partners, limited liability'
+  - 'AS 26 (Intangible Assets) — self-generated goodwill is never recognised in the books'
+sourceLabel: 'ICAI SM Ch 10 scope (May 2026 ed.) · Indian Partnership Act 1932 · LLP Act 2008 · AS 26'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 34 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=partnership-and-llp-accounts'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Two friends, Anil and Bhavna, open a stationery shop together. Anil puts in more money; Bhavna puts
+in more hours. In the first good year they sit down to split the profit and the arguments begin.
+Should Anil get something extra for the bigger capital? Should Bhavna get a salary for minding the
+shop six days a week? Anil took ₹2,00,000 out of the till in June — does that cost him anything?
+And when Bhavna's cousin joins next year and pays for a share of a business the two of them built,
+who gets that money?
+
+Every single one of those arguments has an accounting answer, and this chapter is that set of
+answers. It is the largest chapter in Foundation Accounting and the most dependable source of a
+full-length numerical in the exam. Work through it in order — the later units (admission,
+retirement, death) simply reuse the tools built in the earlier ones.
+
+## 1. What a partnership actually is
+
+Section 4 of the **Indian Partnership Act 1932** defines it: partnership is the relation between
+persons who have agreed to share the profits of a business carried on by all or any of them acting
+for all. Pull that sentence apart and you get the three tests an examiner asks about:
+
+1. **An agreement** between persons — it arises from contract, not from status. Members of a Hindu
+   Undivided Family running a family business are not partners; they got there by birth.
+2. **A business** carried on with a view to profit. Two neighbours sharing the rent of a godown are
+   co-owners, not partners.
+3. **Mutual agency** — "carried on by all or any of them acting for all". Each partner is both a
+   principal and an agent of the others. This is the real test: a person who merely shares profits
+   (a manager on a profit-linked bonus, a lender paid out of profits) is **not** a partner, because
+   nobody is bound by his acts.
+
+The persons are individually **partners**, collectively **a firm**, and the name they trade under is
+the **firm name**. A firm is not a separate legal person: partners have **unlimited liability**,
+jointly and severally, for the firm's debts — which is exactly what an LLP changes, in §14.
+
+<Callout kind="pointer">
+  <p>
+    Sharing of profits is <strong>evidence</strong> of partnership, never <strong>proof</strong>.
+    The clinching test is mutual agency. Every MCQ that describes "a manager who receives 20% of
+    the profits" is testing this one point.
+  </p>
+</Callout>
+
+## 2. The deed, and the rules that apply when there is no deed
+
+A **partnership deed** is the written agreement: capitals, profit-sharing ratio, salaries, interest
+on capital and drawings, admission and retirement terms, dispute settlement. It is not compulsory,
+and registration of the firm is not compulsory either — but an unregistered firm cannot sue to
+enforce its contractual rights, which is why almost every real firm registers.
+
+When the deed is **silent, missing, or does not cover the point in dispute**, the Act supplies the
+missing terms. Five of them carry almost all the exam marks:
+
+| Question | Rule when the deed is silent |
+|---|---|
+| Do partners share profits in the capital ratio? | No — **equally**, however unequal the capitals. Losses are also shared equally. |
+| Is a working partner paid a salary or commission? | **No remuneration** of any kind. |
+| Is interest allowed on capital? | **No interest on capital.** |
+| Is interest charged on drawings? | **No interest on drawings.** |
+| A partner lends the firm money over and above his capital — is he paid? | **Yes: interest at 6% per annum** on that advance (s.13(d)). |
+
+That last line is the one candidates get wrong. **Capital earns nothing; an advance earns 6%.** The
+Act draws the line between money a partner agreed to subscribe (capital) and money he lent beyond
+it (a loan to the firm).
+
+<Callout kind="pointer">
+  <p>
+    Two more silent-deed points worth a mark each. Interest on capital, where the deed
+    <em>does</em> allow it, is payable <strong>only out of profits</strong> — so in a loss year it
+    is not allowed at all. And a new partner cannot be admitted without the consent of
+    <strong>all</strong> existing partners.
+  </p>
+</Callout>
+
+## 3. Charge against profit vs appropriation of profit
+
+This single distinction decides where an item goes, and therefore decides the answer to a whole
+family of MCQs.
+
+- A **charge** is a business expense: debited to the **Profit and Loss Account**, deducted *before*
+  you arrive at net profit, allowed **whether or not there is a profit**.
+- An **appropriation** is a distribution of profit already earned: it goes to the **Profit and Loss
+  Appropriation Account** and is possible **only if there is a profit**.
+
+| Item | Charge or appropriation? |
+|---|---|
+| Interest on a partner's **loan / advance** to the firm | **Charge** (P&amp;L Account) |
+| **Rent** payable to a partner for his building used by the firm | **Charge** (P&amp;L Account) |
+| Manager's salary and commission | **Charge** (P&amp;L Account) |
+| Interest on **capital** | **Appropriation** |
+| Partner's **salary or commission** | **Appropriation** |
+| Transfer to **reserve** | **Appropriation** |
+| Share of profit to partners | **Appropriation** |
+
+A partner wearing his "outsider" hat — as a lender, or as a landlord — is dealt with as a charge.
+A partner wearing his "owner" hat is dealt with as an appropriation.
+
+## 4. The Profit &amp; Loss Appropriation Account
+
+This account starts where the Profit and Loss Account stops. Its job is to divide the profit; it
+never touches trading items. **Debit side:** interest on capital · partners' salaries and commission
+· transfer to reserve · share of profit transferred to partners' capital or current accounts.
+**Credit side:** net profit brought down from the P&amp;L Account · interest on drawings.
+
+<div class="formula">Divisible profit = Net profit (after all charges) + Interest on drawings − Interest on capital − Partners' salary and commission − Transfer to reserve</div>
+
+If the appropriations exceed the available profit, they are **not** all allowed in full. The
+available profit is distributed **in the ratio of the appropriations claimed** — for example, if
+interest on capital of ₹80,000 is due but only ₹60,000 of profit exists, each partner receives
+three-quarters of his entitlement, unless the deed says interest on capital is a charge.
+
+## 5. Interest on capital
+
+Interest on capital is allowed **only if the deed provides for it**, at the deed's rate, and on the
+capital *actually employed through the year*:
+
+<div class="formula">Interest on capital = Opening capital × Rate + Additional capital × Rate × (months in use)/12</div>
+
+If the question gives you **closing** capital, work backwards to the opening figure first — the
+closing balance already contains this year's profit and drawings, and interest must never be
+calculated on it:
+
+<div class="formula">Opening capital = Closing capital − Additional capital introduced − Share of profit − Interest already credited + Drawings + Interest on drawings</div>
+
+## 6. Interest on drawings
+
+Charged only if the deed provides for it, and only for the **period the money was actually out of
+the firm** — from the date of drawing to the year end.
+
+**Product method (always safe).** Multiply each drawing by the months it stayed out, add the
+products, then:
+
+<div class="formula">Interest on drawings = Total of products (₹-months) × Rate × 1/12</div>
+
+**Average-period shortcut** — only when the drawings are *equal in amount and evenly spaced*:
+
+<div class="formula">Average period = (Months left after the first drawing + Months left after the last drawing) ÷ 2</div>
+
+| Equal drawings made... | Average period |
+|---|---|
+| At the **beginning** of each month, for 12 months | **6.5 months** |
+| At the **end** of each month, for 12 months | **5.5 months** |
+| In the **middle** of each month, for 12 months | **6 months** |
+| At the **beginning** of each quarter | **7.5 months** |
+| At the **end** of each quarter | **4.5 months** |
+| In the **middle** of each quarter | **6 months** |
+
+Then interest = Total annual drawings × Rate × Average period ÷ 12.
+
+<Callout kind="mistake">
+  <p>
+    Swapping 6.5 and 5.5. Money drawn at the <em>beginning</em> of a month is out of the firm
+    <em>longer</em>, so it carries the <strong>larger</strong> average period, 6.5 months.
+    Beginning-of-quarter 7.5 and end-of-quarter 4.5 follow the same logic. If a question says
+    "drawings of ₹5,000 per month" without saying when, the convention is to take
+    <strong>6 months</strong> (middle of the month).
+  </p>
+</Callout>
+
+Two more cases. If a partner draws a **fixed sum for only part of the year** — say ₹10,000 a month
+for the first six months — use the average-period formula from first principles, not the table. And
+where **only the total drawings** are given with no dates at all, interest is taken for **6 months**.
+
+## 7. Fixed and fluctuating capital accounts
+
+**Fluctuating capital method (the default).** One account per partner, and everything goes through
+it: opening and additional capital, interest on capital, salary, share of profit, drawings, interest
+on drawings, share of loss. The balance therefore changes every year — hence the name.
+
+**Fixed capital method.** Two accounts per partner. The **Capital Account** moves only when capital
+is actually introduced or permanently withdrawn; the **Current Account** takes everything else —
+interest on capital, salary, commission and share of profit as credits, drawings, interest on
+drawings and share of loss as debits.
+
+| | Fixed capital | Fluctuating capital |
+|---|---|---|
+| Number of accounts per partner | Two (Capital + Current) | One (Capital) |
+| Capital balance | Unchanged unless capital is added or withdrawn | Changes every year |
+| Can the balance be a debit? | The **Current Account can** show a debit balance; the Capital Account normally cannot | The Capital Account itself can go into debit |
+| Used only when... | The deed specifically provides for it | No specific provision (this is the default) |
+
+Under the fixed method, a **debit balance on a Current Account** appears on the assets side of the
+balance sheet; a credit balance appears on the liabilities side with the capitals.
+
+## 8. Guarantee of a minimum profit
+
+Sometimes a partner — usually an incoming or junior one — is promised that his share will not fall
+below a stated amount. Work it in three steps:
+
+1. Divide the profit among all partners in the **normal profit-sharing ratio**.
+2. If the guaranteed partner's share is **more than** the guarantee, stop; the guarantee does
+   nothing.
+3. If it is **less**, the shortfall is the **deficiency**, recovered from the guaranteeing partners
+   in the ratio the deed states — or, if the deed is silent, in the **remaining partners' mutual
+   profit-sharing ratio**.
+
+Example: A, B and C share 5:3:2 and C is guaranteed a minimum of ₹1,00,000. Profit is ₹4,00,000.
+Normal shares: A ₹2,00,000, B ₹1,20,000, C ₹80,000. C's deficiency is ₹20,000, borne by A and B in
+5:3 → A ₹12,500 and B ₹7,500. Final: A ₹1,87,500, B ₹1,12,500, C ₹1,00,000 — still ₹4,00,000 in
+total, which is your check.
+
+If instead **one partner alone** guarantees C, the whole ₹20,000 comes off that partner's share. And
+if the guarantee is given *by the firm to* a partner, all the others bear it in their mutual ratio.
+
+## 9. Past adjustments: fixing old years with one entry
+
+Sometimes an error surfaces after the accounts of one or more past years are closed — interest on
+capital was omitted, a salary was never credited, profits were divided in the wrong ratio. You do
+**not** reopen the old Appropriation Account. You prepare a small statement with two halves for each
+partner — **what should have been given** (Cr) and **what was actually given** (Dr) — net them off,
+and pass **one adjusting journal entry** through the partners' capital (or current) accounts.
+
+Example: L, M and N have fixed capitals of ₹4,00,000, ₹3,00,000 and ₹2,00,000 and share profits
+3:2:1. Interest on capital at 6% p.a. was omitted for one year.
+
+| Partner | Interest that should have been credited | Extra profit already taken (3:2:1 of ₹54,000) | Net |
+|---|---|---|---|
+| L | 24,000 | 27,000 | 3,000 Dr |
+| M | 18,000 | 18,000 | Nil |
+| N | 12,000 | 9,000 | 3,000 Cr |
+| | **54,000** | **54,000** | — |
+
+Adjusting entry: **L's Capital A/c Dr ₹3,000 — To N's Capital A/c ₹3,000.** The two columns always
+total the same figure, and the net column always sums to nil. That is your arithmetic check.
+
+## 10. Goodwill: nature and valuation
+
+**Goodwill** is the value of a firm's reputation — the extra earning power that lets an established
+firm earn more than a normal return on the capital it employs. It is an **intangible asset**, and in
+a partnership question it matters at exactly three moments: admission, retirement and death. It
+grows out of location, product quality, a long customer list, efficient management, a recognised
+brand and simple length of existence; it shrinks with poor service or an obsolete product.
+
+### Average profit method
+
+<div class="formula">Goodwill = Adjusted average profit × Number of years' purchase</div>
+
+Before averaging, **adjust** the past profits so they represent normal, recurring earning power: add
+back abnormal losses (fire, theft) and non-recurring expenses; deduct abnormal or non-trading gains
+(profit on sale of a fixed asset, insurance windfalls, income from investments); deduct any expense
+that will start to be incurred in future (a manager's salary the working partner used to provide
+free); add back any expense that will stop.
+
+Where recent years matter more, the question may ask for a **weighted** average — multiply each
+year's adjusted profit by its weight (1, 2, 3, 4 with the latest year heaviest) and divide by the
+total of the weights.
+
+### Super profit method
+
+**Super profit** is the excess of the firm's earning power over what a normal business of that size
+would earn:
+
+<div class="formula">Normal profit = Capital employed × Normal rate of return</div>
+<div class="formula">Super profit = Adjusted average profit − Normal profit</div>
+<div class="formula">Goodwill = Super profit × Number of years' purchase</div>
+
+Capital employed here means **capital employed in the business** = all assets used in the business
+(excluding goodwill, non-trade investments and fictitious assets) − outside liabilities. If the
+super profit is nil or negative, the firm has no goodwill.
+
+### Capitalisation methods
+
+Two routes, and — worth knowing — **they always give the same answer** on the same data.
+
+<div class="formula">Capitalisation of average profit: Goodwill = (Adjusted average profit ÷ Normal rate of return) − Capital employed</div>
+<div class="formula">Capitalisation of super profit: Goodwill = Super profit ÷ Normal rate of return</div>
+
+The first asks "what capital would a normal business need to earn this profit?" and treats the
+excess over the actual capital as goodwill; the second capitalises only the surplus earning. Because
+normal profit is itself capital employed × the rate, the two are algebraically identical.
+
+### Annuity method
+
+Super profit is expected for a limited number of years, so its **present value** — not its face
+total — is the goodwill. Multiply the super profit by the annuity factor (present value of ₹1 per
+year) the question gives you; Foundation questions always supply the factor.
+
+<div class="formula">Goodwill = Super profit × Annuity factor for n years at the given rate</div>
+
+### AS 26: goodwill is never raised in the books
+
+This rule governs everything in §11 to §13. Under **AS 26**, only **purchased** goodwill — goodwill
+for which a consideration in money or money's worth has actually been paid — can be recognised as an
+asset. **Self-generated goodwill is never recorded.** So when partners reconstitute the firm, you do
+**not** pass "Goodwill A/c Dr — To Old Partners' Capital A/c". The goodwill is **adjusted directly
+through the partners' capital accounts**: the partner who gains a share compensates the partner who
+sacrifices one, and goodwill never appears on the balance sheet as a result.
+
+<Callout kind="mistake">
+  <p>
+    Raising goodwill in the books on admission and then writing it off again is the pre-AS-26
+    treatment. Old question banks are full of it. In the current syllabus it is
+    <strong>wrong</strong> — one net adjusting entry through capital accounts is the only accepted
+    route. If goodwill already appears in the old balance sheet, it must be
+    <strong>written off among the OLD partners in the OLD ratio</strong> before anything else is
+    done.
+  </p>
+</Callout>
+
+## 11. Admission of a partner
+
+Admitting a partner needs the consent of all existing partners. The new partner acquires two rights:
+a share in the **future profits** and a share in the **assets** of the firm. Six things happen, in
+this order.
+
+### Sacrificing ratio
+
+The old partners give up part of their share so the new partner can have one.
+
+<div class="formula">Sacrificing ratio = Old ratio − New ratio</div>
+
+If the question does not say where the new partner's share comes from, assume the old partners
+sacrifice **in their old ratio** — the sacrificing ratio then equals the old ratio, and each old
+partner's new share is simply his old share × (1 − new partner's share). If the question instead
+says the new partner acquires 1/6 from A and 1/12 from B, deduct those specific fractions and the
+sacrificing ratio is 1/6 : 1/12 = 2 : 1.
+
+### Premium for goodwill
+
+The new partner pays for the share of a reputation he did not build. That payment is called the
+**premium for goodwill**.
+
+- **Premium brought in cash** and retained in the business: Cash/Bank A/c Dr; To Premium for
+  Goodwill A/c. Then Premium for Goodwill A/c Dr; **To the sacrificing partners' Capital A/cs in
+  the sacrificing ratio.**
+- **Premium withdrawn** by the old partners: add the withdrawal entry after the above.
+- **Premium paid privately**, outside the firm: **no entry at all** in the firm's books.
+- **New partner unable to bring his share of goodwill in cash**: debit his Capital (or Current)
+  Account with his share and credit the sacrificing partners.
+
+<Callout kind="pointer">
+  <p>
+    The premium goes in the <strong>sacrificing ratio</strong>, never in the old ratio and never in
+    the new ratio — unless the two happen to coincide, which is exactly what makes the trap work.
+    Wrong options in an MCQ almost always share the premium in the old profit-sharing ratio.
+  </p>
+</Callout>
+
+### Hidden goodwill on admission
+
+Sometimes the question never states the goodwill; it hides it in the new partner's capital. Infer it:
+
+<div class="formula">Implied total capital of the firm = New partner's capital × (Reciprocal of his share)</div>
+<div class="formula">Hidden goodwill = Implied total capital − Combined adjusted capitals of all partners including the new one</div>
+
+The combined capital figure must be the one **after** revaluation and reserve adjustments and
+**including** the cash the new partner brings.
+
+### Revaluation Account
+
+Assets and liabilities are restated to fair values so the incoming partner neither gains nor suffers
+from changes that belong to the past. **Debit** it with decreases in assets, increases in
+liabilities, unrecorded liabilities now brought in, and provisions newly created or increased;
+**credit** it with increases in assets, decreases in liabilities, unrecorded assets now brought in,
+and provisions no longer needed.
+
+<div class="formula">Revaluation profit (or loss) → OLD partners only, in the OLD ratio</div>
+
+That line is the whole point of the account and the single most-tested sentence in this unit. If the
+question says the assets and liabilities are to appear at their **old** values in the new balance
+sheet, use a **Memorandum Revaluation Account** instead: its first half goes to the old partners in
+the old ratio and the reversing second half to **all** partners, in the new ratio.
+
+### Reserves, accumulated profits and losses
+
+Any General Reserve, Reserve Fund, Workmen's Compensation Reserve (to the extent not needed) or
+credit balance of the Profit and Loss Account was earned before the new partner arrived, so it is
+transferred to the **old partners' capital accounts in the old ratio**. A **debit** balance of the
+Profit and Loss Account, or Advertisement Suspense, is a past loss and is likewise debited to the
+old partners in the old ratio.
+
+### Adjustment of capitals
+
+Two directions, and the question always tells you which. If the **new partner's capital is given**,
+total capital of the firm = his capital ÷ his share; split that in the new ratio, compare with each
+old partner's adjusted capital, and bring in or withdraw the difference in cash (or through a current
+account). If the **old partners' capitals are given**, gross up their combined adjusted capital by
+their combined share and take the new partner's share of the result.
+
+## 12. Retirement of a partner
+
+A partner may retire with the consent of all partners, or under the deed, or — in a partnership at
+will — by written notice to all the others. The remaining partners continue: the firm is
+reconstituted, not dissolved.
+
+### Gaining ratio
+
+The mirror image of the sacrificing ratio:
+
+<div class="formula">Gaining ratio = New ratio − Old ratio</div>
+
+If nothing is said, the continuing partners gain **in their old mutual ratio**, and the new ratio is
+simply the old ratio of the continuing partners.
+
+### Goodwill on retirement
+
+The outgoing partner is entitled to his share of the firm's goodwill. Consistent with AS 26 no
+goodwill is raised; the **gaining partners compensate the outgoing partner** directly:
+
+<div class="formula">Gaining Partners' Capital A/cs Dr (in the gaining ratio) — To Retiring Partner's Capital A/c (with his share of goodwill)</div>
+
+**Hidden goodwill on retirement.** If the partners fix the total amount payable to the retiring
+partner without stating the goodwill, work it back: his share of goodwill = amount payable − his
+capital balance after revaluation, reserves and everything else; gross that up by the reciprocal of
+his share to get the firm's goodwill.
+
+### Settling the outgoing partner
+
+Everything else follows the admission template, except that the revaluation profit or loss and the
+reserves now go to **all partners including the retiring one, in the OLD ratio** — he was a partner
+while those values built up.
+
+His final balance is settled by a lump sum in cash, or by transfer to his **Loan Account** (on which
+he is entitled to interest at **6% p.a.** if nothing is agreed), or by an agreed mix paid in
+instalments. That Loan Account is a balance-sheet liability until it is discharged.
+
+## 13. Death of a partner
+
+Death is retirement the deceased did not choose, and the accounting is nearly identical — with two
+differences. The settlement is made to the **executor** (legal representative), not to the partner;
+and death happens on **some date in the middle of the year**, so the deceased is entitled to a share
+of the profit earned from the start of the year to that date.
+
+### Profit to the date of death
+
+Two accepted bases, and the deed says which:
+
+<div class="formula">Time basis: Profit to date = Last year's profit × (Months to the date of death ÷ 12), then × his share</div>
+<div class="formula">Turnover (sales) basis: Profit to date = Sales up to the date of death × Last year's rate of net profit on sales, then × his share</div>
+
+The turnover basis is the more realistic of the two, and the one examiners prefer when they give you
+sales figures for both periods: compute the profit rate from the **previous completed year** (profit
+÷ sales × 100) and apply it to the current period's sales. The share of profit to date is debited to
+the Profit and Loss **Suspense** Account and credited to the deceased partner's capital account.
+
+### The executor's account
+
+The deceased partner's Capital Account is closed by transfer to **his Executor's Account**.
+**Credits:** capital balance · share of reserves and accumulated profits (old ratio) · share of
+revaluation profit (old ratio) · share of goodwill (borne by the continuing partners in their gaining
+ratio) · share of profit to the date of death · interest on capital to the date of death if the deed
+provides for it. **Debits:** drawings to the date of death · interest on drawings · share of
+revaluation loss · share of accumulated losses.
+
+Until it is paid, the Executor's Account is a liability of the firm, carrying interest at **6% p.a.**
+where nothing else is agreed.
+
+## 14. Limited Liability Partnership (LLP)
+
+An LLP is the hybrid the Limited Liability Partnership Act 2008 created: the internal flexibility of
+a partnership with the limited liability of a company. It is a **body corporate**, incorporated by
+registration with the Registrar, and a **legal entity separate from its partners**. Its key features:
+
+- **Separate legal entity** — it can own property, sue and be sued in its own name.
+- **Perpetual succession** — a change in partners does not affect its existence, rights or
+  liabilities.
+- **Limited liability** — a partner is not personally liable for the LLP's obligations merely
+  because he is a partner; his exposure is limited to his agreed contribution (fraud aside).
+- **Minimum two partners**, no upper limit. An individual or a body corporate may be a partner.
+- **At least two designated partners**, both individuals, of whom **at least one must be resident in
+  India**. Designated partners answer for statutory compliances and filings.
+- **Mutual rights governed by the LLP agreement**; where it is silent, the Act's default provisions
+  apply — much as the 1932 Act supplies terms for a firm.
+- **No mutual agency between partners** — each partner is an agent of the LLP, not of the other
+  partners. That is precisely why one partner's misconduct does not sink the others.
+
+### Partnership firm vs LLP
+
+| Point | Partnership firm (Act of 1932) | LLP (Act of 2008) |
+|---|---|---|
+| Governing law | Indian Partnership Act 1932 | Limited Liability Partnership Act 2008 |
+| Legal status | Not a separate legal entity | **Body corporate**, separate legal entity |
+| Liability of partners | **Unlimited**, joint and several | **Limited** to the agreed contribution |
+| Perpetual succession | No — changes with the partners | **Yes** |
+| Registration | Optional (but an unregistered firm cannot sue) | **Compulsory** — it exists only on incorporation |
+| Maximum number of partners | Restricted (50, under the Companies Rules) | **No limit** |
+| Designated partners | Not applicable | At least two, one resident in India |
+| Ownership of property | Held by the partners jointly | Held by the **LLP itself** |
+| Agency | Partner is an agent of the firm **and of the other partners** | Partner is an agent of the LLP **only** |
+| Annual filings with the Registrar | None | Annual Return and Statement of Account and Solvency |
+
+### LLP accounts
+
+The bookkeeping is reassuringly familiar. Partners bring in **contribution** rather than "capital" —
+in cash, in tangible or intangible property, or in other benefits, with its monetary value stated in
+the accounts. The LLP prepares the same Profit and Loss Account and shares profits under the LLP
+agreement, through an appropriation section that behaves exactly like the one in §4. It must keep
+**proper books of account** at its registered office, on the cash or the accrual basis; each year it
+files a **Statement of Account and Solvency** and an **Annual Return** with the Registrar; and its
+accounts must be **audited** where turnover or contribution crosses the limits prescribed under the
+LLP Rules.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — appropriation account, with the no-deed twist (moderate)">
+  <p>
+    Anil and Bhavna share profits 3:2 with fixed capitals of ₹6,00,000 and ₹4,00,000. Their deed
+    allows interest on capital at 8% p.a., a salary to Anil of ₹12,000 per month, and interest on
+    drawings at 10% p.a. On 1 April 2025 Bhavna advanced a loan of ₹2,00,000 to the firm; the deed
+    says nothing about interest on it. Anil drew ₹20,000 at the end of every quarter; Bhavna drew
+    ₹1,00,000 on 1 October 2025. Profit for the year ended 31 March 2026, before any of the above,
+    was ₹5,00,000. Divide the profit. Then redo it assuming there is no deed at all.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the charge comes off first</div>
+    Interest on Bhavna's loan = 2,00,000 × 6% = ₹12,000. The deed is silent, so s.13(d) fixes 6%; it is a <strong>charge</strong>, so it is debited to the P&amp;L Account.<br />
+    Net profit carried to the Appropriation Account = 5,00,000 − 12,000 = <strong>₹4,88,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — interest on drawings</div>
+    Anil: equal amounts at the END of each quarter → average period 4.5 months.<br />
+    80,000 × 10% × 4.5/12 = <strong>₹3,000</strong> (product check: 20,000 × (9 + 6 + 3 + 0) = 3,60,000 ₹-months × 10% ÷ 12 = 3,000)<br />
+    Bhavna: 1,00,000 out for 6 months → 1,00,000 × 10% × 6/12 = <strong>₹5,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the appropriation account</div>
+    Credits: net profit 4,88,000 + interest on drawings 8,000 = 4,96,000<br />
+    Debits: interest on capital (48,000 + 32,000) = 80,000; Anil's salary 12,000 × 12 = 1,44,000<br />
+    Divisible profit = 4,96,000 − 80,000 − 1,44,000 = <strong>₹2,72,000</strong><br />
+    Anil 3/5 = ₹1,63,200 · Bhavna 2/5 = ₹1,08,800
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the twist: no deed</div>
+    No salary, no interest on capital, no interest on drawings. But Bhavna's <em>advance</em> still earns 6% — that right comes from the Act, not from the deed.<br />
+    Divisible profit = 5,00,000 − 12,000 = 4,88,000, shared <strong>equally</strong>: <strong>₹2,44,000 each</strong>, even though the capitals are 6:4.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — goodwill: super profit and capitalisation on one set of data (moderate-hard)">
+  <p>
+    A firm's capital employed is ₹20,00,000 and the normal rate of return in this line of business
+    is 12%. Profits of the last four years: 2022–23 ₹3,40,000; 2023–24 ₹3,60,000; 2024–25 ₹4,00,000
+    (including ₹40,000 profit on sale of a machine); 2025–26 ₹3,50,000 (after charging a fire loss
+    of ₹30,000, an event that will not recur). From next year a manager must be paid ₹60,000 a year
+    for work a partner had been doing free. Value the goodwill by (a) super profit at 3 years'
+    purchase, (b) capitalisation of super profit, and (c) capitalisation of average profit.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — adjusted average profit</div>
+    2022–23: 3,40,000<br />
+    2023–24: 3,60,000<br />
+    2024–25: 4,00,000 − 40,000 (abnormal, non-recurring gain) = 3,60,000<br />
+    2025–26: 3,50,000 + 30,000 (abnormal loss added back) = 3,80,000<br />
+    Total 14,40,000 ÷ 4 = 3,60,000; less manager's salary 60,000 (a future recurring cost) = <strong>₹3,00,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — super profit</div>
+    Normal profit = 20,00,000 × 12% = 2,40,000<br />
+    Super profit = 3,00,000 − 2,40,000 = <strong>₹60,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the three valuations</div>
+    (a) Super profit × 3 = 60,000 × 3 = <strong>₹1,80,000</strong><br />
+    (b) Capitalisation of super profit = 60,000 ÷ 0.12 = <strong>₹5,00,000</strong><br />
+    (c) Capitalisation of average profit = (3,00,000 ÷ 0.12) − 20,00,000 = 25,00,000 − 20,00,000 = <strong>₹5,00,000</strong><br />
+    (b) and (c) agree — they always do, because normal profit is itself capital employed × the rate. For contrast, average profit at 3 years' purchase would give 3,00,000 × 3 = ₹9,00,000: the method matters enormously, so read the question twice.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — admission: sacrifice, premium, revaluation (hard)">
+  <p>
+    A and B share profits 3:2. Their capitals are ₹4,00,000 and ₹3,00,000 and the balance sheet
+    shows a General Reserve of ₹1,00,000. C is admitted for a 1/5 share; he brings ₹3,00,000 as
+    capital and ₹1,00,000 as premium for goodwill, both in cash, and the premium is retained in the
+    business. On revaluation: land is worth ₹90,000 more, stock is written down by ₹20,000, a
+    provision of ₹10,000 is made against debtors, and an unrecorded creditor of ₹15,000 comes to
+    light. Find the sacrificing ratio, the new ratio, and each partner's capital afterwards.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — sacrificing and new ratios</div>
+    Nothing says where C's share comes from, so A and B sacrifice in their old ratio → sacrificing ratio <strong>3:2</strong>.<br />
+    A = 3/5 × 4/5 = 12/25 · B = 2/5 × 4/5 = 8/25 · C = 1/5 = 5/25 → new ratio <strong>12 : 8 : 5</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Revaluation Account</div>
+    Credit: land 90,000. Debit: stock 20,000 + provision 10,000 + unrecorded creditor 15,000 = 45,000<br />
+    Revaluation <strong>profit ₹45,000</strong> → to the OLD partners in the OLD ratio 3:2: A ₹27,000, B ₹18,000. C gets nothing.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — premium and reserve</div>
+    Premium ₹1,00,000 in the <strong>sacrificing</strong> ratio 3:2 → A ₹60,000, B ₹40,000.<br />
+    General Reserve ₹1,00,000 in the OLD ratio 3:2 → A ₹60,000, B ₹40,000.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — capital accounts</div>
+    A: 4,00,000 + 60,000 + 27,000 + 60,000 = <strong>₹5,47,000</strong><br />
+    B: 3,00,000 + 40,000 + 18,000 + 40,000 = <strong>₹3,98,000</strong><br />
+    C: <strong>₹3,00,000</strong> (the premium he paid is <em>not</em> part of his capital)
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — retirement: gaining ratio and the hidden-goodwill variant (hard)">
+  <p>
+    X, Y and Z share profits 5:3:2. Y retires, and X and Z agree to share future profits 3:2. The
+    goodwill of the firm is valued at ₹3,00,000. (i) Pass the goodwill adjustment. (ii) Then take a
+    different version of the same question: the goodwill is <em>not</em> stated, but the partners
+    agree that Y will be paid ₹4,20,000 in full settlement, and after revaluation and reserves his
+    capital account stands at ₹3,30,000. Find the firm's goodwill.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — gaining ratio</div>
+    X: 3/5 − 5/10 = 6/10 − 5/10 = 1/10<br />
+    Z: 2/5 − 2/10 = 4/10 − 2/10 = 2/10<br />
+    Gaining ratio <strong>1 : 2</strong> — note Z gains twice as much as X even though X has the bigger share.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — goodwill adjustment (part i)</div>
+    Y's share of goodwill = 3,00,000 × 3/10 = ₹90,000, borne by the gainers 1:2 → X ₹30,000, Z ₹60,000<br />
+    <strong>X's Capital A/c Dr ₹30,000; Z's Capital A/c Dr ₹60,000; To Y's Capital A/c ₹90,000.</strong> No Goodwill Account is opened (AS 26).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — hidden goodwill (part ii)</div>
+    Excess paid over the balance standing to Y's credit = 4,20,000 − 3,30,000 = ₹90,000. That excess <em>is</em> Y's share of goodwill.<br />
+    Firm's goodwill = 90,000 × 10/3 = <strong>₹3,00,000</strong> — the same firm, reached from the other end.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — death mid-year: the executor's amount on a turnover basis (hard)">
+  <p>
+    P, Q and R share profits 2:2:1. R dies on 31 August 2025; the firm closes its books on 31 March.
+    R's capital on 1 April 2025 was ₹2,40,000 and he had drawn ₹35,000 up to the date of death. The
+    balance sheet showed a General Reserve of ₹1,50,000. Revaluation on the date of death produced a
+    profit of ₹75,000, and the firm's goodwill was valued at ₹4,00,000. The deed says R's share of
+    the current year's profit is to be computed on the basis of turnover. Sales for the year ended
+    31 March 2025 were ₹40,00,000 on which the profit was ₹5,00,000; sales from 1 April 2025 to 31
+    August 2025 were ₹12,00,000. Find the amount payable to R's executor.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — profit to the date of death (turnover basis)</div>
+    Last year's rate of net profit on sales = 5,00,000 ÷ 40,00,000 = 12.5%<br />
+    Profit for 1 Apr – 31 Aug 2025 = 12,00,000 × 12.5% = 1,50,000<br />
+    R's share = 1,50,000 × 1/5 = <strong>₹30,000</strong><br />
+    <em>(On a time basis it would have been 5,00,000 × 5/12 × 1/5 = ₹41,667 — a different answer, so use the basis the deed names.)</em>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — R's share of goodwill</div>
+    4,00,000 × 1/5 = ₹80,000, borne by P and Q in their gaining ratio. Their new ratio is 2:2, their old was 2:2 out of 5, so they gain equally → <strong>₹40,000 each</strong>, debited to their capital accounts. No Goodwill Account is raised.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — R's Executor's Account</div>
+    Capital 2,40,000<br />
+    + General Reserve 1,50,000 × 1/5 = 30,000<br />
+    + Revaluation profit 75,000 × 1/5 = 15,000<br />
+    + Goodwill 80,000<br />
+    + Profit to date of death 30,000<br />
+    − Drawings 35,000<br />
+    = <strong>₹3,60,000 payable to R's executor</strong>, carrying interest at 6% p.a. until paid if nothing else is agreed.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Sharing profit in the capital ratio when the deed is silent.** The Act says **equally**, however
+  lopsided the capitals. This is the single most common error in the whole chapter.
+- **Refusing interest on a partner's loan because "the deed is silent".** Capital earns nothing when
+  the deed is silent, but an **advance earns 6% p.a.** — and it is a *charge*, deducted before net
+  profit, not an appropriation.
+- **Putting rent payable to a partner in the Appropriation Account.** Rent and a partner's loan
+  interest are charges; his salary, commission and interest on capital are appropriations.
+- **Swapping 6.5 and 5.5 months.** Beginning-of-month drawings are out longer → 6.5. End-of-month →
+  5.5. Beginning-of-quarter → 7.5, end-of-quarter → 4.5.
+- **Calculating interest on capital on the closing balance** under fluctuating capitals. The closing
+  figure already contains this year's profit and drawings; work back to the opening capital first.
+- **Sharing the premium for goodwill in the old ratio.** It goes in the **sacrificing** ratio.
+  Likewise, the retiring partner's goodwill is borne in the **gaining** ratio, not the old ratio.
+- **Giving revaluation profit to the incoming partner.** On admission, revaluation profit or loss and
+  all reserves belong to the **old partners in the old ratio**. On retirement and death they belong
+  to **all partners including the outgoing one**, in the old ratio.
+- **Raising a Goodwill Account.** AS 26 forbids recognising self-generated goodwill. Adjust through
+  capital accounts. If goodwill is already sitting in the old balance sheet, write it off among the
+  old partners in the old ratio first.
+- **Treating the new partner's premium as part of his capital.** It is credited to the sacrificing
+  partners, not to him.
+- **Getting the guarantee deficiency ratio wrong.** Read whether the deficiency is borne by all the
+  others in their mutual ratio, by one named partner, or in a stated ratio — all three appear.
+- **Reopening past years for a past adjustment.** One net entry through the capital accounts, based
+  on a two-column statement whose totals must agree.
+- **Using the time basis when the deed says turnover** (or the reverse) for the profit to the date
+  of death. The two give different numbers, and both appear as options.
+- **Saying an LLP partner is an agent of the other partners.** He is an agent of the **LLP only** —
+  that is the point of the structure.
+
+## One-page revision summary
+
+**Definition (s.4):** relation between persons who agreed to share the profits of a business carried
+on by all or any of them acting for all · the clinching test is **mutual agency** · firm has
+**unlimited liability**, is not a separate legal person.
+
+**When the deed is silent:** profits and losses **equal** · **no** salary or commission · **no**
+interest on capital · **no** interest on drawings · interest on a partner's **advance at 6% p.a.** ·
+interest on capital, where allowed, is payable only out of profits · admission needs the consent of
+**all** partners.
+
+**Charges (P&amp;L A/c):** interest on partner's loan · rent to a partner · manager's salary.
+**Appropriations (Appropriation A/c):** interest on capital · partner's salary and commission ·
+transfer to reserve · share of profit.
+
+**Formulas:**
+
+<div class="formula">Divisible profit = Net profit + Interest on drawings − Interest on capital − Partners' salary/commission − Transfer to reserve</div>
+<div class="formula">Interest on drawings (product method) = Total ₹-month products × Rate × 1/12</div>
+<div class="formula">Average period = (Months left after the first drawing + Months left after the last drawing) ÷ 2</div>
+<div class="formula">Goodwill (average profit) = Adjusted average profit × Years' purchase</div>
+<div class="formula">Super profit = Adjusted average profit − (Capital employed × Normal rate of return)</div>
+<div class="formula">Goodwill (capitalisation of super profit) = Super profit ÷ Normal rate of return</div>
+<div class="formula">Goodwill (capitalisation of average profit) = (Average profit ÷ Normal rate) − Capital employed</div>
+<div class="formula">Sacrificing ratio = Old ratio − New ratio · Gaining ratio = New ratio − Old ratio</div>
+<div class="formula">Hidden goodwill (admission) = (New partner's capital × reciprocal of his share) − Total adjusted capital of all partners</div>
+<div class="formula">Profit to date of death (turnover basis) = Sales to date × Last year's net profit rate × His share</div>
+
+**Ratios at a glance:** premium for goodwill → **sacrificing ratio** · retiring/deceased partner's
+goodwill → **gaining ratio** · revaluation profit and reserves on admission → **old partners, old
+ratio** · on retirement and death → **all partners including the outgoing one, old ratio** ·
+guarantee deficiency → agreed ratio, else the remaining partners' mutual ratio.
+
+**Drawings shortcuts:** monthly at beginning 6.5 · monthly at end 5.5 · monthly in middle 6 ·
+quarterly at beginning 7.5 · quarterly at end 4.5 · quarterly in middle 6 · amount only, no dates: 6.
+
+**LLP:** body corporate under the LLP Act 2008 · separate legal entity · perpetual succession ·
+liability limited to the agreed **contribution** · minimum two partners, no maximum · at least two
+**designated partners**, both individuals, one resident in India · a partner is an agent of the LLP
+but **not** of the other partners · registration compulsory · annual filings of a Statement of
+Account and Solvency and an Annual Return.

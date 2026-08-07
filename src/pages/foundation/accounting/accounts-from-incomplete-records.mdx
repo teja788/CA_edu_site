@@ -1,0 +1,506 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Accounts from Incomplete Records'
+description: 'CA Foundation Accounting Ch 9 — single entry in plain language: the net worth (statement of affairs) method, the conversion method, total debtors and creditors accounts, bills accounts, and gross-profit-ratio missing figures, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 1 · Accounting'
+paperSlug: accounting
+chapter: 'Ch 9 · Incomplete Records'
+chapterSlug: accounts-from-incomplete-records
+masteryId: f1-ch9
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'ICAI Foundation SM Paper 1, Ch 9 (Accounts from Incomplete Records) — May 2026 edition, scope and conventions'
+  - 'Net worth (statement of affairs) method — standard SM formula'
+  - 'Conversion method — total debtors / total creditors / bills accounts as SM structures them'
+sourceLabel: 'ICAI SM Ch 9 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '7 Aug 2026'
+readTime: 'About 22 min read · 5 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=accounting&chapter=accounts-from-incomplete-records'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Kailash runs a hardware shop in Belgaum. Every evening he counts the cash box and writes the total
+in a notebook. In a second diary he lists who owes him money and whom he owes. He has no ledger, no
+journal, no trial balance — and at the end of the year his banker still asks, "What was your
+profit?"
+
+That is this chapter. You are handed a shoebox instead of a set of books, and you must produce a
+figure the owner can rely on. There are two ways to do it: a quick way that gives you *only* the
+net profit (the **net worth** or **statement of affairs** method), and a longer way that
+reconstructs enough of the double entry to produce a full Trading and Profit &amp; Loss Account
+(the **conversion** method). The exam loves both — the first as a four-line computation, the second
+as a full-length problem built out of two or three missing figures.
+
+## 1. What incomplete records are, and who keeps them
+
+"Single entry system" is a misleading name. It is **not a system at all** — it is the *absence* of
+one. What actually survives in such books is a mixture:
+
+- **Double entry** for **personal accounts** — debtors and creditors — because the trader must know who owes him what.
+- **Single entry**, a one-sided memorandum, for **cash** — a running cash book, often mixing business and private receipts.
+- **No entry at all** for most **real and nominal** accounts — furniture, purchases, sales, rent, salaries, discounts. They exist as bills in a file, not as accounts.
+
+Who keeps books this way? Small sole proprietors and small partnership firms — a trader whose volume
+does not justify a book-keeper, who wants simplicity and privacy, and whom no statute compels
+otherwise. **Companies cannot**: a company must maintain proper books on the double entry basis, so
+incomplete records are never a company's answer, nor are they open to any entity under statutory audit.
+
+The defects follow straight from the definition: **no trial balance can be extracted**, so there is
+no arithmetical check at all; **gross profit cannot be ascertained**, because there is no Trading
+Account, so the trader cannot see his margin or price sensibly; the **true and fair position is
+doubtful**, resting on estimates and counts rather than ledger balances; **frauds and errors go
+undetected**, because nothing has to agree with anything; and the accounts are **not acceptable** to
+tax authorities, banks or an incoming partner without reconstruction.
+
+<Callout kind="pointer">
+  <p>
+    A favourite one-mark question: <strong>is single entry a "system"?</strong> The answer the
+    examiner wants is that it is a <em>mechanically defective, unscientific</em> way of keeping
+    books — a mixture of double entry, single entry and no entry — and not a system in any
+    meaningful sense.
+  </p>
+</Callout>
+
+## 2. Statement of Affairs versus Balance Sheet
+
+Both look like a list of assets and liabilities. They are not the same document, and the
+difference is examined almost every attempt.
+
+| | Statement of Affairs | Balance Sheet |
+|---|---|---|
+| Source of figures | Estimates, physical counts, vouchers, the trader's memory | Ledger balances thrown up by a trial balance |
+| Capital | Is the **balancing figure**: Capital = Assets − Liabilities | Is taken **from the Capital Account**, which is independently built up |
+| Reliability | Lower — an omitted asset or liability simply changes capital, and nothing complains | Higher — an omission would throw the trial balance out |
+| Purpose | To *find* capital when it is not known | To *present* a position already known |
+| Prepared under | Incomplete records | Double entry |
+
+<div class="formula">Capital (statement of affairs) = Assets − Liabilities</div>
+
+<Callout kind="mistake">
+  <p>
+    Writing "Balance Sheet" as the heading in a net-worth question. Under incomplete records the
+    capital figure is <strong>derived by subtraction</strong>, so the correct heading is
+    <strong>Statement of Affairs</strong>. Marks are given for the heading itself.
+  </p>
+</Callout>
+
+## 3. The net worth method: profit from the movement in capital
+
+If the owner puts nothing in and takes nothing out, any increase in his capital during the year
+*is* his profit. Drawings and fresh capital disturb that, so you undo them:
+
+<div class="formula">Profit = Closing capital + Drawings − Further capital introduced − Opening capital</div>
+
+Read it as a story. Closing capital is what is left **after** the owner has helped himself, so add
+the drawings back; fresh capital brought in swelled the closing capital without any trading effort,
+so take it out. What remains, over and above where he started, is profit — and a negative answer is
+a **loss**. The same equation rearranges to whatever the question hides:
+
+<div class="formula">Closing capital = Opening capital + Further capital + Profit − Drawings</div>
+<div class="formula">Drawings = Opening capital + Further capital + Profit − Closing capital</div>
+<div class="formula">Further capital = Closing capital + Drawings − Profit − Opening capital</div>
+
+You get **opening capital** from a statement of affairs drawn at the *beginning* of the year and
+**closing capital** from one drawn at the *end*. So a net-worth question is really three steps:
+opening statement of affairs → closing statement of affairs → the formula.
+
+<Callout kind="pointer">
+  <p>
+    Drawings are not only cash. <strong>Goods taken for personal use</strong> (at cost),
+    the owner's life insurance premium paid from the shop's bank account, his household electricity
+    bill, income tax on his personal income — all are drawings. Income tax of a
+    <em>sole proprietor</em> is a personal expense, never a business expense.
+  </p>
+</Callout>
+
+## 4. Adjustments before you sign off the net worth profit
+
+The closing statement of affairs is built from raw figures. Before it can yield a believable profit,
+the usual year-end adjustments must be pushed through it — every one of them changes **closing
+capital**, and therefore the profit:
+
+- **Depreciation** not yet provided → reduce the asset. **Bad debts** and a **provision for doubtful debts** → reduce debtors.
+- **Outstanding expenses** (wages, rent, interest) → add a liability. **Prepaid expenses** and **accrued income** → add an asset.
+- **Assets or liabilities simply left out** of the first draft → put them in.
+- **Interest on capital** and **interest on drawings**, where asked for, are adjusted after the profit is found, exactly as in Ch 7.
+
+Work adjustment by adjustment on the closing capital figure, then apply the formula once. Never try
+to adjust "the profit" directly — you will lose the sign somewhere. And note the two things the
+method **cannot** do: it gives you neither **gross profit** nor the **individual expenses**, only
+one number with no explanation of how it arose. When the question wants a Trading and Profit &amp;
+Loss Account, you must convert.
+
+## 5. The conversion method: what it is and the order of work
+
+Conversion means rebuilding the missing double entry from whatever evidence exists — the cash book,
+the debtors and creditors diaries, the bill file, counterfoils and invoices — until you can draw up
+a proper Trading Account, Profit &amp; Loss Account and Balance Sheet. The order almost never changes:
+
+1. **Opening Statement of Affairs** → opening capital, and every opening balance needed in steps 3–5.
+2. **Cash book (or Cash and Bank summary)** → reconstruct it. Missing cash sales, missing drawings or the missing closing balance appear as the **balancing figure**.
+3. **Total Debtors Account** → credit sales (or receipts, or closing debtors).
+4. **Total Creditors Account** → credit purchases (or payments, or closing creditors).
+5. **Bills Receivable and Bills Payable Accounts** → feed steps 3 and 4 with the bills figures those accounts need.
+6. **Trading and Profit &amp; Loss Account**, then the **Balance Sheet**, which must tally.
+
+Steps 3, 4 and 5 are all the same trick: open a T-account, put in every figure you know, and let
+the one you do not know be the balancing figure.
+
+## 6. Reconstructing the cash book
+
+The cash book is a ledger account for cash. So:
+
+<div class="formula">Opening cash and bank + Total receipts − Total payments = Closing cash and bank</div>
+
+Any single unknown in that line can be found, and two patterns dominate. **Missing cash sales:**
+every payment, both balances and the receipts from debtors are known, so cash sales are whatever is
+needed to make the account balance. **Missing drawings:** all receipts and all business payments are
+known, and so are both balances; the gap is what the owner took.
+
+Watch the traps. **Capital expenditure paid in cash** (furniture, machinery) is a payment in the
+cash book even though it never reaches the Profit &amp; Loss Account. A **loan received** is a
+receipt but not income. **Cash deposited into or drawn from the bank** is a contra — it must not be
+counted as a receipt *and* a payment in a combined cash-and-bank summary, or you will double-count.
+
+**Splitting cash sales from credit sales.** Only credit sales pass through the Total Debtors
+Account; only cash sales pass through the cash book. So:
+
+<div class="formula">Total sales = Cash sales (from the cash book) + Credit sales (from the Total Debtors A/c)</div>
+
+The same split applies to purchases. If a question says "20% of the sales were for cash" and gives
+you credit sales of ₹8,00,000, then credit sales are 80% of the total: total sales = 8,00,000 ×
+100/80 = ₹10,00,000, and cash sales = ₹2,00,000. Read whether the percentage is of *total* sales or
+*of credit* sales — that one word decides the answer.
+
+## 7. Total Debtors Account: finding credit sales
+
+Everything that increases what customers owe goes on the debit; everything that reduces it goes on
+the credit.
+
+| Debit side (increases) | Credit side (decreases) |
+|---|---|
+| Opening balance of debtors | Cash and cheques received from customers |
+| **Credit sales** | Discount allowed |
+| Bills receivable **dishonoured** | Sales returns (returns inward) |
+| Cheques received earlier now dishonoured | Bad debts written off |
+| Interest charged on overdue accounts | Bills receivable **received** from customers |
+| | Transfer / set-off to the creditors ledger |
+| | Closing balance of debtors |
+
+<div class="formula">Credit sales = Receipts + Discount allowed + Returns inward + Bad debts + B/R received + Set-off + Closing debtors − Opening debtors − B/R dishonoured</div>
+
+Two lines earn most of the marks. **Bills receivable received** from a customer *reduce* debtors —
+the debt has changed its clothes, from a book debt into a bill — so they sit on the credit side.
+When such a bill is later **dishonoured**, the customer owes again and the amount comes **back to
+the debit** of the debtors account. Forgetting the second leg is the classic slip.
+
+<Callout kind="mistake">
+  <p>
+    Cash sales must <strong>never</strong> be entered in the Total Debtors Account. A cash sale
+    creates no debtor. Putting it in inflates credit sales by exactly the cash sales figure — and
+    that wrong number is always sitting there as an option.
+  </p>
+</Callout>
+
+## 8. Total Creditors Account: finding credit purchases
+
+The mirror image. Everything that increases what you owe suppliers is a credit; everything that
+settles it is a debit.
+
+| Debit side (decreases) | Credit side (increases) |
+|---|---|
+| Cash and cheques paid to suppliers | Opening balance of creditors |
+| Discount received | **Credit purchases** |
+| Purchase returns (returns outward) | Bills payable **dishonoured** |
+| Bills payable **accepted** in their favour | |
+| Transfer / set-off from the debtors ledger | |
+| Closing balance of creditors | |
+
+<div class="formula">Credit purchases = Payments + Discount received + Returns outward + B/P accepted + Set-off + Closing creditors − Opening creditors − B/P dishonoured</div>
+
+A **set-off** (a person who is both customer and supplier, the smaller balance being transferred)
+appears twice: on the **credit** of the Total Debtors Account and on the **debit** of the Total
+Creditors Account. One transaction, two accounts, opposite sides — exactly as double entry
+demands.
+
+## 9. Bills receivable and bills payable accounts
+
+These are small accounts, and their only job is to hand a figure to §7 or §8.
+
+**Bills Receivable Account.** Debit: opening B/R, plus bills received from customers during the
+year. Credit: cash collected on maturity, bills discounted, bills endorsed to creditors, bills
+dishonoured, and closing B/R.
+
+<div class="formula">B/R received during the year = Collections + Discounted + Endorsed + Dishonoured + Closing B/R − Opening B/R</div>
+
+**Bills Payable Account.** Credit: opening B/P, plus bills accepted during the year. Debit: cash
+paid on maturity, bills dishonoured, and closing B/P.
+
+<div class="formula">B/P accepted during the year = Payments on maturity + Dishonoured + Closing B/P − Opening B/P</div>
+
+**Where dishonour goes.** A dishonour always travels *out* of the bills account and *back* into the
+personal account. A **bill receivable dishonoured** leaves the B/R Account (credit) and returns to
+the **debit** of the Total Debtors Account, so it **reduces** the computed credit sales. A **bill
+payable dishonoured** leaves the B/P Account (debit) and returns to the **credit** of the Total
+Creditors Account, so it **reduces** the computed credit purchases. Read that pair twice: almost
+every hard MCQ in this chapter is built on a student adding a dishonour where it should be
+subtracted.
+
+## 10. Gross profit ratio and the memorandum trading account
+
+When purchases, sales or closing stock is missing and the question gives you a **gross profit
+ratio**, you rebuild a Trading Account as a *working* — a **memorandum** trading account. It is
+called memorandum because it is not part of the double entry: it is never posted or balanced into
+the ledger, and it exists only to release the one figure you want.
+
+<div class="formula">Cost of goods sold = Opening stock + Net purchases + Direct expenses − Closing stock</div>
+<div class="formula">Gross profit = Net sales − Cost of goods sold</div>
+
+If the gross profit ratio is quoted **on sales** (the usual case):
+
+<div class="formula">Gross profit = Net sales × GP ratio &nbsp;·&nbsp; Cost of goods sold = Net sales × (1 − GP ratio)</div>
+
+Now put the four Trading Account figures on the table, fill in the three you know, and the fourth
+falls out. The commonest applications:
+
+- **Stock destroyed by fire or theft.** Build the account up to the date of the fire: stock on that date = opening stock + net purchases + direct expenses − cost of goods sold. Then **loss of stock = stock on the date of the fire − salvaged stock**, and the insurance claim is the lower of the loss and the policy amount.
+- **Missing sales.** Sales = Cost of goods sold ÷ (1 − GP ratio on sales).
+- **Missing purchases.** Purchases = Cost of goods sold + Closing stock − Opening stock − Direct expenses.
+
+## 11. Mark-up on cost versus margin on sales
+
+A trader who says "I make 25%" has told you nothing until you know **25% of what**. **Mark-up** is
+gross profit expressed as a percentage **of cost**; **margin** is the same rupee profit expressed as
+a percentage **of sales**. Since sales exceed cost, the mark-up percentage is always the larger.
+
+<div class="formula">Margin = Mark-up ÷ (100 + Mark-up) &nbsp;·&nbsp; Mark-up = Margin ÷ (100 − Margin)</div>
+
+Take cost = 100 and the arithmetic writes itself. A 25% mark-up on cost means cost 100, profit 25,
+sales 125 — a margin of 25/125 = **20% on sales**. Run the pairs you should know by heart:
+
+| Mark-up on cost | Margin on sales |
+|---|---|
+| 20% | 16⅔% |
+| 25% | 20% |
+| 33⅓% | 25% |
+| 50% | 33⅓% |
+| 100% | 50% |
+
+<Callout kind="mistake">
+  <p>
+    "Gross profit is 25% <strong>on cost</strong>" applied to <em>sales</em>, or "25%
+    <strong>on sales</strong>" applied to <em>cost</em>. Both wrong figures are planted as options
+    in every ratio question. Underline the two words <em>on cost</em> or <em>on sales</em> in the
+    stem before you touch the calculator.
+  </p>
+</Callout>
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — net worth method with drawings and fresh capital (easy)">
+  <p>
+    Radha Stores keeps no proper books. On 1 April 2025 the business had: cash ₹12,000, bank
+    ₹58,000, debtors ₹1,46,000, stock ₹1,90,000, furniture ₹80,000, creditors ₹1,24,000 and
+    outstanding wages ₹8,000. On 31 March 2026: cash ₹9,000, bank ₹96,000, debtors ₹1,88,000, stock
+    ₹2,35,000, furniture ₹80,000 (to be shown after depreciation of ₹8,000), creditors ₹1,41,000,
+    bills payable ₹35,000 and outstanding wages ₹6,000. Radha withdrew ₹9,000 a month and, in
+    October 2025, sold personal jewellery and brought ₹60,000 into the business. Find the profit.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Statement of Affairs as at 1 April 2025</div>
+    Assets: 12,000 + 58,000 + 1,46,000 + 1,90,000 + 80,000 = 4,86,000<br />
+    Liabilities: 1,24,000 + 8,000 = 1,32,000<br />
+    Opening capital = 4,86,000 − 1,32,000 = <strong>₹3,54,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Statement of Affairs as at 31 March 2026</div>
+    Furniture after depreciation = 80,000 − 8,000 = 72,000<br />
+    Assets: 9,000 + 96,000 + 1,88,000 + 2,35,000 + 72,000 = 6,00,000<br />
+    Liabilities: 1,41,000 + 35,000 + 6,000 = 1,82,000<br />
+    Closing capital = 6,00,000 − 1,82,000 = <strong>₹4,18,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Profit</div>
+    Drawings = 9,000 × 12 = 1,08,000<br />
+    Profit = 4,18,000 + 1,08,000 − 60,000 − 3,54,000 = <strong>₹1,12,000</strong><br />
+    (The ₹60,000 is <em>deducted</em> — it made capital grow without earning anything.)
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — Total Debtors Account to find credit sales (moderate)">
+  <p>
+    Anwar Traders: debtors on 1 April 2025 ₹2,15,000; on 31 March 2026 ₹2,68,000. During the year —
+    cash and cheques received from customers ₹9,84,000; discount allowed ₹21,000; sales returns
+    ₹46,000; bad debts written off ₹14,000; bills receivable accepted by customers ₹1,80,000; one
+    such bill for ₹25,000 was dishonoured on maturity; ₹9,000 was set off against the same party's
+    balance in the creditors ledger. Cash sales for the year were ₹1,55,000. Find credit sales and
+    total sales.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Credit side of the Total Debtors A/c</div>
+    Receipts 9,84,000 + Discount 21,000 + Returns 46,000 + Bad debts 14,000 + B/R received 1,80,000
+    + Set-off 9,000 + Closing 2,68,000 = <strong>15,22,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Debit side, and the balancing figure</div>
+    Known debits: Opening 2,15,000 + B/R dishonoured 25,000 = 2,40,000<br />
+    Credit sales = 15,22,000 − 2,40,000 = <strong>₹12,82,000</strong><br />
+    The dishonoured ₹25,000 is a <em>debit</em>, so it comes off the credit-sales figure — it did
+    not arise from a fresh sale.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Total sales</div>
+    12,82,000 (credit) + 1,55,000 (cash, from the cash book) = <strong>₹14,37,000</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — Total Creditors with a bills payable interplay (moderate-hard)">
+  <p>
+    On 1 April 2025 a trader owed creditors ₹1,86,000 and had bills payable outstanding of ₹42,000.
+    During the year he paid suppliers ₹8,30,000 by cheque, received discounts of ₹19,000 and
+    returned goods worth ₹27,000. He paid ₹2,10,000 in cash on bills that matured, and one bill for
+    ₹20,000 was dishonoured on its due date. On 31 March 2026 creditors stood at ₹2,04,000 and
+    bills payable at ₹55,000. Find the credit purchases for the year.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Bills Payable A/c (get the acceptances first)</div>
+    Debits: paid on maturity 2,10,000 + dishonoured 20,000 + closing 55,000 = 2,85,000<br />
+    Less opening credit 42,000<br />
+    Bills accepted during the year = <strong>₹2,43,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Total Creditors A/c</div>
+    Debit side: paid 8,30,000 + discount 19,000 + returns 27,000 + B/P accepted 2,43,000 + closing
+    2,04,000 = 13,23,000<br />
+    Known credits: opening 1,86,000 + B/P dishonoured 20,000 = 2,06,000<br />
+    Credit purchases = 13,23,000 − 2,06,000 = <strong>₹11,17,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — why the dishonour is a credit here</div>
+    When his own acceptance bounced, the bill died and the supplier became a book creditor again.
+    The ₹20,000 therefore <em>increases</em> creditors without any purchase behind it, so it must
+    be taken out before the purchases figure is read off.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — memorandum trading account: stock lost in a fire (hard)">
+  <p>
+    A fire on 20 September 2025 destroyed Suresh's godown. Stock on 1 April 2025 was ₹4,20,000.
+    From 1 April to 20 September: purchases ₹16,80,000, purchase returns ₹40,000, wages ₹1,20,000,
+    sales ₹21,00,000, sales returns ₹60,000. The gross profit has been steady at 25% on sales.
+    Stock worth ₹1,10,000 was salvaged. Find the loss of stock.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Cost of goods sold to the date of the fire</div>
+    Net sales = 21,00,000 − 60,000 = 20,40,000<br />
+    Gross profit = 25% of 20,40,000 = 5,10,000<br />
+    Cost of goods sold = 20,40,000 − 5,10,000 = <strong>₹15,30,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Stock on the date of the fire</div>
+    Net purchases = 16,80,000 − 40,000 = 16,40,000<br />
+    Goods available = 4,20,000 + 16,40,000 + 1,20,000 (wages, a direct expense) = 21,80,000<br />
+    Stock on 20 Sep 2025 = 21,80,000 − 15,30,000 = <strong>₹6,50,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Loss</div>
+    Loss of stock = 6,50,000 − 1,10,000 (salvage) = <strong>₹5,40,000</strong><br />
+    Had the ratio been "25% <em>on cost</em>", cost of goods sold would have been 20,40,000 ×
+    100/125 = 16,32,000 and the answer would change completely. Read the two words.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — a compact full conversion (hard: the full-length pattern)">
+  <p>
+    Meher Handlooms, year ended 31 March 2026. <strong>1 April 2025:</strong> cash ₹10,000, bank
+    ₹70,000, debtors ₹1,20,000, stock ₹1,60,000, furniture ₹90,000, creditors ₹1,10,000.
+    <strong>Cash and bank summary:</strong> received from debtors ₹6,30,000, cash sales ₹2,40,000;
+    paid to creditors ₹5,10,000, rent ₹72,000, salaries ₹1,44,000, sundry expenses ₹36,000,
+    furniture bought ₹40,000, drawings ₹60,000; closing balances ₹88,000. <strong>Other
+    information:</strong> closing debtors ₹1,55,000, closing creditors ₹1,32,000, discount allowed
+    ₹8,000, discount received ₹6,000, bad debts ₹5,000, closing stock ₹1,85,000; depreciate
+    furniture by 10% on the closing balance. Prepare the final accounts in outline.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Opening capital</div>
+    Assets 10,000 + 70,000 + 1,20,000 + 1,60,000 + 90,000 = 4,50,000; less creditors 1,10,000<br />
+    Opening capital = <strong>₹3,40,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Credit sales and total sales</div>
+    Credit sales = 6,30,000 + 8,000 + 5,000 + 1,55,000 − 1,20,000 = <strong>₹6,78,000</strong><br />
+    Total sales = 6,78,000 + 2,40,000 (cash sales) = <strong>₹9,18,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Credit purchases</div>
+    Credit purchases = 5,10,000 + 6,000 + 1,32,000 − 1,10,000 = <strong>₹5,38,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — Trading Account</div>
+    Cost of goods sold = 1,60,000 + 5,38,000 − 1,85,000 = 5,13,000<br />
+    Gross profit = 9,18,000 − 5,13,000 = <strong>₹4,05,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — Profit &amp; Loss Account</div>
+    Depreciation = 10% of (90,000 + 40,000) = 13,000<br />
+    4,05,000 + 6,000 (discount received) − 72,000 − 1,44,000 − 36,000 − 8,000 − 5,000 − 13,000<br />
+    Net profit = <strong>₹1,33,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 6 — Balance Sheet, and the check that matters</div>
+    Closing capital = 3,40,000 + 1,33,000 − 60,000 = <strong>₹4,13,000</strong><br />
+    Assets: cash and bank 88,000 + debtors 1,55,000 + stock 1,85,000 + furniture 1,17,000 =
+    5,45,000; less creditors 1,32,000 = <strong>₹4,13,000</strong><br />
+    The two agree — that agreement, not the neatness of the format, is the proof that the
+    conversion is complete.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Adding further capital instead of deducting it.** The wrong figure — out by twice the fresh capital — is always sitting there as an option.
+- **Deducting drawings instead of adding them.** Closing capital is already *after* drawings; you add them back.
+- **Calling it a Balance Sheet.** Under incomplete records the heading is Statement of Affairs, because capital is the balancing figure.
+- **Putting cash sales into the Total Debtors Account** (or cash purchases into the Total Creditors Account). Only credit transactions pass through those accounts.
+- **Dropping the second leg of a dishonour.** A dishonoured B/R goes back to the *debit* of debtors and **reduces** credit sales; a dishonoured B/P goes back to the *credit* of creditors and **reduces** credit purchases.
+- **Forgetting that bills received reduce debtors.** A customer's acceptance settles the book debt; leaving it out understates credit sales by the whole B/R figure.
+- **Mark-up read as margin.** 25% on cost is 20% on sales. Applying 25% to sales, or 20% to cost, gives two of the four options in every ratio question.
+- **Omitting capital payments from the cash book.** Furniture bought for cash is still a payment; leave it out and the missing cash sales figure is wrong by exactly that amount.
+- **Double-counting a contra.** Cash paid into the bank is not a receipt in a combined cash-and-bank summary.
+- **Ignoring an omitted liability in the opening statement of affairs.** It overstates opening capital and therefore *understates* the profit — and vice versa for an omitted asset.
+- **Treating the proprietor's income tax or life insurance premium as a business expense.** Both are drawings.
+
+## One-page revision summary
+
+**Nature:** single entry = mixture of double entry (personal accounts), single entry (cash) and no
+entry (real and nominal) · kept by small sole traders and firms; never by a company · defects: no
+trial balance, no gross profit, no true and fair view, frauds undetected.
+
+**Statement of Affairs vs Balance Sheet:** capital is the *balancing figure* vs taken from the
+Capital A/c · estimates vs ledger balances · used to *find* capital vs to *present* it.
+
+**Formulas:**
+
+<div class="formula">Capital = Assets − Liabilities</div>
+<div class="formula">Profit = Closing capital + Drawings − Further capital − Opening capital</div>
+<div class="formula">Credit sales = Receipts + Discount allowed + Returns inward + Bad debts + B/R received + Set-off + Closing debtors − Opening debtors − B/R dishonoured</div>
+<div class="formula">Credit purchases = Payments + Discount received + Returns outward + B/P accepted + Set-off + Closing creditors − Opening creditors − B/P dishonoured</div>
+<div class="formula">B/R received = Collections + Discounted + Endorsed + Dishonoured + Closing B/R − Opening B/R</div>
+<div class="formula">B/P accepted = Payments + Dishonoured + Closing B/P − Opening B/P</div>
+<div class="formula">Cost of goods sold = Opening stock + Net purchases + Direct expenses − Closing stock</div>
+<div class="formula">Margin = Mark-up ÷ (100 + Mark-up) · Mark-up = Margin ÷ (100 − Margin)</div>
+
+**Conversion order:** opening statement of affairs → cash book → total debtors → total creditors →
+bills accounts → Trading and P&amp;L → Balance Sheet (which must tally with capital built as
+opening + profit + fresh capital − drawings).
+
+**Ratios worth memorising:** 20% on cost = 16⅔% on sales · 25% on cost = 20% on sales · 33⅓% on
+cost = 25% on sales · 50% on cost = 33⅓% on sales · 100% on cost = 50% on sales.
