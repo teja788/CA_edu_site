@@ -1,0 +1,1359 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Basic Concepts of Permutations and Combinations'
+description: 'CA Foundation Quantitative Aptitude Ch 5 — counting in plain language: the multiplication and addition rules, factorials and why 0! is 1, nPr and its derivation, repetition, repeated letters, restrictions, circular permutations, necklaces and garlands, nCr and its properties, restricted selections, "one or more" selections, division into groups, and the committee, handshake, diagonal and word-formation families, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 5 · Permutations and Combinations'
+chapterSlug: permutations-and-combinations
+masteryId: f3-ch5
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 5 (Basic Concepts of Permutations and Combinations) — scope and level of treatment'
+  - 'Standard results of elementary combinatorics: the fundamental principle of counting, nPr, nCr, circular permutations, permutations of a multiset, and the standard identities on nCr'
+sourceLabel: 'ICAI SM Paper 3 Ch 5 scope (May 2026 ed.) · standard results of elementary combinatorics'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 30 min read · 10 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=permutations-and-combinations'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A mid-sized audit firm in Pune has 9 qualified assistants and must send a team to a client. The
+partner asks two questions on the same morning. First: "In how many ways can I pick 3 of them for
+the fieldwork team?" Second: "In how many ways can I fill the three posts of team leader, reviewer
+and documentation in-charge from those same 9 people?"
+
+The two questions sound almost identical. Their answers differ by a factor of six. The first is
+84. The second is 504. Nothing about the nine people changed; what changed is whether the three
+chosen names carry different roles. When the roles matter, the order of the names matters, and every
+group of 3 can be arranged in 3! = 6 ways. When only the membership matters, those six arrangements
+are one answer, not six.
+
+That single distinction is the whole of this chapter. Almost every mark lost in Paper 3 on this
+topic comes from answering the partner's second question when he asked the first, or from dividing
+by the wrong repeated-object count, or from forgetting that a round table has no head. The
+arithmetic is small — factorials of numbers under 12, and nothing that needs a calculator. The
+discipline is in reading the sentence.
+
+## 1. The fundamental principle of counting
+
+Counting problems are built from two rules. Every formula later in this chapter is a shortcut for
+one of them applied several times, so it pays to be able to state both without looking.
+
+**The multiplication rule.** If one job can be done in m ways, and after it a second job can be done
+in n ways, then the two jobs *one after the other* can be done in m × n ways.
+
+<div class="formula">Choices made in sequence multiply: m ways then n ways gives m × n ways</div>
+
+A courier office offers 4 service levels and 3 packaging types. A parcel needs one of each, so there
+are 4 × 3 = 12 possible booking combinations. Write the 12 out once, as a grid of 4 rows and 3
+columns, and the rule stops being a formula and becomes obvious: each of the 4 rows carries 3
+entries.
+
+The rule extends to any number of stages. Three stages with m, n and p choices give m × n × p
+outcomes. A vehicle registration format of two letters followed by four digits, with repetition
+allowed, gives 26 × 26 × 10 × 10 × 10 × 10 = 67,60,000 possible plates.
+
+**The addition rule.** If a job can be done in m ways *or*, alternatively, in n ways, and no way is
+counted in both lists, then the job can be done in m + n ways.
+
+<div class="formula">Mutually exclusive alternatives add: m ways or n ways gives m + n ways</div>
+
+The same courier office has 5 vans and 3 motorcycles. A single consignment must go by one vehicle,
+either a van or a motorcycle. It is not a van *and* a motorcycle, so the count is 5 + 3 = 8, not 15.
+
+<Callout kind="pointer">
+  <p>
+    Two words do most of the work. <strong>AND multiplies, OR adds.</strong> Read the problem and
+    find the connector: "a shirt <em>and</em> a tie" multiplies, "a shirt <em>or</em> a tie" adds.
+    The addition rule carries one extra condition that the multiplication rule does not — the
+    alternatives must not overlap. If a choice could be counted in both lists, subtract the overlap.
+  </p>
+</Callout>
+
+The two rules are used together constantly. A four-digit code must start with an odd digit or end
+with 0 — that is an OR, so the two cases are counted separately and added, with the codes that do
+both subtracted once so they are not counted twice. Inside each case the positions are filled one
+after another, which is an AND, so the position counts multiply.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — how many 3-digit numbers use no digit twice</div>
+  A 3-digit number cannot begin with 0.<br />
+  Hundreds place: 9 choices (1 to 9)<br />
+  Tens place: any digit except the one already used, so 9 choices (0 is now allowed)<br />
+  Units place: any digit except the two already used, so 8 choices<br />
+  Positions are filled one after another, so the counts multiply: 9 × 9 × 8 = <strong>648</strong><br />
+  Handling the restricted position first is what keeps this simple. Starting at the units place
+  leaves the hundreds place with a count that depends on what was chosen, and the rule stops applying.
+</div>
+
+## 2. Telling the multiplication rule from the addition rule
+
+Students rarely misapply a formula in this chapter. They misread the sentence that decides which
+formula applies. Three tests settle it quickly.
+
+**Test 1 — does one choice complete the job, or does it take several?** If a single act finishes the
+task (pick one vehicle, pick one route, pick one prize winner), the alternatives are exclusive and
+they add. If the task needs several acts before it is done (pick a shirt, then a tie, then shoes),
+the stages multiply.
+
+**Test 2 — can the two lists overlap?** The addition rule requires that no outcome appears in both
+lists. "Numbers below 100 divisible by 3 or by 5" cannot simply be 33 + 19, because the 6 multiples
+of 15 sit in both lists. The correct count is 33 + 19 − 6 = 46. This subtraction of the overlap is
+the only refinement of the addition rule that Foundation needs.
+
+**Test 3 — is the answer growing, or staying small?** A multiplication answer is normally much
+larger than any of its parts; an addition answer sits just above the largest part. If a question
+about a wardrobe of 5 shirts and 4 trousers offers the options 9 and 20, the phrase "an outfit"
+means one of each, so 20 is the shape of the answer.
+
+| Sentence in the question | Rule | Why |
+|---|---|---|
+| A meal has one starter **and** one main course | multiply | two stages, both must happen |
+| A traveller takes the train **or** the bus | add | one act completes the trip |
+| A code has a letter followed by two digits | multiply | three positions filled in sequence |
+| A prize goes to a boy **or** to a girl | add | the two lists cannot overlap |
+| A route runs A to B **and then** B to C | multiply | the journey is not done after one leg |
+| A card drawn is a king **or** a heart | add, then subtract 1 | the king of hearts is in both lists |
+
+<Callout kind="mistake">
+  <p>
+    The costly version of this error is the "at least one" question. "In how many ways can a shopper
+    buy at least one of 6 different magazines?" is not 6, and it is not 6 + 5 + 4 + 3 + 2 + 1. Each
+    magazine is independently taken or left, giving 2⁶ = 64 possible baskets, and the single empty
+    basket is removed: <strong>63</strong>. Section 15 develops this properly.
+  </p>
+</Callout>
+
+## 3. Factorial notation and why 0 factorial is 1
+
+For a positive whole number n, **n factorial**, written n!, is the product of all the whole numbers
+from n down to 1.
+
+<div class="formula">n! = n × (n − 1) × (n − 2) × … × 3 × 2 × 1</div>
+
+So 5! = 120, 6! = 720 and 7! = 5,040. The values grow very fast, which is why examiners keep n
+small. Four properties carry everything later in the chapter.
+
+**Property 1 — the recursion.** n! = n × (n − 1)!. This is the single most useful line in the
+chapter, because it lets a large factorial be cancelled against a smaller one without multiplying
+either out. 10! ÷ 8! is not a long division; it is 10 × 9 = 90, because 10! = 10 × 9 × 8!.
+
+**Property 2 — 0! = 1.** Put n = 1 into the recursion: 1! = 1 × 0!. Since 1! = 1, the value 0! = 1
+follows. The convention is not an arbitrary tidying-up; it is the only value that keeps the
+recursion true. It also reads sensibly — there is exactly one way to arrange nothing, which is to
+do nothing.
+
+**Property 3 — factorials of negative numbers and of fractions do not exist** at this level. n! is
+defined for whole numbers n ≥ 0 only. Working that produces a factorial of −2 went wrong earlier.
+
+**Property 4 — factorials do not distribute.** (m + n)! is not m! + n!, and (m × n)! is not
+m! × n!. Check once with small numbers: (2 + 3)! = 120 while 2! + 3! = 8.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — simplify 12! ÷ (9! × 3!)</div>
+  Write 12! as 12 × 11 × 10 × 9! using the recursion three times.<br />
+  12! ÷ 9! = 12 × 11 × 10 = 1,320<br />
+  Now divide by 3! = 6: 1,320 ÷ 6 = <strong>220</strong><br />
+  Nothing was multiplied out. 12! is 47,90,01,600, and computing it first would be correct but slow,
+  and every extra digit is another chance to slip.
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Learn 0! through 8! as facts: <strong>1, 1, 2, 6, 24, 120, 720, 5,040, 40,320</strong>. Most
+    Foundation answers in this chapter are built from these nine numbers, and recognising 5,040 as
+    7! on sight saves real time in an objective paper.
+  </p>
+</Callout>
+
+## 4. Permutations and what an arrangement means
+
+A **permutation** is an arrangement of objects in a definite order. Two permutations of the same
+objects are different if the objects sit in different positions.
+
+Take the three letters A, B and C. Arrange all three in a row and there are six ways: ABC, ACB, BAC,
+BCA, CAB, CBA. Each is a permutation. Now take only two of the three letters at a time: AB, BA, AC,
+CA, BC, CB — six again, and AB and BA are counted separately because a permutation cares which
+letter comes first.
+
+The number of permutations of n distinct objects taken r at a time is written **nPr**, and also
+P(n, r) or ⁿPᵣ.
+
+<div class="formula">nPr = the number of ways of arranging r objects chosen from n distinct objects, order counting</div>
+
+Three phrases in a question almost always mean a permutation: **arrange**, **in order**, and any
+naming of distinct positions or posts — first, second and third prize; chairman, secretary and
+treasurer; the seats in a row.
+
+<Callout kind="pointer">
+  <p>
+    A quick self-check that never fails: <strong>swap two of the chosen objects. If the outcome is
+    a different outcome, it is a permutation; if it is the same outcome, it is a combination.</strong>
+    Swap the gold and silver medallists and the result is genuinely different, so medals are a
+    permutation. Swap two members of a committee of equals and the committee is unchanged, so it is
+    a combination.
+  </p>
+</Callout>
+
+## 5. The formula nPr and where it comes from
+
+The derivation is the multiplication rule applied r times, and it is worth reproducing once rather
+than memorising the result.
+
+Fill r positions from n distinct objects, left to right, using no object twice:
+
+- Position 1 can be filled in **n** ways.
+- Position 2 can be filled in **n − 1** ways, since one object is gone.
+- Position 3 can be filled in **n − 2** ways.
+- Position r can be filled in **n − (r − 1)** = **n − r + 1** ways.
+
+The positions are filled one after another, so the counts multiply:
+
+<div class="formula">nPr = n × (n − 1) × (n − 2) × … × (n − r + 1) &nbsp;&nbsp;[exactly r factors]</div>
+
+Multiply and divide by (n − r)! and the product collapses into the standard closed form:
+
+<div class="formula">nPr = n! ÷ (n − r)!, valid for whole numbers with 0 ≤ r ≤ n</div>
+
+Both forms are useful. The product form is faster to evaluate by hand — 9P3 is 9 × 8 × 7 = 504, and
+counting off exactly three factors is easier than cancelling factorials. The closed form is what
+proves the properties.
+
+**Three special cases follow immediately.**
+
+- **r = n.** nPn = n! ÷ 0! = n!. All n distinct objects arranged all at a time give n! arrangements.
+  This is where 0! = 1 earns its keep: without it the formula would break at exactly the commonest
+  case.
+- **r = 1.** nP1 = n. One object chosen and placed in one position.
+- **r = 0.** nP0 = 1. There is one way to arrange nothing.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — 9 assistants, 3 named posts</div>
+  Team leader, reviewer and documentation in-charge are three different posts, so order counts.<br />
+  Leader: 9 ways · Reviewer: 8 ways (one person is already placed) · In-charge: 7 ways<br />
+  9 × 8 × 7 = <strong>504</strong><br />
+  By the closed form: 9P3 = 9! ÷ 6! = 3,62,880 ÷ 720 = 504 ✓<br />
+  Contrast the unnamed team of 3, which is 504 ÷ 3! = <strong>84</strong>. The factor of 6 is the
+  number of ways the same three people could be shuffled among the three posts.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    nPr requires the r objects to be <strong>distinct</strong> and used <strong>at most once each</strong>.
+    The moment a question allows an object to repeat — a digit used twice in a code, a letter
+    reused in a password — nPr does not apply, and Section 6 has the right formula. Applying nPr to
+    a repetition problem always gives an answer that is too small, and the correct larger value will
+    be sitting there as an option.
+  </p>
+</Callout>
+
+## 6. Permutations when repetition is allowed
+
+If an object may be used again after it is used once, every position has the full set of n choices
+available to it, no matter what came before.
+
+<div class="formula">Arrangements of r positions from n objects with repetition allowed = n<sup>r</sup></div>
+
+Note carefully which letter is on top. The **number of positions goes in the exponent**; the number
+of available objects is the base. A 4-digit PIN from 10 digits with repetition is 10⁴ = 10,000, not
+4¹⁰.
+
+Three families of question use this.
+
+**Codes, PINs and registration numbers.** Positions are filled independently. A password of 5
+characters drawn from 26 lower-case letters, repetition allowed, gives 26⁵ = 1,18,81,376.
+
+**Posting distinct items into distinct containers.** Five different letters posted into 3 different
+pillar boxes: each *letter* independently chooses one of 3 boxes, so the answer is 3⁵ = 243. The
+trap is 5³ = 125, which answers a different question — one in which each box chooses a letter,
+which makes no sense because a box can hold many letters and a letter can go into only one box.
+**Ask which side is forced to choose exactly once; that side supplies the exponent.**
+
+**Prizes that may go to the same person twice.** Four different prizes awarded among 6 students,
+with a student allowed to win more than one: each prize independently picks a winner, giving
+6⁴ = 1,296. If no student may win twice it is 6P4 = 360.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — how many 4-digit numbers can be formed from the digits 1 to 7</div>
+  <strong>(a) Repetition allowed.</strong> Every position has all 7 digits available.<br />
+  7 × 7 × 7 × 7 = 7⁴ = <strong>2,401</strong><br />
+  <strong>(b) Repetition not allowed.</strong> Each digit used at most once.<br />
+  7 × 6 × 5 × 4 = 7P4 = <strong>840</strong><br />
+  The two answers differ by nearly a factor of three, so a question that omits the words "no digit
+  is repeated" is not being careless — it is testing exactly this.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>The zero rule for numbers.</strong> A number cannot begin with 0. In a question about
+    4-digit numbers formed from 0 to 5 with repetition allowed, the answer is 5 × 6 × 6 × 6 = 1,080,
+    not 6⁴ = 1,296 — the leading position has only 5 usable digits. Handle the restricted position
+    first, always.
+  </p>
+</Callout>
+
+## 7. Permutations of objects that are not all distinct
+
+If some of the objects being arranged are identical to each other, swapping two identical objects
+produces no new arrangement, and the plain n! over-counts.
+
+Suppose n objects contain p of one identical kind, q of a second identical kind and r of a third,
+with the rest all distinct. Then:
+
+<div class="formula">Number of distinct arrangements = n! ÷ (p! × q! × r!)</div>
+
+The reasoning is a division by the over-count. Pretend for a moment that the p identical objects
+carry tiny numbers making them distinct. Then all n objects are distinct and there are n!
+arrangements. Rubbing the numbers off merges every group of p! arrangements — the p! ways of
+permuting those identical objects among their own positions — into one. So n! must be divided by p!,
+and likewise by q! and r!.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — arrangements of the letters of BALLOON</div>
+  BALLOON has 7 letters: B, A, L, L, O, O, N.<br />
+  L appears twice; O appears twice; B, A and N appear once each.<br />
+  7! = 5,040 · divide by 2! for the two L's and by 2! for the two O's<br />
+  5,040 ÷ (2 × 2) = <strong>1,260</strong><br />
+  Forgetting one of the two divisions gives 2,520; forgetting both gives 5,040. Both will be offered.
+</div>
+
+The same idea handles two related questions.
+
+**Arrangements in which particular identical letters must be together.** Tie the block together and
+count the block as one object, then divide out any repetitions still loose. In BALLOON with both O's
+together: tie OO into one block, leaving B, A, L, L, N and the block — 6 objects with the two L's
+identical, so 6! ÷ 2! = 360. The OO block itself has only one internal arrangement, because the two
+O's are identical; nothing is multiplied back.
+
+**Arrangements of a word with no repeated letter.** Then the divisor is 1 and the answer is simply
+n!. The 6 letters of ORANGE give 6! = 720.
+
+<Callout kind="mistake">
+  <p>
+    A block of <strong>distinct</strong> objects tied together is multiplied back by the number of
+    its internal arrangements; a block of <strong>identical</strong> objects is not. Tying two
+    different people together contributes ×2!; tying two identical O's together contributes ×1.
+    Multiplying by 2! for the OO block is the standard way to turn 360 into a wrong 720.
+  </p>
+</Callout>
+
+## 8. Permutations under restrictions
+
+Four restrictions cover almost everything Foundation asks. Each has a standard device.
+
+**8.1 Particular objects always together — the block method.** Tie the r objects that must stay
+together into a single block. There are now n − r + 1 objects to arrange, and the block's own
+members can be shuffled inside it.
+
+<div class="formula">Together = (n − r + 1)! × r! &nbsp;&nbsp;[for n distinct objects, r of them tied]</div>
+
+Seven executives in a row with three particular directors always together: tie the 3 into a block,
+leaving 5 objects (4 executives plus the block). That is 5! = 120 orders of the objects, and the 3
+directors arrange among themselves in 3! = 6 ways: 120 × 6 = **720**.
+
+**8.2 Particular objects never together — the complement.** Counting "never together" directly is
+painful. Counting its opposite is easy, and everything not "together" is "never together".
+
+<div class="formula">Never together = total arrangements − arrangements with them together</div>
+
+The same seven executives: total 7! = 5,040, together 720, so never together = 5,040 − 720 =
+**4,320**. Note that "never together" here means the three are not all three in one block. If the
+question says **no two** of them may be adjacent, that is a stronger condition and needs the gap
+method below.
+
+**8.3 The gap method — no two of a set adjacent.** Arrange the unrestricted objects first, then slot
+the restricted ones into the gaps between them, one to a gap. Four adults and 3 children in a row
+with no two children next to each other: arrange the 4 adults in 4! = 24 ways, which creates 5 gaps
+(one at each end and 3 between). Choose 3 of the 5 gaps and place the children in order — 5P3 = 60.
+Total 24 × 60 = **1,440**.
+
+**8.4 Particular objects in fixed places.** If a particular object must occupy a stated position,
+place it first and arrange the rest freely. Eight books on a shelf with one particular book always
+in the middle: fix it, then arrange the other 7 in 7! = **5,040** ways. If two particular objects
+must occupy the two ends, place them in 2! = 2 ways and arrange the remaining 6 in 6! = 720 ways,
+giving 1,440.
+
+**A related restriction: always begins with a vowel.** Fill the restricted position first, then the
+rest. In the 6 distinct letters of ORANGE, arrangements beginning with a vowel: 3 vowels can take
+the first place in 3 ways, and the remaining 5 letters arrange in 5! = 120 ways, giving **360** —
+exactly half of 720, which is a useful sanity check because half the letters are vowels.
+
+<Callout kind="pointer">
+  <p>
+    Three habits make restriction questions safe. <strong>Deal with the restricted position or the
+    tied block first.</strong> <strong>Use the complement whenever the words "at least", "never" or
+    "not all" appear.</strong> And <strong>state what the total would be with no restriction</strong>
+    before you start, because a restricted answer larger than the unrestricted total is impossible
+    and can be discarded on sight.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    "Two particular people are never together" and "two particular people are never <em>adjacent</em>"
+    are the same condition for a pair, but for three or more they differ. For three directors,
+    "never all together" is 5,040 − 720 = 4,320, while "no two of them adjacent" is much smaller —
+    arrange the 4 others in 4! ways and place the 3 directors into 3 of the 5 gaps, giving
+    24 × 60 = 1,440. Read which one the question asks.
+  </p>
+</Callout>
+
+## 9. Circular permutations
+
+Around a round table there is no first seat. Rotating everybody one seat to the left produces the
+same seating plan: the same people still have the same neighbours on the same sides. A circular
+arrangement is therefore fixed only by the objects' positions **relative to each other**.
+
+The device is to hold one object still and arrange the rest around it. That kills the rotations.
+
+<div class="formula">Circular arrangements of n distinct objects = (n − 1)!</div>
+
+Six people at a round table give 5! = **120** seatings, not 6! = 720. The 720 counts each genuine
+seating 6 times, once for every rotation. Dividing 720 by 6 gives 120, which is the other way to see
+the same result.
+
+**Circular arrangements of r objects chosen from n.** Choose and arrange r of the n in a line
+(nPr ways), then divide by r to kill the r rotations of each circle:
+
+<div class="formula">Circular arrangements of r out of n distinct objects = nPr ÷ r</div>
+
+**Restrictions around a circle.** The block method still works, but remember that the outer count is
+now circular. Eight people at a round table with two particular friends always together: tie the
+pair into a block, leaving 7 objects around the circle, so (7 − 1)! = 720, then multiply by 2! for
+the pair's internal order: 720 × 2 = **1,440**. Never together = total − together = 5,040 − 1,440 =
+**3,600**, since the unrestricted total is (8 − 1)! = 5,040.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — 5 men and 3 women at a round table, no two women adjacent</div>
+  Seat the 5 men first, circularly: (5 − 1)! = 4! = <strong>24</strong> ways.<br />
+  Five seated men create <strong>5 gaps</strong> between them, one between each adjacent pair.<br />
+  The 3 women take 3 different gaps, and the women are distinct, so 5P3 = 5 × 4 × 3 = <strong>60</strong>.<br />
+  Total = 24 × 60 = <strong>1,440</strong><br />
+  Once the circle is broken by fixing the men, the gaps are ordinary distinct places — no further
+  division by anything is needed.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Dividing a circular count by n a second time is the commonest slip. (n − 1)! has
+    <strong>already</strong> removed the rotations. Writing (n − 1)! ÷ n, or n! ÷ n!, means the
+    correction was applied twice. The only further division ever needed is by 2, and only for the
+    necklace and garland case in Section 10.
+  </p>
+</Callout>
+
+## 10. Necklaces and garlands
+
+A round table and a necklace are not the same object. People at a table stay where they are put; a
+necklace can be picked up and turned over. Turning it over reverses the order of the beads, so the
+clockwise reading and the anticlockwise reading of the same necklace are the **same** necklace.
+
+Because each distinct circular arrangement and its mirror image are one physical object, the
+circular count is halved.
+
+<div class="formula">Necklaces or garlands from n distinct beads or flowers = (n − 1)! ÷ 2</div>
+
+Six differently coloured beads on a string closed into a necklace: (6 − 1)! ÷ 2 = 120 ÷ 2 = **60**.
+The same six beads as six people at a round table give 120, because a person seated to your left
+does not become a person seated to your right when you walk round the table.
+
+**When to halve and when not to.** The test is whether the arrangement can be flipped over and still
+be the same thing.
+
+| Situation | Count | Why |
+|---|---|---|
+| n people at a round table | (n − 1)! | seats cannot be flipped |
+| n keys on a ring | (n − 1)! ÷ 2 | the ring turns over |
+| n flowers in a garland | (n − 1)! ÷ 2 | the garland turns over |
+| n beads on a necklace | (n − 1)! ÷ 2 | the necklace turns over |
+| n differently coloured flags on a circular pole arrangement seen from one side only | (n − 1)! | it cannot be viewed from behind |
+
+<Callout kind="mistake">
+  <p>
+    Halving is only right when the question genuinely lets the object be reversed. Applying
+    ÷ 2 to a round-table seating gives exactly half the correct answer, and half the correct answer
+    is always among the options. Conversely, forgetting the ÷ 2 for a garland gives exactly twice
+    the right value. The words to look for are <strong>necklace, garland, chain, bangle and key
+    ring</strong> for halving, and <strong>table, meeting, circle of chairs</strong> for not
+    halving.
+  </p>
+</Callout>
+
+## 11. Combinations and what a selection means
+
+A **combination** is a selection of objects in which the order of selection does not matter. Two
+selections are the same if they contain the same objects, whatever sequence they were picked in.
+
+From the four letters A, B, C, D, the selections of 2 are AB, AC, AD, BC, BD, CD — six of them. The
+arrangements of 2 are twelve, because each of the six selections can be written in two orders. The
+ratio 12 ÷ 6 = 2 = 2! is not a coincidence; it is the whole relationship between the two ideas.
+
+The number of combinations of n distinct objects taken r at a time is written **nCr**, and also
+C(n, r) or ⁿCᵣ.
+
+Words that signal a combination: **select, choose, committee, group, team, sample, handshake,
+draw**. Words that signal a permutation: **arrange, order, rank, seat in a row, post, prize,
+password, code**.
+
+<Callout kind="pointer">
+  <p>
+    A committee of 3 from 9 is a combination (84). Three named office-bearers from 9 is a
+    permutation (504). If a question mentions a committee <em>and then</em> gives its members
+    different offices, do both steps: choose the members, then arrange them into the offices —
+    84 × 3! = 504, which is the same number reached the other way. Combination first, then
+    arrangement, is often the cleanest route through a hard question.
+  </p>
+</Callout>
+
+## 12. The formula nCr and its link with nPr
+
+Every selection of r objects can be arranged in r! ways, and each of those arrangements is one of
+the nPr permutations. So the nPr permutations fall into groups of r!, one group per selection:
+
+<div class="formula">nPr = nCr × r! &nbsp;&nbsp;so&nbsp;&nbsp; nCr = nPr ÷ r!</div>
+
+Substituting nPr = n! ÷ (n − r)! gives the closed form:
+
+<div class="formula">nCr = n! ÷ [ r! × (n − r)! ], valid for whole numbers with 0 ≤ r ≤ n</div>
+
+For hand computation the cancelled form is far quicker. Write r factors on top counting down from n,
+and r! underneath:
+
+<div class="formula">nCr = [ n × (n − 1) × … × (n − r + 1) ] ÷ r!</div>
+
+So 10C3 = (10 × 9 × 8) ÷ 6 = 120, and 12C4 = (12 × 11 × 10 × 9) ÷ 24 = 495. Neither needs 10! or 12!.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — both answers from one pair of numbers, n = 9, r = 3</div>
+  9P3 = 9 × 8 × 7 = <strong>504</strong> arrangements<br />
+  9C3 = 504 ÷ 3! = 504 ÷ 6 = <strong>84</strong> selections<br />
+  Check by the closed form: 9! ÷ (3! × 6!) = 3,62,880 ÷ (6 × 720) = 3,62,880 ÷ 4,320 = 84 ✓<br />
+  The factor between them is always r!, never n! and never r. Reporting 504 for a committee, or 84
+  for three named posts, are the two mirror-image errors this chapter exists to prevent.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Dividing nPr by <strong>r</strong> instead of by <strong>r!</strong> is a distinct and common
+    slip. 504 ÷ 3 = 168 is not a combination count of anything; it is the number of circular
+    arrangements of 3 people chosen from 9 (Section 9). Both 168 and 84 will appear as options in a
+    well-set question, and only the wording distinguishes them.
+  </p>
+</Callout>
+
+## 13. Properties of nCr
+
+Five properties are examinable, and three of them appear as one-line objective questions almost
+every attempt.
+
+**Property 1 — the ends.** nC0 = nCn = 1. There is exactly one way to select nothing and exactly one
+way to select everything. Also nC1 = n.
+
+**Property 2 — the symmetry.** nCr = nC(n − r).
+
+<div class="formula">nCr = nC(n − r)</div>
+
+Choosing r objects to take is the same act as choosing the n − r objects to leave behind, so the two
+counts must be equal. The formula shows it too: n! ÷ [r!(n − r)!] is unchanged when r and n − r swap
+places. This property is a genuine labour-saver — 20C17 is 20C3 = 1,140, which is three factors
+instead of seventeen.
+
+**Property 3 — the equality rule.** If nCx = nCy then either x = y or x + y = n. So from
+15Cx = 15C4 the two possibilities are x = 4 and x = 11. Offering only one of them is the standard
+trap in this question type.
+
+**Property 4 — Pascal's rule.** nCr + nC(r − 1) = (n + 1)Cr.
+
+<div class="formula">nCr + nC(r − 1) = (n + 1)Cr</div>
+
+The reasoning is a case split. To choose r objects from n + 1, look at one particular object. Either
+it is left out, and the r objects come from the other n — that is nCr ways. Or it is taken, and the
+other r − 1 come from the remaining n — that is nC(r − 1) ways. The two cases cannot overlap and
+cover everything, so they add. Check with numbers: 7C3 + 7C2 = 35 + 21 = 56 = 8C3 ✓
+
+**Property 5 — the total of a row.** nC0 + nC1 + nC2 + … + nCn = 2ⁿ. Every one of the n objects is
+either in the selection or out of it, giving 2ⁿ possible selections in all, and grouping them by
+size gives the left-hand side. Section 15 turns this into the "at least one" formula.
+
+<Callout kind="pointer">
+  <p>
+    Two more identities worth recognising, because they shorten simplification questions:
+    <strong>nCr ÷ nC(r − 1) = (n − r + 1) ÷ r</strong>, and <strong>nPr = nCr × r!</strong> read
+    backwards, which converts any permutation question you can already do into the matching
+    combination question and back.
+  </p>
+</Callout>
+
+## 14. Combinations under restrictions
+
+Two restrictions cover the standard cases. Both come straight from the multiplication rule.
+
+**14.1 A particular object is always included.** Put it in first. The remaining r − 1 places are
+filled from the remaining n − 1 objects.
+
+<div class="formula">Selections of r from n that always include a particular object = (n − 1)C(r − 1)</div>
+
+**14.2 A particular object is always excluded.** Remove it from the pool. All r places are filled
+from the remaining n − 1 objects.
+
+<div class="formula">Selections of r from n that never include a particular object = (n − 1)Cr</div>
+
+The two add back to nCr, which is Pascal's rule again: every selection either contains that object
+or does not.
+
+**14.3 Selections from two separate pools.** When a committee must contain a stated number from each
+of two groups, choose within each group and multiply, because both choices must happen.
+
+<div class="formula">Choose a from group A and b from group B = (size of A)Ca × (size of B)Cb</div>
+
+**14.4 "At least" and "at most" over a range.** Break the requirement into the possible cases, count
+each by 14.3, and add — the cases are mutually exclusive. Where the number of cases is large, count
+the complement instead.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — a committee of 5 from 6 CAs and 4 cost accountants, at least 3 CAs</div>
+  "At least 3 CAs" splits into three exclusive cases.<br />
+  3 CAs and 2 CMAs: 6C3 × 4C2 = 20 × 6 = 120<br />
+  4 CAs and 1 CMA: 6C4 × 4C1 = 15 × 4 = 60<br />
+  5 CAs and 0 CMAs: 6C5 × 4C0 = 6 × 1 = 6<br />
+  The cases cannot overlap, so they add: 120 + 60 + 6 = <strong>186</strong><br />
+  Check by the complement: total 10C5 = 252, minus the cases with 2 CAs (6C2 × 4C3 = 15 × 4 = 60)
+  and with 1 CA (6C1 × 4C4 = 6 × 1 = 6). 252 − 60 − 6 = 186 ✓ Two routes, one answer.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    The wrong route to an "at least 3 CAs" answer is to reserve 3 CAs first and then fill the last
+    2 places from anyone left: 6C3 × 7C2 = 20 × 21 = 420. That double-counts badly, because the same
+    committee arrives several times over depending on which 3 CAs were called the reserved ones.
+    <strong>Whenever a fixed core is reserved and the rest is filled from a mixed pool, the count is
+    too large.</strong> Split into exclusive cases instead.
+  </p>
+</Callout>
+
+## 15. Selecting one or more items from a group
+
+"How many ways can a buyer take some of these items" is a different question from "how many ways can
+a buyer take 3 of these items", and it has its own formula.
+
+**All the objects distinct.** Each object faces an independent yes-or-no decision, so there are 2ⁿ
+possible selections in all. One of them takes nothing, and "one or more" excludes it:
+
+<div class="formula">Selections of one or more items from n distinct items = 2ⁿ − 1</div>
+
+Six different magazines give 2⁶ − 1 = **63** non-empty baskets. The same number is
+6C1 + 6C2 + 6C3 + 6C4 + 6C5 + 6C6 = 6 + 15 + 20 + 15 + 6 + 1 = 63, which is Property 5 of Section 13
+with the nC0 term removed.
+
+**Some objects identical.** Identical objects are not chosen individually — only *how many* of them
+are taken matters. From p identical objects the choice is "take 0, 1, 2, … or p", which is p + 1
+possibilities. Multiply the independent choices together, then remove the one empty selection:
+
+<div class="formula">One or more from p alike, q alike and r distinct = (p + 1) × (q + 1) × 2<sup>r</sup> − 1</div>
+
+**A special case worth knowing.** Selections of one or more from n identical objects = n, because
+the only decision is how many.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — a gift hamper from 4 identical pens, 3 identical diaries and 2 different books</div>
+  Pens: take 0, 1, 2, 3 or 4 → <strong>5</strong> ways<br />
+  Diaries: take 0, 1, 2 or 3 → <strong>4</strong> ways<br />
+  Books: each book is in or out, independently → 2² = <strong>4</strong> ways<br />
+  All three choices happen together, so they multiply: 5 × 4 × 4 = 80 total selections<br />
+  Remove the one empty hamper: 80 − 1 = <strong>79</strong><br />
+  The trap answer is 80, which counts an empty hamper as a hamper. The other trap is 2⁹ − 1 = 511,
+  which treats the identical pens and diaries as if they were nine distinguishable objects.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Subtract 1, not more than 1, and only when the wording excludes the empty selection. "At least
+    one", "one or more" and "some" all exclude it, so subtract 1. "Any number of items, including
+    none" and "in how many ways can the shopkeeper deal with the stock" usually include it, so do
+    not subtract. A single word moves the answer from 63 to 64.
+  </p>
+</Callout>
+
+## 16. Division of objects into groups
+
+This is the family in which "labelled or unlabelled" decides the answer, and it is the one place
+where careful reading of the question is worth more than any formula.
+
+**16.1 Two unequal groups.** Divide m + n distinct objects into a group of m and a group of n, with
+m ≠ n:
+
+<div class="formula">Number of ways = (m + n)! ÷ (m! × n!)</div>
+
+The groups are different sizes, so they identify themselves and no further division is needed.
+Twelve auditors split into a team of 7 and a team of 5: 12! ÷ (7! × 5!) = 12C5 = **792**. Choosing
+the 5 automatically fixes the 7, which is why one combination count answers the whole question.
+
+**16.2 Two equal groups.** Divide 2n distinct objects into two groups of n each. Choosing the first
+group of n also determines the second, and the same split arrives twice — once naming each half as
+"first". So the naive count is halved:
+
+<div class="formula">Two equal unlabelled groups of n each = (2n)! ÷ (n! × n! × 2!)</div>
+
+Ten trainees into two groups of 5: 10! ÷ (5! × 5! × 2!) = 252 ÷ 2 = **126** ways.
+
+**16.3 Groups sent to named places.** If the two groups of 5 are not just "two groups" but "the
+Mumbai team and the Chennai team", the groups are **labelled** and the swap is a genuinely different
+outcome. Multiply back by 2!: 126 × 2 = **252**.
+
+<div class="formula">Labelled groups = unlabelled groups × (number of groups)!</div>
+
+**16.4 Three or more equal groups.** Dividing 3n distinct objects into three unlabelled groups of n
+each:
+
+<div class="formula">(3n)! ÷ [ (n!)³ × 3! ]</div>
+
+Nine articling students into three unlabelled groups of 3: 9! ÷ [(3!)³ × 3!] = 3,62,880 ÷ (216 × 6)
+= 3,62,880 ÷ 1,296 = **280**. Into three named branches instead: 280 × 3! = **1,680**, which is also
+9! ÷ (3!)³ directly.
+
+<Callout kind="pointer">
+  <p>
+    One question answers this whole section: <strong>if two whole groups swapped places, would the
+    outcome be different?</strong> If the groups have names, sizes or destinations that differ, yes
+    — do not divide by the number of groups. If they are simply "three groups of three", no — divide
+    by 3!. The division by k! applies only to groups that are <em>equal in size and unnamed</em>.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    Dividing by k! when the groups are named halves or sixths the right answer; forgetting to divide
+    when they are unnamed doubles or sextuples it. Both wrong values appear as options. The size
+    test alone is not enough — two groups of 5 called Mumbai and Chennai are equal in size but
+    labelled, so no division applies.
+  </p>
+</Callout>
+
+## 17. Committees handshakes diagonals and word formation
+
+Five application families cover nearly every applied question set at Foundation level. Each reduces
+to one of the formulas already stated.
+
+**17.1 Committees and teams.** A committee of equals is a combination; add offices and it becomes a
+permutation on top of a combination. A committee of r from n with a stated composition uses
+Section 14.3. A committee that must exclude a particular person uses (n − 1)Cr, and one that must
+include a particular person uses (n − 1)C(r − 1).
+
+**17.2 Handshakes and greetings.** If every one of n people shakes hands with every other exactly
+once, each handshake is a **selection of 2 people** — A shaking B's hand is the same event as B
+shaking A's.
+
+<div class="formula">Handshakes among n people = nC2 = n(n − 1) ÷ 2</div>
+
+Twelve delegates give 12C2 = **66** handshakes. If instead every person sends a greeting card to
+every other, the count doubles to 12P2 = **132**, because a card from A to B is not the card from B
+to A. One word, "card" instead of "handshake", changes the formula.
+
+**17.3 Points, lines and triangles.** From n points in a plane with **no three in a straight line**:
+
+- Straight lines joining them: nC2, since two points fix a line.
+- Triangles: nC3, since three points fix a triangle.
+
+If k of the n points do lie on one straight line, those k points produce only 1 line instead of kC2,
+and produce no triangles at all. So the counts become nC2 − kC2 + 1 and nC3 − kC3.
+
+**17.4 Diagonals of a polygon.** A convex polygon with n sides has n vertices, and every pair of
+vertices is joined by either a side or a diagonal. There are nC2 pairs and n of them are sides:
+
+<div class="formula">Diagonals of an n-sided convex polygon = nC2 − n = n(n − 3) ÷ 2</div>
+
+A decagon has 10 × 7 ÷ 2 = **35** diagonals. A triangle has 3 × 0 ÷ 2 = 0, which is the check that
+the formula is right.
+
+**17.5 Word formation.** "Word" here means any arrangement of the letters, meaningful or not, unless
+the question says otherwise. The four standard requests are:
+
+- **All the letters, all distinct** — n!.
+- **All the letters, some repeated** — n! divided by the factorial of each repeat count (Section 7).
+- **Vowels always together** — tie the vowels into one block, arrange the block with the consonants,
+  and multiply by the internal arrangements of the vowels.
+- **Beginning or ending with a stated letter** — fix that position first, then arrange the rest.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the 7 letters of NUMBERS</div>
+  All seven letters are different, so the divisor is 1.<br />
+  <strong>(a) Total arrangements:</strong> 7! = <strong>5,040</strong><br />
+  <strong>(b) Beginning with N:</strong> fix N, arrange the other 6: 6! = <strong>720</strong><br />
+  <strong>(c) Vowels U and E together:</strong> tie UE into a block. The objects are now
+  N, M, B, R, S and the block — 6 objects, arranged in 6! = 720 ways — and the two vowels swap
+  inside the block in 2! = 2 ways: 720 × 2 = <strong>1,440</strong><br />
+  <strong>(d) Vowels never together:</strong> 5,040 − 1,440 = <strong>3,600</strong><br />
+  Check (c) against (a): the vowels are together in 1,440 of 5,040 arrangements, which is
+  two-sevenths — the same fraction you would predict, since a block of 2 occupies 6 of the 21
+  possible position pairs.
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Counting also answers simple probability questions, because a probability with equally likely
+    outcomes is one count divided by another. The chance that a committee of 5 drawn at random from
+    6 CAs and 4 cost accountants contains at least 3 CAs is 186 ÷ 252, using the two counts from
+    Section 14. The counting is the work; the division is the last line.
+  </p>
+</Callout>
+
+## 18. Deciding whether a problem is a permutation or a combination
+
+Run the question through these steps in order. Each step is a single decision, and the first one
+that fires gives the answer.
+
+**Step 1 — is the job one act or several?** Several acts in sequence multiply; one act with
+exclusive alternatives adds. Settle this before anything else, because a question can be a chain of
+several counting problems joined by AND.
+
+**Step 2 — does the order of the chosen objects change the outcome?** Swap two of the chosen
+objects and look at the result. Different outcome → permutation. Same outcome → combination.
+
+**Step 3 — may an object be used more than once?** If yes, and order matters, the count is nʳ, not
+nPr. If no, use nPr or nCr.
+
+**Step 4 — are all the objects distinct?** If some are identical, divide the plain arrangement count
+by the factorial of each repeat count.
+
+**Step 5 — is the arrangement in a line or in a circle?** A line of n distinct objects gives n!; a
+circle gives (n − 1)!; a circle that can be turned over gives (n − 1)! ÷ 2.
+
+**Step 6 — is there a restriction?** Tie a "together" group into a block and multiply by its
+internal arrangements. Handle "never", "at least" and "not all" by the complement. Handle "no two
+adjacent" by the gap method.
+
+**Step 7 — are the results being split into groups?** Unequal groups need no correction; k equal
+unlabelled groups need a division by k!; named groups need none.
+
+| The question says | Treat as | Formula |
+|---|---|---|
+| how many ways can 3 posts be filled from 9 | permutation | 9P3 |
+| how many committees of 3 from 9 | combination | 9C3 |
+| how many 4-digit PINs from 10 digits | repetition allowed | 10⁴ |
+| how many arrangements of the letters of BALLOON | repeated letters | 7! ÷ (2! × 2!) |
+| how many ways can 8 sit at a round table | circular | 7! |
+| how many necklaces from 8 different beads | circular, reversible | 7! ÷ 2 |
+| how many handshakes among 12 | combination of 2 | 12C2 |
+| how many diagonals in a decagon | pairs minus sides | 10C2 − 10 |
+| at least one of 6 different items | subsets minus the empty one | 2⁶ − 1 |
+| 10 people into two unnamed groups of 5 | equal unlabelled groups | 10! ÷ (5! 5! 2!) |
+
+## 19. Negative marking and when to leave a question
+
+Paper 3 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+The arithmetic is worth knowing calmly. A pure guess among four options is right one time in four:
+across four such guesses the expected gain is 1 mark and the expected loss is 3 × 0.25 = 0.75, a net
+of 0.25 marks for four questions. Blind guessing is therefore very slightly positive and close to
+neutral.
+
+Elimination is what changes the picture. Rule out one option and a guess among three is worth about
+0.5 marks per four attempts; rule out two and a guess between the last two is worth about 1.5 marks
+per four. This chapter is unusually friendly to elimination, because its distractors are built from
+named errors and several of them can be discarded without doing the sum. An option larger than the
+unrestricted total is impossible. An option that is not a whole number is impossible, since every
+count here is a whole number. An option smaller than the number of ways of doing part of the job is
+impossible. And where a question asks for a selection, any option equal to r! times another option
+is the permutation answer to a combination question.
+
+A workable rule for this chapter: **answer when you can eliminate at least one option, and consider
+leaving it when you cannot narrow the field at all.** Nothing about that rule needs to be applied
+anxiously — the marks at stake either way are small, and time spent on a question you can actually
+finish is worth more than either choice.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — job-card codes at a dealership (easy)">
+  <p>
+    Vaishnavi Motors issues an internal job card for every vehicle it services. The code is two
+    letters from the English alphabet followed by three digits. Find the number of possible codes
+    when (a) letters and digits may repeat, (b) no letter and no digit may repeat, and (c) letters
+    and digits may repeat but the first digit may not be 0.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) repetition allowed everywhere</div>
+    Each position is filled independently, so the five counts multiply.<br />
+    Letters: 26 × 26 · Digits: 10 × 10 × 10<br />
+    26 × 26 × 10 × 10 × 10 = 676 × 1,000 = <strong>6,76,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) no repetition</div>
+    The letters and the digits are separate pools, so a used letter does not remove a digit.<br />
+    Letters: 26 × 25 = 650 · Digits: 10 × 9 × 8 = 720<br />
+    650 × 720 = <strong>4,68,000</strong><br />
+    Equivalently 26P2 × 10P3 = 650 × 720, which is the same calculation named.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) first digit not 0, repetition allowed</div>
+    Fill the restricted position first: the first digit has 9 choices, 1 to 9.<br />
+    The other two digits still have 10 each, and the letters are unaffected.<br />
+    26 × 26 × 9 × 10 × 10 = 676 × 900 = <strong>6,08,400</strong><br />
+    That is 6,76,000 less one-tenth of itself, which is the check: exactly one tenth of all codes
+    began with 0.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — arrangements of the letters of STATEMENT (easy-moderate)">
+  <p>
+    Using all the letters of the word STATEMENT, and counting every arrangement whether or not it
+    means anything, find (a) the total number of arrangements, (b) the number beginning with S,
+    (c) the number in which the three T's are all together, and (d) the number in which the vowels
+    are all together.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — count the letters first</div>
+    S T A T E M E N T has 9 letters.<br />
+    T appears <strong>3</strong> times · E appears <strong>2</strong> times · S, A, M and N once each<br />
+    3 + 2 + 1 + 1 + 1 + 1 = 9 ✓ Always run this check before dividing by anything.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) total arrangements</div>
+    9! = 3,62,880, divided by 3! for the T's and 2! for the E's<br />
+    3,62,880 ÷ (6 × 2) = 3,62,880 ÷ 12 = <strong>30,240</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) beginning with S</div>
+    Fix S in the first place. The remaining 8 letters are T, A, T, E, M, E, N, T.<br />
+    Those 8 still contain 3 T's and 2 E's: 8! ÷ (3! × 2!) = 40,320 ÷ 12 = <strong>3,360</strong><br />
+    Sanity check: S is one of 9 letters and appears once, so a ninth of 30,240 is 3,360 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) the three T's together</div>
+    Tie TTT into one block. The objects are now the block, S, A, E, M, E, N — seven objects.<br />
+    Two E's remain identical among them: 7! ÷ 2! = 5,040 ÷ 2 = <strong>2,520</strong><br />
+    The block is <em>not</em> multiplied by 3!, because its three T's are identical and swapping
+    them gives the same block.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — (d) the vowels together</div>
+    The vowels are A, E, E — three of them. Tie them into one block.<br />
+    Objects: the block plus the six consonants S, T, T, T, M, N → 7 objects with T three times<br />
+    7! ÷ 3! = 5,040 ÷ 6 = 840 outer arrangements<br />
+    Inside the block, A, E and E arrange in 3! ÷ 2! = <strong>3</strong> ways, because the E's repeat<br />
+    840 × 3 = <strong>2,520</strong><br />
+    Parts (c) and (d) happen to agree; that is a coincidence of these particular letter counts and
+    not a rule.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — a partners' meeting at a round table (moderate)">
+  <p>
+    A firm has 8 partners who meet at a circular table. Find the number of seating plans when
+    (a) there is no restriction, (b) the managing partner and the finance partner must sit next to
+    each other, (c) those two must never sit next to each other, and (d) the four partners from the
+    Mumbai office must all sit together as a block.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) no restriction</div>
+    A circle has no first seat, so hold one partner fixed and arrange the other 7 around him.<br />
+    (8 − 1)! = 7! = <strong>5,040</strong><br />
+    The answer is not 8! = 40,320; that would count each plan 8 times, once per rotation.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) two particular partners together</div>
+    Tie the pair into one block. The circle now holds 7 objects: 6 partners plus the block.<br />
+    (7 − 1)! = 6! = 720 circular arrangements of the objects<br />
+    The two inside the block can swap: × 2! = 2<br />
+    720 × 2 = <strong>1,440</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) those two never together</div>
+    Everything that is not "together" is "never together", so subtract.<br />
+    5,040 − 1,440 = <strong>3,600</strong><br />
+    Sanity check: with 8 seats each partner has 2 neighbours out of 7 possible, so the pair sits
+    together in 2/7 of all plans — and 1,440 ÷ 5,040 is exactly 2/7 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) the four Mumbai partners as one block</div>
+    Tie the 4 into a block. The circle now holds 5 objects: 4 other partners plus the block.<br />
+    (5 − 1)! = 4! = 24 circular arrangements of the objects<br />
+    Inside the block the 4 Mumbai partners are distinct: × 4! = 24<br />
+    24 × 24 = <strong>576</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — the same seven objects, four different questions (moderate)">
+  <p>
+    A jeweller in Jaipur has 7 beads, all of different colours. Find the number of distinct
+    arrangements when the beads are (a) laid in a straight line on a display card, (b) placed at the
+    7 seats of a small circular showcase that cannot be moved, (c) strung into a necklace, and
+    (d) strung into a necklace with two particular beads next to each other.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) a straight line</div>
+    Seven distinct objects in 7 distinct positions: 7! = <strong>5,040</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) a fixed circular showcase</div>
+    A circle removes the rotations: (7 − 1)! = 6! = <strong>720</strong><br />
+    The showcase cannot be turned over, so no halving applies.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) a necklace</div>
+    A necklace can be lifted and flipped, so a clockwise reading and the matching anticlockwise
+    reading are the same necklace.<br />
+    (7 − 1)! ÷ 2 = 720 ÷ 2 = <strong>360</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) a necklace with two beads adjacent</div>
+    Tie the two beads into one block, leaving 6 objects on the necklace.<br />
+    (6 − 1)! ÷ 2 = 120 ÷ 2 = 60 · the block's two beads swap in 2! = 2 ways<br />
+    60 × 2 = <strong>120</strong><br />
+    Sanity check: on a 7-bead loop a given bead has 2 neighbours out of 6 possible partners, so the
+    pair is adjacent in one-third of all necklaces — and 360 ÷ 3 = 120 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — an audit committee with a composition rule (moderate)">
+  <p>
+    A company must form an audit committee of 6 members from a panel of 7 chartered accountants and
+    5 company secretaries. Find the number of possible committees when (a) there is no restriction,
+    (b) exactly 4 chartered accountants must serve, (c) at least 4 chartered accountants must serve,
+    and (d) one particular chartered accountant must always be on the committee while one particular
+    company secretary must never be.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) no restriction</div>
+    A committee is a selection, so order does not matter. The panel is 7 + 5 = 12 people.<br />
+    12C6 = (12 × 11 × 10 × 9 × 8 × 7) ÷ 720 = 6,65,280 ÷ 720 = <strong>924</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) exactly 4 chartered accountants</div>
+    Then the remaining 2 places must go to company secretaries. Both choices must happen, so they
+    multiply.<br />
+    7C4 × 5C2 = 35 × 10 = <strong>350</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) at least 4 chartered accountants</div>
+    Three exclusive cases, counted separately and added.<br />
+    4 CAs and 2 CSs: 7C4 × 5C2 = 35 × 10 = 350<br />
+    5 CAs and 1 CS: 7C5 × 5C1 = 21 × 5 = 105<br />
+    6 CAs and 0 CSs: 7C6 × 5C0 = 7 × 1 = 7<br />
+    350 + 105 + 7 = <strong>462</strong><br />
+    The wrong route is 7C4 × 8C2 = 35 × 28 = 980, which reserves 4 CAs and then fills the last two
+    seats from everyone left. The same committee then arrives more than once.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) one in, one out</div>
+    Place the required CA on the committee: 5 seats remain.<br />
+    Remove the barred CS from the panel: 12 − 1 (already seated) − 1 (barred) = 10 people remain.<br />
+    10C5 = (10 × 9 × 8 × 7 × 6) ÷ 120 = 30,240 ÷ 120 = <strong>252</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — dividing twelve assistants into groups (moderate)">
+  <p>
+    A firm has 12 articled assistants. Find the number of ways of dividing them (a) into three
+    unnamed groups of 4, (b) into three named branch teams of 4 for Pune, Indore and Surat, (c) into
+    groups of 3, 4 and 5 for three different assignments, and (d) into two unnamed groups of 6.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the raw split, before any correction</div>
+    Choose 4, then 4 from the rest, then the last 4: 12C4 × 8C4 × 4C4 = 495 × 70 × 1 = 34,650<br />
+    That is the same as 12! ÷ (4! × 4! × 4!) = 47,90,01,600 ÷ 13,824 = 34,650
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) three UNNAMED groups of 4</div>
+    The three groups are equal in size and carry no labels, so the same split has been counted once
+    for each of the 3! orders in which the groups could have been picked.<br />
+    34,650 ÷ 3! = 34,650 ÷ 6 = <strong>5,775</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) three NAMED branch teams of 4</div>
+    Pune, Indore and Surat are different destinations, so swapping two whole teams is a genuinely
+    different outcome and no division applies.<br />
+    <strong>34,650</strong> — the same as 5,775 × 3!
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) groups of 3, 4 and 5</div>
+    The groups differ in size, so they identify themselves and no correction is needed.<br />
+    12C3 × 9C4 × 5C5 = 220 × 126 × 1 = <strong>27,720</strong><br />
+    Equivalently 12! ÷ (3! × 4! × 5!) = 47,90,01,600 ÷ 17,280 = 27,720. Dividing this by 3! is the
+    classic over-correction; the sizes already tell the groups apart.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — (d) two unnamed groups of 6</div>
+    12! ÷ (6! × 6!) = 924, and the two equal unnamed groups halve it.<br />
+    924 ÷ 2! = <strong>462</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — selecting one or more from a mixed stock (moderate)">
+  <p>
+    A stationery shop assembles a gift pack from 5 identical notebooks, 4 identical pencils and 3
+    different reference books. Find the number of ways of making up a pack containing (a) one or
+    more items, (b) at least one reference book, and (c) at least one notebook and at least one
+    pencil, with the books free. Also state (d) what the answer to (a) would have been if all 12
+    items were different.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — count the choices available on each kind</div>
+    Identical objects offer only a quantity decision, not an identity decision.<br />
+    Notebooks: take 0, 1, 2, 3, 4 or 5 → <strong>6</strong> ways<br />
+    Pencils: take 0, 1, 2, 3 or 4 → <strong>5</strong> ways<br />
+    Books: each of the 3 is independently in or out → 2³ = <strong>8</strong> ways
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) one or more items</div>
+    All three decisions are made together, so they multiply: 6 × 5 × 8 = 240 packs in all<br />
+    One of those 240 is the empty pack, and "one or more" excludes it.<br />
+    240 − 1 = <strong>239</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) at least one reference book</div>
+    Now the books must contribute at least one: 2³ − 1 = 7 ways.<br />
+    The notebooks and pencils are unrestricted and may both be zero.<br />
+    6 × 5 × 7 = <strong>210</strong><br />
+    No further subtraction of 1 is needed — the pack already contains a book, so it is never empty.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) at least one notebook and at least one pencil</div>
+    Notebooks: 1 to 5 → 5 ways · Pencils: 1 to 4 → 4 ways · Books: free → 8 ways<br />
+    5 × 4 × 8 = <strong>160</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — (d) if all 12 items were different</div>
+    2¹² − 1 = 4,096 − 1 = <strong>4,095</strong><br />
+    The gap between 239 and 4,095 is the whole cost of ignoring the word "identical".
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — points lines triangles and diagonals (moderate)">
+  <p>
+    A survey plan shows 12 marked points, of which 4 lie on one straight boundary line and no other
+    three are collinear. Find (a) the number of straight lines that can be drawn through pairs of
+    the points, and (b) the number of triangles that can be formed. Separately, for a convex plot in
+    the shape of a 12-sided figure, find (c) the number of diagonals, and (d) the number of
+    handshakes if the 12 owners of the plots each greet every other owner once.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) straight lines</div>
+    Two points fix a line, so start with every pair: 12C2 = (12 × 11) ÷ 2 = 66<br />
+    The 4 collinear points would contribute 4C2 = 6 pairs, but all 6 lie on the same single line.<br />
+    Remove the 6 and add back the 1 line they actually make: 66 − 6 + 1 = <strong>61</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) triangles</div>
+    Three points fix a triangle, unless all three are on one line, in which case there is no
+    triangle.<br />
+    12C3 = (12 × 11 × 10) ÷ 6 = 220 · collinear triples: 4C3 = 4<br />
+    220 − 4 = <strong>216</strong><br />
+    Note the different corrections: lines lose 6 and gain 1, triangles simply lose 4. The two
+    adjustments are not interchangeable.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) diagonals of a 12-sided convex figure</div>
+    Every pair of vertices is joined by a side or a diagonal: 12C2 = 66 pairs, of which 12 are
+    sides.<br />
+    66 − 12 = <strong>54</strong> · by the formula, 12 × (12 − 3) ÷ 2 = 12 × 9 ÷ 2 = 54 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) handshakes among 12 owners</div>
+    A handshake is a selection of 2 people, because A greeting B is the same event as B greeting A.<br />
+    12C2 = <strong>66</strong><br />
+    Had they exchanged greeting cards instead, a card from A to B differs from a card from B to A,
+    so the count would be 12P2 = <strong>132</strong>. The verb decides the formula.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — a shelf of nine books and the gap method (moderate-hard)">
+  <p>
+    A study room shelf holds 5 different accounting texts and 4 different law texts. Find the number
+    of arrangements in which (a) there is no restriction, (b) the 4 law texts stand together,
+    (c) no two law texts stand next to each other, and (d) the two subjects alternate.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) no restriction</div>
+    Nine different books in nine places: 9! = <strong>3,62,880</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the law texts together</div>
+    Tie the 4 law texts into one block. The shelf now holds 6 objects: 5 accounting texts plus the
+    block.<br />
+    6! = 720 · the 4 law texts are distinct, so they arrange inside the block in 4! = 24 ways<br />
+    720 × 24 = <strong>17,280</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) no two law texts adjacent</div>
+    Subtracting 17,280 from 3,62,880 is <em>wrong</em> here: it removes only the arrangements in
+    which all four are one block, leaving plenty in which two are adjacent. Use the gap method.<br />
+    Place the 5 accounting texts first: 5! = 120 ways<br />
+    Five books create <strong>6 gaps</strong> — one before, one after and four between.<br />
+    The 4 law texts take 4 different gaps, and they are distinct: 6P4 = 6 × 5 × 4 × 3 = 360<br />
+    120 × 360 = <strong>43,200</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) the subjects alternate</div>
+    With 5 of one subject and 4 of the other, the pattern must be A L A L A L A L A — accounting
+    first is the only possible pattern, because 5 accounting texts need the 5 odd places.<br />
+    5! × 4! = 120 × 24 = <strong>2,880</strong><br />
+    Had the counts been equal, say 5 and 5, both patterns would be available and the answer would
+    carry a factor of 2.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — one board of directors, four different questions (hard)">
+  <p>
+    A co-operative bank has 10 directors: 6 drawn from the co-operative sector and 4 from banking.
+    Find the number of ways of (a) forming a sub-committee of 4, (b) filling the four posts of
+    chairman, vice-chairman, convenor and recorder from the 10 directors, (c) seating a chosen
+    sub-committee of 4 at a round table, and (d) forming a sub-committee of 4 containing at least 2
+    directors from banking.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) a sub-committee of 4</div>
+    Members of a sub-committee are equals, so order does not matter.<br />
+    10C4 = (10 × 9 × 8 × 7) ÷ 24 = 5,040 ÷ 24 = <strong>210</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) four named posts</div>
+    The four posts are different, so a swap of two names is a different outcome.<br />
+    10P4 = 10 × 9 × 8 × 7 = <strong>5,040</strong><br />
+    That is 210 × 4!, which is the two answers' permanent relationship: the same 210 groups, each
+    arranged into the posts in 24 ways.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) a chosen four at a round table</div>
+    Choose the four (210 ways), then seat them in a circle: (4 − 1)! = 3! = 6 ways.<br />
+    210 × 6 = <strong>1,260</strong><br />
+    Check by the other route: 10P4 ÷ 4 = 5,040 ÷ 4 = 1,260 ✓ Arranging r of n in a circle is the
+    linear count divided by r, because each circle was counted once per rotation.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) at least 2 from banking</div>
+    Three exclusive cases, added.<br />
+    2 banking and 2 co-operative: 4C2 × 6C2 = 6 × 15 = 90<br />
+    3 banking and 1 co-operative: 4C3 × 6C1 = 4 × 6 = 24<br />
+    4 banking and 0 co-operative: 4C4 × 6C0 = 1 × 1 = 1<br />
+    90 + 24 + 1 = <strong>115</strong><br />
+    Check by the complement: 210 total, less 0 banking (6C4 = 15) and less 1 banking
+    (4C1 × 6C3 = 4 × 20 = 80). 210 − 15 − 80 = 115 ✓
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **A permutation used where a combination was needed.** The answer comes out r! times too large.
+  A committee of 3 from 9 is 84, not 504. Ask whether swapping two chosen names changes anything.
+- **A combination used where a permutation was needed.** The mirror image, and the answer is r!
+  times too small. Three named prizes from 9 entrants is 504, not 84.
+- **Dividing nPr by r instead of by r!.** 504 ÷ 3 = 168 is a circular-arrangement count, not a
+  selection count. The divisor between nPr and nCr is always r!.
+- **Using nPr when repetition is allowed.** A 4-digit PIN from 10 digits is 10⁴ = 10,000, not
+  10P4 = 5,040. The repetition answer is always the larger one.
+- **Putting the wrong letter in the exponent.** With repetition the exponent is the number of
+  **positions** and the base is the number of **available objects**. Five letters posted into 3
+  boxes is 3⁵, because each letter must choose exactly one box.
+- **Forgetting that a number cannot start with 0.** Fill the leading position first, with one fewer
+  choice. Every "how many n-digit numbers" question tests this alongside its main point.
+- **Repeated letters not divided out.** BALLOON is 7! ÷ (2! × 2!) = 1,260, not 5,040. Count the
+  repeats before dividing, and check that they add up to the total number of letters.
+- **Multiplying a block of identical objects back by its internal factorial.** A tied block of two
+  identical O's contributes ×1, not ×2!. A tied block of two different people contributes ×2!.
+- **A circular arrangement not divided by n.** Eight people at a round table give 7! = 5,040, not
+  8! = 40,320. Rotations are not different seatings.
+- **A circular arrangement divided twice.** (n − 1)! has already removed the rotations. Writing
+  (n − 1)! ÷ n applies the correction a second time.
+- **Clockwise and anticlockwise treated as different for a necklace or garland.** A necklace can be
+  turned over, so the count is (n − 1)! ÷ 2. Forgetting the halving doubles the answer.
+- **Halving a round-table count.** Seats cannot be flipped, so no ÷ 2 applies. This gives exactly
+  half the right answer, and half the right answer is always offered.
+- **"At least one" solved without the complement.** One or more from 6 different items is
+  2⁶ − 1 = 63. Both 64 (the empty basket left in) and 6 (only one item taken) will be offered.
+- **Identical items treated as distinct in an "at least one" question.** From 5 identical notebooks
+  the only decision is how many, giving 6 options including none — not 2⁵.
+- **A fixed core reserved and the rest filled from the mixed pool.** For "at least 3 CAs from 6 CAs
+  and 4 CMAs on a committee of 5", the count 6C3 × 7C2 = 420 double-counts. Split into exclusive
+  cases and add, or use the complement.
+- **Equal-sized unnamed groups not divided by k!.** Ten trainees into two unnamed groups of 5 is
+  126, not 252. Named groups need no division at all — the two errors have opposite signs and both
+  values will be options.
+- **Unequal groups divided by k!.** Groups of 3, 4 and 5 identify themselves by size, so no
+  division applies. Dividing by 3! here is an over-correction.
+- **"Never together" and "no two adjacent" confused.** For three particular objects, "not all three
+  in one block" is the total minus the block count; "no two of them adjacent" is much smaller and
+  needs the gap method.
+- **The gap count taken as one fewer than it is.** Five objects in a row create **6** gaps, not 4 —
+  the two ends count. Miscounting the ends spoils an otherwise correct gap solution.
+- **Handshakes counted as arrangements.** A handshake is a pair, so nC2. A greeting card, a letter
+  or a one-way journey between two places is ordered, so nP2.
+- **Diagonals counted as all pairs of vertices.** Subtract the n sides: nC2 − n.
+- **The equality rule half-solved.** From nCx = nCy, both x = y and x + y = n are possible. An
+  option list offering only one value relies on the second being forgotten.
+- **Adding when the alternatives overlap.** "Divisible by 3 or by 5" needs the multiples of 15
+  subtracted once. The addition rule requires mutually exclusive lists.
+
+## One-page revision summary
+
+**Symbols.** n is the number of available objects. r is the number chosen. n! is n factorial. nPr
+is the number of ordered arrangements of r objects taken from n. nCr is the number of unordered
+selections of r objects taken from n. Every count is a whole number, and 0 ≤ r ≤ n throughout.
+
+**The two rules of counting.** Stages one after another (AND) multiply: m × n. Exclusive
+alternatives (OR) add: m + n, with any overlap subtracted once.
+
+**Factorials.** n! = n × (n − 1) × … × 2 × 1; n! = n × (n − 1)!; 0! = 1; 1! = 1. Factorials do not
+distribute over + or ×. Values: 0! to 8! are 1, 1, 2, 6, 24, 120, 720, 5,040, 40,320.
+
+**Permutations.**
+
+<div class="formula">nPr = n! ÷ (n − r)! = n × (n − 1) × … × (n − r + 1) &nbsp;·&nbsp; nPn = n! &nbsp;·&nbsp; nP1 = n &nbsp;·&nbsp; nP0 = 1</div>
+
+**Repetition allowed.** r positions filled from n objects, each usable any number of times: n<sup>r</sup>.
+
+**Objects not all distinct.** n objects containing p alike of one kind, q alike of a second and r
+alike of a third: n! ÷ (p! × q! × r!).
+
+**Restrictions in a row.** r particular objects always together: (n − r + 1)! × r!. Never together:
+total − together. No two of a set adjacent: arrange the others first, then place the restricted
+objects into the gaps, remembering that k objects create k + 1 gaps. A particular object in a fixed
+place: fix it first, then arrange the remainder.
+
+**Circular arrangements.**
+
+<div class="formula">n distinct objects in a circle = (n − 1)! &nbsp;·&nbsp; r out of n in a circle = nPr ÷ r &nbsp;·&nbsp; necklace or garland = (n − 1)! ÷ 2</div>
+
+Halve only when the arrangement can be turned over — necklace, garland, bangle, key ring. Do not
+halve a table, a meeting or a fixed circle of seats.
+
+**Combinations.**
+
+<div class="formula">nCr = nPr ÷ r! = n! ÷ [ r! × (n − r)! ]</div>
+
+**Properties.** nC0 = nCn = 1 · nC1 = n · nCr = nC(n − r) · nCr + nC(r − 1) = (n + 1)Cr ·
+nC0 + nC1 + … + nCn = 2ⁿ · if nCx = nCy then x = y or x + y = n.
+
+**Restricted selections.** A particular object always included: (n − 1)C(r − 1). Always excluded:
+(n − 1)Cr. From two pools, a from A and b from B: (size of A)Ca × (size of B)Cb. "At least" and
+"at most" split into exclusive cases which are then added, or are handled by the complement.
+
+**One or more items.** From n distinct items: 2ⁿ − 1. From p alike, q alike and r distinct:
+(p + 1) × (q + 1) × 2ʳ − 1. From n identical items: n.
+
+**Division into groups.** Unequal groups of sizes a, b and c from n = a + b + c objects:
+n! ÷ (a! × b! × c!). k equal unnamed groups of size m each: (km)! ÷ [ (m!)ᵏ × k! ]. Named or
+labelled groups: multiply the unnamed count by k!, which is the same as not dividing by k! at all.
+
+**Applications.** Handshakes among n people: nC2 = n(n − 1) ÷ 2. Greeting cards or one-way
+journeys: nP2. Lines from n points with no three collinear: nC2; triangles: nC3; with k of the
+points collinear, lines become nC2 − kC2 + 1 and triangles become nC3 − kC3. Diagonals of an
+n-sided convex polygon: nC2 − n = n(n − 3) ÷ 2. Word formation: the total is n! divided by the
+factorial of each repeat count; "vowels together" ties them into a block and multiplies by the
+block's own internal arrangements; "vowels never together" is total minus together.
+
+**Deciding which tool.** Swap two chosen objects. A different outcome means a permutation; the same
+outcome means a combination. Then check repetition, then identical objects, then line or circle,
+then restrictions, then grouping.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. Guessing among four is close to neutral;
+eliminating even one option makes an attempt clearly worthwhile. Discard any option that is not a
+whole number, or that exceeds the unrestricted total.

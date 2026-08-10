@@ -1,0 +1,2317 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "permutations-and-combinations",
+  "chapter": "Ch 5 — Basic Concepts of Permutations and Combinations",
+  "questions": [
+    {
+      "id": "q-f3c5-001",
+      "topic": "Ch 5 · Permutations and Combinations · The multiplication rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A tiffin service in Vadodara offers 6 main dishes and 4 kinds of bread. A meal consists of exactly one main dish and one bread. How many different meals are possible?",
+      "options": [
+        {
+          "key": "A",
+          "text": "10",
+          "explanation": "This adds 6 + 4. The addition rule applies to exclusive alternatives — a diner who takes a dish OR a bread. Here the meal needs both, so the two stages multiply."
+        },
+        {
+          "key": "B",
+          "text": "24",
+          "explanation": "Correct. The dish can be chosen in 6 ways and, after it, the bread in 4 ways. The two stages happen one after the other, so the counts multiply: 6 × 4 = 24."
+        },
+        {
+          "key": "C",
+          "text": "360",
+          "explanation": "This is 6P4 = 6 × 5 × 4 × 3, which arranges 4 of the 6 dishes in order. Nothing here is being arranged and the breads are a separate pool, so no permutation is involved."
+        },
+        {
+          "key": "D",
+          "text": "1,296",
+          "explanation": "This is 6⁴, the count for filling 4 positions from 6 objects with repetition. A meal has 2 stages of different sizes, not 4 stages of size 6."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The fundamental principle of counting, §1 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#1-the-fundamental-principle-of-counting"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Multiplication rule: m ways then n ways gives m × n ways",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-002",
+      "topic": "Ch 5 · Permutations and Combinations · The addition rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A courier depot has 5 vans and 3 motorcycles. A single consignment must be despatched by exactly one vehicle, either a van or a motorcycle. In how many ways can the vehicle be chosen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "15",
+          "explanation": "This multiplies 5 × 3, which would count a despatch using a van AND a motorcycle together. The consignment goes by one vehicle only, so the alternatives add."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "This counts only the vans and drops the motorcycles from the list. Both kinds of vehicle are available for the job."
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "explanation": "Correct. One act completes the job and the two lists cannot overlap — no vehicle is both a van and a motorcycle. The addition rule gives 5 + 3 = 8."
+        },
+        {
+          "key": "D",
+          "text": "2",
+          "explanation": "This counts the two kinds of vehicle rather than the vehicles themselves. The question asks which vehicle is chosen, and there are 8 distinct vehicles."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The fundamental principle of counting, §1 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#1-the-fundamental-principle-of-counting"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Addition rule: mutually exclusive alternatives add",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-003",
+      "topic": "Ch 5 · Permutations and Combinations · Counting with a restricted position",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many three-digit numbers can be formed using the digits 0 to 9 if no digit is used more than once in a number?",
+      "options": [
+        {
+          "key": "A",
+          "text": "720",
+          "explanation": "This is 10 × 9 × 8, which allows 0 in the hundreds place. A number beginning with 0 is not a three-digit number, so the leading position has only 9 usable digits."
+        },
+        {
+          "key": "B",
+          "text": "504",
+          "explanation": "This is 9 × 8 × 7, which removes 0 from every position instead of only from the first. Once the hundreds place is filled, 0 becomes available again."
+        },
+        {
+          "key": "C",
+          "text": "900",
+          "explanation": "900 is the count of all three-digit numbers from 100 to 999, with repetition allowed. The question forbids repetition."
+        },
+        {
+          "key": "D",
+          "text": "648",
+          "explanation": "Correct. Fill the restricted position first: hundreds 9 ways (1 to 9), tens 9 ways (any digit except the one used, 0 now allowed), units 8 ways. 9 × 9 × 8 = 648."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The fundamental principle of counting, §1 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#1-the-fundamental-principle-of-counting"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Fill the restricted position first; a number cannot begin with 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-004",
+      "topic": "Ch 5 · Permutations and Combinations · Addition rule with an overlap",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many of the whole numbers from 1 to 99 are divisible by 3 or by 5?",
+      "options": [
+        {
+          "key": "A",
+          "text": "46",
+          "explanation": "Correct. There are 33 multiples of 3 and 19 multiples of 5 below 100, and 6 numbers (the multiples of 15) appear in both lists. 33 + 19 − 6 = 46."
+        },
+        {
+          "key": "B",
+          "text": "52",
+          "explanation": "This is 33 + 19 with the overlap left in. The addition rule needs the two lists to be mutually exclusive; here the 6 multiples of 15 are counted twice."
+        },
+        {
+          "key": "C",
+          "text": "40",
+          "explanation": "This subtracts the 6 multiples of 15 twice, giving 33 + 19 − 12. The overlap is removed once, because it was counted once too often, not twice too often."
+        },
+        {
+          "key": "D",
+          "text": "33",
+          "explanation": "This counts only the multiples of 3. The word 'or' means either list qualifies, so the multiples of 5 belong in the count too."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Telling the multiplication rule from the addition rule, §2 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#2-telling-the-multiplication-rule-from-the-addition-rule"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Addition rule requires exclusive lists; subtract any overlap once",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-005",
+      "topic": "Ch 5 · Permutations and Combinations · Which rule applies",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In which one of the following situations is the count obtained by the ADDITION rule rather than by the multiplication rule?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A service tag consists of three letters followed by two digits",
+          "explanation": "Five positions are filled one after another, and the tag is not complete until all five are filled. Stages in sequence multiply."
+        },
+        {
+          "key": "B",
+          "text": "A thali contains one sweet and one savoury item",
+          "explanation": "The word 'and' signals two stages that must both happen, so the two counts multiply. Reading 'and' as an alternative is the error here."
+        },
+        {
+          "key": "C",
+          "text": "One scholarship is awarded to a single student, chosen either from the 12 commerce students or from the 9 science students",
+          "explanation": "Correct. One act completes the job, the alternatives are genuine alternatives, and no student is in both lists. The count is 12 + 9 = 21."
+        },
+        {
+          "key": "D",
+          "text": "A delivery runs from the depot to the hub and then from the hub to the shop",
+          "explanation": "The journey is not finished after the first leg, so the two legs are stages in sequence and their route counts multiply."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Telling the multiplication rule from the addition rule, §2 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#2-telling-the-multiplication-rule-from-the-addition-rule"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AND multiplies, OR adds; exclusive alternatives only",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-006",
+      "topic": "Ch 5 · Permutations and Combinations · Why 0! equals 1",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which reason best explains why 0! is taken to be 1?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Because any quantity raised to the power 0 equals 1",
+          "explanation": "This borrows a rule about exponents. A factorial is a product of descending whole numbers, not a power, and the index law says nothing about it."
+        },
+        {
+          "key": "B",
+          "text": "Because n! = n × (n − 1)! must stay true at n = 1, which forces 1! = 1 × 0! and so 0! = 1",
+          "explanation": "Correct. The value is fixed by the recursion, not chosen for convenience. It also reads sensibly: there is exactly one way to arrange nothing, which is to do nothing."
+        },
+        {
+          "key": "C",
+          "text": "Because a product that contains 0 as a factor must equal 0, and 1 is the nearest usable value",
+          "explanation": "This treats 0! as the product 0 × … , which would give 0. The factorial of 0 is not a product containing 0; it is an empty product, whose value is 1."
+        },
+        {
+          "key": "D",
+          "text": "Because factorials of numbers below 1 are undefined, so the smallest defined value is used instead",
+          "explanation": "0! is perfectly well defined; it is factorials of negative numbers and fractions that are not defined at this level. The value 1 is derived, not borrowed."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Factorial notation and why 0 factorial is 1, §3 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#3-factorial-notation-and-why-0-factorial-is-1"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n! = n × (n − 1)! at n = 1 forces 0! = 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-007",
+      "topic": "Ch 5 · Permutations and Combinations · Cancelling factorials",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The value of 10! ÷ 8! is",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.25",
+          "explanation": "This divides 10 by 8 and leaves the factorials out of it. A factorial cannot be cancelled digit against digit; 10! and 8! are 36,28,800 and 40,320."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "This subtracts the arguments, treating 10! ÷ 8! as (10 − 8)! or as 2. Factorials do not subtract that way; the recursion is 10! = 10 × 9 × 8!."
+        },
+        {
+          "key": "C",
+          "text": "720",
+          "explanation": "This is 10 × 9 × 8, one factor too many. Writing 10! as 10 × 9 × 8! already accounts for the 8, so only two factors survive the cancellation."
+        },
+        {
+          "key": "D",
+          "text": "90",
+          "explanation": "Correct. 10! = 10 × 9 × 8!, so 10! ÷ 8! = 10 × 9 = 90. Nothing has to be multiplied out."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Factorial notation and why 0 factorial is 1, §3 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#3-factorial-notation-and-why-0-factorial-is-1"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n! = n × (n − 1)! used to cancel a larger factorial against a smaller",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-008",
+      "topic": "Ch 5 · Permutations and Combinations · Simplifying a factorial expression",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The value of 12! ÷ (9! × 3!) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "220",
+          "explanation": "Correct. 12! ÷ 9! = 12 × 11 × 10 = 1,320, and 1,320 ÷ 3! = 1,320 ÷ 6 = 220."
+        },
+        {
+          "key": "B",
+          "text": "1,320",
+          "explanation": "This divides by 9! only and ignores the 3! in the denominator. 1,320 is 12P3, the arrangement count, not the value asked for."
+        },
+        {
+          "key": "C",
+          "text": "440",
+          "explanation": "This divides 1,320 by 3 instead of by 3! = 6. The denominator is a factorial, so the divisor is 6."
+        },
+        {
+          "key": "D",
+          "text": "1",
+          "explanation": "This cancels 12! ÷ 9! to (12 − 9)! = 3! and then divides by 3!. Subtracting the arguments of two factorials is not a valid cancellation."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Factorial notation and why 0 factorial is 1, §3 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#3-factorial-notation-and-why-0-factorial-is-1"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Cancel the larger factorial against the smaller, then divide by the remaining factorial",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-009",
+      "topic": "Ch 5 · Permutations and Combinations · Solving for n in a factorial equation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If n! ÷ (n − 2)! = 72, the value of n is",
+      "options": [
+        {
+          "key": "A",
+          "text": "−8",
+          "explanation": "−8 is the second root of n² − n − 72 = 0, and it is rejected on the facts: a factorial is defined only for whole numbers n ≥ 0."
+        },
+        {
+          "key": "B",
+          "text": "9",
+          "explanation": "Correct. n! ÷ (n − 2)! = n × (n − 1), so n(n − 1) = 72. Since 9 × 8 = 72, n = 9. Check: 9! ÷ 7! = 72 ✓"
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "explanation": "This expands the cancellation upwards as n × (n + 1) instead of downwards as n × (n − 1), and 8 × 9 = 72 then fits. The two factors run down from n, not up."
+        },
+        {
+          "key": "D",
+          "text": "74",
+          "explanation": "This subtracts the arguments and sets n − (n − 2) equal to nothing useful, ending with n − 2 = 72. Factorials do not cancel by subtraction."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Factorial notation and why 0 factorial is 1, §3 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#3-factorial-notation-and-why-0-factorial-is-1"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "n! ÷ (n − 2)! = n(n − 1); reject any root that is not a whole number ≥ 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-010",
+      "topic": "Ch 5 · Permutations and Combinations · Properties of factorials",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which one of the following statements about factorials is FALSE?",
+      "options": [
+        {
+          "key": "A",
+          "text": "7! = 7 × 6!",
+          "explanation": "True. This is the recursion n! = n × (n − 1)!, the property that lets a large factorial be cancelled against a smaller one."
+        },
+        {
+          "key": "B",
+          "text": "0! = 1!",
+          "explanation": "True. Both equal 1. 0! = 1 follows from the recursion at n = 1, and 1! = 1 by the definition."
+        },
+        {
+          "key": "C",
+          "text": "8! ÷ 6! = 56",
+          "explanation": "True. 8! = 8 × 7 × 6!, so the quotient is 8 × 7 = 56."
+        },
+        {
+          "key": "D",
+          "text": "(3 + 4)! = 3! + 4!",
+          "explanation": "Correct — this is the false statement. (3 + 4)! = 7! = 5,040 while 3! + 4! = 6 + 24 = 30. A factorial does not distribute over addition."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Factorial notation and why 0 factorial is 1, §3 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#3-factorial-notation-and-why-0-factorial-is-1"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Factorials do not distribute over addition or multiplication",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-011",
+      "topic": "Ch 5 · Permutations and Combinations · nPr in a business setting",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An audit firm has 9 qualified assistants. In how many ways can the three different posts of team leader, reviewer and documentation in-charge be filled, no assistant holding more than one post?",
+      "options": [
+        {
+          "key": "A",
+          "text": "504",
+          "explanation": "Correct. The three posts are different, so order matters: 9P3 = 9 × 8 × 7 = 504."
+        },
+        {
+          "key": "B",
+          "text": "84",
+          "explanation": "This is 9C3, the number of unnamed teams of 3. It treats the three posts as interchangeable, which loses the 3! = 6 ways of assigning the posts within each team."
+        },
+        {
+          "key": "C",
+          "text": "729",
+          "explanation": "This is 9³, the count when repetition is allowed and one assistant could hold two posts. The stem forbids that, so each choice reduces the pool by one."
+        },
+        {
+          "key": "D",
+          "text": "3,62,880",
+          "explanation": "This is 9!, which arranges all nine assistants. Only three positions are being filled, so the product stops after three factors."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The formula nPr and where it comes from, §5 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#5-the-formula-npr-and-where-it-comes-from"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "nPr = n × (n − 1) × … × (n − r + 1), r factors",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-012",
+      "topic": "Ch 5 · Permutations and Combinations · Evaluating nPr",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The value of 7P3 is",
+      "options": [
+        {
+          "key": "A",
+          "text": "35",
+          "explanation": "This is 7C3. Dropping the order divides the correct answer by 3! = 6, which is exactly the difference between a selection and an arrangement."
+        },
+        {
+          "key": "B",
+          "text": "343",
+          "explanation": "This is 7³, the count when an object may be used again. nPr uses each object at most once, so the factors fall by one each time."
+        },
+        {
+          "key": "C",
+          "text": "210",
+          "explanation": "Correct. 7P3 = 7 × 6 × 5 = 210, which is also 7! ÷ 4! = 5,040 ÷ 24."
+        },
+        {
+          "key": "D",
+          "text": "5,040",
+          "explanation": "This is 7! = 7P7, which arranges all seven objects. The formula stops after r = 3 factors."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The formula nPr and where it comes from, §5 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#5-the-formula-npr-and-where-it-comes-from"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "nPr = n! ÷ (n − r)!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-013",
+      "topic": "Ch 5 · Permutations and Combinations · Solving for r in nPr",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If 10Pr = 720, the value of r is",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "This reads 720 as 6! and takes r from the factorial instead of from the product. 10P6 is 1,51,200, nowhere near 720."
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "explanation": "This takes one factor too many: 10 × 9 × 8 × 7 = 5,040. The product must contain exactly r factors counting down from 10."
+        },
+        {
+          "key": "C",
+          "text": "720",
+          "explanation": "This repeats the value given in the stem. The question asks for r, the number of factors, not for the value of the permutation."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "Correct. 10Pr is 10 × 9 × 8 × … with r factors. Since 10 × 9 × 8 = 720 uses exactly three factors, r = 3."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The formula nPr and where it comes from, §5 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#5-the-formula-npr-and-where-it-comes-from"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nPr is a product of exactly r descending factors starting at n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-014",
+      "topic": "Ch 5 · Permutations and Combinations · Solving for n in nPr",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If nP2 = 56, the value of n is",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "Correct. nP2 = n(n − 1), so n(n − 1) = 56. Since 8 × 7 = 56, n = 8. Check: 8P2 = 8 × 7 = 56 ✓"
+        },
+        {
+          "key": "B",
+          "text": "7",
+          "explanation": "This solves n(n + 1) = 56, expanding the product upwards from n. nP2 counts down from n, so the factors are n and n − 1."
+        },
+        {
+          "key": "C",
+          "text": "−7",
+          "explanation": "−7 is the second root of n² − n − 56 = 0. It is rejected on the facts, because n counts objects and must be a whole number."
+        },
+        {
+          "key": "D",
+          "text": "28",
+          "explanation": "This divides 56 by 2, treating nP2 as 2n. nP2 is a product of two descending factors, not twice n."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The formula nPr and where it comes from, §5 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#5-the-formula-npr-and-where-it-comes-from"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nP2 = n(n − 1); reject a root that is not a whole number",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-015",
+      "topic": "Ch 5 · Permutations and Combinations · Recognising a selection",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A trade association has 10 members. In which one of the following is the answer a COMBINATION rather than a permutation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "In how many ways can the posts of president, secretary and treasurer be filled from the members?",
+          "explanation": "The three posts are different, so swapping two of the chosen names gives a different outcome. That is a permutation, 10P3."
+        },
+        {
+          "key": "B",
+          "text": "In how many ways can 3 members be seated on three numbered chairs on the dais?",
+          "explanation": "Numbered chairs are distinct positions, so the order of the three names matters. This is 10P3 as well."
+        },
+        {
+          "key": "C",
+          "text": "In how many ways can a delegation of 3 members be sent to a meeting?",
+          "explanation": "Correct. The three delegates are equals, so swapping two of them leaves the same delegation. Order does not matter and the count is 10C3 = 120."
+        },
+        {
+          "key": "D",
+          "text": "In how many different orders can 3 of the members be called to speak?",
+          "explanation": "The word 'orders' settles it — the first speaker differs from the second. This is 10P3."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Combinations and what a selection means, §11 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#11-combinations-and-what-a-selection-means"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Swap two chosen objects: different outcome means permutation, same outcome means combination",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-016",
+      "topic": "Ch 5 · Permutations and Combinations · Repetition allowed",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bank issues a four-digit PIN made from the digits 0 to 9, and a digit may be repeated. How many different PINs are possible?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5,040",
+          "explanation": "This is 10P4, which forbids repetition. The stem allows a digit to appear again, so every position keeps all 10 choices."
+        },
+        {
+          "key": "B",
+          "text": "10,000",
+          "explanation": "Correct. Each of the 4 positions is filled independently from 10 digits, so the count is 10⁴ = 10,000. A PIN may begin with 0, so no position is restricted."
+        },
+        {
+          "key": "C",
+          "text": "210",
+          "explanation": "This is 10C4, which treats the PIN as an unordered selection of four digits. In a PIN, 1234 and 4321 are different, so order matters."
+        },
+        {
+          "key": "D",
+          "text": "10,48,576",
+          "explanation": "This is 4¹⁰, with the base and the exponent swapped. The number of positions goes in the exponent and the number of available digits is the base."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Permutations when repetition is allowed, §6 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#6-permutations-when-repetition-is-allowed"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "r positions filled from n objects with repetition allowed = n to the power r",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-017",
+      "topic": "Ch 5 · Permutations and Combinations · Which side supplies the exponent",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In how many ways can 5 different letters be posted into 3 different pillar boxes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "243",
+          "explanation": "Correct. Each letter must go into exactly one box, so each of the 5 letters independently chooses one of 3 boxes: 3⁵ = 243."
+        },
+        {
+          "key": "B",
+          "text": "125",
+          "explanation": "This is 5³, which asks each box to choose one letter. A box can hold many letters and a letter can go into only one box, so the letters are the side that chooses."
+        },
+        {
+          "key": "C",
+          "text": "120",
+          "explanation": "This is 5!, the number of ways of arranging the five letters in a row. Nothing is being arranged here."
+        },
+        {
+          "key": "D",
+          "text": "60",
+          "explanation": "This is 5P3, which would allow at most one letter per box and would leave two letters unposted. Every letter must be posted, and boxes may share."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Permutations when repetition is allowed, §6 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#6-permutations-when-repetition-is-allowed"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "The side forced to choose exactly once supplies the exponent",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-018",
+      "topic": "Ch 5 · Permutations and Combinations · Repetition with a restricted first position",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many four-digit numbers can be formed using only the digits 0, 1, 2, 3, 4 and 5, a digit being allowed to repeat?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,296",
+          "explanation": "This is 6⁴, which allows 0 in the leading position. A number beginning with 0 is not a four-digit number, so that position has only 5 usable digits."
+        },
+        {
+          "key": "B",
+          "text": "360",
+          "explanation": "This is 6P4, which forbids repetition altogether and also ignores the leading-zero rule. The stem allows digits to repeat."
+        },
+        {
+          "key": "C",
+          "text": "1,080",
+          "explanation": "Correct. The thousands place has 5 choices (1 to 5) and the other three places have 6 each: 5 × 6 × 6 × 6 = 1,080."
+        },
+        {
+          "key": "D",
+          "text": "300",
+          "explanation": "This is 5 × 5 × 4 × 3, the answer to the same question with repetition forbidden. It is correct arithmetic for a different stem."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Permutations when repetition is allowed, §6 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#6-permutations-when-repetition-is-allowed"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fill the restricted leading position first, then apply repetition to the rest",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-019",
+      "topic": "Ch 5 · Permutations and Combinations · Prizes with repetition allowed",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three different prizes are to be awarded among 8 students, and a student may win more than one prize. In how many ways can the prizes be awarded?",
+      "options": [
+        {
+          "key": "A",
+          "text": "336",
+          "explanation": "This is 8P3, the answer when no student may win twice. The stem expressly allows a student to win more than one prize."
+        },
+        {
+          "key": "B",
+          "text": "512",
+          "explanation": "Correct. Each prize independently picks one of the 8 students, so the count is 8³ = 512."
+        },
+        {
+          "key": "C",
+          "text": "56",
+          "explanation": "This is 8C3, which selects three students without regard to which prize each receives. The prizes are different, so the assignment matters."
+        },
+        {
+          "key": "D",
+          "text": "6,561",
+          "explanation": "This is 3⁸, with the base and exponent swapped. The prizes are the side that must choose exactly once, so the number of prizes is the exponent."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Permutations when repetition is allowed, §6 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#6-permutations-when-repetition-is-allowed"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Repetition allowed: each of r prizes chooses one of n winners",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-020",
+      "topic": "Ch 5 · Permutations and Combinations · Arrangements with repeated letters",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many distinct arrangements can be made using all the letters of the word BALLOON?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5,040",
+          "explanation": "This is 7!, which treats the two L's as different from each other and the two O's likewise. Swapping two identical letters does not create a new arrangement."
+        },
+        {
+          "key": "B",
+          "text": "2,520",
+          "explanation": "This is 7! ÷ 2!, dividing out only one of the two repeated pairs. Both the L pair and the O pair need a division."
+        },
+        {
+          "key": "C",
+          "text": "630",
+          "explanation": "This is 7! ÷ (2! × 2! × 2!), one division too many. BALLOON has only two repeated letters; B, A and N appear once each and need no division."
+        },
+        {
+          "key": "D",
+          "text": "1,260",
+          "explanation": "Correct. BALLOON has 7 letters with L twice and O twice, so the count is 7! ÷ (2! × 2!) = 5,040 ÷ 4 = 1,260."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Permutations of objects that are not all distinct, §7 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#7-permutations-of-objects-that-are-not-all-distinct"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n objects with p and q alike: n! ÷ (p! × q!)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-021",
+      "topic": "Ch 5 · Permutations and Combinations · Four repeated pairs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many distinct arrangements can be made using all the letters of the word ACCOUNTANT?",
+      "options": [
+        {
+          "key": "A",
+          "text": "36,28,800",
+          "explanation": "This is 10!, with no division at all. ACCOUNTANT repeats four different letters, and each repetition over-counts the plain factorial."
+        },
+        {
+          "key": "B",
+          "text": "9,07,200",
+          "explanation": "This is 10! ÷ (2! × 2!), dividing out only two of the four repeated pairs. A, C, N and T all appear twice."
+        },
+        {
+          "key": "C",
+          "text": "2,26,800",
+          "explanation": "Correct. The 10 letters contain A twice, C twice, N twice and T twice, so the count is 10! ÷ (2! × 2! × 2! × 2!) = 36,28,800 ÷ 16 = 2,26,800."
+        },
+        {
+          "key": "D",
+          "text": "1,51,200",
+          "explanation": "This is 10! ÷ 4!, which treats the four repeated letters as one group of four identical objects. Each pair is divided out separately, by 2! each time."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Permutations of objects that are not all distinct, §7 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#7-permutations-of-objects-that-are-not-all-distinct"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Divide by the factorial of each repeat count separately",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-022",
+      "topic": "Ch 5 · Permutations and Combinations · Identical objects in a row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A signalling mast carries 9 flags in a vertical line: 3 identical red, 2 identical blue and 4 identical green. How many distinct signals can be shown?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3,62,880",
+          "explanation": "This is 9!, which treats every flag as distinguishable. Two red flags cannot be told apart, so swapping them shows the same signal."
+        },
+        {
+          "key": "B",
+          "text": "30,240",
+          "explanation": "This is 9! ÷ (3! × 2!), which divides out the reds and blues but leaves the four greens undivided."
+        },
+        {
+          "key": "C",
+          "text": "15,120",
+          "explanation": "This is 9! ÷ 4!, dividing out only the greens. Each group of identical flags needs its own division."
+        },
+        {
+          "key": "D",
+          "text": "1,260",
+          "explanation": "Correct. The count is 9! ÷ (3! × 2! × 4!) = 3,62,880 ÷ 288 = 1,260, dividing once for each group of identical flags."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Permutations of objects that are not all distinct, §7 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#7-permutations-of-objects-that-are-not-all-distinct"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "n objects with p, q and r alike: n! ÷ (p! × q! × r!)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-023",
+      "topic": "Ch 5 · Permutations and Combinations · A block of identical letters",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In how many of the distinct arrangements of the letters of BALLOON do the two O's stand together?",
+      "options": [
+        {
+          "key": "A",
+          "text": "720",
+          "explanation": "This multiplies the tied OO block back by 2! for its internal order. The two O's are identical, so the block has only one internal arrangement."
+        },
+        {
+          "key": "B",
+          "text": "360",
+          "explanation": "Correct. Tie OO into one object. The objects are then B, A, L, L, N and the block — six objects with the two L's still identical: 6! ÷ 2! = 720 ÷ 2 = 360."
+        },
+        {
+          "key": "C",
+          "text": "1,260",
+          "explanation": "1,260 is the total number of arrangements of BALLOON with no restriction. The condition that the O's stand together has not been applied."
+        },
+        {
+          "key": "D",
+          "text": "900",
+          "explanation": "900 is 1,260 − 360, the number of arrangements in which the O's are NOT together. This answers the opposite question."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Permutations of objects that are not all distinct, §7 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#7-permutations-of-objects-that-are-not-all-distinct"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A tied block of identical objects contributes no internal factor",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-024",
+      "topic": "Ch 5 · Permutations and Combinations · Particular objects always together",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Seven executives stand in a row for a photograph. In how many ways can they stand if three particular directors must always stand together?",
+      "options": [
+        {
+          "key": "A",
+          "text": "720",
+          "explanation": "Correct. Tie the 3 directors into one block, leaving 5 objects to arrange in 5! = 120 ways, and the directors arrange inside the block in 3! = 6 ways: 120 × 6 = 720."
+        },
+        {
+          "key": "B",
+          "text": "120",
+          "explanation": "This is 5! alone. The three directors are distinct people, so the block must be multiplied back by its 3! internal arrangements."
+        },
+        {
+          "key": "C",
+          "text": "5,040",
+          "explanation": "This is 7!, the count with no restriction at all. The togetherness condition has not been applied."
+        },
+        {
+          "key": "D",
+          "text": "4,320",
+          "explanation": "4,320 is 5,040 − 720, the number of arrangements in which the three directors are NOT all together. This answers the opposite question."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Permutations under restrictions, §8 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#8-permutations-under-restrictions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Together = (n − r + 1)! × r!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-025",
+      "topic": "Ch 5 · Permutations and Combinations · Never together, by the complement",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Seven executives stand in a row for a photograph. In how many ways can they stand if three particular directors are never all together?",
+      "options": [
+        {
+          "key": "A",
+          "text": "720",
+          "explanation": "720 is the count of arrangements in which the three directors ARE together. The question asks for everything else."
+        },
+        {
+          "key": "B",
+          "text": "4,320",
+          "explanation": "Correct. Total arrangements 7! = 5,040, of which 5! × 3! = 720 have the directors together. Everything not together is never together: 5,040 − 720 = 4,320."
+        },
+        {
+          "key": "C",
+          "text": "5,040",
+          "explanation": "This is 7!, the unrestricted total. The 720 arrangements that break the condition have not been removed."
+        },
+        {
+          "key": "D",
+          "text": "1,440",
+          "explanation": "1,440 is the count for a stricter condition — no TWO of the directors adjacent, found by the gap method. 'Never all together' only forbids the single block of three."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Permutations under restrictions, §8 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#8-permutations-under-restrictions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Never together = total − together",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-026",
+      "topic": "Ch 5 · Permutations and Combinations · The gap method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Four adults and 3 children are to stand in a row so that no two children stand next to each other. In how many ways can this be done?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,440",
+          "explanation": "Correct. Arrange the 4 adults first in 4! = 24 ways. They create 5 gaps, including the two ends. The 3 distinct children take 3 of those gaps in 5P3 = 60 ways: 24 × 60 = 1,440."
+        },
+        {
+          "key": "B",
+          "text": "576",
+          "explanation": "This counts only 4 gaps instead of 5, forgetting one of the two ends: 4! × 4P3 = 24 × 24. Four objects in a row create five gaps, not four."
+        },
+        {
+          "key": "C",
+          "text": "5,040",
+          "explanation": "This is 7!, the unrestricted total for seven people. The separation condition has not been applied."
+        },
+        {
+          "key": "D",
+          "text": "720",
+          "explanation": "This is 5! × 3!, the count when the three children stand TOGETHER as one block — the opposite of what is asked."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Permutations under restrictions, §8 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#8-permutations-under-restrictions"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Gap method: k objects in a row create k + 1 gaps",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-027",
+      "topic": "Ch 5 · Permutations and Combinations · A restricted first position",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Using all the letters of the word ORANGE, how many arrangements begin with a vowel?",
+      "options": [
+        {
+          "key": "A",
+          "text": "120",
+          "explanation": "This is 5!, which fixes one particular vowel in the first place. ORANGE has three vowels — O, A and E — and any of them may lead."
+        },
+        {
+          "key": "B",
+          "text": "720",
+          "explanation": "This is 6!, the unrestricted total. The condition on the first letter has not been applied."
+        },
+        {
+          "key": "C",
+          "text": "2,160",
+          "explanation": "This is 3 × 6!, which chooses the leading vowel and then arranges all six letters again, using the chosen vowel twice. After the first place is filled, only 5 letters remain."
+        },
+        {
+          "key": "D",
+          "text": "360",
+          "explanation": "Correct. Fill the restricted position first: 3 vowels can lead, and the remaining 5 distinct letters arrange in 5! = 120 ways: 3 × 120 = 360, exactly half of 720."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Permutations under restrictions, §8 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#8-permutations-under-restrictions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fill the restricted position first, then arrange the remainder",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-028",
+      "topic": "Ch 5 · Permutations and Combinations · A block of distinct objects in a row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six boys and 4 girls are to be seated in a row of 10 chairs so that all 4 girls sit together. In how many ways can this be done?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5,040",
+          "explanation": "This is 7!, the arrangement of the 6 boys and the girls' block, with the block's own internal order left out. The 4 girls are distinct and arrange among themselves in 4! ways."
+        },
+        {
+          "key": "B",
+          "text": "36,28,800",
+          "explanation": "This is 10!, the unrestricted total for ten people. The togetherness condition has not been applied."
+        },
+        {
+          "key": "C",
+          "text": "1,20,960",
+          "explanation": "Correct. Tie the 4 girls into one block. There are then 7 objects — 6 boys plus the block — giving 7! = 5,040 orders, and the girls arrange inside in 4! = 24 ways: 5,040 × 24 = 1,20,960."
+        },
+        {
+          "key": "D",
+          "text": "17,280",
+          "explanation": "This is 6! × 4!, which arranges only the boys and forgets that the block itself is one of the objects standing in the row. Tying 4 objects out of 10 leaves 7 objects, not 6."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Permutations under restrictions, §8 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#8-permutations-under-restrictions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Together = (n − r + 1)! × r!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-029",
+      "topic": "Ch 5 · Permutations and Combinations · Circular arrangements",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In how many ways can 6 partners be seated at a round table?",
+      "options": [
+        {
+          "key": "A",
+          "text": "720",
+          "explanation": "This is 6!, the count for a row. A circle has no first seat, so the 6 rotations of the same seating are one seating, not six."
+        },
+        {
+          "key": "B",
+          "text": "60",
+          "explanation": "This is (6 − 1)! ÷ 2, the necklace formula. A table cannot be turned over, so the clockwise and anticlockwise seatings are genuinely different."
+        },
+        {
+          "key": "C",
+          "text": "24",
+          "explanation": "This is 4!, the result of dividing out the rotations twice. (n − 1)! has already removed them once, and no further division applies."
+        },
+        {
+          "key": "D",
+          "text": "120",
+          "explanation": "Correct. Hold one partner fixed and arrange the other 5 around the table: (6 − 1)! = 5! = 120."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Circular permutations, §9 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#9-circular-permutations"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Circular arrangements of n distinct objects = (n − 1)!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-030",
+      "topic": "Ch 5 · Permutations and Combinations · A restriction around a circle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Eight directors sit at a round table. In how many ways can they sit if two particular directors always sit next to each other?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5,040",
+          "explanation": "This is (8 − 1)! = 7!, the unrestricted circular total. The condition that the two sit together has not been applied."
+        },
+        {
+          "key": "B",
+          "text": "720",
+          "explanation": "This is 6! alone. The two directors in the block are different people and can swap seats within the block, so the answer must be multiplied by 2!."
+        },
+        {
+          "key": "C",
+          "text": "1,440",
+          "explanation": "Correct. Tie the pair into one block, leaving 7 objects around the circle: (7 − 1)! = 720 arrangements, multiplied by 2! for the pair's own order: 720 × 2 = 1,440."
+        },
+        {
+          "key": "D",
+          "text": "10,080",
+          "explanation": "This is 7! × 2!, which uses 7! rather than 6! for the 7 objects. The outer count is still circular, so it is (7 − 1)!, not 7!."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Circular permutations, §9 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#9-circular-permutations"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Tie the block, then apply the circular formula to the reduced object count",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-031",
+      "topic": "Ch 5 · Permutations and Combinations · Never together around a circle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Eight directors sit at a round table. In how many ways can they sit if two particular directors never sit next to each other?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3,600",
+          "explanation": "Correct. The unrestricted circular total is (8 − 1)! = 5,040 and the pair sits together in 6! × 2! = 1,440 of them: 5,040 − 1,440 = 3,600."
+        },
+        {
+          "key": "B",
+          "text": "1,440",
+          "explanation": "1,440 is the number of seatings in which the two DO sit together. The question asks for the rest."
+        },
+        {
+          "key": "C",
+          "text": "5,040",
+          "explanation": "This is the unrestricted circular total (8 − 1)!. Nothing has been subtracted."
+        },
+        {
+          "key": "D",
+          "text": "38,880",
+          "explanation": "This subtracts 1,440 from 8! = 40,320 instead of from 7! = 5,040. The total for a round table is (n − 1)!, not n!."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Circular permutations, §9 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#9-circular-permutations"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Never together = circular total − together",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-032",
+      "topic": "Ch 5 · Permutations and Combinations · Necklaces",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In how many distinct ways can 7 beads of different colours be strung to form a necklace?",
+      "options": [
+        {
+          "key": "A",
+          "text": "720",
+          "explanation": "This is (7 − 1)!, the count for a fixed circle such as a round table. A necklace can be turned over, so each arrangement and its mirror image are one necklace."
+        },
+        {
+          "key": "B",
+          "text": "360",
+          "explanation": "Correct. Circular arrangements give (7 − 1)! = 720, and turning the necklace over makes the clockwise and anticlockwise readings the same: 720 ÷ 2 = 360."
+        },
+        {
+          "key": "C",
+          "text": "5,040",
+          "explanation": "This is 7!, the count for beads laid in a straight line. A closed necklace has no first bead."
+        },
+        {
+          "key": "D",
+          "text": "2,520",
+          "explanation": "This is 7! ÷ 2, which halves the row count instead of the circular count. The rotations must be removed before the reversal is."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Necklaces and garlands, §10 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#10-necklaces-and-garlands"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Necklace or garland = (n − 1)! ÷ 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-033",
+      "topic": "Ch 5 · Permutations and Combinations · Garlands",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In how many distinct ways can 9 flowers of different kinds be woven into a garland?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20,160",
+          "explanation": "Correct. Circular arrangements give (9 − 1)! = 40,320, and a garland can be turned over, so the clockwise and anticlockwise readings coincide: 40,320 ÷ 2 = 20,160."
+        },
+        {
+          "key": "B",
+          "text": "40,320",
+          "explanation": "This is (9 − 1)!, correct for a fixed circle but not for a garland. The reversal has not been divided out."
+        },
+        {
+          "key": "C",
+          "text": "3,62,880",
+          "explanation": "This is 9!, the count for flowers laid in a straight line. A closed garland has no first flower."
+        },
+        {
+          "key": "D",
+          "text": "1,81,440",
+          "explanation": "This is 9! ÷ 2, which halves the row count. The rotations must be removed first, giving (9 − 1)!, and only then is the reversal halved."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Necklaces and garlands, §10 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#10-necklaces-and-garlands"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Necklace or garland = (n − 1)! ÷ 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-034",
+      "topic": "Ch 5 · Permutations and Combinations · The gap method around a circle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six men and 3 women are to be seated at a round table so that no two women sit next to each other. In how many ways can this be done?",
+      "options": [
+        {
+          "key": "A",
+          "text": "40,320",
+          "explanation": "This is (9 − 1)!, the unrestricted circular total for nine people. The separation condition has not been applied."
+        },
+        {
+          "key": "B",
+          "text": "14,400",
+          "explanation": "Correct. Seat the 6 men circularly in (6 − 1)! = 120 ways. Six seated men create 6 gaps, and the 3 distinct women take 3 of them in 6P3 = 120 ways: 120 × 120 = 14,400."
+        },
+        {
+          "key": "C",
+          "text": "2,400",
+          "explanation": "This uses 6C3 = 20 for the gaps, which chooses the gaps but does not decide which woman sits in which. The three women are distinct, so 6P3 is needed."
+        },
+        {
+          "key": "D",
+          "text": "7,200",
+          "explanation": "This counts only 5 gaps, using 5P3 = 60. Six people seated in a circle create exactly 6 gaps, one after each person, because the circle closes."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Circular permutations, §9 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#9-circular-permutations"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Circle first, then gaps: n seated objects in a circle create n gaps",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-035",
+      "topic": "Ch 5 · Permutations and Combinations · A committee as a selection",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An audit firm has 9 qualified assistants. In how many ways can a fieldwork team of 3 assistants, all of equal standing, be chosen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "504",
+          "explanation": "This is 9P3, which counts the order of the three names. The team members are of equal standing, so swapping two of them gives the same team."
+        },
+        {
+          "key": "B",
+          "text": "729",
+          "explanation": "This is 9³, the count when repetition is allowed and one assistant could be picked twice. A team of 3 needs 3 different people."
+        },
+        {
+          "key": "C",
+          "text": "168",
+          "explanation": "This divides 9P3 by 3 instead of by 3!. The number of ways of arranging 3 chosen people is 3! = 6, so the divisor is 6, not 3."
+        },
+        {
+          "key": "D",
+          "text": "84",
+          "explanation": "Correct. Order does not matter, so 9C3 = (9 × 8 × 7) ÷ 3! = 504 ÷ 6 = 84."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The formula nCr and its link with nPr, §12 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#12-the-formula-ncr-and-its-link-with-npr"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "nCr = nPr ÷ r!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-036",
+      "topic": "Ch 5 · Permutations and Combinations · Evaluating nCr",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The value of 12C4 is",
+      "options": [
+        {
+          "key": "A",
+          "text": "11,880",
+          "explanation": "This is 12P4 = 12 × 11 × 10 × 9, the arrangement count. A combination discards the order, which divides this by 4!."
+        },
+        {
+          "key": "B",
+          "text": "20,736",
+          "explanation": "This is 12⁴, the count when repetition is allowed and order matters. nCr allows neither."
+        },
+        {
+          "key": "C",
+          "text": "495",
+          "explanation": "Correct. 12C4 = (12 × 11 × 10 × 9) ÷ 4! = 11,880 ÷ 24 = 495."
+        },
+        {
+          "key": "D",
+          "text": "2,970",
+          "explanation": "This divides 12P4 by 4 instead of by 4! = 24. The four chosen objects can be arranged in 24 ways, not 4."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The formula nCr and its link with nPr, §12 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#12-the-formula-ncr-and-its-link-with-npr"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "nCr = n! ÷ [ r! × (n − r)! ]",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-037",
+      "topic": "Ch 5 · Permutations and Combinations · The symmetry property",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The value of 20C17 is",
+      "options": [
+        {
+          "key": "A",
+          "text": "6,840",
+          "explanation": "This is 20P3 = 20 × 19 × 18, the arrangement count. Dividing it by 3! gives the combination."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "This subtracts 20 − 17, treating nCr as a difference. nCr is a quotient of factorials, and 3 is only the value of n − r."
+        },
+        {
+          "key": "C",
+          "text": "1,140",
+          "explanation": "Correct. By the symmetry nCr = nC(n − r), 20C17 = 20C3 = (20 × 19 × 18) ÷ 6 = 6,840 ÷ 6 = 1,140."
+        },
+        {
+          "key": "D",
+          "text": "190",
+          "explanation": "This is 20C2, from reading n − r as 2 instead of 3. The symmetry sends 20C17 to 20C(20 − 17), which is 20C3."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Properties of nCr, §13 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#13-properties-of-ncr"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nCr = nC(n − r)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-038",
+      "topic": "Ch 5 · Permutations and Combinations · The equality rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If 15Cx = 15C4, the possible values of x are",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 or 11",
+          "explanation": "Correct. nCx = nCy holds when x = y or when x + y = n. Here x = 4, or x = 15 − 4 = 11. Both satisfy the equation because 15C11 = 15C4 = 1,365."
+        },
+        {
+          "key": "B",
+          "text": "4 only",
+          "explanation": "This uses x = y and stops. The symmetry nCr = nC(n − r) gives a second value whenever r is not exactly half of n."
+        },
+        {
+          "key": "C",
+          "text": "11 only",
+          "explanation": "This uses x + y = n and forgets the obvious solution x = 4, which satisfies the equation trivially."
+        },
+        {
+          "key": "D",
+          "text": "4 or 19",
+          "explanation": "This adds 15 and 4 instead of subtracting. The second value is n − r = 15 − 4 = 11, and 19 exceeds n, so 15C19 is not even defined."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Properties of nCr, §13 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#13-properties-of-ncr"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "If nCx = nCy then x = y or x + y = n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-039",
+      "topic": "Ch 5 · Permutations and Combinations · Pascal's rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The value of 7C3 + 7C2 is",
+      "options": [
+        {
+          "key": "A",
+          "text": "21",
+          "explanation": "This is 7C2 alone. The expression adds two combination values, and 7C3 = 35 has been left out."
+        },
+        {
+          "key": "B",
+          "text": "56",
+          "explanation": "Correct. 7C3 + 7C2 = 35 + 21 = 56, which is also 8C3 by the rule nCr + nC(r − 1) = (n + 1)Cr."
+        },
+        {
+          "key": "C",
+          "text": "35",
+          "explanation": "This is 7C3 alone, leaving out 7C2 = 21."
+        },
+        {
+          "key": "D",
+          "text": "70",
+          "explanation": "This is 8C4. Pascal's rule raises n by 1 and keeps r at the LARGER of the two lower indices, giving 8C3, not 8C4."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Properties of nCr, §13 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#13-properties-of-ncr"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nCr + nC(r − 1) = (n + 1)Cr",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-040",
+      "topic": "Ch 5 · Permutations and Combinations · Solving for n in nCr",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If nC2 = 45, the value of n is",
+      "options": [
+        {
+          "key": "A",
+          "text": "9",
+          "explanation": "This solves n(n + 1) ÷ 2 = 45, expanding the product upwards from n. nC2 = n(n − 1) ÷ 2, so the two factors run down from n."
+        },
+        {
+          "key": "B",
+          "text": "90",
+          "explanation": "This reads nC2 as n ÷ 2 and doubles 45. nC2 is a product of two descending factors divided by 2!, not a halving of n."
+        },
+        {
+          "key": "C",
+          "text": "−9",
+          "explanation": "−9 is the second root of n² − n − 90 = 0. It is rejected on the facts, because n counts objects and must be a whole number."
+        },
+        {
+          "key": "D",
+          "text": "10",
+          "explanation": "Correct. nC2 = n(n − 1) ÷ 2 = 45 gives n(n − 1) = 90, and 10 × 9 = 90, so n = 10. Check: 10C2 = 45 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The formula nCr and its link with nPr, §12 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#12-the-formula-ncr-and-its-link-with-npr"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nC2 = n(n − 1) ÷ 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-041",
+      "topic": "Ch 5 · Permutations and Combinations · At least, by exclusive cases",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A committee of 5 is to be formed from 6 chartered accountants and 4 cost accountants, and it must contain at least 3 chartered accountants. In how many ways can it be formed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "420",
+          "explanation": "This is 6C3 × 7C2, which reserves 3 chartered accountants and then fills the last 2 seats from everyone left. The same committee then arrives several times, depending on which three were called the reserved ones."
+        },
+        {
+          "key": "B",
+          "text": "186",
+          "explanation": "Correct. Split into exclusive cases and add: 6C3 × 4C2 = 120, 6C4 × 4C1 = 60 and 6C5 × 4C0 = 6, giving 120 + 60 + 6 = 186."
+        },
+        {
+          "key": "C",
+          "text": "120",
+          "explanation": "This is the case of exactly 3 chartered accountants, 6C3 × 4C2. 'At least 3' also allows 4 and 5, and those cases have not been added."
+        },
+        {
+          "key": "D",
+          "text": "252",
+          "explanation": "This is 10C5, the number of committees with no composition rule at all. The restriction has not been applied."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Combinations under restrictions, §14 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#14-combinations-under-restrictions"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "At least: split into mutually exclusive cases and add",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-042",
+      "topic": "Ch 5 · Permutations and Combinations · A particular object always included",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A squad has 15 players and a team of 11 must be chosen. If one particular player, the captain, must always be in the team, in how many ways can the team be chosen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,365",
+          "explanation": "This is 15C11, the count with no restriction. Some of those teams leave the captain out, so the condition has not been applied."
+        },
+        {
+          "key": "B",
+          "text": "364",
+          "explanation": "This is 14C11, which seats the captain and then chooses 11 more players, giving a team of 12. After the captain is placed, only 10 seats are left to fill."
+        },
+        {
+          "key": "C",
+          "text": "1,001",
+          "explanation": "Correct. Place the captain first, then choose the remaining 10 players from the other 14: 14C10 = 14C4 = 1,001."
+        },
+        {
+          "key": "D",
+          "text": "3,003",
+          "explanation": "This is 15C10, which reduces the number of seats to fill but leaves the captain in the pool. He cannot be chosen again, so the pool falls to 14 as well."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Combinations under restrictions, §14 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#14-combinations-under-restrictions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Always included: (n − 1)C(r − 1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-043",
+      "topic": "Ch 5 · Permutations and Combinations · A particular object always excluded",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A sub-committee of 4 is to be chosen from 10 directors. One particular director has declared an interest and must be left out. In how many ways can the sub-committee be chosen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "210",
+          "explanation": "This is 10C4, the count with no restriction. Some of those sub-committees include the interested director."
+        },
+        {
+          "key": "B",
+          "text": "84",
+          "explanation": "This is 9C3, the formula for a director who must always be INCLUDED. Exclusion removes the person from the pool; inclusion removes a seat."
+        },
+        {
+          "key": "C",
+          "text": "70",
+          "explanation": "This is 8C4, which removes two people from the pool instead of one. Only one director is barred."
+        },
+        {
+          "key": "D",
+          "text": "126",
+          "explanation": "Correct. Remove the barred director from the pool and fill all 4 seats from the other 9: 9C4 = 126."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Combinations under restrictions, §14 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#14-combinations-under-restrictions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Always excluded: (n − 1)Cr",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-044",
+      "topic": "Ch 5 · Permutations and Combinations · Selecting one or more distinct items",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A reading room stocks 6 different magazines. In how many ways can a visitor pick up one or more of them?",
+      "options": [
+        {
+          "key": "A",
+          "text": "63",
+          "explanation": "Correct. Each magazine is independently taken or left, giving 2⁶ = 64 possible selections, and the one empty selection is excluded: 64 − 1 = 63."
+        },
+        {
+          "key": "B",
+          "text": "64",
+          "explanation": "This is 2⁶ with the empty selection left in. 'One or more' excludes picking up nothing, so exactly one selection has to go."
+        },
+        {
+          "key": "C",
+          "text": "21",
+          "explanation": "This adds 6 + 5 + 4 + 3 + 2 + 1, a descending series that counts nothing here. The correct sum is 6C1 + 6C2 + … + 6C6 = 6 + 15 + 20 + 15 + 6 + 1 = 63."
+        },
+        {
+          "key": "D",
+          "text": "720",
+          "explanation": "This is 6!, the number of orders in which all six magazines could be read. The question asks which are picked up, not in what sequence."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Selecting one or more items from a group, §15 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#15-selecting-one-or-more-items-from-a-group"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "One or more from n distinct items = 2 to the power n, minus 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-045",
+      "topic": "Ch 5 · Permutations and Combinations · Selecting from a mixed stock",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A gift pack is made up from 4 identical pens, 3 identical diaries and 2 different reference books. In how many ways can a pack containing at least one item be made up?",
+      "options": [
+        {
+          "key": "A",
+          "text": "80",
+          "explanation": "This is 5 × 4 × 4, the total number of packs including the empty one. 'At least one item' excludes the empty pack, so 1 must be subtracted."
+        },
+        {
+          "key": "B",
+          "text": "511",
+          "explanation": "This is 2⁹ − 1, which treats all nine items as distinguishable. Identical pens offer only a quantity decision, not an identity decision."
+        },
+        {
+          "key": "C",
+          "text": "39",
+          "explanation": "This is 5 × 4 × 2 − 1, which gives the two different books a single yes-or-no decision between them. Each distinct book is independently in or out, so they contribute 2² = 4."
+        },
+        {
+          "key": "D",
+          "text": "79",
+          "explanation": "Correct. Pens 0 to 4 give 5 choices, diaries 0 to 3 give 4, and the 2 distinct books give 2² = 4. That is 5 × 4 × 4 = 80 packs, less the empty one: 79."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Selecting one or more items from a group, §15 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#15-selecting-one-or-more-items-from-a-group"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "One or more from p alike, q alike and r distinct = (p + 1)(q + 1) times 2 to the power r, minus 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-046",
+      "topic": "Ch 5 · Permutations and Combinations · Two equal unlabelled groups",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In how many ways can 10 trainees be divided into two groups of 5 each, the groups being of equal standing and carrying no names?",
+      "options": [
+        {
+          "key": "A",
+          "text": "252",
+          "explanation": "This is 10C5, which counts each split twice — once naming each half as the first group. Equal groups without labels need a further division by 2!."
+        },
+        {
+          "key": "B",
+          "text": "126",
+          "explanation": "Correct. 10! ÷ (5! × 5!) = 252, and dividing by 2! for the two equal unlabelled groups gives 126."
+        },
+        {
+          "key": "C",
+          "text": "42",
+          "explanation": "This divides 252 by 3! instead of by 2!. The divisor is the factorial of the number of equal groups, which is 2."
+        },
+        {
+          "key": "D",
+          "text": "30,240",
+          "explanation": "This is 10P5, which puts the first five trainees in order. A group has no internal order, so a combination is needed."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Division of objects into groups, §16 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#16-division-of-objects-into-groups"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Two equal unlabelled groups of n each = (2n)! ÷ (n! × n! × 2!)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-047",
+      "topic": "Ch 5 · Permutations and Combinations · Equal groups that are labelled",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In how many ways can 9 articled students be posted, 3 to each, to the firm's three named branches at Pune, Indore and Surat?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,680",
+          "explanation": "Correct. The branches are named, so the groups are labelled and no division by 3! applies: 9! ÷ (3! × 3! × 3!) = 3,62,880 ÷ 216 = 1,680."
+        },
+        {
+          "key": "B",
+          "text": "280",
+          "explanation": "This divides by a further 3!, which is right only for three unnamed groups. Swapping the Pune team with the Surat team is a genuinely different posting."
+        },
+        {
+          "key": "C",
+          "text": "84",
+          "explanation": "This is 9C3 alone, which fills only the first branch. The remaining 6 students still have to be split between the other two branches."
+        },
+        {
+          "key": "D",
+          "text": "60,480",
+          "explanation": "This is 9! ÷ 3!, dividing by 3! once instead of once for each of the three groups of three. Each group of 3 has no internal order."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Division of objects into groups, §16 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#16-division-of-objects-into-groups"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Labelled groups = unlabelled count × (number of groups)!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-048",
+      "topic": "Ch 5 · Permutations and Combinations · Handshakes",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "At a meeting of 12 delegates, every delegate shakes hands exactly once with every other delegate. How many handshakes take place?",
+      "options": [
+        {
+          "key": "A",
+          "text": "132",
+          "explanation": "This is 12P2, which counts A shaking B's hand and B shaking A's hand as two events. A handshake involves both people at once, so it is one event."
+        },
+        {
+          "key": "B",
+          "text": "144",
+          "explanation": "This is 12², which lets a delegate shake his own hand and counts every pair twice."
+        },
+        {
+          "key": "C",
+          "text": "66",
+          "explanation": "Correct. A handshake is a selection of 2 delegates from 12: 12C2 = (12 × 11) ÷ 2 = 66."
+        },
+        {
+          "key": "D",
+          "text": "220",
+          "explanation": "This is 12C3, which selects three delegates at a time. A handshake involves exactly two people."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Committees handshakes diagonals and word formation, §17 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#17-committees-handshakes-diagonals-and-word-formation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Handshakes among n people = nC2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-049",
+      "topic": "Ch 5 · Permutations and Combinations · Diagonals of a polygon",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many diagonals does a convex polygon of 10 sides have?",
+      "options": [
+        {
+          "key": "A",
+          "text": "35",
+          "explanation": "Correct. Every pair of vertices is joined by a side or a diagonal: 10C2 = 45 pairs, of which 10 are sides. 45 − 10 = 35, which is also 10 × 7 ÷ 2."
+        },
+        {
+          "key": "B",
+          "text": "45",
+          "explanation": "This is 10C2, every pair of vertices. The 10 pairs that form the sides of the polygon are not diagonals and must be removed."
+        },
+        {
+          "key": "C",
+          "text": "90",
+          "explanation": "This is 10P2, which counts the segment from vertex A to vertex B separately from B to A, and also leaves the sides in."
+        },
+        {
+          "key": "D",
+          "text": "70",
+          "explanation": "This is n(n − 3) = 10 × 7 without the division by 2. Each diagonal is counted once from each of its two ends, so the product must be halved."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Committees handshakes diagonals and word formation, §17 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#17-committees-handshakes-diagonals-and-word-formation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Diagonals of an n-sided convex polygon = nC2 − n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c5-050",
+      "topic": "Ch 5 · Permutations and Combinations · Triangles from points with some collinear",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A plan shows 10 marked points, of which 4 lie on one straight line and no other three are collinear. How many triangles can be formed with these points as vertices?",
+      "options": [
+        {
+          "key": "A",
+          "text": "120",
+          "explanation": "This is 10C3, which assumes no three points are collinear. Three points on one straight line make no triangle, so those triples must go."
+        },
+        {
+          "key": "B",
+          "text": "114",
+          "explanation": "This subtracts 4C2 = 6 instead of 4C3 = 4. A triangle needs three vertices, so it is the collinear TRIPLES that have to be removed, not the pairs."
+        },
+        {
+          "key": "C",
+          "text": "40",
+          "explanation": "40 is the number of straight LINES through the points, 10C2 − 4C2 + 1. That answers a different question."
+        },
+        {
+          "key": "D",
+          "text": "116",
+          "explanation": "Correct. 10C3 = 120 triples in all, less the 4C3 = 4 triples drawn entirely from the 4 collinear points: 120 − 4 = 116."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Committees handshakes diagonals and word formation, §17 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#17-committees-handshakes-diagonals-and-word-formation"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Triangles from n points with k collinear = nC3 − kC3",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "cs-f3c5-01",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 5 · Permutations and Combinations · Case: designing a service tag",
+      "case": "Shreyas Instruments services laboratory equipment and marks every job with a service tag. The present format is three letters drawn from the 26 letters of the English alphabet, followed by two digits drawn from 0 to 9. A tag may begin with any letter and may end with any digit. The service manager wants to know how many tags each design rule would make available before the numbering scheme is frozen for the next five years, because a scheme that runs out mid-year forces a costly re-tagging of the whole installed base. Treat every letter and every digit as available unless a question says otherwise.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Permutations when repetition is allowed, §6 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#6-permutations-when-repetition-is-allowed"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c5-01-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Under the present format, how many tags are available if letters and digits may repeat freely?",
+          "topic": "Ch 5 · Repetition allowed across two pools",
+          "sourceRef": "Each position filled independently; counts multiply",
+          "options": [
+            {
+              "key": "A",
+              "text": "14,04,000",
+              "explanation": "This is the count with no letter and no digit repeated, 26P3 × 10P2. The stem allows repetition, so every position keeps its full set of choices."
+            },
+            {
+              "key": "B",
+              "text": "6,760",
+              "explanation": "This is 26² × 10, which uses only two letter positions and one digit position. The format has three letters and two digits."
+            },
+            {
+              "key": "C",
+              "text": "17,57,600",
+              "explanation": "Correct. Each of the 3 letter positions has 26 choices and each of the 2 digit positions has 10: 26³ × 10² = 17,576 × 100 = 17,57,600."
+            },
+            {
+              "key": "D",
+              "text": "17,576",
+              "explanation": "This is 26³, the letters alone. The two digit positions have been left out of the multiplication."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c5-01-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many tags are available if no letter may be repeated within a tag and no digit may be repeated within a tag?",
+          "topic": "Ch 5 · nPr applied to two separate pools",
+          "sourceRef": "Letters and digits are separate pools; nPr applies within each",
+          "options": [
+            {
+              "key": "A",
+              "text": "17,57,600",
+              "explanation": "This is the free-repetition count. The condition that no letter and no digit repeats has not been applied."
+            },
+            {
+              "key": "B",
+              "text": "14,04,000",
+              "explanation": "Correct. Letters: 26P3 = 26 × 25 × 24 = 15,600. Digits: 10P2 = 10 × 9 = 90. The two independent stages multiply: 15,600 × 90 = 14,04,000."
+            },
+            {
+              "key": "C",
+              "text": "15,600",
+              "explanation": "This is 26P3, the letters alone. The two digit positions still have to be filled."
+            },
+            {
+              "key": "D",
+              "text": "15,60,000",
+              "explanation": "This keeps the letters distinct but lets the digits repeat, giving 15,600 × 100. The stem forbids a repeated digit as well."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c5-01-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The manager proposes that every tag must begin with a vowel (A, E, I, O or U), with repetition otherwise allowed everywhere. How many tags would then be available?",
+          "topic": "Ch 5 · A restricted first position with repetition",
+          "sourceRef": "Fill the restricted position first, then apply repetition to the rest",
+          "options": [
+            {
+              "key": "A",
+              "text": "17,57,600",
+              "explanation": "This is the unrestricted count. The condition on the first letter has not been applied."
+            },
+            {
+              "key": "B",
+              "text": "13,000",
+              "explanation": "This is 5 × 26 × 10 × 10, which drops one of the three letter positions. The format still has three letters."
+            },
+            {
+              "key": "C",
+              "text": "67,600",
+              "explanation": "This fixes one particular vowel in the first place, giving 1 × 26 × 26 × 100. Any of the five vowels may lead, so the first position has 5 choices."
+            },
+            {
+              "key": "D",
+              "text": "3,38,000",
+              "explanation": "Correct. First letter 5 ways, the other two letters 26 each, the two digits 10 each: 5 × 26 × 26 × 10 × 10 = 3,38,000."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c5-01-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "A rival design drops the digits altogether and uses four letters, no letter being repeated. How many tags would that design make available?",
+          "topic": "Ch 5 · nPr with r = 4",
+          "sourceRef": "nPr = n × (n − 1) × … with exactly r factors",
+          "options": [
+            {
+              "key": "A",
+              "text": "3,58,800",
+              "explanation": "Correct. 26P4 = 26 × 25 × 24 × 23 = 3,58,800 — fewer than the present format's 17,57,600, so the rival design is the weaker one."
+            },
+            {
+              "key": "B",
+              "text": "4,56,976",
+              "explanation": "This is 26⁴, the count when a letter may repeat. The stem forbids repetition, so each position has one fewer choice than the last."
+            },
+            {
+              "key": "C",
+              "text": "14,950",
+              "explanation": "This is 26C4, which treats the four letters as an unordered selection. On a tag, ABCD and DCBA are different tags."
+            },
+            {
+              "key": "D",
+              "text": "15,600",
+              "explanation": "This is 26P3, one position short. The rival design uses four letters, so the product must carry four factors."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c5-02",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 5 · Permutations and Combinations · Case: forming a CSR committee",
+      "case": "Sahyadri Alloys Limited must constitute a corporate social responsibility committee of 5 members. Its board consists of 12 directors: 7 independent directors and 5 executive directors. The company secretary has been asked how many different committees are possible under three sets of instructions the board is considering. All 12 directors are willing to serve, no director has declared a conflict, and the committee members are of equal standing — the committee elects its own chairperson afterwards, so no member carries a distinct office at the time of selection.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Combinations under restrictions, §14 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#14-combinations-under-restrictions"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c5-02-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the board imposes no condition on the composition, how many different committees of 5 are possible?",
+          "topic": "Ch 5 · An unrestricted selection",
+          "sourceRef": "nCr = n! ÷ [ r! × (n − r)! ]",
+          "options": [
+            {
+              "key": "A",
+              "text": "95,040",
+              "explanation": "This is 12P5, which counts the order in which the five names are picked. The members are of equal standing, so a reordering gives the same committee."
+            },
+            {
+              "key": "B",
+              "text": "792",
+              "explanation": "Correct. 12C5 = (12 × 11 × 10 × 9 × 8) ÷ 120 = 95,040 ÷ 120 = 792."
+            },
+            {
+              "key": "C",
+              "text": "2,48,832",
+              "explanation": "This is 12⁵, the count when a director could be chosen more than once. A committee of 5 needs 5 different people."
+            },
+            {
+              "key": "D",
+              "text": "462",
+              "explanation": "This is 11C5, which drops one director from the pool. All 12 are willing to serve and none is barred."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c5-02-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the committee must contain exactly 3 independent directors, how many committees are possible?",
+          "topic": "Ch 5 · Selection from two pools",
+          "sourceRef": "Choose a from group A and b from group B, then multiply",
+          "options": [
+            {
+              "key": "A",
+              "text": "546",
+              "explanation": "546 is the count for AT LEAST 3 independent directors. 'Exactly 3' is only one of the three cases that make up that figure."
+            },
+            {
+              "key": "B",
+              "text": "1,260",
+              "explanation": "This is 7C3 × 9C2, which reserves 3 independent directors and then fills the last 2 seats from everyone remaining. That both breaks the 'exactly' condition and double-counts."
+            },
+            {
+              "key": "C",
+              "text": "350",
+              "explanation": "Correct. Choose 3 of the 7 independent directors and 2 of the 5 executive directors: 7C3 × 5C2 = 35 × 10 = 350."
+            },
+            {
+              "key": "D",
+              "text": "210",
+              "explanation": "This is 7C2 × 5C3, with the two group sizes swapped. It selects 2 independent and 3 executive directors, the mirror image of what is asked."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c5-02-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the committee must contain at least 3 independent directors, how many committees are possible?",
+          "topic": "Ch 5 · At least, by exclusive cases",
+          "sourceRef": "Split 'at least' into exclusive cases and add",
+          "options": [
+            {
+              "key": "A",
+              "text": "546",
+              "explanation": "Correct. Three exclusive cases: 7C3 × 5C2 = 350, 7C4 × 5C1 = 175 and 7C5 × 5C0 = 21. Their sum is 350 + 175 + 21 = 546."
+            },
+            {
+              "key": "B",
+              "text": "350",
+              "explanation": "This is the exactly-3 case only. The cases with 4 and with 5 independent directors also satisfy 'at least 3' and must be added."
+            },
+            {
+              "key": "C",
+              "text": "792",
+              "explanation": "This is the unrestricted total 12C5. The composition condition has not been applied."
+            },
+            {
+              "key": "D",
+              "text": "1,260",
+              "explanation": "This is 7C3 × 9C2, the reserved-core route. It counts the same committee once for each way of nominating three of its independent directors as the reserved three."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c5-03",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 5 · Permutations and Combinations · Case: splitting a batch of trainees",
+      "case": "A firm has 8 trainees of equal experience and must split them for the coming quarter. Three splits are under discussion. In the first, the 8 are put into two study groups of 4 that carry no names and do the same work, so the two groups are interchangeable. In the second, the 8 are put into two teams of 4 that are named the audit team and the tax team, and the two teams do different work. In the third, the 8 are split into an internal group of 2 and two client groups of 3, all three groups being assigned to three named clients. Within any group the trainees rank equally, so a group has no internal order.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Division of objects into groups, §16 →",
+        "href": "/foundation/quantitative-aptitude/permutations-and-combinations/#16-division-of-objects-into-groups"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c5-03-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "In how many ways can the 8 trainees be put into two UNNAMED study groups of 4?",
+          "topic": "Ch 5 · Two equal unlabelled groups",
+          "sourceRef": "Two equal unlabelled groups of n each = (2n)! ÷ (n! × n! × 2!)",
+          "options": [
+            {
+              "key": "A",
+              "text": "70",
+              "explanation": "This is 8C4, which counts each split twice — once naming each half as the first group. Equal groups with no labels need a further division by 2!."
+            },
+            {
+              "key": "B",
+              "text": "1,680",
+              "explanation": "This is 8P4, which puts the first four trainees in order. A group has no internal order, so a combination is needed."
+            },
+            {
+              "key": "C",
+              "text": "140",
+              "explanation": "This multiplies 8C4 by 2 instead of dividing by it. The correction for equal unlabelled groups always makes the count smaller."
+            },
+            {
+              "key": "D",
+              "text": "35",
+              "explanation": "Correct. 8! ÷ (4! × 4!) = 70, and dividing by 2! for the two equal unnamed groups gives 35."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c5-03-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "In how many ways can the 8 trainees be put into two NAMED teams of 4, the audit team and the tax team?",
+          "topic": "Ch 5 · Equal groups that carry labels",
+          "sourceRef": "Labelled groups = unlabelled count × (number of groups)!",
+          "options": [
+            {
+              "key": "A",
+              "text": "70",
+              "explanation": "Correct. The two teams do different work, so swapping them is a genuinely different outcome and no division by 2! applies: 8C4 = 70, which is also 35 × 2!."
+            },
+            {
+              "key": "B",
+              "text": "35",
+              "explanation": "This divides by 2!, which is right only when the two groups are interchangeable. Naming one team audit and the other tax makes the swap a real change."
+            },
+            {
+              "key": "C",
+              "text": "1,680",
+              "explanation": "This is 8P4, which orders the four members of the audit team. Members of a team rank equally."
+            },
+            {
+              "key": "D",
+              "text": "140",
+              "explanation": "This multiplies 8C4 by 2! a second time. Choosing the audit team already fixes the tax team, so one combination count answers the whole question."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c5-03-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "In how many ways can the 8 trainees be split into a group of 2 and two groups of 3, the three groups going to three NAMED clients?",
+          "topic": "Ch 5 · Mixed group sizes with labels",
+          "sourceRef": "Groups of sizes a, b, c from n objects = n! ÷ (a! × b! × c!)",
+          "options": [
+            {
+              "key": "A",
+              "text": "280",
+              "explanation": "This divides by 2! for the two groups of equal size 3. The clients are named, so sending a particular pair of trainees to client X rather than client Y is a different posting."
+            },
+            {
+              "key": "B",
+              "text": "3,360",
+              "explanation": "This is 8! ÷ (2! × 3!), which divides out only one of the two groups of three. Every group of equal-ranking members needs its own division."
+            },
+            {
+              "key": "C",
+              "text": "560",
+              "explanation": "Correct. 8! ÷ (2! × 3! × 3!) = 40,320 ÷ 72 = 560. The same figure comes from 8C2 × 6C3 × 3C3 = 28 × 20 × 1."
+            },
+            {
+              "key": "D",
+              "text": "1,120",
+              "explanation": "This multiplies the correct 560 by 2! for the two equal-sized groups. Labelled groups are never multiplied up beyond the direct count."
+            }
+          ],
+          "correct": "C"
+        }
+      ]
+    }
+  ]
+}

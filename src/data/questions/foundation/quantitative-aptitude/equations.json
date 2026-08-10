@@ -1,0 +1,2317 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "equations",
+  "chapter": "Ch 2 — Equations",
+  "questions": [
+    {
+      "id": "q-f3c2-001",
+      "topic": "Ch 2 · Equations · Equation vs identity",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following statements is an IDENTITY rather than an equation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "(2x − 5)(2x + 5) = 4x² − 25",
+          "explanation": "Correct. Expanding the left side gives 4x² − 25 term for term, so the two sides agree for every value of x. Substituting x = 0 gives −25 on both sides and x = 1 gives −21 on both sides; an identity never fails."
+        },
+        {
+          "key": "B",
+          "text": "3x − 7 = 2",
+          "explanation": "True only when x = 3. A statement that holds for one value is an equation, not an identity — this is the error of reading any statement with an equals sign as an identity."
+        },
+        {
+          "key": "C",
+          "text": "x² = 16",
+          "explanation": "True only for x = 4 and x = −4. Two roots still make it an equation; an identity must hold for every value, not for several."
+        },
+        {
+          "key": "D",
+          "text": "x/2 + 1 = 0",
+          "explanation": "True only when x = −2. Being simple and short does not make a statement an identity."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: What an equation is and how an identity differs, §1 →",
+        "href": "/foundation/quantitative-aptitude/equations/#1-what-an-equation-is-and-how-an-identity-differs"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Equation true for particular values; identity true for all values",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-002",
+      "topic": "Ch 2 · Equations · Identity recognised while solving",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many values of x satisfy 5(x − 4) = 5x − 20?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Exactly one, x = 4",
+          "explanation": "x = 4 does satisfy the statement, but so does every other number. Reading the bracket (x − 4) as if it fixed the root is the slip here."
+        },
+        {
+          "key": "B",
+          "text": "Every value of x — the statement is an identity",
+          "explanation": "Correct. Expanding the left side gives 5x − 20, which is exactly the right side. Solving it makes every term cancel and leaves 0 = 0, the signal that the statement is an identity and every value works."
+        },
+        {
+          "key": "C",
+          "text": "No value of x",
+          "explanation": "This is what a leftover FALSE statement such as 0 = 5 would mean. Here the leftover statement is 0 = 0, which is true — the opposite conclusion."
+        },
+        {
+          "key": "D",
+          "text": "Exactly two values",
+          "explanation": "A statement of degree one can never have two roots. Two roots belong to a quadratic, and there is no x² term here."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What an equation is and how an identity differs, §1 →",
+        "href": "/foundation/quantitative-aptitude/equations/#1-what-an-equation-is-and-how-an-identity-differs"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "All terms cancelling to 0 = 0 means an identity",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-003",
+      "topic": "Ch 2 · Equations · Degree and number of roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many roots, counted with repetition, does 2x⁴ − 5x³ + x − 7 = 0 have?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "explanation": "One root belongs to a linear equation. Counting only the terms that look easy to solve is not how the root count works."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "Two roots belong to a quadratic. The presence of an x⁴ term rules that out."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "Correct. The highest power present is x⁴, so the degree is 4, and a polynomial equation of degree n has exactly n roots counted with repetition."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "Three would be right if the leading term were x³. Counting the number of TERMS carrying x, rather than the highest power, produces this answer."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Degree and roots, §2 →",
+        "href": "/foundation/quantitative-aptitude/equations/#2-degree-and-roots-the-vocabulary"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A polynomial equation of degree n has n roots counted with repetition",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-004",
+      "topic": "Ch 2 · Equations · Linear equation with fractions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve (3x − 1)/5 − (x + 2)/3 = 2/15.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = −5/4",
+          "explanation": "This is what you get if the minus in front of the second bracket is applied only to the x: 9x − 3 − 5x + 10 = 2 gives 4x = −5. The minus must flip BOTH terms inside the bracket."
+        },
+        {
+          "key": "B",
+          "text": "x = −11/4",
+          "explanation": "This comes from transposing the constant without changing its sign: writing 4x = 2 − 13 instead of 4x = 2 + 13. A term changes sign when it crosses the equals sign."
+        },
+        {
+          "key": "C",
+          "text": "x = 4/15",
+          "explanation": "The final division has been inverted — dividing 4 by 15 instead of 15 by 4. Divide by the coefficient of x, not into it."
+        },
+        {
+          "key": "D",
+          "text": "x = 15/4",
+          "explanation": "Correct. Multiplying every term by the LCM 15 gives 3(3x − 1) − 5(x + 2) = 2, that is 9x − 3 − 5x − 10 = 2, so 4x − 13 = 2, 4x = 15 and x = 15/4."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Simple linear equations in one unknown, §3 →",
+        "href": "/foundation/quantitative-aptitude/equations/#3-simple-linear-equations-in-one-unknown"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Clear fractions by the LCM, remove brackets, transpose, divide",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-005",
+      "topic": "Ch 2 · Equations · Unknown in the denominator",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 3/(x − 1) = 5/(x + 3).",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 7",
+          "explanation": "Correct. Cross-multiplying gives 3(x + 3) = 5(x − 1), that is 3x + 9 = 5x − 5, so 14 = 2x and x = 7. Neither denominator is zero at x = 7, so the root stands."
+        },
+        {
+          "key": "B",
+          "text": "x = −9",
+          "explanation": "This is the result of cross-multiplying the wrong pairs — 3(x − 1) = 5(x + 3). Each numerator must be multiplied by the OTHER fraction's denominator."
+        },
+        {
+          "key": "C",
+          "text": "x = 2",
+          "explanation": "Here the constant 9 has crossed the equals sign without changing sign: 2x = 9 − 5 instead of 2x = 9 + 5. One sign slip, one wrong answer."
+        },
+        {
+          "key": "D",
+          "text": "x = 1",
+          "explanation": "x = 1 makes the first denominator zero, so the original equation is not even defined there. A value that kills a denominator can never be a root."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Simple linear equations in one unknown, §3 →",
+        "href": "/foundation/quantitative-aptitude/equations/#3-simple-linear-equations-in-one-unknown"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Cross-multiply, then reject any root that makes an original denominator zero",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-006",
+      "topic": "Ch 2 · Equations · An equation with no solution",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 1/(x − 3) + 6/(x² − 9) = 1/(x + 3).",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 3",
+          "explanation": "x = 3 makes two of the three denominators zero, so it could never be a root even if the algebra had produced it."
+        },
+        {
+          "key": "B",
+          "text": "The equation has no solution",
+          "explanation": "Correct. Since x² − 9 = (x − 3)(x + 3), multiplying every term by (x − 3)(x + 3) gives (x + 3) + 6 = (x − 3), that is x + 9 = x − 3. The x terms cancel and 9 = −3 is false, so no value of x can satisfy the equation."
+        },
+        {
+          "key": "C",
+          "text": "x = −3",
+          "explanation": "x = −3 makes the third denominator and x² − 9 zero. It is a value the equation excludes, not a root."
+        },
+        {
+          "key": "D",
+          "text": "Every value of x satisfies it",
+          "explanation": "That conclusion belongs to a leftover statement that is TRUE, such as 0 = 0. Here the leftover statement 9 = −3 is false, which means no solution — the opposite result."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Simple linear equations in one unknown, §3 →",
+        "href": "/foundation/quantitative-aptitude/equations/#3-simple-linear-equations-in-one-unknown"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Terms cancelling to a false statement means the equation has no solution",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-007",
+      "topic": "Ch 2 · Equations · Elimination in two unknowns",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 4x + 3y = 34 and 5x − 2y = 8. What is the value of y?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "4 is the value of x, not y. Solving correctly and then reporting the wrong unknown is one of the most common ways a right calculation loses the mark."
+        },
+        {
+          "key": "B",
+          "text": "10",
+          "explanation": "10 is x + y. It is a useful check figure but not the answer to the question asked."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "Correct. Multiply the first equation by 2 and the second by 3: 8x + 6y = 68 and 15x − 6y = 24. Adding gives 23x = 92, so x = 4, and 4(4) + 3y = 34 gives 3y = 18 and y = 6. Check in the second equation: 5(4) − 2(6) = 8 ✓"
+        },
+        {
+          "key": "D",
+          "text": "−6",
+          "explanation": "The sign has been lost when transposing 16 in 4(4) + 3y = 34: writing 3y = 16 − 34 instead of 3y = 34 − 16."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Two unknowns by elimination, §4 →",
+        "href": "/foundation/quantitative-aptitude/equations/#4-two-unknowns-solving-by-elimination"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Elimination: scale to match one variable, then add or subtract",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-008",
+      "topic": "Ch 2 · Equations · Elimination by subtraction",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 7x + 5y = 46 and 3x + 5y = 34. What is the value of x?",
+      "options": [
+        {
+          "key": "A",
+          "text": "−3",
+          "explanation": "The subtraction has been done in the wrong order — the second equation minus the first gives −4x = −12 read as 4x = −12. Subtract consistently, left from left and right from right."
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "explanation": "8 is x + y. It arrives from adding the two equations (10x + 10y = 80) and answering the wrong quantity."
+        },
+        {
+          "key": "C",
+          "text": "5",
+          "explanation": "5 is the value of y, obtained correctly but reported for the wrong unknown."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "Correct. Both equations already carry 5y, so subtract the second from the first: 4x = 12 and x = 3. Then 7(3) + 5y = 46 gives 5y = 25 and y = 5. Check: 3(3) + 5(5) = 34 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Two unknowns by elimination, §4 →",
+        "href": "/foundation/quantitative-aptitude/equations/#4-two-unknowns-solving-by-elimination"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Subtract when the matched coefficients have the same sign",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-009",
+      "topic": "Ch 2 · Equations · Substitution",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve x = 2y − 3 and 3x + 4y = 11. What is the value of x?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "explanation": "Correct. Substituting gives 3(2y − 3) + 4y = 11, that is 6y − 9 + 4y = 11, so 10y = 20 and y = 2. Then x = 2(2) − 3 = 1. Check: 3(1) + 4(2) = 11 ✓"
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "2 is the value of y. The substitution route finds y first, and stopping there answers the wrong unknown."
+        },
+        {
+          "key": "C",
+          "text": "−1",
+          "explanation": "This follows from 6y + 9 + 4y = 11, where the 3 multiplying (2y − 3) has been applied to 2y only and the −3 has kept its sign as +3."
+        },
+        {
+          "key": "D",
+          "text": "7",
+          "explanation": "This comes from reading the first equation as x = 2y + 3 and then computing 2(2) + 3. Copy the sign of the constant when you make x the subject."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Substitution and cross-multiplication, §5 →",
+        "href": "/foundation/quantitative-aptitude/equations/#5-two-unknowns-substitution-and-cross-multiplication"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Substitution: make one variable the subject and push it into the other equation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-010",
+      "topic": "Ch 2 · Equations · Cross-multiplication",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Using the cross-multiplication rule, solve 2x + 3y − 13 = 0 and 3x − y − 3 = 0.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 3, y = 2",
+          "explanation": "The two values have been swapped. The first fraction in the rule belongs to x and the second to y; reading them in the other order gives this pair."
+        },
+        {
+          "key": "B",
+          "text": "x = 2, y = 3",
+          "explanation": "Correct. With a₁ = 2, b₁ = 3, c₁ = −13, a₂ = 3, b₂ = −1, c₂ = −3, the denominator a₁b₂ − a₂b₁ = −2 − 9 = −11. Then x = (b₁c₂ − b₂c₁)/(−11) = (−9 − 13)/(−11) = 2 and y = (c₁a₂ − c₂a₁)/(−11) = (−39 + 6)/(−11) = 3."
+        },
+        {
+          "key": "C",
+          "text": "x = −2, y = −3",
+          "explanation": "This is exactly what the rule returns if the constants are left on the right-hand side, so that c₁ is taken as +13 and c₂ as +3. Both signs invert together, which makes the pair look plausible."
+        },
+        {
+          "key": "D",
+          "text": "x = 2, y = −3",
+          "explanation": "The x fraction has been evaluated with c₁ = −13 but the y fraction with c₁ = +13. Mixing the two conventions inside one calculation flips only the second answer."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Substitution and cross-multiplication, §5 →",
+        "href": "/foundation/quantitative-aptitude/equations/#5-two-unknowns-substitution-and-cross-multiplication"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "x/(b₁c₂ − b₂c₁) = y/(c₁a₂ − c₂a₁) = 1/(a₁b₂ − a₂b₁)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-011",
+      "topic": "Ch 2 · Equations · Infinitely many solutions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For what value of k does the system 2x + 3y = 7 and 6x + ky = 21 have infinitely many solutions?",
+      "options": [
+        {
+          "key": "A",
+          "text": "k = 1",
+          "explanation": "This comes from inverting the ratio — solving 3/k = 3 instead of 3/k = 1/3. The ratios must be taken consistently, first equation over second in every position."
+        },
+        {
+          "key": "B",
+          "text": "k = 3",
+          "explanation": "Copying b₁ into b₂ makes the coefficients equal but not proportional: with k = 3 the ratios are 1/3, 1 and 1/3, which do not match, so the system has a unique solution."
+        },
+        {
+          "key": "C",
+          "text": "k = 9",
+          "explanation": "Correct. Infinitely many solutions need a₁/a₂ = b₁/b₂ = c₁/c₂. Here a₁/a₂ = 2/6 = 1/3 and c₁/c₂ = 7/21 = 1/3, so 3/k must also equal 1/3, giving k = 9. The second equation is then exactly three times the first."
+        },
+        {
+          "key": "D",
+          "text": "No value of k gives infinitely many solutions",
+          "explanation": "This is the conclusion you reach by testing only two of the three ratios and assuming they must disagree. Checking c₁/c₂ = 1/3 shows the third ratio matches, so k = 9 does work."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Unique, no, or infinitely many solutions, §6 →",
+        "href": "/foundation/quantitative-aptitude/equations/#6-unique-solution-no-solution-or-infinitely-many"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "a₁/a₂ = b₁/b₂ = c₁/c₂ gives infinitely many solutions",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-012",
+      "topic": "Ch 2 · Equations · Inconsistent system",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For what value of p is the system px + 4y = 10 and 3x + 2y = 8 inconsistent, that is, has no solution?",
+      "options": [
+        {
+          "key": "A",
+          "text": "p = 3/2",
+          "explanation": "This comes from inverting the y ratio — solving p/3 = 2/4 instead of p/3 = 4/2. Every ratio must be taken as first equation over second."
+        },
+        {
+          "key": "B",
+          "text": "p = 2",
+          "explanation": "Here p has been set equal to b₁/b₂ = 2 directly instead of being found from the proportion p/3 = 4/2. The condition is a proportion, not a copy."
+        },
+        {
+          "key": "C",
+          "text": "No value of p makes the system inconsistent",
+          "explanation": "This follows from stopping after the third ratio is found to differ and reading that as a bar. In fact a mismatch in c₁/c₂ is exactly what inconsistency requires."
+        },
+        {
+          "key": "D",
+          "text": "p = 6",
+          "explanation": "Correct. No solution needs a₁/a₂ = b₁/b₂ with c₁/c₂ different. Here b₁/b₂ = 4/2 = 2, so p/3 = 2 gives p = 6; and c₁/c₂ = 10/8 = 5/4, which is not 2, so the lines are genuinely parallel."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Unique, no, or infinitely many solutions, §6 →",
+        "href": "/foundation/quantitative-aptitude/equations/#6-unique-solution-no-solution-or-infinitely-many"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "a₁/a₂ = b₁/b₂ ≠ c₁/c₂ gives no solution",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-013",
+      "topic": "Ch 2 · Equations · Three unknowns",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve x + y + z = 9, 2x − y + z = 8 and x + 2y − z = 3. What is the value of z?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "Correct. Adding the first and third equations gives 2x + 3y = 12; adding the second and third gives 3x + y = 11. Solving those two gives x = 3 and y = 2, so z = 9 − 3 − 2 = 4. Check in the second equation: 6 − 2 + 4 = 8 ✓"
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "3 is the value of x. The question asks for z, and reporting the first unknown you happen to isolate is the usual slip in three-unknown work."
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "2 is the value of y — again a correct number attached to the wrong letter."
+        },
+        {
+          "key": "D",
+          "text": "9",
+          "explanation": "9 is x + y + z, the right-hand side of the first equation. It is the total, not the individual value."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Three unknowns, §7 →",
+        "href": "/foundation/quantitative-aptitude/equations/#7-three-unknowns"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Eliminate the same variable from two pairs, then solve the resulting pair",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-014",
+      "topic": "Ch 2 · Equations · Three unknowns by symmetry",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If x + y = 7, y + z = 12 and z + x = 13, what is x + y + z?",
+      "options": [
+        {
+          "key": "A",
+          "text": "32",
+          "explanation": "32 is the sum of the three right-hand sides, and that sum counts every letter TWICE. It must still be halved."
+        },
+        {
+          "key": "B",
+          "text": "16",
+          "explanation": "Correct. Adding all three equations gives 2(x + y + z) = 7 + 12 + 13 = 32, so x + y + z = 16. (Individually x = 4, y = 3 and z = 9, which satisfy all three.)"
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "explanation": "This halves 32 twice over. One halving removes the double count; a second one is not warranted by anything in the working."
+        },
+        {
+          "key": "D",
+          "text": "9",
+          "explanation": "9 is the value of z alone. The question asks for the total of all three unknowns."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Three unknowns, §7 →",
+        "href": "/foundation/quantitative-aptitude/equations/#7-three-unknowns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Adding all three pairwise equations gives twice the total",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-015",
+      "topic": "Ch 2 · Equations · Quadratic by factorisation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 6x² + x − 15 = 0 by factorisation.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 5/3 and x = −3/2",
+          "explanation": "Both signs have been flipped. A quick test settles it: 6(5/3)² + (5/3) − 15 = 16.67 + 1.67 − 15, which is not zero."
+        },
+        {
+          "key": "B",
+          "text": "x = −5 and x = 3",
+          "explanation": "The roots have been read straight off the brackets (3x + 5)(2x − 3) without solving them. Each factor must be set to zero and solved: 3x + 5 = 0 gives x = −5/3, not −5."
+        },
+        {
+          "key": "C",
+          "text": "x = −5/3 and x = 3/2",
+          "explanation": "Correct. a × c = 6 × (−15) = −90, and 10 and −9 have product −90 and sum 1. So 6x² + 10x − 9x − 15 = 2x(3x + 5) − 3(3x + 5) = (3x + 5)(2x − 3) = 0, giving x = −5/3 and x = 3/2."
+        },
+        {
+          "key": "D",
+          "text": "x = 5/3 and x = 3/2",
+          "explanation": "One sign has been dropped. The product of the roots must equal c/a = −15/6 = −5/2, so the two roots cannot both be positive."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Quadratic equations by factorisation, §8 →",
+        "href": "/foundation/quantitative-aptitude/equations/#8-quadratic-equations-solving-by-factorisation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Split b into two parts with sum b and product a × c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-016",
+      "topic": "Ch 2 · Equations · Quadratic with no constant term",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 4x² = 12x.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 3 only",
+          "explanation": "This is what dividing both sides by x produces. Dividing by the unknown destroys the root x = 0, because you have quietly assumed x is not zero."
+        },
+        {
+          "key": "B",
+          "text": "x = 0 only",
+          "explanation": "x = 0 is a root, but so is x = 3. Taking the factor x = 0 and stopping loses the second bracket."
+        },
+        {
+          "key": "C",
+          "text": "x = 3 and x = −3",
+          "explanation": "This treats the equation as a pure quadratic of the form x² = 9. There is a middle term here, so the roots are not equal and opposite."
+        },
+        {
+          "key": "D",
+          "text": "x = 0 and x = 3",
+          "explanation": "Correct. Bring everything to one side: 4x² − 12x = 0, so 4x(x − 3) = 0. Setting each factor to zero gives x = 0 and x = 3. Whenever the constant term is missing, one root is always 0."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Quadratic equations by factorisation, §8 →",
+        "href": "/foundation/quantitative-aptitude/equations/#8-quadratic-equations-solving-by-factorisation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "ax² + bx = 0 factorises as x(ax + b) = 0, so one root is always zero",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-017",
+      "topic": "Ch 2 · Equations · Completing the square",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve x² − 6x − 16 = 0 by completing the square.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 8 and x = −2",
+          "explanation": "Correct. x² − 6x = 16; half of −6 is −3 and (−3)² = 9, so x² − 6x + 9 = 25, that is (x − 3)² = 25. Then x − 3 = ±5, giving x = 8 and x = −2."
+        },
+        {
+          "key": "B",
+          "text": "x = 8 only",
+          "explanation": "The negative square root has been dropped. x − 3 = ±5, not just +5; every square root taken while solving carries both signs."
+        },
+        {
+          "key": "C",
+          "text": "x = −8 and x = 2",
+          "explanation": "The completed square has been read as (x + 3)² instead of (x − 3)². Half of −6 is −3, so the bracket carries a minus."
+        },
+        {
+          "key": "D",
+          "text": "x = 3 and x = 5",
+          "explanation": "These are the two numbers appearing in x = 3 ± 5, quoted instead of being combined. The roots are 3 + 5 and 3 − 5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Solving by completing the square, §9 →",
+        "href": "/foundation/quantitative-aptitude/equations/#9-solving-by-completing-the-square"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Add the square of half the coefficient of x, then take both square roots",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-018",
+      "topic": "Ch 2 · Equations · The completing constant",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "To solve 2x² + 12x − 7 = 0 by completing the square, the equation is first divided by 2. What constant must then be added to both sides?",
+      "options": [
+        {
+          "key": "A",
+          "text": "36",
+          "explanation": "This squares the coefficient of x without halving it first: 6² = 36 instead of 3² = 9. The rule is square HALF the coefficient."
+        },
+        {
+          "key": "B",
+          "text": "9",
+          "explanation": "Correct. After dividing by 2 the equation reads x² + 6x = 7/2. Half of 6 is 3, and 3² = 9, so adding 9 makes the left side (x + 3)²."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "This halves the coefficient but forgets to square it. Half of 6 is 3; the constant to add is 3², not 3."
+        },
+        {
+          "key": "D",
+          "text": "6",
+          "explanation": "This uses the ORIGINAL coefficient 12 halved, ignoring the division by 2 that came first. Divide by a before you halve b."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Solving by completing the square, §9 →",
+        "href": "/foundation/quantitative-aptitude/equations/#9-solving-by-completing-the-square"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "The constant added is (b/2a)² after dividing throughout by a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-019",
+      "topic": "Ch 2 · Equations · The quadratic formula",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 3x² − 5x − 2 = 0 using the quadratic formula.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = −2 and x = 1/3",
+          "explanation": "Both roots have the wrong sign, which is what happens when −b is taken as −5 instead of +5. With b = −5, the term −b is +5."
+        },
+        {
+          "key": "B",
+          "text": "x = 2 and x = 1/3",
+          "explanation": "One sign is wrong. The product of the roots must be c/a = −2/3, a negative number, so the two roots cannot share a sign."
+        },
+        {
+          "key": "C",
+          "text": "x = 2 and x = −1/3",
+          "explanation": "Correct. a = 3, b = −5, c = −2, so b² − 4ac = 25 + 24 = 49 and √49 = 7. Then x = (5 ± 7)/6, giving 12/6 = 2 and −2/6 = −1/3."
+        },
+        {
+          "key": "D",
+          "text": "x = 1/2 and x = −3",
+          "explanation": "These are the reciprocals of the true roots. They solve the equation with the coefficients reversed, 2x² + 5x − 3 = 0, not the one given."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The quadratic formula, §10 →",
+        "href": "/foundation/quantitative-aptitude/equations/#10-the-quadratic-formula"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "x = [−b ± √(b² − 4ac)] / 2a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-020",
+      "topic": "Ch 2 · Equations · Rearranging before the formula",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 2x² = 7x − 3.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 3 and x = 2",
+          "explanation": "x = 2 does not satisfy the equation: 2(4) = 8 while 7(2) − 3 = 11. This pair comes from factorising the right-hand side rather than the whole equation."
+        },
+        {
+          "key": "B",
+          "text": "x = −3 and x = −1/2",
+          "explanation": "Both signs are wrong, the result of writing the equation as 2x² + 7x + 3 = 0 — that is, moving the terms across without changing their signs."
+        },
+        {
+          "key": "C",
+          "text": "x = 27/4 and x = −13/4",
+          "explanation": "Here only the −b has been divided by 2a: x = 7/4 ± 5 instead of (7 ± 5)/4. The whole numerator, including the ± term, is divided by 2a."
+        },
+        {
+          "key": "D",
+          "text": "x = 3 and x = 1/2",
+          "explanation": "Correct. Rearrange first: 2x² − 7x + 3 = 0. Then b² − 4ac = 49 − 24 = 25 and √25 = 5, so x = (7 ± 5)/4, giving 3 and 1/2."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The quadratic formula, §10 →",
+        "href": "/foundation/quantitative-aptitude/equations/#10-the-quadratic-formula"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Rearrange to ax² + bx + c = 0 before applying the formula",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-021",
+      "topic": "Ch 2 · Equations · Nature of roots, D = 0",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The roots of 4x² − 12x + 9 = 0 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "real and equal",
+          "explanation": "Correct. D = (−12)² − 4(4)(9) = 144 − 144 = 0. A zero discriminant means both roots equal −b/2a = 12/8 = 3/2, and indeed 4x² − 12x + 9 = (2x − 3)²."
+        },
+        {
+          "key": "B",
+          "text": "real, distinct and rational",
+          "explanation": "Distinct roots need D greater than zero. Here D is exactly zero, so the two roots coincide."
+        },
+        {
+          "key": "C",
+          "text": "real, distinct and irrational",
+          "explanation": "Irrational roots need D positive and not a perfect square. D = 0 is neither positive nor a source of surds."
+        },
+        {
+          "key": "D",
+          "text": "not real",
+          "explanation": "Non-real roots need D below zero. Reading D = 0 as \"nothing to take the square root of, so no roots\" is the misconception here — √0 = 0 is perfectly real."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The discriminant and the nature of the roots, §11 →",
+        "href": "/foundation/quantitative-aptitude/equations/#11-the-discriminant-and-the-nature-of-the-roots"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "D = b² − 4ac; D = 0 gives real and equal roots",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-022",
+      "topic": "Ch 2 · Equations · Nature of roots, D below zero",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The roots of 2x² − 3x + 5 = 0 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "real and equal",
+          "explanation": "Equal roots need D = 0. Here D = 9 − 40 = −31, which is not zero."
+        },
+        {
+          "key": "B",
+          "text": "not real",
+          "explanation": "Correct. D = (−3)² − 4(2)(5) = 9 − 40 = −31, which is negative. No real number has a negative square, so no real value of x satisfies the equation; the roots form a conjugate pair of imaginary numbers."
+        },
+        {
+          "key": "C",
+          "text": "real, distinct and rational",
+          "explanation": "This is the answer you reach by computing 4ac − b² = 31 instead of b² − 4ac and treating the positive result as D. The order of the subtraction decides the whole answer."
+        },
+        {
+          "key": "D",
+          "text": "real, distinct and irrational",
+          "explanation": "Again the sign of D has been dropped: √31 looks like an irrational root, but D is −31, not +31, so nothing real comes out."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The discriminant and the nature of the roots, §11 →",
+        "href": "/foundation/quantitative-aptitude/equations/#11-the-discriminant-and-the-nature-of-the-roots"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "D below zero means the roots are not real",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-023",
+      "topic": "Ch 2 · Equations · Rational or irrational roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The roots of x² − 6x + 7 = 0 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "real and equal",
+          "explanation": "D = 36 − 28 = 8, which is not zero, so the roots are distinct."
+        },
+        {
+          "key": "B",
+          "text": "real, distinct and rational",
+          "explanation": "Rational roots need D to be a perfect square. 8 is positive but not a perfect square, so the roots involve √8 and are irrational."
+        },
+        {
+          "key": "C",
+          "text": "real, distinct and irrational",
+          "explanation": "Correct. D = (−6)² − 4(1)(7) = 36 − 28 = 8, positive but not a perfect square. The roots are (6 ± √8)/2 = 3 ± √2, a conjugate pair of irrational numbers."
+        },
+        {
+          "key": "D",
+          "text": "not real",
+          "explanation": "Non-real roots need D below zero. D = 8 is positive; reading 28 − 36 = −8 by subtracting in the wrong order gives this answer."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The discriminant and the nature of the roots, §11 →",
+        "href": "/foundation/quantitative-aptitude/equations/#11-the-discriminant-and-the-nature-of-the-roots"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "D positive but not a perfect square gives irrational conjugate roots",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-024",
+      "topic": "Ch 2 · Equations · Condition for equal roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The roots of x² − mx + 16 = 0 are real and equal. What is m?",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 only",
+          "explanation": "m² = 64 has two solutions, +8 and −8. Taking only the positive square root loses the second value; m = −8 gives x² + 8x + 16 = (x + 4)², which also has equal roots."
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "explanation": "This is √16, the square root of the constant term. The condition is on the discriminant, m² − 64 = 0, not on c."
+        },
+        {
+          "key": "C",
+          "text": "16",
+          "explanation": "Here m has simply been set equal to c. Nothing in the equal-roots condition equates the middle coefficient with the constant."
+        },
+        {
+          "key": "D",
+          "text": "8 or −8",
+          "explanation": "Correct. D = (−m)² − 4(1)(16) = m² − 64. Equal roots need D = 0, so m² = 64 and m = ±8. Both values give a perfect square: (x − 4)² and (x + 4)²."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The discriminant and the nature of the roots, §11 →",
+        "href": "/foundation/quantitative-aptitude/equations/#11-the-discriminant-and-the-nature-of-the-roots"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Equal roots require b² − 4ac = 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-025",
+      "topic": "Ch 2 · Equations · Equal roots with a shifted coefficient",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The roots of x² + (k − 3)x + 9 = 0 are real and equal. What is the POSITIVE value of k?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9",
+          "explanation": "Correct. D = (k − 3)² − 36 = 0, so (k − 3)² = 36 and k − 3 = ±6, giving k = 9 or k = −3. The positive value is 9, and the equation becomes x² + 6x + 9 = (x + 3)²."
+        },
+        {
+          "key": "B",
+          "text": "−3",
+          "explanation": "−3 is the other root of the condition, and it is negative — the question asks for the positive value."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "This solves k − 3 = 0 rather than (k − 3)² = 36. Setting the bracket itself to zero removes the middle term entirely and leaves x² + 9 = 0, which has no real roots at all."
+        },
+        {
+          "key": "D",
+          "text": "6",
+          "explanation": "6 is the value of the bracket (k − 3), not of k. One more step is needed: k = 6 + 3."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The discriminant and the nature of the roots, §11 →",
+        "href": "/foundation/quantitative-aptitude/equations/#11-the-discriminant-and-the-nature-of-the-roots"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Equal roots require b² − 4ac = 0, solved for the parameter",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-026",
+      "topic": "Ch 2 · Equations · Sum of the roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the sum of the roots of 7x² − 21x + 14 = 0?",
+      "options": [
+        {
+          "key": "A",
+          "text": "−3",
+          "explanation": "This uses b/a instead of −b/a. With b = −21 the sum is −(−21)/7 = +3; dropping the leading minus flips the answer."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "Correct. Sum = −b/a = −(−21)/7 = 3. (The roots are 1 and 2, and 1 + 2 = 3.)"
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "2 is the PRODUCT of the roots, c/a = 14/7. The two relations have been swapped."
+        },
+        {
+          "key": "D",
+          "text": "−2",
+          "explanation": "This is the product with a minus sign attached — both relations misremembered at once."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Sum and product of the roots, §12 →",
+        "href": "/foundation/quantitative-aptitude/equations/#12-sum-and-product-of-the-roots"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "α + β = −b/a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-027",
+      "topic": "Ch 2 · Equations · Product of the roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the product of the roots of 5x² + 12x − 9 = 0?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9/5",
+          "explanation": "The sign of c has been dropped. c = −9, so the product is −9/5; a negative product is the algebraic signal that the two roots have opposite signs, as they do here."
+        },
+        {
+          "key": "B",
+          "text": "−12/5",
+          "explanation": "−12/5 is the SUM of the roots, −b/a. The sum and product relations have been swapped."
+        },
+        {
+          "key": "C",
+          "text": "−9/5",
+          "explanation": "Correct. Product = c/a = −9/5. (The roots are 3/5 and −3, and (3/5)(−3) = −9/5.)"
+        },
+        {
+          "key": "D",
+          "text": "12/5",
+          "explanation": "This is the sum with its sign also inverted — two separate errors landing on one option."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Sum and product of the roots, §12 →",
+        "href": "/foundation/quantitative-aptitude/equations/#12-sum-and-product-of-the-roots"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "αβ = c/a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-028",
+      "topic": "Ch 2 · Equations · Reciprocals of the roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If α and β are the roots of 3x² − 7x + 2 = 0, what is 1/α + 1/β?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2/7",
+          "explanation": "The fraction has been inverted: this is p/s, the product over the sum. Adding the two reciprocals gives (β + α)/αβ, which is the SUM over the product."
+        },
+        {
+          "key": "B",
+          "text": "3/7",
+          "explanation": "This is a/b taken straight from the coefficients. The relation needs −b/a and c/a first; the raw coefficients cannot be used directly."
+        },
+        {
+          "key": "C",
+          "text": "7/3",
+          "explanation": "7/3 is α + β itself. Adding the reciprocals is not the same as the sum of the roots unless the product happens to be 1."
+        },
+        {
+          "key": "D",
+          "text": "7/2",
+          "explanation": "Correct. 1/α + 1/β = (α + β)/αβ = (7/3) ÷ (2/3) = 7/2. (The roots are 2 and 1/3, and 1/2 + 3 = 7/2.)"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Sum and product of the roots, §12 →",
+        "href": "/foundation/quantitative-aptitude/equations/#12-sum-and-product-of-the-roots"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "1/α + 1/β = (α + β)/αβ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-029",
+      "topic": "Ch 2 · Equations · Forming an equation from its roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Form the quadratic equation whose roots are 5 and −2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x² − 3x − 10 = 0",
+          "explanation": "Correct. Sum = 5 + (−2) = 3 and product = 5 × (−2) = −10, so the equation is x² − (3)x + (−10) = 0, that is x² − 3x − 10 = 0."
+        },
+        {
+          "key": "B",
+          "text": "x² + 3x − 10 = 0",
+          "explanation": "The minus in front of the sum has been dropped. The formula is x² − (sum)x + (product) = 0; this version has roots −5 and 2."
+        },
+        {
+          "key": "C",
+          "text": "x² − 3x + 10 = 0",
+          "explanation": "The product has been recorded as +10, as though (5)(−2) were positive. That equation has a negative discriminant and no real roots at all."
+        },
+        {
+          "key": "D",
+          "text": "x² + 3x + 10 = 0",
+          "explanation": "Both signs are wrong — the sum's minus dropped and the product's sign inverted together."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Forming an equation from given roots, §13 →",
+        "href": "/foundation/quantitative-aptitude/equations/#13-forming-an-equation-from-given-roots"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "x² − (sum of roots)x + (product of roots) = 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-030",
+      "topic": "Ch 2 · Equations · Forming an equation from fractional roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Form the quadratic equation with integer coefficients whose roots are 2/3 and −1/4.",
+      "options": [
+        {
+          "key": "A",
+          "text": "12x² + 5x − 2 = 0",
+          "explanation": "The sum's minus sign has been dropped. This equation has roots −2/3 and 1/4 — the right magnitudes with both signs reversed."
+        },
+        {
+          "key": "B",
+          "text": "12x² − 5x − 2 = 0",
+          "explanation": "Correct. Sum = 2/3 − 1/4 = 5/12 and product = −2/12 = −1/6, so x² − (5/12)x − 1/6 = 0. Multiplying throughout by 12 clears the fractions: 12x² − 5x − 2 = 0."
+        },
+        {
+          "key": "C",
+          "text": "12x² − 5x + 2 = 0",
+          "explanation": "The product has been taken as positive. One root is negative, so the product must be negative; this equation has no real roots."
+        },
+        {
+          "key": "D",
+          "text": "12x² + 5x + 2 = 0",
+          "explanation": "Both signs are wrong at once — the sum's minus dropped and the product's sign inverted."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Forming an equation from given roots, §13 →",
+        "href": "/foundation/quantitative-aptitude/equations/#13-forming-an-equation-from-given-roots"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "x² − (sum)x + (product) = 0, then scale to clear fractions",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-031",
+      "topic": "Ch 2 · Equations · One irrational root given",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "One root of a quadratic equation with rational coefficients is 3 − √5. Which equation is it?",
+      "options": [
+        {
+          "key": "A",
+          "text": "x² − 6x − 4 = 0",
+          "explanation": "The product has been computed as 9 + 5 instead of 9 − 5. (3 − √5)(3 + √5) is a difference of two squares, 9 − 5 = 4."
+        },
+        {
+          "key": "B",
+          "text": "x² + 6x + 4 = 0",
+          "explanation": "The minus in front of the sum has been dropped, so this equation has roots −3 ± √5 instead."
+        },
+        {
+          "key": "C",
+          "text": "x² − 6x + 4 = 0",
+          "explanation": "Correct. Rational coefficients force the other root to be the conjugate 3 + √5. Sum = 6 and product = 9 − 5 = 4, so the equation is x² − 6x + 4 = 0."
+        },
+        {
+          "key": "D",
+          "text": "x² − 3x + √5 = 0",
+          "explanation": "The given root has been used as the sum and the surd as the product. It also has an irrational coefficient, which the question expressly rules out."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Forming an equation from given roots, §13 →",
+        "href": "/foundation/quantitative-aptitude/equations/#13-forming-an-equation-from-given-roots"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Irrational roots of a rational quadratic occur in conjugate pairs",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-032",
+      "topic": "Ch 2 · Equations · Equation with scaled roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If α and β are the roots of x² − 5x + 6 = 0, form the equation whose roots are 3α and 3β.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x² − 15x + 18 = 0",
+          "explanation": "The product has been multiplied by 3 instead of by 3². (3α)(3β) = 9αβ = 54, not 18."
+        },
+        {
+          "key": "B",
+          "text": "x² − 5x + 54 = 0",
+          "explanation": "The product has been scaled but the sum left alone. Both must change: the new sum is 3(α + β) = 15."
+        },
+        {
+          "key": "C",
+          "text": "x² − 15x + 6 = 0",
+          "explanation": "The sum has been scaled but the product left alone — the mirror image of the previous error."
+        },
+        {
+          "key": "D",
+          "text": "x² − 15x + 54 = 0",
+          "explanation": "Correct. α + β = 5 and αβ = 6, so the new sum is 3(5) = 15 and the new product is 9(6) = 54, giving x² − 15x + 54 = 0. (The original roots are 2 and 3; the new ones are 6 and 9.)"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Forming an equation from given roots, §13 →",
+        "href": "/foundation/quantitative-aptitude/equations/#13-forming-an-equation-from-given-roots"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Roots kα and kβ have sum ks and product k²p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-033",
+      "topic": "Ch 2 · Equations · Sum of the squares of the roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If α and β are the roots of x² − 8x + 5 = 0, what is α² + β²?",
+      "options": [
+        {
+          "key": "A",
+          "text": "54",
+          "explanation": "Correct. α² + β² = (α + β)² − 2αβ = 8² − 2(5) = 64 − 10 = 54."
+        },
+        {
+          "key": "B",
+          "text": "64",
+          "explanation": "This is (α + β)² with the correction term forgotten. Squaring a sum produces a cross term 2αβ that must be taken back out."
+        },
+        {
+          "key": "C",
+          "text": "74",
+          "explanation": "Here 2αβ has been ADDED instead of subtracted. The identity is s² − 2p; adding gives (α + β)² + 2αβ, which is not a standard quantity at all."
+        },
+        {
+          "key": "D",
+          "text": "59",
+          "explanation": "Only one αβ has been subtracted instead of two. The cross term in (α + β)² is 2αβ, so the correction is 2p, not p."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Symmetric functions of the roots, §14 →",
+        "href": "/foundation/quantitative-aptitude/equations/#14-symmetric-functions-of-the-roots"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "α² + β² = s² − 2p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-034",
+      "topic": "Ch 2 · Equations · Sum of the cubes of the roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If α and β are the roots of x² − 7x + 12 = 0, what is α³ + β³?",
+      "options": [
+        {
+          "key": "A",
+          "text": "343",
+          "explanation": "This is s³ with the correction forgotten. (α + β)³ expands to α³ + β³ + 3αβ(α + β), so 3ps must be taken out."
+        },
+        {
+          "key": "B",
+          "text": "91",
+          "explanation": "Correct. α³ + β³ = s³ − 3ps = 7³ − 3(12)(7) = 343 − 252 = 91. (The roots are 3 and 4, and 27 + 64 = 91.)"
+        },
+        {
+          "key": "C",
+          "text": "595",
+          "explanation": "The correction term has been added rather than subtracted: 343 + 252. The identity subtracts 3ps."
+        },
+        {
+          "key": "D",
+          "text": "307",
+          "explanation": "The correction has been taken as 3p = 36 instead of 3ps = 252. The factor s belongs in the correction term."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Symmetric functions of the roots, §14 →",
+        "href": "/foundation/quantitative-aptitude/equations/#14-symmetric-functions-of-the-roots"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "α³ + β³ = s³ − 3ps",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-035",
+      "topic": "Ch 2 · Equations · Difference of the roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 2x² − 9x + 4 = 0, what is the positive difference between the two roots?",
+      "options": [
+        {
+          "key": "A",
+          "text": "65/4",
+          "explanation": "This is α² + β², computed with s² − 2p. The difference needs s² − 4p, not s² − 2p."
+        },
+        {
+          "key": "B",
+          "text": "7/4",
+          "explanation": "The square root has been taken of 49/16 rather than 49/4 — the denominator has been squared twice over."
+        },
+        {
+          "key": "C",
+          "text": "7/2",
+          "explanation": "Correct. s = 9/2 and p = 2, so (α − β)² = s² − 4p = 81/4 − 8 = 49/4 and the positive difference is 7/2. (The roots are 4 and 1/2.)"
+        },
+        {
+          "key": "D",
+          "text": "49/4",
+          "explanation": "This is (α − β)², the square of the difference. The final square root has not been taken."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Symmetric functions of the roots, §14 →",
+        "href": "/foundation/quantitative-aptitude/equations/#14-symmetric-functions-of-the-roots"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "(α − β)² = s² − 4p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-036",
+      "topic": "Ch 2 · Equations · Ratio expression in the roots",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If α and β are the roots of x² − 6x + 4 = 0, what is α/β + β/α?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9",
+          "explanation": "This is s²/p = 36/4, which forgets the −2p in the numerator. The numerator is α² + β² = s² − 2p, not s²."
+        },
+        {
+          "key": "B",
+          "text": "28",
+          "explanation": "28 is α² + β² alone. The expression is a ratio, so it must still be divided by αβ."
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "α/β + β/α equals 2 only when α and β are equal. Here D = 36 − 16 = 20, so the roots are distinct and the value is not 2."
+        },
+        {
+          "key": "D",
+          "text": "7",
+          "explanation": "Correct. α/β + β/α = (α² + β²)/αβ = (s² − 2p)/p = (36 − 8)/4 = 28/4 = 7."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Symmetric functions of the roots, §14 →",
+        "href": "/foundation/quantitative-aptitude/equations/#14-symmetric-functions-of-the-roots"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "α/β + β/α = (s² − 2p)/p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-037",
+      "topic": "Ch 2 · Equations · Biquadratic reduced to a quadratic",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve x⁴ − 10x² + 9 = 0.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = ±1 and x = ±3",
+          "explanation": "Correct. Put y = x²: y² − 10y + 9 = 0 gives (y − 1)(y − 9) = 0, so y = 1 or 9. Then x² = 1 gives x = ±1 and x² = 9 gives x = ±3 — four roots, as a degree-4 equation requires."
+        },
+        {
+          "key": "B",
+          "text": "x = 1 and x = 9",
+          "explanation": "These are the values of the SUBSTITUTED letter y, not of x. Each y must still be square-rooted to return to x."
+        },
+        {
+          "key": "C",
+          "text": "x = 1 and x = 3",
+          "explanation": "The negative square roots have been dropped. x² = 9 gives x = 3 and x = −3, and both satisfy the original equation."
+        },
+        {
+          "key": "D",
+          "text": "x = ±3 only",
+          "explanation": "Only the second value of y has been carried back. y = 1 is equally a solution of the quadratic in y and contributes x = ±1."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Equations reducible to quadratic form, §15 →",
+        "href": "/foundation/quantitative-aptitude/equations/#15-equations-reducible-to-quadratic-form"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "ax⁴ + bx² + c = 0 reduces under y = x²",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-038",
+      "topic": "Ch 2 · Equations · Extraneous root after squaring",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve √(x + 12) = x.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 4 and x = −3",
+          "explanation": "Both candidates come out of the squared equation, but −3 fails the original: √9 = 3, and 3 is not −3. Keeping an untested candidate is exactly what squaring sets up."
+        },
+        {
+          "key": "B",
+          "text": "x = 4",
+          "explanation": "Correct. Squaring gives x + 12 = x², that is x² − x − 12 = 0, so (x − 4)(x + 3) = 0 and the candidates are 4 and −3. Testing in the ORIGINAL equation: √16 = 4 ✓ and √9 = 3 ≠ −3 ✗, so only x = 4 survives."
+        },
+        {
+          "key": "C",
+          "text": "x = −3",
+          "explanation": "This keeps the extraneous root and discards the genuine one — the test has been applied to the squared equation, which both candidates pass, instead of to the original."
+        },
+        {
+          "key": "D",
+          "text": "The equation has no solution",
+          "explanation": "This is the conclusion from rejecting both candidates. x = 4 does satisfy the original equation, so a solution exists."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Equations reducible to quadratic form, §15 →",
+        "href": "/foundation/quantitative-aptitude/equations/#15-equations-reducible-to-quadratic-form"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Squaring can create extraneous roots; test every candidate in the original equation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-039",
+      "topic": "Ch 2 · Equations · Substituting a repeated block",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve (x² − 3x)² − 2(x² − 3x) − 8 = 0. What is the sum of all its real roots?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "explanation": "2 is the sum of the two values of y, namely 4 and −2. The question asks for the sum of the values of x, which comes from solving two further quadratics."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "3 is the sum of the roots of only ONE of the two quadratics, x² − 3x − 4 = 0. The second quadratic contributes two more roots."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "Correct. With y = x² − 3x, y² − 2y − 8 = 0 gives y = 4 or y = −2. Then x² − 3x − 4 = 0 gives x = 4 and −1, and x² − 3x + 2 = 0 gives x = 1 and 2. The four roots sum to 4 − 1 + 1 + 2 = 6."
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "explanation": "This adds the magnitudes, treating the root −1 as +1. A sum must keep every sign as it stands."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Equations reducible to quadratic form, §15 →",
+        "href": "/foundation/quantitative-aptitude/equations/#15-equations-reducible-to-quadratic-form"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Substitute the repeated block, solve, then return to x for each value",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-040",
+      "topic": "Ch 2 · Equations · The reciprocal pattern",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If x + 1/x = 10/3, what are the values of x?",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 3 only",
+          "explanation": "3 is one root, but the equation is quadratic and has two. Note also that if x is a root then so is 1/x, because the expression x + 1/x does not change when x is replaced by 1/x."
+        },
+        {
+          "key": "B",
+          "text": "x = 10/3 and x = 1",
+          "explanation": "This reads the right-hand side itself as a root. Multiplying by x is still needed: the equation becomes 3x² − 10x + 3 = 0."
+        },
+        {
+          "key": "C",
+          "text": "x = 3 and x = −1/3",
+          "explanation": "One sign is wrong. The product of the roots of 3x² − 10x + 3 = 0 is 3/3 = 1, a positive number, so the two roots must share a sign."
+        },
+        {
+          "key": "D",
+          "text": "x = 3 and x = 1/3",
+          "explanation": "Correct. Multiplying by x gives x² + 1 = (10/3)x, that is 3x² − 10x + 3 = 0, so (3x − 1)(x − 3) = 0 and x = 1/3 or 3. The two roots are reciprocals of each other, as this pattern always produces."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Equations reducible to quadratic form, §15 →",
+        "href": "/foundation/quantitative-aptitude/equations/#15-equations-reducible-to-quadratic-form"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "x + 1/x = y reduces to x² − yx + 1 = 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-041",
+      "topic": "Ch 2 · Equations · Solving a cubic",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve x³ − 4x² + x + 6 = 0.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = −1, 2 and 3",
+          "explanation": "Correct. Testing x = −1 gives −1 − 4 − 1 + 6 = 0, so (x + 1) is a factor and x³ − 4x² + x + 6 = (x + 1)(x² − 5x + 6) = (x + 1)(x − 2)(x − 3). Check: the sum −1 + 2 + 3 = 4 = −b/a ✓"
+        },
+        {
+          "key": "B",
+          "text": "x = 1, 2 and 3",
+          "explanation": "The sign of the located root has been read off the factor (x + 1) as +1. Setting x + 1 = 0 gives x = −1, and x = 1 does not satisfy the cubic: 1 − 4 + 1 + 6 = 4."
+        },
+        {
+          "key": "C",
+          "text": "x = −1, −2 and −3",
+          "explanation": "All three signs are flipped. These are the roots of x³ + 4x² + x − 6 = 0, not of the equation given; their sum would be −4, contradicting −b/a = 4."
+        },
+        {
+          "key": "D",
+          "text": "x = 1, −2 and −3",
+          "explanation": "The signs of every root have been taken from the constant term's factors without testing any of them in the equation. Substitution is the only way to confirm a candidate root."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cubic equations, §16 →",
+        "href": "/foundation/quantitative-aptitude/equations/#16-cubic-equations"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Locate one rational root by trial, divide out the factor, solve the quadratic",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-042",
+      "topic": "Ch 2 · Equations · Sum of the roots of a cubic",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the sum of the roots of 2x³ − 5x² − 4x + 3 = 0?",
+      "options": [
+        {
+          "key": "A",
+          "text": "−5/2",
+          "explanation": "This uses b/a instead of −b/a. With b = −5 the sum is −(−5)/2 = +5/2."
+        },
+        {
+          "key": "B",
+          "text": "5/2",
+          "explanation": "Correct. For ax³ + bx² + cx + d = 0 the sum of the roots is −b/a, so here it is −(−5)/2 = 5/2."
+        },
+        {
+          "key": "C",
+          "text": "−3/2",
+          "explanation": "−3/2 is the PRODUCT of the roots, −d/a. The three cubic relations have been read out of order."
+        },
+        {
+          "key": "D",
+          "text": "−2",
+          "explanation": "−2 is c/a, the sum of the products of the roots taken two at a time. It is a genuine quantity, but not the one asked for."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cubic equations, §16 →",
+        "href": "/foundation/quantitative-aptitude/equations/#16-cubic-equations"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "For a cubic, α + β + γ = −b/a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-043",
+      "topic": "Ch 2 · Equations · Product of the roots of a cubic",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the product of the roots of x³ − 6x² + 11x − 6 = 0?",
+      "options": [
+        {
+          "key": "A",
+          "text": "−6",
+          "explanation": "The minus in −d/a has been dropped, or applied twice. With d = −6, −d/a = +6."
+        },
+        {
+          "key": "B",
+          "text": "11",
+          "explanation": "11 is c/a, the sum of the products of the roots taken two at a time. The product of all three roots is −d/a."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "Correct. Product = −d/a = −(−6)/1 = 6. (The roots are 1, 2 and 3, and 1 × 2 × 3 = 6.)"
+        },
+        {
+          "key": "D",
+          "text": "1",
+          "explanation": "1 is the leading coefficient a, not a function of the roots. The relations always divide by a rather than reporting it."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cubic equations, §16 →",
+        "href": "/foundation/quantitative-aptitude/equations/#16-cubic-equations"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "For a cubic, αβγ = −d/a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-044",
+      "topic": "Ch 2 · Equations · Break-even quantity",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vaishnavi Tools has fixed costs of ₹ 4,80,000 a year, a variable cost of ₹ 260 per unit and a selling price of ₹ 420 per unit. How many units must it sell in a year to break even?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,143 units",
+          "explanation": "This divides the fixed cost by the SELLING PRICE, 4,80,000 ÷ 420. The denominator must be the contribution per unit, because each unit's variable cost still has to be paid."
+        },
+        {
+          "key": "B",
+          "text": "1,846 units",
+          "explanation": "This divides the fixed cost by the variable cost, 4,80,000 ÷ 260, which measures nothing meaningful — the variable cost is an outflow, not a recovery."
+        },
+        {
+          "key": "C",
+          "text": "706 units",
+          "explanation": "This divides by the SUM of price and variable cost, 4,80,000 ÷ 680. The two must be subtracted, not added: contribution is what is left after the variable cost."
+        },
+        {
+          "key": "D",
+          "text": "3,000 units",
+          "explanation": "Correct. Contribution per unit = 420 − 260 = ₹ 160, so the break-even quantity is 4,80,000 ÷ 160 = 3,000 units. At that volume revenue is ₹ 12,60,000 and total cost is 4,80,000 + 7,80,000 = ₹ 12,60,000 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Break-even quantity = fixed cost ÷ (price − variable cost)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-045",
+      "topic": "Ch 2 · Equations · Target-profit quantity",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "With fixed costs of ₹ 4,80,000, a variable cost of ₹ 260 per unit and a price of ₹ 420 per unit, how many units must be sold for an annual profit of ₹ 2,40,000?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4,500 units",
+          "explanation": "Correct. Required contribution = fixed cost + target profit = 4,80,000 + 2,40,000 = ₹ 7,20,000, and the contribution per unit is 420 − 260 = ₹ 160, so 7,20,000 ÷ 160 = 4,500 units."
+        },
+        {
+          "key": "B",
+          "text": "1,500 units",
+          "explanation": "This covers only the target profit, 2,40,000 ÷ 160, and forgets that the fixed costs must be recovered before any profit begins."
+        },
+        {
+          "key": "C",
+          "text": "3,000 units",
+          "explanation": "3,000 is the break-even quantity, where profit is zero. The target profit has not been added into the numerator."
+        },
+        {
+          "key": "D",
+          "text": "1,714 units",
+          "explanation": "This divides the required ₹ 7,20,000 by the selling price of 420 instead of by the contribution of 160."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Quantity = (fixed cost + target profit) ÷ contribution per unit",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-046",
+      "topic": "Ch 2 · Equations · Market equilibrium",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For a commodity the quantity demanded is q = 640 − 8p and the quantity supplied is q = 12p − 160, where p is the price in rupees. What is the equilibrium QUANTITY?",
+      "options": [
+        {
+          "key": "A",
+          "text": "40",
+          "explanation": "40 is the equilibrium PRICE in rupees. The question asks for the quantity, which needs one more substitution."
+        },
+        {
+          "key": "B",
+          "text": "320",
+          "explanation": "Correct. Setting 640 − 8p = 12p − 160 gives 800 = 20p, so p = ₹ 40. Substituting into demand: q = 640 − 8(40) = 320, and into supply: q = 12(40) − 160 = 320 ✓"
+        },
+        {
+          "key": "C",
+          "text": "448",
+          "explanation": "This comes from a sign slip on the supply constant, solving 640 − 8p = 12p + 160. That gives p = 24 and q = 448 — a plausible-looking pair from one wrong sign."
+        },
+        {
+          "key": "D",
+          "text": "800",
+          "explanation": "800 is the intermediate value 640 + 160 obtained while solving for p. It is neither a price nor a quantity."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Equilibrium: quantity demanded = quantity supplied",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-047",
+      "topic": "Ch 2 · Equations · Blending two grades",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A trader blends a grade costing ₹ 320 a kg with a grade costing ₹ 440 a kg to obtain 60 kg of a mixture costing him ₹ 400 a kg. How much of the ₹ 320 grade does he use?",
+      "options": [
+        {
+          "key": "A",
+          "text": "40 kg",
+          "explanation": "40 kg is the quantity of the ₹ 440 grade. The alligation ratio has been read the wrong way round: the difference nearer the dearer price belongs to the cheaper grade."
+        },
+        {
+          "key": "B",
+          "text": "30 kg",
+          "explanation": "An equal split would give a blend costing (320 + 440)/2 = ₹ 380 a kg, not ₹ 400. Assuming halves ignores the value equation entirely."
+        },
+        {
+          "key": "C",
+          "text": "20 kg",
+          "explanation": "Correct. With x kg of the cheaper grade, x + y = 60 and 320x + 440y = 400 × 60 = 24,000. Substituting y = 60 − x gives 320x + 26,400 − 440x = 24,000, so −120x = −2,400 and x = 20 kg (with 40 kg of the dearer grade)."
+        },
+        {
+          "key": "D",
+          "text": "25 kg",
+          "explanation": "This divides 60 kg in the ratio of the two PRICES, 320 : 440, which is 5 : 7. Prices are weights in the value equation, not a splitting ratio."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "One quantity equation and one value equation solve a two-grade blend",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-048",
+      "topic": "Ch 2 · Equations · Work and time",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A can complete a job alone in 15 days and B alone in 10 days. Working together, how long do they take?",
+      "options": [
+        {
+          "key": "A",
+          "text": "25 days",
+          "explanation": "This adds the two times. Two workers together must be FASTER than either alone, so any answer above 10 days is impossible on the face of it."
+        },
+        {
+          "key": "B",
+          "text": "12.5 days",
+          "explanation": "This averages the two times. An average also exceeds the faster worker's own time, which cannot be right."
+        },
+        {
+          "key": "C",
+          "text": "5 days",
+          "explanation": "This subtracts, 15 − 10. Subtraction has no meaning here; the rates add, and 5 days would mean they are faster together than the sum of their rates allows."
+        },
+        {
+          "key": "D",
+          "text": "6 days",
+          "explanation": "Correct. A's rate is 1/15 of the job a day and B's is 1/10, so together they do 1/15 + 1/10 = 2/30 + 3/30 = 5/30 = 1/6 of the job a day. The time taken is 6 days."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "1/a + 1/b = 1/t for combined work",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-049",
+      "topic": "Ch 2 · Equations · Digits of a number",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A two-digit number is four times the sum of its digits. Reversing the digits gives a number 27 greater than the original. What is the original number?",
+      "options": [
+        {
+          "key": "A",
+          "text": "36",
+          "explanation": "Correct. With tens digit t and units digit u, the number is 10t + u. From 10t + u = 4(t + u) we get 6t = 3u, so u = 2t; from (10u + t) − (10t + u) = 27 we get u − t = 3. Solving, t = 3 and u = 6, so the number is 36. Check: 36 = 4 × 9 ✓ and 63 − 36 = 27 ✓"
+        },
+        {
+          "key": "B",
+          "text": "63",
+          "explanation": "63 is the REVERSED number. It satisfies the difference condition read backwards, but 63 is not four times 9."
+        },
+        {
+          "key": "C",
+          "text": "24",
+          "explanation": "24 satisfies only the first condition: 24 = 4 × 6. Its reversal 42 exceeds it by 18, not 27, so the second fact has been ignored."
+        },
+        {
+          "key": "D",
+          "text": "48",
+          "explanation": "48 also satisfies only the first condition, 48 = 4 × 12. Its reversal 84 exceeds it by 36. Both facts must hold at the same time."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "A two-digit number is 10t + u; reversed it is 10u + t",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c2-050",
+      "topic": "Ch 2 · Equations · Ages",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A mother is four times as old as her daughter. In twelve years she will be twice as old as her daughter. What is the mother's present age?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6 years",
+          "explanation": "6 is the daughter's present age. The calculation is right but the wrong person's age has been reported."
+        },
+        {
+          "key": "B",
+          "text": "24 years",
+          "explanation": "Correct. Let d be the daughter's age; the mother's is 4d. In twelve years, 4d + 12 = 2(d + 12), so 4d + 12 = 2d + 24, giving 2d = 12, d = 6 and the mother's age 24. Check: in twelve years they are 36 and 18, and 36 = 2 × 18 ✓"
+        },
+        {
+          "key": "C",
+          "text": "48 years",
+          "explanation": "This comes from ageing only the mother: 4d = 2(d + 12) treats the mother's present age as twice the daughter's future age. Twelve years must be added to both ages."
+        },
+        {
+          "key": "D",
+          "text": "36 years",
+          "explanation": "36 is the mother's age TWELVE YEARS FROM NOW. The question asks for the present age, so the twelve years must be taken back off."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Apply the same shift in years to every person's age",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "cs-f3c2-01",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 2 · Equations · Case: cost structures at a ceramics unit",
+      "case": "Suvarna Ceramics makes a single line of glazed floor tiles at Morbi. Under its present set-up the fixed costs are ₹ 7,20,000 a quarter, the variable cost is ₹ 340 a box and the selling price is ₹ 580 a box. The partners are considering an automatic glazing line. It would raise the quarterly fixed costs to ₹ 11,52,000 but cut the variable cost to ₹ 220 a box; the selling price would stay at ₹ 580. Demand is steady at between 2,500 and 5,000 boxes a quarter and the partners want to understand, before committing, how the two cost structures compare across that range. Every figure below is for one quarter.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Applications to business problems, §17 →",
+        "href": "/foundation/quantitative-aptitude/equations/#17-applications-to-business-problems"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c2-01-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Under the PRESENT set-up, how many boxes must be sold in a quarter to break even?",
+          "topic": "Ch 2 · Break-even quantity",
+          "sourceRef": "Break-even quantity = fixed cost ÷ contribution per unit",
+          "options": [
+            {
+              "key": "A",
+              "text": "3,000 boxes",
+              "explanation": "Correct. Contribution per box = 580 − 340 = ₹ 240, so the break-even quantity is 7,20,000 ÷ 240 = 3,000 boxes. Revenue 17,40,000 then equals total cost 7,20,000 + 10,20,000 ✓"
+            },
+            {
+              "key": "B",
+              "text": "2,118 boxes",
+              "explanation": "This divides the fixed cost by the variable cost, 7,20,000 ÷ 340. The variable cost is an outflow, not the amount each box contributes towards fixed cost."
+            },
+            {
+              "key": "C",
+              "text": "1,241 boxes",
+              "explanation": "This divides by the selling price, 7,20,000 ÷ 580, forgetting that every box also incurs its own ₹ 340 of variable cost."
+            },
+            {
+              "key": "D",
+              "text": "783 boxes",
+              "explanation": "This divides by price PLUS variable cost, 7,20,000 ÷ 920. Contribution is a difference, not a sum."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c2-01-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Still under the present set-up, how many boxes must be sold for a quarterly profit of ₹ 3,60,000?",
+          "topic": "Ch 2 · Target-profit quantity",
+          "sourceRef": "Quantity = (fixed cost + target profit) ÷ contribution per unit",
+          "options": [
+            {
+              "key": "A",
+              "text": "1,500 boxes",
+              "explanation": "This covers the target profit alone, 3,60,000 ÷ 240. The fixed costs must be recovered first, before a single rupee of profit appears."
+            },
+            {
+              "key": "B",
+              "text": "4,500 boxes",
+              "explanation": "Correct. Required contribution = 7,20,000 + 3,60,000 = ₹ 10,80,000, and 10,80,000 ÷ 240 = 4,500 boxes. That is 1,500 boxes beyond break-even, each carrying ₹ 240 ✓"
+            },
+            {
+              "key": "C",
+              "text": "3,000 boxes",
+              "explanation": "3,000 is the break-even quantity, where the profit is zero. The target profit has not been added to the numerator."
+            },
+            {
+              "key": "D",
+              "text": "1,862 boxes",
+              "explanation": "This divides the required ₹ 10,80,000 by the selling price of 580 instead of by the contribution of 240."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c2-01-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the automatic glazing line is installed, what becomes the quarterly break-even quantity?",
+          "topic": "Ch 2 · Break-even under a new cost structure",
+          "sourceRef": "Break-even quantity = fixed cost ÷ contribution per unit",
+          "options": [
+            {
+              "key": "A",
+              "text": "2,000 boxes",
+              "explanation": "This uses the NEW contribution of ₹ 360 with the OLD fixed cost of ₹ 7,20,000. Both figures change together when the machine is installed."
+            },
+            {
+              "key": "B",
+              "text": "5,236 boxes",
+              "explanation": "This divides the new fixed cost by the new variable cost, 11,52,000 ÷ 220, instead of by the contribution."
+            },
+            {
+              "key": "C",
+              "text": "3,200 boxes",
+              "explanation": "Correct. The new contribution is 580 − 220 = ₹ 360, so the break-even quantity is 11,52,000 ÷ 360 = 3,200 boxes. Automation raises the break-even volume here, because the fixed cost rises faster than the contribution improves."
+            },
+            {
+              "key": "D",
+              "text": "4,800 boxes",
+              "explanation": "This uses the new fixed cost with the OLD contribution of ₹ 240 — the mirror image of option A's error."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c2-01-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "At what quarterly output do the two cost structures cost exactly the same?",
+          "topic": "Ch 2 · Indifference point between two cost structures",
+          "sourceRef": "Set the two total-cost expressions equal and solve",
+          "options": [
+            {
+              "key": "A",
+              "text": "3,200 boxes",
+              "explanation": "3,200 is the break-even quantity under the new structure, not the point at which the two structures cost the same. Break-even compares cost with revenue; this question compares cost with cost."
+            },
+            {
+              "key": "B",
+              "text": "3,000 boxes",
+              "explanation": "3,000 is the break-even quantity under the present structure — again a comparison with revenue rather than between the two cost lines."
+            },
+            {
+              "key": "C",
+              "text": "771 boxes",
+              "explanation": "This comes from moving 220x to the left without changing its sign, giving 560x = 4,32,000. The term changes sign as it crosses the equals sign, leaving 120x."
+            },
+            {
+              "key": "D",
+              "text": "3,600 boxes",
+              "explanation": "Correct. Set 7,20,000 + 340x = 11,52,000 + 220x. Then 120x = 4,32,000 and x = 3,600 boxes. Below 3,600 the present set-up is cheaper; above it the automatic line is."
+            }
+          ],
+          "correct": "D"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c2-02",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 2 · Equations · Case: a quadratic profit model",
+      "case": "Ashwini Agro Processing buys, cleans and sells turmeric. Its analyst fits a model to the last three years of monthly data: the monthly profit P, measured in thousands of rupees, is related to the quantity sold x, measured in tonnes, by P = −x² + 24x − 108. The model is used only over the range in which the firm actually trades, from 4 to 20 tonnes a month. The partners want to know the two volumes at which the firm merely covers its costs, and they also want a few standard quantities about the roots of the associated equation x² − 24x + 108 = 0, which their analyst says can be answered without solving it at all.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: The quadratic formula, §10 →",
+        "href": "/foundation/quantitative-aptitude/equations/#10-the-quadratic-formula"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c2-02-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "At which two volumes does the firm break even, that is, make zero profit?",
+          "topic": "Ch 2 · Roots of a quadratic in a business model",
+          "sourceRef": "Setting the quadratic to zero and solving by formula",
+          "options": [
+            {
+              "key": "A",
+              "text": "6 tonnes and 12 tonnes",
+              "explanation": "12 is the midpoint of the two roots, where profit is at its highest, not zero. Substituting x = 12 gives P = −144 + 288 − 108 = 36, a profit of ₹ 36,000."
+            },
+            {
+              "key": "B",
+              "text": "−6 tonnes and −18 tonnes",
+              "explanation": "Both signs are wrong, from solving x² + 24x + 108 = 0. Setting P = 0 gives −x² + 24x − 108 = 0, which becomes x² − 24x + 108 = 0 when multiplied by −1."
+            },
+            {
+              "key": "C",
+              "text": "6 tonnes and 18 tonnes",
+              "explanation": "Correct. P = 0 gives x² − 24x + 108 = 0, where D = 576 − 432 = 144 and √144 = 12, so x = (24 ± 12)/2 = 18 or 6. Between those volumes the firm profits; outside them it loses."
+            },
+            {
+              "key": "D",
+              "text": "12 tonnes and 18 tonnes",
+              "explanation": "18 is a genuine root but 12 is not: it is the volume of maximum profit. One correct root and one plausible neighbour is the commonest shape of a wrong option here."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c2-02-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "For the equation x² − 24x + 108 = 0, what are the sum and the product of the roots?",
+          "topic": "Ch 2 · Sum and product of roots",
+          "sourceRef": "α + β = −b/a and αβ = c/a",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sum −24, product 108",
+              "explanation": "The sum is −b/a, and with b = −24 that is +24. Using b/a directly drops the leading minus."
+            },
+            {
+              "key": "B",
+              "text": "Sum 24, product −108",
+              "explanation": "The product is c/a = +108. A minus has been attached to c that is not there; a negative product would mean the roots have opposite signs, which contradicts 6 and 18."
+            },
+            {
+              "key": "C",
+              "text": "Sum 108, product 24",
+              "explanation": "The two relations have been swapped. The sum comes from the middle coefficient and the product from the constant, not the other way round."
+            },
+            {
+              "key": "D",
+              "text": "Sum 24, product 108",
+              "explanation": "Correct. Sum = −(−24)/1 = 24 and product = 108/1 = 108. The roots 6 and 18 confirm both: 6 + 18 = 24 and 6 × 18 = 108."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c2-02-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Without solving the equation, what is α² + β² for x² − 24x + 108 = 0?",
+          "topic": "Ch 2 · Symmetric functions",
+          "sourceRef": "α² + β² = s² − 2p",
+          "options": [
+            {
+              "key": "A",
+              "text": "576",
+              "explanation": "This is s² alone. Squaring the sum introduces a cross term 2αβ which has to be removed."
+            },
+            {
+              "key": "B",
+              "text": "360",
+              "explanation": "Correct. α² + β² = s² − 2p = 24² − 2(108) = 576 − 216 = 360. (Checking with the roots: 36 + 324 = 360.)"
+            },
+            {
+              "key": "C",
+              "text": "792",
+              "explanation": "The correction 2p has been added rather than subtracted: 576 + 216. The identity subtracts it."
+            },
+            {
+              "key": "D",
+              "text": "468",
+              "explanation": "Only one p has been subtracted, 576 − 108, instead of 2p. The cross term in (α + β)² is 2αβ."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c2-03",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 2 · Equations · Case: three canteen bills, three unknown prices",
+      "case": "A college canteen sells only three items — an idli plate, a dosa and a filter coffee — at prices that did not change during the week. The accounts clerk has lost the rate card but still has three consolidated bills. Monday's bill covers 4 idli plates, 2 dosas and 3 coffees for ₹ 310. Tuesday's covers 2 idli plates, 5 dosas and 1 coffee for ₹ 380. Wednesday's covers 3 idli plates, 1 dosa and 4 coffees for ₹ 255. The clerk needs the three unit prices in order to reprint the rate card, and the principal has also asked what could have been recovered if only two of the three bills had survived.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Three unknowns, §7 →",
+        "href": "/foundation/quantitative-aptitude/equations/#7-three-unknowns"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c2-03-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the price of one dosa?",
+          "topic": "Ch 2 · Three unknowns from three bills",
+          "sourceRef": "Eliminate the same variable from two pairs, then solve the pair",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 60",
+              "explanation": "Correct. Writing the bills as 4x + 2y + 3z = 310, 2x + 5y + z = 380 and 3x + y + 4z = 255 and eliminating z gives x = ₹ 25, y = ₹ 60 and z = ₹ 30. All three bills check exactly: 100 + 120 + 90 = 310, 50 + 300 + 30 = 380 and 75 + 60 + 120 = 255."
+            },
+            {
+              "key": "B",
+              "text": "₹ 25",
+              "explanation": "₹ 25 is the price of an idli plate. The arithmetic is right but the value has been read against the wrong letter."
+            },
+            {
+              "key": "C",
+              "text": "₹ 30",
+              "explanation": "₹ 30 is the price of a coffee — again a correct value attached to the wrong item."
+            },
+            {
+              "key": "D",
+              "text": "₹ 115",
+              "explanation": "₹ 115 is the total of all three prices, 25 + 60 + 30. It answers \"what does one of each cost\", not \"what does a dosa cost\"."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c2-03-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "A visitor orders 3 idli plates, 2 dosas and 1 coffee. What is the bill?",
+          "topic": "Ch 2 · Applying the solved prices",
+          "sourceRef": "Substituting the solved values back into a new expression",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 235",
+              "explanation": "This interchanges the idli and coffee prices, charging ₹ 30 for each idli plate and ₹ 25 for the coffee. The two smallest values are the easiest pair to confuse."
+            },
+            {
+              "key": "B",
+              "text": "₹ 260",
+              "explanation": "This interchanges the idli and dosa prices, charging ₹ 60 for each idli plate and ₹ 25 for each dosa."
+            },
+            {
+              "key": "C",
+              "text": "₹ 225",
+              "explanation": "Correct. 3(25) + 2(60) + 1(30) = 75 + 120 + 30 = ₹ 225."
+            },
+            {
+              "key": "D",
+              "text": "₹ 115",
+              "explanation": "This charges one of each item, ignoring the quantities 3, 2 and 1 stated in the order."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c2-03-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "If only Monday's and Tuesday's bills had survived, what could the clerk have concluded about the three prices?",
+          "topic": "Ch 2 · Why three unknowns need three equations",
+          "sourceRef": "n unknowns require n independent equations",
+          "options": [
+            {
+              "key": "A",
+              "text": "The three prices could still be found uniquely, because two equations always determine three unknowns",
+              "explanation": "Two equations can never pin down three unknowns. Each independent equation removes one degree of freedom, so two equations leave one unknown free to vary."
+            },
+            {
+              "key": "B",
+              "text": "All three prices would have to be zero",
+              "explanation": "Nothing in the bills forces a zero price; both right-hand sides are large and positive. This confuses \"not uniquely determined\" with \"determined to be nothing\"."
+            },
+            {
+              "key": "C",
+              "text": "The two bills would contradict each other, so no set of prices could fit",
+              "explanation": "Contradiction would need the two equations to be proportional on the left but not on the right. Here 4, 2, 3 and 2, 5, 1 are not proportional at all, so both bills can be satisfied together."
+            },
+            {
+              "key": "D",
+              "text": "Infinitely many price combinations would fit, because two equations cannot determine three unknowns",
+              "explanation": "Correct. Two independent equations in three unknowns leave one unknown free; fixing any value for it produces a matching pair of values for the other two. Only the third bill narrows the possibilities to the single set ₹ 25, ₹ 60 and ₹ 30."
+            }
+          ],
+          "correct": "D"
+        }
+      ]
+    }
+  ]
+}

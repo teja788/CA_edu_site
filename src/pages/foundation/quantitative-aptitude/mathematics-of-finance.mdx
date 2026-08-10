@@ -1,0 +1,1226 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Mathematics of Finance (Time Value of Money)'
+description: 'CA Foundation Quantitative Aptitude Ch 4 — simple and compound interest, effective and continuous rates, present and future value, ordinary annuities and annuities due, perpetuity, sinking funds, loan amortisation, NPV, profitability index, CAGR and simple bond valuation, with fully worked examples and every factor built from scratch.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 4 · Mathematics of Finance'
+chapterSlug: mathematics-of-finance
+masteryId: f3-ch4
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 4 (Time Value of Money) — scope, formula set and worked patterns'
+  - 'Standard interest, annuity, perpetuity and discounted-cash-flow formulas as taught at Foundation level'
+sourceLabel: 'ICAI SM Paper 3 Ch 4 scope (May 2026 ed.) · standard finance formulas'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 30 min read · 11 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=mathematics-of-finance'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A dealer in Coimbatore is offered the same textile machine on two terms. Pay ₹ 12,00,000 today, or
+pay ₹ 13,50,000 at the end of two years. Nothing else changes: same machine, same warranty, same
+delivery date. The second price is ₹ 1,50,000 higher, so the first looks cheaper. Yet the dealer's
+banker points out that ₹ 12,00,000 left in a deposit earning 8% compounded yearly grows to
+₹ 13,99,680 in two years. On those numbers the *dearer* price is the better deal, and by almost
+₹ 50,000.
+
+That reversal is the whole chapter. Money has a price called interest, so a sum of money means
+nothing until you also say **when** it is paid. Every formula that follows does one of two jobs:
+it pushes a rupee forward in time (compounding) or pulls a rupee backward in time (discounting).
+Learn to see which job a question wants, and most of the arithmetic becomes routine.
+
+Paper 3 is fully objective, so you will not be asked to write out a derivation. You will be asked
+to produce one number quickly and correctly. Expect questions on simple interest, on compound
+interest with a conversion period that is not a year, on effective rates, on the present or future
+value of an annuity, on the equated instalment of a loan, and on net present value. This chapter
+takes each of them in turn, and shows you how to build every factor you need from scratch, so that
+a missing interest table never costs you a mark.
+
+## 1. Why a rupee today is not a rupee next year
+
+A rupee available today is worth more than a rupee promised a year from now. Three plain reasons:
+
+1. **It can earn.** Deposit today's rupee and it becomes more than a rupee by next year. The
+   promised rupee earns nothing in the meantime.
+2. **Prices drift up.** What a rupee buys next year is usually a little less than what it buys
+   today.
+3. **A promise can fail.** The person who owes you next year's rupee may not pay it.
+
+At Foundation level only the first reason is measured. The rate of interest is the price of using
+someone else's money for a period of time, and it is the single number that converts a rupee at one
+date into a rupee at another date. Fix the vocabulary now, because every later formula reuses it.
+
+- **Principal (P)** — the sum lent, borrowed or invested at the start. Also called the present
+  value when you are pulling money backward in time.
+- **Rate of interest (i or r)** — interest for one period, on one unit of principal. Quoted as a
+  percentage, used as a decimal. 9% per annum means i = 0.09.
+- **Time (t or n)** — the number of periods. It must be counted in the *same* unit as the rate.
+- **Interest (I)** — the money charge itself.
+- **Amount or accumulated value (A)** — principal plus interest at the end.
+
+<div class="formula">Amount (A) = Principal (P) + Interest (I)</div>
+
+<Callout kind="pointer">
+  <p>
+    The rate and the time must always speak the same language. A rate "per annum" goes with a time
+    in years; a rate "per quarter" goes with a time in quarters. More marks are lost in this chapter
+    to a mismatched pair than to any arithmetic slip. Whenever a question mentions months, quarters
+    or half-years, write down the periodic rate and the number of periods <em>before</em> touching
+    the formula.
+  </p>
+</Callout>
+
+Two ways exist to charge interest, and the whole difference between them is one question: does
+interest itself earn interest?
+
+- **Simple interest** — interest is calculated on the original principal for every period. Interest
+  earned is taken away and does not join the principal.
+- **Compound interest** — interest earned at the end of a period is added to the principal, and the
+  enlarged principal earns interest in the next period.
+
+Over one period the two give the same figure. From the second period onward compound interest is
+always the larger, and the gap widens as the time lengthens.
+
+## 2. Simple interest
+
+<div class="formula">I = P × i × t   and   A = P (1 + i t)</div>
+
+Here `i` is the rate per period as a decimal and `t` is the number of periods. That is the entire
+theory. Everything examinable about simple interest is a rearrangement of those two lines:
+
+<div class="formula">P = I ÷ (i t)   ·   i = I ÷ (P t)   ·   t = I ÷ (P i)   ·   P = A ÷ (1 + i t)</div>
+
+The amount grows in a straight line. Plot A against t and you get a straight line whose intercept
+is P and whose slope is P i — the same rupee interest is added every year, for ever.
+
+**Worked illustration.** ₹ 80,000 is lent for 3 years 6 months at 9% per annum simple interest.
+
+- i = 0.09, t = 3.5 years
+- I = 80,000 × 0.09 × 3.5 = ₹ 25,200
+- A = 80,000 + 25,200 = ₹ 1,05,200
+
+**Solving for the unknown.** If a sum doubles itself in 12 years at simple interest, the interest
+earned equals the principal, so P = P × i × 12, giving i = 1 ÷ 12 = 0.0833, that is 8.33% per annum.
+Notice that the principal cancels — you never needed to know it.
+
+**Part periods.** A time given in months is treated as an exact fraction of a year: 8 months is
+8/12 of a year, 3 years 4 months is 3 + 4/12 = 10/3 years. A time given in days is converted using
+a **365-day year** in this chapter, so 73 days is 73/365 = 0.2 of a year. Some commercial questions
+use a 360-day year, and a few count the first day or the last day but not both. Any question that
+depends on the convention will say which one it wants; where it says nothing, use 365 days and
+exact twelfths of a year.
+
+<Callout kind="mistake">
+  <p>
+    Leaving the rate as a whole number is the commonest slip of all. 9% per annum is
+    <strong>0.09</strong>, not 9. If your interest figure comes out a hundred times too large, this
+    is why. The alternative is to divide by 100 inside the formula — I = P × R × t ÷ 100 — but pick
+    one habit and keep it.
+  </p>
+</Callout>
+
+**Two rates over one loan.** When the rate changes part-way, simple interest is worked out slice by
+slice on the same original principal and the slices are added. ₹ 60,000 at 7% for the first 2 years
+and 10% for the next 3 years earns 60,000 × 0.07 × 2 = ₹ 8,400 plus 60,000 × 0.10 × 3 = ₹ 18,000,
+a total of ₹ 26,400. The principal never changes, because simple interest never joins it.
+
+## 3. Compound interest
+
+Under compounding, each period's interest is added to the principal before the next period begins.
+Start with P. After one period the balance is P(1 + i). That whole balance earns in period two, so
+it becomes P(1 + i)(1 + i), and so on:
+
+<div class="formula">A = P (1 + i)^n   ·   Compound interest (CI) = A − P = P [(1 + i)^n − 1]</div>
+
+- **A** is the accumulated amount, sometimes written FV (future value).
+- **i** is the rate **per conversion period**, as a decimal.
+- **n** is the **number of conversion periods**, not necessarily the number of years.
+
+The factor (1 + i)^n is the **compounding factor** or future value interest factor. Read it as "one
+rupee today becomes this many rupees after n periods".
+
+**Worked illustration.** ₹ 2,00,000 invested for 3 years at 10% per annum compounded yearly.
+
+- (1.10)^3 = 1.10 × 1.10 × 1.10 = 1.3310
+- A = 2,00,000 × 1.3310 = ₹ 2,66,200
+- Compound interest = 2,66,200 − 2,00,000 = ₹ 66,200
+
+Simple interest on the same facts would have been 2,00,000 × 0.10 × 3 = ₹ 60,000. The ₹ 6,200 gap
+is interest earned on interest, and it is exactly what the examiner tests when a question gives you
+the *difference* between simple and compound interest.
+
+<Callout kind="pointer">
+  <p>
+    Two shortcuts worth memorising. For <strong>two years</strong>, the difference between compound
+    and simple interest is P i², so ₹ 2,00,000 at 10% gives 2,00,000 × 0.01 = ₹ 2,000. For
+    <strong>three years</strong> the difference is P i² (3 + i), which here gives
+    2,00,000 × 0.01 × 3.10 = ₹ 6,200 — matching the figure above. Both follow from expanding
+    (1 + i)^n, and both let you answer a difference question in one line.
+  </p>
+</Callout>
+
+**Changing rates.** When the rate changes over the life of the deposit, the factors multiply. ₹
+1,00,000 for 2 years at 8% and then 3 years at 10%, all compounded yearly, grows to
+1,00,000 × (1.08)² × (1.10)³ = 1,00,000 × 1.1664 × 1.3310 = ₹ 1,55,247.84, say ₹ 1,55,248.
+
+**Depreciation and other decay.** The same formula runs backwards when a quantity shrinks at a
+constant rate. Write the rate as negative:
+
+<div class="formula">Value after n periods = P (1 − d)^n, where d is the rate of decline per period</div>
+
+A machine bought for ₹ 8,00,000 losing 15% of its written-down value each year is worth
+8,00,000 × (0.85)³ = 8,00,000 × 0.614125 = ₹ 4,91,300 after three years. This is the mathematics of
+the reducing-balance pattern; the accounting entries and the choice of method belong to Paper 1 and
+are not tested here. What Paper 3 asks is the arithmetic of growth and decay at a constant rate.
+
+## 4. Conversion periods and compounding more often than yearly
+
+The **conversion period** (or interest period) is the interval at the end of which interest is added
+to the principal. A rate quoted per annum with a shorter conversion period must be converted before
+it can be used:
+
+<div class="formula">i = (annual nominal rate) ÷ (number of conversions per year)   ·   n = (years) × (number of conversions per year)</div>
+
+| Compounded | Conversions per year | Rate per period on 12% p.a. | Periods in 5 years |
+|---|---|---|---|
+| Yearly | 1 | 0.12 | 5 |
+| Half-yearly | 2 | 0.06 | 10 |
+| Quarterly | 4 | 0.03 | 20 |
+| Monthly | 12 | 0.01 | 60 |
+
+Both columns move together. Halve the period and you halve the rate *and* double the count — never
+one without the other.
+
+**Worked illustration.** ₹ 50,000 for 2 years at 12% per annum compounded quarterly.
+
+- i = 0.12 ÷ 4 = 0.03; n = 2 × 4 = 8
+- (1.03)^8 = 1.2668 to four decimal places (1.266770 at full precision)
+- A = 50,000 × 1.266770 = ₹ 63,338.50; compound interest = ₹ 13,338.50
+
+Yearly compounding on the same facts gives 50,000 × (1.12)² = ₹ 62,720. More frequent compounding
+always produces a larger amount, because interest starts earning sooner.
+
+<Callout kind="pointer">
+  <p>
+    <strong>The rounding rule used throughout this chapter.</strong> Every factor is shown to four
+    decimal places so that you can follow the working, but the money is computed from the unrounded
+    factor and rounded only at the <em>last</em> step, to the nearest rupee (or to two decimal places
+    where the question is about paise). Interest is not rounded at the end of each period unless a
+    question expressly says the bank does so. Rounding early, period by period, can move a five-year
+    answer by several rupees, which is enough to land on the wrong option.
+  </p>
+</Callout>
+
+## 5. Solving for the rate and for the time
+
+The compound interest formula has four quantities. Give the examiner any three and the fourth is
+fixed. Two of the four rearrangements need a little more than division.
+
+**Solving for the rate.** Take the n-th root of the growth ratio and subtract one:
+
+<div class="formula">i = (A ÷ P)^(1/n) − 1</div>
+
+An investment of ₹ 1,50,000 becomes ₹ 2,50,000 in 6 years, compounded yearly. The ratio is
+2,50,000 ÷ 1,50,000 = 1.666667. Its sixth root is 1.088867, so i = 0.088867, that is **8.89% per
+annum**. Note the answer is the rate per conversion period; if the compounding were quarterly, the
+same working would give the rate per quarter, and the annual nominal rate would be four times it.
+
+**Solving for the time.** Time sits in the exponent, so logarithms are the tool. Take logs of both
+sides of A = P(1 + i)^n:
+
+<div class="formula">n = [log A − log P] ÷ log (1 + i)</div>
+
+Any base works, provided you use the same base on top and below. Common logarithms (base 10) are
+the ones the tables carry.
+
+**Worked illustration — how long to double at 8% compounded yearly?**
+
+- A ÷ P = 2, so n = log 2 ÷ log 1.08
+- log 2 = 0.3010, log 1.08 = 0.0334
+- n = 0.3010 ÷ 0.0334 = 9.01 years, so the money doubles a shade after **9 years**
+
+Because only the ratio A ÷ P appears, the principal is irrelevant — ₹ 5,000 and ₹ 5,00,00,000
+double in exactly the same time. That is why doubling questions never give you the principal, and
+why a candidate who hunts for it wastes a minute.
+
+<Callout kind="pointer">
+  <p>
+    A rough check you can do in your head: the <strong>rule of 72</strong>. Divide 72 by the rate in
+    percent and you get the approximate doubling time — 72 ÷ 8 = 9 years, against the exact 9.01
+    above. Use it to sanity-test an option, never to choose between two options that are close
+    together.
+  </p>
+</Callout>
+
+The same method answers "how long to reach 1.5 times" or "to reach ₹ 4,00,000". Divide the target
+by the principal first, then take logs. To grow 50% at 6% compounded yearly needs
+log 1.5 ÷ log 1.06 = 0.1761 ÷ 0.0253 = 6.96 years, so seven years of interest are required before
+the target is passed.
+
+## 6. Nominal rate, effective rate and continuous compounding
+
+A bank that advertises "12% per annum compounded quarterly" is quoting a **nominal rate**. Nobody
+actually earns 12% in the year, because the quarterly interest compounds. The **effective annual
+rate** is the single yearly rate that would produce the same amount in one year with yearly
+compounding. It is the only honest basis for comparing two offers.
+
+<div class="formula">E = (1 + r ÷ m)^m − 1, where r is the annual nominal rate and m is the number of conversions per year</div>
+
+| Nominal 12% p.a. compounded | Rate per period | Effective annual rate |
+|---|---|---|
+| Yearly | 0.12 | 12.0000% |
+| Half-yearly | 0.06 | 12.3600% |
+| Quarterly | 0.03 | 12.5509% |
+| Monthly | 0.01 | 12.6825% |
+| Continuously | — | 12.7497% |
+
+Three readings of that table are examinable. The effective rate is **never below** the nominal
+rate, and equals it only when compounding is yearly. It **rises** as compounding gets more frequent.
+And the rise **slows down** — the jump from yearly to half-yearly is 0.36 percentage points, while
+the jump from monthly all the way to continuous is under 0.07. The effective rate does not run away;
+it approaches a ceiling.
+
+That ceiling is **continuous compounding**, the limit as the conversion period shrinks to nothing:
+
+<div class="formula">A = P e^(r t)   ·   Effective annual rate under continuous compounding = e^r − 1</div>
+
+Here e = 2.71828 (to five decimal places), r is the annual nominal rate as a decimal and t is the
+time in years. ₹ 1,00,000 for 5 years at 8% compounded continuously grows to
+1,00,000 × e^(0.08 × 5) = 1,00,000 × e^0.40 = 1,00,000 × 1.491825 = ₹ 1,49,182.47, against
+1,00,000 × (1.08)^5 = ₹ 1,46,932.81 with yearly compounding.
+
+**Going the other way.** Given an effective rate, the nominal rate that produces it with m
+conversions a year is r = m [(1 + E)^(1/m) − 1]. An effective 10.25% with half-yearly compounding
+implies 2 × [(1.1025)^0.5 − 1] = 2 × 0.05 = **10% nominal**.
+
+<Callout kind="mistake">
+  <p>
+    Using the nominal rate where the effective rate was wanted, or the reverse, is one of the two or
+    three errors this chapter is built to catch. Read the last line of the question again: "what
+    rate of interest, compounded yearly, gives the same return" asks for the effective rate;
+    "what rate should the bank advertise" asks for the nominal rate. Comparing a 12% quarterly offer
+    with a 12.4% yearly offer by their nominal figures picks the wrong bank.
+  </p>
+</Callout>
+
+## 7. Present value and future value of a single sum
+
+Compounding pushes a sum forward in time. **Discounting** pulls it backward, and it is nothing more
+than the compound interest formula solved for P:
+
+<div class="formula">FV = PV (1 + i)^n   ·   PV = FV ÷ (1 + i)^n = FV (1 + i)^(−n)</div>
+
+The multiplier (1 + i)^(−n) is the **discount factor** or present value interest factor. It is
+always less than one, it falls as the rate rises, and it falls as the time lengthens. The rate used
+for discounting is often called the **discount rate** or the required rate of return; it is the
+return the investor could earn elsewhere on money of the same risk.
+
+**Worked illustration.** What is ₹ 5,00,000 receivable in 6 years worth today, if money is worth 9%
+per annum compounded yearly?
+
+- Discount factor = (1.09)^(−6) = 0.5963 to four decimal places
+- PV = 5,00,000 × 0.596267 = ₹ 2,98,133.66, say **₹ 2,98,134**
+
+Read that as: ₹ 2,98,134 invested today at 9% would itself grow to ₹ 5,00,000 in six years, so the
+two sums are worth the same to this investor. That equivalence is the whole idea, and it is what
+lets you compare cash flows that arrive on different dates — you move them all to one date first,
+usually today.
+
+<Callout kind="pointer">
+  <p>
+    Compounding and discounting are exact opposites, so every discount factor is the reciprocal of
+    the matching compound factor. If (1.09)^6 = 1.6771, then the six-year 9% discount factor is
+    1 ÷ 1.6771 = 0.5963. One table serves both jobs, and one calculation checks the other.
+  </p>
+</Callout>
+
+A stream of unequal cash flows has no shortcut: discount each one separately and add. Three
+receipts of ₹ 40,000, ₹ 50,000 and ₹ 60,000 at the ends of years 1, 2 and 3, at 10%, are worth
+40,000(0.9091) + 50,000(0.8264) + 60,000(0.7513) = 36,364 + 41,322 + 45,079 = **₹ 1,22,765** today.
+Only when the amounts are *equal* and the intervals are *regular* can you use the annuity formulas
+that follow, and that is exactly why the next four sections exist.
+
+## 8. Annuities and the vocabulary you must fix
+
+An **annuity** is a series of equal payments made at equal intervals of time. A monthly loan
+instalment, a yearly insurance premium, a quarterly deposit into a recurring account — all are
+annuities. Three words settle everything about which formula to use.
+
+- **Ordinary annuity** (annuity immediate, annuity regular) — payments fall at the **end** of each
+  period. The first payment is one period from today.
+- **Annuity due** — payments fall at the **beginning** of each period. The first payment is today.
+- **Perpetuity** — the payments never stop.
+
+The number of payments is n, the payment itself is R (or A, or PMT — this chapter uses **R**), and
+the rate per period is i. As always, the payment interval, the rate and the count of periods must
+all use the same unit of time.
+
+| The question says | Treat it as | First payment falls |
+|---|---|---|
+| "at the end of every year", "yearly instalments" | Ordinary annuity | End of year 1 |
+| "at the beginning of every year", "the first deposit today" | Annuity due | Today |
+| "annual payment", nothing else said | Ordinary annuity (the default) | End of year 1 |
+| "for ever", "in perpetuity", "an endowment" | Perpetuity | End of year 1 |
+
+<Callout kind="pointer">
+  <p>
+    Where a question is silent, the ordinary annuity is the standing assumption in this chapter and
+    in the study material's worked patterns. Rent and lease payments in real life are usually paid
+    in advance, so a question that means an annuity due almost always says so in words — "payable in
+    advance", "at the commencement of each year", "the first instalment is paid immediately".
+  </p>
+</Callout>
+
+## 9. Future value of an ordinary annuity
+
+Deposit R at the end of each of n periods. The first deposit earns interest for n − 1 periods, the
+second for n − 2, and the last one earns nothing at all, because it arrives on the very day you
+close the account. Adding that geometric series gives:
+
+<div class="formula">FV of an ordinary annuity = R × [(1 + i)^n − 1] ÷ i</div>
+
+The bracketed multiplier is the **future value annuity factor**, often written A(n, i). It is always
+greater than n, because every deposit except the last earns something.
+
+**Worked illustration.** ₹ 25,000 deposited at the end of each year for 10 years at 8% per annum.
+
+- (1.08)^10 = 2.1589 to four decimal places
+- Factor = (2.158925 − 1) ÷ 0.08 = 1.158925 ÷ 0.08 = 14.4866
+- FV = 25,000 × 14.486562 = ₹ 3,62,164.06, say **₹ 3,62,164**
+
+The depositor put in 10 × 25,000 = ₹ 2,50,000 of her own money; the remaining ₹ 1,12,164 is
+interest. Notice the factor 14.4866 is bigger than 10, as promised.
+
+**Solving for the deposit.** Turn the formula round when the target is known and the instalment is
+not:
+
+<div class="formula">R = FV × i ÷ [(1 + i)^n − 1]</div>
+
+To accumulate ₹ 3,62,164 in ten years at 8%, the yearly deposit must be
+3,62,164 ÷ 14.486562 = ₹ 25,000 — the same illustration read backwards. This rearrangement is the
+sinking-fund calculation of section 13.
+
+## 10. Present value of an ordinary annuity
+
+Now ask the opposite question: what single sum today is equivalent to R at the end of each of the
+next n periods? Discount every payment and add:
+
+<div class="formula">PV of an ordinary annuity = R × [1 − (1 + i)^(−n)] ÷ i</div>
+
+The multiplier is the **present value annuity factor**, written P(n, i). It is always **less than
+n**, because every payment is worth less than its face value once discounted. That single sentence
+catches most careless answers: if your annuity factor exceeds the number of payments, you have used
+the future value formula by mistake.
+
+**Worked illustration.** ₹ 60,000 receivable at the end of each year for 5 years, discounted at 10%.
+
+- (1.10)^(−5) = 0.6209 to four decimal places
+- Factor = (1 − 0.620921) ÷ 0.10 = 0.379079 ÷ 0.10 = 3.7908
+- PV = 60,000 × 3.790787 = ₹ 2,27,447.21, say **₹ 2,27,447**
+
+The five payments total ₹ 3,00,000 in face value, and are worth ₹ 2,27,447 today. The ₹ 72,553
+difference is the interest the payer gets to keep by paying later rather than now.
+
+<Callout kind="pointer">
+  <p>
+    The two annuity factors are linked by the compound factor: P(n, i) × (1 + i)^n = A(n, i). Here
+    3.790787 × 1.61051 = 6.10510, which is exactly ((1.10)^5 − 1) ÷ 0.10. If a question gives you
+    one factor and wants the other, this line saves the whole calculation.
+  </p>
+</Callout>
+
+**Solving for the payment.** Rearranged, this is the loan instalment formula of section 14:
+
+<div class="formula">R = PV × i ÷ [1 − (1 + i)^(−n)]</div>
+
+**Deferred annuities.** If the first of n equal payments arrives at the end of year 4 rather than
+year 1, work in two steps. Value the annuity at the moment one period before its first payment —
+here, the end of year 3 — using the ordinary annuity formula, then discount that single sum back to
+today by three years. Do not discount the annuity by n + 3 years; the factor already handles the
+first n periods.
+
+## 11. Annuity due and the one extra period
+
+An annuity due pays at the **beginning** of each period, so every one of the n payments sits one
+period earlier than it would in an ordinary annuity. Each payment therefore earns interest for one
+period longer, or is discounted one period less. That is the entire adjustment:
+
+<div class="formula">FV of an annuity due = R × [(1 + i)^n − 1] ÷ i × (1 + i)</div>
+<div class="formula">PV of an annuity due = R × [1 − (1 + i)^(−n)] ÷ i × (1 + i)</div>
+
+Compute the ordinary annuity value first, then multiply by (1 + i). One multiplication, and it is
+the single most frequently missed step in this chapter.
+
+**Worked illustration.** ₹ 60,000 at the **beginning** of each year for 5 years, at 10%.
+
+- Ordinary annuity present value (section 10) = ₹ 2,27,447.21
+- Multiply by 1.10: PV = 2,27,447.21 × 1.10 = ₹ 2,50,191.93, say **₹ 2,50,192**
+
+The whole stream is worth ₹ 22,745 more, simply because each rupee arrives twelve months sooner.
+
+An equivalent way to see the present value of an annuity due: the first payment is received today
+and needs no discounting at all, and what remains is an ordinary annuity of n − 1 payments. So
+PV = R + R × P(n − 1, i). Here that is 60,000 + 60,000 × 3.169865 = 60,000 + 1,90,191.93 =
+₹ 2,50,191.93 — the same figure by a different road. Use whichever version you can hold in your
+head under exam conditions.
+
+<Callout kind="mistake">
+  <p>
+    Two traps sit side by side. The first is forgetting the (1 + i) altogether, which understates a
+    present value and understates a future value. The second is applying it twice — once through the
+    formula and once by shifting the periods by hand. Pick <strong>one</strong> route: either
+    multiply the ordinary annuity result by (1 + i), or rebuild the series payment by payment. Never
+    both.
+  </p>
+</Callout>
+
+## 12. Perpetuity and growing perpetuity
+
+A **perpetuity** is an annuity whose payments never end — a permanent endowment that funds a prize
+each year, an irredeemable bond, a piece of land let on a perpetual lease. Let n run to infinity in
+the present value annuity formula and (1 + i)^(−n) vanishes, leaving:
+
+<div class="formula">PV of a perpetuity = R ÷ i</div>
+
+At 8%, a prize of ₹ 40,000 a year for ever needs an endowment of 40,000 ÷ 0.08 = **₹ 5,00,000**.
+The fund is never touched; only its interest is spent. That is why the answer is finite even though
+the payments are infinite — payments in the distant future are worth almost nothing today.
+
+A **growing perpetuity** raises the payment by a constant proportion g every period. The first
+payment R, made one period from now, is followed by R(1 + g), then R(1 + g)², and so on:
+
+<div class="formula">PV of a growing perpetuity = R ÷ (i − g), valid only while g is less than i</div>
+
+If the prize must rise by 3% a year to keep pace with prices, and money is still worth 8%, the
+endowment needed is 40,000 ÷ (0.08 − 0.03) = 40,000 ÷ 0.05 = **₹ 8,00,000**. The growth condition
+matters: if g were equal to or greater than i, the payments would grow at least as fast as the
+discounting shrinks them and no finite sum could fund them.
+
+<Callout kind="pointer">
+  <p>
+    In R ÷ (i − g), the numerator R is the payment <strong>one period from now</strong>, not the
+    payment just made. If a question gives last year's prize of ₹ 40,000 and says it will grow at
+    3%, the numerator is 40,000 × 1.03 = ₹ 41,200 and the endowment is ₹ 8,24,000. Read which
+    payment you have been handed.
+  </p>
+</Callout>
+
+## 13. Sinking funds
+
+A **sinking fund** is money set aside at regular intervals so that a known sum is available on a
+known future date — to redeem a debenture issue, to replace a machine at the end of its life, to
+meet a lease renewal premium. The deposits earn interest until the date arrives, so the total
+deposited is always less than the sum required.
+
+A sinking fund is an ordinary annuity read backwards: the target is the future value, and the
+unknown is the deposit.
+
+<div class="formula">Periodic deposit R = S × i ÷ [(1 + i)^n − 1], where S is the sum required</div>
+
+**Worked illustration.** A machine costing ₹ 15,00,000 must be replaced in 8 years. Deposits are
+made at the end of each year into a fund earning 9% per annum compounded yearly.
+
+- (1.09)^8 = 1.992563; factor = (1.992563 − 1) ÷ 0.09 = 11.0285
+- R = 15,00,000 ÷ 11.028474 = ₹ 1,36,011.57, say **₹ 1,36,012 a year**
+
+Eight deposits total ₹ 10,88,093. The remaining ₹ 4,11,907 is interest earned inside the fund.
+
+Two variations appear regularly. If the deposits are made at the **beginning** of each year, divide
+by the annuity-due factor instead — that is, by 11.028474 × 1.09 = 12.021037 — which lowers the
+deposit to ₹ 1,24,781. And if the fund already holds an opening balance, compound that balance
+forward to the target date first and let the annuity fund only the shortfall.
+
+## 14. Loan amortisation and the equated instalment
+
+A loan repaid by equal instalments is the mirror image of an annuity. The lender hands over a lump
+sum today; the borrower hands back a stream of equal payments. The two must be worth the same on
+the day the loan is made, so the loan amount is the **present value of the instalments**:
+
+<div class="formula">Loan = R × [1 − (1 + i)^(−n)] ÷ i   ·   R = Loan × i ÷ [1 − (1 + i)^(−n)]</div>
+
+For a monthly instalment, i is the monthly rate (annual nominal rate ÷ 12) and n is the number of
+months. A five-year loan of ₹ 5,00,000 at 10% per annum compounded monthly needs
+i = 0.10 ÷ 12 = 0.008333 and n = 60, giving R = ₹ 10,623.52 a month.
+
+Every instalment is split. Interest for the period is charged on the **opening balance**; whatever
+is left of the instalment reduces the principal. Because the balance falls, the interest slice
+shrinks and the principal slice grows, instalment after instalment, while the instalment itself
+never changes.
+
+<div class="formula">Interest for the period = Opening balance × i   ·   Principal repaid = Instalment − Interest   ·   Closing balance = Opening balance − Principal repaid</div>
+
+**Worked illustration — a full schedule.** ₹ 5,00,000 borrowed at 10% per annum, repayable in 4
+equal yearly instalments, the first at the end of year 1.
+
+- P(4, 10%) = (1 − (1.10)^(−4)) ÷ 0.10 = 3.169865
+- R = 5,00,000 ÷ 3.169865 = ₹ 1,57,735.40
+
+| Year | Opening balance | Instalment | Interest at 10% | Principal repaid | Closing balance |
+|---|---|---|---|---|---|
+| 1 | 5,00,000.00 | 1,57,735.40 | 50,000.00 | 1,07,735.40 | 3,92,264.60 |
+| 2 | 3,92,264.60 | 1,57,735.40 | 39,226.46 | 1,18,508.94 | 2,73,755.66 |
+| 3 | 2,73,755.66 | 1,57,735.40 | 27,375.57 | 1,30,359.84 | 1,43,395.82 |
+| 4 | 1,43,395.82 | 1,57,735.40 | 14,339.58 | 1,43,395.82 | 0.00 |
+
+Read the schedule across and three facts stand out. Total paid = 4 × 1,57,735.40 = ₹ 6,30,941.61,
+of which ₹ 5,00,000 is principal and ₹ 1,30,941.61 is interest. The interest column falls every
+year while the principal column rises. And the closing balance reaches exactly zero — it is not
+forced there, it falls out of the arithmetic, which is the check that the instalment was right.
+
+<Callout kind="pointer">
+  <p>
+    You rarely need the whole schedule. The balance outstanding after k instalments is just the
+    present value of the instalments still to come:
+    <strong>Balance after k payments = R × P(n − k, i)</strong>. After two years above,
+    1,57,735.40 × P(2, 10%) = 1,57,735.40 × 1.735537 = ₹ 2,73,755.66, matching the table without
+    building it. This is the fastest way to answer "how much is still owed" questions.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    Charging interest on the <em>original</em> loan every year turns an amortisation question into a
+    simple-interest question and inflates the total interest badly. Interest is always on the
+    <strong>opening balance of that period</strong>. A related slip is rounding the instalment to
+    the nearest rupee and then insisting the last balance is exactly nil — a rounded instalment
+    leaves a few rupees over or short, which the final instalment absorbs. This chapter builds every
+    schedule from the unrounded instalment.
+  </p>
+</Callout>
+
+## 15. Net present value and the accept-reject rule
+
+A business spends money now to earn money later. **Net present value (NPV)** puts both sides of that
+bargain on the same date — today — and subtracts:
+
+<div class="formula">NPV = Sum of the present values of all cash inflows − Present value of the cash outflows</div>
+
+The discount rate is the return the business requires, usually its cost of capital. The decision
+rule is short:
+
+- **NPV positive** — accept. The project returns more than the required rate, and the NPV is the
+  surplus, measured in today's rupees.
+- **NPV negative** — reject. The project earns less than money costs.
+- **NPV zero** — the project earns exactly the required rate; the decision turns on other grounds.
+
+**Worked illustration.** A machine costs ₹ 9,00,000 today and is expected to produce net cash
+inflows of ₹ 3,00,000, ₹ 3,50,000, ₹ 4,00,000 and ₹ 2,50,000 at the ends of years 1 to 4. The
+required return is 12%.
+
+| Year | Cash flow | Factor at 12% | Present value |
+|---|---|---|---|
+| 1 | 3,00,000 | 0.8929 | 2,67,857.14 |
+| 2 | 3,50,000 | 0.7972 | 2,79,017.86 |
+| 3 | 4,00,000 | 0.7118 | 2,84,712.10 |
+| 4 | 2,50,000 | 0.6355 | 1,58,879.52 |
+| | | **Total** | **9,90,466.62** |
+
+NPV = 9,90,466.62 − 9,00,000 = **₹ 90,466.62**, positive, so the machine is worth buying at a 12%
+required return.
+
+<Callout kind="pointer">
+  <p>
+    The outlay is spent today, so its discount factor is 1 and it is never discounted. Only outlays
+    made in later years get a factor. Equally, a cash flow described as "in the third year" is taken
+    at the <strong>end</strong> of year 3 unless the question says otherwise, and any scrap or
+    salvage value is simply another inflow in its own year.
+  </p>
+</Callout>
+
+Where the inflows are equal year after year, the annuity factor replaces the four separate lines. An
+outlay of ₹ 4,00,000 returning ₹ 1,20,000 a year for 5 years at 10% has an NPV of
+1,20,000 × 3.790787 − 4,00,000 = 4,54,894.41 − 4,00,000 = ₹ 54,894.41.
+
+## 16. Profitability index and choosing between projects
+
+NPV tells you how much value a project adds; it says nothing about how much had to be committed to
+get it. The **profitability index (PI)**, also called the benefit-cost ratio or desirability factor,
+supplies that:
+
+<div class="formula">PI = Present value of cash inflows ÷ Present value of the initial outlay</div>
+
+- **PI greater than 1** — accept. This is the same signal as a positive NPV, and the two can never
+  disagree on a single project, because PI exceeds 1 exactly when inflows exceed the outlay.
+- **PI less than 1** — reject.
+
+For the machine in section 15, PI = 9,90,466.62 ÷ 9,00,000 = **1.1005**. Every rupee committed
+brings back about ₹ 1.10 in today's money.
+
+**Choosing between projects.** When two projects are independent and money is plentiful, accept
+every project with a positive NPV. When they are **mutually exclusive** — the same factory floor,
+the same licence — take the one with the **higher NPV**, because NPV measures rupees of added value.
+When capital is **rationed** and small projects can be combined, the PI ranking is the more useful
+guide, because it measures value per rupee of scarce capital.
+
+| | Project X | Project Y |
+|---|---|---|
+| Outlay today | ₹ 5,00,000 | ₹ 2,00,000 |
+| Present value of inflows | ₹ 6,00,000 | ₹ 2,60,000 |
+| NPV | ₹ 1,00,000 | ₹ 60,000 |
+| PI | 1.20 | 1.30 |
+
+X adds more value; Y works the harder rupee. If the firm can fund only one and has ₹ 5,00,000
+available, X is the better choice. If it has ₹ 5,00,000 and can find two more projects like Y, the
+PI ranking wins. Foundation questions state which situation applies; read that sentence before
+ranking anything.
+
+<Callout kind="mistake">
+  <p>
+    Ranking mutually exclusive projects by PI when the outlays differ is a genuine trap, and so is
+    comparing the NPVs of projects with different lives without saying so. At this level, follow the
+    instruction in the question: "which project should be selected" with a single budget means the
+    higher NPV, unless the question mentions capital rationing.
+  </p>
+</Callout>
+
+## 17. Compound annual growth rate
+
+**Compound annual growth rate (CAGR)** is the single yearly rate at which a quantity would have to
+grow, compounding, to move from its beginning value to its ending value over the period. It smooths
+away the year-to-year bumps.
+
+<div class="formula">CAGR = (Ending value ÷ Beginning value)^(1 ÷ n) − 1, where n is the number of YEARS between the two values</div>
+
+**Worked illustration.** Turnover rose from ₹ 25,00,000 in 2020-21 to ₹ 48,60,000 in 2025-26.
+
+- The two figures are 5 years apart, not 6 — count the intervals, not the data points.
+- Ratio = 48,60,000 ÷ 25,00,000 = 1.944
+- CAGR = (1.944)^(1/5) − 1 = 1.142192 − 1 = 0.142192, that is **14.22% per annum**
+
+CAGR is the compound-interest rate formula of section 5 under another name, which is why the same
+rearrangement solves both. It ignores everything that happened in between: a business that fell for
+three years and then doubled shows the same CAGR as one that grew steadily, so it describes the
+endpoints only.
+
+<Callout kind="mistake">
+  <p>
+    The simple average of the yearly growth rates is <em>not</em> the CAGR, and is always the higher
+    of the two whenever the yearly rates differ. A quantity that rises 50% and then falls 20% has an
+    arithmetic average growth of 15% a year, while its true CAGR is
+    (1.50 × 0.80)^(1/2) − 1 = 9.54%. Counting years wrongly is the other standard error — from
+    2020-21 to 2025-26 is <strong>5</strong> years.
+  </p>
+</Callout>
+
+## 18. Valuing a simple bond
+
+A bond is a loan cut into tradeable pieces. The issuer promises a fixed **coupon** each period and
+the **redemption value** (usually the face value) on a fixed maturity date. Its value today is what
+those promises are worth, discounted at the return the market now requires — the **yield**:
+
+<div class="formula">Bond value = Coupon × [1 − (1 + y)^(−n)] ÷ y + Redemption value × (1 + y)^(−n)</div>
+
+The first term is an ordinary annuity of coupons; the second is a single sum. Nothing new is
+involved, only the two formulas you already have, added together.
+
+**Worked illustration.** A bond of face value ₹ 1,000 carries a 9% annual coupon, is redeemable at
+par after 5 years, and investors now require 11%.
+
+- Coupon = 9% of 1,000 = ₹ 90 a year for 5 years
+- P(5, 11%) = (1 − (1.11)^(−5)) ÷ 0.11 = 3.695897; (1.11)^(−5) = 0.593451
+- Value = 90 × 3.695897 + 1,000 × 0.593451 = 332.63 + 593.45 = **₹ 926.08**
+
+The bond sells at a **discount** to face value because its 9% coupon is meaner than the 11% the
+market wants; the shortfall is made up by buying the bond for less than ₹ 1,000. Reverse the rates
+and the logic reverses: at a required return of 7% the same bond is worth
+90 × 4.100197 + 1,000 × 0.712986 = **₹ 1,082.00**, a **premium**.
+
+| Required yield versus coupon rate | Bond sells at |
+|---|---|
+| Yield greater than coupon rate | A discount (below face value) |
+| Yield equal to coupon rate | Par (exactly face value) |
+| Yield below the coupon rate | A premium (above face value) |
+
+<Callout kind="pointer">
+  <p>
+    Two rates live in every bond question and they do different work. The <strong>coupon rate</strong>
+    is applied to the <em>face</em> value to find the rupee coupon, and never changes. The
+    <strong>yield</strong> is used to <em>discount</em>, and it moves with the market. Using the
+    coupon rate to discount always returns the face value and always looks suspiciously round —
+    that is the built-in warning that the rates have been swapped.
+  </p>
+</Callout>
+
+If coupons are paid half-yearly, halve both the coupon and the yield and double the number of
+periods, exactly as in section 4. A ₹ 1,000 bond with a 9% coupon paid half-yearly for 5 years at a
+required 11% has ₹ 45 payable for 10 half-years discounted at 5.5%.
+
+## 19. Building any factor without an interest table
+
+Interest tables are convenient, not essential. Every factor in this chapter can be built from
+multiplication, and this section shows the two moves that make it quick. Both are worth practising,
+because a factor you can build is a factor you cannot misread off the wrong row.
+
+**Move one: repeated squaring.** To raise (1 + i) to a power, square your way up rather than
+multiplying ten times.
+
+- (1.08)² = 1.1664
+- (1.08)⁴ = (1.1664)² = 1.360489
+- (1.08)⁸ = (1.360489)² = 1.850930
+- (1.08)¹⁰ = (1.08)⁸ × (1.08)² = 1.850930 × 1.1664 = **2.158925**
+
+Three squarings and one multiplication replace nine multiplications, and each step can be checked
+by eye.
+
+**Move two: one factor gives you the other three.** From a single compound factor, everything else
+follows by a division or two:
+
+<div class="formula">Discount factor = 1 ÷ compound factor   ·   A(n, i) = (compound factor − 1) ÷ i   ·   P(n, i) = (1 − discount factor) ÷ i</div>
+
+Continuing with 8% and 10 years: the compound factor is 2.158925, so the discount factor is
+1 ÷ 2.158925 = 0.463193, the future value annuity factor is (2.158925 − 1) ÷ 0.08 = 14.486562, and
+the present value annuity factor is (1 − 0.463193) ÷ 0.08 = 6.710081. Four numbers from one.
+
+**How many decimals to carry.** This chapter quotes every factor to **four decimal places** in the
+text, and every worked example carries the unrounded value through the arithmetic and rounds only
+the final money figure. In the exam, four decimals in the factor is enough for the options to be
+distinguishable; three is usually enough; two is not, once the sums run into lakhs.
+
+<Callout kind="mistake">
+  <p>
+    Rounding a factor to two decimals and then multiplying by a large principal is the quiet
+    mark-loser. 14.49 instead of 14.486562, applied to a deposit of ₹ 25,000, shifts a ten-year
+    answer by about ₹ 86 — small in itself, but examiners set distractors precisely where an early
+    rounding lands.
+  </p>
+</Callout>
+
+## 20. Answering under negative marking
+
+Paper 3 is entirely objective. A correct answer earns 1 mark, an incorrect answer costs 0.25 mark,
+and an unanswered question scores zero. That single fact should change how you treat a question you
+cannot finish, and the arithmetic of it is worth doing once, calmly.
+
+If you can eliminate nothing and pick at random from four options, you expect
+(1 ÷ 4)(+1) + (3 ÷ 4)(−0.25) = 0.25 − 0.1875 = **+0.0625** marks. The expected value is slightly
+positive, so a blind guess is not harmful, but it is very nearly worthless. Eliminate one option
+and the same sum gives (1 ÷ 3)(+1) + (2 ÷ 3)(−0.25) = **+0.1667**. Eliminate two and it rises to
+**+0.375**. The value of a guess comes almost entirely from the options you can rule out, and in
+this chapter you can often rule out two without computing anything: an annuity present value factor
+larger than the number of payments, a compound amount smaller than the simple-interest amount, or a
+present value larger than the future sum.
+
+The practical reading is simple. Attempt what you can eliminate down to two, mark it and move on.
+Leave a question untouched only when nothing at all can be ruled out and the time would be better
+spent elsewhere. There is no penalty for a blank, and no need to fill every box.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — simple against compound interest (easy)">
+  <p>
+    Ravindra lends ₹ 1,20,000 for 3 years at 10% per annum. Find the interest under (a) simple
+    interest and (b) compound interest with yearly conversion, and (c) the difference between them.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Simple interest</div>
+    I = P × i × t = 1,20,000 × 0.10 × 3 = <strong>₹ 36,000</strong><br />
+    Amount = 1,20,000 + 36,000 = ₹ 1,56,000
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Compound interest</div>
+    (1.10)³ = 1.3310<br />
+    Amount = 1,20,000 × 1.3310 = ₹ 1,59,720<br />
+    Compound interest = 1,59,720 − 1,20,000 = <strong>₹ 39,720</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) The difference, two ways</div>
+    Directly: 39,720 − 36,000 = <strong>₹ 3,720</strong><br />
+    By the three-year shortcut: P i² (3 + i) = 1,20,000 × 0.01 × 3.10 = ₹ 3,720 — the same figure,
+    and a useful check when the question asks only for the difference.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — comparing two bank offers on their effective rates (moderate)">
+  <p>
+    Bank A offers 9.6% per annum compounded quarterly. Bank B offers 9.8% per annum compounded
+    half-yearly. A depositor with ₹ 5,00,000 wants the better of the two. Which should she choose,
+    and by how much is she better off after one year?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Bank A, effective annual rate</div>
+    Rate per quarter = 0.096 ÷ 4 = 0.024; conversions m = 4<br />
+    E = (1.024)⁴ − 1 = 1.099512 − 1 = 0.099512 = <strong>9.9512%</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Bank B, effective annual rate</div>
+    Rate per half-year = 0.098 ÷ 2 = 0.049; conversions m = 2<br />
+    E = (1.049)² − 1 = 1.100401 − 1 = 0.100401 = <strong>10.0401%</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The decision</div>
+    Bank B is better, although its compounding is less frequent, because its nominal rate is enough
+    higher to outweigh that.<br />
+    Interest after one year: A = 5,00,000 × 0.099512 = ₹ 49,756; B = 5,00,000 × 0.100401 = ₹ 50,201<br />
+    Advantage of Bank B = <strong>₹ 445</strong> in the first year<br />
+    Comparing the nominal rates alone would have reached the same conclusion here only by luck. At
+    9.6% quarterly against 9.7% half-yearly the ranking flips, which is precisely why the effective
+    rate exists.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — solving for time with logarithms (moderate)">
+  <p>
+    In how many years will ₹ 2,00,000 grow to ₹ 6,00,000 at 12% per annum compounded yearly? Take
+    log 3 = 0.4771 and log 1.12 = 0.0492.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Set up the ratio</div>
+    A = P (1 + i)^n → 6,00,000 = 2,00,000 (1.12)^n → (1.12)^n = 3<br />
+    The principal disappears; only the multiple of 3 matters.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Take logarithms</div>
+    n log 1.12 = log 3 → n = 0.4771 ÷ 0.0492 = <strong>9.69 years</strong><br />
+    At full precision, n = 0.477121 ÷ 0.049218 = 9.694 years.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Reading the answer</div>
+    If the fund credits interest only at the end of each year, the balance is
+    2,00,000 × (1.12)⁹ = ₹ 5,54,616 after nine years and 2,00,000 × (1.12)¹⁰ = ₹ 6,21,170 after ten.
+    So the target is first reached at the <strong>tenth</strong> credit. "How long does it take" and
+    "when is the money actually there" can have different answers — read which one is asked.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — present value of an uneven stream (moderate)">
+  <p>
+    A buyer offers ₹ 1,50,000 at the end of year 1, ₹ 2,00,000 at the end of year 2, nothing in year
+    3 and ₹ 3,00,000 at the end of year 4. Money is worth 11% per annum. What single amount payable
+    today is equivalent, and how does it compare with the ₹ 6,50,000 face value of the offer?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Build the discount factors</div>
+    (1.11)^(−1) = 0.9009 · (1.11)^(−2) = 0.8116 · (1.11)^(−4) = 0.6587<br />
+    Each is the reciprocal of the matching compound factor: 1 ÷ 1.11 = 0.9009, 1 ÷ 1.2321 = 0.8116,
+    1 ÷ 1.518070 = 0.6587.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Discount each flow separately</div>
+    Year 1: 1,50,000 × 0.900901 = ₹ 1,35,135.14<br />
+    Year 2: 2,00,000 × 0.811622 = ₹ 1,62,324.49<br />
+    Year 3: nil<br />
+    Year 4: 3,00,000 × 0.658731 = ₹ 1,97,619.28<br />
+    Present value = <strong>₹ 4,95,078.91</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — What the comparison means</div>
+    The face value is ₹ 6,50,000, so the deferral costs the seller ₹ 1,54,921 in today's money. Any
+    cash offer above ₹ 4,95,079 today beats this stream. The annuity formula is no help here: the
+    amounts are unequal and one year is blank, so there is no shortcut to discounting flow by flow.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — a recurring deposit, end of quarter against beginning (moderate)">
+  <p>
+    Sunitha deposits ₹ 8,000 into a recurring deposit at the <strong>end</strong> of every quarter
+    for 4 years. The bank pays 8% per annum compounded quarterly. Find the maturity amount, and find
+    what it would have been had she deposited at the <strong>beginning</strong> of every quarter.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Convert the rate and the time</div>
+    Rate per quarter i = 0.08 ÷ 4 = 0.02<br />
+    Number of quarters n = 4 years × 4 = 16<br />
+    Deposit R = ₹ 8,000 per quarter. Total put in = 16 × 8,000 = ₹ 1,28,000.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Ordinary annuity (end of each quarter)</div>
+    (1.02)¹⁶ = 1.3728 to four decimal places (1.372786 unrounded)<br />
+    Factor A(16, 2%) = (1.372786 − 1) ÷ 0.02 = 18.6393<br />
+    Maturity amount = 8,000 × 18.639285 = <strong>₹ 1,49,114.28</strong><br />
+    Interest earned = 1,49,114.28 − 1,28,000 = ₹ 21,114.28
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Annuity due (beginning of each quarter)</div>
+    Multiply the ordinary annuity result by (1 + i) = 1.02<br />
+    Maturity amount = 1,49,114.28 × 1.02 = <strong>₹ 1,52,096.57</strong><br />
+    Depositing three months earlier each time is worth ₹ 2,982.29 more on the same ₹ 1,28,000 —
+    exactly one quarter's interest on the whole accumulated fund.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — lease instalments in advance against an outright price (moderate-hard)">
+  <p>
+    A printing press can be bought outright for ₹ 16,50,000, or leased for five years at
+    ₹ 4,00,000 payable at the <strong>beginning</strong> of each year, with the press passing to the
+    lessee at the end at no further cost. The firm's cost of capital is 12%. Which is cheaper, and
+    by how much?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Identify the annuity</div>
+    Five equal payments, at the start of each year, so this is an <strong>annuity due</strong> of
+    n = 5, R = ₹ 4,00,000, i = 0.12. The first payment is made today and is not discounted at all.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Ordinary annuity factor first</div>
+    (1.12)^(−5) = 0.567427<br />
+    P(5, 12%) = (1 − 0.567427) ÷ 0.12 = 0.432573 ÷ 0.12 = <strong>3.6048</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Convert to an annuity due and compare</div>
+    Annuity-due factor = 3.604776 × 1.12 = 4.037349<br />
+    Present value of the lease = 4,00,000 × 4.037349 = <strong>₹ 16,14,939.74</strong><br />
+    Outright price = ₹ 16,50,000<br />
+    <strong>Leasing is cheaper by ₹ 35,060.26</strong> in today's money.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — The trap</div>
+    Treating the lease as an ordinary annuity gives 4,00,000 × 3.604776 = ₹ 14,41,910.40 and makes
+    the lease look ₹ 2,08,090 cheaper than it is. One missing multiplication by 1.12 changes the
+    size of the advantage sixfold, though not, here, the decision itself.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — a sinking fund for debenture redemption (moderate)">
+  <p>
+    A company must redeem ₹ 40,00,000 of debentures at par at the end of 6 years. It will build a
+    sinking fund by equal deposits at the end of each year, earning 8.5% per annum compounded
+    yearly. Find the yearly deposit and the interest the fund earns over its life.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The compound factor</div>
+    (1.085)² = 1.177225 · (1.085)⁴ = 1.385859 · (1.085)⁶ = 1.385859 × 1.177225 = <strong>1.6315</strong><br />
+    Three multiplications, no table needed.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The annuity factor and the deposit</div>
+    A(6, 8.5%) = (1.631468 − 1) ÷ 0.085 = 0.631468 ÷ 0.085 = 7.4290<br />
+    Deposit R = 40,00,000 ÷ 7.429030 = <strong>₹ 5,38,428.34 a year</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Where the rest comes from</div>
+    Six deposits total 6 × 5,38,428.34 = ₹ 32,30,570.02<br />
+    Interest earned inside the fund = 40,00,000 − 32,30,570.02 = <strong>₹ 7,69,429.98</strong><br />
+    Had the deposits been made at the beginning of each year, the divisor becomes
+    7.429030 × 1.085 = 8.060497 and the deposit falls to ₹ 4,96,247.31.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — a loan amortisation schedule, line by line (hard)">
+  <p>
+    A firm borrows ₹ 12,00,000 at 9% per annum, repayable in 5 equal yearly instalments, the first
+    falling due one year after the loan is taken. Find the instalment, prepare the amortisation
+    schedule, and state the amount still outstanding immediately after the third instalment.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The instalment</div>
+    (1.09)^(−5) = 0.649931<br />
+    P(5, 9%) = (1 − 0.649931) ÷ 0.09 = 0.350069 ÷ 0.09 = 3.8897<br />
+    R = 12,00,000 ÷ 3.889651 = <strong>₹ 3,08,510.95</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The schedule (interest is always on the opening balance)</div>
+    Year 1: opening 12,00,000.00 · interest 1,08,000.00 · principal 2,00,510.95 · closing 9,99,489.05<br />
+    Year 2: opening 9,99,489.05 · interest 89,954.01 · principal 2,18,556.93 · closing 7,80,932.12<br />
+    Year 3: opening 7,80,932.12 · interest 70,283.89 · principal 2,38,227.06 · closing 5,42,705.06<br />
+    Year 4: opening 5,42,705.06 · interest 48,843.46 · principal 2,59,667.49 · closing 2,83,037.57<br />
+    Year 5: opening 2,83,037.57 · interest 25,473.38 · principal 2,83,037.57 · closing <strong>0.00</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Balance after three instalments, without the schedule</div>
+    Two instalments remain, so the balance is their present value:<br />
+    P(2, 9%) = (1 − (1.09)^(−2)) ÷ 0.09 = 1.759111<br />
+    Balance = 3,08,510.95 × 1.759111 = <strong>₹ 5,42,705.06</strong> — the same figure the schedule
+    produced, reached in one line.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — Totals as a check</div>
+    Total paid = 5 × 3,08,510.95 = ₹ 15,42,554.74; of that ₹ 12,00,000 is principal and
+    <strong>₹ 3,42,554.74</strong> is interest. The principal column of the schedule adds back to
+    exactly ₹ 12,00,000, which is the arithmetic proof that the instalment was correct.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — NPV and profitability index for two projects (hard)">
+  <p>
+    A firm with a cost of capital of 13% is looking at two proposals. <strong>Project P</strong>
+    costs ₹ 10,00,000 today and returns ₹ 4,00,000 at the end of each of 4 years.
+    <strong>Project Q</strong> costs ₹ 11,00,000 today and returns ₹ 3,00,000, ₹ 4,00,000,
+    ₹ 5,00,000 and ₹ 6,00,000 at the ends of years 1 to 4. Compute the NPV and the profitability
+    index of each, and advise (a) if both can be funded and (b) if only one can be.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Discount factors at 13%</div>
+    Year 1: 1 ÷ 1.13 = 0.8850 · Year 2: 0.7831 · Year 3: 0.6931 · Year 4: 0.6133<br />
+    Their total, 2.9745, is P(4, 13%) — the annuity factor is nothing but the sum of the separate
+    factors, which is why Project P needs only one multiplication.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Project P (equal inflows, so use the annuity factor)</div>
+    Present value of inflows = 4,00,000 × 2.974471 = ₹ 11,89,788.53<br />
+    NPV = 11,89,788.53 − 10,00,000 = <strong>₹ 1,89,788.53</strong><br />
+    PI = 11,89,788.53 ÷ 10,00,000 = <strong>1.1898</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Project Q (unequal inflows, so discount one by one)</div>
+    3,00,000 × 0.884956 = ₹ 2,65,486.73<br />
+    4,00,000 × 0.783147 = ₹ 3,13,258.68<br />
+    5,00,000 × 0.693050 = ₹ 3,46,525.09<br />
+    6,00,000 × 0.613319 = ₹ 3,67,991.24<br />
+    Present value of inflows = ₹ 12,93,261.72<br />
+    NPV = 12,93,261.72 − 11,00,000 = <strong>₹ 1,93,261.72</strong>; PI = <strong>1.1757</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — The advice, and why the two measures disagree</div>
+    (a) Both NPVs are positive, so if funds allow, <strong>accept both</strong>.<br />
+    (b) If the two are mutually exclusive, take <strong>Project Q</strong>: it adds ₹ 3,473 more
+    value. Project Q wins on NPV but loses on PI, because it needs ₹ 1,00,000 more capital to earn
+    that extra value. The rankings can disagree whenever the outlays differ, and NPV is the measure
+    that answers "which single project makes us richer".
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — CAGR and a growing endowment (moderate)">
+  <p>
+    A firm's revenue grew from ₹ 18,00,000 in 2021-22 to ₹ 32,00,000 in 2025-26. (a) Find the
+    compound annual growth rate. (b) The founder now wants to endow a scholarship of ₹ 1,20,000
+    payable at the end of next year and rising 4% a year for ever. If the endowment fund earns 9%
+    per annum, what capital sum is required?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Count the years, then take the root</div>
+    From 2021-22 to 2025-26 is <strong>4</strong> years, not 5 — count the gaps between the years,
+    not the years named.<br />
+    Ratio = 32,00,000 ÷ 18,00,000 = 1.777778<br />
+    CAGR = (1.777778)^(1/4) − 1 = 1.154701 − 1 = 0.154701 = <strong>15.47% per annum</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Check the answer forwards</div>
+    18,00,000 × (1.154701)⁴ = 18,00,000 × 1.777778 = ₹ 32,00,000 ✓<br />
+    A wrong year count of 5 would have given 12.19%, an option the examiner will certainly offer.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) A growing perpetuity</div>
+    R = ₹ 1,20,000 (the payment one year from now), i = 0.09, g = 0.04, and g is less than i, so the
+    formula applies.<br />
+    Capital required = 1,20,000 ÷ (0.09 − 0.04) = 1,20,000 ÷ 0.05 = <strong>₹ 24,00,000</strong><br />
+    A level scholarship of ₹ 1,20,000 for ever would have needed only 1,20,000 ÷ 0.09 = ₹ 13,33,333.
+    Protecting the scholarship against a 4% drift in prices nearly doubles the endowment.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 11 — valuing a bond with half-yearly coupons (hard)">
+  <p>
+    A bond of face value ₹ 1,00,000 carries a coupon of 8% per annum payable half-yearly and is
+    redeemable at par at the end of 4 years. Investors in similar bonds now require 10% per annum.
+    What is the bond worth today, and why is it not ₹ 1,00,000?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Convert everything to half-years</div>
+    Coupon per half-year = 1,00,000 × 8% ÷ 2 = <strong>₹ 4,000</strong><br />
+    Yield per half-year = 10% ÷ 2 = <strong>5%</strong> · Periods n = 4 × 2 = <strong>8</strong><br />
+    The coupon uses the coupon rate on the face value; the discounting uses the yield. Two rates,
+    two jobs.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The two factors</div>
+    (1.05)⁸ = 1.477455, so the discount factor is 1 ÷ 1.477455 = <strong>0.6768</strong><br />
+    P(8, 5%) = (1 − 0.676839) ÷ 0.05 = <strong>6.4632</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Add the annuity and the single sum</div>
+    Present value of the coupons = 4,000 × 6.463213 = ₹ 25,852.85<br />
+    Present value of the redemption = 1,00,000 × 0.676839 = ₹ 67,683.94<br />
+    Value of the bond = <strong>₹ 93,536.79</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — Why the discount</div>
+    The bond pays 8% while the market wants 10%. A buyer will only accept the smaller coupon if the
+    price is low enough for the shortfall to be recovered on redemption, so the bond trades ₹ 6,463
+    below par. Had the required return been 8%, the two factors would have produced exactly
+    ₹ 1,00,000, and at 6% the bond would have sold at a premium.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Using the simple interest formula where compounding was required.** P i t and P[(1 + i)^n − 1]
+  agree for one period and never again. If a question mentions "compounded", "converted" or a
+  conversion period, the straight-line formula is wrong from period two onward.
+- **Leaving the rate as a percentage.** 8% is 0.08 in every formula on this page. An answer a
+  hundred times too big, or a factor like 8.0 where 1.08 belonged, is this error.
+- **Not adjusting for the conversion period.** Quarterly compounding needs the rate divided by 4
+  <em>and</em> the years multiplied by 4. Doing one without the other is the single most productive
+  distractor an examiner has in this chapter.
+- **Treating an annuity due as an ordinary annuity.** Payments "in advance", "at the beginning" or
+  "the first today" need one extra multiplication by (1 + i). Applying it twice is just as wrong.
+- **Confusing the two annuity factors.** P(n, i) is always less than n; A(n, i) is always more than
+  n. Check your factor against the number of payments before you multiply.
+- **Discounting one period too many or too few.** A payment at the end of year 3 carries the factor
+  (1 + i)^(−3), not (1 + i)^(−4). For a deferred annuity, the annuity factor already values the
+  stream one period before its first payment; discount only the remaining gap.
+- **Discounting the initial outlay in an NPV.** Money spent today has a factor of 1.
+- **Using the nominal rate where the effective rate was needed**, or comparing two offers on their
+  nominal rates alone. Convert both to effective rates and then compare.
+- **Using the coupon rate to discount a bond.** The coupon rate produces the rupee coupon; the
+  yield does the discounting. Swapping them always returns the face value.
+- **Counting years wrongly in a CAGR.** From 2021-22 to 2025-26 is 4 years. Count the intervals,
+  not the labels.
+- **Averaging growth rates instead of compounding them.** The arithmetic mean of yearly growth
+  rates overstates the true CAGR whenever the rates differ.
+- **Charging interest on the original loan in an amortisation schedule.** Interest each period is
+  on that period's opening balance.
+- **Rounding factors too early.** Carry the factor unrounded through the arithmetic and round the
+  money at the end. Two-decimal factors on lakh-sized sums land squarely on a wrong option.
+- **Forgetting that g must be less than i** in a growing perpetuity, and that the numerator is next
+  period's payment, not the last one paid.
+
+## One-page revision summary
+
+**Symbols.** P = principal or present value · A or FV = amount / future value · I = interest ·
+i = rate per conversion period as a decimal · r = annual nominal rate · E = effective annual rate ·
+n = number of conversion periods · m = conversions per year · R = the periodic annuity payment ·
+g = growth rate per period · y = yield per period · e = 2.71828.
+
+**Interest and growth**
+
+<div class="formula">Simple interest: I = P i t · A = P (1 + i t)</div>
+<div class="formula">Compound interest: A = P (1 + i)^n · CI = P [(1 + i)^n − 1]</div>
+<div class="formula">Conversion periods: i = r ÷ m and n = years × m — always change both together</div>
+<div class="formula">Decay: Value after n periods = P (1 − d)^n</div>
+<div class="formula">Rate from two values: i = (A ÷ P)^(1/n) − 1 · Time: n = (log A − log P) ÷ log (1 + i)</div>
+<div class="formula">Effective rate: E = (1 + r ÷ m)^m − 1 · Nominal from effective: r = m [(1 + E)^(1/m) − 1]</div>
+<div class="formula">Continuous compounding: A = P e^(r t) · E = e^r − 1</div>
+
+**Present and future value**
+
+<div class="formula">FV = PV (1 + i)^n · PV = FV (1 + i)^(−n)</div>
+<div class="formula">Discount factor = 1 ÷ compound factor</div>
+
+**Annuities** (R each period, i per period, n periods)
+
+<div class="formula">FV of an ordinary annuity: A(n, i) = R [(1 + i)^n − 1] ÷ i — the factor always exceeds n</div>
+<div class="formula">PV of an ordinary annuity: P(n, i) = R [1 − (1 + i)^(−n)] ÷ i — the factor is always below n</div>
+<div class="formula">Annuity due: take the ordinary annuity value and multiply by (1 + i)</div>
+<div class="formula">Perpetuity: PV = R ÷ i · Growing perpetuity: PV = R ÷ (i − g), needing g below i</div>
+<div class="formula">Link: P(n, i) × (1 + i)^n = A(n, i)</div>
+
+**Applications**
+
+<div class="formula">Sinking fund deposit: R = S i ÷ [(1 + i)^n − 1]</div>
+<div class="formula">Loan instalment: R = Loan × i ÷ [1 − (1 + i)^(−n)]</div>
+<div class="formula">Interest for the period = opening balance × i · Principal repaid = instalment − interest</div>
+<div class="formula">Balance after k instalments = R × P(n − k, i)</div>
+<div class="formula">NPV = PV of inflows − PV of outflows · Accept if NPV is positive</div>
+<div class="formula">Profitability index = PV of inflows ÷ PV of the outlay · Accept if above 1</div>
+<div class="formula">CAGR = (Ending ÷ Beginning)^(1 ÷ n) − 1, n counted in years between the two figures</div>
+<div class="formula">Bond value = Coupon × P(n, y) + Redemption value × (1 + y)^(−n)</div>
+
+**Conventions used on this page.** Factors are quoted to four decimal places and carried unrounded
+into the arithmetic; money is rounded at the last step only. A year is 365 days for simple interest,
+and months are exact twelfths. An annuity is an ordinary annuity unless the question says the
+payments come at the beginning. Interest is added at the end of each conversion period and is not
+rounded period by period.
+
+**Direction of every relationship.** More frequent compounding raises the amount · a higher rate or
+a longer wait lowers a present value · the annuity-due value always exceeds the ordinary annuity
+value · a bond yields above its coupon rate only when it sells below par · compound interest exceeds
+simple interest from the second period onward.
+

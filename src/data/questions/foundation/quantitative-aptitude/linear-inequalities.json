@@ -1,0 +1,2395 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "linear-inequalities",
+  "chapter": "Ch 3 — Linear Inequalities",
+  "questions": [
+    {
+      "id": "q-f3c3-001",
+      "topic": "Ch 3 · Linear Inequalities · Meaning",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a linear inequality in ONE variable?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3x − 7 > 11",
+          "explanation": "Correct. One variable, appearing to the first power only, with no variable in a denominator or under a root. That is exactly what 'linear in one variable' means."
+        },
+        {
+          "key": "B",
+          "text": "x² − 5x ≤ 6",
+          "explanation": "The variable appears to the second power, so the inequality is quadratic, not linear. Students who check only 'is there an inequality sign' pick this."
+        },
+        {
+          "key": "C",
+          "text": "2x + 3y ≤ 12",
+          "explanation": "Linear, but in TWO variables. Its solution is a half-plane, not an interval, so it belongs to the graphical part of the chapter."
+        },
+        {
+          "key": "D",
+          "text": "5/x < 4",
+          "explanation": "The variable sits in a denominator, so the expression is not of the first degree. It also cannot be solved by multiplying across, because the sign of x is unknown."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: What an inequality is, §1 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#1-what-an-inequality-is"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Linear inequality: every variable to the first power only",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-002",
+      "topic": "Ch 3 · Linear Inequalities · Equation vs inequality",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How do the solution sets of 4x − 12 = 0 and 4x − 12 < 0 differ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both have exactly one solution, x = 3",
+          "explanation": "This treats the inequality as though the sign were '='. The inequality is satisfied by 0, by 2.9 and by −100 as well, so it has infinitely many solutions."
+        },
+        {
+          "key": "B",
+          "text": "The equation has infinitely many solutions and the inequality exactly one",
+          "explanation": "The two are the wrong way round. A linear equation in one variable pins the variable to a single value; an inequality fences it into a range."
+        },
+        {
+          "key": "C",
+          "text": "The equation is satisfied only by x = 3; the inequality by every real number less than 3",
+          "explanation": "Correct. 4x = 12 gives x = 3 for the equation. For the inequality, 4x < 12 gives x < 3, an interval (−∞, 3) containing infinitely many values, with 3 itself excluded because the sign is strict."
+        },
+        {
+          "key": "D",
+          "text": "The inequality has no solution, because 4x − 12 cannot be negative",
+          "explanation": "It can. At x = 0 the expression is −12. Assuming a variable must be non-negative unless told otherwise is a habit carried over from business problems, where non-negativity is stated explicitly."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What an inequality is, §1 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#1-what-an-inequality-is"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Equation gives a point; inequality in one variable gives an interval",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-003",
+      "topic": "Ch 3 · Linear Inequalities · Reading the words",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A godown can hold not more than 500 cartons. If x is the number of cartons stored, the correct constraint is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x < 500",
+          "explanation": "This treats 'not more than' as strict and bars the godown from holding exactly 500 cartons, which the sentence plainly permits."
+        },
+        {
+          "key": "B",
+          "text": "x ≤ 500",
+          "explanation": "Correct. 'Not more than' means the boundary value is allowed but nothing above it. Storing exactly 500 cartons is not more than 500, so the sign must be non-strict."
+        },
+        {
+          "key": "C",
+          "text": "x ≥ 500",
+          "explanation": "This reads a ceiling as a floor. It would require at least 500 cartons to be stored, which is the opposite instruction."
+        },
+        {
+          "key": "D",
+          "text": "x > 500",
+          "explanation": "Both errors at once: the direction is reversed and the boundary is excluded, so the only permitted stock levels are the ones the godown cannot hold."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The four symbols, strict and non-strict, §2 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#2-the-four-symbols-strict-and-non-strict"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "'Not more than' / 'at most' produce a non-strict ceiling",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-004",
+      "topic": "Ch 3 · Linear Inequalities · Double inequality notation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The statement −3 ≤ x < 7 means:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x takes only the values −3 and 7",
+          "explanation": "The two numbers are the bounds of a range, not the members of the set. Every value between them qualifies too."
+        },
+        {
+          "key": "B",
+          "text": "x ≥ −3 or x < 7, either one being enough",
+          "explanation": "A double inequality is always an 'and', never an 'or'. Read as an 'or' it would be satisfied by every real number, which cannot be what the two bounds are for."
+        },
+        {
+          "key": "C",
+          "text": "x > −3 and x ≤ 7",
+          "explanation": "The strictness has been swapped between the two ends. Here −3 is included and 7 is excluded, not the other way round."
+        },
+        {
+          "key": "D",
+          "text": "x ≥ −3 and x < 7 at the same time",
+          "explanation": "Correct. Both halves must hold together. The left end is non-strict, so −3 belongs to the set; the right end is strict, so 7 does not."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The four symbols, strict and non-strict, §2 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#2-the-four-symbols-strict-and-non-strict"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A double inequality is a conjunction of its two halves",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-005",
+      "topic": "Ch 3 · Linear Inequalities · Rules of operation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Applied to a true inequality, which single operation reverses its direction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Adding the same negative number to both sides",
+          "explanation": "Addition never changes the direction, whatever the sign of the number added. Adding −5 to 3 < 8 gives −2 < 3, still true and still pointing the same way."
+        },
+        {
+          "key": "B",
+          "text": "Multiplying both sides by the same negative number",
+          "explanation": "Correct. Multiplying by a negative reflects both values through zero, and reflection reverses their order, so the sign must turn for the statement to stay true."
+        },
+        {
+          "key": "C",
+          "text": "Subtracting the same positive number from both sides",
+          "explanation": "Subtraction, like addition, shifts both sides equally along the number line and leaves the order untouched."
+        },
+        {
+          "key": "D",
+          "text": "Dividing both sides by the same positive number",
+          "explanation": "Scaling both sides down by a positive factor preserves which side is larger. Only a negative divisor forces the reversal."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The rules of operation on inequalities, §3 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#3-the-rules-of-operation-on-inequalities"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Rules 1 to 3: only a negative multiplier or divisor reverses the sign",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-006",
+      "topic": "Ch 3 · Linear Inequalities · Combining inequalities",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Given that a < b and c < d, which statement is ALWAYS true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "a − c < b − d",
+          "explanation": "Subtracting two inequalities of the same direction is not a permitted operation. Take a = 1, b = 2, c = 1, d = 100: then a − c = 0 and b − d = −98, so the claim fails."
+        },
+        {
+          "key": "B",
+          "text": "ac < bd",
+          "explanation": "Multiplying two inequalities is valid only when every quantity involved is known to be positive, and nothing here says so. Take a = −5, b = 1, c = −5, d = 1: then ac = 25 and bd = 1."
+        },
+        {
+          "key": "C",
+          "text": "a/c < b/d",
+          "explanation": "Division of one inequality by another is not among the permitted operations, and c or d could even be zero, which would make the expression meaningless."
+        },
+        {
+          "key": "D",
+          "text": "a + c < b + d",
+          "explanation": "Correct. Two inequalities of the same direction may be added term by term. This is the only combining rule the syllabus allows, and it needs no assumption about signs."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The rules of operation on inequalities, §3 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#3-the-rules-of-operation-on-inequalities"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Rule 4: same-direction inequalities may be added, not subtracted or multiplied",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-007",
+      "topic": "Ch 3 · Linear Inequalities · Multiplying through by −1",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Multiplying every term of −x + 3y ≤ 6 by −1 gives:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x − 3y ≥ −6",
+          "explanation": "Correct. Every term changes sign, including the 6 on the right, and because the multiplier is negative the direction reverses. Test (0, 0): the original gives 0 ≤ 6, true; this version gives 0 ≥ −6, also true. The two describe the same half-plane."
+        },
+        {
+          "key": "B",
+          "text": "x − 3y ≤ −6",
+          "explanation": "The signs of the terms were changed but the direction was not reversed. Test (0, 0): 0 ≤ −6 is false, whereas the original was true there, so this is the OPPOSITE half-plane — the classic cause of shading the wrong side."
+        },
+        {
+          "key": "C",
+          "text": "x − 3y ≥ 6",
+          "explanation": "The direction was reversed and the left-hand terms changed sign, but the right-hand 6 was left as it was. Test (0, 0): 0 ≥ 6 is false, so again this is not the original region."
+        },
+        {
+          "key": "D",
+          "text": "−x + 3y ≥ 6",
+          "explanation": "Only the direction and the right-hand sign were touched; the left side was not multiplied at all. Test (0, 3): the original gives 9 ≤ 6, false, while this gives 9 ≥ 6, true."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The sign reversal, §4 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#4-the-sign-reversal-multiplying-or-dividing-by-a-negative"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Multiplying an inequality through by a negative reverses the sign",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-008",
+      "topic": "Ch 3 · Linear Inequalities · Dividing by a negative",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve −5x > 20.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x > −4",
+          "explanation": "The division by −5 was done but the sign was not reversed. Test x = 0: −5(0) = 0, and 0 > 20 is false, so 0 cannot be in the solution set — yet this option contains it."
+        },
+        {
+          "key": "B",
+          "text": "x > 4",
+          "explanation": "The minus sign was dropped from the coefficient before dividing. Test x = 5: −5(5) = −25, and −25 > 20 is false."
+        },
+        {
+          "key": "C",
+          "text": "x < −4",
+          "explanation": "Correct. Dividing both sides by −5 reverses the direction: x < −4. Test x = −10: −5(−10) = 50, and 50 > 20 is true."
+        },
+        {
+          "key": "D",
+          "text": "x < 4",
+          "explanation": "The direction was reversed correctly but the minus was lost from the quotient. Test x = 0, which this option admits: 0 > 20 is false."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The sign reversal, §4 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#4-the-sign-reversal-multiplying-or-dividing-by-a-negative"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Rule 3 applied to a single negative coefficient",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-009",
+      "topic": "Ch 3 · Linear Inequalities · Avoiding the negative divisor",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 7 − 3x > 1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x > 2",
+          "explanation": "From −3x > −6 the division by −3 was made without reversing the sign. Test x = 5: 7 − 15 = −8, and −8 > 1 is false."
+        },
+        {
+          "key": "B",
+          "text": "x < −2",
+          "explanation": "The sign was reversed but the constant lost its minus on the way: −6 divided by −3 is +2, not −2. Test x = −3, which this option admits: 7 + 9 = 16 > 1 is true, but so is x = 0, which the option excludes."
+        },
+        {
+          "key": "C",
+          "text": "x > −2",
+          "explanation": "Both errors together — no reversal and a sign slip on the constant. Test x = 4: 7 − 12 = −5, and −5 > 1 is false, yet this option admits 4."
+        },
+        {
+          "key": "D",
+          "text": "x < 2",
+          "explanation": "Correct. Move the variable to the side where it is positive: 7 − 1 > 3x, so 6 > 3x and x < 2. No negative division is needed at all. Test x = 0: 7 > 1, true."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The sign reversal, §4 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#4-the-sign-reversal-multiplying-or-dividing-by-a-negative"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Collect the variable on the side that leaves it positive",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-010",
+      "topic": "Ch 3 · Linear Inequalities · Why the sign reverses",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The statement 3 < 8 is true. Multiplying both sides by −1 produces −3 and −8. The correct relation between them is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−3 > −8, because multiplying by a negative reflects both values through zero and reflection reverses their order",
+          "explanation": "Correct. On the number line −8 lies further to the left than −3, so −3 is the larger. This single example is the whole justification for Rule 3."
+        },
+        {
+          "key": "B",
+          "text": "−3 < −8, since the direction of a true statement never changes",
+          "explanation": "This keeps the original direction, which is exactly the error Rule 3 exists to prevent. It also asserts something false about the number line: −8 is smaller than −3, not larger."
+        },
+        {
+          "key": "C",
+          "text": "−3 = −8, because both sides were multiplied by the same number",
+          "explanation": "Multiplying two different numbers by the same non-zero factor keeps them different. Equality would need the original numbers to be equal."
+        },
+        {
+          "key": "D",
+          "text": "The relation cannot be determined without knowing the sign of the original numbers",
+          "explanation": "It can, and it always reverses. The rule holds for every pair of real numbers, whatever their signs, because the multiplier alone decides the reflection."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The sign reversal, §4 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#4-the-sign-reversal-multiplying-or-dividing-by-a-negative"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Reflection through zero reverses order",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-011",
+      "topic": "Ch 3 · Linear Inequalities · Negative divisor in a double inequality",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Dividing −4 ≤ −2x ≤ 10 throughout by −2 gives:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−2 ≤ x ≤ 5",
+          "explanation": "The division was by 2 rather than −2, so the minus was dropped from the divisor and no reversal followed. Test x = 5: −2(5) = −10, which is not between −4 and 10."
+        },
+        {
+          "key": "B",
+          "text": "2 ≤ x ≤ −5",
+          "explanation": "The arithmetic is right — −4 ÷ −2 = 2 and 10 ÷ −2 = −5 — but both symbols were left pointing the same way, so the larger bound sits on the left and no number satisfies the statement."
+        },
+        {
+          "key": "C",
+          "text": "−5 ≤ x ≤ 2",
+          "explanation": "Correct. Dividing by −2 reverses both signs to give 2 ≥ x ≥ −5, which is rewritten from the smaller end as −5 ≤ x ≤ 2. Test x = 0: −2(0) = 0, which lies between −4 and 10."
+        },
+        {
+          "key": "D",
+          "text": "x ≤ −5 or x ≥ 2",
+          "explanation": "The bounds are right but the double inequality has been read as an 'or'. A double inequality is always a conjunction, and this option describes the two regions OUTSIDE the answer."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The sign reversal, §4 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#4-the-sign-reversal-multiplying-or-dividing-by-a-negative"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Both ends flip together and change places",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-012",
+      "topic": "Ch 3 · Linear Inequalities · Method choice",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which first step in solving 9 − 4x ≥ 1 avoids any division or multiplication by a negative number?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Divide both sides by −4 immediately, then subtract",
+          "explanation": "This is a negative division at the very first step, which is exactly what was to be avoided, and it needs the reversal to be remembered."
+        },
+        {
+          "key": "B",
+          "text": "Add 4x to both sides and subtract 1, giving 8 ≥ 4x",
+          "explanation": "Correct. Adding and subtracting never change the direction, and the variable ends up with the positive coefficient 4. Dividing by 4 then gives 2 ≥ x, that is x ≤ 2, with no reversal to remember."
+        },
+        {
+          "key": "C",
+          "text": "Multiply both sides by −1 to get −9 + 4x ≤ −1",
+          "explanation": "This is legitimate and the reversal has been made correctly, but it IS a multiplication by a negative — the very operation the question asks you to avoid."
+        },
+        {
+          "key": "D",
+          "text": "Subtract 9 from both sides and then divide by 4",
+          "explanation": "That gives −4x ≥ −8 and then −x ≥ −2, which still leaves a negative coefficient to be cleared by a negative multiplier. The problem has been postponed, not avoided."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The sign reversal, §4 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#4-the-sign-reversal-multiplying-or-dividing-by-a-negative"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Safe habit: transpose so the variable's coefficient is positive",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-013",
+      "topic": "Ch 3 · Linear Inequalities · Clearing fractions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve (2x − 3)/4 + 9 ≥ 3 + 4x/3.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x ≥ 6.3",
+          "explanation": "The working reached −10x ≥ −63 by collecting the variable on the left, and then divided by −10 without reversing the sign. Test x = 9: the left side is 12.75 and the right side 15, so the inequality fails."
+        },
+        {
+          "key": "B",
+          "text": "x ≤ −0.3",
+          "explanation": "Only the two fractional terms were multiplied by the LCM 12; the whole numbers 9 and 3 were left alone. That produces 6x ≥ 3 + 16x and the bound −0.3."
+        },
+        {
+          "key": "C",
+          "text": "x ≤ 6.3",
+          "explanation": "Correct. Multiply every term by 12: 3(2x − 3) + 108 ≥ 36 + 16x, so 6x + 99 ≥ 36 + 16x, giving 63 ≥ 10x and x ≤ 63/10 = 6.3. Test x = 0: 8.25 ≥ 3, true."
+        },
+        {
+          "key": "D",
+          "text": "x ≥ −0.3",
+          "explanation": "Both errors together: the whole-number terms were not multiplied by 12, and the final division by a negative coefficient was made without reversing the sign."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Solving a linear inequality in one variable, §5 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#5-solving-a-linear-inequality-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Step 1: multiply EVERY term by the LCM of the denominators",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-014",
+      "topic": "Ch 3 · Linear Inequalities · The variable cancels",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 5x + 7 < 5x + 12.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x < 5",
+          "explanation": "The difference of the constants, 12 − 7 = 5, has been read as a bound on x. But the x terms cancel, so no bound on x survives at all."
+        },
+        {
+          "key": "B",
+          "text": "Every real number satisfies it",
+          "explanation": "Correct. Subtracting 5x from both sides leaves 7 < 12, which is true whatever x is. The solution set is R, interval (−∞, ∞). Test x = −100 and x = 100: both work."
+        },
+        {
+          "key": "C",
+          "text": "There is no solution",
+          "explanation": "This is the answer to 5x + 7 > 5x + 12, whose residue 7 > 12 is false. Here the residue is true, so the outcome is the opposite."
+        },
+        {
+          "key": "D",
+          "text": "x > 0",
+          "explanation": "Non-negativity is imported from business problems where it is stated explicitly. Nothing in this stem restricts x, and x = −3 satisfies the inequality."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Solving a linear inequality in one variable, §5 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#5-solving-a-linear-inequality-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A true residue gives all reals; a false residue gives the empty set",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-015",
+      "topic": "Ch 3 · Linear Inequalities · Brackets and transposition",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 3(x − 2) + 4 ≤ 5x + 10.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x ≤ −6",
+          "explanation": "The variable was collected on the left as −2x ≤ 12 and then divided by −2 without reversing the sign. Test x = −10: the left side is −32 and the right side −40, so −32 ≤ −40 is false."
+        },
+        {
+          "key": "B",
+          "text": "x ≥ 6",
+          "explanation": "The minus was dropped from −12 before dividing by 2. Test x = 0, which this option excludes: −2 ≤ 10 is true, so 0 does belong to the solution set."
+        },
+        {
+          "key": "C",
+          "text": "x ≤ 6",
+          "explanation": "Both errors at once: the sign of the constant lost and the direction reversed without cause. Test x = −10, which this option admits: −32 ≤ −40 is false."
+        },
+        {
+          "key": "D",
+          "text": "x ≥ −6",
+          "explanation": "Correct. 3x − 6 + 4 ≤ 5x + 10 gives 3x − 2 ≤ 5x + 10, so −12 ≤ 2x and x ≥ −6, the division being by the positive 2. Test x = −6: −28 ≤ −20, true."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Solving a linear inequality in one variable, §5 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#5-solving-a-linear-inequality-in-one-variable"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Steps 2 to 4 of the solving method",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-016",
+      "topic": "Ch 3 · Linear Inequalities · LCM of denominators",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve x/3 − 2 < (x + 4)/5.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x < 21",
+          "explanation": "Correct. Multiply every term by 15: 5x − 30 < 3(x + 4) = 3x + 12, so 2x < 42 and x < 21. Test x = 0: −2 < 0.8, true; test x = 21: 5 < 5 is false, so 21 is properly excluded."
+        },
+        {
+          "key": "B",
+          "text": "x < 7",
+          "explanation": "The term −2 was not multiplied by 15, giving 5x − 2 < 3x + 12 and the bound 7. Test x = 10, which this option excludes: 1.33 < 2.8 is true, so 10 does belong."
+        },
+        {
+          "key": "C",
+          "text": "x > 21",
+          "explanation": "The arithmetic is right but the direction was reversed at the last step, although the division was by the positive 2. Test x = 30: 8 < 6.8 is false."
+        },
+        {
+          "key": "D",
+          "text": "x < 6",
+          "explanation": "The −2 was dropped altogether and the remaining fractions cross-multiplied: 5x < 3x + 12 gives x < 6. Test x = 10: the original holds, so the bound is far too tight."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Solving a linear inequality in one variable, §5 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#5-solving-a-linear-inequality-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Multiply every term, including whole numbers, by the LCM",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-017",
+      "topic": "Ch 3 · Linear Inequalities · The empty solution set",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 4(x + 1) > 4x + 9.",
+      "options": [
+        {
+          "key": "A",
+          "text": "No solution; the solution set is empty",
+          "explanation": "Correct. Expanding gives 4x + 4 > 4x + 9, and subtracting 4x leaves 4 > 9, which is false for every x. Test any value you like — x = 0 gives 4 > 9, x = 100 gives 404 > 409 — and it always fails."
+        },
+        {
+          "key": "B",
+          "text": "Every real number",
+          "explanation": "This is the answer to 4(x + 1) < 4x + 9, whose residue 4 < 9 is true. Here the residue is false, so the outcome is the opposite."
+        },
+        {
+          "key": "C",
+          "text": "x > 5/4",
+          "explanation": "The 4x terms were subtracted on one side only, leaving 4x > 5. Both sides carry 4x, so it must go from both, after which no x remains."
+        },
+        {
+          "key": "D",
+          "text": "x > 0",
+          "explanation": "Non-negativity has been assumed. Even if x were restricted to positive values, x = 3 gives 16 > 21, which is false, so the set would still be empty."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Solving a linear inequality in one variable, §5 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#5-solving-a-linear-inequality-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A false residue after cancellation means an empty solution set",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-018",
+      "topic": "Ch 3 · Linear Inequalities · Break-even as an inequality",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A trader earns a contribution of ₹ 45 on every unit sold and bears fixed costs of ₹ 27,000 a month. What is the least whole number of units he must sell in a month for the contribution to EXCEED the fixed costs?",
+      "options": [
+        {
+          "key": "A",
+          "text": "600 units",
+          "explanation": "This solves 45x ≥ 27,000, treating 'exceed' as though it were 'at least'. At 600 units the contribution is exactly ₹ 27,000, which does not exceed the fixed costs."
+        },
+        {
+          "key": "B",
+          "text": "599 units",
+          "explanation": "The rounding went the wrong way. 599 units give ₹ 26,955, which is ₹ 45 short of the fixed costs, so the trader is still at a loss."
+        },
+        {
+          "key": "C",
+          "text": "27,045 units",
+          "explanation": "The two figures were added instead of divided. The ₹ 45 is a per-unit contribution and must divide into the fixed cost, not add to it."
+        },
+        {
+          "key": "D",
+          "text": "601 units",
+          "explanation": "Correct. 45x > 27,000 gives x > 600, and the least whole number strictly above 600 is 601. At 601 units the contribution is ₹ 27,045, which exceeds ₹ 27,000 by ₹ 45."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Solving a linear inequality in one variable, §5 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#5-solving-a-linear-inequality-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "'Exceed' gives a strict inequality; a whole-number answer moves off the boundary",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-019",
+      "topic": "Ch 3 · Linear Inequalities · Average as an inequality",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A student scored 62 and 71 in two tests. What is the least whole mark she needs in the third test so that the average of the three is at least 70?",
+      "options": [
+        {
+          "key": "A",
+          "text": "70",
+          "explanation": "This assumes the third mark must simply equal the target average. It ignores that the first two marks average 66.5, which is below target, so the third must make up the shortfall as well."
+        },
+        {
+          "key": "B",
+          "text": "77",
+          "explanation": "Correct. (62 + 71 + x)/3 ≥ 70 gives 133 + x ≥ 210, so x ≥ 77. At 77 the total is 210 and the average is exactly 70, which satisfies 'at least'."
+        },
+        {
+          "key": "C",
+          "text": "76",
+          "explanation": "The bound 77 was reached and then reduced by one, as though the condition were strict. It is not: 'at least 70' includes 70, and 76 gives a total of 209 and an average of 69.67."
+        },
+        {
+          "key": "D",
+          "text": "210",
+          "explanation": "The working stopped at the total required across the three tests. The marks already scored, 133 in all, must still be subtracted."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Solving a linear inequality in one variable, §5 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#5-solving-a-linear-inequality-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "'At least' gives a non-strict floor",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-020",
+      "topic": "Ch 3 · Linear Inequalities · Interval notation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Written in interval notation, the solution −2 < x ≤ 4 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "[−2, 4]",
+          "explanation": "Both endpoints have been treated as included. The left end is strict, so −2 does not belong to the set and cannot take a square bracket."
+        },
+        {
+          "key": "B",
+          "text": "(−2, 4)",
+          "explanation": "Both endpoints have been treated as excluded. The right end is non-strict, so 4 does belong and needs a square bracket."
+        },
+        {
+          "key": "C",
+          "text": "(−2, 4]",
+          "explanation": "Correct. A round bracket excludes the endpoint and a square bracket includes it, so the strict left end takes ( and the non-strict right end takes ]."
+        },
+        {
+          "key": "D",
+          "text": "[−2, 4)",
+          "explanation": "The brackets are the right pair but the wrong way round, which admits −2 and rejects 4 — the exact reverse of what the inequality says."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Three ways to write the answer, §6 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#6-three-ways-to-write-the-answer"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Square bracket includes, round bracket excludes",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-021",
+      "topic": "Ch 3 · Linear Inequalities · Intervals and infinity",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The set {x : x ∈ R, x ≥ −6} written in interval notation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "[−6, ∞]",
+          "explanation": "A square bracket on infinity claims that infinity is a member of the set. Infinity is not a number and can never be included, so that end always takes a round bracket."
+        },
+        {
+          "key": "B",
+          "text": "[−6, ∞)",
+          "explanation": "Correct. The sign is non-strict, so −6 belongs and takes a square bracket; the set runs upward without end, so the right end is a round bracket on infinity."
+        },
+        {
+          "key": "C",
+          "text": "(−6, ∞)",
+          "explanation": "This excludes −6, but the sign ≥ includes it. The error is the same one that draws a boundary line dashed when it should be solid."
+        },
+        {
+          "key": "D",
+          "text": "(−∞, −6]",
+          "explanation": "The inequality has been read from the wrong end. x ≥ −6 describes values ABOVE −6; this interval describes the values below it."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Three ways to write the answer, §6 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#6-three-ways-to-write-the-answer"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Infinity always takes a round bracket",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-022",
+      "topic": "Ch 3 · Linear Inequalities · The universe matters",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If x is a NATURAL number, the solution set of 2x < 9 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "{1, 2, 3, 4}",
+          "explanation": "Correct. 2x < 9 gives x < 4.5, and the natural numbers below 4.5 are 1, 2, 3 and 4. At x = 4, 2x = 8 < 9; at x = 5, 2x = 10, which fails."
+        },
+        {
+          "key": "B",
+          "text": "{0, 1, 2, 3, 4}",
+          "explanation": "Zero is a whole number but not a natural number. The stem says natural, so counting starts at 1. This is the answer to the same question asked over the whole numbers."
+        },
+        {
+          "key": "C",
+          "text": "{1, 2, 3, 4, 5}",
+          "explanation": "The bound 4.5 was rounded up and 5 admitted. Substituting gives 2(5) = 10, which is not less than 9."
+        },
+        {
+          "key": "D",
+          "text": "(−∞, 4.5)",
+          "explanation": "This is the solution over the real numbers. The restriction to natural numbers in the stem has been ignored, and an interval cannot describe a set of counting numbers."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Three ways to write the answer, §6 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#6-three-ways-to-write-the-answer"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "State the universe; it changes the solution set",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-023",
+      "topic": "Ch 3 · Linear Inequalities · The number line",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On the number line, the solution of x ≤ 6 is shown by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An open (hollow) circle at 6, with shading to the left",
+          "explanation": "An open circle marks an EXCLUDED endpoint. The sign here is ≤, so 6 satisfies the inequality and its circle must be filled in."
+        },
+        {
+          "key": "B",
+          "text": "A solid circle at 6, with shading to the right",
+          "explanation": "The endpoint is marked correctly but the shading runs the wrong way. Values above 6 fail the inequality; 7 ≤ 6 is false."
+        },
+        {
+          "key": "C",
+          "text": "A solid circle at 6, with shading to the left",
+          "explanation": "Correct. The solid circle shows that 6 itself belongs to the set, and the shading to the left covers every value below 6, of which there are infinitely many."
+        },
+        {
+          "key": "D",
+          "text": "A solid circle at 6 with no shading at all",
+          "explanation": "A single marked point is the picture of the EQUATION x = 6. An inequality is satisfied by a whole range, and that range has to be shaded."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Three ways to write the answer, §6 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#6-three-ways-to-write-the-answer"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Open circle for a strict bound, solid circle for a non-strict bound",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-024",
+      "topic": "Ch 3 · Linear Inequalities · Counting solutions in a universe",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many WHOLE numbers satisfy 3x − 4 < 11?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "This counts 1, 2, 3 and 4 and leaves out 0. Zero is a whole number, and 3(0) − 4 = −4, which is comfortably less than 11."
+        },
+        {
+          "key": "B",
+          "text": "6",
+          "explanation": "This admits 5 as well. At x = 5, 3(5) − 4 = 11, and 11 is not less than 11, so the strict sign excludes it."
+        },
+        {
+          "key": "C",
+          "text": "Infinitely many",
+          "explanation": "True over the INTEGERS, which run downward without end, but the whole numbers start at 0, so the set is finite."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "Correct. 3x < 15 gives x < 5, and the whole numbers below 5 are 0, 1, 2, 3 and 4 — five values in all."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Three ways to write the answer, §6 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#6-three-ways-to-write-the-answer"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Whole numbers include 0; natural numbers do not",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-025",
+      "topic": "Ch 3 · Linear Inequalities · Solving a double inequality",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve −5 ≤ 3x + 4 < 19.",
+      "options": [
+        {
+          "key": "A",
+          "text": "−3 < x ≤ 5",
+          "explanation": "The bracket types have been swapped between the two ends. The left end came from ≤ and must stay inclusive; the right end came from < and must stay exclusive. At x = 5, 3x + 4 = 19, which is not less than 19."
+        },
+        {
+          "key": "B",
+          "text": "−3 ≤ x ≤ 5",
+          "explanation": "Both ends treated as inclusive. Substituting x = 5 gives 19, and the stem requires strictly less than 19."
+        },
+        {
+          "key": "C",
+          "text": "−5/3 ≤ x < 5",
+          "explanation": "The 4 was subtracted from the middle and the right part but not from the left, so the left bound was divided by 3 without being corrected first."
+        },
+        {
+          "key": "D",
+          "text": "−3 ≤ x < 5",
+          "explanation": "Correct. Subtract 4 from all three parts to get −9 ≤ 3x < 15, then divide all three by the positive 3 to get −3 ≤ x < 5. Test x = −3: 3(−3) + 4 = −5, which satisfies the non-strict left end."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Double inequalities, §7 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#7-double-inequalities"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Operate on all three parts at once",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-026",
+      "topic": "Ch 3 · Linear Inequalities · Double inequality with a negative middle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 7 ≤ 5 − 2x ≤ 13.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 ≤ x ≤ 4",
+          "explanation": "The division was by 2 and the minus sign ignored, so no reversal followed. Test x = 1: 5 − 2 = 3, which is not at least 7."
+        },
+        {
+          "key": "B",
+          "text": "−1 ≤ x ≤ −4",
+          "explanation": "The two bounds are right but the symbols were flipped without swapping the bounds, so the statement asks for a number that is at least −1 and at most −4. No number qualifies."
+        },
+        {
+          "key": "C",
+          "text": "−4 ≤ x ≤ −1",
+          "explanation": "Correct. Subtract 5 to get 2 ≤ −2x ≤ 8, divide by −2 and reverse both signs to get −1 ≥ x ≥ −4, then rewrite from the smaller end. Test x = −4: 5 + 8 = 13, and x = −1: 5 + 2 = 7. Both ends hold with equality."
+        },
+        {
+          "key": "D",
+          "text": "x ≤ −4 or x ≥ −1",
+          "explanation": "The bounds are right but the double inequality has been read as an 'or'. This describes everything OUTSIDE the answer; test x = −10, which gives 25, well above 13."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Double inequalities, §7 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#7-double-inequalities"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Both ends flip and change places when the divisor is negative",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-027",
+      "topic": "Ch 3 · Linear Inequalities · An impossible double inequality",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The solution set of 9 < 2x + 1 < 5 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The empty set",
+          "explanation": "Correct. Subtracting 1 gives 8 < 2x < 4, and dividing by 2 gives 4 < x < 2. No number is both above 4 and below 2, so nothing satisfies the statement."
+        },
+        {
+          "key": "B",
+          "text": "2 < x < 4",
+          "explanation": "The two bounds have been quietly swapped to make the answer look sensible. Test x = 3: 2(3) + 1 = 7, which is neither greater than 9 nor less than 5."
+        },
+        {
+          "key": "C",
+          "text": "x > 4",
+          "explanation": "The left half was kept and the right half discarded. Both halves of a double inequality must hold together, and no value above 4 keeps 2x + 1 below 5."
+        },
+        {
+          "key": "D",
+          "text": "All real numbers",
+          "explanation": "An impossible statement has been read as imposing no restriction. The opposite is true: it imposes two restrictions that cannot both be met."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Double inequalities, §7 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#7-double-inequalities"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A left bound above the right bound means an empty set",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-028",
+      "topic": "Ch 3 · Linear Inequalities · Counting integers in a double inequality",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many integers satisfy −8 ≤ 5 − 3x < 13?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "The endpoints −2 and 4 were subtracted to give 6, and the '+1' that counts both ends was forgotten. Listing them shows seven values, not six."
+        },
+        {
+          "key": "B",
+          "text": "7",
+          "explanation": "Correct. Subtracting 5 gives −13 ≤ −3x < 8; dividing by −3 and reversing gives −8/3 < x ≤ 13/3, that is roughly −2.67 < x ≤ 4.33. The integers are −2, −1, 0, 1, 2, 3, 4 — seven of them."
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "explanation": "This admits −3 as well. At x = −3, 5 − 3(−3) = 14, which is not less than 13, so −3 fails the right-hand half."
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "explanation": "Only the positive integers 1 to 4 were counted. The solution range extends below zero, so −2, −1 and 0 belong to it as well."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Double inequalities, §7 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#7-double-inequalities"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Count inclusive of both surviving endpoints",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-029",
+      "topic": "Ch 3 · Linear Inequalities · Which endpoint survives",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In the solution of −8 ≤ 5 − 3x < 13, which endpoint belongs to the solution set?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both −8/3 and 13/3",
+          "explanation": "The original statement has one strict end and one non-strict end, and no operation can turn a strict end into an inclusive one. Only one endpoint can survive."
+        },
+        {
+          "key": "B",
+          "text": "−8/3 only",
+          "explanation": "The bound −8/3 came from the strict half 5 − 3x < 13, so it is excluded. Substituting x = −8/3 gives 5 + 8 = 13 exactly, which fails a strict 'less than 13'."
+        },
+        {
+          "key": "C",
+          "text": "13/3 only",
+          "explanation": "Correct. The bound 13/3 came from the non-strict half −8 ≤ 5 − 3x, and the reversal carried it to the right-hand end. Substituting x = 13/3 gives 5 − 13 = −8, which satisfies −8 ≤ −8."
+        },
+        {
+          "key": "D",
+          "text": "Neither, because both signs reversed",
+          "explanation": "Reversal changes the direction of a symbol, not its strictness. A ≤ stays a form of ≤ after the flip, so one endpoint must remain included."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Double inequalities, §7 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#7-double-inequalities"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Strictness travels with the bound through the reversal",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-030",
+      "topic": "Ch 3 · Linear Inequalities · Simultaneous inequalities",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 3x − 5 ≤ 7 and 2x + 3 > 5 together.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 ≤ x < 4",
+          "explanation": "The bracket types have been swapped. The bound 1 came from a strict inequality and must be excluded; the bound 4 came from a non-strict one and must be included."
+        },
+        {
+          "key": "B",
+          "text": "1 < x ≤ 4",
+          "explanation": "Correct. The first gives 3x ≤ 12, so x ≤ 4; the second gives 2x > 2, so x > 1. The values common to both are (1, 4]. Test x = 4: 7 ≤ 7 and 11 > 5, both true."
+        },
+        {
+          "key": "C",
+          "text": "All real numbers",
+          "explanation": "This is the UNION of the two solution sets, not their intersection. A system requires every inequality to hold at once, so the overlap is what counts; x = 0 fails the second."
+        },
+        {
+          "key": "D",
+          "text": "x > 4",
+          "explanation": "Only the larger of the two bounds was kept, and its direction was reversed as well. Test x = 6: 3(6) − 5 = 13, which is not at most 7."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Simultaneous linear inequalities in one variable, §8 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#8-simultaneous-linear-inequalities-in-one-variable"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Solve each separately, then intersect",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-031",
+      "topic": "Ch 3 · Linear Inequalities · A shared endpoint",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The values satisfying BOTH x ≤ 4 and x < 4 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x ≤ 4",
+          "explanation": "This is the union of the two sets, not their intersection. The value 4 satisfies the first condition but fails the second, and a system needs both."
+        },
+        {
+          "key": "B",
+          "text": "x = 4 only",
+          "explanation": "This is the difference between the two sets — what the first admits and the second does not — and 4 is precisely the value that fails one of the conditions."
+        },
+        {
+          "key": "C",
+          "text": "There is no solution",
+          "explanation": "The two ranges overlap almost completely. Every value below 4, such as 0 or 3.9, satisfies both."
+        },
+        {
+          "key": "D",
+          "text": "x < 4",
+          "explanation": "Correct. At a shared endpoint the strict condition wins, because a value must satisfy every inequality in the system and 4 fails x < 4."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Simultaneous linear inequalities in one variable, §8 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#8-simultaneous-linear-inequalities-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "The stricter condition governs a shared endpoint",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-032",
+      "topic": "Ch 3 · Linear Inequalities · Non-overlapping ranges",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve x + 2 > 8 and 3x < 6 together.",
+      "options": [
+        {
+          "key": "A",
+          "text": "There is no solution",
+          "explanation": "Correct. The first gives x > 6 and the second x < 2. No number is both above 6 and below 2, so the two ranges do not meet and the solution set is empty."
+        },
+        {
+          "key": "B",
+          "text": "2 < x < 6",
+          "explanation": "The bounds have been rearranged into a sensible-looking interval. Test x = 4: 4 + 2 = 6, which is not greater than 8."
+        },
+        {
+          "key": "C",
+          "text": "x > 6",
+          "explanation": "Only the first inequality was solved and the second ignored. At x = 7, 3(7) = 21, which is not less than 6."
+        },
+        {
+          "key": "D",
+          "text": "x < 2",
+          "explanation": "Only the second inequality was solved. At x = 1, 1 + 2 = 3, which is not greater than 8."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Simultaneous linear inequalities in one variable, §8 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#8-simultaneous-linear-inequalities-in-one-variable"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Ranges that do not meet give the empty set",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-033",
+      "topic": "Ch 3 · Linear Inequalities · Counting integer solutions of a system",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A wholesaler accepts an order of x cartons only if both 5x − 3 ≤ 3x + 11 and 2(3x − 1) > 4x + 6 hold. How many whole-carton order sizes are permitted?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "Correct. The first gives 2x ≤ 14, so x ≤ 7; the second gives 6x − 2 > 4x + 6, so 2x > 8 and x > 4. Whole numbers strictly above 4 and at most 7 are 5, 6 and 7."
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "explanation": "This admits 4 as well. At x = 4 the second inequality gives 22 > 22, which is false because the sign is strict."
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "This drops 7, treating the first inequality as strict too. At x = 7 the first gives 32 ≤ 32, which is true because the sign is non-strict."
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "explanation": "Every whole number from 0 to 7 has been counted, so the lower bound from the second inequality has been ignored entirely."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Simultaneous linear inequalities in one variable, §8 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#8-simultaneous-linear-inequalities-in-one-variable"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Intersect, then list the integers within the overlap",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-034",
+      "topic": "Ch 3 · Linear Inequalities · A redundant condition",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Solve 2x ≤ 8 and x ≤ 9 together.",
+      "options": [
+        {
+          "key": "A",
+          "text": "x ≤ 9",
+          "explanation": "This takes the weaker of the two conditions. A value of 6 satisfies x ≤ 9 but gives 2(6) = 12, which is not at most 8."
+        },
+        {
+          "key": "B",
+          "text": "x ≤ 4",
+          "explanation": "Correct. The first gives x ≤ 4, which already implies x ≤ 9, so the second condition is redundant and adds nothing. The intersection is the tighter range."
+        },
+        {
+          "key": "C",
+          "text": "4 ≤ x ≤ 9",
+          "explanation": "The two bounds have been read as the two ends of an interval, but both are upper bounds. Nothing in the system sets a floor."
+        },
+        {
+          "key": "D",
+          "text": "x ≤ 13",
+          "explanation": "The two right-hand values were added. Combining conditions means intersecting their ranges, never adding their bounds."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Simultaneous linear inequalities in one variable, §8 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#8-simultaneous-linear-inequalities-in-one-variable"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "One range inside another leaves the tighter one",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-035",
+      "topic": "Ch 3 · Linear Inequalities · Translating a budget",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A firm buys lathes at ₹ 15,000 each and drilling machines at ₹ 20,000 each, and cannot spend more than ₹ 2,40,000. With x lathes and y drills, the correct constraint is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "15000x + 20000y ≥ 240000",
+          "explanation": "A spending ceiling has been read as a floor. This would require the firm to spend at least ₹ 2,40,000, when the brief says it may not spend more than that."
+        },
+        {
+          "key": "B",
+          "text": "15000x + 20000y = 240000",
+          "explanation": "An equality forces the whole sanction to be spent. The brief caps the outlay; buying two lathes for ₹ 30,000 is permitted and this constraint would forbid it."
+        },
+        {
+          "key": "C",
+          "text": "15000x + 20000y ≤ 240000",
+          "explanation": "Correct. Price times quantity, summed over both machines, cannot exceed the money available. Dividing throughout by 5,000 tidies it to 3x + 4y ≤ 48 with intercepts (16, 0) and (0, 12)."
+        },
+        {
+          "key": "D",
+          "text": "15000x + 20000y < 240000",
+          "explanation": "The ceiling has been made strict, which would bar the firm from spending exactly ₹ 2,40,000 — for instance 16 lathes and nothing else, which the sanction plainly allows."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Turning a business sentence into an inequality, §9 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#9-turning-a-business-sentence-into-an-inequality"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Budget ceilings are non-strict ≤ constraints",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-036",
+      "topic": "Ch 3 · Linear Inequalities · Translating a ratio condition",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "At least one third of the total output must be product A. With x units of A and y units of B, this condition becomes:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x ≥ y/3",
+          "explanation": "The 'one third' was applied to product B alone instead of to the total. Test x = 4, y = 9: the total is 13 and a third is 4.33, so 4 units of A is short, yet this option admits it."
+        },
+        {
+          "key": "B",
+          "text": "x ≤ 2y",
+          "explanation": "The direction has been reversed. This would put a CEILING on product A, when the sentence sets a floor. Test x = 1, y = 100: the option is satisfied but A is nowhere near a third of the output."
+        },
+        {
+          "key": "C",
+          "text": "3x ≥ y",
+          "explanation": "The multiplication by 3 was done but the total was taken as y alone, forgetting that the total x + y includes x itself. Test x = 3, y = 9: total 12, a third is 4, so 3 units of A is short."
+        },
+        {
+          "key": "D",
+          "text": "2x ≥ y",
+          "explanation": "Correct. x ≥ (x + y)/3 gives 3x ≥ x + y, so 2x ≥ y, that is 2x − y ≥ 0. Test x = 5, y = 10: the total is 15, a third is 5, and the condition holds with equality."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Turning a business sentence into an inequality, §9 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#9-turning-a-business-sentence-into-an-inequality"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Clear the fraction before the ratio condition is usable",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-037",
+      "topic": "Ch 3 · Linear Inequalities · Units in a constraint",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Each unit of a product needs 40 minutes of machine time, and the machine runs 60 hours a week. The weekly constraint on x units is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "40x ≤ 60",
+          "explanation": "Minutes on the left have been set against hours on the right. That would cap output at one unit a week, when the machine can in fact make ninety."
+        },
+        {
+          "key": "B",
+          "text": "40x ≥ 3600",
+          "explanation": "The conversion is right but the availability has been read as a requirement. The machine's 60 hours is a ceiling on time used, not a quota to be met."
+        },
+        {
+          "key": "C",
+          "text": "60x ≤ 40",
+          "explanation": "The two figures have been swapped between the coefficient and the right-hand side. The per-unit time belongs to the coefficient and the availability to the right."
+        },
+        {
+          "key": "D",
+          "text": "40x ≤ 3600",
+          "explanation": "Correct. 60 hours is 3,600 minutes, so 40x ≤ 3,600 and x ≤ 90 units a week. Convert one side before writing the coefficient, never after."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The constraint families that keep coming back, §17 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#17-the-constraint-families-that-keep-coming-back"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Convert units before forming the inequality",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-038",
+      "topic": "Ch 3 · Linear Inequalities · Transport capacity",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A lorry rated at 6 tonnes carries x crates of 0.5 tonne and y crates of 0.8 tonne. Cleared of decimals, the capacity constraint is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5x + 8y ≤ 6",
+          "explanation": "The left side was multiplied by 10 and the right side was left alone. Multiplying an inequality by 10 must be done to every term, including the 6."
+        },
+        {
+          "key": "B",
+          "text": "0.5x + 0.8y ≥ 6",
+          "explanation": "The weights are right but the direction is wrong. A rated capacity is a ceiling on the load, not a minimum the lorry must carry."
+        },
+        {
+          "key": "C",
+          "text": "5x + 8y ≤ 60",
+          "explanation": "Correct. 0.5x + 0.8y ≤ 6 multiplied throughout by 10 gives 5x + 8y ≤ 60. Test 4 small and 5 large crates: 20 + 40 = 60, exactly the rated load."
+        },
+        {
+          "key": "D",
+          "text": "x + y ≤ 6",
+          "explanation": "This counts crates instead of tonnes, treating every crate as one tonne. Six of the heavier crates would weigh 4.8 tonnes and twelve of the lighter ones only 6."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The constraint families that keep coming back, §17 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#17-the-constraint-families-that-keep-coming-back"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Multiply every term when clearing decimals",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-039",
+      "topic": "Ch 3 · Linear Inequalities · A blending minimum",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A blend must supply at least 90 units of protein. Feed X supplies 12 units of protein per kg and feed Y supplies 8 units per kg. With x and y kilograms, the constraint is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "12x + 8y ≤ 90",
+          "explanation": "A nutritional minimum has been read as a maximum. This would forbid a rich blend; 5 kg of X and 5 kg of Y supply 100 units, which the brief permits and this option bars."
+        },
+        {
+          "key": "B",
+          "text": "12x + 8y ≥ 90",
+          "explanation": "Correct. Content per kilogram times kilograms, summed over both feeds, must reach at least the specified level. Constraints of this family are what produce unbounded feasible regions."
+        },
+        {
+          "key": "C",
+          "text": "12x + 8y = 90",
+          "explanation": "An equality forces the blend to hit exactly 90 units. 'At least' permits any amount from 90 upwards, so exceeding the minimum must remain feasible."
+        },
+        {
+          "key": "D",
+          "text": "20(x + y) ≥ 90",
+          "explanation": "The two protein contents have been added and applied to the total weight, which assumes every kilogram supplies 20 units. Each feed's content must multiply only its own quantity."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Turning a business sentence into an inequality, §9 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#9-turning-a-business-sentence-into-an-inequality"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "'At least' produces a non-strict floor constraint",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-040",
+      "topic": "Ch 3 · Linear Inequalities · Solid or dashed boundary",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The boundary line of 3x + 4y < 24 should be drawn:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dashed, because points on the line do not satisfy a strict inequality",
+          "explanation": "Correct. At any point of the line 3x + 4y equals 24, and 24 is not less than 24. A broken line is the standard way of showing that the edge is excluded."
+        },
+        {
+          "key": "B",
+          "text": "Solid, because it is a boundary of the region",
+          "explanation": "Every half-plane has a boundary, but the line is drawn solid only when the sign is ≤ or ≥. A solid line here would claim that (8, 0) satisfies the inequality, which it does not."
+        },
+        {
+          "key": "C",
+          "text": "Dashed for ≤ and solid for <",
+          "explanation": "The convention is exactly the other way round: non-strict signs get the solid line and strict signs the dashed one."
+        },
+        {
+          "key": "D",
+          "text": "It does not matter, since only the shading is marked",
+          "explanation": "It matters at the corners. If the boundary is excluded, the vertices lying on it are not attainable, so a plan sitting exactly on that line is not a feasible plan."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A linear inequality in two variables, §10 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#10-a-linear-inequality-in-two-variables-and-its-boundary-line"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Solid line for ≤ and ≥, dashed for < and >",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-041",
+      "topic": "Ch 3 · Linear Inequalities · Intercepts of a boundary line",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The intercepts of the boundary line of 5x + 3y ≤ 45 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(15, 0) and (0, 9)",
+          "explanation": "The two intercepts have been swapped between the axes. Putting y = 0 divides 45 by the coefficient of x, which is 5, not 3."
+        },
+        {
+          "key": "B",
+          "text": "(9, 0) and (0, 15)",
+          "explanation": "Correct. Setting y = 0 gives 5x = 45, so x = 9; setting x = 0 gives 3y = 45, so y = 15. Both points satisfy 5x + 3y = 45."
+        },
+        {
+          "key": "C",
+          "text": "(5, 0) and (0, 3)",
+          "explanation": "The coefficients have been read off as the intercepts. Substituting (5, 0) gives 25, not 45, so the point is not even on the line."
+        },
+        {
+          "key": "D",
+          "text": "(45, 0) and (0, 45)",
+          "explanation": "The right-hand side was used directly without dividing by the coefficient. Substituting (45, 0) gives 225."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A linear inequality in two variables, §10 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#10-a-linear-inequality-in-two-variables-and-its-boundary-line"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Plot by intercepts: set y = 0, then x = 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-042",
+      "topic": "Ch 3 · Linear Inequalities · Reading the test point result",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For 2x − y > 4, the test point (0, 0) gives 0 > 4, which is false. It follows that you should:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Conclude that the inequality has no solution",
+          "explanation": "A false test result rejects one half-plane, not the whole plane. The point (5, 0) gives 10 > 4, which is true, so solutions plainly exist."
+        },
+        {
+          "key": "B",
+          "text": "Shade the side of the line containing the origin",
+          "explanation": "That is what a TRUE result would tell you to do. A false result means the origin's side is the side that fails."
+        },
+        {
+          "key": "C",
+          "text": "Choose a different test point, because the result was false",
+          "explanation": "A false result is exactly as informative as a true one. A different point is needed only when the chosen point lies ON the boundary line."
+        },
+        {
+          "key": "D",
+          "text": "Shade the half-plane on the far side of the line from the origin",
+          "explanation": "Correct. The origin fails the inequality, so the solutions lie on the other side of the boundary — here below and to the right of the dashed line 2x − y = 4."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Which side to shade, §11 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#11-which-side-to-shade-the-test-point-method"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Shade towards the test point only if the substitution is true",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-043",
+      "topic": "Ch 3 · Linear Inequalities · Choosing a test point",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Why is (0, 0) unsuitable as a test point for y ≤ 2x?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The boundary line y = 2x passes through the origin, so the substitution gives 0 ≤ 0 and identifies neither side",
+          "explanation": "Correct. A test point must lie OFF the boundary. Here the origin sits on it, so the result is true but says nothing about which half-plane qualifies. Use (1, 0) instead: 0 ≤ 2 is true, so shade that side."
+        },
+        {
+          "key": "B",
+          "text": "The origin is never part of a feasible region",
+          "explanation": "The origin very often is. In any system of ≤ ceilings with non-negativity it is a corner point, representing the plan of making nothing at all."
+        },
+        {
+          "key": "C",
+          "text": "The inequality is non-strict, and non-strict inequalities need an interior test point",
+          "explanation": "Strictness has nothing to do with the choice of test point. It decides only whether the boundary line is drawn solid or dashed."
+        },
+        {
+          "key": "D",
+          "text": "Both variables are zero, so the substitution involves division by zero",
+          "explanation": "No division occurs anywhere in the substitution. Both sides evaluate to 0, which is a perfectly valid arithmetic result — it is simply an uninformative one."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Which side to shade, §11 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#11-which-side-to-shade-the-test-point-method"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Never test a point that lies on the boundary line",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-044",
+      "topic": "Ch 3 · Linear Inequalities · Testing a point against a system",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Which point satisfies the system 3x + 4y ≤ 24, x ≥ 0, y ≥ 0?",
+      "options": [
+        {
+          "key": "A",
+          "text": "(4, 4)",
+          "explanation": "3(4) + 4(4) = 28, which exceeds 24. The non-negativity conditions hold, but one failed constraint is enough to exclude a point."
+        },
+        {
+          "key": "B",
+          "text": "(−1, 5)",
+          "explanation": "The capacity line is satisfied — 3(−1) + 4(5) = 17 ≤ 24 — but x = −1 fails x ≥ 0. Non-negativity is a constraint like any other, and this is the row students most often skip."
+        },
+        {
+          "key": "C",
+          "text": "(2, 3)",
+          "explanation": "Correct. 3(2) + 4(3) = 18, which is at most 24, and both coordinates are non-negative. The point lies strictly inside the feasible region."
+        },
+        {
+          "key": "D",
+          "text": "(0, 7)",
+          "explanation": "3(0) + 4(7) = 28, which exceeds 24. On the y-axis the region stops at (0, 6), so 7 is one unit too high."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Which side to shade, §11 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#11-which-side-to-shade-the-test-point-method"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A point belongs only if every inequality holds",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-045",
+      "topic": "Ch 3 · Linear Inequalities · What the feasible region is",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The feasible region of a system of linear inequalities is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The set of points satisfying at least one of the inequalities",
+          "explanation": "That is the union of the half-planes. A production plan has to respect every restriction at once, so the region needed is the overlap, not the union."
+        },
+        {
+          "key": "B",
+          "text": "The region enclosed by the boundary lines, whether or not the inequalities hold",
+          "explanation": "The lines alone do not say which side of each of them qualifies. Two systems with the same boundary lines and opposite signs have completely different regions."
+        },
+        {
+          "key": "C",
+          "text": "The set of points satisfying every inequality of the system at the same time",
+          "explanation": "Correct. It is the intersection of all the half-planes, and in a business formulation it is the set of all plans the resources can actually deliver."
+        },
+        {
+          "key": "D",
+          "text": "The set of corner points of the system",
+          "explanation": "The corner points are particular points of the region, usually only three to five of them. The region itself contains infinitely many points."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Systems of inequalities and the feasible region, §12 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#12-systems-of-inequalities-and-the-feasible-region"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Feasible region = intersection of all half-planes",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-046",
+      "topic": "Ch 3 · Linear Inequalities · An empty feasible region",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For x + y ≤ 10, x + y ≥ 25, x ≥ 0, y ≥ 0, the feasible region is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Empty",
+          "explanation": "Correct. The two boundary lines are parallel and the shadings point in opposite directions, so no point can have x + y at most 10 and at least 25 at the same time."
+        },
+        {
+          "key": "B",
+          "text": "Unbounded",
+          "explanation": "An unbounded region contains infinitely many points and simply has no outer edge. This region contains none at all, which is the opposite condition."
+        },
+        {
+          "key": "C",
+          "text": "The strip between the two lines",
+          "explanation": "The strip satisfies neither constraint: it lies above x + y = 10 and below x + y = 25. The shadings point away from each other, not towards each other."
+        },
+        {
+          "key": "D",
+          "text": "Bounded, with corner points (10, 0) and (25, 0)",
+          "explanation": "Each of those points fails the other constraint — (10, 0) gives 10, which is not at least 25, and (25, 0) gives 25, which is not at most 10."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Systems of inequalities and the feasible region, §12 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#12-systems-of-inequalities-and-the-feasible-region"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Parallel boundaries with opposite shadings give an empty region",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-047",
+      "topic": "Ch 3 · Linear Inequalities · Non-negativity",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Why do x ≥ 0 and y ≥ 0 appear in almost every business formulation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "To keep the boundary lines of the other constraints solid",
+          "explanation": "Line type is fixed by the sign of each constraint separately. A strict constraint stays dashed however many non-negativity conditions accompany it."
+        },
+        {
+          "key": "B",
+          "text": "To make every feasible region bounded",
+          "explanation": "They do not. A system of ≥ constraints with non-negativity is unbounded: the axes close the region below and to the left only, and nothing caps it above."
+        },
+        {
+          "key": "C",
+          "text": "Because a formulation must contain at least four constraints",
+          "explanation": "There is no minimum number of constraints. A problem with a single resource limit plus non-negativity is a complete and perfectly ordinary formulation."
+        },
+        {
+          "key": "D",
+          "text": "Because the variables count real quantities, and a negative number of units, kilograms or rupees has no meaning",
+          "explanation": "Correct. They confine the region to the first quadrant, and they frequently supply corner points where a resource line meets an axis — such as (40, 0) and (0, 40) in the workshop example."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The non-negativity constraints, §13 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#13-the-non-negativity-constraints"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Non-negativity confines the region to the first quadrant",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-048",
+      "topic": "Ch 3 · Linear Inequalities · Unbounded region",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The region defined by x + 2y ≥ 20, 3x + y ≥ 15, x ≥ 0, y ≥ 0 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Empty",
+          "explanation": "The point (10, 10) gives 30 ≥ 20 and 40 ≥ 15, so it satisfies both constraints. A region containing a point is not empty."
+        },
+        {
+          "key": "B",
+          "text": "Unbounded, with corner points (0, 15), (2, 9) and (20, 0)",
+          "explanation": "Correct. Both constraints are floors, so travelling away from the origin is never blocked and the region runs on without limit. Its three corners come from the two lines crossing each other and each axis."
+        },
+        {
+          "key": "C",
+          "text": "Bounded, with four corner points",
+          "explanation": "This counts (0, 10) or (5, 0) as corners, but each of those fails the other constraint. The region has three corners and no outer edge."
+        },
+        {
+          "key": "D",
+          "text": "Bounded, because the non-negativity constraints close it",
+          "explanation": "The axes close the region on the left and below only. Nothing caps it above or to the right, which is exactly what 'unbounded' means."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Bounded and unbounded regions, §14 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#14-bounded-and-unbounded-regions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "All-≥ constraints with non-negativity give an unbounded region",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-049",
+      "topic": "Ch 3 · Linear Inequalities · Mixed signs, bounded or not",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The region defined by x + y ≥ 8, x + 2y ≤ 20, x ≥ 0, y ≥ 0 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bounded",
+          "explanation": "Correct. The ceiling x + 2y ≤ 20 caps x at 20 (when y = 0) and y at 10 (when x = 0), so no direction of travel escapes. The corner points are (8, 0), (20, 0), (0, 10) and (0, 8)."
+        },
+        {
+          "key": "B",
+          "text": "Unbounded, because a ≥ constraint is present",
+          "explanation": "A ≥ constraint on its own does not make a region unbounded. Here it only cuts off the part of the region nearest the origin, and the ≤ constraint still closes every direction."
+        },
+        {
+          "key": "C",
+          "text": "Empty, because one constraint is a floor and the other a ceiling",
+          "explanation": "A floor below a ceiling leaves a band of feasible points. Test (8, 0): 8 ≥ 8 and 8 ≤ 20, so it satisfies both."
+        },
+        {
+          "key": "D",
+          "text": "Unbounded in the x direction only",
+          "explanation": "x + 2y ≤ 20 caps x at 20 even when y is zero, so travel to the right is blocked. Nothing in the system permits x to grow without limit."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bounded and unbounded regions, §14 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#14-bounded-and-unbounded-regions"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "With mixed signs, walk the directions instead of applying the pattern",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-050",
+      "topic": "Ch 3 · Linear Inequalities · The binding vertex",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 2x + 3y ≤ 120, 2x + y ≤ 80, x ≥ 0, y ≥ 0, the vertex at which BOTH capacity constraints are binding is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(20, 30)",
+          "explanation": "The coordinates have been written in the wrong order. Substituting gives 2(20) + 3(30) = 130, which already breaks the first constraint."
+        },
+        {
+          "key": "B",
+          "text": "(30, 20)",
+          "explanation": "Correct. Subtracting 2x + y = 80 from 2x + 3y = 120 gives 2y = 40, so y = 20 and then 2x = 60, x = 30. Both constraints hold with equality: 60 + 60 = 120 and 60 + 20 = 80."
+        },
+        {
+          "key": "C",
+          "text": "(40, 40)",
+          "explanation": "The x-intercept of one line has been paired with the y-intercept of the other. The point satisfies neither: 2(40) + 3(40) = 200 and 2(40) + 40 = 120."
+        },
+        {
+          "key": "D",
+          "text": "(60, 80)",
+          "explanation": "These are the two intercepts that lie OUTSIDE the region — (60, 0) breaks the polishing limit and (0, 80) breaks the carpentry limit — combined into a single point."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Corner points, and how to read the vertices, §15 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#15-corner-points-and-how-to-read-the-vertices"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A binding vertex satisfies both constraints with equality",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-051",
+      "topic": "Ch 3 · Linear Inequalities · A crossing that is not a corner",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For x + y ≤ 12, x + 4y ≤ 32, x ≥ 0, y ≥ 0, which of these intersections is NOT a corner point of the feasible region?",
+      "options": [
+        {
+          "key": "A",
+          "text": "(12, 0)",
+          "explanation": "This is a genuine corner. It lies on x + y = 12 and on y = 0, and it satisfies the other constraint: 12 + 0 = 12, which is at most 32."
+        },
+        {
+          "key": "B",
+          "text": "(0, 8)",
+          "explanation": "This is a genuine corner. It lies on x + 4y = 32 and on x = 0, and 0 + 8 = 8 is at most 12, so the filling-line constraint holds."
+        },
+        {
+          "key": "C",
+          "text": "(0, 12)",
+          "explanation": "Correct — this is the crossing to discard. It lies on x + y = 12 and x = 0, but substituting into the other constraint gives 0 + 4(12) = 48, which exceeds 32. It is an intercept you plot and then reject."
+        },
+        {
+          "key": "D",
+          "text": "(16/3, 20/3)",
+          "explanation": "This is the vertex where both slanting lines meet: 16/3 + 20/3 = 12 and 16/3 + 80/3 = 32. It is a corner, and its fractional coordinates are exact."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Corner points, and how to read the vertices, §15 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#15-corner-points-and-how-to-read-the-vertices"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Solve the pairs, then filter by feasibility",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c3-052",
+      "topic": "Ch 3 · Linear Inequalities · The full corner-point set",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The corner points of the region 3x + 2y ≤ 60, x + 2y ≤ 40, x ≤ 16, x ≥ 0, y ≥ 0 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(0, 0), (20, 0), (10, 15), (0, 20)",
+          "explanation": "This keeps (20, 0), which breaks x ≤ 16, and loses both vertices that sit on the line x = 16. It is the corner-point set of the system with the market limit left out."
+        },
+        {
+          "key": "B",
+          "text": "(0, 0), (16, 0), (16, 12), (0, 30)",
+          "explanation": "Both (16, 12) and (0, 30) break the cutting constraint: 48 + 24 = 72 and 0 + 60 = 60, against a limit of 60 for the first and 40 for the second."
+        },
+        {
+          "key": "C",
+          "text": "(0, 0), (16, 0), (10, 15), (0, 20)",
+          "explanation": "This omits (16, 6), the crossing of x = 16 with the cutting line 3x + 2y = 60. Missing one vertex is the commonest slip when a vertical or horizontal constraint is present."
+        },
+        {
+          "key": "D",
+          "text": "(0, 0), (16, 0), (16, 6), (10, 15), (0, 20)",
+          "explanation": "Correct. Five crossings survive the feasibility test: the origin, the market limit meeting each axis line and the cutting line, the two slanting lines meeting each other, and the stitching line meeting the y-axis."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: A full construction, start to finish, §16 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#16-a-full-construction-start-to-finish"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Five boundary lines, ten pairs, five surviving vertices",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "cs-f3c3-01",
+      "type": "case_mcq_set",
+      "numerical": true,
+      "topic": "Ch 3 · Feasible region · Case: the packaging unit",
+      "case": "Sahyadri Packaging at Belagavi makes two products, small cartons and large cartons, and plans them in batches. Let x be the number of batches of small cartons and y the number of batches of large cartons made in a week. A batch of small cartons consumes 4 units of corrugated board and 2 hours of machine time; a batch of large cartons consumes 5 units of board and 5 hours of machine time. The week's supply of board is 200 units and the machine is available for 150 hours. The unit sells whatever it makes, so there is no market limit on either product.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Systems of inequalities and the feasible region, §12 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#12-systems-of-inequalities-and-the-feasible-region"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c3-01-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The machine-hours constraint for the week is:",
+          "topic": "Ch 3 · Translation · Machine hours",
+          "sourceRef": "Machine-hour family: per-unit time × units ≤ hours available",
+          "options": [
+            {
+              "key": "A",
+              "text": "5x + 2y ≤ 150",
+              "explanation": "The two machine times have been attached to the wrong products. The small batch takes 2 hours and the large batch 5, not the other way round."
+            },
+            {
+              "key": "B",
+              "text": "2x + 5y ≤ 150",
+              "explanation": "Correct. Two hours per small batch and five per large batch, summed, cannot exceed the 150 hours the machine offers. Its intercepts are (75, 0) and (0, 30)."
+            },
+            {
+              "key": "C",
+              "text": "2x + 5y ≥ 150",
+              "explanation": "Availability has been read as a requirement. The machine offering 150 hours does not oblige the unit to run it for 150 hours."
+            },
+            {
+              "key": "D",
+              "text": "2x + 5y = 150",
+              "explanation": "An equality forces full utilisation of the machine. Making 10 batches of each, using 70 hours, is perfectly workable and this constraint would forbid it."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c3-01-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The vertex at which both the board and the machine constraints are binding is:",
+          "topic": "Ch 3 · Corner points · Binding vertex",
+          "sourceRef": "Solve the two boundary equations simultaneously",
+          "options": [
+            {
+              "key": "A",
+              "text": "(25, 20)",
+              "explanation": "Correct. Subtracting 2x + 5y = 150 from 4x + 5y = 200 gives 2x = 50, so x = 25, and then 5y = 100, y = 20. Board: 100 + 100 = 200; machine: 50 + 100 = 150. Both hold with equality."
+            },
+            {
+              "key": "B",
+              "text": "(20, 25)",
+              "explanation": "The coordinates have been written in the wrong order. Substituting gives 4(20) + 5(25) = 205 units of board, which the week's supply cannot meet."
+            },
+            {
+              "key": "C",
+              "text": "(50, 30)",
+              "explanation": "The x-intercept of the board line has been paired with the y-intercept of the machine line. The point satisfies neither: board 350, machine 250."
+            },
+            {
+              "key": "D",
+              "text": "(50, 0)",
+              "explanation": "This is a genuine corner of the region, but only the board constraint binds there. The machine uses just 100 of its 150 hours, so it is not the vertex the question asks for."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c3-01-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Is the plan of 30 small batches and 15 large batches feasible?",
+          "topic": "Ch 3 · Feasibility of a point",
+          "sourceRef": "A point belongs only if every constraint holds",
+          "options": [
+            {
+              "key": "A",
+              "text": "No, because the board supply is exceeded",
+              "explanation": "Board used is 4(30) + 5(15) = 195 units against 200 available, so five units are left over. The board constraint holds."
+            },
+            {
+              "key": "B",
+              "text": "No, because the machine hours are exceeded",
+              "explanation": "Machine time used is 2(30) + 5(15) = 135 hours against 150 available, leaving 15 hours idle. The machine constraint holds too."
+            },
+            {
+              "key": "C",
+              "text": "No, because the point is not a corner of the region",
+              "explanation": "Feasibility does not require a point to be a vertex. The region contains infinitely many interior points, and every one of them is a workable plan."
+            },
+            {
+              "key": "D",
+              "text": "Yes, because both constraints hold with room to spare",
+              "explanation": "Correct. 195 ≤ 200 and 135 ≤ 150, and both variables are non-negative, so the plan lies strictly inside the feasible region with slack on both resources."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c3-01-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The feasible region of this system is:",
+          "topic": "Ch 3 · Bounded regions · Counting vertices",
+          "sourceRef": "All-≤ constraints with non-negativity give a bounded region",
+          "options": [
+            {
+              "key": "A",
+              "text": "Unbounded, with three corner points",
+              "explanation": "Both constraints are ceilings, so they cap the region above and the axes close it below. Nothing here allows travel away from the origin without limit."
+            },
+            {
+              "key": "B",
+              "text": "Bounded, with five corner points",
+              "explanation": "Five vertices would need a fifth boundary line. With two resource lines and two axes there are at most four."
+            },
+            {
+              "key": "C",
+              "text": "Bounded, with the four corner points (0, 0), (50, 0), (25, 20) and (0, 30)",
+              "explanation": "Correct. The board line's x-intercept (50, 0) survives because the machine there uses only 100 hours; the machine line's y-intercept (0, 30) survives because the board there is 150 units. The rejected crossings are (75, 0) and (0, 40)."
+            },
+            {
+              "key": "D",
+              "text": "Bounded, but with only the two corner points (50, 0) and (0, 30)",
+              "explanation": "This counts only the surviving intercepts and drops both the origin and the vertex (25, 20) where the two resource lines cross."
+            }
+          ],
+          "correct": "C"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c3-02",
+      "type": "case_mcq_set",
+      "numerical": true,
+      "topic": "Ch 3 · Unbounded regions · Case: the feed blend",
+      "case": "Kaveri Feeds prepares a daily cattle ration by mixing two supplements, S1 and S2, measured in kilograms. Let x be the kilograms of S1 and y the kilograms of S2 used in a day. Each kilogram of S1 supplies 2 units of energy and 1 unit of fibre; each kilogram of S2 supplies 1 unit of energy and 3 units of fibre. The veterinary standard requires the daily ration to supply at least 30 units of energy and at least 30 units of fibre. Both supplements are freely available in any quantity, and neither can be used in a negative amount.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Bounded and unbounded regions, §14 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#14-bounded-and-unbounded-regions"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c3-02-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The feasible region of 2x + y ≥ 30, x + 3y ≥ 30, x ≥ 0, y ≥ 0 is best described as:",
+          "topic": "Ch 3 · Bounded and unbounded",
+          "sourceRef": "All-≥ constraints with non-negativity give an unbounded region",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bounded, with four corner points",
+              "explanation": "A bounded region needs a ceiling somewhere. Both constraints here are floors, so nothing stops the blend from being made larger and larger."
+            },
+            {
+              "key": "B",
+              "text": "Unbounded, with three corner points",
+              "explanation": "Correct. Both constraints push the region away from the origin and neither caps it, so it runs on upward and to the right. Its corners are (0, 30), (12, 6) and (30, 0)."
+            },
+            {
+              "key": "C",
+              "text": "Empty",
+              "explanation": "The point (20, 20) gives 60 units of energy and 80 of fibre, both above the minimums, so the region contains points. Unbounded and empty are opposite conditions."
+            },
+            {
+              "key": "D",
+              "text": "Bounded, because x ≥ 0 and y ≥ 0 close it",
+              "explanation": "The axes close the region on the left and below only. Feeding more of both supplements is always permitted, so no outer edge exists."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c3-02-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The corner point at which both nutritional requirements are met exactly is:",
+          "topic": "Ch 3 · Corner points · Binding vertex",
+          "sourceRef": "Solve the two boundary equations simultaneously",
+          "options": [
+            {
+              "key": "A",
+              "text": "(6, 12)",
+              "explanation": "The coordinates have been swapped. Substituting gives energy 2(6) + 12 = 24, which falls short of the 30 units required."
+            },
+            {
+              "key": "B",
+              "text": "(10, 10)",
+              "explanation": "A plausible reading off an inaccurate sketch. It satisfies the energy line exactly (20 + 10 = 30) but gives 10 + 30 = 40 units of fibre, so only one constraint binds. It is a point on an edge, not a vertex."
+            },
+            {
+              "key": "C",
+              "text": "(12, 6)",
+              "explanation": "Correct. From 2x + y = 30, y = 30 − 2x; substituting into x + 3y = 30 gives x + 90 − 6x = 30, so x = 12 and y = 6. Energy 24 + 6 = 30; fibre 12 + 18 = 30. Both bind."
+            },
+            {
+              "key": "D",
+              "text": "(15, 0)",
+              "explanation": "This is the x-intercept of the energy line, but the fibre supplied there is 15 + 0 = 15, only half the requirement, so the point lies outside the region."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c3-02-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Which point on an axis is a corner of this feasible region?",
+          "topic": "Ch 3 · Corner points · Axis vertices",
+          "sourceRef": "An intercept is a corner only if it satisfies every other constraint",
+          "options": [
+            {
+              "key": "A",
+              "text": "(0, 30)",
+              "explanation": "Correct. It is the y-intercept of the energy line 2x + y = 30, and the fibre it supplies is 0 + 3(30) = 90, comfortably above 30. Both constraints hold, so it survives the filter."
+            },
+            {
+              "key": "B",
+              "text": "(0, 10)",
+              "explanation": "The y-intercept of the fibre line x + 3y = 30, but the energy supplied there is only 2(0) + 10 = 10 against a requirement of 30, so this crossing lies outside the region."
+            },
+            {
+              "key": "C",
+              "text": "(5, 0)",
+              "explanation": "This is not even an intercept of either line as stated: 2(5) + 0 = 10, well short of 30 on the energy line, and 5 + 0 = 5 on the fibre line. It fails both requirements."
+            },
+            {
+              "key": "D",
+              "text": "(0, 0)",
+              "explanation": "Feeding nothing supplies no energy and no fibre, so both floors fail. In a system of minimum requirements the origin is never feasible, unlike a system of resource ceilings where it always is."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c3-03",
+      "type": "case_mcq_set",
+      "numerical": true,
+      "topic": "Ch 3 · Ratio constraints · Case: the trust's investment plan",
+      "case": "A charitable trust at Pune has ₹ 8,00,000 available to place between a bond scheme and an equity scheme. It need not place the whole sum. Its investment policy says that the amount in the bond scheme must be at least as large as the amount in the equity scheme, and that no more than ₹ 3,00,000 may go into the equity scheme. Let x be the amount placed in the bond scheme and y the amount placed in the equity scheme, both measured in thousands of rupees, so that the total available is 800.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Turning a business sentence into an inequality, §9 →",
+        "href": "/foundation/quantitative-aptitude/linear-inequalities/#9-turning-a-business-sentence-into-an-inequality"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c3-03-a",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The policy that the bond amount must be at least as large as the equity amount translates to:",
+          "topic": "Ch 3 · Translation · Comparing two variables",
+          "sourceRef": "Constraints comparing two variables pass through the origin",
+          "options": [
+            {
+              "key": "A",
+              "text": "x ≤ y",
+              "explanation": "The direction is reversed. This would cap the bond holding at the equity holding, which is the opposite of what the policy requires."
+            },
+            {
+              "key": "B",
+              "text": "x ≥ 2y",
+              "explanation": "'At least as large as' has been read as 'at least twice as large as'. The policy sets equality as the floor, not double."
+            },
+            {
+              "key": "C",
+              "text": "x = y",
+              "explanation": "An equality forces the two holdings to match exactly. The policy permits the bond holding to be larger, which this would forbid."
+            },
+            {
+              "key": "D",
+              "text": "x ≥ y",
+              "explanation": "Correct. The boundary line x = y passes through the origin, so a test point off the origin is needed: at (600, 0), 600 ≥ 0 is true, so the region lies on that side of the line."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c3-03-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The corner point at which the equity ceiling and the total-funds line meet is (in thousands of rupees):",
+          "topic": "Ch 3 · Corner points · Ceiling meets fund line",
+          "sourceRef": "Solve y = 300 with x + y = 800, then test the remaining constraints",
+          "options": [
+            {
+              "key": "A",
+              "text": "(500, 300)",
+              "explanation": "Correct. y = 300 in x + y = 800 gives x = 500, and the policy holds because 500 ≥ 300. In rupees this is ₹ 5,00,000 in bonds and ₹ 3,00,000 in equity, the whole ₹ 8,00,000 placed."
+            },
+            {
+              "key": "B",
+              "text": "(300, 500)",
+              "explanation": "The coordinates have been swapped. An equity holding of 500 breaks the ceiling of 300, and the bond holding would then be smaller than the equity holding as well."
+            },
+            {
+              "key": "C",
+              "text": "(400, 400)",
+              "explanation": "This is where x = y meets x + y = 800, but the equity holding of 400 exceeds the ceiling of 300, so the crossing lies outside the region and is discarded."
+            },
+            {
+              "key": "D",
+              "text": "(800, 300)",
+              "explanation": "The x-intercept of the funds line has been paired with the equity ceiling. The total would be 1,100, which is ₹ 3,00,000 more than the trust has."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c3-03-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The corner points of the feasible region (in thousands of rupees) are:",
+          "topic": "Ch 3 · Corner points · The full set",
+          "sourceRef": "Solve every pair of boundary lines, then filter by feasibility",
+          "options": [
+            {
+              "key": "A",
+              "text": "(0, 0), (800, 0) and (400, 400)",
+              "explanation": "This keeps (400, 400), where x = y meets the funds line, but an equity holding of 400 breaks the ceiling of 300. It is the corner-point set of the system with the equity ceiling left out."
+            },
+            {
+              "key": "B",
+              "text": "(0, 0), (800, 0), (500, 300) and (300, 300)",
+              "explanation": "Correct. Four crossings survive: the origin, the funds line on the x-axis, the funds line meeting y = 300, and y = 300 meeting x = y. Placing nothing, and placing everything in bonds, are both permitted by the wording."
+            },
+            {
+              "key": "C",
+              "text": "(0, 0), (800, 0), (500, 300) and (0, 300)",
+              "explanation": "The point (0, 300) has nothing in bonds and ₹ 3,00,000 in equity, so x ≥ y fails. The correct fourth vertex is where the equity ceiling meets the line x = y, namely (300, 300)."
+            },
+            {
+              "key": "D",
+              "text": "(500, 300) and (300, 300) only",
+              "explanation": "Only the two crossings on the equity ceiling have been kept. The origin and (800, 0) are corners as well, because the trust may leave money uninvested and may put everything into bonds."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    }
+  ]
+}

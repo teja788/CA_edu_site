@@ -1,0 +1,1773 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Sets, Relations and Functions; Basics of Limits and Continuity'
+description: 'CA Foundation Quantitative Aptitude Ch 7 in plain language — roster and set-builder notation, types of sets, subsets and the power set, union, intersection, difference and complement, De Morgan and the other laws, Venn counting for two and three sets including the exactly-one and exactly-two variants, the Cartesian product, relations and their properties, equivalence relations, functions one-one onto and bijective, composite and inverse functions, even and odd functions, one-sided limits, evaluation by factorisation and rationalisation, the standard limits, and the three-part test for continuity, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 7 · Sets, Relations and Functions'
+chapterSlug: sets-relations-functions
+masteryId: f3-ch7
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 7 (Sets, Relations and Functions; Basics of Limits and Continuity) — scope and level of treatment'
+  - 'Standard results of elementary set theory and elementary analysis: the inclusion-exclusion principle, De Morgan laws, the count of subsets and of functions between finite sets, the standard algebraic and exponential limits, and the three-part test for continuity at a point'
+sourceLabel: 'ICAI SM Paper 3 Ch 7 scope (May 2026 ed.) · standard results of set theory and elementary analysis'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 30 min read · 11 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=sets-relations-functions'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A district co-operative bank in Belagavi runs a customer survey before launching a new mobile app.
+Of 1,200 account holders surveyed, 740 use net banking, 520 use the UPI handle, and 310 use both.
+The board asks three questions in the same breath: how many use at least one channel, how many use
+net banking only, and how many use neither and will therefore need a branch visit for everything.
+
+Nothing here is hard arithmetic. It is bookkeeping of a particular kind — the kind that goes wrong
+because 310 customers were counted twice, once in the 740 and once in the 520. Subtract the overlap
+once and the answers appear: 950 use at least one channel, 430 use net banking only, and 250 use
+neither. The whole first half of this chapter is that idea made precise, and then extended to three
+overlapping groups, where the double-counting corrects itself in two stages instead of one.
+
+The second half is a different move. Once you can put two collections side by side, you can pair
+their members up. A pairing rule is a **relation**; a pairing rule that gives every input exactly one
+output is a **function**; and a question about what a function *approaches* near a point, rather than
+what it *does* at the point, is a **limit**. Paper 3 asks about all four ideas, in short objective
+questions where the arithmetic is small and the definition does all the work.
+
+## 1. Sets and the two ways of writing one
+
+A **set** is a well-defined collection of distinct objects. "Well-defined" is the whole of the
+definition that matters: given any object, there must be no argument about whether it belongs. The
+GST rates notified in India form a set. "The important GST rates" does not, because two people will
+disagree about which are important.
+
+The objects in a set are its **elements** or **members**. Membership is written with the symbol ∈:
+
+<div class="formula">3 ∈ A means "3 is an element of A" · 7 ∉ A means "7 is not an element of A"</div>
+
+Sets are named with capital letters and their elements with small letters. Two ways of writing a set
+are examinable, and questions often ask you to convert between them.
+
+**Roster form** (also called tabular form) lists the members inside braces, separated by commas:
+`A = {2, 3, 5, 7, 11}`. Three rules govern the list.
+
+- **Order does not matter.** `{2, 3, 5}` and `{5, 3, 2}` are the same set.
+- **Repetition does not count.** The letters of the word ASSESSEE form the set `{A, S, E}` — three
+  members, not eight. Counting the repeats is the commonest slip in a "how many elements" question.
+- **An infinite set may use dots** once the pattern is unambiguous: `{2, 4, 6, 8, …}`.
+
+**Set-builder form** (also called rule form or property form) states the property instead of the
+members: `A = {x : x is a prime number, x < 12}`. Read the colon as "such that". The vertical bar is
+an equally standard separator, so `{x | x is prime, x < 12}` means the same thing.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — convert each form into the other</div>
+  Set-builder to roster: B = <code>{'{x : x is an integer, x² = 25}'}</code><br />
+  The integers whose square is 25 are 5 and −5, so <strong>B = <code>{'{5, −5}'}</code></strong> — two
+  members, because a square root question has two answers.<br />
+  Roster to set-builder: C = <code>{'{5, 10, 15, 20, 25, 30}'}</code><br />
+  Every member is a multiple of 5 that does not exceed 30, so
+  <strong>C = <code>{'{x : x = 5n, n is a natural number, n ≤ 6}'}</code></strong>.
+</div>
+
+The number of elements in a finite set A is its **cardinal number**, written **n(A)** or sometimes
+|A|. For the set of letters in ASSESSEE, n(A) = 3.
+
+<Callout kind="mistake">
+  <p>
+    A set written as <code>{'{0}'}</code> is <strong>not</strong> the empty set. It has one member,
+    the number 0, so its cardinal number is 1. The empty set has no members at all. Options in a
+    Paper 3 question routinely offer <code>{'{0}'}</code>, <code>{'{∅}'}</code> and ∅ side by side,
+    and they are three different objects: a set containing zero, a set containing the empty set, and
+    the empty set itself, with cardinal numbers 1, 1 and 0.
+  </p>
+</Callout>
+
+## 2. The types of set you must be able to name
+
+Nine names cover every classification question the paper asks.
+
+**Empty set (null set, void set).** The set with no elements, written ∅ or `{ }`. There is only one
+empty set, and n(∅) = 0.
+
+**Singleton set.** A set with exactly one element, such as `{7}` or `{∅}`.
+
+**Finite set.** A set whose members can be counted and the counting ends. `{x : x is a two-digit
+number}` is finite, with 90 members.
+
+**Infinite set.** A set whose counting never ends, such as the set of all natural numbers.
+
+**Equal sets.** A = B when every member of A is a member of B and every member of B is a member of A.
+Equal sets have exactly the same members, in any order.
+
+**Equivalent sets.** A and B are equivalent when n(A) = n(B) — the same *number* of members, whatever
+those members are. Written A ↔ B or A ~ B.
+
+**Universal set.** The set U containing every object under discussion in the question at hand. It is
+fixed by the question, not by mathematics: in the bank survey U is the 1,200 account holders
+surveyed, not every human being.
+
+**Disjoint sets.** Two sets with no member in common, so their intersection is the empty set.
+
+**Subset.** Section 3 takes this one on its own, because the counting results built on it are what
+the paper actually tests.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Equal implies equivalent; equivalent does not imply equal.</strong>
+    <code>{'{1, 2, 3}'}</code> and <code>{'{a, b, c}'}</code> are equivalent (both have three
+    members) but plainly not equal. Every pair of equal sets is trivially equivalent, since identical
+    sets have identical counts. A question offering both words in its options is testing exactly this
+    one-way street.
+  </p>
+</Callout>
+
+The standard number sets are worth having by name, because set-builder questions lean on them:
+
+| Symbol | Set | Members |
+|---|---|---|
+| N | natural numbers | 1, 2, 3, … |
+| W | whole numbers | 0, 1, 2, 3, … |
+| Z | integers | …, −2, −1, 0, 1, 2, … |
+| Q | rational numbers | every number expressible as p/q with q ≠ 0 |
+| R | real numbers | every rational and irrational number |
+
+<Callout kind="mistake">
+  <p>
+    <strong>Whether 0 belongs to N is a convention, and this chapter follows the ICAI one: it does
+    not.</strong> N starts at 1 and W is N together with 0. That single choice decides the answer to
+    a question such as "how many elements has <code>{'{x : x ∈ N, x &lt; 5}'}</code>?" — it is 4 here
+    (1, 2, 3, 4) and would be 5 under the other convention. Read whether the question says natural or
+    whole before counting.
+  </p>
+</Callout>
+
+## 3. Subsets proper subsets and the power set
+
+A is a **subset** of B, written A ⊆ B, when every element of A is also an element of B. Read it as
+"A is contained in B". If A ⊆ B then B is a **superset** of A, written B ⊇ A.
+
+Two consequences follow straight from the definition and both are examined.
+
+- **Every set is a subset of itself.** A ⊆ A, because every member of A is a member of A.
+- **The empty set is a subset of every set.** ∅ ⊆ A for every A. There is no member of ∅ that fails
+  to be in A, because there is no member of ∅ at all.
+
+A is a **proper subset** of B, written A ⊂ B, when A ⊆ B and A ≠ B — that is, B has at least one
+element A does not. `{2, 5}` is a proper subset of `{2, 5, 9}`; `{2, 5, 9}` is a subset but not a
+proper subset of itself.
+
+<Callout kind="mistake">
+  <p>
+    The empty set <strong>is</strong> a proper subset of every non-empty set, and this chapter
+    follows that convention. ∅ ⊆ A holds and ∅ ≠ A whenever A has a member, so both halves of the
+    proper-subset definition are satisfied. Treating ∅ as "not really a subset" is what turns a
+    count of 2<sup>n</sup> − 1 proper subsets into 2<sup>n</sup> − 2, and both numbers will be sitting
+    in the option list.
+  </p>
+</Callout>
+
+**The counting results.** Let n(A) = n. Then:
+
+<div class="formula">Number of subsets of A = 2<sup>n</sup></div>
+<div class="formula">Number of proper subsets of A = 2<sup>n</sup> − 1 (every subset except A itself)</div>
+<div class="formula">Number of non-empty proper subsets = 2<sup>n</sup> − 2</div>
+
+The reason for 2<sup>n</sup> is worth holding on to, because it also explains the relation and
+function counts later in the chapter. Building a subset means walking down the list of n elements and
+making an independent **in or out** decision about each. Two choices, n times over, is 2 × 2 × … × 2
+= 2<sup>n</sup>. The all-out decision produces ∅ and the all-in decision produces A itself, so both of
+those are among the 2<sup>n</sup>.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — list every subset of A = <code>{'{p, q, r}'}</code></div>
+  n = 3, so expect 2³ = 8 subsets.<br />
+  No members: <code>{'∅'}</code> — 1 subset<br />
+  One member: <code>{'{p}, {q}, {r}'}</code> — 3 subsets<br />
+  Two members: <code>{'{p, q}, {p, r}, {q, r}'}</code> — 3 subsets<br />
+  Three members: <code>{'{p, q, r}'}</code> — 1 subset<br />
+  Total 1 + 3 + 3 + 1 = <strong>8 ✓</strong> · Proper subsets = 8 − 1 = <strong>7</strong> (all but
+  the last) · Non-empty proper subsets = <strong>6</strong>
+</div>
+
+The **power set** of A, written P(A), is the set whose *elements are all the subsets of A*. It is a
+set of sets. For A = `{p, q, r}` above, P(A) has the eight subsets listed as its eight members, so
+
+<div class="formula">n(P(A)) = 2<sup>n(A)</sup></div>
+
+Because ∅ and A are both subsets of A, both are **elements** of P(A). So `∅ ∈ P(A)` and also
+`∅ ⊆ P(A)` — the first because ∅ is one of the listed subsets, the second because ∅ is a subset of
+absolutely everything.
+
+<Callout kind="mistake">
+  <p>
+    Two errors live in this one formula. The first is computing <strong>2n instead of
+    2<sup>n</sup></strong>: for a five-element set the power set has 32 members, not 10. The second
+    is confusing ∈ with ⊆. For A = <code>{'{1, 2}'}</code>, the statement
+    <code>{'{1} ∈ P(A)'}</code> is <strong>true</strong> (the subset <code>{'{1}'}</code> is a member
+    of the power set) while <code>{'1 ∈ P(A)'}</code> is <strong>false</strong> (the number 1 is not
+    a subset, so it is not a member of P(A)). Elements of a power set are always sets.
+  </p>
+</Callout>
+
+A last small result that examiners like: if n(A) = n, then n(P(P(A))) = 2 raised to the power
+2<sup>n</sup>. For a two-element set that is 2⁴ = 16, and for a three-element set it is 2⁸ = 256 —
+which is why the question is always asked with a very small A.
+
+## 4. The set operations
+
+Five operations combine sets. Throughout, U is the universal set fixed by the question.
+
+**Union, A ∪ B.** Everything in A, or in B, or in both.
+
+<div class="formula">A ∪ B = <code>{'{x : x ∈ A or x ∈ B}'}</code></div>
+
+The "or" is inclusive: an element in both sets is in the union, and it is listed once.
+
+**Intersection, A ∩ B.** Everything in A **and** in B.
+
+<div class="formula">A ∩ B = <code>{'{x : x ∈ A and x ∈ B}'}</code></div>
+
+When A ∩ B = ∅ the sets are **disjoint**.
+
+**Difference, A − B** (also written A \ B). Everything in A that is not in B.
+
+<div class="formula">A − B = <code>{'{x : x ∈ A and x ∉ B}'}</code> = A ∩ B′</div>
+
+Difference is **not** symmetric: A − B and B − A are different sets. For A = `{1, 2, 3, 4}` and
+B = `{3, 4, 5}`, A − B = `{1, 2}` while B − A = `{5}`.
+
+**Symmetric difference, A Δ B.** Everything in exactly one of the two sets.
+
+<div class="formula">A Δ B = (A − B) ∪ (B − A) = (A ∪ B) − (A ∩ B)</div>
+
+For the same two sets, A Δ B = `{1, 2, 5}`. The second form is the useful one for counting:
+n(A Δ B) = n(A ∪ B) − n(A ∩ B) = n(A) + n(B) − 2n(A ∩ B).
+
+**Complement, A′** (also written A<sup>c</sup> or Ā). Everything in the universal set that is not
+in A.
+
+<div class="formula">A′ = U − A = <code>{'{x : x ∈ U and x ∉ A}'}</code></div>
+
+The complement only means something once U is stated. U′ = ∅, ∅′ = U, and (A′)′ = A.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — every operation on one small pair</div>
+  U = <code>{'{1, 2, 3, 4, 5, 6, 7, 8}'}</code>, A = <code>{'{1, 2, 3, 4, 5}'}</code>,
+  B = <code>{'{4, 5, 6, 7}'}</code><br />
+  A ∪ B = <code>{'{1, 2, 3, 4, 5, 6, 7}'}</code> — 7 members, and 4 and 5 appear once each<br />
+  A ∩ B = <code>{'{4, 5}'}</code> — 2 members<br />
+  A − B = <code>{'{1, 2, 3}'}</code> · B − A = <code>{'{6, 7}'}</code> — different sets, as they must be<br />
+  A Δ B = <code>{'{1, 2, 3, 6, 7}'}</code> — 5 members = 7 − 2 ✓<br />
+  A′ = <code>{'{6, 7, 8}'}</code> · B′ = <code>{'{1, 2, 3, 8}'}</code><br />
+  Count check: n(A) + n(B) − n(A ∩ B) = 5 + 4 − 2 = 7 = n(A ∪ B) ✓
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Every one of these operations has a plain-English reading, and reading it aloud is faster than
+    remembering the symbol. Union is "or", intersection is "and", difference is "in the first but not
+    the second", symmetric difference is "in exactly one", and complement is "everything else in the
+    universe". A question that seems to need algebra usually only needs the sentence.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    <strong>A − B is not B − A, and neither of them is A Δ B.</strong> The three answers
+    <code>{'{1, 2, 3}'}</code>, <code>{'{6, 7}'}</code> and <code>{'{1, 2, 3, 6, 7}'}</code> will all
+    appear as options for a difference question. Difference has a direction; symmetric difference is
+    the one that does not.
+  </p>
+</Callout>
+
+## 5. The laws of set algebra including De Morgan
+
+Union and intersection obey laws that mirror addition and multiplication in ordinary algebra, with
+two important differences noted after the table.
+
+| Law | For union | For intersection |
+|---|---|---|
+| Commutative | A ∪ B = B ∪ A | A ∩ B = B ∩ A |
+| Associative | (A ∪ B) ∪ C = A ∪ (B ∪ C) | (A ∩ B) ∩ C = A ∩ (B ∩ C) |
+| Distributive | A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) | A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) |
+| Identity | A ∪ ∅ = A | A ∩ U = A |
+| Domination | A ∪ U = U | A ∩ ∅ = ∅ |
+| Idempotent | A ∪ A = A | A ∩ A = A |
+| Complement | A ∪ A′ = U | A ∩ A′ = ∅ |
+| Absorption | A ∪ (A ∩ B) = A | A ∩ (A ∪ B) = A |
+| De Morgan | (A ∪ B)′ = A′ ∩ B′ | (A ∩ B)′ = A′ ∪ B′ |
+
+**The two differences from ordinary algebra.** First, **the distributive law runs both ways** here:
+union distributes over intersection just as intersection distributes over union. In ordinary
+arithmetic only multiplication distributes over addition, never the reverse. Second, **the idempotent
+law**: A ∪ A = A and A ∩ A = A, whereas x + x = 2x in arithmetic. Both facts are asked directly.
+
+**De Morgan in words.** The complement of a union is the intersection of the complements; the
+complement of an intersection is the union of the complements. Practically: **push the dash inside
+and flip the symbol**. It also extends to differences, in the form
+A − (B ∪ C) = (A − B) ∩ (A − C) and A − (B ∩ C) = (A − B) ∪ (A − C).
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — verify De Morgan on a small universe</div>
+  U = <code>{'{1, 2, 3, 4, 5, 6}'}</code>, A = <code>{'{1, 2, 3}'}</code>,
+  B = <code>{'{3, 4}'}</code><br />
+  <strong>Left side:</strong> A ∪ B = <code>{'{1, 2, 3, 4}'}</code>, so (A ∪ B)′ =
+  <code>{'{5, 6}'}</code><br />
+  <strong>Right side:</strong> A′ = <code>{'{4, 5, 6}'}</code>, B′ = <code>{'{1, 2, 5, 6}'}</code>,
+  so A′ ∩ B′ = <code>{'{5, 6}'}</code> ✓<br />
+  Now the other law. A ∩ B = <code>{'{3}'}</code>, so (A ∩ B)′ =
+  <code>{'{1, 2, 4, 5, 6}'}</code><br />
+  A′ ∪ B′ = <code>{'{4, 5, 6}'}</code> ∪ <code>{'{1, 2, 5, 6}'}</code> =
+  <code>{'{1, 2, 4, 5, 6}'}</code> ✓<br />
+  Note what the wrong version gives: A′ ∪ B′ for the first law would be
+  <code>{'{1, 2, 4, 5, 6}'}</code>, five members instead of two — the symbol must flip.
+</div>
+
+Three further identities save time in the counting sections:
+
+<div class="formula">A − B = A ∩ B′ &nbsp;·&nbsp; n(A − B) = n(A) − n(A ∩ B) &nbsp;·&nbsp; n(A′) = n(U) − n(A)</div>
+
+The middle one is worth reading carefully. n(A − B) is **not** n(A) − n(B); it is n(A) minus only
+the part of B that actually sits inside A. If A has 40 members, B has 30, and 12 are common, then
+n(A − B) = 40 − 12 = 28, not 40 − 30 = 10.
+
+<Callout kind="pointer">
+  <p>
+    To test whether a proposed set identity is true, do not attempt a proof. Take a small universe of
+    four or five numbers, invent A, B and C, and evaluate both sides. If they differ even once the
+    identity is false and you are done. If they agree, try one more choice in which the sets overlap
+    differently. Two well-chosen tests settle almost every objective question of this kind in under a
+    minute.
+  </p>
+</Callout>
+
+## 6. Venn regions read as a table
+
+A Venn diagram draws the universal set as a rectangle and each set as a circle inside it. Its real
+job is to cut the universe into **regions that do not overlap**, so that every member of U is counted
+in exactly one region. Once the regions are listed, every counting question is addition and
+subtraction on a table — and a table is quicker and safer than a sketch under exam conditions.
+
+**Two sets cut the universe into four regions.**
+
+| Region | In words | Set expression | Count |
+|---|---|---|---|
+| 1 | in A only | A ∩ B′ | n(A) − n(A ∩ B) |
+| 2 | in both | A ∩ B | n(A ∩ B) |
+| 3 | in B only | A′ ∩ B | n(B) − n(A ∩ B) |
+| 4 | in neither | (A ∪ B)′ | n(U) − n(A ∪ B) |
+
+The four counts add to n(U), and that is the check to run on every answer. Regions 1, 2 and 3
+together are A ∪ B.
+
+**Three sets cut the universe into eight regions.** Write t for the triple overlap n(A ∩ B ∩ C).
+
+| Region | In words | Count |
+|---|---|---|
+| 1 | A only | n(A) − n(A ∩ B) − n(A ∩ C) + t |
+| 2 | B only | n(B) − n(A ∩ B) − n(B ∩ C) + t |
+| 3 | C only | n(C) − n(A ∩ C) − n(B ∩ C) + t |
+| 4 | A and B but not C | n(A ∩ B) − t |
+| 5 | B and C but not A | n(B ∩ C) − t |
+| 6 | A and C but not B | n(A ∩ C) − t |
+| 7 | all three | t |
+| 8 | none of the three | n(U) − n(A ∪ B ∪ C) |
+
+Every one of the eight counts must come out **zero or positive**. A negative region is the fastest
+possible proof that a figure has been misread or the data are impossible, and it costs five seconds
+to check.
+
+**Why "A only" carries a + t.** Start with all of A. Take away everyone A shares with B, and everyone
+A shares with C. The people in all three sets have now been taken away twice — once as part of
+A ∩ B and once as part of A ∩ C — so they must be added back once. The pattern of subtract, subtract,
+add back is the same pattern that produces the three-set union formula in section 8.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — build the eight-region table for a real count</div>
+  A firm's 120 articled assistants: 62 have worked on audit (A), 55 on taxation (B), 48 on
+  accounts (C); 25 on both audit and tax, 20 on tax and accounts, 22 on audit and accounts, and 12 on
+  all three.<br />
+  All three: t = <strong>12</strong><br />
+  Audit and tax only: 25 − 12 = <strong>13</strong> · Tax and accounts only: 20 − 12 =
+  <strong>8</strong> · Audit and accounts only: 22 − 12 = <strong>10</strong><br />
+  Audit only: 62 − 25 − 22 + 12 = <strong>27</strong><br />
+  Tax only: 55 − 25 − 20 + 12 = <strong>22</strong><br />
+  Accounts only: 48 − 22 − 20 + 12 = <strong>18</strong><br />
+  Sum of the seven inside regions: 27 + 22 + 18 + 13 + 8 + 10 + 12 = <strong>110</strong><br />
+  None of the three: 120 − 110 = <strong>10</strong> · Every region is non-negative and the eight add
+  to 120 ✓
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Fill the table <strong>from the middle outwards</strong>: the triple overlap first, then each
+    pairs-only region, then each only region, and the outside region last. Working inwards from the
+    totals means every later figure depends on an earlier subtraction, and one slip contaminates
+    everything after it. Working outwards, each figure is checked by the running total.
+  </p>
+</Callout>
+
+## 7. Counting with two sets
+
+The two-set counting formula follows straight from the region table: add the two sets, then remove
+the overlap that was counted twice.
+
+<div class="formula">n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</div>
+
+Rearranged as needed, the same single equation answers every two-set question:
+
+<div class="formula">n(A ∩ B) = n(A) + n(B) − n(A ∪ B)</div>
+<div class="formula">n(A only) = n(A) − n(A ∩ B) &nbsp;·&nbsp; n(B only) = n(B) − n(A ∩ B)</div>
+<div class="formula">n(exactly one of A and B) = n(A) + n(B) − 2n(A ∩ B) = n(A ∪ B) − n(A ∩ B)</div>
+<div class="formula">n(neither) = n((A ∪ B)′) = n(U) − n(A ∪ B)</div>
+
+Note the **2** in the exactly-one line. The overlap is removed twice, not once, because members of
+both sets belong to neither "A only" nor "B only".
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the bank survey from the opening paragraph</div>
+  n(U) = 1,200 · n(N) = 740 net banking · n(P) = 520 UPI · n(N ∩ P) = 310 both<br />
+  At least one channel: n(N ∪ P) = 740 + 520 − 310 = <strong>950</strong><br />
+  Net banking only: 740 − 310 = <strong>430</strong> · UPI only: 520 − 310 =
+  <strong>210</strong><br />
+  Exactly one channel: 430 + 210 = <strong>640</strong>, and the formula agrees:
+  950 − 310 = 640 ✓<br />
+  Neither channel: 1,200 − 950 = <strong>250</strong><br />
+  Region check: 430 + 310 + 210 + 250 = 1,200 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>"At least one" is the union; "exactly one" is the union minus the overlap.</strong> In
+    the survey those are 950 and 640, and both numbers will be offered. The word to read is the one
+    in front of "one" — "at least", "exactly", "only", or nothing at all. A stem that says simply
+    "how many use a digital channel" means at least one.
+  </p>
+</Callout>
+
+If the two sets happen to be **disjoint**, n(A ∩ B) = 0 and the formula collapses to
+n(A ∪ B) = n(A) + n(B). That is the special case, not the general rule — assuming it when the sets do
+overlap is what produces an answer larger than the universal set, another impossible figure worth
+spotting.
+
+## 8. Counting with three sets
+
+With three sets the double-counting correction itself over-corrects, and a second correction is
+needed. The result is the **inclusion-exclusion principle** for three sets:
+
+<div class="formula">n(A ∪ B ∪ C) = n(A) + n(B) + n(C) − n(A ∩ B) − n(B ∩ C) − n(A ∩ C) + n(A ∩ B ∩ C)</div>
+
+Read the signs as **plus, minus, plus**: add the three singles, subtract the three pairs, add the one
+triple back. The reason for the last term is arithmetic, not decoration. A member of all three sets
+is counted three times in the singles, then removed three times by the pairs, leaving it counted zero
+times. Adding the triple once restores it to exactly one.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the articled assistants from section 6</div>
+  n(A) = 62, n(B) = 55, n(C) = 48; n(A ∩ B) = 25, n(B ∩ C) = 20, n(A ∩ C) = 22; n(A ∩ B ∩ C) = 12<br />
+  Singles: 62 + 55 + 48 = 165<br />
+  Pairs: 25 + 20 + 22 = 67<br />
+  n(A ∪ B ∪ C) = 165 − 67 + 12 = <strong>110</strong><br />
+  Cross-check against the region table: 27 + 22 + 18 + 13 + 8 + 10 + 12 = 110 ✓<br />
+  Outside all three: 120 − 110 = <strong>10</strong>
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>The triple overlap is added back once, not subtracted, and not added twice.</strong>
+    Subtracting it gives 165 − 67 − 12 = 86; leaving it out gives 98; adding it twice gives 122. All
+    three numbers are plausible-looking and all three appear as options. Count the signs before you
+    press equals: three plus, three minus, one plus.
+  </p>
+</Callout>
+
+The formula is also used **backwards**, to find a missing figure. If the union and every other term
+are known, the triple overlap is whatever makes the equation balance:
+
+<div class="formula">n(A ∩ B ∩ C) = n(A ∪ B ∪ C) − n(A) − n(B) − n(C) + n(A ∩ B) + n(B ∩ C) + n(A ∩ C)</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — recover the triple overlap</div>
+  A survey of 300 investors: 150 hold equity, 120 hold debt funds, 90 hold gold; 45 hold equity and
+  debt, 30 hold debt and gold, 40 hold equity and gold; 40 hold none of the three.<br />
+  At least one holding: 300 − 40 = <strong>260</strong><br />
+  260 = 150 + 120 + 90 − 45 − 30 − 40 + t = 360 − 115 + t = 245 + t<br />
+  t = 260 − 245 = <strong>15 investors hold all three</strong><br />
+  Sanity check on the regions: equity only = 150 − 45 − 40 + 15 = 80; debt only = 120 − 45 − 30 + 15 =
+  60; gold only = 90 − 40 − 30 + 15 = 35; pairs only = 30, 15 and 25; all three = 15. Sum inside =
+  80 + 60 + 35 + 30 + 15 + 25 + 15 = 260 ✓ and 260 + 40 = 300 ✓
+</div>
+
+<Callout kind="pointer">
+  <p>
+    When a three-set question gives you the number who take <strong>none</strong>, that figure is not
+    part of the formula — it converts the universe into the union first.
+    n(A ∪ B ∪ C) = n(U) − n(none), and only then does the seven-term formula apply. Feeding n(U)
+    itself into the left side is the single most common structural error in these questions.
+  </p>
+</Callout>
+
+## 9. Exactly one exactly two and at least
+
+Examiners rarely ask for the union alone. They ask for a **band** — exactly one, exactly two, at
+least two — and each band has its own formula. Write s for the sum of the three single counts, p for
+the sum of the three pairwise counts, and t for the triple count.
+
+<div class="formula">s = n(A) + n(B) + n(C) &nbsp;·&nbsp; p = n(A ∩ B) + n(B ∩ C) + n(A ∩ C) &nbsp;·&nbsp; t = n(A ∩ B ∩ C)</div>
+
+| Band asked for | Formula | Why |
+|---|---|---|
+| at least one | s − p + t | the union itself |
+| exactly one | s − 2p + 3t | each only region, added up |
+| exactly two | p − 3t | each pairs-only region, added up |
+| exactly three | t | the centre region |
+| at least two | p − 2t | exactly two plus exactly three |
+| at most one | n(U) − (p − 2t) | everyone except the at-least-two group |
+| none | n(U) − (s − p + t) | outside the union |
+
+Two checks make these safe to use without memorising them perfectly:
+
+<div class="formula">(exactly one) + (exactly two) + (exactly three) = n(A ∪ B ∪ C)</div>
+<div class="formula">(at least two) = (exactly two) + (exactly three) = (p − 3t) + t = p − 2t</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — every band for the articled assistants</div>
+  s = 165, p = 67, t = 12<br />
+  At least one = 165 − 67 + 12 = <strong>110</strong><br />
+  Exactly one = 165 − 2(67) + 3(12) = 165 − 134 + 36 = <strong>67</strong><br />
+  Exactly two = 67 − 3(12) = 67 − 36 = <strong>31</strong><br />
+  Exactly three = <strong>12</strong><br />
+  At least two = 67 − 2(12) = <strong>43</strong>, and 31 + 12 = 43 ✓<br />
+  Check: 67 + 31 + 12 = 110 = the union ✓<br />
+  Region cross-check: only regions 27 + 22 + 18 = 67 ✓ and pairs-only 13 + 8 + 10 = 31 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>"Exactly two" is not p.</strong> The three pairwise figures each still contain everyone
+    who is in all three sets, so t must be removed from each of them: p − 3t, not p − t and not p. In
+    the example that is 31, while p alone is 67 and p − t is 55. All three appear as options, and
+    only one of them is a count of anything real.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    If you cannot recall which formula belongs to which band, <strong>build the eight-region table
+    from section 6 and add up the regions the question names</strong>. It takes a minute longer and
+    it cannot go wrong, because each region is computed once and every band is then a plain sum.
+    Reviewers of your own working can also see immediately where an error is.
+  </p>
+</Callout>
+
+## 10. Ordered pairs and the Cartesian product
+
+An **ordered pair** (a, b) is two objects written in a fixed order, the first called the first
+co-ordinate and the second the second co-ordinate. Order is the whole point:
+
+<div class="formula">(a, b) = (c, d) if and only if a = c and b = d</div>
+
+So (3, 7) and (7, 3) are different ordered pairs, while the sets `{3, 7}` and `{7, 3}` are the same
+set. Braces ignore order; round brackets do not.
+
+The **Cartesian product** A × B is the set of every ordered pair whose first co-ordinate comes from
+A and whose second comes from B:
+
+<div class="formula">A × B = <code>{'{(a, b) : a ∈ A and b ∈ B}'}</code></div>
+<div class="formula">n(A × B) = n(A) × n(B)</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — A × B and B × A on a small pair</div>
+  A = <code>{'{1, 2}'}</code>, B = <code>{'{x, y, z}'}</code><br />
+  A × B = <code>{'{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)}'}</code> — 2 × 3 =
+  <strong>6 pairs</strong><br />
+  B × A = <code>{'{(x, 1), (x, 2), (y, 1), (y, 2), (z, 1), (z, 2)}'}</code> — also 6 pairs, but
+  <strong>not the same six</strong><br />
+  A × A = <code>{'{(1, 1), (1, 2), (2, 1), (2, 2)}'}</code> — 2² = <strong>4 pairs</strong>
+</div>
+
+Four facts about the product are examinable.
+
+- **A × B ≠ B × A** in general. They are equal only when A = B, or when one of them is empty.
+- **n(A × B) = n(B × A)** always, even when the sets themselves differ. The counts match; the
+  contents do not.
+- **A × ∅ = ∅** and ∅ × B = ∅. No pair can be built if there is nothing to draw a co-ordinate from.
+- **The product distributes** over union, intersection and difference in the first factor:
+  A × (B ∪ C) = (A × B) ∪ (A × C), and likewise for ∩ and −.
+
+<Callout kind="pointer">
+  <p>
+    Cardinality questions sometimes run backwards. "n(A × B) = 20 and n(A) = 4; find n(B)" is simply
+    20 ÷ 4 = 5. And "if n(A × B) = 12, what pairs of cardinalities are possible?" asks for the factor
+    pairs of 12: (1, 12), (2, 6), (3, 4), (4, 3), (6, 2) and (12, 1). Both are one line of
+    arithmetic once the multiplication rule is in place.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    <strong>n(A × B) is a product, not a sum.</strong> For n(A) = 4 and n(B) = 5 the answer is 20,
+    not 9. The wrong option is always the sum, because "and" tempts the reader into adding. Each of
+    the 4 first co-ordinates can be paired with each of the 5 second co-ordinates, which is
+    multiplication.
+  </p>
+</Callout>
+
+## 11. Relations and how many there are
+
+A **relation** R from A to B is any subset of A × B. That is the entire definition — a relation is
+just a chosen collection of ordered pairs. If (a, b) ∈ R we write a R b and say "a is related to b".
+
+When B is A itself, R is called a **relation on A**.
+
+Three sets travel with every relation:
+
+- **Domain** — the set of all first co-ordinates that actually appear in R. Domain ⊆ A.
+- **Range** — the set of all second co-ordinates that actually appear in R. Range ⊆ B.
+- **Codomain** — the whole of B, whether or not every member of it is used.
+
+The distinction between range and codomain looks pedantic and decides several answers later, so fix
+it now: the **codomain is declared** by the question, while the **range is discovered** by looking at
+the pairs.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — domain, range and codomain of one relation</div>
+  A = <code>{'{1, 2, 3, 4}'}</code>, B = <code>{'{2, 4, 6, 8, 10}'}</code>, and R is the relation
+  "b = 2a".<br />
+  Pairs: (1, 2), (2, 4), (3, 6), (4, 8) — every a in A has its double inside B<br />
+  R = <code>{'{(1, 2), (2, 4), (3, 6), (4, 8)}'}</code><br />
+  Domain = <code>{'{1, 2, 3, 4}'}</code> = A · Range = <code>{'{2, 4, 6, 8}'}</code> · Codomain =
+  <code>{'{2, 4, 6, 8, 10}'}</code> = B<br />
+  The element 10 sits in the codomain and not in the range, because nothing in A doubles to 10.
+</div>
+
+**The inverse relation.** R<sup>−1</sup> is obtained by reversing every pair:
+
+<div class="formula">R<sup>−1</sup> = <code>{'{(b, a) : (a, b) ∈ R}'}</code></div>
+
+Reversing swaps the two sets: the **domain of R<sup>−1</sup> is the range of R**, and the range of
+R<sup>−1</sup> is the domain of R. Every relation has an inverse relation — no condition at all is
+needed, which is a sharp contrast with the inverse *function* in section 15.
+
+**How many relations are there?** A relation from A to B is any subset of A × B, and A × B has
+n(A) × n(B) = mn pairs. Section 3 already counted the subsets of a set with mn members:
+
+<div class="formula">Number of relations from A to B = 2<sup>mn</sup>, where m = n(A) and n = n(B)</div>
+<div class="formula">Number of relations on a set A with n elements = 2<sup>n²</sup></div>
+
+For a three-element set that is 2⁹ = 512 relations, and for a two-element set 2⁴ = 16.
+
+<Callout kind="mistake">
+  <p>
+    The number of relations is <strong>2<sup>mn</sup></strong>, not mn and not 2<sup>m</sup>
+    × 2<sup>n</sup> in the sense of 2<sup>m+n</sup>. For n(A) = 3 and n(B) = 2 the product has 6
+    pairs and the count of relations is 2<sup>6</sup> = 64. The options will offer 6 (the size of the
+    product), 32 (2<sup>3+2</sup>) and 64, and only the last counts relations.
+  </p>
+</Callout>
+
+## 12. Properties of a relation and equivalence relations
+
+Five properties are examined, all of them for a relation R **on** a set A.
+
+**Reflexive.** Every element is related to itself: (a, a) ∈ R for **every** a ∈ A. One missing
+self-pair destroys it.
+
+**Symmetric.** Whenever (a, b) ∈ R, the reversed pair (b, a) ∈ R too.
+
+**Transitive.** Whenever (a, b) ∈ R and (b, c) ∈ R, the pair (a, c) ∈ R as well.
+
+**Anti-symmetric.** Whenever (a, b) ∈ R and (b, a) ∈ R, it must follow that a = b. In words: the only
+two-way pairs allowed are the self-pairs. "Less than or equal to" is anti-symmetric; "has the same
+surname as" is not.
+
+**Equivalence relation.** A relation that is reflexive, symmetric **and** transitive, all three
+together. Equality is the model case; so are "is congruent to", "belongs to the same GST slab as",
+and "leaves the same remainder on division by 7 as".
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — test one relation against all three conditions</div>
+  A = <code>{'{1, 2, 3}'}</code> and R = <code>{'{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)}'}</code><br />
+  <strong>Reflexive?</strong> Needs (1, 1), (2, 2) and (3, 3). All three present ✓<br />
+  <strong>Symmetric?</strong> The only non-self pairs are (1, 2) and (2, 1), and each is the other's
+  reverse ✓<br />
+  <strong>Transitive?</strong> Check every chain. (1, 2) with (2, 1) needs (1, 1) ✓; (2, 1) with
+  (1, 2) needs (2, 2) ✓; (1, 2) with (2, 2) needs (1, 2) ✓. No chain fails ✓<br />
+  All three hold, so R is an <strong>equivalence relation</strong>.<br />
+  Now delete (2, 1). R is still reflexive, is no longer symmetric, and is still transitive — the
+  three properties are independent of one another.
+</div>
+
+**Two relations that appear in every paper.**
+
+- The **identity relation** on A is `{(a, a) : a ∈ A}` — exactly the self-pairs and nothing else. It
+  is reflexive, symmetric, transitive and anti-symmetric, so it is an equivalence relation.
+- The **universal relation** A × A contains every possible pair. It is also an equivalence relation,
+  and it is anti-symmetric only when A has at most one element.
+
+**The empty relation.** R = ∅ on a non-empty set A is the trap the examiner reaches for. It is
+**symmetric** and **transitive**, because both conditions begin "whenever a pair is in R…" and there
+is no pair in R to test — a condition with nothing to check is satisfied. It is **not reflexive**,
+because reflexivity demands that pairs *be* present and none are. So the empty relation on a
+non-empty set fails to be an equivalence relation on exactly one count.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Do not call a relation transitive without checking, and do not deny it without checking
+    either.</strong> A relation with no chain to test — no pair (a, b) followed by a pair (b, c) — is
+    transitive, because the condition never fires. R = <code>{'{(1, 2), (3, 4)}'}</code> on
+    <code>{'{1, 2, 3, 4}'}</code> is transitive for that reason, and an option calling it "not
+    transitive" is testing whether you looked. Equally, "symmetric and transitive therefore
+    reflexive" is <strong>false</strong>: the empty relation is the counter-example.
+  </p>
+</Callout>
+
+**Counting relations with a given property** on a set with n elements. Each result comes from
+deciding which of the n² cells of the grid are switched on.
+
+| Property | Count | Reasoning |
+|---|---|---|
+| all relations | 2<sup>n²</sup> | every cell free |
+| reflexive | 2<sup>n² − n</sup> | the n diagonal cells are forced on |
+| symmetric | 2<sup>n(n + 1)/2</sup> | the n diagonal cells plus one free choice per off-diagonal pair |
+| reflexive and symmetric | 2<sup>n(n − 1)/2</sup> | diagonal forced, one choice per unordered pair |
+
+For n = 3 those are 512, 64, 64 and 8 respectively. Transitivity has no such tidy formula and is
+never asked as a count at Foundation level — it is asked as a test on a listed relation.
+
+<Callout kind="pointer">
+  <p>
+    When a relation is given by a rule rather than by a list, test the rule on numbers. For "x R y if
+    x divides y" on the natural numbers: every number divides itself, so reflexive ✓; 2 divides 6 but
+    6 does not divide 2, so not symmetric ✗; if x divides y and y divides z then x divides z, so
+    transitive ✓; and if x divides y and y divides x then x = y, so anti-symmetric ✓. One
+    counter-example is enough to kill a property; a property can only be confirmed by an argument
+    covering every case.
+  </p>
+</Callout>
+
+## 13. Functions and what turns a relation into one
+
+A **function** f from A to B, written f : A → B, is a relation from A to B in which **every** element
+of A appears as a first co-ordinate **exactly once**. Two demands, not one:
+
+1. **Nothing is left out.** Every a ∈ A must have an image.
+2. **Nothing is doubled.** No a may have two different images.
+
+If f pairs a with b we write b = f(a) and call b the **image** of a, and a a **pre-image** of b.
+
+**Every function is a relation; not every relation is a function.** A function is a relation with the
+two extra demands imposed, so the functions form a subset of the relations. The relation
+`{(1, 2), (1, 5)}` on `{1, 2, 5}` fails demand 2 (the input 1 has two outputs) and also demand 1 (the
+inputs 2 and 5 have none), so it is a relation and not a function.
+
+For a function f : A → B:
+
+- **Domain** = A, the whole of it. Unlike a general relation, a function's domain is never a proper
+  part of A.
+- **Codomain** = B, as declared.
+- **Range** = the set of images actually produced, f(A). Always Range ⊆ B, and the two may differ.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — which of these relations are functions</div>
+  Take A = <code>{'{1, 2, 3}'}</code> and B = <code>{'{4, 5}'}</code> throughout.<br />
+  R₁ = <code>{'{(1, 4), (2, 4), (3, 5)}'}</code> — every input once, images may repeat →
+  <strong>a function</strong><br />
+  R₂ = <code>{'{(1, 4), (2, 5)}'}</code> — the input 3 has no image → <strong>not a
+  function</strong><br />
+  R₃ = <code>{'{(1, 4), (1, 5), (2, 4), (3, 4)}'}</code> — the input 1 has two images →
+  <strong>not a function</strong><br />
+  Range of R₁ = <code>{'{4, 5}'}</code> = B here, but that is a fact about R₁, not a requirement.
+</div>
+
+**Reading the definition off a graph.** A curve in the plane is a function of x exactly when no
+vertical line meets it more than once. The circle x² + y² = 25 fails, because the line x = 3 meets it
+at y = 4 and y = −4. Two outputs for one input is precisely demand 2 being broken.
+
+**Two functions worth naming.**
+
+- **Identity function**, I(x) = x. Every element is its own image.
+- **Constant function**, f(x) = c for every x. Its range is the single set `{c}`, however large the
+  domain is.
+
+**The natural domain of a formula.** When a function is given by a formula with no domain stated,
+the domain is every real value for which the formula makes sense. Two exclusions do all the work at
+Foundation level: a **denominator may not be zero**, and the quantity under an **even root may not be
+negative**.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find the natural domain of three formulas</div>
+  f(x) = (x + 3) ÷ (x − 4) → the denominator vanishes at x = 4 → domain is every real x
+  <strong>except 4</strong><br />
+  g(x) = √(x − 7) → need x − 7 ≥ 0 → domain is <strong>x ≥ 7</strong><br />
+  h(x) = 1 ÷ √(9 − x) → need 9 − x &gt; 0, strictly, because the root is also a denominator →
+  domain is <strong>x &lt; 9</strong>
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Repeated images are allowed; repeated inputs are not.</strong> A relation in which two
+    different inputs share one output is a perfectly good function — it simply is not one-one. A
+    relation in which one input has two outputs is not a function at all. Students who reject
+    <code>{'{(1, 4), (2, 4), (3, 5)}'}</code> because "4 appears twice" have applied the test to the
+    wrong co-ordinate.
+  </p>
+</Callout>
+
+## 14. One-one onto and bijective and how many of each
+
+Three names classify a function f : A → B.
+
+**One-one (injective).** Different inputs always give different outputs: f(x₁) = f(x₂) forces
+x₁ = x₂. Equivalently, no element of B has two pre-images.
+
+**Onto (surjective).** Every element of the **codomain** is an image of something: Range = B, with
+nothing in B left unused.
+
+**Bijective (one-one and onto).** Both at once. A bijection pairs the two sets off perfectly, each
+element of A with exactly one element of B and no element of either left over.
+
+A function that is neither is perfectly ordinary — most are.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — classify four functions</div>
+  f : <code>{'{1, 2, 3}'}</code> → <code>{'{a, b, c}'}</code>, f = <code>{'{(1, a), (2, b), (3, c)}'}</code>
+  → distinct images and all of B used → <strong>bijective</strong><br />
+  g : <code>{'{1, 2, 3}'}</code> → <code>{'{a, b}'}</code>, g = <code>{'{(1, a), (2, a), (3, b)}'}</code>
+  → 1 and 2 share an image → not one-one; every element of B is used → <strong>onto only</strong><br />
+  h : <code>{'{1, 2}'}</code> → <code>{'{a, b, c}'}</code>, h = <code>{'{(1, a), (2, b)}'}</code> →
+  distinct images → one-one; c is never produced → <strong>one-one only</strong><br />
+  k : <code>{'{1, 2}'}</code> → <code>{'{a, b}'}</code>, k = <code>{'{(1, a), (2, a)}'}</code> →
+  <strong>neither</strong>
+</div>
+
+**Testing a formula.** For f : R → R given by a formula:
+
+- **One-one** — set f(x₁) = f(x₂) and see whether x₁ = x₂ must follow. f(x) = 5x − 3 gives
+  5x₁ − 3 = 5x₂ − 3 → x₁ = x₂, so it is one-one. f(x) = x² gives x₁² = x₂², which allows x₁ = −x₂,
+  so it is **not** one-one on R.
+- **Onto** — take an arbitrary y in the codomain and try to solve y = f(x) for x. For f(x) = 5x − 3,
+  x = (y + 3) ÷ 5 exists for every real y, so f is onto R. For f(x) = x², no x gives y = −4, so f is
+  **not** onto R — though it *is* onto if the codomain is stated as the non-negative reals.
+
+That last clause is the whole of the "onto" trap: **onto is judged against the codomain the question
+declares**, not against the set of values the function happens to produce.
+
+**The counting results**, for finite sets with n(A) = m and n(B) = n:
+
+<div class="formula">Number of functions from A to B = n<sup>m</sup></div>
+<div class="formula">Number of one-one functions from A to B = n(n − 1)(n − 2) … (n − m + 1), and 0 if m &gt; n</div>
+<div class="formula">Number of bijections from A to B, when m = n, = n!</div>
+
+The function count is n<sup>m</sup> and not m<sup>n</sup>: each of the **m** inputs is given one of
+**n** choices, so it is n multiplied by itself m times. The one-one count is the same walk down the
+inputs with the used images withdrawn: n choices for the first input, n − 1 for the second, and so
+on, which is exactly the permutation <sup>n</sup>P<sub>m</sub>.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — count functions between a 3-set and a 4-set</div>
+  A has 3 elements, B has 4. m = 3, n = 4.<br />
+  All functions: 4³ = <strong>64</strong><br />
+  One-one functions: 4 × 3 × 2 = <strong>24</strong><br />
+  Onto functions: impossible here, since 3 inputs cannot cover 4 outputs →
+  <strong>0</strong><br />
+  Reversing the sets (A has 4, B has 3): all functions 3⁴ = <strong>81</strong>; one-one functions
+  <strong>0</strong>, because 4 inputs cannot have 4 distinct images among 3 available.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>One-one and onto are different conditions and the options exploit the confusion.</strong>
+    One-one is about the inputs never colliding; onto is about the codomain being used up. A function
+    can be one of them, both, or neither. Two quick structural facts settle many questions without
+    any work: a one-one function needs n(B) ≥ n(A), an onto function needs n(B) ≤ n(A), and a
+    bijection between finite sets is possible only when n(A) = n(B).
+  </p>
+</Callout>
+
+## 15. Composite functions inverses and even and odd functions
+
+**Composition** feeds the output of one function into the input of another. For f : A → B and
+g : B → C, the composite g∘f : A → C is defined by
+
+<div class="formula">(g∘f)(x) = g(f(x)) — apply f FIRST, then g</div>
+
+The notation reads right to left, and that is where marks are lost. g∘f means f first; f∘g means g
+first. The two are different functions in general.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — g∘f and f∘g are not the same</div>
+  f(x) = 2x + 3 and g(x) = x²<br />
+  (g∘f)(x) = g(f(x)) = g(2x + 3) = <strong>(2x + 3)² = 4x² + 12x + 9</strong><br />
+  (f∘g)(x) = f(g(x)) = f(x²) = <strong>2x² + 3</strong><br />
+  At x = 1: g∘f gives 25 while f∘g gives 5. Different functions, and both values will be options.<br />
+  Composition is <strong>associative</strong> though: (h∘g)∘f = h∘(g∘f), so brackets never matter,
+  only order.
+</div>
+
+**The inverse function.** f<sup>−1</sup> undoes f: it sends each image back to the input it came
+from.
+
+<div class="formula">f<sup>−1</sup>(y) = x if and only if f(x) = y</div>
+<div class="formula">f<sup>−1</sup> exists if and only if f is BIJECTIVE (one-one and onto)</div>
+
+Both halves of the condition are needed, and each fails for its own reason. If f is not one-one, some
+y has two pre-images and f<sup>−1</sup>(y) would have two values — not a function. If f is not onto,
+some y in the codomain has no pre-image at all, so f<sup>−1</sup> would be undefined there. Contrast
+this with the inverse *relation* of section 11, which always exists because a relation is allowed
+both failings.
+
+**Finding an inverse formula.** Write y = f(x), solve for x in terms of y, then rename y as x.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — invert f(x) = (3x − 4) ÷ 5</div>
+  Put y = (3x − 4) ÷ 5<br />
+  5y = 3x − 4 → 3x = 5y + 4 → x = (5y + 4) ÷ 3<br />
+  Rename: <strong>f<sup>−1</sup>(x) = (5x + 4) ÷ 3</strong><br />
+  Check both ways: f(f<sup>−1</sup>(x)) = [3(5x + 4)/3 − 4] ÷ 5 = (5x + 4 − 4) ÷ 5 = x ✓ and
+  f<sup>−1</sup>(f(x)) = [5(3x − 4)/5 + 4] ÷ 3 = (3x − 4 + 4) ÷ 3 = x ✓
+</div>
+
+Three inverse identities are asked directly:
+
+<div class="formula">(f<sup>−1</sup>)<sup>−1</sup> = f &nbsp;·&nbsp; f∘f<sup>−1</sup> = f<sup>−1</sup>∘f = the identity function</div>
+<div class="formula">(g∘f)<sup>−1</sup> = f<sup>−1</sup>∘g<sup>−1</sup> — the order REVERSES</div>
+
+The reversal has a plain reading: to undo "put on socks, then shoes" you take off the shoes first.
+
+**Even and odd functions.** Compare f(−x) with f(x):
+
+<div class="formula">Even: f(−x) = f(x) for every x &nbsp;·&nbsp; Odd: f(−x) = −f(x) for every x</div>
+
+x², x⁴, |x| and any constant are even. x, x³, x⁵ and 1/x are odd. Most functions are **neither** —
+f(x) = x² + x gives f(−x) = x² − x, which is neither f(x) nor −f(x). The only function that is both
+even and odd is f(x) = 0.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — classify three functions</div>
+  f(x) = 3x⁴ − 5x² + 7 → f(−x) = 3x⁴ − 5x² + 7 = f(x) → <strong>even</strong> (only even powers,
+  constant included)<br />
+  g(x) = 2x³ − x → g(−x) = −2x³ + x = −(2x³ − x) = −g(x) → <strong>odd</strong> (only odd powers, no
+  constant)<br />
+  h(x) = x³ + x² → h(−x) = −x³ + x², which equals neither h(x) nor −h(x) →
+  <strong>neither</strong>
+</div>
+
+<Callout kind="pointer">
+  <p>
+    For a polynomial the test is visual: <strong>all powers even (a constant counts as x<sup>0</sup>,
+    an even power) makes it even; all powers odd and no constant term makes it odd; a mixture makes
+    it neither.</strong> Substituting −x is still worth one line of writing, because a sign slip on a
+    cube is easy and the three answers are all in the option list.
+  </p>
+</Callout>
+
+## 16. Limits and the two one-sided limits
+
+A limit answers a question about the **neighbourhood** of a point, never about the point itself.
+Writing
+
+<div class="formula">lim (x → a) f(x) = L</div>
+
+means: as x is taken closer and closer to a, without ever being equal to a, the value f(x) settles
+closer and closer to L. Whether f(a) exists, and what value it takes if it does, is a separate
+question with a separate answer.
+
+That separation is the single idea the chapter rests on, so here it is in a business dress. A courier
+firm charges ₹ 60 for any consignment up to 5 kg and ₹ 90 for anything above 5 kg. Approach 5 kg from
+below — 4.9, 4.99, 4.999 — and the charge stays ₹ 60. Approach it from above — 5.1, 5.01, 5.001 — and
+the charge stays ₹ 90. The two approaches disagree, so the charge has **no limit** at 5 kg, even
+though the charge *at* exactly 5 kg is perfectly well defined at ₹ 60.
+
+**The two one-sided limits.**
+
+- **Left-hand limit**, written lim (x → a⁻) f(x): the value approached as x rises towards a from
+  below.
+- **Right-hand limit**, written lim (x → a⁺) f(x): the value approached as x falls towards a from
+  above.
+
+<div class="formula">lim (x → a) f(x) exists if and only if LHL = RHL, and both are finite</div>
+<div class="formula">When they are equal, the common value is the limit</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the courier charge, written as a function</div>
+  f(x) = 60 for 0 &lt; x ≤ 5, and f(x) = 90 for x &gt; 5<br />
+  LHL at 5: for x just below 5 the first line applies → lim (x → 5⁻) f(x) = <strong>60</strong><br />
+  RHL at 5: for x just above 5 the second line applies → lim (x → 5⁺) f(x) = <strong>90</strong><br />
+  60 ≠ 90, so <strong>lim (x → 5) f(x) does not exist</strong><br />
+  f(5) = 60 all the same. The value at the point exists; the limit does not. They are different
+  questions.
+</div>
+
+**Substituting the one-sided approach.** A neat mechanical route for a piecewise function is to write
+x = a − h for the left-hand limit and x = a + h for the right-hand limit, with h a small positive
+number, and then let h → 0. It removes any doubt about which branch of the definition applies.
+
+**Algebra of limits.** Where the individual limits exist and are finite, limits behave like ordinary
+arithmetic:
+
+<div class="formula">lim (f ± g) = lim f ± lim g &nbsp;·&nbsp; lim (f × g) = (lim f)(lim g) &nbsp;·&nbsp; lim (f ÷ g) = (lim f) ÷ (lim g), provided lim g ≠ 0</div>
+<div class="formula">lim (k × f) = k × lim f for any constant k</div>
+
+The proviso on the quotient rule is where every interesting question lives. When the denominator's
+limit is zero, the rule says nothing and other work is needed — which is section 17.
+
+<Callout kind="mistake">
+  <p>
+    <strong>"The limit exists" and "the function is defined there" are independent statements.</strong>
+    A function can have a limit at a point where it is undefined: (x² − 9) ÷ (x − 3) has no value at
+    x = 3, yet its limit there is 6. And a function can be defined at a point where it has no limit,
+    as the courier charge is. Reading one off the other is the error the piecewise questions are
+    built to catch.
+  </p>
+</Callout>
+
+## 17. Evaluating limits and the indeterminate form
+
+Four methods, tried in this order, cover every Foundation question.
+
+**Method 1 — direct substitution.** Put x = a into the expression. If the result is an ordinary
+finite number, that is the limit. This works for every polynomial and for every rational function
+whose denominator does not vanish at a.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — substitution</div>
+  lim (x → 2) (3x² − 5x + 4) = 3(4) − 10 + 4 = <strong>6</strong><br />
+  lim (x → 1) (x + 7) ÷ (2x + 3) = 8 ÷ 5 = <strong>8/5</strong> — the denominator is 5, not 0, so
+  substitution is legitimate
+</div>
+
+**When substitution gives 0/0** the expression is in **indeterminate form**. That does not mean the
+limit fails to exist and it does not mean the answer is zero or infinity. It means the substitution
+has told you nothing, and one of the next three methods must be used. The signal is reliable: 0/0
+always indicates a common factor or a common surd waiting to be cancelled.
+
+**Method 2 — factorisation.** Factorise numerator and denominator, cancel the factor that is causing
+the zero, then substitute. Cancelling is allowed because x is near a but never equal to a, so the
+cancelled factor is never actually zero.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — factorisation on a 0/0 form</div>
+  lim (x → 3) (x² − 9) ÷ (x − 3)<br />
+  Substitution first: (9 − 9) ÷ (3 − 3) = 0/0 → indeterminate, so factorise<br />
+  x² − 9 = (x − 3)(x + 3) → the expression is (x − 3)(x + 3) ÷ (x − 3) = x + 3 for every x ≠ 3<br />
+  Now substitute: 3 + 3 = <strong>6</strong><br />
+  Numerical confirmation: at x = 2.999 the quotient is 5.999 and at x = 3.001 it is 6.001 — both
+  sides close in on 6 ✓
+</div>
+
+**Method 3 — rationalisation.** When a square root produces the 0/0, multiply numerator and
+denominator by the conjugate — the same expression with the sign between the terms flipped — and the
+root clears.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — rationalisation</div>
+  lim (x → 0) (√(x + 4) − 2) ÷ x → substitution gives (2 − 2) ÷ 0 = 0/0<br />
+  Multiply above and below by the conjugate √(x + 4) + 2:<br />
+  Numerator becomes (x + 4) − 4 = x<br />
+  Expression = x ÷ [x(√(x + 4) + 2)] = 1 ÷ (√(x + 4) + 2) for x ≠ 0<br />
+  Substitute x = 0: 1 ÷ (2 + 2) = <strong>1/4</strong><br />
+  Numerical confirmation: at x = 0.001 the original quotient is 0.2499984 ✓
+</div>
+
+**Method 4 — the standard limits.** Four results are quoted, not proved, at Foundation level:
+
+<div class="formula">lim (x → a) (x<sup>n</sup> − a<sup>n</sup>) ÷ (x − a) = n·a<sup>n − 1</sup></div>
+<div class="formula">lim (x → 0) (e<sup>x</sup> − 1) ÷ x = 1 &nbsp;·&nbsp; lim (x → 0) (a<sup>x</sup> − 1) ÷ x = log<sub>e</sub> a</div>
+<div class="formula">lim (x → 0) log<sub>e</sub>(1 + x) ÷ x = 1</div>
+<div class="formula">lim (x → 0) (1 + x)<sup>1/x</sup> = e &nbsp;·&nbsp; lim (x → ∞) (1 + 1/x)<sup>x</sup> = e</div>
+
+The first is the workhorse. It handles limits that factorisation would reach only with effort, and it
+applies for any n, including fractions and negatives.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the standard power limit</div>
+  lim (x → 2) (x⁵ − 32) ÷ (x − 2)<br />
+  This is the standard form with n = 5 and a = 2, since 32 = 2⁵<br />
+  Value = 5 × 2⁴ = <strong>80</strong><br />
+  Confirmation by factorisation: x⁵ − 32 = (x − 2)(x⁴ + 2x³ + 4x² + 8x + 16), and substituting x = 2
+  in the second bracket gives 16 + 16 + 16 + 16 + 16 = 80 ✓
+</div>
+
+**Limits at infinity of a rational function.** Divide every term by the highest power of x present in
+the denominator; every term of the form (constant ÷ x<sup>k</sup>) then goes to zero. The outcome
+depends only on the two degrees:
+
+| Degrees | lim (x → ∞) of the ratio |
+|---|---|
+| numerator degree less than denominator degree | 0 |
+| degrees equal | ratio of the leading coefficients |
+| numerator degree greater | the limit is not finite |
+
+So lim (x → ∞) (3x² + 5x) ÷ (7x² − 2) = 3/7, and lim (x → ∞) (4x + 1) ÷ (x² + 9) = 0.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Do not substitute where the function is undefined and report the result as the
+    limit.</strong> For (x² − 9) ÷ (x − 3) at x = 3 the substitution gives 0/0; answering "0", "1" or
+    "does not exist" all treat the indeterminate form as an answer, and the true limit is 6. The
+    reverse error is just as costly: reaching for factorisation when substitution already gave a
+    clean finite number wastes time and invites arithmetic slips.
+  </p>
+</Callout>
+
+## 18. Continuity at a point and piecewise functions
+
+A function is **continuous at x = a** when three things all hold. Miss any one and the function is
+**discontinuous** there.
+
+<div class="formula">1. f(a) is defined &nbsp;·&nbsp; 2. lim (x → a) f(x) exists, that is LHL = RHL &nbsp;·&nbsp; 3. lim (x → a) f(x) = f(a)</div>
+
+The informal reading — "the graph can be drawn without lifting the pen" — is a good picture and a
+poor test. The three-part test is the one to write down, and it should be written in that order,
+because each part is meaningless if the one before it fails.
+
+A function is **continuous on an interval** when it is continuous at every point of that interval.
+Every polynomial is continuous everywhere. A rational function is continuous everywhere except where
+its denominator vanishes. Sums, differences and products of continuous functions are continuous, and
+so is a quotient wherever its denominator is non-zero.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the three tests on one point</div>
+  f(x) = (x² − 4) ÷ (x − 2) for x ≠ 2, and f(2) = 5<br />
+  <strong>Test 1:</strong> f(2) is defined and equals 5 ✓<br />
+  <strong>Test 2:</strong> for x ≠ 2 the expression simplifies to x + 2, so LHL = RHL = 4; the limit
+  exists ✓<br />
+  <strong>Test 3:</strong> the limit is 4 and f(2) is 5, so 4 ≠ 5 ✗<br />
+  <strong>f is discontinuous at x = 2.</strong> Redefining f(2) as 4 would repair it — which is why
+  this kind of break is called a removable discontinuity.
+</div>
+
+**Testing a piecewise function.** The only points that can fail are the **junctions** where the
+definition changes. At each junction, compute three numbers and compare them: the left-hand limit
+from the branch to the left, the right-hand limit from the branch to the right, and the value the
+definition assigns at the junction itself.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — is this piecewise function continuous at x = 3</div>
+  f(x) = 2x + 1 for x &lt; 3; f(3) = 7; f(x) = x² − 2 for x &gt; 3<br />
+  LHL = lim (x → 3⁻) (2x + 1) = 2(3) + 1 = <strong>7</strong><br />
+  RHL = lim (x → 3⁺) (x² − 2) = 9 − 2 = <strong>7</strong><br />
+  LHL = RHL = 7, so the limit exists and equals 7<br />
+  f(3) = 7, and 7 = 7, so all three tests pass → <strong>continuous at x = 3</strong><br />
+  Had f(3) been declared as 5 instead, tests 1 and 2 would still pass and test 3 would fail — the
+  limit would exist while the function stayed discontinuous.
+</div>
+
+**Solving for a constant that makes a function continuous.** This is the standard question. Set
+LHL = RHL = f(a) and solve the resulting equation for the unknown. One unknown needs one equation;
+two unknowns need both equalities.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find k so that f is continuous at x = 2</div>
+  f(x) = 3x + k for x ≤ 2, and f(x) = kx² − 1 for x &gt; 2<br />
+  LHL = 3(2) + k = 6 + k, and this is also f(2), since the first branch carries the equality<br />
+  RHL = k(4) − 1 = 4k − 1<br />
+  Continuity needs 6 + k = 4k − 1 → 7 = 3k → <strong>k = 7/3</strong><br />
+  Check: LHL = 6 + 7/3 = 25/3 and RHL = 28/3 − 1 = 25/3 ✓ and f(2) = 25/3 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Continuity is never judged from the value alone, and never from one side alone.</strong>
+    A student who checks only that f(a) exists will call the courier charge continuous at 5 kg. A
+    student who computes only the left-hand limit will match it to f(a) and declare success without
+    ever looking at the right. Both one-sided limits and the value are three separate numbers, and
+    all three must agree.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    Watch the inequality signs in a piecewise definition. In "f(x) = 3x + k for x ≤ 2", the point
+    x = 2 belongs to the <strong>first</strong> branch, so f(2) = 6 + k and the left branch supplies
+    both the LHL and the value. If the definition had read x &lt; 2 with a separate line fixing
+    f(2) = 11, the value would be 11 and the answer would change. Read which branch owns the junction
+    before computing anything.
+  </p>
+</Callout>
+
+## 19. Negative marking and when to leave a question
+
+Paper 3 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+The arithmetic is worth knowing calmly. A blind guess among four options is right once in four times:
+four such guesses earn 1 mark on average and lose 3 × 0.25 = 0.75, a net gain of 0.25 marks across
+four questions. Blind guessing is therefore very slightly positive and close to neutral, with a wide
+spread of outcomes.
+
+**Elimination changes the picture.** Rule out one option and a guess among three is worth about 0.5
+marks per four attempts; rule out two and a guess between the last two is worth about 1.5 marks per
+four. This chapter is unusually generous to elimination, because so many of its wrong options are
+structurally impossible rather than merely different. A count of people that exceeds the universal
+set, a negative region in a Venn table, a power set with 2n members, a number of one-one functions
+larger than the number of functions — each can be discarded without solving anything.
+
+A sensible working rule: **answer when you can eliminate at least one option, and consider leaving
+the question when you cannot narrow the field at all.** Nothing about that rule needs anxiety
+attached to it. The marks at stake either way are small, and the time saved is usually worth more
+than the choice itself.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — notation, cardinality and the power set (easy)">
+  <p>
+    Let A be the set of distinct letters in the word RECEIVABLES and let B =
+    <code>{'{x : x ∈ N, x is a factor of 18}'}</code>. Find n(A) and n(B), write B in roster form,
+    state the number of subsets and of proper subsets of B, and say whether
+    <code>{'{1, 18}'}</code> ∈ P(B) or <code>{'{1, 18}'}</code> ⊆ P(B).
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — build A and count it once each</div>
+    RECEIVABLES has eleven letters: R, E, C, E, I, V, A, B, L, E, S<br />
+    Distinct letters only: R, E, C, I, V, A, B, L, S<br />
+    <strong>n(A) = 9</strong> — the three E letters count once. Answering 11 counts the repeats.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — build B</div>
+    The natural numbers dividing 18 exactly: 1, 2, 3, 6, 9, 18<br />
+    B = <code>{'{1, 2, 3, 6, 9, 18}'}</code> and <strong>n(B) = 6</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — subsets and proper subsets</div>
+    Subsets: 2<sup>6</sup> = <strong>64</strong><br />
+    Proper subsets: 64 − 1 = <strong>63</strong> — every subset except B itself, and ∅ is one of
+    them<br />
+    Non-empty proper subsets: <strong>62</strong><br />
+    n(P(B)) = <strong>64</strong>, since the power set has one member per subset
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the ∈ versus ⊆ question</div>
+    <code>{'{1, 18}'}</code> is a subset of B, so it is an <strong>element</strong> of P(B):
+    <code>{'{1, 18}'}</code> ∈ P(B) is <strong>true</strong>.<br />
+    <code>{'{1, 18}'}</code> ⊆ P(B) would require 1 and 18 themselves to be members of P(B), that is
+    to be subsets of B. They are numbers, not sets, so this is <strong>false</strong>.<br />
+    The true containment statement would be <code>{'{{1, 18}}'}</code> ⊆ P(B) — a set whose one
+    member is the subset.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — a two-set survey, every band asked (easy-moderate)">
+  <p>
+    A GST practitioner's office reviews 480 client files. 296 files include an e-way bill issue,
+    212 include an input-tax-credit mismatch, and 118 include both. Find how many files have at least
+    one issue, exactly one issue, an e-way bill issue only, and no issue at all. Then confirm the four
+    regions add to 480.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — name the sets and list what is given</div>
+    U = all files, n(U) = 480 · E = e-way bill issue, n(E) = 296 · I = ITC mismatch, n(I) = 212 ·
+    n(E ∩ I) = 118
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — at least one, by the union formula</div>
+    n(E ∪ I) = 296 + 212 − 118 = <strong>390 files</strong><br />
+    Adding without subtracting the overlap gives 508, which exceeds the 480 files that exist — an
+    answer the data itself rejects.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the four regions</div>
+    E only = 296 − 118 = <strong>178</strong> · I only = 212 − 118 = <strong>94</strong><br />
+    Both = <strong>118</strong> · Neither = 480 − 390 = <strong>90</strong><br />
+    Exactly one = 178 + 94 = <strong>272</strong>, and the formula agrees: 390 − 118 = 272 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the region check</div>
+    178 + 118 + 94 + 90 = <strong>480 ✓</strong><br />
+    Every count is non-negative and the four add to the universe, so the figures are internally
+    consistent. Running this check costs one line and catches almost every arithmetic slip.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — a three-set survey with every band (moderate)">
+  <p>
+    A coaching centre surveys 500 students about three optional modules. 260 took Accounts, 230 took
+    Costing and 200 took Statistics; 110 took Accounts and Costing, 95 took Costing and Statistics,
+    and 85 took Accounts and Statistics. 45 students took all three. Find the number who took at
+    least one module, exactly one, exactly two, at least two, and none.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — collect s, p and t</div>
+    s = 260 + 230 + 200 = <strong>690</strong><br />
+    p = 110 + 95 + 85 = <strong>290</strong><br />
+    t = <strong>45</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — at least one, and none</div>
+    n(A ∪ C ∪ S) = s − p + t = 690 − 290 + 45 = <strong>445 students</strong><br />
+    None of the three = 500 − 445 = <strong>55 students</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the bands</div>
+    Exactly one = s − 2p + 3t = 690 − 580 + 135 = <strong>245</strong><br />
+    Exactly two = p − 3t = 290 − 135 = <strong>155</strong><br />
+    Exactly three = <strong>45</strong><br />
+    At least two = p − 2t = 290 − 90 = <strong>200</strong>, and 155 + 45 = 200 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the eight-region table as the check</div>
+    Accounts only = 260 − 110 − 85 + 45 = 110 · Costing only = 230 − 110 − 95 + 45 = 70 ·
+    Statistics only = 200 − 85 − 95 + 45 = 65 → sum 245 ✓<br />
+    Accounts and Costing only = 110 − 45 = 65 · Costing and Statistics only = 95 − 45 = 50 ·
+    Accounts and Statistics only = 85 − 45 = 40 → sum 155 ✓<br />
+    All three = 45 · None = 55 · Grand total 245 + 155 + 45 + 55 = <strong>500 ✓</strong><br />
+    Every region is positive, so the survey figures are consistent.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — set algebra checked by enumeration (moderate)">
+  <p>
+    With U = <code>{'{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}'}</code>, A = <code>{'{1, 2, 3, 4, 5, 6}'}</code>,
+    B = <code>{'{4, 5, 6, 7, 8}'}</code> and C = <code>{'{2, 4, 6, 8, 10}'}</code>, evaluate
+    (A ∪ B)′, A′ ∩ B′, A ∩ (B ∪ C), (A ∩ B) ∪ (A ∩ C) and A Δ B, and state which pairs the results
+    prove equal.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the complements</div>
+    A′ = <code>{'{7, 8, 9, 10}'}</code> · B′ = <code>{'{1, 2, 3, 9, 10}'}</code> ·
+    C′ = <code>{'{1, 3, 5, 7, 9}'}</code>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — De Morgan, first law</div>
+    A ∪ B = <code>{'{1, 2, 3, 4, 5, 6, 7, 8}'}</code> → (A ∪ B)′ = <code>{'{9, 10}'}</code><br />
+    A′ ∩ B′ = <code>{'{7, 8, 9, 10}'}</code> ∩ <code>{'{1, 2, 3, 9, 10}'}</code> =
+    <code>{'{9, 10}'}</code><br />
+    <strong>The two agree ✓</strong> The wrong version, A′ ∪ B′, would give
+    <code>{'{1, 2, 3, 7, 8, 9, 10}'}</code> — seven members instead of two.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the distributive law</div>
+    B ∪ C = <code>{'{2, 4, 5, 6, 7, 8, 10}'}</code> → A ∩ (B ∪ C) = <code>{'{2, 4, 5, 6}'}</code><br />
+    A ∩ B = <code>{'{4, 5, 6}'}</code> · A ∩ C = <code>{'{2, 4, 6}'}</code> → their union is
+    <code>{'{2, 4, 5, 6}'}</code><br />
+    <strong>The two agree ✓</strong> — intersection distributes over union.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the symmetric difference and its count</div>
+    A − B = <code>{'{1, 2, 3}'}</code> · B − A = <code>{'{7, 8}'}</code> → A Δ B =
+    <code>{'{1, 2, 3, 7, 8}'}</code>, <strong>5 members</strong><br />
+    Formula check: n(A) + n(B) − 2n(A ∩ B) = 6 + 5 − 2(3) = 5 ✓<br />
+    Note that A − B and B − A are different sets of different sizes; only their union is symmetric.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — Cartesian products and counting relations (easy-moderate)">
+  <p>
+    A vendor code is built from a region set A = <code>{'{N, S, E}'}</code> and a category set
+    B = <code>{'{1, 2}'}</code>. Write A × B, state n(A × B) and n(B × A), say whether A × B = B × A,
+    and count the relations from A to B, the relations on A, and the functions from A to B.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the product, written out</div>
+    A × B = <code>{'{(N, 1), (N, 2), (S, 1), (S, 2), (E, 1), (E, 2)}'}</code><br />
+    n(A × B) = 3 × 2 = <strong>6</strong> · n(B × A) = 2 × 3 = <strong>6</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — equal counts, different sets</div>
+    B × A contains (1, N) and (2, E), which are not pairs of A × B, since the co-ordinates are in the
+    other order.<br />
+    <strong>A × B ≠ B × A</strong>, although both have 6 members. Equal cardinality is not equality.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — counting relations</div>
+    A relation from A to B is any subset of the 6-member product: 2<sup>6</sup> =
+    <strong>64 relations</strong><br />
+    A relation on A is any subset of A × A, which has 3² = 9 pairs: 2<sup>9</sup> =
+    <strong>512 relations</strong><br />
+    Reflexive relations on A: the 3 diagonal pairs are forced on, leaving 6 free cells →
+    2<sup>6</sup> = <strong>64</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — counting functions</div>
+    Each of the 3 regions must be given exactly one of the 2 categories: 2³ =
+    <strong>8 functions</strong><br />
+    One-one functions from A to B: impossible, since 3 distinct inputs cannot have 3 distinct images
+    among 2 available → <strong>0</strong><br />
+    Note how few of the 64 relations are functions: 8 of them. The extra conditions are severe.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — testing relations for the five properties (moderate)">
+  <p>
+    On A = <code>{'{1, 2, 3}'}</code>, classify each of these relations as reflexive, symmetric,
+    transitive, anti-symmetric, and say which are equivalence relations.
+    R₁ = <code>{'{(1, 1), (2, 2), (3, 3)}'}</code>;
+    R₂ = <code>{'{(1, 2), (2, 3)}'}</code>;
+    R₃ = <code>{'{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)}'}</code>;
+    R₄ = ∅.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — R₁, the identity relation</div>
+    Reflexive: all three self-pairs present ✓ · Symmetric: every pair is its own reverse ✓<br />
+    Transitive: the only chains are (a, a) with (a, a), needing (a, a) ✓ · Anti-symmetric: the only
+    two-way pairs are self-pairs ✓<br />
+    <strong>R₁ is an equivalence relation</strong>, and it is anti-symmetric as well.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — R₂</div>
+    Reflexive: (1, 1) missing ✗<br />
+    Symmetric: (1, 2) present but (2, 1) absent ✗<br />
+    Transitive: (1, 2) and (2, 3) form a chain, so (1, 3) is required and is absent ✗<br />
+    Anti-symmetric: no pair has its reverse present, so the condition never fires ✓ (vacuously)<br />
+    <strong>Not an equivalence relation</strong> — it fails all three of the required properties.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — R₃</div>
+    Reflexive ✓ · Symmetric ✓, since (1, 2) and (2, 1) are both present<br />
+    Transitive: (1, 2) with (2, 1) needs (1, 1) ✓; (2, 1) with (1, 2) needs (2, 2) ✓ → ✓<br />
+    Anti-symmetric: (1, 2) and (2, 1) are both present but 1 ≠ 2 ✗<br />
+    <strong>R₃ is an equivalence relation but is not anti-symmetric</strong> — the two ideas are
+    close to opposites, not variants of each other.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — R₄, the empty relation</div>
+    Reflexive: (1, 1) is required and absent ✗<br />
+    Symmetric ✓, transitive ✓ and anti-symmetric ✓ — each condition begins "whenever a pair is
+    present", and no pair is present, so nothing can violate it.<br />
+    <strong>Not an equivalence relation</strong>, failing on reflexivity alone. This is the standard
+    counter-example to "symmetric and transitive imply reflexive".
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — one-one, onto and the counts (moderate)">
+  <p>
+    (a) For f : R → R with f(x) = 4x − 7, decide whether f is one-one, onto, or bijective, and find
+    f<sup>−1</sup>. (b) For g : R → R with g(x) = x² + 1, decide the same and say what changes if the
+    codomain is stated as the set of reals not less than 1. (c) With n(A) = 4 and n(B) = 6, count the
+    functions and the one-one functions from A to B, and from B to A.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) the linear function</div>
+    One-one: 4x₁ − 7 = 4x₂ − 7 → 4x₁ = 4x₂ → x₁ = x₂ ✓<br />
+    Onto: given any real y, solve y = 4x − 7 → x = (y + 7) ÷ 4, which is a real number for every y ✓<br />
+    <strong>Bijective</strong>, so the inverse exists: <strong>f<sup>−1</sup>(x) = (x + 7) ÷ 4</strong><br />
+    Check: f(f<sup>−1</sup>(x)) = 4(x + 7)/4 − 7 = x ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the quadratic function</div>
+    One-one: g(2) = 5 and g(−2) = 5, so two inputs share an image ✗<br />
+    Onto R: g(x) = x² + 1 is never less than 1, so no x produces y = 0 ✗<br />
+    <strong>Neither one-one nor onto</strong> as stated.<br />
+    Change the codomain to y ≥ 1 and every value of the codomain is now produced, so g becomes
+    <strong>onto</strong> — while still not one-one. Nothing about the rule changed; only the declared
+    codomain did, which is exactly why onto must be tested against what the question declares.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) counts from A to B</div>
+    m = n(A) = 4 inputs, n = n(B) = 6 outputs<br />
+    All functions: 6⁴ = <strong>1,296</strong><br />
+    One-one functions: 6 × 5 × 4 × 3 = <strong>360</strong><br />
+    Onto functions: 0, since 4 inputs cannot cover 6 outputs
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) counts from B to A</div>
+    Now 6 inputs and 4 outputs.<br />
+    All functions: 4⁶ = <strong>4,096</strong><br />
+    One-one functions: <strong>0</strong>, since 6 distinct images cannot be found among 4<br />
+    Note the asymmetry: 6⁴ = 1,296 and 4⁶ = 4,096 are different numbers. The base is the size of the
+    codomain and the index is the size of the domain, never the reverse.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — composite and inverse functions (moderate)">
+  <p>
+    With f(x) = 3x − 2 and g(x) = x² + 1, find (g∘f)(2), (f∘g)(2), a formula for (g∘f)(x), the value
+    of x for which (f∘f)(x) = 40, and verify that (g∘f)<sup>−1</sup> is f<sup>−1</sup>∘g<sup>−1</sup>
+    at one convenient point.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the two composites at x = 2</div>
+    f(2) = 3(2) − 2 = 4 → (g∘f)(2) = g(4) = 16 + 1 = <strong>17</strong><br />
+    g(2) = 4 + 1 = 5 → (f∘g)(2) = f(5) = 15 − 2 = <strong>13</strong><br />
+    17 ≠ 13, so the order of composition matters. Both numbers will be offered as options.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the general formula</div>
+    (g∘f)(x) = g(3x − 2) = (3x − 2)² + 1 = 9x² − 12x + 4 + 1 = <strong>9x² − 12x + 5</strong><br />
+    Check at x = 2: 36 − 24 + 5 = 17 ✓<br />
+    For contrast, (f∘g)(x) = f(x² + 1) = 3(x² + 1) − 2 = 3x² + 1, which at x = 2 gives 13 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — solving a composite equation</div>
+    (f∘f)(x) = f(3x − 2) = 3(3x − 2) − 2 = 9x − 8<br />
+    9x − 8 = 40 → 9x = 48 → <strong>x = 16/3</strong><br />
+    Check: f(16/3) = 16 − 2 = 14, and f(14) = 42 − 2 = 40 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the reversal rule for inverses</div>
+    Restrict both functions to x ≥ 0 outputs so the inverses exist:
+    f<sup>−1</sup>(x) = (x + 2) ÷ 3 and g<sup>−1</sup>(x) = √(x − 1)<br />
+    Take y = 17, the value of (g∘f)(2). Then (g∘f)<sup>−1</sup>(17) should be 2.<br />
+    f<sup>−1</sup>(g<sup>−1</sup>(17)) = f<sup>−1</sup>(√16) = f<sup>−1</sup>(4) = 6 ÷ 3 =
+    <strong>2 ✓</strong><br />
+    The other order, g<sup>−1</sup>(f<sup>−1</sup>(17)) = g<sup>−1</sup>(19/3) = √(16/3), is not 2 —
+    the reversal is compulsory, not cosmetic.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — limits by every method (moderate)">
+  <p>
+    Evaluate (a) lim (x → 4) (x² − 16) ÷ (x − 4), (b) lim (x → 0) (√(x + 9) − 3) ÷ x,
+    (c) lim (x → 3) (x⁴ − 81) ÷ (x − 3), and (d) lim (x → ∞) (5x² − 3x + 2) ÷ (2x² + 7). Confirm each
+    answer by a second method.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) factorisation</div>
+    Substitution gives (16 − 16) ÷ (4 − 4) = 0/0, so the form is indeterminate.<br />
+    x² − 16 = (x − 4)(x + 4), and the (x − 4) cancels for every x ≠ 4<br />
+    Limit = 4 + 4 = <strong>8</strong><br />
+    Confirmation by the standard power limit with n = 2 and a = 4: n·a<sup>n−1</sup> = 2 × 4 = 8 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) rationalisation</div>
+    Substitution gives (3 − 3) ÷ 0 = 0/0<br />
+    Multiply above and below by √(x + 9) + 3: the numerator becomes (x + 9) − 9 = x<br />
+    Expression = x ÷ [x(√(x + 9) + 3)] = 1 ÷ (√(x + 9) + 3) for x ≠ 0<br />
+    Limit = 1 ÷ (3 + 3) = <strong>1/6</strong><br />
+    Numerical confirmation from both sides: at x = 0.001 the original quotient is 0.1666662, at
+    x = −0.001 it is 0.1666671 — both within 0.000001 of 1/6 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) the standard power limit</div>
+    81 = 3⁴, so the expression is exactly (x<sup>n</sup> − a<sup>n</sup>) ÷ (x − a) with n = 4,
+    a = 3<br />
+    Limit = 4 × 3³ = <strong>108</strong><br />
+    Confirmation by factorisation: x⁴ − 81 = (x − 3)(x³ + 3x² + 9x + 27), and at x = 3 the second
+    bracket is 27 + 27 + 27 + 27 = 108 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) a limit at infinity</div>
+    Divide every term by x², the highest power in the denominator:<br />
+    (5 − 3/x + 2/x²) ÷ (2 + 7/x²) → each term with an x in the denominator goes to 0<br />
+    Limit = 5 ÷ 2 = <strong>5/2</strong> — the ratio of the leading coefficients, as the degrees are
+    equal<br />
+    Confirmation: at x = 1,000 the ratio is 4,997,002 ÷ 2,000,007, which is 2.4985 — closing on
+    2.5 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — continuity of a piecewise function, and solving for a constant (moderate-hard)">
+  <p>
+    (a) Test f for continuity at x = 1, where f(x) = x² + 2 for x &lt; 1, f(1) = 4, and f(x) = 3x for
+    x &gt; 1. (b) Find the value of a that makes g continuous at x = 2, where g(x) = ax + 5 for
+    x ≤ 2 and g(x) = x² + 3 for x &gt; 2. (c) Find a and b so that h is continuous at both x = 1 and
+    x = 4, where h(x) = 2x for x &lt; 1, h(x) = ax + b for 1 ≤ x ≤ 4, and h(x) = 3x − 4 for x &gt; 4.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) three numbers, then compare</div>
+    LHL = lim (x → 1⁻) (x² + 2) = 1 + 2 = <strong>3</strong><br />
+    RHL = lim (x → 1⁺) 3x = <strong>3</strong><br />
+    LHL = RHL, so the limit exists and equals 3. Test 2 passes.<br />
+    f(1) = 4, and 3 ≠ 4, so test 3 fails → <strong>f is discontinuous at x = 1</strong><br />
+    The break is removable: redefining f(1) as 3 would make f continuous, and nothing else about the
+    function would change.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) set the two sides equal</div>
+    The junction x = 2 belongs to the first branch, so g(2) = 2a + 5 and that is also the LHL.<br />
+    RHL = lim (x → 2⁺) (x² + 3) = 4 + 3 = 7<br />
+    Continuity needs 2a + 5 = 7 → 2a = 2 → <strong>a = 1</strong><br />
+    Check: LHL = 7, RHL = 7, g(2) = 7 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) two junctions give two equations</div>
+    At x = 1: LHL = 2(1) = 2 and the middle branch gives a + b, which is also h(1)<br />
+    → a + b = 2 &nbsp;… (i)<br />
+    At x = 4: the middle branch gives 4a + b, which is h(4), and the RHL is 3(4) − 4 = 8<br />
+    → 4a + b = 8 &nbsp;… (ii)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) solve the pair and check</div>
+    (ii) − (i): 3a = 6 → <strong>a = 2</strong> → from (i), <strong>b = 0</strong><br />
+    Check at x = 1: LHL 2, middle branch 2(1) + 0 = 2, so h(1) = 2 ✓<br />
+    Check at x = 4: middle branch 2(4) + 0 = 8, RHL 8 ✓<br />
+    The middle branch turned out to be h(x) = 2x, which simply continues the first branch — a neat
+    signal that the working is right.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 11 — a business limit, and a set-counting cross-check (moderate)">
+  <p>
+    (a) A packaging unit's total cost for x thousand cartons is C(x) = ₹ (40,000 + 18x²) and the
+    average cost per thousand cartons is A(x) = C(x) ÷ x. What does A(x) approach as x grows without
+    limit, and what happens as x approaches 0 from above? (b) The same unit's 90 machine operators
+    were surveyed: 54 are trained on the die-cutter, 47 on the laminator, and 12 on neither. How many
+    are trained on both, and how many on exactly one?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) write the average cost as a formula</div>
+    A(x) = (40,000 + 18x²) ÷ x = 40,000/x + 18x<br />
+    As x → 0 from above, 40,000/x grows without bound, so <strong>A(x) has no finite limit at
+    0</strong> — the fixed cost is spread over almost nothing.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) the behaviour for large x</div>
+    As x → ∞, the term 40,000/x → 0 while 18x grows, so A(x) also grows without bound.<br />
+    The business reading: the average cost falls at first, as the fixed ₹ 40,000 is spread wider,
+    then rises as the 18x² term takes over. A limit statement is not always a finite number, and
+    saying so is the correct answer rather than a failure.<br />
+    For contrast, the <strong>marginal-looking ratio</strong> C(x) ÷ x² tends to 18 as x → ∞, because
+    the degrees then match: (40,000/x² + 18) → <strong>18</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) find the overlap from the neither figure</div>
+    n(U) = 90, n(D) = 54, n(L) = 47, n(neither) = 12<br />
+    At least one: n(D ∪ L) = 90 − 12 = <strong>78</strong><br />
+    n(D ∩ L) = n(D) + n(L) − n(D ∪ L) = 54 + 47 − 78 = <strong>23 operators trained on both</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) the remaining regions</div>
+    Die-cutter only = 54 − 23 = <strong>31</strong> · Laminator only = 47 − 23 =
+    <strong>24</strong><br />
+    Exactly one = 31 + 24 = <strong>55</strong>, and 78 − 23 = 55 ✓<br />
+    Region check: 31 + 23 + 24 + 12 = <strong>90 ✓</strong>
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Counting repeated letters or numbers.** A set holds distinct members. The letters of ASSESSEE
+  form a three-member set, not an eight-member one.
+- **Treating the empty set as an element.** ∅ is a **subset** of every set, and it is an **element**
+  only of a power set or of a set that lists it. `{0}`, `{∅}` and ∅ are three different objects with
+  cardinal numbers 1, 1 and 0.
+- **Power set counted as 2n instead of 2<sup>n</sup>.** For a five-member set the power set has 32
+  members, not 10. The same slip turns 2<sup>n</sup> − 1 proper subsets into 2n − 1.
+- **Confusing ∈ with ⊆.** For A = `{1, 2}`, the statement `{1} ∈ P(A)` is true and `1 ∈ P(A)` is
+  false. Every element of a power set is itself a set.
+- **Equating "equivalent" with "equal".** Equal sets have the same members; equivalent sets have only
+  the same count. Equal implies equivalent and never the reverse.
+- **A − B read as n(A) − n(B).** The correct count is n(A) − n(A ∩ B): only the part of B that sits
+  inside A can be removed from A.
+- **De Morgan applied without flipping the symbol.** (A ∪ B)′ is A′ ∩ B′, not A′ ∪ B′. Push the dash
+  in and change union to intersection, or the other way about.
+- **Adding the triple overlap once instead of subtracting the pairs then adding it back.** The three
+  set formula runs plus, minus, plus. Subtracting the triple, or omitting it, or adding it twice,
+  produces three wrong numbers that all look reasonable.
+- **"Exactly two" confused with "at least two".** Exactly two is p − 3t; at least two is p − 2t; the
+  raw pairwise sum p is neither. Read the words in front of the number.
+- **Feeding n(U) into the union formula.** When a stem gives the number who take none of the three,
+  subtract it from n(U) first. The seven-term formula computes the union, not the universe.
+- **n(A × B) computed as a sum.** It is n(A) × n(B). And A × B is not B × A, although the two always
+  have the same number of members.
+- **Number of relations taken as mn.** It is 2<sup>mn</sup>, because a relation is any **subset** of
+  the mn-pair product.
+- **Calling a relation transitive on vacuous grounds without saying so, or denying it wrongly.** A
+  relation with no chain (a, b) followed by (b, c) is transitive, and the empty relation is symmetric
+  and transitive while failing reflexivity. "Symmetric and transitive therefore reflexive" is false.
+- **Assuming an equivalence relation must be anti-symmetric.** The two are close to opposites: an
+  equivalence relation with any non-self pair cannot be anti-symmetric.
+- **Rejecting a function because two inputs share an image.** Repeated images are allowed and only
+  cost one-one status. What disqualifies a relation from being a function is one input with two
+  images, or an input with none.
+- **One-one confused with onto.** One-one is about inputs never colliding; onto is about the codomain
+  being fully used. A function can be either, both or neither.
+- **Onto tested against the range instead of the codomain.** Range = codomain **is** the definition of
+  onto, so testing "is the range equal to the range" makes every function onto. Read the codomain the
+  question declares.
+- **Counting functions as m<sup>n</sup>.** It is n<sup>m</sup>: each of the m inputs picks one of the
+  n outputs. For 4 inputs and 6 outputs that is 1,296, not 4,096.
+- **Composing in the wrong order.** g∘f means f first. For f(x) = 3x − 2 and g(x) = x² + 1 at x = 2
+  the two composites give 17 and 13, and both are in the option list.
+- **Claiming an inverse function for a non-bijective function.** The inverse **relation** always
+  exists; the inverse **function** exists only when f is one-one and onto. And (g∘f)<sup>−1</sup> is
+  f<sup>−1</sup>∘g<sup>−1</sup>, with the order reversed.
+- **Evaluating a limit by substitution where the function is undefined.** 0/0 is a signal, not an
+  answer. Factorise, rationalise, or use a standard limit. (x² − 9) ÷ (x − 3) has limit 6 at x = 3,
+  not 0 and not "does not exist".
+- **Assuming a limit exists because the function has a value there.** The courier charge is defined at
+  5 kg and has no limit there. The converse trap is just as common: a function can have a limit where
+  it has no value at all.
+- **Judging continuity from the value alone, or from one side.** Three numbers must agree: LHL, RHL
+  and f(a). Checking only f(a), or only one one-sided limit, is what the piecewise questions exist
+  to catch.
+- **Misreading which branch owns the junction.** In "f(x) = 3x + k for x ≤ 2", the point x = 2 belongs
+  to the first branch, so that branch supplies both the LHL and f(2).
+- **Even and odd treated as opposites.** Most functions are neither. Only f(x) = 0 is both.
+
+## One-page revision summary
+
+**Set notation.** Roster form lists members inside braces, ignoring order and repetition; set-builder
+form states the property, as in `{x : x ∈ N, x < 10}`. n(A) is the cardinal number. ∈ is membership,
+⊆ is containment.
+
+**Types.** Empty ∅ (n = 0), singleton (n = 1), finite, infinite, equal (same members), equivalent
+(same count), universal U, disjoint (A ∩ B = ∅). Equal implies equivalent, never the reverse. This
+chapter takes N as starting at 1, so 0 belongs to W and not to N.
+
+**Subsets and the power set.** ∅ ⊆ A and A ⊆ A for every A. A ⊂ B means A ⊆ B with A ≠ B.
+
+<div class="formula">Subsets = 2<sup>n</sup> · Proper subsets = 2<sup>n</sup> − 1 · Non-empty proper subsets = 2<sup>n</sup> − 2 · n(P(A)) = 2<sup>n</sup></div>
+
+**Operations.** A ∪ B is "or"; A ∩ B is "and"; A − B = A ∩ B′ is "in A not in B";
+A Δ B = (A ∪ B) − (A ∩ B) is "in exactly one"; A′ = U − A.
+
+**Laws.** Commutative, associative, idempotent (A ∪ A = A), identity (A ∪ ∅ = A, A ∩ U = A),
+complement (A ∪ A′ = U, A ∩ A′ = ∅), absorption, and distributive **both ways**. De Morgan:
+
+<div class="formula">(A ∪ B)′ = A′ ∩ B′ &nbsp;·&nbsp; (A ∩ B)′ = A′ ∪ B′</div>
+
+**Counting, two sets.** n(A ∪ B) = n(A) + n(B) − n(A ∩ B); n(A only) = n(A) − n(A ∩ B);
+n(exactly one) = n(A ∪ B) − n(A ∩ B); n(neither) = n(U) − n(A ∪ B). The four regions add to n(U).
+
+**Counting, three sets**, with s = the three singles, p = the three pairs, t = the triple:
+
+<div class="formula">at least one = s − p + t &nbsp;·&nbsp; exactly one = s − 2p + 3t &nbsp;·&nbsp; exactly two = p − 3t &nbsp;·&nbsp; exactly three = t &nbsp;·&nbsp; at least two = p − 2t</div>
+
+Every one of the eight regions must be zero or positive, and exactly one + exactly two + exactly
+three = the union.
+
+**Cartesian product.** A × B is the set of ordered pairs (a, b); n(A × B) = n(A) × n(B);
+A × B ≠ B × A unless A = B or one is empty; (a, b) = (c, d) only when a = c and b = d.
+
+**Relations.** A relation from A to B is any subset of A × B. Domain and range are what actually
+appear; the codomain is B as declared. R<sup>−1</sup> reverses every pair and always exists.
+
+<div class="formula">Relations from A to B = 2<sup>mn</sup> · Relations on an n-set = 2<sup>n²</sup> · Reflexive = 2<sup>n² − n</sup> · Symmetric = 2<sup>n(n + 1)/2</sup></div>
+
+**Properties.** Reflexive: (a, a) ∈ R for every a. Symmetric: (a, b) ∈ R forces (b, a) ∈ R.
+Transitive: (a, b) and (b, c) force (a, c). Anti-symmetric: (a, b) and (b, a) force a = b.
+Equivalence = reflexive + symmetric + transitive. The empty relation on a non-empty set is symmetric
+and transitive but not reflexive.
+
+**Functions.** f : A → B is a relation in which every element of A has exactly one image. Domain = A;
+range ⊆ codomain = B. One-one: distinct inputs give distinct images. Onto: range = codomain.
+Bijective: both.
+
+<div class="formula">Functions from A to B = n<sup>m</sup> · One-one = n(n − 1)…(n − m + 1) · Bijections when m = n = n!</div>
+
+**Composition and inverse.** (g∘f)(x) = g(f(x)) — f first. Composition is associative but not
+commutative. f<sup>−1</sup> exists only when f is bijective; (f<sup>−1</sup>)<sup>−1</sup> = f and
+(g∘f)<sup>−1</sup> = f<sup>−1</sup>∘g<sup>−1</sup>. Even: f(−x) = f(x). Odd: f(−x) = −f(x). Most
+functions are neither.
+
+**Limits.** lim (x → a) f(x) = L means f(x) settles at L as x nears a, whatever f(a) may be. The
+limit exists exactly when LHL = RHL and both are finite. Methods, in order: direct substitution;
+factorise and cancel; rationalise with the conjugate; the standard limits.
+
+<div class="formula">lim (x → a) (x<sup>n</sup> − a<sup>n</sup>) ÷ (x − a) = n·a<sup>n − 1</sup></div>
+<div class="formula">lim (x → 0) (e<sup>x</sup> − 1) ÷ x = 1 &nbsp;·&nbsp; lim (x → 0) (a<sup>x</sup> − 1) ÷ x = log<sub>e</sub> a &nbsp;·&nbsp; lim (x → 0) log<sub>e</sub>(1 + x) ÷ x = 1</div>
+<div class="formula">lim (x → 0) (1 + x)<sup>1/x</sup> = e &nbsp;·&nbsp; lim (x → ∞) (1 + 1/x)<sup>x</sup> = e</div>
+
+For a rational function as x → ∞: lower degree on top gives 0, equal degrees give the ratio of the
+leading coefficients, higher degree on top gives no finite limit. The form 0/0 is indeterminate — a
+signal to do more work, never an answer.
+
+**Continuity at x = a.** Three tests, in order: f(a) is defined; the limit exists (LHL = RHL); the
+limit equals f(a). Polynomials are continuous everywhere; rational functions everywhere their
+denominator is non-zero. For a piecewise function, only the junctions can fail, and to find a
+constant that repairs continuity, set LHL = RHL = f(a) and solve.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. Blind guessing among four is close to
+neutral; eliminating even one option makes an attempt clearly worthwhile, and this chapter's wrong
+options are often structurally impossible.

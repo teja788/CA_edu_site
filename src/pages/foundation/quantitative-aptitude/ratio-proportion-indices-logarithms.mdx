@@ -1,0 +1,1208 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Ratio and Proportion, Indices, Logarithms'
+description: 'CA Foundation Quantitative Aptitude Ch 1 — ratio, proportion, indices and logarithms in plain language: compound and duplicate ratios, componendo et dividendo, variation, the laws of indices, surds, the laws of logarithms, characteristic and mantissa, antilogarithms, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 1 · Ratio, Proportion, Indices, Logarithms'
+chapterSlug: ratio-proportion-indices-logarithms
+masteryId: f3-ch1
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 1 (Ratio and Proportion, Indices, Logarithms) — scope and level of treatment'
+  - 'Standard results of elementary algebra: laws of indices, laws of logarithms, change of base'
+sourceLabel: 'ICAI SM Paper 3 Ch 1 scope (May 2026 ed.) · standard algebraic results'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 32 min read · 11 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=ratio-proportion-indices-logarithms'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Sahyadri Foods, a small processor in Nashik, closes its books and three questions land on the
+same desk. The two working partners must split a profit of ₹ 14,70,000 in the ratio 4 : 3. The
+plant runs 12 hours a day with 15 workers; if 6 workers leave, how many hours must the rest work
+to move the same output? And the turnover, which stood at ₹ 40,00,000 five years ago, is now
+₹ 1,60,00,000 — the bank wants the compound annual growth rate before it renews the limit.
+
+Three questions, three tools. The first is **ratio**, the second is **inverse variation**, and the
+third cannot be answered at all without **indices** and **logarithms**: you need the fifth root of
+4, and the quickest honest route to it is a logarithm. This chapter builds all three tools in
+order, because the paper builds on them in the same order — mathematics of finance, sequences and
+statistics all reuse what you learn here.
+
+Paper 3 is fully objective. You will not be asked to show a proof; you will be asked for a number
+or an option, under time pressure, with 0.25 marks deducted for a wrong answer. That changes what
+"knowing the chapter" means. It is not enough to reach the right answer slowly — you also have to
+recognise which wrong answer each careless step produces, so that a familiar-looking option does
+not pull you in. Every worked example below names those wrong answers.
+
+## 1. What a ratio is, and what it is not
+
+A **ratio** compares two quantities **of the same kind** by division. If Sahyadri's two partners
+put in ₹ 8,00,000 and ₹ 6,00,000, their capitals are in the ratio 8,00,000 : 6,00,000, which
+simplifies to **4 : 3**.
+
+Write it as `a : b`, read "a is to b". The first term `a` is the **antecedent**, the second term
+`b` is the **consequent**. The ratio itself is the fraction a/b — a pure number with **no unit**.
+
+Four things follow, and each of them is examined:
+
+- **The quantities must be of the same kind**, measured in the same unit. ₹ 500 to 2 kg is not a
+  ratio. ₹ 500 to ₹ 2,000 is, and so is 500 g to 2 kg **after** you convert: 500 g : 2,000 g = 1 : 4.
+- **A ratio has no unit.** 4 : 3 is 4 : 3 whether the capitals were in rupees or in lakhs.
+- **The consequent can never be zero**, because you cannot divide by zero.
+- **Order matters.** 4 : 3 and 3 : 4 are different statements. Swapping them is the single most
+  common way to lose a mark in this chapter.
+
+A ratio is in its **lowest terms** (or simplest form) when the two terms have no common factor
+other than 1. Divide both terms by their HCF: 84 : 126 has HCF 42, so it is 2 : 3.
+
+Three forms of the same statement will appear on the paper, and you should read all three the
+same way. "The capitals are in the ratio 4 : 3." "The capitals are as 4 is to 3." "The capitals
+are 4x and 3x." The third is the most useful, because the multiplier x is what you actually solve
+for: once you know one part is ₹ 2,10,000, every share follows by multiplication.
+
+<Callout kind="pointer">
+  <p>
+    Watch the wording. "The ratio of A to B is 4 : 3" fixes the <em>order</em> — A is 4 parts and B
+    is 3 parts. "A and B are in the ratio 4 : 3" says the same thing. But "A is divided in the ratio
+    4 : 3" tells you only how a <strong>total</strong> is split, and "A is 4 : 3 <em>of</em> B" is
+    not standard phrasing at all — if you meet it, read the sentence around it before assuming.
+  </p>
+</Callout>
+
+## 2. The rules for handling and comparing ratios
+
+Two rules do almost all the work.
+
+<div class="formula">a : b = ka : kb for any non-zero k — multiplying or dividing both terms by the same non-zero number leaves the ratio unchanged</div>
+
+<div class="formula">a : b and c : d are equal when ad = bc (cross multiplication)</div>
+
+**Adding the same number to both terms does not preserve a ratio.** 2 : 3 is not 3 : 4. This is
+worth stating flatly because so many wrong options are built on it.
+
+To **compare** two ratios, convert both to fractions with a common denominator, or simply
+cross-multiply. Is 5 : 8 bigger or smaller than 7 : 11? Cross-multiply: 5 × 11 = 55 and 8 × 7 = 56.
+Since 55 is less than 56, **5 : 8 is the smaller ratio**. Equivalently, 0.625 against 0.6363...
+
+To compare **three or more** ratios, express them all with the same consequent (LCM of the
+consequents) and read off the antecedents.
+
+Three names the examiner uses without explaining them:
+
+- a ratio of **greater inequality** — the antecedent exceeds the consequent (7 : 5);
+- a ratio of **lesser inequality** — the antecedent is smaller (5 : 7);
+- a ratio of **equality** — the two terms are equal (5 : 5, that is 1 : 1).
+
+Add the same positive number to both terms and the ratio always moves **towards 1 : 1**. A ratio of
+greater inequality is reduced; a ratio of lesser inequality is increased. Add 3 to both terms of
+7 : 5 and you get 10 : 8 = 1.25, down from 1.4. This is why "add 3 to both terms" is never a way of
+simplifying — it changes the ratio.
+
+## 3. Inverse, compound, duplicate and triplicate ratios
+
+Five derived ratios carry names, and the paper uses the names rather than the formulas.
+
+| Name | Formed from a : b | Example, on 4 : 9 |
+|---|---|---|
+| **Inverse (reciprocal) ratio** | b : a, that is 1/a : 1/b | 9 : 4 |
+| **Compound ratio** of a : b and c : d | ac : bd | 4 : 9 with 3 : 2 gives 12 : 18 = 2 : 3 |
+| **Duplicate ratio** | a² : b² | 16 : 81 |
+| **Sub-duplicate ratio** | √a : √b | 2 : 3 |
+| **Triplicate ratio** | a³ : b³ | 64 : 729 |
+| **Sub-triplicate ratio** | ∛a : ∛b | on 8 : 27 it is 2 : 3 |
+
+<div class="formula">Compound ratio of a : b and c : d = ac : bd — multiply antecedents together and consequents together</div>
+
+The duplicate ratio is just the compound of a ratio **with itself**, and the triplicate ratio is
+the compound of a ratio with itself twice over. That is worth remembering, because it tells you
+which way the "sub-" versions run: sub-duplicate takes the square **root**, not the square.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Duplicate does not mean "double".</strong> The duplicate ratio of 4 : 9 is 16 : 81, not
+    8 : 18. And 8 : 18 simplifies straight back to 4 : 9, which is exactly why that distractor looks
+    plausible: doubling both terms changes nothing at all. If an option equals the original ratio,
+    it cannot be the duplicate of it (unless the ratio is 1 : 1).
+  </p>
+</Callout>
+
+## 4. Continued ratio: joining ratios that share a term
+
+A **continued ratio** compares three or more quantities at once: a : b : c. You are usually given
+two separate ratios that overlap in one quantity, and asked to join them.
+
+If A : B = 3 : 4 and B : C = 6 : 7, you cannot simply write 3 : 4 : 7 — B is 4 in the first
+statement and 6 in the second. Make B the same in both. The LCM of 4 and 6 is 12:
+
+- multiply A : B = 3 : 4 by 3, giving 9 : 12;
+- multiply B : C = 6 : 7 by 2, giving 12 : 14;
+- therefore **A : B : C = 9 : 12 : 14**.
+
+<div class="formula">If A : B = a : b and B : C = c : d, then A : B : C = ac : bc : bd</div>
+
+That shortcut is the same operation in one line: multiply the first ratio through by c and the
+second by b. On the numbers above, ac : bc : bd = 3×6 : 4×6 : 4×7 = 18 : 24 : 28 = 9 : 12 : 14.
+
+The reverse job also appears: given A : B : C = 9 : 12 : 14, read off any pair by ignoring the
+third term. A : C = 9 : 14.
+
+<Callout kind="pointer">
+  <p>
+    When three ratios chain — A : B, B : C and C : D — do them two at a time, or scale all three so
+    that the shared terms agree. Never write the four antecedents down in a row and hope; the
+    arithmetic takes about fifteen seconds, and a wrong answer costs 0.25 on top of the mark you
+    did not earn.
+  </p>
+</Callout>
+
+## 5. Dividing an amount in a given ratio
+
+This is the most examined single skill in the ratio half of the chapter, and it is mechanical.
+
+<div class="formula">To divide an amount T in the ratio a : b : c — total parts = a + b + c; each share = T × (its own part ÷ total parts)</div>
+
+Sahyadri's profit of ₹ 14,70,000 in the ratio 4 : 3. Total parts 7, so one part is
+₹ 14,70,000 ÷ 7 = ₹ 2,10,000. The shares are 4 × ₹ 2,10,000 = **₹ 8,40,000** and
+3 × ₹ 2,10,000 = **₹ 6,30,000**. They add back to ₹ 14,70,000, which is the check to run every
+time.
+
+Two variants appear constantly.
+
+**"The difference between the shares is given."** If A and B share in 7 : 4 and A gets ₹ 66,000
+more than B, then the difference is 7 − 4 = 3 parts, so one part is ₹ 22,000 and the total is
+11 parts = **₹ 2,42,000**.
+
+**"One share is given."** If the ratio is 5 : 3 : 2 and the middle share is ₹ 96,000, then 3 parts
+= ₹ 96,000, one part = ₹ 32,000, total = 10 parts = **₹ 3,20,000**.
+
+<Callout kind="mistake">
+  <p>
+    Reading "A gets ₹ 66,000 more than B" as "A's share is ₹ 66,000" is the classic slip, and the
+    examiner always puts <em>both</em> answers on the page. Before you divide, ask whether the
+    number you were given is a <strong>share</strong>, a <strong>difference</strong> or the
+    <strong>total</strong> — three different denominators (7 parts, 3 parts, 11 parts) come out of
+    the same sentence.
+  </p>
+</Callout>
+
+**A third variant: the ratio itself changes.** "Two numbers are in the ratio 5 : 7. If 12 is added
+to each, the ratio becomes 3 : 4. Find the numbers." Here you cannot work in parts alone, because
+the added 12 is not a number of parts. Introduce the multiplier x, write the two numbers as 5x and
+7x, and translate the second sentence into an equation:
+
+<div class="working-note">
+  <div class="working-note-label">The standard set-up</div>
+  (5x + 12) ÷ (7x + 12) = 3 ÷ 4<br />
+  Cross-multiply: 4(5x + 12) = 3(7x + 12), so 20x + 48 = 21x + 36<br />
+  Therefore x = 12, and the numbers are 5 × 12 = <strong>60</strong> and 7 × 12 =
+  <strong>84</strong><br />
+  Check: (60 + 12) : (84 + 12) = 72 : 96 = 3 : 4 ✓
+</div>
+
+The same set-up handles the salary and capital versions of the question — "if each partner brings in
+a further ₹ 40,000 the capitals become 3 : 4" — and it is the reason §2 insists that adding a
+constant to both terms changes a ratio. If it did not, there would be nothing to solve.
+
+## 6. Proportion, continued proportion and the mean proportional
+
+Four quantities a, b, c, d are in **proportion** when a : b = c : d. Write it a : b :: c : d, read
+"a is to b as c is to d".
+
+<div class="formula">a : b :: c : d means a/b = c/d, and therefore ad = bc — the product of the extremes equals the product of the means</div>
+
+Here a and d are the **extremes**, b and c are the **means**. The fourth quantity d is called the
+**fourth proportional** to a, b and c: d = bc/a.
+
+**Continued proportion.** Three quantities a, b, c are in continued proportion when
+a : b = b : c — the same middle term serves twice. Cross-multiplying gives the result you will use
+again and again:
+
+<div class="formula">a, b, c in continued proportion ⇔ b² = ac</div>
+
+Then **b is the mean proportional** (or geometric mean) between a and c, so b = √(ac), and **c is
+the third proportional** to a and b, so c = b²/a.
+
+Three names, three formulas, and students mix them up under time pressure. Fix them by counting
+how many quantities you were given:
+
+| You are given | You are asked for | Formula |
+|---|---|---|
+| a, b, c (three) | fourth proportional | d = bc/a |
+| a, b (two) | third proportional | c = b²/a |
+| a, c (two) | mean proportional | b = √(ac) |
+
+The mean proportional between 4 and 25 is √100 = **10**. The third proportional to 4 and 10 is
+100/4 = **25**. The fourth proportional to 4, 10 and 12 is (10 × 12)/4 = **30**.
+
+<Callout kind="pointer">
+  <p>
+    A continued proportion extends: a, b, c, d are in continued proportion when
+    a : b = b : c = c : d. Every consecutive pair has the same ratio, so the quantities form a
+    <strong>geometric progression</strong> — the link that Ch 6 picks up. If a = 3 and the common
+    ratio is 2, the four terms are 3, 6, 12, 24.
+  </p>
+</Callout>
+
+**The k-method.** Because three quantities in continued proportion form a geometric progression,
+they can be written as **a/r, a, ar** — one unknown for the size and one for the ratio. That single
+substitution solves most continued-proportion word problems in three lines.
+
+<div class="working-note">
+  <div class="working-note-label">Three numbers in continued proportion, sum 21 and product 216</div>
+  Write them as a/r, a, ar.<br />
+  Product = (a/r) × a × (ar) = a³ = 216, so a = <strong>6</strong><br />
+  Sum: 6/r + 6 + 6r = 21, so 6/r + 6r = 15, so 6 + 6r² = 15r<br />
+  2r² − 5r + 2 = 0, giving r = 2 or r = 1/2<br />
+  Either way the numbers are <strong>3, 6 and 12</strong> — r = 1/2 simply lists them in reverse.<br />
+  Check: 6² = 3 × 12 ✓ and 3 + 6 + 12 = 21 ✓
+</div>
+
+Writing the three unknowns as a, b, c instead needs two equations and a substitution; writing them
+as a/r, a, ar puts the whole of the continued-proportion condition into the notation, so the
+condition never has to be used again.
+
+## 7. The five operations on a proportion
+
+Start from a/b = c/d. Five standard rearrangements have Latin names, and the paper asks for the
+name as often as it asks for the algebra.
+
+| Operation | From a/b = c/d you may write | What was done |
+|---|---|---|
+| **Invertendo** | b/a = d/c | Turn both sides upside down |
+| **Alternendo** | a/c = b/d | Swap the two means |
+| **Componendo** | (a + b)/b = (c + d)/d | Add 1 to both sides |
+| **Dividendo** | (a − b)/b = (c − d)/d | Subtract 1 from both sides |
+| **Componendo et dividendo** | (a + b)/(a − b) = (c + d)/(c − d) | Divide componendo by dividendo |
+
+Two more, less often named but freely used:
+
+- **Addendo** — if a/b = c/d = e/f = k, then (a + c + e)/(b + d + f) = k as well. Any sum of
+  antecedents over the matching sum of consequents keeps the same ratio.
+- **Subtrahendo** — the same with differences: (a − c)/(b − d) = k.
+
+**Componendo et dividendo is the one that saves real time.** Whenever an equation has the shape
+(x + p)/(x − p) = m/n, do not cross-multiply and grind; apply the rule in reverse and read x off.
+
+Take (x + 5)/(x − 5) = 9/4. Reading it as componendo-et-dividendo applied to x/5 = ?, the operation
+undoes to x/5 = (9 + 4)/(9 − 4) = 13/5, so **x = 13**. Check: 18/8 = 9/4. Correct.
+
+<Callout kind="mistake">
+  <p>
+    Componendo adds the <strong>consequent</strong> to the antecedent and leaves the consequent as
+    the denominator: (a + b)/b, not (a + b)/a. Getting the denominator wrong turns a two-line
+    question into an answer that is nowhere on the option list — or worse, onto the one distractor
+    built from exactly that slip.
+  </p>
+</Callout>
+
+## 8. Direct, inverse and joint variation
+
+**Direct variation.** y varies directly as x, written y ∝ x, when y = kx for some constant k. Double
+x and y doubles. The graph is a straight line through the origin, and the giveaway in a question is
+that **y ÷ x stays constant**.
+
+<div class="formula">y ∝ x ⇒ y = kx ⇒ y₁/x₁ = y₂/x₂</div>
+
+**Inverse variation.** y varies inversely as x, written y ∝ 1/x, when xy = k. Double x and y halves.
+The giveaway is that **the product xy stays constant**.
+
+<div class="formula">y ∝ 1/x ⇒ y = k/x ⇒ x₁y₁ = x₂y₂</div>
+
+Sahyadri's plant is the standard example. 15 workers work 12 hours to move a fixed output, so the
+worker-hours needed are 15 × 12 = 180. With 6 workers gone, 9 remain, and 180 ÷ 9 = **20 hours**.
+The answer 7.2 hours — from treating the relation as direct, 12 × 9/15 — is always on the option
+list.
+
+**Joint variation.** y varies jointly as x and z when y = kxz. Mixed statements are common: "y
+varies directly as x and inversely as the square of z" means y = kx/z².
+
+**Partly constant, partly varying.** A cost that has a fixed component and a variable component is
+written y = a + bx, and two sets of readings are enough to find both constants. This is the shape
+every cost question takes, and it is not a ratio at all — treating it as one is the error the
+question is testing.
+
+<div class="working-note">
+  <div class="working-note-label">Fixed plus variable, from two observations</div>
+  Total cost is partly constant and partly varying with output: ₹ 2,60,000 for 4,000 units and
+  ₹ 3,80,000 for 7,000 units. Find the cost of 10,000 units.<br />
+  2,60,000 = a + 4,000b and 3,80,000 = a + 7,000b<br />
+  Subtract: 1,20,000 = 3,000b, so b = <strong>₹ 40 per unit</strong><br />
+  a = 2,60,000 − 4,000 × 40 = <strong>₹ 1,00,000 fixed</strong><br />
+  Cost of 10,000 units = 1,00,000 + 10,000 × 40 = <strong>₹ 5,00,000</strong><br />
+  Scaling the first figure in proportion instead — 2,60,000 × 10,000/4,000 = ₹ 6,50,000 — is the
+  distractor, and it is wrong because the fixed ₹ 1,00,000 would be counted two and a half times.
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Two habits make variation questions quick. First, decide the direction in words before touching
+    numbers: <em>more workers, fewer hours</em> is inverse; <em>more workers, more output</em> is
+    direct. Second, find k from the first set of data, then substitute the second — it is slower to
+    write than a ratio shortcut, but it never inverts by accident.
+  </p>
+</Callout>
+
+## 9. Indices: the meaning and the laws
+
+In the expression aⁿ, a is the **base** and n is the **index** (or exponent, or power). For a
+positive whole number n it means a multiplied by itself n times: 2⁵ = 2 × 2 × 2 × 2 × 2 = 32.
+
+Five laws carry the whole topic. In each of them the bases must be **the same** before the law can
+be used, and a is taken as a positive real number.
+
+<div class="formula">1. aᵐ × aⁿ = aᵐ⁺ⁿ  ·  2. aᵐ ÷ aⁿ = aᵐ⁻ⁿ  ·  3. (aᵐ)ⁿ = aᵐⁿ  ·  4. (ab)ⁿ = aⁿbⁿ  ·  5. (a/b)ⁿ = aⁿ/bⁿ</div>
+
+Read the first two the way they are written. **Multiplying adds the indices; dividing subtracts
+them.** Nothing is done to the base. 3⁴ × 3² = 3⁶ = 729, not 9⁶.
+
+Law 3 is the one to keep separate from law 1. (a³)² = a⁶ because you have three a's, twice over.
+But a³ × a² = a⁵. Same symbols, different operation: **power of a power multiplies, product of
+powers adds**.
+
+Laws 4 and 5 spread an index across a product or a quotient. They do **not** spread across a sum.
+
+<Callout kind="mistake">
+  <p>
+    <strong>(a + b)ⁿ is not aⁿ + bⁿ.</strong> Test it once with numbers and you will never do it
+    again: (3 + 4)² = 49, while 3² + 4² = 25. The same warning applies to roots —
+    √(9 + 16) = 5, not 3 + 4 = 7. Every "distribute the power over a sum" step is wrong, and an
+    option built from it appears in most exponent questions.
+  </p>
+</Callout>
+
+## 10. Zero, negative and fractional exponents
+
+The laws above were built for whole numbers, and then extended so that they keep working. That is
+where the three definitions come from — they are not arbitrary.
+
+**Zero exponent.** By law 2, aⁿ ÷ aⁿ = aⁿ⁻ⁿ = a⁰. But anything divided by itself is 1.
+
+<div class="formula">a⁰ = 1 for every a ≠ 0 (0⁰ is not defined)</div>
+
+So (7,45,000)⁰ = 1, and (−13)⁰ = 1, and (2/3)⁰ = 1. The size of the base is irrelevant.
+
+**Negative exponent.** By law 2 again, a⁰ ÷ aⁿ = a⁻ⁿ, and a⁰ = 1.
+
+<div class="formula">a⁻ⁿ = 1/aⁿ, and 1/a⁻ⁿ = aⁿ; therefore (a/b)⁻ⁿ = (b/a)ⁿ</div>
+
+A negative index means **reciprocal**, never a negative number. 2⁻³ = 1/8, which is positive and
+small. (2/5)⁻² = (5/2)² = 25/4.
+
+**Fractional exponent.** By law 3, (a^(1/n))ⁿ = a¹ = a, so a^(1/n) must be the nth root of a.
+
+<div class="formula">a^(1/n) = ⁿ√a  and  a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ</div>
+
+The denominator of the fraction is the **root**; the numerator is the **power**. 8^(2/3) = the cube
+root of 8, squared = 2² = **4**. Taking the root first keeps the numbers small — 8² = 64 and then
+the cube root of 64 is also 4, but on 32^(3/5) the difference between rooting first and powering
+first is the difference between 2³ = 8 and the fifth root of 32,768.
+
+<Callout kind="mistake">
+  <p>
+    Three slips, in order of frequency. <strong>(i)</strong> Reading 2⁻³ as −8 instead of 1/8.
+    <strong>(ii)</strong> Reading 8^(2/3) as 8 × 2/3, or as the square root of 8 cubed — the
+    denominator is the root. <strong>(iii)</strong> Writing a⁰ = 0. Each of these has its own
+    distractor sitting on the option list, which is why a wrong answer here feels as convincing as
+    a right one.
+  </p>
+</Callout>
+
+## 11. Surds written as indices
+
+A **surd** is a root that cannot be reduced to a rational number: √2, ∛5, √7. Its decimal never
+terminates and never repeats, so it is left in root form and handled exactly.
+
+Every surd is an index in disguise, and converting it is what makes surd questions easy:
+
+- √a = a^(1/2), ∛a = a^(1/3), ⁿ√a = a^(1/n);
+- ⁿ√(aᵐ) = a^(m/n);
+- √a × √b = √(ab), because a^(1/2) × b^(1/2) = (ab)^(1/2);
+- √a ÷ √b = √(a/b).
+
+The **order** of a surd is the n in ⁿ√a. Surds of the same order combine directly; surds of
+different orders must first be brought to a common order, exactly as fractions are brought to a
+common denominator. To compare ∛3 with √2, write them as 3^(1/3) and 2^(1/2), take the LCM of the
+denominators (6), and raise both to the sixth power: 3² = 9 against 2³ = 8. So **∛3 is larger**.
+
+**Rationalising the denominator** removes a surd from the bottom of a fraction. Multiply above and
+below by the same surd, or by the conjugate:
+
+<div class="formula">1/√a = √a/a  ·  1/(√a + √b) = (√a − √b)/(a − b), using (x + y)(x − y) = x² − y²</div>
+
+So 1/(√5 − √3) = (√5 + √3)/(5 − 3) = (√5 + √3)/2.
+
+Two more habits worth having:
+
+- **Simplify before you rationalise.** √50 = √(25 × 2) = 5√2, so 1/√50 = 1/(5√2) = √2/10. Taking
+  √50 to the top untouched gives √50/50, which is the same number written badly.
+- **Like surds add; unlike surds do not.** 3√2 + 5√2 = 8√2, but 3√2 + 5√3 cannot be combined at
+  all. Reduce every surd to its simplest form first, because √8 + √18 looks unlike and is not:
+  2√2 + 3√2 = 5√2.
+
+<Callout kind="pointer">
+  <p>
+    Convert to index form first, always. A question that looks like "simplify ∛(x⁴) × √(x³) ÷
+    x^(5/6)" is unpleasant in root notation and is three additions and a subtraction in index
+    notation: 4/3 + 3/2 − 5/6 = 8/6 + 9/6 − 5/6 = 12/6 = 2, so the answer is x².
+  </p>
+</Callout>
+
+## 12. Exponential equations: equating the bases
+
+An equation with the unknown in the exponent is solved by making the two sides powers of **the same
+base**, then equating the exponents. The rule that licenses it:
+
+<div class="formula">If aˣ = aʸ and a is positive with a ≠ 1, then x = y</div>
+
+Solve 3^(2x−1) = 81. Write 81 as 3⁴. Then 2x − 1 = 4, so **x = 2.5**.
+
+Solve 2^(x+3) = 8^(x−1). The common base is 2, and 8 = 2³, so the right side is 2^(3x−3). Equate:
+x + 3 = 3x − 3, giving 2x = 6 and **x = 3**.
+
+Some equations reduce to a quadratic in a power. In 4ˣ − 5·2ˣ + 4 = 0, put y = 2ˣ; since
+4ˣ = (2²)ˣ = (2ˣ)², the equation becomes y² − 5y + 4 = 0, so y = 1 or y = 4, giving **x = 0 or
+x = 2**.
+
+Two special cases are worth holding:
+
+- **aˣ = 1** forces x = 0 (for a ≠ 1), because a⁰ = 1 and no other power of a equals 1.
+- **aˣ = bˣ with a ≠ b** also forces x = 0, since (a/b)ˣ = 1.
+
+<Callout kind="mistake">
+  <p>
+    The excluded values matter. The rule needs <strong>a positive and a ≠ 1</strong>. From
+    1ˣ = 1ʸ nothing follows, because every power of 1 is 1. And an equation such as xˣ = x⁴ has the
+    extra root x = 1 that base-equating alone would miss. At Foundation level the bases you meet are
+    tame, but an option that says "x = 3 only" against "x = 0 or x = 3" is testing precisely this.
+  </p>
+</Callout>
+
+## 13. Logarithms: the definition and the two-way conversion
+
+A logarithm answers one question: **to what power must the base be raised to give this number?**
+
+<div class="formula">logₐ N = x means exactly the same thing as aˣ = N (a &gt; 0, a ≠ 1, N &gt; 0)</div>
+
+The two statements are the same fact written twice. 2⁵ = 32 in index form is log₂ 32 = 5 in
+logarithmic form. Practise the conversion until it is automatic, because almost every logarithm
+question begins by moving from one form to the other.
+
+| Index form | Logarithmic form |
+|---|---|
+| 3⁴ = 81 | log₃ 81 = 4 |
+| 10³ = 1,000 | log₁₀ 1,000 = 3 |
+| 5⁰ = 1 | log₅ 1 = 0 |
+| 2⁻³ = 1/8 | log₂ (1/8) = −3 |
+| 49^(1/2) = 7 | log₄₉ 7 = 1/2 |
+
+Read the conditions carefully, because they generate options on their own.
+
+- **The base must be positive and must not be 1.** If the base were 1, every power of it would be 1
+  and the logarithm could not be defined.
+- **The number N must be positive.** No power of a positive base is negative or zero, so
+  **the logarithm of a negative number and of zero does not exist** in the real system.
+- **The logarithm itself may be any real number** — positive, zero or negative. log₂ (1/8) = −3 is
+  perfectly ordinary. A negative logarithm means the number is between 0 and 1, not that the number
+  is negative.
+
+**Why the paper cares.** A logarithm is the only tool at Foundation level that
+gets an unknown **out of an exponent**. Compound interest, the effective rate, the
+number of years to double a deposit, a compound annual growth rate — every one of
+them puts the unknown in the exponent, and every one of them is solved by taking
+logarithms of both sides. Chapter 4 (Mathematics of Finance) uses this on almost
+every question, so the time spent here is repaid twice.
+
+Four results follow straight from the definition and are worth memorising as facts:
+
+<div class="formula">logₐ 1 = 0  ·  logₐ a = 1  ·  a^(logₐ N) = N  ·  logₐ (aˣ) = x</div>
+
+## 14. The laws of logarithms
+
+Because a logarithm is an exponent, every law of indices becomes a law of logarithms. Throughout,
+the base a is the same in every term, and m and n are positive.
+
+<div class="formula">Product: logₐ (mn) = logₐ m + logₐ n</div>
+<div class="formula">Quotient: logₐ (m/n) = logₐ m − logₐ n</div>
+<div class="formula">Power: logₐ (mᵖ) = p × logₐ m</div>
+
+That is the whole toolkit, and it is why logarithms were invented: they turn **multiplication into
+addition**, division into subtraction, and raising to a power into multiplication. A fifth root
+becomes a division by 5.
+
+Two more that fall out of the power law:
+
+- **Root law** — logₐ (ⁿ√m) = (1/n) × logₐ m, because ⁿ√m = m^(1/n).
+- **Reciprocal law** — logₐ n × logₙ a = 1, so logₐ n = 1/logₙ a.
+
+Used together, they collapse ugly expressions. Given log 2 = 0.3010 and log 3 = 0.4771,
+log 12 = log (2² × 3) = 2 log 2 + log 3 = 0.6020 + 0.4771 = **1.0791**. No multiplication was
+needed.
+
+The laws run both ways, and the paper uses both directions.
+
+**Expanding** breaks one logarithm into several: log (a²b/c³) = 2 log a + log b − 3 log c. Move the
+exponents out in front, turn the multiplication into a plus and the division into a minus.
+
+**Condensing** does the reverse, and it is the step that makes an equation solvable. Everything
+must first be turned into a coefficient of 1 before the terms can be joined:
+
+<div class="working-note">
+  <div class="working-note-label">Condensing to a single logarithm</div>
+  Simplify log 2 + 2 log 3 − log 6.<br />
+  Power law first: 2 log 3 = log 3² = log 9<br />
+  Then product and quotient: log 2 + log 9 − log 6 = log (2 × 9 ÷ 6) = <strong>log 3</strong><br />
+  Numerically: 0.3010 + 0.9542 − 0.7781 = 0.4771 = log 3 ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">A short chain that appears in this form every year</div>
+  Show that log (75/16) − 2 log (5/9) + log (32/243) = log 2.<br />
+  2 log (5/9) = log (25/81)<br />
+  The expression becomes log [(75/16) × (81/25) × (32/243)]<br />
+  Inside the bracket: (75 × 81 × 32) ÷ (16 × 25 × 243) = 1,94,400 ÷ 97,200 = 2<br />
+  So the expression is <strong>log 2</strong> ✓
+</div>
+
+Notice what made both of them work: every coefficient was absorbed by the power law **before** any
+adding or subtracting began. Trying to add log 2 to 2 log 3 directly has no meaning.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The log of a sum is not the sum of the logs.</strong> log (m + n) has no expansion at
+    all — it is not log m + log n, and it is not log m × log n. Similarly
+    log (m/n) is <em>not</em> (log m)/(log n), and (log m)² is not 2 log m. These four
+    look-alike errors between them account for most of the wrong answers in the logarithm half of
+    the chapter, and each of them lands on a specific option: expanding log (m + n) as
+    log m + log n turns log 5 into log 2 + log 3 = 0.7781, which is the value of log 6.
+  </p>
+</Callout>
+
+## 15. Change of base; common and natural logarithms
+
+A logarithm to one base can always be rewritten in another base. This is what lets you use a
+calculator or a table that only knows base 10.
+
+<div class="formula">logₐ N = (logₚ N) ÷ (logₚ a), for any admissible new base p</div>
+
+Setting N = p gives the reciprocal law again: logₐ p × logₚ a = 1. Setting the new base to 10
+gives the practical form: **logₐ N = log N ÷ log a**, where log means base 10.
+
+So log₂ 50 = log 50 ÷ log 2 = 1.6990 ÷ 0.3010 = **5.6445**.
+
+**Two bases have their own names.**
+
+- **Common logarithms** use base **10**. They are written simply as **log N**, with the base left
+  out, and they are the ones used with tables. Throughout this chapter, `log` with no base written
+  means base 10.
+- **Natural logarithms** use base **e**, where e = 2.71828..., and are written **ln N** (sometimes
+  logₑ N). They are the ones that appear in continuous-compounding and growth formulas later in the
+  paper.
+
+The two are proportional, because change of base is just a constant multiplier:
+
+<div class="formula">ln N = 2.3026 × log N  ·  log N = 0.4343 × ln N  (since 1/2.3026 = 0.4343)</div>
+
+<Callout kind="pointer">
+  <p>
+    If a question writes <em>log</em> with no base, take base 10 unless the question is plainly about
+    continuous growth. If it writes <em>ln</em>, take base e. And if an option list contains both
+    a value and roughly 2.3 times that value, the question is testing exactly this distinction — the
+    factor 2.3026 between the two answers is the tell.
+  </p>
+</Callout>
+
+## 16. Characteristic, mantissa and antilogarithms
+
+A common logarithm has two parts. The **characteristic** is the integral part; the **mantissa** is
+the decimal part, and **the mantissa is always written as positive**.
+
+log 4,270 = 3.6304 — characteristic 3, mantissa 0.6304.
+
+The mantissa depends only on the **sequence of significant digits**, so 4.27, 42.7, 427 and 4,270
+all share the mantissa 0.6304. The characteristic alone records where the decimal point sits, and
+it is found by counting, not by table:
+
+<div class="formula">Number ≥ 1 with n digits before the decimal point: characteristic = n − 1</div>
+<div class="formula">Number below 1 with m zeros between the decimal point and the first significant digit: characteristic = −(m + 1)</div>
+
+| Number | Digits / zeros | Characteristic | Logarithm |
+|---|---|---|---|
+| 4,270 | 4 digits before the point | 3 | 3.6304 |
+| 42.7 | 2 digits | 1 | 1.6304 |
+| 4.27 | 1 digit | 0 | 0.6304 |
+| 0.427 | no zeros after the point | −1 | 1̄.6304 |
+| 0.0427 | 1 zero after the point | −2 | 2̄.6304 |
+| 0.00427 | 2 zeros after the point | −3 | 3̄.6304 |
+
+The bar notation matters. **1̄.6304 is not −1.6304.** It means (−1) + 0.6304 = **−0.3696**: the
+characteristic is negative and the mantissa stays positive. Keeping the mantissa positive is what
+lets one table serve every decimal position, and it is a convention, not a rule of algebra.
+
+An **antilogarithm** runs the process backwards: if log N = x then N = antilog x. Look up the
+mantissa in the antilog table to get the digit sequence, then use the characteristic to place the
+decimal point — characteristic c means the number has c + 1 digits before the point when c is zero
+or positive, and c leading zeros after the point when c is negative, counting as above.
+
+**Reading a four-figure table.** The body of the table is entered with the first three significant
+digits; a separate "mean difference" column adjusts for the fourth. For log 4,273: the row 42,
+column 7 gives 6304, and the mean-difference column 3 adds 3, giving a mantissa of 0.6307. The
+characteristic is 3, so **log 4,273 = 3.6307**.
+
+<div class="working-note">
+  <div class="working-note-label">An antilogarithm, step by step</div>
+  Find N when log N = 2.8572.<br />
+  Mantissa 0.8572 → the antilog table gives the digit sequence <strong>7197</strong><br />
+  Characteristic 2 → the number has 2 + 1 = 3 digits before the decimal point<br />
+  N = <strong>719.7</strong><br />
+  (The exact value is 720. The gap is the four-figure rounding, not an error — a four-figure table
+  is only good to about four significant figures, and an examiner who wants 720 will say "correct
+  to the nearest whole number".)
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">The same with a negative characteristic</div>
+  Find N when log N = 2̄.8572, that is −2 + 0.8572.<br />
+  The mantissa is the same 0.8572, so the digits are again 7197<br />
+  Characteristic −2 → one zero between the decimal point and the first significant digit<br />
+  N = <strong>0.07197</strong><br />
+  Notice that only the decimal point moved. The mantissa never changes when a number is multiplied
+  or divided by a power of 10, which is the whole reason the tables are built this way.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Two errors, and both are arithmetic rather than conceptual. <strong>(i) Characteristic off by
+    one</strong> — 4 digits gives 3, not 4; one zero after the decimal point gives −2, not −1.
+    <strong>(ii) Treating a bar characteristic as an ordinary negative number</strong> — writing
+    1̄.6304 as −1.6304 shifts the answer by twice the mantissa. Convert to a single negative decimal
+    before you do anything else with it, or keep the two parts separate throughout; do not mix the
+    two habits inside one question.
+  </p>
+</Callout>
+
+## 17. Logarithmic equations and the extraneous-root check
+
+An equation with the unknown inside a logarithm is solved in three steps: collapse each side into a
+**single** logarithm using the laws, remove the logarithms, then **test every root against the
+domain**.
+
+The first step uses the laws of §14. The second uses the one-to-one property:
+
+<div class="formula">If logₐ M = logₐ N then M = N; and if logₐ M = k then M = aᵏ</div>
+
+The third step is the one that carries marks. A logarithm exists only for a **positive** argument,
+so any root that makes any argument zero or negative must be **rejected** — it is an
+**extraneous root**, produced by the algebra and not by the original equation.
+
+**Worked in full.** Solve log₂ x + log₂ (x − 2) = 3.
+
+- Combine: log₂ [x(x − 2)] = 3.
+- Remove: x(x − 2) = 2³ = 8, so x² − 2x − 8 = 0.
+- Factorise: (x − 4)(x + 2) = 0, giving x = 4 or x = −2.
+- **Check.** x = 4 makes both arguments positive (4 and 2), so it is valid. x = −2 makes log₂ (−2)
+  meaningless, so it is rejected. The solution is **x = 4 only**.
+
+**Second pattern.** Solve log (x − 1) + log (x + 1) = log 8, base 10 throughout. Combining gives
+log (x² − 1) = log 8, so x² = 9 and x = ±3. Only **x = 3** survives: at x = −3 both x − 1 and
+x + 1 are negative.
+
+<Callout kind="mistake">
+  <p>
+    Skipping the domain check is the standard trap, and the examiner builds the option list around
+    it: one option gives both roots, one gives the valid root, one gives the rejected root alone.
+    "x = 4 or x = −2" is a wrong answer to the worked equation above even though both numbers came
+    out of correct algebra. The equation, not the quadratic, decides what counts as a solution.
+  </p>
+</Callout>
+
+## 18. Negative marking, and when a guess is worth making
+
+Paper 3 gives 1 mark for a correct answer, deducts 0.25 for a wrong one, and gives 0 for a blank.
+It is worth seeing the arithmetic once, calmly, rather than carrying a vague fear of the deduction.
+
+With four options and no information at all, a random answer is right one time in four. The
+expected value is (1/4 × 1) + (3/4 × −0.25) = **+0.0625 marks** — slightly positive. Eliminate one
+option you are sure is wrong and the expected value rises to about **+0.17**; eliminate two and it
+is **+0.375**. On this scale the deduction is designed to remove the reward for blind ticking, not
+to punish a reasoned attempt.
+
+The number that does not appear in that calculation is the one that matters here. Guesses in this
+chapter are **not random**. Every distractor in a well-set quantitative paper is the answer that a
+particular slip produces — the inverted ratio, the dropped minus sign on an exponent, the log of a
+sum expanded as a sum of logs, the characteristic counted one too high. A student who makes the
+slip does not pick randomly among four; they walk straight to the prepared option and feel certain
+about it.
+
+So the practical rule is not about guessing at all. It is about **where you spend your check**.
+When you finish a question in this chapter, re-read the single step where the named error of that
+topic would occur — the order of the ratio, the sign of the index, the argument of the logarithm.
+That check costs a few seconds and it is what separates a working method from a confident wrong
+answer. If after it you still cannot choose between two options, answering is marginally better
+than leaving it blank; if you have no basis for eliminating anything and the question is long,
+moving on protects the time you need for the questions you can actually do.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — dividing a profit when only a difference is given (easy-moderate)">
+  <p>
+    Sahyadri Foods has three partners who share profit in the ratio <strong>5 : 4 : 3</strong>. For
+    the year ended 31 March 2026 the second partner's share exceeds the third partner's share by
+    <strong>₹ 84,000</strong>. Find the total profit and each partner's share.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — identify what the given number measures</div>
+    The ₹ 84,000 is a <strong>difference</strong>, not a share. In parts, that difference is
+    4 − 3 = <strong>1 part</strong>.<br />
+    Therefore 1 part = ₹ 84,000.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — total and shares</div>
+    Total parts = 5 + 4 + 3 = 12, so total profit = 12 × 84,000 = <strong>₹ 10,08,000</strong><br />
+    First partner = 5 × 84,000 = <strong>₹ 4,20,000</strong><br />
+    Second partner = 4 × 84,000 = <strong>₹ 3,36,000</strong><br />
+    Third partner = 3 × 84,000 = <strong>₹ 2,52,000</strong><br />
+    Check: 4,20,000 + 3,36,000 + 2,52,000 = ₹ 10,08,000 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the two wrong answers this question generates</div>
+    Reading ₹ 84,000 as the <em>second partner's share</em> makes 4 parts = 84,000, one part
+    ₹ 21,000 and the total ₹ 2,52,000 — which is also, confusingly, the correct third share.<br />
+    Dividing 84,000 by the <em>sum</em> 4 + 3 = 7 instead of the difference gives one part ₹ 12,000
+    and a total of ₹ 1,44,000.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — building a continued ratio, then dividing (moderate)">
+  <p>
+    Stock is held at three depots. Depot A to Depot B is <strong>3 : 4</strong>, and Depot B to
+    Depot C is <strong>6 : 11</strong>. The three depots together hold <strong>3,44,000 kg</strong>.
+    How much is at each depot?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — make B agree in both statements</div>
+    B is 4 in the first ratio and 6 in the second; the LCM is 12.<br />
+    A : B = 3 : 4, multiplied by 3, gives 9 : 12<br />
+    B : C = 6 : 11, multiplied by 2, gives 12 : 22<br />
+    Therefore <strong>A : B : C = 9 : 12 : 22</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — divide the total</div>
+    Total parts = 9 + 12 + 22 = 43, so one part = 3,44,000 ÷ 43 = 8,000 kg<br />
+    A = 9 × 8,000 = <strong>72,000 kg</strong> · B = 12 × 8,000 = <strong>96,000 kg</strong> ·
+    C = 22 × 8,000 = <strong>1,76,000 kg</strong><br />
+    Check: 72,000 + 96,000 + 1,76,000 = 3,44,000 kg ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the trap</div>
+    Writing the continued ratio as <strong>3 : 4 : 11</strong> — taking the terms as they stand
+    without reconciling B — gives 18 parts, one part 19,111.11 kg, and three answers that do not
+    even divide evenly. A total that refuses to divide cleanly is usually the signal that the
+    continued ratio was never formed.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — a ratio compounded of three named ratios (moderate)">
+  <p>
+    Find the ratio compounded of the <strong>duplicate ratio of 4 : 5</strong>, the
+    <strong>triplicate ratio of 2 : 3</strong>, and the <strong>sub-duplicate ratio of
+    81 : 256</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — form each named ratio first</div>
+    Duplicate of 4 : 5 = 4² : 5² = <strong>16 : 25</strong><br />
+    Triplicate of 2 : 3 = 2³ : 3³ = <strong>8 : 27</strong><br />
+    Sub-duplicate of 81 : 256 = √81 : √256 = <strong>9 : 16</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — compound them</div>
+    Multiply the antecedents together and the consequents together:<br />
+    (16 × 8 × 9) : (25 × 27 × 16) = 1,152 : 10,800<br />
+    Divide both by 144: <strong>8 : 75</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the two prepared wrong answers</div>
+    Using 81 : 256 as it stands, without taking the sub-duplicate, gives
+    (16 × 8 × 81) : (25 × 27 × 256) = 10,368 : 1,72,800 = <strong>3 : 50</strong>.<br />
+    Taking the <em>square</em> instead of the square root for "sub-duplicate" gives a far larger
+    consequent still. Both look like ordinary answers; neither is reachable if you write the three
+    named ratios out separately before compounding.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — componendo et dividendo (moderate)">
+  <p>
+    If <strong>(4x + 3y) ÷ (4x − 3y) = 11 ÷ 5</strong>, find the ratio x : y. Then solve
+    <strong>(x + 7) ÷ (x − 7) = 5 ÷ 3</strong> for x.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — recognise the shape</div>
+    The left side is (P + Q)/(P − Q) with P = 4x and Q = 3y. Componendo et dividendo says that if
+    P/Q = m/n then (P + Q)/(P − Q) = (m + n)/(m − n). Run it backwards.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — undo the operation</div>
+    4x / 3y = (11 + 5) / (11 − 5) = 16/6 = 8/3<br />
+    So 12x = 24y, giving x/y = 2, that is <strong>x : y = 2 : 1</strong><br />
+    Check: with x = 2, y = 1, (8 + 3)/(8 − 3) = 11/5 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the second equation</div>
+    Here P = x and Q = 7, so x/7 = (5 + 3)/(5 − 3) = 8/2 = 4, giving <strong>x = 28</strong><br />
+    Check: (28 + 7)/(28 − 7) = 35/21 = 5/3 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the wrong answer to watch</div>
+    Inverting the operation — writing 4x/3y = (11 − 5)/(11 + 5) = 6/16 = 3/8 — gives
+    x : y = 9 : 32, and in the second equation x/7 = (5 − 3)/(5 + 3) = 1/4, so x = 1.75. Both
+    appear on option lists. The sum always goes on top, because componendo (the operation that
+    <em>adds</em>) supplies the numerator of the combined fraction.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — joint variation, direct one way and inverse the other (moderate)">
+  <p>
+    At Sahyadri's packing hall the time taken to complete an order varies <strong>directly</strong>
+    as the number of cases and <strong>inversely</strong> as the number of machines running.
+    <strong>12 machines</strong> pack <strong>3,000 cases</strong> in <strong>8 hours</strong>. How
+    long will <strong>9 machines</strong> take to pack <strong>4,500 cases</strong>?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — write the relation and find k</div>
+    t = k × C ÷ M, where C is cases and M is machines.<br />
+    8 = k × 3,000 ÷ 12 = 250k, so k = 8 ÷ 250 = <strong>0.032</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — substitute the second set</div>
+    t = 0.032 × 4,500 ÷ 9 = 0.032 × 500 = <strong>16 hours</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the same answer as a ratio check</div>
+    Cases rise by the factor 4,500 ÷ 3,000 = 1.5, which raises the time.<br />
+    Machines fall by the factor 9 ÷ 12 = 0.75, and fewer machines also raise the time, by the
+    inverse factor 12 ÷ 9 = 4/3.<br />
+    t = 8 × 1.5 × 4/3 = <strong>16 hours</strong> ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — three wrong answers, each from one identifiable slip</div>
+    Treating machines as a <em>direct</em> factor: 8 × 1.5 × 9/12 = <strong>9 hours</strong><br />
+    Ignoring the machines entirely: 8 × 1.5 = <strong>12 hours</strong><br />
+    Inverting both factors: 8 × 2/3 × 3/4 = <strong>4 hours</strong><br />
+    Deciding the direction in words first — fewer machines must mean <em>more</em> hours — rules out
+    9 and 4 before any arithmetic is done.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — the laws of indices, and an exponential equation (moderate)">
+  <p>
+    (a) Simplify (x^(a−b))^(a+b) × (x^(b−c))^(b+c) × (x^(c−a))^(c+a).
+    (b) Solve 5^(x+2) × 5^(2x−1) = 625^(x−1).
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — part (a), power of a power multiplies</div>
+    (x^(a−b))^(a+b) = x^(a² − b²), and likewise for the other two factors.<br />
+    Multiplying powers of the same base adds the exponents:<br />
+    (a² − b²) + (b² − c²) + (c² − a²) = <strong>0</strong><br />
+    So the product is x⁰ = <strong>1</strong>, for every x other than 0.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — part (b), bring both sides to base 5</div>
+    Left side: 5^(x+2) × 5^(2x−1) = 5^(3x + 1)<br />
+    Right side: 625 = 5⁴, so 625^(x−1) = 5^(4x − 4)<br />
+    Equate the exponents: 3x + 1 = 4x − 4, so <strong>x = 5</strong><br />
+    Check: left 5^16, right 625⁴ = 5^16 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the slips</div>
+    In (a), multiplying the two exponents of a product instead of adding them gives x raised to a
+    long product rather than x⁰ = 1, and the option "0" then looks right — but the value of the
+    expression is 1, not 0; only the <em>exponent</em> is 0.<br />
+    In (b), reading 625 as 5⁵ gives 3x + 1 = 5x − 5 and x = 3.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — negative and fractional exponents together (moderate)">
+  <p>
+    Evaluate <strong>32^(−2/5) + 81^(3/4) − (1/64)^(−1/3)</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — first term: negative index means reciprocal</div>
+    32^(−2/5) = 1 ÷ 32^(2/5)<br />
+    32^(1/5) = 2, because 2⁵ = 32; so 32^(2/5) = 2² = 4<br />
+    First term = <strong>1/4 = 0.25</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — second term: root first, then power</div>
+    81^(1/4) = 3, because 3⁴ = 81; so 81^(3/4) = 3³ = <strong>27</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — third term: negative index flips the fraction</div>
+    (1/64)^(−1/3) = 64^(1/3) = <strong>4</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — assemble</div>
+    0.25 + 27 − 4 = <strong>23.25</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — the prepared wrong answers</div>
+    Reading 32^(−2/5) as −4 (a negative index taken as a negative value) gives −4 + 27 − 4 =
+    <strong>19</strong>.<br />
+    Leaving (1/64)^(−1/3) as 1/4 (forgetting to flip) gives 0.25 + 27 − 0.25 =
+    <strong>27</strong>.<br />
+    Reading 81^(3/4) as 81 × 3/4 gives 60.75 in place of 27.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — working with a short table of logarithms (moderate)">
+  <p>
+    Given <strong>log 2 = 0.3010</strong> and <strong>log 3 = 0.4771</strong> (base 10 throughout),
+    find (a) log 720, (b) log 4.5, and (c) the number of digits in 2³⁰.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the one extra value you need</div>
+    log 5 = log (10 ÷ 2) = log 10 − log 2 = 1 − 0.3010 = <strong>0.6990</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) factorise, then use the product and power laws</div>
+    720 = 2⁴ × 3² × 5<br />
+    log 720 = 4 log 2 + 2 log 3 + log 5 = 1.2040 + 0.9542 + 0.6990 = <strong>2.8572</strong><br />
+    Sense check: the characteristic 2 says 720 has three digits ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) the quotient law</div>
+    4.5 = 9 ÷ 2, so log 4.5 = 2 log 3 − log 2 = 0.9542 − 0.3010 = <strong>0.6532</strong><br />
+    Characteristic 0, so the number lies between 1 and 10 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) digits from the characteristic</div>
+    log 2³⁰ = 30 × 0.3010 = 9.030<br />
+    The characteristic is 9, and a number with characteristic n has n + 1 digits, so 2³⁰ has
+    <strong>10 digits</strong>. (It is 1,07,37,41,824.)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — the errors these three parts are built to catch</div>
+    Computing log 4.5 as (log 9) ÷ (log 2) = 0.9542 ÷ 0.3010 = <strong>3.1702</strong> — the quotient
+    law applies to the <em>number</em> inside the log, never to the logarithms themselves.<br />
+    Answering "9 digits" in part (c) by reading the characteristic as the digit count.<br />
+    Expanding log 720 as log 700 + log 20, or as log 7 + log 20, on a number that was never
+    factorised.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — the growth rate the bank asked for (hard: indices and logarithms together)">
+  <p>
+    Sahyadri Foods' turnover was <strong>₹ 40,00,000</strong> five years ago and is
+    <strong>₹ 1,60,00,000</strong> today. Find the compound annual growth rate. Use
+    log 2 = 0.3010, and antilog 0.1204 = 1.3195.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — set up the index equation</div>
+    If the rate is r per annum, then 40,00,000 × (1 + r)⁵ = 1,60,00,000<br />
+    So (1 + r)⁵ = 1,60,00,000 ÷ 40,00,000 = <strong>4</strong><br />
+    The unknown sits in the base, under a fifth power — take logarithms of both sides.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the power law turns the root into a division</div>
+    5 × log (1 + r) = log 4 = 2 log 2 = 2 × 0.3010 = 0.6020<br />
+    log (1 + r) = 0.6020 ÷ 5 = <strong>0.1204</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — read the characteristic before the antilog</div>
+    The characteristic is <strong>0</strong>, so the number lies between 1 and 10 — which is the
+    sense check that 1 + r must pass, since r is a growth rate of well under 900%.<br />
+    1 + r = antilog 0.1204 = <strong>1.3195</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the answer</div>
+    r = 0.3195, that is <strong>31.95% per annum, about 32%</strong><br />
+    Check: 1.3195⁵ = 4.00 to two decimals, and 40,00,000 × 4 = ₹ 1,60,00,000 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — the three wrong routes, each with its own option</div>
+    <strong>Simple average growth:</strong> (1,60,00,000 − 40,00,000) ÷ 40,00,000 ÷ 5 = 60% per
+    annum. It is a real number and a real concept, but it is not compound growth.<br />
+    <strong>Dividing the ratio instead of its logarithm:</strong> 4 ÷ 5 = 0.8, read as 80%.<br />
+    <strong>Antilogging 0.6020 and forgetting to divide by 5:</strong> 1 + r = 4, that is 300%.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — a mixture whose ratio has to be changed (moderate)">
+  <p>
+    A tank holds <strong>60 litres</strong> of a mixture of fruit concentrate and water in the ratio
+    <strong>7 : 5</strong>. (a) How much water must be added so that the ratio becomes
+    <strong>7 : 9</strong>? (b) Starting again from the original 60 litres, what is the ratio if
+    <strong>12 litres of the mixture</strong> is drawn off and replaced by water?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — split the 60 litres first</div>
+    Total parts 7 + 5 = 12, so one part = 60 ÷ 12 = 5 litres<br />
+    Concentrate = 7 × 5 = <strong>35 litres</strong> · Water = 5 × 5 = <strong>25 litres</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) only the water changes</div>
+    Adding water leaves the concentrate at 35 litres. Let w litres be added.<br />
+    35 ÷ (25 + w) = 7 ÷ 9, so 7(25 + w) = 315, giving 25 + w = 45<br />
+    <strong>w = 20 litres</strong>, and the tank then holds 80 litres in the ratio 35 : 45 = 7 : 9 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) drawing off mixture removes both, in the old ratio</div>
+    12 litres of the mixture is itself 7 : 5, so it removes 12 × 7/12 = 7 litres of concentrate and
+    12 × 5/12 = 5 litres of water.<br />
+    Concentrate 35 − 7 = 28 litres; water 25 − 5 + 12 = 32 litres<br />
+    New ratio = 28 : 32 = <strong>7 : 8</strong> (the total is still 60 litres ✓)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the two traps</div>
+    In (a), treating the ratio 7 : 9 as a ratio of <em>parts of the new total</em> and computing
+    water as 60 × 9/16 = 33.75 litres, then adding 33.75 − 25 = 8.75 litres — the concentrate would
+    then be 26.25 litres, but no concentrate was removed.<br />
+    In (b), taking the 12 litres drawn off as pure water: concentrate 35, water 25 − 12 + 12 = 25,
+    ratio unchanged at 7 : 5. A drawn-off mixture always leaves in the ratio it was in.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 11 — a logarithmic equation and a change of base (hard)">
+  <p>
+    (a) Solve <strong>log₃ (x + 6) + log₃ (x − 2) = 2</strong>. (b) Evaluate
+    <strong>log₈ 32</strong> and <strong>log₉ 27</strong> without a table.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) collapse the left side</div>
+    The product law gives log₃ [(x + 6)(x − 2)] = 2<br />
+    Remove the logarithm: (x + 6)(x − 2) = 3² = 9
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — solve the quadratic</div>
+    x² + 4x − 12 = 9, so x² + 4x − 21 = 0<br />
+    (x + 7)(x − 3) = 0, giving x = −7 or x = 3
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the domain check, which decides the answer</div>
+    x = 3: the arguments are 9 and 1, both positive. Valid, and log₃ 9 + log₃ 1 = 2 + 0 = 2 ✓<br />
+    x = −7: the arguments are −1 and −9, both negative, and no logarithm of a negative number
+    exists. <strong>Rejected as an extraneous root.</strong><br />
+    Answer: <strong>x = 3 only</strong>. The option "x = 3 or x = −7" is on the paper, and it is the
+    answer to the quadratic rather than to the equation.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) change of base to 2 and to 3</div>
+    log₈ 32 = (log₂ 32) ÷ (log₂ 8) = 5 ÷ 3 = <strong>5/3</strong><br />
+    log₉ 27 = (log₃ 27) ÷ (log₃ 9) = 3 ÷ 2 = <strong>3/2</strong><br />
+    Check the first from the definition: 8^(5/3) = (8^(1/3))⁵ = 2⁵ = 32 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — the slip in (b)</div>
+    Dividing the numbers instead of their logarithms — 32 ÷ 8 = 4 — gives the option "4", and
+    log₈ 32 = 4 would mean 8⁴ = 32, which is 4,096. A ten-second check from the definition kills
+    that option outright.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Inverting a ratio.** "A is to B as 4 is to 3" is not "B is to A as 4 is to 3". Write down which
+  quantity is the antecedent before you touch the numbers; almost every ratio question carries the
+  inverted answer as an option.
+- **Adding the same number to both terms to "simplify".** Only multiplying or dividing both terms
+  by the same non-zero number leaves a ratio unchanged.
+- **Comparing quantities in different units.** Convert first. 750 g to 3 kg is 1 : 4, not 250 : 1.
+- **"Duplicate" read as "double".** Duplicate squares the terms; sub-duplicate takes their square
+  roots; triplicate cubes them; sub-triplicate takes cube roots.
+- **Writing a continued ratio without reconciling the shared term.** From A : B = 3 : 4 and
+  B : C = 6 : 11, the answer is 9 : 12 : 22, never 3 : 4 : 11.
+- **Confusing a share, a difference and the total.** Decide what the given number counts before
+  dividing by the number of parts.
+- **Mixing up the three proportionals.** Fourth proportional to a, b, c is bc/a; third proportional
+  to a, b is b²/a; mean proportional between a and c is √(ac).
+- **Getting componendo's denominator wrong.** Componendo gives (a + b)/b, and dividendo gives
+  (a − b)/b. Componendo et dividendo puts the sum on top: (a + b)/(a − b).
+- **Assuming variation is direct.** Fewer workers means more hours, not fewer. State the direction
+  in words, then compute.
+- **Distributing a power over a sum.** (a + b)² is not a² + b², and √(a² + b²) is not a + b.
+- **Reading a negative index as a negative number.** 2⁻³ = 1/8, a positive quantity.
+- **Reversing a fractional index.** In a^(m/n), the denominator n is the root and the numerator m
+  is the power. 8^(2/3) = 4, not 8^(3/2) = 22.63 and not 8 × 2/3.
+- **Writing a⁰ = 0.** It is 1 for every non-zero base, however large or small the base is.
+- **Expanding the log of a sum.** log (m + n) has no expansion. Nor is log (m/n) equal to
+  (log m)/(log n), nor (log m)² equal to 2 log m.
+- **Taking the log of a negative number or of zero.** It does not exist. If your working needs one,
+  a root has to be rejected.
+- **Counting the characteristic one out.** A number with 4 digits before the decimal point has
+  characteristic 3; a number with 1 zero after the decimal point has characteristic −2.
+- **Treating a bar characteristic as an ordinary negative decimal.** 1̄.6304 is −0.3696, not
+  −1.6304, because the mantissa stays positive.
+- **Forgetting the domain check in a logarithmic equation.** Solve the quadratic, then test every
+  root inside the original logarithms and discard the ones that make an argument zero or negative.
+- **Mixing log and ln.** Unless the question says otherwise, log means base 10 and ln means base e,
+  and the two differ by the factor 2.3026.
+
+## One-page revision summary
+
+**Ratio.** a : b compares two quantities of the same kind and unit; a is the antecedent, b the
+consequent; the ratio has no unit and b cannot be zero.
+
+<div class="formula">a : b = ka : kb (k ≠ 0)  ·  a : b = c : d ⇔ ad = bc  ·  adding the same number to both terms changes the ratio</div>
+
+**Derived ratios**, from a : b:
+
+<div class="formula">Inverse b : a  ·  Duplicate a² : b²  ·  Sub-duplicate √a : √b  ·  Triplicate a³ : b³  ·  Sub-triplicate ∛a : ∛b</div>
+<div class="formula">Compound of a : b and c : d = ac : bd</div>
+<div class="formula">If A : B = a : b and B : C = c : d, then A : B : C = ac : bc : bd</div>
+<div class="formula">Dividing T in the ratio a : b : c — each share = T × (own part ÷ total parts)</div>
+
+**Proportion.** a : b :: c : d means ad = bc; a and d are the extremes, b and c the means.
+
+<div class="formula">Fourth proportional to a, b, c: d = bc/a  ·  Third proportional to a, b: c = b²/a  ·  Mean proportional between a and c: b = √(ac)</div>
+<div class="formula">a, b, c in continued proportion ⇔ b² = ac</div>
+
+**The five operations**, from a/b = c/d:
+
+<div class="formula">Invertendo b/a = d/c  ·  Alternendo a/c = b/d  ·  Componendo (a+b)/b = (c+d)/d  ·  Dividendo (a−b)/b = (c−d)/d  ·  Componendo et dividendo (a+b)/(a−b) = (c+d)/(c−d)</div>
+<div class="formula">Addendo: if a/b = c/d = e/f = k then (a+c+e)/(b+d+f) = k</div>
+
+**Variation.**
+
+<div class="formula">Direct: y = kx, so y₁/x₁ = y₂/x₂  ·  Inverse: xy = k, so x₁y₁ = x₂y₂  ·  Joint: y = kxz</div>
+
+**Indices.**
+
+<div class="formula">aᵐ × aⁿ = aᵐ⁺ⁿ  ·  aᵐ ÷ aⁿ = aᵐ⁻ⁿ  ·  (aᵐ)ⁿ = aᵐⁿ  ·  (ab)ⁿ = aⁿbⁿ  ·  (a/b)ⁿ = aⁿ/bⁿ</div>
+<div class="formula">a⁰ = 1 (a ≠ 0)  ·  a⁻ⁿ = 1/aⁿ  ·  (a/b)⁻ⁿ = (b/a)ⁿ  ·  a^(m/n) = ⁿ√(aᵐ)</div>
+<div class="formula">If aˣ = aʸ with a positive and a ≠ 1, then x = y; aˣ = 1 forces x = 0</div>
+
+**Surds.** ⁿ√a = a^(1/n); √a × √b = √(ab); compare surds of different orders by raising both to the
+LCM of the orders; rationalise with 1/√a = √a/a and 1/(√a + √b) = (√a − √b)/(a − b).
+
+**Logarithms.**
+
+<div class="formula">logₐ N = x ⇔ aˣ = N, with a positive, a ≠ 1 and N positive</div>
+<div class="formula">logₐ 1 = 0  ·  logₐ a = 1  ·  a^(logₐ N) = N</div>
+<div class="formula">log (mn) = log m + log n  ·  log (m/n) = log m − log n  ·  log (mᵖ) = p log m  ·  log ⁿ√m = (1/n) log m</div>
+<div class="formula">Change of base: logₐ N = (logₚ N) ÷ (logₚ a)  ·  logₐ p × logₚ a = 1</div>
+<div class="formula">ln N = 2.3026 log N  ·  log N = 0.4343 ln N</div>
+
+**No expansion exists** for log (m + n). log (m/n) is not (log m)/(log n).
+
+**Characteristic and mantissa** (common logarithms only). The mantissa depends only on the digit
+sequence and is always positive; the characteristic locates the decimal point.
+
+<div class="formula">Number ≥ 1 with n digits before the point: characteristic = n − 1  ·  Number below 1 with m zeros after the point: characteristic = −(m + 1), written with a bar</div>
+
+A number with characteristic c has c + 1 digits before the decimal point. Antilog reverses the
+process: the mantissa gives the digits, the characteristic places the point.
+
+**Logarithmic equations.** Collapse each side to a single logarithm, use logₐ M = logₐ N ⇒ M = N or
+logₐ M = k ⇒ M = aᵏ, then **reject every root that makes any argument zero or negative**.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 blank. A four-option random guess has expected value
++0.0625; eliminating one option raises it to about +0.17 and two to +0.375. The real risk is not
+random guessing but a confident wrong answer, because every distractor is built from a specific
+error — check the step where that error would occur before you move on.

@@ -1,0 +1,1566 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Basic Applications of Differential and Integral Calculus'
+description: 'CA Foundation Quantitative Aptitude Ch 8 — calculus in plain language: the derivative as a rate of change and as a slope, first principles, the standard derivatives, the sum, product, quotient and chain rules, logarithmic, implicit and parametric differentiation, higher-order derivatives, marginal cost and marginal revenue, maxima and minima, the indefinite integral and the constant of integration, substitution, parts and partial fractions, the definite integral, and business applications, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 8 · Differential and Integral Calculus'
+chapterSlug: differential-and-integral-calculus
+masteryId: f3-ch8
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 8 (Basic Applications of Differential and Integral Calculus) — scope and worked patterns'
+  - 'Standard results of elementary calculus: the difference-quotient definition, the power, exponential and logarithmic derivatives, the product, quotient and chain rules, the second-derivative test, the standard integrals, and the fundamental theorem of calculus in its evaluation form'
+sourceLabel: 'ICAI SM Paper 3 Ch 8 scope (May 2026 ed.) · standard results of elementary calculus'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 30 min read · 12 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=differential-and-integral-calculus'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A packaging unit outside Hosur knows what its total cost looks like. Running x thousand cartons in a
+month costs the firm `C(x) = 3x² + 40x + 500` thousand rupees. The owner does not want the total.
+She wants one number: **if we run one more carton, what does it add?** That number is not the average
+cost, and it is not the cost of the first carton. It is the rate at which total cost is changing at
+the output she is running right now.
+
+Calculus is the arithmetic of that question. Differentiation turns a total into a rate — total cost
+into marginal cost, total revenue into marginal revenue, distance into speed. Integration runs the
+same machine backwards: given the rate, it rebuilds the total. Between the two of them sits the one
+idea Paper 3 keeps testing — that the rate is zero exactly where a total stops rising and starts
+falling, which is to say at a maximum or a minimum.
+
+Nothing in this chapter needs a limit taken by hand more than once or twice. Almost everything is a
+short list of standard derivatives, a short list of standard integrals, four rules for combining
+them, and the discipline to say which rule applies before writing anything down. The marks are lost
+on the chain rule's inner derivative, on a missing constant of integration, and on reporting a
+maximum where the working actually found a minimum.
+
+## 1. The derivative as a rate of change and as a slope
+
+Take any quantity y that depends on x. Move x by a small amount, written Δx, and y responds by some
+amount Δy. The ratio Δy/Δx is the **average rate of change** over that step — how much y moved per
+unit of x, on average, across the whole step.
+
+<div class="formula">Average rate of change = Δy ÷ Δx = [ f(x + Δx) − f(x) ] ÷ Δx</div>
+
+Now shrink the step. As Δx gets smaller the ratio settles down towards a single number, and that
+number is the **derivative**: the rate of change of y with respect to x **at the point x**, not
+averaged over a stretch. It is written dy/dx, or f′(x), or y₁.
+
+<div class="formula">dy/dx = limit of [ f(x + Δx) − f(x) ] ÷ Δx as Δx → 0</div>
+
+The same number has a picture. Draw the curve y = f(x). Join the point at x to the point at x + Δx
+and you have drawn a **chord**, whose slope is exactly Δy/Δx. Slide the second point towards the
+first and the chord swings until it rests on the curve at a single point — the **tangent**. So:
+
+- **dy/dx is the slope of the tangent** to the curve at that point.
+- A positive derivative means the curve is rising there; a negative derivative means it is falling.
+- A zero derivative means the tangent is horizontal — the curve is momentarily flat, which is what a
+  peak or a trough looks like.
+
+That last line is the whole of the maxima-and-minima work in section 12, arrived at before any
+formula.
+
+<div class="working-note">
+  <div class="working-note-label">Average rate against instantaneous rate — the Hosur cost curve</div>
+  C(x) = 3x² + 40x + 500 (₹ thousand) for x thousand cartons.<br />
+  From x = 10 to x = 12: C(12) = 432 + 480 + 500 = 1,412 and C(10) = 300 + 400 + 500 = 1,200.<br />
+  Average rate = (1,412 − 1,200) ÷ 2 = <strong>106</strong> per thousand cartons.<br />
+  From x = 10 to x = 10.1: C(10.1) = 306.03 + 404 + 500 = 1,210.03, so the average rate is
+  10.03 ÷ 0.1 = <strong>100.3</strong>.<br />
+  From x = 10 to x = 10.001: the ratio is <strong>100.003</strong>.<br />
+  The numbers are walking towards 100. Section 11 will get there in one line: C′(x) = 6x + 40 and
+  C′(10) = 100.
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Three notations mean the same thing and all three appear in question papers. For y = f(x), the
+    derivative is <strong>dy/dx</strong> (Leibniz), <strong>f′(x)</strong> (Lagrange) or
+    <strong>y₁</strong>. The second derivative is d²y/dx², f″(x) or y₂. Nothing turns on which is
+    used; d²y/dx² is a single symbol for "differentiate twice", not d² divided by anything.
+  </p>
+</Callout>
+
+## 2. The derivative from first principles
+
+"From first principles" means going back to the difference quotient and taking the limit by hand,
+with no standard result borrowed. Paper 3 asks for it rarely, but doing it twice makes every later
+formula stop looking arbitrary. The method is always four steps.
+
+1. Write f(x + h) with the same rule as f(x), the letter h standing for the small step.
+2. Form f(x + h) − f(x) and simplify until the h in the denominator can be cancelled.
+3. Divide by h.
+4. Let h → 0 in what is left.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate f(x) = x² from first principles</div>
+  f(x + h) = (x + h)² = x² + 2xh + h²<br />
+  f(x + h) − f(x) = 2xh + h² = h(2x + h)<br />
+  Divide by h: (2x + h) &nbsp;&nbsp;← the cancellation is legal because h is not yet zero, only small<br />
+  Let h → 0: the h in the bracket vanishes and <strong>f′(x) = 2x</strong>
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate f(x) = 1/x from first principles</div>
+  f(x + h) = 1 ÷ (x + h)<br />
+  f(x + h) − f(x) = 1/(x + h) − 1/x = [x − (x + h)] ÷ [x(x + h)] = −h ÷ [x(x + h)]<br />
+  Divide by h: −1 ÷ [x(x + h)]<br />
+  Let h → 0: the bracket becomes x, so <strong>f′(x) = −1/x²</strong><br />
+  Sanity check against the power rule of section 3: 1/x is x⁻¹, and −1 × x⁻² = −1/x² ✓
+</div>
+
+The second result is worth remembering as a result, because 1/x is the single most common place
+where students misapply the power rule and write log x instead.
+
+<Callout kind="mistake">
+  <p>
+    Cancelling h and <em>then</em> setting h = 0 is the whole trick, and it must happen in that
+    order. Setting h = 0 first turns the difference quotient into 0 ÷ 0, which says nothing. The
+    limit is the value the ratio <strong>approaches</strong>, and it exists even though the ratio is
+    never actually evaluated at h = 0.
+  </p>
+</Callout>
+
+## 3. The standard derivatives
+
+Everything after this section is built from six lines. Learn them as a block; they are the alphabet
+of the chapter.
+
+| Function y | Derivative dy/dx | Note |
+|---|---|---|
+| c (any constant) | 0 | a constant never changes, so its rate of change is zero |
+| xⁿ (n any real number) | n·xⁿ⁻¹ | the **power rule** — drop the power in front, reduce it by one |
+| eˣ | eˣ | the one function that is its own derivative |
+| aˣ (a > 0) | aˣ · log a | log a is the **natural** log of a; when a = e, log e = 1 and the line above returns |
+| log x (x > 0) | 1/x | log means the natural log throughout this chapter |
+| √x | 1 ÷ (2√x) | just the power rule with n = 1/2 |
+
+Two consequences of the power rule are used constantly and are worth writing out, because neither
+looks like xⁿ at first glance:
+
+<div class="formula">y = 1/x = x⁻¹ → dy/dx = −1 · x⁻² = −1/x²</div>
+<div class="formula">y = √x = x^(1/2) → dy/dx = (1/2) · x^(−1/2) = 1 ÷ (2√x)</div>
+
+And one special case of the power rule that students trip over: for y = x, n = 1 and the derivative
+is 1 · x⁰ = **1**. The derivative of x is 1, not x.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The power rule does not reach 1/x.</strong> It reaches 1/x when 1/x is first written as
+    x⁻¹ — giving −1/x² — but the derivative of <em>log x</em> is 1/x, and the two are constantly
+    swapped. Say it in the safe direction: <em>differentiating</em> log x gives 1/x;
+    <em>differentiating</em> 1/x gives −1/x². An option offering log x as the derivative of 1/x is
+    the integral running backwards, and it will be there.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    <strong>log means natural log</strong> — log to the base e, what a calculator calls ln — every
+    time it appears in this chapter, in both the derivative table and the integral table. ICAI's
+    material uses "log" for the natural log throughout the calculus chapter. If a question ever
+    means log to the base 10 it will say so, and the derivative then carries an extra factor of
+    1 ÷ log 10.
+  </p>
+</Callout>
+
+## 4. Sum difference and constant multiple
+
+The first three rules are the easy ones, and they say that differentiation passes straight through
+addition, subtraction and a numerical multiplier.
+
+<div class="formula">d/dx [ u + v ] = du/dx + dv/dx &nbsp;·&nbsp; d/dx [ u − v ] = du/dx − dv/dx</div>
+<div class="formula">d/dx [ k·u ] = k · du/dx &nbsp;&nbsp;(k any constant)</div>
+
+So a polynomial is differentiated term by term, each term by the power rule, and the constant term
+disappears.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = 4x⁵ − 7x³ + 9x − 22</div>
+  Term 1: 4 × 5x⁴ = 20x⁴<br />
+  Term 2: −7 × 3x² = −21x²<br />
+  Term 3: 9 × 1 = 9 &nbsp;&nbsp;← the derivative of x is 1<br />
+  Term 4: the derivative of the constant −22 is 0<br />
+  <strong>dy/dx = 20x⁴ − 21x² + 9</strong>
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = 3√x + 5/x² + 2eˣ</div>
+  Rewrite every term as a power first: y = 3x^(1/2) + 5x⁻² + 2eˣ<br />
+  3 × (1/2)x^(−1/2) = (3/2)x^(−1/2) = 3 ÷ (2√x)<br />
+  5 × (−2)x⁻³ = −10x⁻³ = −10/x³<br />
+  2eˣ differentiates to 2eˣ<br />
+  <strong>dy/dx = 3 ÷ (2√x) − 10/x³ + 2eˣ</strong>
+</div>
+
+The habit that saves the most marks in this section is **rewriting before differentiating**. Roots
+become fractional powers, reciprocals become negative powers, and a fraction whose denominator is a
+single power is split term by term rather than sent to the quotient rule.
+
+<div class="working-note">
+  <div class="working-note-label">Split first, then differentiate — y = (x³ + 6x² − 4) ÷ x²</div>
+  Divide each term by x² before touching any rule: y = x + 6 − 4x⁻²<br />
+  dy/dx = 1 + 0 + 8x⁻³ = <strong>1 + 8/x³</strong><br />
+  The quotient rule gives the same answer after four times the writing, with four times the chance
+  of a sign slip.
+</div>
+
+## 5. The product rule
+
+When two functions of x are **multiplied**, the derivative is not the product of the derivatives.
+It is a sum of two terms, each one differentiating a single factor and leaving the other alone.
+
+<div class="formula">d/dx [ u · v ] = u · (dv/dx) + v · (du/dx)</div>
+
+Read it aloud as "first times derivative of second, plus second times derivative of first". The
+order of the two terms does not matter; both must be there.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = x³ · eˣ</div>
+  u = x³ → du/dx = 3x² &nbsp;·&nbsp; v = eˣ → dv/dx = eˣ<br />
+  dy/dx = x³ · eˣ + eˣ · 3x²<br />
+  <strong>dy/dx = x²eˣ(x + 3)</strong> after taking out the common x²eˣ<br />
+  Check at x = 1: the formula gives e(1 + 3) = 4e ≈ 10.873. A small numerical step from x = 1 to
+  x = 1.001 moves y from 2.71828 to 2.72916, a ratio of 10.88 ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = (2x + 5)(x² − 3x)</div>
+  Method 1, the product rule: (2x + 5)(2x − 3) + (x² − 3x)(2)<br />
+  = 4x² − 6x + 10x − 15 + 2x² − 6x = <strong>6x² − 2x − 15</strong><br />
+  Method 2, multiply out first: y = 2x³ − 6x² + 5x² − 15x = 2x³ − x² − 15x<br />
+  dy/dx = 6x² − 2x − 15 ✓ — the same answer, which is the point of the check.
+</div>
+
+For a product of **three** factors the rule extends by the same logic — differentiate one factor at
+a time and leave the other two:
+
+<div class="formula">d/dx [ u·v·w ] = u′vw + uv′w + uvw′</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>The product rule is not (du/dx)(dv/dx).</strong> This is the single most common wrong
+    answer in the whole chapter, and it is easy to disprove: for y = x · x = x², the true derivative
+    is 2x, while multiplying the derivatives would give 1 × 1 = 1. Whenever an option for a product
+    question looks unusually short, check whether it is just the two derivatives multiplied — for
+    y = x³eˣ that fake answer is 3x²eˣ, and it will be sitting in the options.
+  </p>
+</Callout>
+
+## 6. The quotient rule
+
+When one function is **divided** by another, the derivative has a subtraction on top and the square
+of the denominator underneath.
+
+<div class="formula">d/dx [ u ÷ v ] = [ v · (du/dx) − u · (dv/dx) ] ÷ v²</div>
+
+The order on the numerator is fixed, because subtraction is not symmetric. Read it as "denominator
+times derivative of numerator, **minus** numerator times derivative of denominator, all over
+denominator squared".
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = (3x + 2) ÷ (x² + 1)</div>
+  u = 3x + 2 → du/dx = 3 &nbsp;·&nbsp; v = x² + 1 → dv/dx = 2x<br />
+  Numerator: (x² + 1)(3) − (3x + 2)(2x) = 3x² + 3 − 6x² − 4x = −3x² − 4x + 3<br />
+  <strong>dy/dx = (−3x² − 4x + 3) ÷ (x² + 1)²</strong><br />
+  Check at x = 0: the formula gives 3 ÷ 1 = 3. Directly, y(0) = 2 and y(0.001) = 2.003, so the
+  ratio is 3.0 ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = eˣ ÷ x</div>
+  u = eˣ → du/dx = eˣ &nbsp;·&nbsp; v = x → dv/dx = 1<br />
+  Numerator: x·eˣ − eˣ·1 = eˣ(x − 1)<br />
+  <strong>dy/dx = eˣ(x − 1) ÷ x²</strong><br />
+  Notice the sign: the derivative is negative for x &lt; 1 and positive for x &gt; 1, so this curve
+  has a minimum at x = 1. Section 12 turns that observation into a method.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>The two numerator terms reversed.</strong> Writing u·v′ − v·u′ instead of v·u′ − u·v′
+    flips the sign of the whole derivative. For y = (3x + 2) ÷ (x² + 1) the reversed version gives
+    (3x² + 4x − 3) ÷ (x² + 1)², which is the same expression with every sign changed — and it will
+    be an option. The safe order is <strong>denominator first</strong>, matching the v² underneath.
+  </p>
+</Callout>
+
+## 7. The chain rule for a function of a function
+
+A **function of a function** is one rule wrapped inside another: (3x² + 5)⁷ is "seventh power" wrapped
+around "3x² + 5"; e^(4x) is "exponential" wrapped around "4x"; log(x² + 1) is "log" wrapped around
+"x² + 1". The chain rule differentiates the outer rule, then multiplies by the derivative of what was
+inside.
+
+<div class="formula">If y = f(u) and u = g(x), then dy/dx = (dy/du) × (du/dx)</div>
+
+In words: **differentiate the outside, keep the inside unchanged, then multiply by the derivative of
+the inside.** That last factor is the one that gets forgotten, and forgetting it is the most reliable
+way to lose a mark in this chapter.
+
+The three cases that carry almost every question:
+
+<div class="formula">y = [ g(x) ]ⁿ → dy/dx = n·[ g(x) ]ⁿ⁻¹ · g′(x)</div>
+<div class="formula">y = e^(g(x)) → dy/dx = e^(g(x)) · g′(x)</div>
+<div class="formula">y = log[ g(x) ] → dy/dx = g′(x) ÷ g(x)</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = (3x² + 5)⁷</div>
+  Outer rule: seventh power. Inner: u = 3x² + 5, so du/dx = 6x.<br />
+  dy/du = 7u⁶ = 7(3x² + 5)⁶<br />
+  dy/dx = 7(3x² + 5)⁶ × 6x = <strong>42x(3x² + 5)⁶</strong><br />
+  Dropping the inner 6x would leave 7(3x² + 5)⁶ — the classic wrong answer.
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = e^(5x³ − 2x)</div>
+  Inner: u = 5x³ − 2x → du/dx = 15x² − 2<br />
+  <strong>dy/dx = (15x² − 2) · e^(5x³ − 2x)</strong><br />
+  The exponential never changes shape. Only the multiplier out front is new.
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = log(4x² + 3x)</div>
+  Inner: u = 4x² + 3x → du/dx = 8x + 3<br />
+  <strong>dy/dx = (8x + 3) ÷ (4x² + 3x)</strong><br />
+  The pattern for a log is always "derivative of the inside, over the inside".
+</div>
+
+Rules combine. A question that looks hard is usually one rule inside another, and naming them in
+order makes it routine.
+
+<div class="working-note">
+  <div class="working-note-label">Two rules together — differentiate y = x² · e^(3x)</div>
+  Outer structure: a <em>product</em>. So the product rule governs, and the chain rule handles the
+  second factor.<br />
+  u = x² → u′ = 2x &nbsp;·&nbsp; v = e^(3x) → v′ = 3e^(3x) (chain rule, inner derivative 3)<br />
+  dy/dx = x²·3e^(3x) + e^(3x)·2x = <strong>x·e^(3x)(3x + 2)</strong>
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Before writing a single symbol, say out loud what the <strong>outermost</strong> operation is —
+    a sum, a product, a quotient or a wrapping. That word chooses the rule. Students who go straight
+    to the formulas apply the chain rule to a product and the product rule to a wrapping; students
+    who name the structure first almost never do.
+  </p>
+</Callout>
+
+## 8. Logarithmic differentiation
+
+Two shapes defeat the ordinary rules: a long product or quotient with several factors, and a power
+whose **exponent contains x**, such as y = x^x. For both, take the natural log of each side first,
+differentiate, and then multiply back.
+
+The method rests on the chain-rule fact that
+
+<div class="formula">d/dx [ log y ] = (1/y) · (dy/dx), so dy/dx = y · d/dx [ log y ]</div>
+
+and on the three log laws: log(ab) = log a + log b, log(a ÷ b) = log a − log b, and log(aⁿ) = n·log a.
+Those laws turn multiplication into addition, which is the whole gain.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = x^x for x &gt; 0</div>
+  Neither the power rule nor the aˣ rule applies: the base and the exponent both move.<br />
+  Take logs: log y = x · log x<br />
+  Differentiate both sides, using the product rule on the right:<br />
+  (1/y)(dy/dx) = x · (1/x) + log x · 1 = 1 + log x<br />
+  <strong>dy/dx = x^x (1 + log x)</strong><br />
+  Check at x = 2: 4(1 + 0.6931) = 6.773. A numerical step from x = 2 to x = 2.0001 gives a ratio of
+  6.7727 ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — differentiate y = (x − 1)³(x + 2)⁴ ÷ (x + 5)²</div>
+  log y = 3 log(x − 1) + 4 log(x + 2) − 2 log(x + 5)<br />
+  (1/y)(dy/dx) = 3/(x − 1) + 4/(x + 2) − 2/(x + 5)<br />
+  <strong>dy/dx = y · [ 3/(x − 1) + 4/(x + 2) − 2/(x + 5) ]</strong>, with y put back in full.<br />
+  A quotient rule wrapped around two product rules would take a page; this takes three lines.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    After differentiating log y the answer is <strong>not</strong> finished. The left side is
+    (1/y)(dy/dx), so the bracket must still be multiplied by y — and y must be written out in the
+    original x form, not left as the letter y. An option that gives only the bracket is the trap.
+  </p>
+</Callout>
+
+## 9. Implicit and parametric differentiation
+
+**An implicit function** is one where y is tangled up with x rather than written as y = something.
+`x² + y² = 25` and `x³ + y³ = 9xy` are implicit. There is no need to untangle them. Differentiate
+every term with respect to x, remembering that any term containing y carries a factor dy/dx by the
+chain rule, and then make dy/dx the subject.
+
+<div class="formula">d/dx (yⁿ) = n·yⁿ⁻¹ · (dy/dx) &nbsp;·&nbsp; d/dx (xy) = x·(dy/dx) + y &nbsp;(product rule)</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find dy/dx for x² + y² = 25</div>
+  Differentiate term by term: 2x + 2y·(dy/dx) = 0<br />
+  2y·(dy/dx) = −2x → <strong>dy/dx = −x/y</strong><br />
+  This is a circle of radius 5. At (3, 4) the slope is −3/4, and the tangent there is indeed
+  perpendicular to the radius, whose slope is 4/3 ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find dy/dx for x³ + y³ = 9xy</div>
+  3x² + 3y²·(dy/dx) = 9[ x·(dy/dx) + y ] &nbsp;&nbsp;← product rule on the right<br />
+  3y²·(dy/dx) − 9x·(dy/dx) = 9y − 3x²<br />
+  (dy/dx)(3y² − 9x) = 9y − 3x² → <strong>dy/dx = (3y − x²) ÷ (y² − 3x)</strong> after dividing by 3
+</div>
+
+**A parametric form** writes both x and y in terms of a third letter, usually t: x = f(t) and
+y = g(t). Differentiate each with respect to t and divide.
+
+<div class="formula">dy/dx = (dy/dt) ÷ (dx/dt), provided dx/dt ≠ 0</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — x = 3t², y = 2t³, find dy/dx at t = 2</div>
+  dx/dt = 6t &nbsp;·&nbsp; dy/dt = 6t²<br />
+  dy/dx = 6t² ÷ 6t = <strong>t</strong>, so at t = 2 the slope is <strong>2</strong>.<br />
+  Check by eliminating t: t = √(x/3), so y = 2(x/3)^(3/2); differentiating directly gives the same
+  slope at x = 12 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    In a parametric problem, dy/dx is (dy/dt) ÷ (dx/dt) — <strong>y on top</strong>. Dividing the
+    other way gives the reciprocal, which for x = 3t², y = 2t³ is 1/t rather than t; at t = 2 that
+    is 0.5 instead of 2, and both numbers will be offered. The memory hook is that the letters keep
+    the same position they have in dy/dx.
+  </p>
+</Callout>
+
+## 10. Higher-order derivatives
+
+Differentiating a derivative gives the **second derivative**, written d²y/dx², f″(x) or y₂. It
+measures the rate at which the rate itself is changing — how fast a slope is steepening or easing.
+Differentiate again for the third derivative, and so on.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — y = 2x⁴ − 5x³ + 7x − 1, find y₁, y₂ and y₃</div>
+  y₁ = 8x³ − 15x² + 7<br />
+  y₂ = 24x² − 30x<br />
+  y₃ = 48x − 30<br />
+  At x = 2: y₁ = 64 − 60 + 7 = 11, y₂ = 96 − 60 = 36, y₃ = 66.
+</div>
+
+Three standard results are worth keeping ready, because each one repeats:
+
+<div class="formula">y = eᵃˣ → y₂ = a²·eᵃˣ &nbsp;·&nbsp; y = log x → y₂ = −1/x² &nbsp;·&nbsp; y = xⁿ → y₂ = n(n − 1)xⁿ⁻²</div>
+
+The second derivative earns its place in this chapter for one reason: **its sign tells you the shape
+of the curve**. Where y₂ is positive the curve bends upwards like a bowl, so a flat point there is a
+minimum. Where y₂ is negative the curve bends downwards like a dome, so a flat point there is a
+maximum. Section 12 is that sentence, applied.
+
+<Callout kind="pointer">
+  <p>
+    A quick way to see the meaning: for a total cost curve, the first derivative is marginal cost
+    and the second derivative says whether marginal cost is <em>rising</em> (y₂ &gt; 0, diminishing
+    returns setting in) or <em>falling</em> (y₂ &lt; 0, economies still being gained). The sign is a
+    business statement, not just a shape.
+  </p>
+</Callout>
+
+## 11. Marginal cost marginal revenue and average cost
+
+This is where the chapter earns its place in a commerce course. Let x be the quantity produced and
+sold.
+
+| Quantity | Definition | How to get it |
+|---|---|---|
+| Total cost | C(x) | given |
+| **Marginal cost** | MC | differentiate: MC = dC/dx |
+| Average cost | AC | divide: AC = C(x) ÷ x |
+| Total revenue | R(x) = price × quantity | given, or price function × x |
+| **Marginal revenue** | MR | differentiate: MR = dR/dx |
+| Average revenue | AR | R(x) ÷ x, which is simply the **price** |
+| Profit | P(x) = R(x) − C(x) | maximum where dP/dx = 0, that is where MR = MC |
+
+**Marginal cost is the rate at which total cost rises as output rises**, read at one particular
+output. It is a very close approximation to the cost of producing one more unit, and at Foundation
+level the two are treated as the same thing.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — C(x) = 3x² + 36x + 1,200 rupees for x units</div>
+  MC = dC/dx = <strong>6x + 36</strong><br />
+  At x = 10: MC = ₹ 96. At x = 30: MC = ₹ 216 — marginal cost rises with output here.<br />
+  AC = C(x) ÷ x = 3x + 36 + 1,200/x<br />
+  At x = 10: AC = 30 + 36 + 120 = <strong>₹ 186</strong>, while MC is only ₹ 96.<br />
+  Fixed cost is the part of C(x) that survives at x = 0: <strong>₹ 1,200</strong>. It never appears in
+  MC, because differentiating a constant gives zero.
+</div>
+
+The last line is the most useful single fact in this section. **Fixed cost never enters marginal
+cost.** Two firms with the same variable cost structure and wildly different fixed costs have exactly
+the same marginal cost function.
+
+**The relation between marginal and average cost.** Average cost falls while marginal cost is below
+it and rises while marginal cost is above it, so the two are **equal exactly where average cost is at
+its minimum**. Proving it is a one-line quotient rule:
+
+<div class="formula">d/dx (AC) = d/dx [ C(x) ÷ x ] = [ x·C′(x) − C(x) ] ÷ x² = ( MC − AC ) ÷ x</div>
+
+That derivative is zero when MC = AC — so the average-cost curve is flat, and therefore at its
+minimum, precisely where the marginal-cost curve crosses it.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the output that minimises average cost</div>
+  AC = 3x + 36 + 1,200x⁻¹ → d(AC)/dx = 3 − 1,200x⁻² <br />
+  Set to zero: 3 = 1,200/x² → x² = 400 → <strong>x = 20 units</strong> (a negative output is
+  meaningless here).<br />
+  Second derivative: d²(AC)/dx² = 2,400x⁻³, which is positive at x = 20, so it is a
+  <strong>minimum</strong>.<br />
+  AC at x = 20 = 60 + 36 + 60 = <strong>₹ 156</strong> · MC at x = 20 = 120 + 36 =
+  <strong>₹ 156</strong> ✓ — the two agree, exactly as the relation predicts.
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — revenue when the price depends on quantity</div>
+  Demand: p = 236 − 2x rupees a unit.<br />
+  R(x) = p·x = 236x − 2x² &nbsp;·&nbsp; MR = dR/dx = <strong>236 − 4x</strong><br />
+  AR = R ÷ x = 236 − 2x, which is the price itself — AR and price are always the same thing.<br />
+  Note MR falls twice as fast as AR. That is general for a straight-line demand curve: both start at
+  the same intercept, and MR's slope is double.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Marginal cost is not average cost.</strong> MC comes from differentiating C(x); AC comes
+    from dividing C(x) by x. For C(x) = 3x² + 36x + 1,200 at x = 10 the two are ₹ 96 and ₹ 186 — not
+    close, and both will be offered. The same trap runs on the revenue side, where AR is the price
+    and MR is not.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    If a stem gives total cost <em>and</em> asks for "the cost of producing the 21st unit", two
+    defensible answers exist: MC at x = 20 (the derivative) and C(21) − C(20) (the exact increment).
+    They differ slightly. Read the wording — "marginal cost at an output of 20" means the derivative,
+    while "the actual cost of the 21st unit" means the difference. This chapter uses the derivative
+    unless the stem says otherwise.
+  </p>
+</Callout>
+
+## 12. Maxima and minima the two tests
+
+A function reaches a maximum or a minimum where its curve stops rising and starts falling, or the
+other way round. At that instant the tangent is horizontal, so:
+
+<div class="formula">Step 1 — solve f′(x) = 0. Its roots are the critical points (also called stationary points).</div>
+
+Solving f′(x) = 0 only tells you **where**. Deciding **which kind** takes a second step, and there
+are two accepted tests.
+
+**The second-derivative test** is the quicker one and this chapter's default.
+
+<div class="formula">At a critical point x = c: f″(c) &lt; 0 → maximum · f″(c) &gt; 0 → minimum · f″(c) = 0 → inconclusive</div>
+
+The signs feel backwards until the picture is fixed in mind. A **maximum** sits on top of a dome, and
+a dome bends downwards, so the second derivative is **negative** there. A **minimum** sits at the
+bottom of a bowl, which bends upwards, so the second derivative is **positive**.
+
+**The first-derivative test** examines the sign of f′(x) just to the left and just to the right of
+the critical point.
+
+| Sign of f′ before c | Sign of f′ after c | Conclusion |
+|---|---|---|
+| positive (rising) | negative (falling) | **maximum** at c |
+| negative (falling) | positive (rising) | **minimum** at c |
+| same sign both sides | same sign both sides | neither — a point of inflexion |
+
+The first-derivative test always works, including when f″(c) = 0. The second-derivative test is
+faster and is what an objective paper expects, so use it first and fall back on sign-testing only
+when the second derivative vanishes.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the maxima and minima of f(x) = x³ − 9x² + 24x + 5</div>
+  f′(x) = 3x² − 18x + 24 = 3(x² − 6x + 8) = 3(x − 2)(x − 4)<br />
+  Critical points: <strong>x = 2 and x = 4</strong><br />
+  f″(x) = 6x − 18<br />
+  At x = 2: f″ = −6, negative → <strong>maximum</strong>, and f(2) = 8 − 36 + 48 + 5 =
+  <strong>25</strong><br />
+  At x = 4: f″ = +6, positive → <strong>minimum</strong>, and f(4) = 64 − 144 + 96 + 5 =
+  <strong>21</strong><br />
+  Confirm with the first-derivative test at x = 2: f′(1) = 3(−1)(−3) = +9 and f′(3) = 3(1)(−1) = −3.
+  Rising then falling — a maximum ✓
+</div>
+
+Notice something that unsettles students: the **maximum value here, 25, is larger than the minimum
+value, 21**, but only just, and in other functions a local maximum can be smaller than a local
+minimum elsewhere. These are **local** extremes — the highest or lowest point in their own
+neighbourhood, not on the whole curve. This cubic runs to +∞ and −∞, so it has no overall maximum at
+all.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The sign of the second-derivative test, read backwards.</strong> f″ negative means
+    maximum; f″ positive means minimum. Reporting the wrong one is the single most common error in
+    optimisation questions, and both critical points will be sitting in the options — so a paper can
+    punish the slip without the student ever noticing an arithmetic mistake. Fix it with the dome and
+    the bowl, not with the words.
+  </p>
+</Callout>
+
+## 13. Business optimisation
+
+Every optimisation question in Paper 3 has the same five steps, whatever the story.
+
+1. **Name the variable** and say what it counts.
+2. **Write the quantity to be optimised** as a function of that one variable, using any other
+   relation in the stem to eliminate a second letter.
+3. **Differentiate and set to zero.**
+4. **Test with the second derivative** to say maximum or minimum.
+5. **Answer the question that was asked** — sometimes the optimal quantity, sometimes the price at
+   it, sometimes the profit itself.
+
+Step 5 is where marks leak. A stem asking for the maximum profit is not answered by the output that
+produces it.
+
+<div class="working-note">
+  <div class="working-note-label">Profit maximisation — demand p = 300 − 2x, total cost C(x) = 60x + 1,600</div>
+  R(x) = p·x = 300x − 2x² &nbsp;·&nbsp; P(x) = R − C = 300x − 2x² − 60x − 1,600 = −2x² + 240x − 1,600<br />
+  P′(x) = −4x + 240 = 0 → <strong>x = 60 units</strong><br />
+  P″(x) = −4, negative → <strong>maximum</strong> ✓<br />
+  Price at that output: p = 300 − 120 = <strong>₹ 180</strong><br />
+  Maximum profit: P(60) = −7,200 + 14,400 − 1,600 = <strong>₹ 5,600</strong><br />
+  Cross-check with MR = MC: MR = 300 − 4x and MC = 60, so 300 − 4x = 60 → x = 60 ✓
+</div>
+
+**Why MR = MC is the same condition.** Profit is R − C, so dP/dx = MR − MC, and setting dP/dx to
+zero sets MR equal to MC. The two statements are one statement. The second-derivative condition for a
+maximum, P″ &lt; 0, says that MR must be falling faster than MC is rising at that output.
+
+<div class="working-note">
+  <div class="working-note-label">Cost minimisation — the average cost of C(x) = 3x² + 36x + 1,200</div>
+  This is the section 11 computation, set out as an optimisation.<br />
+  Minimise AC(x) = 3x + 36 + 1,200x⁻¹<br />
+  AC′(x) = 3 − 1,200x⁻² = 0 → x² = 400 → <strong>x = 20 units</strong><br />
+  AC″(x) = 2,400x⁻³ = 0.3 at x = 20, positive → <strong>minimum</strong> ✓<br />
+  Minimum average cost = <strong>₹ 156 a unit</strong>, total cost at that output = 20 × 156 =
+  <strong>₹ 3,120</strong>
+</div>
+
+**Optimal order size.** A store ordering the same item repeatedly faces two costs that pull in
+opposite directions. Ordering in large lots means few orders and low ordering cost, but a large
+average stock and high holding cost. Ordering in small lots does the reverse. With an annual demand
+D, a cost O of placing one order and a cost H of holding one unit for a year, ordering q at a time
+gives D/q orders a year and an average stock of q/2:
+
+<div class="formula">Total inventory cost T(q) = (D ÷ q)·O + (q ÷ 2)·H</div>
+<div class="formula">T′(q) = −D·O ÷ q² + H ÷ 2 = 0 → q = √( 2·D·O ÷ H )</div>
+
+That square root is the **economic order quantity**. Its second derivative, 2·D·O ÷ q³, is positive
+for every positive q, so the critical point is always a minimum — no test is ever in doubt here.
+
+<div class="working-note">
+  <div class="working-note-label">Optimal order size — D = 27,000 units, O = ₹ 150 an order, H = ₹ 10 a unit a year</div>
+  Numerator: 2 × 27,000 × 150 = 81,00,000. Divide by H = 10: 8,10,000.<br />
+  q = √8,10,000 = <strong>900 units an order</strong><br />
+  Number of orders a year = 27,000 ÷ 900 = <strong>30</strong><br />
+  Ordering cost = 30 × 150 = ₹ 4,500 · Holding cost = 450 × 10 = ₹ 4,500<br />
+  Total = <strong>₹ 9,000</strong>. The two halves are equal at the optimum, which is a useful check —
+  at the economic order quantity, ordering cost always equals holding cost.
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Where a stem gives a <strong>constraint</strong> — a fixed length of fencing, a fixed budget, a
+    fixed total of two quantities — use it at step 2 to eliminate the second variable, then optimise
+    the single-variable function that remains. The constraint is not an extra equation to be solved
+    at the end; it is the tool that makes the problem one-dimensional in the first place.
+  </p>
+</Callout>
+
+## 14. Integration as the reverse of differentiation
+
+Integration answers the question differentiation leaves open: **given the rate, what was the total?**
+If differentiating F(x) gives f(x), then integrating f(x) recovers F(x), and F is called an
+**antiderivative** or **primitive** of f.
+
+<div class="formula">∫ f(x) dx = F(x) + c, where F′(x) = f(x)</div>
+
+The `dx` says which letter is being integrated. The `+ c` is the part that is not decoration.
+
+**Why the constant is not optional.** Differentiation destroys information. The three functions
+x² + 7, x² − 40 and x² all differentiate to 2x, because the constant term vanishes every time. Going
+backwards, 2x cannot possibly know which constant it came from, so the honest answer names them all
+at once: ∫ 2x dx = x² + c. This is called the **indefinite integral** — indefinite precisely because
+c is unknown. Geometrically it is a whole family of parallel curves, each one the same shape shifted
+up or down.
+
+<div class="working-note">
+  <div class="working-note-label">Recovering the constant from one extra fact</div>
+  A firm's marginal cost is MC = 6x + 40 and its fixed cost is ₹ 1,500.<br />
+  C(x) = ∫ (6x + 40) dx = 3x² + 40x + c<br />
+  Fixed cost is the cost at zero output: C(0) = c, so <strong>c = 1,500</strong>.<br />
+  <strong>C(x) = 3x² + 40x + 1,500</strong><br />
+  Without the fixed-cost fact the answer would have to stop at "+ c". With it, the constant is not a
+  loose end — it <em>is</em> the fixed cost.
+</div>
+
+That example is the whole reason the constant matters in a commerce paper. **The constant of
+integration in a total-cost problem is the fixed cost.** In a total-revenue problem it is zero,
+because selling nothing earns nothing — R(0) = 0 forces c = 0, and that is worth stating explicitly
+rather than assuming.
+
+The two easy rules carry over unchanged from differentiation:
+
+<div class="formula">∫ [ f(x) ± g(x) ] dx = ∫ f(x) dx ± ∫ g(x) dx &nbsp;·&nbsp; ∫ k·f(x) dx = k ∫ f(x) dx</div>
+
+There is no product rule and no quotient rule for integration. A product is handled by substitution
+or by parts; a quotient is split, substituted, or broken into partial fractions. That absence is why
+integration is harder than differentiation, and why practice matters more than memory here.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Omitting + c in an indefinite integral.</strong> An answer of x² where the question asked
+    for ∫ 2x dx is incomplete, and in an objective paper the option without the constant is placed
+    there deliberately. The rule is simple: if the integral has <em>limits</em>, no constant; if it
+    has no limits, the constant must appear.
+  </p>
+</Callout>
+
+## 15. The standard integrals
+
+Each line below is a line of the derivative table read from right to left. Every one carries + c.
+
+| Integral | Result | Condition |
+|---|---|---|
+| ∫ xⁿ dx | xⁿ⁺¹ ÷ (n + 1) + c | n ≠ −1 |
+| ∫ dx | x + c | the case n = 0 |
+| ∫ (1/x) dx | log \|x\| + c | this is the missing n = −1 case |
+| ∫ eˣ dx | eˣ + c | |
+| ∫ eᵃˣ dx | eᵃˣ ÷ a + c | a ≠ 0 |
+| ∫ aˣ dx | aˣ ÷ log a + c | a > 0, a ≠ 1 |
+| ∫ (ax + b)ⁿ dx | (ax + b)ⁿ⁺¹ ÷ [ a(n + 1) ] + c | n ≠ −1, a ≠ 0 |
+| ∫ dx ÷ (ax + b) | log \|ax + b\| ÷ a + c | a ≠ 0 |
+
+Two lines deserve a sentence each.
+
+**The power rule "add one, divide by the new power" breaks down at n = −1**, because adding one gives
+zero and dividing by zero is impossible. That single gap is filled by the log: ∫ (1/x) dx = log |x| + c.
+The modulus sign is there because 1/x also exists for negative x, where log x would not.
+
+**The last two lines are the chain rule running backwards.** Whenever the inside of a bracket is
+**linear** in x, integrate as usual and then divide by the coefficient of x. For ∫ (5x + 2)⁴ dx the
+answer is (5x + 2)⁵ ÷ 25 + c — the 5 from the new power and the 5 from the inside, multiplied. This
+shortcut works only for a linear inside; for anything else, substitute.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ ( 4x³ − 6/x + 2e^(3x) − 7 ) dx</div>
+  ∫ 4x³ dx = 4·x⁴/4 = x⁴<br />
+  ∫ (−6/x) dx = −6 log |x|<br />
+  ∫ 2e^(3x) dx = 2·e^(3x)/3<br />
+  ∫ (−7) dx = −7x<br />
+  <strong>x⁴ − 6 log |x| + (2/3)e^(3x) − 7x + c</strong><br />
+  Check by differentiating: 4x³ − 6/x + 2e^(3x) − 7 ✓ — always the fastest check available.
+</div>
+
+<Callout kind="pointer">
+  <p>
+    <strong>Every integration answer can be checked by differentiating it.</strong> That is not a
+    study tip, it is the definition of the operation. In an objective paper, differentiating a
+    promising option is often faster than integrating the stem, especially when the options differ
+    by a factor such as 1/3 or 1/25.
+  </p>
+</Callout>
+
+## 16. Integration by substitution
+
+Substitution is the chain rule reversed. When the integrand contains a function **and something close
+to its derivative**, replace the inner function by a new letter.
+
+<div class="formula">Put u = g(x), so du = g′(x) dx, and ∫ f(g(x))·g′(x) dx becomes ∫ f(u) du</div>
+
+Two patterns cover almost all of what Paper 3 asks:
+
+<div class="formula">∫ [ g(x) ]ⁿ · g′(x) dx = [ g(x) ]ⁿ⁺¹ ÷ (n + 1) + c &nbsp;(n ≠ −1)</div>
+<div class="formula">∫ g′(x) ÷ g(x) dx = log \|g(x)\| + c</div>
+
+The second is worth reading twice: **when the numerator is exactly the derivative of the denominator,
+the integral is the log of the denominator.** That single pattern retires a large family of
+questions.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ 2x·(x² + 5)⁶ dx</div>
+  Put u = x² + 5. Then du/dx = 2x, so du = 2x dx — and 2x dx is exactly what sits in the integrand.<br />
+  The integral becomes ∫ u⁶ du = u⁷/7 + c<br />
+  Put x back: <strong>(x² + 5)⁷ ÷ 7 + c</strong><br />
+  Check: differentiate to get 7(x² + 5)⁶ · 2x ÷ 7 = 2x(x² + 5)⁶ ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ (6x + 1) ÷ (3x² + x + 4) dx</div>
+  The denominator differentiates to 6x + 1, which is the numerator exactly.<br />
+  So the answer is the log of the denominator: <strong>log |3x² + x + 4| + c</strong><br />
+  If the numerator had been 3x instead, factor out: 3x = (1/2)(6x), which is (1/2)(6x + 1) − 1/2, and
+  the integral would split into a log plus a second, harder piece. Examiners keep the match exact.
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ x·e^(x²) dx</div>
+  Put u = x², so du = 2x dx and x dx = du/2.<br />
+  ∫ e^u · (du/2) = (1/2)e^u + c<br />
+  <strong>= (1/2)e^(x²) + c</strong> &nbsp;— note the 1/2, which comes from the missing 2 in the
+  integrand.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Substituting and then forgetting to change dx.</strong> If u = x², then dx is not du —
+    it is du ÷ (2x). Every substitution must convert the differential as well as the function, and
+    the leftover constant is exactly where the factor 1/2 or 1/25 in the correct option comes from.
+    An option missing that factor is the un-adjusted answer.
+  </p>
+</Callout>
+
+## 17. Integration by parts
+
+When the integrand is a product of two unrelated functions — an algebraic factor times an exponential,
+or a log standing on its own — substitution has nothing to grip. Integration by parts is the product
+rule reversed.
+
+<div class="formula">∫ u · v dx = u · ∫v dx − ∫ [ (du/dx) · ∫v dx ] dx</div>
+
+Read plainly: **take the first function, multiply by the integral of the second; then subtract the
+integral of (derivative of the first) times (integral of the second).**
+
+Everything depends on choosing which factor is "the first" — the one that gets differentiated. The
+choice should make the remaining integral easier, and the working order is remembered by **ILATE**:
+
+<div class="formula">I nverse · L ogarithmic · A lgebraic · T rigonometric · E xponential</div>
+
+The function earlier in that list is the one to **differentiate**. Algebraic beats exponential, so in
+∫ x·eˣ dx the x is differentiated and eˣ is integrated. Logarithmic beats algebraic, so in ∫ x·log x dx
+the log is differentiated. (Trigonometric functions sit in the list for completeness; the CA Foundation
+syllabus does not examine them.)
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ x·eˣ dx</div>
+  ILATE: Algebraic before Exponential, so differentiate x and integrate eˣ.<br />
+  = x·eˣ − ∫ (1)·eˣ dx<br />
+  = x·eˣ − eˣ + c = <strong>eˣ(x − 1) + c</strong><br />
+  Check: differentiate eˣ(x − 1) by the product rule → eˣ(x − 1) + eˣ(1) = x·eˣ ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ log x dx</div>
+  There seems to be only one function. Write it as (log x) × 1 and let the 1 be integrated.<br />
+  = log x · x − ∫ (1/x)·x dx = x log x − ∫ 1 dx<br />
+  = <strong>x log x − x + c</strong><br />
+  Check: d/dx (x log x − x) = log x + x(1/x) − 1 = log x ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ x·e^(2x) dx</div>
+  Differentiate x, integrate e^(2x) → its integral is e^(2x)/2.<br />
+  = x·e^(2x)/2 − ∫ (1)·e^(2x)/2 dx = x·e^(2x)/2 − e^(2x)/4 + c<br />
+  <strong>= e^(2x)(2x − 1) ÷ 4 + c</strong><br />
+  The two different denominators, 2 and 4, are where the marks go. Each integration of e^(2x)
+  divides by another 2.
+</div>
+
+Sometimes parts must be applied **twice**, each pass reducing the power of the algebraic factor by
+one. For ∫ x²eˣ dx the first pass gives x²eˣ − 2∫ xeˣ dx, and the second pass finishes it as
+eˣ(x² − 2x + 2) + c.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Choosing the wrong factor to differentiate.</strong> In ∫ x·eˣ dx, differentiating eˣ and
+    integrating x gives x²eˣ/2 − ∫ x²eˣ/2 dx — a harder integral than the one you started with. That
+    is the signal to stop and swap, not to press on. A remaining integral that is worse than the
+    original always means the ILATE order was reversed.
+  </p>
+</Callout>
+
+## 18. Integration by partial fractions
+
+A fraction whose denominator factorises into distinct linear factors is split into a sum of simpler
+fractions, each of which integrates to a log.
+
+<div class="formula">(px + q) ÷ [ (x − a)(x − b) ] = A ÷ (x − a) + B ÷ (x − b)</div>
+
+Find A and B by multiplying through by the denominator and then substituting the values that kill one
+bracket at a time — the fastest method there is at this level.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ (5x − 4) ÷ [ (x − 2)(x + 1) ] dx</div>
+  Write 5x − 4 = A(x + 1) + B(x − 2)<br />
+  Put x = 2: 10 − 4 = 3A → <strong>A = 2</strong><br />
+  Put x = −1: −5 − 4 = −3B → <strong>B = 3</strong><br />
+  So the integral is ∫ [ 2/(x − 2) + 3/(x + 1) ] dx<br />
+  <strong>= 2 log |x − 2| + 3 log |x + 1| + c</strong><br />
+  Check by recombining: 2(x + 1) + 3(x − 2) = 5x − 4 ✓
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — ∫ dx ÷ (x² − 9)</div>
+  Factorise first: x² − 9 = (x − 3)(x + 3)<br />
+  1 = A(x + 3) + B(x − 3) · Put x = 3: 1 = 6A → A = 1/6 · Put x = −3: 1 = −6B → B = −1/6<br />
+  <strong>= (1/6) log |x − 3| − (1/6) log |x + 3| + c = (1/6) log | (x − 3) ÷ (x + 3) | + c</strong><br />
+  The two log forms are the same answer; a paper may print either.
+</div>
+
+Two housekeeping rules before splitting anything:
+
+- **The degree of the numerator must be lower than the degree of the denominator.** If it is not,
+  divide first. For (x² + 1) ÷ (x² − 9), long division gives 1 + 10 ÷ (x² − 9), and only the second
+  piece is split.
+- **A repeated factor needs two terms.** (x − a)² contributes A ÷ (x − a) + B ÷ (x − a)², and the
+  second of those integrates to a power, not a log. The CA Foundation syllabus treats this case
+  lightly; distinct linear factors are the examined pattern.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Splitting a fraction across its numerator instead of its denominator.</strong> There is
+    no rule making 1 ÷ (x − 3)(x + 3) equal to 1/(x − 3) + 1/(x + 3). Test it at x = 0: the left side
+    is −1/9 and the right side is −1/3 + 1/3 = 0. The constants A and B exist precisely because the
+    naive split is false.
+  </p>
+</Callout>
+
+## 19. The definite integral
+
+A **definite integral** carries two limits and evaluates to a single number, not a family of
+functions. Find any antiderivative, put the upper limit in, put the lower limit in, and subtract.
+
+<div class="formula">∫ from a to b of f(x) dx = [ F(x) ] from a to b = F(b) − F(a)</div>
+
+The constant of integration cancels here — F(b) + c minus F(a) + c leaves F(b) − F(a) — which is why
+a definite integral needs no + c. That is not a licence to be careless; it is the one place where the
+constant genuinely does not matter.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — evaluate ∫ from 1 to 3 of (3x² + 2x) dx</div>
+  Antiderivative: x³ + x²<br />
+  At the upper limit x = 3: 27 + 9 = 36<br />
+  At the lower limit x = 1: 1 + 1 = 2<br />
+  Subtract, upper minus lower: 36 − 2 = <strong>34</strong>
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — evaluate ∫ from 1 to e of (1/x) dx</div>
+  Antiderivative: log x<br />
+  = log e − log 1 = 1 − 0 = <strong>1</strong><br />
+  A tidy result worth remembering: the area under the curve y = 1/x from x = 1 to x = e is exactly 1.
+</div>
+
+**The properties**, each of which turns up as a one-line question:
+
+| Property | Statement | Why |
+|---|---|---|
+| Zero width | ∫ from a to a of f(x) dx = 0 | F(a) − F(a) |
+| Reversal | ∫ from a to b = − ∫ from b to a | swapping the subtraction |
+| Splitting | ∫ from a to b = ∫ from a to c + ∫ from c to b | F(c) cancels in the middle |
+| Linearity | ∫ (f ± g) = ∫f ± ∫g, and ∫ k·f = k ∫f | inherited from the indefinite integral |
+
+The splitting property holds for any c, including one outside the interval, though at Foundation
+level it is used to break a range at a point where the rule changes — a tariff that alters above a
+threshold, for instance.
+
+**A definite integral as an area.** For a curve lying above the x-axis between a and b, the definite
+integral is the **area** enclosed by the curve, the x-axis and the two vertical lines x = a and
+x = b. Where the curve dips below the axis, the integral counts that stretch as negative, so a
+question asking for a physical area across a sign change needs the pieces taken separately.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the area under y = x² between x = 0 and x = 3</div>
+  ∫ from 0 to 3 of x² dx = [ x³/3 ] = 27/3 − 0 = <strong>9 square units</strong><br />
+  A rough check: the region sits inside the 3 × 9 rectangle whose area is 27, and it fills a third
+  of it — which is exactly what x³/3 says.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Lower limit minus upper limit.</strong> The order is F(upper) − F(lower), always. Reversed,
+    the example above gives 2 − 36 = −34, and −34 will be one of the four options. The sign is the
+    only thing wrong with it, which is what makes it convincing.
+  </p>
+</Callout>
+
+## 20. Business applications of the definite integral
+
+If differentiating a total gives a marginal function, then integrating a marginal function over a
+range gives the **change in the total** across that range. That one sentence is the whole of this
+section.
+
+<div class="formula">Change in total cost from x = a to x = b = ∫ from a to b of MC dx</div>
+<div class="formula">Total revenue from selling x = 0 to x = b units = ∫ from 0 to b of MR dx</div>
+
+Note the difference between the two lines. The cost version gives only the **change**, because the
+fixed cost is not recovered by a definite integral — it cancelled along with the constant. The
+revenue version gives the **total**, because revenue at zero output is zero, so the change from 0 is
+the whole of it.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — extra cost of raising output from 10 to 20 units</div>
+  Marginal cost MC = 6x + 40 rupees a unit.<br />
+  ∫ from 10 to 20 of (6x + 40) dx = [ 3x² + 40x ]<br />
+  At x = 20: 1,200 + 800 = 2,000 · At x = 10: 300 + 400 = 700<br />
+  Additional cost = 2,000 − 700 = <strong>₹ 1,300</strong><br />
+  The fixed cost never enters, and correctly so — raising output does not change it.
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — total revenue from a marginal revenue function</div>
+  MR = 236 − 4x rupees a unit. Find the total revenue from selling 30 units.<br />
+  R(30) = ∫ from 0 to 30 of (236 − 4x) dx = [ 236x − 2x² ]<br />
+  At x = 30: 7,080 − 1,800 = 5,280 · At x = 0: 0<br />
+  <strong>Total revenue = ₹ 5,280</strong>, so the average price realised is 5,280 ÷ 30 = ₹ 176 a unit.<br />
+  The indefinite route agrees: R(x) = 236x − 2x² + c, and R(0) = 0 forces c = 0.
+</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — total cost when the fixed cost is given</div>
+  MC = 4x + 25 and the fixed cost is ₹ 900. Find the total cost of 40 units.<br />
+  C(x) = ∫ (4x + 25) dx = 2x² + 25x + c, and C(0) = c = 900<br />
+  C(40) = 2(1,600) + 1,000 + 900 = 3,200 + 1,000 + 900 = <strong>₹ 5,100</strong><br />
+  Using a definite integral from 0 to 40 would give ₹ 4,200 — the variable cost only. The fixed cost
+  has to be added back by hand.
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Decide first whether the question wants a <em>total</em> or a <em>change</em>. "Find the total
+    cost of 40 units" needs the fixed cost, so integrate indefinitely and pin c. "Find the additional
+    cost of units 31 to 40" needs no fixed cost, so integrate from 30 to 40 directly. Both wrong
+    answers — total without the fixed cost, and change with it added — are standard options.
+  </p>
+</Callout>
+
+## 21. Negative marking and when to leave a question
+
+Paper 3 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+The arithmetic is straightforward. A blind guess among four options is right one time in four: across
+four such guesses you would expect 1 mark gained and 3 × 0.25 = 0.75 lost, a net 0.25 marks for four
+questions. So guessing at random is very slightly positive and close to neutral, with a wide spread
+around that average.
+
+Elimination changes the picture quickly. Rule out one option and a guess among three is worth about
+0.5 marks per four attempts; rule out two and a guess between the last two is worth about 1.5. This
+chapter makes elimination unusually cheap, because most distractors are built from one named error
+and can be tested in a line. A derivative option can be checked by evaluating it at a convenient
+value of x; an integral option can be checked by differentiating it; a "maximum" option can be
+checked by the sign of the second derivative alone.
+
+A reasonable working rule: **answer when you can eliminate at least one option, and consider leaving
+the question when you cannot narrow the field at all.** The marks at stake either way are small, and
+a question you can finish is worth more than either choice on a question you cannot.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — rewrite before differentiating (easy)">
+  <p>
+    Differentiate y = (2x⁴ − 5x² + 8x) ÷ x², and find the value of dy/dx at x = 2. Then differentiate
+    z = 6√x − 4/x + 3 and find dz/dx at x = 4.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — divide term by term first</div>
+    y = 2x² − 5 + 8x⁻¹ &nbsp;&nbsp;← each term divided by x², so the quotient rule is not needed<br />
+    dy/dx = 4x + 0 − 8x⁻² = <strong>4x − 8/x²</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — evaluate at x = 2</div>
+    4(2) − 8/4 = 8 − 2 = <strong>6</strong><br />
+    Numerical check: y(2) = 8 − 5 + 4 = 7 and y(2.001) = 7.006, so the ratio is about 6.0 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — powers again for the second function</div>
+    z = 6x^(1/2) − 4x⁻¹ + 3<br />
+    dz/dx = 6 · (1/2)x^(−1/2) + 4x⁻² = <strong>3/√x + 4/x²</strong><br />
+    Note the sign: −4x⁻¹ differentiates to +4x⁻², because −4 × (−1) = +4. A dropped sign here gives
+    3/√x − 4/x², which will be an option.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — evaluate at x = 4</div>
+    3/√4 + 4/16 = 1.5 + 0.25 = <strong>1.75</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — the product and quotient rules side by side (easy-moderate)">
+  <p>
+    Differentiate (a) y = (x² + 3)(2x − 5) and (b) y = (x² + 3) ÷ (2x − 5). Evaluate both at x = 1
+    and comment on why the two answers are unrelated.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) by the product rule</div>
+    u = x² + 3 → u′ = 2x &nbsp;·&nbsp; v = 2x − 5 → v′ = 2<br />
+    dy/dx = (x² + 3)(2) + (2x − 5)(2x) = 2x² + 6 + 4x² − 10x = <strong>6x² − 10x + 6</strong><br />
+    Confirm by expanding first: y = 2x³ − 5x² + 6x − 15 → dy/dx = 6x² − 10x + 6 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) at x = 1</div>
+    6 − 10 + 6 = <strong>2</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) by the quotient rule</div>
+    Numerator: v·u′ − u·v′ = (2x − 5)(2x) − (x² + 3)(2) = 4x² − 10x − 2x² − 6 = 2x² − 10x − 6<br />
+    <strong>dy/dx = (2x² − 10x − 6) ÷ (2x − 5)²</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) at x = 1, and the comment</div>
+    Numerator at x = 1: 2 − 10 − 6 = −14 · Denominator: (−3)² = 9<br />
+    dy/dx = <strong>−14/9 ≈ −1.556</strong><br />
+    The two results have no relation to each other, and neither is 2x × 2 = 4x. Multiplying or
+    dividing two functions does not multiply or divide their derivatives — that is the point both
+    parts are making.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — the chain rule and a second derivative (moderate)">
+  <p>
+    (a) Differentiate y = (3x² − 4x)⁵ and evaluate dy/dx at x = 2. (b) For y = log(x² + 1), find both
+    y₁ and y₂, and say what the sign of y₂ tells you at x = 0.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) name the structure</div>
+    Outermost operation: a fifth power wrapped around 3x² − 4x. So the chain rule governs.<br />
+    Inner derivative: d/dx (3x² − 4x) = 6x − 4<br />
+    dy/dx = 5(3x² − 4x)⁴ · (6x − 4) = <strong>(30x − 20)(3x² − 4x)⁴</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) at x = 2</div>
+    Inside: 3(4) − 8 = 4, and 4⁴ = 256 · Outer factor: 5 × (12 − 4) = 40<br />
+    dy/dx = 40 × 256 = <strong>10,240</strong><br />
+    Forgetting the inner (6x − 4) would give 5 × 256 = 1,280 — exactly one eighth of the truth, and a
+    standard distractor.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) the first derivative</div>
+    y = log(x² + 1) → y₁ = (derivative of the inside) ÷ (the inside) = <strong>2x ÷ (x² + 1)</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) the second derivative, by the quotient rule</div>
+    u = 2x → u′ = 2 &nbsp;·&nbsp; v = x² + 1 → v′ = 2x<br />
+    y₂ = [ (x² + 1)(2) − (2x)(2x) ] ÷ (x² + 1)² = (2x² + 2 − 4x²) ÷ (x² + 1)²<br />
+    <strong>y₂ = (2 − 2x²) ÷ (x² + 1)²</strong><br />
+    At x = 0: y₁ = 0 and y₂ = 2, positive — a flat point with the curve bending upwards, so
+    x = 0 is a <strong>minimum</strong> of log(x² + 1). Indeed the smallest value of x² + 1 is 1, and
+    log 1 = 0.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — logarithmic differentiation twice over (moderate)">
+  <p>
+    (a) Differentiate y = x^(2x) for x &gt; 0. (b) Differentiate
+    y = (x + 1)²(x − 3)³ ÷ (x + 4) using logs, and evaluate at x = 0.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) why the ordinary rules fail</div>
+    The power rule needs a constant power; the aˣ rule needs a constant base. Here both move, so take
+    logs.<br />
+    log y = 2x · log x
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) differentiate and multiply back</div>
+    (1/y)(dy/dx) = 2x · (1/x) + log x · 2 = 2 + 2 log x<br />
+    <strong>dy/dx = x^(2x) · (2 + 2 log x)</strong><br />
+    Check at x = 1: y = 1 and dy/dx = 1 × (2 + 0) = 2. A step from x = 1 to x = 1.0001 moves y to
+    1.0002, a ratio of 2.0 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) log laws turn the product into a sum</div>
+    log y = 2 log(x + 1) + 3 log(x − 3) − log(x + 4)<br />
+    (1/y)(dy/dx) = 2/(x + 1) + 3/(x − 3) − 1/(x + 4)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) evaluate at x = 0</div>
+    y(0) = (1)²(−3)³ ÷ 4 = −27/4 = −6.75<br />
+    Bracket at x = 0: 2/1 + 3/(−3) − 1/4 = 2 − 1 − 0.25 = 0.75<br />
+    dy/dx = −6.75 × 0.75 = <strong>−5.0625</strong><br />
+    The bracket alone, 0.75, is the answer students hand in when they forget to multiply by y.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — implicit and parametric forms (moderate)">
+  <p>
+    (a) For x² + xy + y² = 7, find dy/dx and its value at the point (1, 2). (b) For x = t² + 1 and
+    y = t³ − 3t, find dy/dx and its value at t = 2.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) differentiate every term with respect to x</div>
+    2x + [ x·(dy/dx) + y ] + 2y·(dy/dx) = 0 &nbsp;&nbsp;← the middle bracket is the product rule on xy<br />
+    Collect the dy/dx terms: (dy/dx)(x + 2y) = −(2x + y)<br />
+    <strong>dy/dx = −(2x + y) ÷ (x + 2y)</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) at (1, 2)</div>
+    First confirm the point lies on the curve: 1 + 2 + 4 = 7 ✓<br />
+    dy/dx = −(2 + 2) ÷ (1 + 4) = <strong>−4/5 = −0.8</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) differentiate each with respect to t</div>
+    dx/dt = 2t &nbsp;·&nbsp; dy/dt = 3t² − 3<br />
+    <strong>dy/dx = (3t² − 3) ÷ (2t)</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) at t = 2</div>
+    (12 − 3) ÷ 4 = <strong>9/4 = 2.25</strong><br />
+    Dividing the other way round would give 4/9 ≈ 0.444, the standard parametric distractor.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — marginal cost, average cost and where they meet (moderate)">
+  <p>
+    Vikram Castings makes brake drums. Its total cost for x drums a day is C(x) = 2x² + 60x + 5,000
+    rupees. Find (a) the marginal cost at an output of 30 drums, (b) the average cost at 30 drums,
+    (c) the output at which average cost is least, and (d) the marginal cost at that output.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) marginal cost</div>
+    MC = dC/dx = <strong>4x + 60</strong><br />
+    At x = 30: MC = 120 + 60 = <strong>₹ 180 a drum</strong><br />
+    Fixed cost is ₹ 5,000, and it plays no part — differentiating a constant gives zero.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) average cost at the same output</div>
+    C(30) = 2(900) + 1,800 + 5,000 = 1,800 + 1,800 + 5,000 = ₹ 8,600<br />
+    AC = 8,600 ÷ 30 = <strong>₹ 286.67 a drum</strong><br />
+    Marginal ₹ 180 and average ₹ 286.67 are far apart, because at this output the ₹ 5,000 of fixed
+    cost is still spread over only 30 drums.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) minimising average cost</div>
+    AC(x) = 2x + 60 + 5,000x⁻¹<br />
+    AC′(x) = 2 − 5,000x⁻² = 0 → x² = 2,500 → <strong>x = 50 drums</strong><br />
+    AC″(x) = 10,000x⁻³ = 0.08 at x = 50, positive → a <strong>minimum</strong> ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) the two curves meeting</div>
+    AC(50) = 100 + 60 + 100 = <strong>₹ 260</strong> · MC(50) = 200 + 60 = <strong>₹ 260</strong><br />
+    They agree, as section 11 predicted: marginal cost cuts average cost exactly at the lowest point
+    of the average-cost curve. Total cost there is 50 × 260 = ₹ 13,000, which C(50) confirms:
+    5,000 + 3,000 + 5,000 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — profit maximisation from a demand curve (moderate)">
+  <p>
+    A workshop can sell x units a week at a price of p = 500 − 4x rupees each. Its total cost is
+    C(x) = 100x + 2,000 rupees. Find the weekly output that maximises profit, the price charged
+    there, and the maximum profit. Confirm the answer using MR = MC.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — build the profit function</div>
+    R(x) = p·x = (500 − 4x)x = 500x − 4x²<br />
+    P(x) = R(x) − C(x) = 500x − 4x² − 100x − 2,000 = <strong>−4x² + 400x − 2,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — differentiate and test</div>
+    P′(x) = −8x + 400 = 0 → <strong>x = 50 units a week</strong><br />
+    P″(x) = −8, negative → <strong>maximum</strong> ✓ (a positive second derivative would have meant
+    the worst possible output, not the best)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — price and profit at that output</div>
+    p = 500 − 4(50) = <strong>₹ 300 a unit</strong><br />
+    P(50) = −4(2,500) + 20,000 − 2,000 = −10,000 + 20,000 − 2,000 = <strong>₹ 8,000 a week</strong><br />
+    Revenue 15,000 less cost 7,000 = 8,000 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the MR = MC check</div>
+    MR = dR/dx = 500 − 8x &nbsp;·&nbsp; MC = dC/dx = 100<br />
+    500 − 8x = 100 → 8x = 400 → x = 50 ✓ — the same condition written another way.<br />
+    Note that the maximum-<em>revenue</em> output is different: MR = 0 gives x = 62.5, where profit
+    has already begun to fall. Maximum revenue and maximum profit are not the same question.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — the optimal order size (moderate)">
+  <p>
+    A hardware distributor sells 36,000 identical valves a year at a steady rate. Placing one purchase
+    order costs ₹ 200 in paperwork and inspection, and carrying one valve in stock for a year costs
+    ₹ 10. Find the order size that minimises the annual total of ordering and holding cost, the number
+    of orders a year, and that minimum total.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — write the cost as one function of q</div>
+    Let q be the number of valves ordered at a time.<br />
+    Orders a year = 36,000 ÷ q, each costing ₹ 200 → ordering cost = 72,00,000 ÷ q<br />
+    Average stock held = q ÷ 2, each costing ₹ 10 a year → holding cost = 5q<br />
+    T(q) = <strong>72,00,000 ÷ q + 5q</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — differentiate and set to zero</div>
+    T(q) = 72,00,000·q⁻¹ + 5q → T′(q) = −72,00,000·q⁻² + 5 = 0<br />
+    q² = 72,00,000 ÷ 5 = 14,40,000 → <strong>q = 1,200 valves an order</strong><br />
+    T″(q) = 1,44,00,000·q⁻³, positive for every positive q → a <strong>minimum</strong> ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the answer in business terms</div>
+    Orders a year = 36,000 ÷ 1,200 = <strong>30</strong><br />
+    Ordering cost = 30 × 200 = ₹ 6,000 · Holding cost = 600 × 10 = ₹ 6,000<br />
+    <strong>Minimum total = ₹ 12,000 a year</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the check worth remembering</div>
+    At the optimum the two costs are <strong>equal</strong>, ₹ 6,000 each. That is true of every
+    problem of this shape, and it is the fastest way to test a candidate answer. Try q = 900: cost
+    = 8,000 + 4,500 = ₹ 12,500, higher. Try q = 1,500: 4,800 + 7,500 = ₹ 12,300, also higher.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — optimisation under a constraint (moderate)">
+  <p>
+    A godown owner wants to fence a rectangular open yard against an existing boundary wall, so only
+    three sides need fencing. She has 60 metres of fencing. What dimensions enclose the largest area,
+    and what is that area?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — use the constraint to reach one variable</div>
+    Let x metres be each of the two sides at right angles to the wall, and y metres the side parallel
+    to it.<br />
+    Fencing used: 2x + y = 60, so <strong>y = 60 − 2x</strong> — the constraint has removed y.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — write the area as a function of x alone</div>
+    A(x) = x · y = x(60 − 2x) = <strong>60x − 2x²</strong><br />
+    Sensible range: x must be positive and y must be positive, so 0 &lt; x &lt; 30.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — differentiate and test</div>
+    A′(x) = 60 − 4x = 0 → <strong>x = 15 metres</strong><br />
+    A″(x) = −4, negative → <strong>maximum</strong> ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — answer the question asked</div>
+    y = 60 − 30 = <strong>30 metres</strong>, so the yard is 15 m by 30 m.<br />
+    Maximum area = 15 × 30 = <strong>450 square metres</strong><br />
+    Compare 14 m by 32 m = 448 m² and 16 m by 28 m = 448 m² — both slightly worse, as they must be.
+    Note the shape: the side parallel to the wall is twice each of the others, which is the general
+    answer for a three-sided rectangular enclosure.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — four indefinite integrals, one method each (moderate)">
+  <p>
+    Evaluate (a) ∫ (4x³ − 3/x + e^(5x)) dx, (b) ∫ (2x + 3)(x² + 3x + 1)⁴ dx,
+    (c) ∫ x·e^(3x) dx and (d) ∫ (4x + 5) ÷ (2x² + 5x + 3) dx.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) term by term from the standard table</div>
+    ∫ 4x³ dx = x⁴ · ∫ (−3/x) dx = −3 log |x| · ∫ e^(5x) dx = e^(5x)/5<br />
+    <strong>= x⁴ − 3 log |x| + e^(5x) ÷ 5 + c</strong><br />
+    The 1/5 comes from the chain rule reversed; without it, differentiating back would give 5e^(5x).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) substitution, because the derivative is present</div>
+    d/dx (x² + 3x + 1) = 2x + 3, which is exactly the other factor.<br />
+    Put u = x² + 3x + 1, du = (2x + 3) dx → ∫ u⁴ du = u⁵/5<br />
+    <strong>= (x² + 3x + 1)⁵ ÷ 5 + c</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) by parts, ILATE putting the x first</div>
+    Differentiate x, integrate e^(3x) → e^(3x)/3<br />
+    = x·e^(3x)/3 − ∫ e^(3x)/3 dx = x·e^(3x)/3 − e^(3x)/9 + c<br />
+    <strong>= e^(3x)(3x − 1) ÷ 9 + c</strong><br />
+    Check: differentiating e^(3x)(3x − 1)/9 gives [3e^(3x)(3x − 1) + 3e^(3x)]/9 = x·e^(3x) ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) the numerator is the derivative of the denominator</div>
+    d/dx (2x² + 5x + 3) = 4x + 5 ✓<br />
+    So the answer is the log of the denominator: <strong>log |2x² + 5x + 3| + c</strong><br />
+    Partial fractions would also work — the denominator factorises as (2x + 3)(x + 1) — but it is
+    four times the work for the same answer.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 11 — definite integrals, including one by partial fractions (moderate-hard)">
+  <p>
+    Evaluate (a) ∫ from 1 to 4 of (2x + 3/√x) dx, (b) ∫ from 3 to 5 of (5x − 4) ÷ [(x − 2)(x + 1)] dx,
+    and (c) the area enclosed by y = x², the x-axis and the lines x = 1 and x = 3.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) rewrite, integrate, substitute</div>
+    3/√x = 3x^(−1/2), whose integral is 3 · x^(1/2) ÷ (1/2) = 6√x<br />
+    Antiderivative: x² + 6√x<br />
+    Upper limit x = 4: 16 + 12 = 28 · Lower limit x = 1: 1 + 6 = 7<br />
+    <strong>28 − 7 = 21</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) split into partial fractions first</div>
+    5x − 4 = A(x + 1) + B(x − 2) · Put x = 2: 6 = 3A → A = 2 · Put x = −1: −9 = −3B → B = 3<br />
+    Antiderivative: 2 log |x − 2| + 3 log |x + 1|
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) put the limits in</div>
+    At x = 5: 2 log 3 + 3 log 6 = 2(1.0986) + 3(1.7918) = 2.1972 + 5.3753 = 7.5725<br />
+    At x = 3: 2 log 1 + 3 log 4 = 0 + 3(1.3863) = 4.1589<br />
+    <strong>7.5725 − 4.1589 = 3.4136</strong>, which is 2 log 3 + 3 log(3/2) exactly.<br />
+    Both limits are above x = 2, so the integrand never crosses a discontinuity — worth checking
+    before integrating anything with a factor in its denominator.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) the area</div>
+    The curve y = x² is above the axis throughout 1 ≤ x ≤ 3, so the area is the plain integral.<br />
+    ∫ from 1 to 3 of x² dx = [ x³/3 ] = 27/3 − 1/3 = 26/3 = <strong>8.67 square units</strong><br />
+    Reversing the limits would give −26/3; an area cannot be negative, which is a useful sanity check
+    on the subtraction order.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 12 — rebuilding totals from marginal functions (moderate-hard)">
+  <p>
+    A components maker has marginal cost MC = 3x² − 12x + 40 rupees a unit and fixed costs of ₹ 800.
+    Its marginal revenue is MR = 200 − 2x rupees a unit. Find (a) the total cost function, (b) the
+    total revenue function, (c) the profit at an output of 10 units, and (d) the additional cost of
+    raising output from 10 units to 15 units.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) integrate marginal cost and pin the constant</div>
+    C(x) = ∫ (3x² − 12x + 40) dx = x³ − 6x² + 40x + c<br />
+    Fixed cost is the cost at zero output: C(0) = c = 800<br />
+    <strong>C(x) = x³ − 6x² + 40x + 800</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) integrate marginal revenue; the constant is zero</div>
+    R(x) = ∫ (200 − 2x) dx = 200x − x² + c<br />
+    Selling nothing earns nothing, so R(0) = 0 and <strong>c = 0</strong><br />
+    <strong>R(x) = 200x − x²</strong><br />
+    This is the one place where the constant is genuinely zero — and it is zero for a reason that
+    must be stated, not because constants are optional.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) profit at x = 10</div>
+    R(10) = 2,000 − 100 = ₹ 1,900<br />
+    C(10) = 1,000 − 600 + 400 + 800 = ₹ 1,600<br />
+    Profit = 1,900 − 1,600 = <strong>₹ 300</strong><br />
+    Leaving the ₹ 800 fixed cost out would report a profit of ₹ 1,100 — the standard trap when the
+    constant of integration is dropped.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) the extra cost of units 11 to 15</div>
+    This is a <em>change</em>, so integrate marginal cost between the two outputs.<br />
+    ∫ from 10 to 15 of (3x² − 12x + 40) dx = [ x³ − 6x² + 40x ]<br />
+    At x = 15: 3,375 − 1,350 + 600 = 2,625 · At x = 10: 1,000 − 600 + 400 = 800<br />
+    <strong>Additional cost = ₹ 1,825</strong><br />
+    Confirm from the totals: C(15) = 3,425 and C(10) = 1,600, a difference of ₹ 1,825 ✓ — the fixed
+    cost cancels, exactly as a definite integral says it must.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **The chain rule's inner derivative dropped.** (3x² + 5)⁷ differentiates to 42x(3x² + 5)⁶, not
+  7(3x² + 5)⁶. Every wrapped function carries a multiplier from the inside.
+- **The product rule applied as a product of derivatives.** d/dx(u·v) is u·v′ + v·u′, never u′·v′.
+  Test any suspicious option on y = x · x = x², where the truth is 2x and the fake answer is 1.
+- **The quotient rule's numerator terms reversed.** It is v·u′ − u·v′, denominator first. Reversed,
+  every sign in the answer flips.
+- **The power rule applied to 1/x.** Written as x⁻¹ it differentiates to −1/x². The function whose
+  derivative is 1/x is log x, and the two are constantly swapped.
+- **The derivative of x written as x.** It is 1. Similarly the derivative of any constant is 0, not
+  the constant.
+- **Multiplying back forgotten in logarithmic differentiation.** The working produces
+  (1/y)(dy/dx); the answer needs the bracket multiplied by y, written out in x.
+- **The parametric quotient inverted.** dy/dx = (dy/dt) ÷ (dx/dt). The reciprocal is a standard
+  option and is often a plausible-looking number.
+- **dy/dx omitted on the y terms in an implicit problem.** Differentiating y² with respect to x gives
+  2y·(dy/dx), not 2y. Missing the factor makes the answer independent of dy/dx and unsolvable.
+- **A maximum reported where the second-derivative test gives a minimum.** f″ &lt; 0 is the maximum
+  and f″ &gt; 0 is the minimum. Both critical points will be offered, so the slip is never caught by
+  the arithmetic.
+- **Answering with the critical point when the question asked for the value.** "Find the maximum
+  profit" wants rupees, not the output at which it occurs. Read the last line of the stem again
+  before choosing.
+- **Marginal cost confused with average cost.** MC = dC/dx; AC = C(x) ÷ x. They are equal at exactly
+  one output — the one that minimises AC — and nowhere else.
+- **Fixed cost put into marginal cost.** It differentiates away. A stem that changes only the fixed
+  cost changes nothing about MC, MR or the profit-maximising output.
+- **The constant of integration omitted.** An indefinite integral without + c is incomplete, and the
+  option without it is placed there on purpose.
+- **The constant assumed to be zero in a cost problem.** In total cost the constant *is* the fixed
+  cost. It is zero only for total revenue, and only because R(0) = 0.
+- **The differential not converted in a substitution.** If u = x², then x dx = du/2, and the missing
+  1/2 is exactly what separates the right option from the wrong one.
+- **∫ (1/x) dx written as x⁰/0 or as log x without the modulus.** The power rule has no n = −1 case;
+  the answer is log |x| + c.
+- **A definite integral evaluated as lower minus upper.** It is F(upper) − F(lower). The reversed
+  answer is the correct one with its sign changed, and it will be an option.
+- **+ c left in a definite integral.** The constant cancels in the subtraction; writing it is not
+  wrong arithmetic but it signals the two ideas have not been separated.
+- **A fraction split across its denominator without partial fractions.** 1 ÷ [(x − 3)(x + 3)] is not
+  1/(x − 3) + 1/(x + 3). Solve for A and B every time.
+- **Integrating by parts with the wrong factor differentiated.** If the remaining integral is worse
+  than the one you started with, swap the choice rather than continue.
+
+## One-page revision summary
+
+**The derivative.** dy/dx is the limit of [f(x + h) − f(x)] ÷ h as h → 0. It is the rate of change of
+y with respect to x and the slope of the tangent. Positive means rising, negative means falling, zero
+means flat.
+
+**Standard derivatives.**
+
+<div class="formula">c → 0 &nbsp;·&nbsp; xⁿ → n·xⁿ⁻¹ &nbsp;·&nbsp; eˣ → eˣ &nbsp;·&nbsp; aˣ → aˣ log a &nbsp;·&nbsp; log x → 1/x &nbsp;·&nbsp; √x → 1 ÷ (2√x) &nbsp;·&nbsp; 1/x → −1/x²</div>
+
+**The four rules.**
+
+<div class="formula">(u ± v)′ = u′ ± v′ &nbsp;·&nbsp; (k·u)′ = k·u′ &nbsp;·&nbsp; (u·v)′ = u·v′ + v·u′</div>
+<div class="formula">(u ÷ v)′ = (v·u′ − u·v′) ÷ v² &nbsp;·&nbsp; chain: dy/dx = (dy/du)(du/dx)</div>
+
+**Chain-rule shortcuts.** [g(x)]ⁿ → n[g(x)]ⁿ⁻¹·g′(x) · e^(g(x)) → e^(g(x))·g′(x) ·
+log g(x) → g′(x) ÷ g(x).
+
+**Logarithmic differentiation.** For x^x or a long product: take logs, differentiate, then multiply
+the whole bracket by y written out in x.
+
+**Implicit.** Differentiate every term in x; y terms carry dy/dx; collect and divide.
+**Parametric.** dy/dx = (dy/dt) ÷ (dx/dt), y on top.
+
+**Second derivative.** d²y/dx² measures how the slope itself is changing. Positive means the curve
+bends upwards, negative means downwards.
+
+**Business derivatives.** MC = dC/dx · MR = dR/dx · AC = C(x) ÷ x · AR = R(x) ÷ x = price.
+d(AC)/dx = (MC − AC) ÷ x, so **MC = AC exactly where AC is least**. Fixed cost never enters MC.
+
+**Maxima and minima.** Solve f′(x) = 0 for the critical points. Then f″ &lt; 0 → maximum (dome),
+f″ &gt; 0 → minimum (bowl), f″ = 0 → test the sign of f′ on either side. Profit is greatest where
+**MR = MC** with P″ &lt; 0.
+
+<div class="formula">Economic order quantity q = √( 2·D·O ÷ H ), where ordering cost equals holding cost at the optimum</div>
+
+**Integration.** ∫f(x) dx = F(x) + c where F′ = f. The constant is compulsory in an indefinite
+integral; in a total-cost problem it is the **fixed cost**, and in a total-revenue problem it is zero
+because R(0) = 0.
+
+**Standard integrals.**
+
+<div class="formula">∫xⁿ dx = xⁿ⁺¹ ÷ (n + 1) + c (n ≠ −1) &nbsp;·&nbsp; ∫(1/x) dx = log |x| + c &nbsp;·&nbsp; ∫eˣ dx = eˣ + c</div>
+<div class="formula">∫eᵃˣ dx = eᵃˣ ÷ a + c &nbsp;·&nbsp; ∫aˣ dx = aˣ ÷ log a + c &nbsp;·&nbsp; ∫(ax + b)ⁿ dx = (ax + b)ⁿ⁺¹ ÷ [a(n + 1)] + c</div>
+
+**Substitution.** ∫[g(x)]ⁿ·g′(x) dx = [g(x)]ⁿ⁺¹ ÷ (n + 1) + c, and ∫ g′(x) ÷ g(x) dx = log |g(x)| + c.
+Convert the differential as well as the function.
+
+**By parts.** ∫u·v dx = u∫v dx − ∫[u′ ∫v dx] dx. Differentiate the function earlier in **ILATE**
+(Inverse, Logarithmic, Algebraic, Trigonometric, Exponential). ∫log x dx = x log x − x + c.
+
+**Partial fractions.** Split a proper fraction with distinct linear factors as A ÷ (x − a) +
+B ÷ (x − b); find A and B by substituting the values that kill one bracket; each piece integrates to
+a log.
+
+**Definite integral.** ∫ from a to b of f dx = F(b) − F(a), **upper minus lower**, no + c. Properties:
+∫ from a to a = 0; reversing the limits changes the sign; the range can be split at any point.
+
+**Business integrals.** Change in total cost from a to b = ∫ from a to b of MC dx. Total revenue for
+b units = ∫ from 0 to b of MR dx. Area under a curve above the axis = the definite integral between
+the two x values.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. Guessing among four is close to neutral;
+eliminating one option makes an attempt clearly worthwhile, and in this chapter an option can usually
+be tested by differentiating it or by evaluating it at one convenient value of x.

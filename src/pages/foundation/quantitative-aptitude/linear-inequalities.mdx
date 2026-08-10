@@ -1,0 +1,1194 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Linear Inequalities'
+description: 'CA Foundation Quantitative Aptitude Ch 3 — linear inequalities in plain language: the rules of operation and the sign reversal, solution sets on the number line and in interval notation, double and simultaneous inequalities, half-planes and the test-point method, feasible regions, bounded and unbounded cases, corner points, and the translation of business constraints.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 3 · Linear Inequalities'
+chapterSlug: linear-inequalities
+masteryId: f3-ch3
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 3 (Linear Inequalities) — scope and worked patterns'
+  - 'Standard results of elementary algebra — order axioms of the real numbers, half-plane test'
+sourceLabel: 'ICAI SM Paper 3 Ch 3 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 24 min read · 8 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=linear-inequalities'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A small furniture unit at Hubballi makes two things: stacking chairs and study tables. The carpentry
+shed can give 120 hours a week and the polishing bay 80 hours. Nobody in the workshop is asking
+"what is the exact number of chairs?" — the honest question is **how many combinations of chairs and
+tables can this week actually deliver?** Not one answer. A whole region of answers, with an edge
+running around it.
+
+That is the difference between an equation and an inequality, and it is the whole of this chapter.
+An equation pins a variable to a point. An inequality fences it into a range. Real business runs on
+fences: budgets that must not be exceeded, minimum orders that must be met, machine hours that run
+out, godowns that fill up. In the Foundation paper this chapter is worth a steady handful of marks,
+and almost all of them go to three skills — flipping the sign correctly when you divide by a
+negative number, shading the right side of a boundary line, and reading the corner points of a
+feasible region off the right pair of constraints.
+
+## 1. What an inequality is
+
+An **equation** says two expressions are equal. An **inequality** says one is bigger or smaller than
+the other. Compare:
+
+| Statement | Kind | What satisfies it |
+|---|---|---|
+| `2x + 6 = 20` | Linear equation | Exactly one value, `x = 7` |
+| `2x + 6 < 20` | Linear inequality | Every value below 7 — infinitely many |
+| `2x + 6 ≤ 20` | Linear inequality | Every value up to and including 7 |
+
+An inequality is called **linear** when every variable in it appears to the first power only, with no
+products of variables, no squares, no variable inside a root or a denominator. So `3x − 4y ≥ 12` is
+linear; `x² ≤ 9`, `xy ≤ 20` and `3/x < 5` are not.
+
+The set of all values that make the inequality true is its **solution set**. For an equation the
+solution set is usually a single number. For a linear inequality in one variable it is an interval
+of the number line; for a linear inequality in two variables it is half of the plane. That is the
+one idea to carry through every section that follows:
+
+<div class="formula">Equation → a point · Inequality in one variable → an interval · Inequality in two variables → a half-plane</div>
+
+An inequality is called **strict** when it uses `<` or `>` and the boundary value is excluded, and
+**non-strict** (or "weak") when it uses `≤` or `≥` and the boundary value is included. That one word
+in the question — "at most", "not more than", "less than" — decides whether the endpoint belongs to
+your answer, and examiners test it deliberately.
+
+<Callout kind="pointer">
+  <p>
+    A single inequality is neither true nor false on its own; it becomes true or false only once you
+    put a number into it. <code>2x + 6 &lt; 20</code> is true at <code>x = 3</code> and false at
+    <code>x = 9</code>. "Solving" it means finding every <em>x</em> that makes it true, not finding
+    the one that makes it true.
+  </p>
+</Callout>
+
+## 2. The four symbols, strict and non-strict
+
+| Symbol | Read as | Boundary included? | English phrases that produce it |
+|---|---|---|---|
+| `<` | is less than | No | less than · below · under · fewer than · short of |
+| `>` | is greater than | No | more than · above · exceeds · over |
+| `≤` | is less than or equal to | Yes | at most · not more than · maximum of · up to · cannot exceed · available |
+| `≥` | is greater than or equal to | Yes | at least · not less than · minimum of · no fewer than · required |
+
+Two conventions worth fixing now, because every later section depends on them.
+
+**Direction is a property of the statement, not of the numbers.** `5 > 3` and `3 < 5` say the same
+thing. You may read an inequality from either end, so `−4 ≤ x` and `x ≥ −4` are the same solution
+set. Students who mechanically keep the variable on the left lose marks when the question presents
+it on the right.
+
+**A double inequality is two inequalities in one line.** `−3 ≤ x < 7` means `x ≥ −3` **and** `x < 7`
+at the same time. Note the mixed ends: −3 belongs to the set, 7 does not. Both halves must hold, so
+a double inequality is always an "and", never an "or".
+
+## 3. The rules of operation on inequalities
+
+You may do to an inequality almost everything you do to an equation. Four rules cover the syllabus.
+
+**Rule 1 — Add or subtract the same quantity on both sides. The sign does not change.**
+If `a < b`, then `a + c < b + c` and `a − c < b − c`, whatever the sign of *c*. Adding 5 to both
+pans of a balance that was already tilted leaves it tilted the same way. This is why transposing a
+term across the sign is safe.
+
+**Rule 2 — Multiply or divide both sides by the same POSITIVE quantity. The sign does not change.**
+If `a < b` and `c > 0`, then `ac < bc` and `a/c < b/c`. Scaling both sides up by a positive factor
+preserves which one is larger.
+
+**Rule 3 — Multiply or divide both sides by the same NEGATIVE quantity. The sign REVERSES.**
+If `a < b` and `c < 0`, then `ac > bc` and `a/c > b/c`. This is the rule the whole chapter turns on,
+and section 4 is devoted to it.
+
+**Rule 4 — Two inequalities of the same direction may be added.**
+If `a < b` and `c < d`, then `a + c < b + d`. Useful when a question gives ranges for two quantities
+and asks for the range of their total. Note carefully what is **not** allowed: you may not
+**subtract** two inequalities of the same direction, and you may not multiply two inequalities
+together unless every quantity involved is known to be positive.
+
+| Operation on `−2x + 5 ≤ 11` | Result | Sign |
+|---|---|---|
+| Subtract 5 from both sides | `−2x ≤ 6` | unchanged |
+| Divide both sides by 2 (positive) | `−x ≤ 3` | unchanged |
+| Divide both sides by −2 (negative) | `x ≥ −3` | **reversed** |
+| Multiply both sides by −1 (negative) | `2x − 5 ≥ −11` | **reversed** |
+
+Two further habits protect marks. First, **never cross-multiply by an expression whose sign you do
+not know** — if a question gives `12/(x − 2) > 3` you cannot multiply by `(x − 2)` without knowing
+whether it is positive or negative, and at Foundation level such a question is out of scope, so
+check that the inequality really is linear before you start. Second, **taking reciprocals of both
+sides also reverses the direction** when both sides carry the same sign: `2 < 5` gives `1/2 > 1/5`.
+
+## 4. The sign reversal: multiplying or dividing by a negative
+
+Rule 3 deserves its own section because it is the single most common source of a wrong answer in
+this chapter, and because the wrong answer it produces is always sitting there as an option.
+
+Why does the direction flip? Look at a true statement and multiply it by `−1`:
+
+<div class="formula">3 &lt; 8 is true → multiply by −1 → −3 and −8 → but −3 &gt; −8, not −3 &lt; −8</div>
+
+Multiplying by a negative number reflects both values through zero. Reflection reverses order: the
+number that was further to the right lands further to the left. The relation therefore has to turn
+around for the statement to stay true.
+
+Three places where the flip is needed and students miss it:
+
+1. **Dividing by a negative coefficient.** `−5x > 20` divides by `−5` to give `x < −4`, not
+   `x > −4`.
+2. **Multiplying a whole inequality through by −1 to tidy it.** Turning `−x + 3y ≤ 6` into
+   `x − 3y ≥ −6` requires the flip. Writing `x − 3y ≤ −6` describes the opposite half-plane, and in
+   a graphical question you will then shade the wrong side and read the wrong corner points.
+3. **Inside a double inequality.** `−4 ≤ −2x ≤ 10` divided by `−2` gives `2 ≥ x ≥ −5`, which is
+   normally rewritten from the small end as `−5 ≤ x ≤ 2`. Both ends flip together, and the two ends
+   swap places.
+
+<Callout kind="mistake">
+  <p>
+    The safe habit: <strong>collect the variable on whichever side leaves it with a positive
+    coefficient.</strong> Faced with <code>7 − 3x &gt; 1</code>, do not divide by −3. Add
+    <code>3x</code> to both sides and take 1 across instead: <code>6 &gt; 3x</code>, so
+    <code>x &lt; 2</code>. No negative division, no flip to remember, no lost mark. Use the flip when
+    you must; avoid needing it when you can.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    A 10-second check that catches almost every sign error: <strong>test one number</strong>. If you
+    solved <code>−5x &gt; 20</code> and got <code>x &lt; −4</code>, try <code>x = −10</code>. Then
+    <code>−5 × −10 = 50</code>, and <code>50 &gt; 20</code> is true, so the answer holds. Try
+    <code>x = 0</code>: <code>0 &gt; 20</code> is false, as the answer predicts. Two substitutions,
+    and the direction is settled beyond argument.
+  </p>
+</Callout>
+
+## 5. Solving a linear inequality in one variable
+
+The method is the method you already use for a linear equation, with one extra thing to watch. Four
+steps:
+
+1. **Clear fractions** by multiplying every term by the LCM of the denominators. The LCM is a
+   positive number, so no flip.
+2. **Remove brackets** and simplify each side.
+3. **Collect the variable terms on one side and the constants on the other**, by adding or
+   subtracting. No flip at this stage either.
+4. **Divide by the coefficient of the variable.** Flip the sign here if, and only if, that
+   coefficient is negative.
+
+Worked through once, in full:
+
+<div class="formula">Solve 3(x − 2) + 4 ≤ 5x + 10</div>
+
+Step 2 gives `3x − 6 + 4 ≤ 5x + 10`, that is `3x − 2 ≤ 5x + 10`. Step 3: take `3x` to the right and
+10 to the left, `−12 ≤ 2x`. Step 4: divide by 2, a positive number, so `−6 ≤ x`, which is
+`x ≥ −6`. The solution set is every real number from −6 upwards, with −6 itself included because the
+original sign was non-strict.
+
+Now the same problem with a negative coefficient left in place:
+
+<div class="formula">Solve 8 − 2(x + 1) &gt; 3x + 16</div>
+
+Removing brackets: `8 − 2x − 2 > 3x + 16`, so `6 − 2x > 3x + 16`. Collect: `6 − 16 > 3x + 2x`, so
+`−10 > 5x`, and dividing by the positive 5 gives `−2 > x`, that is `x < −2`. Notice that by moving
+`−2x` to the right instead of moving `3x` to the left, the division was by a positive number and no
+flip was needed.
+
+<Callout kind="mistake">
+  <p>
+    When you clear fractions, multiply <strong>every</strong> term, including the ones that have no
+    denominator. In <code>x/3 − 2 &lt; (x + 4)/5</code> the LCM is 15, and the middle term becomes
+    <code>−30</code>, not <code>−2</code>. Dropping the multiplier on the whole-number term is the
+    commonest arithmetic slip in this section, and it produces an answer that looks perfectly
+    reasonable.
+  </p>
+</Callout>
+
+If the variable disappears completely, the inequality is still telling you something. `2x + 5 < 2x + 9`
+reduces to `5 < 9`, which is true whatever *x* is, so the solution set is **all real numbers**. And
+`2x + 5 > 2x + 9` reduces to `5 > 9`, which is never true, so the solution set is **empty**. Neither
+case is a mistake in your working; both are legitimate answers.
+
+## 6. Three ways to write the answer
+
+Once you have solved the inequality you must present the solution set. Foundation questions ask for
+any of three forms, and options are often built by translating the correct answer into the wrong
+form.
+
+**Set-builder form** names the universe explicitly: `{x : x ∈ R, x ≥ −6}`. State the universe,
+because it changes the answer. If the question says *x* is a natural number, the solution set of
+`2x < 9` is `{1, 2, 3, 4}` and not the interval `(−∞, 4.5)`.
+
+**The number line** shows the same thing as a picture. Since this page carries no drawings, describe
+one in words the way an examiner's answer key does:
+
+| Solution | Circle at the endpoint | Shading runs |
+|---|---|---|
+| `x < 6` | Open (hollow) circle at 6 | To the left, without end |
+| `x ≤ 6` | Closed (solid) circle at 6 | To the left, without end |
+| `x > −2` | Open circle at −2 | To the right, without end |
+| `−3 ≤ x < 7` | Closed at −3, open at 7 | Between them only |
+
+**Interval notation** is the compact form. A **square bracket** includes the endpoint; a **round
+bracket** excludes it. Infinity always takes a round bracket, because infinity is not a number that
+can belong to a set.
+
+| Inequality | Interval | Name |
+|---|---|---|
+| `a < x < b` | `(a, b)` | Open interval |
+| `a ≤ x ≤ b` | `[a, b]` | Closed interval |
+| `a ≤ x < b` | `[a, b)` | Half-open (left-closed) |
+| `x ≥ a` | `[a, ∞)` | Unbounded above |
+| `x < b` | `(−∞, b)` | Unbounded below |
+
+<Callout kind="pointer">
+  <p>
+    Read the bracket back into English before you tick an option. <code>[2, 9)</code> says "2 is in,
+    9 is out". If the question asked for values "more than 2 and at most 9", the correct interval is
+    <code>(2, 9]</code> — the same two numbers, the brackets the other way round. A distractor that
+    differs only in bracket type is a bracket question, not an arithmetic question.
+  </p>
+</Callout>
+
+Practise moving between the three forms until it is automatic. Every row below is the same fact
+written three ways:
+
+| Inequality | Set-builder (over the reals) | Interval | Number line |
+|---|---|---|---|
+| `x > 3` | `{x : x ∈ R, x > 3}` | `(3, ∞)` | Open circle at 3, shaded right |
+| `x ≤ −1` | `{x : x ∈ R, x ≤ −1}` | `(−∞, −1]` | Solid circle at −1, shaded left |
+| `0 ≤ x ≤ 5` | `{x : x ∈ R, 0 ≤ x ≤ 5}` | `[0, 5]` | Solid circles at 0 and 5, shaded between |
+| `−2 < x ≤ 4` | `{x : x ∈ R, −2 < x ≤ 4}` | `(−2, 4]` | Open at −2, solid at 4, shaded between |
+| No solution | `∅` | — | Nothing shaded |
+| All reals | `R` | `(−∞, ∞)` | The whole line shaded |
+
+The universe matters more than students expect, and a question states it deliberately. Solve
+`3x − 4 < 11`. Over the reals the answer is `x < 5`, interval `(−∞, 5)`. Over the **natural
+numbers** the same inequality has the solution set `{1, 2, 3, 4}`. Over the **whole numbers** it is
+`{0, 1, 2, 3, 4}`, five members rather than four. Over the **integers** it is `{…, 3, 4}`, an
+infinite set with no lower end. One inequality, four different correct answers, chosen by a phrase
+in the stem.
+
+## 7. Double inequalities
+
+A double inequality traps a variable between two bounds in one line: `−5 ≤ 3x + 4 < 19`. It is
+solved exactly like a single inequality, except that **every operation is performed on all three
+parts at once**.
+
+Take `−5 ≤ 3x + 4 < 19`. Subtract 4 from all three parts: `−9 ≤ 3x < 15`. Divide all three by 3, a
+positive number: `−3 ≤ x < 5`. In interval form, `[−3, 5)`.
+
+When the middle coefficient is negative, both signs flip and the two ends change places. Take
+`7 ≤ 5 − 2x ≤ 13`. Subtract 5: `2 ≤ −2x ≤ 8`. Divide by −2 and reverse both signs:
+`−1 ≥ x ≥ −4`. Rewrite from the smaller end, as convention requires: `−4 ≤ x ≤ −1`, interval
+`[−4, −1]`.
+
+<Callout kind="mistake">
+  <p>
+    Flipping only the sign you happen to be looking at turns <code>2 ≤ −2x ≤ 8</code> into
+    <code>−1 ≥ x ≤ −4</code>, which is not a statement at all. Either flip both, or split the double
+    inequality into its two halves, solve them separately, and put the answers back together. The
+    split always works and costs one extra line.
+  </p>
+</Callout>
+
+A double inequality can also be **empty**. `9 < 2x + 1 < 5` requires *x* to be more than 4 and less
+than 2 at the same time; no number does that, so the solution set is `∅`. Whenever the left bound
+ends up above the right bound, stop and say so.
+
+## 8. Simultaneous linear inequalities in one variable
+
+Two or more separate inequalities in the same variable must hold **together**. Solve each one on its
+own, then take the **intersection** — the overlap — of the solution sets.
+
+<div class="formula">Solution of a system = the values common to every inequality in it</div>
+
+Solve `3x − 5 ≤ 7` and `2x + 3 > 5` together. The first gives `3x ≤ 12`, so `x ≤ 4`. The second
+gives `2x > 2`, so `x > 1`. The values that satisfy both are those greater than 1 and at most 4:
+`1 < x ≤ 4`, interval `(1, 4]`.
+
+Laying the overlap out as a table is the fastest way to avoid an error:
+
+| Inequality | Solved | Interval |
+|---|---|---|
+| `3x − 5 ≤ 7` | `x ≤ 4` | `(−∞, 4]` |
+| `2x + 3 > 5` | `x > 1` | `(1, ∞)` |
+| **Both together** | `1 < x ≤ 4` | `(1, 4]` |
+
+Three outcomes are possible and all three appear in question banks:
+
+- **An interval**, as above, when the two ranges overlap partly.
+- **One of the two ranges**, when one range sits entirely inside the other. `x ≤ 4` together with
+  `x ≤ 9` is simply `x ≤ 4`; the weaker condition adds nothing.
+- **The empty set**, when the ranges do not meet at all. `x > 6` together with `x < 2` has no
+  solution.
+
+<Callout kind="pointer">
+  <p>
+    The endpoint needs its own decision. <code>x ≤ 4</code> with <code>x &lt; 4</code> gives
+    <code>x &lt; 4</code> — the <strong>strict</strong> condition wins at a shared endpoint, because
+    a value must satisfy every inequality, and 4 fails the strict one. Students who write
+    <code>x ≤ 4</code> here have taken the union instead of the intersection.
+  </p>
+</Callout>
+
+Where the variable is restricted to integers, finish by listing. `−2 < x ≤ 3` over the integers is
+`{−1, 0, 1, 2, 3}` — five values, and miscounting the endpoints is exactly what a "how many integer
+solutions" question is testing.
+
+## 9. Turning a business sentence into an inequality
+
+Most marks in this chapter are not lost in the algebra; they are lost in the translation. Work in
+four steps: **name the variables, state their units, write one inequality per limited resource, and
+add the non-negativity conditions.**
+
+| Business sentence | Inequality | The word that decides the sign |
+|---|---|---|
+| The budget for machines is ₹ 2,40,000 | `15000x + 20000y ≤ 240000` | "budget" — a ceiling |
+| The carpentry shed offers 120 hours a week | `2x + 3y ≤ 120` | "offers" — availability, a ceiling |
+| The contract requires at least 40 units of A | `x ≥ 40` | "at least" — a floor |
+| The mix must contain not more than 30% cement | `c ≤ 0.30(c + s)` | "not more than" — a ceiling |
+| The lorry carries a maximum of 6 tonnes | `0.5x + 0.8y ≤ 6` | "maximum" — a ceiling |
+| The blend needs a minimum of 90 units of protein | `12x + 8y ≥ 90` | "minimum" — a floor |
+| Production of B cannot exceed twice that of A | `y ≤ 2x` | "cannot exceed" — a ceiling |
+| At least a third of the output must be A | `x ≥ (1/3)(x + y)`, i.e. `2x ≥ y` | "at least" — a floor |
+
+Two translation traps recur.
+
+**A "resource available" line is always `≤`, however the sentence is phrased.** "The shed has 120
+hours" does not mean the shed must be worked for 120 hours. It means it cannot be worked for more.
+
+**A ratio condition must be cleared of its fraction before it is a usable constraint.** "At least a
+third of the output must be chairs" is `x ≥ (x + y)/3`. Multiply by 3: `3x ≥ x + y`, so `2x ≥ y`,
+or `2x − y ≥ 0`. Only in this last form can you find its intercepts and draw it.
+
+A short drill, worked in full. A bakery makes cakes and biscuit packs. Each cake needs 300 g of
+flour and 20 minutes of oven time; each biscuit pack needs 200 g of flour and 12 minutes. The
+bakery has 60 kg of flour and the oven runs for 8 hours. It has a standing order for at least 40
+biscuit packs, and it will not make more cakes than biscuit packs.
+
+| Restriction | Raw form | Tidied constraint |
+|---|---|---|
+| Flour, 60 kg = 60,000 g | `300x + 200y ≤ 60000` | `3x + 2y ≤ 600` |
+| Oven, 8 hours = 480 minutes | `20x + 12y ≤ 480` | `5x + 3y ≤ 120` |
+| Standing order | at least 40 packs | `y ≥ 40` |
+| Product mix | cakes not more than packs | `x ≤ y`, i.e. `x − y ≤ 0` |
+| Non-negativity | counts of items | `x ≥ 0, y ≥ 0` |
+
+Both capacity lines were converted before the coefficients were written — kilograms to grams, hours
+to minutes — and both were then divided by a common factor to make the intercepts readable. Neither
+step changes which points satisfy the constraint.
+
+<Callout kind="pointer">
+  <p>
+    Read the stem twice for the two silent words. "The bakery <em>has</em> 60 kg of flour" is a
+    ceiling even though no comparison word appears. "It <em>will not</em> make more cakes than
+    packs" is a ceiling on <em>x</em> relative to <em>y</em>, not on <em>x</em> alone. Constraints
+    that compare two variables have no intercept on one axis in the usual sense — <code>x = y</code>
+    passes through the origin — so plan to test <code>(1, 0)</code> or <code>(0, 1)</code> on them.
+  </p>
+</Callout>
+
+## 10. A linear inequality in two variables, and its boundary line
+
+`3x + 4y ≤ 24` is a linear inequality in two variables. Its solution is not a set of numbers but a
+set of **ordered pairs** — every point `(x, y)` that satisfies it. Drawn on graph paper, those
+points fill exactly half of the plane.
+
+The construction has two parts, and they are independent of each other.
+
+**Part 1 — draw the boundary line.** Replace the inequality sign with `=` and plot the resulting
+line. The quickest plot is by **intercepts**: put `y = 0` to get the point where the line crosses
+the *x*-axis, then put `x = 0` for the *y*-axis. For `3x + 4y = 24` that gives `(8, 0)` and
+`(0, 6)`. Join them and extend.
+
+**Part 2 — decide whether the line itself belongs to the solution.** This is where the strict and
+non-strict distinction earns its keep:
+
+| Sign in the inequality | Boundary line drawn as | Points on the line are |
+|---|---|---|
+| `≤` or `≥` | **Solid** (unbroken) | Part of the solution |
+| `<` or `>` | **Dashed** (broken) | **Not** part of the solution |
+
+So `3x + 4y ≤ 24` gets a solid line, and `3x + 4y < 24` the same line drawn dashed. The two regions
+differ only in their edge, but in a corner-point question that edge is the whole answer: if the
+boundary is excluded, the vertices on it are not attainable, and a "maximum production" reading of
+such a region has no exact answer at all.
+
+<Callout kind="pointer">
+  <p>
+    If a boundary line has an intercept that is not a whole number, plot two convenient points
+    instead of forcing the intercepts. For <code>3x + 7y = 42</code> the intercepts are
+    <code>(14, 0)</code> and <code>(0, 6)</code>, both clean; for <code>5x + 3y = 22</code> they are
+    <code>(4.4, 0)</code> and <code>(0, 7.33)</code>, so plot <code>(2, 4)</code> and
+    <code>(−1, 9)</code> instead. Accuracy of the plot decides accuracy of the corner points.
+  </p>
+</Callout>
+
+## 11. Which side to shade: the test point method
+
+A line cuts the plane in two. One side satisfies the inequality, the other does not, and there is no
+way to tell which by looking. The reliable method is to **test one point that is not on the line**.
+
+1. Pick a test point off the boundary. Use `(0, 0)` whenever the line does not pass through the
+   origin, because the arithmetic is trivial.
+2. Substitute it into the original inequality.
+3. If the statement comes out **true**, shade the side of the line that contains the test point. If
+   it comes out **false**, shade the other side.
+
+Set out as a table — the format used everywhere below, and the format to reproduce in an exam:
+
+| Inequality | Boundary | Intercepts | Line | Test point | Substitution | True? | Shade |
+|---|---|---|---|---|---|---|---|
+| `3x + 4y ≤ 24` | `3x + 4y = 24` | `(8, 0)`, `(0, 6)` | Solid | `(0, 0)` | `0 ≤ 24` | Yes | Origin side (below-left) |
+| `3x + 4y ≥ 24` | `3x + 4y = 24` | `(8, 0)`, `(0, 6)` | Solid | `(0, 0)` | `0 ≥ 24` | No | Far side (above-right) |
+| `2x − y > 4` | `2x − y = 4` | `(2, 0)`, `(0, −4)` | Dashed | `(0, 0)` | `0 > 4` | No | Far side (below-right) |
+| `y ≤ 2x` | `y = 2x` | Passes through origin | Solid | `(1, 0)` | `0 ≤ 2` | Yes | Side containing `(1, 0)` |
+
+<Callout kind="mistake">
+  <p>
+    Two failures of the test-point method, both avoidable. First, <strong>using the origin when the
+    boundary passes through it</strong>: <code>y ≤ 2x</code> at <code>(0, 0)</code> gives
+    <code>0 ≤ 0</code>, which is true but tells you nothing, because the origin lies on the line.
+    Pick <code>(1, 0)</code> or <code>(0, 1)</code> instead. Second, <strong>testing the rearranged
+    inequality while remembering the original picture</strong>: if you turned <code>−x + 2y ≥ 4</code>
+    into <code>x − 2y ≤ −4</code>, test the version you are actually holding, and test it honestly.
+  </p>
+</Callout>
+
+There is a shortcut worth knowing but not worth trusting. Once the inequality is written with a
+**positive** coefficient of *y* and *y* alone on the left — `y ≤ mx + c` — the solution is the
+region **below** the line, and `y ≥ mx + c` the region above. It is quick, but it depends entirely
+on that coefficient of *y* being positive, and rearranging to get there is one more chance to lose a
+sign. The test point costs five seconds and never lies.
+
+The same substitution answers the other common question type: **does a given point lie in the
+region?** Put the pair into every inequality in turn. It belongs only if all of them hold, and one
+failure is enough to exclude it. Take `3x + 4y ≤ 24` with `x ≥ 0, y ≥ 0`:
+
+| Point | `3x + 4y` | `≤ 24`? | `x ≥ 0`? | `y ≥ 0`? | In the region? |
+|---|---|---|---|---|---|
+| `(2, 3)` | `6 + 12 = 18` | Yes | Yes | Yes | Yes, strictly inside |
+| `(8, 0)` | `24 + 0 = 24` | Yes, with equality | Yes | Yes | Yes, on the boundary |
+| `(4, 4)` | `12 + 16 = 28` | No | Yes | Yes | No |
+| `(−1, 5)` | `−3 + 20 = 17` | Yes | **No** | Yes | No — non-negativity fails |
+
+The last row is the one that catches people. The point satisfies the interesting constraint and
+fails a constraint that looked like a formality.
+
+## 12. Systems of inequalities and the feasible region
+
+A business rarely has one constraint. Put several linear inequalities together and the solution is
+the set of points satisfying **every one of them at once** — the **common region**, or, in the
+language of business problems, the **feasible region**.
+
+<div class="formula">Feasible region = intersection of all the half-planes = the set of all workable production plans</div>
+
+The procedure never changes:
+
+1. Convert each inequality to its boundary line and mark the two intercepts.
+2. Draw each line, solid or dashed as the sign requires.
+3. Shade the correct half-plane for each, using a test point.
+4. The region covered by **all** the shadings is the feasible region. Everything else is out.
+
+Return to the Hubballi workshop. Let *x* be the number of chairs and *y* the number of tables made
+in a week. A chair takes 2 hours of carpentry and 2 hours of polishing; a table, being larger but
+plainer, takes 3 hours of carpentry and 1 hour of polishing. Carpentry has 120 hours available,
+polishing 80.
+
+<div class="formula">Carpentry: 2x + 3y ≤ 120 · Polishing: 2x + y ≤ 80 · x ≥ 0, y ≥ 0</div>
+
+| Constraint | Boundary | x-intercept | y-intercept | Line | Test `(0, 0)` | True? | Shade |
+|---|---|---|---|---|---|---|---|
+| `2x + 3y ≤ 120` | `2x + 3y = 120` | `(60, 0)` | `(0, 40)` | Solid | `0 ≤ 120` | Yes | Towards origin |
+| `2x + y ≤ 80` | `2x + y = 80` | `(40, 0)` | `(0, 80)` | Solid | `0 ≤ 80` | Yes | Towards origin |
+| `x ≥ 0` | `x = 0` (the y-axis) | — | — | Solid | `(1, 1)`: `1 ≥ 0` | Yes | Right of the axis |
+| `y ≥ 0` | `y = 0` (the x-axis) | — | — | Solid | `(1, 1)`: `1 ≥ 0` | Yes | Above the axis |
+
+The four shadings overlap in a four-sided region in the first quadrant. Its corners turn out to be
+`(0, 0)`, `(40, 0)`, `(30, 20)` and `(0, 40)` — section 15 shows how those are computed, and worked
+example 5 does it in full.
+
+<Callout kind="pointer">
+  <p>
+    A practical habit: shade <strong>lightly</strong>, or hatch each half-plane in a different
+    direction, and then outline the overlap firmly. Students who shade heavily cannot see the common
+    region at all by the fourth constraint, and end up guessing the boundary. Some candidates prefer
+    to shade the <em>rejected</em> side of each line instead; the region left completely unshaded is
+    then the feasible region. Either convention is acceptable if you state which one you used.
+  </p>
+</Callout>
+
+A system can also have **no feasible region at all**. `x + y ≤ 10` together with `x + y ≥ 25`, both
+with `x, y ≥ 0`, asks for points that are simultaneously inside and outside; the half-planes do not
+overlap, the feasible region is empty, and the problem as framed cannot be met. That is a perfectly
+proper answer to a question, and it is the right answer whenever a minimum requirement exceeds the
+available capacity.
+
+Set that empty case out as a table, because the working is what earns the mark, not the conclusion:
+
+| Constraint | Boundary | Intercepts | Test `(0, 0)` | Shade |
+|---|---|---|---|---|
+| `x + y ≤ 10` | `x + y = 10` | `(10, 0)`, `(0, 10)` | `0 ≤ 10` true | Towards the origin |
+| `x + y ≥ 25` | `x + y = 25` | `(25, 0)`, `(0, 25)` | `0 ≥ 25` false | Away from the origin |
+
+The two boundary lines are **parallel**, and the shadings point in opposite directions, so nothing
+lies in both. Whenever two constraints have proportional coefficients — the same left-hand side, or
+one a multiple of the other — check them against each other first. Either one of them is redundant,
+because it is implied by the other, or the pair is contradictory and the region is empty. There is
+no third possibility.
+
+The mirror image is a **redundant constraint**, which is far more common and much easier to miss.
+`x + y ≤ 10` together with `x + y ≤ 30` and `x, y ≥ 0` is just `x + y ≤ 10`; the second line is
+drawn, shaded and then found to lie entirely outside the region. A redundant constraint costs
+nothing except the time spent on it, and its intercepts are a favourite source of wrong corner
+points.
+
+## 13. The non-negativity constraints
+
+Almost every business formulation ends with the line `x ≥ 0, y ≥ 0`. It looks like a formality. It
+is not: it is a constraint like any other, it is often the constraint that supplies a corner point,
+and leaving it out changes the answer.
+
+Why it is always there: the variables count real things. Chairs, kilograms, lorry loads, rupees
+invested, hours booked. **A negative number of chairs has no meaning**, so the mathematics must be
+told what the workshop already knows. Without it, `2x + 3y ≤ 120` alone would happily allow
+`x = 200, y = −100`.
+
+What it does to the picture: `x ≥ 0` keeps you to the right of the *y*-axis and `y ≥ 0` above the
+*x*-axis, so together they confine the whole feasible region to the **first quadrant**. Both axes
+become boundary lines of the region, always solid, because the constraint is non-strict.
+
+<Callout kind="mistake">
+  <p>
+    Two errors follow from treating non-negativity as decoration. The first is <strong>losing corner
+    points</strong>: in the workshop above, <code>(40, 0)</code> comes from the polishing line
+    meeting <code>y = 0</code>, and <code>(0, 40)</code> from the carpentry line meeting
+    <code>x = 0</code>. Ignore the axes and you find only <code>(30, 20)</code>. The second is
+    <strong>calling a region bounded when only the axes closed it</strong>. Check whether the
+    non-negativity lines are doing the work before you describe the region.
+  </p>
+</Callout>
+
+Note also what non-negativity does **not** say. `x ≥ 0` permits `x` to be zero — making no chairs
+at all is a feasible plan, and the origin is usually a corner point of a "resource ceiling" region.
+And `x ≥ 0` says nothing about whole numbers. If the answer must be a whole number of chairs, the
+question has to say so; see section 15 and the reviewer's note in the citations file.
+
+## 14. Bounded and unbounded regions
+
+A feasible region is **bounded** if it can be enclosed inside a circle of some finite radius — you
+can walk all the way round its edge and come back. It is **unbounded** if it runs away to infinity
+in at least one direction, so that one or more of its sides never closes.
+
+The pattern is easy to recognise once you know it:
+
+| Constraint pattern | Typical region | Why |
+|---|---|---|
+| All `≤` with positive coefficients, plus `x, y ≥ 0` | **Bounded** | Ceilings above, axes below; the region is boxed in |
+| All `≥` with positive coefficients, plus `x, y ≥ 0` | **Unbounded** | Floors push you away from the origin, nothing caps you |
+| A mixture of `≤` and `≥` | Either — check | Depends on whether the ceilings close every direction |
+
+The workshop region of section 12 is bounded: carpentry and polishing cap it from above, the axes
+close it from below, and it has four corners.
+
+Now a minimum-requirement problem. A poultry farm blends two feeds. Each kilogram of feed X supplies
+1 unit of protein and 3 units of minerals; each kilogram of feed Y supplies 2 units of protein and 1
+unit of minerals. The daily ration must supply at least 20 units of protein and at least 15 units of
+minerals.
+
+<div class="formula">Protein: x + 2y ≥ 20 · Minerals: 3x + y ≥ 15 · x ≥ 0, y ≥ 0</div>
+
+| Constraint | Boundary | x-intercept | y-intercept | Line | Test `(0, 0)` | True? | Shade |
+|---|---|---|---|---|---|---|---|
+| `x + 2y ≥ 20` | `x + 2y = 20` | `(20, 0)` | `(0, 10)` | Solid | `0 ≥ 20` | No | Away from origin |
+| `3x + y ≥ 15` | `3x + y = 15` | `(5, 0)` | `(0, 15)` | Solid | `0 ≥ 15` | No | Away from origin |
+
+The common region lies above and to the right of both lines and is **unbounded**: buying more of
+both feeds is always allowed, only buying too little is not. Its corner points are `(0, 15)`,
+`(2, 9)` and `(20, 0)` — three corners, and the region simply continues upward and rightward past
+the first and the last.
+
+<Callout kind="mistake">
+  <p>
+    An unbounded region is <strong>not</strong> an empty region, and "no solution" is the wrong
+    answer to a question about one. The farm above has infinitely many workable rations. Unbounded
+    means the region has no outer edge in some direction; empty means no point satisfies the system
+    at all. They are opposite conditions, and a distractor pairing them is checking whether you have
+    read the constraint signs.
+  </p>
+</Callout>
+
+Unboundedness has one real consequence at Foundation level. On a bounded region every corner point
+exists and can be listed. On an unbounded region the corners still exist and are still listed, but
+the region contains points arbitrarily far out, so a question asking for a *largest* feasible value
+has no answer there. That is why cost-minimising blends give unbounded regions and revenue-capping
+capacity problems give bounded ones.
+
+How to settle the question in an exam, without drawing to scale. Ask: **is every direction of travel
+from a point inside the region eventually blocked?** Take any feasible point and imagine walking
+along each axis and along the diagonal away from the origin. If some direction never leaves the
+region, the region is unbounded.
+
+| System | Walk right (`x` increasing) | Walk up (`y` increasing) | Verdict |
+|---|---|---|---|
+| `2x + 3y ≤ 120`, `2x + y ≤ 80`, `x, y ≥ 0` | Blocked by both ceilings | Blocked by both ceilings | **Bounded** |
+| `x + 2y ≥ 20`, `3x + y ≥ 15`, `x, y ≥ 0` | Never blocked | Never blocked | **Unbounded** |
+| `x + y ≥ 8`, `x + 2y ≤ 20`, `x, y ≥ 0` | Blocked at `x = 20` on the second line | Blocked at `y = 10` | **Bounded** |
+| `x ≥ 2`, `y ≥ 3`, `x + y ≤ 12` | Blocked | Blocked | **Bounded** |
+| `y ≥ 3`, `x ≥ 0` | Never blocked to the right | Never blocked upward | **Unbounded** |
+
+The third row is the case worth studying, because it mixes the two signs and still comes out
+bounded: the `≤` constraint caps both variables even though a `≥` constraint is present. So the
+table of patterns in this section is a guide, not a rule. When the signs are mixed, walk the
+directions.
+
+## 15. Corner points, and how to read the vertices
+
+A **corner point** (vertex, or extreme point) is a point where two boundary lines of the feasible
+region cross **and which satisfies every constraint**. Both halves matter. Lines cross in many
+places; only some of those crossings are corners of the region.
+
+The method that never goes wrong:
+
+1. **List every boundary line**, including `x = 0` and `y = 0`.
+2. **Take the lines two at a time** and solve each pair simultaneously. With four lines there are
+   six pairs; with five lines, ten.
+3. **Test each intersection against all the constraints.** Keep it only if it satisfies every one.
+   Discard the rest — they are crossings outside the region.
+4. **Keep the answers exact.** A vertex is frequently a fraction, and rounding it early is how
+   corner-point questions are lost.
+
+Worked on a region with a fractional vertex. A dairy at Belagavi bottles two packs, and the plant
+gives `x + y ≤ 12` (filling-line hours) and `x + 4y ≤ 32` (cold-store space), with `x, y ≥ 0`.
+
+| Pair of lines solved | Intersection | Feasible? | Test that decides it |
+|---|---|---|---|
+| `x = 0` and `y = 0` | `(0, 0)` | Yes | `0 ≤ 12` and `0 ≤ 32` |
+| `y = 0` and `x + y = 12` | `(12, 0)` | Yes | `12 + 0 = 12 ≤ 32` |
+| `y = 0` and `x + 4y = 32` | `(32, 0)` | **No** | `32 + 0 = 32 > 12`, filling line breached |
+| `x + y = 12` and `x + 4y = 32` | `(16/3, 20/3)` | Yes | Both hold with equality |
+| `x = 0` and `x + 4y = 32` | `(0, 8)` | Yes | `0 + 8 = 8 ≤ 12` |
+| `x = 0` and `x + y = 12` | `(0, 12)` | **No** | `0 + 48 = 48 > 32`, cold store breached |
+
+Four crossings survive, so the region has four corners: `(0, 0)`, `(12, 0)`, `(16/3, 20/3)` and
+`(0, 8)`. Two crossings were rejected, and each rejected point is exactly the distractor an option
+list will offer.
+
+<Callout kind="pointer">
+  <p>
+    Keep <code>(16/3, 20/3)</code> as a fraction. Written as <code>(5.33, 6.67)</code> it fails the
+    equality test on both lines, and any later arithmetic inherits the error. Only round at the very
+    last step, and only if the question asks you to.
+  </p>
+</Callout>
+
+## 16. A full construction, start to finish
+
+One problem, every step, in the order an examiner expects to see them.
+
+A garment unit at Tiruppur makes shirts and trousers, counted in dozens. A dozen shirts needs 3
+hours of cutting and 1 hour of stitching; a dozen trousers needs 2 hours of cutting and 2 hours of
+stitching. Cutting has 60 hours and stitching 40 hours in the week. The buyer will not take more
+than 16 dozen shirts. Set up the system and find the feasible region and its corner points.
+
+**Step 1 — name the variables.** Let *x* be dozens of shirts and *y* dozens of trousers made in the
+week.
+
+**Step 2 — one inequality per restriction.**
+
+<div class="formula">Cutting: 3x + 2y ≤ 60 · Stitching: x + 2y ≤ 40 · Buyer's limit: x ≤ 16 · x ≥ 0, y ≥ 0</div>
+
+**Step 3 — intercepts, line type and side, in one table.**
+
+| Constraint | Boundary | x-intercept | y-intercept | Line | Test point | Substitution | Shade |
+|---|---|---|---|---|---|---|---|
+| `3x + 2y ≤ 60` | `3x + 2y = 60` | `(20, 0)` | `(0, 30)` | Solid | `(0, 0)` | `0 ≤ 60` true | Towards origin |
+| `x + 2y ≤ 40` | `x + 2y = 40` | `(40, 0)` | `(0, 20)` | Solid | `(0, 0)` | `0 ≤ 40` true | Towards origin |
+| `x ≤ 16` | `x = 16` (vertical) | `(16, 0)` | none | Solid | `(0, 0)` | `0 ≤ 16` true | Left of the line |
+| `x ≥ 0` | `x = 0` | — | — | Solid | `(1, 1)` | `1 ≥ 0` true | Right of the axis |
+| `y ≥ 0` | `y = 0` | — | — | Solid | `(1, 1)` | `1 ≥ 0` true | Above the axis |
+
+**Step 4 — solve the pairs and filter by feasibility.**
+
+| Pair solved | Point | Kept? | Reason |
+|---|---|---|---|
+| `x = 0`, `y = 0` | `(0, 0)` | Yes | Satisfies all three ceilings |
+| `y = 0`, `x = 16` | `(16, 0)` | Yes | Cutting 48 ≤ 60; stitching 16 ≤ 40 |
+| `y = 0`, `3x + 2y = 60` | `(20, 0)` | No | `20 > 16`, buyer's limit breached |
+| `x = 16`, `3x + 2y = 60` | `(16, 6)` | Yes | Stitching `16 + 12 = 28 ≤ 40` |
+| `x = 16`, `x + 2y = 40` | `(16, 12)` | No | Cutting `48 + 24 = 72 > 60` |
+| `3x + 2y = 60`, `x + 2y = 40` | `(10, 15)` | Yes | `x = 10 ≤ 16` |
+| `x = 0`, `x + 2y = 40` | `(0, 20)` | Yes | Cutting `0 + 40 = 40 ≤ 60` |
+| `x = 0`, `3x + 2y = 60` | `(0, 30)` | No | Stitching `0 + 60 = 60 > 40` |
+
+**Step 5 — state the answer.** The feasible region is the five-sided figure with corner points
+`(0, 0)`, `(16, 0)`, `(16, 6)`, `(10, 15)` and `(0, 20)`. It is **bounded**, because the three
+ceilings and the two axes close it on every side. Every point inside or on the edge of that figure
+is a production plan the week can actually deliver.
+
+<Callout kind="pointer">
+  <p>
+    Notice that three of the eight crossings were discarded, and that two of them — <code>(20, 0)</code>
+    and <code>(0, 30)</code> — are intercepts you had already plotted. An intercept is not
+    automatically a corner point. It is a corner point only when it survives every other constraint.
+  </p>
+</Callout>
+
+## 17. The constraint families that keep coming back
+
+Questions change their story; the arithmetic recycles. Five families cover almost everything asked.
+
+**Machine or labour hours.** Per-unit time × units, summed over products, cannot exceed the hours
+available. `2x + 3y ≤ 120`. Watch for a plant that runs two shifts, or a month stated in days: the
+right-hand side has to be converted to hours before you use it.
+
+**Raw material or component limits.** Per-unit consumption × units, summed, cannot exceed the stock
+on hand. A firm with 900 kg of steel, using 5 kg per bracket and 3 kg per clamp, gets
+`5x + 3y ≤ 900`. Where two products share a scarce component, that shared line is usually the one
+that binds.
+
+**Budget or investment ceilings.** Price × quantity, summed, cannot exceed the money available.
+With machines at ₹ 15,000 and ₹ 20,000 and a budget of ₹ 2,40,000, `15000x + 20000y ≤ 240000`, which
+tidies to `3x + 4y ≤ 48`. Dividing through by the common factor before plotting makes the intercepts
+readable and changes nothing.
+
+**Blending, diet and quality minimums.** Nutrient or ingredient content × quantity, summed, must
+reach at least the specified level. `12x + 8y ≥ 90`. These are the `≥` family, and they are what
+produce unbounded regions.
+
+**Transport and storage capacity.** Weight or volume per unit × units cannot exceed what the vehicle
+or godown holds. A lorry rated at 6 tonnes carrying crates of 0.5 t and 0.8 t gives
+`0.5x + 0.8y ≤ 6`, or `5x + 8y ≤ 60` once cleared of decimals.
+
+<Callout kind="mistake">
+  <p>
+    Units are where these go wrong. If the machine time is given in minutes per unit and the
+    availability in hours, one side must be converted — 40 minutes a unit against 60 hours a week is
+    <code>40x ≤ 3600</code> in minutes, not <code>40x ≤ 60</code>. Similarly a budget in lakhs
+    against prices in rupees. Write the unit next to every coefficient before you form the
+    inequality, and the error cannot happen.
+  </p>
+</Callout>
+
+Two more patterns sit on top of these families and are worth naming, because they look unfamiliar
+the first time.
+
+**A market or contract limit on one product alone.** "The buyer will not lift more than 16 dozen
+shirts" is `x ≤ 16`, a **vertical** line. "At least 40 packs must be made" is `y ≥ 40`, a
+**horizontal** line. Neither has two intercepts, and both are easy to plot; the only care needed is
+which side to shade, and the origin settles it.
+
+**A proportion between two products.** "Output of B must be at least half the output of A" is
+`y ≥ x/2`, that is `2y − x ≥ 0`. Such a line always passes through the origin, so the test point
+must be somewhere else. Take `(4, 0)`: `2(0) − 4 = −4`, and `−4 ≥ 0` is false, so shade the side
+away from `(4, 0)` — the upper-left side of the line.
+
+| Family | Sign | Right-hand side is | Effect on the region |
+|---|---|---|---|
+| Hours, material, budget, capacity | `≤` | What is available | Caps the region; pushes it towards the origin |
+| Diet, blend, contract minimum | `≥` | What is required | Pushes the region away from the origin; often unbounded |
+| Market ceiling on one product | `≤` | A number | A vertical or horizontal cut |
+| Contract floor on one product | `≥` | A number | A vertical or horizontal cut |
+| Proportion between products | either | Zero, after clearing | A line through the origin |
+
+## 18. Negative marking and when to guess
+
+Paper 3 is fully objective, and a wrong answer costs 0.25 marks while a blank costs nothing. That
+changes the arithmetic of guessing, and it is worth working out once, calmly, rather than deciding
+under time pressure.
+
+A pure guess among four options is right one time in four. Over four such guesses you expect
+`1 × 1 = 1` mark from the one you get right and `3 × 0.25 = 0.75` marks lost on the three you get
+wrong, a net gain of 0.25 marks. So blind guessing is very slightly positive, and not worth much.
+What changes the picture is elimination. Rule out one option and you are guessing among three: the
+expected value rises to about 0.33 marks per guess. Rule out two and it is 0.5 marks per guess —
+genuinely worth doing.
+
+This chapter is unusually well suited to elimination, because its wrong options come from named
+errors rather than from random numbers. If you know the boundary is non-strict, every option with a
+round bracket at that endpoint goes. If you know the sign reverses, the option that kept the
+original direction goes. If a corner point must satisfy both binding constraints, substitute and
+discard the ones that fail. Two eliminations turn a coin-toss into a favourable guess, and on a
+numerical question you can often verify the survivor outright by substitution — at which point it is
+not a guess at all.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — fractions and a hidden negative coefficient (easy-moderate)">
+  <p>
+    Solve <code>(2x − 3)/4 + 9 ≥ 3 + 4x/3</code> and write the solution set in interval notation.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Clear the fractions</div>
+    Denominators are 4 and 3, so the LCM is 12. Multiply <strong>every</strong> term by 12:<br />
+    <code>3(2x − 3) + 108 ≥ 36 + 16x</code><br />
+    The 9 became 108 and the 3 became 36 — the whole-number terms are multiplied too.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Remove brackets and collect</div>
+    <code>6x − 9 + 108 ≥ 36 + 16x</code>, so <code>6x + 99 ≥ 36 + 16x</code><br />
+    Move <code>6x</code> to the right and 36 to the left (subtraction only, so no flip):<br />
+    <code>99 − 36 ≥ 16x − 6x</code>, that is <code>63 ≥ 10x</code>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Divide, and present</div>
+    Divide by 10, a positive number, so the sign stands: <code>6.3 ≥ x</code>, i.e.
+    <strong>x ≤ 63/10</strong><br />
+    Solution set <code>{'{'}x : x ∈ R, x ≤ 6.3{'}'}</code> · interval <strong>(−∞, 6.3]</strong> ·
+    number line: solid circle at 6.3, shaded to the left.
+  </div>
+  <p>
+    Check with one number. At <code>x = 0</code>: left side <code>−0.75 + 9 = 8.25</code>, right side
+    3, and <code>8.25 ≥ 3</code> is true, as the answer requires. At <code>x = 9</code>: left side
+    <code>3.75 + 9 = 12.75</code>, right side <code>15</code>, and <code>12.75 ≥ 15</code> is false —
+    also as required, since 9 is outside the set.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — a double inequality with a negative middle term (moderate)">
+  <p>
+    Solve <code>−8 ≤ 5 − 3x &lt; 13</code>. How many integers satisfy it?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Subtract 5 from all three parts</div>
+    <code>−8 − 5 ≤ −3x &lt; 13 − 5</code>, that is <code>−13 ≤ −3x &lt; 8</code><br />
+    Subtraction never changes a sign, so both symbols still point the same way.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Divide all three parts by −3, reversing both signs</div>
+    <code>13/3 ≥ x &gt; −8/3</code><br />
+    Rewrite from the smaller end, which is the standard presentation:
+    <strong>−8/3 &lt; x ≤ 13/3</strong><br />
+    Interval <strong>(−8/3, 13/3]</strong>, that is approximately <code>(−2.67, 4.33]</code>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Count the integers</div>
+    The smallest integer above −2.67 is −2; the largest integer not exceeding 4.33 is 4.<br />
+    Integers: −2, −1, 0, 1, 2, 3, 4 → <strong>7 values</strong> (count is 4 − (−2) + 1 = 7).
+  </div>
+  <p>
+    The bracket types came from opposite ends of the original line, and they swapped when the signs
+    reversed. The strict end started on the right (<code>&lt; 13</code>) and finished on the left.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — simultaneous inequalities in one variable (moderate)">
+  <p>
+    A wholesaler will accept an order of <em>x</em> cartons only if it satisfies both
+    <code>5x − 3 ≤ 3x + 11</code> and <code>2(3x − 1) &gt; 4x + 6</code>. Find the permitted order
+    sizes, and the number of whole cartons possible.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Solve the first inequality</div>
+    <code>5x − 3 ≤ 3x + 11</code> → <code>5x − 3x ≤ 11 + 3</code> → <code>2x ≤ 14</code> →
+    <strong>x ≤ 7</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Solve the second inequality</div>
+    <code>6x − 2 &gt; 4x + 6</code> → <code>2x &gt; 8</code> → <strong>x &gt; 4</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Intersect, then count</div>
+    Both must hold: <strong>4 &lt; x ≤ 7</strong>, interval <strong>(4, 7]</strong>.<br />
+    Cartons are whole units, so <code>x ∈ {'{'}5, 6, 7{'}'}</code> — <strong>3 possible order
+    sizes</strong>. Four is excluded because the second inequality is strict; seven is included
+    because the first is not.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — translating a business brief into a system (moderate)">
+  <p>
+    A workshop at Nashik plans to buy lathes and drilling machines. A lathe costs ₹ 15,000 and
+    occupies 4 sq m of floor; a drilling machine costs ₹ 20,000 and occupies 3 sq m. The capital
+    sanctioned is ₹ 2,40,000 and the shed offers 60 sq m of usable floor. The production plan needs
+    at least 3 lathes. Write the system of inequalities, and test whether the purchase of 8 lathes
+    with 5 drilling machines, and of 12 lathes with 4 drilling machines, is feasible.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Name the variables and their units</div>
+    Let <em>x</em> = number of lathes bought and <em>y</em> = number of drilling machines bought.
+    Both are counts of machines.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — One inequality per restriction</div>
+    Capital: <code>15000x + 20000y ≤ 2,40,000</code>, which divides by 5,000 to
+    <strong>3x + 4y ≤ 48</strong><br />
+    Floor: <code>4x + 3y ≤ 60</code><br />
+    Plan requirement: <strong>x ≥ 3</strong> ("at least", so non-strict)<br />
+    Non-negativity: <code>x ≥ 0, y ≥ 0</code> — here <code>x ≥ 3</code> already implies
+    <code>x ≥ 0</code>, but <code>y ≥ 0</code> is still needed.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Test the two proposed purchases</div>
+    <strong>8 lathes, 5 drills:</strong> capital <code>3(8) + 4(5) = 44 ≤ 48</code> ✓ · floor
+    <code>4(8) + 3(5) = 47 ≤ 60</code> ✓ · <code>x = 8 ≥ 3</code> ✓ → <strong>feasible</strong>
+    (actual spend ₹ 2,20,000).<br />
+    <strong>12 lathes, 4 drills:</strong> capital <code>3(12) + 4(4) = 52 &gt; 48</code> ✗ →
+    <strong>not feasible</strong>; the spend of ₹ 2,60,000 exceeds the sanction by ₹ 20,000, even
+    though the floor at 60 sq m is exactly met and the lathe requirement is satisfied. One failed
+    constraint is enough.
+  </div>
+  <p>
+    Dividing the capital line by 5,000 changed nothing about which points satisfy it, and it turned
+    the intercepts into the readable pair <code>(16, 0)</code> and <code>(0, 12)</code>. Note also
+    that machines come in whole numbers, so the practical answers here are the <em>lattice</em>
+    points of the region; the region itself is still drawn as a continuous area.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — the feasible region and its corner points (moderate)">
+  <p>
+    The Hubballi workshop of section 12 makes <em>x</em> chairs and <em>y</em> tables a week. A chair
+    takes 2 hours of carpentry and 2 hours of polishing; a table takes 3 hours of carpentry and 1
+    hour of polishing. Carpentry offers 120 hours and polishing 80. Draw the feasible region and
+    list its corner points.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The system</div>
+    <code>2x + 3y ≤ 120</code> (carpentry) · <code>2x + y ≤ 80</code> (polishing) ·
+    <code>x ≥ 0, y ≥ 0</code>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Construction table</div>
+    <code>2x + 3y = 120</code>: intercepts <code>(60, 0)</code> and <code>(0, 40)</code>; solid line;
+    test <code>(0, 0)</code> gives <code>0 ≤ 120</code>, true → shade towards the origin.<br />
+    <code>2x + y = 80</code>: intercepts <code>(40, 0)</code> and <code>(0, 80)</code>; solid line;
+    test <code>(0, 0)</code> gives <code>0 ≤ 80</code>, true → shade towards the origin.<br />
+    Both axes solid, region confined to the first quadrant.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Solve the pairs, then filter</div>
+    <code>x = 0, y = 0</code> → <code>(0, 0)</code>: feasible.<br />
+    <code>y = 0</code> with polishing → <code>(40, 0)</code>: carpentry <code>80 ≤ 120</code> ✓
+    feasible.<br />
+    <code>y = 0</code> with carpentry → <code>(60, 0)</code>: polishing <code>120 &gt; 80</code> ✗
+    rejected.<br />
+    Carpentry ∩ polishing: subtract <code>2x + y = 80</code> from <code>2x + 3y = 120</code> to get
+    <code>2y = 40</code>, so <code>y = 20</code> and then <code>2x = 60</code>, <code>x = 30</code> →
+    <strong>(30, 20)</strong>: feasible, both binding.<br />
+    <code>x = 0</code> with carpentry → <code>(0, 40)</code>: polishing <code>40 ≤ 80</code> ✓
+    feasible.<br />
+    <code>x = 0</code> with polishing → <code>(0, 80)</code>: carpentry <code>240 &gt; 120</code> ✗
+    rejected.
+  </div>
+  <p>
+    Corner points: <strong>(0, 0), (40, 0), (30, 20), (0, 40)</strong>. The region is
+    <strong>bounded</strong>. At <code>(30, 20)</code> both departments are fully used —
+    <code>2(30) + 3(20) = 120</code> carpentry hours and <code>2(30) + 20 = 80</code> polishing hours
+    — which is why that vertex is the one a planner looks at first.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — a corner point that is not a whole number (hard)">
+  <p>
+    A dairy at Belagavi fills toned milk and curd, measured in thousands of litres a day, <em>x</em>
+    and <em>y</em>. The filling line allows <code>x + y ≤ 12</code> and the cold store allows
+    <code>x + 4y ≤ 32</code>, with <code>x ≥ 0, y ≥ 0</code>. Find the corner points exactly.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Intercepts and sides</div>
+    <code>x + y = 12</code>: <code>(12, 0)</code> and <code>(0, 12)</code>; solid; test
+    <code>(0, 0)</code> → <code>0 ≤ 12</code> true → shade towards the origin.<br />
+    <code>x + 4y = 32</code>: <code>(32, 0)</code> and <code>(0, 8)</code>; solid; test
+    <code>(0, 0)</code> → <code>0 ≤ 32</code> true → shade towards the origin.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The intersection of the two slanting lines</div>
+    Subtract <code>x + y = 12</code> from <code>x + 4y = 32</code>: <code>3y = 20</code>, so
+    <code>y = 20/3</code>.<br />
+    Then <code>x = 12 − 20/3 = 36/3 − 20/3 = 16/3</code>.<br />
+    Vertex = <strong>(16/3, 20/3)</strong>. Check both: <code>16/3 + 20/3 = 36/3 = 12</code> ✓ and
+    <code>16/3 + 80/3 = 96/3 = 32</code> ✓.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Filter the remaining crossings</div>
+    <code>(0, 0)</code>: feasible.<br />
+    <code>(12, 0)</code> from <code>y = 0</code> and the filling line: cold store
+    <code>12 ≤ 32</code> ✓ feasible.<br />
+    <code>(32, 0)</code> from <code>y = 0</code> and the cold store: filling line
+    <code>32 &gt; 12</code> ✗ rejected.<br />
+    <code>(0, 8)</code> from <code>x = 0</code> and the cold store: filling line
+    <code>8 ≤ 12</code> ✓ feasible.<br />
+    <code>(0, 12)</code> from <code>x = 0</code> and the filling line: cold store
+    <code>48 &gt; 32</code> ✗ rejected.
+  </div>
+  <p>
+    Corner points: <strong>(0, 0), (12, 0), (16/3, 20/3), (0, 8)</strong> — a bounded, four-sided
+    region. Rounded to <code>(5.33, 6.67)</code> the fourth vertex satisfies neither line exactly, so
+    an examiner expecting a substitution check would mark it wrong. Keep the thirds.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — an unbounded region (moderate-hard)">
+  <p>
+    A poultry farm blends feed X and feed Y, in kilograms a day. Each kilogram of X supplies 1 unit
+    of protein and 3 units of minerals; each kilogram of Y supplies 2 units of protein and 1 unit of
+    minerals. The ration must supply at least 20 units of protein and at least 15 units of minerals.
+    Describe the feasible region and give its corner points.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The system, and the shading</div>
+    <code>x + 2y ≥ 20</code> · <code>3x + y ≥ 15</code> · <code>x ≥ 0, y ≥ 0</code><br />
+    <code>x + 2y = 20</code>: <code>(20, 0)</code>, <code>(0, 10)</code>; test <code>(0, 0)</code> →
+    <code>0 ≥ 20</code> false → shade <em>away</em> from the origin.<br />
+    <code>3x + y = 15</code>: <code>(5, 0)</code>, <code>(0, 15)</code>; test <code>(0, 0)</code> →
+    <code>0 ≥ 15</code> false → shade <em>away</em> from the origin.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The crossing of the two lines</div>
+    From <code>3x + y = 15</code>, <code>y = 15 − 3x</code>. Substitute into
+    <code>x + 2y = 20</code>:<br />
+    <code>x + 30 − 6x = 20</code> → <code>−5x = −10</code> → <code>x = 2</code>, so
+    <code>y = 15 − 6 = 9</code> → <strong>(2, 9)</strong>, feasible on both.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The two axis corners</div>
+    On <code>x = 0</code>: the protein line gives <code>(0, 10)</code>, but minerals
+    <code>0 + 10 = 10 &lt; 15</code> ✗. The mineral line gives <code>(0, 15)</code>, and protein
+    <code>0 + 30 = 30 ≥ 20</code> ✓ → <strong>(0, 15)</strong> is the corner.<br />
+    On <code>y = 0</code>: the mineral line gives <code>(5, 0)</code>, but protein
+    <code>5 &lt; 20</code> ✗. The protein line gives <code>(20, 0)</code>, and minerals
+    <code>60 ≥ 15</code> ✓ → <strong>(20, 0)</strong> is the corner.
+  </div>
+  <p>
+    Corner points: <strong>(0, 15), (2, 9), (20, 0)</strong>. The region is <strong>unbounded</strong>
+    — feeding more of both is always permitted, so it extends without limit upward and to the right.
+    It is emphatically not empty: <code>(10, 10)</code>, for instance, supplies 30 units of protein
+    and 40 of minerals and lies well inside it.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — a ratio constraint and a floor together (hard)">
+  <p>
+    A trust has ₹ 6,00,000 to place between a bond scheme and an equity scheme. It need not invest
+    the whole sum. At least twice as much must go into bonds as into equity, and at least ₹ 1,00,000
+    must go into equity. Taking <em>x</em> and <em>y</em> as the amounts in bonds and equity in
+    thousands of rupees, set up the system and find the corner points.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Translate, clearing the ratio</div>
+    Funds: <code>x + y ≤ 600</code> ("need not invest the whole sum", so a ceiling, not an
+    equality).<br />
+    Ratio: "at least twice as much in bonds as in equity" → <code>x ≥ 2y</code>, i.e.
+    <code>x − 2y ≥ 0</code>.<br />
+    Floor on equity: <code>y ≥ 100</code>. Non-negativity: <code>x ≥ 0</code> (and
+    <code>y ≥ 100</code> already covers <code>y ≥ 0</code>).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Boundary lines and sides</div>
+    <code>x + y = 600</code>: <code>(600, 0)</code>, <code>(0, 600)</code>; test <code>(0, 0)</code>
+    → true → shade towards the origin.<br />
+    <code>x = 2y</code> passes through the origin, so test <code>(600, 0)</code>:
+    <code>600 ≥ 0</code> true → shade the side containing <code>(600, 0)</code>, below the line.<br />
+    <code>y = 100</code>: horizontal; test <code>(0, 0)</code> → <code>0 ≥ 100</code> false → shade
+    above it.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Solve the three pairs</div>
+    <code>y = 100</code> with <code>x = 2y</code> → <code>x = 200</code> → <strong>(200, 100)</strong>;
+    funds <code>300 ≤ 600</code> ✓.<br />
+    <code>y = 100</code> with <code>x + y = 600</code> → <code>x = 500</code> →
+    <strong>(500, 100)</strong>; ratio <code>500 ≥ 200</code> ✓.<br />
+    <code>x = 2y</code> with <code>x + y = 600</code> → <code>3y = 600</code>, <code>y = 200</code>,
+    <code>x = 400</code> → <strong>(400, 200)</strong>; equity <code>200 ≥ 100</code> ✓.
+  </div>
+  <p>
+    Corner points: <strong>(200, 100), (500, 100), (400, 200)</strong> — a bounded triangle. In
+    rupees, the three plans are bonds ₹ 2,00,000 with equity ₹ 1,00,000; bonds ₹ 5,00,000 with equity
+    ₹ 1,00,000; and bonds ₹ 4,00,000 with equity ₹ 2,00,000. The first leaves ₹ 3,00,000 uninvested,
+    which the wording permits. Had the brief said the whole sum <em>must</em> be placed, the funds
+    line would be an equation, the region would collapse to the segment joining
+    <code>(500, 100)</code> and <code>(400, 200)</code>, and <code>(200, 100)</code> would disappear.
+  </p>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Not reversing the sign on a negative multiplier or divisor.** `−5x > 20` becomes `x < −4`, never
+  `x > −4`. Collect the variable on the side that leaves it positive and the problem disappears.
+- **Reversing the sign when only adding or subtracting.** The flip belongs to multiplication and
+  division alone. Transposing a term across the inequality never changes its direction.
+- **Flipping one end of a double inequality and not the other.** `2 ≤ −2x ≤ 8` becomes
+  `−4 ≤ x ≤ −1`; both symbols turn, and the two bounds change places.
+- **Treating a strict inequality as inclusive, or the reverse.** "Less than 500" is `< 500`; "not
+  more than 500" is `≤ 500`. It decides whether the endpoint is in the answer, whether the interval
+  takes a square or a round bracket, and whether the boundary line is solid or dashed.
+- **Round bracket around a finite endpoint that belongs to the set.** `[2, 9)` and `(2, 9]` contain
+  different numbers. Infinity, however, always takes a round bracket.
+- **Shading the wrong half-plane.** Test a point, substitute honestly, and shade towards the test
+  point only when the statement came out true. Never use `(0, 0)` when the line passes through it.
+- **Multiplying an inequality by −1 to tidy it and then shading as before.** `−x + 2y ≤ 6` and
+  `x − 2y ≤ −6` are opposite half-planes; only `x − 2y ≥ −6` is the same one.
+- **Assuming every intercept is a corner point.** An intercept is a corner only if it satisfies every
+  other constraint too. Solve the pairs, then filter.
+- **Reading a vertex off the wrong pair of constraints.** In a five-line system there are ten
+  crossings and often only four or five corners. The pair that is *binding* at a corner is the pair
+  that meets there with equality; check both.
+- **Rounding a fractional vertex early.** `(16/3, 20/3)` is exact; `(5.33, 6.67)` satisfies neither
+  boundary equation.
+- **Calling an unbounded region "no solution".** Unbounded means no outer edge; empty means no point
+  at all. A system of `≥` constraints with non-negativity is usually unbounded and always has
+  solutions.
+- **Dropping the non-negativity constraints.** They are what confine the region to the first
+  quadrant, and they supply the corner points that sit on the axes.
+- **Not clearing a ratio condition.** "At least a third must be product A" is `3x ≥ x + y`, that is
+  `2x − y ≥ 0`. Until it is in that form it has no intercepts and cannot be drawn.
+- **Mismatched units in a constraint.** Minutes against hours, rupees against lakhs, kilograms
+  against tonnes. Convert before you write the coefficient, not after.
+- **Forgetting that whole units may be required.** A vertex of `(16/3, 20/3)` is a correct corner of
+  the region, but 16/3 machines cannot be bought. Answer what was asked: the corner point, or the
+  workable whole-number plan.
+
+## One-page revision summary
+
+**The four rules:**
+
+<div class="formula">Add or subtract the same quantity on both sides → direction unchanged</div>
+<div class="formula">Multiply or divide by a POSITIVE quantity → direction unchanged</div>
+<div class="formula">Multiply or divide by a NEGATIVE quantity → direction REVERSES</div>
+<div class="formula">Two inequalities of the same direction may be added, never subtracted</div>
+
+**Signs and their words:** `<` less than, below, under · `>` more than, exceeds, above ·
+`≤` at most, not more than, available, up to · `≥` at least, not less than, minimum, required.
+Strict signs exclude the boundary; non-strict signs include it.
+
+**Presenting the answer:** solution set `{x : x ∈ R, x ≤ 6}` · number line with an open circle for a
+strict bound and a closed circle for a non-strict one · interval with `[ ]` for an included endpoint
+and `( )` for an excluded one, infinity always `( )`.
+
+**Systems in one variable:** solve each inequality separately, then take the **intersection**. At a
+shared endpoint the strict condition wins. Non-overlapping ranges give the empty set.
+
+**Two variables, in order:** replace the sign with `=` · plot by intercepts (`y = 0` then `x = 0`) ·
+**solid** line for `≤`/`≥`, **dashed** for `<`/`>` · test a point off the line, usually `(0, 0)` ·
+shade towards the test point if the statement is **true**, away if **false**.
+
+<div class="formula">Feasible region = the overlap of all the shaded half-planes, confined to the first quadrant by x ≥ 0, y ≥ 0</div>
+
+**Corner points:** list every boundary line including both axes · solve the lines in pairs · keep
+only the intersections that satisfy **every** constraint · keep fractions exact.
+
+**Bounded or unbounded:** all `≤` with positive coefficients plus non-negativity → bounded; all `≥`
+with positive coefficients plus non-negativity → unbounded. Unbounded is not empty. Empty means the
+half-planes never overlap.
+
+**Constraint families:** machine or labour hours (`≤`) · raw material stock (`≤`) · budget or
+investment ceiling (`≤`, and divide through by the common factor) · blending, diet or quality
+minimum (`≥`) · transport or storage capacity (`≤`) · ratio conditions, cleared of fractions before
+plotting.
+
+**Marking:** one mark for a correct answer, 0.25 deducted for a wrong one, nothing for a blank. Two
+eliminations make a guess clearly worthwhile; a substitution check often removes the guess entirely.

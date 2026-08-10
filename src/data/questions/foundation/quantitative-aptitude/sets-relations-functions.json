@@ -1,0 +1,2348 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "sets-relations-functions",
+  "chapter": "Ch 7 — Sets, Relations and Functions; Basics of Limits and Continuity",
+  "questions": [
+    {
+      "id": "q-f3c7-001",
+      "topic": "Ch 7 · Sets · Roster form and distinct elements",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Let A be the set of letters used in the word ASSESSMENT. What is n(A)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9",
+          "explanation": "This collapses the two E letters into one but keeps all four S letters, giving 10 − 1 = 9. Every repeated letter must be reduced to a single member, not only one of them."
+        },
+        {
+          "key": "B",
+          "text": "7",
+          "explanation": "This collapses the four S letters into one but keeps both E letters, giving 10 − 3 = 7. The E is repeated too."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "Correct. The distinct letters are A, S, E, M, N and T, so A = {A, S, E, M, N, T} and n(A) = 6. A set holds distinct members, so the four S letters and the two E letters each count once."
+        },
+        {
+          "key": "D",
+          "text": "10",
+          "explanation": "This counts every letter position in the word, including repeats. ASSESSMENT has ten letters but only six different ones, and a set records members, not occurrences."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Sets and the two ways of writing one, §1 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#1-sets-and-the-two-ways-of-writing-one"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A set contains distinct members; repetition is not counted",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-002",
+      "topic": "Ch 7 · Sets · Identifying the empty set",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following sets is the EMPTY set?",
+      "options": [
+        {
+          "key": "A",
+          "text": "{0}",
+          "explanation": "This set has one member, the number 0, so its cardinal number is 1. Treating the digit zero as 'nothing' is the error; a set containing zero is not an empty set."
+        },
+        {
+          "key": "B",
+          "text": "{∅}",
+          "explanation": "This is a singleton whose single member is the empty set, so its cardinal number is 1, not 0. The braces around ∅ create a container holding one thing."
+        },
+        {
+          "key": "C",
+          "text": "{x : x ∈ N, x is an even prime number}",
+          "explanation": "The only even prime is 2, so this set is {2} — a singleton. Assuming 'even and prime' is impossible overlooks the number 2."
+        },
+        {
+          "key": "D",
+          "text": "{x : x ∈ R, x² + 9 = 0}",
+          "explanation": "Correct. x² + 9 = 0 requires x² = −9, and no real number has a negative square, so no real value qualifies and the set has no members at all."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The types of set you must be able to name, §2 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#2-the-types-of-set-you-must-be-able-to-name"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "The empty set has no members; {0} and {∅} are singletons",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-003",
+      "topic": "Ch 7 · Sets · Set-builder form converted to roster form",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If B = {x : x ∈ N and x is a factor of 36}, what is n(B)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9",
+          "explanation": "Correct. The natural numbers dividing 36 exactly are 1, 2, 3, 4, 6, 9, 12, 18 and 36, so B has 9 members."
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "explanation": "This omits 36 itself, listing only the factors smaller than 36. A number is always a factor of itself, and the stem says factor, not proper factor."
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "explanation": "This counts 6 twice, once from each side of the pairing 6 × 6 = 36. A repeated member is listed once in a set."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "This counts the factor PAIRS (1, 36), (2, 18), (3, 12), (4, 9) and (6, 6) rather than the factors themselves."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Sets and the two ways of writing one, §1 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#1-sets-and-the-two-ways-of-writing-one"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Set-builder form converted to roster form; cardinal number",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-004",
+      "topic": "Ch 7 · Sets · Equal sets and equivalent sets",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Let A = {2, 4, 6} and B = {p, q, r}. Which statement is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A and B are equal sets",
+          "explanation": "Equal sets must have exactly the same members. A holds numbers and B holds letters, so no member is shared and the sets cannot be equal."
+        },
+        {
+          "key": "B",
+          "text": "A and B are equivalent but not equal",
+          "explanation": "Correct. Both sets have three members, so n(A) = n(B) = 3 and they are equivalent. Their members are entirely different, so they are not equal."
+        },
+        {
+          "key": "C",
+          "text": "A and B are both equal and equivalent",
+          "explanation": "This reads 'equal' and 'equivalent' as the same word. Equal sets are always equivalent, but equivalent sets are equal only when their members also match."
+        },
+        {
+          "key": "D",
+          "text": "A and B are neither equal nor equivalent",
+          "explanation": "This denies equivalence as well, which requires only that the counts match. Both counts are 3, so equivalence does hold."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The types of set you must be able to name, §2 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#2-the-types-of-set-you-must-be-able-to-name"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Equal sets share members; equivalent sets share only cardinality",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-005",
+      "topic": "Ch 7 · Sets · Whole numbers and the cardinal number",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many elements does the set {x : x ∈ W and x ≤ 6} contain, where W is the set of whole numbers?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "This lists 1 to 6 and so treats W as the natural numbers. The whole numbers begin at 0, and 0 satisfies 0 ≤ 6."
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "explanation": "This runs 0 to 7, reading the condition as x ≤ 7 or as x < 8. The largest qualifying member is 6 itself."
+        },
+        {
+          "key": "C",
+          "text": "5",
+          "explanation": "This both drops 0 and reads ≤ as a strict inequality, leaving 1 to 5. Two separate slips in one answer."
+        },
+        {
+          "key": "D",
+          "text": "7",
+          "explanation": "Correct. The set is {0, 1, 2, 3, 4, 5, 6}, which has 7 members. Whole numbers include 0 and the sign ≤ includes 6."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The types of set you must be able to name, §2 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#2-the-types-of-set-you-must-be-able-to-name"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "W includes 0; N begins at 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-006",
+      "topic": "Ch 7 · Sets · Number of subsets",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A set A has 7 elements. How many subsets does A have?",
+      "options": [
+        {
+          "key": "A",
+          "text": "128",
+          "explanation": "Correct. Each of the 7 elements is independently either in or out of a subset, giving 2 × 2 × … × 2 seven times over, that is 2⁷ = 128."
+        },
+        {
+          "key": "B",
+          "text": "14",
+          "explanation": "This computes 2n instead of 2ⁿ. Doubling the number of elements is not the same as doubling once per element."
+        },
+        {
+          "key": "C",
+          "text": "127",
+          "explanation": "127 is the number of PROPER subsets, 2⁷ − 1. The stem asks for all subsets, and A itself is one of them."
+        },
+        {
+          "key": "D",
+          "text": "49",
+          "explanation": "This computes n², which counts the ordered pairs in A × A, not the subsets of A."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Subsets, proper subsets and the power set, §3 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#3-subsets-proper-subsets-and-the-power-set"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Number of subsets of an n-element set = 2ⁿ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-007",
+      "topic": "Ch 7 · Sets · Number of proper subsets",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many PROPER subsets does a set with 6 elements have?",
+      "options": [
+        {
+          "key": "A",
+          "text": "64",
+          "explanation": "64 is the number of ALL subsets, 2⁶. A proper subset must differ from the set itself, so the set itself is excluded."
+        },
+        {
+          "key": "B",
+          "text": "62",
+          "explanation": "This excludes the empty set as well as the set itself. The empty set IS a proper subset of any non-empty set, because ∅ ⊆ A and ∅ ≠ A both hold. 62 counts the non-empty proper subsets."
+        },
+        {
+          "key": "C",
+          "text": "63",
+          "explanation": "Correct. There are 2⁶ = 64 subsets in all, and exactly one of them — the set itself — is not proper, so 64 − 1 = 63."
+        },
+        {
+          "key": "D",
+          "text": "12",
+          "explanation": "This computes 2n instead of 2ⁿ, and then does not subtract anything either."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Subsets, proper subsets and the power set, §3 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#3-subsets-proper-subsets-and-the-power-set"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Proper subsets = 2ⁿ − 1; the empty set is a proper subset",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-008",
+      "topic": "Ch 7 · Sets · Power set worked backwards",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The power set of A has 1,024 elements. How many elements has A?",
+      "options": [
+        {
+          "key": "A",
+          "text": "512",
+          "explanation": "This solves 2n = 1,024. The relation is n(P(A)) = 2ⁿ, an exponent, not a doubling."
+        },
+        {
+          "key": "B",
+          "text": "10",
+          "explanation": "Correct. n(P(A)) = 2ⁿ, so 2ⁿ = 1,024 = 2¹⁰ and n = 10."
+        },
+        {
+          "key": "C",
+          "text": "32",
+          "explanation": "This takes the square root of 1,024. Undoing a power of 2 needs a logarithm to base 2, not a square root."
+        },
+        {
+          "key": "D",
+          "text": "11",
+          "explanation": "This counts the exponents from 0 upwards and lands one too high. 2¹¹ = 2,048, which is twice the given figure."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Subsets, proper subsets and the power set, §3 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#3-subsets-proper-subsets-and-the-power-set"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "n(P(A)) = 2^n(A)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-009",
+      "topic": "Ch 7 · Sets · Non-empty proper subsets",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many NON-EMPTY PROPER subsets does the set {a, b, c, d, e} have?",
+      "options": [
+        {
+          "key": "A",
+          "text": "32",
+          "explanation": "32 = 2⁵ is the number of all subsets, with neither the empty set nor the whole set removed."
+        },
+        {
+          "key": "B",
+          "text": "31",
+          "explanation": "This removes only the set itself, giving the proper subsets. The stem also excludes the empty set, so one more must go."
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "explanation": "This computes 2n, then subtracts nothing. The subset count is 2ⁿ."
+        },
+        {
+          "key": "D",
+          "text": "30",
+          "explanation": "Correct. There are 2⁵ = 32 subsets; removing the empty set and the set itself leaves 32 − 2 = 30."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Subsets, proper subsets and the power set, §3 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#3-subsets-proper-subsets-and-the-power-set"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Non-empty proper subsets = 2ⁿ − 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-010",
+      "topic": "Ch 7 · Sets · Membership versus containment in a power set",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For A = {1, 2}, which of the following statements is TRUE?",
+      "options": [
+        {
+          "key": "A",
+          "text": "{1} ∈ P(A)",
+          "explanation": "Correct. {1} is a subset of A, and every subset of A is an ELEMENT of the power set. P(A) = {∅, {1}, {2}, {1, 2}}, and {1} is listed among its members."
+        },
+        {
+          "key": "B",
+          "text": "1 ∈ P(A)",
+          "explanation": "The number 1 is an element of A, not a subset of A, so it is not one of the four members of P(A). Every member of a power set is itself a set."
+        },
+        {
+          "key": "C",
+          "text": "{1} ⊆ P(A)",
+          "explanation": "Containment would require the member 1 to belong to P(A), which it does not. The true containment statement is {{1}} ⊆ P(A)."
+        },
+        {
+          "key": "D",
+          "text": "∅ ∉ P(A)",
+          "explanation": "The empty set is a subset of A, so it is one of the elements of P(A). The correct statements are both ∅ ∈ P(A) and ∅ ⊆ P(A)."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Subsets, proper subsets and the power set, §3 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#3-subsets-proper-subsets-and-the-power-set"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Elements of a power set are subsets of the original set",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-011",
+      "topic": "Ch 7 · Set operations · Symmetric difference",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "With U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {1, 2, 3, 4, 5, 6} and B = {4, 5, 6, 7, 8}, how many elements has A Δ B?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "This counts only A − B = {1, 2, 3}. The symmetric difference also collects what is in B alone."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "Correct. A − B = {1, 2, 3} and B − A = {7, 8}, so A Δ B = {1, 2, 3, 7, 8} with 5 members. The formula agrees: 6 + 5 − 2(3) = 5."
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "explanation": "8 is n(A ∪ B). The union keeps the three common elements 4, 5 and 6, while the symmetric difference removes them."
+        },
+        {
+          "key": "D",
+          "text": "11",
+          "explanation": "This adds n(A) + n(B) = 6 + 5 with no correction at all, counting 4, 5 and 6 twice and then keeping them."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The set operations, §4 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#4-the-set-operations"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A Δ B = (A ∪ B) − (A ∩ B); n(A Δ B) = n(A) + n(B) − 2n(A ∩ B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-012",
+      "topic": "Ch 7 · Set operations · Cardinality of a difference",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If n(A) = 48, n(B) = 35 and n(A ∩ B) = 14, what is n(A − B)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "13",
+          "explanation": "This computes n(A) − n(B) = 48 − 35. Only the part of B that lies inside A can be taken out of A, and that part is the 14 common members."
+        },
+        {
+          "key": "B",
+          "text": "21",
+          "explanation": "21 = 35 − 14 is n(B − A), the other difference. A − B and B − A are different sets and here they have different sizes."
+        },
+        {
+          "key": "C",
+          "text": "34",
+          "explanation": "Correct. n(A − B) = n(A) − n(A ∩ B) = 48 − 14 = 34."
+        },
+        {
+          "key": "D",
+          "text": "69",
+          "explanation": "69 = 48 + 35 − 14 is n(A ∪ B), the union rather than the difference."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The laws of set algebra including De Morgan, §5 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#5-the-laws-of-set-algebra-including-de-morgan"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n(A − B) = n(A) − n(A ∩ B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-013",
+      "topic": "Ch 7 · Set algebra · De Morgan law",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For any two subsets A and B of a universal set U, (A ∩ B)′ is equal to",
+      "options": [
+        {
+          "key": "A",
+          "text": "A′ ∪ B′",
+          "explanation": "Correct. De Morgan's law says the complement of an intersection is the union of the complements: push the dash inside and change the symbol from ∩ to ∪."
+        },
+        {
+          "key": "B",
+          "text": "A′ ∩ B′",
+          "explanation": "This pushes the dash inside without flipping the symbol. A′ ∩ B′ is the complement of A ∪ B, which is the other De Morgan law."
+        },
+        {
+          "key": "C",
+          "text": "A ∪ B",
+          "explanation": "This drops the complement altogether. Taking a complement cannot simply be deleted from the statement."
+        },
+        {
+          "key": "D",
+          "text": "(A ∪ B)′",
+          "explanation": "This flips the inner symbol but keeps the complement outside. (A ∪ B)′ = A′ ∩ B′, which is generally a smaller set than A′ ∪ B′."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The laws of set algebra including De Morgan, §5 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#5-the-laws-of-set-algebra-including-de-morgan"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "De Morgan: (A ∩ B)′ = A′ ∪ B′",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-014",
+      "topic": "Ch 7 · Set algebra · Naming a law",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The identity A ∩ (A ∪ B) = A is known as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "distributive law",
+          "explanation": "The distributive laws spread one operation across another, as in A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C). Here the same set A appears on both sides of the inner operation, which is a different pattern."
+        },
+        {
+          "key": "B",
+          "text": "idempotent law",
+          "explanation": "The idempotent laws are A ∪ A = A and A ∩ A = A, which involve one set only. The identity in the stem involves two."
+        },
+        {
+          "key": "C",
+          "text": "De Morgan law",
+          "explanation": "De Morgan's laws concern complements, and no complement appears in the statement."
+        },
+        {
+          "key": "D",
+          "text": "absorption law",
+          "explanation": "Correct. The absorption laws are A ∩ (A ∪ B) = A and A ∪ (A ∩ B) = A — the outer A absorbs the whole expression, whatever B may be."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The laws of set algebra including De Morgan, §5 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#5-the-laws-of-set-algebra-including-de-morgan"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Absorption laws of set algebra",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-015",
+      "topic": "Ch 7 · Two-set counting · How many are in neither set",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A branch has 240 depositors. 145 hold a recurring deposit, 96 hold a fixed deposit and 61 hold both. How many hold neither product?",
+      "options": [
+        {
+          "key": "A",
+          "text": "180",
+          "explanation": "180 = 145 + 96 − 61 is the number who hold AT LEAST ONE product. The question asks for the depositors outside that group."
+        },
+        {
+          "key": "B",
+          "text": "60",
+          "explanation": "Correct. n(R ∪ F) = 145 + 96 − 61 = 180, so those holding neither number 240 − 180 = 60. The four regions check out: 84 + 61 + 35 + 60 = 240."
+        },
+        {
+          "key": "C",
+          "text": "95",
+          "explanation": "95 = 240 − 145 counts everyone outside the recurring-deposit group, which still includes the 35 who hold only a fixed deposit."
+        },
+        {
+          "key": "D",
+          "text": "61",
+          "explanation": "61 is the overlap — those holding both products — quoted as though it were the outside region."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Counting with two sets, §7 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#7-counting-with-two-sets"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "n(neither) = n(U) − n(A ∪ B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-016",
+      "topic": "Ch 7 · Two-set counting · Recovering the overlap",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If n(A) = 420, n(B) = 380 and n(A ∪ B) = 620, what is n(A ∩ B)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "800",
+          "explanation": "800 = 420 + 380 is the sum of the two sets, which counts the overlap twice. The overlap is the excess of that sum over the union, not the sum itself."
+        },
+        {
+          "key": "B",
+          "text": "40",
+          "explanation": "40 = 420 − 380 is the difference between the two set sizes and has nothing to do with how much they share."
+        },
+        {
+          "key": "C",
+          "text": "180",
+          "explanation": "Correct. Rearranging n(A ∪ B) = n(A) + n(B) − n(A ∩ B) gives n(A ∩ B) = 420 + 380 − 620 = 180."
+        },
+        {
+          "key": "D",
+          "text": "200",
+          "explanation": "200 = 620 − 420 is the number in B but not in A, that is n(B − A), not the common part."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Counting with two sets, §7 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#7-counting-with-two-sets"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-017",
+      "topic": "Ch 7 · Two-set counting · Exactly one of two",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Of 300 employees at a plant, 175 speak Hindi, 140 speak Marathi and 60 speak both. How many speak exactly one of the two languages?",
+      "options": [
+        {
+          "key": "A",
+          "text": "195",
+          "explanation": "Correct. Hindi only = 175 − 60 = 115 and Marathi only = 140 − 60 = 80, so exactly one is 115 + 80 = 195. The formula agrees: 255 − 60 = 195."
+        },
+        {
+          "key": "B",
+          "text": "255",
+          "explanation": "255 = 175 + 140 − 60 is the number who speak AT LEAST one language. That group still includes the 60 who speak both."
+        },
+        {
+          "key": "C",
+          "text": "115",
+          "explanation": "115 counts the Hindi-only speakers alone. Exactly one language also covers those who speak only Marathi."
+        },
+        {
+          "key": "D",
+          "text": "80",
+          "explanation": "80 counts the Marathi-only speakers alone, the mirror image of the previous error."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Counting with two sets, §7 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#7-counting-with-two-sets"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "n(exactly one) = n(A ∪ B) − n(A ∩ B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-018",
+      "topic": "Ch 7 · Two-set counting · One set only",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An agency's 500 policyholders include 290 with a motor policy, 245 with a health policy and 118 with both. How many hold a motor policy ONLY?",
+      "options": [
+        {
+          "key": "A",
+          "text": "45",
+          "explanation": "45 = 290 − 245 subtracts one set size from the other. Only the shared members can be removed from the motor group."
+        },
+        {
+          "key": "B",
+          "text": "127",
+          "explanation": "127 = 245 − 118 is the health-only figure. The stem asks about the motor group."
+        },
+        {
+          "key": "C",
+          "text": "417",
+          "explanation": "417 = 290 + 245 − 118 is the number holding at least one policy, not the motor-only region."
+        },
+        {
+          "key": "D",
+          "text": "172",
+          "explanation": "Correct. Motor only = n(M) − n(M ∩ H) = 290 − 118 = 172. Check the four regions: 172 + 118 + 127 + 83 = 500."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Venn regions read as a table, §6 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#6-venn-regions-read-as-a-table"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n(A only) = n(A) − n(A ∩ B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-019",
+      "topic": "Ch 7 · Two-set counting · Recovering a set size",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a group of 360 candidates, 210 have cleared Paper 1, 85 have cleared both Paper 1 and Paper 2, and 40 have cleared neither. How many have cleared Paper 2?",
+      "options": [
+        {
+          "key": "A",
+          "text": "110",
+          "explanation": "This computes 320 − 210 and stops, forgetting to add back the 85 counted in both papers. The overlap belongs to Paper 2 as well."
+        },
+        {
+          "key": "B",
+          "text": "320",
+          "explanation": "320 = 360 − 40 is the number who cleared at least one paper, not the size of the Paper 2 group."
+        },
+        {
+          "key": "C",
+          "text": "195",
+          "explanation": "Correct. At least one = 360 − 40 = 320, so n(P2) = n(P1 ∪ P2) − n(P1) + n(P1 ∩ P2) = 320 − 210 + 85 = 195."
+        },
+        {
+          "key": "D",
+          "text": "150",
+          "explanation": "150 = 360 − 210 counts everyone who has not cleared Paper 1, which excludes the 85 who cleared both."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Counting with two sets, §7 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#7-counting-with-two-sets"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "n(B) = n(A ∪ B) − n(A) + n(A ∩ B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-020",
+      "topic": "Ch 7 · Three-set counting · The union",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For three sets, n(A) = 180, n(B) = 150, n(C) = 120, n(A ∩ B) = 70, n(B ∩ C) = 55, n(A ∩ C) = 60 and n(A ∩ B ∩ C) = 30. Find n(A ∪ B ∪ C).",
+      "options": [
+        {
+          "key": "A",
+          "text": "450",
+          "explanation": "450 is the plain sum of the three sets, with no correction for members counted two or three times."
+        },
+        {
+          "key": "B",
+          "text": "295",
+          "explanation": "Correct. 450 − (70 + 55 + 60) + 30 = 450 − 185 + 30 = 295. The signs run plus, minus, plus."
+        },
+        {
+          "key": "C",
+          "text": "235",
+          "explanation": "This subtracts the triple overlap instead of adding it: 450 − 185 − 30. Members of all three sets would then be counted a net of minus one time each."
+        },
+        {
+          "key": "D",
+          "text": "265",
+          "explanation": "This leaves the triple overlap out entirely: 450 − 185. Those 30 members are removed three times by the pairs after being added three times, so they must be restored once."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Counting with three sets, §8 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#8-counting-with-three-sets"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Inclusion-exclusion for three sets",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-021",
+      "topic": "Ch 7 · Three-set counting · Exactly one",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Using the same figures — n(A) = 180, n(B) = 150, n(C) = 120, n(A ∩ B) = 70, n(B ∩ C) = 55, n(A ∩ C) = 60, n(A ∩ B ∩ C) = 30 — how many elements belong to EXACTLY ONE of the three sets?",
+      "options": [
+        {
+          "key": "A",
+          "text": "170",
+          "explanation": "Correct. s − 2p + 3t = 450 − 370 + 90 = 170. The region table agrees: A only 80, B only 55, C only 35, and 80 + 55 + 35 = 170."
+        },
+        {
+          "key": "B",
+          "text": "110",
+          "explanation": "This adds the triple overlap once instead of three times: 450 − 370 + 30. Each of the three only regions needs its own restoration of t."
+        },
+        {
+          "key": "C",
+          "text": "95",
+          "explanation": "95 = p − 3t is the EXACTLY TWO figure, answering a different band."
+        },
+        {
+          "key": "D",
+          "text": "295",
+          "explanation": "295 is the union — everyone in at least one set, which includes those in two or three of them."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Exactly one, exactly two and at least, §9 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#9-exactly-one-exactly-two-and-at-least"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Exactly one = s − 2p + 3t",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-022",
+      "topic": "Ch 7 · Three-set counting · Exactly two",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "With the same figures, how many elements belong to EXACTLY TWO of the three sets?",
+      "options": [
+        {
+          "key": "A",
+          "text": "185",
+          "explanation": "185 is the raw sum of the three pairwise counts. Each of those three figures still contains the 30 members who are in all three sets."
+        },
+        {
+          "key": "B",
+          "text": "155",
+          "explanation": "This removes the triple overlap once, 185 − 30. It has to be removed from each of the three pairwise counts, so three times."
+        },
+        {
+          "key": "C",
+          "text": "125",
+          "explanation": "125 = p − 2t is the AT LEAST TWO figure, which also counts the 30 who are in all three."
+        },
+        {
+          "key": "D",
+          "text": "95",
+          "explanation": "Correct. Exactly two = p − 3t = 185 − 90 = 95. Region check: 40 + 25 + 30 = 95 for the three pairs-only regions."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Exactly one, exactly two and at least, §9 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#9-exactly-one-exactly-two-and-at-least"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Exactly two = p − 3t",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-023",
+      "topic": "Ch 7 · Three-set counting · At least two",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "With the same figures, how many elements belong to AT LEAST TWO of the three sets?",
+      "options": [
+        {
+          "key": "A",
+          "text": "95",
+          "explanation": "95 is the EXACTLY TWO figure. 'At least two' also takes in the 30 members who are in all three sets."
+        },
+        {
+          "key": "B",
+          "text": "125",
+          "explanation": "Correct. At least two = p − 2t = 185 − 60 = 125, and the cross-check holds: exactly two 95 plus exactly three 30 = 125."
+        },
+        {
+          "key": "C",
+          "text": "185",
+          "explanation": "185 is the raw pairwise sum p, which counts the triple-overlap members three times over."
+        },
+        {
+          "key": "D",
+          "text": "155",
+          "explanation": "This removes the triple overlap once instead of twice, p − t. The correct coefficient for the at-least-two band is 2."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Exactly one, exactly two and at least, §9 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#9-exactly-one-exactly-two-and-at-least"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "At least two = p − 2t",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-024",
+      "topic": "Ch 7 · Three-set counting · Recovering the triple overlap",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Of 400 firms, 220 use software X, 190 use Y and 160 use Z; 90 use X and Y, 75 use Y and Z, 80 use X and Z, and 45 use none of the three. How many use all three?",
+      "options": [
+        {
+          "key": "A",
+          "text": "75",
+          "explanation": "This uses the whole population of 400 as the union, forgetting that 45 firms use none. The seven-term formula computes the union, not the universe."
+        },
+        {
+          "key": "B",
+          "text": "45",
+          "explanation": "45 is the number using none of the three, quoted as though it were the centre region."
+        },
+        {
+          "key": "C",
+          "text": "30",
+          "explanation": "Correct. Union = 400 − 45 = 355, so t = 355 − (220 + 190 + 160) + (90 + 75 + 80) = 355 − 570 + 245 = 30. Every region then comes out positive."
+        },
+        {
+          "key": "D",
+          "text": "120",
+          "explanation": "This adds the 45 non-users to the total instead of subtracting them, taking the union as 445. Firms outside all three sets are outside the union."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Counting with three sets, §8 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#8-counting-with-three-sets"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Inclusion-exclusion rearranged for the triple overlap",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-025",
+      "topic": "Ch 7 · Venn regions · The only region for one set",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "With n(C) = 120, n(A ∩ C) = 60, n(B ∩ C) = 55 and n(A ∩ B ∩ C) = 30, how many elements are in C but in neither A nor B?",
+      "options": [
+        {
+          "key": "A",
+          "text": "35",
+          "explanation": "Correct. C only = n(C) − n(A ∩ C) − n(B ∩ C) + n(A ∩ B ∩ C) = 120 − 60 − 55 + 30 = 35."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "This forgets to add the triple overlap back: 120 − 60 − 55. Those 30 members were removed twice, once inside each pairwise figure, so one has to be restored."
+        },
+        {
+          "key": "C",
+          "text": "65",
+          "explanation": "This removes only the A ∩ C overlap, 120 − 55, leaving the members shared with B still inside the count."
+        },
+        {
+          "key": "D",
+          "text": "120",
+          "explanation": "120 is the whole of C, including everyone C shares with A or with B."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Venn regions read as a table, §6 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#6-venn-regions-read-as-a-table"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "C only = n(C) − n(A ∩ C) − n(B ∩ C) + n(A ∩ B ∩ C)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-026",
+      "topic": "Ch 7 · Cartesian product · Counting the pairs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If n(A) = 7 and n(B) = 5, how many elements has A × B?",
+      "options": [
+        {
+          "key": "A",
+          "text": "12",
+          "explanation": "This adds the two cardinal numbers. Each of the 7 first co-ordinates can be paired with each of the 5 second co-ordinates, which is multiplication."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "This subtracts one cardinal number from the other, which counts nothing in the product."
+        },
+        {
+          "key": "C",
+          "text": "128",
+          "explanation": "128 = 2⁷ is the number of SUBSETS of A. Subsets and ordered pairs are different objects."
+        },
+        {
+          "key": "D",
+          "text": "35",
+          "explanation": "Correct. n(A × B) = n(A) × n(B) = 7 × 5 = 35."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Ordered pairs and the Cartesian product, §10 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#10-ordered-pairs-and-the-cartesian-product"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n(A × B) = n(A) × n(B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-027",
+      "topic": "Ch 7 · Cartesian product · Working backwards",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If n(A × B) = 42 and n(B) = 6, what is n(A)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "36",
+          "explanation": "This subtracts, 42 − 6, treating the product rule as though it were a sum rule."
+        },
+        {
+          "key": "B",
+          "text": "7",
+          "explanation": "Correct. n(A × B) = n(A) × n(B), so n(A) = 42 ÷ 6 = 7."
+        },
+        {
+          "key": "C",
+          "text": "48",
+          "explanation": "This adds 42 and 6, the reverse of the previous slip and equally unrelated to the multiplication rule."
+        },
+        {
+          "key": "D",
+          "text": "252",
+          "explanation": "This multiplies 42 by 6. The 42 is already a product, so recovering a factor calls for division."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Ordered pairs and the Cartesian product, §10 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#10-ordered-pairs-and-the-cartesian-product"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n(A) = n(A × B) ÷ n(B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-028",
+      "topic": "Ch 7 · Cartesian product · Order of the factors",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about A × B and B × A is correct for non-empty sets A and B?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They are always equal",
+          "explanation": "The pair (a, b) is not the pair (b, a) unless a = b, so the two products contain different pairs whenever A and B differ."
+        },
+        {
+          "key": "B",
+          "text": "They are equal whenever A and B are both non-empty",
+          "explanation": "Being non-empty has nothing to do with it. A = {1} and B = {2} are both non-empty, yet A × B = {(1, 2)} and B × A = {(2, 1)}."
+        },
+        {
+          "key": "C",
+          "text": "They always have the same number of elements, and are equal only when A = B",
+          "explanation": "Correct. n(A × B) = n(A) × n(B) = n(B) × n(A) = n(B × A) always, but the pairs themselves match only when A and B are the same set."
+        },
+        {
+          "key": "D",
+          "text": "They always have different numbers of elements",
+          "explanation": "Multiplication of the two cardinal numbers is commutative, so the counts are always identical. It is the contents, not the counts, that differ."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Ordered pairs and the Cartesian product, §10 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#10-ordered-pairs-and-the-cartesian-product"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A × B ≠ B × A in general, though the cardinalities agree",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-029",
+      "topic": "Ch 7 · Relations · Counting relations between two sets",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If n(A) = 4 and n(B) = 3, how many relations are there from A to B?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4,096",
+          "explanation": "Correct. A × B has 4 × 3 = 12 pairs and a relation is any subset of those pairs, so the count is 2¹² = 4,096."
+        },
+        {
+          "key": "B",
+          "text": "12",
+          "explanation": "12 is the number of ordered pairs in A × B — that is, the size of the largest relation, not the number of relations."
+        },
+        {
+          "key": "C",
+          "text": "128",
+          "explanation": "This computes 2^(4 + 3). The exponent is the number of pairs, which is the product of the two cardinal numbers, not their sum."
+        },
+        {
+          "key": "D",
+          "text": "81",
+          "explanation": "81 = 3⁴ counts the FUNCTIONS from A to B. Every function is a relation, but the great majority of relations are not functions."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Relations and how many there are, §11 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#11-relations-and-how-many-there-are"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Number of relations from A to B = 2^(mn)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-030",
+      "topic": "Ch 7 · Relations · Counting relations on one set",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many relations can be defined on a set containing 3 elements?",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "8 = 2³ counts the subsets of the 3-element set itself, not the subsets of the 9 pairs in A × A."
+        },
+        {
+          "key": "B",
+          "text": "64",
+          "explanation": "64 = 2⁶ is the number of REFLEXIVE relations, where the three diagonal pairs are forced to be present and only 6 cells stay free."
+        },
+        {
+          "key": "C",
+          "text": "9",
+          "explanation": "9 is the number of ordered pairs in A × A, which is the size of the largest relation rather than a count of relations."
+        },
+        {
+          "key": "D",
+          "text": "512",
+          "explanation": "Correct. A × A has 3² = 9 pairs and a relation is any subset of them, so the count is 2⁹ = 512."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Relations and how many there are, §11 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#11-relations-and-how-many-there-are"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Number of relations on an n-element set = 2^(n²)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-031",
+      "topic": "Ch 7 · Relations · Counting reflexive relations",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many REFLEXIVE relations can be defined on a set of 4 elements?",
+      "options": [
+        {
+          "key": "A",
+          "text": "65,536",
+          "explanation": "65,536 = 2¹⁶ counts every relation on the set, without forcing the four self-pairs to be present."
+        },
+        {
+          "key": "B",
+          "text": "1,024",
+          "explanation": "1,024 = 2¹⁰ is the number of SYMMETRIC relations on a 4-element set, where the 6 unordered off-diagonal pairs are decided together with the 4 diagonal cells."
+        },
+        {
+          "key": "C",
+          "text": "4,096",
+          "explanation": "Correct. Reflexivity forces the 4 diagonal pairs to be present, leaving 16 − 4 = 12 free cells, so the count is 2¹² = 4,096."
+        },
+        {
+          "key": "D",
+          "text": "16",
+          "explanation": "16 is n², the number of cells in the grid, not a count of relations."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Properties of a relation and equivalence relations, §12 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#12-properties-of-a-relation-and-equivalence-relations"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Reflexive relations on an n-set = 2^(n² − n)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-032",
+      "topic": "Ch 7 · Relations · The empty relation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "R is the empty relation on A = {1, 2, 3}, that is R = ∅. Which description is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is reflexive, symmetric and transitive, so it is an equivalence relation",
+          "explanation": "Reflexivity demands that (1, 1), (2, 2) and (3, 3) be PRESENT, and none of them is. A relation cannot be reflexive by having no pairs at all."
+        },
+        {
+          "key": "B",
+          "text": "It is symmetric and transitive but not reflexive",
+          "explanation": "Correct. Symmetry and transitivity are conditions of the form 'whenever certain pairs are in R…', and no pair is in R, so neither condition can be broken. Reflexivity instead requires pairs to be there, and they are not."
+        },
+        {
+          "key": "C",
+          "text": "It is reflexive and symmetric but not transitive",
+          "explanation": "This reverses the true position on both counts: reflexivity is the property that fails, and transitivity is one of the two that hold on vacuous grounds."
+        },
+        {
+          "key": "D",
+          "text": "It is none of reflexive, symmetric or transitive",
+          "explanation": "This denies the vacuous truths. A condition with nothing to test is satisfied, so the empty relation is both symmetric and transitive."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Properties of a relation and equivalence relations, §12 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#12-properties-of-a-relation-and-equivalence-relations"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "The empty relation on a non-empty set is symmetric and transitive, not reflexive",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-033",
+      "topic": "Ch 7 · Relations · Identifying an equivalence relation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following relations on A = {1, 2, 3} is an EQUIVALENCE relation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "{(1, 1), (2, 2), (3, 3), (2, 3), (3, 2)}",
+          "explanation": "Correct. All three self-pairs are present, so it is reflexive; the only off-diagonal pairs (2, 3) and (3, 2) are each other's reverse, so it is symmetric; and every chain that starts closes, so it is transitive."
+        },
+        {
+          "key": "B",
+          "text": "{(1, 1), (2, 2), (3, 3), (1, 2)}",
+          "explanation": "Reflexive and transitive, but (1, 2) is present while (2, 1) is not, so symmetry fails. All three properties are needed."
+        },
+        {
+          "key": "C",
+          "text": "{(1, 1), (2, 2), (1, 2), (2, 1)}",
+          "explanation": "Symmetric and transitive, but (3, 3) is missing, so it is not reflexive on A. Reflexivity must cover every element of the set the relation is defined on."
+        },
+        {
+          "key": "D",
+          "text": "{(1, 1), (2, 2), (3, 3), (1, 2), (2, 3)}",
+          "explanation": "Reflexive, but (2, 1) is missing so symmetry fails, and the chain (1, 2) with (2, 3) needs (1, 3), which is also missing, so transitivity fails too."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Properties of a relation and equivalence relations, §12 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#12-properties-of-a-relation-and-equivalence-relations"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Equivalence relation = reflexive + symmetric + transitive",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-034",
+      "topic": "Ch 7 · Functions · When a relation fails to be a function",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A = {1, 2, 3} and B = {4, 5}. Which of the following relations from A to B is NOT a function?",
+      "options": [
+        {
+          "key": "A",
+          "text": "{(1, 4), (2, 4), (3, 4)}",
+          "explanation": "This is the constant function sending everything to 4. Repeated images are allowed; it is a perfectly good function, merely not a one-one one."
+        },
+        {
+          "key": "B",
+          "text": "{(1, 5), (2, 4), (3, 5)}",
+          "explanation": "Every element of A appears exactly once as a first co-ordinate, so this is a function. The image 5 being used twice does not matter."
+        },
+        {
+          "key": "C",
+          "text": "{(1, 4), (2, 5), (3, 4)}",
+          "explanation": "Again every input has exactly one image, so this is a function. Two inputs sharing the image 4 costs one-one status, nothing more."
+        },
+        {
+          "key": "D",
+          "text": "{(1, 4), (1, 5), (2, 4), (3, 5)}",
+          "explanation": "Correct — this is NOT a function. The input 1 is paired with both 4 and 5, so it has two images, and a function allows each input exactly one."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Functions and what turns a relation into one, §13 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#13-functions-and-what-turns-a-relation-into-one"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A function gives every element of the domain exactly one image",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-035",
+      "topic": "Ch 7 · Functions · Counting all functions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many functions are there from a set of 5 elements to a set of 3 elements?",
+      "options": [
+        {
+          "key": "A",
+          "text": "125",
+          "explanation": "125 = 5³ swaps the base and the index. The base is the number of available images and the index is the number of inputs to be given one each."
+        },
+        {
+          "key": "B",
+          "text": "243",
+          "explanation": "Correct. Each of the 5 inputs is independently assigned one of the 3 images, so the count is 3⁵ = 243."
+        },
+        {
+          "key": "C",
+          "text": "15",
+          "explanation": "15 is the number of ordered pairs in the product of the two sets, not a count of functions."
+        },
+        {
+          "key": "D",
+          "text": "32,768",
+          "explanation": "32,768 = 2¹⁵ counts every RELATION between the two sets. Functions are the small subclass of relations that assign exactly one image to each input."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: One-one, onto and bijective, and how many of each, §14 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#14-one-one-onto-and-bijective-and-how-many-of-each"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Number of functions from an m-set to an n-set = n^m",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-036",
+      "topic": "Ch 7 · Functions · Counting one-one functions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many ONE-ONE functions are there from a set of 3 elements to a set of 6 elements?",
+      "options": [
+        {
+          "key": "A",
+          "text": "216",
+          "explanation": "216 = 6³ counts every function, including those in which two inputs share an image."
+        },
+        {
+          "key": "B",
+          "text": "720",
+          "explanation": "720 = 6! would count the arrangements of all six images. Only three of them are used, so the product stops after three factors."
+        },
+        {
+          "key": "C",
+          "text": "120",
+          "explanation": "Correct. The first input has 6 choices, the second 5 and the third 4, since no image may repeat: 6 × 5 × 4 = 120."
+        },
+        {
+          "key": "D",
+          "text": "18",
+          "explanation": "18 = 3 × 6 is the size of the Cartesian product, not a count of functions of any kind."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: One-one, onto and bijective, and how many of each, §14 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#14-one-one-onto-and-bijective-and-how-many-of-each"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "One-one functions = n(n − 1)…(n − m + 1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-037",
+      "topic": "Ch 7 · Functions · When no one-one function exists",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many one-one functions are there from a set of 5 elements to a set of 3 elements?",
+      "options": [
+        {
+          "key": "A",
+          "text": "60",
+          "explanation": "This multiplies 5 × 4 × 3, using the sizes of the wrong set. The choices available come from the codomain, and there are only three of them."
+        },
+        {
+          "key": "B",
+          "text": "6",
+          "explanation": "6 = 3! would count the ways of arranging the three images among three inputs. There are five inputs here, and two of them can never be given a fresh image."
+        },
+        {
+          "key": "C",
+          "text": "243",
+          "explanation": "243 = 3⁵ counts every function from the 5-set to the 3-set. Almost all of them repeat an image, and none of them is one-one."
+        },
+        {
+          "key": "D",
+          "text": "0",
+          "explanation": "Correct. A one-one function needs 5 distinct images and only 3 are available, so no such function exists. In general a one-one function requires n(B) ≥ n(A)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: One-one, onto and bijective, and how many of each, §14 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#14-one-one-onto-and-bijective-and-how-many-of-each"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A one-one function from A to B requires n(B) ≥ n(A)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-038",
+      "topic": "Ch 7 · Functions · Classifying a squaring function",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For f : R → R defined by f(x) = x², which description is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Neither one-one nor onto",
+          "explanation": "Correct. f(3) = f(−3) = 9, so two different inputs share an image and f is not one-one; and no real x gives f(x) = −4, so the codomain R is not fully used and f is not onto."
+        },
+        {
+          "key": "B",
+          "text": "One-one but not onto",
+          "explanation": "This tests only the failure to reach negative values and overlooks that x and −x always share an image."
+        },
+        {
+          "key": "C",
+          "text": "Onto but not one-one",
+          "explanation": "This judges 'onto' against the values f actually produces rather than against the declared codomain R. Onto means the RANGE equals the CODOMAIN, and here the range is only the non-negative reals."
+        },
+        {
+          "key": "D",
+          "text": "Bijective, so f⁻¹ exists on R",
+          "explanation": "Both conditions fail, so no inverse function exists on R. An inverse would have to send 9 back to two different numbers."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: One-one, onto and bijective, and how many of each, §14 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#14-one-one-onto-and-bijective-and-how-many-of-each"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Onto is tested against the declared codomain",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-039",
+      "topic": "Ch 7 · Functions · Counting bijections",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many bijective functions can be defined from a set of 6 elements onto itself?",
+      "options": [
+        {
+          "key": "A",
+          "text": "46,656",
+          "explanation": "46,656 = 6⁶ counts every function from the set to itself, most of which repeat images and are therefore not bijections."
+        },
+        {
+          "key": "B",
+          "text": "720",
+          "explanation": "Correct. A bijection uses each image exactly once, so the first input has 6 choices, the next 5, and so on: 6 × 5 × 4 × 3 × 2 × 1 = 6! = 720."
+        },
+        {
+          "key": "C",
+          "text": "64",
+          "explanation": "64 = 2⁶ is the number of subsets of the set, which counts something else entirely."
+        },
+        {
+          "key": "D",
+          "text": "36",
+          "explanation": "36 = 6² is the number of ordered pairs available, that is the size of A × A."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: One-one, onto and bijective, and how many of each, §14 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#14-one-one-onto-and-bijective-and-how-many-of-each"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Bijections from an n-set onto itself = n!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-040",
+      "topic": "Ch 7 · Functions · Composite function evaluated",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If f(x) = 2x + 5 and g(x) = x² − 1, what is (g∘f)(3)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "21",
+          "explanation": "21 is (f∘g)(3): g(3) = 8 and then f(8) = 21. The notation g∘f means f is applied FIRST, so the order here is reversed."
+        },
+        {
+          "key": "B",
+          "text": "122",
+          "explanation": "This computes f(3)² + 1 = 121 + 1, taking the sign of g's constant term as plus. The rule is x² − 1."
+        },
+        {
+          "key": "C",
+          "text": "120",
+          "explanation": "Correct. f(3) = 2(3) + 5 = 11, and then g(11) = 11² − 1 = 121 − 1 = 120."
+        },
+        {
+          "key": "D",
+          "text": "88",
+          "explanation": "88 = 11 × 8 multiplies f(3) by g(3). Composition feeds one output into the other function; it is not a product."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Composite functions, inverses, and even and odd functions, §15 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#15-composite-functions-inverses-and-even-and-odd-functions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "(g∘f)(x) = g(f(x)) — f applied first",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-041",
+      "topic": "Ch 7 · Functions · Inverse function evaluated",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If f(x) = (4x − 3) ÷ 2, what is f⁻¹(5)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "17/2",
+          "explanation": "This evaluates f(5) instead of the inverse. f(5) = (20 − 3) ÷ 2 = 17/2, which is the image of 5, not its pre-image."
+        },
+        {
+          "key": "B",
+          "text": "2/17",
+          "explanation": "This reads f⁻¹ as the reciprocal 1 ÷ f. The superscript −1 on a function means the inverse function, not a reciprocal."
+        },
+        {
+          "key": "C",
+          "text": "7/4",
+          "explanation": "This rearranges y = (4x − 3) ÷ 2 as x = (2y − 3) ÷ 4, moving the 2 to the wrong side. Multiply by 2 first, then add 3, then divide by 4."
+        },
+        {
+          "key": "D",
+          "text": "13/4",
+          "explanation": "Correct. Solve (4x − 3) ÷ 2 = 5: 4x − 3 = 10, so 4x = 13 and x = 13/4. Check: f(13/4) = (13 − 3) ÷ 2 = 5."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Composite functions, inverses, and even and odd functions, §15 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#15-composite-functions-inverses-and-even-and-odd-functions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "f⁻¹(y) = x exactly when f(x) = y",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-042",
+      "topic": "Ch 7 · Functions · When an inverse function exists",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A function f : A → B has an inverse FUNCTION f⁻¹ : B → A",
+      "options": [
+        {
+          "key": "A",
+          "text": "only when f is both one-one and onto",
+          "explanation": "Correct. If f is not one-one some element of B has two pre-images and f⁻¹ would assign it two values; if f is not onto some element of B has no pre-image and f⁻¹ would be undefined there. Both failures break the definition of a function."
+        },
+        {
+          "key": "B",
+          "text": "whenever f is one-one, whether or not it is onto",
+          "explanation": "One-one alone leaves elements of B with no pre-image, so f⁻¹ would have no value at those points and would not be a function on B."
+        },
+        {
+          "key": "C",
+          "text": "whenever f is onto, whether or not it is one-one",
+          "explanation": "Onto alone allows an element of B to have two pre-images, so f⁻¹ would give that input two outputs."
+        },
+        {
+          "key": "D",
+          "text": "for every function, because every relation has an inverse",
+          "explanation": "This confuses the inverse RELATION, which always exists because reversing pairs is always possible, with the inverse FUNCTION, which must satisfy the one-image rule."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Composite functions, inverses, and even and odd functions, §15 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#15-composite-functions-inverses-and-even-and-odd-functions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "An inverse function exists exactly for a bijection",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-043",
+      "topic": "Ch 7 · Functions · Odd function used to find a value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For f(x) = 5x³ − 2x, it is given that f(3) = 129. What is f(−3)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "129",
+          "explanation": "This treats f as an EVEN function, taking f(−x) = f(x). Both powers present here are odd, so the whole function is odd and the sign flips."
+        },
+        {
+          "key": "B",
+          "text": "−129",
+          "explanation": "Correct. Every power in f is odd, so f(−x) = −f(x). Directly: f(−3) = 5(−27) − 2(−3) = −135 + 6 = −129."
+        },
+        {
+          "key": "C",
+          "text": "−141",
+          "explanation": "This is 5(−27) − 6, keeping the second term negative. The term −2x becomes −2(−3) = +6 when x is replaced by −3."
+        },
+        {
+          "key": "D",
+          "text": "−135",
+          "explanation": "This drops the −2x term and evaluates 5(−3)³ alone. Both terms must be substituted."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Composite functions, inverses, and even and odd functions, §15 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#15-composite-functions-inverses-and-even-and-odd-functions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Odd function: f(−x) = −f(x)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-044",
+      "topic": "Ch 7 · Limits · Evaluation by factorisation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Evaluate lim (x → 5) of (x² − 25) ÷ (x − 5).",
+      "options": [
+        {
+          "key": "A",
+          "text": "0",
+          "explanation": "This substitutes x = 5, gets 0/0 and reports the numerator's zero as the answer. The form 0/0 is indeterminate — it means more work is needed, not that the answer is zero."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "This quotes the point being approached rather than the value approached. The limit is what the expression settles at, not where x is heading."
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "explanation": "Correct. x² − 25 = (x − 5)(x + 5), so for every x ≠ 5 the expression equals x + 5, whose value at x = 5 is 10. The standard power limit agrees: n·aⁿ⁻¹ = 2 × 5 = 10."
+        },
+        {
+          "key": "D",
+          "text": "The limit does not exist",
+          "explanation": "This reads the indeterminate form as a failure. Both one-sided limits close in on 10 — at x = 4.999 the value is 9.999 and at x = 5.001 it is 10.001."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Evaluating limits and the indeterminate form, §17 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#17-evaluating-limits-and-the-indeterminate-form"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "0/0 form cleared by factorisation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-045",
+      "topic": "Ch 7 · Limits · Evaluation by rationalisation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Evaluate lim (x → 0) of (√(x + 16) − 4) ÷ x.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/8",
+          "explanation": "Correct. Multiplying above and below by the conjugate √(x + 16) + 4 turns the numerator into x, leaving 1 ÷ (√(x + 16) + 4). At x = 0 that is 1 ÷ (4 + 4) = 1/8."
+        },
+        {
+          "key": "B",
+          "text": "0",
+          "explanation": "This substitutes x = 0, gets 0/0 and reports zero. The indeterminate form has to be cleared before any value can be read off."
+        },
+        {
+          "key": "C",
+          "text": "1/4",
+          "explanation": "This rationalises correctly but then evaluates 1 ÷ √(x + 16) at x = 0, dropping the + 4 that the conjugate adds to the denominator."
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "explanation": "This inverts the final fraction, reporting the denominator 8 instead of 1/8."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Evaluating limits and the indeterminate form, §17 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#17-evaluating-limits-and-the-indeterminate-form"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "0/0 form with a surd cleared by the conjugate",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-046",
+      "topic": "Ch 7 · Limits · The standard power limit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Evaluate lim (x → 3) of (x⁵ − 243) ÷ (x − 3).",
+      "options": [
+        {
+          "key": "A",
+          "text": "243",
+          "explanation": "243 is aⁿ itself, the constant sitting in the numerator. The standard limit multiplies the index by a raised to one power less."
+        },
+        {
+          "key": "B",
+          "text": "81",
+          "explanation": "81 = 3⁴ is aⁿ⁻¹ without the factor n. The result is n·aⁿ⁻¹, so the 5 must still be applied."
+        },
+        {
+          "key": "C",
+          "text": "15",
+          "explanation": "This computes n × a = 5 × 3 instead of n × aⁿ⁻¹. The index drops by one but does not vanish."
+        },
+        {
+          "key": "D",
+          "text": "405",
+          "explanation": "Correct. Since 243 = 3⁵, this is the standard form with n = 5 and a = 3, giving 5 × 3⁴ = 5 × 81 = 405."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Evaluating limits and the indeterminate form, §17 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#17-evaluating-limits-and-the-indeterminate-form"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "lim (x → a) (xⁿ − aⁿ) ÷ (x − a) = n·aⁿ⁻¹",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-047",
+      "topic": "Ch 7 · Limits · A rational function as x tends to infinity",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Evaluate lim (x → ∞) of (7x³ + 2x) ÷ (3x³ − x² + 5).",
+      "options": [
+        {
+          "key": "A",
+          "text": "0",
+          "explanation": "Zero is the answer only when the numerator's degree is LOWER than the denominator's. Here both are of degree 3, so the leading terms balance instead of vanishing."
+        },
+        {
+          "key": "B",
+          "text": "7/3",
+          "explanation": "Correct. Divide every term by x³: the expression becomes (7 + 2/x²) ÷ (3 − 1/x + 5/x³), and every term carrying an x in its denominator tends to 0, leaving 7 ÷ 3."
+        },
+        {
+          "key": "C",
+          "text": "No finite limit — the ratio grows without bound",
+          "explanation": "This would be right if the numerator were of higher degree. With equal degrees the ratio settles at a finite number."
+        },
+        {
+          "key": "D",
+          "text": "3/7",
+          "explanation": "This inverts the ratio, reading the denominator's leading coefficient over the numerator's."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Evaluating limits and the indeterminate form, §17 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#17-evaluating-limits-and-the-indeterminate-form"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Equal degrees give the ratio of the leading coefficients",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-048",
+      "topic": "Ch 7 · Limits · One-sided limits of a piecewise function",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "f(x) = 3x + 2 for x < 4 and f(x) = x² − 6 for x ≥ 4. What are the left-hand and the right-hand limits of f at x = 4, in that order?",
+      "options": [
+        {
+          "key": "A",
+          "text": "14 and 14",
+          "explanation": "This applies the first branch on both sides. For x just above 4 the second branch governs, and it gives 16 − 6 = 10."
+        },
+        {
+          "key": "B",
+          "text": "10 and 10",
+          "explanation": "This applies the second branch on both sides. For x just below 4 the first branch governs, and it gives 12 + 2 = 14."
+        },
+        {
+          "key": "C",
+          "text": "14 and 10",
+          "explanation": "Correct. LHL uses the branch valid below 4: 3(4) + 2 = 14. RHL uses the branch valid at and above 4: 4² − 6 = 10. They differ, so lim (x → 4) f(x) does not exist."
+        },
+        {
+          "key": "D",
+          "text": "10 and 14",
+          "explanation": "This swaps the two branches. The left-hand limit must come from the rule that applies to the left of the junction."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Limits and the two one-sided limits, §16 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#16-limits-and-the-two-one-sided-limits"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "LHL and RHL taken from the branch valid on each side",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-049",
+      "topic": "Ch 7 · Continuity · Solving for a constant",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "f(x) = 2x + k for x ≤ 3 and f(x) = x² + 4 for x > 3. For what value of k is f continuous at x = 3?",
+      "options": [
+        {
+          "key": "A",
+          "text": "−7",
+          "explanation": "This solves 6 + k = 13 as k = 6 − 13. The 6 must cross the equals sign, changing sign as it goes, leaving k = 13 − 6."
+        },
+        {
+          "key": "B",
+          "text": "19",
+          "explanation": "This adds the two branch values, 6 + 13, instead of setting them equal and solving for k."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "6 is the value of 2x at x = 3, that is the part of the left branch that does not contain k. It is one term of the equation, not its solution."
+        },
+        {
+          "key": "D",
+          "text": "7",
+          "explanation": "Correct. LHL = f(3) = 2(3) + k = 6 + k and RHL = 3² + 4 = 13. Continuity needs 6 + k = 13, so k = 7, and then all three values equal 13."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Continuity at a point and piecewise functions, §18 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#18-continuity-at-a-point-and-piecewise-functions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Continuity at a junction requires LHL = RHL = f(a)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c7-050",
+      "topic": "Ch 7 · Continuity · The three-part test",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A function f is continuous at x = a when",
+      "options": [
+        {
+          "key": "A",
+          "text": "f(a) is defined, lim (x → a) f(x) exists, and that limit equals f(a)",
+          "explanation": "Correct. All three conditions are needed, in that order: the value must exist, the two one-sided limits must agree so the limit exists, and the limit must equal the value."
+        },
+        {
+          "key": "B",
+          "text": "f(a) is defined and the left-hand limit at a equals f(a)",
+          "explanation": "This never looks at the right-hand limit. A function whose right branch jumps away would pass this test and still be discontinuous."
+        },
+        {
+          "key": "C",
+          "text": "the left-hand and right-hand limits at a are equal, whether or not f(a) is defined",
+          "explanation": "This makes the limit sufficient on its own. A function undefined at a, or defined there with a different value, has a limit and is still discontinuous."
+        },
+        {
+          "key": "D",
+          "text": "f(a) is defined, which is enough",
+          "explanation": "This judges continuity from the value alone. A slab tariff is defined at every weight and still jumps at each slab boundary."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Continuity at a point and piecewise functions, §18 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#18-continuity-at-a-point-and-piecewise-functions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "The three-part test for continuity at a point",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "cs-f3c7-01",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 7 · Sets · Case: three service lines at a CA firm",
+      "case": "A CA firm in Nagpur reviews its client register before planning staff deployment for the year. It has 640 clients in all. 385 clients need GST filings, 300 need an income-tax audit and 245 need ROC filings. Reading the engagement letters, the partners find that 165 clients need both GST filings and an income-tax audit, 120 need both an income-tax audit and ROC filings, and 140 need both GST filings and ROC filings. 75 clients need all three services. The firm wants to size three teams, so it needs the count of clients in each band — those needing any service at all, those needing only one, those needing exactly two, and those on the register who need none of the three.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Exactly one, exactly two and at least, §9 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#9-exactly-one-exactly-two-and-at-least"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c7-01-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many clients need at least one of the three services?",
+          "topic": "Ch 7 · Three-set union",
+          "sourceRef": "n(A ∪ B ∪ C) = s − p + t",
+          "options": [
+            {
+              "key": "A",
+              "text": "930",
+              "explanation": "930 is the plain sum 385 + 300 + 245, which counts every client with two services twice and every client with three services three times."
+            },
+            {
+              "key": "B",
+              "text": "580",
+              "explanation": "Correct. 930 − (165 + 120 + 140) + 75 = 930 − 425 + 75 = 580 clients need at least one service."
+            },
+            {
+              "key": "C",
+              "text": "505",
+              "explanation": "This omits the triple overlap, computing 930 − 425 only. The 75 clients with all three services are removed three times by the pairwise figures after being added three times, so 75 must be restored."
+            },
+            {
+              "key": "D",
+              "text": "640",
+              "explanation": "640 is the whole client register, which also contains clients needing none of the three services."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c7-01-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many clients need exactly one of the three services?",
+          "topic": "Ch 7 · Exactly one",
+          "sourceRef": "Exactly one = s − 2p + 3t",
+          "options": [
+            {
+              "key": "A",
+              "text": "580",
+              "explanation": "580 is the at-least-one figure, which also includes clients taking two or three services."
+            },
+            {
+              "key": "B",
+              "text": "200",
+              "explanation": "200 is the EXACTLY TWO figure, p − 3t. It answers a different band of the same question."
+            },
+            {
+              "key": "C",
+              "text": "305",
+              "explanation": "Correct. s − 2p + 3t = 930 − 850 + 225 = 305. The regions confirm it: GST only 155, audit only 90 and ROC only 60, and 155 + 90 + 60 = 305."
+            },
+            {
+              "key": "D",
+              "text": "155",
+              "explanation": "155 is the GST-only region alone. Exactly one service also covers clients needing only the audit and clients needing only ROC work."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c7-01-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many clients need exactly two of the three services?",
+          "topic": "Ch 7 · Exactly two",
+          "sourceRef": "Exactly two = p − 3t",
+          "options": [
+            {
+              "key": "A",
+              "text": "200",
+              "explanation": "Correct. p − 3t = 425 − 225 = 200. Region check: GST and audit only 90, audit and ROC only 45, GST and ROC only 65, and 90 + 45 + 65 = 200."
+            },
+            {
+              "key": "B",
+              "text": "425",
+              "explanation": "425 is the raw sum of the three pairwise figures. Each of those still contains all 75 clients who take all three services."
+            },
+            {
+              "key": "C",
+              "text": "350",
+              "explanation": "This removes the triple overlap once, 425 − 75. It has to come out of each of the three pairwise figures, so three times."
+            },
+            {
+              "key": "D",
+              "text": "275",
+              "explanation": "275 = p − 2t is the AT LEAST TWO figure, which keeps the 75 three-service clients in the count."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c7-01-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many clients on the register need none of the three services?",
+          "topic": "Ch 7 · The region outside the union",
+          "sourceRef": "n(none) = n(U) − n(A ∪ B ∪ C)",
+          "options": [
+            {
+              "key": "A",
+              "text": "75",
+              "explanation": "75 is the number needing ALL three services, the centre region rather than the outside one."
+            },
+            {
+              "key": "B",
+              "text": "135",
+              "explanation": "This takes the union as 505, the figure obtained by leaving the triple overlap out of the inclusion-exclusion sum, and then computes 640 − 505."
+            },
+            {
+              "key": "C",
+              "text": "155",
+              "explanation": "155 is the GST-only region, read off the wrong row of the table."
+            },
+            {
+              "key": "D",
+              "text": "60",
+              "explanation": "Correct. The union is 580, so 640 − 580 = 60 clients need none of the three. Full check: 305 + 200 + 75 + 60 = 640."
+            }
+          ],
+          "correct": "D"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c7-02",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 7 · Relations and functions · Case: assigning zones to hubs",
+      "case": "A logistics desk plans the next quarter's despatch map. There are three delivery zones, written Z = {1, 2, 3}, and four hubs, written H = {w, x, y, z}. A pairing of zones with hubs is recorded simply as a set of ordered pairs (zone, hub), so any such set of pairs is a relation from Z to H. A workable despatch plan is stricter: it must give every zone exactly one hub, which makes it a function from Z to H. The desk also keeps a separate 'shares a driver pool with' relation among the three zones themselves, currently recorded as S = {(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (1, 3), (3, 1)}. The planners want to know how many possibilities exist at each level of strictness, and what kind of relation S actually is.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Relations and how many there are, §11 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#11-relations-and-how-many-there-are"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c7-02-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many relations are there from the zone set Z to the hub set H?",
+          "topic": "Ch 7 · Counting relations",
+          "sourceRef": "Relations from A to B = 2^(mn)",
+          "options": [
+            {
+              "key": "A",
+              "text": "12",
+              "explanation": "12 is the number of ordered pairs in Z × H, that is the size of the largest relation, not the number of relations."
+            },
+            {
+              "key": "B",
+              "text": "64",
+              "explanation": "64 = 4³ is the number of FUNCTIONS from Z to H. Every function is a relation, but most relations are not functions."
+            },
+            {
+              "key": "C",
+              "text": "4,096",
+              "explanation": "Correct. Z × H has 3 × 4 = 12 pairs, and a relation is any subset of them, so the count is 2¹² = 4,096."
+            },
+            {
+              "key": "D",
+              "text": "128",
+              "explanation": "This computes 2^(3 + 4). The exponent is the number of pairs, which is 3 × 4, not 3 + 4."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c7-02-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many workable despatch plans are there, that is functions giving each of the three zones exactly one hub?",
+          "topic": "Ch 7 · Counting functions",
+          "sourceRef": "Functions from an m-set to an n-set = n^m",
+          "options": [
+            {
+              "key": "A",
+              "text": "81",
+              "explanation": "81 = 3⁴ swaps the base and the index. Each of the 3 zones picks one of the 4 hubs, so the base is 4."
+            },
+            {
+              "key": "B",
+              "text": "64",
+              "explanation": "Correct. Zone 1 has 4 choices, zone 2 has 4 and zone 3 has 4, independently: 4³ = 64 plans."
+            },
+            {
+              "key": "C",
+              "text": "12",
+              "explanation": "12 counts the individual zone-hub pairs available, not the ways of choosing one pair per zone."
+            },
+            {
+              "key": "D",
+              "text": "24",
+              "explanation": "24 = 4 × 3 × 2 counts only the plans that give the three zones three DIFFERENT hubs. Nothing in the stem forbids two zones sharing a hub."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c7-02-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many of those plans give the three zones three DIFFERENT hubs?",
+          "topic": "Ch 7 · Counting one-one functions",
+          "sourceRef": "One-one functions = n(n − 1)(n − 2)",
+          "options": [
+            {
+              "key": "A",
+              "text": "64",
+              "explanation": "64 counts every plan, including the ones in which two zones share a hub. Only the plans with no repeated hub qualify here."
+            },
+            {
+              "key": "B",
+              "text": "6",
+              "explanation": "6 = 3! would be the count if exactly three hubs existed and all had to be used. There are four hubs, so one is left unused in each plan."
+            },
+            {
+              "key": "C",
+              "text": "12",
+              "explanation": "12 is the size of Z × H, the pool of individual pairs, not a count of plans."
+            },
+            {
+              "key": "D",
+              "text": "24",
+              "explanation": "Correct. Zone 1 has 4 hubs to choose from, zone 2 has the 3 remaining and zone 3 has 2: 4 × 3 × 2 = 24 one-one plans."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c7-02-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The driver-pool relation on the zones is S = {(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (1, 3), (3, 1)}. Which description of S is correct?",
+          "topic": "Ch 7 · Testing a relation for its properties",
+          "sourceRef": "Reflexive, symmetric and transitive tested pair by pair",
+          "options": [
+            {
+              "key": "A",
+              "text": "Reflexive and symmetric but not transitive, so not an equivalence relation",
+              "explanation": "Correct. All three self-pairs are present, and every off-diagonal pair appears with its reverse. But (2, 1) followed by (1, 3) requires (2, 3), which is absent, so transitivity fails and S is not an equivalence relation."
+            },
+            {
+              "key": "B",
+              "text": "An equivalence relation",
+              "explanation": "This checks reflexivity and symmetry, finds both, and stops. Transitivity has to be tested on every chain, and the chain (2, 1) then (1, 3) breaks it."
+            },
+            {
+              "key": "C",
+              "text": "Not reflexive, because zone 2 and zone 3 are not paired with each other",
+              "explanation": "Reflexivity asks only for the self-pairs (1, 1), (2, 2) and (3, 3), and all three are present. The missing pair (2, 3) is a transitivity failure, not a reflexivity failure."
+            },
+            {
+              "key": "D",
+              "text": "Not symmetric, because (2, 3) is missing while (3, 2) is present",
+              "explanation": "Neither (2, 3) nor (3, 2) is in S, so symmetry is not disturbed — symmetry only requires that a pair present has its reverse present."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c7-03",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 7 · Limits and continuity · Case: a two-slab handling charge",
+      "case": "A cold-storage warehouse near Sangli quotes its monthly handling charge H(x) in rupees, where x is the quantity handled in tonnes. For consignments below 8 tonnes the charge is H(x) = 250x + 1,500. From 8 tonnes upward a different slab applies and the charge is H(x) = 400x + c, where c is a constant the management has not yet fixed. The finance team wants the tariff to have no jump at the 8-tonne boundary, because a jump would let a customer pay less by declaring a smaller consignment. They therefore need the value the charge approaches from below 8 tonnes, the value of c that removes any jump, and confirmation that the resulting tariff really is continuous at 8 tonnes.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Continuity at a point and piecewise functions, §18 →",
+        "href": "/foundation/quantitative-aptitude/sets-relations-functions/#18-continuity-at-a-point-and-piecewise-functions"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c7-03-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the left-hand limit of H at x = 8, in rupees?",
+          "topic": "Ch 7 · Left-hand limit at a junction",
+          "sourceRef": "LHL uses the branch valid below the junction",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 3,200",
+              "explanation": "₹ 3,200 is 400 × 8, taken from the branch that applies at and ABOVE 8 tonnes. A left-hand limit must use the rule valid to the left of the junction."
+            },
+            {
+              "key": "B",
+              "text": "₹ 1,500",
+              "explanation": "₹ 1,500 is the constant term of the lower branch on its own, which is the charge as x approaches 0, not as x approaches 8."
+            },
+            {
+              "key": "C",
+              "text": "₹ 3,500",
+              "explanation": "Correct. For x just below 8 the rule is 250x + 1,500, so the left-hand limit is 250(8) + 1,500 = 2,000 + 1,500 = ₹ 3,500."
+            },
+            {
+              "key": "D",
+              "text": "₹ 2,000",
+              "explanation": "₹ 2,000 is 250 × 8 with the constant ₹ 1,500 dropped. Both terms of the branch must be evaluated."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c7-03-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What value of c removes the jump at x = 8?",
+          "topic": "Ch 7 · Solving for a constant",
+          "sourceRef": "Set LHL = RHL = f(a) and solve",
+          "options": [
+            {
+              "key": "A",
+              "text": "−300",
+              "explanation": "This solves 3,200 + c = 3,500 as c = 3,200 − 3,500. The 3,200 changes sign when it crosses the equals sign, giving c = 3,500 − 3,200."
+            },
+            {
+              "key": "B",
+              "text": "300",
+              "explanation": "Correct. The right-hand value is 400(8) + c = 3,200 + c and the left-hand limit is ₹ 3,500, so 3,200 + c = 3,500 and c = ₹ 300."
+            },
+            {
+              "key": "C",
+              "text": "6,700",
+              "explanation": "This adds the two branch values, 3,500 + 3,200, rather than setting them equal and solving for the difference."
+            },
+            {
+              "key": "D",
+              "text": "1,500",
+              "explanation": "This copies the constant from the lower branch. The two branches have different slopes, so their constants cannot simply be matched."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c7-03-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "With c fixed at that value, what is the position at x = 8?",
+          "topic": "Ch 7 · Applying the three-part test",
+          "sourceRef": "Continuity requires the value, the LHL and the RHL to agree",
+          "options": [
+            {
+              "key": "A",
+              "text": "The charge is discontinuous and the limit does not exist",
+              "explanation": "This would be right only if the two one-sided limits still differed. With c = 300 both are ₹ 3,500, so the limit exists."
+            },
+            {
+              "key": "B",
+              "text": "The charge is continuous and the limit is ₹ 3,200",
+              "explanation": "₹ 3,200 leaves out the constant c. With c = 300 the upper branch at x = 8 gives 3,200 + 300 = ₹ 3,500."
+            },
+            {
+              "key": "C",
+              "text": "The charge is continuous and the limit is ₹ 3,500",
+              "explanation": "Correct. LHL = ₹ 3,500, RHL = 400(8) + 300 = ₹ 3,500, and H(8) = ₹ 3,500 because the upper branch owns the junction. All three agree, so the tariff is continuous there."
+            },
+            {
+              "key": "D",
+              "text": "The limit exists and equals ₹ 3,500, but the charge is still discontinuous at 8 tonnes",
+              "explanation": "A discontinuity would need H(8) to differ from the limit. The branch valid at x = 8 gives exactly ₹ 3,500, so the third test passes too."
+            }
+          ],
+          "correct": "C"
+        }
+      ]
+    }
+  ]
+}

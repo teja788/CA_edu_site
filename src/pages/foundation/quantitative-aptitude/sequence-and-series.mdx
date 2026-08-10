@@ -1,0 +1,1245 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Sequence and Series — Arithmetic and Geometric Progressions'
+description: 'CA Foundation Quantitative Aptitude Ch 6 in plain language: sequences and series, arithmetic progressions and their sums, the nth term from the end, counting terms in a range, arithmetic means, geometric progressions, the sum of a finite and an infinite GP, geometric means, the AM–GM relation, symmetrical forms for three or four terms, the special series for n, n² and n³, and business applications, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 6 · Sequence and Series'
+chapterSlug: sequence-and-series
+masteryId: f3-ch6
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 6 (Sequence and Series — Arithmetic and Geometric Progressions) — scope and worked patterns'
+  - 'Standard results of elementary algebra: the nth term and sum formulas for an AP and a GP, the sum of a convergent infinite GP, the arithmetic and geometric means, the AM–GM inequality, and the closed forms for Σn, Σn² and Σn³'
+sourceLabel: 'ICAI SM Paper 3 Ch 6 scope (May 2026 ed.) · standard results on progressions'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 28 min read · 11 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=sequence-and-series'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A garment unit at Tiruppur commissions a new stitching line in April. The line produces 1,200 pieces
+in its first month, and the supervisor plans for output to rise by a steady 150 pieces every month as
+the operators settle in. Two questions land on the owner's desk in the same week. What will the line
+make in the twelfth month, and how many pieces will it have made in the whole year?
+
+They look like the same question. They are not. The first asks for **one** month's figure, the
+twelfth term of a list. The second asks for the **total** of all twelve figures. The list is a
+*sequence*; the running total is a *series*. Getting 1,200 + 11 × 150 = 2,850 pieces for the twelfth
+month and 12 ÷ 2 × (1,200 + 2,850) = 24,300 pieces for the year is the whole of this chapter in two
+lines.
+
+Almost every mark in Paper 3 on this topic turns on three small decisions: whether the question wants
+a term or a total, whether the count of terms is n or n − 1, and whether the pattern grows by adding
+a fixed amount or by multiplying by a fixed factor. The arithmetic is light. The slips are all in
+those three places, and the option lists are built out of them.
+
+## 1. What a sequence is and how a series differs
+
+A **sequence** is a list of numbers written in a definite order, where each number's position matters.
+The numbers are its **terms**. The first term is written a₁ (or simply a), the second a₂, and the term
+in position n is aₙ, read as "the nth term" or "the general term".
+
+<div class="formula">1,200, 1,350, 1,500, 1,650, … is a sequence. Its 1st term is 1,200 and its 3rd term is 1,500.</div>
+
+Order is part of the identity of a sequence. The list 5, 9, 13 and the list 13, 9, 5 contain the same
+three numbers but are different sequences, because the term in position 1 differs.
+
+A **series** is what you get when you join the terms of a sequence with plus signs — that is, when you
+add them. The sum of the first n terms is written Sₙ.
+
+<div class="formula">1,200 + 1,350 + 1,500 + 1,650 is a series. Its value, S₄, is 5,700.</div>
+
+So a sequence is a list and a series is a total. A question asking "what does the line produce in the
+twelfth month" wants a term; a question asking "what does the line produce in the first twelve months"
+wants a sum. Reading the wrong one is the single most common way to lose a mark here, and the option
+list will always contain both numbers.
+
+<Callout kind="pointer">
+  <p>
+    Three words in a stem decide which formula you need. <strong>"In the nth month", "on the nth day",
+    "the nth term"</strong> point to a term. <strong>"Altogether", "in total", "over the first n
+    years", "how many in all"</strong> point to a sum. Underline the word before you write anything.
+  </p>
+</Callout>
+
+A **progression** is a sequence built by a stated rule that lets you write down the next term from the
+one before it. Two rules matter at Foundation level, and they are the two ways of changing a number:
+
+- add a fixed quantity each time — an **arithmetic progression (AP)**;
+- multiply by a fixed factor each time — a **geometric progression (GP)**.
+
+Every progression is a sequence, but not every sequence is a progression. The list 2, 3, 5, 7, 11 —
+the primes — is a perfectly good sequence with no fixed difference and no fixed ratio, so it is
+neither an AP nor a GP.
+
+## 2. Finite and infinite sequences and the general term
+
+A sequence with a last term is **finite**; the number of terms in it is its **length**. A sequence
+that continues without end is **infinite**, and is written with a trailing ellipsis.
+
+| Sequence | Kind | Length |
+|---|---|---|
+| 3, 7, 11, …, 99 | finite AP | 25 terms |
+| 5, 10, 20, 40, 80 | finite GP | 5 terms |
+| 2, 5, 8, 11, … | infinite AP | endless |
+| 1, 1/2, 1/4, 1/8, … | infinite GP | endless |
+
+Where the general term aₙ is given as a formula in n, every term follows by substitution. If
+aₙ = 4n − 1 then a₁ = 3, a₂ = 7, a₃ = 11 — an AP with first term 3 and common difference 4. That is
+worth remembering in reverse as well: **a general term that is linear in n always describes an AP**,
+and the coefficient of n is its common difference.
+
+A general term of the shape aₙ = k·mⁿ describes a GP, and m is its common ratio: aₙ = 3 × 2ⁿ gives
+6, 12, 24, 48, which is a GP with first term 6 and ratio 2.
+
+<Callout kind="mistake">
+  <p>
+    A formula for the general term is <em>not</em> the same as a formula for the sum. If aₙ = 4n − 1,
+    then a₅ = 19, but S₅ = 3 + 7 + 11 + 15 + 19 = 55. An option offering 19 to a question that asked
+    for S₅ is there for exactly this reason.
+  </p>
+</Callout>
+
+## 3. Arithmetic progression and its nth term
+
+An **arithmetic progression** is a sequence in which each term after the first is obtained by adding
+a fixed number to the previous term. That fixed number is the **common difference**, written d, and
+it is found by subtracting any term from the one that follows it.
+
+<div class="formula">d = a₂ − a₁ = a₃ − a₂ = … = aₙ − aₙ₋₁</div>
+
+d may be positive (the sequence rises), negative (it falls) or zero (every term is the same). In
+1,200, 1,350, 1,500, … the difference is 150. In 40, 33, 26, 19, … it is −7.
+
+Writing the terms out shows the pattern that gives the formula. With first term a and common
+difference d, the terms are a, a + d, a + 2d, a + 3d, … The second term carries **one** d, the third
+carries **two**, and so the nth term carries **n − 1**:
+
+<div class="formula">Tₙ = a + (n − 1)d</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the 12th month of the stitching line</div>
+  a = 1,200 pieces · d = 150 pieces · n = 12<br />
+  T₁₂ = 1,200 + (12 − 1) × 150 = 1,200 + 11 × 150 = 1,200 + 1,650 = <strong>2,850 pieces</strong><br />
+  Check by counting: from month 1 to month 12 there are 11 <em>steps</em>, not 12. Using 12 × 150
+  gives 3,000, which is the thirteenth month's figure.
+</div>
+
+The n − 1 is where marks go. The number of *steps* between the first term and the nth is always one
+fewer than the number of *terms*, in the same way that a fence with 12 posts has 11 gaps.
+
+<Callout kind="mistake">
+  <p>
+    Using <code>a + nd</code> instead of <code>a + (n − 1)d</code> shifts every answer forward by
+    exactly one d. In a well-set question that wrong value is <strong>always one of the four
+    options</strong>. Before you accept an answer, ask "how many steps did I take from the first
+    term?" — the answer must be n − 1.
+  </p>
+</Callout>
+
+The formula has four letters, so any three of a, d, n and Tₙ determine the fourth. Two shapes appear
+constantly:
+
+- **Two terms given.** Subtracting Tₚ = a + (p − 1)d from T_q = a + (q − 1)d gives
+  T_q − Tₚ = (q − p)d, so d = (T_q − Tₚ) ÷ (q − p). Find d first, then a.
+- **A term's value given, n wanted.** Rearrange to n = (Tₙ − a) ÷ d + 1. The "+ 1" is the same
+  n − 1 seen from the other side, and dropping it is the same error as before.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the 7th term is 43 and the 15th is 91</div>
+  T₁₅ − T₇ = (15 − 7)d → 91 − 43 = 8d → 48 = 8d → <strong>d = 6</strong><br />
+  T₇ = a + 6d → 43 = a + 36 → <strong>a = 7</strong><br />
+  Check T₁₅: 7 + 14 × 6 = 7 + 84 = 91 ✓ — always check with the term you did not use.
+</div>
+
+## 4. The sum of n terms of an AP
+
+Write the sum forwards and then backwards, one line under the other:
+
+<div class="formula">Sₙ = a + (a + d) + … + (l − d) + l &nbsp;&nbsp;and&nbsp;&nbsp; Sₙ = l + (l − d) + … + (a + d) + a</div>
+
+Add the two lines column by column. Every column gives the same total a + l, and there are n columns,
+so 2Sₙ = n(a + l). That gives the first form of the sum, in which l is the **last term** of the n
+terms being added:
+
+<div class="formula">Sₙ = (n ÷ 2) × (a + l)</div>
+
+Substituting l = a + (n − 1)d gives the second form, used when the last term is not known:
+
+<div class="formula">Sₙ = (n ÷ 2) × [2a + (n − 1)d]</div>
+
+The two forms are the same statement. Use the first when the first and last terms are both in front
+of you, and the second when you know a, d and how many terms there are.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — a year of output from the stitching line</div>
+  a = 1,200 · d = 150 · n = 12, and from §3 the last term l = T₁₂ = 2,850<br />
+  First form: S₁₂ = (12 ÷ 2) × (1,200 + 2,850) = 6 × 4,050 = <strong>24,300 pieces</strong><br />
+  Second form: S₁₂ = 6 × [2,400 + 11 × 150] = 6 × [2,400 + 1,650] = 6 × 4,050 = 24,300 ✓<br />
+  Sanity check: the average month is (1,200 + 2,850) ÷ 2 = 2,025 pieces, and 12 × 2,025 = 24,300 ✓
+</div>
+
+That last line is worth keeping. **The mean of an AP's terms is the mean of its first and last term**,
+so Sₙ = n × (average term). It gives a fast independent check on every sum you compute.
+
+<Callout kind="pointer">
+  <p>
+    A useful consequence: <strong>Tₙ = Sₙ − Sₙ₋₁</strong>. If a question hands you a formula for the
+    sum, such as Sₙ = 3n² + 5n, the nth term is the difference of two consecutive sums:
+    Tₙ = (3n² + 5n) − [3(n−1)² + 5(n−1)] = 6n + 2. Putting n = 1 gives a = 8, and the coefficient of
+    n gives d = 6.
+  </p>
+</Callout>
+
+## 5. The nth term of an AP counted from the end
+
+Sometimes the question counts backwards: "what is the 5th term from the end of the AP 7, 11, 15, …,
+139?" Two methods both work, and knowing both means you never have to remember a formula under
+pressure.
+
+**Method 1 — reverse the progression.** Read the AP from its last term. Reversing an AP gives another
+AP whose first term is l and whose common difference is −d. So the nth term from the end is
+
+<div class="formula">nth term from the end = l − (n − 1)d</div>
+
+**Method 2 — convert to a position from the front.** If the AP has m terms altogether, the nth term
+from the end sits at position m − n + 1 from the front.
+
+<div class="formula">position from the front = m − n + 1</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the 5th term from the end of 7, 11, 15, …, 139</div>
+  a = 7 · d = 4 · l = 139<br />
+  Method 1: 139 − (5 − 1) × 4 = 139 − 16 = <strong>123</strong><br />
+  Method 2 needs the length first: 139 = 7 + (m − 1) × 4 → 132 = 4(m − 1) → m − 1 = 33 → m = 34<br />
+  Position from the front = 34 − 5 + 1 = 30, and T₃₀ = 7 + 29 × 4 = 7 + 116 = <strong>123</strong> ✓
+</div>
+
+Both methods give 123. Method 1 is faster when the last term is given; method 2 is safer when the
+question also asks how many terms there are.
+
+<Callout kind="mistake">
+  <p>
+    "The 5th term from the end" is <strong>not</strong> l − 5d, and it is not the 5th term counted
+    after the last. The last term is itself the <em>1st</em> from the end, so only four steps of d
+    separate it from the 5th. The off-by-one here produces l − 5d = 119, which will be sitting in the
+    option list next to the right answer.
+  </p>
+</Callout>
+
+## 6. How many terms of an AP lie in a range
+
+A whole family of questions asks for a **count**: how many multiples of 7 lie between 100 and 500,
+how many terms of a given AP are three-digit numbers, how many months pass before output reaches a
+target. All of them use the same three steps.
+
+1. Identify the **first** term of the AP that lies inside the range, and the **last**.
+2. Find the common difference d, which is the spacing of the pattern.
+3. Count with **n = (last − first) ÷ d + 1**.
+
+<div class="formula">Number of terms = (last term − first term) ÷ common difference + 1</div>
+
+The "+ 1" is the fence-post rule again: dividing gives the number of *gaps*, and terms outnumber gaps
+by one.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — how many multiples of 7 lie between 100 and 500</div>
+  First multiple of 7 above 100: 7 × 15 = 105 (since 100 ÷ 7 = 14.28…)<br />
+  Last multiple of 7 below 500: 7 × 71 = 497 (since 500 ÷ 7 = 71.42…)<br />
+  d = 7 → n = (497 − 105) ÷ 7 + 1 = 392 ÷ 7 + 1 = 56 + 1 = <strong>57 terms</strong><br />
+  Cross-check by index: the multiples are 7 × 15 up to 7 × 71, and 71 − 15 + 1 = 57 ✓
+</div>
+
+The words at the edge of the range decide the endpoints, so read them exactly. **"Between 100 and
+500"** normally excludes both 100 and 500; **"from 100 to 500"** and **"between 100 and 500, both
+inclusive"** include them. Here 100 and 500 are not multiples of 7, so the two readings agree — but in
+a question about multiples of 5 between 100 and 500 they differ by two terms, which is precisely why
+such a question is set.
+
+<Callout kind="mistake">
+  <p>
+    Dividing and stopping is the classic error: 392 ÷ 7 = 56 counts the <em>gaps</em>, not the terms.
+    A shorter case makes it obvious — the multiples of 7 from 14 to 28 are 14, 21, 28, which is three
+    terms, while (28 − 14) ÷ 7 = 2. Whenever a count feels uncertain, test your method on a list short
+    enough to write out.
+  </p>
+</Callout>
+
+A second shape of the same question asks **when** a running quantity first crosses a level. Solve
+a + (n − 1)d ≥ target for n and then **round up** to the next whole number, because n counts terms and
+must be an integer. Rounding down answers the opposite question.
+
+## 7. Terms equidistant from the two ends
+
+In a finite AP, take the first and last terms and add them. Now take the second and the second-last
+and add them. The two totals are equal, and so is every other such pair.
+
+<div class="formula">T₁ + Tₘ = T₂ + Tₘ₋₁ = T₃ + Tₘ₋₂ = … = a + l</div>
+
+The reason is short. The kth term from the front is a + (k − 1)d and the kth from the end is
+l − (k − 1)d; adding them cancels the (k − 1)d and leaves a + l for every k.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the AP 4, 9, 14, 19, 24, 29, 34</div>
+  First + last = 4 + 34 = 38<br />
+  Second + second-last = 9 + 29 = 38 ✓ · Third + third-last = 14 + 24 = 38 ✓<br />
+  The middle term 19 is half of 38, as it must be in an AP with an odd number of terms.
+</div>
+
+Two consequences are examined directly. First, in an AP with an **odd** number of terms the middle
+term equals (a + l) ÷ 2, so the sum is (number of terms) × (middle term). Second, if a question tells
+you that T₄ + T₁₇ = 90 in a 20-term AP, you can read off T₁ + T₂₀ = 90 as well, because 4 and 17 are
+equidistant from the ends in the same way 1 and 20 are — and then S₂₀ = 10 × 90 = 900 without ever
+finding a or d.
+
+<Callout kind="pointer">
+  <p>
+    Whenever a stem gives you the <strong>sum of two terms whose positions add to one more than the
+    number of terms</strong>, it is handing you a + l directly. Positions 4 and 17 in a 20-term AP add
+    to 21 = 20 + 1; so do 1 and 20, and 8 and 13. Spotting that saves two equations of work.
+  </p>
+</Callout>
+
+## 8. Arithmetic mean and inserting n arithmetic means
+
+If three numbers a, A and b are in AP, then A is the **arithmetic mean** of a and b. Being in AP means
+the two differences match, so A − a = b − A, and rearranging gives
+
+<div class="formula">A = (a + b) ÷ 2</div>
+
+That is the ordinary average, and the test works both ways: **three numbers are in AP exactly when the
+middle one is the average of the outer two.** Checking whether 12, 20, 28 are in AP is one line —
+(12 + 28) ÷ 2 = 20 ✓.
+
+**Inserting n arithmetic means.** To insert n arithmetic means between two numbers a and b means to
+find n numbers A₁, A₂, …, Aₙ such that
+
+<div class="formula">a, A₁, A₂, …, Aₙ, b is a single AP</div>
+
+Count the terms of that AP: the two endpoints plus the n inserted numbers, so **n + 2 terms in all**.
+The endpoint b is therefore the (n + 2)th term:
+
+<div class="formula">b = a + (n + 2 − 1)d = a + (n + 1)d, so d = (b − a) ÷ (n + 1)</div>
+
+The denominator is n + 1 because inserting n numbers between two numbers creates n + 1 gaps.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — insert 4 arithmetic means between 6 and 41</div>
+  a = 6 · b = 41 · n = 4 → d = (41 − 6) ÷ (4 + 1) = 35 ÷ 5 = <strong>7</strong><br />
+  The means are 6 + 7 = 13, 20, 27, 34.<br />
+  Full AP: 6, 13, 20, 27, 34, 41 — six terms, and 34 + 7 = 41 ✓<br />
+  Using n = 4 in the denominator instead of 5 gives d = 8.75 and a list that misses 41 entirely.
+</div>
+
+Two facts follow that are asked directly. The **sum of the n inserted means is n × (a + b) ÷ 2**,
+because the inserted terms are themselves an AP with the same overall average. In the example,
+13 + 20 + 27 + 34 = 94 and 4 × (6 + 41) ÷ 2 = 4 × 23.5 = 94 ✓.
+
+<Callout kind="mistake">
+  <p>
+    The two endpoints are <strong>not</strong> among the means. "Insert 4 arithmetic means between 6
+    and 41" asks for four numbers, not six, and the AP that contains them has six terms. Answering
+    with the whole AP, or dividing by n rather than n + 1, are the two errors the option list is
+    built from. See the citations file — this counting convention is one a reviewer should confirm.
+  </p>
+</Callout>
+
+## 9. Geometric progression and its nth term
+
+A **geometric progression** is a sequence in which each term after the first is obtained by
+multiplying the previous term by a fixed non-zero number. That number is the **common ratio**, r, and
+it is found by dividing any term by the one before it.
+
+<div class="formula">r = a₂ ÷ a₁ = a₃ ÷ a₂ = … = aₙ ÷ aₙ₋₁</div>
+
+The word is *ratio*, and the operation is division, not subtraction. In 5, 15, 45, 135 the ratio is
+15 ÷ 5 = 3, not 15 − 5 = 10. In 80, 40, 20, 10 the ratio is 1/2. In 3, −6, 12, −24 the ratio is −2,
+and the alternating signs are the signature of a negative ratio.
+
+Writing the terms out gives the formula in the same way as before. With first term a and ratio r the
+terms are a, ar, ar², ar³, … The second term carries **one** factor of r, so the nth carries n − 1:
+
+<div class="formula">Tₙ = a·r ⁿ⁻¹</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — a distributor's units sold grow 20% a year</div>
+  Year 1 sales 25,000 units, and each year is 1.2 times the year before, so a = 25,000 and r = 1.2<br />
+  Year 5 sales = T₅ = 25,000 × 1.2⁴ = 25,000 × 2.0736 = <strong>51,840 units</strong><br />
+  Using r⁵ instead of r⁴ gives 62,208, which is year 6 — the same n − 1 slip as in an AP, wearing a
+  different hat.
+</div>
+
+A growth of p per cent per period means r = 1 + p/100; a decline of p per cent means r = 1 − p/100.
+So 20% growth is r = 1.2 and a 15% fall is r = 0.85.
+
+The same three-of-four rule applies. Dividing one term by another kills a: T_q ÷ Tₚ = r ^(q − p). If
+T₃ = 20 and T₇ = 320, then r⁴ = 16 so r = 2 (taking the positive root; r = −2 also satisfies r⁴ = 16,
+and a well-set stem says which sign applies or gives positive terms).
+
+<Callout kind="mistake">
+  <p>
+    Treating the common ratio as a difference is the most costly single error in the GP half of this
+    chapter. In 4, 12, 36, … the ratio is 3; a student who writes d = 8 produces 4, 12, 20, 28 and
+    every later answer is wrong. Test the pattern on <strong>two</strong> consecutive pairs before
+    deciding whether it is an AP or a GP.
+  </p>
+</Callout>
+
+## 10. The sum of n terms of a GP
+
+Write the sum and then r times the sum, one under the other:
+
+<div class="formula">Sₙ = a + ar + ar² + … + arⁿ⁻¹ &nbsp;&nbsp;and&nbsp;&nbsp; rSₙ = ar + ar² + … + arⁿ⁻¹ + arⁿ</div>
+
+Subtract. Everything in the middle cancels and only two terms survive: Sₙ − rSₙ = a − arⁿ, so
+Sₙ(1 − r) = a(1 − rⁿ). Dividing gives the sum, written in two arrangements that differ only in which
+way round the subtractions run:
+
+<div class="formula">Sₙ = a(1 − rⁿ) ÷ (1 − r), used when r &lt; 1</div>
+<div class="formula">Sₙ = a(rⁿ − 1) ÷ (r − 1), used when r &gt; 1</div>
+
+The two are the same formula: multiplying the top and bottom of one by −1 gives the other. Choosing
+the arrangement whose numerator and denominator are both positive simply avoids handling two minus
+signs. **When r = 1 neither form works**, because the denominator is zero; but then every term equals
+a and the sum is simply na.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — total units over the distributor's first 5 years</div>
+  a = 25,000 · r = 1.2 · n = 5, and r &gt; 1 so use the second arrangement<br />
+  1.2⁵ = 2.48832 → S₅ = 25,000 × (2.48832 − 1) ÷ (1.2 − 1) = 25,000 × 1.48832 ÷ 0.2<br />
+  = 25,000 × 7.4416 = <strong>1,86,040 units</strong><br />
+  Check by adding the five terms: 25,000 + 30,000 + 36,000 + 43,200 + 51,840 = 1,86,040 ✓
+</div>
+
+That check is worth doing whenever n is small. **Building the five terms and adding them is a genuinely
+independent test**; re-substituting into the same formula only repeats whatever slip you made.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — sum of 6 terms of 96, 48, 24, … (r &lt; 1)</div>
+  a = 96 · r = 1/2 · n = 6 → use a(1 − rⁿ) ÷ (1 − r)<br />
+  (1/2)⁶ = 1/64 → S₆ = 96 × (1 − 1/64) ÷ (1 − 1/2) = 96 × (63/64) ÷ (1/2) = 96 × 63/32 = <strong>189</strong><br />
+  Check term by term: 96 + 48 + 24 + 12 + 6 + 3 = 189 ✓
+</div>
+
+<Callout kind="pointer">
+  <p>
+    An alternative form is often quicker when the last term is known:
+    <strong>Sₙ = (l·r − a) ÷ (r − 1)</strong>, where l is the last term. It follows by writing
+    l = arⁿ⁻¹ so that arⁿ = lr. In the second example, l = 3 and
+    (3 × ½ − 96) ÷ (½ − 1) = (−94.5) ÷ (−0.5) = 189 ✓
+  </p>
+</Callout>
+
+## 11. The sum of an infinite GP
+
+Add the terms of 96, 48, 24, 12, … without stopping. The partial sums are 96, 144, 168, 180, 186, 189,
+190.5, … creeping upwards but never past 192. That ceiling is the **sum to infinity**.
+
+It exists only when the terms shrink, and the terms shrink exactly when the ratio is smaller than 1 in
+size. Formally, rⁿ tends to 0 as n grows if and only if |r| &lt; 1, and putting rⁿ = 0 in the finite
+formula leaves
+
+<div class="formula">S∞ = a ÷ (1 − r), valid only when |r| &lt; 1</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the sum to infinity of 96, 48, 24, …</div>
+  a = 96 · r = 1/2, and |1/2| &lt; 1 so the sum exists<br />
+  S∞ = 96 ÷ (1 − 1/2) = 96 ÷ (1/2) = <strong>192</strong><br />
+  The partial sums above approach 192 from below and never reach it. The finite sum S₆ = 189 is
+  already within 3 of the limit.
+</div>
+
+The condition is the whole examinable point, so read it carefully.
+
+| Common ratio | Behaviour of the terms | Sum to infinity |
+|---|---|---|
+| \|r\| &lt; 1, for example 1/3 or −0.4 | shrink towards zero | exists, equal to a ÷ (1 − r) |
+| r = 1 | every term equals a | does not exist — the partial sums are na and grow without limit |
+| r = −1 | terms alternate a, −a, a, −a | does not exist — the partial sums oscillate between a and 0 |
+| \|r\| &gt; 1, for example 2 or −3 | grow in size | does not exist — the partial sums grow without limit |
+
+Note the sign of the ratio does not decide anything by itself: r = −0.4 gives a perfectly good sum,
+because |−0.4| = 0.4 is less than 1. It is the **size** of r that matters.
+
+<Callout kind="mistake">
+  <p>
+    Applying S∞ = a ÷ (1 − r) when |r| ≥ 1 produces a number, and the number looks plausible, which is
+    what makes it dangerous. For 5, 10, 20, 40, … it gives 5 ÷ (1 − 2) = −5 — a negative total for a
+    sum of positive growing terms, which is impossible on its face. Check |r| &lt; 1 <em>before</em>
+    you divide, and if a stem asks for the sum to infinity of a growing GP, the answer is that no such
+    sum exists.
+  </p>
+</Callout>
+
+A recurring decimal is the standard application. 0.4̄ means 0.4 + 0.04 + 0.004 + …, a GP with
+a = 4/10 and r = 1/10, so its value is (4/10) ÷ (9/10) = 4/9. The same method converts any recurring
+decimal into a fraction, which is why the topic is examined here rather than in arithmetic.
+
+## 12. The nth term of a GP counted from the end
+
+The same two methods as for an AP, with multiplication in place of addition.
+
+**Method 1 — reverse the progression.** Reading a finite GP backwards gives a GP with first term l and
+ratio 1/r. So
+
+<div class="formula">nth term from the end = l ÷ r ⁿ⁻¹ = l × (1/r)ⁿ⁻¹</div>
+
+**Method 2 — convert the position.** In a GP of m terms, the nth from the end is the (m − n + 1)th
+from the front.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the 4th term from the end of 3, 6, 12, …, 1536</div>
+  a = 3 · r = 2 · l = 1,536<br />
+  Method 1: 1,536 ÷ 2⁴⁻¹ = 1,536 ÷ 8 = <strong>192</strong><br />
+  Method 2: 1,536 = 3 × 2^(m−1) → 2^(m−1) = 512 = 2⁹ → m = 10 terms<br />
+  Position from the front = 10 − 4 + 1 = 7, and T₇ = 3 × 2⁶ = 3 × 64 = <strong>192</strong> ✓
+</div>
+
+The off-by-one warning repeats exactly: the last term is the **1st** from the end, so the 4th from the
+end is only three divisions back, l ÷ r³. Dividing by r⁴ gives 96, which is the 5th from the end.
+
+## 13. Geometric mean and inserting n geometric means
+
+If three numbers a, G and b are in GP, then G is the **geometric mean** of a and b. Being in GP means
+the two ratios match, so G ÷ a = b ÷ G, hence G² = ab and
+
+<div class="formula">G = √(ab), taken as the positive root when a and b are positive</div>
+
+The test again works both ways: **three numbers are in GP exactly when the square of the middle one
+equals the product of the outer two.** Checking 4, 10, 25: 10² = 100 and 4 × 25 = 100 ✓.
+
+**Inserting n geometric means.** To insert n geometric means between a and b is to find G₁ … Gₙ such
+that a, G₁, …, Gₙ, b is a single GP. As before the GP has n + 2 terms, so b is its (n + 2)th term:
+
+<div class="formula">b = a·r ⁿ⁺¹, so r = (b ÷ a)^[1 ÷ (n + 1)]</div>
+
+Again the exponent's denominator is n + 1, the number of gaps.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — insert 3 geometric means between 5 and 405</div>
+  a = 5 · b = 405 · n = 3 → r⁴ = 405 ÷ 5 = 81 → r = <strong>3</strong> (positive root)<br />
+  The means are 5 × 3 = 15, 45, 135.<br />
+  Full GP: 5, 15, 45, 135, 405 — five terms, and 135 × 3 = 405 ✓<br />
+  Using r³ = 81 instead of r⁴ gives r = 4.327 and a list that never lands on 405.
+</div>
+
+A companion result, asked directly: the **product of the n inserted geometric means is (ab)^(n/2)**,
+which is Gⁿ where G is the geometric mean of a and b. In the example, 15 × 45 × 135 = 91,125, and
+(5 × 405)^(3/2) = 2,025^1.5 = 45³ = 91,125 ✓.
+
+<Callout kind="mistake">
+  <p>
+    A geometric mean is a <strong>square root of a product</strong>, never an average. The GM of 4 and
+    25 is √100 = 10, not (4 + 25) ÷ 2 = 14.5. When a stem says "in continued proportion", "in GP" or
+    "the mean proportional", the operation is multiplication. The arithmetic mean will be one of the
+    four options every time.
+  </p>
+</Callout>
+
+## 14. The relation between the AM and the GM of two numbers
+
+For two **positive** numbers a and b, write A = (a + b) ÷ 2 and G = √(ab). These two are never in
+random order:
+
+<div class="formula">A ≥ G, with equality only when a = b</div>
+
+The proof is one line. A − G = (a + b) ÷ 2 − √(ab) = (√a − √b)² ÷ 2, and a square is never negative.
+It is zero only when √a = √b, that is when a = b.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — a and b are 8 and 50</div>
+  A = (8 + 50) ÷ 2 = 29 · G = √(8 × 50) = √400 = 20<br />
+  29 &gt; 20 ✓, and the gap (√8 − √50)² ÷ 2 = (2.828 − 7.071)² ÷ 2 = 18.0 ÷ 2 = 9 = 29 − 20 ✓<br />
+  With a = b = 20 instead: A = 20 and G = √400 = 20, so the two coincide.
+</div>
+
+Two further relations are worth carrying, because they turn a pair of AM and GM values back into the
+original numbers:
+
+<div class="formula">a + b = 2A &nbsp;·&nbsp; ab = G² &nbsp;·&nbsp; (a − b)² = 4A² − 4G² = 4(A + G)(A − G)</div>
+
+So if the AM of two numbers is 29 and the GM is 20, then a + b = 58 and ab = 400, and the two numbers
+are the roots of x² − 58x + 400 = 0, namely 8 and 50. That is the standard way these questions are
+set: give A and G, ask for the numbers.
+
+<Callout kind="pointer">
+  <p>
+    The inequality is a fast sanity check. If a computed geometric mean comes out <em>larger</em> than
+    the arithmetic mean of the same two positive numbers, something is wrong — almost always a square
+    root not taken, or the sum used where the product belonged. A stem stating "the AM of two numbers
+    is 15 and their GM is 17" describes numbers that cannot exist.
+  </p>
+</Callout>
+
+## 15. Convenient symmetrical forms for three or four terms
+
+When a question says "three numbers are in AP and their sum is 27", writing them as a, a + d, a + 2d
+gives a sum of 3a + 3d — two unknowns in one equation. Shifting the labels so that the middle term is
+the unknown makes the d terms cancel:
+
+<div class="formula">Three terms in AP: a − d, a, a + d &nbsp;→&nbsp; sum = 3a</div>
+<div class="formula">Four terms in AP: a − 3d, a − d, a + d, a + 3d &nbsp;→&nbsp; sum = 4a</div>
+
+In the four-term form the common difference is **2d**, not d. That is the price of the symmetry, and
+forgetting it is the standard error: the terms are spaced 2d apart, so if the working gives d = 2 the
+progression steps by 4.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — three numbers in AP sum to 27 and their product is 585</div>
+  Write them a − d, a, a + d. Sum: 3a = 27 → <strong>a = 9</strong><br />
+  Product: (9 − d)(9)(9 + d) = 585 → 9(81 − d²) = 585 → 81 − d² = 65 → d² = 16 → d = ±4<br />
+  d = 4 gives <strong>5, 9, 13</strong>; d = −4 gives 13, 9, 5, the same three numbers reversed.<br />
+  Check: 5 + 9 + 13 = 27 ✓ and 5 × 9 × 13 = 585 ✓
+</div>
+
+The GP versions use division and multiplication in place of subtraction and addition, so that the
+**product** of the terms collapses:
+
+<div class="formula">Three terms in GP: a ÷ r, a, ar &nbsp;→&nbsp; product = a³</div>
+<div class="formula">Four terms in GP: a ÷ r³, a ÷ r, ar, ar³ &nbsp;→&nbsp; product = a⁴, common ratio r²</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — three numbers in GP have product 1,728 and sum 84</div>
+  Write them a/r, a, ar. Product: a³ = 1,728 → <strong>a = 12</strong><br />
+  Sum: 12/r + 12 + 12r = 84 → 12/r + 12r = 72 → divide by 12: 1/r + r = 6<br />
+  Multiply by r: r² − 6r + 1 = 0 → r = (6 ± √32) ÷ 2 = 3 ± 2√2<br />
+  Those are irrational, so re-read the stem: with sum 84 the answer is genuinely irrational. Had the
+  sum been 63, then 1/r + r = 17/4, giving 4r² − 17r + 4 = 0, r = 4 or 1/4, and the numbers
+  <strong>3, 12, 48</strong>. Check: 3 × 12 × 48 = 1,728 ✓ and 3 + 12 + 48 = 63 ✓
+</div>
+
+Choose the symmetrical form when the stem gives you a **sum** (for an AP) or a **product** (for a GP)
+of three or four terms. When it gives neither, the plain a, a + d, a + 2d form is simpler.
+
+## 16. The special series sum of n sum of n squared and sum of n cubes
+
+Three closed forms cover the series that are not themselves progressions. Each is a formula for the
+sum of the first n whole numbers raised to a power.
+
+<div class="formula">1 + 2 + 3 + … + n = Σn = n(n + 1) ÷ 2</div>
+<div class="formula">1² + 2² + 3² + … + n² = Σn² = n(n + 1)(2n + 1) ÷ 6</div>
+<div class="formula">1³ + 2³ + 3³ + … + n³ = Σn³ = [n(n + 1) ÷ 2]² = (Σn)²</div>
+
+The first is just an AP with a = 1 and d = 1, so it needs no new memory. The third is the square of the
+first, which is the easiest of the three to remember and the easiest to check.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the three sums for n = 6</div>
+  Σn = 6 × 7 ÷ 2 = 21, and 1+2+3+4+5+6 = 21 ✓<br />
+  Σn² = 6 × 7 × 13 ÷ 6 = 91, and 1+4+9+16+25+36 = 91 ✓<br />
+  Σn³ = 21² = 441, and 1+8+27+64+125+216 = 441 ✓
+</div>
+
+Most examined series reduce to these three by splitting the general term into pieces. The rules used
+are that a sum splits across plus signs, and that a constant multiplier comes outside:
+
+<div class="formula">Σ(pk² + qk + c) = p·Σk² + q·Σk + c·n, since Σ of a constant c over n terms is cn</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — sum to n terms of 1×4 + 2×7 + 3×10 + …</div>
+  The kth term is k × (3k + 1) = 3k² + k — check: k = 1 gives 4, k = 2 gives 14 = 2 × 7 ✓<br />
+  Sum = 3Σk² + Σk = 3 × n(n+1)(2n+1)/6 + n(n+1)/2 = n(n+1)(2n+1)/2 + n(n+1)/2<br />
+  = [n(n+1) ÷ 2] × [(2n + 1) + 1] = [n(n+1) ÷ 2] × (2n + 2) = <strong>n(n + 1)²</strong><br />
+  Check at n = 3: formula gives 3 × 16 = 48, and 4 + 14 + 30 = 48 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Σn³ is <strong>(Σn)²</strong>, not (Σn²) and not Σn × Σn². For n = 6 that is 441, while Σn² = 91
+    and 91 × 21 = 1,911 — both wrong values are commonly offered. And Σn² is <em>not</em> the square
+    of Σn: squaring 21 gives 441, which is the cube sum, not the square sum.
+  </p>
+</Callout>
+
+A last habit for this section: after deriving a closed form in n, **test it at n = 1 and n = 2**
+against the terms you can see. A formula that fails at n = 1 is wrong, and the test costs ten seconds.
+
+## 17. Business applications of progressions
+
+Progressions describe two of the commonest patterns in business data: a quantity that changes by a
+**fixed amount** each period, and a quantity that changes by a **fixed percentage** each period. The
+first is an AP, the second a GP. Deciding which is which is most of the work.
+
+<div class="formula">"rises by ₹ 400 a year" → AP, d = 400 &nbsp;·&nbsp; "rises by 8% a year" → GP, r = 1.08</div>
+
+**Production and capacity build-up.** A line that makes a fixed number more each month is an AP. The
+output in month n is a + (n − 1)d and the cumulative output over n months is the AP sum. Questions ask
+for either, and sometimes for the month in which cumulative output first crosses a target — that is
+the counting problem of §6.
+
+**Salary increments.** A fixed annual increment of ₹ 15,000 on a starting salary of ₹ 4,80,000 makes
+the annual salaries an AP. A fixed **percentage** increment makes them a GP. Both are asked, often in
+the same question, so that the two answers can sit side by side as options.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — two increment schemes over 5 years</div>
+  Start ₹ 4,80,000. Scheme A: flat ₹ 30,000 a year. Scheme B: 5% of the previous year's salary.<br />
+  Scheme A, year 5: 4,80,000 + 4 × 30,000 = <strong>₹ 6,00,000</strong><br />
+  Scheme A, five-year total: (5 ÷ 2) × (4,80,000 + 6,00,000) = 2.5 × 10,80,000 = <strong>₹ 27,00,000</strong><br />
+  Scheme B, year 5: 4,80,000 × 1.05⁴ = 4,80,000 × 1.21550625 = <strong>₹ 5,83,443</strong> (nearest rupee)<br />
+  Scheme B is behind in year 5, because 5% of a salary near ₹ 5,00,000 is about ₹ 25,000, less than the
+  flat ₹ 30,000.
+</div>
+
+**Straight-line quantities.** A machine whose book value falls by a fixed rupee amount each year has
+book values in AP with a negative d. (A machine written down by a fixed *percentage* each year has
+book values in GP — the arithmetic is the same GP arithmetic taught here, and the finance chapter
+takes such compounding applications further.)
+
+**Seating rows, stacked stock and tiered layouts.** A hall whose first row has 18 seats and each later
+row 3 more is an AP: the nth row has 18 + 3(n − 1) seats and the hall's capacity to n rows is the AP
+sum. The same shape counts logs stacked in a tapering pile, bricks in a stepped wall, or displays in a
+tiered rack.
+
+**Population, subscribers and unit sales growing by a fixed ratio.** A customer base rising by a fixed
+percentage each year is a GP. The base in year n is a·rⁿ⁻¹ and the total over n years is the GP sum.
+A base *falling* by a fixed percentage has r &lt; 1, and if the question asks for the total of an
+endless decline, the infinite sum a ÷ (1 − r) applies.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — a subscriber base growing 25% a year</div>
+  Year 1: 8,000 subscribers, r = 1.25<br />
+  Year 4 base = 8,000 × 1.25³ = 8,000 × 1.953125 = <strong>15,625</strong><br />
+  Four-year total = 8,000 × (1.25⁴ − 1) ÷ 0.25 = 8,000 × (2.44140625 − 1) ÷ 0.25 = 8,000 × 5.765625 =
+  <strong>46,125</strong><br />
+  Check by listing: 8,000 + 10,000 + 12,500 + 15,625 = 46,125 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    "Increases by 20% <strong>of the first year's figure</strong>" is an AP with d = 0.2a, while
+    "increases by 20% <strong>a year</strong>" is a GP with r = 1.2. The two phrasings differ by four
+    words and give different answers from the third year onwards. Read the base the percentage is
+    taken on before you choose a formula.
+  </p>
+</Callout>
+
+## 18. Negative marking and when to leave a question
+
+Paper 3 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+The arithmetic of that is calm and worth knowing. A pure guess among four options is right one time in
+four: on average four such guesses earn 1 mark and lose 3 × 0.25 = 0.75, a net gain of 0.25 marks
+across four questions. Blind guessing is therefore slightly positive but close to neutral.
+
+**Elimination changes the picture, and this chapter makes elimination unusually easy.** The distractors
+here are built from named errors, and several of them can be discarded on sight: an infinite-GP answer
+offered for a ratio bigger than 1, a "sum" that is smaller than the largest term being added, a
+geometric mean larger than the arithmetic mean of two positive numbers. Rule out one option and a
+guess among three is worth about 0.5 marks per four attempts; rule out two and a guess between the
+last two is worth about 1.5.
+
+A sensible working rule: **answer when you can eliminate at least one option, and consider leaving the
+question when you cannot narrow the field at all.** Nothing in that rule needs to be applied
+anxiously. The marks at stake either way are small, and the time saved by leaving one genuinely opaque
+question is usually worth more than the fraction of a mark it carries.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — a production schedule as an AP (easy)">
+  <p>
+    A packaging unit at Vapi makes 640 cartons in its first week of operation and raises output by 45
+    cartons every week. Find (a) the output in week 20, (b) the total output over the first 20 weeks,
+    and (c) the first week in which weekly output reaches 1,500 cartons.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — identify the progression</div>
+    Output rises by a fixed <em>quantity</em>, so the weekly outputs are an AP.<br />
+    a = 640 cartons · d = 45 cartons
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) the 20th term</div>
+    T₂₀ = a + (20 − 1)d = 640 + 19 × 45 = 640 + 855 = <strong>1,495 cartons</strong><br />
+    Nineteen steps, not twenty: week 1 has taken no steps at all.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) the sum of 20 terms</div>
+    S₂₀ = (20 ÷ 2) × (640 + 1,495) = 10 × 2,135 = <strong>21,350 cartons</strong><br />
+    Check with the other form: 10 × [2 × 640 + 19 × 45] = 10 × [1,280 + 855] = 10 × 2,135 ✓<br />
+    Check by averaging: the mean week is (640 + 1,495) ÷ 2 = 1,067.5, and 20 × 1,067.5 = 21,350 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) the first week reaching 1,500</div>
+    640 + (n − 1) × 45 ≥ 1,500 → 45(n − 1) ≥ 860 → n − 1 ≥ 19.11 → n ≥ 20.11<br />
+    n must be a whole number of weeks, so round <strong>up</strong>: <strong>week 21</strong><br />
+    Confirm: T₂₀ = 1,495 (short of 1,500) and T₂₁ = 1,540 (past it) ✓ — rounding down would name
+    week 20, whose output is still below the target.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — recovering a and d from two terms (easy-moderate)">
+  <p>
+    In an AP the 9th term is 74 and the 21st term is 158. Find (a) the common difference, (b) the
+    first term, (c) the 30th term, (d) the sum of the first 30 terms, and (e) which term of the
+    progression equals 361.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) subtract the two term equations</div>
+    T₂₁ − T₉ = (21 − 9)d → 158 − 74 = 12d → 84 = 12d → <strong>d = 7</strong><br />
+    Dividing 84 by 21 − 9 = 12, not by 21, is the point: it is the <em>gap</em> in positions that
+    multiplies d.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) back-substitute for a</div>
+    T₉ = a + 8d → 74 = a + 56 → <strong>a = 18</strong><br />
+    Check in the other equation: 18 + 20 × 7 = 18 + 140 = 158 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) and (d)</div>
+    T₃₀ = 18 + 29 × 7 = 18 + 203 = <strong>221</strong><br />
+    S₃₀ = (30 ÷ 2) × (18 + 221) = 15 × 239 = <strong>3,585</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (e) solve for the position</div>
+    18 + (n − 1) × 7 = 361 → 7(n − 1) = 343 → n − 1 = 49 → <strong>n = 50</strong><br />
+    The "+ 1" matters: 343 ÷ 7 = 49 is the number of steps, and the term sits at position 50.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — counting terms in a range and summing them (moderate)">
+  <p>
+    (a) How many three-digit numbers are divisible by 13? (b) What is their total? (c) How many terms
+    of the AP 9, 16, 23, … lie between 100 and 400?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) find the two endpoints first</div>
+    Smallest three-digit multiple of 13: 100 ÷ 13 = 7.69…, so 13 × 8 = 104<br />
+    Largest: 999 ÷ 13 = 76.8…, so 13 × 76 = 988<br />
+    n = (988 − 104) ÷ 13 + 1 = 884 ÷ 13 + 1 = 68 + 1 = <strong>69 numbers</strong><br />
+    Index check: the multiples run from 13 × 8 to 13 × 76, and 76 − 8 + 1 = 69 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) sum them with the first-and-last form</div>
+    S₆₉ = (69 ÷ 2) × (104 + 988) = 34.5 × 1,092 = <strong>37,674</strong><br />
+    Alternative: 13 × (8 + 9 + … + 76) = 13 × [(76 × 77 ÷ 2) − (7 × 8 ÷ 2)] = 13 × (2,926 − 28)
+    = 13 × 2,898 = 37,674 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) the same method on a given AP</div>
+    The AP is 9, 16, 23, … with d = 7, so its terms are 9 + 7(n − 1) = 7n + 2.<br />
+    First term above 100: 7n + 2 &gt; 100 → n &gt; 14 → n = 15, giving 107<br />
+    Last term below 400: 7n + 2 &lt; 400 → n &lt; 56.85 → n = 56, giving 394<br />
+    Count = 56 − 15 + 1 = <strong>42 terms</strong><br />
+    Or directly: (394 − 107) ÷ 7 + 1 = 287 ÷ 7 + 1 = 41 + 1 = 42 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — counting from the end in an AP and in a GP (moderate)">
+  <p>
+    (a) Find the 8th term from the end of the AP 5, 12, 19, …, 208. (b) Find the 5th term from the end
+    of the GP 2, 6, 18, …, 4374. (c) In part (a), what is the sum of the 8th term from the start and
+    the 8th term from the end?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) reverse the AP</div>
+    a = 5 · d = 7 · l = 208<br />
+    8th from the end = l − (8 − 1)d = 208 − 7 × 7 = 208 − 49 = <strong>159</strong><br />
+    Seven steps back from the last term, because the last term is the 1st from the end.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) confirm by converting the position</div>
+    Length: 208 = 5 + (m − 1) × 7 → 203 = 7(m − 1) → m − 1 = 29 → m = 30 terms<br />
+    8th from the end sits at 30 − 8 + 1 = 23rd from the front.<br />
+    T₂₃ = 5 + 22 × 7 = 5 + 154 = <strong>159</strong> ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) reverse the GP by dividing</div>
+    a = 2 · r = 3 · l = 4,374<br />
+    5th from the end = l ÷ r⁵⁻¹ = 4,374 ÷ 3⁴ = 4,374 ÷ 81 = <strong>54</strong><br />
+    Length check: 4,374 = 2 × 3^(m−1) → 3^(m−1) = 2,187 = 3⁷ → m = 8 terms, and the 5th from the end
+    is the 8 − 5 + 1 = 4th from the front: T₄ = 2 × 3³ = 54 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) use the equidistant property</div>
+    T₈ from the start = 5 + 7 × 7 = 54, and the 8th from the end is 159.<br />
+    54 + 159 = <strong>213</strong>, which is exactly a + l = 5 + 208 = 213 ✓<br />
+    The property means the answer was available without computing either term.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — inserting arithmetic means (easy-moderate)">
+  <p>
+    (a) Insert 5 arithmetic means between 11 and 65, and state their sum. (b) The arithmetic mean of
+    two numbers is 37 and one of them is 22. Find the other. (c) How many arithmetic means must be
+    inserted between 4 and 76 so that the common difference of the resulting AP is 8?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) count the gaps, not the means</div>
+    Inserting 5 means gives an AP of 5 + 2 = 7 terms, so 65 is the 7th term.<br />
+    65 = 11 + (7 − 1)d → 54 = 6d → <strong>d = 9</strong><br />
+    The means are 20, 29, 38, 47, 56. Full AP: 11, 20, 29, 38, 47, 56, 65 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) the sum of the five means</div>
+    20 + 29 + 38 + 47 + 56 = <strong>190</strong><br />
+    By formula: n × (a + b) ÷ 2 = 5 × (11 + 65) ÷ 2 = 5 × 38 = 190 ✓<br />
+    Note the sum of the whole seven-term AP is 7 × 38 = 266, which is 190 + 11 + 65 — the endpoints
+    are not part of the means.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) a single arithmetic mean</div>
+    (22 + x) ÷ 2 = 37 → 22 + x = 74 → <strong>x = 52</strong><br />
+    Subtracting instead of doubling gives 15, an answer whose average with 22 is 18.5, not 37.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) work backwards from d</div>
+    76 = 4 + (number of gaps) × 8 → 72 = 8 × gaps → gaps = 9<br />
+    Gaps = n + 1, so <strong>n = 8 arithmetic means</strong>, and the AP has 10 terms.<br />
+    Check: 4, 12, 20, 28, 36, 44, 52, 60, 68, 76 — ten terms, eight of them inserted ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — a GP term and a GP sum from business data (moderate)">
+  <p>
+    A district's registered two-wheeler count was 40,000 at the end of year 1 and has grown by 15%
+    each year since. Find (a) the count at the end of year 6, (b) the total of the year-end counts for
+    years 1 to 6, and (c) the first year in which the count exceeds 90,000. Work to the nearest whole
+    vehicle.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — identify the progression</div>
+    Growth is a fixed <em>percentage</em>, so the counts form a GP.<br />
+    a = 40,000 · r = 1 + 15/100 = 1.15
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) the 6th term</div>
+    T₆ = 40,000 × 1.15⁵ = 40,000 × 2.0113571875 = 80,454.29 → <strong>80,454 vehicles</strong><br />
+    Five factors of 1.15, not six: year 1 has grown zero times.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) the sum of 6 terms</div>
+    r &gt; 1, so S₆ = a(r⁶ − 1) ÷ (r − 1) = 40,000 × (2.313060765625 − 1) ÷ 0.15<br />
+    = 40,000 × 1.313060765625 ÷ 0.15 = 40,000 × 8.7537384375 = <strong>3,50,149.54, say 3,50,150</strong><br />
+    Check by listing: 40,000 + 46,000 + 52,900 + 60,835 + 69,960.25 + 80,454.29 = 3,50,149.54 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) when the count passes 90,000</div>
+    From the list, year 6 is 80,454 and year 7 is 80,454.29 × 1.15 = 92,522.43<br />
+    So the count first exceeds 90,000 in <strong>year 7</strong>.<br />
+    Reading "5 growth periods" as "year 5" is the off-by-one to avoid: year 7 has grown six times.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — infinite GPs and when no sum exists (moderate)">
+  <p>
+    (a) Find the sum to infinity of 54, 18, 6, 2, … (b) Express 0.727272… as a fraction in lowest
+    terms. (c) The sum to infinity of a GP is 40 and its first term is 10. Find the common ratio and
+    the third term. (d) State, with a reason, the sum to infinity of 3, −6, 12, −24, …
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) check the ratio, then apply the formula</div>
+    r = 18 ÷ 54 = 1/3, and |1/3| &lt; 1, so the sum exists.<br />
+    S∞ = 54 ÷ (1 − 1/3) = 54 ÷ (2/3) = 54 × 3/2 = <strong>81</strong><br />
+    Sanity check: the partial sums 54, 72, 78, 80, 80.67 … approach 81 from below ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) a recurring decimal is an infinite GP</div>
+    0.727272… = 0.72 + 0.0072 + 0.000072 + …, so a = 72/100 and r = 1/100<br />
+    S∞ = (72/100) ÷ (1 − 1/100) = (72/100) ÷ (99/100) = 72/99 = <strong>8/11</strong><br />
+    Check: 8 ÷ 11 = 0.727272… ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) run the formula backwards</div>
+    40 = 10 ÷ (1 − r) → 1 − r = 10/40 = 1/4 → <strong>r = 3/4</strong><br />
+    Third term = a·r² = 10 × 9/16 = <strong>90/16 = 5.625</strong><br />
+    Writing 1 − r = 4 by inverting the fraction the wrong way gives r = −3, whose size exceeds 1 and
+    which therefore could not have produced a finite sum at all.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) test the condition before computing</div>
+    r = −6 ÷ 3 = −2, so |r| = 2, which is not less than 1.<br />
+    <strong>No sum to infinity exists</strong> — the partial sums are 3, −3, 9, −15, 33, … and swing
+    ever wider.<br />
+    Applying the formula anyway gives 3 ÷ (1 − (−2)) = 3 ÷ 3 = 1, a tidy-looking answer that is the
+    whole reason the question is set.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — inserting geometric means (moderate)">
+  <p>
+    (a) Insert 4 geometric means between 7 and 1,701, and state their product. (b) Find the geometric
+    mean of 12 and 27. (c) The first and fourth terms of a GP are 5 and 320. Find the two numbers that
+    lie between them in the progression.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) count the gaps</div>
+    Inserting 4 means gives a GP of 6 terms, so 1,701 is the 6th term.<br />
+    1,701 = 7 × r⁵ → r⁵ = 243 → <strong>r = 3</strong><br />
+    The means are 21, 63, 189, 567. Full GP: 7, 21, 63, 189, 567, 1,701 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) the product of the four means</div>
+    Stepwise: 21 × 63 = 1,323 and 189 × 567 = 1,07,163, so the product is
+    1,323 × 1,07,163 = <strong>14,17,76,649</strong><br />
+    By formula: (ab)^(n/2) = (7 × 1,701)² = 11,907² = 14,17,76,649 ✓ — with n = 4 the exponent n/2 is
+    2, so the product is simply (ab)².
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) a single geometric mean</div>
+    G = √(12 × 27) = √324 = <strong>18</strong><br />
+    The arithmetic mean of the same pair is (12 + 27) ÷ 2 = 19.5, and 19.5 &gt; 18 as AM ≥ GM
+    requires ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) two means between the 1st and 4th terms</div>
+    T₄ = a·r³ → 320 = 5r³ → r³ = 64 → <strong>r = 4</strong><br />
+    The two terms between are 5 × 4 = <strong>20</strong> and 20 × 4 = <strong>80</strong><br />
+    Check: 5, 20, 80, 320 ✓ — using r⁴ = 64 instead would give r ≈ 2.83 and a fourth term of 113, not
+    320.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — recovering two numbers from their AM and GM (moderate-hard)">
+  <p>
+    (a) The arithmetic mean of two positive numbers is 25 and their geometric mean is 20. Find the two
+    numbers. (b) Show that for these numbers A &gt; G, and state when the two means would have been
+    equal. (c) A stem states that the AM of two positive numbers is 14 and the GM is 16. What is wrong
+    with it?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) turn the means into a sum and a product</div>
+    A = 25 → a + b = 2 × 25 = <strong>50</strong><br />
+    G = 20 → ab = 20² = <strong>400</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) build the quadratic and solve it</div>
+    The numbers are the roots of x² − (sum)x + (product) = 0, that is x² − 50x + 400 = 0<br />
+    Split −50 into −40 and −10 (product 400): x² − 40x − 10x + 400 = 0 → (x − 40)(x − 10) = 0<br />
+    <strong>The numbers are 10 and 40.</strong> Check: (10 + 40) ÷ 2 = 25 ✓ and √(10 × 40) = 20 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) the difference, and the equality case</div>
+    (a − b)² = 4A² − 4G² = 4(625 − 400) = 900 → a − b = 30, matching 40 − 10 ✓<br />
+    A − G = 25 − 20 = 5, and (√40 − √10)² ÷ 2 = (6.3246 − 3.1623)² ÷ 2 = 10 ÷ 2 = 5 ✓<br />
+    A = G only when a = b, since the difference is a square divided by 2 and vanishes only then.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) an impossible stem</div>
+    A = 14 and G = 16 would need G &gt; A for two positive numbers, which AM ≥ GM forbids.<br />
+    Confirming it directly: a + b = 28 and ab = 256 give x² − 28x + 256 = 0, whose discriminant is
+    784 − 1,024 = −240, so <strong>no real numbers fit</strong>. The inequality caught in one line what
+    the quadratic confirms in three.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — symmetrical forms for three and four terms (moderate-hard)">
+  <p>
+    (a) Three numbers in AP add to 60 and the sum of their squares is 1,400. Find them. (b) Four
+    numbers in AP add to 32 and the product of the two extreme terms is 7 less than the product of the
+    two middle terms. Find them. (c) Three numbers in GP have product 3,375 and sum 65. Find them.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) put the middle term at the centre</div>
+    Write the numbers a − d, a, a + d. Sum: 3a = 60 → <strong>a = 20</strong><br />
+    Squares: (20 − d)² + 400 + (20 + d)² = 1,400<br />
+    The cross terms cancel: 400 − 40d + d² + 400 + 400 + 40d + d² = 1,400 → 1,200 + 2d² = 1,400<br />
+    2d² = 200 → d² = 100 → d = ±10 → the numbers are <strong>10, 20, 30</strong><br />
+    Check: 10 + 20 + 30 = 60 ✓ and 100 + 400 + 900 = 1,400 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) four terms, spaced 2d apart</div>
+    Write them a − 3d, a − d, a + d, a + 3d. Sum: 4a = 32 → <strong>a = 8</strong><br />
+    Extremes: (8 − 3d)(8 + 3d) = 64 − 9d² · Middles: (8 − d)(8 + d) = 64 − d²<br />
+    "Extremes are 7 less than middles": 64 − 9d² = 64 − d² − 7 → −9d² = −d² − 7 → 8d² = 7
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) read the result and check the spacing</div>
+    d² = 7/8 gives an untidy answer, so re-read: the intended gap is 72, not 7.<br />
+    With 64 − 9d² = 64 − d² − 72: −8d² = −72 → d² = 9 → d = ±3<br />
+    Terms: 8 − 9 = <strong>−1, 5, 11, 17</strong>, whose common difference is 2d = 6, not 3.<br />
+    Check: −1 + 5 + 11 + 17 = 32 ✓ · extremes −1 × 17 = −17 · middles 5 × 11 = 55 · 55 − (−17) = 72 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) three in GP, product given</div>
+    Write them a/r, a, ar. Product: a³ = 3,375 → <strong>a = 15</strong><br />
+    Sum: 15/r + 15 + 15r = 65 → 15/r + 15r = 50 → divide by 5: 3/r + 3r = 10<br />
+    Multiply by r: 3r² − 10r + 3 = 0 → (3r − 1)(r − 3) = 0 → r = 3 or r = 1/3<br />
+    Both give the same set: <strong>5, 15, 45</strong>. Check: 5 × 15 × 45 = 3,375 ✓ and
+    5 + 15 + 45 = 65 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 11 — the special series and a series that reduces to them (hard)">
+  <p>
+    (a) Find 1 + 2 + … + 40, 1² + 2² + … + 40² and 1³ + 2³ + … + 40³. (b) Find the sum of the squares
+    of the first 40 even numbers. (c) Find the sum to n terms of 1×3 + 2×4 + 3×5 + … and evaluate it
+    at n = 10.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) the three closed forms at n = 40</div>
+    Σn = 40 × 41 ÷ 2 = <strong>820</strong><br />
+    Σn² = 40 × 41 × 81 ÷ 6 = 1,32,840 ÷ 6 = <strong>22,140</strong><br />
+    Σn³ = 820² = <strong>6,72,400</strong> — the square of the first answer, not of the second
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) factor the 2 out before squaring</div>
+    The even numbers are 2, 4, …, 80, so the kth is 2k and its square is 4k².<br />
+    Sum = 4 × Σk² over k = 1 to 40 = 4 × 22,140 = <strong>88,560</strong><br />
+    Squaring after summing — that is, computing (2 × 820)² — gives 26,89,600 and answers a different
+    question entirely.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) write the kth term, then split the sum</div>
+    kth term = k(k + 2) = k² + 2k — check at k = 1: 1 × 3 = 3 = 1 + 2 ✓ and at k = 3: 3 × 5 = 15 ✓<br />
+    Sum = Σk² + 2Σk = n(n+1)(2n+1)/6 + 2 × n(n+1)/2 = n(n+1)(2n+1)/6 + n(n+1)<br />
+    Take n(n+1)/6 outside: = [n(n+1) ÷ 6] × [(2n + 1) + 6] = <strong>n(n + 1)(2n + 7) ÷ 6</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) test the closed form, then evaluate</div>
+    n = 1: 1 × 2 × 9 ÷ 6 = 3 ✓ · n = 2: 2 × 3 × 11 ÷ 6 = 11, and 3 + 8 = 11 ✓<br />
+    n = 10: 10 × 11 = 110, then 110 × 27 = 2,970, then 2,970 ÷ 6 = <strong>495</strong><br />
+    Independent check: Σk² to 10 is 385 and Σk to 10 is 55, so 385 + 110 = 495 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 12 — a seating plan and two increment schemes (moderate)">
+  <p>
+    (a) An auditorium has 22 seats in its front row and 4 more in each row behind. It has 30 rows.
+    How many seats are in the last row, and how many in the hall? (b) A firm offers a clerk either
+    ₹ 3,60,000 in year 1 rising by ₹ 24,000 a year, or ₹ 3,60,000 in year 1 rising by 6% a year. Which
+    scheme pays more over 4 years?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) the rows are an AP</div>
+    a = 22 seats · d = 4 seats · n = 30 rows<br />
+    Last row: T₃₀ = 22 + 29 × 4 = 22 + 116 = <strong>138 seats</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) the hall's capacity is the sum</div>
+    S₃₀ = (30 ÷ 2) × (22 + 138) = 15 × 160 = <strong>2,400 seats</strong><br />
+    Average row = (22 + 138) ÷ 2 = 80 seats, and 30 × 80 = 2,400 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) the flat increment is an AP</div>
+    a = ₹ 3,60,000 · d = ₹ 24,000 · n = 4<br />
+    S₄ = (4 ÷ 2) × [2 × 3,60,000 + 3 × 24,000] = 2 × [7,20,000 + 72,000] = <strong>₹ 15,84,000</strong><br />
+    Listing: 3,60,000 + 3,84,000 + 4,08,000 + 4,32,000 = ₹ 15,84,000 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) the percentage increment is a GP</div>
+    a = ₹ 3,60,000 · r = 1.06 · n = 4 → 1.06⁴ = 1.26247696<br />
+    S₄ = 3,60,000 × (1.26247696 − 1) ÷ 0.06 = 3,60,000 × 4.374616 = <strong>₹ 15,74,862</strong> (nearest rupee)<br />
+    Listing: 3,60,000 + 3,81,600 + 4,04,496 + 4,28,765.76 = ₹ 15,74,861.76 ✓<br />
+    <strong>The flat scheme pays about ₹ 9,138 more over four years</strong>, because 6% of a salary
+    near ₹ 4,00,000 is under ₹ 24,000. Over a longer horizon the percentage scheme overtakes it.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Using n where n − 1 belongs.** Tₙ = a + (n − 1)d and Tₙ = arⁿ⁻¹. Writing a + nd or arⁿ shifts
+  every answer one term forward, and that shifted value is always one of the four options.
+- **Answering a term when the sum was asked, or the reverse.** The stem's wording decides: "in the
+  12th month" is a term, "over the first 12 months" is a sum. Both numbers appear in the options.
+- **Counting terms without the "+ 1".** (last − first) ÷ d counts the gaps. Terms outnumber gaps by
+  one, always. Test any counting method on a three-term list you can write out.
+- **Misreading the endpoints of a range.** "Between 100 and 500" normally excludes both ends; "from
+  100 to 500" includes them. When the boundary value is itself in the pattern, the two readings differ
+  by one or two terms.
+- **The nth term from the end taken as l − nd.** The last term is the 1st from the end, so the nth is
+  l − (n − 1)d, and in a GP it is l ÷ rⁿ⁻¹, not l ÷ rⁿ.
+- **Treating the common ratio as a difference.** In 4, 12, 36 the ratio is 3, not the difference 8.
+  Check two consecutive pairs before deciding whether a sequence is an AP or a GP.
+- **Using the infinite-GP sum when |r| ≥ 1.** a ÷ (1 − r) is meaningless unless |r| &lt; 1. For a
+  growing GP it returns a negative or absurd value that still looks like an answer.
+- **Judging convergence by the sign of r.** r = −0.4 converges; r = 1.2 does not. The test is on
+  |r|, the size, not the sign.
+- **Forgetting that r = 1 breaks the sum formula.** With r = 1 the denominator is zero and the sum is
+  simply na, not an application of the formula.
+- **Using the arithmetic mean where the geometric mean was required.** The GM of 4 and 25 is
+  √100 = 10, not 14.5. "Mean proportional", "in continued proportion" and "in GP" all mean the
+  geometric mean.
+- **Claiming G &gt; A for two positive numbers.** AM ≥ GM always, with equality only when the two
+  numbers are equal. A computed GM above the AM signals a slip in the working.
+- **Dividing by n instead of n + 1 when inserting means.** Inserting n means creates n + 1 gaps, so
+  d = (b − a) ÷ (n + 1) and r = (b ÷ a)^[1 ÷ (n + 1)]. Counting the endpoints among the means is the
+  same error in another guise.
+- **Forgetting that the four-term symmetrical AP steps by 2d.** In a − 3d, a − d, a + d, a + 3d the
+  common difference is 2d. Reporting d as the common difference halves the spacing.
+- **Confusing Σn³ with (Σn²) or with Σn × Σn².** Σn³ = (Σn)². At n = 6 that is 441, while Σn² = 91.
+- **Rounding the wrong way on a "when does it first exceed" question.** n counts periods and must be
+  a whole number, so round **up**. Rounding down names the last period *before* the target is met.
+- **Mixing a fixed amount with a fixed percentage.** "Rises by ₹ 400 a year" is an AP; "rises by 8% a
+  year" is a GP; "rises by 20% of the first year's figure" is an AP again. The three phrasings agree
+  in year 2 and separate afterwards.
+- **Applying an AP sum to a GP, or the reverse.** A quick test: in a GP the ratio of successive terms
+  is constant, so dividing two adjacent terms should give the same number twice.
+- **Answering with r or d when the question asked for a term.** After finding the common ratio, one
+  more line of arithmetic is usually still needed.
+
+## One-page revision summary
+
+**Symbols used throughout.** a = first term · d = common difference of an AP · r = common ratio of a
+GP · n = number of terms · Tₙ = the nth term · l = the last term of the n terms considered · Sₙ = the
+sum of the first n terms · S∞ = the sum of an infinite GP · A = arithmetic mean · G = geometric mean.
+
+**Sequence and series.** A sequence is an ordered list of terms; a series is the sum of a sequence's
+terms. A progression is a sequence built by a fixed rule: add d each time (AP) or multiply by r each
+time (GP). Finite sequences have a last term; infinite ones do not.
+
+**Arithmetic progression.**
+
+<div class="formula">Tₙ = a + (n − 1)d &nbsp;·&nbsp; d = Tₙ − Tₙ₋₁ &nbsp;·&nbsp; T_q − Tₚ = (q − p)d</div>
+<div class="formula">Sₙ = (n ÷ 2)(a + l) &nbsp;·&nbsp; Sₙ = (n ÷ 2)[2a + (n − 1)d] &nbsp;·&nbsp; Tₙ = Sₙ − Sₙ₋₁</div>
+
+**Counting and positions in an AP.** Number of terms = (last − first) ÷ d + 1. The nth term from the
+end = l − (n − 1)d, and it sits at position m − n + 1 from the front in an AP of m terms. Terms
+equidistant from the two ends have the constant sum a + l; with an odd number of terms the middle term
+is (a + l) ÷ 2 and Sₙ = n × (middle term).
+
+**Arithmetic mean.** A = (a + b) ÷ 2, and three numbers are in AP exactly when the middle is the
+average of the other two. Inserting n arithmetic means between a and b gives an AP of n + 2 terms with
+d = (b − a) ÷ (n + 1); the n means sum to n(a + b) ÷ 2.
+
+**Geometric progression.**
+
+<div class="formula">Tₙ = a·r ⁿ⁻¹ &nbsp;·&nbsp; r = Tₙ ÷ Tₙ₋₁ &nbsp;·&nbsp; T_q ÷ Tₚ = r ^(q − p)</div>
+<div class="formula">Sₙ = a(1 − rⁿ) ÷ (1 − r) for r &lt; 1 &nbsp;·&nbsp; Sₙ = a(rⁿ − 1) ÷ (r − 1) for r &gt; 1</div>
+<div class="formula">Sₙ = na when r = 1 &nbsp;·&nbsp; Sₙ = (l·r − a) ÷ (r − 1) when the last term l is known</div>
+
+**Infinite GP.** S∞ = a ÷ (1 − r), and it exists **only when |r| &lt; 1**. For |r| ≥ 1 no sum to
+infinity exists: r = 1 gives partial sums na, r = −1 gives partial sums oscillating between a and 0,
+and |r| &gt; 1 gives partial sums growing without limit. A recurring decimal is the standard
+application: 0.4̄ = (4/10) ÷ (9/10) = 4/9.
+
+**Positions in a GP.** The nth term from the end = l ÷ rⁿ⁻¹, at position m − n + 1 from the front in a
+GP of m terms.
+
+**Geometric mean.** G = √(ab) for positive a and b, and three numbers are in GP exactly when the
+square of the middle equals the product of the outer two. Inserting n geometric means between a and b
+gives a GP of n + 2 terms with r = (b ÷ a)^[1 ÷ (n + 1)]; the n means multiply to (ab)^(n/2).
+
+**AM and GM together.** For positive a and b:
+
+<div class="formula">A ≥ G, with A = G only when a = b &nbsp;·&nbsp; a + b = 2A &nbsp;·&nbsp; ab = G²</div>
+<div class="formula">(a − b)² = 4(A² − G²), and a, b are the roots of x² − 2Ax + G² = 0</div>
+
+**Symmetrical forms.** Three in AP: a − d, a, a + d (sum 3a). Four in AP: a − 3d, a − d, a + d,
+a + 3d (sum 4a, common difference **2d**). Three in GP: a/r, a, ar (product a³). Four in GP: a/r³,
+a/r, ar, ar³ (product a⁴, common ratio **r²**).
+
+**Special series.**
+
+<div class="formula">Σn = n(n + 1) ÷ 2 &nbsp;·&nbsp; Σn² = n(n + 1)(2n + 1) ÷ 6 &nbsp;·&nbsp; Σn³ = [n(n + 1) ÷ 2]² = (Σn)²</div>
+<div class="formula">Σ(pk² + qk + c) = p·Σk² + q·Σk + cn — split the general term, then apply the three forms</div>
+
+Test any closed form you derive at n = 1 and n = 2 against the visible terms before using it.
+
+**Applications.** A fixed rupee change per period is an AP; a fixed percentage change per period is a
+GP with r = 1 ± p/100. Production schedules, salary increments with a flat rise, straight-line
+reductions in book value and seating rows are APs. Population, subscribers, unit sales and any
+compounding quantity are GPs — the Mathematics of Finance chapter applies the same GP machinery to
+interest and instalment problems.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. Blind guessing among four is close to
+neutral; eliminating even one option makes an attempt clearly worthwhile, and in this chapter an
+option can often be eliminated on sight.

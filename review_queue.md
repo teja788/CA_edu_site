@@ -797,3 +797,946 @@ _No factual corrections were needed to the MDX or the bank during this citations
   examinable content, but a trim pass on §4 (the four comparison tables) and §20
   (ss. 49 to 53, which some presentations skip at Foundation level) is available
   if length is a hard constraint.
+
+## llp-act-2008 — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P2 Ch 5, The Limited Liability Partnership Act
+  2008) authored 10 Aug 2026** — notes (18 numbered sections plus mistakes list
+  and one-page summary, 5 application vignettes with working notes), bank
+  (44 standalone MCQs, 3 case_mcq_sets with 11 sub-MCQs, 7 descriptives;
+  8 numericals, all verifier-proven; answer keys A14/B14/C14/D13 over 55 MCQs),
+  citations (`citations/foundation/business-laws/citations_llp-act-2008.md`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 2 Ch 5
+  (May 2026 ed.)** and the notified text of Act 6 of 2009 **as amended by the
+  LLP (Amendment) Act 2021 (Act 31 of 2021)** on India Code. The bare-act lines
+  were transcribed, not re-fetched, so the whole of the s. 2(1) definition
+  lettering (the clauses are alphabetical and (ta) was inserted into the
+  sequence in 2021) and every penalty quantum need a line-by-line diff.
+
+- [ ] **Every penalty figure is a 2021-amendment figure and none was
+  re-fetched.** The chapter states s. 10 (₹10,000 / ₹5,000 plus ₹100 a day,
+  capped at ₹1,00,000 and ₹50,000 for the LLP, ₹50,000 and ₹25,000 for a
+  partner), s. 13(4) (₹500 a day capped at ₹50,000), s. 25(4) and 25(5)
+  (₹10,000), s. 69 (₹100 a day), s. 74 (₹5,000 to ₹5,00,000 plus ₹50 a day),
+  s. 76A (half penalty, capped at ₹1,00,000 / ₹50,000), s. 20, s. 30(2) and
+  s. 37 (fine bands). Two of them carry answer keys — **q-f2c5-009** (₹50,000,
+  the s. 13(4) cap applied to 132 × ₹500 = ₹66,000, which is the distractor)
+  and **q-f2c5-032** (₹3,700 on a 37-day delay at the s. 69 rate). Both rates
+  and the cap live as named constants at the top of
+  `scripts/verify_numerical/verify_llp-act-2008.py`, so a correction is a
+  one-line change. The chapter deliberately **omits** the s. 34(5) and s. 35(2)
+  quanta because the pre- and post-2021 texts differ; add them if the SM states
+  them.
+
+- [ ] **The audit threshold, read as a disjunction.** Rule 24 of the LLP Rules
+  2009 words the exemption with "or" between two negative limbs, which read
+  literally would exempt an LLP satisfying either limb. The chapter follows the
+  settled reading — **audit required if turnover exceeds ₹40,00,000 OR
+  contribution exceeds ₹25,00,000**, exemption only where both are below — and
+  states it in a formula box in §15, in vignette 3 and in the mistakes list.
+  **q-f2c5-030** is written on it (turnover ₹42,60,000, contribution
+  ₹18,00,000 → audit required). If the SM takes the literal disjunctive
+  reading, that key flips to "no audit". Related and deliberately contrasted:
+  the **small LLP** definition in s. 2(1)(ta) is treated as **cumulative** (both
+  limbs), which carries **q-f2c5-006**. Please confirm both conjunctions.
+
+- [ ] **Day-counting and month-counting conventions.** The chapter counts a
+  period expressed in DAYS **from and excluding** the trigger date (matching the
+  Sale of Goods s. 24 convention), and adds MONTHS by calendar with clamping to
+  the month end, so six months from 31 March is 30 September. Four answers rest
+  on it: **q-f2c5-031** (60 days from 31 March 2027 → 30 May 2027),
+  **q-f2c5-032** (Form 8 due 30 October 2027, 37 days late), **cs-f2c5-03-b**
+  (15 days from 20 August 2026 → 4 September 2026, with the inclusive count,
+  3 September, as a distractor) and **cs-f2c5-02-c** (six months from
+  14 April 2026 → 14 October 2026). Vignettes 3, 4 and 5 use the same
+  conventions in prose. If the SM counts inclusively, every one of those dates
+  moves back a day and `_add_days` / `_add_months` in the verifier must change
+  with them.
+
+- [ ] **s. 6(2) — which obligations reach the sole partner.** **cs-f2c5-02-c**
+  computes ₹23,80,000 on the footing that only obligations incurred **after**
+  the six months have run reach the sole partner personally, the ₹11,50,000
+  incurred inside the six months staying with the LLP under s. 27(3). That
+  reading comes from "for more than six months" and "incurred during that
+  period". Vignette 5 teaches the same split. If the SM reads the liability as
+  attaching to everything from the date the number fell below two, the key
+  becomes ₹35,30,000, which is option A.
+
+- [ ] **s. 64 — the omitted "unable to pay its debts" ground.** **q-f2c5-043**
+  makes that a wrong option, on the footing that clause (c) was omitted by
+  Act 31 of 2021 because LLP insolvency moved to the IBC 2016. This is the
+  single proposition in the chapter most likely to be out of step with an older
+  study material or an older question bank, and it should be confirmed against
+  the amended s. 64 and its commencement notification before the draft badge
+  comes off.
+
+- [ ] **The 120-day residence test for a designated partner.** §9,
+  **q-f2c5-018** and d-f2c5-06 all use 120 days (Explanation to s. 7(1), as
+  substituted in 2021), and q-f2c5-018 is written so that the older 182-day
+  answer is an explicit distractor. Confirm the substitution is in force for the
+  Sept 2026 and Jan 2027 attempts.
+
+- [ ] **Two negative propositions taught as headline traps.** (i) The chapter
+  asserts that the **First Schedule contains no provision for interest** on
+  contribution or on advances, and the mistakes list teaches students not to
+  import the six per cent from s. 13(d) of the 1932 Act. A negative proposition
+  cannot be verified from memory — please read the Schedule through. (ii) The
+  chapter asserts that there is **no provision corresponding to s. 30 of the
+  1932 Act**, so a minor cannot be admitted even to the benefits of an LLP.
+  Both appear in §3, §8, §10 and the one-page summary. The chapter also states
+  the First Schedule has **thirteen** clauses; confirm the count.
+
+- [ ] **Rule-level and practice-level detail stated without a statutory
+  anchor.** (i) The **RUN-LLP / FiLLiP / Form 3 / Form 4 / Form 8 / Form 11**
+  table in §6 and the compliance calendar in §15 are MCA practice, and the claim
+  that **FiLLiP allows DPIN to be applied for by at most two** proposed
+  designated partners changes with the form. (ii) The **50-person ceiling** on a
+  general partnership (s. 464 of the Companies Act 2013 with r. 10 of the
+  Companies (Miscellaneous) Rules 2014) appears in §2 and the §3 table. (iii)
+  **s. 18** is stated in §7 without a limitation period, on purpose, because the
+  2021 amendment altered it — supply the period if the SM gives one. (iv)
+  **s. 75** striking-off uses a **two-year** inactivity period from the rules,
+  not the section. No answer key depends on (ii), (iii) or (iv); (i) supports
+  q-f2c5-032 only through the Form 8 due date.
+
+- [ ] **Scope calls made without the SM in front of me.** (i) **s. 31 (whistle
+  blowing)** and **s. 42 (transferable interest)** are treated at full section
+  depth with a question each (q-f2c5-036, q-f2c5-039); both are sometimes
+  skipped at Foundation level — drop them if the SM does. (ii) **s. 39
+  compounding**, **s. 74 general penalty** and **s. 76A half penalties** are
+  compressed into §18 alongside winding up; only q-f2c5-044 tests them, and it
+  turns solely on "fine only" and on the sum lying between the minimum and the
+  maximum fine, so it survives a change in the compounding authority or period.
+  (iii) The chapter treats **conversion** at Schedule-condition depth including
+  the twelve-month correspondence statement and the preservation of partners'
+  pre-conversion liability (vignette 4, cs-f2c5-03-c); trim if the SM gives
+  conversion only an outline. (iv) The notes are **1,592 lines**, above the
+  1,200–1,500 the brief suggested — the scope list (LLP against both a firm and
+  a company in full tables, the whole First Schedule, ss. 26 to 31 in full, five
+  vignettes) did not compress further without dropping content, but a trim pass
+  is available if length is a hard constraint.
+
+## companies-act-2013 — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P2 Ch 6, The Companies Act 2013) authored
+  10 Aug 2026** — notes (18 numbered sections plus mistakes list and one-page
+  summary, 5 application vignettes with working notes, 1,223 lines), bank
+  (44 standalone MCQs, 3 case_mcq_sets with 12 sub-MCQs, 7 descriptives;
+  8 numericals, all verifier-proven; answer keys A14/B14/C14/D14 over 56 MCQs),
+  citations (`citations/foundation/business-laws/citations_companies-act-2013.md`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 2 Ch 6
+  (May 2026 ed.)** and the notified text of Act 18 of 2013 on India Code. The
+  bare-act lines were transcribed, not re-fetched, so the whole of the s. 2
+  definition numbering used here — 2(6), 2(11), 2(20), 2(21), 2(22), 2(42),
+  2(45), 2(46), 2(52), 2(62), 2(68), 2(69), 2(71), 2(85), 2(87), 2(92) — needs a
+  line-by-line diff.
+
+- [ ] **HIGHEST DRIFT RISK — the small-company thresholds are set by RULES, not
+  by the Act.** ₹ 4,00,00,000 paid-up capital and ₹ 40,00,00,000 turnover are
+  prescribed by the Companies (Specification of Definitions Details) Rules 2014
+  as amended, and have already moved twice (₹ 50 lakh / ₹ 2 crore as enacted,
+  then ₹ 2 crore / ₹ 20 crore, then the present figures). They can be raised
+  again by notification with no amendment to the Act. Two verified numericals
+  depend on them: **q-f2c6-024** (₹ 3.20 crore capital, ₹ 44 crore turnover →
+  NOT small, built with a comfortable margin) and **cs-f2c6-02-c** (₹ 3.90 crore
+  and ₹ 38 crore → small, which sits close to the line and is the fragile one).
+  If the Rules change, update both stems **and** the two constants
+  `SMALL_COMPANY_CAPITAL_LIMIT` / `SMALL_COMPANY_TURNOVER_LIMIT` at the top of
+  `scripts/verify_numerical/verify_companies-act-2013.py`. Also confirm the
+  statutory ceilings of ₹ 10 crore and ₹ 100 crore quoted in §10.
+
+- [ ] **s. 2(87)(ii) — "total voting power" versus "total share capital".**
+  q-f2c6-027 exists only because the Companies (Amendment) Act 2017 substituted
+  "total voting power"; its 67 per cent paid-up-capital distractor is the whole
+  point, and if the older wording were in force the key would flip from B to A.
+  The same amendment is what makes vignette 3(a) work. Confirm the substitution
+  is notified and in force as on 28 Feb 2026.
+
+- [ ] **s. 2(87)(ii) — "either at its own or together with one or more of its
+  subsidiary companies".** cs-f2c6-02-b adds Suvarna's own 34 per cent to its
+  subsidiary Bhagirathi's 19 per cent to reach 53 per cent and a subsidiary
+  relationship. The whole question rests on those words being in the notified
+  clause; without them the answer is 34 per cent and an associate relationship
+  (option B). Please check the exact phrase.
+
+- [ ] **The 20.00 per cent boundary in s. 2(6).** q-f2c6-029 is decided at
+  exactly 20.00 per cent (3,00,000 of 15,00,000 votes) on the reading that
+  "significant influence" means control of **at least** twenty per cent, so the
+  boundary is inclusive. If the notified Explanation reads "more than twenty per
+  cent", the key moves from A to C. The deliberate contrast with the exclusive
+  "more than one-half" comparator in s. 2(87)(ii) also carries q-f2c6-031,
+  vignette 3(c) and one row of the mistakes list.
+
+- [ ] **s. 3A day-counting in cs-f2c6-01-d.** The membership of a private company
+  falls to one on **1 March 2026**; the chapter treats the six-month grace as
+  expiring on **1 September 2026**, so a loan taken on 20 November 2026 is caught
+  and the cognisant member is severally liable for the whole ₹ 12,00,000.
+  q-f2c6-009 uses the same convention (5 January 2026 → 5 July 2026). The
+  section says only "carries on business for more than six months while the
+  number is so reduced"; if the SM counts differently the conclusion survives on
+  these facts (both loans fall well after any plausible expiry) but the stated
+  dates should be re-worded.
+
+- [ ] **Pre-incorporation contracts — the Specific Relief Act qualification is
+  deliberately omitted.** q-f2c6-042 and cs-f2c6-03-a both state flatly that the
+  company can become bound only by a **fresh contract** after incorporation. The
+  Intermediate chapter additionally cites **ss. 15(h) and 19(e) of the Specific
+  Relief Act 1963**, under which such a contract may be specifically enforced by
+  or against the company where it is warranted by the terms of the incorporation
+  and the company has accepted it and communicated the acceptance. That
+  qualification was left out as Intermediate-level detail. If the Foundation SM
+  teaches it, both questions and the §16 note need softening.
+
+- [ ] **Producer companies — Chapter XXIA scope call.** §14 and q-f2c6-038 state
+  that a producer company may be formed by **ten or more individual producers or
+  two or more producer institutions**, that it is treated as a **private
+  company**, and that the **two-hundred-member cap does not apply** to it. The
+  last proposition is drawn from the producer-company chapter read with
+  s. 2(68), not from a single quotable line. Confirm it, and confirm the section
+  range 378A–378ZU (Chapter XXIA was inserted by the Companies (Amendment) Act
+  2020).
+
+- [ ] **Scope boundaries against the Intermediate paper.** The chapter is pitched
+  at Foundation depth and says so in several places, but four calls were made
+  without the SM in front of me. (i) **ss. 4 and 5 are outline only** — the
+  alteration provisions (ss. 13, 14), entrenchment, name reservation and
+  rectification, and the s. 12 registered-office machinery are left to
+  Intermediate; §16 mentions only the thirty-day rule in s. 12. (ii) **s. 2(52)
+  listed company** is answered on the main clause only, the Rule 2A carve-outs
+  being flagged as Intermediate detail (q-f2c6-034 says so in its explanation).
+  (iii) **The layers restriction under s. 2(87)** is mentioned in one line with
+  no Rules detail and no question on it. (iv) **s. 8(11) penalties and the
+  s. 8(9) fund carry no rupee figures**, deliberately, because both have been
+  amended. Drop or expand each if the SM differs.
+
+- [ ] **Deliberate non-duplication with the Intermediate bank.** Every numerical
+  in this chapter was written to avoid the framings already used in
+  `src/data/questions/intermediate/corporate-and-other-laws/preliminary.json`
+  (Tara Weaves, Vyoma Ceramics, Neelkanth Alloys, Sahyadri Infra, Panna/Rewa,
+  Ambika/Bhadra/Chitra/Damodar, Godavari/Halcyon). Names, numbers and the shape
+  of the trap differ in each case, and cs-f2c6-02-b (aggregation with a
+  subsidiary's holding) and cs-f2c6-02-c (an associate is **not** a s. 2(85)
+  exclusion) are framings the Intermediate bank does not test at all. A reviewer
+  cross-reading the two banks should confirm nothing has converged.
+
+## negotiable-instruments-act-1881 — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P2 Ch 7, The Negotiable Instruments Act 1881)
+  authored 10 Aug 2026** — notes (18 numbered sections plus mistakes list and
+  one-page summary, 5 application vignettes with working notes, 1,793 lines),
+  bank (46 standalone MCQs, 3 case_mcq_sets with 9 sub-MCQs, 7 descriptives;
+  9 numericals, all verifier-proven; answer keys A14/B14/C14/D13 over 55 MCQs),
+  citations (`citations/foundation/business-laws/citations_negotiable-instruments-act-1881.md`),
+  verifier (`scripts/verify_numerical/verify_negotiable-instruments-act-1881.py`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 2 Ch 7
+  (May 2026 ed.)** and the notified text of Act 26 of 1881 on India Code. The
+  bare-act lines were transcribed, not re-fetched, so the sub-section and clause
+  lettering of ss. 6, 13, 16, 20, 45A, 82, 85, 118, 131, 138, 141 and 142 needs
+  a line-by-line diff.
+
+- [ ] **ss. 138 to 148 are the high-drift block.** The group was inserted in
+  1988 and amended in 2002, 2015 and 2018. Three figures carry questions and
+  must be confirmed against the current notified text: the **two-year /
+  twice-the-cheque-amount** punishment (d-f2c7-07, vignette 4), the **30-day**
+  demand-notice window (cs-f2c7-03-b, a verified numerical) and the **15-day**
+  payment window feeding the **one-month** complaint limit in s. 142(1)(b)
+  (cs-f2c7-03-c, a verified numerical). Separately, **s. 143A** (interim
+  compensation up to 20%) and **s. 148** (deposit of at least 20% on appeal),
+  both from the 2018 amendment, are mentioned in §18 and in one sentence of
+  vignette 4 but **no question depends on either** — delete both if the May 2026
+  SM does not examine them at Foundation level.
+
+- [ ] **The presentment window in proviso (a) to s. 138.** §17 now states the
+  statutory formula ("six months from the date drawn, or the period of its
+  validity, whichever is earlier") and then says the operative limit is
+  **three months** because of the RBI direction that shortened cheque validity.
+  The three-month figure is **not in the Act**. Confirm which form the SM
+  prints. Nothing turns on it arithmetically — the cheque in cs-f2c7-03 is dated
+  12 May 2026 and presented 24 June 2026, inside either limit — but the wording
+  should match the SM.
+
+- [ ] **Day-counting and the order of operations on maturity (ss. 22 to 25).**
+  Four verified numericals depend on the chapter's stated convention:
+  q-f2c7-037 (30 Nov 2026 + 3 months → 28 Feb 2027 → due **3 Mar 2027**),
+  q-f2c7-038 (3 Aug 2026 + 100 days → 11 Nov 2026 → due **14 Nov 2026**),
+  q-f2c7-039 (accepted 10 Jan 2026, 2 months after sight → due **13 Mar 2026**)
+  and q-f2c7-040 (29 Jun 2026 + 3 months + grace → 2 Oct 2026, a notified
+  holiday → due **1 Oct 2026**). The convention, stated in a pointer in §11 and
+  in the verifier's docstring, is: a period in **days** is counted **from and
+  excluding** the trigger date (s. 24 says exactly this, and it matches the
+  offer-lapse and sale-or-return conventions used in the sibling chapters); a
+  period in **months** ends on the **corresponding date**, else on the last day
+  of that month (s. 23); and the **three days of grace are added BEFORE the
+  s. 25 holiday test**, which then moves the date BACK. If the SM applies s. 25
+  before grace, or counts days inclusively, all four keys move and
+  `_add_days`, `_add_months` and `_grace` in the verifier must move with them.
+  The same convention is applied **by analogy** to the s. 138 periods, which the
+  Act does not spell out — see the next item.
+
+- [ ] **The s. 138 clock, applied by analogy.** cs-f2c7-03-b counts 30 days from
+  and excluding 27 June 2026 (the day the payee received the dishonour memo) to
+  **27 July 2026**. cs-f2c7-03-c counts 15 days from and excluding 6 July 2026
+  (the day the drawer received the notice) to 21 July 2026, treats the cause of
+  action as arising on **22 July 2026**, and then takes "one month" to the
+  corresponding date, **22 August 2026**. The one-month step follows the General
+  Clauses Act s. 9 convention rather than any words in s. 142. A reviewer who
+  prefers a different count should say so, because both keys move together.
+
+- [ ] **"Account payee" is not in the Act.** q-f2c7-035 and step 4 of vignette 5
+  both rest on the proposition that an account-payee crossing is banking
+  practice which bites through the **negligence** limb of s. 131, so a
+  collecting banker who ignores it loses its statutory shield. Settled
+  commercial law, but stated from principle, not from statutory words, and it is
+  the point on which the collecting banker in cs-f2c7-01-c loses. Confirm the SM
+  presents it this way.
+
+- [ ] **Section 20 applied to a cheque (vignette 1 and q-f2c7-017).** Vignette 1
+  runs s. 20 on a **blank cheque** and reasons that, a cheque requiring no
+  stamp, the "amount covered by the stamp" ceiling does not operate — which is
+  what makes the ₹ 6,50,000 answer work against a ₹ 1,20,000 private authority.
+  If the SM confines s. 20 to stamped notes and bills, both the vignette and
+  q-f2c7-017 need rewriting. The same vignette also chains s. 20 into **s. 53**
+  so that Bharani, who knew of the fraud, still recovers; that chain is the
+  single most counter-intuitive proposition in the chapter and is worth a
+  reviewer's eye.
+
+- [ ] **Two list-based questions that move if the notified list moves.**
+  q-f2c7-004 is built by offering "due presentment" as the item **not** in the
+  s. 118 presumptions; if the notified text carries a limb this chapter missed,
+  the key changes. q-f2c7-043 and d-f2c7-06 depend on the membership of the
+  **eight** cases in s. 98 where notice of dishonour is unnecessary; d-f2c7-06
+  puts 1.5 of its 6 marks on that list. Likewise the **materiality list** in §16
+  (date, sum, time of payment, place of payment, rate of interest, new party,
+  unauthorised crossing) comes from the case law and the SM, not from s. 87,
+  and q-f2c7-045 is built by asking which item is not on it.
+
+- [ ] **The drawee in case of need (q-f2c7-012).** The chapter holds that a bill
+  is **not treated as dishonoured until the drawee in case of need has also
+  refused**. That is standard, but it is stated from the scheme of the Act and
+  the SM's treatment rather than from a single quoted sub-section; confirm which
+  section the SM attributes it to.
+
+- [ ] **s. 11 read disjunctively (q-f2c7-021).** The key turns on reading the
+  two limbs of s. 11 as alternatives, so that a bill drawn in India on an Indian
+  resident is **inland** even though payable in Dubai. Check the punctuation of
+  the notified text; a conjunctive reading flips the key.
+
+- [ ] **The boundary against the P1 accounting chapter.** Only the headings and
+  the first 180 lines of
+  `src/pages/foundation/accounting/bills-of-exchange-and-promissory-notes.mdx`
+  were read, to avoid duplication. This chapter is **law only**: no journal
+  entries, no discounting, renewal, rebate on retirement, insolvency or
+  accommodation-bill accounting. It links to the P1 chapter twice (the opening
+  pointer and §14 on noting charges). The **due-date method must agree in both
+  chapters** — expressed day, plus three days of grace, then the s. 25 test
+  moving back — so a reviewer who changes one must change the other in the same
+  PR.
+
+- [ ] **Length.** The notes run to **1,793 lines** against the 1,200–1,500 the
+  brief suggested. The scope list (ss. 4 to 148, five vignettes, six comparison
+  tables, the full ss. 98 and 118 lists, a 24-item mistakes list and a one-page
+  summary) did not compress further without dropping examinable content. A trim
+  pass is available on §12 (ss. 61 to 76, the presentment detail) and §15
+  (ss. 26 to 45A), which are the least heavily examined stretches, if length is
+  a hard constraint.
+
+- [ ] **Verifier output on 10 Aug 2026:**
+  `python scripts/verify_numerical/run.py --bank src/data/questions/foundation/business-laws/negotiable-instruments-act-1881.json`
+  → 9 numerical questions verified, 0 failures. All 56 `readLink` anchors were
+  checked against the headings of the MDX and all resolve.
+
+## equations — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 2, Equations) authored 10 Aug 2026** —
+  notes (18 numbered sections plus a common-mistakes list and a one-page
+  summary, 10 fully worked examples with working notes, 1,176 lines), bank
+  (50 standalone MCQs plus 3 case_mcq_sets carrying 10 sub-MCQs = **60 MCQs, no
+  descriptives**, Paper 3 being wholly objective; **58 numericals, all
+  verifier-proven**; answer keys A15/B15/C15/D15), citations
+  (`citations/foundation/quantitative-aptitude/citations_equations.md`),
+  verifier (`scripts/verify_numerical/verify_equations.py`, 744 lines, one
+  function per numerical id). Reviewer should spot-check the whole chapter
+  against **ICAI SM Paper 3 Ch 2 (May 2026 ed.)**. There is no bare Act to
+  check against, so the citations file records the SM scope, each standard
+  result in its conventional statement, and the editorial conventions instead —
+  items 1 to 7 of its "Reviewer's checklist" are the real work.
+
+- [ ] **`law_as_on_date` is deliberately omitted from the frontmatter.** This
+  chapter states no legal or fiscal position, so there is no cut-off date to
+  pin it to; `applicable_attempts` (Sept 2026, Jan 2027) is present. If the
+  attempt-lint rules are later extended to Paper 3, confirm that a mathematics
+  chapter is exempt from `law_as_on_date` rather than failing CI.
+
+- [ ] **Are complex roots examinable at Foundation?** The chapter stops at
+  "D < 0 → the roots are not real, a conjugate pair of imaginary numbers" and
+  does no arithmetic with i. q-f3c2-022 tests only the classification. If the SM
+  develops complex roots further, §11 and the summary need extending; if the SM
+  avoids "imaginary" altogether, the phrase should be cut back to "no real
+  roots". No answer key moves either way.
+
+- [ ] **Does D = 0 give "one root" or "two equal roots"?** The chapter treats it
+  as **two roots that are equal**, consistent with the degree-n-means-n-roots
+  statement in §2. The §2 "mistake" callout, q-f3c2-021 and the reasoning behind
+  q-f3c2-024's two answers (m = 8 *or* −8) all rest on it. If the SM says "one
+  root", §2, §11 and several explanations need rewording, though no key changes.
+
+- [ ] **How an extraneous root is reported.** q-f3c2-038 and worked example 7
+  state the surviving root only and name the discarded value an extraneous root
+  created by squaring. The alternative house style — list both, mark one
+  "rejected" — would change option wording but not the key. Students match
+  option wording literally, so confirm which form the SM prints.
+
+- [ ] **Rejecting negative roots.** The chapter rejects a negative root only
+  when the situation forbids it (a count of boxes, an age, a digit) and warns
+  in §17 against reflexive rejection; q-f3c2-015, q-f3c2-019 and q-f3c2-027 all
+  have a legitimate negative root. Confirm the SM teaches no blanket rule.
+
+- [ ] **Break-even rounding.** Worked example 1(c) computes 2,666.67 and rounds
+  **up** to 2,667 because 2,666 units still leave a loss. Every bank question is
+  built so the exact answer is a whole number and the verifier's `break_even()`
+  returns an exact `Fraction` without rounding, so no key depends on this — but
+  the rounding direction taught should match the SM's worked patterns.
+
+- [ ] **Two places that may exceed SM depth.** (i) The four-row derived-root
+  table in §13 (roots kα, α + k, 1/α, −α, including the "reverse the
+  coefficients" reciprocal result); only q-f3c2-032 uses it, and only the
+  scaled-roots row. (ii) The α⁴ + β⁴ identity in §14, which no bank question
+  uses. Both can be cut without touching a question. Also confirm the printed
+  subscript order of the cross-multiplication rule in §5 matches the SM's, since
+  some texts print the middle denominator as (a₁c₂ − a₂c₁) against −y.
+
+- [ ] **Negative-marking paragraph (§18).** The expected-value arithmetic —
+  blind guessing among four options being close to neutral, elimination of one
+  option making an attempt clearly worthwhile — follows from 1 / −0.25 / 0 as
+  recorded in `foundationScoring`. Confirm the 0.25 deduction is still ICAI's
+  announced pattern for both attempts before the draft badge comes off.
+
+## ratio-proportion-indices-logarithms — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 1, Ratio and Proportion, Indices,
+  Logarithms) authored 10 Aug 2026** — notes (18 numbered sections plus
+  mistakes list and one-page summary, 11 worked examples with working notes,
+  1,208 lines), bank (50 standalone MCQs, 3 case_mcq_sets with 10 sub-MCQs, and
+  **no descriptives** — Paper 3 is 100% objective; 53 numericals, all
+  verifier-proven; answer keys A15/B15/C15/D15 over 60 MCQs), citations
+  (`citations/foundation/quantitative-aptitude/citations_ratio-proportion-indices-logarithms.md`).
+  This is the first Paper 3 chapter and sets the pattern for the rest: no
+  descriptives, numerical density far above the accounting chapters, and every
+  distractor built from a named error. Reviewer should spot-check scope and
+  depth against **ICAI SM Paper 3, Ch 1 (May 2026 ed.)**. There is no bare Act
+  here, so the citations file records conventional statements of each standard
+  result instead of quoted source lines.
+
+- [ ] **`law_as_on_date` is deliberately omitted from the frontmatter.** The
+  chapter carries `applicable_attempts: ['Sept 2026','Jan 2027']` but states no
+  legal position at any date, and a law-as-on date on a mathematics chapter
+  would tell a reviewer that a statutory cut-off had been checked when none
+  exists. Confirm that `scripts/attempt_lint/` does not require
+  `law_as_on_date` for Foundation P3 (it is specified for the volatile
+  Intermediate law/tax papers), and that the notes page renders without it.
+
+- [ ] **`log` with no base is taken as base 10 throughout.** §15 states this
+  explicitly and distinguishes `ln` (base e), with ln N = 2.3026 log N. No
+  answer key turns on it, because every stem that matters names its base, but
+  if the SM uses `log` for the natural logarithm anywhere in Ch 1, §15 and
+  q-f3c1-046 need re-reading.
+
+- [ ] **Sign convention on the characteristic, and the bar notation.** §16
+  teaches 3̄.6304 as −3 + 0.6304 = −0.3696, with the **mantissa always
+  positive**. q-f3c1-047 (characteristic of log 0.00427 = −3) and q-f3c1-048
+  (mantissa positive and digit-dependent) both rest on it. The keys stand under
+  either presentation, but if the SM teaches the single-negative-decimal form,
+  the §16 table and mistake callout should be re-worded to match.
+
+- [ ] **Four-figure tables, and values supplied in the stem.** §16 walks through
+  a four-figure lookup with a mean-difference column and states plainly that
+  antilog 0.8572 gives 719.7 against a true 720, the gap being rounding rather
+  than error. No question in the bank requires a table: every logarithm question
+  supplies the values it needs (log 2 = 0.3010, log 3 = 0.4771, ln 10 = 2.3026,
+  antilog 0.1505 = 1.4142). Confirm the SM examines at four-figure precision and
+  that supplying values in the stem matches how the paper is actually set.
+
+- [ ] **The mean proportional is taken as the positive root only.** q-f3c1-016
+  (between 8 and 32, answer 16) reports one value; q-f3c1-018 says "x is
+  positive" in the stem. If the SM admits the negative root as a second answer,
+  q-f3c1-016 needs the same qualifier added.
+
+- [ ] **Extraneous roots are rejected rather than listed.** q-f3c1-050 and
+  worked example 11 hold that log₂ x + log₂ (x − 2) = 3 has the single answer
+  x = 4, the quadratic's other root x = −2 making an argument negative. The
+  trap option "x = 4 or x = −2" is the answer to the quadratic, not to the
+  equation. Standard position, but confirm the SM states the domain check
+  explicitly; if it does not, the notes carry more weight on this point than the
+  SM does.
+
+- [ ] **The partly-constant, partly-varying cost form (y = a + bx) sits in §8**,
+  next to variation, and q-f3c1-023 tests it. Some presentations place it under
+  simultaneous equations (Ch 2). Nothing in the key depends on where it sits;
+  if the SM keeps it out of Ch 1, the §8 closing block and q-f3c1-023 can move
+  without disturbing anything else.
+
+- [ ] **Negative-marking guidance is stated numerically in §18 and repeated in
+  the one-page summary.** With four options and −0.25, a random answer has an
+  expected value of +0.0625; eliminating one option raises it to about +0.17 and
+  two to +0.375. The section then makes the point that guesses in this chapter
+  are not random, because every distractor is a prepared error. Tone is factual
+  and carries no pressure language, but a reviewer should confirm the arithmetic
+  and the framing before it is copied into the other seven Paper 3 chapters.
+
+## linear-inequalities — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 3, Linear Inequalities) authored
+  10 Aug 2026** — notes (18 numbered sections plus mistakes list and one-page
+  summary, 8 worked examples with working notes), bank (52 standalone MCQs,
+  3 case_mcq_sets with 10 sub-MCQs, no descriptives — Paper 3 is 100%
+  objective; 47 numericals, all verifier-proven; answer keys A16/B16/C15/D15
+  over 62 MCQs), citations
+  (`citations/foundation/quantitative-aptitude/citations_linear-inequalities.md`).
+  Reviewer should spot-check the scope and depth against **ICAI SM Paper 3 Ch 3
+  (May 2026 ed.)**. There is no bare Act for mathematics, so the citations file
+  records standard results and chosen conventions instead of quoted lines, and
+  the frontmatter deliberately omits `law_as_on_date` while keeping
+  `applicable_attempts`.
+
+- [ ] **Does the feasible region include its boundary?** Every corner-point key
+  in the bank assumes yes for non-strict constraints: q-f3c3-050 (30, 20),
+  q-f3c3-051, q-f3c3-052, cs-f3c3-01-b (25, 20), cs-f3c3-02-b (12, 6) and
+  cs-f3c3-03-b (500, 300) all sit exactly on two boundary lines. This is the
+  universal convention, but §10 and q-f3c3-040 option D state the consequence
+  for a STRICT system — that its vertices are not attainable and a "maximum
+  production" reading has no exact answer — and that phrasing should be checked
+  against the SM's own words.
+
+- [ ] **Are integer-only solutions required in production problems?** Corner
+  points are reported as exact rationals, so q-f3c3-051 option D and worked
+  example 6 give `(16/3, 20/3)` and the notes forbid rounding it to
+  `(5.33, 6.67)`. Worked example 4 flags that machines come in whole numbers and
+  calls the practical answers the lattice points of the region. Where a whole
+  number IS wanted the stem says so (q-f3c3-018, -019, -022, -024, -028, -033).
+  If the SM expects production vertices to be rounded to feasible integer plans,
+  the wording of q-f3c3-051 option D and worked example 6 needs revising, though
+  no key moves.
+
+- [ ] **Is an unbounded region ever described as having "no solution"?** This
+  chapter says never: q-f3c3-048, q-f3c3-049 and cs-f3c3-02-a each offer
+  "empty" and "unbounded" as competing options and key the unbounded one, and
+  the §14 callout states that the two are opposite conditions. Because the
+  chapter stops before optimisation, no question asks for a maximum over an
+  unbounded region, where "no finite optimum" would be the right phrase. Confirm
+  the SM's own vocabulary for the unbounded case.
+
+- [ ] **May a stated fund or budget be left partly unused?** cs-f3c3-03 and
+  worked example 8 read "has ₹ 8,00,000 available... need not place the whole
+  sum" as `x + y ≤ 800`, which keeps `(0, 0)` and `(800, 0)` as corner points;
+  q-f3c3-035 makes the same `≤` choice for a sanctioned budget and offers the
+  equality as a named distractor. Worked example 8, a separate ₹ 6,00,000 trust
+  with `x ≥ 2y` and `y ≥ 100`, sets out what changes under an equality — its
+  region collapses to the segment joining `(500, 100)` and `(400, 200)` and the
+  vertex `(200, 100)` disappears. If the SM's investment problems use `=`, the
+  corner-point sets in cs-f3c3-03-c and worked example 8 both change.
+
+- [ ] **Scope boundary: the chapter stops at the corner points.** No objective
+  function is evaluated anywhere in the notes or the bank, and no question asks
+  which vertex is best. That was a deliberate reading of the Foundation
+  syllabus, which places linear-programming optimisation outside Ch 3. If the
+  SM's Ch 3 in fact carries a corner-point-theorem treatment, this chapter is
+  short by one section rather than wrong, and §15 is the natural place to add it.
+
+- [ ] **Non-numerical MCQs need the blind second pass.** Fifteen of the 62 MCQs
+  are conceptual rather than computable (q-f3c3-001, -003, -004, -005, -006,
+  -010, -012, -021, -023, -040, -042, -043, -045, -047 and cs-f3c3-03-a) and so
+  carry no verifier. They should go through `scripts/consistency_check/` before
+  the draft badge comes off.
+
+## mathematics-of-finance — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 4, Mathematics of Finance / Time Value of
+  Money) authored 10 Aug 2026** — notes (20 numbered sections plus a common-
+  mistakes list and a one-page formula summary, 11 fully worked examples with
+  line-by-line working notes, 1,226 lines), bank (50 standalone MCQs plus 3
+  case_mcq_sets carrying 10 sub-MCQs = 60 MCQs, no descriptives, because Paper 3
+  is fully objective; **57 numericals, all verifier-proven**; answer keys
+  A15/B15/C15/D15 over 60 MCQs), verifier
+  (`scripts/verify_numerical/verify_mathematics-of-finance.py`, 57 functions,
+  `decimal.Decimal` under an explicit context), citations
+  (`citations/foundation/quantitative-aptitude/citations_mathematics-of-finance.md`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 3 Ch 4
+  (May 2026 ed.)**. There is no bare Act here and nothing states a legal
+  position, so the notes frontmatter deliberately **omits `law_as_on_date`** and
+  the bank carries no `lawAsOnDate`. `python scripts/verify_numerical/run.py`
+  reports 0 failures across the whole tree (825 numericals).
+
+- [ ] **Rounding and day-count conventions are the real review surface here.**
+  The citations file ends with a twelve-item **Reviewer's checklist of
+  conventions**; please work through it rather than re-checking arithmetic. The
+  four that change answer keys outright: (i) a year is **365 days** for simple
+  interest — q-f3c4-006 gives ₹ 7,200 on 365 days and ₹ 7,300 (option A) on 360;
+  (ii) money is rounded **once at the end**, to the nearest paisa, and interest
+  is never rounded period by period; (iii) amortisation schedules are built from
+  the **unrounded** instalment so the closing balance falls to zero — if the SM
+  rounds the EMI first, cs-f3c4-01-d moves; (iv) CAGR counts the **intervals**
+  between the two years, so 2019-20 to 2025-26 is 6 years (q-f3c4-049) and
+  2021-22 to 2025-26 is 4 (worked example 10). Counting the labels instead flips
+  both to the D distractor.
+
+- [ ] **The ordinary annuity is this chapter's default where a stem is silent.**
+  An annuity due is used only where the stem says "at the beginning", "in
+  advance" or "the first payment today" (q-f3c4-039, q-f3c4-040, cs-f3c4-03-c,
+  worked examples 5 and 6). Confirm the SM does not make payment-in-advance the
+  default in any of its own illustrations — recurring deposits and lease rentals
+  are the places where commercial practice differs from the textbook default,
+  and a silent switch would flip several keys by a factor of (1 + i).
+
+- [ ] **Three scope calls made without the SM in front of me.** (i) **Continuous
+  compounding** is taught at the level of two formulas (`A = P e^(r t)` and
+  `E = e^r − 1`), one worked amount and the last row of the §6 effective-rate
+  table; if the May 2026 edition omits it, drop q-f3c4-029 and q-f3c4-030 and
+  that table row — nothing else depends on them. (ii) The **growing perpetuity**
+  (`R ÷ (i − g)`) is the single item most likely to sit outside the Foundation
+  syllabus; it is notes §12, q-f3c4-042 and half of worked example 10, all of
+  which lift out cleanly, leaving the level perpetuity intact. (iii) **Capital
+  rationing** gets two sentences and a small table in §16 and is never tested;
+  cut it if the SM does not go that far.
+
+- [ ] **Overlap boundary with Paper 1 was drawn deliberately.** Notes §3 treats
+  the constant-rate decline formula `P(1 − d)^n` as pure arithmetic and says in
+  terms that the accounting treatment of reducing-balance depreciation belongs to
+  `foundation/accounting/depreciation-and-amortisation`. Confirm the split reads
+  correctly to a student who has done Paper 1 first, and that q-f3c4-015 cannot
+  be mistaken for an accounting question.
+
+- [ ] **The negative-marking paragraph (notes §20) states expected values.** With
+  0.25 deducted per wrong answer, a blind guess among four options is worth
+  +0.0625 marks, one elimination +0.1667 and two eliminations +0.375. The
+  arithmetic is right, but a reviewer should confirm the framing is acceptable
+  house style — it tells students a blind guess is very nearly worthless rather
+  than telling them never to guess, and it names three chapter-specific sanity
+  checks (a PV annuity factor above n, a compound amount below the simple-
+  interest amount, a present value above the future sum) as the cheap way to
+  eliminate options.
+
+- [ ] **Interest tables are never assumed.** Notes §19 shows how to build any
+  factor by repeated squaring and how to derive the other three factors from one,
+  and every worked example states the factor it uses to four decimal places.
+  Confirm this is enough for a student sitting the paper without printed tables,
+  and that no question in the bank silently requires a table lookup.
+
+## sequence-and-series — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 6, Sequence and Series — Arithmetic and
+  Geometric Progressions) authored 10 Aug 2026** — notes (18 numbered sections
+  plus a common-mistakes list and a one-page summary, 12 fully worked examples
+  with line-by-line working notes, 1,245 lines), bank (50 standalone MCQs,
+  3 case_mcq_sets with 10 sub-MCQs, no descriptives because Paper 3 is wholly
+  objective; 58 of the 60 MCQs numerical and all 58 verifier-proven; answer keys
+  A15/B15/C15/D15 over 60 MCQs), citations
+  (`citations/foundation/quantitative-aptitude/citations_sequence-and-series.md`),
+  verifier (`scripts/verify_numerical/verify_sequence-and-series.py`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 3 Ch 6
+  (May 2026 ed.)**. There is no bare Act behind a mathematics chapter, so the
+  citations file records the standard results in their conventional statements
+  instead; what needs a human is the convention list reproduced below.
+  `law_as_on_date` is deliberately omitted from the frontmatter and that
+  omission is noted in the citations file.
+
+- [ ] **Scope boundary with Ch 4 (Mathematics of Finance).** Compound interest,
+  annuities, sinking funds, present value and instalment problems are GP
+  applications but are **not** worked here — they belong to Ch 4. This chapter
+  teaches the GP machinery and mentions the finance chapter once, in the
+  one-page summary, with no link. If the SM's Ch 6 does work an interest
+  example, confirm that leaving it out does not create a gap for students who
+  read the chapters in order.
+
+- [ ] **Is the geometric mean of two positive numbers the positive root only?**
+  The chapter takes G = √(ab) as the positive root throughout. q-f3c6-044
+  (GM of 8 and 32 = 16) and cs-f3c6-03-c (GM of 18 and 50 = 30) both depend on
+  it, as does q-f3c6-045, which takes r = 5 and not −5 when inserting geometric
+  means. Strictly G² = ab has two roots. This is the usual Foundation
+  convention; confirm the SM states it explicitly rather than leaving it
+  implied.
+
+- [ ] **Does "insert n means" count the endpoints?** The chapter says it does
+  not: n means between a and b give a progression of n + 2 terms and n + 1 gaps,
+  so d = (b − a) ÷ (n + 1) and r = (b ÷ a)^[1 ÷ (n + 1)]. q-f3c6-026,
+  q-f3c6-027 and q-f3c6-045 all rest on this, and their distractors are built
+  from the n-versus-n+1 divisor error. Standard, but it is the commonest source
+  of a one-place shift in a student's answer, so the SM's phrasing should be
+  matched word for word.
+
+- [ ] **An infinite GP with r = 1 — "divergent", or "no sum exists"?** The
+  chapter says the sum to infinity does not exist and gives the reason (partial
+  sums are na), avoiding "convergent" and "divergent" as later-syllabus words.
+  q-f3c6-039 option D and the whole of q-f3c6-042 use the "no sum exists"
+  phrasing. If the SM uses "divergent", q-f3c6-042's correct option should adopt
+  that word so students recognise it. The r = −1 case is listed separately in
+  §11's table (partial sums oscillate between a and 0); trim that row if the SM
+  folds it into |r| ≥ 1 without comment.
+
+- [ ] **Whether a single number or a two-term list counts as a progression.**
+  The chapter never asks a student to classify a one- or two-term list, and no
+  key turns on it. Some texts say any two-term sequence is trivially both an AP
+  and a GP. If the SM states a position, §1 should be aligned with it.
+
+- [ ] **Endpoints of a stated range, and rounding when a target is crossed.**
+  §6 reads "between 100 and 500" as exclusive and "from 100 to 500" as
+  inclusive. The ambiguity is designed out of the bank rather than relied on:
+  q-f3c6-013 is worded "greater than 50 and less than 300" because 300 is itself
+  a multiple of 6, and in q-f3c6-020 neither endpoint is a term. Separately,
+  q-f3c6-022 and cs-f3c6-01-c round the period count **up** when asking when a
+  target is first reached; confirm the SM's worked examples do the same rather
+  than naming the last period below the target.
+
+- [ ] **Notation and presentation calls.** The notes use Tₙ for the nth term,
+  Sₙ for the sum of n terms and l for the last term, but use aₙ for the general
+  term of a plain sequence in §1–§2 before switching to Tₙ inside the
+  progressions. §10 presents both arrangements of the finite GP sum and states
+  they are the same formula; if the SM leads with only one, follow its order,
+  because students match printed forms literally. Finally, the notes run to
+  1,245 lines — §7 (equidistant terms) and §15 (symmetrical forms) compress
+  most easily if a shorter page is wanted.
+
+## permutations-and-combinations — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 5, Basic Concepts of Permutations and
+  Combinations) authored 10 Aug 2026** — notes (19 numbered sections plus a
+  common-mistakes list and a one-page summary, 10 fully worked examples with
+  line-by-line working notes, 1,359 lines), bank (50 standalone MCQs, 3
+  case_mcq_sets with 10 sub-MCQs, no descriptives — Paper 3 is wholly
+  objective; 56 of the 60 MCQs numerical and all verifier-proven; answer keys
+  A16/B14/C15/D15 over 60 MCQs), citations
+  (`citations/foundation/quantitative-aptitude/citations_permutations-and-combinations.md`).
+  Reviewer should spot-check the whole chapter against **ICAI SM Paper 3 Ch 5
+  (May 2026 ed.)**. There is no statutory source, so the audit is a scope and
+  convention check, not a bare-act diff. Frontmatter carries
+  `applicable_attempts` and deliberately omits `law_as_on_date` — an
+  arrangement count does not move with a Finance Act.
+
+- [ ] **Is a garland identical under reflection?** The chapter halves the
+  circular count for anything that can be turned over — necklace, garland,
+  bangle, key ring — and does not halve a table or a fixed circle of seats.
+  q-f3c5-032 (necklace of 7 beads → 360) and q-f3c5-033 (garland of 9 flowers
+  → 20,160) both depend on it, and in both the unhalved value sits there as a
+  distractor, so if the SM does not halve garlands the keys move to those
+  options. q-f3c5-029 (round table of 6 → 120) tests the same convention in the
+  opposite direction, offering the halved 60. The §10 table is the single place
+  to edit.
+
+- [ ] **Does "at least one" include the empty selection?** The chapter excludes
+  it, so q-f3c5-044 is 63 and not 64, and q-f3c5-045 is 79 and not 80. Both
+  un-subtracted values are the distractors. §15 additionally states the converse
+  — that wording such as "any number, including none" does not subtract — which
+  is an editorial addition and should be checked against the SM's phrasing.
+
+- [ ] **Are repeated letters indistinguishable by default?** The chapter assumes
+  yes, which decides q-f3c5-020 (BALLOON → 1,260), q-f3c5-021 (ACCOUNTANT →
+  2,26,800), q-f3c5-022 (identical flags → 1,260), q-f3c5-023 and q-f3c5-045
+  together. The related call is inside the block method: a tied block of
+  **identical** objects is not multiplied back by its internal factorial, while
+  a block of **distinct** objects is. q-f3c5-023 (360) and q-f3c5-024 (720) are
+  set side by side to test exactly that difference.
+
+- [ ] **Equal-size groups: labelled or unlabelled?** The chapter divides by k!
+  only when equal-sized groups carry no name, destination or distinct work.
+  Four keys turn on it: q-f3c5-046 (two unnamed groups of 5 → 126), q-f3c5-047
+  (three named branches of 3 → 1,680), cs-f3c5-03-a (two unnamed groups of 4 →
+  35) and cs-f3c5-03-b (**the same 8 trainees**, two named teams of 4 → 70).
+  The last pair is the same numbers with one word changed, so a different
+  convention swaps the two keys. cs-f3c5-03-c (sizes 2, 3, 3 to named clients →
+  560) additionally relies on unequal or labelled groups taking no divisor.
+
+- [ ] **"Never together" versus "no two adjacent" for three or more objects.**
+  The chapter reads "never all together" as the complement of the single block
+  and reserves the gap method for "no two adjacent". q-f3c5-025 (4,320) carries
+  1,440 — the no-two-adjacent figure — as its distractor, and q-f3c5-026
+  (1,440) carries 720 as its. If the SM reads "never together" as "no two
+  adjacent", the two keys change places. This is the most likely single point of
+  disagreement between presentations.
+
+- [ ] **Two smaller scope calls made without the SM in front of me.** (i) §17
+  and worked example 8 state the collinear-point correction for **lines** as
+  nC2 − kC2 + 1 alongside the triangle correction nC3 − kC3; only the triangle
+  rule carries a key (q-f3c5-050 → 116), so the line rule can be trimmed if the
+  SM omits it. (ii) §13 states the equality rule with both branches, so
+  q-f3c5-038's key is "4 or 11"; if the SM teaches only x = y, reword the
+  question rather than re-key it. (iii) The notes run to 1,359 lines with 19
+  sections; §16's three-or-more-groups formula is the most likely item to
+  exceed SM depth and can go without touching a bank question.
+
+- [ ] **Verifier method, for information.**
+  `scripts/verify_numerical/verify_permutations-and-combinations.py` proves 49
+  of the 56 numerical answers by **brute-force enumeration** with `itertools`,
+  building the arrangements, selections, circular canonical forms and group
+  assignments and counting them, rather than re-applying the stem's formula.
+  Circular counts are derived by reducing each arrangement to its smallest
+  rotation, and necklace counts by the smallest rotation of the sequence or its
+  reverse, so (n − 1)! and (n − 1)! ÷ 2 are results and not assumptions. Six
+  functions use a formula (the service-tag case, which runs to millions of tags,
+  and the two factorial-identity questions) and one is a hybrid; each says so in
+  a comment. If a reviewer changes any convention above, the verifier is
+  expected to fail rather than to agree.
+
+## sets-relations-functions — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 7, Sets, Relations and Functions; Basics
+  of Limits and Continuity) authored 10 Aug 2026** — notes (19 numbered sections
+  plus a common-mistakes list and a one-page summary, 11 worked examples with
+  line-by-line working notes, 1,773 lines), bank (50 standalone MCQs plus 3
+  case_mcq_sets carrying 11 sub-MCQs = 61 MCQs, no descriptives, as Paper 3 is
+  wholly objective; 49 numerical, all verifier-proven; answer keys
+  A15/B15/C16/D15), citations
+  (`citations/foundation/quantitative-aptitude/citations_sets-relations-functions.md`).
+  `python scripts/verify_numerical/run.py --bank
+  src/data/questions/foundation/quantitative-aptitude/sets-relations-functions.json`
+  prints 49 verified, 0 failures. All 53 readLink anchors were checked against
+  the built heading slugs of the finished MDX. Reviewer should spot-check the
+  whole chapter against **ICAI SM Paper 3 Ch 7 (May 2026 ed.)** for scope and
+  depth; there is no statutory source to diff against.
+
+- [ ] **Proper subsets: 2ⁿ − 1 or 2ⁿ − 2?** The chapter takes the standard
+  position that ∅ is a proper subset of every non-empty set, so a 6-element set
+  has **63** proper subsets. **q-f3c7-007's key (C, 63) depends on it**, and 62
+  is offered as the distractor for the other convention. Several Indian
+  textbooks teach "proper subsets = 2ⁿ − 2", meaning non-empty proper subsets.
+  If the SM does that, the key flips to B and notes §3 plus the summary need
+  rewriting. This is the highest-value check on this chapter.
+
+- [ ] **The empty relation, and vacuous truth generally.** The chapter holds
+  that R = ∅ on a non-empty set is symmetric and transitive (nothing can violate
+  a condition that never fires) but not reflexive, and states expressly that
+  {(1, 2), (3, 4)} is transitive for the same reason. **q-f3c7-032 (key B) and
+  worked example 6 working note 4 rest entirely on this.** Vacuous truth is
+  standard mathematics but is sometimes avoided at Foundation level. If the SM
+  ducks it, q-f3c7-032 must be rewritten or dropped, and the §12 "mistake"
+  callout with it.
+
+- [ ] **"Onto" judged against the codomain, not the range.** q-f3c7-038 (key A:
+  f(x) = x² on R → R is neither one-one nor onto) and worked example 7(b) both
+  turn on testing surjectivity against the codomain the question declares.
+  Confirm the SM's own onto questions always state a codomain; a stem that does
+  not is ambiguous and its key is not defensible either way.
+
+- [ ] **Is 0 a natural number?** The chapter follows N = {1, 2, 3, …} and
+  W = N ∪ {0}, and says so in a §2 callout. q-f3c7-005 is deliberately written
+  over W so no key depends on the convention, but the §2 table and that callout
+  need rewording if the SM says otherwise.
+
+- [ ] **Standard limits quoted without proof, and the omitted trigonometric
+  limit.** §17 quotes five results — the power limit n·aⁿ⁻¹, (eˣ − 1)/x → 1,
+  (aˣ − 1)/x → logₑ a, logₑ(1 + x)/x → 1, and both forms of the limit defining
+  e — and **deliberately omits lim (x → 0) (sin x)/x = 1** and every other
+  trigonometric limit, on the view that Foundation Paper 3 handles limits
+  algebraically. No bank question needs one. If the SM carries them, §17 gains a
+  row and the bank should gain a question; nothing already written changes.
+
+- [ ] **Which branch owns a junction in a piecewise function.** q-f3c7-049
+  (k = 7) and the whole of cs-f3c7-03 read the inequality signs literally, so
+  "x ≤ 3" gives f(3) from the first branch and "x ≥ 8" gives H(8) from the
+  second. Confirm the stems read unambiguously to a student; two keys move if a
+  reader takes the junction the other way.
+
+- [ ] **No Venn diagrams are drawn.** §6 sets the regions out as two tables
+  (four regions for two sets, eight for three) and every counting question
+  reasons from the table. This is a presentation choice, not a scope omission —
+  but a reviewer expecting a drawn diagram should confirm it is acceptable for
+  the page, and that the eight-region table's "+ t" restoration in each only
+  region reads clearly.
+
+- [ ] **Scope calls made without the SM in front of me.** (i) The §12 table
+  giving the counts of reflexive and symmetric relations (2^(n²−n) and
+  2^(n(n+1)/2)) may exceed Foundation depth; only q-f3c7-031 uses it. (ii) The
+  §9 band formulas (exactly one = s − 2p + 3t and the rest) may be presented in
+  the SM only as region arithmetic; every one of them is reproduced by the §6
+  table, so they can be demoted to a shortcut without any key changing. (iii) No
+  general formula for the number of onto functions is taught — every onto
+  question in the bank is either the m = n case or the impossible case. Confirm
+  the SM does not want the general surjection count.
+
+## differential-and-integral-calculus — VERIFY 2026-08-10
+
+- [ ] **New chapter (Foundation P3 Ch 8, Basic Applications of Differential and
+  Integral Calculus) authored 10 Aug 2026** — notes (21 numbered sections plus
+  12 fully worked examples, a common-mistakes list and a one-page summary;
+  1,566 lines), bank (50 standalone MCQs + 3 case_mcq_sets carrying 12
+  sub-MCQs = 62 MCQs, no descriptives because Paper 3 is wholly objective;
+  answer keys A16/B17/C14/D15), citations
+  (`citations/foundation/quantitative-aptitude/citations_differential-and-integral-calculus.md`).
+  **All 61 numerical questions are verifier-proven, 0 failures.** Reviewer
+  should spot-check the scope against **ICAI SM Paper 3 Ch 8 (May 2026 ed.)**;
+  the arithmetic does not need re-checking (see the next item for why).
+
+- [ ] **Split authorship — read this before reviewing.** The notes, the bank,
+  and verifier functions `q_f3c8_002` to `q_f3c8_040` were written in one
+  session pass. That pass was cut short by a session usage limit before it
+  finished, and the remaining **22 verifier functions** (`q-f3c8-041` to
+  `q-f3c8-050` and all twelve `cs-f3c8-*` sub-questions) plus this citations
+  file were written by a **second pass that read the finished bank without the
+  reasoning behind it**. Every one of those 22 recomputed the answer
+  independently and agreed with the key already in the bank. That agreement is
+  meaningful precisely because the second pass did not know the first pass's
+  working — but a reviewer should know the two halves of the module were
+  written hours apart, and may want to read the last 22 functions with fresh
+  eyes. Nothing else in the chapter was touched by the second pass.
+
+- [ ] **The verifier deliberately never repeats the stem's algebra.** A claimed
+  derivative is compared with a five-point central difference quotient of the
+  original function; a claimed antiderivative is differentiated numerically and
+  compared with the integrand; a definite integral is recomputed by composite
+  Simpson's rule on 2,000 sub-intervals; an extremum is confirmed on a dense
+  grid of 4,001 points and located by ternary search using no calculus at all.
+  Re-applying the same differentiation rule the stem used would reproduce the
+  same mistake, which is the failure this design exists to prevent. The module
+  imports only `math` — no third-party package — because CI runs a bare
+  Python 3 with no pip install step.
+
+- [ ] **"+ c" is compulsory, and two keys rest on it.** In `q-f3c8-041`
+  (∫x⁵ dx) and `q-f3c8-042` (∫(1/x) dx) the distractor is the correct function
+  with the constant of integration removed. A numerical derivative cannot see
+  an additive constant, so each option carries an explicit flag recording
+  whether "+ c" is actually printed, and the verifier reads that flag rather
+  than the algebra. **If the SM accepts an indefinite integral written without
+  its constant, both questions must be rewritten — not re-keyed.** This is the
+  highest-value check in the chapter.
+
+- [ ] **`log` means the natural logarithm throughout this chapter**, while an
+  unmarked `log` means base 10 in Ch 1 (Ratio, Proportion, Indices,
+  Logarithms). Both chapters state their convention explicitly where a student
+  will see it, which is the only thing that makes the clash defensible.
+  Confirm that ICAI's own calculus chapter uses "log" for the natural log —
+  every logarithmic option in this bank depends on that claim — and confirm
+  both statements survive any later editing pass.
+
+- [ ] **Marginal cost is treated as the derivative, not the cost of one more
+  unit.** Every case-set scenario says to treat output as a continuous
+  variable, so "the marginal cost at 20 pumps" means C′(20) = ₹ 90, not the
+  cost of the 21st pump. Both readings appear in teaching material and give
+  different numbers. If the SM defines marginal cost incrementally, §11 needs
+  rewording, though no key would move.
+
+- [ ] **The EOQ case set is derived, not quoted (`cs-f3c8-03`).** The scenario
+  states the cost structure in words — ₹ 400 per order, ₹ 10 to carry one
+  bearing for a year, average stock is half the order size, 18,000 bearings a
+  year — and the verifier builds that annual cost function and minimises it by
+  ternary search. It never uses √(2·D·Co/Ch). So those four keys are proof the
+  model is right, not that a remembered square root was typed correctly.
+  `cs-f3c8-03-d` additionally tests that quadrupling the holding cost **halves**
+  the optimum (600), with the "divide by four" answer (300) sitting beside it.
+
+- [ ] **Scope calls made without the SM to hand.** Three sections may be out of
+  Foundation scope and are each removable as a block: **§9 implicit and
+  parametric differentiation** (check the bank for anchors into §9 before
+  cutting); **partial fractions restricted to distinct linear factors** — if
+  repeated or irreducible quadratic factors are examinable, §18 is short a
+  case; and **trigonometric functions excluded**, appearing only as the T in
+  the ILATE mnemonic with an explicit note that they are not examined, and used
+  by no question anywhere in the bank.
+
+- [ ] **The second-derivative test is the chapter's default**, with the
+  first-derivative test given as the fallback when f″(c) = 0. If the SM leads
+  with sign-testing, §12's ordering should be swapped. No key moves either way:
+  every extremum is confirmed on a dense grid independently of which test the
+  notes recommend.
+
+- [ ] **Definite integrals are evaluated as F(upper) − F(lower)**, and the
+  reversed subtraction is carried as a distractor in `q-f3c8-050` (−34 against
+  the correct 34). A presentation casual about the order would make that
+  distractor defensible, which it must not be.

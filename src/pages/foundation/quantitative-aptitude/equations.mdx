@@ -1,0 +1,1176 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Equations'
+description: 'CA Foundation Quantitative Aptitude Ch 2 — equations in plain language: linear equations in one, two and three unknowns, elimination, substitution and cross-multiplication, consistency, quadratic equations by factorisation, completing the square and the formula, the discriminant, sum and product of roots, equations reducible to quadratic form, cubics, and business applications, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 2 · Equations'
+chapterSlug: equations
+masteryId: f3-ch2
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 2 (Equations) — scope and worked patterns'
+  - 'Standard results of elementary algebra: the quadratic formula, the discriminant test, the relations between roots and coefficients, and the cross-multiplication rule'
+sourceLabel: 'ICAI SM Paper 3 Ch 2 scope (May 2026 ed.) · standard algebraic results'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '10 Aug 2026'
+readTime: 'About 25 min read · 8 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=equations'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A printing press in Coimbatore quotes two ways of doing the same job. Plan A charges a fixed setting
+charge of ₹ 18,000 plus ₹ 6 per printed copy. Plan B charges nothing to set up but ₹ 15 per copy.
+The owner's question is short: **at what order size do the two plans cost the same?**
+
+Write the two costs as expressions, put an equals sign between them, and the question turns into
+`18,000 + 6x = 15x`. Nine words of business become one line of algebra, and the line has exactly one
+answer: 2,000 copies. Below 2,000 copies Plan B is cheaper, above it Plan A is. The whole of this
+chapter is that move — translate, solve, and read the answer back into the business.
+
+Paper 3 asks for the second step almost every time. You will be given an equation and asked for its
+roots, or given a pair of equations and asked for x + y, or told a quadratic's roots and asked to
+build the equation back up. The arithmetic is small. The marks are lost on sign slips, on forgetting
+the second root, and on answering a different question from the one asked.
+
+## 1. What an equation is and how an identity differs
+
+An **equation** is a statement that two expressions are equal, and it is true only for particular
+values of the letter in it. Those values are the **roots** or **solutions**.
+
+<div class="formula">3x − 7 = 11 is true only when x = 6. That single value is the root.</div>
+
+An **identity** looks the same on the page but is true for **every** value of the letter:
+
+<div class="formula">(x + 4)² = x² + 8x + 16 is true for x = 0, x = −3, x = 1,00,000 — for every x</div>
+
+Test it at two convenient values. Put x = 0 into the identity: both sides give 16. Put x = 1: both
+sides give 25. An identity never fails. Put x = 0 into `3x − 7 = 11` and the left side gives −7,
+which is not 11 — so the statement is an equation, and only the value that repairs it counts.
+
+The practical difference is what happens when you "solve" one. Solve an equation and the letters
+cancel down to a value. Try to solve an identity and everything cancels, leaving a true statement
+with no letters at all, such as 0 = 0. That is the signal to stop and say "identity — every value
+works", not "no solution".
+
+<Callout kind="pointer">
+  <p>
+    Examiners test this with a one-liner: "Which of the following is an identity?" The reliable
+    method is to substitute <strong>two different easy values</strong>, usually 0 and 1. If both
+    sides agree twice, the statement is almost certainly an identity; if they disagree even once, it
+    is an equation at best and false at worst.
+  </p>
+</Callout>
+
+## 2. Degree and roots: the vocabulary
+
+Six words carry the whole chapter.
+
+- **Variable** — the letter whose value is unknown: x, y, z.
+- **Coefficient** — the number multiplying a variable. In 7x² the coefficient of x² is 7.
+- **Constant term** — the number standing alone, with no variable attached.
+- **Degree** — the highest power of the variable present, once the equation is arranged with every
+  term on one side. `4x + 9 = 0` has degree 1; `2x² − 5x + 3 = 0` has degree 2; `x³ − 6x² + 11x − 6 = 0`
+  has degree 3.
+- **Root** — a value that satisfies the equation. Substituting it makes the two sides equal.
+- **Simultaneous equations** — two or more equations that must hold **at the same time**, for the
+  same values of the letters.
+
+Degree decides how many roots to expect. A polynomial equation of degree n has exactly **n roots**,
+counted with repetition. So a linear equation has one root, a quadratic has two, a cubic has three.
+Names follow the degree: degree 1 is **linear** (or simple), degree 2 is **quadratic**, degree 3 is
+**cubic**.
+
+| Equation | Degree | Name | Roots to expect |
+|---|---|---|---|
+| 5x − 20 = 0 | 1 | linear (simple) | 1 |
+| 2x² − 7x + 3 = 0 | 2 | quadratic | 2 |
+| x³ − 6x² + 11x − 6 = 0 | 3 | cubic | 3 |
+| x⁴ − 13x² + 36 = 0 | 4 | biquadratic | 4 |
+
+A last piece of vocabulary. Two equations that must hold together are **simultaneous**; a system
+that has at least one solution is **consistent** and one that has none is **inconsistent**; a system
+whose equations carry genuinely different information is **independent**, and one whose second
+equation is only the first rescaled is **dependent**. Section 6 turns these four words into a test
+you can apply in ten seconds.
+
+<Callout kind="mistake">
+  <p>
+    "A quadratic has two roots" does not mean the two roots must be different. When the two roots
+    coincide, as in x² − 10x + 25 = 0 where x = 5 twice, the equation still has two roots — they are
+    <strong>real and equal</strong>. An option saying "only one root" is the trap; an option saying
+    "two equal real roots" is the answer.
+  </p>
+</Callout>
+
+## 3. Simple linear equations in one unknown
+
+A linear equation in one unknown can always be pushed into the shape `ax + b = 0` with a ≠ 0, and
+then it has exactly one root, x = −b ÷ a.
+
+The method is four steps, always in this order:
+
+1. **Clear the fractions.** Multiply every term on both sides by the LCM of the denominators.
+2. **Remove the brackets.** Watch the sign in front of each bracket.
+3. **Transpose.** Move every term with the unknown to one side and every number to the other. A term
+   changes its sign when it crosses the equals sign.
+4. **Divide** by the coefficient of the unknown.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve (2x − 3)/4 − (x − 5)/6 = 1/2</div>
+  LCM of 4, 6 and 2 is 12. Multiply every term by 12:<br />
+  3(2x − 3) − 2(x − 5) = 6<br />
+  6x − 9 − 2x + 10 = 6 &nbsp;&nbsp;← the minus in front of the second bracket flips both signs inside<br />
+  4x + 1 = 6 → 4x = 5 → <strong>x = 5/4</strong><br />
+  Check: (2(1.25) − 3)/4 − (1.25 − 5)/6 = (−0.5)/4 − (−3.75)/6 = −0.125 + 0.625 = 0.5 ✓
+</div>
+
+Two shapes deserve their own note.
+
+**A letter that cancels.** If the x terms vanish and what is left is false, such as 7 = 9, the
+equation has **no solution**. If what is left is true, such as 9 = 9, it is an identity and every
+value works.
+
+**Equations with the unknown in a denominator.** Multiply through, solve, and then **reject any root
+that makes an original denominator zero**. Such a root is not a root at all — the equation was never
+defined there.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve 1/(x − 2) + 1/(x + 2) = 4/(x² − 4)</div>
+  Notice first that x² − 4 = (x − 2)(x + 2), so that is the common denominator.<br />
+  Multiply every term by (x − 2)(x + 2): (x + 2) + (x − 2) = 4<br />
+  2x = 4 → x = 2<br />
+  But x = 2 makes the first denominator zero, so the original equation has no meaning there.<br />
+  <strong>The equation has no solution.</strong> An option offering "x = 2" is the whole point of the
+  question.
+</div>
+
+**A word on units.** In a business equation the letter always stands for a number of something —
+jars, rupees, days. Write down what it stands for before you solve. Half of the wrong answers in the
+applications section are right numbers attached to the wrong thing.
+
+<Callout kind="mistake">
+  <p>
+    The single most expensive slip in the whole chapter is the sign on transposition. A term that
+    moves across the equals sign changes sign; a term that moves across a <em>plus</em> sign inside
+    the same side does not. Writing <code>4x = 6 + 1</code> instead of <code>4x = 6 − 1</code> in the
+    example above gives x = 7/4, and 7/4 will be sitting there as an option.
+  </p>
+</Callout>
+
+## 4. Two unknowns: solving by elimination
+
+One equation in two unknowns has endlessly many solutions: `x + y = 10` is satisfied by (1, 9),
+(2, 8), (4.5, 5.5) and infinitely more. To pin the pair down you need a **second** equation that the
+same pair must satisfy. That is a system of **simultaneous** equations, written in the standard form
+
+<div class="formula">a₁x + b₁y = c₁ &nbsp;&nbsp;and&nbsp;&nbsp; a₂x + b₂y = c₂</div>
+
+**Elimination** removes one unknown by adding or subtracting the equations after scaling them so
+that one variable has the same coefficient in both.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve 3x + 4y = 26 and 5x − 2y = 26</div>
+  Choose to remove y, because its coefficients 4 and −2 are already close.<br />
+  (i) 3x + 4y = 26 &nbsp;&nbsp;&nbsp; (ii) × 2 → 10x − 4y = 52<br />
+  The y terms are now +4y and −4y, so <strong>add</strong> the two lines:<br />
+  13x = 78 → <strong>x = 6</strong><br />
+  Put x = 6 back into (i): 18 + 4y = 26 → 4y = 8 → <strong>y = 2</strong><br />
+  Check in the equation you did <em>not</em> use for back-substitution: 5(6) − 2(2) = 30 − 4 = 26 ✓
+</div>
+
+Two habits are worth building. **Add when the signs of the matched terms are opposite; subtract when
+they are the same.** And always check in the *other* equation — checking in the one you used to find
+the second unknown cannot catch an error. Fractional answers are perfectly normal; a system is not
+wrong because its solution is 59/13.
+
+<Callout kind="pointer">
+  <p>
+    Pick the unknown that is <strong>cheapest to eliminate</strong>. If one variable already has
+    equal or opposite coefficients, use it directly. If one coefficient divides the other exactly,
+    scale only one equation. Choosing badly costs no marks, only time.
+  </p>
+</Callout>
+
+## 5. Two unknowns: substitution and cross-multiplication
+
+**Substitution** suits a system in which one unknown already stands almost alone. Make one variable
+the subject of one equation and push that expression into the other.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve x + 3y = 17 and 4x − y = 3</div>
+  The first equation gives x directly: x = 17 − 3y<br />
+  Substitute into the second: 4(17 − 3y) − y = 3<br />
+  68 − 12y − y = 3 → −13y = −65 → <strong>y = 5</strong><br />
+  Then x = 17 − 3(5) = <strong>x = 2</strong> · Check: 4(2) − 5 = 3 ✓
+</div>
+
+**Cross-multiplication** is a formula that solves the standard pair in one stroke. Write both
+equations with everything on the left:
+
+<div class="formula">a₁x + b₁y + c₁ = 0 &nbsp;&nbsp;and&nbsp;&nbsp; a₂x + b₂y + c₂ = 0</div>
+
+<div class="formula">x ÷ (b₁c₂ − b₂c₁) = y ÷ (c₁a₂ − c₂a₁) = 1 ÷ (a₁b₂ − a₂b₁)</div>
+
+So, provided a₁b₂ − a₂b₁ ≠ 0,
+
+<div class="formula">x = (b₁c₂ − b₂c₁) ÷ (a₁b₂ − a₂b₁) &nbsp;&nbsp;and&nbsp;&nbsp; y = (c₁a₂ − c₂a₁) ÷ (a₁b₂ − a₂b₁)</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the same pair by cross-multiplication</div>
+  x + 3y = 17 becomes x + 3y − 17 = 0, so a₁ = 1, b₁ = 3, c₁ = −17<br />
+  4x − y = 3 becomes 4x − y − 3 = 0, so a₂ = 4, b₂ = −1, c₂ = −3<br />
+  Denominator: a₁b₂ − a₂b₁ = (1)(−1) − (4)(3) = −1 − 12 = −13<br />
+  x numerator: b₁c₂ − b₂c₁ = (3)(−3) − (−1)(−17) = −9 − 17 = −26 → x = −26 ÷ −13 = <strong>2</strong><br />
+  y numerator: c₁a₂ − c₂a₁ = (−17)(4) − (−3)(1) = −68 + 3 = −65 → y = −65 ÷ −13 = <strong>5</strong>
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Cross-multiplication fails for exactly one reason, and it is always the same reason: the
+    constants were not moved to the left, so c₁ and c₂ kept the wrong sign. In the example above,
+    using c₁ = +17 and c₂ = +3 gives x = +26 ÷ −13 = −2 and y = +5 — a perfectly plausible-looking
+    pair with both signs wrong. Write the equations in the "= 0" form on paper before you touch the
+    formula.
+  </p>
+</Callout>
+
+## 6. Unique solution no solution or infinitely many
+
+Everything about a pair of linear equations in two unknowns is decided by three ratios:
+
+<div class="formula">Compare a₁/a₂ with b₁/b₂ with c₁/c₂ (equations written as a₁x + b₁y = c₁ and a₂x + b₂y = c₂)</div>
+
+| Condition | What it means | Solutions | The lines |
+|---|---|---|---|
+| a₁/a₂ ≠ b₁/b₂ | different slopes | exactly **one** solution — the system is *consistent and independent* | cross at one point |
+| a₁/a₂ = b₁/b₂ ≠ c₁/c₂ | same slope, different intercept | **no** solution — the system is *inconsistent* | parallel, never meet |
+| a₁/a₂ = b₁/b₂ = c₁/c₂ | the same equation twice over | **infinitely many** solutions — *consistent and dependent* | one line drawn twice |
+
+The picture behind the table is worth holding on to. Each equation in two unknowns draws a straight
+line. Two lines can meet at one point, never meet, or lie on top of one another — there is no fourth
+possibility, which is why a pair of linear equations can never have exactly two or exactly three
+solutions. An option offering "two solutions" for a linear system is always wrong.
+
+The first condition is the one to memorise, because it is equivalent to `a₁b₂ − a₂b₁ ≠ 0` — the
+same quantity that sits in the denominator of the cross-multiplication formula. When that quantity
+is zero the formula divides by zero, which is the algebra telling you there is no single answer.
+
+<Callout kind="pointer">
+  <p>
+    Questions of the shape "for what value of k does the system have no solution?" are pure ratio
+    work. Set a₁/a₂ = b₁/b₂ to find the candidate value of k, then <strong>check the third
+    ratio</strong>. If c₁/c₂ also matches, the answer is "infinitely many", not "none". Skipping the
+    third check is what makes these questions worth asking.
+  </p>
+</Callout>
+
+## 7. Three unknowns
+
+Three unknowns need three independent equations. The method does not change — it only repeats.
+
+1. **Choose one variable to remove.** Take the equations in pairs and eliminate the same variable
+   from each pair. Three equations give two new equations in the two surviving unknowns.
+2. **Solve that pair** by any method from the last two sections.
+3. **Back-substitute** into any original equation to recover the third unknown.
+4. **Check in all three** original equations, not just the one you used.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve x + y + z = 12, 2x − y + 3z = 22, 3x + 2y − z = 5</div>
+  Label them (i), (ii), (iii). Remove y first, because (i) and (ii) already carry +y and −y.<br />
+  (i) + (ii): 3x + 4z = 34 &nbsp;&nbsp;… (iv)<br />
+  (iii) + 2 × (ii): 3x + 2y − z + 4x − 2y + 6z = 5 + 44 → 7x + 5z = 49 &nbsp;&nbsp;… (v)<br />
+  Solve (iv) and (v). Multiply (iv) by 7 and (v) by 3 to match the x terms:<br />
+  21x + 28z = 238 and 21x + 15z = 147 → subtract: 13z = 91 → <strong>z = 7</strong><br />
+  From (iv): 3x + 28 = 34 → <strong>x = 2</strong> · From (i): y = 12 − 2 − 7 = <strong>y = 3</strong><br />
+  Check (ii): 4 − 3 + 21 = 22 ✓ &nbsp; Check (iii): 6 + 6 − 7 = 5 ✓
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Eliminate the <strong>same</strong> variable from both pairs. Removing y from one pair and z
+    from the other leaves two equations in different unknowns and gets you nowhere — it is the most
+    common way a three-unknown attempt stalls halfway.
+  </p>
+</Callout>
+
+Three-unknown systems can also be inconsistent or dependent. If eliminating leaves a false statement
+such as 0 = 5, the system has **no solution**. If it leaves 0 = 0, one equation was a combination of
+the others and there are **infinitely many** solutions.
+
+## 8. Quadratic equations: solving by factorisation
+
+A **quadratic equation** is any equation of degree two. Standard form:
+
+<div class="formula">ax² + bx + c = 0, where a ≠ 0</div>
+
+If a were 0 the x² term would vanish and the equation would be linear — which is why "a ≠ 0" is part
+of the definition and not decoration.
+
+Two shapes solve themselves and are worth spotting before any method is applied.
+
+- **Pure quadratic, ax² + c = 0** — no middle term. Then x² = −c/a, so x = ±√(−c/a). The roots are
+  always equal in size and opposite in sign, and they are real only when −c/a is not negative.
+  `3x² − 27 = 0` gives x = ±3.
+- **No constant term, ax² + bx = 0** — take x out as a factor: x(ax + b) = 0, so **one root is
+  always 0** and the other is −b/a. `5x² − 20x = 0` gives x = 0 and x = 4. Dividing both sides by x
+  to "simplify" destroys the root x = 0 and is the mistake this shape is set to catch.
+
+**Factorisation** rests on one fact: if a product is zero, at least one factor is zero. Split the
+middle coefficient b into two parts whose **sum is b** and whose **product is a × c**.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve 6x² − 19x + 10 = 0</div>
+  a × c = 6 × 10 = 60; we need two numbers with product 60 and sum −19 → −15 and −4<br />
+  6x² − 15x − 4x + 10 = 0<br />
+  3x(2x − 5) − 2(2x − 5) = 0<br />
+  (2x − 5)(3x − 2) = 0<br />
+  So 2x − 5 = 0 or 3x − 2 = 0 → <strong>x = 5/2 or x = 2/3</strong><br />
+  Check by the root relations: sum = 5/2 + 2/3 = 19/6 = −b/a ✓ ; product = 5/3 = c/a = 10/6 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Two errors live here. The first is splitting b using a product of <strong>c alone</strong>
+    instead of <strong>a × c</strong> — that works only when a = 1 and quietly fails otherwise. The
+    second is reading the factor (2x − 5) as giving the root −5, or 5, instead of solving
+    2x − 5 = 0 properly. Set every factor to zero and solve it; never read a root straight off a
+    bracket.
+  </p>
+</Callout>
+
+## 9. Solving by completing the square
+
+Factorisation only works when the factors are rational. **Completing the square** always works, and
+it is where the quadratic formula comes from.
+
+The steps, on ax² + bx + c = 0:
+
+1. Divide throughout by a, so the x² term is bare: x² + (b/a)x + c/a = 0.
+2. Move the constant to the right: x² + (b/a)x = −c/a.
+3. Add the square of **half the coefficient of x** to both sides: add (b/2a)².
+4. The left side is now a perfect square, (x + b/2a)². Take the square root of both sides,
+   remembering **both** signs.
+5. Isolate x.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve 2x² + 8x − 10 = 0 by completing the square</div>
+  Divide by 2: x² + 4x − 5 = 0 → x² + 4x = 5<br />
+  Half the coefficient of x is 2; its square is 4. Add 4 to both sides:<br />
+  x² + 4x + 4 = 9 → (x + 2)² = 9<br />
+  x + 2 = ±3 &nbsp;&nbsp;← the ± is the whole point; a square root has two values<br />
+  x = −2 + 3 = 1 &nbsp;or&nbsp; x = −2 − 3 = −5 → <strong>roots 1 and −5</strong><br />
+  Check: sum = −4 = −b/a = −8/2 ✓ ; product = −5 = c/a = −10/2 ✓
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Writing <code>x + 2 = 3</code> and stopping loses the second root every time. A square root
+    taken during solving carries <strong>±</strong>. The distractor "1 only" is put in the option
+    list precisely for the student who forgets it.
+  </p>
+</Callout>
+
+## 10. The quadratic formula
+
+Run the completing-the-square steps on the general equation and the result is the formula every
+Foundation student needs by heart:
+
+<div class="formula">For ax² + bx + c = 0 (a ≠ 0): x = [ −b ± √(b² − 4ac) ] ÷ 2a</div>
+
+Both roots come out of one line: one uses the plus, the other the minus.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve 3x² − 11x + 6 = 0 by formula</div>
+  a = 3, b = −11, c = 6<br />
+  b² − 4ac = (−11)² − 4(3)(6) = 121 − 72 = 49 → √49 = 7<br />
+  x = [ 11 ± 7 ] ÷ 6<br />
+  x = 18/6 = <strong>3</strong> &nbsp;or&nbsp; x = 4/6 = <strong>2/3</strong><br />
+  Check: sum 3 + 2/3 = 11/3 = −b/a ✓ ; product 3 × 2/3 = 2 = c/a = 6/3 ✓
+</div>
+
+Three habits keep the formula honest.
+
+- **Rearrange to "= 0" first.** `2x² = 7x − 3` is not ready; `2x² − 7x + 3 = 0` is.
+- **Carry the sign into b.** In 3x² − 11x + 6 the value of b is −11, so −b is +11. Using −(11) here
+  gives the roots −3 and −2/3, both wrong in sign.
+- **Take the square root before dividing.** √(b² − 4ac) must be evaluated as a whole; you cannot
+  root b² and 4ac separately, and √49 is 7, not 24.5.
+
+<Callout kind="mistake">
+  <p>
+    The classic slip is dividing only the −b by 2a. The whole numerator, <strong>including the
+    ± term</strong>, is divided. Writing x = −b/2a ± √(b² − 4ac) turns the roots of
+    3x² − 11x + 6 = 0 into 11/6 ± 7, which is neither root.
+  </p>
+</Callout>
+
+## 11. The discriminant and the nature of the roots
+
+The quantity under the square root sign decides everything about the roots without your having to
+find them.
+
+<div class="formula">Discriminant D = b² − 4ac</div>
+
+| D | Nature of the roots | Example |
+|---|---|---|
+| D &gt; 0 and a perfect square | **real, distinct and rational** — the equation factorises over the rationals | x² − 5x + 6 = 0, D = 1, roots 2 and 3 |
+| D &gt; 0 but not a perfect square | **real, distinct and irrational**, occurring as a conjugate pair p ± √q | x² − 4x + 1 = 0, D = 12, roots 2 ± √3 |
+| D = 0 | **real and equal** — one value repeated twice, x = −b/2a | x² − 6x + 9 = 0, D = 0, root 3 twice |
+| D &lt; 0 | **not real** — no real number satisfies the equation; the roots are a conjugate pair of imaginary numbers | x² + x + 4 = 0, D = −15 |
+
+The "perfect square" row assumes a, b and c are rational, which they are in every Foundation
+question. Two consequences worth stating plainly:
+
+- **Irrational roots always come in pairs.** If 2 + √3 is a root of a quadratic with rational
+  coefficients, 2 − √3 is the other root. The same is true of imaginary roots: if 3 + 2i is a root,
+  3 − 2i is the other.
+- **"Real and equal" still counts as two roots.** The equation has two roots that happen to have the
+  same value.
+
+<Callout kind="pointer">
+  <p>
+    "For what value of k are the roots equal?" is a D = 0 question, nothing more. Set b² − 4ac = 0,
+    which is itself usually a quadratic in k, and solve it — so expect <strong>two</strong> answers
+    for k unless the question narrows it down. "Roots are real" means D ≥ 0, and the ≥ matters: it
+    includes the equal-roots case.
+  </p>
+</Callout>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — for kx² − 12x + 9 = 0, find k for equal roots, and the range of k for real distinct roots</div>
+  Here a = k, b = −12, c = 9, and k ≠ 0 or the equation stops being quadratic.<br />
+  D = (−12)² − 4(k)(9) = 144 − 36k<br />
+  <strong>Equal roots:</strong> D = 0 → 144 = 36k → <strong>k = 4</strong><br />
+  Check: 4x² − 12x + 9 = (2x − 3)², root 3/2 twice ✓<br />
+  <strong>Real and distinct:</strong> D &gt; 0 → 144 − 36k &gt; 0 → <strong>k &lt; 4, and k ≠ 0</strong><br />
+  <strong>Not real:</strong> D &lt; 0 → k &gt; 4
+</div>
+
+One more relationship is worth carrying. Because the equal-roots case is D = 0, the repeated root is
+simply
+
+<div class="formula">When D = 0, both roots equal −b ÷ 2a</div>
+
+For 4x² − 12x + 9 = 0 that is 12 ÷ 8 = 3/2, matching the factorised form above without any further
+work.
+
+## 12. Sum and product of the roots
+
+If α and β are the roots of ax² + bx + c = 0, then ax² + bx + c = a(x − α)(x − β). Expand the right
+side and match coefficients, and two relations drop out:
+
+<div class="formula">α + β = −b/a &nbsp;&nbsp;&nbsp;&nbsp; αβ = c/a</div>
+
+Read them as: the **sum is minus the middle coefficient over the first**, and the **product is the
+last over the first**. They let you answer a large family of questions without solving anything.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — for 5x² − 12x + 4 = 0, find α + β, αβ and 1/α + 1/β</div>
+  a = 5, b = −12, c = 4<br />
+  α + β = −(−12)/5 = <strong>12/5</strong><br />
+  αβ = 4/5<br />
+  1/α + 1/β = (α + β) ÷ αβ = (12/5) ÷ (4/5) = <strong>3</strong><br />
+  No root was ever computed. (For the record they are 2 and 2/5, and 1/2 + 5/2 = 3 ✓)
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Two sign traps. First, the sum is <strong>−b/a</strong>, not b/a — for 5x² − 12x + 4 = 0 the sum
+    is +12/5, and answering −12/5 is the commonest wrong option in the paper. Second, students swap
+    the two: quoting the sum as c/a and the product as −b/a gives 4/5 and −12/5, a pair that looks
+    respectable and is completely inverted.
+  </p>
+</Callout>
+
+## 13. Forming an equation from given roots
+
+Run the relations backwards and you can build the equation from its roots.
+
+<div class="formula">x² − (sum of the roots)x + (product of the roots) = 0</div>
+
+The minus sign in front of the sum is part of the formula. Multiply through by any convenient number
+to clear fractions — the roots do not change when every term is scaled.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — form the equation whose roots are 3/4 and −2/5</div>
+  Sum = 3/4 − 2/5 = (15 − 8)/20 = 7/20<br />
+  Product = (3/4)(−2/5) = −6/20 = −3/10<br />
+  x² − (7/20)x − 3/10 = 0<br />
+  Multiply throughout by 20: <strong>20x² − 7x − 6 = 0</strong><br />
+  Check: D = 49 + 480 = 529 = 23², roots = (7 ± 23)/40 = 30/40 and −16/40 = 3/4 and −2/5 ✓
+</div>
+
+The same idea builds an equation whose roots are **derived** from another equation's roots. You do
+not need the roots themselves — only their new sum and new product.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — α and β satisfy x² − 6x + 4 = 0; form the equation whose roots are 2α and 2β</div>
+  From the given equation: α + β = 6, αβ = 4<br />
+  New sum = 2α + 2β = 2(α + β) = 12<br />
+  New product = (2α)(2β) = 4αβ = 16<br />
+  Equation: x² − 12x + 16 = 0
+</div>
+
+<Callout kind="pointer">
+  <p>
+    A question that gives you one irrational or imaginary root of a rational quadratic has already
+    given you both. If one root is 5 − √2, the other is 5 + √2, so the sum is 10 and the product is
+    25 − 2 = 23, and the equation is x² − 10x + 23 = 0. You never have to hunt for the second root.
+  </p>
+</Callout>
+
+Three shifted-root patterns come up often enough to be worth memorising. If α and β are the roots of
+ax² + bx + c = 0, with s = α + β = −b/a and p = αβ = c/a:
+
+| New roots | New sum | New product | Resulting equation |
+|---|---|---|---|
+| kα and kβ | ks | k²p | ax² + kbx + k²c = 0 |
+| α + k and β + k | s + 2k | p + ks + k² | replace x by (x − k) in the original |
+| 1/α and 1/β | s/p | 1/p | **cx² + bx + a = 0** — reverse the coefficients |
+| −α and −β | −s | p | ax² − bx + c = 0 — flip the sign of b |
+
+The reciprocal row is the neatest result in the chapter: to get the equation whose roots are the
+reciprocals of another's, simply **write the coefficients backwards**. From 3x² − 11x + 6 = 0, whose
+roots are 3 and 2/3, the reciprocal equation is 6x² − 11x + 3 = 0, whose roots are 1/3 and 3/2 ✓
+
+## 14. Symmetric functions of the roots
+
+A **symmetric function** of α and β is any expression that stays the same when α and β swap places.
+Every such expression can be written using only the sum s = α + β and the product p = αβ, which is
+why they can be evaluated without solving the equation.
+
+The identities worth knowing:
+
+<div class="formula">α² + β² = s² − 2p</div>
+<div class="formula">(α − β)² = s² − 4p, so α − β = ±√(s² − 4p)</div>
+<div class="formula">1/α + 1/β = s ÷ p &nbsp;&nbsp;&nbsp; 1/α² + 1/β² = (s² − 2p) ÷ p²</div>
+<div class="formula">α³ + β³ = s³ − 3ps</div>
+<div class="formula">α/β + β/α = (α² + β²) ÷ αβ = (s² − 2p) ÷ p</div>
+<div class="formula">α⁴ + β⁴ = (s² − 2p)² − 2p²</div>
+
+Each one is built the same way: write the expression in terms of α + β and αβ using an algebraic
+identity, then substitute. α⁴ + β⁴, for instance, is (α² + β²)² − 2α²β², and α² + β² is already
+known to be s² − 2p.
+
+Notice that (α − β)² = s² − 4p is the discriminant divided by a²: for ax² + bx + c = 0,
+s² − 4p = b²/a² − 4c/a = (b² − 4ac)/a². So a question asking for the **difference** of the roots is
+a discriminant question wearing a different hat.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — for 2x² − 9x + 4 = 0, find α² + β², α³ + β³ and α − β</div>
+  s = 9/2, p = 4/2 = 2<br />
+  α² + β² = s² − 2p = 81/4 − 4 = <strong>65/4</strong><br />
+  α³ + β³ = s³ − 3ps = 729/8 − 3(2)(9/2) = 729/8 − 27 = (729 − 216)/8 = <strong>513/8</strong><br />
+  (α − β)² = s² − 4p = 81/4 − 8 = 49/4 → α − β = <strong>±7/2</strong><br />
+  (The roots are 4 and 1/2; 16 + 0.25 = 16.25 = 65/4 ✓ and 4 − 0.5 = 3.5 = 7/2 ✓)
+</div>
+
+<Callout kind="mistake">
+  <p>
+    α² + β² is <strong>not</strong> (α + β)². The cross term 2αβ must be subtracted. Reporting
+    (9/2)² = 81/4 above instead of 65/4 is the error the distractor is built from. The same applies
+    to α³ + β³, where the correction term is 3ps and not nothing.
+  </p>
+</Callout>
+
+## 15. Equations reducible to quadratic form
+
+Many equations that are not quadratic become quadratic after a **substitution**. Four families cover
+almost everything Paper 3 asks.
+
+**Family 1 — the biquadratic, ax⁴ + bx² + c = 0.** Put y = x². Solve the quadratic in y, then take
+square roots to return to x. Each positive y gives two values of x; a negative y gives none that are
+real.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve x⁴ − 13x² + 36 = 0</div>
+  Let y = x²: y² − 13y + 36 = 0 → (y − 4)(y − 9) = 0 → y = 4 or y = 9<br />
+  x² = 4 → x = ±2 &nbsp;&nbsp; x² = 9 → x = ±3<br />
+  <strong>Four roots: 2, −2, 3, −3</strong> — as a degree-4 equation must have.
+</div>
+
+**Family 2 — the reciprocal pattern, a(x + 1/x)² + b(x + 1/x) + c = 0.** Put y = x + 1/x. Solve for
+y, then solve x + 1/x = y, which is the quadratic x² − yx + 1 = 0.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve 2(x + 1/x)² − 9(x + 1/x) + 10 = 0</div>
+  Let y = x + 1/x: 2y² − 9y + 10 = 0<br />
+  Split −9 into −4 and −5 (product 2 × 10 = 20): 2y² − 4y − 5y + 10 = 0 → (y − 2)(2y − 5) = 0<br />
+  y = 2 or y = 5/2<br />
+  y = 2: x + 1/x = 2 → x² − 2x + 1 = 0 → (x − 1)² = 0 → x = 1, twice<br />
+  y = 5/2: x + 1/x = 5/2 → 2x² − 5x + 2 = 0 → (2x − 1)(x − 2) = 0 → x = 1/2, x = 2<br />
+  <strong>Roots: 1 (repeated), 1/2 and 2</strong> — four in all, as a degree-4 equation requires.
+</div>
+
+**Family 3 — equations with a surd.** Isolate the square root on one side and square both sides.
+Squaring can manufacture roots that do not satisfy the original equation, so **every root must be
+substituted back into the original equation** and any that fails must be discarded. A root thrown up
+by squaring that fails the check is an **extraneous root**.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve √(3x + 10) = x</div>
+  Square both sides: 3x + 10 = x² → x² − 3x − 10 = 0 → (x − 5)(x + 2) = 0 → x = 5 or x = −2<br />
+  Test x = 5 in the original: √25 = 5 ✓ — a genuine root<br />
+  Test x = −2: √4 = 2, but the right side is −2, and 2 ≠ −2 ✗ — <strong>extraneous</strong><br />
+  The equation has <strong>one</strong> root, x = 5.
+</div>
+
+**Family 4 — the same expression appearing twice.** In (x² + 3x)² − 8(x² + 3x) + 12 = 0, put
+y = x² + 3x, solve y² − 8y + 12 = 0 to get y = 2 or 6, then solve each of x² + 3x = 2 and
+x² + 3x = 6 as a separate quadratic.
+
+<Callout kind="mistake">
+  <p>
+    Two habits go wrong here. Students solve for the substituted letter and stop, giving y = 4 and
+    y = 9 as "the roots" instead of returning to x. And students who do return forget that squaring
+    is a one-way street: the check against the <strong>original</strong> equation, not the squared
+    one, is what separates a root from an extraneous root.
+  </p>
+</Callout>
+
+## 16. Cubic equations
+
+A cubic ax³ + bx² + cx + d = 0 has three roots. At Foundation level the questions are built so that
+**at least one root is a simple rational number**, and the method is:
+
+1. **Find one root by trial.** Test the divisors of the constant term divided by the divisors of the
+   leading coefficient — in practice, try ±1, ±2, ±3 and the other small factors of d ÷ a. When a
+   value of x makes the whole expression zero, that value is a root.
+2. **Divide out the factor.** If x = r is a root, (x − r) is a factor. Divide the cubic by (x − r)
+   to leave a quadratic.
+3. **Solve the quadratic** by factorisation or formula. Together with r that gives all three roots.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — solve x³ − 6x² + 11x − 6 = 0</div>
+  Constant is −6, so try x = 1: 1 − 6 + 11 − 6 = 0 ✓ — x = 1 is a root, (x − 1) is a factor<br />
+  Divide: x³ − 6x² + 11x − 6 = (x − 1)(x² − 5x + 6)<br />
+  x² − 5x + 6 = (x − 2)(x − 3) → x = 2 and x = 3<br />
+  <strong>Roots: 1, 2 and 3</strong><br />
+  Check with the cubic relations: sum = 6 = −b/a ✓ ; product = 6 = −d/a ✓
+</div>
+
+**How to do the division.** Two routes give the same quotient. Ordinary long division of polynomials
+works exactly like long division of numbers. The quicker route at Foundation level is to write the
+quotient with unknown coefficients and match terms: if x³ − 6x² + 11x − 6 = (x − 1)(x² + mx + n),
+then expanding gives x³ + (m − 1)x² + (n − m)x − n, so −n = −6 → n = 6 and m − 1 = −6 → m = −5. That
+recovers x² − 5x + 6 in two lines, and the middle coefficient acts as a free check: n − m = 6 + 5 =
+11 ✓
+
+The relations between roots and coefficients extend to cubics. For ax³ + bx² + cx + d = 0 with roots
+α, β, γ:
+
+<div class="formula">α + β + γ = −b/a &nbsp;&nbsp; αβ + βγ + γα = c/a &nbsp;&nbsp; αβγ = −d/a</div>
+
+The alternating signs are the pattern: minus, plus, minus. They give a fast check on any cubic you
+have just solved.
+
+<Callout kind="pointer">
+  <p>
+    Trial values are not random. Any rational root of a cubic with integer coefficients must be a
+    factor of the constant term divided by a factor of the leading coefficient. For
+    2x³ − 3x² − 11x + 6 = 0 the candidates are ±1, ±2, ±3, ±6 and their halves — about a dozen
+    numbers, and x = 3 works on the third try.
+  </p>
+</Callout>
+
+## 17. Applications to business problems
+
+Word problems are marked on the translation, not the algebra. Four disciplined steps:
+
+1. **Name the unknown in words first** — "let x be the number of units sold in a month". A letter
+   with no stated meaning is where most wrong answers begin.
+2. **Write one equation for each independent fact** in the question. Count the facts; you need as
+   many equations as unknowns.
+3. **Solve.**
+4. **Answer the question that was asked.** If the question asks for the *selling price* and you
+   solved for the *number of units*, one more line of arithmetic is still needed.
+
+**Cost, revenue and break-even.** With a fixed cost F, a variable cost v per unit and a selling
+price p per unit:
+
+<div class="formula">Total cost = F + vx &nbsp;&nbsp; Total revenue = px &nbsp;&nbsp; Profit = (p − v)x − F</div>
+<div class="formula">Break-even quantity = F ÷ (p − v), where p − v is the contribution per unit</div>
+
+At break-even the profit is zero, so the two lines cross. The press in the opening paragraph is the
+same idea with two cost lines instead of a cost line and a revenue line.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the printing press from the opening paragraph</div>
+  Let x be the number of copies printed.<br />
+  Plan A costs 18,000 + 6x · Plan B costs 15x<br />
+  The plans cost the same when 18,000 + 6x = 15x → 18,000 = 9x → <strong>x = 2,000 copies</strong><br />
+  At 2,000 copies each plan costs ₹ 30,000. Below 2,000 copies Plan B is cheaper (its saving on the
+  setting charge outweighs the higher rate); above 2,000 copies Plan A is cheaper.
+</div>
+
+A **target-profit** question is the same equation with the profit written in instead of zero:
+quantity = (fixed cost + target profit) ÷ contribution per unit.
+
+**Demand, supply and equilibrium.** A demand equation falls as price rises, a supply equation rises
+with price, and the **equilibrium** price is where the two quantities are equal. Set the two
+right-hand sides equal, solve for p, then put p back into either equation to get the quantity.
+
+**Mixtures and alligation-style splits.** Two grades at different rates blended into one lot: let x
+be the quantity of the first grade, write a **quantity** equation and a **value** equation, and
+solve them together.
+
+<div class="formula">x + y = total quantity &nbsp;&nbsp; r₁x + r₂y = (blend rate) × (total quantity)</div>
+
+**Work and time.** Work rates add. If A finishes a job in a days, A does 1/a of it per day.
+
+<div class="formula">1/a + 1/b = 1/t, where t is the time taken together</div>
+
+**Digits.** A two-digit number with tens digit t and units digit u is **10t + u**, never tu.
+Reversing the digits gives 10u + t, and the difference between the two is always 9(t − u).
+
+**Ages.** Write the present ages as the unknowns, and express past or future ages by subtracting or
+adding the same number of years **from every person's age**. "Five years ago" means x − 5 and
+y − 5 together, not x − 5 and y.
+
+**Cost, profit and percentages.** A percentage is a multiplier, so "sold at a profit of 20% on cost"
+means selling price = 1.2 × cost, while "a margin of 20% on the selling price" means cost = 0.8 ×
+selling price. Both translate into linear equations, and the two produce different answers from the
+same 20% — read which base the percentage is quoted on before you write the equation.
+
+**How many equations do you need?** One for each unknown, and they must be independent. If a word
+problem gives you three facts about two unknowns, one of the three is either a repetition or a check
+— use two to solve and the third to verify. If it gives you two facts about three unknowns, the
+question must be asking for a combination such as x + y + z rather than for the individual values.
+
+<Callout kind="mistake">
+  <p>
+    In an age or digit problem, a quadratic often produces one negative or one non-integral root.
+    That root is <strong>rejected on the facts</strong> — an age cannot be −3 and a digit cannot be
+    7.5 — and rejecting it is part of the answer, not an oversight. But do not reject a negative root
+    reflexively: in a profit-and-loss or a temperature question a negative value can be perfectly
+    meaningful.
+  </p>
+</Callout>
+
+## 18. Negative marking and when to leave a question
+
+Paper 3 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25 and an unattempted one scores 0.
+
+The arithmetic of that is worth knowing calmly. A pure guess among four options is right one time in
+four: on average, four such guesses earn 1 mark and lose 3 × 0.25 = 0.75, a net gain of 0.25 marks
+for four questions. So blind guessing is very slightly positive but close to neutral, and its spread
+is wide.
+
+What changes the picture is **elimination**. Rule out one option and a guess among the remaining
+three is right one time in three, worth about 0.5 marks per four attempts. Rule out two and a guess
+between the last two is worth about 1.5 marks per four. In this chapter elimination is unusually
+easy, because the distractors are built from named errors: an option carrying the wrong sign on a
+sum of roots, or a single root where a quadratic must have two, can often be discarded on sight.
+
+A sensible working rule for this chapter: **answer when you can eliminate at least one option;
+consider leaving it when you cannot narrow the field at all**. Nothing about that rule needs to be
+followed anxiously — the marks at stake in either direction are small, and time spent on a question
+you can actually finish is worth more than either choice.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — break-even and the target-profit quantity (easy)">
+  <p>
+    Sharada Foods packs one variety of pickle. Fixed costs are ₹ 2,40,000 a month; the variable cost
+    is ₹ 180 a jar and the selling price is ₹ 300 a jar. Find (a) the break-even quantity, (b) the
+    quantity needed for a monthly profit of ₹ 90,000, and (c) the new break-even quantity if
+    competition forces the price down to ₹ 270 while costs stay the same.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — set up the profit equation</div>
+    Let x be the number of jars sold in a month.<br />
+    Revenue = 300x · Total cost = 2,40,000 + 180x<br />
+    Contribution per jar = 300 − 180 = <strong>₹ 120</strong><br />
+    Profit = 120x − 2,40,000
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) break-even: profit is zero</div>
+    120x − 2,40,000 = 0 → 120x = 2,40,000 → <strong>x = 2,000 jars</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) profit of ₹ 90,000</div>
+    120x − 2,40,000 = 90,000 → 120x = 3,30,000 → <strong>x = 2,750 jars</strong><br />
+    The extra 750 jars carry ₹ 120 of contribution each: 750 × 120 = ₹ 90,000 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (c) price cut to ₹ 270</div>
+    New contribution = 270 − 180 = ₹ 90 · 2,40,000 ÷ 90 = 2,666.67<br />
+    Jars are whole, and 2,666 jars still leave a small loss, so the firm must sell
+    <strong>2,667 jars</strong> to break even. A 10% price cut raised the break-even volume by a
+    third — that is the leverage the contribution per unit carries.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — two unknowns by elimination and by cross-multiplication (easy-moderate)">
+  <p>
+    A stationery wholesaler in Nashik sells registers and files. One retailer buys 3 registers and
+    4 files for ₹ 1,010. Another buys 5 registers and returns 2 files against a credit note, paying
+    ₹ 860 net. Find the price of each item, and confirm the answer by cross-multiplication.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — translate</div>
+    Let r be the price of a register and f the price of a file, both in rupees.<br />
+    (i) 3r + 4f = 1,010 &nbsp;&nbsp;&nbsp; (ii) 5r − 2f = 860
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — elimination</div>
+    (ii) × 2 → 10r − 4f = 1,720. The f terms are now +4f and −4f, so add:<br />
+    13r = 2,730 → <strong>r = ₹ 210</strong><br />
+    From (i): 4f = 1,010 − 630 = 380 → <strong>f = ₹ 95</strong><br />
+    Check in (ii): 5(210) − 2(95) = 1,050 − 190 = 860 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the same pair by cross-multiplication</div>
+    Rewrite with everything on the left: 3r + 4f − 1,010 = 0 and 5r − 2f − 860 = 0<br />
+    a₁ = 3, b₁ = 4, c₁ = −1,010 · a₂ = 5, b₂ = −2, c₂ = −860<br />
+    Denominator a₁b₂ − a₂b₁ = (3)(−2) − (5)(4) = −26<br />
+    r = (b₁c₂ − b₂c₁) ÷ (−26) = [(4)(−860) − (−2)(−1,010)] ÷ (−26) = (−3,440 − 2,020) ÷ (−26) = <strong>210</strong><br />
+    f = (c₁a₂ − c₂a₁) ÷ (−26) = [(−1,010)(5) − (−860)(3)] ÷ (−26) = (−5,050 + 2,580) ÷ (−26) = <strong>95</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — consistency and the value of k (moderate)">
+  <p>
+    For the system 3x + ky = 12 and 6x + 8y = 30, find the value of k for which the system has
+    (a) no solution and (b) a unique solution. Then say what happens if the second equation's
+    constant is 24 instead of 30.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — write down the three ratios</div>
+    a₁/a₂ = 3/6 = 1/2 &nbsp;·&nbsp; b₁/b₂ = k/8 &nbsp;·&nbsp; c₁/c₂ = 12/30 = 2/5
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) no solution</div>
+    No solution needs a₁/a₂ = b₁/b₂ but c₁/c₂ different.<br />
+    k/8 = 1/2 → <strong>k = 4</strong><br />
+    Third ratio check: 2/5 ≠ 1/2, so the ratios really do split → the system is inconsistent and has
+    <strong>no solution when k = 4</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) unique solution</div>
+    A unique solution needs a₁/a₂ ≠ b₁/b₂, that is k/8 ≠ 1/2 → <strong>k ≠ 4</strong>. Any other
+    value of k, positive or negative, gives one crossing point.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the constant changed to 24</div>
+    Now c₁/c₂ = 12/24 = 1/2. At k = 4 all three ratios equal 1/2, so the second equation is simply
+    the first doubled: the system has <strong>infinitely many solutions</strong>. The same k, the
+    opposite conclusion — which is exactly why the third ratio must always be checked.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — three unknowns from three invoices (moderate)">
+  <p>
+    A college store's three purchase bills read: 2 pens, 3 notebooks and 1 calculator for ₹ 470;
+    1 pen, 2 notebooks and 3 calculators for ₹ 840; 4 pens, 1 notebook and 2 calculators for ₹ 640.
+    Find the unit price of each item.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — translate</div>
+    Let x, y and z be the prices of a pen, a notebook and a calculator, in rupees.<br />
+    (i) 2x + 3y + z = 470 &nbsp; (ii) x + 2y + 3z = 840 &nbsp; (iii) 4x + y + 2z = 640
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — eliminate x from two pairs</div>
+    2 × (ii) − (i): (2x + 4y + 6z) − (2x + 3y + z) = 1,680 − 470 → y + 5z = 1,210 … (iv)<br />
+    (iii) − 4 × (ii): (4x + y + 2z) − (4x + 8y + 12z) = 640 − 3,360 → −7y − 10z = −2,720,
+    that is 7y + 10z = 2,720 … (v)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — solve the pair</div>
+    From (iv): y = 1,210 − 5z. Substitute in (v):<br />
+    7(1,210 − 5z) + 10z = 2,720 → 8,470 − 35z + 10z = 2,720 → −25z = −5,750 → <strong>z = ₹ 230</strong><br />
+    y = 1,210 − 5(230) = <strong>₹ 60</strong> · From (i): 2x = 470 − 180 − 230 = 60 → <strong>x = ₹ 30</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — check in all three</div>
+    (i) 60 + 180 + 230 = 470 ✓ &nbsp; (ii) 30 + 120 + 690 = 840 ✓ &nbsp; (iii) 120 + 60 + 460 = 640 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — a quadratic from a trading situation (moderate)">
+  <p>
+    A dealer spent ₹ 8,000 buying identical steel tiffin boxes. Had he negotiated and bought 20 more
+    boxes for the same total outlay, each box would have cost ₹ 20 less. How many boxes did he buy,
+    and at what price each?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — name the unknown and write the two prices</div>
+    Let x be the number of boxes actually bought.<br />
+    Actual price per box = 8,000 ÷ x · Hypothetical price = 8,000 ÷ (x + 20)<br />
+    The hypothetical price is ₹ 20 lower: 8,000/x − 8,000/(x + 20) = 20
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — clear the fractions</div>
+    Multiply by x(x + 20): 8,000(x + 20) − 8,000x = 20x(x + 20)<br />
+    1,60,000 = 20x² + 400x → divide by 20: x² + 20x − 8,000 = 0
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — solve and reject on the facts</div>
+    D = 400 + 32,000 = 32,400 → √32,400 = 180<br />
+    x = (−20 ± 180) ÷ 2 → x = 80 or x = −100<br />
+    A count of boxes cannot be negative, so <strong>x = 80 boxes</strong>, at 8,000 ÷ 80 =
+    <strong>₹ 100 each</strong>.<br />
+    Check the story: 100 boxes would have cost 8,000 ÷ 100 = ₹ 80 each, which is ₹ 20 less ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — working entirely through sum and product of roots (moderate-hard)">
+  <p>
+    The two roots of 2x² − 11x + k = 0 differ by 3/2. Find k. Then, without solving the equation,
+    find α² + β² and form the equation whose roots are α + 2 and β + 2.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the difference is a discriminant question</div>
+    s = α + β = −(−11)/2 = 11/2 &nbsp;·&nbsp; p = αβ = k/2<br />
+    (α − β)² = s² − 4p = 121/4 − 2k<br />
+    The difference is 3/2, so (α − β)² = 9/4:<br />
+    121/4 − 2k = 9/4 → 2k = 112/4 = 28 → <strong>k = 14</strong><br />
+    Check: 2x² − 11x + 14 = (2x − 7)(x − 2), roots 7/2 and 2, difference 3/2 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — α² + β² without the roots</div>
+    p = k/2 = 7 · α² + β² = s² − 2p = 121/4 − 14 = <strong>65/4</strong><br />
+    (The roots are 7/2 and 2: 49/4 + 4 = 65/4 ✓)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — build the shifted equation</div>
+    New sum = (α + 2) + (β + 2) = s + 4 = 11/2 + 4 = 19/2<br />
+    New product = (α + 2)(β + 2) = p + 2s + 4 = 7 + 11 + 4 = 22<br />
+    x² − (19/2)x + 22 = 0 → multiply by 2 → <strong>2x² − 19x + 44 = 0</strong><br />
+    Check against the shifted roots 11/2 and 4: sum 19/2 ✓, product 22 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — reducible to quadratic form: a surd and a substitution (moderate-hard)">
+  <p>
+    Solve (a) √(2x + 7) − x = 2 and (b) (x² + 2x)² − 11(x² + 2x) + 24 = 0.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) isolate the surd, then square</div>
+    √(2x + 7) = x + 2<br />
+    Square both sides: 2x + 7 = x² + 4x + 4 → x² + 2x − 3 = 0 → (x + 3)(x − 1) = 0<br />
+    Candidates: x = 1 and x = −3
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) test both against the ORIGINAL equation</div>
+    x = 1: √9 − 1 = 3 − 1 = 2 ✓ — a genuine root<br />
+    x = −3: √1 − (−3) = 1 + 3 = 4, and 4 ≠ 2 ✗ — <strong>extraneous</strong>, created by the squaring<br />
+    <strong>The only root is x = 1.</strong> Squaring turned "√(2x+7) = x + 2" into a statement that
+    also accepts √(2x+7) = −(x + 2), and x = −3 satisfies that second, unwanted equation.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) substitute the repeated block</div>
+    Let y = x² + 2x. Then y² − 11y + 24 = 0 → (y − 3)(y − 8) = 0 → y = 3 or y = 8
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (b) return to x, twice</div>
+    y = 3: x² + 2x − 3 = 0 → (x + 3)(x − 1) = 0 → x = −3, 1<br />
+    y = 8: x² + 2x − 8 = 0 → (x + 4)(x − 2) = 0 → x = −4, 2<br />
+    <strong>Four roots: −4, −3, 1 and 2</strong> — the equation is of degree 4 in x, so four is right.
+    Stopping at y = 3 and y = 8 answers a question nobody asked.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — a cubic by locating one rational root (hard)">
+  <p>
+    Solve 2x³ − 3x² − 11x + 6 = 0 and verify the answer with the cubic root relations.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — list the candidate rational roots</div>
+    A rational root must be (a factor of 6) ÷ (a factor of 2): ±1, ±2, ±3, ±6, ±1/2, ±3/2<br />
+    x = 1: 2 − 3 − 11 + 6 = −6, not zero<br />
+    x = 2: 16 − 12 − 22 + 6 = −12, not zero<br />
+    x = 3: 54 − 27 − 33 + 6 = 0 ✓ → <strong>x = 3 is a root and (x − 3) is a factor</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — divide out the known factor</div>
+    2x³ − 3x² − 11x + 6 ÷ (x − 3) = 2x² + 3x − 2<br />
+    (Check by expanding: (x − 3)(2x² + 3x − 2) = 2x³ + 3x² − 2x − 6x² − 9x + 6 = 2x³ − 3x² − 11x + 6 ✓)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — solve the quadratic that is left</div>
+    2x² + 3x − 2 = 0 → split 3 as 4 and −1 (product 2 × −2 = −4): 2x² + 4x − x − 2 = 0<br />
+    2x(x + 2) − 1(x + 2) = 0 → (x + 2)(2x − 1) = 0 → x = −2, x = 1/2<br />
+    <strong>Roots: 3, −2 and 1/2</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — verify with the relations</div>
+    Sum = 3 − 2 + 0.5 = 1.5 and −b/a = 3/2 ✓<br />
+    Pairwise sum = (3)(−2) + (−2)(0.5) + (0.5)(3) = −6 − 1 + 1.5 = −5.5 and c/a = −11/2 ✓<br />
+    Product = 3 × −2 × 0.5 = −3 and −d/a = −6/2 = −3 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — market equilibrium and a blending decision (moderate)">
+  <p>
+    (a) For a variety of rice at a mandi, the quantity demanded in quintals is q = 900 − 15p and the
+    quantity supplied is q = 5p − 100, where p is the price per quintal in rupees. Find the
+    equilibrium price and quantity. (b) A coffee trader blends a ₹ 420 per kg grade with a ₹ 640 per
+    kg grade to make 88 kg of a blend costing him ₹ 500 per kg. How much of each grade goes in?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) equilibrium is where the two quantities are equal</div>
+    900 − 15p = 5p − 100<br />
+    900 + 100 = 5p + 15p → 1,000 = 20p → <strong>p = ₹ 50 per quintal</strong><br />
+    Quantity from demand: 900 − 15(50) = <strong>150 quintals</strong><br />
+    Check in supply: 5(50) − 100 = 150 ✓ — both sides must give the same quantity, and that check is
+    the whole point of doing it twice.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) one quantity equation and one value equation</div>
+    Let x kg be the ₹ 420 grade and y kg the ₹ 640 grade.<br />
+    Quantity: x + y = 88 · Value: 420x + 640y = 500 × 88 = 44,000<br />
+    Substitute y = 88 − x: 420x + 640(88 − x) = 44,000<br />
+    420x + 56,320 − 640x = 44,000 → −220x = −12,320 → <strong>x = 56 kg</strong>, y = <strong>32 kg</strong><br />
+    Check the value: 420(56) + 640(32) = 23,520 + 20,480 = ₹ 44,000 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — three short translations: work, digits and ages (easy-moderate)">
+  <p>
+    (a) Pipe A fills a tank in 12 hours and pipe B in 18 hours. How long do they take together?
+    (b) The digits of a two-digit number add to 11, and reversing the digits increases the number by
+    45. Find the number. (c) A father is three times as old as his son; eight years ago he was five
+    times as old. Find both present ages.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) rates add, times do not</div>
+    In one hour A fills 1/12 of the tank and B fills 1/18.<br />
+    Together per hour: 1/12 + 1/18 = 3/36 + 2/36 = 5/36<br />
+    Time = 36/5 = <strong>7.2 hours, that is 7 hours 12 minutes</strong><br />
+    Adding the times to get 30 hours, or averaging them to get 15, both contradict common sense: two
+    pipes must be faster than either alone.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) a two-digit number is 10t + u</div>
+    Let t be the tens digit and u the units digit. The number is 10t + u; reversed it is 10u + t.<br />
+    (i) t + u = 11<br />
+    (ii) (10u + t) − (10t + u) = 45 → 9u − 9t = 45 → u − t = 5<br />
+    Add (i) and (ii): 2u = 16 → u = 8, so t = 3 → the number is <strong>38</strong><br />
+    Check: 83 − 38 = 45 ✓ and 3 + 8 = 11 ✓
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) subtract the years from every age</div>
+    Let s be the son's present age and f the father's. Then f = 3s.<br />
+    Eight years ago: f − 8 = 5(s − 8)<br />
+    3s − 8 = 5s − 40 → 32 = 2s → <strong>s = 16 years</strong>, f = <strong>48 years</strong><br />
+    Check eight years ago: 40 and 8, and 40 = 5 × 8 ✓ — the classic slip is writing f − 8 = 5s, which
+    forgets to age the son backwards and gives s = 6.4, an answer no set of options will contain.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **The sign on transposition.** A term changes sign only when it crosses the equals sign. Half the
+  wrong options in a linear-equation question are the answer you get from one flipped sign.
+- **Losing the second root.** Every square root taken while solving carries **±**. `(x + 2)² = 9`
+  gives x = 1 *and* x = −5, never x = 1 alone.
+- **Splitting the middle term using c instead of a × c.** The two numbers must multiply to
+  **a × c** and add to b. Using c alone works only when a = 1, which is exactly why the examiner
+  sets a ≠ 1.
+- **Reading a root straight off a bracket.** The factor (2x − 5) gives x = 5/2, not 5 and not −5.
+  Set each factor to zero and solve it.
+- **Dividing only part of the numerator by 2a.** The whole of −b ± √(b² − 4ac) is divided by 2a.
+- **Forgetting the sign of b inside the formula.** For 3x² − 11x + 6 = 0, b = −11 so −b = +11.
+  Treating b as +11 flips both roots' signs.
+- **Sum and product swapped, or the sum's sign dropped.** Sum = **−b/a**, product = **c/a**. For
+  5x² − 12x + 4 = 0 that is +12/5 and 4/5; the options will contain −12/5 and the swapped pair.
+- **Taking the root of the discriminant before finishing it.** √(b² − 4ac) is one square root of one
+  number. It is not √(b²) − √(4ac), and √49 is 7 not 24.5.
+- **"D = 0 means one root."** It means **two equal real roots**. Similarly "the roots are real"
+  includes the equal case, so the condition is D ≥ 0, not D &gt; 0.
+- **Answering the substituted letter.** In x⁴ − 13x² + 36 = 0 the answer is x = ±2, ±3, not
+  y = 4, 9. Always come back to the original variable.
+- **Keeping an extraneous root.** After squaring, every candidate must be tested in the **original**
+  equation. In √(2x + 7) − x = 2 the value −3 passes the squared equation and fails the real one.
+- **Skipping the third ratio in a consistency question.** a₁/a₂ = b₁/b₂ alone does not mean "no
+  solution"; if c₁/c₂ matches too, the answer is "infinitely many".
+- **Cross-multiplication with the constants left on the right.** The formula needs the "= 0" form.
+  Wrong signs on c₁ and c₂ produce a neat pair of answers with both signs inverted.
+- **Eliminating a different variable from each pair in a three-unknown system.** Remove the same
+  variable from both pairs, or the two new equations will not share their unknowns.
+- **Rejecting a negative root by reflex.** A count of boxes cannot be −100 and an age cannot be −3,
+  so those go. But a negative root is a perfectly good answer for a temperature, a loss, or a change
+  in demand — reject only for a stated reason.
+- **Ageing one person and not the other.** "Eight years ago" applies to every age in the problem at
+  the same time.
+- **Writing a two-digit number as tu.** It is 10t + u. The product form is the most costly single
+  translation error in the applications section.
+
+## One-page revision summary
+
+**Equation vs identity.** An equation is true for particular values (its roots); an identity is true
+for every value. Test with two easy substitutions, usually x = 0 and x = 1.
+
+**Degree and root count.** Degree n means n roots counted with repetition. Linear 1, quadratic 2,
+cubic 3.
+
+**Linear in one unknown.** ax + b = 0, a ≠ 0 → x = −b/a. Clear fractions by the LCM, remove
+brackets, transpose (signs change), divide. Reject any root that makes an original denominator zero.
+
+**Two unknowns.** a₁x + b₁y = c₁ and a₂x + b₂y = c₂. Methods: elimination (scale, then add if the
+matched signs are opposite, subtract if the same), substitution, and cross-multiplication. Writing
+both as a₁x + b₁y + c₁ = 0:
+
+<div class="formula">x ÷ (b₁c₂ − b₂c₁) = y ÷ (c₁a₂ − c₂a₁) = 1 ÷ (a₁b₂ − a₂b₁)</div>
+
+**Consistency.** a₁/a₂ ≠ b₁/b₂ → unique solution (consistent, independent). a₁/a₂ = b₁/b₂ ≠ c₁/c₂ →
+no solution (inconsistent, parallel lines). a₁/a₂ = b₁/b₂ = c₁/c₂ → infinitely many (dependent, the
+same line). The unique-solution test is the same as a₁b₂ − a₂b₁ ≠ 0.
+
+**Three unknowns.** Eliminate the *same* variable from two pairs, solve the resulting two-unknown
+system, back-substitute, and check in all three originals. A leftover 0 = 5 means no solution; a
+leftover 0 = 0 means infinitely many.
+
+**Quadratic, ax² + bx + c = 0, a ≠ 0.** Factorise by splitting b into two parts with sum b and
+product a × c; or complete the square; or use
+
+<div class="formula">x = [ −b ± √(b² − 4ac) ] ÷ 2a</div>
+
+**Discriminant D = b² − 4ac.** D &gt; 0 and a perfect square → real, distinct, rational. D &gt; 0 not a
+perfect square → real, distinct, irrational, in conjugate pairs p ± √q. D = 0 → real and equal, both
+roots −b/2a. D &lt; 0 → no real roots; the roots are a conjugate pair of imaginary numbers.
+
+**Roots and coefficients (quadratic).** α + β = −b/a; αβ = c/a. Build an equation from roots with
+x² − (sum)x + (product) = 0, then scale to clear fractions.
+
+**Symmetric functions**, with s = α + β and p = αβ:
+
+<div class="formula">α² + β² = s² − 2p &nbsp;·&nbsp; (α − β)² = s² − 4p &nbsp;·&nbsp; α³ + β³ = s³ − 3ps</div>
+<div class="formula">1/α + 1/β = s/p &nbsp;·&nbsp; 1/α² + 1/β² = (s² − 2p)/p² &nbsp;·&nbsp; α/β + β/α = (s² − 2p)/p</div>
+
+**Roots and coefficients (cubic ax³ + bx² + cx + d = 0).** α + β + γ = −b/a; αβ + βγ + γα = c/a;
+αβγ = −d/a. Solve by testing candidate rational roots (factors of d over factors of a), dividing out
+the linear factor, and solving the quadratic that remains.
+
+**Reducible to quadratic.** ax⁴ + bx² + c = 0 → put y = x², solve, then take both square roots of
+each positive y. A repeated block → substitute the block. A surd → isolate and square, then test
+every candidate in the original equation and discard extraneous roots.
+
+**Applications.** Break-even quantity = fixed cost ÷ (price − variable cost); profit =
+(price − variable cost) × quantity − fixed cost. Equilibrium: set demand quantity equal to supply
+quantity, solve for price, substitute back. Mixtures: one quantity equation plus one value equation.
+Work: rates add, 1/a + 1/b = 1/t. Two-digit number = 10t + u; reversed = 10u + t; difference
+= 9(t − u). Ages: apply the same shift in years to every person. Reject a root only when the
+situation forbids it.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. Guessing among four is close to neutral;
+eliminating even one option makes an attempt clearly worthwhile.
+
+
+
+
+
+
+
+
+

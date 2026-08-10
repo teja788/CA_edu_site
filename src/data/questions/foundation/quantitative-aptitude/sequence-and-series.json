@@ -1,0 +1,2317 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "sequence-and-series",
+  "chapter": "Ch 6 — Sequence and Series",
+  "questions": [
+    {
+      "id": "q-f3c6-001",
+      "topic": "Ch 6 · Sequence and Series · Sequence versus series",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement correctly distinguishes a sequence from a series?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A sequence is the total of a list of numbers; a series is the list itself.",
+          "explanation": "The two are the right way round only if you swap them. This is the reversal error, and it is the reason a question asking for output 'in month 12' is answered with the twelve-month total."
+        },
+        {
+          "key": "B",
+          "text": "A sequence is a list of numbers written in a definite order; a series is the sum of the terms of a sequence.",
+          "explanation": "Correct. The list 1,200, 1,350, 1,500 is a sequence; 1,200 + 1,350 + 1,500 = 4,050 is the corresponding series. A question asking for a term wants the first idea, and one asking for a total wants the second."
+        },
+        {
+          "key": "C",
+          "text": "A sequence must be infinite, while a series must be finite.",
+          "explanation": "Both may be finite or infinite. 5, 10, 20, 40, 80 is a finite sequence and 1 + 1/2 + 1/4 + … is an infinite series, so neither half of the statement holds."
+        },
+        {
+          "key": "D",
+          "text": "A sequence has a common difference; a series has a common ratio.",
+          "explanation": "Common difference and common ratio distinguish an AP from a GP, not a sequence from a series. Many sequences, such as the primes, have neither."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What a sequence is and how a series differs, §1 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#1-what-a-sequence-is-and-how-a-series-differs"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A sequence is an ordered list of terms; a series is the sum of those terms",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-002",
+      "topic": "Ch 6 · Sequence and Series · General term of a sequence",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The general term of a sequence is aₙ = 4n + 5. What is its 10th term?",
+      "options": [
+        {
+          "key": "A",
+          "text": "41",
+          "explanation": "This substitutes n = 9 instead of n = 10. The n − 1 adjustment belongs in the AP term formula, not in a general term that is already written in n."
+        },
+        {
+          "key": "B",
+          "text": "45",
+          "explanation": "Correct. Substituting n = 10 gives 4 × 10 + 5 = 45. The sequence is 9, 13, 17, … — an AP with first term 9 and common difference 4, and 9 + 9 × 4 = 45 confirms it."
+        },
+        {
+          "key": "C",
+          "text": "49",
+          "explanation": "This substitutes n = 11. Counting one position too far is the mirror image of option A's error."
+        },
+        {
+          "key": "D",
+          "text": "270",
+          "explanation": "This is the SUM of the first ten terms, 10 ÷ 2 × (9 + 45) = 270. The question asked for one term, not the total."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Finite and infinite sequences and the general term, §2 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#2-finite-and-infinite-sequences-and-the-general-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A general term linear in n describes an AP; substitute n directly",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-003",
+      "topic": "Ch 6 · Sequence and Series · Series from a general term",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A sequence has general term aₙ = 3n − 1. What is the sum of its first 6 terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "57",
+          "explanation": "Correct. The terms are 2, 5, 8, 11, 14, 17, and 2 + 5 + 8 + 11 + 14 + 17 = 57. By formula, 6 ÷ 2 × (2 + 17) = 3 × 19 = 57."
+        },
+        {
+          "key": "B",
+          "text": "17",
+          "explanation": "17 is the 6th TERM, not the sum of six terms. This is the term-for-total substitution the chapter opens with."
+        },
+        {
+          "key": "C",
+          "text": "40",
+          "explanation": "This adds only the first five terms, 2 + 5 + 8 + 11 + 14. An off-by-one in the count of terms being added."
+        },
+        {
+          "key": "D",
+          "text": "66",
+          "explanation": "This applies 6 ÷ 2 × (a + l) with the 7th term, 20, used as the last term: 3 × (2 + 20) = 66. The last of six terms is the 6th, not the 7th."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Finite and infinite sequences and the general term, §2 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#2-finite-and-infinite-sequences-and-the-general-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A series is the sum of a sequence's terms; Sₙ = (n ÷ 2)(a + l)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-004",
+      "topic": "Ch 6 · Sequence and Series · Recognising a GP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Which of the following sequences is a geometric progression?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3, 6, 9, 12",
+          "explanation": "Successive ratios are 2, 1.5 and 1.33 — not constant. This is an AP with common difference 3. Reading the first pair, 6 ÷ 3 = 2, and stopping there is the trap."
+        },
+        {
+          "key": "B",
+          "text": "2, 6, 18, 54",
+          "explanation": "Correct. 6 ÷ 2 = 3, 18 ÷ 6 = 3 and 54 ÷ 18 = 3, so the ratio is constant at 3. A GP requires the same ratio at every step, which is why two pairs must be checked, not one."
+        },
+        {
+          "key": "C",
+          "text": "5, 10, 16, 23",
+          "explanation": "The differences are 5, 6 and 7 and the ratios are 2, 1.6 and 1.44. Neither is constant, so this is neither an AP nor a GP."
+        },
+        {
+          "key": "D",
+          "text": "1, 4, 9, 16",
+          "explanation": "These are the perfect squares. The ratios 4, 2.25 and 1.78 are not constant, so the sequence is not a GP even though it follows an obvious rule."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Geometric progression and its nth term, §9 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#9-geometric-progression-and-its-nth-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A GP has a constant ratio between every pair of successive terms",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-005",
+      "topic": "Ch 6 · Sequence and Series · nth term of an AP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the 24th term of the arithmetic progression 8, 15, 22, 29, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "176",
+          "explanation": "This uses a + 24d = 8 + 24 × 7. From the 1st term to the 24th there are 23 steps, not 24, so this is the 25th term."
+        },
+        {
+          "key": "B",
+          "text": "162",
+          "explanation": "This uses a + 22d = 8 + 154, which is the 23rd term. Counting one step too few is as costly as counting one too many."
+        },
+        {
+          "key": "C",
+          "text": "169",
+          "explanation": "Correct. a = 8 and d = 15 − 8 = 7, so T₂₄ = 8 + (24 − 1) × 7 = 8 + 161 = 169."
+        },
+        {
+          "key": "D",
+          "text": "2,124",
+          "explanation": "This is S₂₄, the sum of the first 24 terms: 12 × (8 + 169) = 2,124. The question asked for one term."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Arithmetic progression and its nth term, §3 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#3-arithmetic-progression-and-its-nth-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Tₙ = a + (n − 1)d",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-006",
+      "topic": "Ch 6 · Sequence and Series · nth term with a negative common difference",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An AP has first term 250 and common difference −7. What is its 30th term?",
+      "options": [
+        {
+          "key": "A",
+          "text": "40",
+          "explanation": "This uses a + 30d = 250 − 210, which is the 31st term. The count of steps is n − 1 whether d is positive or negative."
+        },
+        {
+          "key": "B",
+          "text": "54",
+          "explanation": "This uses a + 28d = 250 − 196, the 29th term — one step short."
+        },
+        {
+          "key": "C",
+          "text": "4,455",
+          "explanation": "This is S₃₀, the sum of the first 30 terms: 15 × (250 + 47) = 4,455. A term was asked for, not a total."
+        },
+        {
+          "key": "D",
+          "text": "47",
+          "explanation": "Correct. T₃₀ = 250 + (30 − 1) × (−7) = 250 − 203 = 47. A negative d simply makes the progression fall; the formula is unchanged."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Arithmetic progression and its nth term, §3 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#3-arithmetic-progression-and-its-nth-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Tₙ = a + (n − 1)d holds for negative d without change",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-007",
+      "topic": "Ch 6 · Sequence and Series · Recovering the first term of an AP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The 5th term of an AP is 41 and its 12th term is 90. What is its first term?",
+      "options": [
+        {
+          "key": "A",
+          "text": "13",
+          "explanation": "Correct. T₁₂ − T₅ = (12 − 5)d gives 49 = 7d, so d = 7. Then T₅ = a + 4d gives 41 = a + 28 and a = 13. Check: 13 + 11 × 7 = 90 ✓"
+        },
+        {
+          "key": "B",
+          "text": "6",
+          "explanation": "This subtracts 5d instead of 4d from the 5th term. The 5th term carries four steps of d, not five — the n − 1 slip in its commonest form."
+        },
+        {
+          "key": "C",
+          "text": "20",
+          "explanation": "This subtracts only 3d, treating the 5th term as if it carried three steps. One step too few in the other direction."
+        },
+        {
+          "key": "D",
+          "text": "7",
+          "explanation": "7 is the common difference, correctly found, but the question asked for the first term. Stopping at d is the last-line error."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Arithmetic progression and its nth term, §3 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#3-arithmetic-progression-and-its-nth-term"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "T_q − Tₚ = (q − p)d, then back-substitute for a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-008",
+      "topic": "Ch 6 · Sequence and Series · A later term from two given terms",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In an AP the 10th term is 52 and the 16th term is 82. What is the 25th term?",
+      "options": [
+        {
+          "key": "A",
+          "text": "127",
+          "explanation": "Correct. d = (82 − 52) ÷ (16 − 10) = 30 ÷ 6 = 5, so a = 52 − 9 × 5 = 7 and T₂₅ = 7 + 24 × 5 = 127."
+        },
+        {
+          "key": "B",
+          "text": "132",
+          "explanation": "This computes a + 25d instead of a + 24d, giving the 26th term. The n − 1 slip at the last step."
+        },
+        {
+          "key": "C",
+          "text": "122",
+          "explanation": "This computes a + 23d, the 24th term — one step short of what was asked."
+        },
+        {
+          "key": "D",
+          "text": "142",
+          "explanation": "This divides 30 by 5, the count of positions strictly between the 10th and the 16th, giving d = 6. The gap that multiplies d is 16 − 10 = 6, so the divisor is 6 and not 5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Arithmetic progression and its nth term, §3 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#3-arithmetic-progression-and-its-nth-term"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "T_q − Tₚ = (q − p)d",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-009",
+      "topic": "Ch 6 · Sequence and Series · Term recovered from a sum formula",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The sum of the first n terms of a sequence is Sₙ = 3n² + 5n. What is its 8th term?",
+      "options": [
+        {
+          "key": "A",
+          "text": "232",
+          "explanation": "This is S₈ = 3 × 64 + 40 = 232, the total of the first eight terms. The 8th term is only the last slice of that total."
+        },
+        {
+          "key": "B",
+          "text": "50",
+          "explanation": "Correct. Tₙ = Sₙ − Sₙ₋₁ = (3n² + 5n) − [3(n − 1)² + 5(n − 1)] = 6n + 2, so T₈ = 48 + 2 = 50. Check: S₈ − S₇ = 232 − 182 = 50 ✓"
+        },
+        {
+          "key": "C",
+          "text": "44",
+          "explanation": "This evaluates 6n + 2 at n = 7, giving the 7th term. An off-by-one after the correct derivation."
+        },
+        {
+          "key": "D",
+          "text": "56",
+          "explanation": "This evaluates 6n + 2 at n = 9, giving the 9th term — one position past the one asked for."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The sum of n terms of an AP, §4 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#4-the-sum-of-n-terms-of-an-ap"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Tₙ = Sₙ − Sₙ₋₁",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-010",
+      "topic": "Ch 6 · Sequence and Series · Locating a term's position",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Which term of the arithmetic progression 5, 11, 17, 23, … is equal to 251?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The 41st",
+          "explanation": "41 is the number of STEPS from the first term: (251 − 5) ÷ 6 = 41. Terms outnumber steps by one, so the position is 42."
+        },
+        {
+          "key": "B",
+          "text": "The 42nd",
+          "explanation": "Correct. a = 5 and d = 6, so 5 + (n − 1) × 6 = 251 gives 6(n − 1) = 246, n − 1 = 41 and n = 42. Check: 5 + 41 × 6 = 251 ✓"
+        },
+        {
+          "key": "C",
+          "text": "The 43rd",
+          "explanation": "This adds one twice — once when dividing and once at the end. T₄₃ = 5 + 42 × 6 = 257, not 251."
+        },
+        {
+          "key": "D",
+          "text": "The 40th",
+          "explanation": "This subtracts one from the step count instead of adding one. T₄₀ = 5 + 39 × 6 = 239."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Arithmetic progression and its nth term, §3 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#3-arithmetic-progression-and-its-nth-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n = (Tₙ − a) ÷ d + 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-011",
+      "topic": "Ch 6 · Sequence and Series · Sum of n terms of an AP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the sum of the first 20 terms of the arithmetic progression 7, 12, 17, 22, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "102",
+          "explanation": "102 is the 20th TERM, 7 + 19 × 5. The question asked for the total of twenty terms, not the last of them."
+        },
+        {
+          "key": "B",
+          "text": "1,140",
+          "explanation": "This uses the 21st term, 107, as the last term: 10 × (7 + 107). The last of twenty terms is the 20th."
+        },
+        {
+          "key": "C",
+          "text": "1,090",
+          "explanation": "Correct. a = 7, d = 5 and T₂₀ = 102, so S₂₀ = (20 ÷ 2) × (7 + 102) = 10 × 109 = 1,090. The other form gives 10 × [14 + 19 × 5] = 10 × 109 ✓"
+        },
+        {
+          "key": "D",
+          "text": "988",
+          "explanation": "This adds only nineteen terms: S₁₉ = (19 ÷ 2) × (7 + 97) = 988. An off-by-one in the count of terms summed."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The sum of n terms of an AP, §4 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#4-the-sum-of-n-terms-of-an-ap"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sₙ = (n ÷ 2)[2a + (n − 1)d]",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-012",
+      "topic": "Ch 6 · Sequence and Series · Sum from the first and last terms",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An AP has 15 terms. Its first term is 12 and its last term is 96. What is the sum of all its terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "756",
+          "explanation": "This uses 14 ÷ 2 × 108, counting the gaps between terms instead of the terms themselves. Fifteen terms are being added, so the multiplier is 15 ÷ 2."
+        },
+        {
+          "key": "B",
+          "text": "1,620",
+          "explanation": "This is 15 × (12 + 96) with the division by 2 omitted. Pairing the terms from the two ends gives 15 pairs of half-value, hence the ÷ 2."
+        },
+        {
+          "key": "C",
+          "text": "108",
+          "explanation": "108 is a + l, the constant total of any pair of terms equidistant from the ends. It is one ingredient of the sum, not the sum."
+        },
+        {
+          "key": "D",
+          "text": "810",
+          "explanation": "Correct. Sₙ = (n ÷ 2)(a + l) = (15 ÷ 2) × (12 + 96) = 7.5 × 108 = 810. Check by averaging: the mean term is 54 and 15 × 54 = 810 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The sum of n terms of an AP, §4 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#4-the-sum-of-n-terms-of-an-ap"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sₙ = (n ÷ 2)(a + l)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-013",
+      "topic": "Ch 6 · Sequence and Series · Sum of the multiples in a range",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the sum of all the multiples of 6 that are greater than 50 and less than 300?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6,960",
+          "explanation": "This counts 40 terms instead of 41 — the count came from (294 − 54) ÷ 6 = 40 with the '+ 1' omitted, and 40 is the number of gaps."
+        },
+        {
+          "key": "B",
+          "text": "7,308",
+          "explanation": "This counts 42 terms, adding one at both ends of the range. Only one '+ 1' is needed, and 300 is not itself in the list because the range excludes it."
+        },
+        {
+          "key": "C",
+          "text": "7,134",
+          "explanation": "Correct. The first multiple above 50 is 54 and the last below 300 is 294, so n = (294 − 54) ÷ 6 + 1 = 41 and the sum is (41 ÷ 2) × (54 + 294) = 41 × 174 = 7,134."
+        },
+        {
+          "key": "D",
+          "text": "41",
+          "explanation": "41 is the NUMBER of such multiples, which is the first step of the working. The question asked for their total."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: How many terms of an AP lie in a range, §6 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#6-how-many-terms-of-an-ap-lie-in-a-range"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Count = (last − first) ÷ d + 1, then Sₙ = (n ÷ 2)(a + l)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-014",
+      "topic": "Ch 6 · Sequence and Series · Number of terms from a given sum",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many terms of the arithmetic progression 3, 7, 11, 15, … add up to 300?",
+      "options": [
+        {
+          "key": "A",
+          "text": "12",
+          "explanation": "Correct. Sₙ = (n ÷ 2)[6 + 4(n − 1)] = n(2n + 1) = 300 gives 2n² + n − 300 = 0, whose positive root is n = 12. Check by adding: 3 + 7 + … + 47 = (12 ÷ 2) × 50 = 300 ✓"
+        },
+        {
+          "key": "B",
+          "text": "11",
+          "explanation": "Eleven terms add to 11 × 23 = 253, short of 300. This comes from rounding the root down instead of solving the quadratic exactly."
+        },
+        {
+          "key": "C",
+          "text": "13",
+          "explanation": "Thirteen terms add to 13 × 27 = 351, past 300. One term too many."
+        },
+        {
+          "key": "D",
+          "text": "−12.5",
+          "explanation": "This is the second, negative root of 2n² + n − 300 = 0. A count of terms cannot be negative or fractional, so this root is rejected on the facts."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The sum of n terms of an AP, §4 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#4-the-sum-of-n-terms-of-an-ap"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Sₙ = (n ÷ 2)[2a + (n − 1)d], solved for n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-015",
+      "topic": "Ch 6 · Sequence and Series · Sum of a falling AP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An AP has first term 90 and common difference −4. What is the sum of its first 25 terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,000",
+          "explanation": "This uses 2a + 25d instead of 2a + 24d: (25 ÷ 2) × (180 − 100). The bracket carries n − 1 differences, so 24 of them, not 25."
+        },
+        {
+          "key": "B",
+          "text": "−6",
+          "explanation": "−6 is the 25th TERM, 90 − 24 × 4. A falling AP can have negative terms while its sum is still positive."
+        },
+        {
+          "key": "C",
+          "text": "1,040",
+          "explanation": "This adds 26 terms: (26 ÷ 2) × (180 − 100). Both the multiplier and the bracket were shifted by one."
+        },
+        {
+          "key": "D",
+          "text": "1,050",
+          "explanation": "Correct. S₂₅ = (25 ÷ 2) × [2 × 90 + 24 × (−4)] = 12.5 × (180 − 96) = 12.5 × 84 = 1,050. Check by averaging: (90 + (−6)) ÷ 2 = 42 and 25 × 42 = 1,050 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The sum of n terms of an AP, §4 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#4-the-sum-of-n-terms-of-an-ap"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Sₙ = (n ÷ 2)[2a + (n − 1)d] with negative d",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-016",
+      "topic": "Ch 6 · Sequence and Series · Sum from two given terms",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In an AP the 5th term is 26 and the 12th term is 61. What is the sum of its first 20 terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,120",
+          "explanation": "This uses 2a + 20d in the bracket instead of 2a + 19d. Twenty terms contain nineteen differences."
+        },
+        {
+          "key": "B",
+          "text": "1,070",
+          "explanation": "Correct. d = (61 − 26) ÷ 7 = 5 and a = 26 − 4 × 5 = 6, so S₂₀ = 10 × [12 + 19 × 5] = 10 × 107 = 1,070. Check: T₂₀ = 101 and 10 × (6 + 101) = 1,070 ✓"
+        },
+        {
+          "key": "C",
+          "text": "101",
+          "explanation": "101 is the 20th term. The sum of twenty terms was asked for."
+        },
+        {
+          "key": "D",
+          "text": "969",
+          "explanation": "This adds only nineteen terms: S₁₉ = (19 ÷ 2) × (6 + 96) = 969."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The sum of n terms of an AP, §4 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#4-the-sum-of-n-terms-of-an-ap"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Find d and a from two terms, then Sₙ = (n ÷ 2)[2a + (n − 1)d]",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-017",
+      "topic": "Ch 6 · Sequence and Series · nth term of an AP from the end",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the 7th term from the end of the arithmetic progression 6, 11, 16, …, 201?",
+      "options": [
+        {
+          "key": "A",
+          "text": "166",
+          "explanation": "This computes l − 7d = 201 − 35. The last term is itself the 1st from the end, so only six steps separate it from the 7th."
+        },
+        {
+          "key": "B",
+          "text": "176",
+          "explanation": "This computes l − 5d = 201 − 25, which is the 6th term from the end — one step short."
+        },
+        {
+          "key": "C",
+          "text": "171",
+          "explanation": "Correct. d = 5 and l = 201, so the 7th term from the end is 201 − (7 − 1) × 5 = 201 − 30 = 171. Cross-check: the AP has 40 terms, and the 40 − 7 + 1 = 34th term is 6 + 33 × 5 = 171 ✓"
+        },
+        {
+          "key": "D",
+          "text": "34",
+          "explanation": "34 is the POSITION of that term counted from the front, not the term's value. The question asked for the term."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The nth term of an AP counted from the end, §5 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#5-the-nth-term-of-an-ap-counted-from-the-end"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nth term from the end = l − (n − 1)d",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-018",
+      "topic": "Ch 6 · Sequence and Series · Counting backwards in an AP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The arithmetic progression 7, 13, 19, …, 205 is written out in full. What is its 4th term from the end?",
+      "options": [
+        {
+          "key": "A",
+          "text": "181",
+          "explanation": "This computes l − 4d = 205 − 24, taking four steps back instead of three. The last term is the 1st from the end."
+        },
+        {
+          "key": "B",
+          "text": "193",
+          "explanation": "This computes l − 2d = 205 − 12, the 3rd term from the end — one step short."
+        },
+        {
+          "key": "C",
+          "text": "34",
+          "explanation": "34 is the number of terms in the progression, found from 205 = 7 + (m − 1) × 6. It is a step in one of the two methods, not the answer."
+        },
+        {
+          "key": "D",
+          "text": "187",
+          "explanation": "Correct. d = 6 and l = 205, so the 4th term from the end is 205 − (4 − 1) × 6 = 205 − 18 = 187. Cross-check: the AP has 34 terms and T₃₁ = 7 + 30 × 6 = 187 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The nth term of an AP counted from the end, §5 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#5-the-nth-term-of-an-ap-counted-from-the-end"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nth term from the end = l − (n − 1)d; position from the front = m − n + 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-019",
+      "topic": "Ch 6 · Sequence and Series · A series that reduces to the special sums",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the sum of the first 12 terms of the series 1×2 + 2×3 + 3×4 + 4×5 + …",
+      "options": [
+        {
+          "key": "A",
+          "text": "728",
+          "explanation": "Correct. The kth term is k(k + 1) = k² + k, so the sum is Σk² + Σk = 12 × 13 × 25 ÷ 6 + 12 × 13 ÷ 2 = 650 + 78 = 728."
+        },
+        {
+          "key": "B",
+          "text": "650",
+          "explanation": "This is Σk² alone. Splitting k(k + 1) into k² + k gives two pieces, and the second one has been dropped."
+        },
+        {
+          "key": "C",
+          "text": "78",
+          "explanation": "This is Σk alone, the other half of the split. It is also the sum of the first 12 natural numbers, which is a different question."
+        },
+        {
+          "key": "D",
+          "text": "156",
+          "explanation": "156 is the 12th TERM, 12 × 13. The sum of twelve such terms was asked for."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The special series, §16 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#16-the-special-series-sum-of-n-sum-of-n-squared-and-sum-of-n-cubes"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Σ(k² + k) = Σk² + Σk, using the closed forms for each",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-020",
+      "topic": "Ch 6 · Sequence and Series · Counting terms in a range",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "How many terms of the arithmetic progression 12, 19, 26, 33, … lie between 100 and 500?",
+      "options": [
+        {
+          "key": "A",
+          "text": "56",
+          "explanation": "This divides and stops: (495 − 103) ÷ 7 = 56 counts the gaps between the qualifying terms. Terms outnumber gaps by one."
+        },
+        {
+          "key": "B",
+          "text": "70",
+          "explanation": "70 is the POSITION of the last qualifying term in the progression, not the count of qualifying terms. The count starts at the 14th term, not the 1st."
+        },
+        {
+          "key": "C",
+          "text": "57",
+          "explanation": "Correct. The general term is 7n + 5. It exceeds 100 first at n = 14 (giving 103) and stays under 500 up to n = 70 (giving 495), so the count is 70 − 14 + 1 = 57."
+        },
+        {
+          "key": "D",
+          "text": "58",
+          "explanation": "This adds one at both ends of the count. Only one '+ 1' is needed when converting a difference of positions into a number of terms."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: How many terms of an AP lie in a range, §6 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#6-how-many-terms-of-an-ap-lie-in-a-range"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Count = last position − first position + 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-021",
+      "topic": "Ch 6 · Sequence and Series · Sum of cubes",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the value of 1³ + 2³ + 3³ + … + 15³?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,240",
+          "explanation": "This is Σn² for n = 15, that is 15 × 16 × 31 ÷ 6. The question asked for the sum of the cubes, not of the squares."
+        },
+        {
+          "key": "B",
+          "text": "14,400",
+          "explanation": "Correct. Σn³ = (Σn)², and Σn = 15 × 16 ÷ 2 = 120, so the answer is 120² = 14,400."
+        },
+        {
+          "key": "C",
+          "text": "120",
+          "explanation": "120 is Σn itself, the sum of the numbers rather than of their cubes. It is the quantity that must still be squared."
+        },
+        {
+          "key": "D",
+          "text": "3,375",
+          "explanation": "3,375 is 15³, the last term alone. A sum of fifteen cubes was asked for."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The special series, §16 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#16-the-special-series-sum-of-n-sum-of-n-squared-and-sum-of-n-cubes"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Σn³ = [n(n + 1) ÷ 2]² = (Σn)²",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-022",
+      "topic": "Ch 6 · Sequence and Series · When a rising quantity first reaches a level",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A workshop assembles 45 units in its first week and 6 more units in each following week. In which week does weekly output first reach 150 units?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Week 18",
+          "explanation": "Week 18 produces 45 + 17 × 6 = 147 units, which is still below 150. This comes from rounding 18.5 down; a count of weeks must be rounded up to clear the target."
+        },
+        {
+          "key": "B",
+          "text": "Week 17",
+          "explanation": "This reports the step count 105 ÷ 6 = 17.5 rounded down, forgetting the '+ 1' that converts steps into a week number. Week 17 produces only 141 units."
+        },
+        {
+          "key": "C",
+          "text": "Week 26",
+          "explanation": "This divides 150 by 6 and rounds up, ignoring the 45 units the workshop already makes in week 1. The first term is not zero."
+        },
+        {
+          "key": "D",
+          "text": "Week 19",
+          "explanation": "Correct. 45 + 6(n − 1) ≥ 150 gives n − 1 ≥ 17.5, so n ≥ 18.5 and n = 19. Week 19 produces 45 + 18 × 6 = 153 units, and week 18 produces only 147 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: How many terms of an AP lie in a range, §6 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#6-how-many-terms-of-an-ap-lie-in-a-range"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Solve a + (n − 1)d ≥ target and round n up to a whole period",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-023",
+      "topic": "Ch 6 · Sequence and Series · Terms equidistant from the ends",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An AP has 24 terms. The sum of its 5th and 20th terms is 96. What is the sum of all 24 terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,152",
+          "explanation": "Correct. Positions 5 and 20 add to 25 = 24 + 1, so the two terms are equidistant from the ends and their total is a + l = 96. Then S₂₄ = (24 ÷ 2) × 96 = 1,152."
+        },
+        {
+          "key": "B",
+          "text": "2,304",
+          "explanation": "This is 24 × 96 with the division by 2 omitted. The formula pairs the terms, so each pair contributes a + l once for every two terms."
+        },
+        {
+          "key": "C",
+          "text": "96",
+          "explanation": "96 is the constant pair total a + l, which is the given information rather than the answer."
+        },
+        {
+          "key": "D",
+          "text": "1,248",
+          "explanation": "This uses 26 ÷ 2 as the multiplier, adding the '+ 1' from the position check into the count of terms. The AP has 24 terms, not 26."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Terms equidistant from the two ends, §7 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#7-terms-equidistant-from-the-two-ends"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Terms equidistant from the ends sum to a + l; Sₙ = (n ÷ 2)(a + l)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-024",
+      "topic": "Ch 6 · Sequence and Series · The middle term of an odd-length AP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An AP has 15 terms and its middle term is 34. What is the sum of all its terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "255",
+          "explanation": "This is (15 ÷ 2) × 34, which halves the count as well as reading the middle term as a + l. Only one of those two steps belongs here."
+        },
+        {
+          "key": "B",
+          "text": "68",
+          "explanation": "68 is a + l, twice the middle term. It is the pair total, not the sum of fifteen terms."
+        },
+        {
+          "key": "C",
+          "text": "510",
+          "explanation": "Correct. With an odd number of terms the middle term equals (a + l) ÷ 2, so a + l = 68 and S₁₅ = (15 ÷ 2) × 68 = 15 × 34 = 510."
+        },
+        {
+          "key": "D",
+          "text": "1,020",
+          "explanation": "This is 15 × 68, using a + l where the middle term belonged and so double-counting. The middle term is already the average of the AP."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Terms equidistant from the two ends, §7 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#7-terms-equidistant-from-the-two-ends"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "With an odd count, Sₙ = n × (middle term)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-025",
+      "topic": "Ch 6 · Sequence and Series · Arithmetic mean of two numbers",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The arithmetic mean of two numbers is 46. One of them is 19. What is the other?",
+      "options": [
+        {
+          "key": "A",
+          "text": "27",
+          "explanation": "This subtracts 19 from 46. The mean is half the sum, so the sum must be restored by doubling before the known number is removed."
+        },
+        {
+          "key": "B",
+          "text": "73",
+          "explanation": "Correct. (19 + x) ÷ 2 = 46 gives 19 + x = 92, so x = 73. Check: (19 + 73) ÷ 2 = 46 ✓"
+        },
+        {
+          "key": "C",
+          "text": "65",
+          "explanation": "This adds 19 to 46 without doubling first. Its average with 19 is 42, not 46."
+        },
+        {
+          "key": "D",
+          "text": "32.5",
+          "explanation": "This averages 46 and 19, treating the given mean as if it were the second number. The mean of the pair, not of the mean and one member, is what was given."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Arithmetic mean and inserting n arithmetic means, §8 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#8-arithmetic-mean-and-inserting-n-arithmetic-means"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "A = (a + b) ÷ 2, so a + b = 2A",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-026",
+      "topic": "Ch 6 · Sequence and Series · Inserting arithmetic means",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six arithmetic means are inserted between 9 and 44. What is the third of those means?",
+      "options": [
+        {
+          "key": "A",
+          "text": "26.5",
+          "explanation": "This uses d = (44 − 9) ÷ 6 = 5.833, dividing by the number of means rather than by the number of gaps. Inserting 6 means creates 7 gaps."
+        },
+        {
+          "key": "B",
+          "text": "19",
+          "explanation": "19 is the SECOND mean. Counting the endpoint 9 as the first mean shifts every answer back by one place."
+        },
+        {
+          "key": "C",
+          "text": "29",
+          "explanation": "29 is the FOURTH mean, the result of counting one place too far along the progression."
+        },
+        {
+          "key": "D",
+          "text": "24",
+          "explanation": "Correct. The AP has 6 + 2 = 8 terms, so 44 = 9 + 7d and d = 5. The means are 14, 19, 24, 29, 34, 39, and the third is 24."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Arithmetic mean and inserting n arithmetic means, §8 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#8-arithmetic-mean-and-inserting-n-arithmetic-means"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Inserting n arithmetic means gives an AP of n + 2 terms, d = (b − a) ÷ (n + 1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-027",
+      "topic": "Ch 6 · Sequence and Series · Sum of inserted arithmetic means",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A number of arithmetic means are inserted between 5 and 85, and those means add up to 675. How many means were inserted?",
+      "options": [
+        {
+          "key": "A",
+          "text": "15",
+          "explanation": "Correct. The n means have the same average as the pair, so their sum is n × (5 + 85) ÷ 2 = 45n. Setting 45n = 675 gives n = 15."
+        },
+        {
+          "key": "B",
+          "text": "13",
+          "explanation": "This removes the two endpoints from the given total first, using (675 − 90) ÷ 45. The endpoints were never part of the 675."
+        },
+        {
+          "key": "C",
+          "text": "17",
+          "explanation": "This adds the two endpoints into the total, using (675 + 90) ÷ 45. Again, the means alone were what was summed."
+        },
+        {
+          "key": "D",
+          "text": "30",
+          "explanation": "This divides 675 by 22.5, the average of 5 and 85 halved a second time. The average term is 45, not 22.5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Arithmetic mean and inserting n arithmetic means, §8 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#8-arithmetic-mean-and-inserting-n-arithmetic-means"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "The n inserted arithmetic means sum to n(a + b) ÷ 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-028",
+      "topic": "Ch 6 · Sequence and Series · nth term of a GP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the 7th term of the geometric progression 3, 12, 48, 192, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "49,152",
+          "explanation": "This uses a·r⁷ = 3 × 4⁷, which is the 8th term. The nth term carries n − 1 factors of r, not n."
+        },
+        {
+          "key": "B",
+          "text": "3,072",
+          "explanation": "This uses a·r⁵, the 6th term — one factor of r short."
+        },
+        {
+          "key": "C",
+          "text": "12,288",
+          "explanation": "Correct. r = 12 ÷ 3 = 4, so T₇ = 3 × 4⁶ = 3 × 4,096 = 12,288."
+        },
+        {
+          "key": "D",
+          "text": "16,383",
+          "explanation": "This is S₇, the sum of the first seven terms, 3(4⁷ − 1) ÷ 3 = 16,383. A term was asked for, not the total."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Geometric progression and its nth term, §9 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#9-geometric-progression-and-its-nth-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Tₙ = a·rⁿ⁻¹",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-029",
+      "topic": "Ch 6 · Sequence and Series · nth term of a shrinking GP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the 9th term of the geometric progression 1,024, 512, 256, 128, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "explanation": "This uses a·r⁹ = 1,024 ÷ 512, giving the 10th term. Nine terms mean eight halvings, not nine."
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "explanation": "This uses a·r⁷, the 8th term — one halving short."
+        },
+        {
+          "key": "C",
+          "text": "2,044",
+          "explanation": "This is S₉, the sum of the first nine terms. The nine terms 1,024 down to 4 add to 2,044, but a single term was asked for."
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "explanation": "Correct. r = 512 ÷ 1,024 = 1/2, so T₉ = 1,024 × (1/2)⁸ = 1,024 ÷ 256 = 4. Listing confirms it: 1024, 512, 256, 128, 64, 32, 16, 8, 4."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Geometric progression and its nth term, §9 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#9-geometric-progression-and-its-nth-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Tₙ = a·rⁿ⁻¹ with r < 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-030",
+      "topic": "Ch 6 · Sequence and Series · Percentage growth as a GP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A distributor sold 12,500 units in year 1, and unit sales have risen by 20% every year since. How many units are sold in year 5?",
+      "options": [
+        {
+          "key": "A",
+          "text": "31,104",
+          "explanation": "This uses 12,500 × 1.2⁵, which is the year-6 figure. Year 5 has grown four times, not five."
+        },
+        {
+          "key": "B",
+          "text": "25,920",
+          "explanation": "Correct. r = 1 + 20/100 = 1.2, so year 5 sales are 12,500 × 1.2⁴ = 12,500 × 2.0736 = 25,920 units."
+        },
+        {
+          "key": "C",
+          "text": "21,600",
+          "explanation": "This uses 12,500 × 1.2³, the year-4 figure — one growth period short."
+        },
+        {
+          "key": "D",
+          "text": "93,020",
+          "explanation": "This is the TOTAL of the five years' sales, 12,500(1.2⁵ − 1) ÷ 0.2. One year's figure was asked for."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Geometric progression and its nth term, §9 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#9-geometric-progression-and-its-nth-term"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Growth of p% per period gives r = 1 + p/100; Tₙ = a·rⁿ⁻¹",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-031",
+      "topic": "Ch 6 · Sequence and Series · A later GP term from two given terms",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a geometric progression of positive terms the 3rd term is 45 and the 6th term is 1,215. What is the 8th term?",
+      "options": [
+        {
+          "key": "A",
+          "text": "10,935",
+          "explanation": "Correct. T₆ ÷ T₃ = r³ = 1,215 ÷ 45 = 27, so r = 3 and a = 45 ÷ 9 = 5. Then T₈ = 5 × 3⁷ = 5 × 2,187 = 10,935."
+        },
+        {
+          "key": "B",
+          "text": "32,805",
+          "explanation": "This uses a·r⁸, the 9th term. The 8th term carries seven factors of r."
+        },
+        {
+          "key": "C",
+          "text": "3,645",
+          "explanation": "This uses a·r⁶, the 7th term — one factor of r short."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "3 is the common ratio, correctly found, but the question asked for a term. One more line of arithmetic was needed."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Geometric progression and its nth term, §9 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#9-geometric-progression-and-its-nth-term"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "T_q ÷ Tₚ = r^(q − p)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-032",
+      "topic": "Ch 6 · Sequence and Series · Ratio taken as a difference",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the 5th term of the geometric progression 6, 18, 54, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "54",
+          "explanation": "This treats the sequence as an AP with common difference 12, producing 6, 18, 30, 42, 54. The step from 18 to 54 is a multiplication by 3, not an addition of 12."
+        },
+        {
+          "key": "B",
+          "text": "1,458",
+          "explanation": "This uses a·r⁵ = 6 × 3⁵, which is the 6th term."
+        },
+        {
+          "key": "C",
+          "text": "486",
+          "explanation": "Correct. r = 18 ÷ 6 = 3, so T₅ = 6 × 3⁴ = 6 × 81 = 486. Listing confirms it: 6, 18, 54, 162, 486."
+        },
+        {
+          "key": "D",
+          "text": "162",
+          "explanation": "This uses a·r³, the 4th term — one factor of r short."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Geometric progression and its nth term, §9 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#9-geometric-progression-and-its-nth-term"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "The common ratio is a quotient, not a difference",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-033",
+      "topic": "Ch 6 · Sequence and Series · Recovering the first term of a GP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A geometric progression of positive terms has 5th term 80 and 8th term 640. What is its first term?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "explanation": "2 is the common ratio, found correctly from r³ = 640 ÷ 80 = 8. The question asked for the first term."
+        },
+        {
+          "key": "B",
+          "text": "10",
+          "explanation": "This divides the 5th term by r³ instead of r⁴, using n rather than n − 1. The 5th term carries four factors of r."
+        },
+        {
+          "key": "C",
+          "text": "2.5",
+          "explanation": "This divides by r⁵, taking one factor of r too many back."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "Correct. r³ = 640 ÷ 80 = 8 gives r = 2, and a = 80 ÷ 2⁴ = 80 ÷ 16 = 5. Check: 5, 10, 20, 40, 80 — the 5th term is 80 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Geometric progression and its nth term, §9 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#9-geometric-progression-and-its-nth-term"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "T_q ÷ Tₚ = r^(q − p), then a = Tₚ ÷ r^(p − 1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-034",
+      "topic": "Ch 6 · Sequence and Series · Sum of a GP with r greater than 1",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the sum of the first 8 terms of the geometric progression 2, 6, 18, 54, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "4,374",
+          "explanation": "4,374 is the 8th TERM, 2 × 3⁷. The total of eight terms was asked for."
+        },
+        {
+          "key": "B",
+          "text": "6,560",
+          "explanation": "Correct. a = 2 and r = 3, so S₈ = 2(3⁸ − 1) ÷ (3 − 1) = 3⁸ − 1 = 6,561 − 1 = 6,560. Adding the terms confirms it: 2 + 6 + 18 + 54 + 162 + 486 + 1,458 + 4,374 = 6,560."
+        },
+        {
+          "key": "C",
+          "text": "19,682",
+          "explanation": "This uses r⁹ in the numerator, summing nine terms instead of eight."
+        },
+        {
+          "key": "D",
+          "text": "2,186",
+          "explanation": "This uses r⁷, summing only seven terms."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The sum of n terms of a GP, §10 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#10-the-sum-of-n-terms-of-a-gp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sₙ = a(rⁿ − 1) ÷ (r − 1) for r > 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-035",
+      "topic": "Ch 6 · Sequence and Series · Sum of a GP with r less than 1",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the sum of the first 7 terms of the geometric progression 128, 64, 32, 16, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "254",
+          "explanation": "Correct. a = 128 and r = 1/2, so S₇ = 128(1 − (1/2)⁷) ÷ (1 − 1/2) = 256 × 127/128 = 254. Adding the terms confirms it: 128 + 64 + 32 + 16 + 8 + 4 + 2 = 254."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "2 is the 7th TERM. The total of seven terms was asked for."
+        },
+        {
+          "key": "C",
+          "text": "255",
+          "explanation": "This sums eight terms, adding the extra 1 at the end. An off-by-one in the count of terms."
+        },
+        {
+          "key": "D",
+          "text": "252",
+          "explanation": "This sums only six terms, 128 down to 4."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The sum of n terms of a GP, §10 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#10-the-sum-of-n-terms-of-a-gp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sₙ = a(1 − rⁿ) ÷ (1 − r) for r < 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-036",
+      "topic": "Ch 6 · Sequence and Series · A GP whose common ratio is 1",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The first term of a geometric progression is 15 and its common ratio is 1. What is the sum of its first 9 terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is not defined, because the sum formula divides by 1 − r = 0",
+          "explanation": "The two standard forms do fail at r = 1, but the sum itself is perfectly ordinary. When every term is the same, the total is simply the term multiplied by the count."
+        },
+        {
+          "key": "B",
+          "text": "15",
+          "explanation": "15 is a single term, not the total of nine of them. Every term equals 15, so the sum must be nine times as large."
+        },
+        {
+          "key": "C",
+          "text": "135",
+          "explanation": "Correct. With r = 1 every term equals a, so S₉ = 9 × 15 = 135. This is the one case in which neither of the two standard GP sum forms may be used."
+        },
+        {
+          "key": "D",
+          "text": "120",
+          "explanation": "This multiplies by 8 rather than 9, using n − 1 where the plain count of terms belongs. There are nine terms to add."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The sum of n terms of a GP, §10 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#10-the-sum-of-n-terms-of-a-gp"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "When r = 1 every term equals a and Sₙ = na",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-037",
+      "topic": "Ch 6 · Sequence and Series · GP sum from the last term",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A geometric progression has first term 5, common ratio 3 and last term 1,215. What is the sum of all its terms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,215",
+          "explanation": "1,215 is the last TERM, which is the given information rather than the total."
+        },
+        {
+          "key": "B",
+          "text": "605",
+          "explanation": "This computes (l − a) ÷ (r − 1) = (1,215 − 5) ÷ 2, omitting the factor r on the last term. The formula is (lr − a) ÷ (r − 1)."
+        },
+        {
+          "key": "C",
+          "text": "3,640",
+          "explanation": "This computes lr − a = 3,645 − 5 and stops, forgetting to divide by r − 1."
+        },
+        {
+          "key": "D",
+          "text": "1,820",
+          "explanation": "Correct. Sₙ = (l·r − a) ÷ (r − 1) = (1,215 × 3 − 5) ÷ 2 = 3,640 ÷ 2 = 1,820. Listing the terms confirms it: 5 + 15 + 45 + 135 + 405 + 1,215 = 1,820."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The sum of n terms of a GP, §10 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#10-the-sum-of-n-terms-of-a-gp"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Sₙ = (l·r − a) ÷ (r − 1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-038",
+      "topic": "Ch 6 · Sequence and Series · Sum of an infinite GP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the sum to infinity of the geometric progression 45, 15, 5, 5/3, …",
+      "options": [
+        {
+          "key": "A",
+          "text": "135",
+          "explanation": "This divides by r = 1/3 instead of by 1 − r = 2/3. The denominator of the infinite sum is one minus the ratio."
+        },
+        {
+          "key": "B",
+          "text": "67.5",
+          "explanation": "Correct. r = 15 ÷ 45 = 1/3 and |1/3| < 1, so S∞ = 45 ÷ (1 − 1/3) = 45 ÷ (2/3) = 67.5. The partial sums 45, 60, 65, 66.67 … climb towards it."
+        },
+        {
+          "key": "C",
+          "text": "30",
+          "explanation": "This multiplies by 1 − r instead of dividing. The result is smaller than the first term alone, which cannot be a total of positive terms."
+        },
+        {
+          "key": "D",
+          "text": "22.5",
+          "explanation": "This divides 45 by 2, as if 1 − r were 2. Since r is 1/3, the denominator is 2/3."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The sum of an infinite GP, §11 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#11-the-sum-of-an-infinite-gp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "S∞ = a ÷ (1 − r) for |r| < 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-039",
+      "topic": "Ch 6 · Sequence and Series · When an infinite GP has a sum",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Which of the following infinite geometric progressions has a sum to infinity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5, 10, 20, 40, …",
+          "explanation": "Here r = 2, so |r| ≥ 1 and the partial sums grow without limit. Applying the formula anyway gives 5 ÷ (1 − 2) = −5, a negative total for positive growing terms."
+        },
+        {
+          "key": "B",
+          "text": "3, −6, 12, −24, …",
+          "explanation": "Here r = −2, so |r| = 2 ≥ 1. The alternating signs do not help: the partial sums 3, −3, 9, −15 swing ever wider. Judging convergence by the sign of r rather than its size is the error."
+        },
+        {
+          "key": "C",
+          "text": "12, −4, 4/3, −4/9, …",
+          "explanation": "Correct. Here r = −1/3, so |r| = 1/3 < 1 and the sum exists: 12 ÷ (1 + 1/3) = 9. A negative ratio is allowed provided its size is under 1."
+        },
+        {
+          "key": "D",
+          "text": "7, 7, 7, 7, …",
+          "explanation": "Here r = 1, so the partial sums are 7n and grow without limit. The formula is also unusable, since 1 − r = 0."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The sum of an infinite GP, §11 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#11-the-sum-of-an-infinite-gp"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "An infinite GP has a sum only when |r| < 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-040",
+      "topic": "Ch 6 · Sequence and Series · Infinite GP run backwards",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The sum to infinity of a geometric progression is 60 and its first term is 15. What is its common ratio?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/4",
+          "explanation": "Correct. 60 = 15 ÷ (1 − r) gives 1 − r = 15 ÷ 60 = 1/4, so r = 3/4. Check: 15 ÷ (1 − 0.75) = 15 ÷ 0.25 = 60 ✓"
+        },
+        {
+          "key": "B",
+          "text": "1/4",
+          "explanation": "1/4 is the value of 1 − r, correctly computed but reported as r itself. One subtraction is still owed."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "This reports 60 ÷ 15, the ratio of the sum to the first term. A common ratio of 4 has size above 1, so no sum to infinity could have existed."
+        },
+        {
+          "key": "D",
+          "text": "−3",
+          "explanation": "This multiplies where it should divide, reading 15 = 60(1 − r) as 1 − r = 4. Again |r| ≥ 1, which contradicts the existence of the given sum."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The sum of an infinite GP, §11 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#11-the-sum-of-an-infinite-gp"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "S∞ = a ÷ (1 − r), solved for r",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-041",
+      "topic": "Ch 6 · Sequence and Series · A recurring decimal as an infinite GP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Express the recurring decimal 0.363636… as a fraction in its lowest terms.",
+      "options": [
+        {
+          "key": "A",
+          "text": "9/25",
+          "explanation": "This is 36/100, the first term of the series alone. The remaining terms 0.0036, 0.000036 and so on have been ignored."
+        },
+        {
+          "key": "B",
+          "text": "2/5",
+          "explanation": "This is 36/90, the rule for a decimal in which only ONE digit recurs. Two digits recur here, so the denominator is 99, not 90."
+        },
+        {
+          "key": "C",
+          "text": "4/9",
+          "explanation": "This is the value of 0.444…, obtained by treating the repeating block as the single digit 4. The repeating block is 36."
+        },
+        {
+          "key": "D",
+          "text": "4/11",
+          "explanation": "Correct. The decimal is 0.36 + 0.0036 + 0.000036 + …, a GP with a = 36/100 and r = 1/100, so its value is (36/100) ÷ (99/100) = 36/99 = 4/11. Check: 4 ÷ 11 = 0.363636… ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The sum of an infinite GP, §11 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#11-the-sum-of-an-infinite-gp"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "A recurring decimal is an infinite GP with r = 10^(−block length)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-042",
+      "topic": "Ch 6 · Sequence and Series · Infinite sum applied where it does not exist",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the sum to infinity of the geometric progression 4, 8, 16, 32, …?",
+      "options": [
+        {
+          "key": "A",
+          "text": "−4",
+          "explanation": "This applies a ÷ (1 − r) with r = 2, giving 4 ÷ (−1). A total of endlessly many positive terms cannot be negative, which is the signal that the formula was used outside its range."
+        },
+        {
+          "key": "B",
+          "text": "No sum to infinity exists, because the common ratio 2 is not smaller than 1 in size",
+          "explanation": "Correct. r = 8 ÷ 4 = 2 and |r| = 2, so rⁿ does not shrink to zero and the partial sums 4, 12, 28, 60, … grow without limit. The condition |r| < 1 must be checked before the formula is used."
+        },
+        {
+          "key": "C",
+          "text": "4/3",
+          "explanation": "This uses a ÷ (1 + r), a misremembered form of the denominator. Even a correct denominator would not rescue a ratio of size 2."
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "explanation": "This takes r as 1/2 by dividing 4 by 8 rather than 8 by 4, then applies the formula. The ratio is the later term divided by the earlier one."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The sum of an infinite GP, §11 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#11-the-sum-of-an-infinite-gp"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "S∞ exists only when |r| < 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-043",
+      "topic": "Ch 6 · Sequence and Series · nth term of a GP from the end",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the 3rd term from the end of the geometric progression 5, 10, 20, …, 2,560?",
+      "options": [
+        {
+          "key": "A",
+          "text": "320",
+          "explanation": "This divides by r³ = 8. The last term is itself the 1st from the end, so only two divisions separate it from the 3rd."
+        },
+        {
+          "key": "B",
+          "text": "1,280",
+          "explanation": "This divides by r only, giving the 2nd term from the end — one division short."
+        },
+        {
+          "key": "C",
+          "text": "640",
+          "explanation": "Correct. r = 2 and l = 2,560, so the 3rd term from the end is 2,560 ÷ 2² = 640. Cross-check: the GP has 10 terms and T₈ = 5 × 2⁷ = 640 ✓"
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "explanation": "20 is the 3rd term from the START. The question counted backwards from the last term."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The nth term of a GP counted from the end, §12 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#12-the-nth-term-of-a-gp-counted-from-the-end"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "nth term from the end = l ÷ rⁿ⁻¹",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-044",
+      "topic": "Ch 6 · Sequence and Series · Geometric mean of two numbers",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the geometric mean of 8 and 32?",
+      "options": [
+        {
+          "key": "A",
+          "text": "16",
+          "explanation": "Correct. G = √(8 × 32) = √256 = 16. Check that the three numbers form a GP: 16 ÷ 8 = 2 and 32 ÷ 16 = 2 ✓"
+        },
+        {
+          "key": "B",
+          "text": "20",
+          "explanation": "20 is the ARITHMETIC mean, (8 + 32) ÷ 2. A geometric mean uses the product and a square root, not the sum and a halving. Note also that 20 > 16, as AM ≥ GM requires."
+        },
+        {
+          "key": "C",
+          "text": "256",
+          "explanation": "256 is the product 8 × 32, with the square root not taken. The geometric mean is the root of the product."
+        },
+        {
+          "key": "D",
+          "text": "40",
+          "explanation": "40 is the sum 8 + 32 — the wrong operation and no root taken at all."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Geometric mean and inserting n geometric means, §13 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#13-geometric-mean-and-inserting-n-geometric-means"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "G = √(ab) for positive a and b",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-045",
+      "topic": "Ch 6 · Sequence and Series · Inserting geometric means",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three geometric means are inserted between 2 and 1,250. What is the first of those means?",
+      "options": [
+        {
+          "key": "A",
+          "text": "50",
+          "explanation": "50 is the SECOND mean. Counting one place too far along the progression shifts the answer by a factor of r."
+        },
+        {
+          "key": "B",
+          "text": "About 17.1",
+          "explanation": "This uses r = 625^(1/3) ≈ 8.55, dividing the exponent by the number of means rather than by the number of gaps. Inserting 3 means creates 4 gaps, so the index is 1/4."
+        },
+        {
+          "key": "C",
+          "text": "626",
+          "explanation": "626 is the ARITHMETIC mean of 2 and 1,250. Inserting geometric means requires a constant ratio, not a constant difference."
+        },
+        {
+          "key": "D",
+          "text": "10",
+          "explanation": "Correct. The GP has 3 + 2 = 5 terms, so 1,250 = 2r⁴, r⁴ = 625 and r = 5. The means are 10, 50 and 250, and the first is 10. Check: 2, 10, 50, 250, 1,250 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Geometric mean and inserting n geometric means, §13 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#13-geometric-mean-and-inserting-n-geometric-means"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Inserting n geometric means gives a GP of n + 2 terms, r = (b ÷ a)^[1 ÷ (n + 1)]",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-046",
+      "topic": "Ch 6 · Sequence and Series · Recovering two numbers from their AM and GM",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The arithmetic mean of two positive numbers is 15 and their geometric mean is 12. What are the two numbers?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20 and 10",
+          "explanation": "These do average 15, but their geometric mean is √200 ≈ 14.14, not 12. Only the AM condition was checked."
+        },
+        {
+          "key": "B",
+          "text": "24 and 6",
+          "explanation": "Correct. a + b = 2 × 15 = 30 and ab = 12² = 144, so the numbers are the roots of x² − 30x + 144 = 0, that is 24 and 6. Check: (24 + 6) ÷ 2 = 15 ✓ and √(24 × 6) = √144 = 12 ✓"
+        },
+        {
+          "key": "C",
+          "text": "18 and 12",
+          "explanation": "These average 15 but their geometric mean is √216 ≈ 14.70. Their product is 216, not the required 144."
+        },
+        {
+          "key": "D",
+          "text": "27 and 3",
+          "explanation": "These average 15 but their geometric mean is √81 = 9, which is below 12. The product condition fails in the other direction."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The relation between the AM and the GM of two numbers, §14 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#14-the-relation-between-the-am-and-the-gm-of-two-numbers"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "a + b = 2A and ab = G²; a and b are the roots of x² − 2Ax + G² = 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-047",
+      "topic": "Ch 6 · Sequence and Series · The AM–GM relation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For two DISTINCT positive numbers a and b, with A their arithmetic mean and G their geometric mean, which statement is always true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "G > A",
+          "explanation": "This has the inequality the wrong way round. For 8 and 50 the AM is 29 and the GM is 20, and no pair of positive numbers reverses that order."
+        },
+        {
+          "key": "B",
+          "text": "A = G",
+          "explanation": "The two means coincide only when a = b, which the stem has excluded by saying the numbers are distinct."
+        },
+        {
+          "key": "C",
+          "text": "A > G",
+          "explanation": "Correct. A − G = (√a − √b)² ÷ 2, which is positive whenever a and b differ, and zero only when they are equal. Since the stem says the numbers are distinct, the inequality is strict."
+        },
+        {
+          "key": "D",
+          "text": "A ≥ G only when both numbers are greater than 1",
+          "explanation": "The relation does not depend on the size of the numbers. For 0.04 and 0.09 the AM is 0.065 and the GM is 0.06, so A > G still holds."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The relation between the AM and the GM of two numbers, §14 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#14-the-relation-between-the-am-and-the-gm-of-two-numbers"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AM ≥ GM for positive numbers, with equality only when they are equal",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-048",
+      "topic": "Ch 6 · Sequence and Series · Three terms in AP from a sum and a product",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three numbers in arithmetic progression add to 45 and their product is 3,000. What is the largest of them?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20",
+          "explanation": "Correct. Writing them a − d, a, a + d gives 3a = 45 and a = 15. Then 15(225 − d²) = 3,000 gives 225 − d² = 200, d² = 25 and d = 5, so the numbers are 10, 15 and 20."
+        },
+        {
+          "key": "B",
+          "text": "15",
+          "explanation": "15 is the MIDDLE term, which the symmetrical form delivers first. The question asked for the largest."
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "explanation": "10 is the SMALLEST of the three. Reading a − d where a + d was wanted reverses the answer."
+        },
+        {
+          "key": "D",
+          "text": "40",
+          "explanation": "This takes d = 25 straight from d² = 25 without the square root, giving 15 + 25. The square root step is what turns 25 into 5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Convenient symmetrical forms for three or four terms, §15 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#15-convenient-symmetrical-forms-for-three-or-four-terms"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Three terms in AP as a − d, a, a + d",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-049",
+      "topic": "Ch 6 · Sequence and Series · Three terms in GP from a product and a sum",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three numbers in geometric progression have product 216 and sum 26. What is the smallest of them?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "6 is the MIDDLE term, which the symmetrical form a/r, a, ar delivers first from a³ = 216. One more step was needed."
+        },
+        {
+          "key": "B",
+          "text": "18",
+          "explanation": "18 is the LARGEST of the three. Reading ar where a/r was wanted reverses the answer."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "3 is the common ratio, correctly found from 3r² − 10r + 3 = 0, but not one of the three numbers."
+        },
+        {
+          "key": "D",
+          "text": "2",
+          "explanation": "Correct. Writing them a/r, a, ar gives a³ = 216 and a = 6. Then 6/r + 6 + 6r = 26 leads to 3r² − 10r + 3 = 0 and r = 3, so the numbers are 2, 6 and 18. Check: 2 × 6 × 18 = 216 ✓ and 2 + 6 + 18 = 26 ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Convenient symmetrical forms for three or four terms, §15 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#15-convenient-symmetrical-forms-for-three-or-four-terms"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Three terms in GP as a/r, a, ar, whose product is a³",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c6-050",
+      "topic": "Ch 6 · Sequence and Series · Sum of squares",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "What is the value of 1² + 2² + 3² + … + 25²?",
+      "options": [
+        {
+          "key": "A",
+          "text": "325",
+          "explanation": "325 is Σn for n = 25, the sum of the numbers themselves rather than of their squares."
+        },
+        {
+          "key": "B",
+          "text": "1,05,625",
+          "explanation": "This is 325², which is Σn³ — the sum of the CUBES. Squaring Σn gives the cube sum, not the square sum."
+        },
+        {
+          "key": "C",
+          "text": "5,525",
+          "explanation": "Correct. Σn² = n(n + 1)(2n + 1) ÷ 6 = 25 × 26 × 51 ÷ 6 = 33,150 ÷ 6 = 5,525."
+        },
+        {
+          "key": "D",
+          "text": "6,201",
+          "explanation": "This applies the formula at n = 26, summing one square too many. The last term is 25², so n is 25."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The special series, §16 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#16-the-special-series-sum-of-n-sum-of-n-squared-and-sum-of-n-cubes"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Σn² = n(n + 1)(2n + 1) ÷ 6",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "cs-f3c6-01",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 6 · Sequence and Series · Case: a production build-up at a press",
+      "case": "Anjani Metal Press at Rajkot commissioned a new component line in April. The line produced 3,400 pieces in its first month, and the plant head's build-up plan raises output by a steady 260 pieces every month as operators are trained and the second shift fills up. The customer contract runs for 24 months, and the plan holds for the whole of that period. Monthly output is counted at the end of each month, and every figure below relates to that 24-month contract period.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Business applications of progressions, §17 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#17-business-applications-of-progressions"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c6-01-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many pieces does the line produce in month 18?",
+          "topic": "Ch 6 · nth term of an AP",
+          "sourceRef": "Tₙ = a + (n − 1)d",
+          "options": [
+            {
+              "key": "A",
+              "text": "7,820 pieces",
+              "explanation": "Correct. a = 3,400 and d = 260, so T₁₈ = 3,400 + 17 × 260 = 3,400 + 4,420 = 7,820 pieces. From month 1 to month 18 there are 17 increases."
+            },
+            {
+              "key": "B",
+              "text": "8,080 pieces",
+              "explanation": "This uses a + 18d, counting eighteen increases. Month 1 has had none, so the count is 17 — this is the month-19 figure."
+            },
+            {
+              "key": "C",
+              "text": "7,560 pieces",
+              "explanation": "This uses a + 16d, the month-17 figure — one increase short."
+            },
+            {
+              "key": "D",
+              "text": "1,00,980 pieces",
+              "explanation": "This is the CUMULATIVE output of the first 18 months. The question asked for one month's production."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c6-01-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the line's total output over the first 18 months?",
+          "topic": "Ch 6 · Sum of n terms of an AP",
+          "sourceRef": "Sₙ = (n ÷ 2)[2a + (n − 1)d]",
+          "options": [
+            {
+              "key": "A",
+              "text": "7,820 pieces",
+              "explanation": "7,820 is the output of month 18 alone. Eighteen months of production were asked for."
+            },
+            {
+              "key": "B",
+              "text": "1,03,320 pieces",
+              "explanation": "This uses 2a + 18d in the bracket instead of 2a + 17d. Eighteen months contain seventeen increases."
+            },
+            {
+              "key": "C",
+              "text": "93,160 pieces",
+              "explanation": "This adds only seventeen months, S₁₇. An off-by-one in the count of months summed."
+            },
+            {
+              "key": "D",
+              "text": "1,00,980 pieces",
+              "explanation": "Correct. S₁₈ = (18 ÷ 2) × [2 × 3,400 + 17 × 260] = 9 × (6,800 + 4,420) = 9 × 11,220 = 1,00,980 pieces. Averaging checks it: the mean month is (3,400 + 7,820) ÷ 2 = 5,610 and 18 × 5,610 = 1,00,980 ✓"
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c6-01-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "In which month does monthly output first reach 9,000 pieces?",
+          "topic": "Ch 6 · When a rising AP first crosses a level",
+          "sourceRef": "Solve a + (n − 1)d ≥ target and round n up",
+          "options": [
+            {
+              "key": "A",
+              "text": "Month 23",
+              "explanation": "Correct. 3,400 + 260(n − 1) ≥ 9,000 gives n − 1 ≥ 21.54, so n ≥ 22.54 and n = 23. Month 23 produces 3,400 + 22 × 260 = 9,120 pieces, while month 22 produces only 8,860 ✓"
+            },
+            {
+              "key": "B",
+              "text": "Month 22",
+              "explanation": "This rounds 22.54 down. Month 22 produces 8,860 pieces, still short of 9,000, so the target has not been reached."
+            },
+            {
+              "key": "C",
+              "text": "Month 21",
+              "explanation": "This rounds the step count 21.54 down to 21 and then omits the '+ 1' that converts steps into a month number."
+            },
+            {
+              "key": "D",
+              "text": "Month 35",
+              "explanation": "This divides 9,000 by 260 and rounds up, ignoring the 3,400 pieces the line already makes in month 1."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c6-01-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Over the 24-month contract, what is the combined output of month 7 and month 18?",
+          "topic": "Ch 6 · Terms equidistant from the ends",
+          "sourceRef": "Terms equidistant from the two ends of a finite AP sum to a + l",
+          "options": [
+            {
+              "key": "A",
+              "text": "15,640 pieces",
+              "explanation": "This doubles the month-24 figure of 9,380. The two months named are not both the last month."
+            },
+            {
+              "key": "B",
+              "text": "6,800 pieces",
+              "explanation": "This doubles the month-1 figure of 3,400, using the first term where the pair total was needed."
+            },
+            {
+              "key": "C",
+              "text": "12,780 pieces",
+              "explanation": "Correct. Positions 7 and 18 add to 25 = 24 + 1, so the two months are equidistant from the ends of the contract and their outputs total a + l = 3,400 + 9,380 = 12,780 pieces. Direct check: 4,960 + 7,820 = 12,780 ✓"
+            },
+            {
+              "key": "D",
+              "text": "17,200 pieces",
+              "explanation": "This adds month 18 to month 24 rather than to month 7, giving 7,820 + 9,380. Only positions adding to 25 carry the constant pair total."
+            }
+          ],
+          "correct": "C"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c6-02",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 6 · Sequence and Series · Case: growth and decline at a regional media house",
+      "case": "Vaachak Media runs two businesses. Its regional streaming service ended year 1 with 25,000 paying subscribers, and the count has grown by 40% of the previous year's figure in each year since; the board's five-year plan assumes that rate continues to the end of year 5. Its older DVD-rental arm is in managed decline: revenue was ₹ 96,00,000 in year 1 and each later year brings in three-quarters of the previous year's revenue, with no closure date fixed and no other change in the business. Subscriber counts are measured at each year end and revenue is measured for each full year.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Business applications of progressions, §17 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#17-business-applications-of-progressions"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c6-02-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many paying subscribers does the streaming service have at the end of year 5?",
+          "topic": "Ch 6 · nth term of a GP",
+          "sourceRef": "Growth of p% per period gives r = 1 + p/100; Tₙ = a·rⁿ⁻¹",
+          "options": [
+            {
+              "key": "A",
+              "text": "1,34,456",
+              "explanation": "This uses 25,000 × 1.4⁵, which is the year-6 figure. Year 5 has grown four times, not five."
+            },
+            {
+              "key": "B",
+              "text": "96,040",
+              "explanation": "Correct. r = 1.4, so year 5 has 25,000 × 1.4⁴ = 25,000 × 3.8416 = 96,040 subscribers. Listing confirms it: 25,000 · 35,000 · 49,000 · 68,600 · 96,040."
+            },
+            {
+              "key": "C",
+              "text": "68,600",
+              "explanation": "This uses 25,000 × 1.4³, the year-4 figure — one growth period short."
+            },
+            {
+              "key": "D",
+              "text": "2,73,640",
+              "explanation": "This is the TOTAL of the five year-end counts, not the count at the end of year 5."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c6-02-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the total of the five year-end subscriber counts, years 1 to 5 inclusive?",
+          "topic": "Ch 6 · Sum of n terms of a GP",
+          "sourceRef": "Sₙ = a(rⁿ − 1) ÷ (r − 1) for r > 1",
+          "options": [
+            {
+              "key": "A",
+              "text": "96,040",
+              "explanation": "96,040 is the year-5 count alone. Five years' counts were to be added."
+            },
+            {
+              "key": "B",
+              "text": "1,77,600",
+              "explanation": "This uses r⁴ in the numerator and so adds only the first four years, 25,000 through 68,600."
+            },
+            {
+              "key": "C",
+              "text": "4,08,096",
+              "explanation": "This uses r⁶ and so adds six years, including a year-6 count of 1,34,456 that lies outside the plan."
+            },
+            {
+              "key": "D",
+              "text": "2,73,640",
+              "explanation": "Correct. S₅ = 25,000 × (1.4⁵ − 1) ÷ (1.4 − 1) = 25,000 × 4.37824 ÷ 0.4 = 2,73,640. Adding the five listed counts gives the same total ✓"
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c6-02-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the DVD arm continues its decline without end, what is the total revenue it will earn from year 1 onwards?",
+          "topic": "Ch 6 · Sum of an infinite GP",
+          "sourceRef": "S∞ = a ÷ (1 − r), valid because |r| = 3/4 < 1",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 3,84,00,000",
+              "explanation": "Correct. r = 3/4 and |r| < 1, so the sum exists: S∞ = 96,00,000 ÷ (1 − 3/4) = 96,00,000 × 4 = ₹ 3,84,00,000."
+            },
+            {
+              "key": "B",
+              "text": "₹ 1,28,00,000",
+              "explanation": "This divides by r = 3/4 instead of by 1 − r = 1/4. The denominator of the infinite sum is one minus the ratio."
+            },
+            {
+              "key": "C",
+              "text": "₹ 72,00,000",
+              "explanation": "₹ 72,00,000 is the year-2 revenue, three-quarters of year 1. A single year, not the endless total."
+            },
+            {
+              "key": "D",
+              "text": "₹ 2,88,00,000",
+              "explanation": "This is the total from year 2 onwards, leaving out year 1's own ₹ 96,00,000. The question counted from year 1."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c6-03",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 6 · Sequence and Series · Case: seating layouts at a training centre",
+      "case": "A professional training centre is fitting out two halls. The main hall is tiered: its first row holds 26 seats and every row behind holds 5 seats more than the row in front of it, and the hall has 28 rows in all. The seminar room is a smaller, fan-shaped space with only three rows; the fitter's drawing shows 18 seats in its first row and 50 in its last, and the architect's note says the three row counts are to be in geometric progression. All counts are of finished seats, and no row is left partly fitted.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Business applications of progressions, §17 →",
+        "href": "/foundation/quantitative-aptitude/sequence-and-series/#17-business-applications-of-progressions"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c6-03-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "How many seats are there in the last row of the main hall?",
+          "topic": "Ch 6 · nth term of an AP",
+          "sourceRef": "Tₙ = a + (n − 1)d",
+          "options": [
+            {
+              "key": "A",
+              "text": "166 seats",
+              "explanation": "This uses a + 28d, counting 28 increases. Row 1 has had none, so 28 rows contain 27 increases — this would be a 29th row."
+            },
+            {
+              "key": "B",
+              "text": "156 seats",
+              "explanation": "This uses a + 26d, the 27th row — one increase short."
+            },
+            {
+              "key": "C",
+              "text": "161 seats",
+              "explanation": "Correct. a = 26 and d = 5, so T₂₈ = 26 + 27 × 5 = 26 + 135 = 161 seats."
+            },
+            {
+              "key": "D",
+              "text": "2,618 seats",
+              "explanation": "2,618 is the CAPACITY of the whole hall, the total across all 28 rows. One row was asked about."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c6-03-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the seating capacity of the main hall?",
+          "topic": "Ch 6 · Sum of n terms of an AP",
+          "sourceRef": "Sₙ = (n ÷ 2)(a + l)",
+          "options": [
+            {
+              "key": "A",
+              "text": "161 seats",
+              "explanation": "161 is the last row alone. The capacity is the total across all 28 rows."
+            },
+            {
+              "key": "B",
+              "text": "2,618 seats",
+              "explanation": "Correct. S₂₈ = (28 ÷ 2) × (26 + 161) = 14 × 187 = 2,618 seats. Averaging checks it: the mean row holds 93.5 seats and 28 × 93.5 = 2,618 ✓"
+            },
+            {
+              "key": "C",
+              "text": "2,688 seats",
+              "explanation": "This uses 2a + 28d in the bracket instead of 2a + 27d, adding one increase too many."
+            },
+            {
+              "key": "D",
+              "text": "2,457 seats",
+              "explanation": "This adds only 27 rows, S₂₇. An off-by-one in the count of rows summed."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-f3c6-03-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "In the three-row seminar room, how many seats must the middle row hold?",
+          "topic": "Ch 6 · Geometric mean",
+          "sourceRef": "The middle term of three in GP is the geometric mean, G = √(ab)",
+          "options": [
+            {
+              "key": "A",
+              "text": "34 seats",
+              "explanation": "34 is the ARITHMETIC mean, (18 + 50) ÷ 2. That would put the three rows in AP, not in the GP the architect's note requires."
+            },
+            {
+              "key": "B",
+              "text": "900 seats",
+              "explanation": "900 is the product 18 × 50, with the square root not taken — a figure far larger than the whole room."
+            },
+            {
+              "key": "C",
+              "text": "32 seats",
+              "explanation": "32 is the difference 50 − 18. A difference plays no part in identifying a middle term of a GP."
+            },
+            {
+              "key": "D",
+              "text": "30 seats",
+              "explanation": "Correct. For three numbers in GP the middle one is the geometric mean: G = √(18 × 50) = √900 = 30 seats. Check the ratios: 30 ÷ 18 = 5/3 and 50 ÷ 30 = 5/3 ✓"
+            }
+          ],
+          "correct": "D"
+        }
+      ]
+    }
+  ]
+}

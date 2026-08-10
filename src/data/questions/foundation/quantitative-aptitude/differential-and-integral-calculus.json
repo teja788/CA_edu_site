@@ -1,0 +1,2379 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "differential-and-integral-calculus",
+  "chapter": "Ch 8 — Basic Applications of Differential and Integral Calculus",
+  "questions": [
+    {
+      "id": "q-f3c8-001",
+      "topic": "Ch 8 · Calculus · What the derivative measures",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For a curve y = f(x), what does the value of dy/dx at a particular point measure?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The value of y itself at that point",
+          "explanation": "This confuses the function with its rate of change. y tells you the height of the curve; dy/dx tells you how fast that height is changing."
+        },
+        {
+          "key": "B",
+          "text": "The slope of the tangent to the curve at that point, which is the instantaneous rate of change of y with respect to x",
+          "explanation": "Correct. The difference quotient [f(x + h) − f(x)] ÷ h is the slope of a chord; as h → 0 the chord becomes the tangent, so the limit is both the tangent's slope and the rate of change of y at that single point."
+        },
+        {
+          "key": "C",
+          "text": "The average rate of change of y across the whole curve",
+          "explanation": "The average rate is Δy ÷ Δx across a finite step, which is the chord's slope. The derivative is what that ratio settles to when the step shrinks to nothing — a value at one point, not an average over a stretch."
+        },
+        {
+          "key": "D",
+          "text": "The area enclosed between the curve and the x-axis up to that point",
+          "explanation": "Area under a curve is what the definite INTEGRAL measures. Reading the derivative as an area reverses the two operations of the chapter."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The derivative as a rate of change and as a slope, §1 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#1-the-derivative-as-a-rate-of-change-and-as-a-slope"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Derivative as limit of the difference quotient; slope of the tangent",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-002",
+      "topic": "Ch 8 · Calculus · Differentiation from first principles",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Differentiating f(x) = x³ from first principles, what is f′(x)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "x²",
+          "explanation": "The power has been reduced by one but the old power was not brought down as a multiplier. The rule is n·xⁿ⁻¹, so the 3 must appear in front."
+        },
+        {
+          "key": "B",
+          "text": "3x³",
+          "explanation": "The power has been brought down as a multiplier but not reduced. Both halves of the power rule must be applied, not one of them."
+        },
+        {
+          "key": "C",
+          "text": "3x²",
+          "explanation": "Correct. f(x + h) − f(x) = 3x²h + 3xh² + h³; dividing by h leaves 3x² + 3xh + h², and letting h → 0 removes the last two terms."
+        },
+        {
+          "key": "D",
+          "text": "3x² + 3xh + h²",
+          "explanation": "This is the difference quotient AFTER cancelling h but BEFORE the limit is taken. The last step, letting h → 0, has been skipped, so the answer still contains the step size."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The derivative from first principles, §2 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#2-the-derivative-from-first-principles"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "First principles: cancel h, then let h → 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-003",
+      "topic": "Ch 8 · Calculus · Average rate of change",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A packaging unit's total cost is C(x) = 3x² + 40x + 500 (₹ thousand) when x thousand cartons are run. What is the AVERAGE rate of change of total cost as output rises from 10 to 12 thousand cartons, per thousand cartons?",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 106 thousand",
+          "explanation": "Correct. C(12) = 432 + 480 + 500 = 1,412 and C(10) = 300 + 400 + 500 = 1,200, so the change is 212 over a step of 2, giving 212 ÷ 2 = 106."
+        },
+        {
+          "key": "B",
+          "text": "₹ 212 thousand",
+          "explanation": "This is the total change in cost across the step. An average RATE must still be divided by the width of the step, which is 2 thousand cartons."
+        },
+        {
+          "key": "C",
+          "text": "₹ 100 thousand",
+          "explanation": "This is C′(10) = 6(10) + 40, the marginal cost at the start of the step. That is the instantaneous rate at one point, not the average across the interval."
+        },
+        {
+          "key": "D",
+          "text": "₹ 112 thousand",
+          "explanation": "This is C′(12) = 6(12) + 40, the marginal cost at the end of the step — the same error as option C, taken at the other end."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The derivative as a rate of change and as a slope, §1 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#1-the-derivative-as-a-rate-of-change-and-as-a-slope"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Average rate of change = Δy ÷ Δx over a finite step",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-004",
+      "topic": "Ch 8 · Calculus · First principles for a reciprocal",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From first principles, the derivative of f(x) = 1/x (for x ≠ 0) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/x²",
+          "explanation": "The magnitude is right but the sign has been lost. Writing 1/x as x⁻¹ and applying the power rule gives −1 · x⁻², and the minus sign is part of the answer, not decoration."
+        },
+        {
+          "key": "B",
+          "text": "−1/x",
+          "explanation": "The index has been given a minus sign but not reduced. Differentiating x⁻¹ moves the index from −1 to −2, so the answer carries x⁻², not x⁻¹."
+        },
+        {
+          "key": "C",
+          "text": "log |x|",
+          "explanation": "This is the INTEGRAL of 1/x. Differentiating log x gives 1/x, so this option runs the relationship backwards — the single most common swap in the chapter."
+        },
+        {
+          "key": "D",
+          "text": "−1/x²",
+          "explanation": "Correct. f(x + h) − f(x) = −h ÷ [x(x + h)]; dividing by h gives −1 ÷ [x(x + h)], and letting h → 0 gives −1/x²."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The derivative from first principles, §2 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#2-the-derivative-from-first-principles"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "d/dx (1/x) = −1/x²",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-005",
+      "topic": "Ch 8 · Calculus · The power rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = x⁷, then dy/dx is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "7x⁶",
+          "explanation": "Correct. The power rule d/dx (xⁿ) = n·xⁿ⁻¹ brings the 7 down as a multiplier and reduces the index to 6."
+        },
+        {
+          "key": "B",
+          "text": "7x⁷",
+          "explanation": "The index has been brought down as a multiplier but not reduced. Both halves of the power rule apply together."
+        },
+        {
+          "key": "C",
+          "text": "x⁶",
+          "explanation": "The index has been reduced but the old index was not brought down in front. Without the 7 the answer is one seventh of the truth."
+        },
+        {
+          "key": "D",
+          "text": "6x⁶",
+          "explanation": "The NEW index has been used as the multiplier. The multiplier is the original index n, not n − 1."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The standard derivatives, §3 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#3-the-standard-derivatives"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Power rule d/dx (xⁿ) = n·xⁿ⁻¹",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-006",
+      "topic": "Ch 8 · Calculus · The power rule with a negative index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = 1/x³, then dy/dx is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/x⁴",
+          "explanation": "The sign has been dropped. The index is −3, so the multiplier is −3, and the answer is negative for positive x — as it must be, because 1/x³ falls as x rises."
+        },
+        {
+          "key": "B",
+          "text": "−3/x²",
+          "explanation": "The index has been moved the wrong way. Subtracting 1 from −3 gives −4, not −2; a negative index becomes MORE negative on differentiation."
+        },
+        {
+          "key": "C",
+          "text": "−3/x⁴",
+          "explanation": "Correct. Write y = x⁻³. Then dy/dx = −3·x⁻⁴ = −3/x⁴."
+        },
+        {
+          "key": "D",
+          "text": "3/x²",
+          "explanation": "Both errors together — the lost minus sign of option A and the wrong index of option B."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The standard derivatives, §3 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#3-the-standard-derivatives"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Power rule applied to a negative index",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-007",
+      "topic": "Ch 8 · Calculus · Derivative of a square root",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = √x, the value of dy/dx at x = 9 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/3",
+          "explanation": "This is 1 ÷ √x, with the factor 2 in the denominator lost. The power rule on x^(1/2) leaves (1/2)·x^(−1/2), and that half becomes the 2 underneath."
+        },
+        {
+          "key": "B",
+          "text": "1/6",
+          "explanation": "Correct. y = x^(1/2), so dy/dx = (1/2)x^(−1/2) = 1 ÷ (2√x). At x = 9 that is 1 ÷ (2 × 3) = 1/6."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "This is 2√x itself. The derivative is the RECIPROCAL of 2√x, so the fraction has been turned upside down."
+        },
+        {
+          "key": "D",
+          "text": "1/18",
+          "explanation": "This is 1 ÷ (2x), with the square root dropped from the denominator. x^(−1/2) means 1 ÷ √x, not 1 ÷ x."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The standard derivatives, §3 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#3-the-standard-derivatives"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "d/dx (√x) = 1 ÷ (2√x)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-008",
+      "topic": "Ch 8 · Calculus · Derivative of an exponential with base a",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = 3ˣ, then dy/dx is (log meaning the natural logarithm):",
+      "options": [
+        {
+          "key": "A",
+          "text": "x · 3ˣ⁻¹",
+          "explanation": "The power rule has been applied to a variable EXPONENT. n·xⁿ⁻¹ works when the base moves and the index is fixed; here the base is fixed at 3 and the index moves, which is the opposite situation."
+        },
+        {
+          "key": "B",
+          "text": "3ˣ",
+          "explanation": "This treats 3ˣ as if it were eˣ. Only base e differentiates to itself; every other base picks up a factor of log a, and log 3 ≈ 1.0986 is not 1."
+        },
+        {
+          "key": "C",
+          "text": "3ˣ ÷ log 3",
+          "explanation": "This is the INTEGRAL of 3ˣ. Differentiation multiplies by log a; integration divides by it, and the two have been exchanged."
+        },
+        {
+          "key": "D",
+          "text": "3ˣ · log 3",
+          "explanation": "Correct. d/dx (aˣ) = aˣ · log a. Setting a = e recovers eˣ · 1 = eˣ, which is the consistency check."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The standard derivatives, §3 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#3-the-standard-derivatives"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "d/dx (aˣ) = aˣ log a",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-009",
+      "topic": "Ch 8 · Calculus · Derivative of the logarithm",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = log x (natural log), the value of dy/dx at x = 4 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.25",
+          "explanation": "Correct. d/dx (log x) = 1/x, so at x = 4 the derivative is 1/4 = 0.25."
+        },
+        {
+          "key": "B",
+          "text": "−0.0625",
+          "explanation": "This is −1/x² = −1/16, which is the derivative of 1/x, not of log x. The pair is constantly swapped: log x differentiates TO 1/x, and 1/x differentiates to −1/x²."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "This is x itself. The derivative is the reciprocal of x, so the fraction has been inverted."
+        },
+        {
+          "key": "D",
+          "text": "1.3863",
+          "explanation": "This is log 4, the value of the FUNCTION at x = 4, not the value of its derivative there."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The standard derivatives, §3 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#3-the-standard-derivatives"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "d/dx (log x) = 1/x",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-010",
+      "topic": "Ch 8 · Calculus · Differentiating a polynomial term by term",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = 5x⁴ − 3x² + 7x − 9, the value of dy/dx at x = 2 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "148",
+          "explanation": "The term 7x has been treated as a constant and dropped. Its derivative is 7, not 0 — only a term with no x at all disappears."
+        },
+        {
+          "key": "B",
+          "text": "155",
+          "explanation": "Correct. dy/dx = 20x³ − 6x + 7. At x = 2 that is 160 − 12 + 7 = 155."
+        },
+        {
+          "key": "C",
+          "text": "146",
+          "explanation": "The constant −9 has been carried into the derivative. Differentiating any constant gives 0, so the −9 must vanish, not survive."
+        },
+        {
+          "key": "D",
+          "text": "162",
+          "explanation": "The term 7x has been differentiated to 7x rather than to 7, adding 14 instead of 7 at x = 2. The derivative of x is 1."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Sum difference and constant multiple, §4 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#4-sum-difference-and-constant-multiple"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Term-by-term differentiation; derivative of a constant is zero",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-011",
+      "topic": "Ch 8 · Calculus · Simplify before differentiating",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = (2x³ + 5x² − 4) ÷ x², the value of dy/dx at x = 2 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "explanation": "The sign on the last term is wrong. Dividing gives y = 2x + 5 − 4x⁻², and differentiating −4x⁻² gives +8x⁻³, because −4 × (−2) = +8. Using −8x⁻³ produces 2 − 1 = 1."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "The term −4/x² has been dropped as though it were a constant. It contains x, so it contributes 8/x³ to the derivative."
+        },
+        {
+          "key": "C",
+          "text": "11",
+          "explanation": "This divides the derivative of the numerator by the derivative of the denominator: (6x² + 10x) ÷ 2x = 44 ÷ 4 = 11. No such rule exists — a quotient needs either the quotient rule or, as here, term-by-term division first."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "Correct. Divide each term by x² first: y = 2x + 5 − 4x⁻². Then dy/dx = 2 + 8x⁻³, and at x = 2 that is 2 + 8/8 = 3."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Sum difference and constant multiple, §4 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#4-sum-difference-and-constant-multiple"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Divide term by term before differentiating",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-012",
+      "topic": "Ch 8 · Calculus · Roots and reciprocals in one function",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = 4√x + 6/x, the value of dy/dx at x = 4 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.375",
+          "explanation": "The sign on the second term is wrong. 6/x is 6x⁻¹, which differentiates to −6x⁻² = −0.375 at x = 4, so the two parts subtract, not add."
+        },
+        {
+          "key": "B",
+          "text": "−0.125",
+          "explanation": "The coefficient 4 has not been carried through the power rule. d/dx (4x^(1/2)) is 4 × (1/2)x^(−1/2) = 2/√x = 1, not 0.25."
+        },
+        {
+          "key": "C",
+          "text": "0.625",
+          "explanation": "Correct. dy/dx = 2/√x − 6/x². At x = 4 that is 2/2 − 6/16 = 1 − 0.375 = 0.625."
+        },
+        {
+          "key": "D",
+          "text": "2.5",
+          "explanation": "The term 6/x has been treated as if it differentiated to 6/x (that is, as though it were 6 log x), giving 1 + 1.5. Integrating 1/x gives log x; differentiating 1/x gives −1/x²."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Sum difference and constant multiple, §4 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#4-sum-difference-and-constant-multiple"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Rewrite roots and reciprocals as powers before differentiating",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-013",
+      "topic": "Ch 8 · Calculus · The product rule with an exponential",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = x²·eˣ, the value of dy/dx at x = 1 is (take e = 2.71828):",
+      "options": [
+        {
+          "key": "A",
+          "text": "8.155",
+          "explanation": "Correct. The product rule gives dy/dx = x²eˣ + eˣ(2x) = xeˣ(x + 2). At x = 1 that is 1 × e × 3 = 3e = 8.155."
+        },
+        {
+          "key": "B",
+          "text": "5.437",
+          "explanation": "This is (2x)(eˣ) = 2e — the product rule applied as a PRODUCT OF DERIVATIVES. That is never the rule; on y = x · x = x² it would give 1 instead of 2x."
+        },
+        {
+          "key": "C",
+          "text": "2.718",
+          "explanation": "Only the first term of the product rule, x²·eˣ at x = 1, has been written. The second term eˣ·2x is missing, and it contributes 2e."
+        },
+        {
+          "key": "D",
+          "text": "4.718",
+          "explanation": "This adds the two derivatives, 2x + eˣ = 2 + e. Addition of derivatives is the rule for a SUM, not for a product."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The product rule, §5 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#5-the-product-rule"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "d/dx (u·v) = u·v′ + v·u′",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-014",
+      "topic": "Ch 8 · Calculus · The product rule on two polynomials",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = (3x + 1)(x² − 2), the value of dy/dx at x = 2 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "12",
+          "explanation": "This multiplies the two derivatives, 3 × 2x = 3 × 4. The product rule is a SUM of two terms, not a product of the derivatives."
+        },
+        {
+          "key": "B",
+          "text": "34",
+          "explanation": "Correct. dy/dx = (3x + 1)(2x) + (x² − 2)(3) = 6x² + 2x + 3x² − 6 = 9x² + 2x − 6, which at x = 2 is 36 + 4 − 6 = 34. Expanding first gives 2x³ + x² − 6x − 2 and the same derivative."
+        },
+        {
+          "key": "C",
+          "text": "28",
+          "explanation": "Only the first term, (3x + 1)(2x) = 7 × 4, has been written. The second term (x² − 2)(3) = 6 is missing."
+        },
+        {
+          "key": "D",
+          "text": "6",
+          "explanation": "Only the second term, (x² − 2)(3) = 2 × 3, has been written. The first term, 28, is missing — the mirror image of option C."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The product rule, §5 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#5-the-product-rule"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Product rule; both terms required",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-015",
+      "topic": "Ch 8 · Calculus · The quotient rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = (2x + 1) ÷ (x − 3), the value of dy/dx at x = 5 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.75",
+          "explanation": "The two numerator terms have been reversed. Using u·v′ − v·u′ instead of v·u′ − u·v′ gives +7 ÷ (x − 3)², flipping the sign of the whole answer."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "This divides the derivative of the numerator by the derivative of the denominator, 2 ÷ 1. No such rule exists for a quotient."
+        },
+        {
+          "key": "C",
+          "text": "−1.75",
+          "explanation": "Correct. Numerator = (x − 3)(2) − (2x + 1)(1) = 2x − 6 − 2x − 1 = −7, so dy/dx = −7 ÷ (x − 3)². At x = 5 that is −7 ÷ 4 = −1.75."
+        },
+        {
+          "key": "D",
+          "text": "−3.5",
+          "explanation": "The denominator has been left as (x − 3) instead of squared. The quotient rule always divides by v², which here is 4, not 2."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The quotient rule, §6 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#6-the-quotient-rule"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "d/dx (u ÷ v) = (v·u′ − u·v′) ÷ v²",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-016",
+      "topic": "Ch 8 · Calculus · Quotient rule with a squared numerator",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = x² ÷ (x + 1), the value of dy/dx at x = 1 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−0.75",
+          "explanation": "The numerator terms have been reversed: u·v′ − v·u′ instead of v·u′ − u·v′. That changes the sign of the whole derivative."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "This divides the derivative of the numerator by the derivative of the denominator, 2x ÷ 1. A quotient is not differentiated that way."
+        },
+        {
+          "key": "C",
+          "text": "1.5",
+          "explanation": "The denominator has been left as (x + 1) rather than (x + 1)². The correct numerator is 3 and the correct denominator 4, not 2."
+        },
+        {
+          "key": "D",
+          "text": "0.75",
+          "explanation": "Correct. Numerator = (x + 1)(2x) − x²(1) = x² + 2x, so dy/dx = (x² + 2x) ÷ (x + 1)². At x = 1 that is 3 ÷ 4 = 0.75."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The quotient rule, §6 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#6-the-quotient-rule"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Quotient rule, denominator squared",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-017",
+      "topic": "Ch 8 · Calculus · Quotient rule with an exponential",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = eˣ ÷ x, the value of dy/dx at x = 2 is (take e² = 7.389):",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.847",
+          "explanation": "Correct. dy/dx = (x·eˣ − eˣ) ÷ x² = eˣ(x − 1) ÷ x². At x = 2 that is 7.389 × 1 ÷ 4 = 1.847."
+        },
+        {
+          "key": "B",
+          "text": "3.695",
+          "explanation": "The denominator has been left as x rather than x², giving 7.389 ÷ 2. The quotient rule divides by v² every time."
+        },
+        {
+          "key": "C",
+          "text": "−1.847",
+          "explanation": "The numerator terms have been reversed, giving eˣ(1 − x) ÷ x². The order is denominator times derivative of numerator FIRST."
+        },
+        {
+          "key": "D",
+          "text": "7.389",
+          "explanation": "The denominator has been treated as a constant, leaving just eˣ. Since x moves, it must be differentiated too."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The quotient rule, §6 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#6-the-quotient-rule"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Quotient rule applied to eˣ ÷ x",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-018",
+      "topic": "Ch 8 · Calculus · The chain rule on a power",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = (4x − 7)⁶, the value of dy/dx at x = 2 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "The inner derivative has been forgotten. Differentiating the outside gives 6(4x − 7)⁵ = 6, but the chain rule then multiplies by d/dx (4x − 7) = 4."
+        },
+        {
+          "key": "B",
+          "text": "24",
+          "explanation": "Correct. dy/dx = 6(4x − 7)⁵ × 4 = 24(4x − 7)⁵. At x = 2 the bracket is 1, so the value is 24."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "The power has been used as the inner factor only: (4x − 7)⁵ × 4. The outer 6 from the power rule is missing."
+        },
+        {
+          "key": "D",
+          "text": "48",
+          "explanation": "The inner derivative has been written as 4x instead of 4, giving 6 × 1 × 8. The derivative of 4x − 7 is the constant 4."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The chain rule for a function of a function, §7 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#7-the-chain-rule-for-a-function-of-a-function"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Chain rule: d/dx [g(x)]ⁿ = n[g(x)]ⁿ⁻¹·g′(x)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-019",
+      "topic": "Ch 8 · Calculus · Chain rule on an exponential",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = e^(3x²), the value of dy/dx at x = 1 is (take e³ = 20.0855):",
+      "options": [
+        {
+          "key": "A",
+          "text": "20.086",
+          "explanation": "The inner derivative has been forgotten. e^(g(x)) differentiates to e^(g(x)) × g′(x), and here g′(x) = 6x, which is 6 at x = 1."
+        },
+        {
+          "key": "B",
+          "text": "120.513",
+          "explanation": "Correct. dy/dx = 6x·e^(3x²), so at x = 1 the value is 6 × 20.0855 = 120.513."
+        },
+        {
+          "key": "C",
+          "text": "60.257",
+          "explanation": "The inner derivative has been taken as the coefficient 3 rather than as d/dx (3x²) = 6x. The whole inside must be differentiated, not just read off."
+        },
+        {
+          "key": "D",
+          "text": "22.167",
+          "explanation": "This applies the power rule to a variable exponent, giving 3x²·e^(3x² − 1) = 3e². The exponential rule, not the power rule, governs a fixed base with a moving exponent."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The chain rule for a function of a function, §7 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#7-the-chain-rule-for-a-function-of-a-function"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Chain rule: d/dx e^(g(x)) = e^(g(x))·g′(x)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-020",
+      "topic": "Ch 8 · Calculus · Chain rule on a logarithm",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = log(5x² + 2), the value of dy/dx at x = 1 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.7",
+          "explanation": "The fraction has been inverted: this is (5x² + 2) ÷ 10x. The rule is derivative of the inside OVER the inside, not the other way round."
+        },
+        {
+          "key": "B",
+          "text": "0.1429",
+          "explanation": "The inner derivative has been omitted, leaving 1 ÷ (5x² + 2) = 1/7. Differentiating log[g(x)] always multiplies by g′(x)."
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "explanation": "Only the inner derivative 10x has been written. The division by the inside function has been dropped."
+        },
+        {
+          "key": "D",
+          "text": "1.4286",
+          "explanation": "Correct. dy/dx = 10x ÷ (5x² + 2). At x = 1 that is 10 ÷ 7 = 1.4286."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The chain rule for a function of a function, §7 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#7-the-chain-rule-for-a-function-of-a-function"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Chain rule: d/dx log[g(x)] = g′(x) ÷ g(x)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-021",
+      "topic": "Ch 8 · Calculus · Chain rule on a square root",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = √(x² + 9), the value of dy/dx at x = 4 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.8",
+          "explanation": "Correct. dy/dx = 2x ÷ [2√(x² + 9)] = x ÷ √(x² + 9). At x = 4 the root is 5, so the value is 4/5 = 0.8."
+        },
+        {
+          "key": "B",
+          "text": "0.1",
+          "explanation": "The inner derivative 2x has been omitted, leaving 1 ÷ (2√(x² + 9)) = 1/10. The chain rule multiplies by the derivative of what is under the root."
+        },
+        {
+          "key": "C",
+          "text": "1.6",
+          "explanation": "The factor 1/2 from the power rule on x^(1/2) has been dropped, giving 2x ÷ √(x² + 9) = 8/5. The 2 from the inner derivative and the 2 underneath cancel exactly once."
+        },
+        {
+          "key": "D",
+          "text": "0.16",
+          "explanation": "The denominator has been written as the inside itself rather than as its square root: 4 ÷ 25 instead of 4 ÷ 5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The chain rule for a function of a function, §7 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#7-the-chain-rule-for-a-function-of-a-function"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Chain rule on a square root",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-022",
+      "topic": "Ch 8 · Calculus · Logarithmic differentiation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = x^x for x > 0, the value of dy/dx at x = 2 is (take log 2 = 0.6931):",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "This applies the power rule to a moving exponent: x·x^(x − 1) = x^x = 4. The power rule needs a FIXED index, which x^x does not have."
+        },
+        {
+          "key": "B",
+          "text": "6.773",
+          "explanation": "Correct. Take logs: log y = x log x. Differentiating, (1/y)(dy/dx) = 1 + log x, so dy/dx = x^x(1 + log x) = 4 × 1.6931 = 6.773."
+        },
+        {
+          "key": "C",
+          "text": "1.693",
+          "explanation": "This is the bracket (1 + log 2) on its own. The working produces (1/y)(dy/dx), so the bracket must still be multiplied by y = x^x = 4."
+        },
+        {
+          "key": "D",
+          "text": "2.773",
+          "explanation": "This applies the aˣ rule with the base treated as fixed, giving x^x·log x. It captures the moving exponent but not the moving base, so the term from differentiating the base is missing."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Logarithmic differentiation, §8 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#8-logarithmic-differentiation"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "d/dx (x^x) = x^x (1 + log x)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-023",
+      "topic": "Ch 8 · Calculus · Implicit differentiation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the curve x² + y² = 25, the value of dy/dx at the point (3, 4) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.75",
+          "explanation": "The minus sign has been lost. Differentiating gives 2x + 2y(dy/dx) = 0, so dy/dx = −x/y, and the slope on the upper right of a circle is negative."
+        },
+        {
+          "key": "B",
+          "text": "−1.3333",
+          "explanation": "The fraction has been inverted: this is −y/x. Collecting the dy/dx terms leaves 2y(dy/dx) = −2x, so y goes underneath."
+        },
+        {
+          "key": "C",
+          "text": "1.3333",
+          "explanation": "Both errors together — the fraction inverted and the sign lost, giving +y/x."
+        },
+        {
+          "key": "D",
+          "text": "−0.75",
+          "explanation": "Correct. 2x + 2y(dy/dx) = 0 gives dy/dx = −x/y = −3/4 = −0.75. As a check, the radius to (3, 4) has slope 4/3, and the tangent is perpendicular to it."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Implicit and parametric differentiation, §9 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#9-implicit-and-parametric-differentiation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Implicit differentiation: y terms carry dy/dx",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-024",
+      "topic": "Ch 8 · Calculus · Implicit differentiation with a product term",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the curve x³ + y³ = 9xy, the value of dy/dx at the point (2, 4) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.25",
+          "explanation": "The fraction has been inverted. Collecting terms gives (dy/dx)(3y² − 9x) = 9y − 3x², so (y² − 3x) belongs in the denominator, not the numerator."
+        },
+        {
+          "key": "B",
+          "text": "−0.8",
+          "explanation": "A sign has been dropped while transposing. Moving 9x(dy/dx) to the left and 3x² to the right leaves both the numerator and the denominator positive at this point."
+        },
+        {
+          "key": "C",
+          "text": "0.8",
+          "explanation": "Correct. 3x² + 3y²(dy/dx) = 9[x(dy/dx) + y], so dy/dx = (3y − x²) ÷ (y² − 3x) = (12 − 4) ÷ (16 − 6) = 0.8. The point does lie on the curve: 8 + 64 = 72 = 9(2)(4)."
+        },
+        {
+          "key": "D",
+          "text": "0.5",
+          "explanation": "The product rule has not been applied to 9xy: the term x·(dy/dx) is missing, so the working reads 3x² + 3y²(dy/dx) = 9y and gives 24 ÷ 48."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Implicit and parametric differentiation, §9 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#9-implicit-and-parametric-differentiation"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Implicit differentiation with a product term",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-025",
+      "topic": "Ch 8 · Calculus · Parametric differentiation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If x = 4t² and y = 8t³, the value of dy/dx at t = 2 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "Correct. dx/dt = 8t and dy/dt = 24t², so dy/dx = 24t² ÷ 8t = 3t. At t = 2 that is 6."
+        },
+        {
+          "key": "B",
+          "text": "0.1667",
+          "explanation": "The quotient has been taken the wrong way round: this is (dx/dt) ÷ (dy/dt), the reciprocal of the answer. In dy/dx the y-derivative stays on top."
+        },
+        {
+          "key": "C",
+          "text": "96",
+          "explanation": "This is dy/dt = 24t² alone. A rate with respect to t is not a rate with respect to x; it must still be divided by dx/dt."
+        },
+        {
+          "key": "D",
+          "text": "16",
+          "explanation": "This is dx/dt = 8t alone — the denominator reported as if it were the answer."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Implicit and parametric differentiation, §9 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#9-implicit-and-parametric-differentiation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "dy/dx = (dy/dt) ÷ (dx/dt)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-026",
+      "topic": "Ch 8 · Calculus · The second derivative of a polynomial",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = x⁴ − 5x³ + 2x, the value of d²y/dx² at x = 2 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−26",
+          "explanation": "This is the FIRST derivative at x = 2: 4x³ − 15x² + 2 = 32 − 60 + 2. The question asks for the second derivative, so one more differentiation is needed."
+        },
+        {
+          "key": "B",
+          "text": "−12",
+          "explanation": "Correct. y₁ = 4x³ − 15x² + 2 and y₂ = 12x² − 30x. At x = 2 that is 48 − 60 = −12."
+        },
+        {
+          "key": "C",
+          "text": "18",
+          "explanation": "This is the THIRD derivative at x = 2: 24x − 30 = 18. One differentiation too many."
+        },
+        {
+          "key": "D",
+          "text": "108",
+          "explanation": "The sign of the −5x³ term has been lost on the way, giving 12x² + 30x = 48 + 60. Each differentiation preserves the sign of the term it acts on."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Higher-order derivatives, §10 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#10-higher-order-derivatives"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Second derivative by differentiating twice",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-027",
+      "topic": "Ch 8 · Calculus · Second derivative of an exponential",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If y = e^(5x), the value of d²y/dx² at x = 0 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5",
+          "explanation": "This is the first derivative at x = 0, 5e⁰. The function has been differentiated only once."
+        },
+        {
+          "key": "B",
+          "text": "1",
+          "explanation": "The factor 5 has been dropped at both stages, as though the function were eˣ. Each differentiation of e^(5x) multiplies by the inner derivative 5."
+        },
+        {
+          "key": "C",
+          "text": "25",
+          "explanation": "Correct. y₁ = 5e^(5x) and y₂ = 25e^(5x). At x = 0 the exponential is 1, so the value is 25."
+        },
+        {
+          "key": "D",
+          "text": "10",
+          "explanation": "The two chain-rule factors of 5 have been added rather than multiplied. Differentiating twice multiplies by 5 twice, giving 5² = 25."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Higher-order derivatives, §10 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#10-higher-order-derivatives"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "y = eᵃˣ → y₂ = a²eᵃˣ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-028",
+      "topic": "Ch 8 · Calculus · Marginal cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A foundry's total cost of making x brake drums a day is C(x) = 2x² + 60x + 5,000 rupees. Its marginal cost at an output of 30 drums is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 286.67",
+          "explanation": "This is the AVERAGE cost at 30 drums, C(30) ÷ 30. Average cost divides the total; marginal cost differentiates it, and the two agree only at the minimum of average cost."
+        },
+        {
+          "key": "B",
+          "text": "₹ 8,600",
+          "explanation": "This is the TOTAL cost of 30 drums, C(30) = 1,800 + 1,800 + 5,000. Marginal cost is a rate, not a total."
+        },
+        {
+          "key": "C",
+          "text": "₹ 5,180",
+          "explanation": "The fixed cost of ₹ 5,000 has been carried into the marginal cost. Differentiating a constant gives zero, so fixed cost never appears in MC."
+        },
+        {
+          "key": "D",
+          "text": "₹ 180",
+          "explanation": "Correct. MC = dC/dx = 4x + 60, so at x = 30 the marginal cost is 120 + 60 = ₹ 180 a drum."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Marginal cost marginal revenue and average cost, §11 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#11-marginal-cost-marginal-revenue-and-average-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "MC = dC/dx",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-029",
+      "topic": "Ch 8 · Calculus · Average cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the same foundry, with C(x) = 2x² + 60x + 5,000 rupees, the average cost per drum at an output of 30 drums is (to the nearest paisa):",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 286.67",
+          "explanation": "Correct. C(30) = 1,800 + 1,800 + 5,000 = ₹ 8,600, and AC = 8,600 ÷ 30 = ₹ 286.67."
+        },
+        {
+          "key": "B",
+          "text": "₹ 180",
+          "explanation": "This is the MARGINAL cost at 30 drums, 4x + 60. Marginal cost comes from differentiating; average cost comes from dividing."
+        },
+        {
+          "key": "C",
+          "text": "₹ 120",
+          "explanation": "This is the average VARIABLE cost, (2x² + 60x) ÷ x = 2x + 60. Average cost includes the fixed ₹ 5,000 spread over the 30 drums, which adds ₹ 166.67."
+        },
+        {
+          "key": "D",
+          "text": "₹ 8,600",
+          "explanation": "This is the total cost of 30 drums. An average must still be divided by the number of units."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Marginal cost marginal revenue and average cost, §11 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#11-marginal-cost-marginal-revenue-and-average-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AC = C(x) ÷ x",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-030",
+      "topic": "Ch 8 · Calculus · Marginal revenue",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A trader's total revenue from selling x units is R(x) = 236x − 2x² rupees. The marginal revenue at x = 20 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 196",
+          "explanation": "This is average revenue, R(x) ÷ x = 236 − 2x, which is the same thing as the price. For a falling demand curve, marginal revenue is always below price."
+        },
+        {
+          "key": "B",
+          "text": "₹ 3,920",
+          "explanation": "This is total revenue at 20 units, 4,720 − 800. Marginal revenue is the rate at which that total is rising, not the total itself."
+        },
+        {
+          "key": "C",
+          "text": "₹ 156",
+          "explanation": "Correct. MR = dR/dx = 236 − 4x, so at x = 20 it is 236 − 80 = ₹ 156."
+        },
+        {
+          "key": "D",
+          "text": "₹ 236",
+          "explanation": "The −2x² term has not been differentiated. Its derivative, −4x, is exactly what makes marginal revenue fall as sales rise."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Marginal cost marginal revenue and average cost, §11 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#11-marginal-cost-marginal-revenue-and-average-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "MR = dR/dx",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-031",
+      "topic": "Ch 8 · Calculus · Output that minimises average cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A workshop's total cost is C(x) = 3x² + 36x + 1,200 rupees for x units. The output at which average cost is least is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "400 units",
+          "explanation": "The term 1,200x⁻¹ has been differentiated to −1,200x⁻¹ instead of −1,200x⁻², so the equation solved was 3 = 1,200/x. A negative index becomes more negative on differentiation."
+        },
+        {
+          "key": "B",
+          "text": "20 units",
+          "explanation": "Correct. AC = 3x + 36 + 1,200x⁻¹, so d(AC)/dx = 3 − 1,200x⁻² = 0 gives x² = 400 and x = 20. The second derivative 2,400x⁻³ is positive there, confirming a minimum; AC and MC both equal ₹ 156 at that output."
+        },
+        {
+          "key": "C",
+          "text": "34.64 units",
+          "explanation": "The coefficient 3 has been dropped, so the equation solved was 1 = 1,200/x², giving x = √1,200. The 3 comes from differentiating 3x and must stay."
+        },
+        {
+          "key": "D",
+          "text": "No such output exists — average cost falls at every level of output",
+          "explanation": "Average cost does fall at first, because the fixed ₹ 1,200 is spread more thinly. But the 3x term keeps rising while 1,200/x flattens, so d(AC)/dx changes sign from negative to positive at x = 20 and the curve turns."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Marginal cost marginal revenue and average cost, §11 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#11-marginal-cost-marginal-revenue-and-average-cost"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "d(AC)/dx = (MC − AC) ÷ x; AC least where MC = AC",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-032",
+      "topic": "Ch 8 · Calculus · Fixed cost inside a total cost function",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A unit's total cost function is C(x) = 4x² + 25x + 900 rupees. Its fixed cost is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 25",
+          "explanation": "This is the coefficient of x, which belongs to variable cost — it is the part of cost that changes with output, the opposite of fixed."
+        },
+        {
+          "key": "B",
+          "text": "Nil, because the marginal cost function contains no fixed element",
+          "explanation": "Marginal cost MC = 8x + 25 indeed contains no fixed cost, because differentiation destroys constants. That is a fact about MC, not evidence that the firm has no fixed cost."
+        },
+        {
+          "key": "C",
+          "text": "₹ 929",
+          "explanation": "This is C(1), the cost of running one unit. Fixed cost is the cost at ZERO output, C(0), which excludes the ₹ 29 of variable cost the first unit adds."
+        },
+        {
+          "key": "D",
+          "text": "₹ 900",
+          "explanation": "Correct. Fixed cost is the cost incurred at zero output: C(0) = 0 + 0 + 900 = ₹ 900. It is the constant term, and it is exactly what the constant of integration recovers when total cost is rebuilt from marginal cost."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Marginal cost marginal revenue and average cost, §11 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#11-marginal-cost-marginal-revenue-and-average-cost"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Fixed cost = C(0), the constant term",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-033",
+      "topic": "Ch 8 · Calculus · Marginal revenue from a demand function",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A firm can sell x units at a price of p = 180 − 3x rupees each. Its marginal revenue at x = 10 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 120",
+          "explanation": "Correct. R(x) = p·x = 180x − 3x², so MR = 180 − 6x and MR(10) = 180 − 60 = ₹ 120."
+        },
+        {
+          "key": "B",
+          "text": "₹ 150",
+          "explanation": "This is the price at x = 10, which is average revenue. On a straight-line demand curve MR falls twice as fast as price, so the two are never equal except at x = 0."
+        },
+        {
+          "key": "C",
+          "text": "₹ 1,500",
+          "explanation": "This is total revenue at 10 units, 1,800 − 300. Marginal revenue is the rate of change of that total, not the total."
+        },
+        {
+          "key": "D",
+          "text": "−₹ 3",
+          "explanation": "This is dp/dx, the slope of the demand curve. Marginal revenue is the derivative of total revenue p·x, not of the price alone."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Marginal cost marginal revenue and average cost, §11 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#11-marginal-cost-marginal-revenue-and-average-cost"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "MR from R(x) = p·x with p a function of x",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-034",
+      "topic": "Ch 8 · Calculus · Local maximum value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For f(x) = x³ − 6x² + 9x + 4, the local MAXIMUM value of the function is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "This is f(3). At x = 3 the second derivative is 6x − 12 = +6, which is positive, so x = 3 is the MINIMUM. The second-derivative test has been read backwards."
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "explanation": "Correct. f′(x) = 3(x − 1)(x − 3), so the critical points are x = 1 and x = 3. f″(x) = 6x − 12 is −6 at x = 1, so that is the maximum, and f(1) = 1 − 6 + 9 + 4 = 8."
+        },
+        {
+          "key": "C",
+          "text": "1",
+          "explanation": "This is the value of x at which the maximum occurs, not the maximum value of the function. The question asks for the height, not the position."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "This is the x-coordinate of the other critical point — the minimum's position. Two errors in one: the wrong point and the wrong quantity."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Maxima and minima the two tests, §12 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#12-maxima-and-minima-the-two-tests"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "f′ = 0 locates; f″ < 0 means maximum",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-035",
+      "topic": "Ch 8 · Calculus · The second-derivative test",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For f(x) = x³ − 6x² + 9x + 4, what does the second-derivative test say about the critical point at x = 3?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is a maximum, because f′(3) = 0",
+          "explanation": "f′(3) = 0 is true, but it only says the tangent is horizontal there. A horizontal tangent occurs at a maximum, at a minimum and at a point of inflexion alike, so it cannot decide the kind."
+        },
+        {
+          "key": "B",
+          "text": "It is a maximum, because f″(3) = 6 is positive",
+          "explanation": "The arithmetic is right and the conclusion is reversed. A positive second derivative means the curve bends upwards like a bowl, and the bottom of a bowl is a minimum."
+        },
+        {
+          "key": "C",
+          "text": "It is a minimum, because f″(3) = 6 is positive",
+          "explanation": "Correct. f″(x) = 6x − 12, so f″(3) = 6 > 0, the curve is bending upwards there, and x = 3 gives a local minimum with value f(3) = 4."
+        },
+        {
+          "key": "D",
+          "text": "It is neither — the point is one of inflexion",
+          "explanation": "A point of inflexion at a critical point needs f″ = 0 there, with the sign of f′ the same on both sides. Here f″(3) = 6 is not zero, and f′ changes from negative to positive across x = 3."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Maxima and minima the two tests, §12 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#12-maxima-and-minima-the-two-tests"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "f″ > 0 means minimum; f″ < 0 means maximum",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-036",
+      "topic": "Ch 8 · Calculus · Local minimum value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For f(x) = 2x³ − 9x² + 12x + 5, the local MINIMUM value of the function is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "10",
+          "explanation": "This is f(1). At x = 1 the second derivative 12x − 18 equals −6, which is negative, so x = 1 is the maximum, not the minimum."
+        },
+        {
+          "key": "B",
+          "text": "1",
+          "explanation": "This is the x-coordinate of the maximum — the wrong point and the wrong quantity."
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "This is the value of x at which the minimum occurs. The question asks for the value of the function there, not the position."
+        },
+        {
+          "key": "D",
+          "text": "9",
+          "explanation": "Correct. f′(x) = 6(x − 1)(x − 2), and f″(x) = 12x − 18 is +6 at x = 2, so x = 2 is the minimum. f(2) = 16 − 36 + 24 + 5 = 9."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Maxima and minima the two tests, §12 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#12-maxima-and-minima-the-two-tests"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Second-derivative test for a cubic's two critical points",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-037",
+      "topic": "Ch 8 · Calculus · Minimum of a function with a reciprocal term",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For x > 0, the least value of f(x) = x + 4/x is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "Correct. f′(x) = 1 − 4x⁻² = 0 gives x² = 4 and x = 2 (the negative root is outside the stated range). f″(x) = 8x⁻³ = 1 at x = 2, positive, so it is a minimum, and f(2) = 2 + 2 = 4."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "This is the value of x at which the minimum occurs. The least VALUE of the function is f(2), not 2 itself."
+        },
+        {
+          "key": "C",
+          "text": "5",
+          "explanation": "This is f(1), reached by testing a convenient value instead of differentiating. f(1) = 5 is larger than f(2) = 4, so x = 1 is not the minimum."
+        },
+        {
+          "key": "D",
+          "text": "0",
+          "explanation": "This comes from setting the function itself to zero rather than its derivative. f(x) = 0 has no solution for x > 0, since both terms are positive."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Maxima and minima the two tests, §12 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#12-maxima-and-minima-the-two-tests"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Minimising x + k/x by the second-derivative test",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-038",
+      "topic": "Ch 8 · Calculus · Profit-maximising output",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A firm can sell x units a week at p = 400 − 5x rupees each, and its total cost is C(x) = 100x + 1,200 rupees. The profit-maximising weekly output is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "40 units",
+          "explanation": "This solves MR = 0, that is 400 − 10x = 0. That is the output which maximises REVENUE. Profit is greatest where MR equals MC, and MC here is ₹ 100, not zero."
+        },
+        {
+          "key": "B",
+          "text": "60 units",
+          "explanation": "This sets PRICE equal to marginal cost, 400 − 5x = 100. Price is average revenue; the profit condition uses marginal revenue, which falls twice as fast."
+        },
+        {
+          "key": "C",
+          "text": "80 units",
+          "explanation": "This sets the price to zero, 400 − 5x = 0 — the output at which the firm would give the goods away. It has nothing to do with profit."
+        },
+        {
+          "key": "D",
+          "text": "30 units",
+          "explanation": "Correct. P(x) = (400 − 5x)x − 100x − 1,200 = −5x² + 300x − 1,200, so P′(x) = −10x + 300 = 0 gives x = 30, and P″ = −10 < 0 confirms a maximum. The same answer comes from MR = MC: 400 − 10x = 100."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Business optimisation, §13 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#13-business-optimisation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Profit maximum where MR = MC and P″ < 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-039",
+      "topic": "Ch 8 · Calculus · Maximum profit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the same firm (p = 400 − 5x, C(x) = 100x + 1,200), the maximum weekly profit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 4,500",
+          "explanation": "The fixed cost of ₹ 1,200 has been left out. Fixed cost does not affect the optimal OUTPUT, because it differentiates away, but it certainly affects the profit figure."
+        },
+        {
+          "key": "B",
+          "text": "₹ 3,300",
+          "explanation": "Correct. At x = 30 the price is ₹ 250, revenue is ₹ 7,500 and cost is 3,000 + 1,200 = ₹ 4,200, so profit is ₹ 3,300. The same comes from P(30) = −4,500 + 9,000 − 1,200."
+        },
+        {
+          "key": "C",
+          "text": "₹ 30",
+          "explanation": "This is the optimal output, reported where the question asked for the profit. The last line of the stem decides which number is wanted."
+        },
+        {
+          "key": "D",
+          "text": "₹ 7,500",
+          "explanation": "This is total revenue at the optimal output. Profit is revenue less total cost, and the ₹ 4,200 of cost has not been deducted."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Business optimisation, §13 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#13-business-optimisation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Maximum profit = P(x) at the optimal output",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-040",
+      "topic": "Ch 8 · Calculus · Optimisation under a constraint",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A rectangular yard is to be fenced on three sides only, the fourth side being an existing wall. With 100 metres of fencing available, the greatest area that can be enclosed is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "625 square metres",
+          "explanation": "This is a 25 m × 25 m square. A square is the best shape when all four sides must be fenced; with one side free the optimal rectangle is not square."
+        },
+        {
+          "key": "B",
+          "text": "1,111.11 square metres",
+          "explanation": "This divides the 100 metres into three equal sides of 33.33 m. Equal sides are not optimal here — differentiating shows the two shorter sides should be 25 m each."
+        },
+        {
+          "key": "C",
+          "text": "1,250 square metres",
+          "explanation": "Correct. With x metres on each of the two sides at right angles to the wall, the third side is 100 − 2x and A(x) = 100x − 2x². A′(x) = 100 − 4x = 0 gives x = 25, A″ = −4 confirms a maximum, and the area is 25 × 50 = 1,250 m²."
+        },
+        {
+          "key": "D",
+          "text": "2,500 square metres",
+          "explanation": "This uses the constraint as x + y = 100, forgetting that TWO sides of length x are fenced. The correct constraint is 2x + y = 100."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Business optimisation, §13 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#13-business-optimisation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Use the constraint to reduce to one variable, then optimise",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-041",
+      "topic": "Ch 8 · Calculus · The standard integral of a power",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ x⁵ dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x⁶ ÷ 6 + c",
+          "explanation": "Correct. ∫xⁿ dx = xⁿ⁺¹ ÷ (n + 1) + c for n ≠ −1: raise the index by one and divide by the new index. Differentiating x⁶/6 gives 6x⁵/6 = x⁵ ✓"
+        },
+        {
+          "key": "B",
+          "text": "5x⁴ + c",
+          "explanation": "This DIFFERENTIATES x⁵ instead of integrating it. Integration raises the index; differentiation lowers it."
+        },
+        {
+          "key": "C",
+          "text": "x⁶ + c",
+          "explanation": "The index has been raised but the division by the new index has been left out. Differentiating x⁶ gives 6x⁵, which is six times the integrand."
+        },
+        {
+          "key": "D",
+          "text": "x⁶ ÷ 6",
+          "explanation": "The arithmetic is right but the constant of integration is missing. Every indefinite integral stands for a whole family of functions differing by a constant."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The standard integrals, §15 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#15-the-standard-integrals"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "∫xⁿ dx = xⁿ⁺¹ ÷ (n + 1) + c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-042",
+      "topic": "Ch 8 · Calculus · The integral of 1/x",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ (1/x) dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x⁰ ÷ 0 + c",
+          "explanation": "This applies the power rule at n = −1, where raising the index gives 0 and the rule divides by zero. That single gap is why the log exists as a separate standard result."
+        },
+        {
+          "key": "B",
+          "text": "log |x| + c",
+          "explanation": "Correct. Since d/dx (log x) = 1/x, the antiderivative of 1/x is log |x| + c. The modulus is written because 1/x is defined for negative x as well, where log x is not."
+        },
+        {
+          "key": "C",
+          "text": "−1/x² + c",
+          "explanation": "This differentiates 1/x instead of integrating it. The derivative of 1/x is −1/x²; its integral is the log."
+        },
+        {
+          "key": "D",
+          "text": "log |x|",
+          "explanation": "The result is right but the constant of integration is missing. An indefinite integral without + c is incomplete."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The standard integrals, §15 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#15-the-standard-integrals"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "∫(1/x) dx = log |x| + c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-043",
+      "topic": "Ch 8 · Calculus · Integrating an exponential",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ e^(4x) dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "e^(4x) + c",
+          "explanation": "The inner coefficient has been ignored. Differentiating e^(4x) gives 4e^(4x), four times the integrand, so a 1/4 is needed to put it right."
+        },
+        {
+          "key": "B",
+          "text": "4e^(4x) + c",
+          "explanation": "This differentiates instead of integrating. Integration divides by the coefficient of x in the exponent; differentiation multiplies by it."
+        },
+        {
+          "key": "C",
+          "text": "e^(4x) ÷ (4x) + c",
+          "explanation": "The division has been made by the whole exponent 4x rather than by the constant 4. Only the constant divides out; dividing by a function of x would need the quotient rule to undo."
+        },
+        {
+          "key": "D",
+          "text": "e^(4x) ÷ 4 + c",
+          "explanation": "Correct. ∫eᵃˣ dx = eᵃˣ ÷ a + c. Differentiating e^(4x)/4 returns 4e^(4x)/4 = e^(4x) ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The standard integrals, §15 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#15-the-standard-integrals"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "∫eᵃˣ dx = eᵃˣ ÷ a + c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-044",
+      "topic": "Ch 8 · Calculus · Integrating a power of a linear expression",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ (3x + 2)⁵ dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(3x + 2)⁶ ÷ 6 + c",
+          "explanation": "Divided by the new index but not by the inner coefficient 3. Differentiating this gives (3x + 2)⁵ × 3, three times too much."
+        },
+        {
+          "key": "B",
+          "text": "(3x + 2)⁶ ÷ 3 + c",
+          "explanation": "Divided by the inner coefficient but not by the new index 6 — the mirror image of option A."
+        },
+        {
+          "key": "C",
+          "text": "(3x + 2)⁶ ÷ 18 + c",
+          "explanation": "Correct. ∫(ax + b)ⁿ dx = (ax + b)ⁿ⁺¹ ÷ [a(n + 1)] + c, and here a(n + 1) = 3 × 6 = 18. Differentiating back gives 6(3x + 2)⁵ × 3 ÷ 18 = (3x + 2)⁵ ✓"
+        },
+        {
+          "key": "D",
+          "text": "15(3x + 2)⁴ + c",
+          "explanation": "This differentiates the expression instead of integrating it: 5(3x + 2)⁴ × 3. The index should go up, not down."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The standard integrals, §15 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#15-the-standard-integrals"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "∫(ax + b)ⁿ dx = (ax + b)ⁿ⁺¹ ÷ [a(n + 1)] + c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-045",
+      "topic": "Ch 8 · Calculus · Integration by substitution",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ 2x(x² + 7)⁵ dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(x² + 7)⁶ ÷ 6 + c",
+          "explanation": "Correct. Put u = x² + 7, so du = 2x dx — exactly the factor already present. The integral becomes ∫u⁵ du = u⁶/6, and restoring x gives (x² + 7)⁶ ÷ 6 + c."
+        },
+        {
+          "key": "B",
+          "text": "(x² + 7)⁶ ÷ 12 + c",
+          "explanation": "An extra division by 2 has been made. The 2x in the integrand was already consumed by du; dividing again halves the answer."
+        },
+        {
+          "key": "C",
+          "text": "x²(x² + 7)⁶ ÷ 6 + c",
+          "explanation": "The 2x has been treated as a constant multiplier and integrated separately to x². A factor containing x cannot be pulled outside the integral sign."
+        },
+        {
+          "key": "D",
+          "text": "(x² + 7)⁶ + c",
+          "explanation": "The division by the new index 6 has been left out. Differentiating this gives 6(x² + 7)⁵ × 2x, six times the integrand."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Integration by substitution, §16 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#16-integration-by-substitution"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "∫[g(x)]ⁿ·g′(x) dx = [g(x)]ⁿ⁺¹ ÷ (n + 1) + c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-046",
+      "topic": "Ch 8 · Calculus · Substitution giving a logarithm",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ (2x + 3) ÷ (x² + 3x + 5) dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(2x + 3)·log |x² + 3x + 5| + c",
+          "explanation": "The numerator has been left standing outside the log. It was consumed by the substitution du = (2x + 3) dx and cannot appear again in the answer."
+        },
+        {
+          "key": "B",
+          "text": "log |x² + 3x + 5| + c",
+          "explanation": "Correct. The numerator is exactly the derivative of the denominator, so ∫ g′(x) ÷ g(x) dx = log |g(x)| + c. Differentiating back gives (2x + 3) ÷ (x² + 3x + 5) ✓"
+        },
+        {
+          "key": "C",
+          "text": "log |2x + 3| + c",
+          "explanation": "The log has been taken of the numerator instead of the denominator. In the pattern g′ ÷ g, the log is always of the function underneath."
+        },
+        {
+          "key": "D",
+          "text": "−(2x + 3) ÷ (x² + 3x + 5)² + c",
+          "explanation": "This differentiates a quotient rather than integrating it. The presence of the exact derivative on top is the signal to reach for the log, not the quotient rule."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Integration by substitution, §16 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#16-integration-by-substitution"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "∫ g′(x) ÷ g(x) dx = log |g(x)| + c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-047",
+      "topic": "Ch 8 · Calculus · Integration by parts",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ x·e^(2x) dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "e^(2x)(2x − 1) ÷ 2 + c",
+          "explanation": "Only one division by 2 has been made. Integrating e^(2x) divides by 2 at the first pass and again at the second, so the common denominator is 4."
+        },
+        {
+          "key": "B",
+          "text": "x·e^(2x) ÷ 2 + c",
+          "explanation": "Only the first term of the by-parts formula has been written. The subtraction of ∫ (derivative of x)(integral of e^(2x)) dx is missing."
+        },
+        {
+          "key": "C",
+          "text": "e^(2x)(2x − 1) ÷ 4 + c",
+          "explanation": "Correct. By parts with x differentiated: x·e^(2x)/2 − ∫ e^(2x)/2 dx = x·e^(2x)/2 − e^(2x)/4, which factorises to e^(2x)(2x − 1) ÷ 4 + c."
+        },
+        {
+          "key": "D",
+          "text": "x²·e^(2x) ÷ 4 + c",
+          "explanation": "The ILATE order has been reversed — the x was integrated and the exponential differentiated. That leaves a harder integral than the original, which is the signal to swap the choice."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Integration by parts, §17 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#17-integration-by-parts"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Integration by parts with ILATE",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-048",
+      "topic": "Ch 8 · Calculus · Integrating the logarithm",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ log x dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/x + c",
+          "explanation": "This differentiates log x instead of integrating it. The two operations have been exchanged."
+        },
+        {
+          "key": "B",
+          "text": "x·log x + c",
+          "explanation": "Only the first term of the by-parts result. The remaining integral ∫ (1/x)·x dx = ∫ 1 dx = x must still be subtracted."
+        },
+        {
+          "key": "C",
+          "text": "(log x)² ÷ 2 + c",
+          "explanation": "The power rule has been applied to log x as if it were a power of x. That pattern works for ∫ (log x)·(1/x) dx, where the derivative of log x is present; here it is not."
+        },
+        {
+          "key": "D",
+          "text": "x·log x − x + c",
+          "explanation": "Correct. Write log x as (log x)(1) and integrate the 1 by parts: x log x − ∫ (1/x)(x) dx = x log x − x + c. Differentiating back gives log x + 1 − 1 = log x ✓"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Integration by parts, §17 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#17-integration-by-parts"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "∫ log x dx = x log x − x + c",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-049",
+      "topic": "Ch 8 · Calculus · Integration by partial fractions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "∫ (5x − 4) ÷ [(x − 2)(x + 1)] dx equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 log |x − 2| + 3 log |x + 1| + c",
+          "explanation": "Correct. Writing 5x − 4 = A(x + 1) + B(x − 2) and putting x = 2 gives 6 = 3A so A = 2; putting x = −1 gives −9 = −3B so B = 3. Recombining, 2(x + 1) + 3(x − 2) = 5x − 4 ✓"
+        },
+        {
+          "key": "B",
+          "text": "3 log |x − 2| + 2 log |x + 1| + c",
+          "explanation": "A and B have been attached to the wrong brackets. A is found by killing the (x + 1) factor, so it belongs above (x − 2), and vice versa."
+        },
+        {
+          "key": "C",
+          "text": "2 log |x − 2| − 3 log |x + 1| + c",
+          "explanation": "The sign of B is wrong. Putting x = −1 gives −9 = −3B, and dividing two negatives gives B = +3, not −3."
+        },
+        {
+          "key": "D",
+          "text": "log |(x − 2)(x + 1)| + c",
+          "explanation": "This treats the numerator as though it were the derivative of the denominator. The denominator expands to x² − x − 2, whose derivative is 2x − 1, not 5x − 4, so the log shortcut does not apply."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Integration by partial fractions, §18 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#18-integration-by-partial-fractions"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Partial fractions with distinct linear factors",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "q-f3c8-050",
+      "topic": "Ch 8 · Calculus · Evaluating a definite integral",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The value of ∫ from 1 to 3 of (3x² + 2x) dx is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−34",
+          "explanation": "The limits have been subtracted the wrong way round, F(lower) − F(upper). A definite integral is always upper minus lower, so only the sign is wrong here."
+        },
+        {
+          "key": "B",
+          "text": "34",
+          "explanation": "Correct. The antiderivative is x³ + x². At x = 3 it is 27 + 9 = 36 and at x = 1 it is 1 + 1 = 2, so the integral is 36 − 2 = 34."
+        },
+        {
+          "key": "C",
+          "text": "36",
+          "explanation": "Only the upper limit has been substituted. The value at the lower limit must still be subtracted."
+        },
+        {
+          "key": "D",
+          "text": "26",
+          "explanation": "The 2x term has not been integrated: the antiderivative used was x³ alone, giving 27 − 1. Every term of the integrand contributes."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The definite integral, §19 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#19-the-definite-integral"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Definite integral = F(upper) − F(lower)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10"
+    },
+    {
+      "id": "cs-f3c8-01",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 8 · Calculus · Case: cost and pricing at a pump maker",
+      "case": "Anuradha Pumps assembles a single model of monoblock pump at its Coimbatore unit. Its total cost of making x pumps a day is C(x) = x² + 50x + 900 rupees. The unit can sell x pumps a day at a price of p = 250 − x rupees each, and the partners want to settle two separate questions before the next season: the output at which each pump costs least to make, and the output at which the day's profit is greatest. Treat x as a continuous variable throughout.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Marginal cost marginal revenue and average cost, §11 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#11-marginal-cost-marginal-revenue-and-average-cost"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c8-01-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the marginal cost at an output of 20 pumps a day?",
+          "topic": "Ch 8 · Marginal cost",
+          "sourceRef": "MC = dC/dx",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 115",
+              "explanation": "This is the AVERAGE cost at 20 pumps, C(20) ÷ 20 = 2,300 ÷ 20. Average cost divides the total; marginal cost differentiates it."
+            },
+            {
+              "key": "B",
+              "text": "₹ 2,300",
+              "explanation": "This is the total cost of 20 pumps, 400 + 1,000 + 900. Marginal cost is a rate, not a total."
+            },
+            {
+              "key": "C",
+              "text": "₹ 90",
+              "explanation": "Correct. MC = dC/dx = 2x + 50, so at x = 20 the marginal cost is 40 + 50 = ₹ 90 a pump."
+            },
+            {
+              "key": "D",
+              "text": "₹ 990",
+              "explanation": "The fixed cost of ₹ 900 has been carried into the marginal cost. A constant differentiates to zero, so fixed cost cannot appear in MC."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c8-01-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the LOWEST average cost per pump that the unit can achieve?",
+          "topic": "Ch 8 · Minimum average cost",
+          "sourceRef": "AC least where d(AC)/dx = 0, that is where MC = AC",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 80",
+              "explanation": "This is average VARIABLE cost at the optimal output, x + 50 = 80. Average cost must also carry the fixed ₹ 900, which at 30 pumps adds ₹ 30 a pump."
+            },
+            {
+              "key": "B",
+              "text": "₹ 3,300",
+              "explanation": "This is the TOTAL cost at the optimal output of 30 pumps, 900 + 1,500 + 900. A per-unit figure must still be divided by 30."
+            },
+            {
+              "key": "C",
+              "text": "₹ 30",
+              "explanation": "This is the OUTPUT at which average cost is least, not the average cost there. The question asks for rupees per pump."
+            },
+            {
+              "key": "D",
+              "text": "₹ 110",
+              "explanation": "Correct. AC = x + 50 + 900x⁻¹, so d(AC)/dx = 1 − 900x⁻² = 0 gives x = 30, with AC″ = 1,800x⁻³ positive there. AC(30) = 30 + 50 + 30 = ₹ 110, and MC(30) = 60 + 50 = ₹ 110 as well — the two curves meet at the minimum."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c8-01-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "At what daily output is the unit's profit greatest?",
+          "topic": "Ch 8 · Profit-maximising output",
+          "sourceRef": "Profit maximum where MR = MC",
+          "options": [
+            {
+              "key": "A",
+              "text": "50 pumps",
+              "explanation": "Correct. R(x) = 250x − x², so MR = 250 − 2x, and MC = 2x + 50. Setting MR = MC gives 200 = 4x and x = 50. Equivalently P(x) = −2x² + 200x − 900 with P′ = −4x + 200 = 0 and P″ = −4 < 0."
+            },
+            {
+              "key": "B",
+              "text": "125 pumps",
+              "explanation": "This solves MR = 0, the output at which total REVENUE peaks. Profit peaks earlier, because every extra pump still costs something to make."
+            },
+            {
+              "key": "C",
+              "text": "66.67 pumps",
+              "explanation": "This sets PRICE equal to marginal cost, 250 − x = 2x + 50. Price is average revenue; the profit condition uses marginal revenue, which falls twice as fast."
+            },
+            {
+              "key": "D",
+              "text": "30 pumps",
+              "explanation": "This is the output that minimises average cost. Least cost per unit and greatest profit are different questions, and here they give different answers."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c8-01-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the greatest daily profit the unit can earn?",
+          "topic": "Ch 8 · Maximum profit",
+          "sourceRef": "Maximum profit = P(x) at the profit-maximising output",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 5,000",
+              "explanation": "The fixed cost of ₹ 900 has been left out. It does not change the optimal output, because it differentiates away, but it does reduce the profit."
+            },
+            {
+              "key": "B",
+              "text": "₹ 4,100",
+              "explanation": "Correct. At x = 50 the price is ₹ 200, revenue is ₹ 10,000 and total cost is 2,500 + 2,500 + 900 = ₹ 5,900, so the profit is ₹ 4,100."
+            },
+            {
+              "key": "C",
+              "text": "₹ 10,000",
+              "explanation": "This is total revenue at the optimal output. The ₹ 5,900 of total cost has not been deducted."
+            },
+            {
+              "key": "D",
+              "text": "₹ 50",
+              "explanation": "This is the optimal output reported where the question asked for the profit in rupees."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c8-02",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 8 · Calculus · Case: rebuilding totals from marginal functions",
+      "case": "Meenakshi Components supplies one machined part. Its accounts give only marginal figures: the marginal cost of the xth part is MC = 3x² − 24x + 90 rupees and the marginal revenue is MR = 500 − 6x rupees. The firm's fixed costs are ₹ 2,500 for the period. The management wants the total cost and total revenue functions rebuilt from these marginals so that output decisions can be tested. Treat x as a continuous variable and ignore any capacity limit.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Business applications of the definite integral, §20 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#20-business-applications-of-the-definite-integral"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c8-02-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the total cost of producing 10 parts?",
+          "topic": "Ch 8 · Total cost from marginal cost",
+          "sourceRef": "C(x) = ∫MC dx with the constant equal to fixed cost",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 700",
+              "explanation": "This is the definite integral of MC from 0 to 10 — the variable cost alone. A definite integral loses the constant, so the ₹ 2,500 of fixed cost has to be added back."
+            },
+            {
+              "key": "B",
+              "text": "₹ 150",
+              "explanation": "This is the marginal cost AT 10 parts, 300 − 240 + 90. That is the cost of one more part, not the cost of ten."
+            },
+            {
+              "key": "C",
+              "text": "₹ 3,200",
+              "explanation": "Correct. C(x) = ∫(3x² − 24x + 90) dx = x³ − 12x² + 90x + c, and C(0) = c = 2,500. So C(10) = 1,000 − 1,200 + 900 + 2,500 = ₹ 3,200."
+            },
+            {
+              "key": "D",
+              "text": "₹ 2,500",
+              "explanation": "This is the fixed cost only. The variable cost of the first ten parts, ₹ 700, has not been added."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c8-02-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the total revenue from selling 20 parts?",
+          "topic": "Ch 8 · Total revenue from marginal revenue",
+          "sourceRef": "R(x) = ∫MR dx with R(0) = 0",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 10,000",
+              "explanation": "The −6x term has not been integrated, leaving R = 500x. Every term of the marginal function contributes to the total."
+            },
+            {
+              "key": "B",
+              "text": "₹ 380",
+              "explanation": "This is the marginal revenue at 20 parts, 500 − 120 — the revenue from the next part sold, not from all twenty."
+            },
+            {
+              "key": "C",
+              "text": "₹ 11,300",
+              "explanation": "The ₹ 2,500 fixed cost has been added as a constant of integration on the revenue side. Revenue at zero output is zero, so the constant here must be zero."
+            },
+            {
+              "key": "D",
+              "text": "₹ 8,800",
+              "explanation": "Correct. R(x) = ∫(500 − 6x) dx = 500x − 3x² + c, and R(0) = 0 forces c = 0. So R(20) = 10,000 − 1,200 = ₹ 8,800."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c8-02-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the ADDITIONAL cost of raising output from 10 parts to 15 parts?",
+          "topic": "Ch 8 · Change in total cost from a definite integral",
+          "sourceRef": "Change in total cost = ∫ from a to b of MC dx",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 1,325",
+              "explanation": "Correct. ∫ from 10 to 15 of (3x² − 24x + 90) dx = [x³ − 12x² + 90x], which is 2,025 at x = 15 and 700 at x = 10, giving ₹ 1,325. The totals confirm it: C(15) = ₹ 4,525 and C(10) = ₹ 3,200, a difference of ₹ 1,325, with the fixed cost cancelling."
+            },
+            {
+              "key": "B",
+              "text": "₹ 3,825",
+              "explanation": "The fixed cost of ₹ 2,500 has been added to the change. Fixed cost is already being incurred at 10 parts, so raising output does not incur it again — and a definite integral correctly cancels it."
+            },
+            {
+              "key": "C",
+              "text": "₹ 2,025",
+              "explanation": "Only the upper limit has been evaluated. The value of the antiderivative at x = 10 must still be subtracted."
+            },
+            {
+              "key": "D",
+              "text": "₹ 4,525",
+              "explanation": "This is the TOTAL cost of 15 parts, including the fixed ₹ 2,500. The question asks for the extra cost of the last five parts."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c8-02-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the firm's profit at an output of 20 parts?",
+          "topic": "Ch 8 · Profit from rebuilt totals",
+          "sourceRef": "Profit = R(x) − C(x) with the constant of integration included",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 3,800",
+              "explanation": "The fixed cost of ₹ 2,500 has been left out of total cost, giving 8,800 − 5,000. The constant of integration is the fixed cost and must be carried."
+            },
+            {
+              "key": "B",
+              "text": "₹ 1,300",
+              "explanation": "Correct. C(20) = 8,000 − 4,800 + 1,800 + 2,500 = ₹ 7,500 and R(20) = ₹ 8,800, so the profit is ₹ 1,300."
+            },
+            {
+              "key": "C",
+              "text": "₹ 8,800",
+              "explanation": "This is total revenue at 20 parts, with no cost deducted at all."
+            },
+            {
+              "key": "D",
+              "text": "−₹ 430",
+              "explanation": "This is MR − MC at x = 20, that is 380 − 810. That difference is the RATE at which profit is changing — it shows profit is already falling at this output — but it is not the profit itself."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "cs-f3c8-03",
+      "type": "case_mcq_set",
+      "numerical": false,
+      "topic": "Ch 8 · Calculus · Case: the optimal order size at a spares depot",
+      "case": "Girija Traders runs a spares depot and sells 18,000 identical bearings a year at a steady rate. Placing one purchase order costs ₹ 400 in paperwork, freight documentation and inspection, whatever the size of the order. Carrying one bearing in stock for a year costs ₹ 10 in interest, space and insurance. Stock is drawn down evenly between deliveries, so the average stock held is half the order size. The depot wants to fix the order size that makes the annual total of ordering cost and holding cost as small as possible.",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-10",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Business optimisation, §13 →",
+        "href": "/foundation/quantitative-aptitude/differential-and-integral-calculus/#13-business-optimisation"
+      },
+      "questions": [
+        {
+          "id": "cs-f3c8-03-a",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What order size minimises the annual total of ordering and holding cost?",
+          "topic": "Ch 8 · Economic order quantity",
+          "sourceRef": "T(q) = (D ÷ q)O + (q ÷ 2)H, minimised at q = √(2DO ÷ H)",
+          "options": [
+            {
+              "key": "A",
+              "text": "848.5 bearings",
+              "explanation": "The factor 2 in the numerator has been dropped, giving √(18,000 × 400 ÷ 10). That 2 comes from the average stock being q/2, which puts H/2 in the derivative."
+            },
+            {
+              "key": "B",
+              "text": "30 bearings",
+              "explanation": "The ordering cost and the holding cost have been swapped, giving √(2 × 18,000 × 10 ÷ 400). The cost of placing an order belongs on top, and the cost of holding a unit underneath."
+            },
+            {
+              "key": "C",
+              "text": "1,200 bearings",
+              "explanation": "Correct. T(q) = 72,00,000q⁻¹ + 5q, so T′(q) = −72,00,000q⁻² + 5 = 0 gives q² = 14,40,000 and q = 1,200. T″(q) = 1,44,00,000q⁻³ is positive, so it is a minimum."
+            },
+            {
+              "key": "D",
+              "text": "The order size cannot be found without knowing the purchase price of a bearing",
+              "explanation": "The purchase price does not enter the optimisation. Buying 18,000 bearings a year costs the same in purchase price whatever the lot size, so that term is a constant and differentiates away."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-f3c8-03-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "At that order size, how many orders will the depot place in a year?",
+          "topic": "Ch 8 · Orders a year at the optimum",
+          "sourceRef": "Number of orders = D ÷ q",
+          "options": [
+            {
+              "key": "A",
+              "text": "21.2 orders",
+              "explanation": "This divides the annual demand by 848.5, the order size that comes from dropping the factor 2 in the formula."
+            },
+            {
+              "key": "B",
+              "text": "30 orders",
+              "explanation": "This divides the annual demand by the AVERAGE stock of 600 rather than by the order size of 1,200. Each delivery brings a full order, not half of one."
+            },
+            {
+              "key": "C",
+              "text": "1,200 orders",
+              "explanation": "This reports the order size where the number of orders was asked. The two are reciprocally related, not equal."
+            },
+            {
+              "key": "D",
+              "text": "15 orders",
+              "explanation": "Correct. 18,000 ÷ 1,200 = 15 orders a year, roughly one every twenty-four days."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-f3c8-03-c",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "What is the minimum annual total of ordering cost and holding cost?",
+          "topic": "Ch 8 · Minimum inventory cost",
+          "sourceRef": "T(q) at the economic order quantity; the two components are equal there",
+          "options": [
+            {
+              "key": "A",
+              "text": "₹ 12,000",
+              "explanation": "Correct. Ordering cost = 15 × 400 = ₹ 6,000 and holding cost = 600 × 10 = ₹ 6,000, so the total is ₹ 12,000. The two halves being equal is the standing check at the economic order quantity."
+            },
+            {
+              "key": "B",
+              "text": "₹ 6,000",
+              "explanation": "Only one of the two components has been counted. Both ordering cost and holding cost are incurred, and at the optimum each is ₹ 6,000."
+            },
+            {
+              "key": "C",
+              "text": "₹ 18,000",
+              "explanation": "Holding cost has been charged on the whole order size rather than on the average stock: 1,200 × 10 instead of 600 × 10. Stock runs down evenly, so the average held is half the order."
+            },
+            {
+              "key": "D",
+              "text": "₹ 12,728",
+              "explanation": "This is the total at an order size of 848.5, the figure produced by dropping the factor 2 in the formula. It is ₹ 728 worse than the optimum — which shows how flat the curve is near its minimum."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-f3c8-03-d",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "If the holding cost rises from ₹ 10 to ₹ 40 a bearing a year, ordering cost and demand being unchanged, the new optimal order size is:",
+          "topic": "Ch 8 · Sensitivity of the optimum",
+          "sourceRef": "q = √(2DO ÷ H): quadrupling H halves q",
+          "options": [
+            {
+              "key": "A",
+              "text": "300 bearings",
+              "explanation": "The order size has been assumed to fall in proportion to the holding cost, 1,200 ÷ 4. Because H sits under a square root, quadrupling it halves the order size rather than quartering it."
+            },
+            {
+              "key": "B",
+              "text": "600 bearings",
+              "explanation": "Correct. q = √(2 × 18,000 × 400 ÷ 40) = √3,60,000 = 600. Holding cost has risen fourfold, and the square root turns that into a halving of the order size."
+            },
+            {
+              "key": "C",
+              "text": "1,200 bearings",
+              "explanation": "Unchanged, as though the holding cost were not in the formula. H is the denominator of the expression under the root, so a change in it always moves the answer."
+            },
+            {
+              "key": "D",
+              "text": "2,400 bearings",
+              "explanation": "The order size has been moved in the wrong direction. A higher cost of holding stock makes large lots more expensive, so the optimal lot gets smaller, not larger."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    }
+  ]
+}
