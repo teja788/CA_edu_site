@@ -1,0 +1,676 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Index Numbers'
+description: 'CA Foundation Quantitative Aptitude Ch 18 — price relatives, simple aggregate and simple average of relatives, the weighted index numbers (Laspeyres, Paasche, Fisher, Marshall-Edgeworth, Dorbish-Bowley), the time-reversal and factor-reversal tests and why Fisher satisfies both, quantity and value indices, the cost of living index by the aggregate-expenditure and family-budget methods, deflating a money wage to a real wage, base shifting and splicing, with fully worked examples computed from scratch.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 18 · Index Numbers'
+chapterSlug: index-numbers
+masteryId: f3-ch18
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 18 (Index Numbers) — scope, formula set and worked patterns'
+  - 'Standard price, quantity and cost-of-living index formulas and the reversal tests as taught at Foundation level'
+sourceLabel: 'ICAI SM Paper 3 Ch 18 scope (May 2026 ed.) · standard index-number formulas'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 30 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=index-numbers'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A homemaker in Pune keeps every grocery bill. In 2015 her monthly basket of rice, oil, pulses and
+milk cost ₹ 8,000. The same basket, bought in the same shops in the exact same quantities, cost
+₹ 10,400 by 2024. She has bought nothing extra and nothing better; only the price tags have moved.
+Her cost of living has risen to 130 for every 100 it once was, and that single number, 130, is an
+index number. It says nothing about any one price. It measures how a whole bundle of prices has
+moved together, against a starting point fixed at 100.
+
+That is the entire idea of the chapter. Prices, wages, output and share values all change at once and
+by different amounts, and no single figure among them describes the crowd. An index number is a
+device that reduces the crowd to one number by comparing a later situation with an earlier
+**base** situation set equal to 100. Economists call it a barometer because, like a barometer, it
+does not weigh anything directly — it registers pressure, the net upward or downward push of many
+prices at the same time.
+
+Paper 3 is fully objective, so you will not derive a formula in the exam. You will be handed a small
+table of prices and quantities and asked for one index to two decimal places. This chapter takes each
+formula in turn, builds it from the table, and shows exactly which sum — Σp₁q₀ or Σp₀q₁ — belongs on
+top. Get the four sums right and every weighted index in the paper is one division away.
+
+## 1. What an index number is, and what it is used for
+
+An **index number** is a ratio, expressed as a percentage, that measures the relative change in a
+variable or a group of variables between a **current period** (subscript 1) and a **base period**
+(subscript 0). The base period value is always fixed at **100**, so an index of 130 means a 30% rise
+over the base and an index of 92 means an 8% fall.
+
+Three features separate an index number from an ordinary average:
+
+1. **It is expressed relative to a base.** The base period is chosen as normal — not a boom, not a
+   slump — and set to 100. Every later figure is read against it.
+2. **It is a pure number.** Because it is a ratio of money values to money values, or of prices to
+   prices, the units cancel. An index of 130 carries no rupee sign and no kilogram.
+3. **It measures net change in a group.** A single price uses a **price relative**; an index number
+   summarises many prices, or many quantities, at once.
+
+The notation used throughout is **P₀₁** for a price index of period 1 on base period 0, and **Q₀₁**
+for the matching quantity index. Read the subscripts left to right as "from 0 to 1".
+
+Where index numbers are used at this level:
+
+- **Cost of living / consumer price index** — to measure how the cost of a fixed basket of goods
+  changes, and so to revise wages, pensions and dearness allowance.
+- **Wholesale price index** — to track the general price level and gauge inflation.
+- **Deflating** — to strip the price effect out of a money figure and recover its real value, so a
+  money wage becomes a real wage.
+- **Index of industrial production** — a quantity index that tracks output.
+
+<Callout kind="pointer">
+  <p>
+    Every subscript in this chapter is either 0 (base) or 1 (current). A quantity carries a
+    <strong>price subscript</strong> and a <strong>quantity subscript</strong> once it enters a sum:
+    Σp₁q₀ means "current prices weighted by base quantities". Reading the two subscripts correctly is
+    the whole skill in weighted index numbers, so slow down and name each sum before you add it.
+  </p>
+</Callout>
+
+## 2. Price relatives
+
+A **price relative** measures the change in the price of a single commodity. It is the current price
+as a percentage of the base price:
+
+<div class="formula">Price relative = (p₁ ÷ p₀) × 100</div>
+
+If a litre of oil cost ₹ 120 in the base year and ₹ 150 now, its price relative is
+150 ÷ 120 × 100 = 125, a 25% rise. A relative below 100 signals a fall: a price that dropped from
+₹ 80 to ₹ 72 has a relative of 90.
+
+The price relative is the atom from which the simpler index numbers are built. A **quantity
+relative** does the same job for a quantity, q₁ ÷ q₀ × 100, and a **value relative** compares total
+money values, p₁q₁ ÷ p₀q₀ × 100. Everything in the next few sections is a way of averaging price
+relatives across several commodities.
+
+## 3. Simple aggregate method
+
+The crudest index adds the current prices, adds the base prices, and divides:
+
+<div class="formula">Simple aggregate price index = (Σp₁ ÷ Σp₀) × 100</div>
+
+For four commodities priced ₹ 25, 20, 15 and 40 in the base year and ₹ 30, 24, 20 and 46 now, the
+index is (30 + 24 + 20 + 46) ÷ (25 + 20 + 15 + 40) × 100 = 120 ÷ 100 × 100 = **120**.
+
+It is simple, and that is its only virtue. Two faults make it unreliable:
+
+<Callout kind="mistake">
+  <p>
+    The simple aggregate index is <strong>distorted by the units in which prices are quoted</strong>.
+    Quote wheat per quintal instead of per kilogram and its price is a hundred times larger, so it
+    swamps the total and the index bends toward wheat, though nothing real has changed. It also gives
+    every commodity <strong>equal importance</strong> — a costly item bought once a year counts the
+    same as a cheap item bought daily. Both faults are cured by using relatives and by weighting.
+  </p>
+</Callout>
+
+## 4. Simple average of price relatives
+
+Instead of adding the prices, add the **price relatives** and average them. Because each relative is
+already a pure number that starts at 100, the units problem disappears:
+
+<div class="formula">Simple average of price relatives = Σ(p₁ ÷ p₀ × 100) ÷ N, where N is the number of commodities</div>
+
+For four commodities whose prices move 40 to 50, 20 to 25, 50 to 60 and 25 to 30, the relatives are
+125, 125, 120 and 120, and the index is (125 + 125 + 120 + 120) ÷ 4 = 490 ÷ 4 = **122.5**.
+
+This cures the units defect — a relative does not care whether wheat is priced per kilogram or per
+quintal. It does **not** cure the weighting defect: a daily necessity and an annual luxury still
+count alike, because every relative carries the weight 1. The arithmetic mean is the usual choice,
+though the geometric mean of the relatives is sometimes preferred because it treats a rise and the
+matching fall symmetrically.
+
+## 5. Weighted index numbers — the four sums
+
+Real commodities are not equally important, so a good index **weights** each price by a quantity that
+reflects how much of the commodity is traded. Every weighted price index in the syllabus is built
+from the same four sums, so compute all four once and read the formulas off them:
+
+<div class="formula">Σp₀q₀ · Σp₁q₀ · Σp₀q₁ · Σp₁q₁</div>
+
+Read each sum by its two subscripts. **Σp₁q₀** is current prices on base quantities; **Σp₀q₁** is
+base prices on current quantities; **Σp₀q₀** and **Σp₁q₁** are the base-year and current-year total
+values. Lay a table out in these four columns and the rest is division.
+
+| Commodity | p₀ | q₀ | p₁ | q₁ | p₀q₀ | p₁q₀ | p₀q₁ | p₁q₁ |
+|---|---|---|---|---|---|---|---|---|
+| A | 5 | 50 | 8 | 60 | 250 | 400 | 300 | 480 |
+| B | 8 | 40 | 10 | 30 | 320 | 400 | 240 | 300 |
+| C | 12 | 20 | 15 | 25 | 240 | 300 | 300 | 375 |
+| D | 4 | 100 | 5 | 90 | 400 | 500 | 360 | 450 |
+| **Σ** | | | | | **1210** | **1600** | **1200** | **1605** |
+
+This one table drives the next five formulas. Keep it in view.
+
+## 6. Laspeyres index — base-year weights
+
+The **Laspeyres** price index weights every price by the **base-year** quantity q₀. It answers: what
+would the base-year basket cost now, against what it cost then?
+
+<div class="formula">Laspeyres index (P₀₁) = (Σp₁q₀ ÷ Σp₀q₀) × 100</div>
+
+From the table, Laspeyres = 1600 ÷ 1210 × 100 = **132.23**. The weights q₀ are fixed once, in the
+base year, so a whole series of yearly Laspeyres indices uses the same basket — an advantage for
+comparison and for data collection. Its bias runs one way: because consumers move away from goods
+that become dear, holding the old quantities fixed **overstates** the true rise in the cost of
+living, so Laspeyres tends to read a little high.
+
+## 7. Paasche index — current-year weights
+
+The **Paasche** price index weights every price by the **current-year** quantity q₁. It answers:
+what does the current basket cost now, against what the same current basket would have cost in the
+base year?
+
+<div class="formula">Paasche index (P₀₁) = (Σp₁q₁ ÷ Σp₀q₁) × 100</div>
+
+From the table, Paasche = 1605 ÷ 1200 × 100 = **133.75**. The weights change every year, so each
+Paasche index needs fresh quantity data — a cost. Its bias runs the other way: current quantities
+already reflect the switch away from dear goods, so Paasche tends to **understate** the rise and read
+a little low.
+
+<Callout kind="pointer">
+  <p>
+    A memory hook that never fails: <strong>Laspeyres uses the past</strong> (base-year q₀),
+    <strong>Paasche the present</strong> (current-year q₁) — both begin with the same letter. The
+    only difference between the two formulas is the quantity subscript. The prices are always
+    current on top and base below; it is the weight that switches.
+  </p>
+</Callout>
+
+## 8. Fisher's ideal index — the geometric mean of the two
+
+Laspeyres reads high and Paasche reads low, so the truth sits between them. **Fisher's ideal index**
+takes the **geometric mean** of the two — the square root of their product:
+
+<div class="formula">Fisher's index (P₀₁) = square root of (Laspeyres × Paasche)</div>
+<div class="formula">Equivalently, Fisher = square root of [(Σp₁q₀ ÷ Σp₀q₀) × (Σp₁q₁ ÷ Σp₀q₁)] × 100</div>
+
+From the table, Fisher = square root of (132.2314 × 133.75) = square root of 17685.75 = **132.99**.
+It is called **ideal** for two reasons: it splits the difference between the upward Laspeyres bias
+and the downward Paasche bias by using both base and current weights, and — the deeper reason — it
+is the only one of these formulas that passes **both** the time-reversal and the factor-reversal
+tests of section 10.
+
+<Callout kind="mistake">
+  <p>
+    Fisher is the <strong>geometric</strong> mean of Laspeyres and Paasche, not the arithmetic mean.
+    The arithmetic mean (Laspeyres + Paasche) ÷ 2 is a different index — the Dorbish-Bowley of
+    section 9 — and it fails the reversal tests. Take the square root of the product, never half the
+    sum, when the question says Fisher.
+  </p>
+</Callout>
+
+## 9. Marshall-Edgeworth and Dorbish-Bowley
+
+Two more weighted indices combine base and current weights, each in its own way.
+
+The **Marshall-Edgeworth** index weights each price by the **sum** of the base and current
+quantities, (q₀ + q₁):
+
+<div class="formula">Marshall-Edgeworth index = [Σp₁(q₀ + q₁) ÷ Σp₀(q₀ + q₁)] × 100 = [(Σp₁q₀ + Σp₁q₁) ÷ (Σp₀q₀ + Σp₀q₁)] × 100</div>
+
+From the same four sums, Marshall-Edgeworth = (1600 + 1605) ÷ (1210 + 1200) × 100 =
+3205 ÷ 2410 × 100 = **132.99**. It is a close and honest approximation to Fisher, and it too uses
+both sets of weights.
+
+The **Dorbish-Bowley** (also written Drobish-Bowley) index is simply the **arithmetic mean** of
+Laspeyres and Paasche:
+
+<div class="formula">Dorbish-Bowley index = (Laspeyres + Paasche) ÷ 2</div>
+
+Here Dorbish-Bowley = (132.2314 + 133.75) ÷ 2 = **132.99**. Notice that Fisher, Marshall-Edgeworth
+and Dorbish-Bowley all land near the same value — that is expected, because all three sit between the
+same Laspeyres and Paasche. What separates them is the reversal tests, which only Fisher passes.
+
+<Callout kind="pointer">
+  <p>
+    A single table of four column-sums (Σp₀q₀, Σp₁q₀, Σp₀q₁, Σp₁q₁) answers Laspeyres, Paasche,
+    Fisher, Marshall-Edgeworth and Dorbish-Bowley all at once. Build the table first, total the four
+    columns, and then no index costs more than one division and, for Fisher, one square root. Never
+    restart the arithmetic for each formula.
+  </p>
+</Callout>
+
+## 10. The tests of a good index number
+
+A trustworthy index should behave consistently. Two tests, both examinable, check that.
+
+**The time-reversal test.** Reversing the roles of the two periods should reverse the index exactly.
+If the index from 0 to 1 is P₀₁ and from 1 to 0 is P₁₀, both taken as **ratios** (drop the ×100),
+their product should equal 1:
+
+<div class="formula">Time-reversal test: P₀₁ × P₁₀ = 1</div>
+
+**The factor-reversal test.** A price index and the matching quantity index, multiplied together,
+should equal the **value ratio** — the change in total money value, because price times quantity is
+value:
+
+<div class="formula">Factor-reversal test: P₀₁ × Q₀₁ = Σp₁q₁ ÷ Σp₀q₀ (the value ratio, as a ratio)</div>
+
+Laspeyres and Paasche each fail both tests. **Fisher passes both**, which is exactly why it earns the
+name "ideal". To see the time-reversal test for Fisher, write it out: P₀₁ is the square root of
+(Σp₁q₀ ÷ Σp₀q₀ × Σp₁q₁ ÷ Σp₀q₁), and P₁₀ is the same expression with the periods swapped, the square
+root of (Σp₀q₁ ÷ Σp₁q₁ × Σp₀q₀ ÷ Σp₁q₀). Multiply them and every sum cancels against its partner,
+leaving 1. The factor-reversal test cancels the same way and leaves Σp₁q₁ ÷ Σp₀q₀. For the table in
+section 5 that value ratio is 1605 ÷ 1210 = 1.3264, and Fisher's price index times Fisher's quantity
+index reproduces it to the last decimal.
+
+<Callout kind="mistake">
+  <p>
+    In both tests the indices are used as <strong>ratios, without the ×100</strong>. A student who
+    keeps the hundreds gets P₀₁ × P₁₀ = 10,000 instead of 1, and panics. Strip the ×100 before you
+    multiply: an index of 132.23 enters the test as 1.3223.
+  </p>
+</Callout>
+
+A third test, the **circular test** (P₀₁ × P₁₂ × P₂₀ = 1), is passed only by the simple aggregate and
+by fixed-weight indices; Fisher fails it. At Foundation level, remember the headline: Fisher passes
+time-reversal and factor-reversal, and is the only one of the standard weighted indices to pass both.
+
+## 11. Quantity and value index numbers
+
+Everything so far measured price. A **quantity index** measures how quantities have moved, holding
+prices as the weights. Just swap the roles of p and q in the formulas:
+
+<div class="formula">Laspeyres quantity index = (Σq₁p₀ ÷ Σq₀p₀) × 100 · Paasche quantity index = (Σq₁p₁ ÷ Σq₀p₁) × 100</div>
+<div class="formula">Fisher quantity index = square root of (Laspeyres quantity × Paasche quantity)</div>
+
+For the section 5 table, the Laspeyres quantity index is Σp₀q₁ ÷ Σp₀q₀ × 100 = 1200 ÷ 1210 × 100 =
+**99.17** — quantities barely moved, so the index sits just below 100. The Fisher quantity index is
+**99.74**.
+
+A **value index** needs no weights at all, because value already combines price and quantity:
+
+<div class="formula">Value index = (Σp₁q₁ ÷ Σp₀q₀) × 100</div>
+
+Here the value index is 1605 ÷ 1210 × 100 = **132.64**. It is the product of the Fisher price and
+Fisher quantity indices (as ratios), which is the factor-reversal test read forwards.
+
+## 12. Cost of living index — the two methods
+
+The **cost of living index number (CLI)**, also called the **consumer price index (CPI)**, measures
+the change in the cost of a fixed basket that a defined group of consumers actually buys. It is
+computed by either of two methods, which give the **same** answer.
+
+**Aggregate expenditure method.** Weight each price by the base-year quantity and take the ratio of
+total expenditures — this is exactly the Laspeyres formula:
+
+<div class="formula">Cost of living index (aggregate expenditure) = (Σp₁q₀ ÷ Σp₀q₀) × 100</div>
+
+For a basket priced ₹ 8, 6 and 5 in the base year, bought in quantities 25, 50 and 20, and priced
+₹ 10, 7 and 6 now, the index is (10×25 + 7×50 + 6×20) ÷ (8×25 + 6×50 + 5×20) × 100 =
+(250 + 350 + 120) ÷ (200 + 300 + 100) × 100 = 720 ÷ 600 × 100 = **120**.
+
+**Family budget method.** Weight each **price relative** by the value the family spends on that item,
+W = p₀q₀, and take the weighted average:
+
+<div class="formula">Cost of living index (family budget) = Σ(R × W) ÷ ΣW, where R = (p₁ ÷ p₀) × 100 and W = p₀q₀</div>
+
+The two methods are algebraically identical, because R × W = (p₁ ÷ p₀ × 100) × p₀q₀ = 100 × p₁q₀, so
+Σ(RW) ÷ ΣW = Σp₁q₀ ÷ Σp₀q₀ × 100. When a question gives you group **weights** and group **relatives**
+directly — food weighted 50 with a relative of 140, and so on — the family budget form is the one to
+reach for.
+
+<Callout kind="pointer">
+  <p>
+    The family budget weight W is a <strong>value</strong> (₹ spent), not a quantity, and the R it
+    multiplies is a <strong>relative</strong> (a percentage), not a price. A common slip is to weight
+    the price by W or to weight the relative by the quantity. Match relative with value-weight, and
+    the answer equals the aggregate-expenditure Laspeyres figure exactly.
+  </p>
+</Callout>
+
+## 13. Deflating — from a money wage to a real wage
+
+Money wages that rise while prices rise faster leave a worker worse off. **Deflating** removes the
+price effect by dividing the money figure by the cost of living index and restoring the base of 100:
+
+<div class="formula">Real wage = (Money wage ÷ Cost of living index) × 100</div>
+
+A worker paid ₹ 18,000 a month when the cost of living index stands at 120 (base 100) has a real
+wage of 18,000 ÷ 120 × 100 = **₹ 15,000** in base-year rupees. The extra ₹ 3,000 of money wage has
+been entirely eaten by the 20% rise in prices; in real terms the worker is exactly where the base
+year left them.
+
+The same division measures the **purchasing power of the rupee**, which is the reciprocal of the
+index, restored to a rupee:
+
+<div class="formula">Purchasing power of the rupee = 100 ÷ Cost of living index (in rupees)</div>
+
+When the index is 125, a rupee buys 100 ÷ 125 = **₹ 0.80** of what it bought in the base year — a
+fifth of its purchasing power has gone. A **real wage index** carries the same information as a
+series: real wage of the year divided by real wage of the base year, times 100.
+
+<Callout kind="mistake">
+  <p>
+    Deflating <strong>divides</strong> by the index and multiplies by 100; it never multiplies by the
+    index. If your "real" wage comes out larger than the money wage while prices are rising, you have
+    multiplied where you should have divided. Real wage is always below money wage once the cost of
+    living index exceeds 100.
+  </p>
+</Callout>
+
+## 14. Base shifting
+
+A series built on an old base — say 2010 = 100 — becomes hard to read once the base year is long
+past. **Base shifting** re-expresses the whole series on a new, more recent base without collecting
+any new data. Divide every index by the old index of the chosen new base year, and multiply by 100:
+
+<div class="formula">Index on the new base = (Old index of the current year ÷ Old index of the new base year) × 100</div>
+
+Take a series 2019 = 100, 2020 = 120, 2021 = 150, 2022 = 180 and shift the base to 2021. Divide every
+figure by 150 and multiply by 100: 2021 becomes 100 by construction, and 2022 becomes
+180 ÷ 150 × 100 = **120**. The shape of the series is untouched; only the year that reads 100 has
+moved.
+
+## 15. Splicing
+
+**Splicing** joins two index series that overlap in one year — typically an old series that was
+discontinued and a new series begun on a fresh base — into one continuous series. Multiply the new
+series by the old series' value in the overlap year, and divide by 100 (the new series' base):
+
+<div class="formula">Spliced figure = (New-series index × Old-series index in the overlap year) ÷ 100</div>
+
+Suppose an old series ends at 2020 = 150 (on some earlier base) and a new series begins 2020 = 100,
+2021 = 110, 2022 = 125. To carry the new series onto the old base, multiply each new figure by 150 ÷
+100. The 2022 figure splices to 125 × 150 ÷ 100 = **187.5**, and the two series now read on one
+continuous scale. Splicing a series **backwards** (old onto the new base) uses the reciprocal ratio.
+
+## 16. Answering under negative marking
+
+Paper 3 is entirely objective. A correct answer earns 1 mark, a wrong answer costs 0.25 mark, and a
+blank scores zero. Index-number questions reward a quick sanity check before you commit.
+
+If you guess blindly among four options you expect (1 ÷ 4)(+1) + (3 ÷ 4)(−0.25) = **+0.0625** marks —
+barely positive, nearly worthless. Eliminate one option and it rises to +0.1667; eliminate two and
+it reaches +0.375. The value of a guess is almost entirely in the options you can rule out, and in
+this chapter two are often obvious without full computation: a Fisher index must lie **between**
+Laspeyres and Paasche, a real wage must be **below** the money wage when prices have risen, and a
+cost of living index above 100 means prices went **up**, so an option below 100 is wrong on its face.
+Compute the four column-sums, cross-check that Fisher sits between the other two, and move on.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — price relatives and the simple average (easy)">
+  <p>
+    Four commodities had base-year prices ₹ 60, ₹ 40, ₹ 25 and ₹ 50, and current prices ₹ 72, ₹ 54,
+    ₹ 30 and ₹ 55. Find each price relative and the simple average of price relatives.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Each relative is p₁ ÷ p₀ × 100</div>
+    Commodity 1: 72 ÷ 60 × 100 = 120<br />
+    Commodity 2: 54 ÷ 40 × 100 = 135<br />
+    Commodity 3: 30 ÷ 25 × 100 = 120<br />
+    Commodity 4: 55 ÷ 50 × 100 = 110
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Average the four relatives</div>
+    Simple average = (120 + 135 + 120 + 110) ÷ 4 = 485 ÷ 4 = <strong>121.25</strong><br />
+    Because each relative is a pure number, the units the prices were quoted in never mattered.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — Laspeyres, Paasche and Fisher from one table (moderate)">
+  <p>
+    For three commodities the base and current prices and quantities are: A — p₀ 6, q₀ 10, p₁ 10,
+    q₁ 12; B — p₀ 2, q₀ 20, p₁ 3, q₁ 25; C — p₀ 4, q₀ 15, p₁ 5, q₁ 10. Compute the Laspeyres,
+    Paasche and Fisher price indices.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Build the four column-sums</div>
+    Σp₀q₀ = 6×10 + 2×20 + 4×15 = 60 + 40 + 60 = 160<br />
+    Σp₁q₀ = 10×10 + 3×20 + 5×15 = 100 + 60 + 75 = 235<br />
+    Σp₀q₁ = 6×12 + 2×25 + 4×10 = 72 + 50 + 40 = 162<br />
+    Σp₁q₁ = 10×12 + 3×25 + 5×10 = 120 + 75 + 50 = 245
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Laspeyres and Paasche</div>
+    Laspeyres = Σp₁q₀ ÷ Σp₀q₀ × 100 = 235 ÷ 160 × 100 = <strong>146.88</strong><br />
+    Paasche = Σp₁q₁ ÷ Σp₀q₁ × 100 = 245 ÷ 162 × 100 = <strong>151.23</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Fisher is the geometric mean of the two</div>
+    Fisher = square root of (146.875 × 151.2346) = square root of 22212.58 = <strong>149.04</strong><br />
+    Fisher sits between Laspeyres and Paasche, as it must. If yours does not, one of the four sums is
+    wrong.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — Marshall-Edgeworth and Dorbish-Bowley (moderate)">
+  <p>
+    Using the four sums of worked example 2 (Σp₀q₀ = 160, Σp₁q₀ = 235, Σp₀q₁ = 162, Σp₁q₁ = 245),
+    find the Marshall-Edgeworth and the Dorbish-Bowley price indices.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Marshall-Edgeworth uses (q₀ + q₁) weights</div>
+    Numerator = Σp₁q₀ + Σp₁q₁ = 235 + 245 = 480<br />
+    Denominator = Σp₀q₀ + Σp₀q₁ = 160 + 162 = 322<br />
+    Marshall-Edgeworth = 480 ÷ 322 × 100 = <strong>149.07</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Dorbish-Bowley is the arithmetic mean of L and P</div>
+    Dorbish-Bowley = (146.875 + 151.2346) ÷ 2 = 298.1096 ÷ 2 = <strong>149.05</strong><br />
+    Both land beside the Fisher figure of 149.04 — three different roads between the same two towns.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — checking the time-reversal test for Fisher (hard)">
+  <p>
+    Using the section 5 table (Σp₀q₀ = 1210, Σp₁q₀ = 1600, Σp₀q₁ = 1200, Σp₁q₁ = 1605), show that
+    Fisher's price index satisfies the time-reversal test, P₀₁ × P₁₀ = 1.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Fisher forwards, as a ratio</div>
+    P₀₁ = square root of (Σp₁q₀ ÷ Σp₀q₀ × Σp₁q₁ ÷ Σp₀q₁)<br />
+    = square root of (1600 ÷ 1210 × 1605 ÷ 1200) = square root of (1.322314 × 1.337500) = 1.329885
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Fisher backwards, periods swapped</div>
+    P₁₀ = square root of (Σp₀q₁ ÷ Σp₁q₁ × Σp₀q₀ ÷ Σp₁q₀)<br />
+    = square root of (1200 ÷ 1605 × 1210 ÷ 1600) = square root of (0.747664 × 0.756250) = 0.751945
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Multiply the two ratios</div>
+    P₀₁ × P₁₀ = 1.329885 × 0.751945 = <strong>1.0000</strong><br />
+    The product is exactly 1, so Fisher passes. Note that both indices entered as ratios; had we kept
+    the ×100 the product would have read 10,000.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — the factor-reversal test for Fisher (hard)">
+  <p>
+    For the same table, verify the factor-reversal test: Fisher's price index times Fisher's quantity
+    index equals the value ratio Σp₁q₁ ÷ Σp₀q₀.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Fisher price index as a ratio</div>
+    P₀₁ = square root of (1600 ÷ 1210 × 1605 ÷ 1200) = 1.329885 (from worked example 4)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Fisher quantity index as a ratio</div>
+    Q₀₁ = square root of (Σp₀q₁ ÷ Σp₀q₀ × Σp₁q₁ ÷ Σp₁q₀)<br />
+    = square root of (1200 ÷ 1210 × 1605 ÷ 1600) = square root of (0.991736 × 1.003125) = 0.997414
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Their product is the value ratio</div>
+    P₀₁ × Q₀₁ = 1.329885 × 0.997414 = <strong>1.326446</strong><br />
+    Value ratio = Σp₁q₁ ÷ Σp₀q₀ = 1605 ÷ 1210 = <strong>1.326446</strong> ✓<br />
+    The two agree to the last decimal, so Fisher passes the factor-reversal test as well.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — cost of living by both methods (moderate)">
+  <p>
+    A working-class family buys three goods. Base-year prices ₹ 8, ₹ 6 and ₹ 5, base-year quantities
+    25, 50 and 20; current prices ₹ 10, ₹ 7 and ₹ 6. Find the cost of living index by the aggregate
+    expenditure method and by the family budget method, and confirm they agree.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Aggregate expenditure (Laspeyres)</div>
+    Σp₁q₀ = 10×25 + 7×50 + 6×20 = 250 + 350 + 120 = 720<br />
+    Σp₀q₀ = 8×25 + 6×50 + 5×20 = 200 + 300 + 100 = 600<br />
+    Index = 720 ÷ 600 × 100 = <strong>120</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Family budget: relatives and value-weights</div>
+    Relatives R: 10÷8×100 = 125, 7÷6×100 = 116.667, 6÷5×100 = 120<br />
+    Weights W = p₀q₀: 200, 300, 100 (ΣW = 600)<br />
+    Σ(RW) = 125×200 + 116.667×300 + 120×100 = 25,000 + 35,000 + 12,000 = 72,000
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Divide and compare</div>
+    Family budget index = Σ(RW) ÷ ΣW = 72,000 ÷ 600 = <strong>120</strong><br />
+    Identical to the aggregate expenditure figure, because R × W = 100 × p₁q₀ term by term. Two
+    methods, one answer.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — cost of living from group weights and relatives (moderate)">
+  <p>
+    A consumer price index is built from five groups with the weights and group index numbers
+    (relatives) shown. Find the cost of living index. Food — weight 50, index 140; Clothing — weight
+    10, index 120; Fuel and light — weight 15, index 110; Rent — weight 15, index 125; Miscellaneous
+    — weight 10, index 130.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — This is the family budget form, Σ(RW) ÷ ΣW</div>
+    Σ(RW) = 140×50 + 120×10 + 110×15 + 125×15 + 130×10<br />
+    = 7,000 + 1,200 + 1,650 + 1,875 + 1,300 = 13,025<br />
+    ΣW = 50 + 10 + 15 + 15 + 10 = 100
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Divide</div>
+    Cost of living index = 13,025 ÷ 100 = <strong>130.25</strong><br />
+    When the weights add to 100, the divisor is 100 and the index is just the total of the RW column.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — real wage and purchasing power (moderate)">
+  <p>
+    A clerk earned ₹ 12,000 a month in the base year, when the cost of living index was 100, and
+    earns ₹ 18,000 now, when the index has risen to 120. (a) What is the real wage now, in base-year
+    rupees? (b) By how much has real income actually changed? (c) What is the purchasing power of the
+    rupee now?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Deflate the money wage</div>
+    Real wage = Money wage ÷ index × 100 = 18,000 ÷ 120 × 100 = <strong>₹ 15,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Compare with the base-year real wage</div>
+    Base-year real wage = 12,000 ÷ 100 × 100 = ₹ 12,000<br />
+    Real income has risen from ₹ 12,000 to ₹ 15,000, a genuine gain of <strong>₹ 3,000</strong> — the
+    ₹ 6,000 money rise was not all swallowed by prices, only ₹ 3,000 of it.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) Purchasing power of the rupee</div>
+    Purchasing power = 100 ÷ 120 = <strong>₹ 0.833</strong><br />
+    A rupee now buys about 83 paise of what it bought in the base year.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — base shifting and splicing (hard)">
+  <p>
+    An old wholesale price index reads 2018 = 100, 2019 = 125, 2020 = 150. A revised series was then
+    started: 2020 = 100, 2021 = 112, 2022 = 130. (a) Shift the old series to a 2019 base. (b) Splice
+    the new series onto the old base so the whole runs on one scale, and give the 2022 figure.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Base shifting to 2019 = 100</div>
+    Divide every old figure by the 2019 value (125) and multiply by 100:<br />
+    2018: 100 ÷ 125 × 100 = 80 · 2019: 125 ÷ 125 × 100 = 100 · 2020: 150 ÷ 125 × 100 = <strong>120</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Splice the new series onto the old base</div>
+    Overlap year 2020: old = 150, new = 100. Multiply each new figure by 150 ÷ 100 = 1.5:<br />
+    2021: 112 × 1.5 = 168 · 2022: 130 × 1.5 = <strong>195</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Reading the joined series</div>
+    On the original 2018 = 100 scale the series now runs 100, 125, 150, 168, 195 — continuous across
+    the changeover, with no jump at 2020. Splicing rescales; it never re-collects prices.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Swapping the quantity weight.** Laspeyres uses base quantities q₀; Paasche uses current
+  quantities q₁. Put Σp₁q₀ over Σp₀q₀ for Laspeyres and Σp₁q₁ over Σp₀q₁ for Paasche. The prices are
+  always current over base; only the weight switches.
+- **Averaging Laspeyres and Paasche for Fisher.** Fisher is the geometric mean — the square root of
+  the product. The arithmetic mean (L + P) ÷ 2 is Dorbish-Bowley, a different index.
+- **Keeping the ×100 in the reversal tests.** Time-reversal and factor-reversal use the indices as
+  ratios. Strip the hundreds: 132.23 enters as 1.3223, not 132.23.
+- **Using the simple aggregate index across mixed units.** A price quoted per quintal dominates one
+  quoted per kilogram. Use relatives or weights instead.
+- **Weighting the price in the family budget method.** The family budget method weights the price
+  **relative** R by the **value** W = p₀q₀. Weighting a price, or weighting by a quantity, breaks the
+  identity with the aggregate expenditure Laspeyres figure.
+- **Multiplying instead of dividing when deflating.** Real wage = money wage ÷ index × 100. If the
+  real wage comes out above the money wage while prices rose, the operation was inverted.
+- **Confusing the value index with a price index.** The value index Σp₁q₁ ÷ Σp₀q₀ × 100 mixes price
+  and quantity change together; it is not a price index and needs no separate weights.
+- **Counting the base year wrongly in base shifting.** Divide the whole series by the old index of
+  the **new** base year — the year you want to read as 100 — not by the first year of the series.
+- **Splicing with the wrong ratio.** To carry a new series onto an old base, multiply by
+  old ÷ new in the overlap year (here 150 ÷ 100). Going the other way uses the reciprocal.
+- **Forgetting that a Fisher index must lie between Laspeyres and Paasche.** If it does not, a
+  column-sum is wrong — a free check the examiner cannot take away.
+
+## One-page revision summary
+
+**Notation.** p₀, p₁ = base and current prices · q₀, q₁ = base and current quantities ·
+P₀₁ = price index (period 1 on base 0) · Q₀₁ = quantity index · R = price relative · W = value weight
+p₀q₀ · N = number of commodities. Build the four sums first: **Σp₀q₀, Σp₁q₀, Σp₀q₁, Σp₁q₁**.
+
+**Unweighted indices**
+
+<div class="formula">Price relative = (p₁ ÷ p₀) × 100</div>
+<div class="formula">Simple aggregate = (Σp₁ ÷ Σp₀) × 100 — distorted by units</div>
+<div class="formula">Simple average of relatives = Σ(p₁ ÷ p₀ × 100) ÷ N — cures units, not weighting</div>
+
+**Weighted price indices** (prices current over base; only the weight changes)
+
+<div class="formula">Laspeyres = (Σp₁q₀ ÷ Σp₀q₀) × 100 — base-year weights, reads high</div>
+<div class="formula">Paasche = (Σp₁q₁ ÷ Σp₀q₁) × 100 — current-year weights, reads low</div>
+<div class="formula">Fisher = square root of (Laspeyres × Paasche) — the ideal index</div>
+<div class="formula">Marshall-Edgeworth = [(Σp₁q₀ + Σp₁q₁) ÷ (Σp₀q₀ + Σp₀q₁)] × 100</div>
+<div class="formula">Dorbish-Bowley = (Laspeyres + Paasche) ÷ 2 — arithmetic mean</div>
+
+**Tests of a good index** (indices used as ratios, no ×100)
+
+<div class="formula">Time-reversal: P₀₁ × P₁₀ = 1 — Fisher passes</div>
+<div class="formula">Factor-reversal: P₀₁ × Q₀₁ = Σp₁q₁ ÷ Σp₀q₀ — Fisher passes; Fisher passes both, hence "ideal"</div>
+
+**Quantity and value**
+
+<div class="formula">Laspeyres quantity = (Σq₁p₀ ÷ Σq₀p₀) × 100 · Fisher quantity = square root of (Laspeyres q × Paasche q)</div>
+<div class="formula">Value index = (Σp₁q₁ ÷ Σp₀q₀) × 100 = Fisher price × Fisher quantity (as ratios)</div>
+
+**Cost of living, deflating, rescaling**
+
+<div class="formula">Cost of living (aggregate expenditure) = (Σp₁q₀ ÷ Σp₀q₀) × 100</div>
+<div class="formula">Cost of living (family budget) = Σ(RW) ÷ ΣW, R = price relative, W = p₀q₀ — same answer</div>
+<div class="formula">Real wage = (Money wage ÷ cost of living index) × 100</div>
+<div class="formula">Purchasing power of the rupee = 100 ÷ cost of living index</div>
+<div class="formula">Base shifting: new index = (old index of the year ÷ old index of the new base year) × 100</div>
+<div class="formula">Splicing: new-series index × (old-series overlap value ÷ 100)</div>
+
+**Direction of every relationship.** Laspeyres reads above Paasche when consumers shift away from
+dear goods · Fisher, Marshall-Edgeworth and Dorbish-Bowley all sit between Laspeyres and Paasche ·
+a cost of living index above 100 means prices rose · a real wage falls below the money wage once the
+index passes 100 · the purchasing power of the rupee is the reciprocal of the index.

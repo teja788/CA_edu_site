@@ -1,0 +1,761 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Correlation and Regression'
+description: 'CA Foundation Quantitative Aptitude Ch 17 — correlation and its types, scatter diagrams in words, Karl Pearson product-moment coefficient r and its properties, Spearman rank correlation with and without tied ranks, probable error, the two lines of regression, the regression coefficients b_yx and b_xy, r as the geometric mean of the two coefficients, prediction from a regression line, and the difference between correlation and regression, with fully worked numerical examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 17 · Correlation and Regression'
+chapterSlug: correlation-and-regression
+masteryId: f3-ch17
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Part C (Statistics), Ch 17 (Correlation and Regression) — scope, formula set and worked patterns'
+  - 'Standard statements of the Karl Pearson coefficient, Spearman rank correlation, probable error and least-squares regression as taught at Foundation level'
+sourceLabel: 'ICAI SM Paper 3 Statistics (Correlation and Regression), May 2026 ed. · standard statistical formulas'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 32 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=correlation-and-regression'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A poultry farm near Namakkal keeps two numbers for every batch of birds: the average daily
+temperature in the shed and the number of eggs collected that day. Over a hot month the manager
+notices that on warmer days the count falls, and on cooler days it rises. She wants two different
+answers from the same pair of columns. First, **how strong** is the link between temperature and
+egg output, on a single scale she can compare against last year. Second, **if tomorrow is forecast
+at a particular temperature, how many eggs should she expect**, so she can plan the packing crates.
+
+The first question is answered by **correlation**, the second by **regression**. They use the same
+sums — Σx, Σy, Σxy, Σx² and Σy² — yet they answer different questions, and confusing the two is the
+single most common error in this chapter. Correlation gives one pure number that measures how
+tightly the two quantities move together. Regression gives an equation, a straight line, that lets
+you estimate one variable from the other.
+
+Paper 3 is fully objective, so you will not write an essay on either idea. You will compute a
+coefficient, a rank correlation, a regression coefficient or a predicted value, and pick the right
+option quickly. This chapter builds every formula from its sums, shows how the pieces connect, and
+warns you where the examiner sets the traps.
+
+## 1. What correlation measures
+
+Two quantities are **correlated** when they tend to change together. Height and weight, advertising
+spend and sales, temperature and egg output — in each pair, knowing one tells you something about
+the likely value of the other. Correlation puts a single number on the strength and direction of
+that tendency.
+
+The direction is the sign:
+
+- **Positive correlation** — the two move the **same** way. Large values of one go with large
+  values of the other, small with small. Height and weight, or study hours and marks.
+- **Negative correlation** — the two move in **opposite** ways. Large values of one go with small
+  values of the other. Price and quantity demanded, or shed temperature and egg count.
+- **Zero correlation** — no linear tendency at all. The values of one give no straight-line clue to
+  the other.
+
+The strength is how tightly the points cluster around a straight line. Perfectly tight is the
+extreme; a loose scatter with only a faint drift is weak. The coefficient of correlation, written
+**r**, captures both at once: its sign is the direction, and its size from 0 to 1 is the strength.
+
+<Callout kind="pointer">
+  <p>
+    Correlation measures a <strong>linear</strong> tendency only. Two quantities can be tied by a
+    perfect curved rule and still return an r near zero, because r asks one narrow question: how
+    close are the points to a straight line. A small r means "little straight-line relationship", not
+    "no relationship of any kind". At Foundation level every question is about linear correlation, so
+    this rarely bites, but the wording of a concept question can turn on it.
+  </p>
+</Callout>
+
+A last word of caution that examiners like to test. Correlation is not causation. A high r between
+two series says they move together; it does not say one drives the other. Both may be driven by a
+third thing, or the pairing may be pure coincidence — a **spurious** or **nonsense** correlation.
+The number is silent on cause; only judgement supplies that.
+
+## 2. Scatter diagrams and the shape of a relationship
+
+Before any formula, the quickest read on a relationship is a **scatter diagram**: plot each pair
+(x, y) as a dot, x across and y up. The cloud of dots shows the pattern at a glance, and you should
+be able to describe one in words even though Paper 3 will not ask you to draw it.
+
+- **Perfect positive.** All dots lie exactly on a single upward-sloping line. Here r = +1.
+- **Perfect negative.** All dots lie exactly on a single downward-sloping line. Here r = −1.
+- **High positive.** The dots slope up and hug a line closely but not exactly. r is near +1, say
+  +0.8 to +0.95.
+- **Low negative.** The dots drift downward but scatter widely around the trend. r is a small
+  negative number, say −0.3.
+- **No correlation.** The dots fill a shapeless blob or a horizontal band with no tilt. r is near 0.
+
+Two readings of a scatter are examinable. The **direction** of the tilt is the sign of r, and the
+**tightness** of the cluster around the line is the size of r. A tight upward band and a loose
+upward band both have positive r, but the tight one is larger. When the dots sit exactly on a line,
+correlation is perfect and, as a later section shows, the two regression lines become one.
+
+<Callout kind="pointer">
+  <p>
+    The scatter diagram is the honest picture; the coefficient is the summary. Always let the sign
+    you expect from the story — price up, demand down, so negative — sanity-check the sign your
+    arithmetic produces. If the story says negative and your r comes out positive, you have almost
+    certainly dropped a minus sign in Σxy or in one of the deviations.
+  </p>
+</Callout>
+
+## 3. Karl Pearson's product-moment coefficient r
+
+The workhorse measure of linear correlation is **Karl Pearson's product-moment coefficient**. It is
+the covariance of the two variables divided by the product of their standard deviations:
+
+<div class="formula">r = Cov(x, y) ÷ (σx × σy)</div>
+
+where the covariance is the average product of the paired deviations from the two means:
+
+<div class="formula">Cov(x, y) = Σ(x − x̄)(y − ȳ) ÷ n   ·   σx = √(Σ(x − x̄)² ÷ n)   ·   σy = √(Σ(y − ȳ)² ÷ n)</div>
+
+Dividing covariance by the two standard deviations strips out the units and the scale, leaving a
+pure number between −1 and +1. That single line is the whole idea; everything else is a way of
+computing it without heavy arithmetic.
+
+**The computing formula.** Deviations from a mean are ugly when the mean is not a whole number, so
+in practice r is built straight from the five raw sums. Multiply through by n and the means
+disappear:
+
+<div class="formula">r = [nΣxy − (Σx)(Σy)] ÷ √([nΣx² − (Σx)²] × [nΣy² − (Σy)²])</div>
+
+This is the form to use in the exam. Lay out a table with columns for x, y, xy, x² and y², total
+each column, and drop the five sums into the formula. Nothing in it needs a mean or a standard
+deviation as a separate step.
+
+**Worked illustration.** Take five pairs: x = 1, 2, 3, 4, 5 and y = 3, 2, 5, 6, 4.
+
+- Σx = 15, Σy = 20, Σxy = 66, Σx² = 55, Σy² = 90, n = 5
+- Numerator = nΣxy − (Σx)(Σy) = 5×66 − 15×20 = 330 − 300 = 30
+- Under the root: nΣx² − (Σx)² = 275 − 225 = 50; nΣy² − (Σy)² = 450 − 400 = 50
+- r = 30 ÷ √(50 × 50) = 30 ÷ 50 = **0.6**
+
+The sign is positive and the size is moderate: y rises with x, but loosely. Notice the two bracket
+values under the root are each a variance multiplied by n, so they can never be negative, and the
+sign of r always comes from the numerator alone.
+
+<Callout kind="mistake">
+  <p>
+    The commonest arithmetic slip is squaring the wrong thing under the root. It is
+    <strong>nΣx² − (Σx)²</strong>, that is n times the sum of the squares, minus the square of the
+    sum. Writing (Σx)² where nΣx² belonged, or the reverse, wrecks the denominator. A quick check:
+    each bracket must come out positive, and each must be smaller than nΣx² itself.
+  </p>
+</Callout>
+
+**The assumed-mean short form.** When the numbers are large, subtract a convenient constant from
+each variable first (a *change of origin*) and, if the values share a common gap, divide by it (a
+*change of scale*). Because r is unaffected by either move — the next section proves it — you may
+compute r on the small transformed numbers and the answer is unchanged. This is exactly why r is
+such a convenient measure: you can shift and rescale the data into easy figures without touching the
+result.
+
+## 4. Properties of the correlation coefficient
+
+Six properties are examinable, and most concept questions in this chapter test one of them.
+
+1. **r lies between −1 and +1.** That is, −1 ≤ r ≤ 1 always. A computed r outside that range is a
+   signal of an arithmetic error, most often in the denominator. r = +1 is perfect positive
+   correlation, r = −1 perfect negative, r = 0 no linear correlation.
+
+2. **r is a pure number.** It carries no units. Correlate height in centimetres with weight in
+   kilograms, or the same data in inches and pounds, and r is identical. This is what makes it
+   comparable across completely different pairs of variables.
+
+3. **r is unaffected by a change of origin.** Add or subtract the same constant from every x, or
+   from every y, and r does not change. Shifting where you measure from cannot alter how tightly two
+   series move together.
+
+4. **r is unaffected by a change of scale**, except that multiplying one variable by a **negative**
+   number flips the sign of r. Multiply every x by a positive constant and r is unchanged; multiply
+   by a negative constant and r keeps its size but reverses its sign. Formally, if u = (x − a) ÷ h
+   and v = (y − b) ÷ k, then r between x and y equals r between u and v when h and k have the same
+   sign, and equals its negative when h and k have opposite signs.
+
+5. **r is symmetric.** The correlation of x with y equals the correlation of y with x. There is only
+   one correlation coefficient for a pair, unlike regression, which has two coefficients.
+
+6. **r is the geometric mean of the two regression coefficients**, r = ±√(b_yx × b_xy), a link
+   developed fully in section 9. Its sign is the common sign of the two regression coefficients.
+
+<Callout kind="pointer">
+  <p>
+    Property 3 and property 4 together are why the assumed-mean method is legitimate: subtracting a
+    constant is a change of origin, dividing by a common gap is a change of scale by a positive
+    number, and neither touches r. So r = 0.6 whether you compute it on the raw marks or on the tidy
+    small deviations. The one trap is a negative scale factor — for instance replacing x by
+    (50 − x) — which reverses the sign of r. Read whether the transformation multiplies by a
+    negative number.
+  </p>
+</Callout>
+
+## 5. Rank correlation
+
+Sometimes the data are not measurements but **ranks** — a first, a second, a third — or the
+relationship is monotonic but not straight, so Pearson's r is not the right tool. Two judges rank
+the same ten contestants; you want to know how far the two orderings agree. **Spearman's rank
+correlation coefficient**, written R (or ρ), answers exactly that:
+
+<div class="formula">R = 1 − 6Σd² ÷ [n(n² − 1)]</div>
+
+Here n is the number of pairs and d is the difference between the two ranks of each pair. The steps
+are mechanical: rank each series, take the difference d for every pair, square it, add the squares
+to get Σd², and substitute.
+
+**Worked illustration — no ties.** Seven items are ranked by two judges. The rank differences d come
+out as −2, +1, −1, +2, −1, +1, 0, so d² = 4, 1, 1, 4, 1, 1, 0 and Σd² = 12.
+
+- n = 7, so n(n² − 1) = 7 × 48 = 336
+- R = 1 − (6 × 12) ÷ 336 = 1 − 72 ÷ 336 = 1 − 0.2143 = **0.7857**
+
+The two judges agree fairly well but not perfectly. R runs from −1 (exactly reversed orderings)
+through 0 (no agreement) to +1 (identical orderings), the same range as Pearson's r.
+
+**Tied ranks.** When two or more items share a value, they share a rank: give each the **average**
+of the rank positions they occupy. Two items tied for the 3rd and 4th places each get rank 3.5;
+three items tied for 5th, 6th and 7th each get rank 6. Ties bias the plain formula slightly, so a
+**correction** is added to Σd², one term for every group of ties:
+
+<div class="formula">Corrected Σd² = Σd² + Σ (m³ − m) ÷ 12</div>
+
+where m is the number of items in a tied group and the sum runs over every such group. Then
+substitute the corrected figure into the same R formula.
+
+**Worked illustration — with ties.** Five candidates are marked by two examiners:
+
+- Examiner X gives 50, 70, 60, 60, 80; Examiner Y gives 55, 60, 40, 55, 60.
+- X ranks (highest mark = rank 1): 80→1, 70→2, the two 60s share ranks 3 and 4 → 3.5 each, 50→5.
+  So X ranks are 5, 2, 3.5, 3.5, 1.
+- Y ranks: the two 60s share ranks 1 and 2 → 1.5 each, the two 55s share ranks 3 and 4 → 3.5 each,
+  40→5. So Y ranks are 3.5, 1.5, 5, 3.5, 1.5.
+- d = 1.5, 0.5, −1.5, 0, −0.5, so d² = 2.25, 0.25, 2.25, 0, 0.25 and Σd² = 5.
+- Tie correction: one tied pair in X (m = 2) gives (8 − 2)/12 = 0.5; two tied pairs in Y give
+  0.5 + 0.5 = 1.0. Total correction = 1.5, so corrected Σd² = 5 + 1.5 = 6.5.
+- n = 5, n(n² − 1) = 5 × 24 = 120
+- R = 1 − (6 × 6.5) ÷ 120 = 1 − 39 ÷ 120 = 1 − 0.325 = **0.675**
+
+<Callout kind="mistake">
+  <p>
+    Two tie slips recur. The first is ranking tied items 1, 2 instead of giving both the average
+    1.5 — the average keeps the rank total correct. The second is forgetting the correction term
+    altogether, or adding only one term when several tied groups exist. Add one
+    <strong>(m³ − m) ÷ 12</strong> for <em>each</em> group, in <em>either</em> series, and add them
+    all to Σd² before dividing.
+  </p>
+</Callout>
+
+## 6. Probable error and the significance of r
+
+An r computed from a sample is only an estimate of the true correlation. The **probable error**
+(PE) measures how far the sample r might reasonably sit from the truth:
+
+<div class="formula">PE = 0.6745 × (1 − r²) ÷ √n</div>
+
+The constant 0.6745 is fixed; n is the number of pairs and r is the sample coefficient. Two uses
+follow, and both are examinable.
+
+**The likely range of the true correlation.** The true value is expected to lie within one probable
+error either side of the sample r, that is between r − PE and r + PE.
+
+**A rough test of significance**, using the rule of thumb built on PE:
+
+- If r is **less than PE**, correlation is treated as **not significant** — it could easily be zero.
+- If r is **more than six times PE** (r &gt; 6 × PE), correlation is treated as **significant** — it
+  is very unlikely to be zero.
+- Between those, no firm verdict from PE alone.
+
+**Worked illustration.** A sample of 64 pairs gives r = 0.6.
+
+- 1 − r² = 1 − 0.36 = 0.64; √n = √64 = 8
+- PE = 0.6745 × 0.64 ÷ 8 = 0.6745 × 0.08 = **0.05396**
+- The true correlation is expected between 0.6 − 0.054 = 0.546 and 0.6 + 0.054 = 0.654.
+- 6 × PE = 0.324, and r = 0.6 is well above it, so the correlation is significant.
+
+<Callout kind="pointer">
+  <p>
+    Probable error shrinks in two ways: as r moves toward ±1, the (1 − r²) factor falls toward zero,
+    and as the sample grows, √n in the denominator rises. So a strong correlation on a large sample
+    has a tiny probable error and is easy to call significant, while a weak correlation on a small
+    sample has a large one. If a question hands you r and n, the PE is one line; if it hands you PE
+    and n and asks for r, rearrange to solve for r².
+  </p>
+</Callout>
+
+## 7. Regression: the two lines
+
+Correlation stops at "how strong". **Regression** goes further and gives an equation to
+**estimate** one variable from the other. Because you can estimate either way, there are **two**
+regression lines for a pair of variables.
+
+- The **regression line of y on x** estimates y from a known x. Its equation is
+  <div class="formula">y − ȳ = b_yx (x − x̄)</div>
+- The **regression line of x on y** estimates x from a known y. Its equation is
+  <div class="formula">x − x̄ = b_xy (y − ȳ)</div>
+
+Both lines are drawn by the method of **least squares**: the line of y on x is the straight line
+that makes the total of the squared vertical gaps between the dots and the line as small as
+possible, and the line of x on y minimises the squared horizontal gaps. They are different lines
+because they minimise different gaps — one measures error in y, the other error in x.
+
+Two facts about the pair of lines are heavily tested:
+
+1. **Both lines pass through the point of means (x̄, ȳ).** Whatever the data, the two lines cross at
+   the mean of x and the mean of y. So if you are given the two line equations, solving them
+   simultaneously gives you x̄ and ȳ at once.
+2. **The lines coincide only when r = ±1, and are at right angles when r = 0.** Perfect correlation
+   collapses the two lines into one; zero correlation makes them perpendicular, one horizontal and
+   one vertical. The angle between the two lines is a picture of the strength of correlation: the
+   closer they are, the stronger the relationship.
+
+<Callout kind="pointer">
+  <p>
+    Use the right line for the job. To estimate y from a given x, use the line of <strong>y on
+    x</strong>; to estimate x from a given y, use the line of <strong>x on y</strong>. Using the
+    wrong line to predict is a real and costly error, because the two lines have different slopes and
+    give different answers. The only time it does not matter is r = ±1, when the two lines are the
+    same line.
+  </p>
+</Callout>
+
+## 8. The regression coefficients
+
+The slope of each line is its **regression coefficient**. The coefficient of the line of y on x is
+b_yx, and of the line of x on y is b_xy. Each is built from the same five sums as r:
+
+<div class="formula">b_yx = [nΣxy − (Σx)(Σy)] ÷ [nΣx² − (Σx)²]</div>
+<div class="formula">b_xy = [nΣxy − (Σx)(Σy)] ÷ [nΣy² − (Σy)²]</div>
+
+Notice the numerators are identical — the very same numerator as r — and only the denominators
+differ: b_yx divides by the x-spread, b_xy by the y-spread. Written with covariance and variances:
+
+<div class="formula">b_yx = Cov(x, y) ÷ σx²   ·   b_xy = Cov(x, y) ÷ σy²</div>
+
+and written with r and the standard deviations, the form most often quoted:
+
+<div class="formula">b_yx = r × (σy ÷ σx)   ·   b_xy = r × (σx ÷ σy)</div>
+
+**Worked illustration.** For the five pairs of section 3 (x = 1..5, y = 3, 2, 5, 6, 4) the shared
+numerator was 30, and nΣx² − (Σx)² = 50 while nΣy² − (Σy)² = 50, so here b_yx = 30 ÷ 50 = 0.6 and
+b_xy = 30 ÷ 50 = 0.6. When the two spreads differ, the two coefficients differ too — that is the
+usual case.
+
+Three properties of the regression coefficients are examinable:
+
+1. **Both coefficients carry the same sign**, and it is the sign of r. If both are positive, r is
+   positive; if both negative, r is negative. They can never have opposite signs, because they share
+   a numerator.
+2. **Their product is r²**, so b_yx × b_xy = r². This is the anchor of the next section.
+3. **They are affected by change of scale but not by change of origin.** Unlike r, a regression
+   coefficient does carry units, so rescaling a variable rescales its coefficient. Shifting the
+   origin, though, leaves both coefficients unchanged.
+
+<Callout kind="mistake">
+  <p>
+    Do not mix up the two denominators. b_yx (the y-on-x slope) divides the common numerator by
+    <strong>nΣx² − (Σx)²</strong>, the x term; b_xy divides by the <strong>y</strong> term. Swapping
+    them silently switches the two lines. A memory hook: the coefficient of "y on x" is divided by
+    the spread of the variable you are given, which is x.
+  </p>
+</Callout>
+
+## 9. Linking r and the regression coefficients
+
+Because b_yx × b_xy = r², the correlation coefficient is the **geometric mean** of the two
+regression coefficients:
+
+<div class="formula">r = ±√(b_yx × b_xy)</div>
+
+The sign is not decided by the square root; it is the **common sign of the two coefficients**. If
+both b's are positive, take the positive root; if both are negative, take the negative root. This
+single formula is a favourite of the examiner, because it lets a question give you the two slopes
+and ask for the correlation without any data table at all.
+
+**Worked illustration.** A firm's regression coefficients are b_yx = 0.8 and b_xy = 0.45.
+
+- Product = 0.8 × 0.45 = 0.36
+- r = +√0.36 = **0.6** (positive, because both coefficients are positive)
+
+Two useful consistency checks fall out of this link:
+
+- **Neither b may exceed the reciprocal of the other beyond r² = 1.** Because r² = b_yx × b_xy ≤ 1,
+  the product of the two coefficients can never be more than 1. If a question offers b_yx = 1.5 and
+  b_xy = 0.9, their product is 1.35 &gt; 1, which is impossible — one of the figures is wrong. Use
+  this to reject an impossible option instantly.
+- **One large and one small.** Since the product is at most 1, if one coefficient is large the other
+  must be small. A slope of 1.6 for y on x forces the x-on-y slope to be at most 0.625.
+
+<Callout kind="pointer">
+  <p>
+    A related property: the arithmetic mean of the two regression coefficients is never less than r,
+    that is (b_yx + b_xy) ÷ 2 ≥ r. It follows from the fact that the arithmetic mean of two positive
+    numbers is at least their geometric mean. You will rarely compute with it, but it is a clean
+    concept-question fact, and it double-checks a suspicious pair of slopes.
+  </p>
+</Callout>
+
+## 10. Predicting with a regression line
+
+Prediction is the practical payoff. Build the correct line, substitute the known value, read off the
+estimate.
+
+**Worked illustration — estimating y from x.** For the five pairs of section 3, x̄ = 3, ȳ = 4 and
+b_yx = 0.6, so the line of y on x is
+
+<div class="formula">y − 4 = 0.6 (x − 3), that is y = 0.6x + 2.2</div>
+
+To estimate y when x = 10: y = 0.6 × 10 + 2.2 = 6 + 2.2 = **8.2**.
+
+**Worked illustration — estimating x from y.** For the same data, b_xy = 0.6, so the line of x on y
+is x − 3 = 0.6 (y − 4), that is x = 0.6y + 0.6. To estimate x when y = 9: x = 0.6 × 9 + 0.6 = **6.0**.
+
+Two points guard against error. First, use the line that predicts the variable you want: to get y,
+use y on x. Second, an estimate far outside the range of the observed data is unreliable, because
+the straight-line rule was only fitted inside that range; the arithmetic still runs, but the answer
+should be treated with caution.
+
+<Callout kind="pointer">
+  <p>
+    When a question hands you the two <em>regression equations</em> rather than the data, you can
+    still do everything. Solve the two equations together to get x̄ and ȳ (they meet at the means).
+    Identify which equation is y on x by writing each in slope form and checking that the product of
+    the two slopes does not exceed 1 — the correct pairing is the one that gives r² ≤ 1. Then read
+    the slopes as b_yx and b_xy, take r = ±√(b_yx × b_xy), and predict from the appropriate line.
+  </p>
+</Callout>
+
+## 11. Correlation versus regression
+
+The two ideas share their sums but answer different questions, and keeping them apart is worth a
+mark or two on its own.
+
+| | Correlation (r) | Regression (b_yx, b_xy) |
+|---|---|---|
+| Question answered | How strongly do x and y move together? | How do we estimate one from the other? |
+| Output | One pure number, −1 to +1 | Two lines / two slopes, in units |
+| Symmetry | One value; r of x, y = r of y, x | Two values; b_yx ≠ b_xy in general |
+| Units | None (a pure number) | Carries units of the variables |
+| Change of origin | No effect | No effect |
+| Change of scale | No effect (sign may flip) | Rescales the coefficient |
+| Cause and effect | Implies neither | Treats x as the estimator of y (or vice versa) |
+
+Three connections tie the two together and are all fair game:
+
+- r and the two b's always share the **same sign**.
+- r is the **geometric mean** of b_yx and b_xy.
+- Both regression lines pass through **(x̄, ȳ)**, and they coincide exactly when r = ±1 and are
+  perpendicular when r = 0.
+
+<Callout kind="mistake">
+  <p>
+    The headline error is treating a regression coefficient as if it were the correlation
+    coefficient, or the reverse. b_yx can be larger than 1 (a slope has no ceiling), but r never
+    exceeds 1. If an option offers a "correlation" of 1.6, it is wrong on its face; if it offers a
+    "regression coefficient" of 1.6, that is perfectly possible. Read which of the two the question
+    is asking for.
+  </p>
+</Callout>
+
+## 12. Answering under negative marking
+
+Paper 3 is entirely objective: a correct answer earns 1 mark, a wrong answer costs 0.25 mark, and a
+blank scores zero. That arithmetic should shape how you treat a question you cannot finish.
+
+A blind guess among four options expects (1 ÷ 4)(+1) + (3 ÷ 4)(−0.25) = 0.25 − 0.1875 = **+0.0625**
+marks — barely positive, nearly worthless. Eliminate one option and the expectation rises to
++0.1667; eliminate two and it reaches +0.375. The value of a guess comes almost entirely from the
+options you can rule out first.
+
+This chapter hands you eliminations for free. Any option offering a correlation outside −1 to +1 is
+impossible. Any pair of regression coefficients whose product exceeds 1 is impossible. A correlation
+whose sign disagrees with the sign of the regression coefficients is impossible. A predicted value
+that ignores the intercept, or uses the wrong line, is usually one of the planted distractors. Rule
+those out, then choose. Attempt what you can narrow to two; leave truly blank only what you cannot
+touch at all.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — Karl Pearson r from a small data set (easy)">
+  <p>
+    Compute the coefficient of correlation for the pairs x = 1, 2, 3, 4, 5 and y = 3, 2, 5, 6, 4.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Build the five sums</div>
+    Σx = 15 · Σy = 20 · Σxy = (1×3)+(2×2)+(3×5)+(4×6)+(5×4) = 3+4+15+24+20 = 66<br />
+    Σx² = 1+4+9+16+25 = 55 · Σy² = 9+4+25+36+16 = 90 · n = 5
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Numerator and denominator</div>
+    Numerator = nΣxy − (Σx)(Σy) = 5×66 − 15×20 = 330 − 300 = 30<br />
+    nΣx² − (Σx)² = 275 − 225 = 50 · nΣy² − (Σy)² = 450 − 400 = 50
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Substitute</div>
+    r = 30 ÷ √(50 × 50) = 30 ÷ 50 = <strong>0.6</strong><br />
+    Positive and moderate: y rises with x but not tightly. Both bracket values are positive, as they
+    must be, so the sign came from the numerator.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — r by the change-of-origin short form (moderate)">
+  <p>
+    Six months of data give x = 2, 4, 6, 8, 10 and y = 5, 4, 9, 8, 12. Find the coefficient of
+    correlation, and confirm that subtracting a constant from each series leaves it unchanged.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Raw sums</div>
+    Σx = 30 · Σy = 38 · Σxy = 10+16+54+64+120 = 264 · Σx² = 220 · Σy² = 330 · n = 5<br />
+    Numerator = 5×264 − 30×38 = 1320 − 1140 = 180
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Denominator and r</div>
+    nΣx² − (Σx)² = 1100 − 900 = 200 · nΣy² − (Σy)² = 1650 − 1444 = 206<br />
+    r = 180 ÷ √(200 × 206) = 180 ÷ √41200 = 180 ÷ 202.98 = <strong>0.8868</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The origin does not matter</div>
+    Replace x by (x − 6) and y by (y − 8): the deviations, and therefore the numerator 180 and both
+    bracket values 200 and 206, are exactly the same, because a change of origin cancels in every
+    term. So r stays 0.8868. This is why you may shift large data to small numbers before computing.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — effect of change of scale on r (moderate)">
+  <p>
+    A set of paired data has correlation r = 0.6. Each x value is now doubled, and each y value is
+    replaced by (40 − y). What is the new correlation coefficient?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Doubling x</div>
+    Multiplying every x by +2 is a change of scale by a positive number. It does not change r. So far
+    r remains 0.6 in size and sign.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Replacing y by (40 − y)</div>
+    This is (−1)×y + 40: a change of origin (the +40, no effect) and a change of scale by −1. A
+    negative scale factor keeps the size of r but reverses its sign.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Combine</div>
+    Size unchanged at 0.6; one negative scale factor flips the sign once. New r = <strong>−0.6</strong>.<br />
+    Had both transformations used negative factors, the sign would flip twice and return to +0.6.
+    Count the negative scale factors: an odd number flips the sign, an even number does not.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — rank correlation without ties (easy)">
+  <p>
+    Two judges rank seven paintings. The rank differences for the seven paintings are
+    d = −2, +1, −1, +2, −1, +1, 0. Find the rank correlation coefficient.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Square and total the differences</div>
+    d² = 4, 1, 1, 4, 1, 1, 0 · Σd² = 12 · n = 7
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Substitute</div>
+    n(n² − 1) = 7 × (49 − 1) = 7 × 48 = 336<br />
+    R = 1 − (6 × 12) ÷ 336 = 1 − 72 ÷ 336 = 1 − 0.2143 = <strong>0.7857</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Reading it</div>
+    R is positive and fairly high: the two judges broadly agree on the ordering. Had every rank
+    matched, Σd² would be 0 and R = 1; had the orders been exactly reversed, R would be −1.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — rank correlation with tied ranks (hard)">
+  <p>
+    Two examiners mark five candidates. Examiner X awards 50, 70, 60, 60, 80; Examiner Y awards
+    55, 60, 40, 55, 60. Find the rank correlation coefficient, correcting for ties.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Rank each examiner (highest mark = rank 1)</div>
+    X: 80→1, 70→2, the two 60s occupy places 3 and 4 → 3.5 each, 50→5. X ranks = 5, 2, 3.5, 3.5, 1.<br />
+    Y: the two 60s occupy places 1 and 2 → 1.5 each, the two 55s occupy places 3 and 4 → 3.5 each,
+    40→5. Y ranks = 3.5, 1.5, 5, 3.5, 1.5.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Differences and their squares</div>
+    d = 5−3.5, 2−1.5, 3.5−5, 3.5−3.5, 1−1.5 = 1.5, 0.5, −1.5, 0, −0.5<br />
+    d² = 2.25, 0.25, 2.25, 0, 0.25 · Σd² = 5
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Tie correction</div>
+    One tied pair in X (m = 2): (2³ − 2) ÷ 12 = 6 ÷ 12 = 0.5<br />
+    Two tied pairs in Y (m = 2 each): 0.5 + 0.5 = 1.0<br />
+    Total correction = 1.5, so corrected Σd² = 5 + 1.5 = 6.5
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — Substitute</div>
+    n(n² − 1) = 5 × 24 = 120<br />
+    R = 1 − (6 × 6.5) ÷ 120 = 1 − 39 ÷ 120 = 1 − 0.325 = <strong>0.675</strong><br />
+    Skipping the 1.5 correction would have given 1 − 30 ÷ 120 = 0.75, an option the examiner will
+    certainly offer.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — probable error and significance (moderate)">
+  <p>
+    A correlation coefficient of 0.6 is found from a sample of 64 pairs. Find the probable error,
+    state the likely range of the true correlation, and decide whether the correlation is
+    significant.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Probable error</div>
+    1 − r² = 1 − 0.36 = 0.64 · √n = √64 = 8<br />
+    PE = 0.6745 × 0.64 ÷ 8 = 0.6745 × 0.08 = <strong>0.05396</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Likely range of the true correlation</div>
+    r ± PE = 0.6 ± 0.054, so the true value is expected between <strong>0.546 and 0.654</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Significance</div>
+    6 × PE = 6 × 0.05396 = 0.3238. Since r = 0.6 is greater than 6 × PE, the correlation is
+    <strong>significant</strong>. It is also far above PE itself, so it could not plausibly be zero.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — both regression coefficients and r from data (moderate)">
+  <p>
+    For eight pairs the sums are Σx = 56, Σy = 40, Σxy = 364, Σx² = 524, Σy² = 256, with n = 8.
+    Find b_yx, b_xy and the coefficient of correlation.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The shared numerator and the two spreads</div>
+    Numerator = nΣxy − (Σx)(Σy) = 8×364 − 56×40 = 2912 − 2240 = 672<br />
+    nΣx² − (Σx)² = 8×524 − 56² = 4192 − 3136 = 1056<br />
+    nΣy² − (Σy)² = 8×256 − 40² = 2048 − 1600 = 448
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The two regression coefficients</div>
+    b_yx = 672 ÷ 1056 = <strong>0.6364</strong> · b_xy = 672 ÷ 448 = <strong>1.5</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — r as the geometric mean</div>
+    r = +√(b_yx × b_xy) = √(0.6364 × 1.5) = √0.9546 = <strong>0.9770</strong><br />
+    Positive, because both coefficients are positive. Directly from the sums,
+    r = 672 ÷ √(1056 × 448) = 672 ÷ 687.8 = 0.9770 — the two routes agree.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — building the two lines and predicting (moderate)">
+  <p>
+    Using again x = 1, 2, 3, 4, 5 and y = 3, 2, 5, 6, 4 (means x̄ = 3, ȳ = 4, both regression
+    coefficients 0.6), write the two regression lines, estimate y when x = 10, and estimate x when
+    y = 9.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The two lines</div>
+    y on x: y − 4 = 0.6(x − 3) → y = 0.6x + 2.2<br />
+    x on y: x − 3 = 0.6(y − 4) → x = 0.6y + 0.6
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Estimate y from x = 10</div>
+    Use the line of y on x: y = 0.6 × 10 + 2.2 = 6 + 2.2 = <strong>8.2</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Estimate x from y = 9</div>
+    Use the line of x on y: x = 0.6 × 9 + 0.6 = 5.4 + 0.6 = <strong>6.0</strong><br />
+    x = 10 sits outside the observed range 1–5, so the first estimate is an extrapolation and should
+    be read with caution; the second is a mild extrapolation too. The arithmetic is sound; the
+    reliability is a separate matter.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — means and r from two regression equations (hard)">
+  <p>
+    Two regression lines are 8x − 10y + 66 = 0 and 40x − 18y − 214 = 0. Find the mean of x, the mean
+    of y, and the coefficient of correlation.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The means are where the lines cross</div>
+    Solve 8x − 10y = −66 and 40x − 18y = 214 together.<br />
+    From the first, 4x − 5y = −33; from the second, 20x − 9y = 107. Eliminate x:
+    5×(4x − 5y) gives 20x − 25y = −165, subtract to get −16y = −272, so <strong>ȳ = 17</strong>,
+    and then 4x = 5×17 − 33 = 52, so <strong>x̄ = 13</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Identify the two lines by testing r² ≤ 1</div>
+    Suppose 8x − 10y + 66 = 0 is y on x: 10y = 8x + 66 → b_yx = 0.8.<br />
+    Suppose 40x − 18y − 214 = 0 is x on y: 40x = 18y + 214 → b_xy = 18 ÷ 40 = 0.45.<br />
+    Product = 0.8 × 0.45 = 0.36 ≤ 1, so the assumption is valid.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The correlation coefficient</div>
+    r = +√(b_yx × b_xy) = √0.36 = <strong>0.6</strong>, positive because both coefficients are
+    positive.<br />
+    Had the other pairing been tried, the product would have exceeded 1 — an impossible r² — which is
+    the built-in check that you have matched each equation to the right line.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Squaring the sum where the sum of squares belonged.** The bracket is nΣx² − (Σx)², n times the
+  sum of squares minus the square of the sum. Each bracket must come out positive.
+- **Reading r as larger than 1.** The correlation coefficient never leaves −1 to +1. An answer or an
+  option outside that range is wrong on its face; a *regression coefficient*, by contrast, may exceed 1.
+- **Confusing the two regression denominators.** b_yx divides the common numerator by the x term,
+  nΣx² − (Σx)²; b_xy divides by the y term. Swapping them switches the two lines.
+- **Taking the wrong sign on r = ±√(b_yx × b_xy).** The square root does not fix the sign; the common
+  sign of the two regression coefficients does. Two negative slopes give a negative r.
+- **Accepting an impossible pair of slopes.** If b_yx × b_xy exceeds 1, the pair cannot be genuine,
+  because that product is r² and r² can be at most 1.
+- **Predicting with the wrong line.** To estimate y use y on x; to estimate x use x on y. The two
+  lines have different slopes and give different answers except when r = ±1.
+- **Forgetting the tie correction in rank correlation**, or adding only one term when several tied
+  groups exist. Add (m³ − m) ÷ 12 for every tied group, in either series.
+- **Ranking tied items 1, 2 instead of 1.5, 1.5.** Tied items share the average of the positions
+  they occupy, which keeps the rank total correct.
+- **Mixing up which variable is the origin shift and which the scale.** A change of origin never
+  touches r or the regression coefficients; a change of scale rescales a regression coefficient and
+  can flip the sign of r if the factor is negative.
+- **Treating correlation as causation.** A high r says two series move together, nothing about one
+  causing the other; the correlation may be spurious.
+- **Using r where a regression coefficient was asked, or the reverse.** They share a numerator but
+  answer different questions and, in general, take different values.
+
+## One-page revision summary
+
+**Symbols.** x, y = the two variables · n = number of pairs · Σx, Σy, Σxy, Σx², Σy² = the five raw
+sums · x̄, ȳ = the two means · σx, σy = the two standard deviations · Cov(x, y) = covariance ·
+r = correlation coefficient · R = rank correlation · b_yx, b_xy = regression coefficients ·
+PE = probable error · d = rank difference · m = size of a tied group.
+
+**Correlation**
+
+<div class="formula">r = Cov(x, y) ÷ (σx × σy)</div>
+<div class="formula">r = [nΣxy − (Σx)(Σy)] ÷ √([nΣx² − (Σx)²] × [nΣy² − (Σy)²])</div>
+<div class="formula">Always −1 ≤ r ≤ 1 · pure number · unaffected by change of origin and scale (a negative scale factor flips the sign)</div>
+
+**Rank correlation**
+
+<div class="formula">R = 1 − 6Σd² ÷ [n(n² − 1)]</div>
+<div class="formula">With ties: use corrected Σd² = Σd² + Σ (m³ − m) ÷ 12, one term per tied group, and average the tied ranks</div>
+
+**Probable error**
+
+<div class="formula">PE = 0.6745 × (1 − r²) ÷ √n · true r expected in r ± PE · significant if r &gt; 6 × PE · not significant if r &lt; PE</div>
+
+**Regression**
+
+<div class="formula">Line of y on x: y − ȳ = b_yx (x − x̄) · Line of x on y: x − x̄ = b_xy (y − ȳ)</div>
+<div class="formula">b_yx = [nΣxy − (Σx)(Σy)] ÷ [nΣx² − (Σx)²] = r × (σy ÷ σx)</div>
+<div class="formula">b_xy = [nΣxy − (Σx)(Σy)] ÷ [nΣy² − (Σy)²] = r × (σx ÷ σy)</div>
+<div class="formula">b_yx × b_xy = r² · r = ±√(b_yx × b_xy) with the common sign of the two coefficients</div>
+<div class="formula">Both lines pass through (x̄, ȳ) · they coincide when r = ±1 · they are perpendicular when r = 0</div>
+
+**Directions to remember.** r and both regression coefficients share one sign · r never exceeds 1
+but a regression coefficient may · a change of origin touches nothing, a change of scale rescales a
+regression coefficient and can flip the sign of r · use y on x to predict y and x on y to predict x
+· solving the two regression equations together gives the means · correlation measures strength,
+regression estimates a value.

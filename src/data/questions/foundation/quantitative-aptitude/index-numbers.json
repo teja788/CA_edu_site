@@ -1,0 +1,1009 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "index-numbers",
+  "chapter": "Ch 18 — Index Numbers",
+  "questions": [
+    {
+      "id": "q-f3c18-001",
+      "topic": "Ch 18 · Index numbers · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An index number is best described as:",
+      "options": [
+        { "key": "A", "text": "The arithmetic average of a set of prices in the current year", "explanation": "An average of prices carries a unit and is distorted by the units chosen. An index number is a pure ratio measured against a base." },
+        { "key": "B", "text": "A number that measures the relative change in a variable or a group of variables between a current period and a base period, the base being set at 100", "explanation": "Correct. An index number expresses the current situation as a percentage of a base situation fixed at 100, so it measures net relative change without carrying any unit." },
+        { "key": "C", "text": "The total money value of all goods traded in the current year", "explanation": "That is aggregate value, not an index. An index compares two periods and is a pure number." },
+        { "key": "D", "text": "The difference between the current price and the base price of a commodity", "explanation": "A difference is an absolute change in one price. An index number is a ratio, and it summarises a group, not a single commodity." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: What an index number is, §1 →", "href": "/foundation/quantitative-aptitude/index-numbers/#1-what-an-index-number-is-and-what-it-is-used-for" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Definition of an index number",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-002",
+      "topic": "Ch 18 · Index numbers · Base period",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In an index number series the base period value is:",
+      "options": [
+        { "key": "A", "text": "Always the largest value in the series", "explanation": "The base is chosen as a normal period, not a peak. It need not be the largest value." },
+        { "key": "B", "text": "Set equal to the current period value", "explanation": "The base and current periods are different periods; the base is the reference against which the current period is compared." },
+        { "key": "C", "text": "Always set equal to 100, so every other figure is read as a percentage of it", "explanation": "Correct. The base period is fixed at 100 by convention, so an index of 130 means a 30% rise over the base and 92 means an 8% fall." },
+        { "key": "D", "text": "Set equal to zero at the start of the series", "explanation": "An index measures a ratio, not a difference, so the base is 100 rather than 0." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: What an index number is, §1 →", "href": "/foundation/quantitative-aptitude/index-numbers/#1-what-an-index-number-is-and-what-it-is-used-for" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Base period set at 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-003",
+      "topic": "Ch 18 · Price relative",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A commodity cost ₹ 25 in the base year and ₹ 30 in the current year. Its price relative is:",
+      "options": [
+        { "key": "A", "text": "120", "explanation": "Correct. Price relative = p₁ ÷ p₀ × 100 = 30 ÷ 25 × 100 = 120, a 20% rise over the base year." },
+        { "key": "B", "text": "83.33", "explanation": "This is the reverse ratio, 25 ÷ 30 × 100. The current price goes on top of the base price, not below it." },
+        { "key": "C", "text": "20", "explanation": "This is the percentage rise, (30 − 25) ÷ 25 × 100. The relative is the whole ratio, 120, not just the increase." },
+        { "key": "D", "text": "105", "explanation": "This adds the ₹ 5 rise to 100. A price relative is a ratio times 100, not the base plus the rupee change." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Price relatives, §2 →", "href": "/foundation/quantitative-aptitude/index-numbers/#2-price-relatives" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Price relative = (p₁ ÷ p₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-004",
+      "topic": "Ch 18 · Price relative",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The price of a commodity rose from ₹ 80 in the base year to ₹ 100 in the current year. The price relative is:",
+      "options": [
+        { "key": "A", "text": "80", "explanation": "This is the reverse ratio, 80 ÷ 100 × 100. Current price divided by base price gives the relative." },
+        { "key": "B", "text": "25", "explanation": "This is the percentage rise, (100 − 80) ÷ 80 × 100. The relative is the full ratio, not the increase alone." },
+        { "key": "C", "text": "20", "explanation": "This is the rupee change ₹ 20, not a relative. A relative is a ratio expressed as a percentage." },
+        { "key": "D", "text": "125", "explanation": "Correct. Price relative = 100 ÷ 80 × 100 = 125, a 25% rise over the base year." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Price relatives, §2 →", "href": "/foundation/quantitative-aptitude/index-numbers/#2-price-relatives" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Price relative = (p₁ ÷ p₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-005",
+      "topic": "Ch 18 · Simple aggregate index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Four commodities had base-year prices ₹ 25, ₹ 20, ₹ 15 and ₹ 40, and current-year prices ₹ 30, ₹ 24, ₹ 20 and ₹ 46. The simple aggregate price index is:",
+      "options": [
+        { "key": "A", "text": "122.08", "explanation": "This is the simple average of the four price relatives, a different method. The simple aggregate divides the sum of current prices by the sum of base prices." },
+        { "key": "B", "text": "120", "explanation": "Correct. Simple aggregate = Σp₁ ÷ Σp₀ × 100 = (30 + 24 + 20 + 46) ÷ (25 + 20 + 15 + 40) × 100 = 120 ÷ 100 × 100 = 120." },
+        { "key": "C", "text": "83.33", "explanation": "This is the reverse ratio, Σp₀ ÷ Σp₁ × 100. Current prices go on top." },
+        { "key": "D", "text": "125", "explanation": "This does not match either sum. Add the four current prices (120) and the four base prices (100) and divide." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Simple aggregate method, §3 →", "href": "/foundation/quantitative-aptitude/index-numbers/#3-simple-aggregate-method" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Simple aggregate = (Σp₁ ÷ Σp₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-006",
+      "topic": "Ch 18 · Simple average of price relatives",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For four commodities the prices moved 40 → 50, 20 → 25, 50 → 60 and 25 → 30 (base → current). The simple average of price relatives is:",
+      "options": [
+        { "key": "A", "text": "122.22", "explanation": "This is the simple aggregate, Σp₁ ÷ Σp₀ × 100 = 165 ÷ 135 × 100. The simple average of relatives averages the four relatives instead." },
+        { "key": "B", "text": "490", "explanation": "This is the sum of the four relatives (125 + 125 + 120 + 120) without dividing by N = 4." },
+        { "key": "C", "text": "122.5", "explanation": "Correct. The relatives are 125, 125, 120 and 120, and their average is 490 ÷ 4 = 122.5." },
+        { "key": "D", "text": "120", "explanation": "This is only two of the four relatives. All four must be averaged: (125 + 125 + 120 + 120) ÷ 4." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Simple average of price relatives, §4 →", "href": "/foundation/quantitative-aptitude/index-numbers/#4-simple-average-of-price-relatives" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Simple average of relatives = Σ(p₁ ÷ p₀ × 100) ÷ N",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-007",
+      "topic": "Ch 18 · Simple aggregate · Limitation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The chief defect of the simple aggregate price index is that:",
+      "options": [
+        { "key": "A", "text": "It is distorted by the units in which prices are quoted, and gives every commodity equal importance", "explanation": "Correct. A price quoted per quintal swamps one quoted per kilogram, and each commodity counts alike regardless of how much is bought. Relatives cure the first fault and weighting the second." },
+        { "key": "B", "text": "It cannot be computed when prices rise", "explanation": "It can be computed for any prices; the objection is that the result is unreliable, not that it fails to exist." },
+        { "key": "C", "text": "It always understates the true change in prices", "explanation": "It can read too high or too low depending on the units chosen; the bias has no fixed direction." },
+        { "key": "D", "text": "It requires current-year quantity data that are hard to collect", "explanation": "The simple aggregate uses no quantities at all. That objection applies to the Paasche index." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Simple aggregate method, §3 →", "href": "/foundation/quantitative-aptitude/index-numbers/#3-simple-aggregate-method" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Limitations of the simple aggregate index",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-008",
+      "topic": "Ch 18 · Laspeyres index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (6, 10, 10, 12); B (2, 20, 3, 25); C (4, 15, 5, 10). The Laspeyres price index is:",
+      "options": [
+        { "key": "A", "text": "151.23", "explanation": "This is the Paasche index, Σp₁q₁ ÷ Σp₀q₁ × 100. Laspeyres uses base-year quantities q₀, not current quantities." },
+        { "key": "B", "text": "153.13", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100, which mixes price and quantity change. Laspeyres weights current prices by base quantities." },
+        { "key": "C", "text": "146.88", "explanation": "Correct. Laspeyres = Σp₁q₀ ÷ Σp₀q₀ × 100 = 235 ÷ 160 × 100 = 146.88, using Σp₁q₀ = 100 + 60 + 75 and Σp₀q₀ = 60 + 40 + 60." },
+        { "key": "D", "text": "149.04", "explanation": "This is Fisher's index, the geometric mean of Laspeyres and Paasche. It is not Laspeyres itself." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Laspeyres index, §6 →", "href": "/foundation/quantitative-aptitude/index-numbers/#6-laspeyres-index-base-year-weights" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Laspeyres = (Σp₁q₀ ÷ Σp₀q₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-009",
+      "topic": "Ch 18 · Paasche index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the same three commodities — A (6, 10, 10, 12); B (2, 20, 3, 25); C (4, 15, 5, 10) as (p₀, q₀, p₁, q₁) — the Paasche price index is:",
+      "options": [
+        { "key": "A", "text": "151.23", "explanation": "Correct. Paasche = Σp₁q₁ ÷ Σp₀q₁ × 100 = 245 ÷ 162 × 100 = 151.23, using Σp₁q₁ = 120 + 75 + 50 and Σp₀q₁ = 72 + 50 + 40." },
+        { "key": "B", "text": "146.88", "explanation": "This is the Laspeyres index, which weights by base-year quantities q₀. Paasche weights by current-year quantities q₁." },
+        { "key": "C", "text": "149.04", "explanation": "This is Fisher's index, the geometric mean of Laspeyres and Paasche, not Paasche alone." },
+        { "key": "D", "text": "153.13", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Paasche keeps current quantities in both numerator and denominator." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Paasche index, §7 →", "href": "/foundation/quantitative-aptitude/index-numbers/#7-paasche-index-current-year-weights" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Paasche = (Σp₁q₁ ÷ Σp₀q₁) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-010",
+      "topic": "Ch 18 · Fisher index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Four commodities have (p₀, q₀, p₁, q₁): A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90). Fisher's ideal price index is:",
+      "options": [
+        { "key": "A", "text": "133.75", "explanation": "This is the Paasche index alone. Fisher is the geometric mean of Laspeyres and Paasche, so it lies below the higher of the two." },
+        { "key": "B", "text": "132.99", "explanation": "Correct. Laspeyres = 1600 ÷ 1210 × 100 = 132.23 and Paasche = 1605 ÷ 1200 × 100 = 133.75, so Fisher = square root of (132.23 × 133.75) = 132.99." },
+        { "key": "C", "text": "132.23", "explanation": "This is the Laspeyres index alone. Fisher lies between Laspeyres and Paasche, above this figure." },
+        { "key": "D", "text": "132.64", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Fisher is built from Laspeyres and Paasche, not from the value ratio." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Fisher's ideal index, §8 →", "href": "/foundation/quantitative-aptitude/index-numbers/#8-fishers-ideal-index-the-geometric-mean-of-the-two" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fisher = square root of (Laspeyres × Paasche)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-011",
+      "topic": "Ch 18 · Laspeyres index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the four commodities A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90) as (p₀, q₀, p₁, q₁), the Laspeyres price index is:",
+      "options": [
+        { "key": "A", "text": "133.75", "explanation": "This is the Paasche index, weighted by current quantities q₁. Laspeyres uses base quantities q₀." },
+        { "key": "B", "text": "132.99", "explanation": "This is Fisher's index, the geometric mean of Laspeyres and Paasche, not Laspeyres itself." },
+        { "key": "C", "text": "132.64", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Laspeyres holds base quantities in both sums." },
+        { "key": "D", "text": "132.23", "explanation": "Correct. Laspeyres = Σp₁q₀ ÷ Σp₀q₀ × 100 = 1600 ÷ 1210 × 100 = 132.23." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Laspeyres index, §6 →", "href": "/foundation/quantitative-aptitude/index-numbers/#6-laspeyres-index-base-year-weights" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Laspeyres = (Σp₁q₀ ÷ Σp₀q₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-012",
+      "topic": "Ch 18 · Paasche index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the four commodities A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90) as (p₀, q₀, p₁, q₁), the Paasche price index is:",
+      "options": [
+        { "key": "A", "text": "133.75", "explanation": "Correct. Paasche = Σp₁q₁ ÷ Σp₀q₁ × 100 = 1605 ÷ 1200 × 100 = 133.75, using current-year quantities as weights." },
+        { "key": "B", "text": "132.23", "explanation": "This is the Laspeyres index, weighted by base quantities q₀. Paasche uses current quantities q₁." },
+        { "key": "C", "text": "132.99", "explanation": "This is Fisher's index, the geometric mean of Laspeyres and Paasche, not Paasche alone." },
+        { "key": "D", "text": "132.64", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Paasche keeps current quantities in both numerator and denominator." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Paasche index, §7 →", "href": "/foundation/quantitative-aptitude/index-numbers/#7-paasche-index-current-year-weights" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Paasche = (Σp₁q₁ ÷ Σp₀q₁) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-013",
+      "topic": "Ch 18 · Marshall-Edgeworth index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (10, 12, 12, 15); B (8, 15, 10, 10); C (6, 24, 8, 20). The Marshall-Edgeworth price index is:",
+      "options": [
+        { "key": "A", "text": "126.56", "explanation": "This is the Laspeyres index, Σp₁q₀ ÷ Σp₀q₀ × 100 = 486 ÷ 384 × 100. Marshall-Edgeworth uses (q₀ + q₁) as the weight." },
+        { "key": "B", "text": "125.71", "explanation": "This is the Paasche index, Σp₁q₁ ÷ Σp₀q₁ × 100 = 440 ÷ 350 × 100. Marshall-Edgeworth combines both weights." },
+        { "key": "C", "text": "126.16", "explanation": "Correct. Marshall-Edgeworth = (Σp₁q₀ + Σp₁q₁) ÷ (Σp₀q₀ + Σp₀q₁) × 100 = (486 + 440) ÷ (384 + 350) × 100 = 926 ÷ 734 × 100 = 126.16." },
+        { "key": "D", "text": "114.58", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100 = 440 ÷ 384 × 100. It mixes price and quantity change." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Marshall-Edgeworth and Dorbish-Bowley, §9 →", "href": "/foundation/quantitative-aptitude/index-numbers/#9-marshall-edgeworth-and-dorbish-bowley" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Marshall-Edgeworth = [(Σp₁q₀ + Σp₁q₁) ÷ (Σp₀q₀ + Σp₀q₁)] × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-014",
+      "topic": "Ch 18 · Dorbish-Bowley index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For three commodities A (6, 10, 10, 12); B (2, 20, 3, 25); C (4, 15, 5, 10) as (p₀, q₀, p₁, q₁), the Dorbish-Bowley price index is:",
+      "options": [
+        { "key": "A", "text": "146.88", "explanation": "This is the Laspeyres index alone. Dorbish-Bowley is the arithmetic mean of Laspeyres and Paasche." },
+        { "key": "B", "text": "149.05", "explanation": "Correct. Laspeyres = 235 ÷ 160 × 100 = 146.88 and Paasche = 245 ÷ 162 × 100 = 151.23, so Dorbish-Bowley = (146.88 + 151.23) ÷ 2 = 149.05." },
+        { "key": "C", "text": "151.23", "explanation": "This is the Paasche index alone. Dorbish-Bowley averages Laspeyres and Paasche." },
+        { "key": "D", "text": "298.11", "explanation": "This is the sum of Laspeyres and Paasche without dividing by 2. Dorbish-Bowley is their mean." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Marshall-Edgeworth and Dorbish-Bowley, §9 →", "href": "/foundation/quantitative-aptitude/index-numbers/#9-marshall-edgeworth-and-dorbish-bowley" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Dorbish-Bowley = (Laspeyres + Paasche) ÷ 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-015",
+      "topic": "Ch 18 · Fisher index · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Fisher's ideal index is the:",
+      "options": [
+        { "key": "A", "text": "Arithmetic mean of the Laspeyres and Paasche indices", "explanation": "The arithmetic mean of the two is the Dorbish-Bowley index. Fisher uses the geometric mean." },
+        { "key": "B", "text": "Sum of the Laspeyres and Paasche indices", "explanation": "Fisher is a mean, not a sum. It lies between the two, not above both." },
+        { "key": "C", "text": "Larger of the Laspeyres and Paasche indices", "explanation": "Fisher lies between the two indices, so it is never the larger of them." },
+        { "key": "D", "text": "Geometric mean of the Laspeyres and Paasche indices — the square root of their product", "explanation": "Correct. Fisher = square root of (Laspeyres × Paasche), which sits between the two and passes both reversal tests." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Fisher's ideal index, §8 →", "href": "/foundation/quantitative-aptitude/index-numbers/#8-fishers-ideal-index-the-geometric-mean-of-the-two" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Fisher is the geometric mean of Laspeyres and Paasche",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-016",
+      "topic": "Ch 18 · Laspeyres index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (10, 12, 12, 15); B (8, 15, 10, 10); C (6, 24, 8, 20). The Laspeyres price index is:",
+      "options": [
+        { "key": "A", "text": "126.56", "explanation": "Correct. Laspeyres = Σp₁q₀ ÷ Σp₀q₀ × 100 = 486 ÷ 384 × 100 = 126.56, using Σp₁q₀ = 144 + 150 + 192 and Σp₀q₀ = 120 + 120 + 144." },
+        { "key": "B", "text": "125.71", "explanation": "This is the Paasche index, weighted by current quantities q₁. Laspeyres uses base quantities q₀." },
+        { "key": "C", "text": "126.14", "explanation": "This is Fisher's index, the geometric mean of Laspeyres and Paasche, not Laspeyres itself." },
+        { "key": "D", "text": "114.58", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Laspeyres holds base quantities in both sums." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Laspeyres index, §6 →", "href": "/foundation/quantitative-aptitude/index-numbers/#6-laspeyres-index-base-year-weights" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Laspeyres = (Σp₁q₀ ÷ Σp₀q₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-017",
+      "topic": "Ch 18 · Paasche index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the three commodities A (10, 12, 12, 15); B (8, 15, 10, 10); C (6, 24, 8, 20) as (p₀, q₀, p₁, q₁), the Paasche price index is:",
+      "options": [
+        { "key": "A", "text": "126.56", "explanation": "This is the Laspeyres index, weighted by base quantities q₀. Paasche uses current quantities q₁." },
+        { "key": "B", "text": "126.14", "explanation": "This is Fisher's index, the geometric mean of Laspeyres and Paasche, not Paasche alone." },
+        { "key": "C", "text": "125.71", "explanation": "Correct. Paasche = Σp₁q₁ ÷ Σp₀q₁ × 100 = 440 ÷ 350 × 100 = 125.71, using Σp₁q₁ = 180 + 100 + 160 and Σp₀q₁ = 150 + 80 + 120." },
+        { "key": "D", "text": "114.58", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Paasche keeps current quantities in both sums." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Paasche index, §7 →", "href": "/foundation/quantitative-aptitude/index-numbers/#7-paasche-index-current-year-weights" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Paasche = (Σp₁q₁ ÷ Σp₀q₁) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-018",
+      "topic": "Ch 18 · Fisher index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (6, 10, 10, 12); B (2, 20, 3, 25); C (4, 15, 5, 10). Fisher's ideal price index is:",
+      "options": [
+        { "key": "A", "text": "146.88", "explanation": "This is the Laspeyres index alone. Fisher is the geometric mean of Laspeyres and Paasche." },
+        { "key": "B", "text": "149.04", "explanation": "Correct. Laspeyres = 235 ÷ 160 × 100 = 146.88 and Paasche = 245 ÷ 162 × 100 = 151.23, so Fisher = square root of (146.88 × 151.23) = 149.04." },
+        { "key": "C", "text": "151.23", "explanation": "This is the Paasche index alone. Fisher lies below the higher of the two indices." },
+        { "key": "D", "text": "153.13", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Fisher is built from Laspeyres and Paasche." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Fisher's ideal index, §8 →", "href": "/foundation/quantitative-aptitude/index-numbers/#8-fishers-ideal-index-the-geometric-mean-of-the-two" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fisher = square root of (Laspeyres × Paasche)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-019",
+      "topic": "Ch 18 · Fisher index · Why ideal",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Fisher's index is called the ideal index number mainly because it:",
+      "options": [
+        { "key": "A", "text": "Satisfies both the time-reversal test and the factor-reversal test", "explanation": "Correct. Alone among the standard weighted indices, Fisher passes both reversal tests, and it also balances the upward Laspeyres bias against the downward Paasche bias." },
+        { "key": "B", "text": "Is the easiest of all the index numbers to compute", "explanation": "Fisher needs both Laspeyres and Paasche and then a square root, so it is more work, not less. Ease is not why it is ideal." },
+        { "key": "C", "text": "Uses only base-year quantities as weights", "explanation": "That describes Laspeyres. Fisher uses both base and current weights through the two indices it combines." },
+        { "key": "D", "text": "Always equals 100 in every period", "explanation": "No index stays at 100 once prices move. Fisher varies with prices like any other index." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The tests of a good index number, §10 →", "href": "/foundation/quantitative-aptitude/index-numbers/#10-the-tests-of-a-good-index-number" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Fisher passes both reversal tests",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-020",
+      "topic": "Ch 18 · Time-reversal test",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the data A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90) as (p₀, q₀, p₁, q₁), the product P₀₁ × P₁₀ using Fisher's index (both taken as ratios) equals:",
+      "options": [
+        { "key": "A", "text": "0", "explanation": "The product of two positive index ratios cannot be zero. The time-reversal test requires it to equal 1." },
+        { "key": "B", "text": "100", "explanation": "This keeps the ×100 in each index. Used as ratios, Fisher's P₀₁ × P₁₀ = 1, not 100." },
+        { "key": "C", "text": "1", "explanation": "Correct. Fisher's index satisfies the time-reversal test: P₀₁ (1.3299) × P₁₀ (0.7519) = 1, so reversing the periods reverses the index exactly." },
+        { "key": "D", "text": "132.99", "explanation": "This is Fisher's index P₀₁ itself. The test multiplies it by the reversed index P₁₀, giving 1." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: The tests of a good index number, §10 →", "href": "/foundation/quantitative-aptitude/index-numbers/#10-the-tests-of-a-good-index-number" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Time-reversal test: P₀₁ × P₁₀ = 1 for Fisher",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-021",
+      "topic": "Ch 18 · Factor-reversal test",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the data A (6, 10, 10, 12); B (2, 20, 3, 25); C (4, 15, 5, 10) as (p₀, q₀, p₁, q₁), Fisher's price index times Fisher's quantity index (both as ratios) equals the value ratio Σp₁q₁ ÷ Σp₀q₀, which is:",
+      "options": [
+        { "key": "A", "text": "1.0000", "explanation": "That is the result of the time-reversal test, not the factor-reversal test. The factor-reversal test gives the value ratio." },
+        { "key": "B", "text": "1.5313", "explanation": "Correct. The value ratio = Σp₁q₁ ÷ Σp₀q₀ = 245 ÷ 160 = 1.5313, and Fisher's price ratio times Fisher's quantity ratio reproduces it exactly, which is the factor-reversal test." },
+        { "key": "C", "text": "1.4904", "explanation": "This is Fisher's price index as a ratio (149.04 ÷ 100). The factor-reversal test multiplies it by the Fisher quantity ratio to reach the value ratio." },
+        { "key": "D", "text": "153.13", "explanation": "This is the value index expressed as a percentage. As a ratio, for use in the test, it is 1.5313." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The tests of a good index number, §10 →", "href": "/foundation/quantitative-aptitude/index-numbers/#10-the-tests-of-a-good-index-number" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Factor-reversal test: P₀₁ × Q₀₁ = Σp₁q₁ ÷ Σp₀q₀ for Fisher",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-022",
+      "topic": "Ch 18 · Time-reversal test · Formula",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The time-reversal test is satisfied when (indices taken as ratios):",
+      "options": [
+        { "key": "A", "text": "P₀₁ + P₁₀ = 1", "explanation": "The test multiplies the two indices, it does not add them. The sum of two ratios near 1.3 and 0.75 is about 2, not 1." },
+        { "key": "B", "text": "P₀₁ × Q₀₁ = value ratio", "explanation": "That is the factor-reversal test, which pairs a price index with a quantity index. The time-reversal test pairs the price index with its own reverse." },
+        { "key": "C", "text": "P₀₁ = P₁₀", "explanation": "The forward and reverse indices are reciprocals, not equals. Their product, not their equality, is the test." },
+        { "key": "D", "text": "P₀₁ × P₁₀ = 1", "explanation": "Correct. Reversing the periods should invert the index, so the forward and reverse ratios multiply to 1. Fisher satisfies this; Laspeyres and Paasche do not." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: The tests of a good index number, §10 →", "href": "/foundation/quantitative-aptitude/index-numbers/#10-the-tests-of-a-good-index-number" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Time-reversal test: P₀₁ × P₁₀ = 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-023",
+      "topic": "Ch 18 · Factor-reversal test · Formula",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The factor-reversal test is satisfied when (indices taken as ratios):",
+      "options": [
+        { "key": "A", "text": "P₀₁ × Q₀₁ = Σp₁q₁ ÷ Σp₀q₀", "explanation": "Correct. The price index times the quantity index should equal the value ratio, because price times quantity is value. Fisher satisfies this; Laspeyres and Paasche do not." },
+        { "key": "B", "text": "P₀₁ × P₁₀ = 1", "explanation": "That is the time-reversal test, which pairs the price index with its own reverse. The factor-reversal test pairs price with quantity." },
+        { "key": "C", "text": "P₀₁ + Q₀₁ = 1", "explanation": "The test multiplies the price and quantity indices; it does not add them, and the result is the value ratio, not 1." },
+        { "key": "D", "text": "P₀₁ = Q₀₁", "explanation": "Price and quantity indices are generally different. Their product equalling the value ratio is the test, not their equality." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The tests of a good index number, §10 →", "href": "/foundation/quantitative-aptitude/index-numbers/#10-the-tests-of-a-good-index-number" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Factor-reversal test: P₀₁ × Q₀₁ = Σp₁q₁ ÷ Σp₀q₀",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-024",
+      "topic": "Ch 18 · Quantity index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Four commodities have (p₀, q₀, p₁, q₁): A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90). The Laspeyres quantity index is:",
+      "options": [
+        { "key": "A", "text": "100.83", "explanation": "This is the reverse ratio, Σq₀p₀ ÷ Σq₁p₀ × 100. The current quantities go on top in a quantity index." },
+        { "key": "B", "text": "132.23", "explanation": "This is the Laspeyres price index. A quantity index weights quantities by prices, using Σq₁p₀ over Σq₀p₀." },
+        { "key": "C", "text": "99.17", "explanation": "Correct. Laspeyres quantity index = Σq₁p₀ ÷ Σq₀p₀ × 100 = Σp₀q₁ ÷ Σp₀q₀ × 100 = 1200 ÷ 1210 × 100 = 99.17, so quantities barely moved." },
+        { "key": "D", "text": "99.74", "explanation": "This is the Fisher quantity index, the geometric mean of the Laspeyres and Paasche quantity indices, not the Laspeyres quantity index alone." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Quantity and value index numbers, §11 →", "href": "/foundation/quantitative-aptitude/index-numbers/#11-quantity-and-value-index-numbers" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Laspeyres quantity index = (Σq₁p₀ ÷ Σq₀p₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-025",
+      "topic": "Ch 18 · Value index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the four commodities A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90) as (p₀, q₀, p₁, q₁), the value index is:",
+      "options": [
+        { "key": "A", "text": "132.23", "explanation": "This is the Laspeyres price index, Σp₁q₀ ÷ Σp₀q₀ × 100. The value index uses current values in the numerator, Σp₁q₁." },
+        { "key": "B", "text": "133.75", "explanation": "This is the Paasche price index, Σp₁q₁ ÷ Σp₀q₁ × 100. The value index divides by base-year value, Σp₀q₀." },
+        { "key": "C", "text": "132.99", "explanation": "This is Fisher's price index. The value index is a separate quantity, Σp₁q₁ ÷ Σp₀q₀ × 100." },
+        { "key": "D", "text": "132.64", "explanation": "Correct. Value index = Σp₁q₁ ÷ Σp₀q₀ × 100 = 1605 ÷ 1210 × 100 = 132.64, which combines both price and quantity change." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Quantity and value index numbers, §11 →", "href": "/foundation/quantitative-aptitude/index-numbers/#11-quantity-and-value-index-numbers" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Value index = (Σp₁q₁ ÷ Σp₀q₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-026",
+      "topic": "Ch 18 · Cost of living · Aggregate expenditure",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A family's basket has (p₀, q₀, p₁): item 1 (8, 25, 10); item 2 (6, 50, 7); item 3 (5, 20, 6). The cost of living index by the aggregate expenditure method is:",
+      "options": [
+        { "key": "A", "text": "120", "explanation": "Correct. Aggregate expenditure = Σp₁q₀ ÷ Σp₀q₀ × 100 = (250 + 350 + 120) ÷ (200 + 300 + 100) × 100 = 720 ÷ 600 × 100 = 120." },
+        { "key": "B", "text": "120.56", "explanation": "This is the simple average of the three price relatives (125, 116.67, 120), which ignores the quantities. The aggregate expenditure method weights by base quantities." },
+        { "key": "C", "text": "83.33", "explanation": "This is the reverse ratio, Σp₀q₀ ÷ Σp₁q₀ × 100. Current-year expenditure on the base basket goes on top." },
+        { "key": "D", "text": "130", "explanation": "This matches neither sum. Compute Σp₁q₀ = 720 and Σp₀q₀ = 600 and divide." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Cost of living index, §12 →", "href": "/foundation/quantitative-aptitude/index-numbers/#12-cost-of-living-index-the-two-methods" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cost of living (aggregate expenditure) = (Σp₁q₀ ÷ Σp₀q₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-027",
+      "topic": "Ch 18 · Cost of living · Family budget",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A consumer price index has five groups with (group index R, weight W): Food (140, 50); Clothing (120, 10); Fuel and light (110, 15); Rent (125, 15); Miscellaneous (130, 10). By the family budget method the index is:",
+      "options": [
+        { "key": "A", "text": "13,025", "explanation": "This is Σ(RW) before dividing by ΣW. The weights total 100, so divide the 13,025 by 100." },
+        { "key": "B", "text": "130.25", "explanation": "Correct. Family budget index = Σ(RW) ÷ ΣW = (140×50 + 120×10 + 110×15 + 125×15 + 130×10) ÷ 100 = 13,025 ÷ 100 = 130.25." },
+        { "key": "C", "text": "125", "explanation": "This is the unweighted mean of the five group indices, (140 + 120 + 110 + 125 + 130) ÷ 5. The family budget method weights each index by W." },
+        { "key": "D", "text": "100", "explanation": "An index of 100 would mean no change. The RW total of 13,025 over a weight of 100 gives 130.25." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Cost of living index, §12 →", "href": "/foundation/quantitative-aptitude/index-numbers/#12-cost-of-living-index-the-two-methods" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cost of living (family budget) = Σ(RW) ÷ ΣW",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-028",
+      "topic": "Ch 18 · Cost of living · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The cost of living index number (consumer price index) measures:",
+      "options": [
+        { "key": "A", "text": "The change in the wholesale price of a single commodity", "explanation": "That is a price relative for one commodity at wholesale. The cost of living index covers a whole retail basket for a defined group." },
+        { "key": "B", "text": "The change in industrial output over a year", "explanation": "That is the index of industrial production, a quantity index. The cost of living index tracks prices of a consumption basket." },
+        { "key": "C", "text": "The change in the cost of a fixed basket of goods and services bought by a defined group of consumers", "explanation": "Correct. It tracks how much a fixed basket, representative of a particular group, costs over time, and is used to revise wages and dearness allowance." },
+        { "key": "D", "text": "The change in the exchange rate of the rupee", "explanation": "The exchange rate is a different measure. The cost of living index compares the cost of a consumption basket across periods." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Cost of living index, §12 →", "href": "/foundation/quantitative-aptitude/index-numbers/#12-cost-of-living-index-the-two-methods" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Cost of living index measures the cost of a fixed basket",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-029",
+      "topic": "Ch 18 · Real wage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A worker earns ₹ 18,000 a month when the cost of living index stands at 120 (base year = 100). The real wage, in base-year rupees, is:",
+      "options": [
+        { "key": "A", "text": "₹ 21,600", "explanation": "This multiplies the money wage by 120 ÷ 100 instead of dividing. Deflating divides by the index and restores the base of 100." },
+        { "key": "B", "text": "₹ 18,000", "explanation": "This leaves the money wage unchanged, ignoring the 20% rise in prices. The real wage must be lower than the money wage when the index exceeds 100." },
+        { "key": "C", "text": "₹ 14,400", "explanation": "This deflates by 125 rather than the given index of 120. Use the index stated in the question." },
+        { "key": "D", "text": "₹ 15,000", "explanation": "Correct. Real wage = money wage ÷ index × 100 = 18,000 ÷ 120 × 100 = ₹ 15,000, the base-year purchasing power of the current pay." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Deflating, §13 →", "href": "/foundation/quantitative-aptitude/index-numbers/#13-deflating-from-a-money-wage-to-a-real-wage" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Real wage = (money wage ÷ cost of living index) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-030",
+      "topic": "Ch 18 · Purchasing power of the rupee",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "When the cost of living index is 125 (base year = 100), the purchasing power of the rupee, in base-year rupees, is:",
+      "options": [
+        { "key": "A", "text": "₹ 0.80", "explanation": "Correct. Purchasing power = 100 ÷ index = 100 ÷ 125 = ₹ 0.80, so a rupee now buys 80 paise of what it bought in the base year." },
+        { "key": "B", "text": "₹ 1.25", "explanation": "This is index ÷ 100. The purchasing power is the reciprocal, 100 ÷ index, and must be below ₹ 1 once prices have risen." },
+        { "key": "C", "text": "₹ 0.75", "explanation": "This subtracts 0.25 from 1. The purchasing power is 100 ÷ 125 = 0.80, not 1 minus the fractional rise." },
+        { "key": "D", "text": "₹ 1.00", "explanation": "The rupee holds its full value only when the index is 100. At 125 its purchasing power has fallen to ₹ 0.80." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Deflating, §13 →", "href": "/foundation/quantitative-aptitude/index-numbers/#13-deflating-from-a-money-wage-to-a-real-wage" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Purchasing power of the rupee = 100 ÷ cost of living index",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-031",
+      "topic": "Ch 18 · Real wage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An employee is paid ₹ 24,000 a month when the cost of living index is 150 (base year = 100). The real wage, in base-year rupees, is:",
+      "options": [
+        { "key": "A", "text": "₹ 36,000", "explanation": "This multiplies by 150 ÷ 100 instead of dividing. Deflating always divides the money wage by the index." },
+        { "key": "B", "text": "₹ 24,000", "explanation": "This leaves the money wage unchanged. With the index at 150, prices are half as high again, so the real wage is well below the money wage." },
+        { "key": "C", "text": "₹ 16,000", "explanation": "Correct. Real wage = 24,000 ÷ 150 × 100 = ₹ 16,000, the base-year value of the current pay." },
+        { "key": "D", "text": "₹ 15,000", "explanation": "This deflates by 160 rather than 150. Use the index given, 150, so the answer is ₹ 16,000." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Deflating, §13 →", "href": "/foundation/quantitative-aptitude/index-numbers/#13-deflating-from-a-money-wage-to-a-real-wage" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Real wage = (money wage ÷ cost of living index) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-032",
+      "topic": "Ch 18 · Deflating · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Deflating a money wage means:",
+      "options": [
+        { "key": "A", "text": "Increasing the money wage by the rate of inflation", "explanation": "That would raise the money figure, not remove the price effect. Deflating strips the price rise out to reveal real value." },
+        { "key": "B", "text": "Dividing the money wage by the cost of living index and restoring the base of 100, to find its real value", "explanation": "Correct. Deflating removes the price effect: real wage = money wage ÷ index × 100, giving the base-year purchasing power of the pay." },
+        { "key": "C", "text": "Multiplying the money wage by the cost of living index", "explanation": "Multiplying by the index inflates the figure further. Deflating divides by it." },
+        { "key": "D", "text": "Subtracting the base wage from the current wage", "explanation": "That is an absolute money difference, not a real value. Deflating uses the index, not a subtraction." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Deflating, §13 →", "href": "/foundation/quantitative-aptitude/index-numbers/#13-deflating-from-a-money-wage-to-a-real-wage" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Deflating removes the price effect from a money figure",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-033",
+      "topic": "Ch 18 · Base shifting",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A price index series reads 2019 = 100, 2020 = 120, 2021 = 150, 2022 = 180. If the base is shifted to 2021 = 100, the index for 2022 becomes:",
+      "options": [
+        { "key": "A", "text": "150", "explanation": "This subtracts 30 from 180. Base shifting divides by the new base year's old index, 150, and multiplies by 100." },
+        { "key": "B", "text": "83.33", "explanation": "This is the reverse ratio, 150 ÷ 180 × 100. The current year's index goes on top." },
+        { "key": "C", "text": "30", "explanation": "This is the rupee-style difference 180 − 150, not a rebased index. Divide 180 by 150 and multiply by 100." },
+        { "key": "D", "text": "120", "explanation": "Correct. New index = old index of 2022 ÷ old index of 2021 × 100 = 180 ÷ 150 × 100 = 120." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Base shifting, §14 →", "href": "/foundation/quantitative-aptitude/index-numbers/#14-base-shifting" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Base shifting: new index = (old index of year ÷ old index of new base) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-034",
+      "topic": "Ch 18 · Splicing",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An old index series ends at 2020 = 150. A new series begins 2020 = 100, 2021 = 110, 2022 = 125. Splicing the new series onto the old base, the 2022 figure is:",
+      "options": [
+        { "key": "A", "text": "187.5", "explanation": "Correct. Spliced figure = new index × (old overlap value ÷ 100) = 125 × 150 ÷ 100 = 187.5, so the new series is rescaled to the old base." },
+        { "key": "B", "text": "83.33", "explanation": "This is the reverse ratio, 125 × 100 ÷ 150. To carry the new series onto the old base, multiply by 150 ÷ 100." },
+        { "key": "C", "text": "275", "explanation": "This adds 125 and 150. Splicing multiplies the new figure by the overlap ratio, it does not add the two." },
+        { "key": "D", "text": "125", "explanation": "This is the unspliced new-series figure. Splicing rescales it by the overlap ratio 150 ÷ 100 = 1.5." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Splicing, §15 →", "href": "/foundation/quantitative-aptitude/index-numbers/#15-splicing" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Splicing: new index × (old overlap value ÷ 100)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-035",
+      "topic": "Ch 18 · Base shifting · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Base shifting is used to:",
+      "options": [
+        { "key": "A", "text": "Collect fresh prices for a new base year", "explanation": "Base shifting needs no new data; it works entirely from the existing index series. Fresh prices would be a full re-basing exercise, not base shifting." },
+        { "key": "B", "text": "Join two overlapping index series into one continuous series", "explanation": "That is splicing. Base shifting re-expresses a single series on a new base, it does not join two series." },
+        { "key": "C", "text": "Re-express an existing index series on a new, more recent base year without collecting new data", "explanation": "Correct. Divide every figure by the old index of the chosen new base year and multiply by 100; the series is unchanged in shape, only the year reading 100 moves." },
+        { "key": "D", "text": "Convert a price index into a quantity index", "explanation": "Base shifting keeps the same variable; it only changes the reference year. Price and quantity indices are computed from different formulas." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Base shifting, §14 →", "href": "/foundation/quantitative-aptitude/index-numbers/#14-base-shifting" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Purpose of base shifting",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-036",
+      "topic": "Ch 18 · Splicing · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Splicing of index numbers is the technique of:",
+      "options": [
+        { "key": "A", "text": "Removing the price effect from a money figure", "explanation": "That is deflating. Splicing joins two index series, it does not convert money to real value." },
+        { "key": "B", "text": "Averaging the Laspeyres and Paasche indices", "explanation": "Averaging the two gives the Dorbish-Bowley index. Splicing links two series that overlap in a year." },
+        { "key": "C", "text": "Shifting a single series to a new base year", "explanation": "That is base shifting. Splicing works on two different series, not one." },
+        { "key": "D", "text": "Joining two overlapping index series, computed on different bases, into one continuous series", "explanation": "Correct. Using the overlap year, the new series is rescaled by the old series' value so the combined series runs on one scale with no jump." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Splicing, §15 →", "href": "/foundation/quantitative-aptitude/index-numbers/#15-splicing" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Purpose of splicing",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-037",
+      "topic": "Ch 18 · Fisher index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (10, 12, 12, 15); B (8, 15, 10, 10); C (6, 24, 8, 20). Fisher's ideal price index is:",
+      "options": [
+        { "key": "A", "text": "126.56", "explanation": "This is the Laspeyres index alone, 486 ÷ 384 × 100. Fisher is the geometric mean of Laspeyres and Paasche." },
+        { "key": "B", "text": "126.14", "explanation": "Correct. Laspeyres = 486 ÷ 384 × 100 = 126.56 and Paasche = 440 ÷ 350 × 100 = 125.71, so Fisher = square root of (126.56 × 125.71) = 126.14." },
+        { "key": "C", "text": "125.71", "explanation": "This is the Paasche index alone, 440 ÷ 350 × 100. Fisher lies between Laspeyres and Paasche." },
+        { "key": "D", "text": "114.58", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Fisher is built from the Laspeyres and Paasche price indices." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Fisher's ideal index, §8 →", "href": "/foundation/quantitative-aptitude/index-numbers/#8-fishers-ideal-index-the-geometric-mean-of-the-two" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Fisher = square root of (Laspeyres × Paasche)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-038",
+      "topic": "Ch 18 · Quantity index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (10, 12, 12, 15); B (8, 15, 10, 10); C (6, 24, 8, 20). The Laspeyres quantity index is:",
+      "options": [
+        { "key": "A", "text": "91.15", "explanation": "Correct. Laspeyres quantity index = Σq₁p₀ ÷ Σq₀p₀ × 100 = Σp₀q₁ ÷ Σp₀q₀ × 100 = 350 ÷ 384 × 100 = 91.15, so quantities fell overall." },
+        { "key": "B", "text": "126.56", "explanation": "This is the Laspeyres price index. A quantity index weights the current quantities by base prices, using Σq₁p₀ over Σq₀p₀." },
+        { "key": "C", "text": "109.71", "explanation": "This is the reverse ratio, Σp₀q₀ ÷ Σp₀q₁ × 100 = 384 ÷ 350 × 100. Current quantities go on top." },
+        { "key": "D", "text": "114.58", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. A quantity index holds prices fixed as the weights." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Quantity and value index numbers, §11 →", "href": "/foundation/quantitative-aptitude/index-numbers/#11-quantity-and-value-index-numbers" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Laspeyres quantity index = (Σq₁p₀ ÷ Σq₀p₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-039",
+      "topic": "Ch 18 · Value index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (6, 10, 10, 12); B (2, 20, 3, 25); C (4, 15, 5, 10). The value index is:",
+      "options": [
+        { "key": "A", "text": "146.88", "explanation": "This is the Laspeyres price index, Σp₁q₀ ÷ Σp₀q₀ × 100. The value index uses current values, Σp₁q₁, in the numerator." },
+        { "key": "B", "text": "151.23", "explanation": "This is the Paasche price index, Σp₁q₁ ÷ Σp₀q₁ × 100. The value index divides by base-year value, Σp₀q₀." },
+        { "key": "C", "text": "153.13", "explanation": "Correct. Value index = Σp₁q₁ ÷ Σp₀q₀ × 100 = 245 ÷ 160 × 100 = 153.13, combining both price and quantity change." },
+        { "key": "D", "text": "149.04", "explanation": "This is Fisher's price index. The value index is the ratio of total current value to total base value." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Quantity and value index numbers, §11 →", "href": "/foundation/quantitative-aptitude/index-numbers/#11-quantity-and-value-index-numbers" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Value index = (Σp₁q₁ ÷ Σp₀q₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-040",
+      "topic": "Ch 18 · Real wage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A supervisor earns ₹ 30,000 a month when the cost of living index is 125 (base year = 100). The real wage, in base-year rupees, is:",
+      "options": [
+        { "key": "A", "text": "₹ 37,500", "explanation": "This multiplies by 125 ÷ 100. Deflating divides the money wage by the index and multiplies by 100." },
+        { "key": "B", "text": "₹ 30,000", "explanation": "This leaves the money wage unchanged, ignoring the 25% rise in prices. The real wage must be lower." },
+        { "key": "C", "text": "₹ 25,000", "explanation": "This deflates by 120 rather than 125. Use the index stated, 125, giving ₹ 24,000." },
+        { "key": "D", "text": "₹ 24,000", "explanation": "Correct. Real wage = 30,000 ÷ 125 × 100 = ₹ 24,000, the base-year value of the current pay." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Deflating, §13 →", "href": "/foundation/quantitative-aptitude/index-numbers/#13-deflating-from-a-money-wage-to-a-real-wage" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Real wage = (money wage ÷ cost of living index) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-041",
+      "topic": "Ch 18 · Purchasing power of the rupee",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "When the cost of living index is 250 (base year = 100), the purchasing power of the rupee, in base-year rupees, is:",
+      "options": [
+        { "key": "A", "text": "₹ 0.40", "explanation": "Correct. Purchasing power = 100 ÷ index = 100 ÷ 250 = ₹ 0.40, so a rupee now buys 40 paise of what it once did." },
+        { "key": "B", "text": "₹ 2.50", "explanation": "This is index ÷ 100. The purchasing power is the reciprocal, 100 ÷ index, and falls as prices rise." },
+        { "key": "C", "text": "₹ 0.25", "explanation": "This divides by 400, not 250. The purchasing power is 100 ÷ 250 = ₹ 0.40." },
+        { "key": "D", "text": "₹ 0.60", "explanation": "This subtracts 0.40 from 1. The purchasing power is 100 ÷ 250 = ₹ 0.40 directly." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Deflating, §13 →", "href": "/foundation/quantitative-aptitude/index-numbers/#13-deflating-from-a-money-wage-to-a-real-wage" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Purchasing power of the rupee = 100 ÷ cost of living index",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-042",
+      "topic": "Ch 18 · Simple aggregate index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities had base-year prices ₹ 50, ₹ 30 and ₹ 20, and current-year prices ₹ 60, ₹ 39 and ₹ 24. The simple aggregate price index is:",
+      "options": [
+        { "key": "A", "text": "81.30", "explanation": "This is the reverse ratio, Σp₀ ÷ Σp₁ × 100 = 100 ÷ 123 × 100. Current prices go on top." },
+        { "key": "B", "text": "123", "explanation": "Correct. Simple aggregate = Σp₁ ÷ Σp₀ × 100 = (60 + 39 + 24) ÷ (50 + 30 + 20) × 100 = 123 ÷ 100 × 100 = 123." },
+        { "key": "C", "text": "123.33", "explanation": "This is the simple average of the three price relatives (120, 130, 120), a different method from the simple aggregate." },
+        { "key": "D", "text": "120", "explanation": "This matches only part of the data. Add the three current prices (123) and the three base prices (100) and divide." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Simple aggregate method, §3 →", "href": "/foundation/quantitative-aptitude/index-numbers/#3-simple-aggregate-method" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Simple aggregate = (Σp₁ ÷ Σp₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-043",
+      "topic": "Ch 18 · Simple average of price relatives",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For four commodities the prices moved 30 → 36, 50 → 65, 20 → 23 and 40 → 44 (base → current). The simple average of price relatives is:",
+      "options": [
+        { "key": "A", "text": "120", "explanation": "This is the simple aggregate, Σp₁ ÷ Σp₀ × 100 = 168 ÷ 140 × 100. The simple average of relatives averages the four relatives instead." },
+        { "key": "B", "text": "475", "explanation": "This is the sum of the four relatives (120 + 130 + 115 + 110) without dividing by N = 4." },
+        { "key": "C", "text": "118.75", "explanation": "Correct. The relatives are 120, 130, 115 and 110, and their average is 475 ÷ 4 = 118.75." },
+        { "key": "D", "text": "117.5", "explanation": "This does not match the average of the four relatives. Sum 120 + 130 + 115 + 110 = 475 and divide by 4." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Simple average of price relatives, §4 →", "href": "/foundation/quantitative-aptitude/index-numbers/#4-simple-average-of-price-relatives" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Simple average of relatives = Σ(p₁ ÷ p₀ × 100) ÷ N",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-044",
+      "topic": "Ch 18 · Price relative",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A commodity cost ₹ 150 in the base year and ₹ 180 in the current year. Its price relative is:",
+      "options": [
+        { "key": "A", "text": "83.33", "explanation": "This is the reverse ratio, 150 ÷ 180 × 100. The current price divided by the base price gives the relative." },
+        { "key": "B", "text": "30", "explanation": "This is the rupee change ₹ 30, not a relative. A relative is a ratio expressed as a percentage." },
+        { "key": "C", "text": "20", "explanation": "This is the percentage rise, (180 − 150) ÷ 150 × 100. The relative is the whole ratio, 120." },
+        { "key": "D", "text": "120", "explanation": "Correct. Price relative = 180 ÷ 150 × 100 = 120, a 20% rise over the base year." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Price relatives, §2 →", "href": "/foundation/quantitative-aptitude/index-numbers/#2-price-relatives" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Price relative = (p₁ ÷ p₀) × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-045",
+      "topic": "Ch 18 · Marshall-Edgeworth index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three commodities have (p₀, q₀, p₁, q₁): A (6, 10, 10, 12); B (2, 20, 3, 25); C (4, 15, 5, 10). The Marshall-Edgeworth price index is:",
+      "options": [
+        { "key": "A", "text": "149.07", "explanation": "Correct. Marshall-Edgeworth = (Σp₁q₀ + Σp₁q₁) ÷ (Σp₀q₀ + Σp₀q₁) × 100 = (235 + 245) ÷ (160 + 162) × 100 = 480 ÷ 322 × 100 = 149.07." },
+        { "key": "B", "text": "146.88", "explanation": "This is the Laspeyres index, Σp₁q₀ ÷ Σp₀q₀ × 100. Marshall-Edgeworth uses (q₀ + q₁) as the weight." },
+        { "key": "C", "text": "151.23", "explanation": "This is the Paasche index, Σp₁q₁ ÷ Σp₀q₁ × 100. Marshall-Edgeworth combines both weights." },
+        { "key": "D", "text": "153.13", "explanation": "This is the value index, Σp₁q₁ ÷ Σp₀q₀ × 100. Marshall-Edgeworth adds the base and current quantity weights instead." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Marshall-Edgeworth and Dorbish-Bowley, §9 →", "href": "/foundation/quantitative-aptitude/index-numbers/#9-marshall-edgeworth-and-dorbish-bowley" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Marshall-Edgeworth = [(Σp₁q₀ + Σp₁q₁) ÷ (Σp₀q₀ + Σp₀q₁)] × 100",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-046",
+      "topic": "Ch 18 · Dorbish-Bowley index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Four commodities have (p₀, q₀, p₁, q₁): A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90). The Dorbish-Bowley price index is:",
+      "options": [
+        { "key": "A", "text": "132.23", "explanation": "This is the Laspeyres index alone. Dorbish-Bowley is the arithmetic mean of Laspeyres and Paasche." },
+        { "key": "B", "text": "132.99", "explanation": "Correct. Laspeyres = 1600 ÷ 1210 × 100 = 132.23 and Paasche = 1605 ÷ 1200 × 100 = 133.75, so Dorbish-Bowley = (132.23 + 133.75) ÷ 2 = 132.99." },
+        { "key": "C", "text": "133.75", "explanation": "This is the Paasche index alone. Dorbish-Bowley averages Laspeyres and Paasche." },
+        { "key": "D", "text": "265.98", "explanation": "This is the sum of Laspeyres and Paasche without dividing by 2. Dorbish-Bowley is their mean." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Marshall-Edgeworth and Dorbish-Bowley, §9 →", "href": "/foundation/quantitative-aptitude/index-numbers/#9-marshall-edgeworth-and-dorbish-bowley" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Dorbish-Bowley = (Laspeyres + Paasche) ÷ 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-047",
+      "topic": "Ch 18 · Fisher quantity index",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Four commodities have (p₀, q₀, p₁, q₁): A (5, 50, 8, 60); B (8, 40, 10, 30); C (12, 20, 15, 25); D (4, 100, 5, 90). The Fisher quantity index is:",
+      "options": [
+        { "key": "A", "text": "99.17", "explanation": "This is the Laspeyres quantity index, Σp₀q₁ ÷ Σp₀q₀ × 100. Fisher is the geometric mean of the Laspeyres and Paasche quantity indices." },
+        { "key": "B", "text": "132.99", "explanation": "This is the Fisher price index. The quantity index weights quantities by prices, not prices by quantities." },
+        { "key": "C", "text": "99.74", "explanation": "Correct. Laspeyres quantity = 1200 ÷ 1210 × 100 = 99.17 and Paasche quantity = 1605 ÷ 1600 × 100 = 100.31, so Fisher quantity = square root of (99.17 × 100.31) = 99.74." },
+        { "key": "D", "text": "100.31", "explanation": "This is the Paasche quantity index alone, Σp₁q₁ ÷ Σp₁q₀ × 100. Fisher takes the geometric mean of it and the Laspeyres quantity index." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Quantity and value index numbers, §11 →", "href": "/foundation/quantitative-aptitude/index-numbers/#11-quantity-and-value-index-numbers" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Fisher quantity index = square root of (Laspeyres quantity × Paasche quantity)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-048",
+      "topic": "Ch 18 · Cost of living · Family budget",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A consumer price index has four groups with (group index R, weight W): Food (160, 40); Clothing (120, 20); House rent (130, 25); Fuel (110, 15). By the family budget method the index is:",
+      "options": [
+        { "key": "A", "text": "13,700", "explanation": "This is Σ(RW) before dividing by ΣW. The weights total 100, so divide 13,700 by 100." },
+        { "key": "B", "text": "130", "explanation": "This is the unweighted mean of the four group indices, (160 + 120 + 130 + 110) ÷ 4. The family budget method weights each index by W." },
+        { "key": "C", "text": "100", "explanation": "An index of 100 would mean no change. The weighted total gives 137." },
+        { "key": "D", "text": "137", "explanation": "Correct. Family budget index = Σ(RW) ÷ ΣW = (160×40 + 120×20 + 130×25 + 110×15) ÷ 100 = 13,700 ÷ 100 = 137." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Cost of living index, §12 →", "href": "/foundation/quantitative-aptitude/index-numbers/#12-cost-of-living-index-the-two-methods" },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cost of living (family budget) = Σ(RW) ÷ ΣW",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-049",
+      "topic": "Ch 18 · Fixed base vs chain base",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a fixed-base index series, each year's index is computed with reference to:",
+      "options": [
+        { "key": "A", "text": "One fixed base year, the same for every year in the series", "explanation": "Correct. A fixed-base series compares every year with a single chosen base year, whereas a chain-base series compares each year with the immediately preceding year." },
+        { "key": "B", "text": "The immediately preceding year", "explanation": "That describes a chain-base (link relative) series. In a fixed-base series the reference year does not move." },
+        { "key": "C", "text": "The average of all the years in the series", "explanation": "The base is a single chosen year set at 100, not an average of all years." },
+        { "key": "D", "text": "The year with the lowest prices", "explanation": "The base is chosen as a normal year, not the cheapest. It need not have the lowest prices." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What an index number is, §1 →", "href": "/foundation/quantitative-aptitude/index-numbers/#1-what-an-index-number-is-and-what-it-is-used-for" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Fixed base compares every year with one base year",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c18-050",
+      "topic": "Ch 18 · Uses of index numbers",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Index numbers are often described as economic barometers because they:",
+      "options": [
+        { "key": "A", "text": "Fix the prices of commodities in the market", "explanation": "Index numbers measure price change; they do not set prices. A barometer registers pressure, it does not create it." },
+        { "key": "B", "text": "Measure the net change in the general level of prices or activity, signalling the state of the economy", "explanation": "Correct. Like a barometer registering pressure, an index number registers the net movement of many prices or quantities and so signals inflation, cost of living and output trends." },
+        { "key": "C", "text": "Guarantee that wages will always rise faster than prices", "explanation": "Index numbers inform wage revision but guarantee nothing about the outcome. They measure, they do not promise." },
+        { "key": "D", "text": "Replace the need for any statistical averaging", "explanation": "An index number is itself a form of weighted average; it uses averaging rather than removing the need for it." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: What an index number is, §1 →", "href": "/foundation/quantitative-aptitude/index-numbers/#1-what-an-index-number-is-and-what-it-is-used-for" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Index numbers as economic barometers",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

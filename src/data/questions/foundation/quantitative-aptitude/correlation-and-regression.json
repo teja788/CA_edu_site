@@ -1,0 +1,2109 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "correlation-and-regression",
+  "chapter": "Ch 17 — Correlation and Regression",
+  "questions": [
+    {
+      "id": "q-f3c17-001",
+      "topic": "Ch 17 · Correlation · Meaning",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Two quantities are said to be correlated when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "One is always exactly double the other",
+          "explanation": "That is one particular exact relationship. Correlation covers any tendency to move together, not only a fixed multiple."
+        },
+        {
+          "key": "B",
+          "text": "They tend to change together, so that a value of one gives information about the likely value of the other",
+          "explanation": "Correct. Correlation is the tendency of two variables to move together; the coefficient measures the strength and direction of that tendency."
+        },
+        {
+          "key": "C",
+          "text": "They are measured in the same units",
+          "explanation": "The units are irrelevant. Height in cm and weight in kg can be strongly correlated though the units differ."
+        },
+        {
+          "key": "D",
+          "text": "One is the cause of the other",
+          "explanation": "Correlation implies neither cause nor effect. Two series can move together without one causing the other."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What correlation measures, §1 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#1-what-correlation-measures"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Meaning of correlation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-002",
+      "topic": "Ch 17 · Correlation · Direction",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The price of a commodity and the quantity demanded of it usually show:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Positive correlation",
+          "explanation": "Positive correlation would mean demand rises as price rises. Ordinary demand behaves the opposite way."
+        },
+        {
+          "key": "B",
+          "text": "Zero correlation",
+          "explanation": "There is a clear tendency, not none: higher prices go with lower demand."
+        },
+        {
+          "key": "C",
+          "text": "Negative correlation",
+          "explanation": "Correct. As price rises, quantity demanded tends to fall, so the two move in opposite directions — negative correlation."
+        },
+        {
+          "key": "D",
+          "text": "Perfect positive correlation",
+          "explanation": "The relationship is neither perfect nor positive; higher price is linked to lower, not higher, demand."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What correlation measures, §1 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#1-what-correlation-measures"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Positive, negative and zero correlation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-003",
+      "topic": "Ch 17 · Correlation · Scatter diagram",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a scatter diagram, all the plotted points lie exactly on a single straight line that slopes downward from left to right. The correlation coefficient is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "+1",
+          "explanation": "A value of +1 goes with an exact upward-sloping line, not a downward one."
+        },
+        {
+          "key": "B",
+          "text": "0",
+          "explanation": "Zero correlation shows as a shapeless cloud with no tilt, not an exact line."
+        },
+        {
+          "key": "C",
+          "text": "−1",
+          "explanation": "Correct. Points exactly on a downward-sloping line show perfect negative correlation, r = −1."
+        },
+        {
+          "key": "D",
+          "text": "Between 0 and +1",
+          "explanation": "A downward line is negative, and an exact line is perfect, so the value is exactly −1, not a positive fraction."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Scatter diagrams, §2 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#2-scatter-diagrams-and-the-shape-of-a-relationship"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Scatter diagram and the sign and size of r",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-004",
+      "topic": "Ch 17 · Correlation · Range of r",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following can NEVER be a value of the Karl Pearson coefficient of correlation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "−0.95",
+          "explanation": "This lies inside −1 to +1 and is a perfectly valid strong negative correlation."
+        },
+        {
+          "key": "B",
+          "text": "0",
+          "explanation": "Zero is valid; it means no linear correlation."
+        },
+        {
+          "key": "C",
+          "text": "+0.80",
+          "explanation": "This is a valid strong positive correlation."
+        },
+        {
+          "key": "D",
+          "text": "+1.20",
+          "explanation": "Correct. The correlation coefficient always satisfies −1 ≤ r ≤ 1, so 1.20 is impossible and signals an arithmetic error."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Properties of r, §4 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#4-properties-of-the-correlation-coefficient"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "−1 ≤ r ≤ 1",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-005",
+      "topic": "Ch 17 · Correlation · Origin and scale",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The coefficient of correlation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Independent of change of origin but not of change of scale",
+          "explanation": "It is independent of both. A change of scale by a positive factor leaves r unchanged."
+        },
+        {
+          "key": "B",
+          "text": "Independent of both change of origin and change of scale (a negative scale factor only reverses its sign)",
+          "explanation": "Correct. Shifting the origin never changes r, and rescaling by a positive factor never changes it; a negative scale factor keeps the size but flips the sign."
+        },
+        {
+          "key": "C",
+          "text": "Dependent on both change of origin and change of scale",
+          "explanation": "Neither move changes r. This is exactly why the assumed-mean short form is valid."
+        },
+        {
+          "key": "D",
+          "text": "Independent of change of scale but not of change of origin",
+          "explanation": "The reverse of the truth. A change of origin has no effect at all on r."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Properties of r, §4 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#4-properties-of-the-correlation-coefficient"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r is independent of change of origin and scale",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-006",
+      "topic": "Ch 17 · Karl Pearson r · From data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the pairs x = 1, 2, 3, 4, 5 and y = 3, 2, 5, 6, 4, the Karl Pearson coefficient of correlation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.0",
+          "explanation": "Perfect correlation would need all points on one line; here the scatter is only moderate."
+        },
+        {
+          "key": "B",
+          "text": "0.36",
+          "explanation": "This is r², the product of the two regression coefficients, not r itself. Take the square root."
+        },
+        {
+          "key": "C",
+          "text": "0.6",
+          "explanation": "Correct. Numerator nΣxy − (Σx)(Σy) = 5×66 − 15×20 = 30; each bracket is 50, so r = 30 ÷ √(50×50) = 0.6."
+        },
+        {
+          "key": "D",
+          "text": "0.3",
+          "explanation": "This divides the numerator 30 by 100 (using (Σx)² and (Σy)² directly) instead of by √(50×50). The denominator is the root of the product of the two brackets."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Karl Pearson's coefficient, §3 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#3-karl-pearsons-product-moment-coefficient-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r = [nΣxy − (Σx)(Σy)] ÷ √([nΣx² − (Σx)²][nΣy² − (Σy)²])",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-007",
+      "topic": "Ch 17 · Covariance · From data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the pairs x = 1, 2, 3, 4, 5 and y = 3, 2, 5, 6, 4, the covariance of x and y, Cov(x, y) = Σ(x − x̄)(y − ȳ) ÷ n, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "This is Σ(x − x̄)(y − ȳ) before dividing by n. Divide the total of 6 by n = 5."
+        },
+        {
+          "key": "B",
+          "text": "1.2",
+          "explanation": "Correct. Σ(x − x̄)(y − ȳ) = 6, and dividing by n = 5 gives Cov(x, y) = 1.2."
+        },
+        {
+          "key": "C",
+          "text": "0.6",
+          "explanation": "0.6 is the correlation coefficient here, not the covariance. Covariance still carries the units of x times y."
+        },
+        {
+          "key": "D",
+          "text": "30",
+          "explanation": "30 is nΣxy − (Σx)(Σy). Covariance is that divided by n², or equivalently the mean of the deviation products, giving 1.2."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Karl Pearson's coefficient, §3 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#3-karl-pearsons-product-moment-coefficient-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cov(x, y) = Σ(x − x̄)(y − ȳ) ÷ n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-008",
+      "topic": "Ch 17 · Karl Pearson r · From sums",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 5 pairs of values the sums are Σx = 30, Σy = 38, Σxy = 264, Σx² = 220 and Σy² = 330. The coefficient of correlation is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.00",
+          "explanation": "Perfect correlation is not reached; the points do not lie exactly on a line."
+        },
+        {
+          "key": "B",
+          "text": "0.90",
+          "explanation": "0.90 is the regression coefficient b_yx = 180 ÷ 200. The correlation coefficient divides by the root of the product of both brackets, giving 0.8868."
+        },
+        {
+          "key": "C",
+          "text": "0.79",
+          "explanation": "This uses the wrong denominator. r = 180 ÷ √(200×206) = 0.8868, not 0.79."
+        },
+        {
+          "key": "D",
+          "text": "0.89",
+          "explanation": "Correct. Numerator = 5×264 − 30×38 = 180; brackets 1100 − 900 = 200 and 1650 − 1444 = 206; r = 180 ÷ √(200×206) = 0.8868, about 0.89."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Karl Pearson's coefficient, §3 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#3-karl-pearsons-product-moment-coefficient-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r from the five raw sums",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-009",
+      "topic": "Ch 17 · Regression coefficient · b_yx",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 5 pairs the sums are Σx = 30, Σy = 38, Σxy = 264, Σx² = 220 and Σy² = 330. The regression coefficient of y on x, b_yx, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.87",
+          "explanation": "0.87 is b_xy = 180 ÷ 206, which divides by the y term. b_yx divides by the x term, nΣx² − (Σx)² = 200."
+        },
+        {
+          "key": "B",
+          "text": "0.6",
+          "explanation": "0.6 is not this data's coefficient. Here b_yx = 180 ÷ 200 = 0.9."
+        },
+        {
+          "key": "C",
+          "text": "1.11",
+          "explanation": "This inverts the ratio, dividing 200 by 180. The numerator is the common numerator 180, the denominator is the x term 200."
+        },
+        {
+          "key": "D",
+          "text": "0.9",
+          "explanation": "Correct. b_yx = [nΣxy − (Σx)(Σy)] ÷ [nΣx² − (Σx)²] = 180 ÷ 200 = 0.9."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "b_yx = [nΣxy − (Σx)(Σy)] ÷ [nΣx² − (Σx)²]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-010",
+      "topic": "Ch 17 · Regression coefficient · b_xy",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the pairs x = 6, 2, 10, 4, 8 and y = 9, 11, 5, 8, 7, the regression coefficient of x on y, b_xy, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−0.92",
+          "explanation": "−0.92 is the correlation coefficient r for this data, not the regression coefficient of x on y."
+        },
+        {
+          "key": "B",
+          "text": "−0.65",
+          "explanation": "−0.65 is b_yx, which divides by the x term (200). b_xy divides by the y term (100), giving −1.3."
+        },
+        {
+          "key": "C",
+          "text": "1.3",
+          "explanation": "The sign is wrong. The numerator −130 is negative, so b_xy is negative: the two variables move in opposite directions."
+        },
+        {
+          "key": "D",
+          "text": "−1.3",
+          "explanation": "Correct. Numerator = 5×214 − 30×40 = −130; y term = 5×340 − 40² = 100; b_xy = −130 ÷ 100 = −1.3."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "b_xy = [nΣxy − (Σx)(Σy)] ÷ [nΣy² − (Σy)²]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-011",
+      "topic": "Ch 17 · Link r and b · Geometric mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The two regression coefficients are b_yx = 0.8 and b_xy = 0.45. The coefficient of correlation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.625",
+          "explanation": "This is the arithmetic mean of the two coefficients, not r. The correlation is the geometric mean, √(0.8 × 0.45)."
+        },
+        {
+          "key": "B",
+          "text": "0.36",
+          "explanation": "0.36 is r², the product b_yx × b_xy. Take its square root to get r."
+        },
+        {
+          "key": "C",
+          "text": "0.6",
+          "explanation": "Correct. r = +√(b_yx × b_xy) = √(0.8 × 0.45) = √0.36 = 0.6, positive because both coefficients are positive."
+        },
+        {
+          "key": "D",
+          "text": "1.2",
+          "explanation": "This adds the coefficients. A correlation cannot exceed 1 in any case; r is the geometric mean, 0.6."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Linking r and the coefficients, §9 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#9-linking-r-and-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r = ±√(b_yx × b_xy)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-012",
+      "topic": "Ch 17 · Link r and b · Sign",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Both regression coefficients are negative: b_yx = −0.6 and b_xy = −0.6. The coefficient of correlation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "+0.6",
+          "explanation": "The size is right but the sign is wrong. When both regression coefficients are negative, r takes the negative root."
+        },
+        {
+          "key": "B",
+          "text": "−0.6",
+          "explanation": "Correct. r = ±√(b_yx × b_xy) = √0.36 = 0.6 in size, and the common sign of the two coefficients is negative, so r = −0.6."
+        },
+        {
+          "key": "C",
+          "text": "−0.36",
+          "explanation": "−0.36 is the product with a sign attached, not r. r is the square root of the product, with the coefficients' sign."
+        },
+        {
+          "key": "D",
+          "text": "0",
+          "explanation": "Two non-zero coefficients cannot give zero correlation. Here r = −0.6."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Linking r and the coefficients, §9 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#9-linking-r-and-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Sign of r is the common sign of the two regression coefficients",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-013",
+      "topic": "Ch 17 · Regression coefficients · Sign property",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about the two regression coefficients is always TRUE?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They always have the same sign, which is the sign of r",
+          "explanation": "Correct. The two coefficients share the common numerator, so they carry the same sign, and that sign is the sign of r."
+        },
+        {
+          "key": "B",
+          "text": "One is always positive and the other always negative",
+          "explanation": "They can never have opposite signs, because they share a numerator."
+        },
+        {
+          "key": "C",
+          "text": "Both always lie between −1 and +1",
+          "explanation": "A regression coefficient may exceed 1 in size; only r is bounded by ±1."
+        },
+        {
+          "key": "D",
+          "text": "They are always equal to each other",
+          "explanation": "They are equal only when the two spreads are equal. In general b_yx ≠ b_xy."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Both regression coefficients carry the sign of r",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-014",
+      "topic": "Ch 17 · Regression coefficient · From r and SDs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Given r = 0.8, standard deviation of x = 4 and standard deviation of y = 6, the regression coefficient of y on x, b_yx, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.53",
+          "explanation": "0.53 is b_xy = r × σx ÷ σy = 0.8 × 4 ÷ 6. For b_yx the ratio is σy ÷ σx."
+        },
+        {
+          "key": "B",
+          "text": "1.2",
+          "explanation": "Correct. b_yx = r × (σy ÷ σx) = 0.8 × (6 ÷ 4) = 0.8 × 1.5 = 1.2."
+        },
+        {
+          "key": "C",
+          "text": "4.8",
+          "explanation": "This multiplies r by σy alone (0.8 × 6). The formula divides σy by σx as well."
+        },
+        {
+          "key": "D",
+          "text": "0.8",
+          "explanation": "0.8 is r itself. The regression coefficient scales r by the ratio of the standard deviations."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "b_yx = r × (σy ÷ σx)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-015",
+      "topic": "Ch 17 · Regression coefficient · From r and SDs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Given r = 0.7, standard deviation of x = 5 and standard deviation of y = 10, the regression coefficient of x on y, b_xy, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.4",
+          "explanation": "1.4 is b_yx = r × σy ÷ σx = 0.7 × 10 ÷ 5. For b_xy the ratio is σx ÷ σy."
+        },
+        {
+          "key": "B",
+          "text": "0.7",
+          "explanation": "0.7 is r itself, before scaling by the ratio of the standard deviations."
+        },
+        {
+          "key": "C",
+          "text": "0.35",
+          "explanation": "Correct. b_xy = r × (σx ÷ σy) = 0.7 × (5 ÷ 10) = 0.7 × 0.5 = 0.35."
+        },
+        {
+          "key": "D",
+          "text": "3.5",
+          "explanation": "This multiplies r by σx alone (0.7 × 5). Divide by σy as well to get 0.35."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "b_xy = r × (σx ÷ σy)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-016",
+      "topic": "Ch 17 · Prediction · y from x",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The regression line of y on x is y = 0.6x + 2.2. The estimated value of y when x = 10 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6.0",
+          "explanation": "This uses only 0.6 × 10 and drops the intercept 2.2. Add the constant term of the line."
+        },
+        {
+          "key": "B",
+          "text": "8.2",
+          "explanation": "Correct. y = 0.6 × 10 + 2.2 = 6 + 2.2 = 8.2."
+        },
+        {
+          "key": "C",
+          "text": "2.8",
+          "explanation": "This adds 0.6 and 2.2 and treats x as 1. Substitute x = 10 into the line."
+        },
+        {
+          "key": "D",
+          "text": "16.3",
+          "explanation": "This mishandles the slope. With slope 0.6 and intercept 2.2, x = 10 gives 8.2."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Predicting with a regression line, §10 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#10-predicting-with-a-regression-line"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Predict y from the line of y on x",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-017",
+      "topic": "Ch 17 · Prediction · x from y",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The regression line of x on y is x = 0.6y + 0.6. The estimated value of x when y = 9 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5.4",
+          "explanation": "This uses only 0.6 × 9 and drops the intercept 0.6. Add the constant."
+        },
+        {
+          "key": "B",
+          "text": "9.0",
+          "explanation": "This is the given y, not the estimate of x. Substitute y = 9 into the line."
+        },
+        {
+          "key": "C",
+          "text": "6.0",
+          "explanation": "Correct. x = 0.6 × 9 + 0.6 = 5.4 + 0.6 = 6.0."
+        },
+        {
+          "key": "D",
+          "text": "15.0",
+          "explanation": "This adds y and the terms incorrectly. The correct estimate is 0.6 × 9 + 0.6 = 6.0."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Predicting with a regression line, §10 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#10-predicting-with-a-regression-line"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Predict x from the line of x on y",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-018",
+      "topic": "Ch 17 · Regression lines · Point of means",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The two regression lines are 3x + 2y = 26 and 6x + y = 31. The mean value of x is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5",
+          "explanation": "This does not satisfy both equations. The consistent solution is x = 4, y = 7."
+        },
+        {
+          "key": "B",
+          "text": "7",
+          "explanation": "7 is the mean of y, not of x. Solving the two equations gives x̄ = 4 and ȳ = 7."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "Correct. The lines meet at the means. Solving 3x + 2y = 26 and 6x + y = 31 gives x̄ = 4 (and ȳ = 7)."
+        },
+        {
+          "key": "D",
+          "text": "13",
+          "explanation": "13 does not solve the pair. Substitute back to check: x = 4 gives 6×4 + y = 31, so y = 7."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Regression, the two lines, §7 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#7-regression-the-two-lines"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Both regression lines pass through (x̄, ȳ)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-019",
+      "topic": "Ch 17 · Regression lines · Property",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The two regression lines for a set of paired data always:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Are parallel to each other",
+          "explanation": "They are parallel only in the impossible case of never meeting; in fact they always intersect at the means."
+        },
+        {
+          "key": "B",
+          "text": "Intersect at the point of means (x̄, ȳ)",
+          "explanation": "Correct. Whatever the data, both lines pass through the mean of x and the mean of y, so they cross there."
+        },
+        {
+          "key": "C",
+          "text": "Pass through the origin (0, 0)",
+          "explanation": "They pass through the origin only by coincidence. In general they pass through (x̄, ȳ)."
+        },
+        {
+          "key": "D",
+          "text": "Have the same slope",
+          "explanation": "Equal slopes would make them the same line, which happens only when r = ±1."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Regression, the two lines, §7 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#7-regression-the-two-lines"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "The two lines cross at (x̄, ȳ)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-020",
+      "topic": "Ch 17 · Rank correlation · No ties",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six items are ranked by two judges. The rank differences are d = −1, 1, −1, 1, −1, 1. The rank correlation coefficient is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.60",
+          "explanation": "This does not follow from Σd² = 6 and n = 6. The correct value is 1 − 36 ÷ 210 = 0.8286."
+        },
+        {
+          "key": "B",
+          "text": "0.17",
+          "explanation": "0.17 is 6Σd² ÷ [n(n² − 1)], the quantity subtracted from 1. R itself is 1 minus that."
+        },
+        {
+          "key": "C",
+          "text": "−0.83",
+          "explanation": "The sign is wrong. Small rank differences give a high positive R, not a negative one."
+        },
+        {
+          "key": "D",
+          "text": "0.83",
+          "explanation": "Correct. Σd² = 6, n = 6, n(n² − 1) = 210, so R = 1 − (6×6) ÷ 210 = 1 − 0.1714 = 0.8286."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Rank correlation, §5 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#5-rank-correlation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "R = 1 − 6Σd² ÷ [n(n² − 1)]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-021",
+      "topic": "Ch 17 · Rank correlation · No ties",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Seven paintings are ranked by two judges. The rank differences are d = −2, 1, −1, 2, −1, 1, 0. The rank correlation coefficient is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.79",
+          "explanation": "Correct. Σd² = 4+1+1+4+1+1+0 = 12, n = 7, n(n² − 1) = 336, so R = 1 − 72 ÷ 336 = 0.7857."
+        },
+        {
+          "key": "B",
+          "text": "0.21",
+          "explanation": "0.21 is the fraction subtracted from 1 (72 ÷ 336). R is 1 minus that, 0.7857."
+        },
+        {
+          "key": "C",
+          "text": "0.86",
+          "explanation": "0.86 would follow from Σd² = 8. Here Σd² = 12, giving R = 0.7857."
+        },
+        {
+          "key": "D",
+          "text": "0.64",
+          "explanation": "This uses the wrong denominator. With n = 7, the denominator is 7 × 48 = 336, not a smaller figure."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Rank correlation, §5 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#5-rank-correlation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "R = 1 − 6Σd² ÷ [n(n² − 1)]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-022",
+      "topic": "Ch 17 · Rank correlation · Tied ranks",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two examiners mark five candidates. Examiner X awards 50, 70, 60, 60, 80 and Examiner Y awards 55, 60, 40, 55, 60. Using average ranks and the tie correction, the rank correlation coefficient is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.75",
+          "explanation": "0.75 omits the tie correction (using Σd² = 5 alone). The corrected Σd² is 6.5, giving 0.675."
+        },
+        {
+          "key": "B",
+          "text": "0.60",
+          "explanation": "This does not match the corrected calculation. With corrected Σd² = 6.5 and n = 5, R = 0.675."
+        },
+        {
+          "key": "C",
+          "text": "0.325",
+          "explanation": "0.325 is the fraction subtracted from 1 (39 ÷ 120), not R itself."
+        },
+        {
+          "key": "D",
+          "text": "0.675",
+          "explanation": "Correct. Σd² = 5; tie correction = 0.5 (X) + 1.0 (Y) = 1.5; corrected Σd² = 6.5; R = 1 − (6×6.5) ÷ 120 = 0.675."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Rank correlation, §5 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#5-rank-correlation"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Rank correlation with tie correction Σ(m³ − m) ÷ 12",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-023",
+      "topic": "Ch 17 · Probable error",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A correlation coefficient of 0.6 is obtained from 64 pairs of observations. The probable error is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.054",
+          "explanation": "Correct. PE = 0.6745 × (1 − 0.36) ÷ √64 = 0.6745 × 0.64 ÷ 8 = 0.6745 × 0.08 = 0.05396."
+        },
+        {
+          "key": "B",
+          "text": "0.076",
+          "explanation": "This forgets to square r, using (1 − r) = 0.4 instead of (1 − r²) = 0.64. The formula squares r."
+        },
+        {
+          "key": "C",
+          "text": "0.43",
+          "explanation": "This omits the division by √n. Divide 0.6745 × 0.64 by 8."
+        },
+        {
+          "key": "D",
+          "text": "0.34",
+          "explanation": "0.34 is 6 × PE, the significance threshold, not the probable error itself."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Probable error, §6 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#6-probable-error-and-the-significance-of-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "PE = 0.6745 × (1 − r²) ÷ √n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-024",
+      "topic": "Ch 17 · Probable error · Significance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the probable-error rule of thumb, a sample correlation r is treated as significant when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "r is less than the probable error",
+          "explanation": "That is the test for NOT significant — r could easily be zero."
+        },
+        {
+          "key": "B",
+          "text": "r equals the probable error",
+          "explanation": "Equality gives no firm verdict; it is well below the significance threshold."
+        },
+        {
+          "key": "C",
+          "text": "r is greater than six times the probable error",
+          "explanation": "Correct. The rule of thumb treats correlation as significant when r exceeds 6 × PE, and as not significant when r is below PE."
+        },
+        {
+          "key": "D",
+          "text": "the probable error is greater than 1",
+          "explanation": "The probable error is a small positive number here; it is not compared with 1. Compare r with PE and with 6 × PE."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Probable error, §6 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#6-probable-error-and-the-significance-of-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Significance rule: r > 6 × PE",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-025",
+      "topic": "Ch 17 · Correlation versus regression",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement best distinguishes correlation from regression?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Correlation measures the strength of the relationship; regression provides an equation to estimate one variable from the other",
+          "explanation": "Correct. Correlation gives one number for strength and direction; regression gives lines that let you estimate one variable from another."
+        },
+        {
+          "key": "B",
+          "text": "Correlation gives two lines; regression gives one number",
+          "explanation": "The reverse. Correlation gives one number, r; regression gives two lines."
+        },
+        {
+          "key": "C",
+          "text": "Both give exactly the same information",
+          "explanation": "They share the same sums but answer different questions — strength versus estimation."
+        },
+        {
+          "key": "D",
+          "text": "Correlation depends on units; regression does not",
+          "explanation": "It is the other way round. r is a pure number; regression coefficients carry units."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Correlation versus regression, §11 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#11-correlation-versus-regression"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Difference between correlation and regression",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-026",
+      "topic": "Ch 17 · Karl Pearson r · Negative, from data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the pairs x = 6, 2, 10, 4, 8 and y = 9, 11, 5, 8, 7, the coefficient of correlation is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−1.3",
+          "explanation": "−1.3 is b_xy, a regression coefficient. r cannot be less than −1; its value here is −0.92."
+        },
+        {
+          "key": "B",
+          "text": "0.92",
+          "explanation": "The size is right but the sign is wrong. The numerator −130 is negative, so r is negative."
+        },
+        {
+          "key": "C",
+          "text": "−0.65",
+          "explanation": "−0.65 is the regression coefficient b_yx, not r. The correlation divides by the root of both brackets."
+        },
+        {
+          "key": "D",
+          "text": "−0.92",
+          "explanation": "Correct. Numerator = 5×214 − 30×40 = −130; brackets 200 and 100; r = −130 ÷ √(200×100) = −130 ÷ 141.42 = −0.9192."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Karl Pearson's coefficient, §3 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#3-karl-pearsons-product-moment-coefficient-r"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "r from data (negative correlation)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-027",
+      "topic": "Ch 17 · Regression coefficient · b_yx from data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the pairs x = 1, 2, 3, 4, 5 and y = 3, 2, 5, 6, 4, the regression coefficient of y on x, b_yx, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.6",
+          "explanation": "Correct. b_yx = [nΣxy − (Σx)(Σy)] ÷ [nΣx² − (Σx)²] = 30 ÷ 50 = 0.6."
+        },
+        {
+          "key": "B",
+          "text": "1.2",
+          "explanation": "1.2 is the covariance, Σ(x − x̄)(y − ȳ) ÷ n. The regression coefficient divides the numerator 30 by the x term 50."
+        },
+        {
+          "key": "C",
+          "text": "0.36",
+          "explanation": "0.36 is r² here. The regression coefficient b_yx equals 0.6."
+        },
+        {
+          "key": "D",
+          "text": "1.67",
+          "explanation": "This inverts the ratio, dividing 50 by 30. Divide the numerator 30 by the x term 50."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "b_yx = [nΣxy − (Σx)(Σy)] ÷ [nΣx² − (Σx)²]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-028",
+      "topic": "Ch 17 · Regression coefficient · b_xy from data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 5 pairs the sums are Σx = 30, Σy = 38, Σxy = 264, Σx² = 220 and Σy² = 330. The regression coefficient of x on y, b_xy, is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.87",
+          "explanation": "Correct. b_xy = [nΣxy − (Σx)(Σy)] ÷ [nΣy² − (Σy)²] = 180 ÷ 206 = 0.8738, about 0.87."
+        },
+        {
+          "key": "B",
+          "text": "0.9",
+          "explanation": "0.9 is b_yx, which divides by the x term (200). b_xy divides by the y term (206)."
+        },
+        {
+          "key": "C",
+          "text": "1.14",
+          "explanation": "This inverts the ratio, dividing 206 by 180. The numerator is 180, the y term is 206."
+        },
+        {
+          "key": "D",
+          "text": "0.79",
+          "explanation": "0.79 is not this coefficient. b_xy = 180 ÷ 206 = 0.8738."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "b_xy = [nΣxy − (Σx)(Σy)] ÷ [nΣy² − (Σy)²]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-029",
+      "topic": "Ch 17 · Link r and b · Geometric mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The two regression coefficients are b_yx = 1.5 and b_xy = 0.6. The coefficient of correlation is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.95",
+          "explanation": "Correct. r = +√(1.5 × 0.6) = √0.9 = 0.9487, about 0.95, positive because both coefficients are positive."
+        },
+        {
+          "key": "B",
+          "text": "0.9",
+          "explanation": "0.9 is the product b_yx × b_xy, which equals r². Take its square root, 0.9487."
+        },
+        {
+          "key": "C",
+          "text": "1.05",
+          "explanation": "This is the arithmetic mean of the two coefficients, and it exceeds 1, so it cannot be a correlation. r is the geometric mean, 0.9487."
+        },
+        {
+          "key": "D",
+          "text": "2.1",
+          "explanation": "This adds the coefficients. r is √(1.5 × 0.6) = 0.9487."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Linking r and the coefficients, §9 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#9-linking-r-and-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r = ±√(b_yx × b_xy)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-030",
+      "topic": "Ch 17 · Link r and b · Sign",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The two regression coefficients are b_yx = −0.9 and b_xy = −0.4. The coefficient of correlation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "−0.36",
+          "explanation": "−0.36 is the product with a sign, not r. r is the square root of 0.36, carrying the coefficients' sign."
+        },
+        {
+          "key": "B",
+          "text": "0.6",
+          "explanation": "The size is right but the sign is wrong. Both coefficients are negative, so r is negative."
+        },
+        {
+          "key": "C",
+          "text": "−0.6",
+          "explanation": "Correct. r = ±√(0.9 × 0.4) = √0.36 = 0.6 in size, negative because both coefficients are negative, so r = −0.6."
+        },
+        {
+          "key": "D",
+          "text": "−0.65",
+          "explanation": "−0.65 is the arithmetic mean of the two coefficients, not r. The correlation is the geometric mean, −0.6."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Linking r and the coefficients, §9 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#9-linking-r-and-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r = ±√(b_yx × b_xy), sign from the coefficients",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-031",
+      "topic": "Ch 17 · Covariance · From sums",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 5 pairs the sums are Σx = 30, Σy = 38 and Σxy = 264. The covariance of x and y, Cov(x, y) = (Σxy ÷ n) − x̄ȳ, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.9",
+          "explanation": "0.9 is the regression coefficient b_yx, not the covariance, which is 7.2."
+        },
+        {
+          "key": "B",
+          "text": "52.8",
+          "explanation": "52.8 is Σxy ÷ n before subtracting the product of the means. Subtract x̄ȳ = 45.6."
+        },
+        {
+          "key": "C",
+          "text": "180",
+          "explanation": "180 is nΣxy − (Σx)(Σy). Covariance is that divided by n², giving 7.2."
+        },
+        {
+          "key": "D",
+          "text": "7.2",
+          "explanation": "Correct. Σxy ÷ n = 264 ÷ 5 = 52.8; x̄ȳ = 6 × 7.6 = 45.6; Cov = 52.8 − 45.6 = 7.2."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Karl Pearson's coefficient, §3 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#3-karl-pearsons-product-moment-coefficient-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Cov(x, y) = (Σxy ÷ n) − x̄ȳ",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-032",
+      "topic": "Ch 17 · Prediction · y from x",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For a data set x̄ = 6, ȳ = 7.6 and b_yx = 0.9. Using the regression line of y on x, the estimated value of y when x = 12 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "13.0",
+          "explanation": "Correct. Line: y − 7.6 = 0.9(x − 6), so y = 0.9x + 2.2. At x = 12, y = 0.9 × 12 + 2.2 = 13.0."
+        },
+        {
+          "key": "B",
+          "text": "10.8",
+          "explanation": "This is only 0.9 × 12 and drops the intercept 2.2. Add the constant term."
+        },
+        {
+          "key": "C",
+          "text": "7.6",
+          "explanation": "7.6 is the mean of y. The estimate at x = 12 is 13.0."
+        },
+        {
+          "key": "D",
+          "text": "15.4",
+          "explanation": "This mishandles the intercept. y = 0.9 × 12 + 2.2 = 13.0, not 15.4."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Predicting with a regression line, §10 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#10-predicting-with-a-regression-line"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "y − ȳ = b_yx (x − x̄), then substitute",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-033",
+      "topic": "Ch 17 · Regression coefficients · Finding an SD",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Given b_yx = 1.6, b_xy = 0.4 and the standard deviation of x = 3, the standard deviation of y is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "12",
+          "explanation": "This multiplies σx by b_yx ÷ b_xy = 4. The ratio of the standard deviations is √4 = 2, so σy = 6."
+        },
+        {
+          "key": "B",
+          "text": "1.5",
+          "explanation": "This takes σx ÷ σy the wrong way. Since σy² ÷ σx² = 4, σy is twice σx, giving 6."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "Correct. b_yx ÷ b_xy = σy² ÷ σx² = 1.6 ÷ 0.4 = 4, so σy ÷ σx = 2 and σy = 2 × 3 = 6."
+        },
+        {
+          "key": "D",
+          "text": "4.8",
+          "explanation": "This multiplies σx by b_yx (1.6). The correct route uses b_yx ÷ b_xy = σy² ÷ σx²."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "b_yx ÷ b_xy = σy² ÷ σx²",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-034",
+      "topic": "Ch 17 · Karl Pearson r · From covariance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The covariance of x and y is 12, the standard deviation of x is 4 and the standard deviation of y is 5. The coefficient of correlation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.6",
+          "explanation": "Correct. r = Cov(x, y) ÷ (σx × σy) = 12 ÷ (4 × 5) = 12 ÷ 20 = 0.6."
+        },
+        {
+          "key": "B",
+          "text": "0.48",
+          "explanation": "This divides by σx² and σy in some mix. The denominator is σx × σy = 20, giving 0.6."
+        },
+        {
+          "key": "C",
+          "text": "2.4",
+          "explanation": "This divides 12 by σy alone (5) and mishandles it. Divide by the product σx × σy = 20."
+        },
+        {
+          "key": "D",
+          "text": "0.75",
+          "explanation": "0.75 is Cov ÷ σx² = 12 ÷ 16, the regression coefficient b_yx, not r."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Karl Pearson's coefficient, §3 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#3-karl-pearsons-product-moment-coefficient-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r = Cov(x, y) ÷ (σx × σy)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-035",
+      "topic": "Ch 17 · Regression coefficient · From covariance and variance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The covariance of x and y is 12 and the variance of x is 16. The regression coefficient of y on x, b_yx, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.75",
+          "explanation": "Correct. b_yx = Cov(x, y) ÷ σx² = 12 ÷ 16 = 0.75."
+        },
+        {
+          "key": "B",
+          "text": "1.33",
+          "explanation": "This inverts the ratio, dividing 16 by 12. b_yx divides the covariance by the variance of x."
+        },
+        {
+          "key": "C",
+          "text": "0.6",
+          "explanation": "0.6 would need a standard deviation of y as well. b_yx uses only Cov and the variance of x, giving 0.75."
+        },
+        {
+          "key": "D",
+          "text": "192",
+          "explanation": "This multiplies covariance by variance. The regression coefficient divides Cov by σx²."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "b_yx = Cov(x, y) ÷ σx²",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-036",
+      "topic": "Ch 17 · Regression lines · Coincidence",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The two regression lines coincide (become a single line) when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "r = 0",
+          "explanation": "When r = 0 the two lines are perpendicular, not coincident."
+        },
+        {
+          "key": "B",
+          "text": "r = ±1",
+          "explanation": "Correct. Perfect correlation makes both lines the same line; the two coefficients become reciprocals and the slopes match."
+        },
+        {
+          "key": "C",
+          "text": "the means are equal",
+          "explanation": "Equal means fix where the lines cross, not whether they coincide. Coincidence needs r = ±1."
+        },
+        {
+          "key": "D",
+          "text": "the two standard deviations are equal",
+          "explanation": "Equal standard deviations make the two coefficients equal, but the lines still differ unless r = ±1."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Regression, the two lines, §7 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#7-regression-the-two-lines"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Lines coincide when r = ±1",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-037",
+      "topic": "Ch 17 · Regression lines · Perpendicular",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "When the coefficient of correlation is zero, the two regression lines are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The same line",
+          "explanation": "They become one line only when r = ±1, not when r = 0."
+        },
+        {
+          "key": "B",
+          "text": "Parallel",
+          "explanation": "They still cross at the means, so they are not parallel."
+        },
+        {
+          "key": "C",
+          "text": "At right angles to each other",
+          "explanation": "Correct. When r = 0 the two lines are perpendicular — one horizontal, one vertical — reflecting no linear relationship."
+        },
+        {
+          "key": "D",
+          "text": "Both passing through the origin",
+          "explanation": "They pass through the means, and only through the origin by coincidence. At r = 0 they are perpendicular."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Regression, the two lines, §7 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#7-regression-the-two-lines"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Lines perpendicular when r = 0",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-038",
+      "topic": "Ch 17 · Regression lines · Point of means",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The two regression lines are 8x − 10y + 66 = 0 and 40x − 18y − 214 = 0. The mean value of y is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "13",
+          "explanation": "13 is the mean of x, not of y. Solving the two equations gives x̄ = 13 and ȳ = 17."
+        },
+        {
+          "key": "B",
+          "text": "17",
+          "explanation": "Correct. The lines meet at the means. Solving 8x − 10y = −66 and 40x − 18y = 214 gives ȳ = 17 (and x̄ = 13)."
+        },
+        {
+          "key": "C",
+          "text": "7",
+          "explanation": "7 does not satisfy both equations. Substitute to check: x = 13, y = 17 solves both."
+        },
+        {
+          "key": "D",
+          "text": "6.6",
+          "explanation": "6.6 is the intercept of one line written in slope form, not a mean. The mean of y is 17."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Regression, the two lines, §7 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#7-regression-the-two-lines"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Means from solving the two regression equations",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-039",
+      "topic": "Ch 17 · Rank correlation · From Σd²",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 10 pairs of ranks with no ties, Σd² = 44. The rank correlation coefficient is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.44",
+          "explanation": "0.44 is not R. Substituting Σd² = 44 and n = 10 gives R = 0.7333."
+        },
+        {
+          "key": "B",
+          "text": "0.27",
+          "explanation": "0.27 is 264 ÷ 990, the quantity subtracted from 1. R is 1 minus that."
+        },
+        {
+          "key": "C",
+          "text": "0.56",
+          "explanation": "This uses the wrong denominator. With n = 10 the denominator is 10 × 99 = 990."
+        },
+        {
+          "key": "D",
+          "text": "0.73",
+          "explanation": "Correct. n(n² − 1) = 10 × 99 = 990, so R = 1 − (6 × 44) ÷ 990 = 1 − 264 ÷ 990 = 0.7333."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Rank correlation, §5 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#5-rank-correlation"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "R = 1 − 6Σd² ÷ [n(n² − 1)]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-040",
+      "topic": "Ch 17 · Probable error",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A correlation coefficient of 0.8 is obtained from 25 pairs of observations. The probable error is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.0486",
+          "explanation": "Correct. PE = 0.6745 × (1 − 0.64) ÷ √25 = 0.6745 × 0.36 ÷ 5 = 0.6745 × 0.072 = 0.04856."
+        },
+        {
+          "key": "B",
+          "text": "0.027",
+          "explanation": "This uses (1 − r) = 0.2 instead of (1 − r²) = 0.36. The formula squares r."
+        },
+        {
+          "key": "C",
+          "text": "0.243",
+          "explanation": "This omits the division by √n. Divide 0.6745 × 0.36 by 5."
+        },
+        {
+          "key": "D",
+          "text": "0.29",
+          "explanation": "0.29 is about 6 × PE, the significance threshold, not the probable error itself."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Probable error, §6 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#6-probable-error-and-the-significance-of-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "PE = 0.6745 × (1 − r²) ÷ √n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-041",
+      "topic": "Ch 17 · Regression coefficient · b_yx from data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 8 pairs the sums are Σx = 56, Σy = 40, Σxy = 364, Σx² = 524 and Σy² = 256. The regression coefficient of y on x, b_yx, is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.57",
+          "explanation": "This inverts the ratio, dividing 1056 by 672. Divide the numerator 672 by the x term 1056."
+        },
+        {
+          "key": "B",
+          "text": "1.5",
+          "explanation": "1.5 is b_xy, which divides by the y term (448). b_yx divides by the x term (1056)."
+        },
+        {
+          "key": "C",
+          "text": "0.98",
+          "explanation": "0.98 is the correlation coefficient r for this data, not the regression coefficient of y on x."
+        },
+        {
+          "key": "D",
+          "text": "0.64",
+          "explanation": "Correct. Numerator = 8×364 − 56×40 = 672; x term = 8×524 − 56² = 1056; b_yx = 672 ÷ 1056 = 0.6364."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "b_yx = [nΣxy − (Σx)(Σy)] ÷ [nΣx² − (Σx)²]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-042",
+      "topic": "Ch 17 · Regression coefficient · b_xy from data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 8 pairs the sums are Σx = 56, Σy = 40, Σxy = 364, Σx² = 524 and Σy² = 256. The regression coefficient of x on y, b_xy, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.64",
+          "explanation": "0.64 is b_yx, which divides by the x term (1056). b_xy divides by the y term (448)."
+        },
+        {
+          "key": "B",
+          "text": "0.67",
+          "explanation": "This inverts the ratio, dividing 448 by 672. Divide the numerator 672 by the y term 448."
+        },
+        {
+          "key": "C",
+          "text": "0.98",
+          "explanation": "0.98 is r, not b_xy. A regression coefficient may exceed 1, and here b_xy = 1.5."
+        },
+        {
+          "key": "D",
+          "text": "1.5",
+          "explanation": "Correct. Numerator = 672; y term = 8×256 − 40² = 448; b_xy = 672 ÷ 448 = 1.5."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The regression coefficients, §8 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#8-the-regression-coefficients"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "b_xy = [nΣxy − (Σx)(Σy)] ÷ [nΣy² − (Σy)²]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-043",
+      "topic": "Ch 17 · Karl Pearson r · From data",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 8 pairs the sums are Σx = 56, Σy = 40, Σxy = 364, Σx² = 524 and Σy² = 256. The coefficient of correlation is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.5",
+          "explanation": "1.5 is the regression coefficient b_xy, not r. The correlation cannot exceed 1."
+        },
+        {
+          "key": "B",
+          "text": "0.95",
+          "explanation": "This rounds too far. The precise value is 0.9770, nearest to 0.98."
+        },
+        {
+          "key": "C",
+          "text": "0.98",
+          "explanation": "Correct. r = 672 ÷ √(1056 × 448) = 672 ÷ 687.8 = 0.9770. Equivalently r = √(0.6364 × 1.5) = 0.977."
+        },
+        {
+          "key": "D",
+          "text": "0.64",
+          "explanation": "0.64 is the regression coefficient b_yx, not r. The correlation is the geometric mean of the two coefficients, 0.977."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Karl Pearson's coefficient, §3 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#3-karl-pearsons-product-moment-coefficient-r"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "r from the five raw sums",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-044",
+      "topic": "Ch 17 · Link r and b · Geometric mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The two regression coefficients are b_yx = 0.6364 and b_xy = 1.5. The coefficient of correlation is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.98",
+          "explanation": "Correct. r = +√(0.6364 × 1.5) = √0.9546 = 0.9770, about 0.98, positive because both coefficients are positive."
+        },
+        {
+          "key": "B",
+          "text": "0.95",
+          "explanation": "0.95 is the product b_yx × b_xy (0.9546), which equals r². Take its square root, 0.977."
+        },
+        {
+          "key": "C",
+          "text": "1.07",
+          "explanation": "This is the arithmetic mean of the two coefficients and exceeds 1, so it cannot be a correlation. r is the geometric mean, 0.977."
+        },
+        {
+          "key": "D",
+          "text": "2.14",
+          "explanation": "This adds the coefficients. r = √(0.6364 × 1.5) = 0.977."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Linking r and the coefficients, §9 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#9-linking-r-and-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r = ±√(b_yx × b_xy)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-045",
+      "topic": "Ch 17 · Prediction · y from x",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The regression line of y on x is y = 2x + 3. The estimated value of y when x = 5 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "10",
+          "explanation": "This is only 2 × 5 and drops the intercept 3. Add the constant term."
+        },
+        {
+          "key": "B",
+          "text": "13",
+          "explanation": "Correct. y = 2 × 5 + 3 = 10 + 3 = 13."
+        },
+        {
+          "key": "C",
+          "text": "5",
+          "explanation": "5 is the given x. Substitute it into the line to estimate y."
+        },
+        {
+          "key": "D",
+          "text": "25",
+          "explanation": "This mishandles the slope. y = 2 × 5 + 3 = 13."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Predicting with a regression line, §10 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#10-predicting-with-a-regression-line"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Substitute x into the line of y on x",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-046",
+      "topic": "Ch 17 · Regression · Why two lines",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "There are two regression lines for a pair of variables because:",
+      "options": [
+        {
+          "key": "A",
+          "text": "One estimates y from x by minimising vertical errors, and the other estimates x from y by minimising horizontal errors",
+          "explanation": "Correct. The line of y on x minimises squared errors in y; the line of x on y minimises squared errors in x. They minimise different errors, so they are different lines."
+        },
+        {
+          "key": "B",
+          "text": "One is for positive correlation and the other for negative correlation",
+          "explanation": "Both lines exist for any data, whatever the sign of the correlation."
+        },
+        {
+          "key": "C",
+          "text": "One uses the mean and the other uses the median",
+          "explanation": "Both least-squares lines pass through the mean point; neither uses the median."
+        },
+        {
+          "key": "D",
+          "text": "The data are always split into two halves",
+          "explanation": "The data are not split. Both lines use all the pairs; they simply minimise error in different variables."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Regression, the two lines, §7 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#7-regression-the-two-lines"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Two lines of regression by least squares",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-047",
+      "topic": "Ch 17 · Link r and b · Geometric mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The two regression coefficients are b_yx = 0.2 and b_xy = 1.8. The coefficient of correlation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.36",
+          "explanation": "0.36 is the product b_yx × b_xy, which equals r². Take its square root to get r."
+        },
+        {
+          "key": "B",
+          "text": "0.6",
+          "explanation": "Correct. r = +√(0.2 × 1.8) = √0.36 = 0.6, positive because both coefficients are positive."
+        },
+        {
+          "key": "C",
+          "text": "1.0",
+          "explanation": "This is the arithmetic mean of the two coefficients, not r. The correlation is the geometric mean, 0.6."
+        },
+        {
+          "key": "D",
+          "text": "2.0",
+          "explanation": "This adds the coefficients. r = √(0.2 × 1.8) = 0.6."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Linking r and the coefficients, §9 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#9-linking-r-and-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "r = ±√(b_yx × b_xy)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-048",
+      "topic": "Ch 17 · Probable error",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A correlation coefficient of 0.9 is obtained from 100 pairs of observations. The probable error is nearest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.077",
+          "explanation": "0.077 is about 6 × PE, the significance threshold, not the probable error itself."
+        },
+        {
+          "key": "B",
+          "text": "0.0067",
+          "explanation": "This uses (1 − r) = 0.1 instead of (1 − r²) = 0.19. The formula squares r."
+        },
+        {
+          "key": "C",
+          "text": "0.128",
+          "explanation": "This omits the division by √n. Divide 0.6745 × 0.19 by 10."
+        },
+        {
+          "key": "D",
+          "text": "0.0128",
+          "explanation": "Correct. PE = 0.6745 × (1 − 0.81) ÷ √100 = 0.6745 × 0.19 ÷ 10 = 0.6745 × 0.019 = 0.01282."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Probable error, §6 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#6-probable-error-and-the-significance-of-r"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "PE = 0.6745 × (1 − r²) ÷ √n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-049",
+      "topic": "Ch 17 · Regression coefficients · Property",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "If one regression coefficient is greater than 1, then the other regression coefficient must be:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Also greater than 1",
+          "explanation": "That would make the product exceed 1, but the product equals r² and cannot exceed 1. So the other must be smaller."
+        },
+        {
+          "key": "B",
+          "text": "Less than 1",
+          "explanation": "Correct. Since b_yx × b_xy = r² ≤ 1, if one coefficient exceeds 1 the other must be less than 1 to keep the product at most 1."
+        },
+        {
+          "key": "C",
+          "text": "Equal to 1",
+          "explanation": "It need not equal 1; it need only be small enough that the product stays at most 1."
+        },
+        {
+          "key": "D",
+          "text": "Negative",
+          "explanation": "The two coefficients share a sign. If one is positive and above 1, the other is positive and below 1, not negative."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Linking r and the coefficients, §9 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#9-linking-r-and-the-regression-coefficients"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "b_yx × b_xy = r² ≤ 1",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c17-050",
+      "topic": "Ch 17 · Prediction · Choosing the line",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "To estimate the value of y for a given value of x, you should use:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The average of the two lines",
+          "explanation": "There is no averaging step. Use the line of y on x to estimate y."
+        },
+        {
+          "key": "B",
+          "text": "The regression line of x on y",
+          "explanation": "That line estimates x from y, the opposite task. Using it here gives a different, wrong estimate unless r = ±1."
+        },
+        {
+          "key": "C",
+          "text": "Either line, since both give the same answer",
+          "explanation": "The two lines have different slopes and give different answers, except when r = ±1."
+        },
+        {
+          "key": "D",
+          "text": "The regression line of y on x",
+          "explanation": "Correct. The line of y on x is fitted to estimate y from x, so it is the right line for this prediction."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Predicting with a regression line, §10 →",
+        "href": "/foundation/quantitative-aptitude/correlation-and-regression/#10-predicting-with-a-regression-line"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Use y on x to predict y",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

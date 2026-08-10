@@ -176,8 +176,8 @@ export const foundationPapers = [
           { number: 14, slug: 'central-tendency-and-dispersion', name: 'Measures of Central Tendency and Dispersion', hasNotes: true },
           { number: 15, slug: 'probability', name: 'Probability', hasNotes: true },
           { number: 16, slug: 'theoretical-distributions', name: 'Theoretical Distributions', hasNotes: true },
-          { number: 17, slug: 'correlation-and-regression', name: 'Correlation and Regression' },
-          { number: 18, slug: 'index-numbers', name: 'Index Numbers' },
+          { number: 17, slug: 'correlation-and-regression', name: 'Correlation and Regression', hasNotes: true },
+          { number: 18, slug: 'index-numbers', name: 'Index Numbers', hasNotes: true },
         ],
       },
     ],
@@ -196,8 +196,8 @@ export const foundationPapers = [
       {
         name: 'All chapters',
         chapters: [
-          { number: 1, slug: 'nature-and-scope-of-business-economics', name: 'Nature and Scope of Business Economics' },
-          { number: 2, slug: 'theory-of-demand-and-supply', name: 'Theory of Demand and Supply' },
+          { number: 1, slug: 'nature-and-scope-of-business-economics', name: 'Nature and Scope of Business Economics', hasNotes: true },
+          { number: 2, slug: 'theory-of-demand-and-supply', name: 'Theory of Demand and Supply', hasNotes: true },
           { number: 3, slug: 'theory-of-production-and-cost', name: 'Theory of Production and Cost' },
           { number: 4, slug: 'price-determination-in-different-markets', name: 'Price Determination in Different Markets' },
           { number: 5, slug: 'business-cycles', name: 'Business Cycles' },
