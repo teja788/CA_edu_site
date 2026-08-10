@@ -1,0 +1,1959 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "seating-arrangements",
+  "chapter": "Ch 11 — Seating Arrangements",
+  "questions": [
+    {
+      "id": "q-f3c11-001",
+      "topic": "Ch 11 · Seating Arrangements · Directions in a north-facing row",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Six people sit in a row, all facing north (away from you, the reader). For any one of them, which way does the right hand point as you look at the row?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Towards your right (the east side of the drawing)",
+          "explanation": "Correct. Facing north, a person's right hand points east. On a page drawn with north at the top, east is the right-hand side, so the person's right coincides with your right — which is why a north-facing row is the one case where 'left' and 'right' read the same for you and for them."
+        },
+        {
+          "key": "B",
+          "text": "Towards your left (the west side of the drawing)",
+          "explanation": "This is what happens when the row faces south, not north. Facing north, the right hand is on the east side, which is your right, not your left."
+        },
+        {
+          "key": "C",
+          "text": "Towards you",
+          "explanation": "A person facing north faces away from you; nothing about the right hand points back towards the reader. The right hand points sideways, to the east."
+        },
+        {
+          "key": "D",
+          "text": "Away from you",
+          "explanation": "The direction of gaze is away from you, but the question asks about the right hand, which points sideways to the east, not straight ahead."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Rows, circles and what left and right mean, §1 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#1-rows-circles-and-what-left-and-right-mean"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Facing north, right hand points east; in a north-facing row left and right align with the drawing",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-002",
+      "topic": "Ch 11 · Seating Arrangements · Right and left in a circle facing the centre",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Eight people sit around a circular table facing the centre. For any person, 'the person immediately to the right' means the neighbour in which direction around the table?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The anticlockwise neighbour",
+          "explanation": "Correct. Facing the centre, a person's right hand points along the anticlockwise direction, so the neighbour to the right is the anticlockwise one. This flips when people face outward, which is exactly why the facing must be read first."
+        },
+        {
+          "key": "B",
+          "text": "The clockwise neighbour",
+          "explanation": "Clockwise is the LEFT side for someone facing the centre. Reading right as clockwise is the single most common circular-seating slip; it holds only when people face outward."
+        },
+        {
+          "key": "C",
+          "text": "The person directly across the table",
+          "explanation": "The person across the table is the one opposite, not the immediate right. 'Immediately to the right' always means an adjacent neighbour."
+        },
+        {
+          "key": "D",
+          "text": "It cannot be decided without more information",
+          "explanation": "It can be decided: the facing is given as 'towards the centre', and that fixes right as the anticlockwise neighbour for every person at the table."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Facing the centre: right = anticlockwise neighbour, left = clockwise neighbour",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-003",
+      "topic": "Ch 11 · Seating Arrangements · Right and left in a circle facing outward",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "People sit around a circular table but all face OUTWARD, away from the centre. For any person, 'the person to the left' is the neighbour in which direction around the table?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The anticlockwise neighbour",
+          "explanation": "Correct. Facing outward reverses everything: the left hand now points along the anticlockwise direction, so the left neighbour is the anticlockwise one. Facing the centre it would have been the clockwise neighbour."
+        },
+        {
+          "key": "B",
+          "text": "The clockwise neighbour",
+          "explanation": "Clockwise is the left neighbour only when people face the CENTRE. Facing outward flips left to the anticlockwise side."
+        },
+        {
+          "key": "C",
+          "text": "The same as when facing the centre",
+          "explanation": "Turning to face outward is a half-turn, which swaps left and right. So the left neighbour is the opposite one from the facing-centre case, not the same."
+        },
+        {
+          "key": "D",
+          "text": "The person diagonally opposite",
+          "explanation": "'To the left' means an adjacent neighbour, never the person diagonally across the table."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Facing outward, and how left and right flip, §6 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#6-facing-outward-and-how-left-and-right-flip"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Facing outward: left = anticlockwise neighbour, right = clockwise neighbour",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-004",
+      "topic": "Ch 11 · Seating Arrangements · Meaning of nth to the left",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a row facing north, the clue reads 'R is third to the left of S'. Which statement describes this exactly?",
+      "options": [
+        {
+          "key": "A",
+          "text": "R sits on S's left with exactly two persons between R and S",
+          "explanation": "Correct. 'Third to the left' counts three steps towards the left starting from S, so R is three seats to S's left and exactly two people sit in the gap between them."
+        },
+        {
+          "key": "B",
+          "text": "R sits on S's left with exactly three persons between them",
+          "explanation": "Third to the left means three seats away, and three seats away leaves TWO people in between, not three. Counting the gap as three is the classic off-by-one error here."
+        },
+        {
+          "key": "C",
+          "text": "R sits on S's right, three seats away",
+          "explanation": "The clue says to the LEFT of S, so R is on S's left. Placing R on the right reverses the whole relationship."
+        },
+        {
+          "key": "D",
+          "text": "R is the third person from the left END of the row",
+          "explanation": "'Third to the left of S' is measured from S, not from the end of the row. 'Third from the left end' is a different clue entirely."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Reading the clues, §2 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#2-reading-the-clues-immediate-neighbour-between-and-nth-to-the-left"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n-th to the left of X means n seats towards the left of X, leaving n-1 persons between",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-005",
+      "topic": "Ch 11 · Seating Arrangements · Length of a row from two positions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a row, M is 6th from the left end and 4th from the right end. How many people are in the row?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9",
+          "explanation": "Correct. M is counted once from each end, so adding the two positions counts M twice: total = 6 + 4 − 1 = 9. The −1 removes the double count of M."
+        },
+        {
+          "key": "B",
+          "text": "10",
+          "explanation": "This is 6 + 4 with the double count of M left in. M is counted from both ends, so one of the two counts must be removed."
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "explanation": "This subtracts 2 instead of 1. Only M is shared between the two counts, so exactly one is subtracted, giving 9."
+        },
+        {
+          "key": "D",
+          "text": "11",
+          "explanation": "This adds 1 rather than subtracting it. The overlap must be removed, not added, so the total is 6 + 4 − 1 = 9."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A step-by-step method to fix positions, §7 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#7-a-step-by-step-method-to-fix-positions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n = (position from left) + (position from right) − 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-006",
+      "topic": "Ch 11 · Seating Arrangements · Persons between two given positions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a row of 10 people, A is 4th from the left end and B is 3rd from the right end. How many people sit between A and B?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "explanation": "This drops one seat. A is at seat 4 and B at seat 10 − 3 + 1 = 8; the people strictly between are seats 5, 6 and 7, which is three, not two."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "Correct. A is at seat 4 and B is at seat 10 − 3 + 1 = 8. The people strictly between them occupy seats 5, 6 and 7 = 8 − 4 − 1 = 3."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "This counts one of the endpoints. 'Between' excludes both A and B, so from seat 4 to seat 8 the gap holds 8 − 4 − 1 = 3 people."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "This uses B's position from the right (3) as if it were a seat number, giving 8 − 4 + 1. B's seat is 10 − 3 + 1 = 8, and the gap is 3."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A step-by-step method to fix positions, §7 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#7-a-step-by-step-method-to-fix-positions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "k-th from the right in a row of n is seat n − k + 1; persons between p and q are |p − q| − 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-007",
+      "topic": "Ch 11 · Seating Arrangements · What between means",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A puzzle says 'exactly three persons sit between X and Y'. Which counting rule does this follow?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Count only the seats strictly in the gap, excluding both X and Y",
+          "explanation": "Correct. 'Between X and Y' always means the seats strictly in the gap; X and Y themselves are never counted. So three persons between them means X and Y are four seats apart."
+        },
+        {
+          "key": "B",
+          "text": "Count the gap and include X",
+          "explanation": "X is an endpoint of the gap, not a person between the two. Including it double counts and shifts every position by one."
+        },
+        {
+          "key": "C",
+          "text": "Count the gap and include both X and Y",
+          "explanation": "Including both endpoints turns 'between' into 'from X to Y inclusive', which is a different quantity. 'Between' excludes the two named people."
+        },
+        {
+          "key": "D",
+          "text": "Count from the nearer end of the row to X",
+          "explanation": "'Between X and Y' has nothing to do with the ends of the row; it counts only the seats lying between the two named people."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Reading the clues, §2 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#2-reading-the-clues-immediate-neighbour-between-and-nth-to-the-left"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Between X and Y counts only the seats strictly in the gap, excluding both",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-008",
+      "topic": "Ch 11 · Seating Arrangements · Second to the right in a row",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Six friends P, Q, R, S, T and U sit in a row facing north. R is at the extreme left end. T sits immediately to the right of R. P has exactly two persons to his left. S sits immediately to the right of P. Q is at the extreme right end, and U sits immediately to the left of Q. Who sits second to the right of T?",
+      "options": [
+        {
+          "key": "A",
+          "text": "S",
+          "explanation": "Correct. The order from left to right is R, T, P, S, U, Q. T is second in the row, so second to his right is the fourth seat, which is S."
+        },
+        {
+          "key": "B",
+          "text": "P",
+          "explanation": "P is FIRST to the right of T, not second. Second to the right skips P and lands on the next seat, S."
+        },
+        {
+          "key": "C",
+          "text": "U",
+          "explanation": "U is fifth in the order R, T, P, S, U, Q — that is third to the right of T, not second."
+        },
+        {
+          "key": "D",
+          "text": "R",
+          "explanation": "R sits to the LEFT of T, at the extreme left end. Second to the right moves away from R, towards the right end."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Row solves to R, T, P, S, U, Q; second to the right of T is S",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-009",
+      "topic": "Ch 11 · Seating Arrangements · Persons between in a solved row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six friends P, Q, R, S, T and U sit in a row facing north. R is at the extreme left end. T sits immediately to the right of R. P has exactly two persons to his left. S sits immediately to the right of P. Q is at the extreme right end, and U sits immediately to the left of Q. How many people sit between P and Q?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "This counts one endpoint. The order is R, T, P, S, U, Q; P is at seat 3 and Q at seat 6, so the gap holds seats 4 and 5 = 2 people."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "Correct. The order is R, T, P, S, U, Q. P is at seat 3 and Q at seat 6, so S and U (seats 4 and 5) sit between them = 6 − 3 − 1 = 2."
+        },
+        {
+          "key": "C",
+          "text": "1",
+          "explanation": "Only one seat between P and Q would put them at seats 3 and 5, but Q is at the extreme right end, seat 6, leaving two seats in the gap."
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "explanation": "Four would be the whole stretch from just after P to Q inclusive. 'Between' excludes Q itself, so the count is 2."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Row solves to R, T, P, S, U, Q; persons between P (seat 3) and Q (seat 6) = 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-010",
+      "topic": "Ch 11 · Seating Arrangements · Immediate left in a solved row",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Six friends P, Q, R, S, T and U sit in a row facing north. R is at the extreme left end. T sits immediately to the right of R. P has exactly two persons to his left. S sits immediately to the right of P. Q is at the extreme right end, and U sits immediately to the left of Q. Who sits immediately to the left of U?",
+      "options": [
+        {
+          "key": "A",
+          "text": "S",
+          "explanation": "Correct. The order is R, T, P, S, U, Q. U is at seat 5, so the seat immediately to its left is seat 4, which is S."
+        },
+        {
+          "key": "B",
+          "text": "Q",
+          "explanation": "Q sits immediately to the RIGHT of U, at the extreme right end. The question asks for the person on U's left."
+        },
+        {
+          "key": "C",
+          "text": "P",
+          "explanation": "P is at seat 3, two seats to the left of U. The person immediately to U's left is at seat 4, which is S."
+        },
+        {
+          "key": "D",
+          "text": "T",
+          "explanation": "T is at seat 2, far to U's left. The immediate left neighbour of U is at seat 4, S."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Row solves to R, T, P, S, U, Q; immediately left of U is S",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-011",
+      "topic": "Ch 11 · Seating Arrangements · Count to one side in a solved row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six friends P, Q, R, S, T and U sit in a row facing north. R is at the extreme left end. T sits immediately to the right of R. P has exactly two persons to his left. S sits immediately to the right of P. Q is at the extreme right end, and U sits immediately to the left of Q. How many people sit to the right of P?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "explanation": "This misses one seat. The order is R, T, P, S, U, Q; P is at seat 3, so seats 4, 5 and 6 — S, U and Q — lie to his right, which is three people."
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "explanation": "Four would put P at seat 2, but P has two people to his left, so P is at seat 3 with three seats to his right."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "Correct. The order is R, T, P, S, U, Q. P sits at seat 3, so the seats to his right are 4, 5 and 6, held by S, U and Q = 3 people."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "Five is everyone except P. Only the people at higher seat numbers than P count, which is three."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Row solves to R, T, P, S, U, Q; people to the right of P (seat 3) = 3",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-012",
+      "topic": "Ch 11 · Seating Arrangements · Count to the right from a position",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Twenty-five people stand in a single row. Ravi is 11th from the left end. How many people stand to his right?",
+      "options": [
+        {
+          "key": "A",
+          "text": "13",
+          "explanation": "This subtracts one seat too many. Ravi occupies seat 11, so the people to his right are seats 12 to 25 = 25 − 11 = 14."
+        },
+        {
+          "key": "B",
+          "text": "14",
+          "explanation": "Correct. Ravi is at seat 11, so the seats to his right run from 12 to 25, giving 25 − 11 = 14 people."
+        },
+        {
+          "key": "C",
+          "text": "15",
+          "explanation": "This counts Ravi's own seat as being to his right. Subtract his position from the total: 25 − 11 = 14."
+        },
+        {
+          "key": "D",
+          "text": "11",
+          "explanation": "Eleven is Ravi's position from the left, not the number to his right. Those to his right number 25 − 11 = 14."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "People to the right of seat m in a row of n = n − m",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-013",
+      "topic": "Ch 11 · Seating Arrangements · Left and right in a south-facing row",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "People sit in a single row all facing SOUTH (towards you, the reader). For any one of them, 'the person immediately to the right' sits on which side as you look at the row?",
+      "options": [
+        {
+          "key": "A",
+          "text": "On your left",
+          "explanation": "Correct. Facing south, a person's right hand points west, and on a north-up drawing west is your left. So each person's right is your left — the mirror flip that a south-facing row is built to test."
+        },
+        {
+          "key": "B",
+          "text": "On your right",
+          "explanation": "This holds for a NORTH-facing row. Turning to face south swaps left and right, so the person's right is now on your left."
+        },
+        {
+          "key": "C",
+          "text": "Directly in front of them",
+          "explanation": "The right neighbour sits alongside, not in front. Facing direction changes which side is which, but the neighbour is still beside the person."
+        },
+        {
+          "key": "D",
+          "text": "The same side as in a north-facing row",
+          "explanation": "Facing south is a half-turn from facing north, and a half-turn swaps left and right. So the side is the opposite of the north-facing case."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Facing south, a person's right hand points west, which is the reader's left",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-014",
+      "topic": "Ch 11 · Seating Arrangements · Who faces whom in two rows",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A, B, C and D sit in row 1, all facing south. P, Q, R and S sit in row 2, all facing north, so the two rows face each other and each person faces exactly one person opposite. B sits at the left end of row 1 as we look, and faces P. A sits immediately to the right of B as we look, and faces Q. C sits at the right end of row 1 and faces S. D takes the remaining seat of row 1 and faces R. Who faces A?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Q",
+          "explanation": "Correct. The clue states directly that A faces Q. As we look, the columns are B–P, A–Q, D–R, C–S, so A (second column) is opposite Q."
+        },
+        {
+          "key": "B",
+          "text": "P",
+          "explanation": "P faces B, who sits at the left end. A sits one seat to B's right as we look, so A faces Q, the person opposite that column."
+        },
+        {
+          "key": "C",
+          "text": "R",
+          "explanation": "R faces D, not A. Each row-1 person faces the row-2 person in the same column, and A shares its column with Q."
+        },
+        {
+          "key": "D",
+          "text": "S",
+          "explanation": "S faces C at the right end. A is in the second column from the left, whose opposite seat holds Q."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Two rows facing each other, §4 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#4-two-rows-facing-each-other"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Columns are B–P, A–Q, D–R, C–S; A faces Q",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-015",
+      "topic": "Ch 11 · Seating Arrangements · Own-left in the facing row",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A, B, C and D sit in row 1, all facing south. P, Q, R and S sit in row 2, all facing north, so the two rows face each other. B sits at the left end of row 1 as we look and faces P. A sits immediately to the right of B as we look and faces Q. C sits at the right end of row 1 and faces S. D takes the remaining seat and faces R. Who sits immediately to Q's own left?",
+      "options": [
+        {
+          "key": "A",
+          "text": "P",
+          "explanation": "Correct. Q faces north, so Q's own right hand points east (your right) and Q's own left points west (your left). The columns as we look are P, Q, R, S, so the seat to Q's left is P."
+        },
+        {
+          "key": "B",
+          "text": "R",
+          "explanation": "R sits to Q's own right, not left. Because Q faces north, Q's left is towards the west side of the drawing, where P sits."
+        },
+        {
+          "key": "C",
+          "text": "S",
+          "explanation": "S is two seats to Q's right, at the far end of row 2. The person immediately to Q's left is the neighbour P."
+        },
+        {
+          "key": "D",
+          "text": "A",
+          "explanation": "A is in the other row, facing Q. The question asks for Q's neighbour within row 2, which is P."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Two rows facing each other, §4 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#4-two-rows-facing-each-other"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Row 2 faces north, so own-left = west; row 2 as we look is P, Q, R, S; left of Q is P",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-016",
+      "topic": "Ch 11 · Seating Arrangements · Own-right in the facing row",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A, B, C and D sit in row 1, all facing south. P, Q, R and S sit in row 2, all facing north, so the two rows face each other. B sits at the left end of row 1 as we look and faces P. A sits immediately to the right of B as we look and faces Q. C sits at the right end of row 1 and faces S. D takes the remaining seat and faces R. Who sits immediately to A's own right?",
+      "options": [
+        {
+          "key": "A",
+          "text": "B",
+          "explanation": "Correct. A faces south, so A's own right hand points west — the left side as we look. In row 1 the seats as we look are B, A, D, C, so the seat to A's own right (the west side) is B."
+        },
+        {
+          "key": "B",
+          "text": "D",
+          "explanation": "D sits to A's own LEFT. Because A faces south, A's right is towards the west (your left), where B sits, and D is on the east side."
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "explanation": "C sits at the far right end as we look, two seats east of A. A's own right points west, so the immediate seat there is B."
+        },
+        {
+          "key": "D",
+          "text": "Q",
+          "explanation": "Q is in the other row and faces A. The question asks for A's neighbour within row 1, on A's own right side, which is B."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Two rows facing each other, §4 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#4-two-rows-facing-each-other"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Row 1 faces south, so own-right = west; row 1 as we look is B, A, D, C; right of A is B",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-017",
+      "topic": "Ch 11 · Seating Arrangements · Persons between in a facing row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A, B, C and D sit in row 1, all facing south. B sits at the left end of row 1 as we look, C sits at the right end, A sits immediately to the right of B as we look, and D takes the remaining seat. How many people sit between B and C in row 1?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "explanation": "This misses a seat. As we look, row 1 is B, A, D, C; B is at column 1 and C at column 4, so A and D sit between them = 2."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "Correct. As we look, the row is B, A, D, C. B is at the left end and C at the right end, so A and D fill the two seats between = 4 − 1 − 1 = 2."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "Three would be the count if B and C were not at the ends. Both are end seats, so only the two middle seats lie between them."
+        },
+        {
+          "key": "D",
+          "text": "0",
+          "explanation": "Zero would mean B and C are neighbours, but they sit at opposite ends of a four-person row, with two people between."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Two rows facing each other, §4 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#4-two-rows-facing-each-other"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Row 1 as we look is B, A, D, C; persons between the two ends = 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-018",
+      "topic": "Ch 11 · Seating Arrangements · Third to the left in a circle",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Eight people A, B, C, D, E, F, G and H sit around a circular table facing the centre. Starting from A and moving clockwise, the order is A, F, C, H, B, G, D, E. Who sits third to the left of A?",
+      "options": [
+        {
+          "key": "A",
+          "text": "H",
+          "explanation": "Correct. Facing the centre, 'to the left' is the clockwise direction. Three seats clockwise from A along A, F, C, H is H."
+        },
+        {
+          "key": "B",
+          "text": "C",
+          "explanation": "C is only SECOND to the left of A (two clockwise steps). The third clockwise step reaches H."
+        },
+        {
+          "key": "C",
+          "text": "D",
+          "explanation": "D is three seats to the left only if you miscount the clockwise order; A, F, C, H makes H the third, while D is sixth."
+        },
+        {
+          "key": "D",
+          "text": "E",
+          "explanation": "E sits immediately to A's RIGHT (one anticlockwise step). It lies in the opposite direction from 'to the left'."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Facing centre, left = clockwise; three clockwise from A (A, F, C, H) is H",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-019",
+      "topic": "Ch 11 · Seating Arrangements · Persons between clockwise in a circle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Eight people A, B, C, D, E, F, G and H sit around a circular table facing the centre. Starting from A and moving clockwise, the order is A, F, C, H, B, G, D, E. Counting clockwise from A, how many people sit between A and B?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "This counts B itself or an extra seat. Clockwise from A the order is A, F, C, H, B, so F, C and H sit between A and B = 3."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "Correct. Moving clockwise from A the order is A, F, C, H, B, so the people strictly between A and B are F, C and H = 3."
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "Two would skip one seat. The clockwise gap A → B passes F, C and H, which is three people."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "Five is the count the OTHER way round the table (anticlockwise from A to B). Clockwise, only three people sit between them."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Clockwise order A, F, C, H, B, G, D, E; between A and B clockwise = 3",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-020",
+      "topic": "Ch 11 · Seating Arrangements · Immediate right in a circle",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Eight people A, B, C, D, E, F, G and H sit around a circular table facing the centre. Starting from A and moving clockwise, the order is A, F, C, H, B, G, D, E. Who sits immediately to the right of C?",
+      "options": [
+        {
+          "key": "A",
+          "text": "F",
+          "explanation": "Correct. Facing the centre, 'to the right' is the anticlockwise direction. The seat one step anticlockwise from C is F, since clockwise the order runs F, C, H."
+        },
+        {
+          "key": "B",
+          "text": "H",
+          "explanation": "H sits immediately to C's LEFT (one clockwise step). Facing the centre, the right side is anticlockwise, which is F."
+        },
+        {
+          "key": "C",
+          "text": "A",
+          "explanation": "A is two steps anticlockwise from C, not one. The immediate anticlockwise neighbour of C is F."
+        },
+        {
+          "key": "D",
+          "text": "B",
+          "explanation": "B is two seats clockwise from C. The immediate right of C, being anticlockwise, is F."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Facing centre, right = anticlockwise; anticlockwise neighbour of C is F",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-021",
+      "topic": "Ch 11 · Seating Arrangements · Persons between opposite seats",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Eight people sit at equal gaps around a circular table facing the centre. Two of them, X and Y, sit exactly opposite each other. How many people sit between X and Y along one side of the table?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "Correct. With 8 seats at equal gaps, opposite means 4 gaps apart. Each arc from X to Y then contains 8 ÷ 2 − 1 = 3 people."
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "explanation": "Four would count one of X or Y. Half of eight is four gaps, and four gaps leave three people strictly between."
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "Two is too few. Opposite seats in a circle of eight have three people on each connecting arc."
+        },
+        {
+          "key": "D",
+          "text": "6",
+          "explanation": "Six is everyone other than X and Y, that is, both arcs combined. One side holds half of them, which is three."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Opposite seats in a circle of n at equal gaps: persons on one arc = n/2 − 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-022",
+      "topic": "Ch 11 · Seating Arrangements · Immediate right facing outward",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A person sits at a round table facing OUTWARD (away from the centre). The person immediately to her right sits in which direction around the table?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The clockwise direction",
+          "explanation": "Correct. Facing outward flips the rule: the right hand now points clockwise, so the right neighbour is the clockwise one. Facing the centre it would be anticlockwise."
+        },
+        {
+          "key": "B",
+          "text": "The anticlockwise direction",
+          "explanation": "Anticlockwise is the right side only when a person faces the CENTRE. Facing outward reverses it to clockwise."
+        },
+        {
+          "key": "C",
+          "text": "Straight across the table",
+          "explanation": "The immediate right is always an adjacent neighbour, not the seat across the table."
+        },
+        {
+          "key": "D",
+          "text": "The same direction as when facing the centre",
+          "explanation": "Turning to face outward is a half-turn, which swaps left and right. So the right neighbour is on the opposite side from the facing-centre case."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Facing outward, and how left and right flip, §6 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#6-facing-outward-and-how-left-and-right-flip"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Facing outward: right = clockwise neighbour",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-023",
+      "topic": "Ch 11 · Seating Arrangements · Counting facing directions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Eight people P, Q, R, S, T, U, V and W sit around a circular table. P, R, T and V face outward, away from the centre; the rest face the centre. How many people face the centre?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5",
+          "explanation": "This is one too many. Four people (P, R, T, V) face outward, so the remaining 8 − 4 = 4 face the centre."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "Three is one too few. Removing the four who face outward from the eight leaves four facing the centre."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "Correct. Q, S, U and W are the people not listed as facing outward, so exactly 8 − 4 = 4 face the centre."
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "explanation": "Eight is everyone at the table. Four of them face outward, so only four face the centre."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Facing outward, and how left and right flip, §6 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#6-facing-outward-and-how-left-and-right-flip"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "8 people, 4 face outward, so 8 − 4 = 4 face the centre",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-024",
+      "topic": "Ch 11 · Seating Arrangements · Between from left and right positions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a row of 15 people, X is 5th from the left end and Y is 6th from the right end. How many people sit between X and Y?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "This drops one seat. X is at seat 5 and Y at seat 15 − 6 + 1 = 10, so seats 6 to 9 lie between = 10 − 5 − 1 = 4."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "Five counts both endpoints. From seat 5 to seat 10 the strictly-between seats number 10 − 5 − 1 = 4."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "Correct. X is at seat 5; Y is at seat 15 − 6 + 1 = 10. The people strictly between are at seats 6, 7, 8 and 9 = 4."
+        },
+        {
+          "key": "D",
+          "text": "6",
+          "explanation": "Six mixes up Y's count-from-the-right (6) with a seat number. Y actually sits at seat 10, leaving four people between."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: A step-by-step method to fix positions, §7 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#7-a-step-by-step-method-to-fix-positions"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Y at seat n − k + 1 = 10; persons between seats 5 and 10 = 4",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-025",
+      "topic": "Ch 11 · Seating Arrangements · Position from the other end",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a row of 15 people, P is 7th from the left end. What is P's position from the right end?",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "This forgets the +1. Position from the right = n − m + 1 = 15 − 7 + 1 = 9, not 8."
+        },
+        {
+          "key": "B",
+          "text": "9",
+          "explanation": "Correct. P is at seat 7 from the left, so from the right the position is 15 − 7 + 1 = 9. (Seats 8 to 15 lie to P's right, then P himself is the 9th counting from the right.)"
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "explanation": "This double counts. The two positions and the total obey (from left) + (from right) = n + 1, so from the right = 16 − 7 = 9."
+        },
+        {
+          "key": "D",
+          "text": "7",
+          "explanation": "Seven is P's position from the LEFT. The row is not symmetric about P, so the right-hand position differs: it is 9."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A step-by-step method to fix positions, §7 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#7-a-step-by-step-method-to-fix-positions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Position from the right = n − (position from left) + 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-026",
+      "topic": "Ch 11 · Seating Arrangements · Which clue fixes a definite seat",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "You are fixing a linear arrangement and know the number of seats. Which single clue lets you place a person in a definite seat straight away?",
+      "options": [
+        {
+          "key": "A",
+          "text": "'X sits at the extreme right end'",
+          "explanation": "Correct. An end clue names an exact seat: the extreme right end is seat n, a fixed position. Fixed clues are the anchors you build the rest of the arrangement around."
+        },
+        {
+          "key": "B",
+          "text": "'X sits somewhere to the left of Y'",
+          "explanation": "This only orders X before Y; X could still sit in many seats. It is a floating clue, useful for eliminating options but not for pinning a seat."
+        },
+        {
+          "key": "C",
+          "text": "'X is a neighbour of Y'",
+          "explanation": "This ties X to Y but fixes neither, and it does not even say which side. It cannot place a person until Y's own seat is known."
+        },
+        {
+          "key": "D",
+          "text": "'X does not sit at either end'",
+          "explanation": "This rules out two seats but leaves several possible. It narrows the field without giving a definite seat."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A step-by-step method to fix positions, §7 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#7-a-step-by-step-method-to-fix-positions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Start from fixed clues (ends, exact positions) before floating clues",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-027",
+      "topic": "Ch 11 · Seating Arrangements · Ambiguity of a neighbour clue",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a row you are told only that 'A sits next to B'. Which conclusion follows for certain?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A and B occupy adjacent seats, but which of them is on the left is not fixed",
+          "explanation": "Correct. 'Next to' fixes only that A and B are neighbours; it does not say A is on B's left or right, so two orders remain possible until another clue decides."
+        },
+        {
+          "key": "B",
+          "text": "A sits immediately to the left of B",
+          "explanation": "This is one of the two possibilities, not a certainty. 'Next to' does not fix the side, so A could equally sit to B's right."
+        },
+        {
+          "key": "C",
+          "text": "A sits immediately to the right of B",
+          "explanation": "This is the other possibility. Without a clue naming the side, neither order can be asserted for certain."
+        },
+        {
+          "key": "D",
+          "text": "A and B sit at the two ends of the row",
+          "explanation": "The ends of a row are not adjacent (unless the row has two seats), so 'next to' cannot place A and B at opposite ends."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Ambiguous clues and multiple valid layouts, §8 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#8-ambiguous-clues-and-multiple-valid-layouts"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "'Next to' fixes adjacency but not the side",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-028",
+      "topic": "Ch 11 · Seating Arrangements · What stays certain under two layouts",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Four people W, X, Y and Z sit in a row. X and Y sit at the two ends (in either order). W sits somewhere to the left of Z. Which statement is certainly true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "W sits second from the left",
+          "explanation": "Correct. The two ends are taken by X and Y, so W and Z fill the two middle seats. With W left of Z, W is at seat 2 and Z at seat 3 — fixed regardless of how X and Y share the ends."
+        },
+        {
+          "key": "B",
+          "text": "X sits at the left end",
+          "explanation": "X and Y may sit at the ends in either order, so X could be at the left or the right end. This is not certain."
+        },
+        {
+          "key": "C",
+          "text": "Z sits at the right end",
+          "explanation": "The ends belong to X and Y. Z is a middle seat (seat 3), never an end, so this is false."
+        },
+        {
+          "key": "D",
+          "text": "Y sits immediately to the left of W",
+          "explanation": "Only if Y happens to be at the left end; if Y is at the right end, the person to W's left is X. So this cannot be asserted for certain."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Ambiguous clues and multiple valid layouts, §8 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#8-ambiguous-clues-and-multiple-valid-layouts"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Ends hold X and Y; middle seats hold W then Z, so W is seat 2 in every layout",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-029",
+      "topic": "Ch 11 · Seating Arrangements · Recognising cannot be determined",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a row of 5 people, only two facts are known: T sits exactly in the middle, and V sits at the extreme left end. Where does W sit?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seat 2 (second from the left)",
+          "explanation": "Possible, but not forced. W could equally sit at seat 4 or seat 5, so seat 2 cannot be asserted."
+        },
+        {
+          "key": "B",
+          "text": "Seat 4",
+          "explanation": "Possible, but not certain. The clues leave seats 2, 4 and 5 open for W, so no single seat is fixed."
+        },
+        {
+          "key": "C",
+          "text": "Seat 5 (extreme right end)",
+          "explanation": "Possible, but not forced. W is one of three people sharing seats 2, 4 and 5, so its exact seat is open."
+        },
+        {
+          "key": "D",
+          "text": "Cannot be determined",
+          "explanation": "Correct. T is fixed at seat 3 and V at seat 1, leaving seats 2, 4 and 5 for W and the other two people. Nothing pins W to one of them, so the seat cannot be determined."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Ambiguous clues and multiple valid layouts, §8 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#8-ambiguous-clues-and-multiple-valid-layouts"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Two fixed seats leave three open; W is not pinned, so cannot be determined",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-030",
+      "topic": "Ch 11 · Seating Arrangements · Direction in a classroom grid",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Students sit in a grid of rows and columns, all facing the front of the room (north). For any student, the right hand points towards which side as you look at the grid from the back?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Towards your right, the higher-numbered columns",
+          "explanation": "Correct. Facing the front (north), a student's right hand points east. Looking from the back with the same facing, east is your right, which is the higher-numbered-column side."
+        },
+        {
+          "key": "B",
+          "text": "Towards your left, the lower-numbered columns",
+          "explanation": "This would hold if the students faced the back (south). Facing the front, their right is east, on your right."
+        },
+        {
+          "key": "C",
+          "text": "Towards the front of the room",
+          "explanation": "The front is the direction of gaze, not of the right hand. The right hand points sideways, along the rows."
+        },
+        {
+          "key": "D",
+          "text": "Towards the back of the room",
+          "explanation": "The back is behind the students; the right hand points sideways to the east, along the row, not backwards."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Grid and rectangular table arrangements, §9 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#9-grid-and-rectangular-table-arrangements"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "In a north-facing grid, a student's right is east, the higher-column side",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-031",
+      "topic": "Ch 11 · Seating Arrangements · Counting rows in a grid",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nine students sit in a 3-by-3 grid (3 rows of 3), all facing the front. Row 1 is the front row and row 3 the back. A student sits in the centre seat, row 2 column 2. How many students sit strictly in front of her?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "explanation": "Two counts only part of the front row. Everyone in row 1 is in front of the centre seat, and row 1 has three students."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "Correct. 'In front' means towards the front row. The centre student is in row 2, so the whole of row 1 — three students — sits in front of her."
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "explanation": "Six is everyone in rows 1 and 3. Only row 1 is in front of her; row 3 sits behind."
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "explanation": "Four would add a seat from row 2 or row 3. Only the three students of row 1 are strictly in front of the centre seat."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Grid and rectangular table arrangements, §9 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#9-grid-and-rectangular-table-arrangements"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Centre seat is in row 2; row 1 (3 students) is strictly in front",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-032",
+      "topic": "Ch 11 · Seating Arrangements · Directly behind in a grid",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Nine students sit in a 3-by-3 grid facing the front. From the front row to the back the seats are: row 1 U, V, W; row 2 X, Y, Z; row 3 P, Q, R, with columns read left to right. Who sits directly behind Y?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Q",
+          "explanation": "Correct. Y is in row 2, column 2. 'Directly behind' means the same column in the next row back, which is row 3 column 2 — Q."
+        },
+        {
+          "key": "B",
+          "text": "V",
+          "explanation": "V sits directly in FRONT of Y (row 1, same column). 'Behind' points towards the back rows."
+        },
+        {
+          "key": "C",
+          "text": "X",
+          "explanation": "X sits immediately to Y's left in the same row, not behind. Behind means the seat in the same column one row further back."
+        },
+        {
+          "key": "D",
+          "text": "Z",
+          "explanation": "Z sits immediately to Y's right in the same row, not behind. The seat behind Y is in row 3, column 2 — Q."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Grid and rectangular table arrangements, §9 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#9-grid-and-rectangular-table-arrangements"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Directly behind Y (row 2 col 2) is row 3 col 2 = Q",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-033",
+      "topic": "Ch 11 · Seating Arrangements · Negative marking value",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In CA Foundation Paper 3, how many marks are deducted for each wrong answer?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.25 mark",
+          "explanation": "Correct. Paper 3 is objective with negative marking of 0.25 mark for each wrong answer; a correct answer earns 1 mark and an unattempted question scores 0."
+        },
+        {
+          "key": "B",
+          "text": "0.5 mark",
+          "explanation": "0.5 is the deduction in some other exams, not Paper 3. The Foundation Paper 3 penalty is 0.25 mark per wrong answer."
+        },
+        {
+          "key": "C",
+          "text": "1 mark",
+          "explanation": "Losing a full mark would be as costly as the mark on offer. The actual deduction is a quarter mark, 0.25."
+        },
+        {
+          "key": "D",
+          "text": "No marks are deducted",
+          "explanation": "Paper 3 does carry a penalty. Each wrong answer costs 0.25 mark, which is why blind guessing is close to break-even."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Negative marking and when to leave a question, §10 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#10-negative-marking-and-when-to-leave-a-question"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Paper 3 negative marking is 0.25 mark per wrong answer",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-034",
+      "topic": "Ch 11 · Seating Arrangements · Expected value of a blind guess",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "You guess blindly among four options on four such questions, with 1 mark for a correct answer and 0.25 deducted for a wrong one. On average, what is your net score over the four?",
+      "options": [
+        {
+          "key": "A",
+          "text": "About +0.25 mark",
+          "explanation": "Correct. On four blind guesses you expect one right (+1) and three wrong (3 × −0.25 = −0.75), a net of +0.25 — slightly positive but close to neutral."
+        },
+        {
+          "key": "B",
+          "text": "About −0.75 mark",
+          "explanation": "This counts the three wrong answers but forgets the one expected correct answer worth +1. The net is +1 − 0.75 = +0.25."
+        },
+        {
+          "key": "C",
+          "text": "About +1 mark",
+          "explanation": "This ignores the penalty on the three wrong guesses. Subtracting 0.75 from the +1 leaves a net of +0.25."
+        },
+        {
+          "key": "D",
+          "text": "Exactly 0",
+          "explanation": "Blind guessing is very slightly positive, not exactly neutral. One correct (+1) against three wrong (−0.75) nets +0.25 over four questions."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Negative marking and when to leave a question, §10 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#10-negative-marking-and-when-to-leave-a-question"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Four blind guesses: 1×(+1) + 3×(−0.25) = +0.25 net",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-035",
+      "topic": "Ch 11 · Seating Arrangements · When to attempt a question",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Given Paper 3's 0.25 negative marking, what is a sensible working rule for whether to attempt a seating question you are unsure of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Attempt it once you can rule out at least one option",
+          "explanation": "Correct. Ruling out even one option raises a guess above a blind one, so the expected value turns clearly positive. Leave a question only when you cannot narrow the field at all."
+        },
+        {
+          "key": "B",
+          "text": "Never attempt unless you are completely certain",
+          "explanation": "This is too cautious. Because eliminating one option already tips the odds in your favour, sensible partial guesses earn marks over a whole paper."
+        },
+        {
+          "key": "C",
+          "text": "Always attempt every question, whatever your doubt",
+          "explanation": "Blind guessing is only just above neutral and has wide spread. It is better to attempt when you can eliminate at least one option, not indiscriminately."
+        },
+        {
+          "key": "D",
+          "text": "Attempt only the questions worth the most marks",
+          "explanation": "Every objective question here carries the same 1 mark, so weighting by marks does not apply. The useful test is whether you can eliminate an option."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Negative marking and when to leave a question, §10 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#10-negative-marking-and-when-to-leave-a-question"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Attempt when at least one option can be eliminated; leave only when the field cannot be narrowed",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-036",
+      "topic": "Ch 11 · Seating Arrangements · Count to the left in a solved row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six friends P, Q, R, S, T and U sit in a row facing north. R is at the extreme left end. T sits immediately to the right of R. P has exactly two persons to his left. S sits immediately to the right of P. Q is at the extreme right end, and U sits immediately to the left of Q. How many people sit to the left of S?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "explanation": "This misses a seat. The order is R, T, P, S, U, Q; S is at seat 4, so seats 1, 2 and 3 — R, T and P — lie to its left, which is three."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "Correct. The order is R, T, P, S, U, Q. S sits at seat 4, so R, T and P (seats 1, 2 and 3) are to its left = 3 people."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "Four would place S at seat 5, but S sits immediately to the right of P at seat 3, so S is at seat 4 with three seats to its left."
+        },
+        {
+          "key": "D",
+          "text": "1",
+          "explanation": "One would make S the second seat. S is at seat 4, so three people sit to its left."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Row solves to R, T, P, S, U, Q; people to the left of S (seat 4) = 3",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-037",
+      "topic": "Ch 11 · Seating Arrangements · Who sits between two people",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Six friends P, Q, R, S, T and U sit in a row facing north. R is at the extreme left end. T sits immediately to the right of R. P has exactly two persons to his left. S sits immediately to the right of P. Q is at the extreme right end, and U sits immediately to the left of Q. Who sits exactly between T and S?",
+      "options": [
+        {
+          "key": "A",
+          "text": "P",
+          "explanation": "Correct. The order is R, T, P, S, U, Q. T is at seat 2 and S at seat 4, so the single seat between them, seat 3, is P."
+        },
+        {
+          "key": "B",
+          "text": "R",
+          "explanation": "R sits to the left of T at the extreme left end, not between T and S. The person in the gap is P."
+        },
+        {
+          "key": "C",
+          "text": "U",
+          "explanation": "U sits to the right of S, at seat 5. The seat between T and S is seat 3, which holds P."
+        },
+        {
+          "key": "D",
+          "text": "Q",
+          "explanation": "Q is at the extreme right end, far from the gap between T and S. That gap is filled by P."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Row solves to R, T, P, S, U, Q; between T (seat 2) and S (seat 4) is P",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-038",
+      "topic": "Ch 11 · Seating Arrangements · Row length from two positions",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a row, A is 10th from the left end and 5th from the right end. How many people are in the row?",
+      "options": [
+        {
+          "key": "A",
+          "text": "15",
+          "explanation": "This leaves the double count in. A is counted from both ends, so total = 10 + 5 − 1 = 14, not 15."
+        },
+        {
+          "key": "B",
+          "text": "14",
+          "explanation": "Correct. A is counted once from each end, so adding the positions counts A twice: total = 10 + 5 − 1 = 14."
+        },
+        {
+          "key": "C",
+          "text": "13",
+          "explanation": "This subtracts 2. Only A is shared between the two counts, so exactly one is removed, giving 14."
+        },
+        {
+          "key": "D",
+          "text": "16",
+          "explanation": "This adds 1 instead of subtracting. The overlap of A must be taken away, so the total is 10 + 5 − 1 = 14."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A step-by-step method to fix positions, §7 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#7-a-step-by-step-method-to-fix-positions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "n = (position from left) + (position from right) − 1 = 14",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-039",
+      "topic": "Ch 11 · Seating Arrangements · Immediate left in a circle",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Eight people A, B, C, D, E, F, G and H sit around a circular table facing the centre. Starting from A and moving clockwise, the order is A, F, C, H, B, G, D, E. Who sits immediately to the left of D?",
+      "options": [
+        {
+          "key": "A",
+          "text": "E",
+          "explanation": "Correct. Facing the centre, 'to the left' is the clockwise direction. One clockwise step from D reaches E, since the clockwise order runs D, E, then back to A."
+        },
+        {
+          "key": "B",
+          "text": "G",
+          "explanation": "G sits immediately to D's RIGHT (one anticlockwise step). Facing the centre, the left side is clockwise, which is E."
+        },
+        {
+          "key": "C",
+          "text": "A",
+          "explanation": "A is two clockwise steps from D. The immediate left neighbour, one step clockwise, is E."
+        },
+        {
+          "key": "D",
+          "text": "B",
+          "explanation": "B is two anticlockwise steps from D. The immediate left of D, being clockwise, is E."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Facing centre, left = clockwise; clockwise neighbour of D is E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-040",
+      "topic": "Ch 11 · Seating Arrangements · Clockwise gap across the wrap",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Eight people A, B, C, D, E, F, G and H sit around a circular table facing the centre. Starting from A and moving clockwise, the order is A, F, C, H, B, G, D, E. Counting clockwise from E, how many people sit between E and G?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "This drops a seat. Clockwise from E the order wraps E, A, F, C, H, B, G, so five people — A, F, C, H and B — sit between E and G."
+        },
+        {
+          "key": "B",
+          "text": "6",
+          "explanation": "Six counts G itself or an extra seat. The clockwise stretch from E to G passes A, F, C, H and B = 5 people."
+        },
+        {
+          "key": "C",
+          "text": "5",
+          "explanation": "Correct. E sits last in the clockwise order, so clockwise it wraps to A, F, C, H, B, then G. The people between are A, F, C, H and B = 5."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "Three is the count the OTHER way (anticlockwise from E to G, passing D). Clockwise, the gap holds five people."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Clockwise from E wraps E, A, F, C, H, B, G; between E and G = 5",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-041",
+      "topic": "Ch 11 · Seating Arrangements · Who faces a given person",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A, B, C and D sit in row 1 facing south; P, Q, R and S sit in row 2 facing north, so the rows face each other. B faces P, A faces Q, C faces S and D faces R. Who faces D?",
+      "options": [
+        {
+          "key": "A",
+          "text": "R",
+          "explanation": "Correct. The clue states directly that D faces R, since D and R share the same column across the two rows."
+        },
+        {
+          "key": "B",
+          "text": "P",
+          "explanation": "P faces B, not D. Each row-1 person faces the row-2 person in the same column, and D's column holds R."
+        },
+        {
+          "key": "C",
+          "text": "Q",
+          "explanation": "Q faces A. D shares its column with R, so D faces R."
+        },
+        {
+          "key": "D",
+          "text": "S",
+          "explanation": "S faces C. The person opposite D is R."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Two rows facing each other, §4 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#4-two-rows-facing-each-other"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Facing pairs B–P, A–Q, C–S, D–R; D faces R",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-042",
+      "topic": "Ch 11 · Seating Arrangements · Position from the other end in a long row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a row of 40 people, a person is 16th from the left end. What is that person's position from the right end?",
+      "options": [
+        {
+          "key": "A",
+          "text": "24",
+          "explanation": "This forgets the +1. Position from the right = n − m + 1 = 40 − 16 + 1 = 25, not 24."
+        },
+        {
+          "key": "B",
+          "text": "25",
+          "explanation": "Correct. From the right, the position is 40 − 16 + 1 = 25. (The 24 people to the right, plus the person, make 25 counting from the right.)"
+        },
+        {
+          "key": "C",
+          "text": "26",
+          "explanation": "This overcounts by one. The two positions and the total obey (from left) + (from right) = n + 1 = 41, so from the right = 41 − 16 = 25."
+        },
+        {
+          "key": "D",
+          "text": "16",
+          "explanation": "Sixteen is the position from the LEFT. The person is not in the middle, so the right-hand position is different: 25."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A step-by-step method to fix positions, §7 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#7-a-step-by-step-method-to-fix-positions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Position from the right = n − m + 1 = 25",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-043",
+      "topic": "Ch 11 · Seating Arrangements · To the right of versus from the right",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a row, what is the difference between 'second to the right of X' and 'second from the right end'?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The first is measured from X; the second is measured from the right end of the row",
+          "explanation": "Correct. 'Second to the right of X' counts two seats rightward starting at X, so it depends on where X sits. 'Second from the right end' is fixed at seat n − 1, independent of any person."
+        },
+        {
+          "key": "B",
+          "text": "They always name the same seat",
+          "explanation": "They coincide only by accident. One is relative to X and moves with X; the other is a fixed seat near the right end."
+        },
+        {
+          "key": "C",
+          "text": "Both are measured from the right end of the row",
+          "explanation": "Only the second is. 'Second to the right of X' is measured from X's seat, not from the end."
+        },
+        {
+          "key": "D",
+          "text": "Both are measured from X",
+          "explanation": "Only the first is measured from X. 'Second from the right end' has nothing to do with X; it is the seat one in from the right edge."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Reading the clues, §2 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#2-reading-the-clues-immediate-neighbour-between-and-nth-to-the-left"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "'to the right of X' is relative to X; 'from the right end' is relative to the end",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-044",
+      "topic": "Ch 11 · Seating Arrangements · Between in the second row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In row 2, four people P, Q, R and S sit facing north. As we look, P is at the left end, S is at the right end, Q sits immediately to the right of P, and R takes the remaining seat. How many people sit between P and S?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "Three would be the count if P and S were not both at the ends. As we look, the row is P, Q, R, S, so only Q and R sit between the two end seats."
+        },
+        {
+          "key": "B",
+          "text": "1",
+          "explanation": "One misses a seat. As we look, the row is P, Q, R, S; between the ends P and S sit Q and R = 2."
+        },
+        {
+          "key": "C",
+          "text": "2",
+          "explanation": "Correct. As we look, the row is P, Q, R, S. P and S are at the two ends, so Q and R fill the two middle seats between them = 4 − 1 − 1 = 2."
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "explanation": "Four is the whole row. 'Between' excludes P and S themselves, leaving the two middle people, Q and R."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Two rows facing each other, §4 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#4-two-rows-facing-each-other"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Row 2 as we look is P, Q, R, S; persons between the two ends = 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-045",
+      "topic": "Ch 11 · Seating Arrangements · Own-right at a grid corner",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Nine students sit in a 3-by-3 grid facing the front. From the front row to the back the seats are: row 1 U, V, W; row 2 X, Y, Z; row 3 P, Q, R, with columns read left to right. U sits at the front-left corner. Who sits immediately to U's own right?",
+      "options": [
+        {
+          "key": "A",
+          "text": "V",
+          "explanation": "Correct. U faces the front (north), so U's own right hand points east, towards the higher-numbered columns. In row 1 the seat immediately east of U is V."
+        },
+        {
+          "key": "B",
+          "text": "X",
+          "explanation": "X sits directly behind U in the same column, not to the side. U's own right is along the row, towards V."
+        },
+        {
+          "key": "C",
+          "text": "W",
+          "explanation": "W is at the far right of row 1, two seats east of U. The seat immediately to U's right is V."
+        },
+        {
+          "key": "D",
+          "text": "Q",
+          "explanation": "Q sits in row 3, nowhere near U. U's immediate right neighbour is V, in the same front row."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Grid and rectangular table arrangements, §9 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#9-grid-and-rectangular-table-arrangements"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "U faces north, own-right = east; immediate east seat in row 1 is V",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-046",
+      "topic": "Ch 11 · Seating Arrangements · Between opposite seats in a larger circle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Twelve people sit at equal gaps around a circular table facing the centre. Two of them sit exactly opposite each other. How many people sit between them along one side of the table?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "Six counts one of the two opposite people. Opposite means 6 gaps apart in a circle of 12, leaving 12 ÷ 2 − 1 = 5 people on each arc."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "Correct. Twelve seats at equal gaps make opposite people 6 gaps apart; each connecting arc then holds 12 ÷ 2 − 1 = 5 people."
+        },
+        {
+          "key": "C",
+          "text": "7",
+          "explanation": "Seven exceeds one arc. Half of twelve is six gaps, and six gaps leave five people strictly between."
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "explanation": "Four is too few for a circle of twelve. Opposite seats have five people on each side."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Circular arrangements facing the centre, §5 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#5-circular-arrangements-facing-the-centre"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Opposite seats in a circle of 12 at equal gaps: persons on one arc = 12/2 − 1 = 5",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-047",
+      "topic": "Ch 11 · Seating Arrangements · What a single interior clue fixes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a row of 4 people, the only clue is 'M does not sit at either end'. Which statement is certainly true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "M has a person seated on both sides",
+          "explanation": "Correct. Not sitting at an end means M is in an interior seat (seat 2 or seat 3), and every interior seat of a row has a neighbour on each side."
+        },
+        {
+          "key": "B",
+          "text": "M sits at seat 2",
+          "explanation": "M could be at seat 2 or seat 3; the clue rules out only the ends. So seat 2 is not certain."
+        },
+        {
+          "key": "C",
+          "text": "M sits next to both ends of the row",
+          "explanation": "An interior seat touches only one end seat, not both. Seat 2 borders the left end; seat 3 borders the right end; neither borders both."
+        },
+        {
+          "key": "D",
+          "text": "Exactly one person sits to M's left",
+          "explanation": "True only if M is at seat 2. If M is at seat 3, two people sit to the left, so this is not certain."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Ambiguous clues and multiple valid layouts, §8 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#8-ambiguous-clues-and-multiple-valid-layouts"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "An interior seat has neighbours on both sides; exact seat not fixed by one clue",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-048",
+      "topic": "Ch 11 · Seating Arrangements · Persons between in a five-person row",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Five people J, K, L, M and N sit in a row facing north. N is at the left end and K at the right end. L is second to the left of K, and M sits immediately to the left of L. How many people sit between M and K?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "explanation": "One misses a seat. The order is N, M, L, J, K; M is at seat 2 and K at seat 5, so L and J (seats 3 and 4) sit between = 2."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "Correct. The order is N, M, L, J, K. M is at seat 2 and K at seat 5, so L and J fill the gap = 5 − 2 − 1 = 2."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "Three counts an endpoint. From seat 2 (M) to seat 5 (K) the strictly-between seats number 5 − 2 − 1 = 2."
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "explanation": "Four is more than the whole gap. Only seats 3 and 4 lie between M and K, which is two people."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Row solves to N, M, L, J, K; persons between M (seat 2) and K (seat 5) = 2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-049",
+      "topic": "Ch 11 · Seating Arrangements · Second to the right in a five-person row",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Five people J, K, L, M and N sit in a row facing north. N is at the left end and K at the right end. L is second to the left of K, and M sits immediately to the left of L. Who sits second to the right of N?",
+      "options": [
+        {
+          "key": "A",
+          "text": "L",
+          "explanation": "Correct. The order is N, M, L, J, K. N is at the left end, seat 1; second to its right is seat 3, which is L."
+        },
+        {
+          "key": "B",
+          "text": "M",
+          "explanation": "M is only FIRST to the right of N (seat 2). Second to the right skips M and lands on L at seat 3."
+        },
+        {
+          "key": "C",
+          "text": "J",
+          "explanation": "J is third to the right of N, at seat 4. Second to the right of N is L."
+        },
+        {
+          "key": "D",
+          "text": "K",
+          "explanation": "K is at the extreme right end, seat 5 — fourth to the right of N. Second to the right is L."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: A single row facing one way, §3 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#3-a-single-row-facing-one-way"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Row solves to N, M, L, J, K; second to the right of N is L",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c11-050",
+      "topic": "Ch 11 · Seating Arrangements · Attempting a two-option question",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On a seating question you have narrowed the answer to two options but cannot decide between them. With 1 mark for a correct answer and 0.25 deducted for a wrong one, should you attempt it?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Yes — with two options the expected value is clearly positive",
+          "explanation": "Correct. A guess between two options is right half the time: expected value = 0.5 × (+1) + 0.5 × (−0.25) = +0.375 mark, comfortably positive, so it is worth attempting."
+        },
+        {
+          "key": "B",
+          "text": "No — any uncertainty means you should leave it",
+          "explanation": "Leaving a 50-50 question forgoes a positive expected value. Once you are down to two options, attempting earns marks on average."
+        },
+        {
+          "key": "C",
+          "text": "No — the 0.25 penalty makes a two-way guess a net loss",
+          "explanation": "The penalty is smaller than the reward at even odds: 0.5 × 1 minus 0.5 × 0.25 is +0.375, a net gain, not a loss."
+        },
+        {
+          "key": "D",
+          "text": "Only if the two options are adjacent letters",
+          "explanation": "The letters of the options carry no information about correctness. What matters is that eliminating two options has already tipped the odds in your favour."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Negative marking and when to leave a question, §10 →",
+        "href": "/foundation/quantitative-aptitude/seating-arrangements/#10-negative-marking-and-when-to-leave-a-question"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Two-option guess: 0.5×(+1) + 0.5×(−0.25) = +0.375 net",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

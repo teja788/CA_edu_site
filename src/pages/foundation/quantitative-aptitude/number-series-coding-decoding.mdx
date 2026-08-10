@@ -1,0 +1,646 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Number Series, Coding and Decoding and Odd Man Out'
+description: 'CA Foundation Quantitative Aptitude Ch 9 (Part B, Logical Reasoning) — number series, coding-decoding and odd-man-out in plain language: reading a series by its differences, arithmetic and geometric patterns, square, cube and power series, alternating and mixed two-thread series, Fibonacci-type sums, finding a missing or a wrong term, letter series and the place value of letters, coding by letter shifts, reversal, substitution and number and symbol codes, spotting the item that breaks a rule, speed tactics and negative-marking guidance, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 9 · Number Series, Coding and Decoding and Odd Man Out'
+chapterSlug: number-series-coding-decoding
+masteryId: f3-ch9
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Part B (Logical Reasoning), Ch 9 (Number Series, Coding and Decoding and Odd Man Out) — scope and level of treatment'
+  - 'Standard conventions of reasoning tests: the difference method for a number series, letter place values A = 1 to Z = 26, shift and substitution codes, and the odd-man-out rule'
+sourceLabel: 'ICAI SM Paper 3 (Part B) Ch 9 scope (May 2026 ed.) · standard reasoning-test conventions'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 24 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=number-series-coding-decoding'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A logistics warehouse in Bengaluru numbers its picking shelves along one wall 4, 11, 18, 25, and the
+supervisor asks a new hand to label the next two shelves before the morning shift. The gap between
+one shelf and the next is a steady 7, so the labels continue 32 and 39. That is the whole of a number
+series in one sentence: find the rule that links each term to the next, then use the rule to read off
+the term the question asks for.
+
+Part B of Paper 3 is Logical Reasoning, and this chapter is where reasoning meets arithmetic. Three
+families of question sit together here. A **number series** shows you a run of numbers and hides one,
+usually the next term. A **coding-decoding** question replaces the letters or digits of a word by a
+rule and asks you to apply the same rule to a fresh word. An **odd-man-out** question shows a small
+group of items and asks which one does not share the rule the rest obey. All three test the same
+habit: spot the rule quickly, apply it carefully, and do not talk yourself out of the answer you have
+found.
+
+The marks here are won on speed and lost on haste. The arithmetic is small, so a wrong answer almost
+always comes from reading a `+7` as a `+8`, from stopping one letter short in the alphabet, or from
+picking the item that catches the eye instead of the item that breaks the rule.
+
+## 1. What a number series is and how to read it
+
+A **number series** is an ordered list of numbers built by a fixed rule. Your task is never to admire
+the numbers but to recover the rule, and the fastest route to the rule is almost always the same
+first move.
+
+<div class="formula">Write the differences between each pair of neighbouring terms, and study that new row.</div>
+
+Take 4, 11, 18, 25. The differences are 7, 7, 7 — a constant, so the rule is "add 7" and the next
+term is 32. Take 3, 5, 9, 15, 23. The differences are 2, 4, 6, 8 — themselves a neat series, so the
+next difference is 10 and the next term is 33. The difference row turns a hard-looking series into an
+easy one, and when the differences are still not obvious, the differences *of* the differences often
+are.
+
+A handful of shapes cover almost every Foundation series. It pays to carry the list in your head, so
+that you test them in order rather than staring:
+
+- **A constant difference** — the terms go up or down by the same amount (an arithmetic series).
+- **A growing or shrinking difference** — the differences themselves form a series.
+- **A constant ratio** — each term is the previous one multiplied or divided by a fixed number (a
+  geometric series).
+- **A two-step rule** — each term is the previous one multiplied by something and then a number added
+  or taken away, such as "double and add one".
+- **Squares, cubes or their neighbours** — the terms are 1, 4, 9, 16 or 1, 8, 27, 64, sometimes
+  shifted by one.
+- **Two threads plaited together** — alternate terms belong to two separate simple series.
+- **A sum rule** — each term is the sum of the two before it (a Fibonacci-type series).
+
+<Callout kind="pointer">
+  <p>
+    Test the cheap rules before the expensive ones. Check for a constant difference first, then a
+    constant ratio, then squares and cubes, and only then the plaited and two-step patterns. Most
+    series surrender to one of the first three tests, and running them in this order keeps you from
+    inventing a complicated rule where a simple one already fits.
+  </p>
+</Callout>
+
+## 2. Arithmetic and difference series
+
+An **arithmetic series** moves by a constant difference: add (or subtract) the same number each time.
+If the first term is a and the common difference is d, the terms are a, a + d, a + 2d, a + 3d, and so
+on. Reading the next term needs nothing more than the last term plus d.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find the next term of 100, 92, 85, 79, 74, ...</div>
+  Differences: 100 to 92 is −8, 92 to 85 is −7, 85 to 79 is −6, 79 to 74 is −5<br />
+  The differences are −8, −7, −6, −5, climbing by 1 each time, so the next difference is −4<br />
+  Next term = 74 − 4 = <strong>70</strong>
+</div>
+
+This is really the first family from Section 1 with a twist. When the difference is truly constant you
+have a plain arithmetic series. When the difference is not constant but the row of differences is
+itself simple — climbing by 1, or by 2, or doubling — you have a **difference series**, and the same
+move solves it: extend the difference row by its own rule, then add the new difference to the last
+term.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find the next term of 2, 6, 12, 20, 30, ...</div>
+  Differences: 4, 6, 8, 10 — an arithmetic row rising by 2<br />
+  The next difference is 12, so the next term is 30 + 12 = <strong>42</strong><br />
+  (These terms are also 1×2, 2×3, 3×4, 4×5, 5×6, so the sixth is 6×7 = 42 — the same answer by a
+  different reading, which is a good confidence check.)
+</div>
+
+<Callout kind="mistake">
+  <p>
+    The commonest slip in an arithmetic series is a single arithmetic error in the difference row.
+    Writing the differences of 3, 5, 9, 15, 23 as 2, 4, 6, 7 instead of 2, 4, 6, 8 — a plain
+    subtraction mistake on the last pair — turns a "+10" into a "+9" and hands you 32 where the answer
+    is 33. Recompute the last difference before you commit.
+  </p>
+</Callout>
+
+## 3. Geometric and ratio series
+
+A **geometric series** moves by a constant ratio: multiply (or divide) by the same number each time.
+The differences do not settle, but the *ratios* do. Divide each term by the one before it, and a
+constant answer tells you the rule at once.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find the next term of 2, 6, 18, 54, ...</div>
+  Ratios: 6 ÷ 2 = 3, 18 ÷ 6 = 3, 54 ÷ 18 = 3 — a constant ratio of 3<br />
+  Next term = 54 × 3 = <strong>162</strong>
+</div>
+
+A shrinking geometric series works the same way with a ratio below 1. In 96, 48, 24, 12 each term is
+half the last, so the next is 6.
+
+Two richer patterns live nearby and are worth spotting.
+
+**A changing multiplier.** In 1, 2, 6, 24, 120 the multipliers are ×2, ×3, ×4, ×5 — the ratio is not
+constant but it grows by a clear rule, so the next multiplier is ×6 and the next term is 720.
+
+**A multiply-then-adjust rule.** In 3, 7, 15, 31 no single ratio fits, but "multiply by 2 and add 1"
+does: 3 to 7, 7 to 15, 15 to 31, and the next term is 31 × 2 + 1 = 63. In 5, 13, 37, 109 the rule is
+"multiply by 3 and subtract 2", giving 109 × 3 − 2 = 325.
+
+<Callout kind="pointer">
+  <p>
+    When neither a constant difference nor a constant ratio fits, suspect a two-step rule. Read the
+    jump from a small pair — say 3 to 7 — and guess "times something, plus something". Here 3 × 2 = 6
+    and 6 + 1 = 7, so try "double and add one" on the next pair to confirm. Two confirmations are
+    enough to trust the rule for the term you need.
+  </p>
+</Callout>
+
+## 4. Squares, cubes and other power series
+
+Some series are not built by adding or multiplying at all — the terms are simply the squares or the
+cubes of the counting numbers, sometimes nudged up or down by a fixed amount. Because these numbers
+grow fast, learning the first dozen squares and the first several cubes saves real time.
+
+<div class="formula">Squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144 · Cubes: 1, 8, 27, 64, 125, 216</div>
+
+The bare square series 1, 4, 9, 16, 25 continues 36. The bare cube series 1, 8, 27, 64 continues 125.
+The shifts are where the marks hide:
+
+- **Squares plus one** — 2, 5, 10, 17, 26 are 1² + 1, 2² + 1, 3² + 1, 4² + 1, 5² + 1, so the next is
+  6² + 1 = 37.
+- **Squares minus one** — 0, 3, 8, 15, 24 are 1² − 1, 2² − 1, 3² − 1, 4² − 1, 5² − 1, so the next is
+  6² − 1 = 35.
+- **Cubes plus one** — 2, 9, 28, 65 are 1³ + 1, 2³ + 1, 3³ + 1, 4³ + 1, so the next is 5³ + 1 = 126.
+
+<Callout kind="mistake">
+  <p>
+    A square series can masquerade as a difference series and waste your time. The differences of 1,
+    4, 9, 16, 25 are 3, 5, 7, 9 — the odd numbers — so a student who only chases differences still
+    reaches 36, but slowly and with more room for error. Recognising the terms *as squares* is faster
+    and safer. Learn the squares to 15 and the cubes to 10; the return on that small effort is large.
+  </p>
+</Callout>
+
+## 5. Alternating and mixed series
+
+An **alternating series** is two simple series plaited into one. Odd-position terms follow one rule
+and even-position terms follow another, and the trick is to read the two threads apart before you try
+to read either one.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find the next term of 1, 5, 2, 10, 3, 15, ...</div>
+  Odd positions (1st, 3rd, 5th, ...): 1, 2, 3 — counting up by 1<br />
+  Even positions (2nd, 4th, 6th, ...): 5, 10, 15 — the five-times table<br />
+  The next term is in the 7th place, an odd position, so it continues the first thread: <strong>4</strong>
+</div>
+
+A **mixed series** applies more than one operation in a repeating cycle. In 5, 6, 10, 11, 15, 16 the
+operations run +1, +4, +1, +4, +1, so the next operation is +4 and the next term is 20. Reading the
+operations as their own little pattern is the whole method.
+
+A **sum series**, or Fibonacci-type series, builds each term by adding the two before it. In 2, 3, 5,
+8, 13 each term is the sum of its two predecessors, so the next is 8 + 13 = 21.
+
+<Callout kind="pointer">
+  <p>
+    The signal for an alternating series is a difference row that swings — up, down, up, down — with
+    no steady pattern of its own. The moment the differences refuse to settle and seem to alternate in
+    size, stop treating the list as one series and split it into odd and even positions. Two easy
+    threads are almost always hiding under one hard-looking series.
+  </p>
+</Callout>
+
+## 6. Finding the missing term and the wrong term
+
+Two variants dress up the same skill. In a **missing-term** question the gap is somewhere inside the
+series, marked by a blank or a question mark, and the rule you recover from the terms on either side
+fills it. In a **wrong-term** (or "find the odd term") question every place is filled, but one term
+breaks the rule the others keep, and you must name the intruder.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find the missing term in 7, 14, ?, 28, 35</div>
+  The known differences are 7 (7 to 14) and 7 (28 to 35), so the rule is "add 7"<br />
+  The missing term sits between 14 and 28, and 14 + 7 = 21, while 28 − 7 = 21 — both directions agree<br />
+  Missing term = <strong>21</strong>
+</div>
+
+For a wrong term, build the rule from the terms that clearly agree, then test each term against it.
+In 3, 6, 12, 24, 48, 96, 190 the rule is plainly "double each time": 3, 6, 12, 24, 48, 96 all fit,
+and the run should end 192, not 190. The wrong term is 190, and the value it should hold is 192.
+
+<Callout kind="mistake">
+  <p>
+    In a wrong-term question, resist changing the <em>first</em> term you cannot immediately place.
+    Build the rule from a stretch of three or four terms that clearly agree, and only then look for
+    the one that fails it. Declaring the second term wrong because you have not yet seen the pattern
+    is how a correct series gets "corrected" into a wrong answer.
+  </p>
+</Callout>
+
+## 7. Letter series and the place value of letters
+
+Reasoning questions treat the alphabet as a number line. Each letter carries a **place value** — its
+position counting from the front — and almost every letter and coding question rests on it.
+
+<div class="formula">A = 1, B = 2, C = 3, ... M = 13, N = 14, ... Y = 25, Z = 26</div>
+
+It helps to hold three anchor points: A = 1, the midpoint after M = 13 and N = 14, and Z = 26. From an
+anchor you can count a few steps to any letter without reciting the whole alphabet.
+
+A **letter series** then behaves exactly like a number series on those place values.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — find the next letter of B, D, G, K, ...</div>
+  Place values: B = 2, D = 4, G = 7, K = 11<br />
+  Differences: 2, 3, 4 — rising by 1, so the next difference is 5<br />
+  Next place value = 11 + 5 = 16, and the 16th letter is <strong>P</strong>
+</div>
+
+Two cautions matter with letters. First, when a step runs past Z it usually **wraps around** to A and
+counts on — Z shifted forward by 1 becomes A. Second, an alternating letter series is common: in A,
+Z, B, Y, C, X the odd positions run A, B, C forward while the even positions run Z, Y, X backward, so
+the next term is D.
+
+<Callout kind="pointer">
+  <p>
+    Convert letters to numbers, solve the series in numbers, and convert the answer back to a letter
+    at the very end. Doing the reasoning on place values rather than on the letters themselves removes
+    almost every counting error, because adding 5 to 11 is safer than reciting "K, L, M, N, O, P".
+  </p>
+</Callout>
+
+## 8. Coding and decoding by letter shifts and substitution
+
+**Coding** replaces the letters of a word by a rule to disguise it; **decoding** runs the rule
+backward to recover the word. The examiner shows you one word and its code, expects you to infer the
+rule, and then asks you to code a fresh word or decode a fresh code. Four rules cover most questions.
+
+**The letter shift.** Every letter moves the same number of places along the alphabet. If CAT is
+coded DBU, each letter has moved forward by one (C to D, A to B, T to U), so DOG codes to EPH. A
+backward shift works the same way: if MANGO is coded LZMFN, every letter has moved back by one, so
+APPLE codes to ZOOKD — and note A moving back by one wraps around to Z.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — if SUN is coded VXQ, how is MOON coded?</div>
+  S to V is +3, U to X is +3, N to Q is +3 — a forward shift of 3<br />
+  M + 3 = P, O + 3 = R, O + 3 = R, N + 3 = Q<br />
+  MOON codes to <strong>PRRQ</strong>
+</div>
+
+**Reversal.** The code is simply the word written backward. If DELHI is coded IHLED, then PATNA codes
+to ANTAP. Nothing shifts; the letters only change order.
+
+**Substitution with made-up words.** A short "language" gives two or three coded phrases and asks for
+one word. The method is to find a word that two phrases share and match it to the meaning those two
+phrases share.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — 'tap nok' means 'green apple', 'nok sim' means 'apple pie'; which word means 'apple'?</div>
+  'green apple' and 'apple pie' share the word <strong>apple</strong> in meaning<br />
+  Their codes 'tap nok' and 'nok sim' share the code word <strong>nok</strong><br />
+  So 'nok' must mean 'apple' — the shared code word carries the shared meaning
+</div>
+
+**A rule on part of the word.** Sometimes only the vowels change, or only the consonants, and the
+rest stays put. Read which letters moved and which did not before you announce the rule.
+
+<Callout kind="mistake">
+  <p>
+    A letter shift is set to punish two habits: shifting in the wrong direction, and forgetting to
+    wrap at the ends of the alphabet. If CAT codes to DBU the shift is forward; coding DOG as CNF
+    (shifting back) reverses it. And a backward shift on APPLE must send A to Z, not leave it as A —
+    the option that leaves an end-letter unmoved is put there for the student who forgets the wrap.
+  </p>
+</Callout>
+
+## 9. Coding and decoding with numbers and symbols
+
+When the code is made of numbers or symbols rather than letters, the rule usually connects each letter
+to its **place value** from Section 7, sometimes with one extra operation on top.
+
+**Position codes.** Each letter is written as its place value. If EAT is coded 5-1-20 (E = 5, A = 1,
+T = 20), then BIG codes to 2-9-7. A **reverse position** code counts from the back instead, using
+27 − (place value), so that A = 26, B = 25, ... Z = 1; under it BAD codes to 25-26-23.
+
+**Sum codes.** The letters are turned into place values and then added. If CAT is coded 24
+(C + A + T = 3 + 1 + 20 = 24), then DOG is coded 4 + 15 + 7 = 26.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — if EAT is coded 5-1-20, how is BIG coded?</div>
+  The code is each letter's place value in order<br />
+  B = 2, I = 9, G = 7<br />
+  BIG codes to <strong>2-9-7</strong>
+</div>
+
+**Operations on the value.** A code may double the place value, add a fixed number to it, or apply a
+rule that depends on whether the value is odd or even. Read the given example, recover the operation,
+and apply exactly that operation to the asked word.
+
+**Symbol codes.** Symbols behave like letters or digits under a fixed key. If a key says +
+means ×, × means −, and so on, an expression is evaluated by first swapping every symbol for its real
+meaning and then doing the arithmetic in the ordinary order.
+
+<Callout kind="pointer">
+  <p>
+    With a number code, always write out the place-value line first, in order, under the letters. Most
+    errors here are misalignment — pairing the second number with the third letter — and a tidy
+    two-row layout of letters over numbers removes the risk before any arithmetic starts.
+  </p>
+</Callout>
+
+## 10. Odd man out
+
+An **odd-man-out** question shows a small group and asks which member does not share the rule the rest
+obey. The method is to find the property the majority hold, then name the one that lacks it.
+
+The rule can live in several places, so scan for the common ones in turn:
+
+- **A number property** — all but one are perfect squares, or perfect cubes, or prime, or multiples
+  of some number. Among 49, 64, 80, 100, three are perfect squares and 80 is not, so 80 is the odd
+  one.
+- **A relationship inside a pair** — each pair may hold a fixed link. Among (2, 8), (3, 27), (4, 64),
+  (5, 30), the first number cubed gives the second in three pairs (2³ = 8, 3³ = 27, 4³ = 64) but
+  5³ = 125, not 30, so (5, 30) is odd.
+- **A letter or gap pattern** — letter groups may share an internal spacing that one group breaks.
+
+<Callout kind="mistake">
+  <p>
+    The trap in odd-man-out is picking the item that merely <em>looks</em> different — the largest
+    number, the only even one, the odd-sounding letter group — instead of the item that fails the
+    shared rule. Decide the rule the majority obey first, in one clear sentence, and only then find
+    the member that breaks it. The eye is drawn to the wrong outlier surprisingly often.
+  </p>
+</Callout>
+
+## 11. Exam speed tactics
+
+Reasoning questions reward a settled routine more than raw cleverness. A few habits carry most of the
+value.
+
+- **Reach for the difference row first.** On any number or letter series, write the differences before
+  you theorise. It solves the arithmetic and difference families outright and points straight at the
+  others.
+- **Run the rule tests in a fixed order.** Constant difference, then constant ratio, then squares and
+  cubes, then two-step and plaited rules. A fixed order stops you from inventing a hard rule where an
+  easy one already fits.
+- **Confirm a rule on two jumps, then stop.** Once a rule fits two consecutive steps, trust it for the
+  term you need. Hunting for a third confirmation on an easy series only burns time.
+- **Work letters as numbers.** Convert to place values, reason in numbers, convert back at the end.
+- **Verify by substitution when a term is offered.** In a missing-term question, check that your
+  answer fits the term on <em>both</em> sides of the gap, not just one.
+- **Move on and return.** If a series resists two or three rule tests, mark it and come back. A single
+  stubborn question is not worth a run of easier marks left untouched.
+
+## 12. Negative marking and when to leave a question
+
+Paper 3 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+The arithmetic of that is calm rather than frightening. A blind guess among four options is right one
+time in four: across four such guesses you expect one mark gained and three quarter-mark deductions,
+a net of 1 − 0.75 = 0.25 marks — very slightly positive but close to neutral. What tilts the balance
+is **elimination**. Rule out one option and a guess among the remaining three is worth about 0.5 marks
+across four attempts; rule out two and a guess between the last two is worth about 1.5 marks. On a
+two-way guess the expected value is 0.5 × 1 − 0.5 × 0.25 = +0.375, clearly worth taking.
+
+Reasoning questions are unusually kind to elimination, because a wrong option is often wrong in a way
+you can see: a next-term option that ignores the difference row, a coded word with a letter left
+unwrapped at the end of the alphabet, an odd-man-out choice that is merely the largest number. A
+sensible rule for this chapter: **answer whenever you can rule out even one option; consider leaving a
+question only when you cannot narrow the field at all.** None of this needs to be followed anxiously —
+the marks at stake either way are small, and a question you can actually finish is worth more than
+either choice.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — a difference series and a square series (easy)">
+  <p>
+    Find the next term of (a) 5, 8, 13, 20, 29, ... and (b) 3, 6, 11, 18, 27, ...
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) read the difference row</div>
+    Differences: 3, 5, 7, 9 — the odd numbers, rising by 2<br />
+    The next difference is 11, so the next term is 29 + 11 = <strong>40</strong><br />
+    (These terms are also 2² + 1, 3² − 1... no: they are 5, 8, 13, 20, 29 = 4 + 1, 9 − 1... the
+    difference reading is the reliable one here, and it gives 40.)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the same move, a different shift</div>
+    Differences: 3, 5, 7, 9 again, so the next difference is 11 and the next term is 27 + 11 =
+    <strong>38</strong><br />
+    Reading the terms as squares confirms it: 3, 6, 11, 18, 27 are 2² − 1, 3² − 3... the difference
+    row is cleaner, and both parts share the odd-number difference pattern.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — a two-step rule and a changing multiplier (easy-moderate)">
+  <p>
+    Find the next term of (a) 4, 9, 19, 39, 79, ... and (b) 2, 6, 24, 120, ...
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) neither difference nor ratio is constant</div>
+    Differences 5, 10, 20, 40 double each time, which hints at a multiply rule<br />
+    Test "double and add one": 4 × 2 + 1 = 9, 9 × 2 + 1 = 19, 19 × 2 + 1 = 39, 39 × 2 + 1 = 79 ✓<br />
+    Next term = 79 × 2 + 1 = <strong>159</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the multiplier itself grows</div>
+    Ratios: 6 ÷ 2 = 3, 24 ÷ 6 = 4, 120 ÷ 24 = 5 — the multiplier climbs 3, 4, 5<br />
+    The next multiplier is 6, so the next term is 120 × 6 = <strong>720</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — an alternating series and a Fibonacci-type series (moderate)">
+  <p>
+    Find the next term of (a) 3, 4, 6, 8, 12, 16, 24, ... and (b) 1, 1, 2, 3, 5, 8, ...
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) split the two threads</div>
+    Odd positions (1st, 3rd, 5th, 7th): 3, 6, 12, 24 — doubling<br />
+    Even positions (2nd, 4th, 6th): 4, 8, 16 — also doubling<br />
+    The next term is in the 8th place, an even position, so it continues 4, 8, 16 as 16 × 2 =
+    <strong>32</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) each term is the sum of the two before it</div>
+    2 = 1 + 1, 3 = 1 + 2, 5 = 2 + 3, 8 = 3 + 5 ✓<br />
+    Next term = 5 + 8 = <strong>13</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — a missing term and a wrong term (moderate)">
+  <p>
+    (a) Find the missing term: 6, 11, ?, 27, 38. (b) One term is wrong in 2, 3, 5, 7, 10, 13, 17;
+    name it and give its correct value.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) build the rule from both sides of the gap</div>
+    Known differences: 11 − 6 = 5, and 38 − 27 = 11. The differences look like 5, 6, 7... rising by 1<br />
+    So 6 to 11 is +5, 11 to the gap is +6 giving 17, gap to 27 is +7... check: 17 + 7 = 24, not 27<br />
+    Re-read: differences 5, 7, 9, 11 (rising by 2) give 6, 11, 18, 27, 38 ✓ — the missing term is
+    <strong>18</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) test each term against the clear rule</div>
+    The primes run 2, 3, 5, 7, 11, 13, 17; the list gives 2, 3, 5, 7, 10, 13, 17<br />
+    Every term is prime except <strong>10</strong>, which sits where <strong>11</strong> belongs<br />
+    The differences confirm it: 2, 3, 5, 7 then a jump to 10 breaks the run of primes
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — a forward and a backward letter shift (easy-moderate)">
+  <p>
+    In a code, (a) FROG is written HTQI. How is BIRD written? (b) In another code TIGER is written
+    SHFDQ. How is LION written?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) find the shift, then apply it</div>
+    F to H is +2, R to T is +2, O to Q is +2, G to I is +2 — a forward shift of 2<br />
+    B + 2 = D, I + 2 = K, R + 2 = T, D + 2 = F<br />
+    BIRD is written <strong>DKTF</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) a backward shift, checked for wrap</div>
+    T to S is −1, I to H is −1, G to F is −1, E to D is −1, R to Q is −1 — a backward shift of 1<br />
+    L − 1 = K, I − 1 = H, O − 1 = N, N − 1 = M<br />
+    LION is written <strong>KHNM</strong> — no letter reached A, so no wrap was needed here
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — a position code and a sum code (moderate)">
+  <p>
+    Using place values A = 1 to Z = 26: (a) if PEN is coded 16-5-14, how is CUP coded? (b) if a word
+    is coded by adding its letters' place values, what is the code for the word BAG?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) each letter is its place value</div>
+    C = 3, U = 21, P = 16<br />
+    CUP codes to <strong>3-21-16</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) turn to place values, then add</div>
+    B = 2, A = 1, G = 7<br />
+    Sum = 2 + 1 + 7 = <strong>10</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — a substitution language (moderate)">
+  <p>
+    In a code language, 'mo ta lin' means 'she reads books', 'ta ru' means 'reads fast', and
+    'lin ka' means 'old books'. Which word means 'books', and which means 'reads'?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — find shared words and shared meanings</div>
+    'she reads books' (mo ta lin) and 'reads fast' (ta ru) share the meaning <strong>reads</strong>
+    and the code word <strong>ta</strong>, so 'ta' means 'reads'<br />
+    'she reads books' (mo ta lin) and 'old books' (lin ka) share the meaning <strong>books</strong>
+    and the code word <strong>lin</strong>, so 'lin' means 'books'
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — confirm with the leftover words</div>
+    In 'mo ta lin' = 'she reads books', with ta = reads and lin = books, the remaining 'mo' must
+    mean 'she' ✓<br />
+    Answer: <strong>'lin' means 'books' and 'ta' means 'reads'</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — odd man out, three ways (moderate)">
+  <p>
+    Find the odd one in each group: (a) 27, 64, 125, 150; (b) 11, 13, 15, 17; (c) the letter pairs
+    CE, GI, KM, PR.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) test for perfect cubes</div>
+    27 = 3³, 64 = 4³, 125 = 5³, but 150 is not a cube<br />
+    Odd one: <strong>150</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) test for primes</div>
+    11, 13, 17 are prime; 15 = 3 × 5 is not<br />
+    Odd one: <strong>15</strong> — not the largest number, which is the tempting wrong pick
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) test the gap inside each pair</div>
+    C to E is a gap of 2, G to I is 2, K to M is 2, but P to R is also 2 — so check the start letters:
+    C, G, K, P have gaps 4, 4, 5, so <strong>PR</strong> breaks the even spacing of the starting
+    letters<br />
+    Odd one: <strong>PR</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — a mixed reasoning set under exam pressure (hard)">
+  <p>
+    A question paper groups four sub-parts. (a) Next term of 7, 14, 28, 56, ...; (b) next letter of
+    D, H, M, S, ...; (c) the wrong term in 1, 4, 9, 16, 26, 36; (d) the odd one in 8, 27, 64, 81.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) constant ratio</div>
+    Each term doubles: 7, 14, 28, 56, so the next is 56 × 2 = <strong>112</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) letters as place values</div>
+    D = 4, H = 8, M = 13, S = 19; differences 4, 5, 6, so the next difference is 7<br />
+    Next place value = 19 + 7 = 26, the 26th letter, which is <strong>Z</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) the square run with one intruder</div>
+    The squares are 1, 4, 9, 16, 25, 36; the list gives 1, 4, 9, 16, 26, 36<br />
+    The wrong term is <strong>26</strong>, which should be 25
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — (d) cubes versus a square</div>
+    8 = 2³, 27 = 3³, 64 = 4³ are cubes, but 81 = 9² is a square, not a cube<br />
+    Odd one: <strong>81</strong>
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **A single subtraction slip in the difference row.** One wrong difference sends the whole answer
+  astray. Recompute the last difference before you extend the row.
+- **Inventing a hard rule where an easy one fits.** Test constant difference, then constant ratio,
+  then squares and cubes, before reaching for a two-step or plaited rule.
+- **Missing an alternating series.** When the difference row swings up and down with no pattern, split
+  the list into odd and even positions and read two easy threads.
+- **Reading squares only as differences.** The differences of a square series are the odd numbers;
+  recognising the terms as squares outright is faster and safer.
+- **Shifting a letter code the wrong way.** If the example shifts forward, code the new word forward
+  too. Check the direction on the given pair before you touch the asked word.
+- **Forgetting to wrap at the ends of the alphabet.** A forward shift past Z returns to A; a backward
+  shift past A returns to Z. The option that leaves an end-letter unmoved is a deliberate trap.
+- **Misaligning a number code.** Write the place values in a tidy row under the letters, so the second
+  number never pairs with the third letter.
+- **Picking the eye-catching item in odd-man-out.** The largest number or the only even one is often a
+  decoy. State the shared rule in a sentence first, then find the member that fails it.
+- **Correcting the wrong term too early.** Build the rule from three or four agreeing terms before you
+  accuse any single term of breaking it.
+- **Checking a missing term on one side only.** Confirm your answer against the terms on both sides of
+  the gap.
+- **Answering the two threads instead of the term asked.** In an alternating series, decide which
+  thread the asked position belongs to before you read off a value.
+
+## One-page revision summary
+
+**Reading a series.** Write the differences first. Constant difference is arithmetic; a difference row
+that is itself a series is a difference series; a constant ratio is geometric.
+
+**Rule-test order.** Constant difference, then constant ratio, then squares and cubes, then two-step
+rules (multiply and adjust, such as "double and add one"), then alternating and Fibonacci-type sums.
+
+**Powers to memorise.** Squares 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144; cubes 1, 8, 27, 64,
+125, 216. Watch for shifts of ±1.
+
+**Alternating series.** Split odd and even positions into two threads and read each on its own.
+A sum series adds the two previous terms.
+
+**Missing and wrong terms.** For a missing term, recover the rule and check both sides of the gap. For
+a wrong term, build the rule from the terms that agree, then name the one that breaks it.
+
+**Letters as numbers.** A = 1 to Z = 26. Convert letters to place values, reason in numbers, convert
+back at the end. A forward step past Z wraps to A; a backward step past A wraps to Z.
+
+**Coding-decoding.** Letter shift — every letter moves the same number of places, forward or backward,
+with wrap at the ends. Reversal — the word written backward. Substitution — match a shared code word
+to a shared meaning. Position code — each letter as its place value; a reverse position code uses
+27 − place value. Sum code — add the place values. Symbol code — swap each symbol for its meaning,
+then compute.
+
+**Odd man out.** Find the property the majority share — perfect square, cube, prime, multiple, or a
+fixed pairing — and name the member that lacks it. Ignore the item that merely looks different.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. A blind four-way guess is close to neutral;
+eliminating even one option makes an attempt clearly worthwhile.

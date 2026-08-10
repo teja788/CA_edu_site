@@ -1,0 +1,1009 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "number-series-coding-decoding",
+  "chapter": "Ch 9 — Number Series, Coding and Decoding and Odd Man Out",
+  "questions": [
+    {
+      "id": "q-f3c9-001",
+      "topic": "Ch 9 · Number series · Arithmetic series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 4, 11, 18, 25, ...",
+      "options": [
+        { "key": "A", "text": "30", "explanation": "Wrong. This adds 5 to the last term, but the common difference of the series is 7, not 5. The gaps are 7, 7, 7 throughout." },
+        { "key": "B", "text": "31", "explanation": "Wrong. This adds 6. Recompute the difference row: 11 − 4 = 7, 18 − 11 = 7, 25 − 18 = 7, so the step is 7." },
+        { "key": "C", "text": "32", "explanation": "Correct. The differences are a constant 7, so the series is arithmetic and the next term is 25 + 7 = 32." },
+        { "key": "D", "text": "33", "explanation": "Wrong. This adds 8. A single arithmetic slip on the last difference turns a +7 into a +8; the true step is 7." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Arithmetic and difference series, §2 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#2-arithmetic-and-difference-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Arithmetic series: constant common difference",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-002",
+      "topic": "Ch 9 · Number series · Increasing-difference series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 3, 5, 9, 15, 23, ...",
+      "options": [
+        { "key": "A", "text": "31", "explanation": "Wrong. This adds 8, the previous difference, but the differences themselves grow: 2, 4, 6, 8, so the next difference is 10." },
+        { "key": "B", "text": "32", "explanation": "Wrong. This adds 9. The difference row rises by 2 each time (2, 4, 6, 8), so the next difference is 10, not 9." },
+        { "key": "C", "text": "33", "explanation": "Correct. The differences are 2, 4, 6, 8, rising by 2, so the next difference is 10 and the next term is 23 + 10 = 33." },
+        { "key": "D", "text": "35", "explanation": "Wrong. This adds 12. The difference after 8 is 10, not 12; the difference row rises by 2, not by 4." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Arithmetic and difference series, §2 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#2-arithmetic-and-difference-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Difference series: the differences form their own series",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-003",
+      "topic": "Ch 9 · Number series · Second-difference series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 2, 6, 12, 20, 30, ...",
+      "options": [
+        { "key": "A", "text": "40", "explanation": "Wrong. This adds 10, the previous difference. The differences are 4, 6, 8, 10, rising by 2, so the next difference is 12." },
+        { "key": "B", "text": "42", "explanation": "Correct. The differences are 4, 6, 8, 10, so the next difference is 12 and the next term is 30 + 12 = 42. (Equivalently the terms are 1×2, 2×3, 3×4, 4×5, 5×6, so the sixth is 6×7 = 42.)" },
+        { "key": "C", "text": "44", "explanation": "Wrong. This adds 14. The difference after 10 is 12, not 14; the difference row rises by 2." },
+        { "key": "D", "text": "38", "explanation": "Wrong. This adds only 8, repeating an earlier difference rather than continuing the row 4, 6, 8, 10, 12." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Arithmetic and difference series, §2 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#2-arithmetic-and-difference-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Difference series with a rising difference row",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-004",
+      "topic": "Ch 9 · Number series · Decreasing series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 100, 92, 85, 79, 74, ...",
+      "options": [
+        { "key": "A", "text": "69", "explanation": "Wrong. This subtracts 5, the previous difference. The differences are −8, −7, −6, −5, so the next is −4." },
+        { "key": "B", "text": "70", "explanation": "Correct. The differences are −8, −7, −6, −5, shrinking in size by 1, so the next difference is −4 and the next term is 74 − 4 = 70." },
+        { "key": "C", "text": "71", "explanation": "Wrong. This subtracts 3. The difference after −5 is −4, not −3; the row moves by 1 each step." },
+        { "key": "D", "text": "68", "explanation": "Wrong. This subtracts 6, repeating an earlier difference rather than continuing −8, −7, −6, −5, −4." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Arithmetic and difference series, §2 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#2-arithmetic-and-difference-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Decreasing difference series",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-005",
+      "topic": "Ch 9 · Number series · Geometric series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 2, 6, 18, 54, ...",
+      "options": [
+        { "key": "A", "text": "108", "explanation": "Wrong. This doubles 54, but the ratio of the series is 3: 6 ÷ 2 = 3, 18 ÷ 6 = 3, 54 ÷ 18 = 3." },
+        { "key": "B", "text": "162", "explanation": "Correct. Each term is 3 times the last (a constant ratio of 3), so the next term is 54 × 3 = 162." },
+        { "key": "C", "text": "150", "explanation": "Wrong. 150 is not 54 times any consistent ratio. The geometric rule gives 54 × 3 = 162." },
+        { "key": "D", "text": "216", "explanation": "Wrong. This multiplies by 4. The ratio is a constant 3, not 4, so the answer is 162." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Geometric and ratio series, §3 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#3-geometric-and-ratio-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Geometric series: constant ratio",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-006",
+      "topic": "Ch 9 · Number series · Shrinking geometric series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 96, 48, 24, 12, ...",
+      "options": [
+        { "key": "A", "text": "6", "explanation": "Correct. Each term is half the last (a constant ratio of 1/2), so the next term is 12 ÷ 2 = 6." },
+        { "key": "B", "text": "8", "explanation": "Wrong. 8 does not continue a halving pattern; 12 halved is 6." },
+        { "key": "C", "text": "4", "explanation": "Wrong. This divides by 3. The ratio is 1/2, since 48 ÷ 96 = 24 ÷ 48 = 12 ÷ 24 = 1/2." },
+        { "key": "D", "text": "10", "explanation": "Wrong. This subtracts 2, treating the series as arithmetic. It is geometric with ratio 1/2, giving 6." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Geometric and ratio series, §3 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#3-geometric-and-ratio-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Geometric series with ratio below 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-007",
+      "topic": "Ch 9 · Number series · Changing multiplier",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 1, 2, 6, 24, 120, ...",
+      "options": [
+        { "key": "A", "text": "600", "explanation": "Wrong. This multiplies 120 by 5, but the multiplier grows: ×2, ×3, ×4, ×5, so the next is ×6." },
+        { "key": "B", "text": "720", "explanation": "Correct. The multipliers are 2, 3, 4, 5 (each term times the next counting number), so the next term is 120 × 6 = 720." },
+        { "key": "C", "text": "840", "explanation": "Wrong. This multiplies by 7. After ×5 the next multiplier is ×6, not ×7." },
+        { "key": "D", "text": "620", "explanation": "Wrong. 620 is not 120 times any whole number. The rule gives 120 × 6 = 720." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Geometric and ratio series, §3 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#3-geometric-and-ratio-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Series with a growing multiplier (factorial pattern)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-008",
+      "topic": "Ch 9 · Number series · Multiply-and-add rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 3, 7, 15, 31, ...",
+      "options": [
+        { "key": "A", "text": "47", "explanation": "Wrong. This adds 16, the previous difference. The rule is 'double and add one', not a fixed difference." },
+        { "key": "B", "text": "62", "explanation": "Wrong. This doubles 31 but forgets the +1. The rule is ×2 + 1, giving 63." },
+        { "key": "C", "text": "63", "explanation": "Correct. Each term is twice the previous plus one: 3, 7, 15, 31, so the next is 31 × 2 + 1 = 63." },
+        { "key": "D", "text": "61", "explanation": "Wrong. This uses ×2 − 1. The example shows +1 (3 × 2 + 1 = 7), so the next term is 63." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Geometric and ratio series, §3 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#3-geometric-and-ratio-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Two-step rule: multiply then add",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-009",
+      "topic": "Ch 9 · Number series · Multiply-and-subtract rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 5, 13, 37, 109, ...",
+      "options": [
+        { "key": "A", "text": "321", "explanation": "Wrong. This multiplies by 3 and subtracts 6. The rule is ×3 − 2, so 109 × 3 − 2 = 325." },
+        { "key": "B", "text": "327", "explanation": "Wrong. This is 109 × 3, forgetting the −2. Check the rule: 5 × 3 − 2 = 13, 13 × 3 − 2 = 37." },
+        { "key": "C", "text": "325", "explanation": "Correct. Each term is three times the previous minus two: 5, 13, 37, 109, so the next is 109 × 3 − 2 = 325." },
+        { "key": "D", "text": "323", "explanation": "Wrong. This multiplies by 3 and subtracts 4. The example fixes the rule at ×3 − 2, giving 325." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Geometric and ratio series, §3 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#3-geometric-and-ratio-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Two-step rule: multiply then subtract",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-010",
+      "topic": "Ch 9 · Number series · Square series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 1, 4, 9, 16, 25, ...",
+      "options": [
+        { "key": "A", "text": "30", "explanation": "Wrong. This adds 5. The differences here are the odd numbers 3, 5, 7, 9, so the next difference is 11, giving 36 — and the terms are the squares." },
+        { "key": "B", "text": "35", "explanation": "Wrong. 35 is not a perfect square. The terms are 1², 2², 3², 4², 5², so the next is 6² = 36." },
+        { "key": "C", "text": "36", "explanation": "Correct. The terms are the squares 1, 4, 9, 16, 25, so the next term is 6² = 36." },
+        { "key": "D", "text": "49", "explanation": "Wrong. 49 = 7² skips a square. After 5² = 25 the next square is 6² = 36." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Squares, cubes and other power series, §4 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#4-squares-cubes-and-other-power-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Perfect-square series",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-011",
+      "topic": "Ch 9 · Number series · Describing a rule",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which description fits the series 1, 3, 6, 10, 15, ...?",
+      "options": [
+        { "key": "A", "text": "Each term adds the next counting number (+2, then +3, then +4, then +5)", "explanation": "Correct. The differences are 2, 3, 4, 5 — the counting numbers — so each term adds one more than the last gap. These are the triangular numbers." },
+        { "key": "B", "text": "Each term is double the previous term", "explanation": "Wrong. Doubling 1 gives 2, not 3, and doubling 3 gives 6 only by coincidence; 6 doubled is 12, not 10. The rule is not a constant ratio." },
+        { "key": "C", "text": "The terms are the perfect squares", "explanation": "Wrong. The squares are 1, 4, 9, 16, 25. This series is 1, 3, 6, 10, 15, which are the triangular numbers, not the squares." },
+        { "key": "D", "text": "Each term is the sum of the two before it (Fibonacci)", "explanation": "Wrong. A Fibonacci rule would give 1, 3, 4, 7, 11. Here 6 is not 1 + 3, so the rule is adding successive counting numbers." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Arithmetic and difference series, §2 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#2-arithmetic-and-difference-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Recognising the rule of a difference (triangular) series",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-012",
+      "topic": "Ch 9 · Number series · Cube series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 1, 8, 27, 64, ...",
+      "options": [
+        { "key": "A", "text": "100", "explanation": "Wrong. 100 = 10² is a square, not a cube. The terms are 1³, 2³, 3³, 4³, so the next is a cube." },
+        { "key": "B", "text": "125", "explanation": "Correct. The terms are the cubes 1, 8, 27, 64, so the next term is 5³ = 125." },
+        { "key": "C", "text": "121", "explanation": "Wrong. 121 = 11² is a square. After 4³ = 64 the next cube is 5³ = 125." },
+        { "key": "D", "text": "216", "explanation": "Wrong. 216 = 6³ skips a cube. The next cube after 4³ = 64 is 5³ = 125, not 6³." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Squares, cubes and other power series, §4 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#4-squares-cubes-and-other-power-series" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Perfect-cube series",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-013",
+      "topic": "Ch 9 · Number series · Identifying the operation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which single operation turns each term of 3, 7, 15, 31, 63 into the next?",
+      "options": [
+        { "key": "A", "text": "Multiply by 2 and add 1", "explanation": "Correct. 3 × 2 + 1 = 7, 7 × 2 + 1 = 15, 15 × 2 + 1 = 31, 31 × 2 + 1 = 63 — the rule fits every step." },
+        { "key": "B", "text": "Add 4 each time", "explanation": "Wrong. 3 + 4 = 7 works once, but 7 + 4 = 11, not 15. The gaps grow (4, 8, 16, 32), so no fixed addition fits." },
+        { "key": "C", "text": "Multiply by 2", "explanation": "Wrong. 3 × 2 = 6, not 7. Doubling alone misses the +1 that the series adds each step." },
+        { "key": "D", "text": "Multiply by 3 and subtract 2", "explanation": "Wrong. 3 × 3 − 2 = 7 works once, but 7 × 3 − 2 = 19, not 15. The correct rule is ×2 + 1." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Geometric and ratio series, §3 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#3-geometric-and-ratio-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Identifying a two-step multiply-and-add rule",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-014",
+      "topic": "Ch 9 · Number series · Square-minus-one series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 0, 3, 8, 15, 24, ...",
+      "options": [
+        { "key": "A", "text": "33", "explanation": "Wrong. This adds 9, the previous difference. The terms are 1² − 1, 2² − 1, ..., so the next is 6² − 1 = 35." },
+        { "key": "B", "text": "34", "explanation": "Wrong. 34 is neither one less than a square nor the next difference. The rule n² − 1 gives 6² − 1 = 35." },
+        { "key": "C", "text": "35", "explanation": "Correct. The terms are 1² − 1, 2² − 1, 3² − 1, 4² − 1, 5² − 1, so the next is 6² − 1 = 35. (The differences 3, 5, 7, 9 confirm the next gap is 11.)" },
+        { "key": "D", "text": "48", "explanation": "Wrong. 48 = 7² − 1 skips a term. After 5² − 1 = 24 the next is 6² − 1 = 35, not 7² − 1." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Squares, cubes and other power series, §4 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#4-squares-cubes-and-other-power-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Shifted square series (n squared minus one)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-015",
+      "topic": "Ch 9 · Number series · Alternating two-thread series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next (seventh) term of the series 1, 5, 2, 10, 3, 15, ...",
+      "options": [
+        { "key": "A", "text": "4", "explanation": "Correct. Odd positions run 1, 2, 3 (counting up), even positions run 5, 10, 15 (fives). The seventh term is an odd position, so it continues 1, 2, 3 with 4." },
+        { "key": "B", "text": "20", "explanation": "Wrong. 20 continues the even-position thread 5, 10, 15, but the seventh term is an odd position, which continues 1, 2, 3." },
+        { "key": "C", "text": "18", "explanation": "Wrong. This treats the list as a single series. Split into two threads: the odd-position thread gives 4." },
+        { "key": "D", "text": "6", "explanation": "Wrong. This doubles the previous odd-position term. The odd-position thread rises by 1 (1, 2, 3, 4), so the answer is 4." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Alternating and mixed series, §5 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#5-alternating-and-mixed-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Alternating series: two plaited threads",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-016",
+      "topic": "Ch 9 · Number series · Mixed-operation series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 5, 6, 10, 11, 15, 16, ...",
+      "options": [
+        { "key": "A", "text": "17", "explanation": "Wrong. This adds 1, but the operations cycle +1, +4, +1, +4, +1, and the next operation is +4." },
+        { "key": "B", "text": "20", "explanation": "Correct. The operations run +1, +4, +1, +4, +1, so the next is +4 and the term is 16 + 4 = 20." },
+        { "key": "C", "text": "21", "explanation": "Wrong. This adds 5. The repeating cycle is +1 then +4; the next step is +4, giving 20." },
+        { "key": "D", "text": "19", "explanation": "Wrong. This adds 3. The two operations in the cycle are +1 and +4, and the next one due is +4." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Alternating and mixed series, §5 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#5-alternating-and-mixed-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Mixed series: a repeating cycle of operations",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-017",
+      "topic": "Ch 9 · Number series · Fibonacci-type series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next term of the series 2, 3, 5, 8, 13, ...",
+      "options": [
+        { "key": "A", "text": "18", "explanation": "Wrong. This adds 5, treating the last gap as fixed. In a sum series the next term is the sum of the two before it, 8 + 13." },
+        { "key": "B", "text": "20", "explanation": "Wrong. 20 is not 8 + 13. Each term equals the sum of its two predecessors." },
+        { "key": "C", "text": "21", "explanation": "Correct. Each term is the sum of the two before it: 2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13, so the next is 8 + 13 = 21." },
+        { "key": "D", "text": "26", "explanation": "Wrong. This doubles 13. The rule is a Fibonacci-type sum, giving 8 + 13 = 21." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Alternating and mixed series, §5 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#5-alternating-and-mixed-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Fibonacci-type series: each term the sum of the two before",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-018",
+      "topic": "Ch 9 · Number series · Interleaved families",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the series 1, 1, 4, 8, 9, 27, 16, 64, the terms in the odd positions and the terms in the even positions follow which two families?",
+      "options": [
+        { "key": "A", "text": "Perfect squares and perfect cubes", "explanation": "Correct. Odd positions are 1, 4, 9, 16 (the squares 1², 2², 3², 4²); even positions are 1, 8, 27, 64 (the cubes 1³, 2³, 3³, 4³)." },
+        { "key": "B", "text": "Both threads are perfect squares", "explanation": "Wrong. The even-position thread is 1, 8, 27, 64, which are cubes, not squares (8 and 27 are not perfect squares)." },
+        { "key": "C", "text": "Prime numbers and cubes", "explanation": "Wrong. The odd-position thread is 1, 4, 9, 16 — none of 4, 9, 16 is prime, and 1 is not prime either. They are squares." },
+        { "key": "D", "text": "Squares and a doubling series", "explanation": "Wrong. The even-position thread 1, 8, 27, 64 does not double (8 to 27 is not ×2). It is the cubes." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Alternating and mixed series, §5 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#5-alternating-and-mixed-series" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Interleaved square and cube threads",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-019",
+      "topic": "Ch 9 · Number series · Missing term",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the missing term of the series 7, 14, ?, 28, 35.",
+      "options": [
+        { "key": "A", "text": "20", "explanation": "Wrong. 20 does not fit the constant step of 7; 14 + 7 = 21, and 28 − 7 = 21." },
+        { "key": "B", "text": "21", "explanation": "Correct. The step is a constant 7, so the missing term is 14 + 7 = 21, which also equals 28 − 7 = 21 — both sides agree." },
+        { "key": "C", "text": "22", "explanation": "Wrong. This adds 8 to 14, but the common difference of the series is 7." },
+        { "key": "D", "text": "19", "explanation": "Wrong. This works backward as 28 − 9. The step is 7, not 9, so the term is 21." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Finding the missing term and the wrong term, §6 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#6-finding-the-missing-term-and-the-wrong-term" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Missing term recovered from the common difference",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-020",
+      "topic": "Ch 9 · Number series · Wrong term",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "One term breaks the pattern of 3, 6, 12, 24, 48, 96, 190. Which term is wrong, and what should it be?",
+      "options": [
+        { "key": "A", "text": "190 should be 192", "explanation": "Correct. The rule is 'double each time': 3, 6, 12, 24, 48, 96 all fit, and 96 × 2 = 192, not 190. The last term is the intruder." },
+        { "key": "B", "text": "48 should be 46", "explanation": "Wrong. 24 × 2 = 48 is correct; 48 fits the doubling rule perfectly and needs no change." },
+        { "key": "C", "text": "96 should be 98", "explanation": "Wrong. 48 × 2 = 96 is correct. The doubling rule holds up to 96; it is the final term that fails." },
+        { "key": "D", "text": "24 should be 22", "explanation": "Wrong. 12 × 2 = 24 is correct. Changing an early term that already fits is the classic wrong-term error." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Finding the missing term and the wrong term, §6 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#6-finding-the-missing-term-and-the-wrong-term" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Wrong term: build the rule, then find the intruder",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-021",
+      "topic": "Ch 9 · Number series · Missing geometric term",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Find the missing term of the geometric series 4, ?, 36, 108.",
+      "options": [
+        { "key": "A", "text": "12", "explanation": "Correct. The ratio is 3, since 108 ÷ 36 = 3 and 36 ÷ 12 = 3; also 4 × 3 = 12, so the missing term is 12." },
+        { "key": "B", "text": "9", "explanation": "Wrong. 4 × 9 = 36 would skip a term. Between 4 and 36 the single step multiplies by 3, giving 12." },
+        { "key": "C", "text": "16", "explanation": "Wrong. 16 does not sit on a ×3 ladder; 4 × 3 = 12 and 12 × 3 = 36." },
+        { "key": "D", "text": "24", "explanation": "Wrong. 24 does not give 36 on multiplying by the ratio 3. The missing term is 12." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Finding the missing term and the wrong term, §6 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#6-finding-the-missing-term-and-the-wrong-term" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Missing term in a geometric series",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-022",
+      "topic": "Ch 9 · Number series · Wrong term in a square series",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which term does not belong in the series 2, 5, 10, 17, 26, 38?",
+      "options": [
+        { "key": "A", "text": "38", "explanation": "Correct. The rule is n² + 1: 1² + 1, 2² + 1, ..., 5² + 1 = 26, and the sixth should be 6² + 1 = 37, not 38. The last term is wrong." },
+        { "key": "B", "text": "26", "explanation": "Wrong. 26 = 5² + 1 fits the rule exactly and needs no change." },
+        { "key": "C", "text": "17", "explanation": "Wrong. 17 = 4² + 1 fits the rule. The intruder is the final term." },
+        { "key": "D", "text": "10", "explanation": "Wrong. 10 = 3² + 1 fits the rule. Only the last term breaks n² + 1." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Finding the missing term and the wrong term, §6 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#6-finding-the-missing-term-and-the-wrong-term" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Wrong term against the rule n squared plus one",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-023",
+      "topic": "Ch 9 · Coding-decoding · Forward letter shift",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a code, CAT is written as DBU. How is DOG written in the same code?",
+      "options": [
+        { "key": "A", "text": "EPH", "explanation": "Correct. The code shifts each letter forward by 1 (C→D, A→B, T→U). So D→E, O→P, G→H, giving EPH." },
+        { "key": "B", "text": "EPI", "explanation": "Wrong. G shifted forward by 1 is H, not I. Only the last letter is misplaced here." },
+        { "key": "C", "text": "FPH", "explanation": "Wrong. D shifted forward by 1 is E, not F. The shift is +1, applied to every letter." },
+        { "key": "D", "text": "EOH", "explanation": "Wrong. O shifted forward by 1 is P, not O. The middle letter must move too." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Coding by a forward letter shift of one place",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-024",
+      "topic": "Ch 9 · Coding-decoding · Forward letter shift",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a code, BAT is written as DCV. How is BIRD written in the same code?",
+      "options": [
+        { "key": "A", "text": "DKTF", "explanation": "Correct. The shift is forward by 2 (B→D, A→C, T→V). So B→D, I→K, R→T, D→F, giving DKTF." },
+        { "key": "B", "text": "CJSE", "explanation": "Wrong. This shifts by 1, not 2. The example BAT→DCV shows a shift of two places." },
+        { "key": "C", "text": "DKTE", "explanation": "Wrong. The last D shifted forward by 2 is F, not E. Every letter moves by 2." },
+        { "key": "D", "text": "DLTF", "explanation": "Wrong. I shifted forward by 2 is K, not L. Recount: I, J, K is two steps." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Coding by a forward letter shift of two places",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-025",
+      "topic": "Ch 9 · Coding-decoding · Backward shift with wrap",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a code, MANGO is written as LZMFN. How is APPLE written in the same code?",
+      "options": [
+        { "key": "A", "text": "ZOOKD", "explanation": "Correct. The shift is backward by 1 (M→L, A→Z, N→M, G→F, O→N). So A→Z (wrapping past the start), P→O, P→O, L→K, E→D, giving ZOOKD." },
+        { "key": "B", "text": "BQQMF", "explanation": "Wrong. This shifts forward by 1. The example MANGO→LZMFN shows a backward shift." },
+        { "key": "C", "text": "ZOODK", "explanation": "Wrong. The last two letters are swapped; L→K and E→D give ...KD, not ...DK." },
+        { "key": "D", "text": "YNNJC", "explanation": "Wrong. This shifts backward by 2. The example shows a shift of only one place." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Backward shift with wrap-around at A",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-026",
+      "topic": "Ch 9 · Coding-decoding · Reversal",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a code, DELHI is written as IHLED. How is PATNA written in the same code?",
+      "options": [
+        { "key": "A", "text": "ANTAP", "explanation": "Correct. The code is the word written backward (DELHI reversed is IHLED). PATNA reversed is ANTAP." },
+        { "key": "B", "text": "ANATP", "explanation": "Wrong. This misorders the reversal. PATNA reversed reads A-N-T-A-P, not A-N-A-T-P." },
+        { "key": "C", "text": "APTNA", "explanation": "Wrong. This shifts letters rather than reversing them. The rule simply writes the word backward." },
+        { "key": "D", "text": "ATNAP", "explanation": "Wrong. This misplaces the T and second A. Reversing P-A-T-N-A gives A-N-T-A-P." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Coding by reversing the word",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-027",
+      "topic": "Ch 9 · Coding-decoding · Forward shift of three",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a code, SUN is written as VXQ. How is MOON written in the same code?",
+      "options": [
+        { "key": "A", "text": "PRRQ", "explanation": "Correct. The shift is forward by 3 (S→V, U→X, N→Q). So M→P, O→R, O→R, N→Q, giving PRRQ." },
+        { "key": "B", "text": "PRRP", "explanation": "Wrong. N shifted forward by 3 is Q, not P. The last letter must be Q." },
+        { "key": "C", "text": "ORRQ", "explanation": "Wrong. M shifted forward by 3 is P, not O. Recount M, N, O, P as three steps." },
+        { "key": "D", "text": "PQRQ", "explanation": "Wrong. The first O shifted forward by 3 is R, not Q. Both O's become R." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Coding by a forward letter shift of three places",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-028",
+      "topic": "Ch 9 · Coding-decoding · Substitution language",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a code language, 'tap nok' means 'green apple', 'nok sim' means 'apple pie', and 'sim ley' means 'pie chart'. Which word means 'pie'?",
+      "options": [
+        { "key": "A", "text": "sim", "explanation": "Correct. 'apple pie' (nok sim) and 'pie chart' (sim ley) share the meaning 'pie' and the code word 'sim', so 'sim' means 'pie'." },
+        { "key": "B", "text": "nok", "explanation": "Wrong. 'nok' appears in 'green apple' and 'apple pie', whose shared meaning is 'apple', so 'nok' means 'apple', not 'pie'." },
+        { "key": "C", "text": "ley", "explanation": "Wrong. 'ley' appears only in 'pie chart', where it must pair with the unshared word 'chart', so 'ley' means 'chart'." },
+        { "key": "D", "text": "tap", "explanation": "Wrong. 'tap' appears only in 'green apple', where it must mean the unshared word 'green'." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Substitution language: shared code word carries shared meaning",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-029",
+      "topic": "Ch 9 · Coding-decoding · Substitution language",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a code language, 'mo ta' means 'red car' and 'ta ru' means 'car park'. Which word means 'car'?",
+      "options": [
+        { "key": "A", "text": "ta", "explanation": "Correct. 'red car' (mo ta) and 'car park' (ta ru) share the meaning 'car' and the code word 'ta', so 'ta' means 'car'." },
+        { "key": "B", "text": "mo", "explanation": "Wrong. 'mo' appears only in 'red car', where it pairs with the unshared word 'red', so 'mo' means 'red'." },
+        { "key": "C", "text": "ru", "explanation": "Wrong. 'ru' appears only in 'car park', where it pairs with the unshared word 'park', so 'ru' means 'park'." },
+        { "key": "D", "text": "It cannot be decided", "explanation": "Wrong. The shared code word 'ta' matches the shared meaning 'car', so the answer is fixed." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Substitution language with two phrases",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-030",
+      "topic": "Ch 9 · Coding-decoding · Sum of place values",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Using place values A = 1 to Z = 26, what is the sum of the place values of the letters of the word FACE?",
+      "options": [
+        { "key": "A", "text": "15", "explanation": "Correct. F = 6, A = 1, C = 3, E = 5, and 6 + 1 + 3 + 5 = 15." },
+        { "key": "B", "text": "14", "explanation": "Wrong. This undercounts by 1, usually from taking F as 5. F is the sixth letter, so F = 6." },
+        { "key": "C", "text": "16", "explanation": "Wrong. This overcounts by 1. Check each value: F = 6, A = 1, C = 3, E = 5, total 15." },
+        { "key": "D", "text": "13", "explanation": "Wrong. This drops 2 from the total, often from taking C as 1. C is the third letter, so C = 3." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding with numbers and symbols, §9 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#9-coding-and-decoding-with-numbers-and-symbols" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sum of letter place values",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-031",
+      "topic": "Ch 9 · Coding-decoding · Position code",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If EAT is coded as 5-1-20, how is BIG coded in the same way?",
+      "options": [
+        { "key": "A", "text": "2-9-7", "explanation": "Correct. Each letter is written as its place value (E = 5, A = 1, T = 20). So B = 2, I = 9, G = 7, giving 2-9-7." },
+        { "key": "B", "text": "2-8-7", "explanation": "Wrong. I is the ninth letter, so I = 9, not 8." },
+        { "key": "C", "text": "3-9-7", "explanation": "Wrong. B is the second letter, so B = 2, not 3." },
+        { "key": "D", "text": "2-9-6", "explanation": "Wrong. G is the seventh letter, so G = 7, not 6." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding with numbers and symbols, §9 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#9-coding-and-decoding-with-numbers-and-symbols" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Position code: each letter as its place value",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-032",
+      "topic": "Ch 9 · Coding-decoding · Reverse position code",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a code, the letters are numbered from the back: A = 26, B = 25, ..., Z = 1. What is the code for the word BAD?",
+      "options": [
+        { "key": "A", "text": "25-26-23", "explanation": "Correct. Reverse place value is 27 minus the ordinary place value: B → 27 − 2 = 25, A → 27 − 1 = 26, D → 27 − 4 = 23." },
+        { "key": "B", "text": "2-1-4", "explanation": "Wrong. This is the ordinary forward place value. The code counts from the back, so it uses 27 − position." },
+        { "key": "C", "text": "25-25-23", "explanation": "Wrong. A from the back is 26, not 25. Only B is 25." },
+        { "key": "D", "text": "24-26-23", "explanation": "Wrong. B from the back is 25, not 24 (27 − 2 = 25)." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding with numbers and symbols, §9 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#9-coding-and-decoding-with-numbers-and-symbols" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Reverse position code using 27 minus place value",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-033",
+      "topic": "Ch 9 · Coding-decoding · Sum code",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If the word CAT is coded 24 by adding its letters' place values (C + A + T = 3 + 1 + 20), what is the code for DOG?",
+      "options": [
+        { "key": "A", "text": "26", "explanation": "Correct. D = 4, O = 15, G = 7, and 4 + 15 + 7 = 26." },
+        { "key": "B", "text": "24", "explanation": "Wrong. 24 is the code for CAT. DOG has different letters, summing to 26." },
+        { "key": "C", "text": "25", "explanation": "Wrong. This undercounts by 1. Recompute: 4 + 15 + 7 = 26." },
+        { "key": "D", "text": "27", "explanation": "Wrong. This overcounts by 1, usually from taking O as 16. O is the fifteenth letter, so O = 15." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding with numbers and symbols, §9 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#9-coding-and-decoding-with-numbers-and-symbols" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Sum code from letter place values",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-034",
+      "topic": "Ch 9 · Coding-decoding · Vowel-shift rule",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A code replaces every vowel with the next vowel in the cycle a→e→i→o→u→a and leaves consonants unchanged. Which ordinary word becomes 'bet' under this rule?",
+      "options": [
+        { "key": "A", "text": "bat", "explanation": "Correct. Decoding 'bet' means turning each vowel back one step: 'e' came from 'a'. So 'bat' encodes to 'bet' (b, a→e, t)." },
+        { "key": "B", "text": "bit", "explanation": "Wrong. 'bit' would encode to 'bot', since i→o. It does not become 'bet'." },
+        { "key": "C", "text": "but", "explanation": "Wrong. 'but' would encode to 'bat', since u→a. It does not become 'bet'." },
+        { "key": "D", "text": "bet", "explanation": "Wrong. 'bet' would encode to 'bit', since e→i. The code changes the vowel, so the source cannot also be 'bet'." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Rule applied to vowels only; decode by reversing",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-035",
+      "topic": "Ch 9 · Coding-decoding · Word-for-word substitution",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a family's private code, 'sun' stands for 'moon', 'moon' stands for 'star', and 'star' stands for 'sky'. Which word do they use when they mean an actual star?",
+      "options": [
+        { "key": "A", "text": "moon", "explanation": "Correct. 'moon' stands for 'star', so whenever they mean a star they say 'moon'." },
+        { "key": "B", "text": "star", "explanation": "Wrong. In their code 'star' stands for 'sky', so saying 'star' means the sky, not a star." },
+        { "key": "C", "text": "sky", "explanation": "Wrong. 'sky' is not one of the code words they speak; it is only a meaning ('star' stands for 'sky')." },
+        { "key": "D", "text": "sun", "explanation": "Wrong. 'sun' stands for 'moon', so saying 'sun' means the moon, not a star." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Word-for-word substitution: read the mapping backward",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-036",
+      "topic": "Ch 9 · Coding-decoding · Conditional number rule",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A code turns a number into another by a rule: if the number is even, add 1; if odd, double it. Examples: 4 becomes 5, 3 becomes 6, 6 becomes 7. What does 5 become?",
+      "options": [
+        { "key": "A", "text": "10", "explanation": "Correct. 5 is odd, so the rule doubles it: 5 × 2 = 10." },
+        { "key": "B", "text": "6", "explanation": "Wrong. Adding 1 is the rule for even numbers. 5 is odd, so it is doubled, not increased by 1." },
+        { "key": "C", "text": "5", "explanation": "Wrong. The rule always changes the number. An odd number is doubled, giving 10." },
+        { "key": "D", "text": "11", "explanation": "Wrong. This doubles and adds 1. The rule for an odd number is only to double it, giving 10." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding with numbers and symbols, §9 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#9-coding-and-decoding-with-numbers-and-symbols" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Conditional coding rule on a number",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-037",
+      "topic": "Ch 9 · Coding-decoding · Forward shift on a longer word",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a code, TEACHER is written as UFBDIFS. How is STUDENT written in the same code?",
+      "options": [
+        { "key": "A", "text": "TUVEFOU", "explanation": "Correct. The shift is forward by 1 (T→U, E→F, A→B, ...). So S→T, T→U, U→V, D→E, E→F, N→O, T→U, giving TUVEFOU." },
+        { "key": "B", "text": "TUVEFPU", "explanation": "Wrong. N shifted forward by 1 is O, not P. The sixth letter must be O." },
+        { "key": "C", "text": "RUVEFOU", "explanation": "Wrong. S shifted forward by 1 is T, not R. Shifting backward reverses the rule." },
+        { "key": "D", "text": "TUWEFOU", "explanation": "Wrong. U shifted forward by 1 is V, not W. Only one step forward is applied." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Coding and decoding by letter shifts and substitution, §8 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#8-coding-and-decoding-by-letter-shifts-and-substitution" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Forward shift of one on a seven-letter word",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-038",
+      "topic": "Ch 9 · Odd man out · Perfect squares",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which number does not belong: 49, 64, 80, 100?",
+      "options": [
+        { "key": "A", "text": "49", "explanation": "Wrong. 49 = 7² is a perfect square, so it shares the property the group holds." },
+        { "key": "B", "text": "64", "explanation": "Wrong. 64 = 8² is a perfect square and belongs with the rest." },
+        { "key": "C", "text": "80", "explanation": "Correct. 49, 64 and 100 are perfect squares (7², 8², 10²), but 80 is not the square of any whole number." },
+        { "key": "D", "text": "100", "explanation": "Wrong. 100 = 10² is a perfect square. It is the largest number, but size is not the rule here." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Odd man out: the one that is not a perfect square",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-039",
+      "topic": "Ch 9 · Odd man out · Prime numbers",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which number is the odd one out: 23, 29, 33, 37?",
+      "options": [
+        { "key": "A", "text": "23", "explanation": "Wrong. 23 is prime (divisible only by 1 and itself), so it shares the group's property." },
+        { "key": "B", "text": "29", "explanation": "Wrong. 29 is prime and belongs with the rest." },
+        { "key": "C", "text": "33", "explanation": "Correct. 23, 29 and 37 are prime, but 33 = 3 × 11 is composite, so it breaks the shared rule." },
+        { "key": "D", "text": "37", "explanation": "Wrong. 37 is prime. It is the largest number, but the rule is primality, not size." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Odd man out: the one that is not prime",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-040",
+      "topic": "Ch 9 · Odd man out · Perfect cubes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which number is the odd one out: 8, 27, 64, 100?",
+      "options": [
+        { "key": "A", "text": "8", "explanation": "Wrong. 8 = 2³ is a perfect cube and shares the group's property." },
+        { "key": "B", "text": "27", "explanation": "Wrong. 27 = 3³ is a perfect cube and belongs with the rest." },
+        { "key": "C", "text": "64", "explanation": "Wrong. 64 = 4³ is a perfect cube (it is also 8², but here the shared rule is cubes)." },
+        { "key": "D", "text": "100", "explanation": "Correct. 8, 27 and 64 are perfect cubes, but 100 = 10² is a square, not a cube." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Odd man out: the one that is not a perfect cube",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-041",
+      "topic": "Ch 9 · Odd man out · Letter-gap groups",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which letter pair is different from the others: BD, CE, FH, MN?",
+      "options": [
+        { "key": "A", "text": "BD", "explanation": "Wrong. B to D skips one letter (a gap of 2), matching the pattern of most of the group." },
+        { "key": "B", "text": "CE", "explanation": "Wrong. C to E is a gap of 2, the same spacing as BD and FH." },
+        { "key": "C", "text": "FH", "explanation": "Wrong. F to H is a gap of 2, matching the group." },
+        { "key": "D", "text": "MN", "explanation": "Correct. BD, CE and FH each skip one letter (gap of 2), but M to N is a gap of only 1, so MN breaks the pattern." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Odd man out: the letter pair with a different internal gap",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-042",
+      "topic": "Ch 9 · Odd man out · Number pairs",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which pair does not fit the pattern of the others: (2, 8), (3, 27), (4, 64), (5, 30)?",
+      "options": [
+        { "key": "A", "text": "(2, 8)", "explanation": "Wrong. 2³ = 8, so this pair follows 'cube the first number'." },
+        { "key": "B", "text": "(3, 27)", "explanation": "Wrong. 3³ = 27, so this pair follows the cube rule." },
+        { "key": "C", "text": "(4, 64)", "explanation": "Wrong. 4³ = 64, so this pair follows the cube rule." },
+        { "key": "D", "text": "(5, 30)", "explanation": "Correct. In each pair the second number is the cube of the first, but 5³ = 125, not 30, so (5, 30) breaks the rule." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Odd man out: the pair whose internal relation differs",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-043",
+      "topic": "Ch 9 · Odd man out · Perfect squares",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which number is the odd one out: 121, 144, 169, 200?",
+      "options": [
+        { "key": "A", "text": "121", "explanation": "Wrong. 121 = 11² is a perfect square and shares the group's property." },
+        { "key": "B", "text": "144", "explanation": "Wrong. 144 = 12² is a perfect square and belongs with the rest." },
+        { "key": "C", "text": "169", "explanation": "Wrong. 169 = 13² is a perfect square." },
+        { "key": "D", "text": "200", "explanation": "Correct. 121, 144 and 169 are perfect squares (11², 12², 13²), but 200 is not the square of any whole number." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Odd man out: the one that is not a perfect square",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-044",
+      "topic": "Ch 9 · Odd man out · Multiples of nine",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which number does not belong: 18, 27, 36, 44?",
+      "options": [
+        { "key": "A", "text": "18", "explanation": "Wrong. 18 = 9 × 2 is a multiple of 9 and shares the group's property." },
+        { "key": "B", "text": "27", "explanation": "Wrong. 27 = 9 × 3 is a multiple of 9 and belongs with the rest." },
+        { "key": "C", "text": "36", "explanation": "Wrong. 36 = 9 × 4 is a multiple of 9." },
+        { "key": "D", "text": "44", "explanation": "Correct. 18, 27 and 36 are multiples of 9, but 44 is not (44 ÷ 9 is not a whole number)." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Odd man out: the one that is not a multiple of nine",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-045",
+      "topic": "Ch 9 · Odd man out · Square run",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which number is out of place: 4, 9, 16, 20, 25?",
+      "options": [
+        { "key": "A", "text": "9", "explanation": "Wrong. 9 = 3² is a perfect square and fits the run 2², 3², 4², 5²." },
+        { "key": "B", "text": "16", "explanation": "Wrong. 16 = 4² is a perfect square and belongs in the run." },
+        { "key": "C", "text": "20", "explanation": "Correct. 4, 9, 16 and 25 are the squares 2², 3², 4², 5², but 20 is not a perfect square, so it breaks the run." },
+        { "key": "D", "text": "25", "explanation": "Wrong. 25 = 5² is a perfect square and completes the run." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Odd man out, §10 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#10-odd-man-out" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Odd man out: the intruder in a run of squares",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-046",
+      "topic": "Ch 9 · Number series · Method",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "What is the reliable first step when the rule of a number series is not obvious?",
+      "options": [
+        { "key": "A", "text": "Write the differences between consecutive terms and study that new row", "explanation": "Correct. The difference row solves arithmetic and difference series outright, and its shape points to ratios, squares or alternating threads for the rest." },
+        { "key": "B", "text": "Assume the series always multiplies by a fixed number", "explanation": "Wrong. Many series are not geometric. Assuming a constant ratio fails on arithmetic, square and alternating series." },
+        { "key": "C", "text": "Assume every series is a Fibonacci sum", "explanation": "Wrong. The sum rule is only one of several families and fits few series. Testing it first wastes time." },
+        { "key": "D", "text": "Pick the option nearest to the last term", "explanation": "Wrong. Proximity is not a rule. The answer depends on the pattern, which the difference row reveals." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: What a number series is and how to read it, §1 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#1-what-a-number-series-is-and-how-to-read-it" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "The difference method as the first step",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-047",
+      "topic": "Ch 9 · Letter series · Rising gaps",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next letter of the series B, D, G, K, ...",
+      "options": [
+        { "key": "A", "text": "O", "explanation": "Wrong. O is the 15th letter, which would need a gap of 4, but the gaps rise 2, 3, 4, 5, so the next gap is 5, reaching the 16th letter." },
+        { "key": "B", "text": "P", "explanation": "Correct. Place values 2, 4, 7, 11 rise by 2, 3, 4, so the next gap is 5, giving 11 + 5 = 16, and the 16th letter is P." },
+        { "key": "C", "text": "N", "explanation": "Wrong. N is the 14th letter, a gap of only 3 from K. The gap after 4 is 5, not 3." },
+        { "key": "D", "text": "Q", "explanation": "Wrong. Q is the 17th letter, a gap of 6 from K. The next gap is 5, not 6." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Letter series and the place value of letters, §7 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#7-letter-series-and-the-place-value-of-letters" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Letter series with rising gaps, solved on place values",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-048",
+      "topic": "Ch 9 · Letter series · Backward step",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next letter of the series Z, X, V, T, ...",
+      "options": [
+        { "key": "A", "text": "S", "explanation": "Wrong. S is the 19th letter, only one step back from T. The series steps back by 2 each time." },
+        { "key": "B", "text": "R", "explanation": "Correct. Place values 26, 24, 22, 20 fall by 2 each time, so the next is 18, and the 18th letter is R." },
+        { "key": "C", "text": "Q", "explanation": "Wrong. Q is the 17th letter, three steps back from T. The step is 2, giving the 18th letter." },
+        { "key": "D", "text": "P", "explanation": "Wrong. P is the 16th letter, a step of 4 from T. The series moves back by 2, not 4." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Letter series and the place value of letters, §7 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#7-letter-series-and-the-place-value-of-letters" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Letter series stepping backward by two",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-049",
+      "topic": "Ch 9 · Letter series · Alternating threads",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Find the next (seventh) letter of the series A, Z, B, Y, C, X, ...",
+      "options": [
+        { "key": "A", "text": "W", "explanation": "Wrong. W continues the backward even-position thread Z, Y, X, but the seventh term is an odd position, which runs A, B, C forward." },
+        { "key": "B", "text": "D", "explanation": "Correct. Odd positions run A, B, C forward; even positions run Z, Y, X backward. The seventh term is an odd position, so it continues A, B, C with D." },
+        { "key": "C", "text": "E", "explanation": "Wrong. E would skip a letter in the forward thread. After A, B, C the next is D, not E." },
+        { "key": "D", "text": "V", "explanation": "Wrong. V continues the backward thread past X, but the seventh position belongs to the forward thread, giving D." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Letter series and the place value of letters, §7 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#7-letter-series-and-the-place-value-of-letters" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Alternating letter series: forward and backward threads",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c9-050",
+      "topic": "Ch 9 · Marking · Negative marking",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Paper 3 deducts 0.25 mark for a wrong answer and gives 1 mark for a correct one. You have narrowed a reasoning question to two equally likely options. Is a guess worth making?",
+      "options": [
+        { "key": "A", "text": "Yes — a 50/50 guess averages a clear net gain, so attempt it", "explanation": "Correct. The expected value is 0.5 × 1 − 0.5 × 0.25 = 0.5 − 0.125 = +0.375 marks, which is clearly positive, so the guess is worth taking." },
+        { "key": "B", "text": "No — any guess loses marks on average", "explanation": "Wrong. Even a blind four-way guess is very slightly positive; a two-way guess is clearly positive at +0.375 marks." },
+        { "key": "C", "text": "Only if the penalty were removed", "explanation": "Wrong. The penalty is already accounted for: with it, a two-way guess still returns +0.375 marks on average." },
+        { "key": "D", "text": "It makes no difference to the expected score", "explanation": "Wrong. The expected value is +0.375, not zero, so attempting raises the expected score." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Negative marking and when to leave a question, §12 →", "href": "/foundation/quantitative-aptitude/number-series-coding-decoding/#12-negative-marking-and-when-to-leave-a-question" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Negative marking: expected value of a two-way guess",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

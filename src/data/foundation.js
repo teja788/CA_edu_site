@@ -163,10 +163,10 @@ export const foundationPapers = [
       {
         name: 'Part B · Logical Reasoning (20 marks)',
         chapters: [
-          { number: 9, slug: 'number-series-coding-decoding', name: 'Number Series, Coding and Decoding and Odd Man Out' },
-          { number: 10, slug: 'direction-sense-test', name: 'Direction Sense Test' },
-          { number: 11, slug: 'seating-arrangements', name: 'Seating Arrangements' },
-          { number: 12, slug: 'blood-relations', name: 'Blood Relations' },
+          { number: 9, slug: 'number-series-coding-decoding', name: 'Number Series, Coding and Decoding and Odd Man Out', hasNotes: true },
+          { number: 10, slug: 'direction-sense-test', name: 'Direction Sense Test', hasNotes: true },
+          { number: 11, slug: 'seating-arrangements', name: 'Seating Arrangements', hasNotes: true },
+          { number: 12, slug: 'blood-relations', name: 'Blood Relations', hasNotes: true },
         ],
       },
       {

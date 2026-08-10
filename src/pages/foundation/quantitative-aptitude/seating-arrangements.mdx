@@ -1,0 +1,648 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Seating Arrangements'
+description: 'CA Foundation Quantitative Aptitude Part B Ch 11 — seating arrangements in plain language: single rows facing one way, two rows facing each other, circular tables facing the centre and facing outward, how left and right flip with the facing, the meaning of immediate neighbour, between and nth to the left, a step-by-step method to fix positions from clues, handling ambiguous clues and multiple valid layouts, grids and rectangular tables, and negative-marking judgement, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 11 · Seating Arrangements'
+chapterSlug: seating-arrangements
+masteryId: f3-ch11
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Part B Logical Reasoning, Seating Arrangements — scope and question patterns'
+  - 'Standard conventions of seating-arrangement reasoning: left and right read from the person, the direction of a facing person, and the clockwise and anticlockwise sense on a circle'
+sourceLabel: 'ICAI SM Paper 3 Part B Seating Arrangements scope (May 2026 ed.) · standard reasoning conventions'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 24 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=seating-arrangements'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A wedding planner in Mysuru is laying out the head table. The bride's father wants to sit next to the
+groom's mother; the two grandfathers must not sit side by side; and the priest is to have the middle
+seat. The planner turns the requests into a diagram, tries a seat for each person, and adjusts until
+every rule holds at once. That is the whole of this chapter — a set of clues, a diagram, and the
+patient business of placing people until only one arrangement survives.
+
+Paper 3 asks the same thing in miniature. You are given a handful of people, a shape to seat them in —
+a row, a pair of rows, a round table, a grid — and a list of clues, and then a single question: who
+sits third to the left of P, how many people sit between A and B, who faces whom. The reasoning is
+short but exact. Marks are lost on one confusion above all others: whose **left** and whose **right**
+a clue is spoken from. Fix that, draw the diagram cleanly, and these questions become some of the most
+reliable marks on the paper.
+
+## 1. Rows, circles and what left and right mean
+
+Every seating question is one of a few shapes. A **single row** seats people side by side, all facing
+the same way. **Two rows** seat them in facing lines, so each person in one row looks at a person in
+the other. A **circle** seats them round a table, either all facing the centre or all facing outward.
+A **grid** seats them in rows and columns, like a classroom. The shape is always stated; your first
+job is to draw it.
+
+The one idea that runs through all of them is that **left and right belong to the person, not to
+you**. When a clue says "Q is to the left of P", it means P's own left hand — the side P would raise
+a left hand on — not the left of the page as you look at it. Whether P's left matches your left
+depends entirely on which way P faces.
+
+Start from the compass. Draw every diagram with **north at the top**, as on a map, so east is to your
+right and west is to your left. Now a person's left and right follow from their facing:
+
+<div class="formula">
+Facing NORTH → right hand points EAST (your right), left hand points WEST (your left)<br />
+Facing SOUTH → right hand points WEST (your left), left hand points EAST (your right)<br />
+Facing EAST&nbsp;&nbsp;→ right hand points SOUTH, left hand points NORTH<br />
+Facing WEST&nbsp;&nbsp;→ right hand points NORTH, left hand points SOUTH
+</div>
+
+Only the first line is comfortable: a north-facing person shares your left and right, because you and
+the person look the same way. Every other facing turns the person relative to you, and left and right
+turn with them. A south-facing person is the exact mirror — their right is your left.
+
+<Callout kind="pointer">
+  <p>
+    Before you place a single name, write the facing of each seat at the top of your diagram and mark
+    an arrow for east. Nine out of ten wrong answers in this chapter come from reading a person's left
+    or right as your own. The arrow is a five-second insurance policy against the most expensive error
+    in the topic.
+  </p>
+</Callout>
+
+The same rule, wrapped onto a circle, becomes the clockwise-anticlockwise rule of §5 and §6. The
+compass never lets you down; memorising slogans without it does.
+
+## 2. Reading the clues: immediate neighbour, between, and nth to the left
+
+The clues are written in a small, fixed vocabulary. Read each phrase the same way every time.
+
+- **Immediate neighbour** — the person in the very next seat, with nobody in between. "T sits
+  immediately to the right of R" means R and then T, adjacent, T on R's right.
+- **Between** — the seats strictly in the gap. "Three persons sit between A and B" counts only the
+  people in the gap, never A or B. Three people between means A and B are **four** seats apart.
+- **nth to the left (or right) of X** — count n seats from X in that direction. "R is third to the
+  left of S" means three seats to S's left, which leaves **two** people between R and S. The number
+  of people between is always one less than the step count.
+- **nth from the end** — count n seats inward from an end of the row. "Second from the right end" is
+  a fixed seat near the right edge, and has nothing to do with any named person.
+
+The last two phrases look alike and are constantly confused. "Second to the right **of X**" is
+measured from X and moves when X moves. "Second **from the right end**" is measured from the edge of
+the row and never moves.
+
+<Callout kind="mistake">
+  <p>
+    The off-by-one trap. "n-th to the left of X" is a step count, so the number of people
+    <strong>between</strong> them is n − 1, not n. If P is fourth to the left of Q, three people sit
+    between them. Reading "fourth to the left" as "four people in between" shifts every position by
+    one and is the single most common counting error in the chapter.
+  </p>
+</Callout>
+
+## 3. A single row facing one way
+
+Number the seats **1 to n from your left to your right**. When the row faces **north**, a person's own
+left is the lower seat number and their own right is the higher seat number, because a north-facing
+person shares your left and right. This is the friendly case, and most row questions use it.
+
+Take the arrangement six friends solve to when the clues are: P, Q, R, S, T and U sit facing north;
+R is at the extreme left; T is immediately to R's right; P has exactly two people to his left; S is
+immediately to P's right; Q is at the extreme right; and U is immediately to Q's left.
+
+<div class="formula">
+Left end ←&nbsp;&nbsp; R &nbsp;|&nbsp; T &nbsp;|&nbsp; P &nbsp;|&nbsp; S &nbsp;|&nbsp; U &nbsp;|&nbsp; Q &nbsp;→ Right end<br />
+Seat:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp; 4 &nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp; 6
+</div>
+
+Read answers straight off the diagram. Second to the right of T (seat 2) is seat 4, S. The person
+between T and S is seat 3, P. The people to the right of P are seats 4, 5 and 6 — three of them. The
+people between P and Q are seats 4 and 5 — two of them, because "between" excludes Q at seat 6.
+
+When the row faces **south**, everything flips left for right. The diagram is drawn the same way, but
+a person's own right is now the lower seat number. A clue like "K is to the immediate right of L" then
+places K at a **lower** seat than L. The safest habit is to draw the row, mark the facing, translate
+each "left/right" clue into "lower-seat/higher-seat" once at the start, and never think about hands
+again.
+
+<Callout kind="mistake">
+  <p>
+    Do not assume a row faces north. Many questions say "facing south" precisely so that "to the right
+    of" means towards your left. Read the facing line first. A whole arrangement built on the wrong
+    facing will be a clean, confident, completely wrong mirror image of the truth.
+  </p>
+</Callout>
+
+## 4. Two rows facing each other
+
+Here two lines of people sit opposite one another — often described as row 1 facing south and row 2
+facing north, so the rows look at each other. Each person in one row sits directly across from one
+person in the other; those two **face** each other.
+
+Draw the two rows one above the other, in **columns**, with the facing of each row marked. Take four
+people in each row where, as you look at it, row 1 reads B, A, D, C and row 2 reads P, Q, R, S:
+
+<div class="formula">
+Row 1 (faces south, towards you):&nbsp;&nbsp; B &nbsp;&nbsp; A &nbsp;&nbsp; D &nbsp;&nbsp; C<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↕ &nbsp;&nbsp;&nbsp; ↕ &nbsp;&nbsp;&nbsp; ↕ &nbsp;&nbsp;&nbsp; ↕ &nbsp;&nbsp; (each faces the one below)<br />
+Row 2 (faces north, away):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P &nbsp;&nbsp; Q &nbsp;&nbsp; R &nbsp;&nbsp; S<br />
+Column:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp; 4
+</div>
+
+The facing pairs are read down the columns: B faces P, A faces Q, D faces R, C faces S. So "who faces
+A" is answered at a glance — Q.
+
+The trap is left and right, because the two rows face opposite ways. Row 1 faces south, so a row-1
+person's own right is towards **your left** (the lower columns); A is at column 2, so A's own right is
+column 1, which is B. Row 2 faces north, so a row-2 person's own right is towards **your right** (the
+higher columns); Q is at column 2, so Q's own left is column 1, which is P. The same physical
+direction is one person's left and the other's right.
+
+<Callout kind="mistake">
+  <p>
+    In a two-row question, never carry one "left" across both rows. A row-1 person and a row-2 person
+    read left and right in opposite directions, because they face opposite ways. Translate each row's
+    clues into columns using that row's own facing, and the mirror trap disappears.
+  </p>
+</Callout>
+
+## 5. Circular arrangements facing the centre
+
+Seat people round a table, all facing the centre. Number the seats **1 to n clockwise**. Now "left"
+and "right" become directions round the table, and the compass rule of §1 decides which is which.
+
+Picture yourself in the seat at the bottom of the table, facing the centre — that is, facing up the
+page, towards north. Your right hand points east, and east is the seat to the **anticlockwise** side.
+Your left hand points west, the **clockwise** side. Because every person round the table faces the
+centre, this holds for all of them:
+
+<div class="formula">
+Facing the centre:<br />
+&nbsp;&nbsp;&nbsp; "to the RIGHT of a person" = the ANTICLOCKWISE neighbour<br />
+&nbsp;&nbsp;&nbsp; "to the LEFT of a person"&nbsp; = the CLOCKWISE neighbour
+</div>
+
+Take eight people whose clockwise order, starting from A, is A, F, C, H, B, G, D, E:
+
+<div class="formula">
+Clockwise from A:&nbsp;&nbsp; A → F → C → H → B → G → D → E → (back to A)
+</div>
+
+Third to the **left** of A is three steps **clockwise**: A, F, C, H — so H. Immediately to the
+**right** of C is one step **anticlockwise** from C, which is F. Immediately to the left of D is one
+step clockwise, which is E. Counting the people **between** A and B **clockwise** from A, the stretch
+A → F → C → H → B passes F, C and H — three people.
+
+Counting between two people always needs a direction on a circle, because there are two arcs. If X and
+Y sit **exactly opposite** each other at a round table of n equal seats, each arc holds the same
+number: n ÷ 2 − 1 people. For eight seats that is three on each side; for twelve seats, five.
+
+<Callout kind="pointer">
+  <p>
+    On a circle, fix one person's seat before you do anything else — the puzzle is the same seating
+    however you rotate it, so pinning one person removes that false freedom. Then place the rest by
+    stepping clockwise for "left" and anticlockwise for "right". Redrawing the ring three times because
+    you never anchored it is the commonest way circular questions eat time.
+  </p>
+</Callout>
+
+## 6. Facing outward, and how left and right flip
+
+Some tables seat everyone facing **outward**, away from the centre. Facing outward is a half-turn from
+facing inward, and a half-turn swaps left and right. So every rule from §5 reverses:
+
+<div class="formula">
+Facing OUTWARD:<br />
+&nbsp;&nbsp;&nbsp; "to the RIGHT of a person" = the CLOCKWISE neighbour<br />
+&nbsp;&nbsp;&nbsp; "to the LEFT of a person"&nbsp; = the ANTICLOCKWISE neighbour
+</div>
+
+The check is the same compass picture. Sit at the bottom of the table but now face outward, down the
+page towards south. Your right hand points west — the clockwise side. So "right" is clockwise, exactly
+the opposite of the facing-centre case.
+
+Tables sometimes mix the two: some people face the centre and some face outward. Then you must read
+each person's left and right from **that person's own** facing, one at a time. Counting how many face
+each way is just bookkeeping — if four of eight are told to face outward, the other four face the
+centre.
+
+<Callout kind="mistake">
+  <p>
+    The fatal shortcut is to learn "right means anticlockwise" as a fact about circles. It is only a
+    fact about circles where people face the centre. The moment a question says "facing outside" or
+    seats a mix of both, that slogan sends every left-right clue the wrong way. Go back to the compass:
+    which way is this person facing, and so where is this person's right hand pointing?
+  </p>
+</Callout>
+
+## 7. A step-by-step method to fix positions
+
+Most arrangements are built the same way, in a fixed order that wastes the least time.
+
+1. **Draw the empty shape** and mark the facing of every seat, with an east arrow. Decide, once, how
+   each row's or circle's "left/right" maps to your diagram.
+2. **Place the fixed clues first.** A clue that names an exact seat — an end of a row, "the middle
+   seat", a pinned position on a circle — gives a definite anchor. Put those in before anything else.
+3. **Attach the linked clues** to the anchors. "Immediately to the right of", "third to the left of",
+   "faces" — each ties a new person to one already placed. Add them outward from the anchors.
+4. **Hold the floating clues in reserve.** "Somewhere to the left of", "not at an end", "not next to"
+   rarely fix a seat on their own, but they rule options out. Use them to choose between the
+   possibilities the fixed clues leave open.
+5. **Check every clue against the finished diagram**, not just the ones you leaned on. One unused
+   clue that fails means the arrangement is wrong somewhere earlier.
+
+Two position formulas save the diagram entirely for the simplest row questions:
+
+<div class="formula">
+In a row of n, a person m-th from the left is at seat m, and k-th from the right is at seat n − k + 1.<br />
+If a person is m-th from the left AND k-th from the right, then n = m + k − 1.<br />
+People strictly between seats p and q are |p − q| − 1.
+</div>
+
+So a person 6th from the left and 4th from the right sits in a row of 6 + 4 − 1 = 9. In a row of 15, a
+person 7th from the left is 15 − 7 + 1 = 9th from the right. The −1 in the length formula removes the
+person counted from both ends at once.
+
+<Callout kind="mistake">
+  <p>
+    In n = (from left) + (from right) − 1, the person is counted twice, so you subtract 1, never add
+    it. Writing n = m + k gives a row one seat too long every time. The mirror slip on the between
+    formula is forgetting the −1: seats p and q hold |p − q| − 1 people between them, not |p − q|.
+  </p>
+</Callout>
+
+## 8. Ambiguous clues and multiple valid layouts
+
+Not every set of clues pins a single arrangement, and part of the skill is knowing when it does not.
+A clue like "A sits next to B" fixes that A and B are neighbours but **not which side**, so two orders
+survive. A question can still have one answer even when the layout does not: if a fact is the same in
+every surviving layout, it is certain; if it changes between them, the honest answer is **cannot be
+determined**.
+
+Take four people W, X, Y and Z, where X and Y sit at the two ends in some order, and W sits somewhere
+to the left of Z. The ends are X and Y — but which is which is open — so two layouts remain:
+
+<div class="formula">
+Layout 1:&nbsp;&nbsp; X &nbsp;|&nbsp; W &nbsp;|&nbsp; Z &nbsp;|&nbsp; Y<br />
+Layout 2:&nbsp;&nbsp; Y &nbsp;|&nbsp; W &nbsp;|&nbsp; Z &nbsp;|&nbsp; X
+</div>
+
+W is at seat 2 in **both**, and Z at seat 3 in both, so "W is second from the left" is certain. But
+"X is at the left end" holds only in Layout 1, so it cannot be asserted. When a question offers
+"cannot be determined" as an option, treat it as a real answer, not a cop-out — it is correct exactly
+when the asked fact differs across surviving layouts.
+
+<Callout kind="pointer">
+  <p>
+    When two layouts survive, do not guess one and hope. Test the asked fact in each: if it holds in
+    both, that is your answer; if it splits, choose "cannot be determined". Examiners plant the
+    ambiguity deliberately, and the mirror layout is usually sitting in the option list as the trap.
+  </p>
+</Callout>
+
+## 9. Grid and rectangular table arrangements
+
+A **grid** seats people in rows and columns, like a classroom facing the front. Mark which row is the
+front and which way the class faces, then read four relations: same row (beside), same column (in
+front or behind), and diagonals. With everyone facing the front (north), a student's right hand points
+east — the higher-column side — and "in front" means towards the front row.
+
+Take nine students in three rows of three, front row first: row 1 U, V, W; row 2 X, Y, Z; row 3
+P, Q, R, columns read left to right:
+
+<div class="formula">
+Front&nbsp;&nbsp;&nbsp; U &nbsp;&nbsp; V &nbsp;&nbsp; W&nbsp;&nbsp; (row 1)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X &nbsp;&nbsp; Y &nbsp;&nbsp; Z&nbsp;&nbsp; (row 2)<br />
+Back&nbsp;&nbsp;&nbsp;&nbsp; P &nbsp;&nbsp; Q &nbsp;&nbsp; R&nbsp;&nbsp; (row 3)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (all face the front; east is to your right)
+</div>
+
+Y is the centre seat. Directly behind Y is the same column one row back — Q. Directly in front of Y is
+V. Everyone in row 1 sits in front of Y, so three students are strictly in front of the centre. At the
+front-left corner, U faces north, so U's own right is east — the seat V.
+
+A **rectangular table** is the same idea folded into four sides. People on the long sides sit in facing
+lines, exactly like the two rows of §4; the short-side or corner seats need their own facing noted.
+The method never changes: draw the shape, write each seat's facing, and read left and right from the
+person.
+
+## 10. Negative marking and when to leave a question
+
+Paper 3 is fully objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+Weigh a guess by its expected value. A blind guess among four options is right one time in four: over
+four such guesses you expect one correct (+1) and three wrong (3 × −0.25 = −0.75), a net of +0.25 —
+just positive, but with a wide spread. **Elimination** changes the picture fast. Rule out one option
+and a guess among three is right one time in three. Down to two options, a guess is right half the
+time, worth 0.5 × 1 − 0.5 × 0.25 = +0.375 mark — clearly worth taking.
+
+Seating questions are unusually kind to elimination, because a wrong option is often a wrong mirror:
+a left read as a right, a between miscounted by one, a clockwise answer where the table faces outward.
+Spotting the flaw in one option removes it and tips the odds in your favour.
+
+<Callout kind="pointer">
+  <p>
+    A calm rule for this chapter: attempt a question once you can rule out at least one option, and
+    consider leaving it only when you cannot narrow the field at all. Nothing here needs to be done
+    anxiously — the marks at stake either way are small, and the time you save by leaving a genuinely
+    stuck question is better spent on one you can finish.
+  </p>
+</Callout>
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — a single row from the ends inward (easy)">
+  <p>
+    Seven students stand in a row facing north for a photograph. Reena is 3rd from the left end and
+    Meena is 2nd from the right end. How many students stand between Reena and Meena, and what is
+    Reena's position from the right end?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — turn the end-counts into seat numbers</div>
+    The row has 7 seats, numbered 1 to 7 from the left.<br />
+    Reena is 3rd from the left → seat 3.<br />
+    Meena is 2nd from the right → seat 7 − 2 + 1 = seat 6.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — count between, and turn Reena around</div>
+    Between seats 3 and 6 lie seats 4 and 5 → 6 − 3 − 1 = <strong>2 students</strong>.<br />
+    Reena from the right = 7 − 3 + 1 = <strong>5th from the right</strong>.<br />
+    Check: seats to Reena's right are 4, 5, 6, 7 — four of them — so counting from the right she is the
+    5th, and 4 + 5 = 9 while 3 + 5 = 8 = n + 1 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — building a row from scattered clues (easy-moderate)">
+  <p>
+    Six friends P, Q, R, S, T and U sit in a row facing north. R is at the extreme left end; T is
+    immediately to R's right; P has exactly two people to his left; S is immediately to P's right; Q is
+    at the extreme right end; and U is immediately to Q's left. Find the full order, then name the
+    person second to the right of T and the number of people between P and Q.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — place the fixed clues first</div>
+    Six seats, 1 to 6 from the left. Fixed anchors: R at seat 1 (left end), Q at seat 6 (right end).<br />
+    "P has exactly two people to his left" → seats 1 and 2 are to P's left → P at seat 3.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — attach the linked clues</div>
+    T immediately right of R → seat 2. S immediately right of P → seat 4. U immediately left of Q →
+    seat 5.<br />
+    Order from left to right: <strong>R, T, P, S, U, Q</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — read the answers off the diagram</div>
+    Second to the right of T (seat 2) is seat 4 → <strong>S</strong>.<br />
+    Between P (seat 3) and Q (seat 6) are seats 4 and 5 → <strong>2 people</strong>.<br />
+    Check every clue against R, T, P, S, U, Q: all six hold ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — two rows facing each other, and the left-right flip (moderate)">
+  <p>
+    A, B, C and D sit in row 1 facing south; P, Q, R and S sit in row 2 facing north, so the rows face
+    each other. As you look at them, row 1 reads B, A, D, C and row 2 reads P, Q, R, S. Who faces A,
+    who sits to A's own right, and who sits to Q's own left?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — read the facing pairs down the columns</div>
+    Column 1: B–P · Column 2: A–Q · Column 3: D–R · Column 4: C–S.<br />
+    So <strong>A faces Q</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — A's own right (row 1 faces south)</div>
+    Row 1 faces south, so a row-1 person's right hand points west — towards your left, the lower
+    columns.<br />
+    A is at column 2, so A's own right is column 1 → <strong>B</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Q's own left (row 2 faces north)</div>
+    Row 2 faces north, so a row-2 person's left hand points west — again the lower columns, but read
+    as this person's left.<br />
+    Q is at column 2, so Q's own left is column 1 → <strong>P</strong>.<br />
+    Notice B (A's right) and P (Q's left) are both on the west side: the same physical direction is one
+    person's right and the other's left, because the rows face opposite ways.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — a round table facing the centre (moderate)">
+  <p>
+    Eight people A, B, C, D, E, F, G and H sit around a circular table facing the centre. Their
+    clockwise order starting from A is A, F, C, H, B, G, D, E. Find (a) the person third to the left of
+    A, (b) the person immediately to the right of C, and (c) the number of people between A and B
+    counting clockwise from A.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — set the direction rule (facing the centre)</div>
+    Facing the centre: "left" is the clockwise step, "right" is the anticlockwise step.<br />
+    Clockwise ring: A → F → C → H → B → G → D → E → back to A.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) and (b)</div>
+    (a) Third to the left of A = three clockwise steps: A, F, C, H → <strong>H</strong>.<br />
+    (b) Immediately to the right of C = one anticlockwise step from C. Clockwise it reads F, C, H, so
+    anticlockwise of C is <strong>F</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) count clockwise between A and B</div>
+    Clockwise from A: A → F → C → H → B. The people strictly between A and B are F, C and H →
+    <strong>3 people</strong>.<br />
+    (Counted the other way, anticlockwise, five people separate them — always state the direction.)
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — a table with some seats facing outward (moderate-hard)">
+  <p>
+    Eight people sit round a table. P, R, T and V face outward; Q, S, U and W face the centre. In
+    clockwise order the seats are P, Q, R, S, T, U, V, W. Who sits to the immediate right of P, and who
+    sits to the immediate right of Q? How many people face the centre?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — read each person from their own facing</div>
+    P faces outward, so for P "right" is the clockwise step.<br />
+    Q faces the centre, so for Q "right" is the anticlockwise step.<br />
+    Clockwise ring: P → Q → R → S → T → U → V → W → back to P.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the two "right" neighbours</div>
+    P's right = one clockwise step from P = <strong>Q</strong>.<br />
+    Q's right = one anticlockwise step from Q = <strong>P</strong>.<br />
+    They sit next to each other, yet each is on the other's right — because they face opposite ways.
+    This is the whole point of a mixed-facing table.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — count the facings</div>
+    Four people (P, R, T, V) face outward, so the remaining 8 − 4 = <strong>4</strong> face the centre.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — a five-person row from partial clues (moderate)">
+  <p>
+    Five people J, K, L, M and N sit in a row facing north. N is at the left end and K at the right
+    end. L is second to the left of K, and M is immediately to L's left. Find the order, the number of
+    people between M and K, and the person second to the right of N.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — fixed anchors</div>
+    Five seats, 1 to 5 from the left. N at seat 1, K at seat 5.<br />
+    L is second to the left of K → two seats left of seat 5 → seat 3.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — attach the last two people</div>
+    M immediately to L's left → seat 2. The only seat left, seat 4, takes J.<br />
+    Order: <strong>N, M, L, J, K</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — read the answers</div>
+    Between M (seat 2) and K (seat 5): seats 3 and 4 → <strong>2 people</strong>.<br />
+    Second to the right of N (seat 1) is seat 3 → <strong>L</strong>.<br />
+    Check all four clues against N, M, L, J, K: every one holds ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — when the layout is not unique (hard)">
+  <p>
+    Four people W, X, Y and Z sit in a row. X and Y sit at the two ends, in some order. W sits
+    somewhere to the left of Z. Decide whether each statement is certain: (a) W is second from the
+    left; (b) X sits at the left end; (c) Z is at the right end.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — list every surviving layout</div>
+    Ends are X and Y (order open); the middle seats 2 and 3 take W and Z with W left of Z.<br />
+    Layout 1: X | W | Z | Y &nbsp;&nbsp; Layout 2: Y | W | Z | X<br />
+    No other layout satisfies all the clues.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — test each statement in both</div>
+    (a) W is at seat 2 in both layouts → <strong>certain (true)</strong>.<br />
+    (b) X is at the left end only in Layout 1 → <strong>not certain</strong>.<br />
+    (c) Z is at seat 3, a middle seat, in both layouts, so Z is never at the right end →
+    <strong>certain (false)</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the lesson</div>
+    A fact is certain only if it is the same across every surviving layout. Where the layouts split, the
+    right answer is "cannot be determined" — and the mirror layout is usually the planted trap in the
+    options.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — a classroom grid (moderate)">
+  <p>
+    Nine students sit in three rows of three, all facing the front. Front to back the seats are: row 1
+    U, V, W; row 2 X, Y, Z; row 3 P, Q, R, columns left to right. Who sits directly behind Y, how many
+    students sit in front of Y, and who is to the immediate right (own right) of the front-left student
+    U?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — fix the grid and the facing</div>
+    Row 1 is the front; the class faces north (the front), so each student's own right is east, the
+    higher-column side.<br />
+    Y is the centre seat: row 2, column 2.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — read the three relations</div>
+    Directly behind Y = same column, next row back = row 3, column 2 → <strong>Q</strong>.<br />
+    In front of Y = the whole of row 1 → U, V, W → <strong>3 students</strong>.<br />
+    U is front-left (row 1, column 1); U's own right is east, the next column → <strong>V</strong>.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — counting across the wrap of a circle (hard)">
+  <p>
+    Eight people A, B, C, D, E, F, G and H sit around a circular table facing the centre. Their
+    clockwise order from A is A, F, C, H, B, G, D, E. Counting clockwise from E, how many people sit
+    between E and G? And if two people sit exactly opposite each other at this table, how many people
+    sit between them on one side?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — walk clockwise from E, allowing the wrap</div>
+    E is the last name in the clockwise list, so clockwise from E the ring wraps back to the start:<br />
+    E → A → F → C → H → B → G.<br />
+    The people strictly between E and G are A, F, C, H and B → <strong>5 people</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — opposite seats on a circle of eight</div>
+    With 8 equal seats, "opposite" is 4 gaps apart, and each connecting arc holds 8 ÷ 2 − 1 =
+    <strong>3 people</strong>.<br />
+    Note the two answers to "how many between": 5 the clockwise way from E to G, but only 1 the other
+    way (just D). The direction is never optional on a circle.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Reading the person's left as your own.** "To the left of P" is P's left hand. It matches your left
+  only when P faces north. Mark the facing and an east arrow before placing anyone.
+- **Assuming a row faces north.** A "facing south" row mirrors left and right. Read the facing line
+  first, or build a confident mirror image of the wrong answer.
+- **The off-by-one on "between".** n-th to the left leaves n − 1 people between; seats p and q hold
+  |p − q| − 1 people between. Forgetting the −1 shifts every position by one.
+- **Adding instead of subtracting in the length formula.** n = (from left) + (from right) − 1. The
+  shared person is counted twice, so you subtract 1; writing n = m + k makes the row one seat too long.
+- **Carrying one "left" across two facing rows.** The two rows face opposite ways, so their lefts point
+  in opposite directions. Translate each row's clues with that row's own facing.
+- **Using "right = anticlockwise" everywhere.** That holds only for a table facing the centre. Facing
+  outward, right is clockwise; on a mixed table, read each person separately.
+- **Not fixing a seat on a circle.** A circular arrangement is the same however you rotate it. Pin one
+  person first, or you will redraw the ring again and again.
+- **Ignoring the wrap when counting round a circle.** Clockwise from the last-listed person continues
+  back to the first. Counting must follow the ring all the way round.
+- **Forcing a unique answer when two layouts survive.** If the asked fact changes between surviving
+  layouts, the answer is "cannot be determined", not the layout you happened to draw.
+- **Confusing "to the right of X" with "from the right end".** The first is measured from X and moves
+  with X; the second is a fixed seat near the edge and never moves.
+- **Guessing one of two survivors instead of testing both.** Check the asked fact in each surviving
+  layout; the mirror layout is usually sitting in the options as the trap.
+
+## One-page revision summary
+
+**Left and right belong to the person.** Draw every diagram north-up, mark each seat's facing and an
+east arrow. Facing north: right = east (your right). Facing south: right = west (your left). A
+north-facing row is the only case where the person's left and right match yours.
+
+**Reading clues.** Immediate neighbour = next seat. Between = seats strictly in the gap, excluding
+both named people. n-th to the left of X = n seats towards X's left, leaving n − 1 people between.
+"From the right end" is a fixed seat; "to the right of X" moves with X.
+
+**Single row.** Number seats 1 to n from your left. Facing north, own-left = lower seat, own-right =
+higher seat; facing south, the reverse. Place fixed clues (ends, middle) first, then linked clues.
+
+**Two rows facing each other.** Draw them in columns; facing pairs read down the columns. The rows
+face opposite ways, so translate each row's left and right with its own facing — the same physical
+side is one person's left and the other's right.
+
+**Circle facing the centre.** Number seats clockwise. Right = anticlockwise neighbour; left =
+clockwise neighbour. Pin one person to kill the rotation.
+
+<div class="formula">
+Facing centre: right = anticlockwise, left = clockwise<br />
+Facing outward: right = clockwise, left = anticlockwise
+</div>
+
+**Circle counting.** Between needs a direction; follow the ring, wrapping past the last seat.
+Opposite seats on a circle of n equal seats: n ÷ 2 − 1 people on each arc.
+
+**Position formulas.**
+
+<div class="formula">
+n = (position from left) + (position from right) − 1<br />
+position from the right = n − (position from left) + 1<br />
+people between seats p and q = |p − q| − 1
+</div>
+
+**Grids and rectangular tables.** Mark the front and the facing. Same row = beside; same column = in
+front or behind; note corner and short-side facings separately. Long sides behave like two facing
+rows.
+
+**Ambiguity.** A fact is certain only if it holds in every surviving layout; otherwise "cannot be
+determined". Test the asked fact in each survivor rather than guessing one.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. A blind four-way guess nets about +0.25 over
+four questions; eliminating even one option makes an attempt clearly worthwhile, and a two-way guess
+is worth about +0.375.

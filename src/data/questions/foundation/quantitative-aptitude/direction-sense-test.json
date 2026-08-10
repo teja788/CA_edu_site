@@ -1,0 +1,1959 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "direction-sense-test",
+  "chapter": "Ch 10 — Direction Sense Test",
+  "questions": [
+    {
+      "id": "q-f3c10-001",
+      "topic": "Ch 10 · Direction Sense · Opposite directions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which direction is exactly opposite to North-East (NE)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "South-West",
+          "explanation": "Correct. The opposite of a direction is found by flipping both letters: North becomes South and East becomes West, so NE becomes SW."
+        },
+        {
+          "key": "B",
+          "text": "North-West",
+          "explanation": "Only the East part was flipped to West; the North was left unchanged. A true opposite flips both letters."
+        },
+        {
+          "key": "C",
+          "text": "South-East",
+          "explanation": "Only the North part was flipped to South. This is a quarter turn away, not the opposite."
+        },
+        {
+          "key": "D",
+          "text": "East",
+          "explanation": "East is a cardinal direction 45 degrees from NE, not its opposite. The opposite must itself be an ordinal direction."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The compass and the eight directions, §1 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#1-the-compass-and-the-eight-directions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Opposite direction flips both letters: NE ↔ SW",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-002",
+      "topic": "Ch 10 · Direction Sense · Left and right of a facing",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A person is facing East. Towards which direction does his right hand point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North",
+          "explanation": "North is on the left hand when facing East, not the right. The right hand is 90 degrees clockwise from the facing."
+        },
+        {
+          "key": "B",
+          "text": "South",
+          "explanation": "Correct. The right hand is always 90 degrees clockwise from the way you face. Clockwise from East is South."
+        },
+        {
+          "key": "C",
+          "text": "West",
+          "explanation": "West is behind a person facing East, not to either side."
+        },
+        {
+          "key": "D",
+          "text": "East",
+          "explanation": "East is straight ahead, the direction he faces, not the direction of his right hand."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The compass and the eight directions, §1 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#1-the-compass-and-the-eight-directions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Right hand is 90° clockwise from the facing",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-003",
+      "topic": "Ch 10 · Direction Sense · Ordinal directions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the eight compass directions lies exactly midway between South and East?",
+      "options": [
+        {
+          "key": "A",
+          "text": "South-West",
+          "explanation": "South-West lies between South and West, not between South and East."
+        },
+        {
+          "key": "B",
+          "text": "North-East",
+          "explanation": "North-East lies between North and East. It is on the opposite side of the compass from the answer."
+        },
+        {
+          "key": "C",
+          "text": "South-East",
+          "explanation": "Correct. The ordinal direction between South and East is named by joining the two cardinals, giving South-East."
+        },
+        {
+          "key": "D",
+          "text": "North-West",
+          "explanation": "North-West lies between North and West, the opposite of the required direction."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The compass and the eight directions, §1 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#1-the-compass-and-the-eight-directions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Ordinal direction is midway between two cardinals",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-004",
+      "topic": "Ch 10 · Direction Sense · Turning through degrees",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Starting from North, through how many degrees must you turn clockwise to face South-East?",
+      "options": [
+        {
+          "key": "A",
+          "text": "90°",
+          "explanation": "90 degrees clockwise from North reaches East, not South-East. South-East is one further ordinal step."
+        },
+        {
+          "key": "B",
+          "text": "135°",
+          "explanation": "Correct. Each compass point is 45 degrees apart. North to South-East clockwise is three steps: North, North-East, East, South-East, that is 3 × 45 = 135 degrees."
+        },
+        {
+          "key": "C",
+          "text": "45°",
+          "explanation": "45 degrees clockwise from North reaches North-East, only one step. South-East is three steps away."
+        },
+        {
+          "key": "D",
+          "text": "225°",
+          "explanation": "225 degrees is the anticlockwise route to South-East. Measured clockwise, as asked, the turn is 135 degrees."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The compass and the eight directions, §1 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#1-the-compass-and-the-eight-directions"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Adjacent compass points are 45° apart",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-005",
+      "topic": "Ch 10 · Direction Sense · Turning through degrees",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Facing East, through how many degrees must you turn anticlockwise to face North?",
+      "options": [
+        {
+          "key": "A",
+          "text": "270°",
+          "explanation": "270 degrees is the clockwise route from East to North. Measured anticlockwise, as asked, the turn is shorter."
+        },
+        {
+          "key": "B",
+          "text": "180°",
+          "explanation": "180 degrees anticlockwise from East reaches West, the opposite direction, not North."
+        },
+        {
+          "key": "C",
+          "text": "90°",
+          "explanation": "Correct. Anticlockwise from East the order is East, North, so North is one quarter-turn, 90 degrees, away."
+        },
+        {
+          "key": "D",
+          "text": "45°",
+          "explanation": "45 degrees anticlockwise from East reaches North-East, only halfway to North."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Anticlockwise chain E → N is one quarter-turn",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-006",
+      "topic": "Ch 10 · Direction Sense · Single-turn distance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Sunil walks 4 km towards the East, then turns left and walks 3 km. How far is he from his starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "7 km",
+          "explanation": "7 km is the total distance walked, 4 + 3. The question asks for the straight-line distance from the start, which is the hypotenuse of a right triangle."
+        },
+        {
+          "key": "B",
+          "text": "1 km",
+          "explanation": "This subtracts the legs, 4 − 3. The two legs are perpendicular, so they combine by Pythagoras, not by subtraction."
+        },
+        {
+          "key": "C",
+          "text": "5 km",
+          "explanation": "Correct. Facing East then turning left faces North, so the finish is 4 East and 3 North. Distance = √(4² + 3²) = √25 = 5 km."
+        },
+        {
+          "key": "D",
+          "text": "12 km",
+          "explanation": "This multiplies the legs, 4 × 3. Distance combines the legs by Pythagoras, not by multiplication."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "3-4-5 right triangle; distance = √(x² + y²)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-007",
+      "topic": "Ch 10 · Direction Sense · Single-turn distance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Reena walks 8 m towards the North, then turns right and walks 6 m. How far is she from where she started?",
+      "options": [
+        {
+          "key": "A",
+          "text": "14 m",
+          "explanation": "14 m is the distance walked, 8 + 6, not the straight-line distance from the start."
+        },
+        {
+          "key": "B",
+          "text": "10 m",
+          "explanation": "Correct. Facing North then turning right faces East, so the finish is 6 East and 8 North. Distance = √(8² + 6²) = √100 = 10 m."
+        },
+        {
+          "key": "C",
+          "text": "2 m",
+          "explanation": "This subtracts the legs. Two perpendicular legs combine by Pythagoras, giving the hypotenuse, not the difference."
+        },
+        {
+          "key": "D",
+          "text": "48 m",
+          "explanation": "This is the product of the legs, 8 × 6. That is not how straight-line distance is found."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "6-8-10 right triangle",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-008",
+      "topic": "Ch 10 · Direction Sense · Two perpendicular legs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A man walks 5 km due West and then 12 km due South. His distance from the starting point is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "17 km",
+          "explanation": "17 km is the total distance walked, 5 + 12. The straight-line distance is the hypotenuse of the right triangle formed by the two legs."
+        },
+        {
+          "key": "B",
+          "text": "7 km",
+          "explanation": "This subtracts the legs, 12 − 5. The perpendicular legs combine by Pythagoras, not by subtraction."
+        },
+        {
+          "key": "C",
+          "text": "13 km",
+          "explanation": "Correct. The finish is 5 West and 12 South. Distance = √(5² + 12²) = √169 = 13 km, the 5-12-13 triple."
+        },
+        {
+          "key": "D",
+          "text": "60 km",
+          "explanation": "This is the product 5 × 12, which is not the distance."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "5-12-13 right triangle",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-009",
+      "topic": "Ch 10 · Direction Sense · Two perpendicular legs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Starting from a point, Kavya goes 24 m towards the South and then 7 m towards the East. How far is she from the start?",
+      "options": [
+        {
+          "key": "A",
+          "text": "31 m",
+          "explanation": "31 m is the total distance walked, 24 + 7, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "25 m",
+          "explanation": "Correct. The finish is 7 East and 24 South. Distance = √(7² + 24²) = √625 = 25 m, the 7-24-25 triple."
+        },
+        {
+          "key": "C",
+          "text": "17 m",
+          "explanation": "This subtracts the legs, 24 − 7. Perpendicular legs combine by Pythagoras."
+        },
+        {
+          "key": "D",
+          "text": "168 m",
+          "explanation": "This is the product 24 × 7, not a distance."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "7-24-25 right triangle",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-010",
+      "topic": "Ch 10 · Direction Sense · Two perpendicular legs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A boy runs 15 m to the East and then 8 m to the North. What is the shortest distance from his starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "23 m",
+          "explanation": "23 m is the distance run, 15 + 8, not the shortest distance from the start."
+        },
+        {
+          "key": "B",
+          "text": "7 m",
+          "explanation": "This subtracts the legs, 15 − 8. The two perpendicular legs combine by Pythagoras."
+        },
+        {
+          "key": "C",
+          "text": "17 m",
+          "explanation": "Correct. The finish is 15 East and 8 North. Distance = √(15² + 8²) = √289 = 17 m, the 8-15-17 triple."
+        },
+        {
+          "key": "D",
+          "text": "120 m",
+          "explanation": "This is the product 15 × 8, not a distance."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "8-15-17 right triangle",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-011",
+      "topic": "Ch 10 · Direction Sense · Two perpendicular legs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Farhan cycles 9 km to the North and then 12 km to the West. How far is he from his starting position?",
+      "options": [
+        {
+          "key": "A",
+          "text": "21 km",
+          "explanation": "21 km is the distance cycled, 9 + 12, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "15 km",
+          "explanation": "Correct. The finish is 12 West and 9 North. Distance = √(9² + 12²) = √225 = 15 km, the 9-12-15 triple."
+        },
+        {
+          "key": "C",
+          "text": "3 km",
+          "explanation": "This subtracts the legs, 12 − 9. Perpendicular legs combine by Pythagoras."
+        },
+        {
+          "key": "D",
+          "text": "108 km",
+          "explanation": "This is the product 9 × 12, not a distance."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "9-12-15 right triangle",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-012",
+      "topic": "Ch 10 · Direction Sense · Distance and direction together",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Deepa walks 3 m East and then 4 m North. She is now how far from the start, and in which direction from the start?",
+      "options": [
+        {
+          "key": "A",
+          "text": "7 m, North-East",
+          "explanation": "The direction is right, but 7 m is the distance walked, not the straight-line distance. That distance is √(3² + 4²) = 5 m."
+        },
+        {
+          "key": "B",
+          "text": "5 m, North-East",
+          "explanation": "Correct. The finish is 3 East and 4 North, so distance = √25 = 5 m, and being up and to the right it lies North-East of the start."
+        },
+        {
+          "key": "C",
+          "text": "5 m, South-West",
+          "explanation": "The distance is right, but South-West is the direction of the START from Deepa, not of Deepa from the start. She is North-East of where she began."
+        },
+        {
+          "key": "D",
+          "text": "1 m, North-East",
+          "explanation": "1 m subtracts the legs. Perpendicular legs combine by Pythagoras to give 5 m."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "3-4-5 triangle; finish lies NE of start",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-013",
+      "topic": "Ch 10 · Direction Sense · Same-line cancellation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A jogger runs 10 m towards the East, then turns around and runs 4 m towards the West. How far is she from her starting point now?",
+      "options": [
+        {
+          "key": "A",
+          "text": "14 m",
+          "explanation": "14 m adds the two moves. But East and West are along one line, so they partly cancel rather than add."
+        },
+        {
+          "key": "B",
+          "text": "6 m",
+          "explanation": "Correct. East and West lie on the same line, so 10 East − 4 West leaves a net 6 m East of the start."
+        },
+        {
+          "key": "C",
+          "text": "40 m",
+          "explanation": "This is the product 10 × 4, which is not a distance."
+        },
+        {
+          "key": "D",
+          "text": "4 m",
+          "explanation": "This is just the second leg. The net displacement is the difference of the two same-line moves, 6 m."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Drawing the path on paper, §2 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#2-drawing-the-path-on-paper"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Same-line moves cancel: 10 E − 4 W = 6 E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-014",
+      "topic": "Ch 10 · Direction Sense · Multi-leg with cancellation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ramesh walks 6 km East, then 8 km North, then 6 km West. How far is he from the starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20 km",
+          "explanation": "20 km is the total distance walked, 6 + 8 + 6, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "12 km",
+          "explanation": "This ignores that the two 6 km legs cancel and doubles something instead. The net across is zero, leaving only the 8 km North."
+        },
+        {
+          "key": "C",
+          "text": "8 km",
+          "explanation": "Correct. The 6 km East and 6 km West cancel, leaving only 8 km North, so the distance is 8 km."
+        },
+        {
+          "key": "D",
+          "text": "10 km",
+          "explanation": "10 km would be right if the East and West legs did not cancel. Here they do, so no triangle is formed."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "6 E and 6 W cancel; net 8 N",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-015",
+      "topic": "Ch 10 · Direction Sense · Multi-leg with cancellation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A car travels 10 km North, then 5 km East, then 10 km South. Its distance from the start is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "25 km",
+          "explanation": "25 km is the total distance travelled, 10 + 5 + 10, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "5 km",
+          "explanation": "Correct. The 10 km North and 10 km South cancel, leaving only 5 km East, so the distance is 5 km."
+        },
+        {
+          "key": "C",
+          "text": "15 km",
+          "explanation": "This adds the East leg to one of the cancelling legs. The two 10 km legs cancel completely."
+        },
+        {
+          "key": "D",
+          "text": "20 km",
+          "explanation": "This adds the two 10 km legs as if they were in the same direction. They are opposite, so they cancel."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "10 N and 10 S cancel; net 5 E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-016",
+      "topic": "Ch 10 · Direction Sense · Closed loop",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Anil walks 4 m North, 4 m East, 4 m South and 4 m West. How far is he from his starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "16 m",
+          "explanation": "16 m is the total distance walked around the square, not the distance from the start."
+        },
+        {
+          "key": "B",
+          "text": "8 m",
+          "explanation": "This adds two adjacent legs. In fact every leg is cancelled by its opposite."
+        },
+        {
+          "key": "C",
+          "text": "4 m",
+          "explanation": "This is one leg. All four legs cancel in opposite pairs, so nothing remains."
+        },
+        {
+          "key": "D",
+          "text": "0 m",
+          "explanation": "Correct. North cancels South and East cancels West, so the walk is a closed square and he ends exactly where he began."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Equal opposite legs cancel; net displacement 0",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-017",
+      "topic": "Ch 10 · Direction Sense · Repeated legs to a triple",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A hiker walks 3 km East, 4 km North, 3 km East and 4 km North. How far is she from the start?",
+      "options": [
+        {
+          "key": "A",
+          "text": "14 km",
+          "explanation": "14 km is the distance walked, 3 + 4 + 3 + 4, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "10 km",
+          "explanation": "Correct. Net East = 3 + 3 = 6, net North = 4 + 4 = 8, so distance = √(6² + 8²) = √100 = 10 km."
+        },
+        {
+          "key": "C",
+          "text": "7 km",
+          "explanation": "This is just one pair of legs, 3 + 4. Both pairs must be added along their own axes first."
+        },
+        {
+          "key": "D",
+          "text": "100 km",
+          "explanation": "100 is 6² + 8², the value under the square root. The distance is its square root, 10 km."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net (6, 8) → 6-8-10 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-018",
+      "topic": "Ch 10 · Direction Sense · Multi-leg with cancellation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A man walks 5 m South, 12 m West and 5 m North. How far is he from where he began?",
+      "options": [
+        {
+          "key": "A",
+          "text": "22 m",
+          "explanation": "22 m is the total walked, 5 + 12 + 5, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "2 m",
+          "explanation": "This mishandles the cancelling legs. The 5 South and 5 North cancel exactly, not down to 2."
+        },
+        {
+          "key": "C",
+          "text": "12 m",
+          "explanation": "Correct. The 5 South and 5 North cancel, leaving only 12 m West, so the distance is 12 m."
+        },
+        {
+          "key": "D",
+          "text": "13 m",
+          "explanation": "13 m would arise from a 5-12-13 triangle, but the two 5 m legs cancel rather than forming a triangle side."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "5 S and 5 N cancel; net 12 W",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-019",
+      "topic": "Ch 10 · Direction Sense · Net gaps then Pythagoras",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Starting from home, Tara walks 10 m North, 6 m East and 2 m South. Her straight-line distance from home is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "18 m",
+          "explanation": "18 m is the total walked, 10 + 6 + 2, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "10 m",
+          "explanation": "Correct. Net North = 10 − 2 = 8, net East = 6, so distance = √(6² + 8²) = √100 = 10 m."
+        },
+        {
+          "key": "C",
+          "text": "4 m",
+          "explanation": "This handles only the North–South legs, 10 − 2 − 4, and ignores the 6 m East. Both net gaps go into Pythagoras."
+        },
+        {
+          "key": "D",
+          "text": "14 m",
+          "explanation": "This adds the net North gap and the East gap, 8 + 6. Perpendicular gaps combine by Pythagoras, not by adding."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net (6, 8) → 6-8-10 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-020",
+      "topic": "Ch 10 · Direction Sense · Net gaps then Pythagoras",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A delivery van goes 12 km East, 9 km North and 4 km South. How far is it from the depot?",
+      "options": [
+        {
+          "key": "A",
+          "text": "25 km",
+          "explanation": "25 km is the total distance driven, 12 + 9 + 4, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "13 km",
+          "explanation": "Correct. Net North = 9 − 4 = 5, net East = 12, so distance = √(12² + 5²) = √169 = 13 km, the 5-12-13 triple."
+        },
+        {
+          "key": "C",
+          "text": "17 km",
+          "explanation": "17 km adds the East and un-cancelled North, 12 + 5? No — it comes from using 9 instead of the net 5. Cancel the North and South first."
+        },
+        {
+          "key": "D",
+          "text": "5 km",
+          "explanation": "5 km is only the net North gap. The 12 km East must be combined with it by Pythagoras."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net (12, 5) → 5-12-13 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-021",
+      "topic": "Ch 10 · Direction Sense · Net gaps then Pythagoras",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A runner covers 15 m North, 12 m East and 4 m West. What is his distance from the start?",
+      "options": [
+        {
+          "key": "A",
+          "text": "31 m",
+          "explanation": "31 m is the total distance run, 15 + 12 + 4, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "23 m",
+          "explanation": "23 m uses 12 for the East gap instead of the net 8. Cancel the East and West legs first: 12 − 4 = 8."
+        },
+        {
+          "key": "C",
+          "text": "17 m",
+          "explanation": "Correct. Net East = 12 − 4 = 8, net North = 15, so distance = √(8² + 15²) = √289 = 17 m, the 8-15-17 triple."
+        },
+        {
+          "key": "D",
+          "text": "7 m",
+          "explanation": "7 m subtracts the net gaps, 15 − 8. Perpendicular gaps combine by Pythagoras."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net (8, 15) → 8-15-17 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-022",
+      "topic": "Ch 10 · Direction Sense · Net gaps then Pythagoras",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nisha walks 5 km East, 12 km North and 4 km East. How far is she from the starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "21 km",
+          "explanation": "21 km is the total walked, 5 + 12 + 4, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "15 km",
+          "explanation": "Correct. Net East = 5 + 4 = 9, net North = 12, so distance = √(9² + 12²) = √225 = 15 km, the 9-12-15 triple."
+        },
+        {
+          "key": "C",
+          "text": "3 km",
+          "explanation": "3 km subtracts the net gaps, 12 − 9. Perpendicular gaps combine by Pythagoras."
+        },
+        {
+          "key": "D",
+          "text": "25 km",
+          "explanation": "25 km appears if the North leg is doubled or read wrongly. Net North is 12 and net East is 9, giving 15."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net (9, 12) → 9-12-15 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-023",
+      "topic": "Ch 10 · Direction Sense · Net gaps then Pythagoras",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A cyclist rides 24 km East, 4 km West and 21 km North. Her straight-line distance from the start is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "49 km",
+          "explanation": "49 km is the total ridden, 24 + 4 + 21, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "41 km",
+          "explanation": "41 km uses 24 for the East gap instead of the net 20. Cancel the East and West legs first: 24 − 4 = 20."
+        },
+        {
+          "key": "C",
+          "text": "29 km",
+          "explanation": "Correct. Net East = 24 − 4 = 20, net North = 21, so distance = √(20² + 21²) = √841 = 29 km, the 20-21-29 triple."
+        },
+        {
+          "key": "D",
+          "text": "45 km",
+          "explanation": "45 km adds the net gaps, 20 + 21 + 4. The perpendicular gaps combine by Pythagoras."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Net (20, 21) → 20-21-29 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-024",
+      "topic": "Ch 10 · Direction Sense · Two perpendicular legs",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A man walks 7 m towards the South and then 24 m towards the East. How far is he from the start?",
+      "options": [
+        {
+          "key": "A",
+          "text": "31 m",
+          "explanation": "31 m is the total walked, 7 + 24, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "17 m",
+          "explanation": "17 m subtracts the legs, 24 − 7. Perpendicular legs combine by Pythagoras."
+        },
+        {
+          "key": "C",
+          "text": "25 m",
+          "explanation": "Correct. The finish is 24 East and 7 South. Distance = √(24² + 7²) = √625 = 25 m, the 7-24-25 triple."
+        },
+        {
+          "key": "D",
+          "text": "168 m",
+          "explanation": "This is the product 24 × 7, not a distance."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "7-24-25 right triangle",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-025",
+      "topic": "Ch 10 · Direction Sense · Direction of finish from start",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Mohan walks 8 m North and then 8 m West. In which direction is he now from his starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North-East",
+          "explanation": "North-East would need a move to the East. Mohan moved West, so he is on the West side of the start."
+        },
+        {
+          "key": "B",
+          "text": "North-West",
+          "explanation": "Correct. He is North of the start (8 m North) and West of it (8 m West), so he lies to the North-West."
+        },
+        {
+          "key": "C",
+          "text": "South-West",
+          "explanation": "He moved North, not South, so he is on the North side of the start, not the South."
+        },
+        {
+          "key": "D",
+          "text": "West",
+          "explanation": "He is not due West, because he also moved 8 m North. Equal North and West moves put him exactly North-West."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Drawing the path on paper, §2 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#2-drawing-the-path-on-paper"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "North and West moves place the finish NW of start",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-026",
+      "topic": "Ch 10 · Direction Sense · Direction of start from finish",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A girl walks 5 m East and then 5 m South. In which direction is her starting point from her present position?",
+      "options": [
+        {
+          "key": "A",
+          "text": "South-East",
+          "explanation": "South-East is the direction of her present position from the start, not the reverse. The question asks for the direction of the start from where she now stands."
+        },
+        {
+          "key": "B",
+          "text": "North-East",
+          "explanation": "The start is to the North of her (she went South) but to the West (she went East), not the East."
+        },
+        {
+          "key": "C",
+          "text": "North-West",
+          "explanation": "Correct. She is South-East of the start, so the start is the opposite, North-West of her present position."
+        },
+        {
+          "key": "D",
+          "text": "South-West",
+          "explanation": "The start is North of her, not South, because she walked South away from it."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Drawing the path on paper, §2 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#2-drawing-the-path-on-paper"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Direction of start from finish is the opposite of finish from start",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-027",
+      "topic": "Ch 10 · Direction Sense · Facing after turns",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A man is facing North. He turns right, then turns right again. Which direction is he facing now?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North",
+          "explanation": "North would need a full 360-degree turn. Two right turns make only 180 degrees."
+        },
+        {
+          "key": "B",
+          "text": "South",
+          "explanation": "Correct. Each right turn is 90 degrees clockwise: North to East, then East to South. Two right turns face him South."
+        },
+        {
+          "key": "C",
+          "text": "East",
+          "explanation": "East is after only one right turn. A second right turn carries him on to South."
+        },
+        {
+          "key": "D",
+          "text": "West",
+          "explanation": "West is reached by turning left twice, or right twice from South. From North, two rights give South."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Two right turns = 180°; N → E → S",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-028",
+      "topic": "Ch 10 · Direction Sense · Facing after a turn",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Facing South, a person turns to his left. Which direction does he now face?",
+      "options": [
+        {
+          "key": "A",
+          "text": "West",
+          "explanation": "West is a right turn from South, not a left turn. Left is anticlockwise, the other way."
+        },
+        {
+          "key": "B",
+          "text": "East",
+          "explanation": "Correct. A left turn is 90 degrees anticlockwise. Anticlockwise from South goes to East."
+        },
+        {
+          "key": "C",
+          "text": "North",
+          "explanation": "North is an about-turn, 180 degrees, from South. A single left turn is only 90 degrees."
+        },
+        {
+          "key": "D",
+          "text": "South",
+          "explanation": "South is the starting facing. A turn must change it."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Left = anticlockwise; S → E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-029",
+      "topic": "Ch 10 · Direction Sense · Heading after several turns",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A person starts facing East and makes three successive right turns. Which direction does she end up facing?",
+      "options": [
+        {
+          "key": "A",
+          "text": "East",
+          "explanation": "East is the start. Three right turns of 90 degrees make 270 degrees, so the facing changes."
+        },
+        {
+          "key": "B",
+          "text": "South",
+          "explanation": "South is after one right turn from East. Two more right turns carry her on to North."
+        },
+        {
+          "key": "C",
+          "text": "West",
+          "explanation": "West is after two right turns from East. A third right turn moves her to North."
+        },
+        {
+          "key": "D",
+          "text": "North",
+          "explanation": "Correct. Right turns clockwise from East: East → South → West → North. Three turns end at North. (Equivalently, three rights equal one left, and left from East is North.)"
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Three right turns from E → N",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-030",
+      "topic": "Ch 10 · Direction Sense · Heading after several turns",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Starting to face North, a guard turns right five times in a row. Which direction is he facing at the end?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North",
+          "explanation": "Four right turns return to North; a fifth right turn moves him one more step to East."
+        },
+        {
+          "key": "B",
+          "text": "East",
+          "explanation": "Correct. Five right turns is 450 degrees, which is 360 + 90, so the effect is a single right turn from North, giving East."
+        },
+        {
+          "key": "C",
+          "text": "South",
+          "explanation": "South is two right turns from North. Five turns reduce to one net turn, not two."
+        },
+        {
+          "key": "D",
+          "text": "West",
+          "explanation": "West is three right turns from North. Five turns reduce to one net turn, giving East."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Five right turns reduce to one; N → E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-031",
+      "topic": "Ch 10 · Direction Sense · Facing after two turns",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A cyclist facing West turns left, and a little later turns left again. Which direction is she facing after the two turns?",
+      "options": [
+        {
+          "key": "A",
+          "text": "West",
+          "explanation": "West is the starting facing. Two left turns make 180 degrees, changing it to the opposite."
+        },
+        {
+          "key": "B",
+          "text": "East",
+          "explanation": "Correct. Two left turns is 180 degrees, an about-turn, so West becomes its opposite, East."
+        },
+        {
+          "key": "C",
+          "text": "North",
+          "explanation": "North is one left turn from West. The second left turn carries her on to East."
+        },
+        {
+          "key": "D",
+          "text": "South",
+          "explanation": "South is one right turn from West. Two left turns give East, not South."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Two left turns = 180°; W → E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-032",
+      "topic": "Ch 10 · Direction Sense · Equivalent turns",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Turning 270° in the clockwise direction is the same as turning through how much in the anticlockwise direction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "270°",
+          "explanation": "270 degrees is the clockwise amount. The equivalent anticlockwise turn completes the circle, 360 − 270."
+        },
+        {
+          "key": "B",
+          "text": "180°",
+          "explanation": "180 degrees is a half turn and reaches the opposite direction, not the same endpoint as 270 degrees clockwise."
+        },
+        {
+          "key": "C",
+          "text": "90°",
+          "explanation": "Correct. A full circle is 360 degrees, so 270 degrees clockwise ends at the same place as 360 − 270 = 90 degrees anticlockwise."
+        },
+        {
+          "key": "D",
+          "text": "360°",
+          "explanation": "360 degrees is a full turn back to the start. 270 degrees clockwise does not return to the start."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "270° clockwise = 90° anticlockwise",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-033",
+      "topic": "Ch 10 · Direction Sense · Turn then distance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Facing North, Karan walks 12 m forward, turns right and walks 5 m. How far is he from his starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "17 m",
+          "explanation": "17 m is the total walked, 12 + 5, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "7 m",
+          "explanation": "7 m subtracts the legs, 12 − 5. Perpendicular legs combine by Pythagoras."
+        },
+        {
+          "key": "C",
+          "text": "13 m",
+          "explanation": "Correct. Forward North is 12, then right faces East for 5, so the finish is 5 East and 12 North. Distance = √(5² + 12²) = √169 = 13 m."
+        },
+        {
+          "key": "D",
+          "text": "60 m",
+          "explanation": "This is the product 12 × 5, not a distance."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Net (5, 12) → 5-12-13 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-034",
+      "topic": "Ch 10 · Direction Sense · Turns forming a U-shape",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A robot faces North, moves 6 m forward, turns right and moves 8 m, then turns right and moves 6 m. How far is it from its start?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20 m",
+          "explanation": "20 m is the total moved, 6 + 8 + 6, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "8 m",
+          "explanation": "Correct. Forward North 6, right faces East for 8, right again faces South for 6. The North 6 and South 6 cancel, leaving 8 m East."
+        },
+        {
+          "key": "C",
+          "text": "12 m",
+          "explanation": "12 m doubles the 6 m legs instead of cancelling them. Being opposite, they cancel to zero, leaving only the 8 m."
+        },
+        {
+          "key": "D",
+          "text": "10 m",
+          "explanation": "10 m would come from a 6-8-10 triangle, but the two 6 m legs cancel, so no triangle is formed."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "6 N and 6 S cancel; net 8 E",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-035",
+      "topic": "Ch 10 · Direction Sense · Shadow at sunrise",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Just after sunrise, in which direction does the shadow of a vertical pole fall?",
+      "options": [
+        {
+          "key": "A",
+          "text": "East",
+          "explanation": "East is where the sun is at sunrise. The shadow falls away from the sun, so it cannot point East."
+        },
+        {
+          "key": "B",
+          "text": "West",
+          "explanation": "Correct. The morning sun is in the East, and a shadow always falls on the side away from the sun, so it points West."
+        },
+        {
+          "key": "C",
+          "text": "North",
+          "explanation": "The shadow lies opposite the sun. With the sun in the East, the shadow is in the West, not the North."
+        },
+        {
+          "key": "D",
+          "text": "South",
+          "explanation": "The shadow lies opposite the sun, which is East at sunrise, so the shadow is West, not South."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Shadows and the sun, §5 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#5-shadows-and-the-sun"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sunrise sun East → shadow West",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-036",
+      "topic": "Ch 10 · Direction Sense · Shadow at sunset",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Near sunset, the shadow of a tree falls towards which direction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "West",
+          "explanation": "West is where the sun sets. The shadow falls away from the sun, so it points the other way."
+        },
+        {
+          "key": "B",
+          "text": "East",
+          "explanation": "Correct. The evening sun is in the West, and the shadow falls away from it, so it points East."
+        },
+        {
+          "key": "C",
+          "text": "North",
+          "explanation": "The shadow lies opposite the sun. With the sun in the West, the shadow is East, not North."
+        },
+        {
+          "key": "D",
+          "text": "South",
+          "explanation": "The shadow lies opposite the setting sun in the West, so it points East, not South."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Shadows and the sun, §5 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#5-shadows-and-the-sun"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sunset sun West → shadow East",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-037",
+      "topic": "Ch 10 · Direction Sense · Facing from a morning shadow",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "One morning soon after sunrise, a boy finds his shadow falling exactly to his right. Which direction is he facing?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North",
+          "explanation": "If he faced North, his right hand would point East, so his shadow would be East. In the morning the shadow is West."
+        },
+        {
+          "key": "B",
+          "text": "South",
+          "explanation": "Correct. The morning shadow points West. If West is on his right, he faces South, because the facing is 90 degrees anticlockwise from the right hand."
+        },
+        {
+          "key": "C",
+          "text": "East",
+          "explanation": "Facing East, his right hand points South, so the shadow would be South. The morning shadow is West."
+        },
+        {
+          "key": "D",
+          "text": "West",
+          "explanation": "Facing West, the West-pointing shadow would be straight ahead, not to his right."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Shadows and the sun, §5 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#5-shadows-and-the-sun"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Morning shadow West on right hand → faces South",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-038",
+      "topic": "Ch 10 · Direction Sense · Facing from an evening shadow",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the evening near sunset, a man sees his shadow fall to his right. Which direction is he facing?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North",
+          "explanation": "Correct. The evening shadow points East. If East is on his right hand, he faces North, since the facing is 90 degrees anticlockwise from the right hand."
+        },
+        {
+          "key": "B",
+          "text": "South",
+          "explanation": "Facing South, his right hand points West, so the shadow would be West. The evening shadow is East."
+        },
+        {
+          "key": "C",
+          "text": "East",
+          "explanation": "Facing East, the East-pointing shadow would be straight ahead, not to his right."
+        },
+        {
+          "key": "D",
+          "text": "West",
+          "explanation": "Facing West, his right hand points North, so the shadow would be North. The evening shadow is East."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Shadows and the sun, §5 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#5-shadows-and-the-sun"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Evening shadow East on right hand → faces North",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-039",
+      "topic": "Ch 10 · Direction Sense · Midday shadow trap",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "At exactly noon, a student tries to find directions from the very short shadow of a pole. What is the correct conclusion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The shadow reliably points East",
+          "explanation": "At noon the sun is nearly overhead, not in the East, so this does not hold."
+        },
+        {
+          "key": "B",
+          "text": "The shadow reliably points West",
+          "explanation": "West is the afternoon direction of the shadow, once the sun has moved past overhead. At exactly noon the shadow is too short to read."
+        },
+        {
+          "key": "C",
+          "text": "A midday shadow is too short to give a reliable direction",
+          "explanation": "Correct. Around noon the sun is almost directly overhead, so shadows are very short and cannot be used to fix a direction reliably."
+        },
+        {
+          "key": "D",
+          "text": "The shadow reliably points North",
+          "explanation": "A well-set question does not expect a firm direction from a midday shadow. The right conclusion is that it cannot be determined reliably."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Shadows and the sun, §5 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#5-shadows-and-the-sun"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Midday sun overhead → shadow unreliable",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-040",
+      "topic": "Ch 10 · Direction Sense · Walking towards a morning shadow",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the early morning a man walks straight towards his own shadow. In which direction is he walking?",
+      "options": [
+        {
+          "key": "A",
+          "text": "East",
+          "explanation": "East is towards the morning sun, which is behind him if he walks towards his shadow. His shadow lies in the opposite direction."
+        },
+        {
+          "key": "B",
+          "text": "West",
+          "explanation": "Correct. The morning shadow falls to the West, so walking towards his shadow means walking West."
+        },
+        {
+          "key": "C",
+          "text": "North",
+          "explanation": "The morning shadow is due West, so he walks West, not North."
+        },
+        {
+          "key": "D",
+          "text": "South",
+          "explanation": "The morning shadow is due West, so he walks West, not South."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Shadows and the sun, §5 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#5-shadows-and-the-sun"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Morning shadow West → walking towards it is West",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-041",
+      "topic": "Ch 10 · Direction Sense · Shadows of two facing people",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Early one morning, two friends stand facing each other. If the shadow of one falls to his left, the shadow of the other falls to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "his left",
+          "explanation": "Two people facing each other have their left and right sides swapped. The same world-direction shadow cannot be on the left of both."
+        },
+        {
+          "key": "B",
+          "text": "his right",
+          "explanation": "Correct. The morning shadow falls West for both. If it is on the first friend's left, he faces South and the second faces North, so West is on the second friend's right."
+        },
+        {
+          "key": "C",
+          "text": "his front",
+          "explanation": "The shadow is to one side for the first friend, so it is to a side for the other too, not the front."
+        },
+        {
+          "key": "D",
+          "text": "his back",
+          "explanation": "The shadow is to the side, not ahead or behind, for people standing across from each other with a sideways shadow."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Shadows and the sun, §5 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#5-shadows-and-the-sun"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Facing people have left/right swapped; same world shadow",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-042",
+      "topic": "Ch 10 · Direction Sense · Opposite-direction gap",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two runners start from the same point; one runs 6 km due North and the other 8 km due South. How far apart are they now?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 km",
+          "explanation": "2 km subtracts the distances, 8 − 6. That is right only when both run the same way; here they run opposite ways, so the gap is the sum."
+        },
+        {
+          "key": "B",
+          "text": "14 km",
+          "explanation": "Correct. They run in opposite directions from one point, so the gap is the sum: 6 + 8 = 14 km."
+        },
+        {
+          "key": "C",
+          "text": "10 km",
+          "explanation": "10 km would arise from a right triangle, but North and South are along one line, so the moves add straight, not by Pythagoras."
+        },
+        {
+          "key": "D",
+          "text": "48 km",
+          "explanation": "This is the product 6 × 8, not a distance."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mirror images and opposite-direction traps, §6 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#6-mirror-images-and-opposite-direction-traps"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Opposite-direction walkers: gap = sum = 6 + 8",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-043",
+      "topic": "Ch 10 · Direction Sense · Direction of one walker from another",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "P and Q start from the same spot. P walks towards the East and Q walks towards the West. In which direction is Q from P?",
+      "options": [
+        {
+          "key": "A",
+          "text": "East",
+          "explanation": "East is the direction P walked. Q went the opposite way, so Q is on the West side of P."
+        },
+        {
+          "key": "B",
+          "text": "West",
+          "explanation": "Correct. P moves East and Q moves West from the same start, so Q ends up to the West of P."
+        },
+        {
+          "key": "C",
+          "text": "North",
+          "explanation": "Neither walker moved North or South, so the direction between them is along the East–West line."
+        },
+        {
+          "key": "D",
+          "text": "South",
+          "explanation": "Neither walker moved North or South, so the direction between them is along the East–West line."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mirror images and opposite-direction traps, §6 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#6-mirror-images-and-opposite-direction-traps"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Opposite walkers: each is opposite the other; Q is West of P",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-044",
+      "topic": "Ch 10 · Direction Sense · Relative direction chain",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A is to the East of B. B is to the North of C. In which direction is C from A?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North-East",
+          "explanation": "C is south and west of A, so it lies in the South-West quadrant, not the North-East."
+        },
+        {
+          "key": "B",
+          "text": "South-West",
+          "explanation": "Correct. Place B at the centre: A is East of B, and C is South of B. From A, then, C is both to the West and to the South, that is South-West."
+        },
+        {
+          "key": "C",
+          "text": "South-East",
+          "explanation": "C is to the West of A, not the East, because A lies East of B while C sits below B."
+        },
+        {
+          "key": "D",
+          "text": "North-West",
+          "explanation": "C is to the South of A, not the North, because C is below B while A is level with B."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mirror images and opposite-direction traps, §6 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#6-mirror-images-and-opposite-direction-traps"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Sketch from clues; C is SW of A",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-045",
+      "topic": "Ch 10 · Direction Sense · Mirror reflection",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A man walks towards the North and sees his reflection approaching in a plane mirror straight ahead. In which direction does the reflection appear to move?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North",
+          "explanation": "The reflection moves towards him, opposite to his own motion, so it cannot move North with him."
+        },
+        {
+          "key": "B",
+          "text": "South",
+          "explanation": "Correct. A plane mirror facing him reverses the direction crossing it, so as he walks North his reflection appears to walk South towards him."
+        },
+        {
+          "key": "C",
+          "text": "East",
+          "explanation": "The reflection moves along the same line he walks, North–South, reversed. It does not move sideways."
+        },
+        {
+          "key": "D",
+          "text": "West",
+          "explanation": "The reflection moves along the North–South line, reversed, not to the West."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mirror images and opposite-direction traps, §6 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#6-mirror-images-and-opposite-direction-traps"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Plane mirror reverses the direction facing it",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-046",
+      "topic": "Ch 10 · Direction Sense · Relative direction chain",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A school is East of a library, and the library is North of a market. In which direction is the market from the school?",
+      "options": [
+        {
+          "key": "A",
+          "text": "North-West",
+          "explanation": "The market is South of the school, not North, because it sits below the library while the school is level with the library."
+        },
+        {
+          "key": "B",
+          "text": "South-East",
+          "explanation": "The market is West of the school, not East, because the school lies East of the library while the market is below the library."
+        },
+        {
+          "key": "C",
+          "text": "South-West",
+          "explanation": "Correct. Put the library at the centre: the school is East of it and the market is South of it. From the school, the market is both West and South, that is South-West."
+        },
+        {
+          "key": "D",
+          "text": "North-East",
+          "explanation": "The market lies below and to the west of the school, so it is South-West, the opposite quadrant from North-East."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Mirror images and opposite-direction traps, §6 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#6-mirror-images-and-opposite-direction-traps"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Sketch from clues; market is SW of school",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-047",
+      "topic": "Ch 10 · Direction Sense · Negative marking judgement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Paper 3 deducts 0.25 mark for each wrong answer and gives 1 mark for each correct one. Which is the best guidance for a direction-sense question you are unsure of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Never attempt any question, to avoid the penalty",
+          "explanation": "This forgoes marks you could reasonably win. Direction questions are checkable by redrawing, so many can be answered with confidence."
+        },
+        {
+          "key": "B",
+          "text": "Attempt when you can eliminate at least one option, since the drawing is checkable",
+          "explanation": "Correct. Eliminating even one option makes the expected value of a guess clearly positive, and a redrawn path usually confirms the answer, so attempting is worthwhile."
+        },
+        {
+          "key": "C",
+          "text": "Always guess blindly, because there is no penalty",
+          "explanation": "There is a penalty of 0.25 for a wrong answer, so blind guessing is only marginally positive and carries wide risk."
+        },
+        {
+          "key": "D",
+          "text": "Attempt only if you are 100% certain, otherwise always leave it",
+          "explanation": "This is too cautious. Once one or two options are eliminated, an attempt is clearly worth making even without full certainty."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Negative marking and when to leave a question, §7 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#7-negative-marking-and-when-to-leave-a-question"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "0.25 negative marking; attempt on elimination",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-048",
+      "topic": "Ch 10 · Direction Sense · Longer walk to a triple",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A surveyor walks 26 m North, 10 m East, 2 m South and 3 m West. How far is she from her starting point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "41 m",
+          "explanation": "41 m is the total walked, 26 + 10 + 2 + 3, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "25 m",
+          "explanation": "Correct. Net North = 26 − 2 = 24, net East = 10 − 3 = 7, so distance = √(7² + 24²) = √625 = 25 m, the 7-24-25 triple."
+        },
+        {
+          "key": "C",
+          "text": "33 m",
+          "explanation": "33 m uses 26 and 7 without cancelling the South leg. Reduce each axis first: North becomes 24, East becomes 7."
+        },
+        {
+          "key": "D",
+          "text": "17 m",
+          "explanation": "17 m subtracts the net gaps, 24 − 7. Perpendicular gaps combine by Pythagoras."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Net (7, 24) → 7-24-25 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-049",
+      "topic": "Ch 10 · Direction Sense · Turns forming a spiral",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Facing East, a drone flies 15 m, turns left and flies 13 m, turns left and flies 3 m, turns left and flies 8 m. How far is it from the launch point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "39 m",
+          "explanation": "39 m is the total flown, 15 + 13 + 3 + 8, not the straight-line distance."
+        },
+        {
+          "key": "B",
+          "text": "13 m",
+          "explanation": "Correct. Tracking the heading: East 15, then North 13, then West 3, then South 8. Net East = 15 − 3 = 12, net North = 13 − 8 = 5, so distance = √(12² + 5²) = √169 = 13 m."
+        },
+        {
+          "key": "C",
+          "text": "17 m",
+          "explanation": "17 m adds the net gaps, 12 + 5. Perpendicular gaps combine by Pythagoras, giving 13 m."
+        },
+        {
+          "key": "D",
+          "text": "7 m",
+          "explanation": "7 m subtracts the net gaps, 12 − 5. The gaps combine by Pythagoras, not by subtraction."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Turns — left, right, clockwise and anticlockwise, §4 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#4-turns-left-right-clockwise-and-anticlockwise"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Net (12, 5) → 5-12-13 triple",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c10-050",
+      "topic": "Ch 10 · Direction Sense · Distance and direction together",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From his hostel, Vikram walks 5 m East, 15 m North, 4 m East and 3 m South. How far is he from the hostel, and in which direction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "21 m, North-East",
+          "explanation": "The direction is right, but 21 m is close to the total walked, not the straight-line distance. That distance is 15 m."
+        },
+        {
+          "key": "B",
+          "text": "15 m, North-East",
+          "explanation": "Correct. Net East = 5 + 4 = 9, net North = 15 − 3 = 12, so distance = √(9² + 12²) = √225 = 15 m, and being up and to the right the finish lies North-East of the hostel."
+        },
+        {
+          "key": "C",
+          "text": "15 m, South-West",
+          "explanation": "The distance is right, but South-West is the direction of the hostel from Vikram, not of Vikram from the hostel. He is North-East of the hostel."
+        },
+        {
+          "key": "D",
+          "text": "3 m, North-East",
+          "explanation": "3 m subtracts the net gaps, 12 − 9. The perpendicular gaps combine by Pythagoras to give 15 m."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Net displacement and the shortest distance from start, §3 →",
+        "href": "/foundation/quantitative-aptitude/direction-sense-test/#3-net-displacement-and-the-shortest-distance-from-start"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Net (9, 12) → 9-12-15 triple; finish NE of start",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

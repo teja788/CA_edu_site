@@ -1,0 +1,611 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Direction Sense Test'
+description: 'CA Foundation Quantitative Aptitude Part B Ch 10 — direction sense in plain language: the compass and the eight directions, drawing the path on paper, the shortest distance from the start by the Pythagoras right-triangle, left and right turns relative to the current facing, clockwise and anticlockwise rotation, shadows and the position of the sun, mirror and opposite-direction traps, and negative-marking judgement, with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 10 · Direction Sense Test'
+chapterSlug: direction-sense-test
+masteryId: f3-ch10
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Part B Logical Reasoning, Direction Sense Test — scope and question patterns'
+  - 'Standard conventions of the compass and plane geometry: the eight-point compass rose, the right angle between adjacent cardinal directions, and the Pythagoras theorem for the straight-line distance between two points'
+sourceLabel: 'ICAI SM Paper 3 Part B Direction Sense Test scope (May 2026 ed.) · standard compass and geometry conventions'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 22 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=direction-sense-test'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A delivery rider in Pune leaves the depot and rides 4 km east to a warehouse, turns and rides
+3 km north to a shop, and stops. His manager, tracking him on a map, asks a single question: **how
+far is the rider from the depot in a straight line?** Not how far he rode — that is 7 km — but how
+far apart the two points are.
+
+Draw the two legs on paper and a right-angled triangle appears, with the two rides as its short
+sides and the straight-line gap as its longest side. The gap is √(4² + 3²) = √25 = **5 km**. The
+whole of this chapter is that one move: turn a described walk into a picture, read the picture as
+right triangles and straight lines, and answer the exact question asked.
+
+Paper 3 asks these in Part B, Logical Reasoning, and they are among the most reliable marks on the
+paper — the arithmetic is small and every answer is checkable. Marks are lost not on the geometry but
+on three things: mixing up left and right after the walker has turned, confusing the total distance
+walked with the straight-line distance from the start, and naming the wrong final direction. This
+chapter fixes each of those in turn.
+
+## 1. The compass and the eight directions
+
+Every direction question is read against a **compass rose**. The four **cardinal** directions are
+North, East, South and West. Fix them by the rising sun: face the sunrise and you face **East**;
+North is then to your left, South to your right, West behind you.
+
+<div class="formula">Clockwise from the top: North → East → South → West → back to North</div>
+
+Between each pair of cardinals sits an **ordinal** (or intercardinal) direction, named by joining
+the two cardinals it lies between, the North–South part always spoken first:
+
+- **North-East (NE)** — between North and East
+- **South-East (SE)** — between South and East
+- **South-West (SW)** — between South and West
+- **North-West (NW)** — between North and West
+
+That gives the **eight-point compass**. Two facts about it carry most of the easy marks.
+
+**Adjacent cardinals are a right angle apart.** North to East is 90°, East to South is another 90°,
+and so on around the circle of 360°. Each ordinal sits exactly halfway, so North to North-East is
+45°, and North to South-East is 135°.
+
+**Opposite directions are a straight 180° apart.** The opposite of North is South; the opposite of
+East is West; the opposite of North-East is **South-West**; the opposite of North-West is South-East.
+To find any opposite, flip **both** letters: NE → SW, SE → NW.
+
+<Callout kind="pointer">
+  <p>
+    A quick table settles the left/right questions before any walking starts. If a person <strong>faces
+    North</strong>, then East is on the right hand, West on the left, South behind. Rotate the whole
+    table with the walker: <strong>facing East</strong>, the right hand points South and the left hand
+    North; <strong>facing South</strong>, the right hand points West; <strong>facing West</strong>, the
+    right hand points North. The rule in one line: your right hand is always 90° clockwise from the way
+    you face.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    "Left" and "right" are the walker's, not the reader's, and they turn with the walker. When a
+    person walking South turns left, they turn towards the <strong>East</strong>, not the West — even
+    though East is on the reader's right side of the page. Always re-read left and right from where the
+    walker is now facing, never from the map.
+  </p>
+</Callout>
+
+## 2. Drawing the path on paper
+
+The single habit that makes this chapter easy is to **draw**, not to picture in the head. Keep to one
+convention and never vary it:
+
+<div class="formula">North points up the page · East points right · South points down · West points left</div>
+
+Then follow four steps for every question.
+
+1. **Mark the start** with a dot and label it. Every "how far from the start" answer is measured back
+   to this dot.
+2. **Draw each leg** in turn as an arrow the right way, and write its length on it. A turn is a
+   corner between two arrows.
+3. **Find the finish** — the tip of the last arrow.
+4. **Answer the exact question** — the straight-line distance from start to finish, or the direction
+   of the finish from the start, or the direction the walker now faces. These are three different
+   questions and a single picture answers all three.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — walk East 6, North 8, and read the picture</div>
+  Start at the dot. Arrow 1: 6 units right (East). Arrow 2: from that tip, 8 units up (North).<br />
+  Finish is 6 right and 8 up from the start.<br />
+  Straight-line distance = √(6² + 8²) = √(36 + 64) = √100 = <strong>10 units</strong><br />
+  Direction of the finish from the start: up and to the right, so <strong>North-East</strong><br />
+  Facing at the finish: the last arrow pointed North, so the walker <strong>faces North</strong>.
+</div>
+
+A coordinate grid makes the arithmetic mechanical, and the verifier behind this chapter uses exactly
+this. Put the start at (0, 0). **East adds to the across-value (x); West subtracts. North adds to the
+up-value (y); South subtracts.** After every leg the finish is a single point (x, y). Everything else
+is read off that point.
+
+<Callout kind="pointer">
+  <p>
+    Distances along the <strong>same line add or cancel before any triangle is drawn</strong>. A walk
+    of 10 m East then 4 m West is not two sides of a triangle — it is a net 6 m East, because the two
+    moves are along one line. Collapse every such pair first; only genuinely perpendicular legs make a
+    right triangle.
+  </p>
+</Callout>
+
+## 3. Net displacement and the shortest distance from start
+
+The **distance walked** is the sum of the leg lengths — it is the length of the whole crooked path.
+The **displacement**, or shortest distance from the start, is the straight line from the first dot to
+the last point. The two are equal only when the walk never turns. Every "how far is he from the
+starting point" question asks for the **displacement**, and the trap answer is the distance walked.
+
+Reduce the finish to a point (x, y) as in Section 2. Then:
+
+<div class="formula">Net East–West gap = x (East positive, West negative) · Net North–South gap = y (North positive, South negative)</div>
+<div class="formula">Shortest distance from start = √(x² + y²)</div>
+
+The formula is the **Pythagoras theorem**: the net East–West gap and the net North–South gap are the
+two perpendicular sides of a right triangle, and the shortest distance is its hypotenuse.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — East 3, North 4</div>
+  Finish point: x = 3 (East), y = 4 (North)<br />
+  Shortest distance = √(3² + 4²) = √(9 + 16) = √25 = <strong>5 units</strong><br />
+  The 3–4–5 triangle is the one every examiner reaches for first.
+</div>
+
+A short list of **Pythagorean triples** turns almost every distance question into instant recall.
+When you see two of the three numbers, the third is fixed:
+
+| Two perpendicular legs | Straight-line distance |
+|---|---|
+| 3 and 4 | 5 |
+| 6 and 8 | 10 |
+| 5 and 12 | 13 |
+| 9 and 12 | 15 |
+| 8 and 15 | 17 |
+| 7 and 24 | 25 |
+| 20 and 21 | 29 |
+| 12 and 35 | 37 |
+
+Multi-leg walks reduce to a triple once the same-line moves are cancelled.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — North 10, East 6, South 2</div>
+  Net up–down: 10 North − 2 South = 8 North, so y = 8<br />
+  Net across: 6 East, so x = 6<br />
+  Shortest distance = √(6² + 8²) = √100 = <strong>10 units</strong>, and the finish lies
+  <strong>North-East</strong> of the start.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Adding the legs to answer "how far from the start" is the most common error in the chapter. In the
+    walk above the walker covered 10 + 6 + 2 = 18 units of road, but is only 10 units from the start.
+    An option reading "18" is placed there for exactly this slip. Read whether the question asks
+    <strong>how far he walked</strong> or <strong>how far he is from the start</strong>, and answer that
+    one.
+  </p>
+</Callout>
+
+When the two net gaps are equal — say 5 East and 5 North — the finish is due **North-East** and the
+distance is 5√2, about 7.07. Foundation questions are usually built so the answer is a whole number,
+so a √2 answer is a signal to re-check the numbers, not usually the intended value.
+
+## 4. Turns: left, right, clockwise and anticlockwise
+
+A **turn** changes the direction the walker faces; it does not move the walker. Two independent facts
+must be tracked through a walk: **where the walker is** (the point) and **which way the walker faces**
+(the heading). Confusing the two is where turn questions are lost.
+
+A turn is always measured from the **current heading**, not from North.
+
+- **Turn right** = turn 90° **clockwise**. Facing North and turning right leaves you facing East.
+- **Turn left** = turn 90° **anticlockwise**. Facing North and turning left leaves you facing West.
+
+Chain the turns around the compass in the turning direction:
+
+<div class="formula">Right (clockwise): North → East → South → West → North</div>
+<div class="formula">Left (anticlockwise): North → West → South → East → North</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — face North, turn right, walk 12, turn left, walk 5</div>
+  Start facing North at the dot.<br />
+  Turn right → now facing East. Walk 12 → finish so far (12, 0).<br />
+  Turn left → from East, left is North → now facing North. Walk 5 → finish (12, 5).<br />
+  Shortest distance = √(12² + 5²) = √169 = <strong>13 units</strong>; the walker now
+  <strong>faces North</strong>.
+</div>
+
+Some questions give the turns in **degrees** rather than as "left" or "right". Convert on the same
+clock face: 90° is a quarter turn, 180° is an about-face to the opposite direction, 270° one way is
+the same as 90° the other, and 360° returns to the start.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — face East, turn 270° clockwise</div>
+  270° clockwise = three quarter-turns clockwise: East → South → West → North.<br />
+  The walker now faces <strong>North</strong>. The same end-point is reached by a single 90°
+  anticlockwise (left) turn — a useful shortcut when the number is 270.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    A turn changes the heading only; it does not add distance. Reading "turns right" as "moves right by
+    one unit" invents a leg that is not there. Equally, after two or more turns the words left and right
+    must be re-read from the <strong>new</strong> heading each time — a left turn after a right turn does
+    not cancel to "straight on" unless the walker had turned right immediately before.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    Count turns in one currency. Convert every "left" to −90° and every "right" to +90°, add them, and
+    reduce the total modulo 360°. Facing North, a walk of right, right, left is +90 +90 −90 = +90°, a
+    single right turn, so the walker ends facing East — no need to track each step around the compass.
+  </p>
+</Callout>
+
+## 5. Shadows and the sun
+
+The sun rises in the **East** and sets in the **West**. A shadow always falls on the side **away from
+the sun**, so the shadow points opposite to the sun's position in the sky.
+
+- **Morning, just after sunrise** — the sun is in the East, so every shadow falls towards the
+  **West**.
+- **Evening, near sunset** — the sun is in the West, so every shadow falls towards the **East**.
+- **Around noon** — the sun is nearly overhead, shadows are very short and unreliable, and a good
+  question will avoid asking a direction from a midday shadow. Treat "at noon, the shadow points…" as
+  a warning that the intended answer is "cannot be determined" or that the question means the general
+  midday sun, slightly to the South at Indian latitudes.
+
+A shadow's direction fixes the sun, and the sun with the time of day fixes everything else. The usual
+question gives you a person, the time of day and the side their shadow falls on, and asks which way
+the person faces.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — early morning, a girl's shadow falls to her right; which way does she face?</div>
+  Morning sun is in the East, so the shadow falls towards the <strong>West</strong>.<br />
+  The shadow is on her right, so her right hand points West.<br />
+  The right hand is 90° clockwise from the facing, so the facing is 90° anticlockwise from West:
+  West → South.<br />
+  She faces <strong>South</strong>.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    The shadow points <strong>away</strong> from the sun, not towards it. In the morning the sun is
+    East and the shadow is West; answering "the shadow falls East in the morning" reverses the whole
+    chain and turns every following direction the wrong way. Fix the sun first, then place the shadow
+    opposite it.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    Two people <strong>facing each other</strong> have their left and right hands swapped relative to
+    one another, but a shadow falls the same way in the world for both — towards the West in the
+    morning. So "the shadow was to A's left and to B's right" is consistent with A and B facing
+    opposite ways, and is a favourite way to test whether you are reading the world or the person.
+  </p>
+</Callout>
+
+## 6. Mirror images and opposite-direction traps
+
+Two families of trap appear once a chapter is comfortable with plain walks.
+
+**Opposite directions.** When two people start from the same point and walk in opposite directions,
+each is in the opposite direction from the other, and the distance between them is the **sum** of the
+two distances, not the difference. If A walks 6 km North and B walks 4 km South from the same start,
+B is due South of A, and they are 6 + 4 = 10 km apart.
+
+**Relative direction.** "P is East of Q; Q is North of R; where is R from P?" is answered by
+sketching, not by guessing. Place Q at the origin: P is East of Q so P is to the right; R is South of
+Q (because Q is North of R) so R is below. Then R is **down and to the left of P**, that is R is
+**South-West** of P. Reverse a stated relation carefully: if P is East of Q, then Q is West of P.
+
+**Mirror reflection.** A plane mirror reverses the direction facing it while leaving the perpendicular
+directions unchanged. The workable rule for these puzzles: a mirror swaps a direction for its
+**opposite along the line facing the mirror**. Face a mirror while walking North and your reflection
+walks South towards you; the reflection of a movement to the East, seen in a mirror on the North wall,
+appears to move to the West. Read the plane of the mirror first, then flip the one direction that
+crosses it.
+
+<Callout kind="mistake">
+  <p>
+    For people walking in opposite directions from one point, the gap is the <strong>sum</strong> of
+    the distances. Subtracting — treating 6 km North and 4 km South as a 2 km gap — is the built-in
+    trap. Subtraction is right only when both walk the <strong>same</strong> way along one line, where
+    one is simply ahead of the other.
+  </p>
+</Callout>
+
+## 7. Negative marking and when to leave a question
+
+Paper 3 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+Direction questions are unusually safe ground for this rule, for two reasons. First, the answer is
+**checkable**: you can redraw the path and confirm the finish point in seconds, so a finished question
+is rarely a guess. Second, the distractors are built from **named errors** — the distance walked
+instead of the displacement, a left/right swap, the opposite final direction — and once you know the
+error a wrong option is testing, you can often discard two or three options on sight.
+
+The expected-value arithmetic is the same as for the rest of the paper. A blind guess among four
+options gains, on average, ¼(1) − ¾(0.25) = 0.0625 mark — barely positive. Eliminate one option and a
+guess among three is worth about ⅓(1) − ⅔(0.25) ≈ 0.17 mark; eliminate two and the guess between the
+last pair is worth ½(1) − ½(0.25) = 0.375 mark. In this chapter elimination is easy, so most attempted
+questions are clearly worth attempting.
+
+A calm working rule: **redraw, answer, and move on where the picture is clear; attempt on elimination
+where it is not; leave only the rare question you cannot narrow at all.** The marks at stake either way
+are small, and a clean drawing settles most questions faster than the decision to skip them.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — the shortest distance from the start (easy)">
+  <p>
+    Meera walks 8 m towards the East from her gate, then turns left and walks 6 m. How far is she from
+    her gate, and in which direction does the gate lie from her?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — draw and place the finish</div>
+    Start at (0, 0). East 8 → (8, 0). Turn left from East → now facing North. North 6 → (8, 6).<br />
+    Finish point: x = 8 (East), y = 6 (North).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — apply Pythagoras</div>
+    Distance from the gate = √(8² + 6²) = √(64 + 36) = √100 = <strong>10 m</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — direction of the gate from Meera</div>
+    Meera is 8 East and 6 North of the gate, so the gate is 8 West and 6 South of Meera — down and to
+    the left — that is <strong>South-West</strong> of her. Note that the gate's direction from Meera is
+    the exact opposite of Meera's direction from the gate.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — distance walked versus displacement (easy-moderate)">
+  <p>
+    A cyclist rides 12 km North, then 5 km East, then 12 km South. (a) What total distance did he ride?
+    (b) How far is he from his starting point, and in which direction?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) the distance ridden is the sum of the legs</div>
+    12 + 5 + 12 = <strong>29 km</strong> of road covered.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) collapse the same-line moves first</div>
+    Up–down: 12 North − 12 South = 0, so y = 0. Across: 5 East, so x = 5.<br />
+    The finish is 5 km due East of the start: displacement = <strong>5 km, East</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the point of the question</div>
+    He rode 29 km but ends only 5 km from home, because the two 12 km legs are along one North–South
+    line and cancel exactly. "29" and "12" are both offered as distractors; the question asks for the
+    straight-line gap, which is 5.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — a walk with several turns (moderate)">
+  <p>
+    Starting from his office and facing North, Arjun walks 3 km, turns right and walks 4 km, turns
+    right and walks 3 km, then turns left and walks 6 km. How far is he from the office in a straight
+    line?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — track heading and point together</div>
+    Facing North, walk 3 → (0, 3).<br />
+    Turn right → facing East, walk 4 → (4, 3).<br />
+    Turn right → facing South, walk 3 → (4, 0).<br />
+    Turn left → from South, left is East → facing East, walk 6 → (10, 0).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — read the finish</div>
+    Net up–down: 3 North − 3 South = 0, so y = 0. Net across: 4 + 6 = 10 East, so x = 10.<br />
+    Straight-line distance = √(10² + 0²) = <strong>10 km</strong>, due East of the office.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the trap</div>
+    The North and South legs are both 3 km and cancel, which is easy to miss in the middle of four
+    turns. Collapsing the up–down moves to zero before reaching for Pythagoras is what keeps the
+    working short.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — a genuine right triangle from a multi-leg walk (moderate)">
+  <p>
+    A ranger leaves camp and walks 10 m East, 4 m North, 2 m West, then 8 m North. How far is she from
+    camp?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — net across and net up</div>
+    Across: 10 East − 2 West = 8 East → x = 8.<br />
+    Up: 4 North + 8 North = 12 North → y = 12.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Pythagoras on the net gaps</div>
+    Distance = √(8² + 12²)? Check for a triple: 8 and 12 are not a standard pair, so compute:
+    √(64 + 144) = √208 ≈ 14.42 m. Because it is not a whole number, re-read the numbers — here they are
+    as given, so the intended answer is √208 = 4√13 m, about <strong>14.42 m</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the lesson</div>
+    Not every walk lands on a clean triple. When the net gaps are 8 and 12, the honest answer is
+    4√13, and an option offering a tidy "14" would be a rounding trap. Most Foundation questions are
+    built to give whole numbers; when they do not, carry the surd rather than forcing a round figure.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — degrees of turning (moderate)">
+  <p>
+    A man is facing South-West. He turns 90° clockwise, then 45° anticlockwise, then 180°. Which
+    direction is he facing at the end?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — work in 45° steps around the compass</div>
+    The eight points are 45° apart. Clockwise order: N, NE, E, SE, S, SW, W, NW, back to N.<br />
+    Start: SW.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — apply the turns in order</div>
+    90° clockwise from SW = two steps clockwise: SW → W → NW.<br />
+    45° anticlockwise from NW = one step back: NW → W.<br />
+    180° from W = four steps: W → NW → N → NE → E.<br />
+    He faces <strong>East</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — the net-angle check</div>
+    Total turn = +90 − 45 + 180 = +225° clockwise. From SW, 225° clockwise is 225 ÷ 45 = 5 steps:
+    SW → W → NW → N → NE → E ✓ — the same answer by adding the angles first.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — a shadow question (moderate)">
+  <p>
+    Two friends, Ravi and Sameer, stand facing each other one early morning shortly after sunrise.
+    Ravi's shadow falls exactly to his left. (a) Which direction does Ravi face? (b) Which direction
+    does Sameer face?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — fix the sun and the shadow</div>
+    Early morning: the sun is in the East, so every shadow falls towards the <strong>West</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) turn the shadow into a facing for Ravi</div>
+    The shadow is to Ravi's left, so his left hand points West. The left hand is 90° anticlockwise from
+    the facing, so the facing is 90° clockwise from West: West → North.<br />
+    Ravi faces <strong>North</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) Sameer faces the opposite way</div>
+    They stand face to face, so Sameer faces the opposite of North, which is <strong>South</strong>.
+    Check: for Sameer, facing South, the West-pointing shadow is on his right — consistent with two
+    people facing each other having their hands swapped.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — opposite directions and the gap between two people (moderate)">
+  <p>
+    From the same bus stop, Priya walks 9 m towards the North and Nikhil walks 12 m towards the West.
+    (a) How far apart are they? (b) In which direction is Priya from Nikhil?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — place both from one origin</div>
+    Bus stop at (0, 0). Priya: 9 North → (0, 9). Nikhil: 12 West → (−12, 0).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) distance between the two points</div>
+    Across gap = 0 − (−12) = 12; up gap = 9 − 0 = 9.<br />
+    Distance = √(12² + 9²) = √(144 + 81) = √225 = <strong>15 m</strong> (the 9–12–15 triple).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) direction of Priya from Nikhil</div>
+    From Nikhil at (−12, 0) to Priya at (0, 9): 12 to the East and 9 to the North — up and to the
+    right — so Priya is <strong>North-East</strong> of Nikhil.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — relative direction from a chain of clues (hard)">
+  <p>
+    A school is East of the library. The library is North of the market. The bank is West of the
+    market. Where is the bank relative to the school?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — build a coordinate sketch from the clues</div>
+    Put the market at (0, 0). Library is North of the market → library (0, 1).<br />
+    School is East of the library → school (1, 1). Bank is West of the market → bank (−1, 0).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — compare the two points</div>
+    From the school (1, 1) to the bank (−1, 0): the bank is 2 to the West and 1 to the South — down and
+    to the left.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — name the direction</div>
+    Down and to the left is the <strong>South-West</strong> quadrant, so the bank is
+    <strong>South-West</strong> of the school. Because the two gaps are unequal (2 West, 1 South), it is
+    "roughly South-West"; when a question wants only the eight-point answer, South-West is the choice.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — separating heading from position (hard)">
+  <p>
+    Facing East, a drone flies 7 m forward, turns left and flies 24 m, turns left and flies 7 m.
+    (a) How far is it from the launch point? (b) Which direction does it now face, and (c) in which
+    direction is the launch point from the drone?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — fly it leg by leg</div>
+    Facing East, forward 7 → (7, 0).<br />
+    Turn left → from East, left is North → facing North, forward 24 → (7, 24).<br />
+    Turn left → from North, left is West → facing West, forward 7 → (0, 24).
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) distance from launch</div>
+    Finish (0, 24): x = 0, y = 24. The two East–West legs of 7 cancel.<br />
+    Distance = √(0² + 24²) = <strong>24 m</strong>, due North of the launch point.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) and (c)</div>
+    (b) The last turn left the drone facing <strong>West</strong> — the heading, unrelated to where the
+    launch point lies.<br />
+    (c) The drone is 24 m North of the launch, so the launch is 24 m <strong>South</strong> of the
+    drone. Facing West while the launch lies South is the whole point: heading and relative direction
+    are two separate answers.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Distance walked instead of displacement.** "How far from the start" wants the straight-line gap,
+  √(x² + y²), not the sum of the legs. The sum is always offered as a distractor.
+- **Not cancelling same-line moves.** 10 East then 4 West is a net 6 East, one leg, not two sides of a
+  triangle. Collapse every North–South pair and every East–West pair before reaching for Pythagoras.
+- **Reading left and right from the map, not the walker.** Left and right turn with the walker. A
+  walker facing South who turns left turns towards the East.
+- **Confusing heading with relative direction.** The way a walker faces at the finish and the
+  direction of the start from the finish are two different questions. A walker can face West while the
+  start lies due South.
+- **Reversing a relative clue.** "P is East of Q" means Q is West of P. Flipping this the wrong way
+  turns the whole sketch inside out.
+- **Getting the opposite direction wrong.** The opposite of North-East is South-West, found by
+  flipping both letters. NE → NW is a half-done flip and a common wrong option.
+- **Subtracting for opposite-direction walkers.** Two people walking opposite ways from one point are
+  apart by the sum of their distances, not the difference.
+- **Putting the shadow towards the sun.** A shadow falls away from the sun: West in the morning, East
+  in the evening. Placing it towards the sun reverses every following direction.
+- **Trusting a midday shadow.** Near noon the sun is overhead and the shadow is too short to give a
+  reliable direction; a well-set question expects "cannot be determined".
+- **Forcing a round distance.** When the net gaps are not a Pythagorean pair, the answer is a surd
+  such as 4√13. A suspiciously tidy option may be a rounding trap; most Foundation walks are built to
+  land on a whole number, so an ugly figure is a cue to re-check the legs first.
+- **Inventing a leg from a turn.** "Turns right" changes the heading only; it adds no distance.
+
+## One-page revision summary
+
+**The compass.** Four cardinals N, E, S, W, 90° apart; four ordinals NE, SE, SW, NW halfway between,
+45° from each cardinal. Opposite = flip both letters (NE ↔ SW, NW ↔ SE). Facing North: right hand
+East, left hand West. The right hand is always 90° clockwise from the facing.
+
+**Draw everything.** North up, East right, South down, West left. Start at (0, 0). East +x, West −x,
+North +y, South −y. The finish is a single point (x, y).
+
+**Distance walked vs displacement.** Distance walked = sum of the legs. Displacement (shortest
+distance from start) = √(x² + y²) by Pythagoras, where x is the net East–West gap and y the net
+North–South gap. "How far from the start" always means displacement.
+
+**Pythagorean triples to recognise:** 3-4-5, 6-8-10, 5-12-13, 9-12-15, 8-15-17, 7-24-25, 20-21-29,
+12-35-37. Equal net gaps give a distance of (gap)√2 and a diagonal (ordinal) direction.
+
+**Turns.** Right = 90° clockwise, left = 90° anticlockwise, measured from the current heading.
+Clockwise chain N→E→S→W→N; anticlockwise N→W→S→E→N. Track heading and position separately. Add turns
+as +90 (right) and −90 (left), reduce modulo 360. In degrees: 90° quarter, 180° opposite, 270°
+clockwise = 90° anticlockwise, 360° full circle.
+
+**Shadows.** Sun rises East, sets West. Shadow falls away from the sun: West in the morning, East in
+the evening. Midday shadows are unreliable. From a shadow, fix the sun, place the shadow opposite,
+then read the person's facing from which hand the shadow is on.
+
+**Relative direction and opposites.** Sketch from clues on a grid; reverse a stated relation with
+care. Opposite-direction walkers from one point are apart by the sum of their distances, and each is
+in the opposite direction from the other.
+
+**Marking.** 1 mark correct, −0.25 wrong, 0 unattempted. Answers here are checkable by redrawing and
+distractors are built from named errors, so elimination is easy and most attempted questions are
+worth attempting.
