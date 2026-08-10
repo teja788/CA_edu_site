@@ -1,0 +1,772 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Measures of Central Tendency and Dispersion'
+description: 'CA Foundation Quantitative Aptitude Ch 14 — arithmetic, geometric and harmonic mean, median and mode with interpolation formulas, quartiles, deciles and percentiles, then range, quartile deviation, mean deviation, standard deviation and variance, combined SD, coefficient of variation and the effect of change of origin and scale, with every figure computed from scratch and fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 14 · Measures of Central Tendency and Dispersion'
+chapterSlug: central-tendency-and-dispersion
+masteryId: f3-ch14
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Statistics — Measures of Central Tendency and Dispersion (scope, formula set and worked patterns)'
+  - 'Standard statements of the mean, median, mode, quartile and dispersion formulas as taught at Foundation level'
+sourceLabel: 'ICAI SM Paper 3 Statistics (Central Tendency & Dispersion) scope (May 2026 ed.) · standard statistics formulas'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 32 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=central-tendency-and-dispersion'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A branch manager in Belgaum reads two lines off her monthly report. The **average** balance in her
+savings accounts is ₹ 58,000, up nicely on last year. Yet the branch is losing small depositors to
+the post office next door. Both facts are true at once, and the average alone hides the reason: three
+new corporate accounts, each above ₹ 50,00,000, have pulled the mean upward while the typical
+customer — the one in the middle of the queue — still keeps barely ₹ 9,000. One number told her
+where the accounts sit on average; it said nothing about how far apart they are spread.
+
+That is the whole of this chapter. A **measure of central tendency** compresses a mass of figures
+into one representative value — a centre of gravity. A **measure of dispersion** then says how tightly
+or loosely the figures cluster around that centre. You need both: an average without a spread is a
+half-told story, and the manager above would have kept her small depositors had she read the second
+line first.
+
+Paper 3 is fully objective, so you will never write out a derivation. You will be handed a data list
+or a frequency table and asked for one number — a mean, a median, a standard deviation, a coefficient
+of variation — quickly and exactly. This chapter takes each average and each measure of spread in
+turn, builds every formula from the definition, and shows the arithmetic on real tables so that a
+half-remembered formula never costs you a mark.
+
+## 1. What central tendency means
+
+Central tendency is the tendency of data to cluster around a central value. The three averages you
+must know differ in **what they treat as the centre**, and each answers a slightly different question.
+
+- **Arithmetic mean** — the ordinary average: share the total equally among all the items. It uses
+  every value, so it is the most complete, but for the same reason a single extreme value drags it.
+- **Median** — the middle value once the data are arranged in order. Half the items lie below it and
+  half above. It ignores the size of the extremes, so it is unmoved by an outlier.
+- **Mode** — the value that occurs most often: the most typical, most fashionable item.
+
+Two more averages, the **geometric mean** and the **harmonic mean**, suit special kinds of data
+(growth rates, ratios and speeds) and appear in sections 8 and 9.
+
+<Callout kind="pointer">
+  <p>
+    Fix one idea before any arithmetic. The arithmetic mean uses the <em>value</em> of every item, so
+    it is the average most disturbed by an extreme figure. The median uses only <em>position</em>, so
+    it is unaffected by how large the largest item is. When a question says "one value is unusually
+    high, which average is least affected", the answer is the median, every time.
+  </p>
+</Callout>
+
+The data come in three shapes, and every formula in this chapter has a version for each.
+
+- **Individual series** — a bare list of values: 12, 15, 18, 22, …
+- **Discrete series** — distinct values each with a frequency: the value 20 occurring 6 times.
+- **Continuous series** — values grouped into class intervals: 10–20 containing 8 items.
+
+## 2. Arithmetic mean
+
+For a list of n values the arithmetic mean is the total divided by the count:
+
+<div class="formula">x̄ = (x₁ + x₂ + … + xₙ) ÷ n = Σx ÷ n</div>
+
+The marks 45, 52, 48, 60 and 55 total 260, so the mean is 260 ÷ 5 = **52**. Everything else about the
+mean is a variation on that one line.
+
+**A missing value.** Because Σx = n x̄, any one missing item can be recovered when the mean is known.
+If the mean of six observations is 40, their total is 6 × 40 = 240; if five of them add to 210, the
+sixth is 240 − 210 = **30**.
+
+**Weighted arithmetic mean.** When the items do not all count equally, attach a weight w to each and
+average with the weights:
+
+<div class="formula">x̄w = Σ(w x) ÷ Σw</div>
+
+A student scores 80, 70, 60 and 90 in four subjects carrying 4, 3, 2 and 1 credits. The weighted mean
+is (80×4 + 70×3 + 60×2 + 90×1) ÷ (4+3+2+1) = 740 ÷ 10 = **74**, not the simple average of 75. The
+weights decide how much each mark pulls.
+
+**Combined mean of two or more groups.** Two groups of sizes n₁ and n₂ with means x̄₁ and x̄₂ combine
+to a single mean by pooling their totals:
+
+<div class="formula">x̄₁₂ = (n₁ x̄₁ + n₂ x̄₂) ÷ (n₁ + n₂)</div>
+
+Forty accounts averaging ₹ 60 with sixty averaging ₹ 70 give a combined mean of
+(40×60 + 60×70) ÷ 100 = 6,600 ÷ 100 = **66**. The formula extends to any number of groups by adding
+more n x̄ terms on top and more n below.
+
+<Callout kind="mistake">
+  <p>
+    The combined mean is <strong>not</strong> the simple average of the two group means. (60 + 70) ÷ 2
+    = 65 is wrong here; the true figure is 66, pulled toward the larger group. Only when the groups are
+    of equal size do the two agree. Always weight each group mean by its own count.
+  </p>
+</Callout>
+
+## 3. Arithmetic mean of grouped data
+
+For a frequency distribution, treat each class by its **mid-point** x (the average of the two class
+limits) and weight by the frequency f. With N = Σf items in all:
+
+<div class="formula">Direct method: x̄ = Σ(f x) ÷ N, where x is the class mid-point</div>
+
+| Class | Mid-point x | Frequency f | f x |
+|---|---|---|---|
+| 0–10 | 5 | 6 | 30 |
+| 10–20 | 15 | 8 | 120 |
+| 20–30 | 25 | 12 | 300 |
+| 30–40 | 35 | 10 | 350 |
+| 40–50 | 45 | 4 | 180 |
+| **Total** | | **N = 40** | **Σf x = 980** |
+
+Mean = 980 ÷ 40 = **24.5**.
+
+**Step-deviation method.** When the mid-points are large or awkward, subtract an assumed mean A and
+divide by the common class width h. The coded value d = (x − A) ÷ h is a small whole number, and the
+mean is rebuilt at the end:
+
+<div class="formula">x̄ = A + (Σ f d ÷ N) × h, where d = (x − A) ÷ h</div>
+
+Take mid-points 10, 30, 50, 70, 90 with frequencies 5, 8, 15, 7, 5 (N = 40). Put A = 50 and h = 20,
+so d = −2, −1, 0, 1, 2. Then Σf d = 5(−2) + 8(−1) + 15(0) + 7(1) + 5(2) = −10 − 8 + 0 + 7 + 10 = −1,
+and the mean is 50 + (−1 ÷ 40) × 20 = 50 − 0.5 = **49.5**. The step-deviation method gives exactly the
+same answer as the direct method — it only makes the multiplication smaller.
+
+## 4. Properties of the arithmetic mean
+
+Three properties are examinable, and each generates its own kind of question.
+
+1. **The sum of deviations about the mean is zero.** Σ(x − x̄) = 0, always. The positive and negative
+   deviations cancel exactly, because the mean is the balancing point of the data. This is the single
+   most tested property of the mean.
+2. **Change of origin shifts the mean by the same amount.** Add a constant to every observation and
+   the mean rises by that constant. If y = x + c then ȳ = x̄ + c.
+3. **Change of scale multiplies the mean by the same factor.** Multiply every observation by a
+   constant and the mean is multiplied likewise. If y = k x then ȳ = k x̄.
+
+Combining the last two: if every value is transformed by y = k x + c, the new mean is k x̄ + c. A set
+with mean 45, each value doubled and then increased by 5, has a new mean of 2 × 45 + 5 = **95**.
+
+<div class="formula">If y = k x + c then ȳ = k x̄ + c</div>
+
+<Callout kind="pointer">
+  <p>
+    The step-deviation method of section 3 is nothing but property 2 and property 3 read backwards:
+    coding d = (x − A) ÷ h subtracts an origin A and divides by a scale h, and the last line
+    x̄ = A + h·d̄ undoes both. Understanding this is why you never have to memorise the coding formula
+    as a separate rule.
+  </p>
+</Callout>
+
+## 5. Median
+
+The median is the value of the middle item when the data are placed in order of size. Its position,
+not its arithmetic, is what you find first.
+
+**Individual series.** Arrange the n values in ascending order.
+
+- If n is **odd**, the median is the value of the (n + 1) ÷ 2 th item. For 10, 12, 15, 18, 20, 22, 25
+  (n = 7), the median is the 4th value, **18**.
+- If n is **even**, there are two middle items and the median is their average. For 28, 30, 34, 40, 45,
+  52 (n = 6), the 3rd and 4th values are 34 and 40, so the median is (34 + 40) ÷ 2 = **37**.
+
+**Discrete series.** Form the cumulative frequency (the running total of f), find N ÷ 2, and read off
+the value at which the cumulative frequency first reaches or passes N ÷ 2.
+
+| Value x | f | Cumulative f |
+|---|---|---|
+| 10 | 4 | 4 |
+| 20 | 6 | 10 |
+| 30 | 10 | 20 |
+| 40 | 8 | 28 |
+| 50 | 2 | 30 |
+
+Here N = 30 and N ÷ 2 = 15. The cumulative frequency first passes 15 at the value 30, so the median is
+**30**.
+
+**Continuous series.** The middle item now falls inside a class, so the median is found by
+**interpolation** — assuming the items are spread evenly across the median class:
+
+<div class="formula">Median = L + [(N ÷ 2 − cf) ÷ f] × h</div>
+
+where L is the lower limit of the median class, cf is the cumulative frequency before it, f is its own
+frequency and h is its width. The median class is the one whose cumulative frequency first reaches
+N ÷ 2.
+
+<div class="formula">Example: N = 100, N ÷ 2 = 50, median class 20–30 with L = 20, cf = 30, f = 40, h = 10 → 20 + [(50 − 30) ÷ 40] × 10 = 20 + 5 = 25</div>
+
+<Callout kind="mistake">
+  <p>
+    For the median of a continuous series you use N ÷ 2, <strong>not</strong> (N + 1) ÷ 2. The
+    (N + 1) ÷ 2 rule belongs to individual and discrete series, where you are picking an actual item.
+    In a continuous series you are locating a point on a smooth scale, so N ÷ 2 is the position. Mixing
+    the two rules is a classic one-mark loss.
+  </p>
+</Callout>
+
+## 6. Mode
+
+The mode is the value that occurs most frequently — the most common item.
+
+**By inspection.** In a discrete series the mode is simply the value with the highest frequency. If
+the value 15 occurs 12 times and no other value occurs as often, the mode is **15**.
+
+**Grouped data.** In a continuous series the modal class is the class with the highest frequency, and
+the mode inside it is found by:
+
+<div class="formula">Mode = L + [(f₁ − f₀) ÷ (2f₁ − f₀ − f₂)] × h</div>
+
+where L is the lower limit of the modal class, f₁ its frequency, f₀ the frequency of the class before
+it, f₂ the frequency of the class after it and h the class width. For a modal class 20–30 with
+f₁ = 20, f₀ = 8, f₂ = 10 and h = 10:
+
+<div class="formula">Mode = 20 + [(20 − 8) ÷ (40 − 8 − 10)] × 10 = 20 + (12 ÷ 22) × 10 = 25.45</div>
+
+The formula pulls the mode toward whichever neighbouring class is heavier: the class after (f₂ = 10) is
+heavier than the class before (f₀ = 8), so the mode sits above the mid-point of 25.
+
+## 7. The empirical relation between mean, median and mode
+
+For a moderately asymmetrical (skewed) distribution the three averages are tied by an approximate
+relation:
+
+<div class="formula">Mean − Mode = 3 (Mean − Median), which rearranges to Mode = 3 Median − 2 Mean</div>
+
+Given any two of the three, the third follows. If the mean is 45.6 and the median is 44.4, then the
+mode is 3 × 44.4 − 2 × 45.6 = 133.2 − 91.2 = **42**. Rearranged the other way,
+Median = (Mode + 2 Mean) ÷ 3, so a mean of 36 with a mode of 30 gives a median of (30 + 72) ÷ 3 =
+**34**.
+
+<Callout kind="pointer">
+  <p>
+    In a <strong>symmetrical</strong> distribution the three averages coincide: mean = median = mode.
+    The empirical relation is only for skewed data, and it is approximate. When it is used, the median
+    always lies between the mean and the mode, and it sits closer to the mean — exactly one-third of
+    the way from the mean to the mode.
+  </p>
+</Callout>
+
+## 8. Geometric mean
+
+The geometric mean (GM) of n positive values is the n-th root of their product:
+
+<div class="formula">GM = (x₁ × x₂ × … × xₙ)^(1 ÷ n)</div>
+
+The GM of 3, 9 and 27 is (3 × 9 × 27)^(1/3) = 729^(1/3) = **9**. For two numbers a and b it is simply
+√(a b): the GM of 5 and 20 is √100 = **10**.
+
+The geometric mean is the correct average for **rates of growth, ratios and index numbers** — anything
+that compounds. An investment that grows in the ratio 1.10 one year and 1.44 the next has grown on
+average in the ratio √(1.10 × 1.44) per year, and multiplying the two yearly factors and taking the
+GM reproduces the true overall growth, which the arithmetic mean would overstate. For grouped data the
+GM is computed through logarithms: GM = antilog[(Σ f log x) ÷ N].
+
+## 9. Harmonic mean
+
+The harmonic mean (HM) of n values is the reciprocal of the average of their reciprocals:
+
+<div class="formula">HM = n ÷ (1÷x₁ + 1÷x₂ + … + 1÷xₙ) = n ÷ Σ(1 ÷ x)</div>
+
+The HM of 2, 3 and 6 is 3 ÷ (1/2 + 1/3 + 1/6) = 3 ÷ 1 = **3**. The harmonic mean is the right average
+for **rates expressed per unit** — speeds over equal distances, prices per rupee, work done per hour.
+A car that covers equal distances at 40 km/h and 60 km/h averages 2 ÷ (1/40 + 1/60) = 2 ÷ (5/120) =
+**48 km/h**, not the 50 km/h a simple average would suggest, because it spends longer at the slower
+speed.
+
+<Callout kind="pointer">
+  <p>
+    For any set of positive, unequal values the three means always sit in the order
+    <strong>AM &gt; GM &gt; HM</strong>. They are equal only when every value is the same. A quick sanity
+    check: if you compute a "harmonic mean" larger than the arithmetic mean, you have inverted a step.
+    For two numbers there is also the neat identity GM² = AM × HM.
+  </p>
+</Callout>
+
+## 10. Quartiles, deciles and percentiles
+
+The median splits the data in half. **Partition values** split it into more parts, and they are found
+the same way as the median — by position, then by interpolation.
+
+- **Quartiles** split the data into four quarters: Q₁, Q₂ (= the median) and Q₃.
+- **Deciles** split it into ten parts: D₁ to D₉.
+- **Percentiles** split it into a hundred parts: P₁ to P₉₉.
+
+**Continuous series.** For the k-th quartile the position is k N ÷ 4; for the k-th decile it is
+k N ÷ 10; for the k-th percentile it is k N ÷ 100. Locate the class holding that position, then
+interpolate exactly as for the median:
+
+<div class="formula">Qₖ = L + [(k N ÷ 4 − cf) ÷ f] × h</div>
+<div class="formula">Dₖ = L + [(k N ÷ 10 − cf) ÷ f] × h · Pₖ = L + [(k N ÷ 100 − cf) ÷ f] × h</div>
+
+Take the distribution 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 15, 7, 5 (N = 40) and
+cumulative frequencies 5, 13, 28, 35, 40.
+
+- **Q₁**: position N ÷ 4 = 10, so the class is 10–20 (L = 10, cf = 5, f = 8, h = 10). Q₁ = 10 + [(10 −
+  5) ÷ 8] × 10 = 10 + 6.25 = **16.25**.
+- **Q₃**: position 3N ÷ 4 = 30, so the class is 30–40 (L = 30, cf = 28, f = 7, h = 10). Q₃ = 30 + [(30
+  − 28) ÷ 7] × 10 = 30 + 2.857 = **32.86**.
+- **P₉₀**: position 90N ÷ 100 = 36, so the class is 40–50 (L = 40, cf = 35, f = 5, h = 10). P₉₀ = 40 +
+  [(36 − 35) ÷ 5] × 10 = 40 + 2 = **42**.
+
+**Individual and discrete series.** Use the positional rule (n + 1). Q₁ is the (n + 1) ÷ 4 th item,
+Q₃ the 3(n + 1) ÷ 4 th, Dₖ the k(n + 1) ÷ 10 th and Pₖ the k(n + 1) ÷ 100 th. When the position is not
+a whole number, interpolate between the two neighbouring items. For the eight ordered values 12, 15,
+18, 22, 25, 28, 30, 35, Q₁ sits at the (8 + 1) ÷ 4 = 2.25 th item, that is 15 + 0.25 × (18 − 15) =
+**15.75**.
+
+## 11. What dispersion measures
+
+Two branches can share the same average balance and be nothing alike: one with every account near the
+mean, the other with half the accounts near zero and half very large. **Dispersion** measures how
+spread out the values are around their centre. The smaller the dispersion, the more representative the
+average, and the more consistent the data.
+
+There are two families. **Distance measures** look only at how far apart certain values lie — the
+range and the quartile deviation. **Average-deviation measures** average the distances of all the items
+from a centre — the mean deviation and the standard deviation. Each measure comes in an **absolute**
+form (in the same units as the data) and a **relative** form (a pure number, a coefficient, used to
+compare data measured in different units).
+
+<Callout kind="pointer">
+  <p>
+    An absolute measure carries the unit of the data — rupees, kilograms, marks — so it cannot compare
+    two data sets in different units, or even two sets of very different size. That is what the
+    <strong>relative</strong> measures (coefficient of range, coefficient of quartile deviation,
+    coefficient of variation) are for: each divides the spread by an average to give a plain number
+    that travels across units.
+  </p>
+</Callout>
+
+## 12. Range
+
+The range is the simplest measure of dispersion: the gap between the largest and the smallest value.
+
+<div class="formula">Range = L − S (largest value − smallest value) · Coefficient of range = (L − S) ÷ (L + S)</div>
+
+For 25, 40, 15, 60, 35 the largest is 60 and the smallest 15, so the range is 60 − 15 = **45** and the
+coefficient of range is 45 ÷ 75 = 0.6. The range uses only two values and ignores everything between
+them, so a single outlier controls it completely — useful as a quick spread, poor as a stable one.
+
+## 13. Quartile deviation
+
+The quartile deviation (also the semi-interquartile range) uses the two quartiles instead of the two
+extremes, so it is undisturbed by outliers. It is half the distance between Q₁ and Q₃:
+
+<div class="formula">Quartile deviation = (Q₃ − Q₁) ÷ 2 · Coefficient of quartile deviation = (Q₃ − Q₁) ÷ (Q₃ + Q₁)</div>
+
+With Q₁ = 25 and Q₃ = 45, the quartile deviation is (45 − 25) ÷ 2 = **10**. With Q₁ = 15 and Q₃ = 25,
+the coefficient of quartile deviation is (25 − 15) ÷ (25 + 15) = 10 ÷ 40 = **0.25**. Because it throws
+away the top and bottom quarters, the quartile deviation describes the middle half of the data only.
+
+## 14. Mean deviation
+
+The mean deviation is the average of the **absolute** distances of the items from a centre — usually
+the mean or the median. Absolute values are used because ordinary deviations from the mean add to
+zero (section 4).
+
+<div class="formula">Mean deviation about the mean = Σ|x − x̄| ÷ n · about the median = Σ|x − M| ÷ n</div>
+<div class="formula">Grouped: Mean deviation = Σ f |x − A| ÷ N, where A is the mean or the median</div>
+
+For 4, 6, 8, 10, 12 the mean is 8; the absolute deviations are 4, 2, 0, 2, 4, adding to 12, so the
+mean deviation about the mean is 12 ÷ 5 = **2.4**. The **coefficient of mean deviation** divides by the
+centre used: for 3, 6, 9, 12, 15 the median is 9, the mean deviation about the median is (6+3+0+3+6) ÷
+5 = 3.6, and the coefficient is 3.6 ÷ 9 = **0.4**.
+
+<Callout kind="pointer">
+  <p>
+    The mean deviation is at its smallest when it is measured about the <strong>median</strong> — no
+    other point makes the sum of absolute deviations smaller. So if a question offers the mean
+    deviation about the mean and about the median for the same data, the one about the median is the
+    lower of the two. This is the median's special property, the mirror of "deviations about the mean
+    sum to zero".
+  </p>
+</Callout>
+
+## 15. Standard deviation and variance
+
+The standard deviation is the most important measure of dispersion. It is the square root of the
+average of the **squared** deviations from the mean, and squaring — rather than taking absolute values
+— is what gives it its clean algebra. Its square is the **variance**.
+
+<div class="formula">Variance σ² = Σ(x − x̄)² ÷ n · Standard deviation σ = √[Σ(x − x̄)² ÷ n]</div>
+
+<Callout kind="pointer">
+  <p>
+    This chapter divides by <strong>n</strong> (the population standard deviation), which is the
+    convention the Foundation study material and its worked examples use throughout. Some later courses
+    divide by (n − 1) for a sample; at this level, unless a question expressly says "sample standard
+    deviation", divide by n. Every standard-deviation figure in these notes and in the question bank
+    uses divisor n.
+  </p>
+</Callout>
+
+For 2, 4, 6, 8, 10 the mean is 6; the squared deviations are 16, 4, 0, 4, 16, adding to 40, so the
+variance is 40 ÷ 5 = 8 and the standard deviation is √8 = **2.83**. For 5, 10, 15, 20, 25 the mean is
+15 and the sum of squared deviations is 250, so the variance is 250 ÷ 5 = **50**.
+
+**The short-cut (sum-of-squares) formula.** Expanding the square gives a form that needs only Σx and
+Σx², so you never have to compute each deviation:
+
+<div class="formula">σ = √[Σx² ÷ n − (Σx ÷ n)²] · equivalently σ² = (Σx² ÷ n) − x̄²</div>
+
+For ten values with Σx = 100 and Σx² = 1090, the mean is 10 and the variance is 1090 ÷ 10 − 10² = 109
+− 100 = 9, so the standard deviation is **3**. This form is the fastest when the raw totals are given.
+
+## 16. Standard deviation of grouped data
+
+For a frequency distribution the deviations are weighted by the frequencies, and the step-deviation
+coding of section 3 carries straight over. With d = (x − A) ÷ h:
+
+<div class="formula">σ = √[Σ f d² ÷ N − (Σ f d ÷ N)²] × h</div>
+
+Take mid-points 5, 15, 25, 35, 45 with frequencies 5, 8, 15, 7, 5 (N = 40). Put A = 25 and h = 10, so
+d = −2, −1, 0, 1, 2.
+
+| Mid-point x | f | d | f d | f d² |
+|---|---|---|---|---|
+| 5 | 5 | −2 | −10 | 20 |
+| 15 | 8 | −1 | −8 | 8 |
+| 25 | 15 | 0 | 0 | 0 |
+| 35 | 7 | 1 | 7 | 7 |
+| 45 | 5 | 2 | 10 | 20 |
+| **Total** | **40** | | **−1** | **55** |
+
+σ = √[55 ÷ 40 − (−1 ÷ 40)²] × 10 = √[1.375 − 0.000625] × 10 = √1.374375 × 10 = **11.72**. The coded
+form removes the origin (A) freely — property 2 of the mean — but the scale h must be multiplied back
+at the end, because dividing by h shrank every deviation.
+
+<Callout kind="mistake">
+  <p>
+    In the step-deviation standard deviation you multiply by h at the very end, and you must not add A
+    back — unlike the mean. Adding an assumed mean changes the origin, and the standard deviation is
+    <strong>independent of the origin</strong> (section 19). The commonest slip is to treat the SD
+    coding exactly like the mean coding and tack on "+ A". There is no + A in a standard deviation.
+  </p>
+</Callout>
+
+## 17. Combined standard deviation
+
+Two groups can be pooled into one standard deviation, but — unlike the combined mean — you cannot just
+weight the two SDs. You must account for how far each group's mean sits from the combined mean, because
+that separation is itself a source of spread. First find the combined mean, then:
+
+<div class="formula">σ₁₂ = √&#123; [n₁(σ₁² + d₁²) + n₂(σ₂² + d₂²)] ÷ (n₁ + n₂) &#125;, where d₁ = x̄₁ − x̄₁₂ and d₂ = x̄₂ − x̄₁₂</div>
+
+Group 1 has n₁ = 100, mean 50, SD 5; group 2 has n₂ = 150, mean 60, SD 7. The combined mean is
+(100×50 + 150×60) ÷ 250 = 56, so d₁ = 50 − 56 = −6 and d₂ = 60 − 56 = 4. Then
+
+<div class="formula">σ₁₂ = √&#123; [100(25 + 36) + 150(49 + 16)] ÷ 250 &#125; = √[(6,100 + 9,750) ÷ 250] = √63.4 = 7.96</div>
+
+The d₁² and d₂² terms are why the combined SD (7.96) is larger than either group's own SD — separating
+the two group means adds spread that neither group shows on its own.
+
+## 18. Coefficient of variation
+
+The coefficient of variation is the standard deviation expressed as a percentage of the mean. It is
+the relative measure of dispersion, a pure number, and it is the right tool for comparing the
+consistency of two data sets — different units, different sizes, different averages.
+
+<div class="formula">Coefficient of variation (CV) = (σ ÷ x̄) × 100</div>
+
+A set with mean 40 and SD 8 has CV = (8 ÷ 40) × 100 = **20%**. The **lower** the coefficient of
+variation, the more consistent, uniform or stable the data; the higher, the more variable. To compare
+two batsmen, two suppliers, two machines, compute each CV and prefer the smaller for consistency. Take
+series A with mean 50 and SD 10 (CV 20%) against series B with mean 80 and SD 12 (CV 15%): B is the
+more consistent, even though its absolute SD is larger, because relative to its own average it varies
+less.
+
+<Callout kind="mistake">
+  <p>
+    Do not judge consistency by the standard deviation alone when the two data sets have different
+    means. The larger SD does not mean the more variable data — series B above has the larger SD yet is
+    the steadier of the two. Consistency is always a question about the <strong>coefficient of
+    variation</strong>, never the raw standard deviation.
+  </p>
+</Callout>
+
+## 19. Change of origin and scale
+
+How the two most-used measures respond to a linear transformation y = k x + c is worth stating once,
+because it turns several questions into a single line of arithmetic.
+
+- **The mean** changes with both origin and scale: ȳ = k x̄ + c (section 4).
+- **The standard deviation** is **independent of the origin** but changes with the **scale**:
+  σy = |k| σx. Adding a constant to every value shifts the whole distribution without spreading it, so
+  the SD is unchanged; multiplying stretches it, so the SD is multiplied by |k|.
+
+<div class="formula">If y = k x + c then ȳ = k x̄ + c and σy = |k| σx (the constant c does not affect the SD)</div>
+
+So if the SD of a set is 5 and every value is multiplied by 3, the new SD is 3 × 5 = **15**; but if the
+SD is 7 and every value is increased by 10, the new SD is still **7**. The variance, being the square,
+is multiplied by k²: σy² = k² σx². These results are exactly why the assumed-mean (origin) coding is
+free in the standard deviation while the width (scale) h must be multiplied back.
+
+## 20. Answering under negative marking
+
+Paper 3 is entirely objective. A correct answer earns 1 mark, a wrong answer costs 0.25 mark, and a
+blank scores zero. That penalty should shape how you treat a question you cannot finish. A blind guess
+among four options has expected value (1 ÷ 4)(+1) + (3 ÷ 4)(−0.25) = **+0.0625** — barely positive, so
+guessing at random is nearly worthless. But eliminate one option and it rises to (1 ÷ 3)(+1) + (2 ÷ 3)
+(−0.25) = **+0.1667**, and eliminate two and it reaches **+0.375**. The value of a guess lives almost
+entirely in the options you can rule out.
+
+This chapter hands you cheap eliminations. A combined mean must lie between the two group means, so any
+option outside that range is out. A standard deviation cannot be negative and cannot exceed the range
+of the data. The median of ordered data must lie between the smallest and largest values. A coefficient
+of variation of a positive data set is positive. Rule out the impossible options first, then compute
+only if two plausible ones remain. Attempt what you can narrow to two; leave untouched only what you
+cannot narrow at all.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — combined mean and a missing group mean (easy)">
+  <p>
+    A college has two sections of a course. Section A has 30 students with an average mark of 64.
+    Section B has 20 students. The average mark of all 50 students together is 68. Find the average
+    mark of Section B.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Write the combined-mean equation</div>
+    x̄₁₂ = (n_A x̄_A + n_B x̄_B) ÷ (n_A + n_B)<br />
+    68 = (30 × 64 + 20 × x̄_B) ÷ 50
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Solve for the unknown mean</div>
+    68 × 50 = 1,920 + 20 x̄_B → 3,400 − 1,920 = 20 x̄_B → x̄_B = 1,480 ÷ 20 = <strong>74</strong><br />
+    Check: (30 × 64 + 20 × 74) ÷ 50 = (1,920 + 1,480) ÷ 50 = 3,400 ÷ 50 = 68 ✓
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — grouped mean by the step-deviation method (moderate)">
+  <p>
+    Find the arithmetic mean of the distribution below using the step-deviation method, taking the
+    assumed mean at the mid-point 50.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Set up the coding</div>
+    Mid-points 10, 30, 50, 70, 90; frequencies 5, 8, 15, 7, 5; N = 40.<br />
+    A = 50, h = 20, so d = (x − 50) ÷ 20 = −2, −1, 0, 1, 2.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Sum f d and rebuild the mean</div>
+    Σ f d = 5(−2) + 8(−1) + 15(0) + 7(1) + 5(2) = −10 − 8 + 0 + 7 + 10 = −1<br />
+    x̄ = A + (Σ f d ÷ N) × h = 50 + (−1 ÷ 40) × 20 = 50 − 0.5 = <strong>49.5</strong><br />
+    The direct method (Σ f x ÷ N = 1,980 ÷ 40) gives the same 49.5 — the coding only shrinks the
+    arithmetic.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — median and mode of a continuous series (moderate)">
+  <p>
+    For the distribution 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 20, 10, 7, find the
+    median and the mode.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Cumulative frequencies</div>
+    5, 13, 33, 43, 50. N = 50, so N ÷ 2 = 25. The cumulative frequency first passes 25 in the class
+    <strong>20–30</strong>, which is the median class.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Median by interpolation</div>
+    L = 20, cf = 13, f = 20, h = 10.<br />
+    Median = 20 + [(25 − 13) ÷ 20] × 10 = 20 + (12 ÷ 20) × 10 = 20 + 6 = <strong>26</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Mode by the grouped formula</div>
+    The highest frequency is 20, so the modal class is also 20–30: f₁ = 20, f₀ = 8, f₂ = 10.<br />
+    Mode = 20 + [(20 − 8) ÷ (40 − 8 − 10)] × 10 = 20 + (12 ÷ 22) × 10 = <strong>25.45</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — the empirical relation (easy)">
+  <p>
+    In a moderately skewed distribution the arithmetic mean is 45.6 and the median is 44.4. Estimate
+    the mode, and confirm the median lies one-third of the way from the mean to the mode.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Apply Mode = 3 Median − 2 Mean</div>
+    Mode = 3 × 44.4 − 2 × 45.6 = 133.2 − 91.2 = <strong>42</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The one-third check</div>
+    Mean − Mode = 45.6 − 42 = 3.6; Mean − Median = 45.6 − 44.4 = 1.2.<br />
+    3.6 = 3 × 1.2 ✓ — the median sits one-third of the way from the mean toward the mode, as the
+    relation requires.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — geometric and harmonic mean in context (moderate)">
+  <p>
+    (a) A deposit grows in the ratio 1.10 in the first year and 1.44 in the second. Find the average
+    annual growth ratio. (b) A commuter cycles to work at 12 km/h and returns along the same road at
+    18 km/h. Find the average speed for the whole trip.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Growth ratios need the geometric mean</div>
+    GM = √(1.10 × 1.44) = √1.584 = 1.2586 → an average growth of about <strong>25.86% a year</strong>.<br />
+    Check: 1.2586² = 1.584 = 1.10 × 1.44 ✓. The arithmetic mean 1.27 would overstate the true growth.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Equal distances need the harmonic mean</div>
+    HM = 2 ÷ (1/12 + 1/18) = 2 ÷ [(3 + 2) ÷ 36] = 2 ÷ (5 ÷ 36) = 72 ÷ 5 = <strong>14.4 km/h</strong><br />
+    Less than the simple average of 15, because more time is spent on the slower outward leg.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — quartiles and quartile deviation of a continuous series (hard)">
+  <p>
+    For 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 15, 7, 5 (N = 40), find Q₁, Q₃, the
+    quartile deviation and its coefficient.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Cumulative frequencies and positions</div>
+    Cumulative: 5, 13, 28, 35, 40. Q₁ position = N ÷ 4 = 10; Q₃ position = 3N ÷ 4 = 30.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Q₁ and Q₃ by interpolation</div>
+    Q₁ class 10–20 (cf just passes 10): L = 10, cf = 5, f = 8 → Q₁ = 10 + [(10 − 5) ÷ 8] × 10 =
+    <strong>16.25</strong><br />
+    Q₃ class 30–40 (cf just passes 30): L = 30, cf = 28, f = 7 → Q₃ = 30 + [(30 − 28) ÷ 7] × 10 =
+    <strong>32.86</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Quartile deviation and its coefficient</div>
+    QD = (Q₃ − Q₁) ÷ 2 = (32.857 − 16.25) ÷ 2 = <strong>8.30</strong><br />
+    Coefficient of QD = (Q₃ − Q₁) ÷ (Q₃ + Q₁) = 16.607 ÷ 49.107 = <strong>0.338</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — standard deviation of grouped data by step-deviation (hard)">
+  <p>
+    Find the standard deviation of the distribution with mid-points 5, 15, 25, 35, 45 and frequencies
+    5, 8, 15, 7, 5 (N = 40), using the assumed mean 25 and width 10.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Code and tabulate</div>
+    d = (x − 25) ÷ 10 = −2, −1, 0, 1, 2.<br />
+    f d = −10, −8, 0, 7, 10 → Σ f d = −1.<br />
+    f d² = 20, 8, 0, 7, 20 → Σ f d² = 55.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Apply the coded SD formula</div>
+    σ = √[Σ f d² ÷ N − (Σ f d ÷ N)²] × h = √[55 ÷ 40 − (−1 ÷ 40)²] × 10<br />
+    = √[1.375 − 0.000625] × 10 = √1.374375 × 10 = <strong>11.72</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The traps avoided</div>
+    Multiply by h = 10 at the end (scale), but do <strong>not</strong> add the assumed mean 25 back —
+    the SD is independent of the origin. The (Σ f d ÷ N)² correction term is small here but must never
+    be dropped.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — combined mean and combined standard deviation (hard)">
+  <p>
+    Group 1 has 100 items with mean 50 and standard deviation 5. Group 2 has 150 items with mean 60
+    and standard deviation 7. Find the mean and the standard deviation of the 250 items combined.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Combined mean first</div>
+    x̄₁₂ = (100 × 50 + 150 × 60) ÷ 250 = (5,000 + 9,000) ÷ 250 = 14,000 ÷ 250 = <strong>56</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Distances of the group means from the combined mean</div>
+    d₁ = 50 − 56 = −6, so d₁² = 36.<br />
+    d₂ = 60 − 56 = 4, so d₂² = 16.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Combined standard deviation</div>
+    σ₁₂ = √&#123; [100(25 + 36) + 150(49 + 16)] ÷ 250 &#125; = √&#123; [100 × 61 + 150 × 65] ÷ 250 &#125;<br />
+    = √[(6,100 + 9,750) ÷ 250] = √(15,850 ÷ 250) = √63.4 = <strong>7.96</strong><br />
+    The combined SD exceeds both 5 and 7 because the two group means themselves lie 10 apart, and that
+    separation is extra spread.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — coefficient of variation and consistency (moderate)">
+  <p>
+    Two bowlers are compared over a season. Bowler A concedes an average of 50 runs a match with a
+    standard deviation of 10; bowler B concedes an average of 80 runs with a standard deviation of 12.
+    Which bowler is the more consistent?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Coefficient of variation of each</div>
+    CV_A = (10 ÷ 50) × 100 = <strong>20%</strong><br />
+    CV_B = (12 ÷ 80) × 100 = <strong>15%</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Read the smaller coefficient</div>
+    Bowler B has the lower coefficient of variation, so <strong>bowler B is the more consistent</strong>,
+    even though his absolute standard deviation (12) is larger than A's (10). Consistency is judged
+    relative to the average, and B's spread is smaller relative to his own higher average.
+  </div>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+- **Averaging two group means without weighting.** The combined mean weights each group by its size;
+  (x̄₁ + x̄₂) ÷ 2 is right only for equal groups.
+- **Using (N + 1) ÷ 2 for the median of a continuous series.** Continuous series use N ÷ 2 to locate
+  the median class; the (N + 1) rule is for individual and discrete series.
+- **Reading the mode as the highest frequency in a continuous series.** The highest frequency only
+  identifies the modal class; the value comes from the interpolation formula.
+- **Confusing f₀ and f₂ in the mode formula.** f₀ is the class before the modal class, f₂ the class
+  after; swapping them moves the mode the wrong way.
+- **Using the arithmetic mean for growth rates or for equal-distance speeds.** Growth and ratios need
+  the geometric mean; rates per unit over equal distances need the harmonic mean.
+- **Adding the assumed mean back into a standard deviation.** The SD is independent of the origin; you
+  multiply by the width h at the end but never add A.
+- **Dropping the (Σ f d ÷ N)² correction term** in the coded SD formula. It is small but not zero, and
+  omitting it inflates the SD.
+- **Weighting the combined SD like the combined mean.** You must add the d₁² and d₂² separation terms;
+  a simple weighted average of the two SDs is always too small.
+- **Judging consistency by the raw standard deviation.** Consistency across different means is a
+  question about the coefficient of variation; the larger SD is not the more variable data.
+- **Forgetting absolute values in the mean deviation.** Ordinary deviations from the mean sum to zero,
+  so the mean deviation must use |x − A|.
+- **Dividing the variance by (n − 1) at Foundation level.** This chapter and the SM divide by n unless
+  the question says "sample".
+- **Not counting the cumulative frequency correctly** when locating a median, quartile or percentile
+  class. cf is the cumulative frequency of the class *before* the one you interpolate in.
+
+## One-page revision summary
+
+**Central tendency.** Mean uses every value (most affected by extremes) · median uses the middle
+position (unaffected by extremes) · mode is the most frequent value.
+
+<div class="formula">Arithmetic mean: x̄ = Σx ÷ n · Weighted: Σ(w x) ÷ Σw · Combined: (n₁x̄₁ + n₂x̄₂) ÷ (n₁ + n₂)</div>
+<div class="formula">Grouped mean: x̄ = A + (Σ f d ÷ N) × h, d = (x − A) ÷ h</div>
+<div class="formula">Median (continuous): L + [(N ÷ 2 − cf) ÷ f] × h · individual/discrete: (n + 1) ÷ 2 th item</div>
+<div class="formula">Mode (grouped): L + [(f₁ − f₀) ÷ (2f₁ − f₀ − f₂)] × h</div>
+<div class="formula">Empirical relation: Mode = 3 Median − 2 Mean · symmetrical: mean = median = mode</div>
+<div class="formula">GM = (x₁x₂…xₙ)^(1/n) — for growth and ratios · HM = n ÷ Σ(1 ÷ x) — for rates over equal distance</div>
+<div class="formula">Order for positive unequal values: AM &gt; GM &gt; HM · for two numbers GM² = AM × HM</div>
+<div class="formula">Partition values (continuous): Qₖ = L + [(kN ÷ 4 − cf) ÷ f] × h · Dₖ uses kN ÷ 10 · Pₖ uses kN ÷ 100</div>
+
+**Dispersion.** Absolute measures carry the data's unit; relative measures (coefficients) are pure
+numbers for comparing across units.
+
+<div class="formula">Range = L − S · Coefficient of range = (L − S) ÷ (L + S)</div>
+<div class="formula">Quartile deviation = (Q₃ − Q₁) ÷ 2 · Coefficient = (Q₃ − Q₁) ÷ (Q₃ + Q₁)</div>
+<div class="formula">Mean deviation = Σ f |x − A| ÷ N (A = mean or median) · smallest about the median</div>
+<div class="formula">Variance σ² = Σ(x − x̄)² ÷ n · SD σ = √[Σ(x − x̄)² ÷ n] · short cut: σ² = Σx² ÷ n − x̄²</div>
+<div class="formula">Grouped SD (coded): σ = √[Σ f d² ÷ N − (Σ f d ÷ N)²] × h</div>
+<div class="formula">Combined SD: σ₁₂ = √&#123; [n₁(σ₁² + d₁²) + n₂(σ₂² + d₂²)] ÷ (n₁ + n₂) &#125;, dᵢ = x̄ᵢ − x̄₁₂</div>
+<div class="formula">Coefficient of variation = (σ ÷ x̄) × 100 · lower CV = more consistent</div>
+
+**Change of origin and scale.** For y = k x + c: mean ȳ = k x̄ + c (both) · SD σy = |k| σx (scale only,
+origin free) · variance σy² = k² σx².
+
+**Conventions used on this page.** The standard deviation and variance divide by **n** (population),
+matching the study material. Factors and intermediate figures are carried unrounded and the final
+answer is rounded to two decimal places. The ordinary median rule (N + 1) ÷ 2 is used for individual
+and discrete series, and N ÷ 2 for locating classes in continuous series.

@@ -1,0 +1,713 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Theoretical Distributions (Binomial, Poisson and Normal)'
+description: 'CA Foundation Quantitative Aptitude Ch 16 — probability distributions built from first principles: the binomial with P(X=r)=nCr p^r q^(n−r), its mean np and variance npq; the Poisson as the law of rare events with mean equal to variance equal to m; and the normal curve with the standard z-score and the 68-95-99.7 rule, with fully worked examples and every probability computed from the parameters.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 16 · Theoretical Distributions'
+chapterSlug: theoretical-distributions
+masteryId: f3-ch16
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 16 (Theoretical Distributions) — scope, formula set and worked patterns'
+  - 'Standard statements of the binomial, Poisson and normal distributions as taught at Foundation level'
+sourceLabel: 'ICAI SM Paper 3 Ch 16 scope (May 2026 ed.) · standard probability formulas'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 32 min read · 10 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=theoretical-distributions'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A quality inspector at a garment unit in Tiruppur pulls ten shirts at random from every batch of a
+thousand. Long experience says about 4% of the unit's output has a stitching fault. The inspector
+cannot examine all thousand shirts, yet she still wants to say, before the batch ships, how likely
+it is that her sample of ten throws up no faulty shirt at all, or exactly one, or three or more. She
+is not measuring anything new. She is reading a **pattern** that the number of faulty shirts in a
+sample of ten must follow, given the 4% rate — a pattern fixed in advance by the mathematics, not by
+this particular batch.
+
+That pattern is a **theoretical distribution**. It is a probability model written down from a few
+assumptions, and it tells you the chance of each possible value before you collect a single
+observation. This chapter builds the three that Paper 3 tests: the **binomial**, for counting
+successes in a fixed number of trials; the **Poisson**, for counting rare events over a stretch of
+time or space; and the **normal**, the bell-shaped curve that measurements of size, weight and marks
+tend to follow. Learn to recognise which situation feeds which distribution, and most of the work is
+substituting into one formula.
+
+Paper 3 is fully objective, so you will not derive these results. You will be handed the parameters
+and asked for one probability, one mean, one variance or one area, quickly and exactly. This chapter
+takes each distribution in turn, shows how every number is computed from the parameters in the stem,
+and keeps to standard values so that no probability table is ever needed to answer a question.
+
+## 1. What a theoretical distribution is
+
+A **random variable** is a rule that attaches a number to each outcome of an experiment — the number
+of heads in five tosses, the number of accidents on a road in a day, the weight of a bag of cement.
+A **probability distribution** lists every value the variable can take together with the probability
+of each. When those probabilities come from actual data collected by counting, the distribution is
+**observed** (or empirical). When they come instead from a mathematical law derived from assumptions,
+the distribution is **theoretical** (or expected).
+
+- A **discrete** distribution attaches probability to separate, countable values — 0, 1, 2, 3 and so
+  on. The binomial and the Poisson are discrete: you cannot have 2.5 defective shirts.
+- A **continuous** distribution spreads probability over an interval of the number line, so the
+  variable can take any value in a range. The normal is continuous: a weight can be 49.7 kg or
+  49.73 kg or anything between.
+
+Two rules hold for every probability distribution, and an option that breaks either is wrong on
+sight. Each probability lies between 0 and 1, and the probabilities of all the values add up to
+exactly 1.
+
+<div class="formula">Each P(X = value) is at least 0 and at most 1   ·   the sum of P over all values = 1</div>
+
+A theoretical distribution is described by a small number of **parameters** — constants that fix the
+whole shape. The binomial needs two (n and p), the Poisson needs one (m), and the normal needs two
+(the mean and the standard deviation). Give the parameters and the entire distribution is
+determined, which is exactly why an objective question can hand you the parameters and expect a
+single, definite number back.
+
+<Callout kind="pointer">
+  <p>
+    The purpose of fitting a theoretical distribution to real data is to <strong>replace a bulky
+    table of observed frequencies with a couple of parameters</strong>. Once you know the data behave
+    like a binomial with a certain p, or a Poisson with a certain m, you can state the probability of
+    any value — including values you never actually observed — without collecting more data. That is
+    the whole practical payoff, and it is why examiners like these three distributions.
+  </p>
+</Callout>
+
+## 2. The binomial distribution
+
+The binomial answers one question: in **n** independent trials, each of which either succeeds or
+fails, how many successes occur? "Success" is just the label for the outcome you are counting; it
+need not be good news, and counting faulty shirts is a perfectly ordinary use. Four assumptions
+define the model, and every one of them must hold:
+
+1. There is a **fixed number of trials**, n, decided before the experiment.
+2. Each trial has exactly **two outcomes**, success or failure (a Bernoulli trial).
+3. The probability of success, **p**, is **constant** from trial to trial. The probability of failure
+   is q = 1 − p, so p + q = 1.
+4. The trials are **independent** — the result of one does not change the chances of another.
+
+Sampling ten shirts from a thousand, tossing a coin twenty times, firing eight shots at a target:
+each fits the four assumptions. Drawing cards without replacement does **not**, because p changes as
+the pack shrinks — that breaks assumption 3.
+
+If X is the number of successes in n trials, its probability is given by the **binomial law**:
+
+<div class="formula">P(X = r) = nCr p^r q^(n−r),   for r = 0, 1, 2, …, n,   where q = 1 − p</div>
+
+Here nCr is the number of ways to choose which r of the n trials are the successes, nCr = n! ÷ [r!
+(n − r)!]. The p^r is the chance those r trials all succeed, and q^(n−r) is the chance the other
+n − r all fail. Multiply and add over the ways, and you have the formula. The n + 1 probabilities for
+r = 0 up to r = n are the successive terms of the expansion of (q + p)^n, which is why they must add
+to (q + p)^n = 1.
+
+**Worked illustration.** A fair coin is tossed 6 times. What is the probability of exactly 4 heads?
+Here n = 6, p = 1/2, q = 1/2, r = 4.
+
+- 6C4 = 15
+- P(X = 4) = 15 × (1/2)^4 × (1/2)^2 = 15 × (1/2)^6 = 15 ÷ 64 = **0.2344**
+
+<Callout kind="mistake">
+  <p>
+    The exponents must add to n. In P(X = r) = nCr p^r q^(n−r), the power of p is r and the power of q
+    is n − r, and r + (n − r) = n every time. Writing q^r or p^(n−r) swaps the two and is the
+    commonest slip in the whole chapter. A quick check: the two exponents together must always equal
+    the number of trials.
+  </p>
+</Callout>
+
+Two shapes of question recur. "**At least one**" is answered through its complement, because working
+out P(X = 1) + P(X = 2) + … is slow, while the opposite event is a single term:
+
+<div class="formula">P(at least one success) = 1 − P(X = 0) = 1 − q^n</div>
+
+And "**at most one**" or "**fewer than two**" is the sum of just the first one or two terms,
+P(X = 0) + P(X = 1). Read the boundary words carefully — "more than 2" means r = 3, 4, …, while "at
+least 2" includes r = 2 itself.
+
+## 3. Mean, variance and mode of the binomial
+
+You rarely need the whole distribution. The three summary numbers are asked far more often than any
+single probability, and each is a one-line formula.
+
+<div class="formula">Mean = n p   ·   Variance = n p q   ·   Standard deviation = √(n p q)</div>
+
+The mean is where the distribution balances — in n trials with success chance p, you expect np
+successes, which is plain common sense. The variance measures the spread. Because q is a proper
+fraction (it is below 1), npq is always **smaller than** np, so a binomial variance is **always less
+than its mean**. That single fact separates the binomial from the Poisson, where the two are equal,
+and it is a favourite one-line examiner test.
+
+**Worked illustration.** For n = 20 and p = 0.3: mean = 20 × 0.3 = **6**, variance = 20 × 0.3 × 0.7 =
+**4.2**, standard deviation = √4.2 = **2.0494**. The variance 4.2 is below the mean 6, as it must be.
+
+Given the mean and the variance you can recover the parameters, which is a standard reverse question.
+Divide the variance by the mean to get q, since npq ÷ np = q; then p = 1 − q and n = mean ÷ p.
+
+<div class="formula">q = variance ÷ mean   ·   p = 1 − q   ·   n = mean ÷ p</div>
+
+For a binomial with mean 4 and variance 2.4: q = 2.4 ÷ 4 = 0.6, so p = 0.4 and n = 4 ÷ 0.4 = **10**.
+
+The **mode** — the most probable number of successes — is found without listing every probability.
+Compute (n + 1)p. If it is not a whole number, the mode is the whole-number part (the largest integer
+below it). If (n + 1)p is itself a whole number, the distribution has two modes, at (n + 1)p and at
+(n + 1)p − 1.
+
+<div class="formula">Mode = the integer part of (n + 1)p, when (n + 1)p is not a whole number</div>
+
+For n = 10 and p = 0.4, (n + 1)p = 11 × 0.4 = 4.4, so the mode is **4**. For n = 9 and p = 0.5,
+(n + 1)p = 5 exactly, so there are two modes, 5 and 4.
+
+<Callout kind="pointer">
+  <p>
+    Three facts about the shape are worth carrying into the hall. The binomial is
+    <strong>symmetric</strong> only when p = 0.5; it leans to the right when p is below 0.5 and to the
+    left when p is above 0.5. Its mean np and its mode are usually close but need not be equal. And it
+    is a <strong>discrete</strong> distribution with exactly n + 1 possible values, from 0 successes
+    up to n. If an option offers a fractional number of successes, it is wrong.
+  </p>
+</Callout>
+
+## 4. Fitting a binomial distribution
+
+To **fit** a binomial to observed data means to find the binomial that best matches it, then compute
+the frequencies that model predicts. The recipe is short. The number of trials n is the largest count
+possible (five coins give n = 5). The probability p is estimated from the mean of the data, because
+mean = np, so p = (mean) ÷ n. The **expected frequency** of exactly r successes, out of N repetitions
+of the whole experiment, is N times the binomial probability:
+
+<div class="formula">Expected frequency of r successes = N × nCr p^r q^(n−r)</div>
+
+**Worked illustration.** Five fair coins are tossed 320 times. How many of the 320 tosses should show
+exactly 2 heads? Here n = 5, p = 1/2, N = 320, r = 2.
+
+- 5C2 = 10, so P(X = 2) = 10 × (1/2)^5 = 10 ÷ 32 = 0.3125
+- Expected frequency = 320 × 0.3125 = **100**
+
+The full set of expected frequencies for r = 0, 1, 2, 3, 4, 5 comes out as 10, 50, 100, 100, 50, 10,
+which add back to 320 — a useful check, since the expected frequencies must total N.
+
+## 5. The Poisson distribution
+
+The Poisson distribution counts how many times a **rare event** happens over a fixed stretch of time,
+length, area or volume: misprints on a page, accidents at a junction in a week, calls arriving at an
+exchange in a minute, faulty items in a large consignment. There is no natural upper limit — a page
+could in principle carry any number of misprints — so the count runs 0, 1, 2, 3, … without stopping.
+
+The distribution arises as a **limiting case of the binomial**, when the number of trials n grows
+very large while the success probability p becomes very small, in such a way that the mean np settles
+at a finite figure written **m** (some texts call it λ). In that limit the binomial formula collapses
+to a much simpler one that needs only the single parameter m:
+
+<div class="formula">P(X = x) = e^(−m) m^x ÷ x!,   for x = 0, 1, 2, 3, …,   where m = the mean</div>
+
+Here e = 2.71828 is the base of natural logarithms, m is the average number of occurrences in the
+interval, and x! is the factorial of x (with 0! = 1). The probabilities again add to 1, because the
+series e^(−m)[1 + m + m²/2! + m³/3! + …] is e^(−m) × e^m = 1.
+
+**Worked illustration.** The number of misprints on a page follows a Poisson distribution with mean
+m = 2. The probability of exactly 3 misprints on a page is:
+
+- e^(−2) = 0.1353
+- P(X = 3) = e^(−2) × 2^3 ÷ 3! = 0.1353 × 8 ÷ 6 = 0.1353 × 1.3333 = **0.1804**
+
+The two shapes from the binomial reappear. P(X = 0) is simply e^(−m), because m^0 = 1 and 0! = 1, so
+"**no occurrence**" is one exponential. And "**at least one**" is its complement:
+
+<div class="formula">P(X = 0) = e^(−m)   ·   P(at least one) = 1 − e^(−m)</div>
+
+<Callout kind="mistake">
+  <p>
+    The Poisson mean m is the average count <strong>for the interval the question asks about</strong>.
+    If accidents happen at 2 per week and the question asks about a fortnight, m becomes 4, not 2. If
+    misprints run at 3 per page and you want the chance for two pages, m is 6. Scale the mean to the
+    interval <em>before</em> putting it in the formula, or every probability comes out wrong.
+  </p>
+</Callout>
+
+## 6. Mean, variance and the additive property of Poisson
+
+The Poisson has a property that no other distribution in this chapter shares, and it is tested almost
+every attempt: its **mean and its variance are equal**, both equal to m.
+
+<div class="formula">Mean = m   ·   Variance = m   ·   Standard deviation = √m</div>
+
+So a Poisson variable with mean 9 has variance 9 and standard deviation 3. Turned around, if a
+distribution is known to be Poisson and you are told its variance, you have been told its mean; if
+mean and variance are quoted as unequal, the distribution cannot be Poisson. Contrast the binomial,
+whose variance npq is strictly below its mean np — the two never match unless there is nothing to
+count.
+
+The **additive (reproductive) property** says that if two independent Poisson variables are added,
+the total is again Poisson, with a mean equal to the sum of the two means.
+
+<div class="formula">If X is Poisson(m₁) and Y is Poisson(m₂), independent, then X + Y is Poisson(m₁ + m₂)</div>
+
+If line A of a switchboard takes calls at a Poisson rate of 3 per minute and line B at 2 per minute,
+independently, the two lines together take calls at a Poisson rate of 5 per minute, and the chance of
+no call at all in a minute across both is e^(−5) = 0.0067.
+
+The **mode** of a Poisson follows the same rule as the binomial's, using m in place of (n + 1)p. When
+m is not a whole number the mode is its integer part; when m is a whole number the distribution has
+two modes, m and m − 1. A convenient way to build the whole distribution is the **recurrence
+relation**, each probability from the one before it:
+
+<div class="formula">P(X = x + 1) = P(X = x) × m ÷ (x + 1)</div>
+
+## 7. Fitting a Poisson distribution
+
+Fitting a Poisson is even shorter than fitting a binomial, because there is only one parameter to
+estimate. The mean m is read straight off the data as the average count, m = (sum of f × x) ÷ (sum of
+f), where f is the observed frequency of each value x. The **expected frequency** of exactly x
+occurrences, over N repetitions, is N times the Poisson probability:
+
+<div class="formula">Expected frequency of x occurrences = N × e^(−m) m^x ÷ x!</div>
+
+**Worked illustration.** A Poisson distribution with mean m = 1 is fitted to N = 200 observations. The
+expected frequency of exactly 1 occurrence is:
+
+- e^(−1) = 0.3679
+- P(X = 1) = e^(−1) × 1^1 ÷ 1! = 0.3679
+- Expected frequency = 200 × 0.3679 = **73.58**, that is about 74
+
+In practice you build the whole table with the recurrence of section 6: start from N × e^(−m) for
+x = 0, then multiply each figure by m ÷ (x + 1) to reach the next. It saves recomputing the
+exponential every line.
+
+## 8. The normal distribution
+
+The **normal distribution** is the continuous, bell-shaped curve that heights, weights, examination
+marks and measurement errors follow closely. Unlike the two discrete distributions, it spreads
+probability over the whole number line, and it is described by two parameters: the mean μ (the Greek
+letter mu) and the standard deviation σ (sigma). Its curve is given by a formula you never have to
+evaluate by hand at Foundation level, but should recognise:
+
+<div class="formula">f(x) = 1 ÷ (σ √(2π)) × e^(−(x − μ)² ÷ (2σ²))</div>
+
+What matters is the list of properties, because every examinable fact is one of them:
+
+- The curve is **bell-shaped and perfectly symmetric** about the mean. The left half is the mirror
+  image of the right.
+- Because of that symmetry, the **mean, the median and the mode all coincide** at the centre, μ. This
+  is the property most often asked as a one-liner.
+- The **total area under the curve is 1**, and by symmetry exactly **half, 0.5, lies on each side** of
+  the mean. Area under the curve is read as probability.
+- The curve is **asymptotic** to the horizontal axis: it approaches the axis on both sides but never
+  touches it, so in theory the variable can take any value, however extreme.
+- It has its **points of inflexion at μ − σ and μ + σ**, one standard deviation on each side of the
+  mean, where the curve changes from bending down to bending up.
+- The two tails are identical, so the **skewness is zero** and the coefficient of **kurtosis is 3**
+  (the curve is mesokurtic).
+
+<Callout kind="pointer">
+  <p>
+    A few fixed relationships for the normal curve are worth memorising, because they turn up as
+    direct one-mark questions. The <strong>mean deviation is about 0.7979σ</strong> (roughly four
+    fifths of σ), the <strong>quartile deviation is 0.6745σ</strong> (roughly two thirds), so the
+    quartiles sit at μ ± 0.6745σ. The ratio quartile deviation : mean deviation : standard deviation
+    is close to <strong>10 : 12 : 15</strong>. You are far more likely to be asked to recognise these
+    than to use them in arithmetic.
+  </p>
+</Callout>
+
+## 9. The standard normal variable and z-scores
+
+Every normal distribution, whatever its mean and spread, can be rescaled to one fixed reference curve
+— the **standard normal distribution**, which has mean 0 and standard deviation 1. The rescaling
+subtracts the mean and divides by the standard deviation, and the result is the **standard normal
+variable**, written Z:
+
+<div class="formula">z = (x − μ) ÷ σ</div>
+
+The z-score says how many standard deviations a value x lies above the mean (z positive) or below it
+(z negative). A value equal to the mean has z = 0; a value one standard deviation above the mean has
+z = 1; a value half a standard deviation below has z = −0.5. Because the shift-and-scale does not
+distort areas, the probability that x falls in any range equals the probability that Z falls in the
+matching range of z-scores — and that single reference curve serves every normal distribution ever
+set.
+
+**Worked illustration.** Marks are normally distributed with mean μ = 50 and standard deviation
+σ = 10. A mark of 68 corresponds to:
+
+- z = (68 − 50) ÷ 10 = 18 ÷ 10 = **1.8**
+
+So 68 lies 1.8 standard deviations above the mean. Running the formula backwards, a z-score can be
+turned into a raw value with x = μ + zσ. With μ = 100 and σ = 15, the value two standard deviations
+above the mean is x = 100 + 2 × 15 = **130**.
+
+<Callout kind="mistake">
+  <p>
+    Divide by the standard deviation, never by the variance. In z = (x − μ) ÷ σ the denominator is σ,
+    so if a question gives you the variance you must take its square root first. A variance of 64
+    means σ = 8, and it is 8 that goes under the line. Using 64 shrinks every z-score eightfold and
+    lands you on the wrong option.
+  </p>
+</Callout>
+
+## 10. Areas under the normal curve
+
+Since area under the normal curve is probability, the examinable skill is turning a range of x-values
+into a z-range and reading off the area. The full table of z-areas is not needed at Foundation level,
+because questions are built around a handful of standard z-values whose areas are worth knowing by
+heart. The key figures, each the area from the mean (z = 0) out to the stated z, are:
+
+| z | Area from 0 to z | Read as |
+|---|---|---|
+| 1.00 | 0.3413 | one standard deviation |
+| 1.96 | 0.4750 | the 95% marker |
+| 2.00 | 0.4772 | two standard deviations |
+| 2.58 | 0.4950 | the 99% marker |
+| 3.00 | 0.4987 | three standard deviations |
+
+From these, any one-sided or two-sided area follows by adding or subtracting, remembering that the
+whole area is 1 and each half is 0.5:
+
+- **P(Z greater than 1)** = 0.5 − 0.3413 = **0.1587** (the area beyond one standard deviation in one
+  tail).
+- **P(Z less than 2)** = 0.5 + 0.4772 = **0.9772**.
+- **P(−1 less than Z less than 2)** = 0.3413 + 0.4772 = **0.8185** (areas on opposite sides of the
+  mean are added).
+
+Doubling the one-side figures gives the **empirical rule**, the most quoted fact about the normal
+curve: about **68.27%** of the values lie within one standard deviation of the mean, about **95.45%**
+within two, and about **99.73%** within three.
+
+<div class="formula">μ ± 1σ covers ≈ 68.27%   ·   μ ± 2σ covers ≈ 95.45%   ·   μ ± 3σ covers ≈ 99.73%</div>
+
+Two further markers matter because they set the central 95% and 99% exactly. The **central 95%** of a
+normal distribution lies between μ − 1.96σ and μ + 1.96σ, leaving 2.5% in each tail. The **central
+99%** lies between μ − 2.58σ and μ + 2.58σ, leaving 0.5% in each tail.
+
+<div class="formula">Central 95%: μ ± 1.96σ   ·   Central 99%: μ ± 2.58σ</div>
+
+**Worked illustration.** Weights are normal with mean 500 g and standard deviation 100 g. The middle
+95% of the packets weigh between 500 − 1.96 × 100 = **304 g** and 500 + 1.96 × 100 = **696 g**. To
+count how many of 10,000 packets lie within one standard deviation of the mean, multiply the area by
+the number: 10,000 × 0.6826 = **6,826 packets**, taking the within-one-σ area as 2 × 0.3413.
+
+<Callout kind="pointer">
+  <p>
+    Keep the two-sided and one-sided readings apart. "Within one standard deviation" is a
+    <strong>two-sided</strong> band and covers 2 × 0.3413 = 0.6826. "More than one standard deviation
+    above the mean" is a <strong>one-sided</strong> tail and covers 0.5 − 0.3413 = 0.1587. The same
+    0.3413 feeds both, but the first doubles it around the mean while the second subtracts it from a
+    half. Decide which picture the question draws before you compute.
+  </p>
+</Callout>
+
+## 11. Choosing the right distribution
+
+Half the marks in this chapter go to picking the correct model, so fix the signals now.
+
+- Use the **binomial** when there is a **fixed number of independent trials**, each a success or a
+  failure with a **constant** probability, and you count the successes: heads in 10 tosses, defectives
+  in a sample of 20, correct answers in a 15-question guess. Both n and p are known, and n is small
+  enough to state.
+- Use the **Poisson** when you count how often a **rare event** happens over an interval of time or
+  space with **no fixed upper limit** and only the **average rate** given: accidents per week,
+  customers per minute, flaws per metre of cloth. There is a mean but no n and no p, or n is huge and
+  p tiny.
+- Use the **normal** when the variable is a **continuous measurement** — length, weight, marks, time —
+  that clusters symmetrically around an average, and the question talks of a **mean and a standard
+  deviation** and asks for a proportion or a percentage in some range.
+
+<Callout kind="pointer">
+  <p>
+    The three are linked, not separate. The <strong>Poisson is the limiting form of the binomial</strong>
+    when n is large and p is small (a working rule of thumb: n at least 20 and p at most 0.05), with
+    m = np. And the <strong>normal is the limiting form of the binomial</strong> when n is large and p
+    is not too close to 0 or 1. So a binomial with a big n can be approximated by a Poisson or a
+    normal, which is why the same physical situation can sometimes be handled by more than one model.
+  </p>
+</Callout>
+
+<div class="formula">Binomial (n large, p small) → Poisson, m = np   ·   Binomial (n large, p moderate) → Normal, μ = np, σ = √(npq)</div>
+
+## 12. Answering under negative marking
+
+Paper 3 is entirely objective. A correct answer earns 1 mark, a wrong answer costs 0.25 mark, and a
+blank scores zero. That arithmetic should shape how you treat a distribution question you cannot
+finish.
+
+Guessing blindly among four options has an expected value of (1 ÷ 4)(+1) + (3 ÷ 4)(−0.25) =
+**+0.0625** marks — just barely positive, and nearly worthless. The value of a guess comes almost
+entirely from the options you can eliminate first, and this chapter hands you cheap eliminations.
+A binomial variance quoted **above** its mean is impossible. A Poisson whose mean and variance
+**differ** is impossible. A probability **above 1**, a **negative** probability, or a **fractional
+number of successes** is impossible. A normal area **above 1** or a claim that **more than half** the
+curve lies beyond the mean is impossible. Ruling out even two options lifts the expected value of a
+guess to **+0.375**.
+
+The practical rule: eliminate what the properties forbid, commit to the surviving option, and move on.
+Leave a question blank only when nothing can be ruled out and the minute is better spent elsewhere.
+There is no penalty for a blank, so never leave a question you have narrowed to two.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — a single binomial probability (easy)">
+  <p>
+    A fair coin is tossed 5 times. Find the probability of getting exactly 3 heads.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Identify the parameters</div>
+    A toss succeeds (heads) with probability p = 1/2, fails with q = 1/2, and there are n = 5
+    independent trials. We want r = 3.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Apply the binomial law</div>
+    5C3 = 10<br />
+    P(X = 3) = 10 × (1/2)^3 × (1/2)^2 = 10 × (1/2)^5 = 10 ÷ 32 = <strong>0.3125</strong><br />
+    The exponents 3 and 2 add to 5, the number of trials — the built-in check.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — mean, variance and standard deviation of a binomial (easy)">
+  <p>
+    A machine produces items of which 20% are defective. A sample of 100 items is drawn. Find the
+    mean, the variance and the standard deviation of the number of defectives.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Set up n, p and q</div>
+    n = 100, p = 0.20 (defective is the "success" we count), q = 0.80.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Substitute</div>
+    Mean = n p = 100 × 0.20 = <strong>20</strong><br />
+    Variance = n p q = 100 × 0.20 × 0.80 = <strong>16</strong><br />
+    Standard deviation = √16 = <strong>4</strong><br />
+    The variance 16 is below the mean 20, as a binomial variance always must be.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — at least one, through the complement (moderate)">
+  <p>
+    The probability that a component fails a test is 0.1. Five components are tested independently.
+    Find the probability that at least one of them fails.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Recognise the complement</div>
+    "At least one failure" is the opposite of "no failures at all". Computing P(X = 0) is one term;
+    computing P(X = 1) + … + P(X = 5) is five. Use the complement.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Compute</div>
+    n = 5, p = 0.1, q = 0.9<br />
+    P(X = 0) = q^n = (0.9)^5 = 0.59049<br />
+    P(at least one) = 1 − 0.59049 = <strong>0.40951</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — fitting a binomial and finding expected frequencies (moderate)">
+  <p>
+    Five coins are tossed together 320 times. Assuming the coins are fair, find the expected number of
+    tosses showing 0, 1, 2, 3, 4 and 5 heads.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Parameters of the fitted binomial</div>
+    n = 5, p = 1/2, q = 1/2, N = 320. Every probability is 5Cr ÷ 32.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Probabilities from the binomial coefficients</div>
+    5Cr for r = 0…5 is 1, 5, 10, 10, 5, 1, over a denominator of 32.<br />
+    Probabilities: 1/32, 5/32, 10/32, 10/32, 5/32, 1/32.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Multiply by N = 320</div>
+    Expected frequencies = 320 × probability:<br />
+    r = 0: 10 · r = 1: 50 · r = 2: 100 · r = 3: 100 · r = 4: 50 · r = 5: 10<br />
+    They add to <strong>320</strong>, which confirms the fit is complete.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — a single Poisson probability (easy)">
+  <p>
+    The number of accidents at a road junction in a week follows a Poisson distribution with mean 2.
+    Find the probability of exactly 3 accidents in a week. Take e^(−2) = 0.1353.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Parameters</div>
+    m = 2 accidents per week; x = 3; the interval asked about is one week, so m needs no scaling.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Apply the Poisson law</div>
+    P(X = 3) = e^(−2) × 2^3 ÷ 3! = 0.1353 × 8 ÷ 6<br />
+    = 0.1353 × 1.3333 = <strong>0.1804</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — the additive property and 'at least one' (moderate)">
+  <p>
+    A switchboard receives calls on two independent lines. Line A averages 3 calls a minute and line B
+    averages 2 calls a minute, each Poisson. Find (a) the probability of no call at all in a given
+    minute and (b) the probability of at least one call. Take e^(−5) = 0.006738.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Add the means</div>
+    By the additive property, the two lines together are Poisson with mean m = 3 + 2 = 5 calls a
+    minute.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) No call</div>
+    P(X = 0) = e^(−5) = <strong>0.006738</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) At least one call</div>
+    P(at least one) = 1 − e^(−5) = 1 − 0.006738 = <strong>0.993262</strong><br />
+    Almost certain, which fits an exchange taking five calls a minute on average.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — fitting a Poisson with the recurrence relation (moderate)">
+  <p>
+    Over 200 days the total number of accidents on a stretch of road was 100. Fit a Poisson
+    distribution and find the expected number of days with 0, 1 and 2 accidents. Take e^(−0.5) =
+    0.6065.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Estimate the mean</div>
+    m = total accidents ÷ number of days = 100 ÷ 200 = <strong>0.5</strong> accidents per day.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Start the table at x = 0</div>
+    Expected days with 0 accidents = 200 × e^(−0.5) = 200 × 0.6065 = <strong>121.30</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Step up with the recurrence P(x+1) = P(x) × m ÷ (x+1)</div>
+    Days with 1 accident = 121.30 × 0.5 ÷ 1 = <strong>60.65</strong><br />
+    Days with 2 accidents = 60.65 × 0.5 ÷ 2 = <strong>15.16</strong><br />
+    Each figure is the one above it times m ÷ (x + 1), so the exponential is computed only once.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — z-scores and the area between two values (moderate)">
+  <p>
+    The weights of bags of cement are normal with mean 50 kg and standard deviation 5 kg. Find the
+    percentage of bags weighing between 45 kg and 60 kg. Take the area from 0 to 1 as 0.3413 and from
+    0 to 2 as 0.4772.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Convert both limits to z-scores</div>
+    z for 45 = (45 − 50) ÷ 5 = −1<br />
+    z for 60 = (60 − 50) ÷ 5 = +2
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Add areas on opposite sides of the mean</div>
+    The range runs from one standard deviation below the mean to two above, so the areas add:<br />
+    Area = 0.3413 + 0.4772 = 0.8185
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Express as a percentage</div>
+    0.8185 × 100 = <strong>81.85%</strong> of the bags weigh between 45 kg and 60 kg.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — the empirical rule and the central 95% (moderate-hard)">
+  <p>
+    The marks of 1,000 students are normal with mean 60 and standard deviation 15. (a) How many
+    students score between 30 and 90? (b) Between which two marks do the middle 95% of students lie?
+    Take the within-two-σ area as 0.9545 and z = 1.96 for the central 95%.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Recognise μ ± 2σ</div>
+    30 = 60 − 2 × 15 and 90 = 60 + 2 × 15, so the range is exactly the mean ± two standard deviations.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Multiply the area by the number of students</div>
+    Number = 1,000 × 0.9545 = <strong>954.5</strong>, so about <strong>955 students</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) The central 95% uses z = 1.96</div>
+    Lower = 60 − 1.96 × 15 = 60 − 29.4 = <strong>30.6</strong><br />
+    Upper = 60 + 1.96 × 15 = 60 + 29.4 = <strong>89.4</strong><br />
+    The middle 95% of students score between about 30.6 and 89.4 marks.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — the Poisson as a limit of the binomial (hard)">
+  <p>
+    In a large consignment, 0.2% of articles are defective. A sample of 1,000 articles is drawn. Using
+    the Poisson approximation, find the probability that the sample contains exactly 3 defective
+    articles. Take e^(−2) = 0.1353.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Why Poisson fits here</div>
+    This is a binomial with n = 1,000 and p = 0.002 — n very large and p very small. The Poisson is
+    the right approximation, with m = n p.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Find the mean</div>
+    m = n p = 1,000 × 0.002 = <strong>2</strong> defective articles on average.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Apply the Poisson law</div>
+    P(X = 3) = e^(−2) × 2^3 ÷ 3! = 0.1353 × 8 ÷ 6 = <strong>0.1804</strong><br />
+    Computing the exact binomial 1000C3 (0.002)^3 (0.998)^997 gives almost the same figure, which is
+    what "limiting case" means in practice — the hard binomial is replaced by an easy Poisson.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Swapping the exponents in the binomial.** In nCr p^r q^(n−r) the power of p is the number of
+  successes r and the power of q is n − r. The two powers must add to n; if they do not, they have
+  been swapped.
+- **Leaving a probability as a percentage or above 1.** Every P(X = r) is a number between 0 and 1.
+  An answer bigger than 1, or negative, is a signal of a wrong formula, not a valid option.
+- **Forgetting the complement for "at least one".** P(at least one) = 1 − P(none) = 1 − q^n for the
+  binomial and 1 − e^(−m) for the Poisson. Summing the long way wastes time and invites slips.
+- **Quoting a binomial variance above its mean.** npq is always below np because q is below 1. A
+  variance larger than the mean cannot be binomial.
+- **Treating the Poisson mean and variance as different.** For a Poisson both equal m. If a question
+  says the mean is one figure and the variance another, the distribution is not Poisson.
+- **Not scaling the Poisson mean to the interval.** A rate of 2 per week becomes m = 4 for a
+  fortnight and m = 6 for three weeks. Match m to the interval the question asks about.
+- **Dividing by the variance instead of the standard deviation in a z-score.** z = (x − μ) ÷ σ. If
+  the variance is given, take its square root first.
+- **Confusing a two-sided band with a one-sided tail.** "Within one σ" covers 2 × 0.3413 = 0.6826;
+  "more than one σ above the mean" covers 0.5 − 0.3413 = 0.1587. The same 0.3413, two different
+  pictures.
+- **Forgetting that half the normal curve lies each side of the mean.** The total area is 1 and the
+  mean, median and mode all sit at the centre, so exactly 0.5 lies above the mean and 0.5 below.
+- **Mixing up the empirical percentages.** μ ± 1σ ≈ 68.27%, μ ± 2σ ≈ 95.45%, μ ± 3σ ≈ 99.73%, while
+  the central 95% and 99% use z = 1.96 and z = 2.58. Keep the σ-multiples and the 95/99 markers
+  apart.
+- **Choosing the wrong distribution.** A fixed n with a known p is binomial; a rare event with only a
+  mean rate is Poisson; a continuous measurement with a mean and a standard deviation is normal.
+
+## One-page revision summary
+
+**Binomial** (parameters n and p, with q = 1 − p; discrete, values 0 to n)
+
+<div class="formula">P(X = r) = nCr p^r q^(n−r) · Mean = n p · Variance = n p q (always below the mean) · SD = √(n p q)</div>
+<div class="formula">P(at least one) = 1 − q^n · Mode = integer part of (n + 1)p · Recover parameters: q = variance ÷ mean, p = 1 − q, n = mean ÷ p</div>
+<div class="formula">Fitting: expected frequency of r = N × nCr p^r q^(n−r), with p = mean ÷ n</div>
+
+**Poisson** (single parameter m; discrete, values 0, 1, 2, … with no upper limit)
+
+<div class="formula">P(X = x) = e^(−m) m^x ÷ x! · Mean = Variance = m · SD = √m · P(X = 0) = e^(−m) · P(at least one) = 1 − e^(−m)</div>
+<div class="formula">Additive: Poisson(m₁) + Poisson(m₂) = Poisson(m₁ + m₂) · Recurrence: P(x + 1) = P(x) × m ÷ (x + 1) · Limit of the binomial when n large, p small, m = n p</div>
+
+**Normal** (parameters μ and σ; continuous, symmetric bell)
+
+<div class="formula">Mean = median = mode = μ · Total area = 1, with 0.5 each side · Points of inflexion at μ ± σ · Skewness 0, kurtosis 3</div>
+<div class="formula">Standard normal variable z = (x − μ) ÷ σ (mean 0, SD 1) · Raw value from z: x = μ + z σ</div>
+<div class="formula">Area 0 to 1 = 0.3413 · 0 to 1.96 = 0.4750 · 0 to 2 = 0.4772 · 0 to 2.58 = 0.4950 · 0 to 3 = 0.4987</div>
+<div class="formula">Empirical rule: μ ± 1σ ≈ 68.27% · μ ± 2σ ≈ 95.45% · μ ± 3σ ≈ 99.73% · Central 95% = μ ± 1.96σ · Central 99% = μ ± 2.58σ</div>
+
+**Choosing the model.** Fixed independent trials with constant p, count successes → **binomial**.
+Rare events over an interval, only a mean rate → **Poisson**. Continuous measurement clustering
+around a mean → **normal**.
+
+**Conventions used on this page.** e = 2.71828, with e^(−1) = 0.3679, e^(−2) = 0.1353, e^(−3) =
+0.0498. Normal areas use the standard z-values in the table above; where a question needs an area it
+is either one of these or is stated in the stem, so no external table is required. Probabilities are
+rounded to four decimal places and percentages to two.

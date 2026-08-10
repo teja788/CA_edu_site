@@ -1,0 +1,2109 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "central-tendency-and-dispersion",
+  "chapter": "Ch 14 — Measures of Central Tendency and Dispersion",
+  "questions": [
+    {
+      "id": "q-f3c14-001",
+      "topic": "Ch 14 · Central tendency · Choice of average",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A data set of house prices contains one mansion far dearer than every other house. Which average is MOST affected by that single extreme value?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mode",
+          "explanation": "The mode is the most frequent value; a single unique high price does not change which value occurs most often."
+        },
+        {
+          "key": "B",
+          "text": "Median",
+          "explanation": "The median depends only on the middle position, not on the size of the extremes, so one dear mansion leaves it almost unchanged."
+        },
+        {
+          "key": "C",
+          "text": "All three are affected equally",
+          "explanation": "They are not. The mean moves a great deal, while the median and mode barely move, which is the whole reason for preferring the median when outliers are present."
+        },
+        {
+          "key": "D",
+          "text": "Arithmetic mean",
+          "explanation": "Correct. The arithmetic mean adds in the value of every item, so one very large price pulls the total, and hence the mean, upward. It is the average most sensitive to an extreme value."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: What central tendency means, §1 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#1-what-central-tendency-means"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Arithmetic mean is most affected by extreme values",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-002",
+      "topic": "Ch 14 · Arithmetic mean · Individual series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The marks of five students are 45, 52, 48, 60 and 55. Their arithmetic mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "52",
+          "explanation": "Correct. x̄ = Σx ÷ n = (45 + 52 + 48 + 60 + 55) ÷ 5 = 260 ÷ 5 = 52."
+        },
+        {
+          "key": "B",
+          "text": "50",
+          "explanation": "This would need a total of 250. The five marks add to 260, giving 52."
+        },
+        {
+          "key": "C",
+          "text": "54",
+          "explanation": "This looks like a rounded guess; the exact total 260 divided by 5 is 52, not 54."
+        },
+        {
+          "key": "D",
+          "text": "260",
+          "explanation": "This is the total of the marks, Σx. The mean divides that total by the number of students."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Arithmetic mean, §2 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#2-arithmetic-mean"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "x̄ = Σx ÷ n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-003",
+      "topic": "Ch 14 · Arithmetic mean · Missing value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The arithmetic mean of six observations is 40. Five of them are 35, 42, 38, 45 and 50. The sixth observation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "40",
+          "explanation": "Assuming the missing value equals the mean; it does only by coincidence. Here the five known values already total 210, forcing the sixth to 30."
+        },
+        {
+          "key": "B",
+          "text": "30",
+          "explanation": "Correct. Σx = n x̄ = 6 × 40 = 240. The five known values total 210, so the sixth is 240 − 210 = 30."
+        },
+        {
+          "key": "C",
+          "text": "24",
+          "explanation": "This divides the shortfall differently; the sixth value is simply the full total 240 less the known 210, which is 30."
+        },
+        {
+          "key": "D",
+          "text": "50",
+          "explanation": "This ignores the total constraint. The full total must be 240, and 240 − 210 = 30."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Arithmetic mean, §2 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#2-arithmetic-mean"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Σx = n x̄, recover the missing item",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-004",
+      "topic": "Ch 14 · Arithmetic mean · Weighted mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A student scores 80, 70, 60 and 90 in four subjects carrying credits (weights) of 4, 3, 2 and 1 respectively. The weighted arithmetic mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "740",
+          "explanation": "This is Σ(w x), the weighted total. It must be divided by the total weight Σw = 10."
+        },
+        {
+          "key": "B",
+          "text": "74",
+          "explanation": "Correct. x̄w = Σ(w x) ÷ Σw = (80×4 + 70×3 + 60×2 + 90×1) ÷ (4+3+2+1) = 740 ÷ 10 = 74."
+        },
+        {
+          "key": "C",
+          "text": "75",
+          "explanation": "This is the simple mean (80+70+60+90) ÷ 4. The weighted mean must weight each mark by its credit."
+        },
+        {
+          "key": "D",
+          "text": "72.5",
+          "explanation": "A miscount of the weights; the correct weighted total 740 over total weight 10 gives 74."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Arithmetic mean, §2 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#2-arithmetic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Weighted mean = Σ(w x) ÷ Σw",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-005",
+      "topic": "Ch 14 · Arithmetic mean · Combined mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Group 1 has 40 items with mean 60. Group 2 has 60 items with mean 70. The mean of the two groups combined is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "66",
+          "explanation": "Correct. x̄₁₂ = (n₁x̄₁ + n₂x̄₂) ÷ (n₁ + n₂) = (40×60 + 60×70) ÷ 100 = 6,600 ÷ 100 = 66."
+        },
+        {
+          "key": "B",
+          "text": "65",
+          "explanation": "This is the simple average (60 + 70) ÷ 2, which ignores the group sizes. The larger group pulls the combined mean to 66."
+        },
+        {
+          "key": "C",
+          "text": "64",
+          "explanation": "This weights the means the wrong way round; weighting 60 by 40 and 70 by 60 gives 66."
+        },
+        {
+          "key": "D",
+          "text": "130",
+          "explanation": "This adds the two means without averaging. The combined mean must lie between 60 and 70."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Arithmetic mean, §2 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#2-arithmetic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Combined mean = (n₁x̄₁ + n₂x̄₂) ÷ (n₁ + n₂)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-006",
+      "topic": "Ch 14 · Arithmetic mean · Combined mean, missing group",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Section A has 30 students with mean mark 64. Section B has 20 students. All 50 students together have mean mark 68. The mean mark of Section B is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "72",
+          "explanation": "This uses a total of 3,360 (mean 67.2) rather than 3,400; the stated combined mean 68 forces 74."
+        },
+        {
+          "key": "B",
+          "text": "76",
+          "explanation": "This over-corrects. Solving 20x̄_B = 3,400 − 1,920 = 1,480 gives exactly 74."
+        },
+        {
+          "key": "C",
+          "text": "70",
+          "explanation": "Assuming the combined mean lies midway; but Section A's lower mean 64 with more students means B must exceed 68 by more, giving 74."
+        },
+        {
+          "key": "D",
+          "text": "74",
+          "explanation": "Correct. 68 × 50 = 30×64 + 20×x̄_B → 3,400 = 1,920 + 20x̄_B → x̄_B = 1,480 ÷ 20 = 74."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Arithmetic mean, §2 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#2-arithmetic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Solve combined-mean equation for the unknown group mean",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-007",
+      "topic": "Ch 14 · Arithmetic mean · Grouped data, direct method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the distribution with classes 0–10, 10–20, 20–30, 30–40, 40–50 and frequencies 6, 8, 12, 10, 4, the arithmetic mean (direct method) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "24",
+          "explanation": "A rounding of the total; 980 ÷ 40 is exactly 24.5."
+        },
+        {
+          "key": "B",
+          "text": "25",
+          "explanation": "This is the mid-point of the middle class, not the mean. The frequencies are not symmetric, so the mean is 24.5."
+        },
+        {
+          "key": "C",
+          "text": "980",
+          "explanation": "This is Σf x, the total of frequency times mid-point. Divide by N = 40 to get the mean."
+        },
+        {
+          "key": "D",
+          "text": "24.5",
+          "explanation": "Correct. Mid-points 5, 15, 25, 35, 45; Σf x = 30 + 120 + 300 + 350 + 180 = 980; N = 40; mean = 980 ÷ 40 = 24.5."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Arithmetic mean of grouped data, §3 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#3-arithmetic-mean-of-grouped-data"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Grouped mean = Σ(f x) ÷ N using class mid-points",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-008",
+      "topic": "Ch 14 · Arithmetic mean · Step-deviation method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Mid-points 10, 30, 50, 70, 90 have frequencies 5, 8, 15, 7, 5 (N = 40). Using assumed mean A = 50 and width h = 20, the arithmetic mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "48",
+          "explanation": "This over-states the downward correction. The term (−1 ÷ 40) × 20 is −0.5, giving 49.5."
+        },
+        {
+          "key": "B",
+          "text": "50",
+          "explanation": "This is the assumed mean A itself, which holds only if Σf d = 0. Here Σf d = −1, so the mean is 49.5."
+        },
+        {
+          "key": "C",
+          "text": "49.5",
+          "explanation": "Correct. d = −2, −1, 0, 1, 2; Σf d = −10 − 8 + 0 + 7 + 10 = −1; mean = 50 + (−1 ÷ 40) × 20 = 50 − 0.5 = 49.5."
+        },
+        {
+          "key": "D",
+          "text": "50.5",
+          "explanation": "This adds the correction with the wrong sign; Σf d = −1 lowers the mean by 0.5 to 49.5."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Arithmetic mean of grouped data, §3 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#3-arithmetic-mean-of-grouped-data"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Step-deviation mean = A + (Σf d ÷ N) × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-009",
+      "topic": "Ch 14 · Properties of the mean · Deviations",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The algebraic sum of the deviations of a set of observations from their arithmetic mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Always positive",
+          "explanation": "The deviations of values above the mean are positive and of values below are negative, and they cancel to zero, not to a positive total."
+        },
+        {
+          "key": "B",
+          "text": "Equal to the number of observations",
+          "explanation": "The count of observations does not enter; the signed deviations always sum to zero."
+        },
+        {
+          "key": "C",
+          "text": "Always zero",
+          "explanation": "Correct. Σ(x − x̄) = 0 for every data set, because the mean is the balancing point: positive and negative deviations cancel exactly."
+        },
+        {
+          "key": "D",
+          "text": "Equal to the mean",
+          "explanation": "There is no such relationship; the sum of deviations from the mean is zero regardless of the value of the mean."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Properties of the arithmetic mean, §4 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#4-properties-of-the-arithmetic-mean"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Σ(x − x̄) = 0",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-010",
+      "topic": "Ch 14 · Properties of the mean · Change of origin and scale",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The mean of 20 observations is 45. If each observation is multiplied by 2 and then increased by 5, the mean of the new observations is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "95",
+          "explanation": "Correct. For y = k x + c, ȳ = k x̄ + c = 2 × 45 + 5 = 95."
+        },
+        {
+          "key": "B",
+          "text": "90",
+          "explanation": "This multiplies the mean by 2 but forgets to add the constant 5. The new mean is 2 × 45 + 5 = 95."
+        },
+        {
+          "key": "C",
+          "text": "50",
+          "explanation": "This adds 5 but forgets to multiply by 2. Both operations apply to the mean, giving 95."
+        },
+        {
+          "key": "D",
+          "text": "100",
+          "explanation": "This adds 5 before multiplying, i.e. 2 × (45 + 5). The order is multiply then add: 2 × 45 + 5 = 95."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Properties of the arithmetic mean, §4 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#4-properties-of-the-arithmetic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "For y = k x + c, ȳ = k x̄ + c",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-011",
+      "topic": "Ch 14 · Median · Individual series (odd n)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The median of 12, 18, 15, 22, 10, 25 and 20 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "17.4",
+          "explanation": "This is the arithmetic mean, not the median. The median of the sorted data is the middle value, 18."
+        },
+        {
+          "key": "B",
+          "text": "22",
+          "explanation": "This is the value before arranging in order. The data must first be sorted; the 4th sorted value is 18."
+        },
+        {
+          "key": "C",
+          "text": "18",
+          "explanation": "Correct. Arranged: 10, 12, 15, 18, 20, 22, 25. With n = 7, the median is the (7+1) ÷ 2 = 4th value, which is 18."
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "explanation": "This counts the 4th value in the unsorted list. Sort first: the 4th sorted value is 18."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Median, §5 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#5-median"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Median = (n+1) ÷ 2 th item (odd n)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-012",
+      "topic": "Ch 14 · Median · Individual series (even n)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The median of 34, 28, 45, 52, 30 and 40 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "37",
+          "explanation": "Correct. Arranged: 28, 30, 34, 40, 45, 52. With n = 6, the two middle values are the 3rd and 4th, 34 and 40, so the median is (34 + 40) ÷ 2 = 37."
+        },
+        {
+          "key": "B",
+          "text": "40",
+          "explanation": "This takes only the 4th value. The median is the average of 34 and 40, which is 37."
+        },
+        {
+          "key": "C",
+          "text": "34",
+          "explanation": "This takes only the 3rd value. For even n the median is the average of the two middle values, 34 and 40."
+        },
+        {
+          "key": "D",
+          "text": "38.17",
+          "explanation": "This is the arithmetic mean of all six values, not the median. The median is 37."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Median, §5 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#5-median"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Median (even n) = average of the two middle items",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-013",
+      "topic": "Ch 14 · Median · Discrete series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the discrete series with values 10, 20, 30, 40, 50 and frequencies 4, 6, 10, 8, 2, the median is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "20",
+          "explanation": "The cumulative frequency at 20 is only 10, short of 15. The median value is where the cumulative frequency first reaches 15, namely 30."
+        },
+        {
+          "key": "B",
+          "text": "30",
+          "explanation": "Correct. Cumulative frequencies are 4, 10, 20, 28, 30; N = 30, so N ÷ 2 = 15. The cumulative frequency first passes 15 at the value 30."
+        },
+        {
+          "key": "C",
+          "text": "25",
+          "explanation": "This averages 20 and 30. In a discrete series the median is an actual value, here 30."
+        },
+        {
+          "key": "D",
+          "text": "40",
+          "explanation": "The cumulative frequency reaches 15 already at value 30 (cf jumps 10 → 20 there), so the median is 30, not 40."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Median, §5 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#5-median"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Discrete median: value where cumulative f first reaches N ÷ 2",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-014",
+      "topic": "Ch 14 · Median · Continuous series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For classes 0–10, 10–20, 20–30, 30–40 with frequencies 10, 20, 40, 30 (N = 100), the median is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "30",
+          "explanation": "This is the upper limit of the median class. Interpolation places the median at 25, part-way in."
+        },
+        {
+          "key": "B",
+          "text": "20",
+          "explanation": "This is the lower limit of the median class, before the interpolation term (50 − 30) ÷ 40 × 10 = 5 is added, giving 25."
+        },
+        {
+          "key": "C",
+          "text": "25",
+          "explanation": "Correct. N ÷ 2 = 50; cumulative frequencies 10, 30, 70, 100 place the median in class 20–30. Median = 20 + [(50 − 30) ÷ 40] × 10 = 20 + 5 = 25."
+        },
+        {
+          "key": "D",
+          "text": "26.25",
+          "explanation": "This uses (N+1) ÷ 2 = 50.5 instead of N ÷ 2. Continuous series use N ÷ 2, giving 25."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Median, §5 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#5-median"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Continuous median = L + [(N ÷ 2 − cf) ÷ f] × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-015",
+      "topic": "Ch 14 · Median · Continuous series (interpolation)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For classes 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 15, 7, 5 (N = 40), the median is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "25.33",
+          "explanation": "This adds the interpolation term with cf taken as the median class's own upper cumulative figure; the correct cf (before the class) is 13, giving 24.67."
+        },
+        {
+          "key": "B",
+          "text": "28",
+          "explanation": "This is the cumulative frequency of the median class, not a value. The median is 24.67."
+        },
+        {
+          "key": "C",
+          "text": "20",
+          "explanation": "This is the lower limit of the median class. The interpolation term (20 − 13) ÷ 15 × 10 = 4.67 must be added, giving 24.67."
+        },
+        {
+          "key": "D",
+          "text": "24.67",
+          "explanation": "Correct. N ÷ 2 = 20; cumulative 5, 13, 28, 35, 40 place the median in 20–30. Median = 20 + [(20 − 13) ÷ 15] × 10 = 20 + 4.67 = 24.67."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Median, §5 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#5-median"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Continuous median with interpolation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-016",
+      "topic": "Ch 14 · Mode · Discrete series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the values 5, 10, 15, 20, 25 with frequencies 3, 7, 12, 8, 2, the mode is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "13.75",
+          "explanation": "This is roughly the arithmetic mean, not the mode. The most frequent value is 15."
+        },
+        {
+          "key": "B",
+          "text": "15",
+          "explanation": "Correct. In a discrete series the mode is the value with the highest frequency. The largest frequency, 12, belongs to the value 15."
+        },
+        {
+          "key": "C",
+          "text": "12",
+          "explanation": "This is the highest frequency, not the value at which it occurs. The mode is that value, 15."
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "explanation": "The frequency at 20 is 8, less than the 12 at value 15. The mode is 15."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mode, §6 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#6-mode"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Discrete mode = value with the highest frequency",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-017",
+      "topic": "Ch 14 · Mode · Grouped data formula",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For classes 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 20, 10, 7, the mode is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "26.67",
+          "explanation": "This swaps f₀ and f₂ in the denominator. With f₀ = 8 (class before) and f₂ = 10 (class after), the mode is 25.45."
+        },
+        {
+          "key": "B",
+          "text": "25.45",
+          "explanation": "Correct. Modal class 20–30 (highest f). Mode = L + [(f₁ − f₀) ÷ (2f₁ − f₀ − f₂)] × h = 20 + [(20 − 8) ÷ (40 − 8 − 10)] × 10 = 20 + (12 ÷ 22) × 10 = 25.45."
+        },
+        {
+          "key": "C",
+          "text": "20",
+          "explanation": "This is the lower limit of the modal class, before the interpolation term is added, giving 25.45."
+        },
+        {
+          "key": "D",
+          "text": "25",
+          "explanation": "This is the mid-point of the modal class. The formula shifts the mode toward the heavier neighbour (f₂ = 10 > f₀ = 8), giving 25.45."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mode, §6 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#6-mode"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Grouped mode = L + [(f₁ − f₀) ÷ (2f₁ − f₀ − f₂)] × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-018",
+      "topic": "Ch 14 · Empirical relation · Mode",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a moderately skewed distribution the mean is 45.6 and the median is 44.4. Using the empirical relation, the mode is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "43.2",
+          "explanation": "This averages the mean and median. The empirical relation gives Mode = 3 Median − 2 Mean = 42."
+        },
+        {
+          "key": "B",
+          "text": "44.4",
+          "explanation": "This is the median, not the mode. Applying Mode = 3 Median − 2 Mean gives 42."
+        },
+        {
+          "key": "C",
+          "text": "42",
+          "explanation": "Correct. Mode = 3 Median − 2 Mean = 3 × 44.4 − 2 × 45.6 = 133.2 − 91.2 = 42."
+        },
+        {
+          "key": "D",
+          "text": "46.8",
+          "explanation": "This applies the relation with the mean and median swapped (3 Mean − 2 Median). The correct form is 3 Median − 2 Mean = 42."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The empirical relation, §7 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#7-the-empirical-relation-between-mean-median-and-mode"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Mode = 3 Median − 2 Mean",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-019",
+      "topic": "Ch 14 · Empirical relation · Median",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a moderately skewed distribution the mean is 36 and the mode is 30. Using the empirical relation, the median is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "33",
+          "explanation": "This averages the mean and mode. The empirical relation gives Median = (Mode + 2 Mean) ÷ 3 = 34."
+        },
+        {
+          "key": "B",
+          "text": "35",
+          "explanation": "This over-weights the mean. (30 + 2 × 36) ÷ 3 = 102 ÷ 3 = 34."
+        },
+        {
+          "key": "C",
+          "text": "32",
+          "explanation": "This applies the relation with mean and mode swapped. With mean 36 and mode 30, the median is 34."
+        },
+        {
+          "key": "D",
+          "text": "34",
+          "explanation": "Correct. From Mode = 3 Median − 2 Mean, Median = (Mode + 2 Mean) ÷ 3 = (30 + 72) ÷ 3 = 34."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The empirical relation, §7 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#7-the-empirical-relation-between-mean-median-and-mode"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Median = (Mode + 2 Mean) ÷ 3",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-020",
+      "topic": "Ch 14 · Geometric mean · Individual values",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The geometric mean of 3, 9 and 27 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "27",
+          "explanation": "This is the largest value, not the geometric mean. The cube root of the product 729 is 9."
+        },
+        {
+          "key": "B",
+          "text": "13",
+          "explanation": "This is the arithmetic mean (3 + 9 + 27) ÷ 3 = 13. The geometric mean uses the product, giving 9."
+        },
+        {
+          "key": "C",
+          "text": "81",
+          "explanation": "This is 3 × 27; the geometric mean is the cube root of the product, which is 9."
+        },
+        {
+          "key": "D",
+          "text": "9",
+          "explanation": "Correct. GM = (3 × 9 × 27)^(1/3) = 729^(1/3) = 9."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Geometric mean, §8 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#8-geometric-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "GM = (x₁x₂…xₙ)^(1/n)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-021",
+      "topic": "Ch 14 · Geometric mean · Two numbers",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The geometric mean of 5 and 20 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "100",
+          "explanation": "This is the product 5 × 20; the geometric mean is its square root, 10."
+        },
+        {
+          "key": "B",
+          "text": "10",
+          "explanation": "Correct. For two numbers GM = √(a b) = √(5 × 20) = √100 = 10."
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "explanation": "This is the harmonic mean of 5 and 20. The geometric mean is 10, and indeed GM² = AM × HM = 12.5 × 8 = 100."
+        },
+        {
+          "key": "D",
+          "text": "12.5",
+          "explanation": "This is the arithmetic mean (5 + 20) ÷ 2 = 12.5. The geometric mean is √100 = 10."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Geometric mean, §8 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#8-geometric-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "GM of two numbers = √(a b)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-022",
+      "topic": "Ch 14 · Harmonic mean · Individual values",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The harmonic mean of 2, 3 and 6 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "explanation": "This is Σ(1 ÷ x) = 1, the denominator. The harmonic mean is n ÷ that sum = 3 ÷ 1 = 3."
+        },
+        {
+          "key": "B",
+          "text": "6",
+          "explanation": "This is the largest value. The harmonic mean of the three is 3."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "Correct. HM = n ÷ Σ(1 ÷ x) = 3 ÷ (1/2 + 1/3 + 1/6) = 3 ÷ 1 = 3."
+        },
+        {
+          "key": "D",
+          "text": "3.67",
+          "explanation": "This is the arithmetic mean (2 + 3 + 6) ÷ 3 = 3.67. The harmonic mean uses reciprocals, giving 3."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Harmonic mean, §9 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#9-harmonic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "HM = n ÷ Σ(1 ÷ x)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-023",
+      "topic": "Ch 14 · Harmonic mean · Average speed",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A vehicle covers equal distances at 40 km/h and 60 km/h. Its average speed for the whole journey is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "49 km/h",
+          "explanation": "A rounded guess; the harmonic mean 2 ÷ (1/40 + 1/60) is exactly 48 km/h."
+        },
+        {
+          "key": "B",
+          "text": "50 km/h",
+          "explanation": "This is the arithmetic mean (40 + 60) ÷ 2. Because more time is spent at the slower speed, the true average is the harmonic mean, 48 km/h."
+        },
+        {
+          "key": "C",
+          "text": "24 km/h",
+          "explanation": "This forgets the numerator n = 2. HM = 2 ÷ (5 ÷ 120) = 48 km/h."
+        },
+        {
+          "key": "D",
+          "text": "48 km/h",
+          "explanation": "Correct. Equal distances need the harmonic mean: 2 ÷ (1/40 + 1/60) = 2 ÷ (5 ÷ 120) = 48 km/h."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Harmonic mean, §9 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#9-harmonic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Average speed over equal distances = harmonic mean",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-024",
+      "topic": "Ch 14 · Relationship between averages",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For a set of positive, unequal values, the correct order of the three means is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "HM > GM > AM",
+          "explanation": "This reverses the true order. The arithmetic mean is the largest and the harmonic mean the smallest."
+        },
+        {
+          "key": "B",
+          "text": "AM = GM = HM always",
+          "explanation": "The three are equal only when every value is identical. For unequal values AM > GM > HM strictly."
+        },
+        {
+          "key": "C",
+          "text": "AM > GM > HM",
+          "explanation": "Correct. For positive unequal values the arithmetic mean always exceeds the geometric mean, which always exceeds the harmonic mean. Equality holds only when all values are equal."
+        },
+        {
+          "key": "D",
+          "text": "GM > AM > HM",
+          "explanation": "The geometric mean lies between the other two, not above the arithmetic mean. The order is AM > GM > HM."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Harmonic mean, §9 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#9-harmonic-mean"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "AM ≥ GM ≥ HM, equality only when all values equal",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-025",
+      "topic": "Ch 14 · Quartiles · Continuous series (Q1)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For classes 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 15, 7, 5 (N = 40), the first quartile Q₁ is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "24.67",
+          "explanation": "This is the median, not Q₁. The first quartile is at position N ÷ 4 = 10, giving 16.25."
+        },
+        {
+          "key": "B",
+          "text": "16.25",
+          "explanation": "Correct. Q₁ position = N ÷ 4 = 10; cumulative 5, 13, … places it in 10–20. Q₁ = 10 + [(10 − 5) ÷ 8] × 10 = 10 + 6.25 = 16.25."
+        },
+        {
+          "key": "C",
+          "text": "20",
+          "explanation": "This is the upper limit of the Q₁ class. Interpolation places Q₁ at 16.25."
+        },
+        {
+          "key": "D",
+          "text": "10",
+          "explanation": "This is the lower limit of the Q₁ class, before adding the interpolation term 6.25, which gives 16.25."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Quartiles, deciles and percentiles, §10 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#10-quartiles-deciles-and-percentiles"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Qₖ = L + [(kN ÷ 4 − cf) ÷ f] × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-026",
+      "topic": "Ch 14 · Quartiles · Continuous series (Q3)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For classes 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 15, 7, 5 (N = 40), the third quartile Q₃ is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "32.86",
+          "explanation": "Correct. Q₃ position = 3N ÷ 4 = 30; cumulative 5, 13, 28, 35 places it in 30–40. Q₃ = 30 + [(30 − 28) ÷ 7] × 10 = 30 + 2.86 = 32.86."
+        },
+        {
+          "key": "B",
+          "text": "35",
+          "explanation": "This is the upper limit of the Q₃ class. Interpolation places Q₃ at 32.86."
+        },
+        {
+          "key": "C",
+          "text": "28",
+          "explanation": "This is the cumulative frequency of the class before Q₃, not a value. Q₃ is 32.86."
+        },
+        {
+          "key": "D",
+          "text": "30",
+          "explanation": "This is the lower limit of the Q₃ class, before adding the interpolation term 2.86, which gives 32.86."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Quartiles, deciles and percentiles, §10 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#10-quartiles-deciles-and-percentiles"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Q₃ = L + [(3N ÷ 4 − cf) ÷ f] × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-027",
+      "topic": "Ch 14 · Percentiles · Continuous series (P90)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For classes 0–10, 10–20, 20–30, 30–40, 40–50 with frequencies 5, 8, 15, 7, 5 (N = 40), the 90th percentile P₉₀ is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "45",
+          "explanation": "This is the mid-point of the last class. The 90th percentile falls at 42."
+        },
+        {
+          "key": "B",
+          "text": "40",
+          "explanation": "This is the lower limit of the P₉₀ class, before adding the interpolation term 2, which gives 42."
+        },
+        {
+          "key": "C",
+          "text": "36",
+          "explanation": "This is the position (90N ÷ 100), not the value. Interpolating gives P₉₀ = 42."
+        },
+        {
+          "key": "D",
+          "text": "42",
+          "explanation": "Correct. P₉₀ position = 90N ÷ 100 = 36; cumulative 5, 13, 28, 35, 40 places it in 40–50. P₉₀ = 40 + [(36 − 35) ÷ 5] × 10 = 40 + 2 = 42."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Quartiles, deciles and percentiles, §10 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#10-quartiles-deciles-and-percentiles"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Pₖ = L + [(kN ÷ 100 − cf) ÷ f] × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-028",
+      "topic": "Ch 14 · Quartiles · Individual series",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The ordered data are 12, 15, 18, 22, 25, 28, 30, 35 (n = 8). The first quartile Q₁ is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "16.5",
+          "explanation": "This uses position n ÷ 4 = 2 and averages items 2 and 3. The (n + 1) rule gives position 2.25 and value 15.75."
+        },
+        {
+          "key": "B",
+          "text": "15.75",
+          "explanation": "Correct. Q₁ position = (n + 1) ÷ 4 = 2.25th item = 15 + 0.25 × (18 − 15) = 15 + 0.75 = 15.75."
+        },
+        {
+          "key": "C",
+          "text": "18",
+          "explanation": "This is the 3rd item. Q₁ sits at the 2.25th position, which is 15.75."
+        },
+        {
+          "key": "D",
+          "text": "15",
+          "explanation": "This is the 2nd item alone. The position 2.25 requires interpolating a quarter of the way to the 3rd item, giving 15.75."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Quartiles, deciles and percentiles, §10 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#10-quartiles-deciles-and-percentiles"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Individual Q₁ = (n + 1) ÷ 4 th item, interpolated",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-029",
+      "topic": "Ch 14 · Dispersion · Range",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the data 25, 40, 15, 60 and 35, the range is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "60",
+          "explanation": "This is the largest value alone. The range is the largest minus the smallest, 60 − 15 = 45."
+        },
+        {
+          "key": "B",
+          "text": "35",
+          "explanation": "This is one of the data values, not the range. The range is 60 − 15 = 45."
+        },
+        {
+          "key": "C",
+          "text": "45",
+          "explanation": "Correct. Range = largest − smallest = 60 − 15 = 45."
+        },
+        {
+          "key": "D",
+          "text": "75",
+          "explanation": "This is the sum of the largest and smallest, the denominator of the coefficient of range. The range itself is their difference, 45."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Range, §12 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#12-range"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Range = largest − smallest",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-030",
+      "topic": "Ch 14 · Dispersion · Quartile deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If Q₁ = 25 and Q₃ = 45, the quartile deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "35",
+          "explanation": "This is the average of Q₁ and Q₃, not a measure of spread. The quartile deviation is 10."
+        },
+        {
+          "key": "B",
+          "text": "20",
+          "explanation": "This is the interquartile range Q₃ − Q₁. The quartile deviation is half of it, 10."
+        },
+        {
+          "key": "C",
+          "text": "70",
+          "explanation": "This is Q₃ + Q₁. The quartile deviation uses the difference halved, giving 10."
+        },
+        {
+          "key": "D",
+          "text": "10",
+          "explanation": "Correct. Quartile deviation = (Q₃ − Q₁) ÷ 2 = (45 − 25) ÷ 2 = 20 ÷ 2 = 10."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Quartile deviation, §13 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#13-quartile-deviation"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Quartile deviation = (Q₃ − Q₁) ÷ 2",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-031",
+      "topic": "Ch 14 · Dispersion · Coefficient of quartile deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If Q₁ = 15 and Q₃ = 25, the coefficient of quartile deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "10",
+          "explanation": "This is the interquartile range Q₃ − Q₁. The coefficient divides it by Q₃ + Q₁, giving 0.25."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "This is the quartile deviation (Q₃ − Q₁) ÷ 2, an absolute measure. The coefficient is the pure number 0.25."
+        },
+        {
+          "key": "C",
+          "text": "0.40",
+          "explanation": "This divides by Q₁ + something else; the correct denominator Q₃ + Q₁ = 40 gives 0.25."
+        },
+        {
+          "key": "D",
+          "text": "0.25",
+          "explanation": "Correct. Coefficient of QD = (Q₃ − Q₁) ÷ (Q₃ + Q₁) = (25 − 15) ÷ (25 + 15) = 10 ÷ 40 = 0.25."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Quartile deviation, §13 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#13-quartile-deviation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Coefficient of QD = (Q₃ − Q₁) ÷ (Q₃ + Q₁)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-032",
+      "topic": "Ch 14 · Dispersion · Mean deviation about mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The mean deviation about the mean of 4, 6, 8, 10 and 12 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "A miscount of the deviations; 12 ÷ 5 is exactly 2.4."
+        },
+        {
+          "key": "B",
+          "text": "0",
+          "explanation": "This is the sum of signed deviations, which is always zero. The mean deviation uses absolute deviations, giving 2.4."
+        },
+        {
+          "key": "C",
+          "text": "2.4",
+          "explanation": "Correct. Mean = 8; absolute deviations 4, 2, 0, 2, 4 sum to 12; mean deviation = 12 ÷ 5 = 2.4."
+        },
+        {
+          "key": "D",
+          "text": "12",
+          "explanation": "This is Σ|x − x̄|, the total absolute deviation. Divide by n = 5 to get 2.4."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Mean deviation, §14 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#14-mean-deviation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Mean deviation about mean = Σ|x − x̄| ÷ n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-033",
+      "topic": "Ch 14 · Dispersion · Coefficient of mean deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 3, 6, 9, 12 and 15, the coefficient of mean deviation about the median is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.4",
+          "explanation": "Correct. Median = 9; absolute deviations 6, 3, 0, 3, 6 sum to 18; mean deviation = 18 ÷ 5 = 3.6; coefficient = 3.6 ÷ 9 = 0.4."
+        },
+        {
+          "key": "B",
+          "text": "9",
+          "explanation": "This is the median, not the coefficient. The coefficient of mean deviation is 0.4."
+        },
+        {
+          "key": "C",
+          "text": "3.6",
+          "explanation": "This is the mean deviation itself, an absolute measure. The coefficient divides it by the median 9, giving 0.4."
+        },
+        {
+          "key": "D",
+          "text": "0.36",
+          "explanation": "This divides the mean deviation by 10 rather than by the median 9. The coefficient is 3.6 ÷ 9 = 0.4."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Mean deviation, §14 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#14-mean-deviation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Coefficient of MD = mean deviation ÷ median",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-034",
+      "topic": "Ch 14 · Dispersion · Mean deviation, grouped",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For values 10, 20, 30, 40, 50 with frequencies 2, 3, 5, 3, 2 (N = 15), the mean deviation about the mean is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "30",
+          "explanation": "This is the mean, not the mean deviation. The average absolute distance from the mean is 9.33."
+        },
+        {
+          "key": "B",
+          "text": "9.33",
+          "explanation": "Correct. Mean = Σf x ÷ N = 450 ÷ 15 = 30; Σf|x − 30| = 40 + 30 + 0 + 30 + 40 = 140; mean deviation = 140 ÷ 15 = 9.33."
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "explanation": "A rounded guess; 140 ÷ 15 is 9.33."
+        },
+        {
+          "key": "D",
+          "text": "140",
+          "explanation": "This is Σf|x − x̄|, the total. Divide by N = 15 to get 9.33."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mean deviation, §14 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#14-mean-deviation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Grouped mean deviation = Σf|x − A| ÷ N",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-035",
+      "topic": "Ch 14 · Dispersion · Standard deviation (individual)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The standard deviation of 2, 4, 6, 8 and 10 is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "This is the mean deviation-like guess; the population SD of the data is √8 = 2.83."
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "explanation": "This is the variance, σ². The standard deviation is its square root, √8 = 2.83."
+        },
+        {
+          "key": "C",
+          "text": "2.83",
+          "explanation": "Correct. Mean = 6; squared deviations 16, 4, 0, 4, 16 sum to 40; variance = 40 ÷ 5 = 8; SD = √8 = 2.83."
+        },
+        {
+          "key": "D",
+          "text": "3.16",
+          "explanation": "This is √10, using divisor 4 (sample) instead of 5. This chapter divides by n = 5, giving √8 = 2.83."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Standard deviation and variance, §15 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#15-standard-deviation-and-variance"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "σ = √[Σ(x − x̄)² ÷ n]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-036",
+      "topic": "Ch 14 · Dispersion · Variance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The variance of 5, 10, 15, 20 and 25 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "7.07",
+          "explanation": "This is the standard deviation √50, not the variance. The variance is 50."
+        },
+        {
+          "key": "B",
+          "text": "250",
+          "explanation": "This is Σ(x − x̄)², the total. Divide by n = 5 to get the variance, 50."
+        },
+        {
+          "key": "C",
+          "text": "62.5",
+          "explanation": "This divides 250 by 4 (sample divisor). This chapter divides by n = 5, giving 50."
+        },
+        {
+          "key": "D",
+          "text": "50",
+          "explanation": "Correct. Mean = 15; squared deviations 100, 25, 0, 25, 100 sum to 250; variance = 250 ÷ 5 = 50."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Standard deviation and variance, §15 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#15-standard-deviation-and-variance"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Variance = Σ(x − x̄)² ÷ n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-037",
+      "topic": "Ch 14 · Dispersion · Standard deviation (discrete series)",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For values 2, 4, 6, 8 with frequencies 1, 3, 3, 1 (N = 8), the standard deviation is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "This is the variance, σ². The standard deviation is √3 = 1.73."
+        },
+        {
+          "key": "B",
+          "text": "1.73",
+          "explanation": "Correct. Mean = 40 ÷ 8 = 5; Σf(x − 5)² = 9 + 3 + 3 + 9 = 24; variance = 24 ÷ 8 = 3; SD = √3 = 1.73."
+        },
+        {
+          "key": "C",
+          "text": "24",
+          "explanation": "This is Σf(x − x̄)², the total. The SD is √(24 ÷ 8) = √3 = 1.73."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "This is the mean, not the standard deviation. The SD is 1.73."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Standard deviation of grouped data, §16 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#16-standard-deviation-of-grouped-data"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Grouped SD = √[Σf(x − x̄)² ÷ N]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-038",
+      "topic": "Ch 14 · Dispersion · SD by step-deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For mid-points 5, 15, 25, 35, 45 with frequencies 5, 8, 15, 7, 5 (N = 40), using A = 25 and h = 10, the standard deviation is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.17",
+          "explanation": "This forgets to multiply by the width h = 10. The coded SD √1.374375 must be scaled by 10, giving 11.72."
+        },
+        {
+          "key": "B",
+          "text": "11.75",
+          "explanation": "This drops the (Σf d ÷ N)² correction term. Keeping it, σ = √1.374375 × 10 = 11.72."
+        },
+        {
+          "key": "C",
+          "text": "36.72",
+          "explanation": "This adds the assumed mean 25 back into the SD. The standard deviation is independent of the origin; the answer is 11.72."
+        },
+        {
+          "key": "D",
+          "text": "11.72",
+          "explanation": "Correct. d = −2, −1, 0, 1, 2; Σf d = −1, Σf d² = 55. σ = √[55 ÷ 40 − (−1 ÷ 40)²] × 10 = √1.374375 × 10 = 11.72."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Standard deviation of grouped data, §16 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#16-standard-deviation-of-grouped-data"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Coded SD = √[Σf d² ÷ N − (Σf d ÷ N)²] × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-039",
+      "topic": "Ch 14 · Dispersion · Combined standard deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Group 1: n₁ = 100, mean 50, SD 5. Group 2: n₂ = 150, mean 60, SD 7. The combined standard deviation is closest to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "7.96",
+          "explanation": "Correct. Combined mean = 56; d₁ = −6, d₂ = 4. σ₁₂ = √{[100(25 + 36) + 150(49 + 16)] ÷ 250} = √63.4 = 7.96."
+        },
+        {
+          "key": "B",
+          "text": "63.4",
+          "explanation": "This is the combined variance, σ². The combined SD is its square root, 7.96."
+        },
+        {
+          "key": "C",
+          "text": "6.2",
+          "explanation": "This is a plain weighted average of the two SDs (100×5 + 150×7) ÷ 250 = 6.2, which omits the d₁² and d₂² separation terms. The true combined SD is 7.96."
+        },
+        {
+          "key": "D",
+          "text": "6",
+          "explanation": "This ignores the spread between the group means entirely; including it gives 7.96."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Combined standard deviation, §17 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#17-combined-standard-deviation"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Combined SD includes the (x̄ᵢ − x̄₁₂)² terms",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-040",
+      "topic": "Ch 14 · Dispersion · Coefficient of variation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A data set has mean 40 and standard deviation 8. Its coefficient of variation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8%",
+          "explanation": "This reports the standard deviation as a percentage of 100, not of the mean. CV = (8 ÷ 40) × 100 = 20%."
+        },
+        {
+          "key": "B",
+          "text": "20%",
+          "explanation": "Correct. CV = (σ ÷ x̄) × 100 = (8 ÷ 40) × 100 = 20%."
+        },
+        {
+          "key": "C",
+          "text": "500%",
+          "explanation": "This multiplies (40 ÷ 8) × 100. The coefficient of variation is (SD ÷ mean) × 100 = 20%."
+        },
+        {
+          "key": "D",
+          "text": "5%",
+          "explanation": "This computes mean ÷ SD instead of SD ÷ mean. CV = (8 ÷ 40) × 100 = 20%."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Coefficient of variation, §18 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#18-coefficient-of-variation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "CV = (σ ÷ x̄) × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-041",
+      "topic": "Ch 14 · Dispersion · CV and consistency",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Series A has mean 50 and SD 10; series B has mean 80 and SD 12. Which series is MORE consistent?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Series B, because its mean is larger",
+          "explanation": "A larger mean alone does not make data more consistent. It is the lower coefficient of variation (15%) that makes B the steadier series."
+        },
+        {
+          "key": "B",
+          "text": "Series B, because its coefficient of variation is lower",
+          "explanation": "Correct. CV_A = (10 ÷ 50) × 100 = 20%; CV_B = (12 ÷ 80) × 100 = 15%. The lower CV (series B) is the more consistent, despite its larger absolute SD."
+        },
+        {
+          "key": "C",
+          "text": "Both are equally consistent",
+          "explanation": "Their coefficients of variation differ, 20% for A and 15% for B, so they are not equally consistent; B is steadier."
+        },
+        {
+          "key": "D",
+          "text": "Series A, because its standard deviation is smaller",
+          "explanation": "Consistency is judged by the coefficient of variation, not the raw SD. B has the lower CV (15% versus 20%), so B is more consistent."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Coefficient of variation, §18 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#18-coefficient-of-variation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Lower coefficient of variation = more consistent",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-042",
+      "topic": "Ch 14 · Change of scale · Standard deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The standard deviation of a data set is 5. If every observation is multiplied by 3, the new standard deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "This adds 3 to the SD. Multiplying the data by 3 multiplies the SD by 3, giving 15."
+        },
+        {
+          "key": "B",
+          "text": "15",
+          "explanation": "Correct. The SD scales with the multiplier: σy = |k| σx = 3 × 5 = 15."
+        },
+        {
+          "key": "C",
+          "text": "45",
+          "explanation": "This multiplies by 3² = 9. The variance is multiplied by k²; the standard deviation is multiplied by |k| = 3, giving 15."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "Multiplying every value by 3 stretches the spread, so the SD is not unchanged; it becomes 3 × 5 = 15. (Only adding a constant leaves the SD unchanged.)"
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Change of origin and scale, §19 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#19-change-of-origin-and-scale"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "σy = |k| σx under change of scale",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-043",
+      "topic": "Ch 14 · Change of origin · Standard deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The standard deviation of a data set is 7. If every observation is increased by 10, the new standard deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "7",
+          "explanation": "Correct. The standard deviation is independent of a change of origin: adding a constant shifts the data without spreading it, so the SD stays 7."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "This subtracts; a change of origin does not reduce the SD either. It remains 7."
+        },
+        {
+          "key": "C",
+          "text": "17",
+          "explanation": "This adds the constant 10 to the SD. Adding a constant to every value leaves the SD unchanged at 7."
+        },
+        {
+          "key": "D",
+          "text": "70",
+          "explanation": "This multiplies the SD by 10. Adding (not multiplying) a constant leaves the SD unchanged at 7."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Change of origin and scale, §19 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#19-change-of-origin-and-scale"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "SD is independent of change of origin",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-044",
+      "topic": "Ch 14 · Dispersion · SD from Σx and Σx²",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 10 observations, Σx = 100 and Σx² = 1090. The standard deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "Correct. Mean = 100 ÷ 10 = 10; variance = Σx² ÷ n − x̄² = 1090 ÷ 10 − 100 = 109 − 100 = 9; SD = √9 = 3."
+        },
+        {
+          "key": "B",
+          "text": "109",
+          "explanation": "This is Σx² ÷ n. The variance subtracts x̄² = 100, giving 9, so the SD is 3."
+        },
+        {
+          "key": "C",
+          "text": "10.44",
+          "explanation": "This forgets to subtract x̄²; √(1090 ÷ 10) = 10.44 is not the SD. Subtracting the squared mean gives √9 = 3."
+        },
+        {
+          "key": "D",
+          "text": "9",
+          "explanation": "This is the variance. The standard deviation is its square root, 3."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard deviation and variance, §15 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#15-standard-deviation-and-variance"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "σ = √[Σx² ÷ n − (Σx ÷ n)²]",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-045",
+      "topic": "Ch 14 · Dispersion · Recovering the mean from CV",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A data set has coefficient of variation 25% and standard deviation 5. Its arithmetic mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "This is SD ÷ (CV ÷ 100) mis-set as 5 ÷ 1.25 without the ×100 step handled; the correct mean is 20."
+        },
+        {
+          "key": "B",
+          "text": "125",
+          "explanation": "This multiplies 25 × 5. The mean is (5 ÷ 25) × 100 = 20."
+        },
+        {
+          "key": "C",
+          "text": "1.25",
+          "explanation": "This computes (25 ÷ 100) × 5 = 1.25, i.e. CV × SD. Rearranging CV = (σ ÷ x̄) × 100 gives x̄ = 20."
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "explanation": "Correct. CV = (σ ÷ x̄) × 100, so x̄ = (σ ÷ CV) × 100 = (5 ÷ 25) × 100 = 20."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Coefficient of variation, §18 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#18-coefficient-of-variation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "x̄ = (σ ÷ CV) × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-046",
+      "topic": "Ch 14 · Dispersion · CV from mean and variance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A data set has mean 50 and variance 100. Its coefficient of variation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2%",
+          "explanation": "This computes (100 ÷ 50) without the SD square root and mis-scales. Using SD = 10, CV = 20%."
+        },
+        {
+          "key": "B",
+          "text": "20%",
+          "explanation": "Correct. SD = √variance = √100 = 10; CV = (10 ÷ 50) × 100 = 20%."
+        },
+        {
+          "key": "C",
+          "text": "10%",
+          "explanation": "This takes SD ÷ mean without ×100 mis-set, or halves the result. The correct CV is (10 ÷ 50) × 100 = 20%."
+        },
+        {
+          "key": "D",
+          "text": "200%",
+          "explanation": "This uses the variance 100 directly as the SD: (100 ÷ 50) × 100 = 200%. The SD is √100 = 10, giving 20%."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Coefficient of variation, §18 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#18-coefficient-of-variation"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "CV = (√variance ÷ mean) × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-047",
+      "topic": "Ch 14 · Change of origin and scale · Property",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The standard deviation of a data set is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Independent of both origin and scale",
+          "explanation": "The SD does change under a change of scale: multiplying every value by k multiplies the SD by |k|."
+        },
+        {
+          "key": "B",
+          "text": "Dependent on change of origin but independent of change of scale",
+          "explanation": "This is the reverse of the truth. The SD is unaffected by an added constant (origin) but is affected by a multiplier (scale)."
+        },
+        {
+          "key": "C",
+          "text": "Dependent on both origin and scale",
+          "explanation": "The SD does not change under a change of origin; adding a constant leaves it unchanged."
+        },
+        {
+          "key": "D",
+          "text": "Independent of change of origin but dependent on change of scale",
+          "explanation": "Correct. Adding a constant to every value shifts the data without spreading it, so the SD is unchanged; multiplying by a constant stretches the data, so the SD is multiplied by the absolute value of that constant."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Change of origin and scale, §19 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#19-change-of-origin-and-scale"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "SD independent of origin, dependent on scale",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-048",
+      "topic": "Ch 14 · Empirical relation · Symmetrical distribution",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a perfectly symmetrical distribution, the mean, median and mode are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "All equal",
+          "explanation": "Correct. In a symmetrical distribution the three averages coincide: mean = median = mode. Skewness is precisely the separation between them."
+        },
+        {
+          "key": "B",
+          "text": "In the order mode > median > mean",
+          "explanation": "This describes a negatively skewed distribution. A symmetrical distribution has all three equal."
+        },
+        {
+          "key": "C",
+          "text": "In the order mean > median > mode",
+          "explanation": "This describes a positively skewed distribution, not a symmetrical one, where all three are equal."
+        },
+        {
+          "key": "D",
+          "text": "Unrelated to one another",
+          "explanation": "They are closely related: in a symmetrical distribution they are exactly equal."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The empirical relation, §7 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#7-the-empirical-relation-between-mean-median-and-mode"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Symmetrical distribution: mean = median = mode",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-049",
+      "topic": "Ch 14 · Arithmetic mean · Application",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A firm has 25 employees with an average monthly salary of ₹ 18,000. The 10 managers among them average ₹ 30,000. The average salary of the remaining 15 employees is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 10,000",
+          "explanation": "Correct. Total = 25 × 18,000 = ₹ 4,50,000; managers = 10 × 30,000 = ₹ 3,00,000; remaining = (4,50,000 − 3,00,000) ÷ 15 = 1,50,000 ÷ 15 = ₹ 10,000."
+        },
+        {
+          "key": "B",
+          "text": "₹ 12,000",
+          "explanation": "This uses a remaining total of ₹ 1,80,000; the correct remaining total is 4,50,000 − 3,00,000 = ₹ 1,50,000, giving ₹ 10,000."
+        },
+        {
+          "key": "C",
+          "text": "₹ 6,000",
+          "explanation": "This divides the managers' total by 15 or similar; the remaining employees' total ₹ 1,50,000 over 15 gives ₹ 10,000."
+        },
+        {
+          "key": "D",
+          "text": "₹ 15,000",
+          "explanation": "This is roughly the simple difference of averages, not a weighted calculation. The remaining 15 average ₹ 10,000."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Arithmetic mean, §2 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#2-arithmetic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Remaining mean = (grand total − known group total) ÷ remaining count",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c14-050",
+      "topic": "Ch 14 · Arithmetic mean · Combined mean of three groups",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three groups have 20, 30 and 50 items with means 15, 20 and 25 respectively. The mean of all items combined is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2150",
+          "explanation": "This is Σn x̄, the combined total. Divide by N = 100 to get 21.5."
+        },
+        {
+          "key": "B",
+          "text": "22",
+          "explanation": "A rounding; the exact weighted mean is 2,150 ÷ 100 = 21.5."
+        },
+        {
+          "key": "C",
+          "text": "21.5",
+          "explanation": "Correct. Combined mean = (20×15 + 30×20 + 50×25) ÷ 100 = (300 + 600 + 1250) ÷ 100 = 2,150 ÷ 100 = 21.5."
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "explanation": "This is the simple average of the three means (15 + 20 + 25) ÷ 3, which ignores the group sizes. The weighted mean is 21.5."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Arithmetic mean, §2 →",
+        "href": "/foundation/quantitative-aptitude/central-tendency-and-dispersion/#2-arithmetic-mean"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Combined mean = Σ(nᵢ x̄ᵢ) ÷ Σnᵢ",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

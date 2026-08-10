@@ -1,0 +1,1959 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "theoretical-distributions",
+  "chapter": "Ch 16 — Theoretical Distributions",
+  "questions": [
+    {
+      "id": "q-f3c16-001",
+      "topic": "Ch 16 · Theoretical distributions · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A theoretical (or expected) probability distribution is one whose probabilities are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Obtained by counting the outcomes of a completed experiment",
+          "explanation": "That describes an observed or empirical distribution, built from data already collected. A theoretical distribution is written down before data are collected."
+        },
+        {
+          "key": "B",
+          "text": "Derived from a mathematical law based on stated assumptions, before any data are collected",
+          "explanation": "Correct. A theoretical distribution comes from a law, such as the binomial or Poisson formula, fixed by a few assumptions and parameters, so it gives the probability of every value in advance."
+        },
+        {
+          "key": "C",
+          "text": "Always equal for every value the variable can take",
+          "explanation": "That is the special case of a uniform distribution, not a definition of a theoretical distribution in general."
+        },
+        {
+          "key": "D",
+          "text": "Available only for continuous variables",
+          "explanation": "The binomial and Poisson are theoretical distributions of discrete variables, so this is false."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What a theoretical distribution is, §1 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#1-what-a-theoretical-distribution-is"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Theoretical versus observed distribution",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-002",
+      "topic": "Ch 16 · Discrete and continuous · Classification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement correctly classifies the three standard distributions of this chapter?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Binomial and Poisson are continuous; normal is discrete",
+          "explanation": "The reverse is true. Counts of successes or events are discrete; a measurement spread over a range is continuous."
+        },
+        {
+          "key": "B",
+          "text": "Binomial and Poisson are discrete; normal is continuous",
+          "explanation": "Correct. The binomial counts successes and the Poisson counts occurrences, both whole numbers, so both are discrete. The normal models a continuous measurement."
+        },
+        {
+          "key": "C",
+          "text": "All three are discrete",
+          "explanation": "The normal curve spreads probability over an interval, so it is continuous, not discrete."
+        },
+        {
+          "key": "D",
+          "text": "All three are continuous",
+          "explanation": "The binomial and Poisson attach probability to separate whole-number values, so they are discrete."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What a theoretical distribution is, §1 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#1-what-a-theoretical-distribution-is"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Discrete versus continuous distributions",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-003",
+      "topic": "Ch 16 · Binomial · Assumptions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT an assumption of the binomial distribution?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The number of trials is fixed in advance",
+          "explanation": "This is a genuine assumption. The binomial needs a known, fixed n."
+        },
+        {
+          "key": "B",
+          "text": "Each trial has exactly two outcomes, success or failure",
+          "explanation": "This is a genuine assumption. Each trial must be a Bernoulli trial."
+        },
+        {
+          "key": "C",
+          "text": "The probability of success may change from trial to trial",
+          "explanation": "Correct choice. This is NOT an assumption — it contradicts one. The binomial requires the success probability p to stay constant across trials, which is why sampling without replacement is not binomial."
+        },
+        {
+          "key": "D",
+          "text": "The trials are independent",
+          "explanation": "This is a genuine assumption. One trial's result must not affect another's."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Binomial assumptions: fixed n, two outcomes, constant p, independence",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-004",
+      "topic": "Ch 16 · Binomial · Single probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair coin is tossed 6 times. The probability of getting exactly 4 heads is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.2344",
+          "explanation": "Correct. P(X = 4) = 6C4 (1/2)^4 (1/2)^2 = 15 × (1/2)^6 = 15 ÷ 64 = 0.2344."
+        },
+        {
+          "key": "B",
+          "text": "0.0938",
+          "explanation": "This is P(X = 5) = 6C5 ÷ 64 = 6 ÷ 64. The question asks for exactly 4 heads, not 5."
+        },
+        {
+          "key": "C",
+          "text": "0.3125",
+          "explanation": "This is the exactly-3-heads figure for 5 tosses, not 4 heads in 6 tosses."
+        },
+        {
+          "key": "D",
+          "text": "0.1563",
+          "explanation": "This is 10 ÷ 64, using 6C2 or 6C3 wrongly. The coefficient 6C4 is 15, not 10."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(X = r) = nCr p^r q^(n−r)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-005",
+      "topic": "Ch 16 · Binomial · Single probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A die is rolled 5 times. Taking a roll of 1 or 2 as a 'success' (so p = 1/3), the probability of exactly 2 successes is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.1646",
+          "explanation": "This halves the correct answer. P(X = 2) = 5C2 (1/3)^2 (2/3)^3 = 80 ÷ 243 = 0.3292, not its half."
+        },
+        {
+          "key": "B",
+          "text": "0.3292",
+          "explanation": "Correct. 5C2 = 10, so P(X = 2) = 10 × (1/9) × (8/27) = 80 ÷ 243 = 0.3292."
+        },
+        {
+          "key": "C",
+          "text": "0.2963",
+          "explanation": "This uses (2/3)^3 alone as 8/27 without the coefficient and the p² term correctly combined."
+        },
+        {
+          "key": "D",
+          "text": "0.0329",
+          "explanation": "This drops the coefficient 5C2 = 10 and leaves a figure ten times too small."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(X = r) = nCr p^r q^(n−r) with p = 1/3",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-006",
+      "topic": "Ch 16 · Binomial · Mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A binomial distribution has n = 20 and p = 0.3. Its mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "Correct. Mean = n p = 20 × 0.3 = 6."
+        },
+        {
+          "key": "B",
+          "text": "4.2",
+          "explanation": "This is the variance, n p q = 20 × 0.3 × 0.7. The question asks for the mean."
+        },
+        {
+          "key": "C",
+          "text": "2.0494",
+          "explanation": "This is the standard deviation, √(n p q). The mean is n p."
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "explanation": "This is n alone. The mean is n multiplied by p."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Mean, variance and mode of the binomial, §3 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#3-mean-variance-and-mode-of-the-binomial"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Binomial mean = n p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-007",
+      "topic": "Ch 16 · Binomial · Variance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A binomial distribution has n = 20 and p = 0.3. Its variance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "This is the mean, n p. A binomial variance is always below its mean, so it cannot be 6."
+        },
+        {
+          "key": "B",
+          "text": "4.2",
+          "explanation": "Correct. Variance = n p q = 20 × 0.3 × 0.7 = 4.2, which is below the mean of 6, as it must be."
+        },
+        {
+          "key": "C",
+          "text": "2.0494",
+          "explanation": "This is the standard deviation, √4.2. The variance is 4.2 itself."
+        },
+        {
+          "key": "D",
+          "text": "14",
+          "explanation": "This uses n q = 20 × 0.7 and forgets the factor p."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mean, variance and mode of the binomial, §3 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#3-mean-variance-and-mode-of-the-binomial"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Binomial variance = n p q",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-008",
+      "topic": "Ch 16 · Binomial · Standard deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A binomial distribution has n = 100 and p = 0.5. Its standard deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "25",
+          "explanation": "This is the variance, n p q = 100 × 0.5 × 0.5. The standard deviation is its square root."
+        },
+        {
+          "key": "B",
+          "text": "50",
+          "explanation": "This is the mean, n p. The standard deviation is √(n p q)."
+        },
+        {
+          "key": "C",
+          "text": "5",
+          "explanation": "Correct. Variance = 100 × 0.5 × 0.5 = 25, so the standard deviation = √25 = 5."
+        },
+        {
+          "key": "D",
+          "text": "7.07",
+          "explanation": "This is √50, taking the square root of the mean rather than the variance."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Mean, variance and mode of the binomial, §3 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#3-mean-variance-and-mode-of-the-binomial"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Binomial SD = √(n p q)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-009",
+      "topic": "Ch 16 · Binomial · At least one",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair coin is tossed 4 times. The probability of getting at least one head is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.0625",
+          "explanation": "This is P(no head) = (1/2)^4 = 1/16. The question asks for at least one head, which is the complement."
+        },
+        {
+          "key": "B",
+          "text": "0.9375",
+          "explanation": "Correct. P(at least one) = 1 − P(none) = 1 − (1/2)^4 = 1 − 1/16 = 15/16 = 0.9375."
+        },
+        {
+          "key": "C",
+          "text": "0.25",
+          "explanation": "This is the probability of a head on a single toss, not at least one in four."
+        },
+        {
+          "key": "D",
+          "text": "0.5",
+          "explanation": "This is one toss's chance of a head. Over four tosses at least one head is far more likely."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(at least one) = 1 − q^n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-010",
+      "topic": "Ch 16 · Binomial · Zero successes",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The probability that a component passes a test is 0.8, so the probability it fails is 0.2. In 5 independent tests, the probability that none fails is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.3277",
+          "explanation": "Correct. 'None fails' means all 5 pass: P = (0.8)^5 = 0.32768 ≈ 0.3277. Equivalently P(X = 0 failures) = q^n with q = 0.8."
+        },
+        {
+          "key": "B",
+          "text": "0.6723",
+          "explanation": "This is 1 − 0.3277, the probability that at least one fails, not that none fails."
+        },
+        {
+          "key": "C",
+          "text": "0.2",
+          "explanation": "This is the single-test failure probability, not the chance of no failure in five tests."
+        },
+        {
+          "key": "D",
+          "text": "0",
+          "explanation": "No failures is quite possible; its probability is 0.3277, not zero."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(X = 0) = q^n",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-011",
+      "topic": "Ch 16 · Binomial · Recovering parameters",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A binomial distribution has mean 4 and variance 2.4. The number of trials n is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "This does not satisfy mean = n p. With q = variance ÷ mean = 0.6 and p = 0.4, n must be 4 ÷ 0.4 = 10."
+        },
+        {
+          "key": "B",
+          "text": "10",
+          "explanation": "Correct. q = variance ÷ mean = 2.4 ÷ 4 = 0.6, so p = 0.4 and n = mean ÷ p = 4 ÷ 0.4 = 10."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "This is the mean itself, mistaken for n. The mean equals n p, not n."
+        },
+        {
+          "key": "D",
+          "text": "0.4",
+          "explanation": "This is p, the success probability, not the number of trials."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mean, variance and mode of the binomial, §3 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#3-mean-variance-and-mode-of-the-binomial"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "q = variance ÷ mean, p = 1 − q, n = mean ÷ p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-012",
+      "topic": "Ch 16 · Binomial · Mode",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A binomial distribution has n = 10 and p = 0.4. Its mode (most probable number of successes) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "explanation": "Correct. (n + 1)p = 11 × 0.4 = 4.4, which is not a whole number, so the mode is its integer part, 4."
+        },
+        {
+          "key": "B",
+          "text": "5",
+          "explanation": "This rounds 4.4 up. The mode is the integer part of (n + 1)p, which is the value below it, 4."
+        },
+        {
+          "key": "C",
+          "text": "4.4",
+          "explanation": "This is (n + 1)p itself. The mode must be a whole number of successes, its integer part."
+        },
+        {
+          "key": "D",
+          "text": "0.4",
+          "explanation": "This is p, not the mode."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Mean, variance and mode of the binomial, §3 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#3-mean-variance-and-mode-of-the-binomial"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Mode = integer part of (n + 1)p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-013",
+      "topic": "Ch 16 · Binomial · Single probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair coin is tossed 8 times. The probability of exactly 3 heads is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.2188",
+          "explanation": "Correct. P(X = 3) = 8C3 (1/2)^8 = 56 ÷ 256 = 0.21875 ≈ 0.2188."
+        },
+        {
+          "key": "B",
+          "text": "0.1094",
+          "explanation": "This is 28 ÷ 256, using 8C2 = 28 instead of 8C3 = 56."
+        },
+        {
+          "key": "C",
+          "text": "0.2734",
+          "explanation": "This is 70 ÷ 256, the value for exactly 4 heads (8C4 = 70)."
+        },
+        {
+          "key": "D",
+          "text": "0.0313",
+          "explanation": "This is 8 ÷ 256, using 8C1 = 8. The coefficient 8C3 is 56."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(X = r) = nCr p^r q^(n−r)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-014",
+      "topic": "Ch 16 · Binomial · Fitting",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Five fair coins are tossed together 320 times. The expected number of tosses showing exactly 2 heads is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "10",
+          "explanation": "This is the expected count for 0 heads or 5 heads (320 × 1/32), not for 2 heads."
+        },
+        {
+          "key": "B",
+          "text": "50",
+          "explanation": "This is the expected count for exactly 1 head or 4 heads (320 × 5/32)."
+        },
+        {
+          "key": "C",
+          "text": "100",
+          "explanation": "Correct. P(X = 2) = 5C2 (1/2)^5 = 10 ÷ 32 = 0.3125, so expected frequency = 320 × 0.3125 = 100."
+        },
+        {
+          "key": "D",
+          "text": "160",
+          "explanation": "This is half of 320, ignoring the binomial probability altogether."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Fitting a binomial distribution, §4 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#4-fitting-a-binomial-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Expected frequency = N × nCr p^r q^(n−r)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-015",
+      "topic": "Ch 16 · Binomial · Mean and variance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For any binomial distribution, the variance is always:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Greater than the mean",
+          "explanation": "Impossible for a binomial. Since q is below 1, n p q is below n p."
+        },
+        {
+          "key": "B",
+          "text": "Equal to the mean",
+          "explanation": "That equality holds for the Poisson, not the binomial. For a binomial the two are equal only in the trivial case."
+        },
+        {
+          "key": "C",
+          "text": "Less than the mean",
+          "explanation": "Correct. Variance = n p q and mean = n p, and q < 1, so the variance is always smaller than the mean."
+        },
+        {
+          "key": "D",
+          "text": "Equal to the square of the mean",
+          "explanation": "There is no such relationship for the binomial."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Mean, variance and mode of the binomial, §3 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#3-mean-variance-and-mode-of-the-binomial"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Binomial variance n p q is below the mean n p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-016",
+      "topic": "Ch 16 · Poisson · Limiting case",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Poisson distribution arises from the binomial as a limiting case when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "n is small and p is large",
+          "explanation": "This is the opposite of the Poisson conditions. The Poisson describes rare events in many trials."
+        },
+        {
+          "key": "B",
+          "text": "n is large, p is small and the product n p stays finite",
+          "explanation": "Correct. As n tends to infinity and p to zero with n p = m fixed, the binomial tends to the Poisson with mean m."
+        },
+        {
+          "key": "C",
+          "text": "n and p are both large",
+          "explanation": "A large p with large n gives a roughly normal shape, not a Poisson."
+        },
+        {
+          "key": "D",
+          "text": "p equals 0.5 for any n",
+          "explanation": "p = 0.5 gives a symmetric binomial, which does not tend to the Poisson."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Poisson distribution, §5 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#5-the-poisson-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Poisson as the limit of the binomial: n large, p small, n p = m",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-017",
+      "topic": "Ch 16 · Poisson · Single probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The number of misprints on a page is Poisson with mean 2. Taking e^(-2) = 0.1353, the probability of exactly 3 misprints on a page is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.1804",
+          "explanation": "Correct. P(X = 3) = e^(-2) × 2^3 ÷ 3! = 0.1353 × 8 ÷ 6 = 0.1804."
+        },
+        {
+          "key": "B",
+          "text": "0.2707",
+          "explanation": "This is P(X = 2) = e^(-2) × 2^2 ÷ 2! = 2 × 0.1353. The question asks for exactly 3."
+        },
+        {
+          "key": "C",
+          "text": "0.1353",
+          "explanation": "This is P(X = 0) = e^(-2), the no-misprint probability."
+        },
+        {
+          "key": "D",
+          "text": "0.0902",
+          "explanation": "This wrongly divides by 3 instead of 3! = 6 somewhere in the working."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The Poisson distribution, §5 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#5-the-poisson-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(X = x) = e^(−m) m^x ÷ x!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-018",
+      "topic": "Ch 16 · Poisson · Zero occurrences",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A Poisson variable has mean 1.5. Taking e^(-1.5) = 0.2231, the probability of no occurrence is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.2231",
+          "explanation": "Correct. P(X = 0) = e^(-m) = e^(-1.5) = 0.2231, since m^0 = 1 and 0! = 1."
+        },
+        {
+          "key": "B",
+          "text": "0.7769",
+          "explanation": "This is 1 − 0.2231, the probability of at least one occurrence, not of none."
+        },
+        {
+          "key": "C",
+          "text": "0.3347",
+          "explanation": "This is P(X = 1) = e^(-1.5) × 1.5 = 0.3347, one occurrence, not none."
+        },
+        {
+          "key": "D",
+          "text": "0.1116",
+          "explanation": "This halves the correct answer with no basis in the formula."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The Poisson distribution, §5 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#5-the-poisson-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(X = 0) = e^(−m)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-019",
+      "topic": "Ch 16 · Poisson · Single probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A Poisson variable has mean 3. Taking e^(-3) = 0.0498, the probability of exactly 2 occurrences is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.1494",
+          "explanation": "This is P(X = 1) = e^(-3) × 3 = 0.1494, one occurrence, not two."
+        },
+        {
+          "key": "B",
+          "text": "0.2240",
+          "explanation": "Correct. P(X = 2) = e^(-3) × 3^2 ÷ 2! = 0.0498 × 9 ÷ 2 = 0.2240."
+        },
+        {
+          "key": "C",
+          "text": "0.2510",
+          "explanation": "This is P(X = 3) for mean 3, the modal value, not the two-occurrence probability."
+        },
+        {
+          "key": "D",
+          "text": "0.0498",
+          "explanation": "This is P(X = 0) = e^(-3), the no-occurrence probability."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Poisson distribution, §5 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#5-the-poisson-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(X = x) = e^(−m) m^x ÷ x!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-020",
+      "topic": "Ch 16 · Poisson · Mean and variance",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a Poisson distribution, the mean is always:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Greater than the variance",
+          "explanation": "Not so. For a Poisson the mean and variance are the same number."
+        },
+        {
+          "key": "B",
+          "text": "Less than the variance",
+          "explanation": "Not so. There is no gap between them in a Poisson."
+        },
+        {
+          "key": "C",
+          "text": "Equal to the variance",
+          "explanation": "Correct. A defining property of the Poisson is that its mean and variance are both equal to m."
+        },
+        {
+          "key": "D",
+          "text": "Equal to the square root of the variance",
+          "explanation": "The standard deviation, not the mean, is the square root of the variance. For a Poisson the mean equals the variance m, while the SD is √m."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Mean, variance and the additive property of Poisson, §6 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#6-mean-variance-and-the-additive-property-of-poisson"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Poisson mean = variance = m",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-021",
+      "topic": "Ch 16 · Poisson · Single probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A Poisson variable has mean 2. Taking e^(-2) = 0.1353, the probability of exactly 2 occurrences is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.1353",
+          "explanation": "This is P(X = 0) = e^(-2). The question asks for exactly 2 occurrences."
+        },
+        {
+          "key": "B",
+          "text": "0.2707",
+          "explanation": "Correct. P(X = 2) = e^(-2) × 2^2 ÷ 2! = 0.1353 × 4 ÷ 2 = 2 × 0.1353 = 0.2707."
+        },
+        {
+          "key": "C",
+          "text": "0.1804",
+          "explanation": "This is P(X = 3) for mean 2, three occurrences rather than two."
+        },
+        {
+          "key": "D",
+          "text": "0.5413",
+          "explanation": "This forgets to divide by 2! and doubles the correct figure."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Poisson distribution, §5 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#5-the-poisson-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(X = x) = e^(−m) m^x ÷ x!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-022",
+      "topic": "Ch 16 · Poisson · At least one",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The number of breakdowns of a machine per day is Poisson with mean 1. Taking e^(-1) = 0.3679, the probability of at least one breakdown in a day is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.3679",
+          "explanation": "This is P(no breakdown) = e^(-1). The question asks for at least one, its complement."
+        },
+        {
+          "key": "B",
+          "text": "0.6321",
+          "explanation": "Correct. P(at least one) = 1 − P(0) = 1 − e^(-1) = 1 − 0.3679 = 0.6321."
+        },
+        {
+          "key": "C",
+          "text": "0.7358",
+          "explanation": "This is 2 × 0.3679, which has no meaning here and exceeds the complement."
+        },
+        {
+          "key": "D",
+          "text": "0.2642",
+          "explanation": "This wrongly subtracts twice the no-breakdown probability from one."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Poisson distribution, §5 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#5-the-poisson-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(at least one) = 1 − e^(−m)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-023",
+      "topic": "Ch 16 · Poisson · Additive property",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two independent Poisson variables have means 1.5 and 2.5. Taking e^(-4) = 0.0183, the probability that their sum is zero is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.0183",
+          "explanation": "Correct. By the additive property the sum is Poisson with mean 1.5 + 2.5 = 4, so P(sum = 0) = e^(-4) = 0.0183."
+        },
+        {
+          "key": "B",
+          "text": "0.0821",
+          "explanation": "This multiplies the two separate P(0) values, e^(-1.5) × e^(-2.5), but computes them wrongly; the clean route is e^(-4)."
+        },
+        {
+          "key": "C",
+          "text": "0.1353",
+          "explanation": "This is e^(-2), using a mean of 2 rather than the combined mean of 4."
+        },
+        {
+          "key": "D",
+          "text": "0.0916",
+          "explanation": "This averages the two means to 2 instead of adding them to 4."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Mean, variance and the additive property of Poisson, §6 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#6-mean-variance-and-the-additive-property-of-poisson"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Additive property: Poisson(m₁) + Poisson(m₂) = Poisson(m₁ + m₂)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-024",
+      "topic": "Ch 16 · Poisson · Mode",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A Poisson distribution has mean 2.6. Its mode is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "This rounds 2.6 up. The mode is the integer part of a non-integer mean, which is the value below it."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "Correct. When the Poisson mean is not a whole number, the mode is its integer part, so for m = 2.6 the mode is 2."
+        },
+        {
+          "key": "C",
+          "text": "2.6",
+          "explanation": "This is the mean itself. The mode must be a whole number of occurrences."
+        },
+        {
+          "key": "D",
+          "text": "1.6",
+          "explanation": "This subtracts 1 from the mean, which is not how the mode is found."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mean, variance and the additive property of Poisson, §6 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#6-mean-variance-and-the-additive-property-of-poisson"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Poisson mode = integer part of m when m is not a whole number",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-025",
+      "topic": "Ch 16 · Poisson · Recurrence",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For a Poisson distribution, P(X = 1) equals P(X = 2). The mean m is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "explanation": "With m = 1, P(1) = 0.3679 while P(2) = 0.1839; they are not equal."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "Correct. The recurrence gives P(2) ÷ P(1) = m ÷ 2. Setting this ratio to 1 gives m = 2, so P(1) and P(2) are equal."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "With m = 4 the ratio P(2) ÷ P(1) is 2, so P(2) is twice P(1), not equal."
+        },
+        {
+          "key": "D",
+          "text": "0.5",
+          "explanation": "With m = 0.5 the ratio is 0.25, so P(2) is a quarter of P(1)."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Mean, variance and the additive property of Poisson, §6 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#6-mean-variance-and-the-additive-property-of-poisson"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Recurrence P(x + 1) = P(x) × m ÷ (x + 1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-026",
+      "topic": "Ch 16 · Poisson · Fitting",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A Poisson distribution with mean 1 is fitted to 200 observations. Taking e^(-1) = 0.3679, the expected frequency of exactly 1 occurrence is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "73.58",
+          "explanation": "Correct. P(X = 1) = e^(-1) × 1 = 0.3679, so expected frequency = 200 × 0.3679 = 73.58."
+        },
+        {
+          "key": "B",
+          "text": "36.79",
+          "explanation": "This halves the correct answer, as if using 100 observations instead of 200."
+        },
+        {
+          "key": "C",
+          "text": "200",
+          "explanation": "This is the total number of observations, ignoring the probability of exactly 1 occurrence."
+        },
+        {
+          "key": "D",
+          "text": "27.07",
+          "explanation": "This uses e^(-2) for a mean of 2, not e^(-1) for a mean of 1."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Fitting a Poisson distribution, §7 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#7-fitting-a-poisson-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Expected frequency = N × e^(−m) m^x ÷ x!",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-027",
+      "topic": "Ch 16 · Poisson · Standard deviation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A Poisson distribution has variance 9. Its standard deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "9",
+          "explanation": "This is the variance (and also the mean), not the standard deviation."
+        },
+        {
+          "key": "B",
+          "text": "81",
+          "explanation": "This squares the variance rather than taking its square root."
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "explanation": "Correct. The standard deviation is √(variance) = √9 = 3. For a Poisson the mean and variance are both 9."
+        },
+        {
+          "key": "D",
+          "text": "4.5",
+          "explanation": "This halves the variance, which is not how a standard deviation is found."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Mean, variance and the additive property of Poisson, §6 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#6-mean-variance-and-the-additive-property-of-poisson"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Poisson SD = √m",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-028",
+      "topic": "Ch 16 · Poisson · Estimating the mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A total of 300 telephone calls arrive at an exchange over 200 one-minute intervals. Fitting a Poisson distribution, the mean m per minute is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.5",
+          "explanation": "Correct. m = total occurrences ÷ number of intervals = 300 ÷ 200 = 1.5 calls per minute."
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "explanation": "This rounds the true mean of 1.5 up. The estimate is the exact average, 1.5."
+        },
+        {
+          "key": "C",
+          "text": "0.667",
+          "explanation": "This inverts the ratio, dividing 200 by 300 instead of 300 by 200."
+        },
+        {
+          "key": "D",
+          "text": "3",
+          "explanation": "This uses 600 ÷ 200 or otherwise doubles the call total."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Fitting a Poisson distribution, §7 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#7-fitting-a-poisson-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "m = (sum of f × x) ÷ (sum of f)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-029",
+      "topic": "Ch 16 · Normal · Properties",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about the normal distribution is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is positively skewed",
+          "explanation": "The normal curve is perfectly symmetric, so its skewness is zero, not positive."
+        },
+        {
+          "key": "B",
+          "text": "Its mean, median and mode are all equal",
+          "explanation": "Correct. Because the curve is symmetric about the centre, the mean, median and mode coincide at μ."
+        },
+        {
+          "key": "C",
+          "text": "The area under the curve is 0.5",
+          "explanation": "The total area under any probability curve is 1; 0.5 is the area on each side of the mean."
+        },
+        {
+          "key": "D",
+          "text": "It is a discrete distribution",
+          "explanation": "The normal is continuous, spreading probability over an interval, not over separate points."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The normal distribution, §8 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#8-the-normal-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Normal: symmetric, mean = median = mode, total area 1",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-030",
+      "topic": "Ch 16 · Normal · Points of inflexion",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For a normal curve with mean μ and standard deviation σ, the points of inflexion occur at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "μ and μ + σ",
+          "explanation": "The two inflexion points sit symmetrically on either side of the mean, not at the mean itself."
+        },
+        {
+          "key": "B",
+          "text": "μ − σ and μ + σ",
+          "explanation": "Correct. The curve changes its bending exactly one standard deviation on each side of the mean."
+        },
+        {
+          "key": "C",
+          "text": "μ − 2σ and μ + 2σ",
+          "explanation": "Two standard deviations mark the 95.45% band, not the inflexion points."
+        },
+        {
+          "key": "D",
+          "text": "μ − 3σ and μ + 3σ",
+          "explanation": "Three standard deviations mark the 99.73% band, not the inflexion points."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The normal distribution, §8 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#8-the-normal-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Normal points of inflexion at μ ± σ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-031",
+      "topic": "Ch 16 · Normal · z-score",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Marks are normal with mean 50 and standard deviation 10. The z-score of a mark of 68 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.8",
+          "explanation": "Correct. z = (x − μ) ÷ σ = (68 − 50) ÷ 10 = 18 ÷ 10 = 1.8."
+        },
+        {
+          "key": "B",
+          "text": "0.56",
+          "explanation": "This divides 10 by 18, inverting the ratio."
+        },
+        {
+          "key": "C",
+          "text": "2.3",
+          "explanation": "This divides 68 − 45 or otherwise uses the wrong mean."
+        },
+        {
+          "key": "D",
+          "text": "0.18",
+          "explanation": "This divides 18 by 100, using the variance rather than the standard deviation."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The standard normal variable and z-scores, §9 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#9-the-standard-normal-variable-and-z-scores"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "z = (x − μ) ÷ σ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-032",
+      "topic": "Ch 16 · Normal · Value from z",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A normal distribution has mean 100 and standard deviation 15. The value two standard deviations above the mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "70",
+          "explanation": "This is two standard deviations below the mean, 100 − 2 × 15, not above."
+        },
+        {
+          "key": "B",
+          "text": "130",
+          "explanation": "Correct. x = μ + zσ = 100 + 2 × 15 = 130."
+        },
+        {
+          "key": "C",
+          "text": "102",
+          "explanation": "This adds 2 to the mean rather than two standard deviations."
+        },
+        {
+          "key": "D",
+          "text": "115",
+          "explanation": "This is one standard deviation above the mean, 100 + 15, not two."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The standard normal variable and z-scores, §9 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#9-the-standard-normal-variable-and-z-scores"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "x = μ + z σ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-033",
+      "topic": "Ch 16 · Normal · Empirical rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For a normal distribution the area from the mean to one standard deviation (z = 0 to 1) is 0.3413. The percentage of values lying within one standard deviation of the mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "34.13%",
+          "explanation": "This is the area on one side only. 'Within one standard deviation' spans both sides of the mean."
+        },
+        {
+          "key": "B",
+          "text": "68.26%",
+          "explanation": "Correct. The band μ − σ to μ + σ covers 2 × 0.3413 = 0.6826, that is 68.26%."
+        },
+        {
+          "key": "C",
+          "text": "95.44%",
+          "explanation": "This is the two-standard-deviation band, 2 × 0.4772, not the one-σ band."
+        },
+        {
+          "key": "D",
+          "text": "50%",
+          "explanation": "50% is the area on one entire side of the mean, not the one-σ band."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Within μ ± σ ≈ 2 × 0.3413 = 68.26%",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-034",
+      "topic": "Ch 16 · Normal · Empirical rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For a normal distribution the area from the mean to two standard deviations (z = 0 to 2) is 0.4772. The percentage of values lying within two standard deviations of the mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "47.72%",
+          "explanation": "This is the area on one side only. The band covers both sides of the mean."
+        },
+        {
+          "key": "B",
+          "text": "68.26%",
+          "explanation": "This is the one-standard-deviation band, 2 × 0.3413, not the two-σ band."
+        },
+        {
+          "key": "C",
+          "text": "95.44%",
+          "explanation": "Correct. The band μ − 2σ to μ + 2σ covers 2 × 0.4772 = 0.9544, that is 95.44%."
+        },
+        {
+          "key": "D",
+          "text": "99.73%",
+          "explanation": "This is the three-standard-deviation band, not the two-σ band."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Within μ ± 2σ ≈ 2 × 0.4772 = 95.44%",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-035",
+      "topic": "Ch 16 · Normal · Tail area",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The area under the standard normal curve from 0 to 1 is 0.3413. The probability P(Z greater than 1) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.3413",
+          "explanation": "This is the area from 0 to 1, not the tail beyond 1. Subtract it from 0.5."
+        },
+        {
+          "key": "B",
+          "text": "0.1587",
+          "explanation": "Correct. P(Z greater than 1) = 0.5 − 0.3413 = 0.1587, the area in the upper tail."
+        },
+        {
+          "key": "C",
+          "text": "0.8413",
+          "explanation": "This is P(Z less than 1) = 0.5 + 0.3413, the area to the left of 1, not the right."
+        },
+        {
+          "key": "D",
+          "text": "0.6587",
+          "explanation": "This subtracts 0.3413 from 1 instead of from 0.5, forgetting that only half the curve lies to the right of the mean."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(Z greater than 1) = 0.5 − 0.3413",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-036",
+      "topic": "Ch 16 · Normal · Cumulative area",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The area under the standard normal curve from 0 to 2 is 0.4772. The probability P(Z less than 2) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.4772",
+          "explanation": "This is the area from 0 to 2 only. It omits the whole left half of the curve."
+        },
+        {
+          "key": "B",
+          "text": "0.9772",
+          "explanation": "Correct. P(Z less than 2) = 0.5 + 0.4772 = 0.9772, the left half plus the area from 0 to 2."
+        },
+        {
+          "key": "C",
+          "text": "0.0228",
+          "explanation": "This is P(Z greater than 2), the upper tail, not P(Z less than 2)."
+        },
+        {
+          "key": "D",
+          "text": "0.5228",
+          "explanation": "This adds 0.5 to the tail area 0.0228 rather than to 0.4772."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(Z less than 2) = 0.5 + 0.4772",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-037",
+      "topic": "Ch 16 · Normal · Area between two z-values",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the standard normal curve, the area from 0 to 1 is 0.3413 and from 0 to 2 is 0.4772. The probability P(−1 less than Z less than 2) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.8185",
+          "explanation": "Correct. The two values lie on opposite sides of the mean, so the areas add: 0.3413 + 0.4772 = 0.8185."
+        },
+        {
+          "key": "B",
+          "text": "0.1359",
+          "explanation": "This subtracts 0.3413 from 0.4772, which would apply only if both z-values were on the same side of the mean."
+        },
+        {
+          "key": "C",
+          "text": "0.9545",
+          "explanation": "This is the symmetric −2 to +2 band, 2 × 0.4772, not −1 to +2."
+        },
+        {
+          "key": "D",
+          "text": "0.6826",
+          "explanation": "This is the symmetric −1 to +1 band, 2 × 0.3413, not −1 to +2."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Opposite-side areas add: 0.3413 + 0.4772",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-038",
+      "topic": "Ch 16 · Normal · Central 95%",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The area under the standard normal curve from 0 to 1.96 is 0.4750. The percentage of values lying more than 1.96 standard deviations above the mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.5%",
+          "explanation": "Correct. The upper tail beyond z = 1.96 is 0.5 − 0.4750 = 0.025, that is 2.5%. The two tails together leave the central 95%."
+        },
+        {
+          "key": "B",
+          "text": "5%",
+          "explanation": "This is both tails combined. A single tail beyond 1.96 is half of it, 2.5%."
+        },
+        {
+          "key": "C",
+          "text": "1.25%",
+          "explanation": "This halves the correct tail area with no basis."
+        },
+        {
+          "key": "D",
+          "text": "97.5%",
+          "explanation": "This is the area to the left of 1.96, 0.5 + 0.4750, not the tail beyond it."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(Z greater than 1.96) = 0.5 − 0.4750 = 2.5%",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-039",
+      "topic": "Ch 16 · Normal · Central 99%",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A normal distribution has mean 200 and standard deviation 20. Using z = 2.58 for the central 99%, the upper limit of the central 99% of values is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "148.4",
+          "explanation": "This is the lower limit, μ − 2.58σ = 200 − 51.6. The question asks for the upper limit."
+        },
+        {
+          "key": "B",
+          "text": "251.6",
+          "explanation": "Correct. Upper limit = μ + 2.58σ = 200 + 2.58 × 20 = 200 + 51.6 = 251.6."
+        },
+        {
+          "key": "C",
+          "text": "240",
+          "explanation": "This uses z = 2 instead of 2.58, giving μ + 2σ = 240."
+        },
+        {
+          "key": "D",
+          "text": "258",
+          "explanation": "This adds 2.58 × σ to the wrong base or confuses the z-value with the answer."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Central 99% = μ ± 2.58σ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-040",
+      "topic": "Ch 16 · Normal · Mean, median, mode",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In a normal distribution the median is 45. The mode is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "22.5",
+          "explanation": "There is no halving relationship. In a normal curve the mode equals the median."
+        },
+        {
+          "key": "B",
+          "text": "45",
+          "explanation": "Correct. In a normal distribution the mean, median and mode all coincide, so the mode equals the median, 45."
+        },
+        {
+          "key": "C",
+          "text": "90",
+          "explanation": "There is no doubling relationship. The mode equals the median, not twice it."
+        },
+        {
+          "key": "D",
+          "text": "Cannot be determined",
+          "explanation": "It can be determined at once: for a normal curve the mode equals the median."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The normal distribution, §8 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#8-the-normal-distribution"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Normal: mean = median = mode",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-041",
+      "topic": "Ch 16 · Normal · Standard deviation from variance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A normal distribution has variance 64. Its standard deviation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "Correct. Standard deviation = √(variance) = √64 = 8."
+        },
+        {
+          "key": "B",
+          "text": "64",
+          "explanation": "This is the variance itself. The standard deviation is its square root."
+        },
+        {
+          "key": "C",
+          "text": "32",
+          "explanation": "This halves the variance rather than taking its square root."
+        },
+        {
+          "key": "D",
+          "text": "4096",
+          "explanation": "This squares the variance instead of taking its root."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The standard normal variable and z-scores, §9 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#9-the-standard-normal-variable-and-z-scores"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Standard deviation = √(variance)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-042",
+      "topic": "Ch 16 · Normal · Central 95%",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The weights of packets are normal with mean 500 g and standard deviation 100 g. Using z = 1.96 for the central 95%, the upper weight limit of the middle 95% of packets is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "696 g",
+          "explanation": "Correct. Upper limit = μ + 1.96σ = 500 + 1.96 × 100 = 500 + 196 = 696 g."
+        },
+        {
+          "key": "B",
+          "text": "304 g",
+          "explanation": "This is the lower limit, μ − 1.96σ = 500 − 196. The question asks for the upper limit."
+        },
+        {
+          "key": "C",
+          "text": "500 g",
+          "explanation": "This is the mean itself, not the upper limit of the central 95%."
+        },
+        {
+          "key": "D",
+          "text": "600 g",
+          "explanation": "This adds one standard deviation, μ + σ, instead of 1.96 standard deviations."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Central 95% = μ ± 1.96σ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-043",
+      "topic": "Ch 16 · Normal · Counting with areas",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The marks of 10,000 students are normal. Taking the proportion within one standard deviation of the mean as 0.6826, the number of students scoring within one standard deviation of the mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3413",
+          "explanation": "This uses the one-sided area 0.3413. 'Within one standard deviation' is a two-sided band, 0.6826."
+        },
+        {
+          "key": "B",
+          "text": "6826",
+          "explanation": "Correct. Number = N × area = 10,000 × 0.6826 = 6,826 students."
+        },
+        {
+          "key": "C",
+          "text": "9544",
+          "explanation": "This uses the two-standard-deviation area 0.9544, not the one-σ area."
+        },
+        {
+          "key": "D",
+          "text": "5000",
+          "explanation": "This is half the students, the area on one side of the mean, not the one-σ band."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Count = N × area within μ ± σ",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-044",
+      "topic": "Ch 16 · Choosing the distribution",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A sample of 15 bulbs is drawn from a large lot in which 6% are defective, and the number of defective bulbs in the sample is counted. The most appropriate distribution is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Binomial",
+          "explanation": "Correct. There is a fixed number of trials (15), each bulb is defective or not, the probability is constant (6%), and the trials are effectively independent, so the count of defectives is binomial."
+        },
+        {
+          "key": "B",
+          "text": "Poisson",
+          "explanation": "The Poisson has no fixed n and only a mean rate. Here n = 15 and p = 0.06 are both known, so the binomial is the exact model."
+        },
+        {
+          "key": "C",
+          "text": "Normal",
+          "explanation": "The normal models a continuous measurement. The number of defective bulbs is a discrete count."
+        },
+        {
+          "key": "D",
+          "text": "None of these",
+          "explanation": "The situation fits the binomial exactly, so this is wrong."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Choosing the right distribution, §11 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#11-choosing-the-right-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Fixed n, constant p, count successes → binomial",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-045",
+      "topic": "Ch 16 · Choosing the distribution",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The number of customers arriving at a bank counter per minute, where arrivals are rare and independent and only the average rate is known, is best modelled by the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Binomial distribution",
+          "explanation": "The binomial needs a fixed number of trials n and a success probability p. Here neither is given, only an average rate."
+        },
+        {
+          "key": "B",
+          "text": "Poisson distribution",
+          "explanation": "Correct. Rare, independent events over an interval of time, with only a mean rate available and no fixed upper limit, is exactly the Poisson setting."
+        },
+        {
+          "key": "C",
+          "text": "Normal distribution",
+          "explanation": "The normal models a continuous measurement, not a count of arrivals."
+        },
+        {
+          "key": "D",
+          "text": "Uniform distribution",
+          "explanation": "A uniform distribution makes every value equally likely, which does not describe arrivals clustered around a mean rate."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Choosing the right distribution, §11 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#11-choosing-the-right-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Rare events over an interval, mean rate only → Poisson",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-046",
+      "topic": "Ch 16 · Binomial · Cumulative probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair coin is tossed 5 times. The probability of at most one head is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.1875",
+          "explanation": "Correct. P(X ≤ 1) = P(0) + P(1) = (1 + 5) ÷ 32 = 6 ÷ 32 = 0.1875."
+        },
+        {
+          "key": "B",
+          "text": "0.0313",
+          "explanation": "This is P(0) = 1 ÷ 32 alone, omitting P(1)."
+        },
+        {
+          "key": "C",
+          "text": "0.1563",
+          "explanation": "This is P(1) = 5 ÷ 32 alone, omitting P(0)."
+        },
+        {
+          "key": "D",
+          "text": "0.8125",
+          "explanation": "This is P(X ≥ 2) = 1 − 0.1875, the complement of at most one head."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(X ≤ 1) = P(0) + P(1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-047",
+      "topic": "Ch 16 · Poisson · Cumulative probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A Poisson variable has mean 2. Taking e^(-2) = 0.1353, the probability of two or more occurrences is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.4060",
+          "explanation": "This is P(0) + P(1) = 0.1353 + 0.2707, the complement, not P(X ≥ 2)."
+        },
+        {
+          "key": "B",
+          "text": "0.5940",
+          "explanation": "Correct. P(X ≥ 2) = 1 − P(0) − P(1) = 1 − 0.1353 − 0.2707 = 0.5940."
+        },
+        {
+          "key": "C",
+          "text": "0.7293",
+          "explanation": "This subtracts only P(0) from 1, forgetting to remove P(1) as well."
+        },
+        {
+          "key": "D",
+          "text": "0.3233",
+          "explanation": "This omits P(0) from the subtraction, leaving 1 − P(1) − something incorrect."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The Poisson distribution, §5 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#5-the-poisson-distribution"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "P(X ≥ 2) = 1 − P(0) − P(1)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-048",
+      "topic": "Ch 16 · Normal · Tail area",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The area under the standard normal curve from 0 to 2 is 0.4772. The probability P(Z greater than 2) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.4772",
+          "explanation": "This is the area from 0 to 2, not the tail beyond 2. Subtract it from 0.5."
+        },
+        {
+          "key": "B",
+          "text": "0.0228",
+          "explanation": "Correct. P(Z greater than 2) = 0.5 − 0.4772 = 0.0228, the area in the upper tail."
+        },
+        {
+          "key": "C",
+          "text": "0.9772",
+          "explanation": "This is P(Z less than 2), the area to the left of 2, not the right."
+        },
+        {
+          "key": "D",
+          "text": "0.5228",
+          "explanation": "This subtracts 0.4772 from 1 rather than from 0.5."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(Z greater than 2) = 0.5 − 0.4772",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-049",
+      "topic": "Ch 16 · Binomial · Single probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Six fair dice are rolled together. The probability of getting exactly two sixes is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.2009",
+          "explanation": "Correct. n = 6, p = 1/6, r = 2: P = 6C2 (1/6)^2 (5/6)^4 = 15 × 625 ÷ 46656 = 9375 ÷ 46656 = 0.2009."
+        },
+        {
+          "key": "B",
+          "text": "0.0335",
+          "explanation": "This drops the coefficient 6C2 = 15, leaving a figure fifteen times too small."
+        },
+        {
+          "key": "C",
+          "text": "0.4019",
+          "explanation": "This doubles the correct answer, as if 6C2 were 30."
+        },
+        {
+          "key": "D",
+          "text": "0.1339",
+          "explanation": "This uses (5/6)^3 instead of (5/6)^4, so the exponents no longer add to 6."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The binomial distribution, §2 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#2-the-binomial-distribution"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "P(X = r) = nCr p^r q^(n−r) with p = 1/6",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c16-050",
+      "topic": "Ch 16 · Normal · Tail percentage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The area under the standard normal curve from 0 to 2.58 is 0.4950. The percentage of values lying more than 2.58 standard deviations above the mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.5%",
+          "explanation": "Correct. The upper tail beyond z = 2.58 is 0.5 − 0.4950 = 0.005, that is 0.5%. Both tails together leave the central 99%."
+        },
+        {
+          "key": "B",
+          "text": "1%",
+          "explanation": "This is both tails combined. A single tail beyond 2.58 is half of it, 0.5%."
+        },
+        {
+          "key": "C",
+          "text": "0.05%",
+          "explanation": "This is ten times too small, misplacing the decimal point."
+        },
+        {
+          "key": "D",
+          "text": "99.5%",
+          "explanation": "This is the area to the left of 2.58, 0.5 + 0.4950, not the tail beyond it."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Areas under the normal curve, §10 →",
+        "href": "/foundation/quantitative-aptitude/theoretical-distributions/#10-areas-under-the-normal-curve"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "P(Z greater than 2.58) = 0.5 − 0.4950 = 0.5%",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

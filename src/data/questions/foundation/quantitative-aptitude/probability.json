@@ -1,0 +1,1959 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "probability",
+  "chapter": "Ch 15 — Probability",
+  "questions": [
+    {
+      "id": "q-f3c15-001",
+      "topic": "Ch 15 · Basics · Sample space",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the theory of probability, the sample space of a random experiment is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The set of all possible outcomes of the experiment",
+          "explanation": "Correct. The sample space S lists every outcome the experiment can produce, each once. For one die it is {1, 2, 3, 4, 5, 6}; for two coins it is {HH, HT, TH, TT}."
+        },
+        {
+          "key": "B",
+          "text": "The particular outcome that actually occurs on one trial",
+          "explanation": "That single actual result is one outcome, an element of the sample space, not the sample space itself."
+        },
+        {
+          "key": "C",
+          "text": "The outcome that is most likely to occur",
+          "explanation": "The sample space makes no distinction between likely and unlikely; it simply collects every possible outcome."
+        },
+        {
+          "key": "D",
+          "text": "Any subset of outcomes chosen in advance",
+          "explanation": "A chosen subset of outcomes is an event. The sample space is the full set from which events are drawn."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The language of probability, §1 →",
+        "href": "/foundation/quantitative-aptitude/probability/#1-the-language-of-probability-experiment-sample-space-and-events"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Definition of the sample space",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-002",
+      "topic": "Ch 15 · Classical definition · One die",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair die is thrown once. The probability that the score is an even number is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/2",
+          "explanation": "Correct. The even scores are 2, 4 and 6, so n(E) = 3 and P = 3/6 = 1/2."
+        },
+        {
+          "key": "B",
+          "text": "1/3",
+          "explanation": "This counts only two even faces or divides 2 by 6. There are three even faces on a die, not two."
+        },
+        {
+          "key": "C",
+          "text": "1/6",
+          "explanation": "1/6 is the probability of one specific face, not of the three even faces together."
+        },
+        {
+          "key": "D",
+          "text": "2/3",
+          "explanation": "2/3 would be four favourable faces out of six; only three faces are even."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Three definitions, §2 →",
+        "href": "/foundation/quantitative-aptitude/probability/#2-three-definitions-classical-relative-frequency-and-axiomatic"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(E) = n(E)/n(S) on one die",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-003",
+      "topic": "Ch 15 · Classical definition · One die",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair die is thrown once. The probability that the score is greater than 4 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/3",
+          "explanation": "Correct. The scores greater than 4 are 5 and 6, so n(E) = 2 and P = 2/6 = 1/3."
+        },
+        {
+          "key": "B",
+          "text": "1/2",
+          "explanation": "1/2 would be three favourable faces. 'Greater than 4' excludes 4 itself, leaving only 5 and 6."
+        },
+        {
+          "key": "C",
+          "text": "1/6",
+          "explanation": "1/6 counts a single face. Two faces, 5 and 6, exceed 4."
+        },
+        {
+          "key": "D",
+          "text": "2/3",
+          "explanation": "2/3 is four faces out of six, as if 'greater than 4' meant 3, 4, 5, 6. Only 5 and 6 qualify."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Three definitions, §2 →",
+        "href": "/foundation/quantitative-aptitude/probability/#2-three-definitions-classical-relative-frequency-and-axiomatic"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Counting favourable faces on one die",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-004",
+      "topic": "Ch 15 · Definitions · Relative frequency",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The relative-frequency (empirical) definition of probability describes the probability of an event as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The ratio of favourable to total equally likely outcomes, reasoned before any trial",
+          "explanation": "That is the classical (a priori) definition, which needs equally likely outcomes and no experiment. The relative-frequency definition is based on observed trials."
+        },
+        {
+          "key": "B",
+          "text": "The limiting proportion of trials in which the event occurs, over many repetitions",
+          "explanation": "Correct. When outcomes are not equally likely or cannot be listed, the experiment is repeated many times and the probability is the proportion the event settles towards as the number of trials grows large."
+        },
+        {
+          "key": "C",
+          "text": "Any number between 0 and 1 assigned so as to obey the three axioms",
+          "explanation": "That is the axiomatic definition, which states the properties a probability must satisfy rather than how it is measured from data."
+        },
+        {
+          "key": "D",
+          "text": "The ratio of favourable to unfavourable outcomes",
+          "explanation": "That ratio is the odds in favour, not a probability. A probability divides by the total, not by the unfavourable count."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Three definitions, §2 →",
+        "href": "/foundation/quantitative-aptitude/probability/#2-three-definitions-classical-relative-frequency-and-axiomatic"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Relative-frequency definition of probability",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-005",
+      "topic": "Ch 15 · Coins · Two tosses",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair coin is tossed twice. The probability of getting exactly one head is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/2",
+          "explanation": "Correct. The sample space is {HH, HT, TH, TT}; exactly one head occurs in HT and TH, so P = 2/4 = 1/2."
+        },
+        {
+          "key": "B",
+          "text": "1/4",
+          "explanation": "1/4 is the chance of one specific outcome such as HT. Two outcomes give exactly one head."
+        },
+        {
+          "key": "C",
+          "text": "1/3",
+          "explanation": "This treats the outcomes as {two heads, one head, no head} equally likely. They are not: 'one head' happens in two of the four equally likely outcomes."
+        },
+        {
+          "key": "D",
+          "text": "3/4",
+          "explanation": "3/4 is the probability of at least one head, not exactly one. It wrongly includes HH."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Two coins: exactly one head",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-006",
+      "topic": "Ch 15 · Coins · At least one head",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair coin is tossed twice. The probability of getting at least one head is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/4",
+          "explanation": "Correct. Only TT has no head, so P(no head) = 1/4 and P(at least one head) = 1 − 1/4 = 3/4."
+        },
+        {
+          "key": "B",
+          "text": "1/2",
+          "explanation": "1/2 counts exactly one head only, missing the HH outcome that also satisfies 'at least one'."
+        },
+        {
+          "key": "C",
+          "text": "1/4",
+          "explanation": "1/4 is the probability of no head at all, the very case being excluded."
+        },
+        {
+          "key": "D",
+          "text": "1/3",
+          "explanation": "This wrongly treats three head-counts as equally likely. The four coin outcomes are the equally likely ones, and three of them contain a head."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Two coins: at least one head by the complement",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-007",
+      "topic": "Ch 15 · Coins · Three tosses",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three fair coins are tossed together. The probability of getting exactly two heads is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/8",
+          "explanation": "Correct. There are 2³ = 8 outcomes; exactly two heads occur in HHT, HTH and THH, that is 3C2 = 3 of them, so P = 3/8."
+        },
+        {
+          "key": "B",
+          "text": "1/8",
+          "explanation": "1/8 is one specific outcome such as HHT. Three outcomes carry exactly two heads."
+        },
+        {
+          "key": "C",
+          "text": "1/4",
+          "explanation": "1/4 would be two favourable outcomes out of eight. There are three."
+        },
+        {
+          "key": "D",
+          "text": "1/2",
+          "explanation": "1/2 is four outcomes out of eight. Exactly two heads happens in three, not four."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Three coins: exactly two heads via 3C2/8",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-008",
+      "topic": "Ch 15 · Coins · At least one head",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Three fair coins are tossed together. The probability of getting at least one head is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "7/8",
+          "explanation": "Correct. Only TTT has no head, so P(no head) = 1/8 and P(at least one head) = 1 − 1/8 = 7/8."
+        },
+        {
+          "key": "B",
+          "text": "1/8",
+          "explanation": "1/8 is the probability of no head, the case being excluded, not of at least one head."
+        },
+        {
+          "key": "C",
+          "text": "1/2",
+          "explanation": "1/2 understates the count badly; seven of the eight outcomes contain at least one head."
+        },
+        {
+          "key": "D",
+          "text": "3/8",
+          "explanation": "3/8 is the probability of exactly two heads, not of at least one head."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Three coins: at least one head by the complement",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-009",
+      "topic": "Ch 15 · Classical definition · Condition",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The classical (a priori) definition P(E) = n(E)/n(S) may be applied only when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The outcomes of the experiment are finite in number and equally likely",
+          "explanation": "Correct. The classical formula counts favourable over total and assumes each outcome is as likely as any other. A loaded die or a bent coin breaks that assumption, and then the relative-frequency definition is used instead."
+        },
+        {
+          "key": "B",
+          "text": "The experiment has been repeated a large number of times",
+          "explanation": "Repetition underlies the relative-frequency definition. The classical definition needs no trials at all; it reasons the probability out in advance."
+        },
+        {
+          "key": "C",
+          "text": "The events involved are independent of one another",
+          "explanation": "Independence is a separate property of events and is not what the classical formula requires. What it requires is that the outcomes be equally likely."
+        },
+        {
+          "key": "D",
+          "text": "The sample space contains infinitely many outcomes",
+          "explanation": "The classical definition needs a finite sample space so the counts n(E) and n(S) are meaningful. An infinite sample space is the case it cannot handle."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Three definitions, §2 →",
+        "href": "/foundation/quantitative-aptitude/probability/#2-three-definitions-classical-relative-frequency-and-axiomatic"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Equally likely condition of the classical definition",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-010",
+      "topic": "Ch 15 · Cards · A king",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "One card is drawn at random from a well-shuffled pack of 52 cards. The probability that it is a king is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/13",
+          "explanation": "Correct. There are 4 kings in the pack, so P = 4/52 = 1/13."
+        },
+        {
+          "key": "B",
+          "text": "1/52",
+          "explanation": "1/52 is the chance of one specific card. There are four kings, not one."
+        },
+        {
+          "key": "C",
+          "text": "1/4",
+          "explanation": "1/4 is the probability of a chosen suit (13 cards). The four kings span all suits."
+        },
+        {
+          "key": "D",
+          "text": "4/13",
+          "explanation": "4/13 divides the 4 kings by 13 instead of 52. The total number of cards is 52."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(king) from a standard pack",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-011",
+      "topic": "Ch 15 · Cards · A red card",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "One card is drawn at random from a pack of 52. The probability that it is a red card is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/2",
+          "explanation": "Correct. The pack has 26 red cards (hearts and diamonds), so P = 26/52 = 1/2."
+        },
+        {
+          "key": "B",
+          "text": "1/26",
+          "explanation": "1/26 is one card out of the 26 red ones, not the chance of drawing any red card."
+        },
+        {
+          "key": "C",
+          "text": "1/13",
+          "explanation": "1/13 is the chance of a given rank such as a king. Red covers half the pack."
+        },
+        {
+          "key": "D",
+          "text": "2/13",
+          "explanation": "2/13 does not match 26/52. Half of the 52 cards are red, giving exactly 1/2."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(red card) = 26/52",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-012",
+      "topic": "Ch 15 · Cards · A face card",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "One card is drawn at random from a pack of 52. The probability that it is a face card (jack, queen or king) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/13",
+          "explanation": "Correct. Each suit has three face cards, so there are 12 in all and P = 12/52 = 3/13."
+        },
+        {
+          "key": "B",
+          "text": "1/13",
+          "explanation": "1/13 counts only one rank of face card (4 cards). Three ranks are face cards, giving 12."
+        },
+        {
+          "key": "C",
+          "text": "4/13",
+          "explanation": "4/13 would be 16 face cards. Counting the ace as a face card is the usual slip; the face cards are only jack, queen and king."
+        },
+        {
+          "key": "D",
+          "text": "3/52",
+          "explanation": "3/52 counts three face cards in total instead of three per suit. There are 12 face cards, so the numerator is 12."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(face card) = 12/52",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-013",
+      "topic": "Ch 15 · Cards · A spade",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "One card is drawn at random from a pack of 52. The probability that it is a spade is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/4",
+          "explanation": "Correct. There are 13 spades, one of the four suits, so P = 13/52 = 1/4."
+        },
+        {
+          "key": "B",
+          "text": "1/13",
+          "explanation": "1/13 is the chance of a given rank across the pack, not of one whole suit."
+        },
+        {
+          "key": "C",
+          "text": "1/2",
+          "explanation": "1/2 is the chance of a colour (26 cards). A single suit is 13 cards, a quarter of the pack."
+        },
+        {
+          "key": "D",
+          "text": "1/26",
+          "explanation": "1/26 is far too small; a suit contains 13 cards out of 52, giving 1/4."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(spade) = 13/52",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-014",
+      "topic": "Ch 15 · Addition theorem · Mutually exclusive",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "One card is drawn from a pack of 52. The probability that it is an ace or a king is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2/13",
+          "explanation": "Correct. 'Ace' and 'king' are mutually exclusive (no card is both), so P = 4/52 + 4/52 = 8/52 = 2/13."
+        },
+        {
+          "key": "B",
+          "text": "1/13",
+          "explanation": "1/13 is the chance of an ace alone, or of a king alone. The event is either of the two."
+        },
+        {
+          "key": "C",
+          "text": "4/13",
+          "explanation": "4/13 divides 8 aces-or-kings by 13 rather than 52. The denominator is the whole pack, 52."
+        },
+        {
+          "key": "D",
+          "text": "8/13",
+          "explanation": "8/13 also uses the wrong denominator. The 8 favourable cards are out of 52, giving 2/13."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Addition theorem for mutually exclusive events (ace or king)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-015",
+      "topic": "Ch 15 · Types of events · Mutually exclusive",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Two events are said to be mutually exclusive when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "They cannot occur at the same time, so they share no common outcome",
+          "explanation": "Correct. Mutually exclusive (disjoint) events have an empty intersection, so P(A ∩ B) = 0. On a die, 'even' and 'odd' are mutually exclusive."
+        },
+        {
+          "key": "B",
+          "text": "Their probabilities add up to exactly 1",
+          "explanation": "Probabilities adding to 1 describes exhaustive events, and only when they are also mutually exclusive. Disjointness itself says nothing about the total being 1."
+        },
+        {
+          "key": "C",
+          "text": "The occurrence of one does not affect the probability of the other",
+          "explanation": "That is independence, a different idea. Mutually exclusive events are in fact strongly dependent: if one occurs, the other cannot."
+        },
+        {
+          "key": "D",
+          "text": "Together they cover the whole sample space",
+          "explanation": "Covering the whole sample space is what exhaustive means. Mutually exclusive is about not overlapping, not about covering everything."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Types of events, §3 →",
+        "href": "/foundation/quantitative-aptitude/probability/#3-types-of-events-equally-likely-mutually-exclusive-exhaustive-and-independent"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Definition of mutually exclusive events",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-016",
+      "topic": "Ch 15 · Two dice · Sum of 7",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two fair dice are thrown together. The probability that the sum of the scores is 7 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/6",
+          "explanation": "Correct. The pairs giving 7 are (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — six of 36, so P = 6/36 = 1/6."
+        },
+        {
+          "key": "B",
+          "text": "5/36",
+          "explanation": "5/36 is the count for a sum of 6 or 8, not 7. The sum of 7 has six favourable pairs, the most of any sum."
+        },
+        {
+          "key": "C",
+          "text": "1/9",
+          "explanation": "1/9 would be four favourable pairs. The sum of 7 arises in six ways."
+        },
+        {
+          "key": "D",
+          "text": "1/12",
+          "explanation": "1/12 is three favourable pairs out of 36; that matches a sum of 4 or 10, not 7."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Two dice: P(sum = 7)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-017",
+      "topic": "Ch 15 · Two dice · Sum of 8",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two fair dice are thrown together. The probability that the sum of the scores is 8 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5/36",
+          "explanation": "Correct. The pairs giving 8 are (2,6), (3,5), (4,4), (5,3), (6,2) — five of 36, so P = 5/36."
+        },
+        {
+          "key": "B",
+          "text": "1/6",
+          "explanation": "1/6 is six favourable pairs, which is the count for a sum of 7. The sum of 8 has five."
+        },
+        {
+          "key": "C",
+          "text": "1/9",
+          "explanation": "1/9 is four favourable pairs, the count for a sum of 9. The sum of 8 arises in five ways."
+        },
+        {
+          "key": "D",
+          "text": "1/12",
+          "explanation": "1/12 is three pairs, matching a sum of 10. Eight can be made in five ways."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Two dice: P(sum = 8)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-018",
+      "topic": "Ch 15 · Two dice · A doublet",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two fair dice are thrown together. The probability of getting a doublet (both dice showing the same score) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/6",
+          "explanation": "Correct. The doublets are (1,1), (2,2), (3,3), (4,4), (5,5), (6,6) — six of 36, so P = 6/36 = 1/6."
+        },
+        {
+          "key": "B",
+          "text": "1/12",
+          "explanation": "1/12 is three favourable outcomes. There are six doublets, one for each face."
+        },
+        {
+          "key": "C",
+          "text": "1/36",
+          "explanation": "1/36 is one specific doublet such as (3,3). All six doublets together give 6/36."
+        },
+        {
+          "key": "D",
+          "text": "5/36",
+          "explanation": "5/36 does not match the six doublets. Every one of the six faces gives a doublet, so the count is six."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Two dice: P(doublet)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-019",
+      "topic": "Ch 15 · Two dice · Sum at least 10",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two fair dice are thrown together. The probability that the sum of the scores is 10 or more is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/6",
+          "explanation": "Correct. Sum 10 has 3 pairs, sum 11 has 2 and sum 12 has 1, giving 6 of 36, so P = 6/36 = 1/6."
+        },
+        {
+          "key": "B",
+          "text": "1/12",
+          "explanation": "1/12 counts only the three pairs that make 10, ignoring the sums 11 and 12."
+        },
+        {
+          "key": "C",
+          "text": "5/36",
+          "explanation": "5/36 is the count for a single sum of 8. 'At least 10' gathers the sums 10, 11 and 12."
+        },
+        {
+          "key": "D",
+          "text": "1/9",
+          "explanation": "1/9 is four favourable pairs. The sums 10, 11 and 12 together give six."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Two dice: P(sum >= 10)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-020",
+      "topic": "Ch 15 · Two dice · Prime sum",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two fair dice are thrown together. The probability that the sum of the scores is a prime number is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5/12",
+          "explanation": "Correct. The prime sums are 2, 3, 5, 7 and 11, with 1 + 2 + 4 + 6 + 2 = 15 pairs, so P = 15/36 = 5/12."
+        },
+        {
+          "key": "B",
+          "text": "1/3",
+          "explanation": "1/3 is 12 favourable pairs. Counting only the primes 3, 5, 7 and forgetting 2 and 11 undercounts to 12; the full prime set gives 15."
+        },
+        {
+          "key": "C",
+          "text": "7/18",
+          "explanation": "7/18 is 14 pairs, which omits the single pair (1,1) that sums to the prime 2. The correct count is 15."
+        },
+        {
+          "key": "D",
+          "text": "1/2",
+          "explanation": "1/2 is 18 pairs. That over-counts; the prime sums total 15 of the 36 pairs."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Two dice: P(sum is prime)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-021",
+      "topic": "Ch 15 · Addition theorem · Statement",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For any two events A and B, the general addition theorem states that P(A ∪ B) equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "P(A) + P(B) − P(A ∩ B)",
+          "explanation": "Correct. The overlap P(A ∩ B) is counted once in P(A) and again in P(B), so it is subtracted once to avoid double counting."
+        },
+        {
+          "key": "B",
+          "text": "P(A) + P(B)",
+          "explanation": "This is the special form, valid only when A and B are mutually exclusive so that P(A ∩ B) = 0. In general the overlap must be subtracted."
+        },
+        {
+          "key": "C",
+          "text": "P(A) × P(B)",
+          "explanation": "That is the multiplication rule for independent events, giving the probability of both occurring, not of either occurring."
+        },
+        {
+          "key": "D",
+          "text": "P(A) + P(B) + P(A ∩ B)",
+          "explanation": "Adding the overlap counts it three times in total. The overlap must be subtracted, not added."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "General addition theorem statement",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-022",
+      "topic": "Ch 15 · Addition theorem · Mutually exclusive",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A and B are mutually exclusive events with P(A) = 0.3 and P(B) = 0.4. Then P(A ∪ B) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.7",
+          "explanation": "Correct. Mutually exclusive means P(A ∩ B) = 0, so P(A ∪ B) = P(A) + P(B) = 0.3 + 0.4 = 0.7."
+        },
+        {
+          "key": "B",
+          "text": "0.12",
+          "explanation": "0.12 is P(A) × P(B), the product used for independent events, not the union of mutually exclusive ones."
+        },
+        {
+          "key": "C",
+          "text": "0.1",
+          "explanation": "0.1 is the difference P(B) − P(A). The union of disjoint events is their sum."
+        },
+        {
+          "key": "D",
+          "text": "0.58",
+          "explanation": "0.58 would subtract an overlap of 0.12. Mutually exclusive events have zero overlap, so nothing is subtracted."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(A or B) for mutually exclusive events",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-023",
+      "topic": "Ch 15 · Addition theorem · Overlapping events",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For two events, P(A) = 1/2, P(B) = 1/3 and P(A ∩ B) = 1/6. Then P(A ∪ B) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2/3",
+          "explanation": "Correct. P(A ∪ B) = 1/2 + 1/3 − 1/6 = 3/6 + 2/6 − 1/6 = 4/6 = 2/3."
+        },
+        {
+          "key": "B",
+          "text": "5/6",
+          "explanation": "5/6 adds P(A) and P(B) without subtracting the overlap. The events share P(A ∩ B) = 1/6, which must be removed once."
+        },
+        {
+          "key": "C",
+          "text": "1/6",
+          "explanation": "1/6 is the intersection itself, the probability of both occurring, not of either."
+        },
+        {
+          "key": "D",
+          "text": "1/2",
+          "explanation": "1/2 is P(A) alone. The union is larger, since B contributes outcomes beyond those of A."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "General addition theorem with a given overlap",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-024",
+      "topic": "Ch 15 · Addition theorem · King or heart",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "One card is drawn from a pack of 52. The probability that it is a king or a heart is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4/13",
+          "explanation": "Correct. P(king or heart) = 4/52 + 13/52 − 1/52 = 16/52 = 4/13, subtracting the king of hearts counted in both."
+        },
+        {
+          "key": "B",
+          "text": "17/52",
+          "explanation": "17/52 adds 4 kings and 13 hearts without subtracting the king of hearts, which is counted twice. The correct numerator is 16."
+        },
+        {
+          "key": "C",
+          "text": "1/4",
+          "explanation": "1/4 = 13/52 is the probability of a heart alone. The event also includes the three kings that are not hearts."
+        },
+        {
+          "key": "D",
+          "text": "1/52",
+          "explanation": "1/52 is the probability of the king of hearts alone, the overlap, not of the whole 'king or heart' event."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Addition theorem: P(king or heart) = 16/52",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-025",
+      "topic": "Ch 15 · Addition theorem · One die",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair die is thrown once. The probability that the score is even or greater than 3 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2/3",
+          "explanation": "Correct. Even = {2, 4, 6}, greater than 3 = {4, 5, 6}; their union is {2, 4, 5, 6}, so P = 4/6 = 2/3."
+        },
+        {
+          "key": "B",
+          "text": "1/2",
+          "explanation": "1/2 is the probability of 'even' alone. The event also brings in 5, which is greater than 3."
+        },
+        {
+          "key": "C",
+          "text": "5/6",
+          "explanation": "5/6 adds the two sets (3 + 3 outcomes) without subtracting the overlap {4, 6}. The union has four outcomes, not five."
+        },
+        {
+          "key": "D",
+          "text": "1",
+          "explanation": "1 would mean every face qualifies, but 1 and 3 are neither even nor greater than 3."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Addition theorem on one die with an overlap",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-026",
+      "topic": "Ch 15 · Addition theorem · Two dice",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two fair dice are thrown together. The probability that the sum is 7 or 11 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2/9",
+          "explanation": "Correct. The sums 7 and 11 are mutually exclusive: 6 pairs give 7 and 2 give 11, so P = 8/36 = 2/9."
+        },
+        {
+          "key": "B",
+          "text": "1/6",
+          "explanation": "1/6 is the probability of a sum of 7 alone. The event also allows a sum of 11."
+        },
+        {
+          "key": "C",
+          "text": "1/3",
+          "explanation": "1/3 is 12 favourable pairs. The sums 7 and 11 give 6 + 2 = 8 pairs, not 12."
+        },
+        {
+          "key": "D",
+          "text": "1/4",
+          "explanation": "1/4 is 9 pairs out of 36. The correct count of pairs summing to 7 or 11 is 8."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Addition theorem: P(sum 7 or 11)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-027",
+      "topic": "Ch 15 · Addition theorem · Finding the overlap",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For two events, P(A) = 0.5, P(B) = 0.6 and P(A ∪ B) = 0.8. Then P(A ∩ B) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.3",
+          "explanation": "Correct. Rearranging the addition theorem, P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = 0.5 + 0.6 − 0.8 = 0.3."
+        },
+        {
+          "key": "B",
+          "text": "1.1",
+          "explanation": "1.1 is P(A) + P(B). A probability cannot exceed 1, so this cannot be an intersection."
+        },
+        {
+          "key": "C",
+          "text": "0.11",
+          "explanation": "0.11 misplaces a decimal. The correct subtraction gives 0.3."
+        },
+        {
+          "key": "D",
+          "text": "0.2",
+          "explanation": "0.2 would follow from P(A ∪ B) = 0.9. Here the union is 0.8, so the overlap is 0.3."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The addition theorem, §4 →",
+        "href": "/foundation/quantitative-aptitude/probability/#4-the-addition-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Solving the addition theorem for P(A and B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-028",
+      "topic": "Ch 15 · Urn · Single draw",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An urn contains 5 red and 3 white balls. One ball is drawn at random. The probability that it is red is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5/8",
+          "explanation": "Correct. There are 5 red balls among 8, so P(red) = 5/8."
+        },
+        {
+          "key": "B",
+          "text": "3/8",
+          "explanation": "3/8 is the probability of a white ball, not a red one."
+        },
+        {
+          "key": "C",
+          "text": "5/3",
+          "explanation": "5/3 divides red by white. A probability divides favourable by the total, giving 5/8, and can never exceed 1."
+        },
+        {
+          "key": "D",
+          "text": "1/2",
+          "explanation": "1/2 would need equal numbers of each colour. There are 5 red and 3 white, so the reds are more likely."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Standard set-ups, §10 →",
+        "href": "/foundation/quantitative-aptitude/probability/#10-standard-set-ups-coins-dice-cards-and-urns"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Single draw from an urn",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-029",
+      "topic": "Ch 15 · Urn · Both red",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bag contains 4 red and 6 black balls. Two balls are drawn at random together. The probability that both are red is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2/15",
+          "explanation": "Correct. Favourable = 4C2 = 6, total = 10C2 = 45, so P = 6/45 = 2/15."
+        },
+        {
+          "key": "B",
+          "text": "4/25",
+          "explanation": "4/25 = (4/10)² treats the draw as with replacement. Drawing two together is without replacement, so use combinations."
+        },
+        {
+          "key": "C",
+          "text": "2/5",
+          "explanation": "2/5 = 4/10 is the chance the first ball is red, not that both are red."
+        },
+        {
+          "key": "D",
+          "text": "1/3",
+          "explanation": "1/3 = 15/45 is the probability that both balls are black, not both red."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "P(both red) = 4C2/10C2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-030",
+      "topic": "Ch 15 · Urn · Both black",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bag contains 4 red and 6 black balls. Two balls are drawn at random together. The probability that both are black is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/3",
+          "explanation": "Correct. Favourable = 6C2 = 15, total = 10C2 = 45, so P = 15/45 = 1/3."
+        },
+        {
+          "key": "B",
+          "text": "9/25",
+          "explanation": "9/25 = (6/10)² assumes replacement. Two balls drawn together are drawn without replacement."
+        },
+        {
+          "key": "C",
+          "text": "3/5",
+          "explanation": "3/5 = 6/10 is the chance the first ball is black, not that both are."
+        },
+        {
+          "key": "D",
+          "text": "2/15",
+          "explanation": "2/15 is the probability that both balls are red, not both black."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "P(both black) = 6C2/10C2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-031",
+      "topic": "Ch 15 · Urn · One of each colour",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A bag contains 4 red and 6 black balls. Two balls are drawn at random together. The probability that one is red and one is black is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8/15",
+          "explanation": "Correct. Favourable = 4C1 × 6C1 = 24, total = 10C2 = 45, so P = 24/45 = 8/15."
+        },
+        {
+          "key": "B",
+          "text": "12/25",
+          "explanation": "12/25 assumes replacement and one ordering. Drawing two together is without replacement, and both orderings count."
+        },
+        {
+          "key": "C",
+          "text": "1/2",
+          "explanation": "1/2 is close but wrong; the exact count 24/45 reduces to 8/15, not 1/2."
+        },
+        {
+          "key": "D",
+          "text": "2/15",
+          "explanation": "2/15 is the probability that both balls are red. This event is one of each colour."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "P(one red and one black) = 4C1*6C1/10C2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-032",
+      "topic": "Ch 15 · Complement · Not black",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An urn contains 3 white, 5 black and 2 red balls. One ball is drawn at random. The probability that it is not black is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/2",
+          "explanation": "Correct. There are 10 balls and 5 are black, so P(black) = 5/10 and P(not black) = 1 − 5/10 = 1/2. Equivalently the 5 non-black balls give 5/10."
+        },
+        {
+          "key": "B",
+          "text": "1/5",
+          "explanation": "1/5 = 2/10 counts only the red balls. 'Not black' includes both the white and the red balls."
+        },
+        {
+          "key": "C",
+          "text": "3/10",
+          "explanation": "3/10 counts only the white balls. 'Not black' also includes the 2 red balls."
+        },
+        {
+          "key": "D",
+          "text": "2/5",
+          "explanation": "2/5 = 4/10 is neither the white nor the non-black count. The five non-black balls give 5/10 = 1/2."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Three definitions, §2 →",
+        "href": "/foundation/quantitative-aptitude/probability/#2-three-definitions-classical-relative-frequency-and-axiomatic"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Complement rule: P(not black) = 1 - P(black)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-033",
+      "topic": "Ch 15 · Conditional probability · Definition",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For two events A and B with P(B) not zero, the conditional probability P(A | B) is defined as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "P(A ∩ B) / P(B)",
+          "explanation": "Correct. Given that B has occurred, the sample space shrinks to B, and P(A | B) is the share of that reduced space in which A also holds."
+        },
+        {
+          "key": "B",
+          "text": "P(A ∩ B) / P(A)",
+          "explanation": "Dividing by P(A) gives P(B | A), the reverse conditional. The condition being given is B, so divide by P(B)."
+        },
+        {
+          "key": "C",
+          "text": "P(A) × P(B)",
+          "explanation": "That product is P(A ∩ B) only when A and B are independent, and it is not a conditional probability."
+        },
+        {
+          "key": "D",
+          "text": "P(A) / P(B)",
+          "explanation": "The numerator must be the joint probability P(A ∩ B), not P(A). Using P(A) ignores that only the part of A lying inside B can occur once B is given."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Definition of conditional probability",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-034",
+      "topic": "Ch 15 · Conditional probability · Computation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For two events, P(A ∩ B) = 0.2 and P(B) = 0.5. Then P(A | B) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.4",
+          "explanation": "Correct. P(A | B) = P(A ∩ B) / P(B) = 0.2 / 0.5 = 0.4."
+        },
+        {
+          "key": "B",
+          "text": "0.1",
+          "explanation": "0.1 is the product P(A ∩ B) × P(B). The conditional probability divides, it does not multiply."
+        },
+        {
+          "key": "C",
+          "text": "0.7",
+          "explanation": "0.7 is the sum P(A ∩ B) + P(B). Conditional probability is a ratio, not a sum."
+        },
+        {
+          "key": "D",
+          "text": "2.5",
+          "explanation": "2.5 divides P(B) by P(A ∩ B), inverting the ratio. A probability cannot exceed 1 in any case."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(A|B) = P(A and B)/P(B)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-035",
+      "topic": "Ch 15 · Multiplication theorem · Without replacement",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two cards are drawn one after the other, without replacement, from a pack of 52. The probability that both are kings is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/221",
+          "explanation": "Correct. P(both kings) = 4/52 × 3/51 = 12/2652 = 1/221, the second draw being conditional on the first."
+        },
+        {
+          "key": "B",
+          "text": "1/169",
+          "explanation": "1/169 = (4/52)² assumes replacement, keeping 4 kings among 52 on the second draw. Without replacement only 3 kings remain among 51."
+        },
+        {
+          "key": "C",
+          "text": "1/13",
+          "explanation": "1/13 is the probability that a single card is a king, not that two successive cards both are."
+        },
+        {
+          "key": "D",
+          "text": "1/16",
+          "explanation": "1/16 = (1/4)² has no basis here; it neither uses the four kings nor the falling denominator."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Multiplication theorem: both kings without replacement",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-036",
+      "topic": "Ch 15 · Conditional probability · One die",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair die is thrown once. Given that the score is even, the probability that it is a 6 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/3",
+          "explanation": "Correct. Given 'even', the sample space shrinks to {2, 4, 6}; one of these three is a 6, so P = 1/3."
+        },
+        {
+          "key": "B",
+          "text": "1/6",
+          "explanation": "1/6 is the unconditional probability of a 6. The condition 'even' has already reduced the sample space to three faces."
+        },
+        {
+          "key": "C",
+          "text": "1/2",
+          "explanation": "1/2 would be one of two outcomes. The reduced space {2, 4, 6} has three outcomes, not two."
+        },
+        {
+          "key": "D",
+          "text": "1/9",
+          "explanation": "1/9 is P(6) × P(even) = 1/6 × 1/2, which is not how a conditional probability is found. Divide the joint by the condition instead."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Conditional probability on one die: P(6 | even)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-037",
+      "topic": "Ch 15 · Conditional probability · Two dice",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two fair dice are thrown. Given that the first die shows a 3, the probability that the sum of the two scores is 8 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/6",
+          "explanation": "Correct. With the first die fixed at 3, a sum of 8 needs the second die to show 5, which has probability 1/6."
+        },
+        {
+          "key": "B",
+          "text": "5/36",
+          "explanation": "5/36 is the unconditional probability of a sum of 8. The condition fixes the first die, so only the second die's result matters."
+        },
+        {
+          "key": "C",
+          "text": "1/36",
+          "explanation": "1/36 is the probability of one specific ordered pair such as (3,5) out of all 36. Once the first die is given as 3, the relevant space has only six outcomes."
+        },
+        {
+          "key": "D",
+          "text": "1/5",
+          "explanation": "1/5 has no basis here; the second die has six equally likely faces, so the required probability is 1/6."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Conditional probability and the multiplication theorem, §5 →",
+        "href": "/foundation/quantitative-aptitude/probability/#5-conditional-probability-and-the-multiplication-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Conditional probability with two dice",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-038",
+      "topic": "Ch 15 · Independence · With replacement",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two cards are drawn one after the other, with replacement, from a pack of 52. The probability that both are aces is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/169",
+          "explanation": "Correct. With replacement the draws are independent, so P(both aces) = 4/52 × 4/52 = 1/13 × 1/13 = 1/169."
+        },
+        {
+          "key": "B",
+          "text": "1/221",
+          "explanation": "1/221 = 4/52 × 3/51 is the without-replacement answer. With replacement the first card is returned, so 4 aces remain among 52."
+        },
+        {
+          "key": "C",
+          "text": "2/13",
+          "explanation": "2/13 = 8/52 would be the chance of drawing an ace or a king in one draw, unrelated to two aces."
+        },
+        {
+          "key": "D",
+          "text": "1/26",
+          "explanation": "1/26 halves 1/13. Two independent aces multiply to (1/13)² = 1/169, not 1/26."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Independent events, §6 →",
+        "href": "/foundation/quantitative-aptitude/probability/#6-independent-events"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Independence: both aces with replacement",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-039",
+      "topic": "Ch 15 · Independence · Definition",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Two events A and B are independent if and only if:",
+      "options": [
+        {
+          "key": "A",
+          "text": "P(A ∩ B) = P(A) × P(B)",
+          "explanation": "Correct. Independence means the occurrence of one does not change the probability of the other, and this is exactly the condition that the joint probability equals the product of the separate probabilities."
+        },
+        {
+          "key": "B",
+          "text": "P(A ∩ B) = 0",
+          "explanation": "That is the condition for mutually exclusive events, which is the opposite situation: they cannot occur together at all."
+        },
+        {
+          "key": "C",
+          "text": "P(A) + P(B) = 1",
+          "explanation": "Probabilities summing to 1 is a special numerical coincidence, not the definition of independence."
+        },
+        {
+          "key": "D",
+          "text": "P(A ∪ B) = P(A) + P(B)",
+          "explanation": "That is the addition rule for mutually exclusive events, not a statement about independence."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Independent events, §6 →",
+        "href": "/foundation/quantitative-aptitude/probability/#6-independent-events"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Definition of independent events",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-040",
+      "topic": "Ch 15 · Independence · Joint probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A and B are independent events with P(A) = 0.3 and P(B) = 0.5. Then P(A ∩ B) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.15",
+          "explanation": "Correct. For independent events P(A ∩ B) = P(A) × P(B) = 0.3 × 0.5 = 0.15."
+        },
+        {
+          "key": "B",
+          "text": "0.8",
+          "explanation": "0.8 is P(A) + P(B). That sum is neither the intersection nor even the union (which would subtract the overlap)."
+        },
+        {
+          "key": "C",
+          "text": "0.65",
+          "explanation": "0.65 is the union P(A) + P(B) − P(A)P(B) = 0.3 + 0.5 − 0.15. The question asks for the intersection."
+        },
+        {
+          "key": "D",
+          "text": "0.35",
+          "explanation": "0.35 has no basis; for independent events the joint probability is the product 0.15."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Independent events, §6 →",
+        "href": "/foundation/quantitative-aptitude/probability/#6-independent-events"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "P(A and B) = P(A)P(B) for independent events",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-041",
+      "topic": "Ch 15 · Independence · Union",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A and B are independent events with P(A) = 0.4 and P(B) = 0.7. Then P(A ∪ B) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.82",
+          "explanation": "Correct. P(A ∩ B) = 0.4 × 0.7 = 0.28, so P(A ∪ B) = 0.4 + 0.7 − 0.28 = 0.82."
+        },
+        {
+          "key": "B",
+          "text": "1.1",
+          "explanation": "1.1 adds P(A) and P(B) without subtracting the overlap. A probability cannot exceed 1, so this is impossible."
+        },
+        {
+          "key": "C",
+          "text": "0.28",
+          "explanation": "0.28 is the intersection P(A ∩ B), the probability of both occurring, not of either."
+        },
+        {
+          "key": "D",
+          "text": "0.9",
+          "explanation": "0.9 would treat the events as mutually exclusive with a different overlap. Here the overlap is 0.28, giving 0.82."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Independent events, §6 →",
+        "href": "/foundation/quantitative-aptitude/probability/#6-independent-events"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Union of two independent events",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-042",
+      "topic": "Ch 15 · Independence · At least one",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two marksmen fire once each at a target, hitting independently with probabilities 0.6 and 0.7. The probability that the target is hit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.88",
+          "explanation": "Correct. P(both miss) = 0.4 × 0.3 = 0.12, so P(target hit) = 1 − 0.12 = 0.88."
+        },
+        {
+          "key": "B",
+          "text": "0.42",
+          "explanation": "0.42 = 0.6 × 0.7 is the probability that both marksmen hit, not that the target is hit by at least one."
+        },
+        {
+          "key": "C",
+          "text": "1.3",
+          "explanation": "1.3 = 0.6 + 0.7 adds the two hit probabilities. A probability cannot exceed 1; the overlap must be handled, best via the complement."
+        },
+        {
+          "key": "D",
+          "text": "0.12",
+          "explanation": "0.12 is the probability that both miss, the complement of the event asked for."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Independent events, §6 →",
+        "href": "/foundation/quantitative-aptitude/probability/#6-independent-events"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "At least one success for independent events via the complement",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-043",
+      "topic": "Ch 15 · Bayes theorem · Posterior probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Urn I holds 3 white and 2 black balls; Urn II holds 2 white and 3 black. An urn is chosen at random and one ball is drawn; it is white. The probability that it came from Urn I is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/5",
+          "explanation": "Correct. By Bayes, P(I | white) = (1/2 × 3/5) / (1/2 × 3/5 + 1/2 × 2/5) = (3/10) / (5/10) = 3/5."
+        },
+        {
+          "key": "B",
+          "text": "1/2",
+          "explanation": "1/2 is the prior probability of Urn I before any ball is seen. Observing a white ball updates it upward to 3/5."
+        },
+        {
+          "key": "C",
+          "text": "2/5",
+          "explanation": "2/5 is P(II | white), the probability the ball came from Urn II. The two posteriors add to 1."
+        },
+        {
+          "key": "D",
+          "text": "3/10",
+          "explanation": "3/10 is the numerator alone, P(I and white). Bayes' theorem divides it by the total probability of white, which is 1/2."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bayes' theorem, §7 →",
+        "href": "/foundation/quantitative-aptitude/probability/#7-bayes-theorem"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Bayes' theorem: posterior probability of Urn I given white",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-044",
+      "topic": "Ch 15 · Bayes theorem · Total probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Urn I holds 3 white and 2 black balls; Urn II holds 2 white and 3 black. An urn is chosen at random and one ball is drawn. The probability that the ball is white is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/2",
+          "explanation": "Correct. By total probability, P(white) = 1/2 × 3/5 + 1/2 × 2/5 = 3/10 + 2/10 = 5/10 = 1/2."
+        },
+        {
+          "key": "B",
+          "text": "1/5",
+          "explanation": "1/5 is the difference between the two conditional probabilities (3/5 − 2/5), not the weighted total."
+        },
+        {
+          "key": "C",
+          "text": "3/5",
+          "explanation": "3/5 is P(white | I), the chance of white from Urn I alone. The overall chance averages the two urns."
+        },
+        {
+          "key": "D",
+          "text": "2/5",
+          "explanation": "2/5 is P(white | II), the chance of white from Urn II alone, not the total over both urns."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bayes' theorem, §7 →",
+        "href": "/foundation/quantitative-aptitude/probability/#7-bayes-theorem"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Theorem of total probability for a white draw",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-045",
+      "topic": "Ch 15 · Random variable · Expectation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A fair die is thrown once and X is the score shown. The expected value E(X) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.5",
+          "explanation": "Correct. E(X) = (1 + 2 + 3 + 4 + 5 + 6) × 1/6 = 21/6 = 3.5, an average the die itself can never show."
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "explanation": "3 is a middle face but not the mean. The six equally likely scores average to 3.5."
+        },
+        {
+          "key": "C",
+          "text": "21",
+          "explanation": "21 is the sum of the six faces before dividing by 6. The expectation weights each by its probability 1/6."
+        },
+        {
+          "key": "D",
+          "text": "6",
+          "explanation": "6 is the largest face, not the average. The expected score is 3.5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Random variables, §8 →",
+        "href": "/foundation/quantitative-aptitude/probability/#8-random-variables-expectation-variance-and-mean"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "E(X) for a fair die",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-046",
+      "topic": "Ch 15 · Random variable · Mean",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A discrete random variable X takes the values 0, 1 and 2 with probabilities 0.2, 0.5 and 0.3 respectively. The mean E(X) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.1",
+          "explanation": "Correct. E(X) = 0 × 0.2 + 1 × 0.5 + 2 × 0.3 = 0 + 0.5 + 0.6 = 1.1."
+        },
+        {
+          "key": "B",
+          "text": "1",
+          "explanation": "1 is the middle value, treated as if the values were equally likely. Weighting by 0.2, 0.5, 0.3 gives 1.1."
+        },
+        {
+          "key": "C",
+          "text": "1.5",
+          "explanation": "1.5 is the plain average of the values 0, 1, 2 ignoring their probabilities. The expectation must use the weights."
+        },
+        {
+          "key": "D",
+          "text": "0.9",
+          "explanation": "0.9 mis-multiplies the terms. The correct weighted sum is 0.5 + 0.6 = 1.1."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Random variables, §8 →",
+        "href": "/foundation/quantitative-aptitude/probability/#8-random-variables-expectation-variance-and-mean"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Mean of a discrete distribution",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-047",
+      "topic": "Ch 15 · Random variable · Variance",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A discrete random variable X takes the values 0, 1 and 2 with probabilities 0.2, 0.5 and 0.3. Given E(X) = 1.1, the variance Var(X) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.49",
+          "explanation": "Correct. E(X²) = 0 + 1 × 0.5 + 4 × 0.3 = 1.7, so Var(X) = E(X²) − [E(X)]² = 1.7 − 1.21 = 0.49."
+        },
+        {
+          "key": "B",
+          "text": "1.7",
+          "explanation": "1.7 is E(X²), one component of the variance. The variance subtracts the square of the mean, [E(X)]² = 1.21."
+        },
+        {
+          "key": "C",
+          "text": "1.21",
+          "explanation": "1.21 is [E(X)]², the term subtracted from E(X²). It is not the variance itself."
+        },
+        {
+          "key": "D",
+          "text": "0.7",
+          "explanation": "0.7 is the standard deviation (the square root of 0.49), not the variance."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Random variables, §8 →",
+        "href": "/foundation/quantitative-aptitude/probability/#8-random-variables-expectation-variance-and-mean"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Var(X) = E(X^2) - [E(X)]^2",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-048",
+      "topic": "Ch 15 · Types of events · Exclusive versus independent",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A and B are two events with non-zero probabilities that are mutually exclusive. Which statement is TRUE?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They cannot occur together, so P(A ∩ B) = 0, and they cannot also be independent",
+          "explanation": "Correct. Mutually exclusive events have P(A ∩ B) = 0, but independence needs P(A ∩ B) = P(A)P(B), which is non-zero here. So two events with non-zero probability cannot be both mutually exclusive and independent."
+        },
+        {
+          "key": "B",
+          "text": "They are automatically independent",
+          "explanation": "The opposite is true. If A occurs, B cannot, so A's occurrence changes B's probability to zero — the strongest possible dependence."
+        },
+        {
+          "key": "C",
+          "text": "P(A ∩ B) = P(A) × P(B)",
+          "explanation": "That is the independence condition, and it fails here: P(A ∩ B) = 0 while P(A) × P(B) is positive."
+        },
+        {
+          "key": "D",
+          "text": "Their probabilities must add up to 1",
+          "explanation": "Adding to 1 would make them exhaustive as well. Mutually exclusive events need not cover the whole sample space, so their probabilities need not total 1."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Types of events, §3 →",
+        "href": "/foundation/quantitative-aptitude/probability/#3-types-of-events-equally-likely-mutually-exclusive-exhaustive-and-independent"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Mutually exclusive versus independent events",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-049",
+      "topic": "Ch 15 · Odds · Odds to probability",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The odds in favour of a horse winning a race are 3 : 2. The probability that the horse wins is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/5",
+          "explanation": "Correct. Odds in favour of a : b give P = a / (a + b) = 3 / (3 + 2) = 3/5."
+        },
+        {
+          "key": "B",
+          "text": "3/2",
+          "explanation": "3/2 divides favourable by unfavourable, giving a number greater than 1. A probability divides by the total a + b = 5."
+        },
+        {
+          "key": "C",
+          "text": "2/5",
+          "explanation": "2/5 is the probability the horse loses, matching the odds against of 2 : 3, not the odds in favour."
+        },
+        {
+          "key": "D",
+          "text": "2/3",
+          "explanation": "2/3 inverts the ratio to 2 : 3 in favour. The stated odds in favour are 3 : 2, giving 3/5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Odds in favour and odds against, §9 →",
+        "href": "/foundation/quantitative-aptitude/probability/#9-odds-in-favour-and-odds-against"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Odds in favour to probability: a/(a+b)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c15-050",
+      "topic": "Ch 15 · Odds · Probability to odds",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The probability of an event is 2/7. The odds against the event are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5 : 2",
+          "explanation": "Correct. The unfavourable share is 1 − 2/7 = 5/7, so odds against = (5/7) : (2/7) = 5 : 2."
+        },
+        {
+          "key": "B",
+          "text": "2 : 5",
+          "explanation": "2 : 5 is the odds in favour of the event, not against it. Odds against put the unfavourable count first."
+        },
+        {
+          "key": "C",
+          "text": "2 : 7",
+          "explanation": "2 : 7 is the probability itself expressed as favourable to total. Odds compare favourable to unfavourable, so the total 7 does not appear."
+        },
+        {
+          "key": "D",
+          "text": "5 : 7",
+          "explanation": "5 : 7 is the unfavourable count against the total. Odds against compare the unfavourable to the favourable, giving 5 : 2."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Odds in favour and odds against, §9 →",
+        "href": "/foundation/quantitative-aptitude/probability/#9-odds-in-favour-and-odds-against"
+      },
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Probability to odds against: (1-p):p",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

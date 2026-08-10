@@ -172,10 +172,10 @@ export const foundationPapers = [
       {
         name: 'Part C · Statistics (40 marks)',
         chapters: [
-          { number: 13, slug: 'statistical-description-of-data', name: 'Statistical Description of Data and Sampling' },
-          { number: 14, slug: 'central-tendency-and-dispersion', name: 'Measures of Central Tendency and Dispersion' },
-          { number: 15, slug: 'probability', name: 'Probability' },
-          { number: 16, slug: 'theoretical-distributions', name: 'Theoretical Distributions' },
+          { number: 13, slug: 'statistical-description-of-data', name: 'Statistical Description of Data and Sampling', hasNotes: true },
+          { number: 14, slug: 'central-tendency-and-dispersion', name: 'Measures of Central Tendency and Dispersion', hasNotes: true },
+          { number: 15, slug: 'probability', name: 'Probability', hasNotes: true },
+          { number: 16, slug: 'theoretical-distributions', name: 'Theoretical Distributions', hasNotes: true },
           { number: 17, slug: 'correlation-and-regression', name: 'Correlation and Regression' },
           { number: 18, slug: 'index-numbers', name: 'Index Numbers' },
         ],

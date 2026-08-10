@@ -1,0 +1,2109 @@
+{
+  "level": "foundation",
+  "paper": "Paper 3 — Quantitative Aptitude",
+  "paperSlug": "quantitative-aptitude",
+  "chapterSlug": "statistical-description-of-data",
+  "chapter": "Ch 13 — Statistical Description of Data and Sampling",
+  "questions": [
+    {
+      "id": "q-f3c13-001",
+      "topic": "Ch 13 · Meaning of statistics · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Used in its singular sense, the word 'statistics' means:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A collection of numerical facts such as prices or marks",
+          "explanation": "This is the plural sense — the figures themselves. The singular sense names the discipline, not the data."
+        },
+        {
+          "key": "B",
+          "text": "The science of collecting, organising, presenting, analysing and interpreting numerical data",
+          "explanation": "Correct. In the singular the word names the science that turns raw figures into a basis for decisions under uncertainty."
+        },
+        {
+          "key": "C",
+          "text": "The study of a single observation in detail",
+          "explanation": "Statistics deals with aggregates, not single items. A lone figure is a datum, and studying it alone is not statistics."
+        },
+        {
+          "key": "D",
+          "text": "Any table of figures printed by the government",
+          "explanation": "Government tables are one source of data, but the singular sense is the science, not a particular publication."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: What statistics means, §1 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#1-what-statistics-means"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Statistics in the singular and plural senses",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-002",
+      "topic": "Ch 13 · Variables and attributes · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a DISCRETE variable?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The height of a student measured in centimetres",
+          "explanation": "Height can take any value in a range, limited only by the instrument, so it is continuous, not discrete."
+        },
+        {
+          "key": "B",
+          "text": "The time taken to run 100 metres",
+          "explanation": "Time is measured on a continuous scale — any value between two readings is possible — so it is continuous."
+        },
+        {
+          "key": "C",
+          "text": "The number of children in a family",
+          "explanation": "Correct. It takes only separate, countable whole-number values (0, 1, 2, …) and never a value in between, which is exactly what makes a variable discrete."
+        },
+        {
+          "key": "D",
+          "text": "The weight of a bag of rice",
+          "explanation": "Weight varies continuously across a range, so it is a continuous variable, not a discrete one."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: What statistics means, §1 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#1-what-statistics-means"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Discrete versus continuous variables",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-003",
+      "topic": "Ch 13 · Primary and secondary data · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A research student quotes population figures from the published Census of India in her project. In her hands these figures are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Primary data, because the Census is an official source",
+          "explanation": "Being official does not make data primary. Primary data are collected first-hand by the user for the enquiry in hand."
+        },
+        {
+          "key": "B",
+          "text": "Secondary data, because they were collected by someone else for another purpose and are now reused",
+          "explanation": "Correct. The Census is primary to the Registrar General who conducts it, and secondary to anyone who later borrows the figures — the test is the collector's relation to the enquiry."
+        },
+        {
+          "key": "C",
+          "text": "Primary data, because they are numerical",
+          "explanation": "All statistical data are numerical; that says nothing about whether they are primary or secondary."
+        },
+        {
+          "key": "D",
+          "text": "Neither primary nor secondary, because they are a complete count",
+          "explanation": "A complete count is a census, but census output is still data, and reused by a third party it is secondary data."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Primary and secondary data, §2 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#2-primary-and-secondary-data"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Primary versus secondary data — the collector's relation to the enquiry",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-004",
+      "topic": "Ch 13 · Scales of measurement · Nominal",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The blood groups of patients are recorded as A, B, AB and O. This variable is measured on which scale?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nominal scale",
+          "explanation": "Correct. Blood groups are labels with no order — no group is 'greater' than another — so only the nominal scale applies; you may say two are the same or different, nothing more."
+        },
+        {
+          "key": "B",
+          "text": "Ordinal scale",
+          "explanation": "An ordinal scale ranks its values. Blood groups carry no rank, so ordering them is meaningless."
+        },
+        {
+          "key": "C",
+          "text": "Interval scale",
+          "explanation": "An interval scale needs equal, meaningful numerical gaps. Blood-group labels have no numerical gaps at all."
+        },
+        {
+          "key": "D",
+          "text": "Ratio scale",
+          "explanation": "A ratio scale needs a true zero and meaningful ratios. Labels like A and O support neither."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The four scales of measurement, §3 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#3-the-four-scales-of-measurement"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Nominal scale — labels without order",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-005",
+      "topic": "Ch 13 · Scales of measurement · Ordinal",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Customers rate a service as poor, fair, good or excellent. The MOST that can validly be said about these ratings is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "They can only be checked for equality, not ordered",
+          "explanation": "This describes a nominal scale. These ratings clearly carry an order from poor up to excellent, so they are more than nominal."
+        },
+        {
+          "key": "B",
+          "text": "They can be ordered, but the gaps between them are not necessarily equal",
+          "explanation": "Correct. This is the ordinal scale: the ratings rank from poor to excellent, yet the distance from poor to fair need not equal the distance from good to excellent, so differences carry no fixed meaning."
+        },
+        {
+          "key": "C",
+          "text": "The difference between good and fair equals the difference between excellent and good",
+          "explanation": "That would require equal, measurable intervals — the interval scale. Word ratings do not guarantee equal gaps."
+        },
+        {
+          "key": "D",
+          "text": "Excellent is exactly twice as good as fair",
+          "explanation": "Ratios like 'twice as good' need a ratio scale with a true zero, which subjective ratings do not have."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The four scales of measurement, §3 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#3-the-four-scales-of-measurement"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Ordinal scale — rank without equal intervals",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-006",
+      "topic": "Ch 13 · Scales of measurement · Interval",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Temperature measured in degrees Celsius is an example of which scale, and why?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ratio scale, because 40 °C is twice 20 °C",
+          "explanation": "This is exactly the trap. 40 °C is NOT twice 20 °C, because 0 °C does not mean 'no heat'. The Celsius zero is a convention, not an absence."
+        },
+        {
+          "key": "B",
+          "text": "Interval scale, because the gaps are equal but there is no true zero",
+          "explanation": "Correct. Equal differences are meaningful (30 °C to 20 °C matches 20 °C to 10 °C), but the zero is arbitrary, so ratios are meaningless — the defining marks of an interval scale."
+        },
+        {
+          "key": "C",
+          "text": "Ordinal scale, because temperatures can only be ranked",
+          "explanation": "Temperatures can be ranked, but they also have equal, meaningful gaps, which lifts them above the ordinal scale."
+        },
+        {
+          "key": "D",
+          "text": "Nominal scale, because degrees are just labels",
+          "explanation": "Degrees are not mere labels; the numerical differences between them are real and equal, so the scale is far above nominal."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The four scales of measurement, §3 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#3-the-four-scales-of-measurement"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Interval scale — equal gaps, no true zero (Celsius temperature)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-007",
+      "topic": "Ch 13 · Scales of measurement · Ratio",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which variable is measured on a RATIO scale?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The calendar year of an event (2020, 2021, …)",
+          "explanation": "Calendar years have equal gaps but no true zero — year 0 is a convention, not the start of time — so this is an interval scale, not ratio."
+        },
+        {
+          "key": "B",
+          "text": "The rank of a student in class",
+          "explanation": "A rank orders students but its gaps are unequal, so it is an ordinal scale."
+        },
+        {
+          "key": "C",
+          "text": "The monthly income of a household in rupees",
+          "explanation": "Correct. Income has equal gaps and a true zero (₹ 0 is genuinely no income), so ratios are meaningful — ₹ 40,000 really is twice ₹ 20,000 — which is the ratio scale."
+        },
+        {
+          "key": "D",
+          "text": "The pincode of a locality",
+          "explanation": "A pincode is a label with no order or true zero, so it sits on the nominal scale."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The four scales of measurement, §3 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#3-the-four-scales-of-measurement"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Ratio scale — true zero and meaningful ratios",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-008",
+      "topic": "Ch 13 · Scales of measurement · True zero",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The presence of a true, absolute zero (meaning 'none of the quantity') is the feature that distinguishes:",
+      "options": [
+        {
+          "key": "A",
+          "text": "The nominal scale from the ordinal scale",
+          "explanation": "Those two are separated by whether the values can be ranked, not by a zero — neither has a true zero."
+        },
+        {
+          "key": "B",
+          "text": "The ordinal scale from the interval scale",
+          "explanation": "Those two are separated by whether the gaps are equal and meaningful; neither has a true zero."
+        },
+        {
+          "key": "C",
+          "text": "The interval scale from the ratio scale",
+          "explanation": "Correct. Interval and ratio scales both have equal gaps; only the ratio scale adds a true zero, which is what makes ratios meaningful on it and not on the interval scale."
+        },
+        {
+          "key": "D",
+          "text": "A discrete variable from a continuous variable",
+          "explanation": "Discrete versus continuous is about whether values are countable or lie anywhere in a range, not about a zero point."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The four scales of measurement, §3 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#3-the-four-scales-of-measurement"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "True zero distinguishes ratio from interval",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-009",
+      "topic": "Ch 13 · Census and sample · Concept",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A quality inspector must test whether matchsticks light. Testing destroys the matchstick. The only feasible method of investigation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A complete census of every matchstick",
+          "explanation": "A census here would destroy the entire output, leaving nothing to sell. Complete enumeration is impossible when the test destroys the item."
+        },
+        {
+          "key": "B",
+          "text": "A sample survey of some matchsticks",
+          "explanation": "Correct. Where testing is destructive a census is self-defeating, so a representative sample is the only workable route, and the population quality is inferred from it."
+        },
+        {
+          "key": "C",
+          "text": "No investigation is possible at all",
+          "explanation": "Investigation is perfectly possible; a sample lets the quality be judged without destroying everything."
+        },
+        {
+          "key": "D",
+          "text": "A census, because it is always the most accurate",
+          "explanation": "A census is exhaustive but not always feasible; destructive testing is the classic case where it cannot be used."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Census, samples and methods of sampling, §4 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#4-census-samples-and-methods-of-sampling"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Sampling required where testing is destructive",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-010",
+      "topic": "Ch 13 · Sampling methods · Simple random",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In SIMPLE RANDOM sampling:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Every unit of the population has an equal chance of selection",
+          "explanation": "Correct. Simple random sampling gives every unit the same probability of being chosen, and makes every possible sample of the given size equally likely — the benchmark for all random methods."
+        },
+        {
+          "key": "B",
+          "text": "The investigator selects the units he judges most typical",
+          "explanation": "That is purposive (judgement) sampling, which is not random and lets the investigator's bias in."
+        },
+        {
+          "key": "C",
+          "text": "Only the units that are easiest to reach are selected",
+          "explanation": "That describes convenience sampling, which is non-random and unrepresentative."
+        },
+        {
+          "key": "D",
+          "text": "The population is split into groups and one group is chosen",
+          "explanation": "That is closer to cluster sampling. Simple random sampling draws individual units, not whole groups."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Census, samples and methods of sampling, §4 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#4-census-samples-and-methods-of-sampling"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Simple random sampling — equal chance for every unit",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-011",
+      "topic": "Ch 13 · Sampling methods · Systematic",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A population of 2,400 members is to be sampled systematically to obtain a sample of 60. The sampling interval k is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "40",
+          "explanation": "Correct. The systematic sampling interval is k = N ÷ n = 2,400 ÷ 60 = 40, so after a random start between 1 and 40 every 40th member is taken."
+        },
+        {
+          "key": "B",
+          "text": "60",
+          "explanation": "60 is the sample size n, not the interval. The interval divides the population size by the sample size."
+        },
+        {
+          "key": "C",
+          "text": "2,460",
+          "explanation": "This adds the two figures. The interval is a quotient, N ÷ n, not a sum."
+        },
+        {
+          "key": "D",
+          "text": "30",
+          "explanation": "This halves the sample size for no reason. k = 2,400 ÷ 60 = 40, not 30."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Census, samples and methods of sampling, §4 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#4-census-samples-and-methods-of-sampling"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Systematic sampling interval k = N ÷ n",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-012",
+      "topic": "Ch 13 · Sampling methods · Stratified",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A firm of 1,500 workers has 900 in production and 600 in administration. A stratified sample of 100 is drawn with proportional allocation. The number drawn from production is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "40",
+          "explanation": "40 is the number drawn from administration, (600 ÷ 1,500) × 100. The production stratum, being larger, contributes 60."
+        },
+        {
+          "key": "B",
+          "text": "60",
+          "explanation": "Correct. Proportional allocation draws (stratum size ÷ population) × sample size = (900 ÷ 1,500) × 100 = 60 from production, leaving 40 from administration."
+        },
+        {
+          "key": "C",
+          "text": "45",
+          "explanation": "This would split the sample equally-ish by guesswork. Proportional allocation uses the exact share 900 ÷ 1,500 = 0.6, giving 60."
+        },
+        {
+          "key": "D",
+          "text": "50",
+          "explanation": "50 would be an equal split ignoring the different stratum sizes. Proportional allocation must reflect that production has more workers, so it gets 60."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Census, samples and methods of sampling, §4 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#4-census-samples-and-methods-of-sampling"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Stratified sampling — proportional allocation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-013",
+      "topic": "Ch 13 · Sampling methods · Cluster",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A surveyor picks 5 villages at random from a district and interviews EVERY household in those 5 villages. This is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Stratified sampling",
+          "explanation": "Stratified sampling would sample from every village (stratum), not study a chosen few completely. Here most villages are left out entirely."
+        },
+        {
+          "key": "B",
+          "text": "Cluster sampling",
+          "explanation": "Correct. The district is split into clusters (villages), a few clusters are chosen at random, and each chosen cluster is surveyed completely — the definition of cluster sampling."
+        },
+        {
+          "key": "C",
+          "text": "Simple random sampling of households",
+          "explanation": "Households were not drawn individually at random from the whole district; whole villages were chosen and then fully enumerated."
+        },
+        {
+          "key": "D",
+          "text": "Systematic sampling",
+          "explanation": "No fixed interval down an ordered list was used; entire randomly chosen villages were surveyed, which is clustering."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Census, samples and methods of sampling, §4 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#4-census-samples-and-methods-of-sampling"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Cluster sampling — some groups studied completely",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-014",
+      "topic": "Ch 13 · Sampling methods · Multistage",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A national survey first selects states, then districts within the chosen states, then villages within those districts, then households within those villages. This design is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Multistage sampling",
+          "explanation": "Correct. Sampling proceeds in successive stages — states, then districts, then villages, then households — each stage sampling within the units chosen at the stage before, which is multistage sampling."
+        },
+        {
+          "key": "B",
+          "text": "Simple random sampling",
+          "explanation": "Simple random sampling draws units directly in one step, not through a sequence of nested stages."
+        },
+        {
+          "key": "C",
+          "text": "Quota sampling",
+          "explanation": "Quota sampling fills preset quotas non-randomly; here the selection is random at each nested stage."
+        },
+        {
+          "key": "D",
+          "text": "Systematic sampling",
+          "explanation": "Systematic sampling uses a single fixed interval on one list, not a chain of sampling stages."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Census, samples and methods of sampling, §4 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#4-census-samples-and-methods-of-sampling"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Multistage sampling — selection in stages",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-015",
+      "topic": "Ch 13 · Errors · Sampling error",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Sampling error is the error that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Arises because only a part of the population is studied, and is absent in a complete census",
+          "explanation": "Correct. Sampling error is the difference that comes from studying a sample rather than the whole; a census studies everyone, so it carries no sampling error. It also shrinks as the sample grows."
+        },
+        {
+          "key": "B",
+          "text": "Arises from a faulty measuring instrument",
+          "explanation": "A faulty instrument causes non-sampling error, which affects censuses and samples alike, not sampling error."
+        },
+        {
+          "key": "C",
+          "text": "Arises from mistakes in tabulating the collected data",
+          "explanation": "Tabulation mistakes are non-sampling errors of processing, present even in a full census."
+        },
+        {
+          "key": "D",
+          "text": "Increases as the sample size increases",
+          "explanation": "The opposite is true: sampling error falls as the sample size rises, because a larger part represents the whole more closely."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Sampling and non-sampling error, §5 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#5-sampling-and-non-sampling-error"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Sampling error — present only in samples, falls with size",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-016",
+      "topic": "Ch 13 · Errors · Non-sampling error",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about a complete census is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is free of all error",
+          "explanation": "No investigation is free of all error. A census removes sampling error but is still exposed to non-sampling error."
+        },
+        {
+          "key": "B",
+          "text": "It has no sampling error but can still carry non-sampling error",
+          "explanation": "Correct. Because it studies everyone, a census has no sampling error, yet processing and measurement faults (non-sampling error) remain, and the sheer scale can even enlarge them."
+        },
+        {
+          "key": "C",
+          "text": "It has sampling error but no non-sampling error",
+          "explanation": "This is reversed. A census has no sampling error; non-sampling error is the kind it can still suffer."
+        },
+        {
+          "key": "D",
+          "text": "It always has less total error than any sample",
+          "explanation": "Not always. A well-run sample can have less total error than a census when the census accumulates heavy non-sampling error."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Sampling and non-sampling error, §5 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#5-sampling-and-non-sampling-error"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Census carries non-sampling error but no sampling error",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-017",
+      "topic": "Ch 13 · Class structure · Class width",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a continuous (exclusive) distribution the class is written 150–200. Its class width is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "200",
+          "explanation": "200 is the upper limit alone. The width is the gap between the two limits, 50."
+        },
+        {
+          "key": "B",
+          "text": "175",
+          "explanation": "175 is the mid-value of the class, (150 + 200) ÷ 2, not its width. Width is a difference, not a midpoint."
+        },
+        {
+          "key": "C",
+          "text": "350",
+          "explanation": "350 adds the two limits. The width is their difference, 200 − 150 = 50."
+        },
+        {
+          "key": "D",
+          "text": "50",
+          "explanation": "Correct. For an exclusive class the boundaries equal the limits, so the width is the upper limit minus the lower limit, 200 − 150 = 50."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Class width of an exclusive class",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-018",
+      "topic": "Ch 13 · Class structure · Mid-value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The mid-value (class mark) of the class 118–126 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "244",
+          "explanation": "244 is the sum of the two limits, before dividing by 2. The mid-value is 244 ÷ 2 = 122."
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "explanation": "8 is the class width, 126 − 118. The mid-value is the midpoint, not the width."
+        },
+        {
+          "key": "C",
+          "text": "122",
+          "explanation": "Correct. The mid-value is the average of the two limits, (118 + 126) ÷ 2 = 244 ÷ 2 = 122."
+        },
+        {
+          "key": "D",
+          "text": "118",
+          "explanation": "118 is the lower limit alone. The mid-value sits halfway between the limits, at 122."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Mid-value = (lower limit + upper limit) ÷ 2",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-019",
+      "topic": "Ch 13 · Class structure · Class boundaries",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A distribution uses the inclusive classes 20–29, 30–39, 40–49, … The LOWER class boundary of the class 30–39 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "29.5",
+          "explanation": "Correct. The gap between 29 and 30 is 1, so each boundary shifts by half of it, 0.5. The lower boundary of 30–39 is 30 − 0.5 = 29.5."
+        },
+        {
+          "key": "B",
+          "text": "30",
+          "explanation": "30 is the written lower limit, not the true boundary. For inclusive classes the boundary is half a unit below it, 29.5."
+        },
+        {
+          "key": "C",
+          "text": "29",
+          "explanation": "29 is the upper limit of the previous class. The boundary lies halfway between 29 and 30, at 29.5."
+        },
+        {
+          "key": "D",
+          "text": "34.5",
+          "explanation": "34.5 is the mid-value of the class 30–39, not its lower boundary. The lower boundary is 29.5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Class boundary = lower limit − half the gap (inclusive classes)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-020",
+      "topic": "Ch 13 · Class structure · True width of inclusive class",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the inclusive class 30–39 (part of the series 20–29, 30–39, 40–49), the TRUE class width, found from its boundaries, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "10",
+          "explanation": "Correct. The boundaries are 29.5 and 39.5, so the true width is 39.5 − 29.5 = 10. The half-unit added at each end restores the whole unit the inclusive limits hid."
+        },
+        {
+          "key": "B",
+          "text": "9",
+          "explanation": "9 is the apparent width from the written limits, 39 − 30. It ignores the 0.5 shift at each boundary and understates the true width by one unit."
+        },
+        {
+          "key": "C",
+          "text": "9.5",
+          "explanation": "9.5 shifts only one end. Both boundaries move by 0.5, so the true width is 39.5 − 29.5 = 10, not 9.5."
+        },
+        {
+          "key": "D",
+          "text": "39.5",
+          "explanation": "39.5 is the upper boundary, not the width. The width is the difference between the two boundaries, 10."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "True class width from boundaries of an inclusive class",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-021",
+      "topic": "Ch 13 · Frequency distribution · Sturges' rule",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Using Sturges' rule, the number of classes suggested for 100 observations (take log₁₀ 100 = 2) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "Correct. Sturges' rule gives k = 1 + 3.322 × log₁₀ 100 = 1 + 3.322 × 2 = 7.644, which rounds to a whole number of 8 classes."
+        },
+        {
+          "key": "B",
+          "text": "7",
+          "explanation": "7 is the value if 7.644 is rounded down. Rounding to the nearest whole number gives 8, since 7.644 is above 7.5."
+        },
+        {
+          "key": "C",
+          "text": "6.64",
+          "explanation": "6.64 forgets the leading 1 in the formula (3.322 × 2 alone). A count of classes must also be a whole number, so this cannot be the answer."
+        },
+        {
+          "key": "D",
+          "text": "100",
+          "explanation": "100 is the number of observations N, not the number of classes. Sturges' rule compresses N into a handful of classes, here 8."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Frequency distributions and choosing the number of classes, §7 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#7-frequency-distributions-and-choosing-the-number-of-classes"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Sturges' rule k = 1 + 3.322 log10 N",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-022",
+      "topic": "Ch 13 · Frequency distribution · Class width from Sturges",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For 100 observations ranging from 10 to 90, Sturges' rule (log₁₀ 100 = 2) is used to fix the number of classes. The implied class width is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "8 is the number of classes, not the width. The width divides the range by that number: 80 ÷ 8 = 10."
+        },
+        {
+          "key": "B",
+          "text": "10",
+          "explanation": "Correct. Sturges gives 1 + 3.322 × 2 = 7.644, rounded to 8 classes; the range is 90 − 10 = 80, so the width is 80 ÷ 8 = 10."
+        },
+        {
+          "key": "C",
+          "text": "80",
+          "explanation": "80 is the range (90 − 10), before it is shared among the classes. Dividing by 8 classes gives a width of 10."
+        },
+        {
+          "key": "D",
+          "text": "11.43",
+          "explanation": "11.43 divides the range by 7 rather than 8 classes. Sturges' 7.644 rounds to 8, so the width is 80 ÷ 8 = 10."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Frequency distributions and choosing the number of classes, §7 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#7-frequency-distributions-and-choosing-the-number-of-classes"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Class width = range ÷ number of classes (Sturges)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-023",
+      "topic": "Ch 13 · Frequency distribution · Number of classes",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Data run from 100 to 160 and a class width of 10 is chosen. The number of classes needed is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "explanation": "Correct. The range is 160 − 100 = 60, and with a width of 10 the number of classes is 60 ÷ 10 = 6, namely 100–110, 110–120, …, 150–160."
+        },
+        {
+          "key": "B",
+          "text": "7",
+          "explanation": "7 would count one class too many. The range 60 divided by the width 10 gives exactly 6 classes."
+        },
+        {
+          "key": "C",
+          "text": "60",
+          "explanation": "60 is the range, not the number of classes. Dividing it by the width of 10 gives 6."
+        },
+        {
+          "key": "D",
+          "text": "16",
+          "explanation": "16 has no basis here. The number of classes is range ÷ width = 60 ÷ 10 = 6."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Frequency distributions and choosing the number of classes, §7 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#7-frequency-distributions-and-choosing-the-number-of-classes"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Number of classes = range ÷ class width",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-024",
+      "topic": "Ch 13 · Class structure · Limits from mid-value and width",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A class has a mid-value of 42 and a class width of 8. Its lower class limit is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "34",
+          "explanation": "34 subtracts the whole width from the mid-value. Only half the width, 4, separates the mid-value from each limit, so the lower limit is 38."
+        },
+        {
+          "key": "B",
+          "text": "46",
+          "explanation": "46 is the UPPER limit, mid-value plus half the width. The lower limit subtracts half the width, giving 38."
+        },
+        {
+          "key": "C",
+          "text": "38",
+          "explanation": "Correct. The lower limit is the mid-value minus half the width, 42 − (8 ÷ 2) = 42 − 4 = 38, and the upper limit is 42 + 4 = 46."
+        },
+        {
+          "key": "D",
+          "text": "42",
+          "explanation": "42 is the mid-value itself. The lower limit lies half a width below it, at 38."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Lower limit = mid-value − half the class width",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-025",
+      "topic": "Ch 13 · Relative frequency · Basic",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A class has a frequency of 45 in a distribution of 300 observations. Its relative frequency is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.15",
+          "explanation": "Correct. Relative frequency is the class frequency divided by the total, 45 ÷ 300 = 0.15, a share of the whole that lies between 0 and 1."
+        },
+        {
+          "key": "B",
+          "text": "15",
+          "explanation": "15 is the percentage frequency (0.15 × 100), not the relative frequency. Relative frequency is the fraction 0.15."
+        },
+        {
+          "key": "C",
+          "text": "6.67",
+          "explanation": "6.67 divides 300 by 45, the ratio the wrong way up. Relative frequency divides the class frequency by the total, 45 ÷ 300 = 0.15."
+        },
+        {
+          "key": "D",
+          "text": "0.045",
+          "explanation": "0.045 would divide 45 by 1,000. The total is 300, so the relative frequency is 45 ÷ 300 = 0.15."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Relative frequency = f ÷ N",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-026",
+      "topic": "Ch 13 · Relative frequency · Percentage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A class of frequency 18 belongs to a distribution of 240 observations. Its percentage frequency is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "18",
+          "explanation": "18 is the class frequency itself, not a percentage. Expressed as a share of 240 it is 7.5%."
+        },
+        {
+          "key": "B",
+          "text": "0.075",
+          "explanation": "0.075 is the relative frequency (a fraction). Multiplying by 100 turns it into the percentage, 7.5%."
+        },
+        {
+          "key": "C",
+          "text": "13.33",
+          "explanation": "13.33 divides 240 by 18, inverting the ratio. The percentage is (18 ÷ 240) × 100 = 7.5%."
+        },
+        {
+          "key": "D",
+          "text": "7.5",
+          "explanation": "Correct. Percentage frequency is (frequency ÷ total) × 100 = (18 ÷ 240) × 100 = 0.075 × 100 = 7.5%."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Percentage frequency = (f ÷ N) × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-027",
+      "topic": "Ch 13 · Cumulative frequency · Less-than",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The classes 0–10, 10–20, 20–30, 30–40 have frequencies 5, 12, 18 and 9. The 'less than 30' cumulative frequency is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "35",
+          "explanation": "Correct. 'Less than 30' adds the frequencies of all classes below 30: 5 + 12 + 18 = 35."
+        },
+        {
+          "key": "B",
+          "text": "44",
+          "explanation": "44 adds all four frequencies (5 + 12 + 18 + 9), which is 'less than 40', the grand total N. 'Less than 30' excludes the last class."
+        },
+        {
+          "key": "C",
+          "text": "30",
+          "explanation": "30 is the class boundary being asked about, not a frequency. The cumulative frequency below it is 35."
+        },
+        {
+          "key": "D",
+          "text": "18",
+          "explanation": "18 is the frequency of the single class 20–30. The 'less than 30' figure cumulates all classes below 30, giving 35."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Less-than cumulative frequency",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-028",
+      "topic": "Ch 13 · Cumulative frequency · More-than",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the classes 0–10, 10–20, 20–30, 30–40 with frequencies 5, 12, 18 and 9, the 'more than 20' cumulative frequency is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "35",
+          "explanation": "35 is the 'less than 30' figure (5 + 12 + 18). 'More than 20' cumulates upward from 20, giving 18 + 9 = 27."
+        },
+        {
+          "key": "B",
+          "text": "27",
+          "explanation": "Correct. 'More than 20' adds the frequencies of the classes from 20 upward: 18 + 9 = 27."
+        },
+        {
+          "key": "C",
+          "text": "44",
+          "explanation": "44 is the grand total N, i.e. 'more than 0'. 'More than 20' leaves out the first two classes, so it is 27."
+        },
+        {
+          "key": "D",
+          "text": "9",
+          "explanation": "9 is the frequency of the last class 30–40 alone. 'More than 20' also includes the class 20–30, giving 18 + 9 = 27."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "More-than cumulative frequency",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-029",
+      "topic": "Ch 13 · Cumulative frequency · Recovering a frequency",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a less-than cumulative table, 'less than 40' is 52 and 'less than 30' is 35. The frequency of the class 30–40 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "17",
+          "explanation": "Correct. A class frequency is the difference of two neighbouring less-than cumulative figures: 52 − 35 = 17."
+        },
+        {
+          "key": "B",
+          "text": "87",
+          "explanation": "87 adds the two cumulative figures. A single class frequency is their difference, 52 − 35 = 17."
+        },
+        {
+          "key": "C",
+          "text": "52",
+          "explanation": "52 is the 'less than 40' cumulative total, which already contains every class below 40. The class 30–40 alone is 52 − 35 = 17."
+        },
+        {
+          "key": "D",
+          "text": "35",
+          "explanation": "35 is the 'less than 30' cumulative total. The frequency of 30–40 is the extra amount added by 40, i.e. 52 − 35 = 17."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Class frequency = difference of neighbouring cumulative frequencies",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-030",
+      "topic": "Ch 13 · Relative frequency · Recovering N",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A class has a frequency of 24 and a relative frequency of 0.16. The total number of observations N is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.84",
+          "explanation": "3.84 multiplies 24 by 0.16. To recover the total you divide: 24 ÷ 0.16 = 150."
+        },
+        {
+          "key": "B",
+          "text": "384",
+          "explanation": "384 multiplies 24 by 16 instead of dividing by 0.16. N = 24 ÷ 0.16 = 150."
+        },
+        {
+          "key": "C",
+          "text": "150",
+          "explanation": "Correct. Since relative frequency = f ÷ N, the total is N = f ÷ relative frequency = 24 ÷ 0.16 = 150."
+        },
+        {
+          "key": "D",
+          "text": "40",
+          "explanation": "40 has no basis here. From f ÷ N = 0.16 with f = 24, the total is 24 ÷ 0.16 = 150."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "N = class frequency ÷ relative frequency",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-031",
+      "topic": "Ch 13 · Class structure · Upper boundary",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A distribution uses the inclusive classes 100–199, 200–299, 300–399, … The UPPER class boundary of the class 100–199 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "199.5",
+          "explanation": "Correct. The gap between 199 and 200 is 1, so the boundary rises by half of it: 199 + 0.5 = 199.5."
+        },
+        {
+          "key": "B",
+          "text": "200",
+          "explanation": "200 is the lower limit of the next class, not the boundary. The boundary sits halfway between 199 and 200, at 199.5."
+        },
+        {
+          "key": "C",
+          "text": "199",
+          "explanation": "199 is the written upper limit. The true boundary adds half the gap, giving 199.5."
+        },
+        {
+          "key": "D",
+          "text": "149.5",
+          "explanation": "149.5 is the mid-value of 100–199, not its upper boundary. The upper boundary is 199.5."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Upper boundary = upper limit + half the gap",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-032",
+      "topic": "Ch 13 · Class structure · Width from mid-values",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Two successive classes have mid-values 15 and 23. The class width is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8",
+          "explanation": "Correct. The difference between two successive mid-values equals the class width, 23 − 15 = 8."
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "explanation": "4 is half the gap between the mid-values. The full difference, 23 − 15 = 8, is the class width."
+        },
+        {
+          "key": "C",
+          "text": "19",
+          "explanation": "19 is the value halfway between the two mid-values, not the width. The width is their difference, 8."
+        },
+        {
+          "key": "D",
+          "text": "15",
+          "explanation": "15 is the first mid-value. The width is the step to the next mid-value, 23 − 15 = 8."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Successive mid-values differ by the class width",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-033",
+      "topic": "Ch 13 · Pie chart · Angle from component",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a pie chart of total spending ₹ 7,200, an item costing ₹ 1,800 is shown as a sector of angle:",
+      "options": [
+        {
+          "key": "A",
+          "text": "45 degrees",
+          "explanation": "45° is half the correct angle. The quarter share (0.25) of 360 is 90°, not 45°."
+        },
+        {
+          "key": "B",
+          "text": "25 degrees",
+          "explanation": "25 is the percentage share (1,800 ÷ 7,200 × 100), not the angle. The angle multiplies the share by 360, giving 90°."
+        },
+        {
+          "key": "C",
+          "text": "180 degrees",
+          "explanation": "180° would be a half share. Here the item is a quarter of the total, so the angle is 90°."
+        },
+        {
+          "key": "D",
+          "text": "90 degrees",
+          "explanation": "Correct. The sector angle is (component ÷ total) × 360 = (1,800 ÷ 7,200) × 360 = 0.25 × 360 = 90°."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Bar charts and pie charts, §10 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#10-bar-charts-and-pie-charts"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Pie sector angle = (component ÷ total) × 360",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-034",
+      "topic": "Ch 13 · Pie chart · Component from angle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a pie chart of a ₹ 36,000 budget, one sector has an angle of 60°. The amount it represents is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 60",
+          "explanation": "₹ 60 mistakes the angle in degrees for an amount. Convert through the total: (60 ÷ 360) × 36,000 = ₹ 6,000."
+        },
+        {
+          "key": "B",
+          "text": "₹ 6,000",
+          "explanation": "Correct. The amount is (angle ÷ 360) × total = (60 ÷ 360) × 36,000 = (1 ÷ 6) × 36,000 = ₹ 6,000."
+        },
+        {
+          "key": "C",
+          "text": "₹ 21,600",
+          "explanation": "₹ 21,600 multiplies the total by 0.6 (as if the angle were 216°). A 60° sector is one-sixth of the circle, giving ₹ 6,000."
+        },
+        {
+          "key": "D",
+          "text": "₹ 216",
+          "explanation": "₹ 216 has no basis. The amount is (60 ÷ 360) of ₹ 36,000, which is ₹ 6,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Bar charts and pie charts, §10 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#10-bar-charts-and-pie-charts"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Component = (angle ÷ 360) × total",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-035",
+      "topic": "Ch 13 · Pie chart · Percentage from angle",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A sector of a pie chart subtends an angle of 72° at the centre. The percentage of the total it represents is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "20",
+          "explanation": "Correct. Percentage = (angle ÷ 360) × 100 = (72 ÷ 360) × 100 = 0.2 × 100 = 20%."
+        },
+        {
+          "key": "B",
+          "text": "72",
+          "explanation": "72 is the angle in degrees, not the percentage. Dividing by 360 and multiplying by 100 gives 20%."
+        },
+        {
+          "key": "C",
+          "text": "25.92",
+          "explanation": "25.92 multiplies 72 by 0.36 (treating degrees as if 1° = 0.36%). The correct conversion is (72 ÷ 360) × 100 = 20%."
+        },
+        {
+          "key": "D",
+          "text": "40",
+          "explanation": "40 divides 72 by 180 rather than 360. A full circle is 360°, so the share is (72 ÷ 360) × 100 = 20%."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bar charts and pie charts, §10 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#10-bar-charts-and-pie-charts"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Percentage = (angle ÷ 360) × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-036",
+      "topic": "Ch 13 · Diagrams · Bar chart vs histogram",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The key difference between a bar chart and a histogram is that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A bar chart has gaps between the bars, while a histogram's rectangles are adjacent with no gaps",
+          "explanation": "Correct. Bar charts show distinct categories, so the bars stand apart; histograms show continuous classes, so their rectangles touch, the boundaries being shared."
+        },
+        {
+          "key": "B",
+          "text": "A histogram can only be drawn for discrete data",
+          "explanation": "The reverse is true: a histogram is for continuous (grouped) data. Bar charts are typical for discrete categories."
+        },
+        {
+          "key": "C",
+          "text": "A bar chart represents frequency by area, a histogram by length",
+          "explanation": "This swaps them. A bar chart's meaning is in its length; a histogram represents frequency by area."
+        },
+        {
+          "key": "D",
+          "text": "There is no difference; the two terms are interchangeable",
+          "explanation": "They are not interchangeable. The gap-versus-adjacent distinction reflects categorical versus continuous data."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Histogram, frequency polygon and ogive, §11 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#11-histogram-frequency-polygon-and-ogive"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Bar chart (gaps) versus histogram (adjacent rectangles)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-037",
+      "topic": "Ch 13 · Histogram · Frequency density",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "To draw a histogram with unequal class widths, the class 30–50 with a frequency of 60 should be plotted at a height (frequency density) of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3",
+          "explanation": "Correct. Frequency density is frequency ÷ class width = 60 ÷ (50 − 30) = 60 ÷ 20 = 3, so that area, not height, carries the frequency."
+        },
+        {
+          "key": "B",
+          "text": "60",
+          "explanation": "60 is the raw frequency. Using it as the height would exaggerate this wide class; the density is 60 ÷ 20 = 3."
+        },
+        {
+          "key": "C",
+          "text": "20",
+          "explanation": "20 is the class width, not the height. The density divides the frequency by that width, giving 3."
+        },
+        {
+          "key": "D",
+          "text": "1,200",
+          "explanation": "1,200 multiplies frequency by width. Frequency density divides them: 60 ÷ 20 = 3."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Histogram, frequency polygon and ogive, §11 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#11-histogram-frequency-polygon-and-ogive"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Frequency density = frequency ÷ class width",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-038",
+      "topic": "Ch 13 · Graphs · Frequency polygon",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A frequency polygon is obtained by plotting and joining the points whose coordinates are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(class mid-value, class frequency)",
+          "explanation": "Correct. A frequency polygon plots each class frequency against the class mid-value and joins the points by straight lines, closing to the axis one class beyond each end."
+        },
+        {
+          "key": "B",
+          "text": "(class boundary, cumulative frequency)",
+          "explanation": "That describes the ogive, which plots cumulative frequency against class boundaries — not the frequency polygon."
+        },
+        {
+          "key": "C",
+          "text": "(class boundary, frequency density)",
+          "explanation": "Those are the corners of a histogram's rectangles, not the points of a frequency polygon, which uses mid-values."
+        },
+        {
+          "key": "D",
+          "text": "(class frequency, class width)",
+          "explanation": "This pairs two quantities that are never the coordinates of any standard graph. A frequency polygon uses mid-value against frequency."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Histogram, frequency polygon and ogive, §11 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#11-histogram-frequency-polygon-and-ogive"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Frequency polygon plots frequency against mid-values",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-039",
+      "topic": "Ch 13 · Ogive · Median position",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "There are 80 observations. To read the median off a less-than ogive, you locate on the cumulative-frequency axis the value:",
+      "options": [
+        {
+          "key": "A",
+          "text": "40",
+          "explanation": "Correct. The median is the value below which half the data lie, so you mark N ÷ 2 = 80 ÷ 2 = 40 on the cumulative axis, run across to the ogive and down to the variable."
+        },
+        {
+          "key": "B",
+          "text": "80",
+          "explanation": "80 is N itself, the top of the ogive. The median is read at half of it, 40."
+        },
+        {
+          "key": "C",
+          "text": "41",
+          "explanation": "41 is (N ÷ 2) + 1, a discrete-data adjustment. For a continuous ogive the median position is N ÷ 2 = 40."
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "explanation": "20 is N ÷ 4, the position of the first quartile, not the median. The median sits at N ÷ 2 = 40."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Histogram, frequency polygon and ogive, §11 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#11-histogram-frequency-polygon-and-ogive"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Median read off ogive at N ÷ 2",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-040",
+      "topic": "Ch 13 · Ogive · Median by interpolation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "For the classes 0–10, 10–20, 20–30, 30–40 with frequencies 6, 14, 20 and 10 (N = 50), the median read from the ogive is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "20",
+          "explanation": "20 is the lower boundary of the median class, the starting point of the interpolation, not the finished median of 22.5."
+        },
+        {
+          "key": "B",
+          "text": "25",
+          "explanation": "25 is the median position N ÷ 2 on the cumulative axis, not the median value on the variable axis. Reading across the ogive gives 22.5."
+        },
+        {
+          "key": "C",
+          "text": "22.5",
+          "explanation": "Correct. N ÷ 2 = 25 falls in the class 20–30 (cumulative reaches 20 at 20 and 40 at 30). Median = 20 + [(25 − 20) ÷ 20] × 10 = 20 + 2.5 = 22.5."
+        },
+        {
+          "key": "D",
+          "text": "22",
+          "explanation": "22 rounds the interpolation carelessly. The exact reading is 20 + (5 ÷ 20) × 10 = 22.5."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Histogram, frequency polygon and ogive, §11 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#11-histogram-frequency-polygon-and-ogive"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Median by ogive interpolation: L + [(N/2 − cf)/f] × h",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-041",
+      "topic": "Ch 13 · Ogive · Shape",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A 'less than' ogive:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rises from left to right, from 0 up to the total frequency N",
+          "explanation": "Correct. A less-than cumulative frequency only grows as the boundary rises, so its curve climbs steadily from 0 on the left to N on the right."
+        },
+        {
+          "key": "B",
+          "text": "Falls from left to right, from N down to 0",
+          "explanation": "That describes the 'more than' ogive. The less-than ogive rises rather than falls."
+        },
+        {
+          "key": "C",
+          "text": "Is a horizontal straight line",
+          "explanation": "A cumulative curve changes as classes are added; it is not horizontal. The less-than ogive rises."
+        },
+        {
+          "key": "D",
+          "text": "First rises and then falls",
+          "explanation": "A cumulative frequency never decreases as the boundary increases, so a less-than ogive only rises."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Histogram, frequency polygon and ogive, §11 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#11-histogram-frequency-polygon-and-ogive"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Less-than ogive rises to N",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-042",
+      "topic": "Ch 13 · Cumulative frequency · Reading a count",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From a less-than ogive of 60 students, 38 scored less than 50 marks. The number scoring 50 marks or more is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "22",
+          "explanation": "Correct. Those scoring 50 or more are the rest of the group: N − (less than 50) = 60 − 38 = 22."
+        },
+        {
+          "key": "B",
+          "text": "38",
+          "explanation": "38 is the number scoring LESS than 50. The number scoring 50 or more is the complement, 60 − 38 = 22."
+        },
+        {
+          "key": "C",
+          "text": "60",
+          "explanation": "60 is the whole group N. Only those at or above 50 are wanted, which is 60 − 38 = 22."
+        },
+        {
+          "key": "D",
+          "text": "12",
+          "explanation": "12 has no basis here. The complement of 38 within 60 is 22, not 12."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Count at or above a value = N − less-than cumulative",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-043",
+      "topic": "Ch 13 · Pie chart · Angle from percentage",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An item forms 35% of a total. In a pie chart its sector angle is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "126 degrees",
+          "explanation": "Correct. Each 1% of the total is 3.6°, so 35% × 3.6 = 126°, equivalently (35 ÷ 100) × 360 = 126°."
+        },
+        {
+          "key": "B",
+          "text": "35 degrees",
+          "explanation": "35 treats the percentage directly as degrees. The conversion multiplies by 3.6, giving 126°."
+        },
+        {
+          "key": "C",
+          "text": "3.6 degrees",
+          "explanation": "3.6° is the angle for a single per cent. For 35% the angle is 35 × 3.6 = 126°."
+        },
+        {
+          "key": "D",
+          "text": "350 degrees",
+          "explanation": "350 multiplies 35 by 10. The correct factor is 3.6 per cent-point, giving 126°."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bar charts and pie charts, §10 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#10-bar-charts-and-pie-charts"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Pie angle: 1% = 3.6 degrees",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-044",
+      "topic": "Ch 13 · Relative frequency · Missing value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A four-class distribution has relative frequencies 0.10, 0.25 and 0.30 for its first three classes. The relative frequency of the fourth class is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.35",
+          "explanation": "Correct. Relative frequencies always sum to 1, so the fourth is 1 − (0.10 + 0.25 + 0.30) = 1 − 0.65 = 0.35."
+        },
+        {
+          "key": "B",
+          "text": "0.65",
+          "explanation": "0.65 is the sum of the first three. The missing value is what remains to reach 1, i.e. 1 − 0.65 = 0.35."
+        },
+        {
+          "key": "C",
+          "text": "0.30",
+          "explanation": "0.30 merely repeats the third class. The fourth must be 1 minus the other three, 0.35."
+        },
+        {
+          "key": "D",
+          "text": "1.00",
+          "explanation": "1.00 is the total of all four relative frequencies, not the fourth one. Subtracting the known three gives 0.35."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Relative frequencies sum to 1",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-045",
+      "topic": "Ch 13 · Frequency distribution · Open-end class",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A class stated as 'below 10' or 'above 60', with only one limit given, is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "An open-end class",
+          "explanation": "Correct. An open-end class leaves one limit unstated ('below 10', '60 and above'); its mid-value cannot be found until a width is assumed, usually that of the neighbouring class."
+        },
+        {
+          "key": "B",
+          "text": "An inclusive class",
+          "explanation": "An inclusive class states both limits (e.g. 20–29) and includes both. An open-end class is missing one limit altogether."
+        },
+        {
+          "key": "C",
+          "text": "A cumulative class",
+          "explanation": "There is no such thing as a 'cumulative class'; cumulation applies to frequencies, not to the class itself."
+        },
+        {
+          "key": "D",
+          "text": "An exclusive class",
+          "explanation": "An exclusive class states both limits with the upper belonging to the next class. An open-end class states only one limit."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Class limits, boundaries, width and mid-value, §8 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#8-class-limits-boundaries-width-and-mid-value"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Open-end class — one limit unstated",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-046",
+      "topic": "Ch 13 · Frequency distribution · Range",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a set of observations the largest value is 148 and the smallest is 92. The range is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "120",
+          "explanation": "120 is the mid-point of the two values, (148 + 92) ÷ 2, not the range. The range is 56."
+        },
+        {
+          "key": "B",
+          "text": "240",
+          "explanation": "240 adds the two values. The range is their difference, 148 − 92 = 56."
+        },
+        {
+          "key": "C",
+          "text": "148",
+          "explanation": "148 is only the largest value. The range measures the spread, 148 − 92 = 56."
+        },
+        {
+          "key": "D",
+          "text": "56",
+          "explanation": "Correct. The range is the largest value minus the smallest, 148 − 92 = 56."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Frequency distributions and choosing the number of classes, §7 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#7-frequency-distributions-and-choosing-the-number-of-classes"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Range = largest − smallest",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-047",
+      "topic": "Ch 13 · Cumulative frequency · More-than difference",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a 'more than' cumulative table, 'more than 100' is 75 and 'more than 120' is 47. The frequency of the class 100–120 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "28",
+          "explanation": "Correct. The frequency of a class is the difference between two neighbouring more-than cumulative figures: 75 − 47 = 28."
+        },
+        {
+          "key": "B",
+          "text": "122",
+          "explanation": "122 adds the two cumulative figures. A class frequency is their difference, 75 − 47 = 28."
+        },
+        {
+          "key": "C",
+          "text": "75",
+          "explanation": "75 is the 'more than 100' total, covering every class from 100 upward. The class 100–120 alone is 75 − 47 = 28."
+        },
+        {
+          "key": "D",
+          "text": "47",
+          "explanation": "47 is the 'more than 120' total. The class 100–120 is the part lost between 100 and 120, i.e. 75 − 47 = 28."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Class frequency from more-than cumulative differences",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-048",
+      "topic": "Ch 13 · Relative frequency · Percentage above a value",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Out of 200 candidates, 30 scored above 60 marks. The percentage of candidates scoring above 60 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "15",
+          "explanation": "Correct. The percentage is (30 ÷ 200) × 100 = 0.15 × 100 = 15%."
+        },
+        {
+          "key": "B",
+          "text": "30",
+          "explanation": "30 is the count of candidates, not a percentage. As a share of 200 it is 15%."
+        },
+        {
+          "key": "C",
+          "text": "6.67",
+          "explanation": "6.67 divides 200 by 30, inverting the ratio. The percentage is (30 ÷ 200) × 100 = 15%."
+        },
+        {
+          "key": "D",
+          "text": "170",
+          "explanation": "170 is the number scoring 60 or below (200 − 30), not the percentage above 60, which is 15%."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Cumulative and relative frequency, §9 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#9-cumulative-and-relative-frequency"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Percentage above a value = (count ÷ N) × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-049",
+      "topic": "Ch 13 · Pie chart · Total from a sector",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a pie chart, a sector of angle 45° represents ₹ 5,000. The total value represented by the whole chart is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 40,000",
+          "explanation": "Correct. The whole circle is 360°, so the total is 5,000 × (360 ÷ 45) = 5,000 × 8 = ₹ 40,000."
+        },
+        {
+          "key": "B",
+          "text": "₹ 5,000",
+          "explanation": "₹ 5,000 is the value of the single 45° sector, not the whole. Scaling up to 360° gives ₹ 40,000."
+        },
+        {
+          "key": "C",
+          "text": "₹ 45,000",
+          "explanation": "₹ 45,000 confuses the angle with a rupee figure. The total is 5,000 × (360 ÷ 45) = ₹ 40,000."
+        },
+        {
+          "key": "D",
+          "text": "₹ 625",
+          "explanation": "₹ 625 scales the amount down by 45/360 instead of up. The full total is 5,000 × 8 = ₹ 40,000."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Bar charts and pie charts, §10 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#10-bar-charts-and-pie-charts"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Total = sector value × (360 ÷ sector angle)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "q-f3c13-050",
+      "topic": "Ch 13 · Exam technique · Negative marking",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Each correct answer earns +1 and each wrong answer −0.25. Guessing blindly among four options, the expected mark per question is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.0625",
+          "explanation": "Correct. Expected mark = (1 ÷ 4)(+1) + (3 ÷ 4)(−0.25) = 0.25 − 0.1875 = 0.0625 — just positive, so a blind guess barely helps."
+        },
+        {
+          "key": "B",
+          "text": "0.25",
+          "explanation": "0.25 is only the gain term, (1 ÷ 4)(+1), before subtracting the expected penalty of 0.1875. The net is 0.0625."
+        },
+        {
+          "key": "C",
+          "text": "0",
+          "explanation": "0 would be the break-even if there were no positive term, but the small expected gain leaves +0.0625, not 0."
+        },
+        {
+          "key": "D",
+          "text": "-0.25",
+          "explanation": "−0.25 is the penalty for one wrong answer, not the expected value across all four equally likely outcomes, which is +0.0625."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Answering under negative marking, §12 →",
+        "href": "/foundation/quantitative-aptitude/statistical-description-of-data/#12-answering-under-negative-marking"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Expected value of a blind guess under 0.25 negative marking",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-11"
+    }
+  ]
+}

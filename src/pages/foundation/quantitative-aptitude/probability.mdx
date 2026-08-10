@@ -1,0 +1,721 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Probability'
+description: 'CA Foundation Quantitative Aptitude Ch 15 — random experiments, sample space and events, the classical, relative-frequency and axiomatic definitions, equally likely, mutually exclusive, exhaustive and independent events, the addition and multiplication theorems, conditional probability, independence, an elementary Bayes theorem, the expectation, variance and mean of a random variable, and odds in favour and against, built on the standard coin, die, card and urn set-ups with fully worked examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 15 · Probability'
+chapterSlug: probability
+masteryId: f3-ch15
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 15 (Probability) — scope, definitions and worked patterns'
+  - 'Standard statements of the classical, relative-frequency and axiomatic definitions, the addition and multiplication theorems, conditional probability, Bayes theorem and the expectation and variance of a random variable, as taught at Foundation level'
+sourceLabel: 'ICAI SM Paper 3 Ch 15 scope (May 2026 ed.) · standard probability results'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 32 min read · 10 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=probability'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A cricket commentator in Bengaluru says a batsman has "a 70 percent chance" of reaching his century.
+A weather app says there is "a 40 percent chance of rain" over Chennai this evening. An auditor says
+there is "a low probability" that a sampled voucher is misstated. All three are talking about the
+same idea — a number between 0 and 1 that measures how likely something is — yet only one of them can
+be checked by counting. This chapter is about the counting kind, because that is the only kind Paper 3
+can mark.
+
+Probability begins where certainty ends. When you throw a fair die you cannot say which face will
+show, but you can say the six faces are equally likely, and from that single fact everything else
+follows by arithmetic. The whole chapter is a set of rules for turning a clearly described chance
+experiment into one fraction. Learn to write down the sample space, count the outcomes that favour
+the event, and divide — and most questions are already half solved.
+
+Paper 3 is fully objective, so you will never derive a theorem. You will be handed coins, dice, a
+pack of 52 cards, or an urn of coloured balls, and asked for one probability, one expected value, or
+one odds ratio. This chapter takes each definition and each theorem in turn, ties every one to those
+four standard set-ups, and shows the counting so plainly that a slip becomes hard to make.
+
+## 1. The language of probability: experiment, sample space and events
+
+Three words must be fixed before any formula is written, because every later rule is stated in terms
+of them.
+
+- **Random experiment** — an action whose result cannot be predicted with certainty before it is
+  performed, though all its possible results are known in advance. Tossing a coin, throwing a die,
+  drawing a card, picking a ball from an urn: each is a random experiment.
+- **Sample space (S)** — the set of all possible outcomes of the experiment, listed once each. The
+  number of outcomes in it is written n(S).
+- **Event (E)** — any subset of the sample space; that is, any collection of outcomes we choose to
+  name. The number of outcomes in it is written n(E). An event with a single outcome is an
+  **elementary** (or simple) event; one built from several is a **compound** event.
+
+<div class="formula">Sample space of one die: S = <code>{'{1, 2, 3, 4, 5, 6}'}</code>, so n(S) = 6</div>
+<div class="formula">Sample space of two coins: S = <code>{'{HH, HT, TH, TT}'}</code>, so n(S) = 4</div>
+
+An event **occurs** when the actual outcome of the experiment is one of the outcomes inside the
+event. If a die shows 4, the event "an even number" has occurred, because 4 is one of the outcomes
+`{2, 4, 6}` that make up that event.
+
+Two events at the edges of the scale deserve names. The **sure** (or certain) event is the whole
+sample space S — it always occurs. The **impossible** (or null) event is the empty set — it never
+occurs. Everything examinable sits between these two.
+
+<Callout kind="pointer">
+  <p>
+    Almost every mistake in this chapter is a counting mistake, not a formula mistake. Before you
+    reach for any theorem, write the sample space down — or at least its size n(S). For two dice
+    that is 36 ordered pairs, for three coins it is 8 outcomes, for a pack it is 52 cards. A wrong
+    n(S) poisons every fraction that follows, and it is the single figure an examiner most hopes you
+    will guess.
+  </p>
+</Callout>
+
+Because events are sets, the set operations carry plain meanings that you will use in every theorem:
+
+- **A ∪ B** (A union B) — the event that **A or B or both** occur.
+- **A ∩ B** (A intersection B) — the event that **A and B both** occur.
+- **A'** (A complement, also written A-bar or A-c) — the event that **A does not** occur. Its
+  outcomes are exactly those of S left out of A.
+
+## 2. Three definitions: classical, relative frequency and axiomatic
+
+Probability can be defined in three ways. They agree wherever they overlap, but each answers a
+question the others cannot, so all three are examinable.
+
+**The classical (or a priori) definition.** When an experiment has a finite number of outcomes that
+are **all equally likely**, the probability of an event E is the ratio of favourable outcomes to
+total outcomes:
+
+<div class="formula">P(E) = n(E) / n(S) = (number of outcomes favourable to E) / (total number of outcomes)</div>
+
+This is the workhorse of the chapter. It needs no experiment to be performed — you reason it out in
+advance, which is why it is called *a priori*. Its one condition is the phrase in bold: the outcomes
+must be equally likely, and if they are not, the formula does not apply.
+
+**The relative-frequency (or empirical) definition.** When the outcomes are not equally likely, or
+you cannot list them, you repeat the experiment many times and watch the proportion settle:
+
+<div class="formula">P(E) = limit, as the number of trials N grows large, of (number of times E occurs) / N</div>
+
+A drawing pin tossed 1,000 times and landing point-up 620 times has an estimated probability of
+point-up of about 0.62. No symmetry lets you reason that in advance; only the record of trials gives
+it. This is how insurers price a policy and how a factory states a defect rate.
+
+**The axiomatic definition.** The modern definition keeps only the properties both of the above must
+obey, and builds everything from three axioms. For any events A and B in a sample space S:
+
+<div class="formula">Axiom 1: P(A) ≥ 0    Axiom 2: P(S) = 1    Axiom 3: P(A ∪ B) = P(A) + P(B) when A and B are mutually exclusive</div>
+
+From these three lines every result in the chapter can be proved, including that
+0 ≤ P(A) ≤ 1 always, that P(impossible event) = 0, and the complement rule below. You are not asked
+to prove them; you are asked to know that the axioms are the foundation and that no probability can
+ever fall outside the range 0 to 1.
+
+The most-used consequence is the **complement rule**, worth memorising as a separate fact because it
+turns many "at least one" questions into a single subtraction:
+
+<div class="formula">P(A') = 1 − P(A)</div>
+
+<Callout kind="mistake">
+  <p>
+    A probability can never be greater than 1 or less than 0. If your working produces 7/6 or a
+    negative number, you have double-counted an outcome, used n(E) larger than n(S), or added two
+    events that overlap without subtracting the overlap. Stop and recount rather than "adjusting" the
+    figure — the error is always upstream.
+  </p>
+</Callout>
+
+## 3. Types of events: equally likely, mutually exclusive, exhaustive and independent
+
+Four adjectives describe how events relate to one another. A question usually turns on spotting which
+one applies, so fix each definition to a picture.
+
+- **Equally likely** — two or more events have the same chance of occurring, with no reason to
+  prefer one over another. The six faces of a fair die are equally likely; the two sides of a fair
+  coin are equally likely. This is the condition the classical definition needs.
+- **Mutually exclusive (disjoint)** — two events cannot both occur in the same trial, so they share
+  no outcome and A ∩ B is the impossible event, giving P(A ∩ B) = 0. On one die, "an even number"
+  and "an odd number" are mutually exclusive; "an even number" and "a number greater than 4" are
+  **not**, because 6 belongs to both.
+- **Exhaustive** — a set of events that together cover the whole sample space, so at least one of
+  them must occur and their union is S. The events "even" and "odd" on a die are exhaustive; so are
+  "heart, diamond, club, spade" on a pack.
+- **Independent** — the occurrence of one event does not change the probability of the other.
+  Successive tosses of a coin are independent: the coin has no memory of the last toss. Independence
+  is a statement about probabilities, defined precisely in section 6.
+
+<Callout kind="mistake">
+  <p>
+    Mutually exclusive and independent are different ideas, and confusing them is the classic trap.
+    Mutually exclusive events cannot happen together (P(A ∩ B) = 0). Independent events can happen
+    together, and do so exactly as often as chance alone predicts (P(A ∩ B) = P(A)P(B)). In fact two
+    events with non-zero probabilities cannot be both mutually exclusive and independent — if they
+    never occur together, then one occurring drives the other's chance to zero, which is the very
+    opposite of independence.
+  </p>
+</Callout>
+
+A set of events that is **mutually exclusive and exhaustive** carves the sample space into
+non-overlapping pieces that between them leave nothing out. The probabilities of such a set add to
+exactly 1. This is the structure Bayes' theorem in section 7 stands on.
+
+## 4. The addition theorem
+
+The addition theorem answers "what is the probability that A **or** B occurs?" It has two forms, and
+choosing the wrong one is a common slip.
+
+**General form (events may overlap).** Add the two probabilities, then subtract the overlap you have
+counted twice:
+
+<div class="formula">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</div>
+
+**Special form (mutually exclusive events).** When A and B cannot both occur, the overlap is zero,
+so the subtraction disappears:
+
+<div class="formula">P(A ∪ B) = P(A) + P(B), valid only when A and B are mutually exclusive</div>
+
+The general form is always correct; the special form is a shortcut you may use only after checking
+that the two events share no outcome. When in doubt, use the general form and let P(A ∩ B) be zero if
+it truly is.
+
+**Worked illustration.** One card is drawn from a well-shuffled pack of 52. Find the probability that
+it is a king **or** a heart. There are 4 kings and 13 hearts, but the king of hearts is one card
+counted in both, so:
+
+- P(king) = 4/52, P(heart) = 13/52, P(king and heart) = 1/52
+- P(king or heart) = 4/52 + 13/52 − 1/52 = 16/52 = 4/13
+
+Had you forgotten to subtract the shared king of hearts, you would have written 17/52 and lost the
+mark to a card counted twice.
+
+<Callout kind="pointer">
+  <p>
+    Read the connective in the question. "Or" points to the addition theorem and a union; "and"
+    points to the multiplication theorem of section 5 and an intersection. "At least one" is an "or"
+    in disguise, and is very often fastest through the complement: P(at least one) = 1 − P(none).
+  </p>
+</Callout>
+
+For three events the pattern extends, adding singles, subtracting pairs and adding back the triple:
+
+<div class="formula">P(A ∪ B ∪ C) = P(A) + P(B) + P(C) − P(A ∩ B) − P(A ∩ C) − P(B ∩ C) + P(A ∩ B ∩ C)</div>
+
+## 5. Conditional probability and the multiplication theorem
+
+Sometimes you learn something part-way through — the first card drawn was a king, the first die
+showed an even number — and want the probability of a second event **given** that knowledge. That is
+a **conditional probability**, written P(A | B), read "the probability of A given B".
+
+<div class="formula">P(A | B) = P(A ∩ B) / P(B), provided P(B) is not zero</div>
+
+The knowledge that B has occurred shrinks the sample space to B alone; the conditional probability is
+the share of that smaller world in which A also holds. On one die, the probability of a 6 is 1/6, but
+the probability of a 6 **given that the number is even** is 1/3, because the world has shrunk to
+`{2, 4, 6}` and one of those three is a 6.
+
+Rearranging the definition gives the **multiplication theorem** — the probability that **both** A and
+B occur:
+
+<div class="formula">P(A ∩ B) = P(B) × P(A | B) = P(A) × P(B | A)</div>
+
+**Worked illustration.** Two cards are drawn one after the other from a pack, **without replacement**.
+Find the probability that both are kings.
+
+- P(first is a king) = 4/52
+- P(second is a king, given the first was) = 3/51, because only 3 kings remain among 51 cards
+- P(both kings) = 4/52 × 3/51 = 12/2652 = 1/221
+
+The "without replacement" is doing all the work: it makes the second draw depend on the first, so the
+second probability is conditional. Draw **with replacement** and the card goes back, the pack is whole
+again, and the two draws become independent — the topic of the next section.
+
+<Callout kind="mistake">
+  <p>
+    Watch for the two words "with replacement" or "without replacement", because they decide whether
+    the draws are independent. Without replacement, the denominator falls by one at each draw (52,
+    then 51, then 50). With replacement, every draw faces the full pack, so the probabilities are
+    identical and the events independent. A question that stays silent on a card or ball problem
+    almost always means **without** replacement — the objects are removed as they are drawn.
+  </p>
+</Callout>
+
+## 6. Independent events
+
+Two events are **independent** when the occurrence of one leaves the probability of the other
+unchanged: P(A | B) = P(A). Substituting that into the multiplication theorem gives the working test
+you will actually use:
+
+<div class="formula">A and B are independent if and only if P(A ∩ B) = P(A) × P(B)</div>
+
+So for independent events you simply multiply the separate probabilities to get the probability of
+both. This extends to any number of independent events: the probability that all of them occur is the
+product of their individual probabilities.
+
+**Worked illustration.** A coin is tossed and a die is thrown. The coin's result and the die's result
+are independent. The probability of a head **and** a six is:
+
+<div class="formula">P(head and six) = P(head) × P(six) = 1/2 × 1/6 = 1/12</div>
+
+**The "at least one" pattern.** Independence combines beautifully with the complement rule. Two
+marksmen fire at a target, hitting independently with probabilities 0.6 and 0.7. The target is hit if
+**either** hits, so work through the miss:
+
+- P(first misses) = 1 − 0.6 = 0.4; P(second misses) = 1 − 0.7 = 0.3
+- P(both miss) = 0.4 × 0.3 = 0.12 (independent, so multiply)
+- P(target is hit) = 1 − P(both miss) = 1 − 0.12 = 0.88
+
+Adding 0.6 and 0.7 would give 1.3, an impossible probability — the giveaway that "or" between
+overlapping independent events is not a plain sum. The complement route avoids the trap every time.
+
+<Callout kind="pointer">
+  <p>
+    Do not confuse the two multiplication situations. For <strong>independent</strong> events you
+    multiply the plain probabilities, P(A) × P(B). For <strong>dependent</strong> events you multiply
+    by the <em>conditional</em> probability, P(A) × P(B | A). The card-drawing "without replacement"
+    problems are dependent; coins, dice and "with replacement" draws are independent.
+  </p>
+</Callout>
+
+## 7. Bayes' theorem
+
+Bayes' theorem reverses a conditional probability. You know the chance of an effect given each
+possible cause, and you observe the effect; Bayes tells you the chance of each cause. At Foundation
+level it is asked with two or three causes and simple fractions.
+
+Suppose the causes B1, B2, ... are **mutually exclusive and exhaustive** — exactly one of them holds
+— and an event A is observed. The probability that cause Bk was responsible is:
+
+<div class="formula">P(Bk | A) = [P(Bk) × P(A | Bk)] / P(A), where P(A) = P(B1)P(A | B1) + P(B2)P(A | B2) + ...</div>
+
+The denominator is just the **total probability** of A, gathered over every cause. The numerator is
+the one cause you are asking about. Every term is a prior probability times a conditional you were
+given, so the whole calculation is bookkeeping once the tree is drawn.
+
+**Worked illustration.** Urn I holds 3 white and 2 black balls; Urn II holds 2 white and 3 black
+balls. An urn is chosen at random and one ball is drawn; it is white. What is the probability it came
+from Urn I?
+
+- Priors: P(I) = 1/2, P(II) = 1/2
+- Conditionals: P(white | I) = 3/5, P(white | II) = 2/5
+- Total probability of white = 1/2 × 3/5 + 1/2 × 2/5 = 3/10 + 2/10 = 5/10 = 1/2
+- P(I | white) = (1/2 × 3/5) / (1/2) = (3/10) / (1/2) = 3/5
+
+So the white ball has shifted the odds: before the draw each urn was equally likely, but a white ball
+is more probable from the whiter Urn I, so after seeing it the probability of Urn I rises from 1/2 to
+3/5.
+
+<Callout kind="pointer">
+  <p>
+    Lay a Bayes question out as a tree. First branch on the causes with their prior probabilities;
+    from each cause branch on the observed event with its conditional probability; multiply along each
+    path. The denominator is the sum of the paths that end in the observed event, and the numerator is
+    the single path you are asked about. Drawn this way, the theorem is addition and multiplication,
+    nothing more.
+  </p>
+</Callout>
+
+## 8. Random variables: expectation, variance and mean
+
+A **random variable** X assigns a number to each outcome of an experiment — the number of heads in
+three tosses, the score on a die, the rupees won in a game. A **discrete** random variable takes a
+list of separate values, each with a probability, and the probabilities add to 1. That list of
+values with their probabilities is the **probability distribution**.
+
+The **expectation** (or **expected value**, or **mean**) of X is the long-run average value, found by
+weighting each value by its probability:
+
+<div class="formula">E(X) = Σ x·P(x) = x1·P(x1) + x2·P(x2) + ...</div>
+
+The **variance** measures how widely the values spread around that mean. It is the expected squared
+distance from the mean, and the shortcut form is almost always faster:
+
+<div class="formula">Var(X) = E(X²) − [E(X)]², where E(X²) = Σ x²·P(x)</div>
+
+The **standard deviation** is the square root of the variance. The mean and the expectation are the
+**same number** for a random variable, so a question that says "find the mean of X" and one that says
+"find the expected value of X" want identical arithmetic.
+
+**Worked illustration.** A fair die is thrown once and X is the score. Each of the six values has
+probability 1/6, so:
+
+- E(X) = (1 + 2 + 3 + 4 + 5 + 6) × 1/6 = 21/6 = 3.5
+- E(X²) = (1 + 4 + 9 + 16 + 25 + 36) × 1/6 = 91/6 = 15.1667
+- Var(X) = 15.1667 − (3.5)² = 15.1667 − 12.25 = 2.9167, that is 35/12
+
+The expected score is 3.5, a value the die can never actually show — the expectation is an average,
+not a prediction of any single throw.
+
+<Callout kind="pointer">
+  <p>
+    A fair game is one whose expected gain is zero. If a game charges a fixed stake and pays random
+    winnings, compute E(winnings) and compare it with the stake: if E(winnings) equals the stake the
+    game is fair, if it is less the game favours the house, and if it is more it favours the player.
+    "Should you play?" questions are almost always asking you to compare an expectation with a price.
+  </p>
+</Callout>
+
+## 9. Odds in favour and odds against
+
+Odds restate a probability as a ratio of two whole numbers rather than a single fraction. If an event
+has a favourable outcomes and b unfavourable outcomes out of a + b equally likely outcomes:
+
+<div class="formula">Odds in favour of the event = a : b (favourable to unfavourable)</div>
+<div class="formula">Odds against the event = b : a (unfavourable to favourable)</div>
+
+Convert between odds and probability with two short rules:
+
+<div class="formula">If odds in favour are a : b, then P(event) = a / (a + b)</div>
+<div class="formula">If P(event) = p, then odds in favour = p : (1 − p) and odds against = (1 − p) : p</div>
+
+**Worked illustration.** The odds in favour of a horse winning are 3 : 2. Then a = 3, b = 2, and the
+probability of a win is 3 / (3 + 2) = 3/5 = 0.6. The odds **against** the same win are 2 : 3.
+
+Reverse the direction: if the probability of an event is 2/7, the unfavourable share is 5/7, so the
+odds **against** the event are 5/7 : 2/7 = 5 : 2, and the odds **in favour** are 2 : 5.
+
+<Callout kind="mistake">
+  <p>
+    Read whether the question wants odds "in favour" or odds "against", and whether it gives you odds
+    or a probability. Odds in favour of a : b give a probability of a / (a + b), <em>not</em> a / b —
+    the denominator is the total a + b, not the unfavourable count alone. Writing 3/2 instead of 3/5
+    for "odds in favour 3 : 2" is the standard error, and it produces a number greater than 1, which
+    a probability can never be.
+  </p>
+</Callout>
+
+## 10. Standard set-ups: coins, dice, cards and urns
+
+Almost every Foundation probability question dresses itself in one of four costumes. Memorise the
+counts once and the reading of a question becomes mechanical.
+
+**Coins.** Each toss is Head or Tail, equally likely, and tosses are independent. n coins (or one
+coin n times) give 2^n equally likely outcomes: 2 coins give 4, 3 coins give 8. The number of ways of
+getting exactly r heads in n tosses is the combination nCr, so with 3 coins the outcomes with exactly
+2 heads are 3C2 = 3 out of 8, giving 3/8.
+
+**Dice.** One die has 6 equally likely faces. Two dice give 6 × 6 = 36 ordered pairs — always treat
+the dice as distinguishable, so (2, 5) and (5, 2) are two different outcomes. The sum ranges from 2 to
+12, and the count of pairs giving each sum rises to a peak at 7 (six ways) and falls away
+symmetrically. A **doublet** is a pair of equal faces, `{(1,1), ..., (6,6)}`, six in all.
+
+| Sum on two dice | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Number of ways | 1 | 2 | 3 | 4 | 5 | 6 | 5 | 4 | 3 | 2 | 1 |
+
+**Cards.** A standard pack has 52 cards: 26 red (hearts and diamonds) and 26 black (clubs and spades),
+13 cards in each of the four suits, and within each suit an ace, 2 to 10, and three face cards (jack,
+queen, king). So there are 4 aces, 4 of each rank, 12 face cards in all, and 1 particular card such as
+the king of hearts.
+
+**Urns and bags.** An urn holds coloured balls drawn at random. If the draws are one at a time
+without replacement, use conditional probabilities (denominators fall by one each draw); if two or
+more are drawn together, count with combinations. To draw 2 red from a bag of 4 red and 6 black, the
+favourable count is 4C2 and the total is 10C2, giving 4C2 / 10C2 = 6/45 = 2/15.
+
+<Callout kind="pointer">
+  <p>
+    Drawing several objects "together" or "at once" is the same as drawing them one by one without
+    replacement, so either method gives the same answer — use combinations for a batch and conditional
+    multiplication for a sequence, whichever is quicker. The counts nCr you need here are the ones
+    from the Permutations and Combinations chapter, so keep 4C2 = 6, 10C2 = 45 and their friends at
+    your fingertips.
+  </p>
+</Callout>
+
+## 11. Answering under negative marking
+
+Paper 3 is entirely objective. A correct answer earns 1 mark, a wrong answer costs 0.25 mark, and a
+blank scores zero. That single fact should shape how you treat a probability question you cannot
+finish.
+
+If you guess blindly among four options, you expect
+(1/4)(+1) + (3/4)(−0.25) = 0.25 − 0.1875 = **+0.0625** marks — barely positive, almost worthless.
+Eliminate one option and the sum rises to (1/3)(+1) + (2/3)(−0.25) = **+0.1667**; eliminate two and it
+reaches **+0.375**. The value of a guess comes almost entirely from the options you can rule out, and
+probability offers cheap eliminations. Any option greater than 1 or below 0 is wrong on sight. Any
+option that adds two overlapping events without subtracting the overlap is usually one of the
+distractors. An expected value that lies outside the range of the random variable's own values is
+impossible.
+
+The practical reading is simple. Compute where you can; where you cannot, cut the options down to two
+by these sanity checks, then mark one and move on. Leave a question blank only when nothing can be
+ruled out and your time is better spent elsewhere. There is no penalty for a blank, but there is
+rarely a reason to leave one either.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — three coins and the exactly-two-heads count (easy)">
+  <p>
+    Three fair coins are tossed together. Find the probability of (a) exactly two heads and (b) at
+    least one head.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The sample space</div>
+    With 3 coins there are 2³ = 8 equally likely outcomes:<br />
+    HHH, HHT, HTH, THH, HTT, THT, TTH, TTT. So n(S) = 8.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) Exactly two heads</div>
+    The favourable outcomes are HHT, HTH, THH — that is 3C2 = 3 of them.<br />
+    P(exactly two heads) = 3/8 = <strong>0.375</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) At least one head, through the complement</div>
+    The only outcome with no head is TTT, so P(no head) = 1/8.<br />
+    P(at least one head) = 1 − 1/8 = <strong>7/8</strong>. Counting the seven favourable outcomes
+    directly gives the same figure, but the complement is faster.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — two dice and the sum (easy)">
+  <p>
+    Two fair dice are thrown together. Find the probability that the sum of the two scores is (a) 7
+    and (b) a prime number.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The sample space</div>
+    Two distinguishable dice give 6 × 6 = 36 equally likely ordered pairs, so n(S) = 36.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) Sum of 7</div>
+    The pairs are (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — six of them.<br />
+    P(sum 7) = 6/36 = <strong>1/6</strong>, the most likely of all the sums.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) Sum is prime</div>
+    The prime sums are 2, 3, 5, 7 and 11, with 1 + 2 + 4 + 6 + 2 = 15 favourable pairs.<br />
+    P(sum is prime) = 15/36 = <strong>5/12</strong>. Reading the ways-per-sum table off by heart makes
+    this a ten-second count.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — a card, king or heart (easy)">
+  <p>
+    One card is drawn at random from a well-shuffled pack of 52. Find the probability that it is a
+    king or a heart.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The two events overlap</div>
+    There are 4 kings and 13 hearts, but the king of hearts belongs to both events, so the events are
+    not mutually exclusive. The general addition theorem is needed.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Apply the addition theorem</div>
+    P(king) = 4/52, P(heart) = 13/52, P(king and heart) = 1/52.<br />
+    P(king or heart) = 4/52 + 13/52 − 1/52 = 16/52 = <strong>4/13</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The check</div>
+    Count the favourable cards directly: 13 hearts plus the three kings that are not hearts = 16 cards.
+    16/52 = 4/13, confirming the theorem and catching any double-count of the king of hearts.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — two cards without replacement (moderate)">
+  <p>
+    Two cards are drawn one after the other, without replacement, from a pack of 52. Find the
+    probability that (a) both are kings and (b) both are of the same colour.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Both kings</div>
+    P(first king) = 4/52; given that, 3 kings remain among 51 cards, so P(second king) = 3/51.<br />
+    P(both kings) = 4/52 × 3/51 = 12/2652 = <strong>1/221</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Both the same colour</div>
+    The first card fixes a colour; 25 of the remaining 51 cards share it.<br />
+    P(same colour) = 52/52 × 25/51 = <strong>25/51</strong>. The first draw is a certainty because any
+    card starts a colour; only the second draw carries a real probability.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — A combinations check on part (a)</div>
+    Choosing 2 kings from 4 out of 2 cards from 52: 4C2 / 52C2 = 6 / 1326 = 1/221, the same answer by
+    the batch method.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — balls drawn from a bag (moderate)">
+  <p>
+    A bag contains 4 red and 6 black balls. Two balls are drawn at random together. Find the
+    probability that (a) both are red, (b) both are black and (c) one is of each colour.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The total number of draws</div>
+    Two balls chosen from 10 give 10C2 = 45 equally likely selections, so n(S) = 45.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) and (b) by combinations</div>
+    Both red: 4C2 / 45 = 6/45 = <strong>2/15</strong>.<br />
+    Both black: 6C2 / 45 = 15/45 = <strong>1/3</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) One of each, and the total check</div>
+    One red and one black: (4C1 × 6C1) / 45 = (4 × 6)/45 = 24/45 = <strong>8/15</strong>.<br />
+    The three probabilities cover every case and must add to 1: 2/15 + 1/3 + 8/15 = 2/15 + 5/15 + 8/15
+    = 15/15 = 1. That sum is the surest check on a colour-drawing question.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — the general addition theorem in reverse (moderate)">
+  <p>
+    For two events A and B, P(A) = 0.5, P(B) = 0.6 and P(A ∪ B) = 0.8. Find (a) P(A ∩ B) and (b)
+    whether A and B are independent.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Solve the addition theorem for the overlap</div>
+    P(A ∪ B) = P(A) + P(B) − P(A ∩ B), so 0.8 = 0.5 + 0.6 − P(A ∩ B).<br />
+    P(A ∩ B) = 1.1 − 0.8 = <strong>0.3</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Test independence</div>
+    If A and B were independent, P(A ∩ B) would equal P(A) × P(B) = 0.5 × 0.6 = 0.30.<br />
+    The actual overlap is 0.3, which matches, so A and B <strong>are</strong> independent.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The reading</div>
+    Independence is not something you assume from the words of a question; it is something you test by
+    comparing P(A ∩ B) with P(A) × P(B). Here they agree exactly, which they will not always do.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — two independent shooters (moderate)">
+  <p>
+    Two marksmen fire once each at a target, hitting independently with probabilities 0.6 and 0.7.
+    Find the probability that (a) both hit, (b) the target is hit at all and (c) exactly one hits.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Both hit</div>
+    Independent, so multiply: P(both hit) = 0.6 × 0.7 = <strong>0.42</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) The target is hit, through the complement</div>
+    P(both miss) = 0.4 × 0.3 = 0.12, so P(hit) = 1 − 0.12 = <strong>0.88</strong>. Adding 0.6 + 0.7 =
+    1.3 is impossible, which is why the complement is the safe route.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) Exactly one hits</div>
+    First hits and second misses: 0.6 × 0.3 = 0.18. First misses and second hits: 0.4 × 0.7 = 0.28.<br />
+    P(exactly one) = 0.18 + 0.28 = <strong>0.46</strong>. Check: 0.42 (both) + 0.46 (one) + 0.12 (none)
+    = 1.00.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — Bayes' theorem with two urns (hard)">
+  <p>
+    Urn I holds 3 white and 2 black balls; Urn II holds 2 white and 3 black. An urn is chosen at
+    random and a ball drawn; it turns out white. Find (a) the probability the ball is white and (b) the
+    probability it came from Urn I.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Priors and conditionals</div>
+    P(I) = P(II) = 1/2. P(white | I) = 3/5, P(white | II) = 2/5.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) Total probability of white</div>
+    P(white) = P(I)P(white | I) + P(II)P(white | II) = 1/2 × 3/5 + 1/2 × 2/5 = 3/10 + 2/10 =
+    <strong>1/2</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) Bayes' reversal</div>
+    P(I | white) = [P(I)P(white | I)] / P(white) = (3/10) / (1/2) = <strong>3/5</strong>. The white ball
+    lifts Urn I's probability from 1/2 before the draw to 3/5 after it, because white is the more
+    likely colour from the whiter urn.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — expectation and variance of a distribution (moderate)">
+  <p>
+    A discrete random variable X takes the values 0, 1 and 2 with probabilities 0.2, 0.5 and 0.3.
+    Find (a) E(X) and (b) Var(X).
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Check the distribution</div>
+    The probabilities add to 0.2 + 0.5 + 0.3 = 1, so the distribution is valid.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) Expectation</div>
+    E(X) = 0 × 0.2 + 1 × 0.5 + 2 × 0.3 = 0 + 0.5 + 0.6 = <strong>1.1</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (b) Variance by the shortcut</div>
+    E(X²) = 0² × 0.2 + 1² × 0.5 + 2² × 0.3 = 0 + 0.5 + 1.2 = 1.7.<br />
+    Var(X) = E(X²) − [E(X)]² = 1.7 − (1.1)² = 1.7 − 1.21 = <strong>0.49</strong>.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 10 — odds and a fair game (hard)">
+  <p>
+    In a game a fair die is thrown once. You receive ₹ 60 if it shows a six and pay ₹ 12 otherwise.
+    Find (a) your expected gain per throw, (b) whether the game is fair and (c) the odds against
+    throwing a six.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The distribution of the gain</div>
+    P(six) = 1/6 with a gain of +₹ 60; P(not six) = 5/6 with a gain of −₹ 12.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (a) and (b) Expected gain</div>
+    E(gain) = 60 × 1/6 + (−12) × 5/6 = 10 − 10 = <strong>₹ 0</strong>.<br />
+    The expected gain is zero, so the game is <strong>fair</strong> — over many throws you neither win
+    nor lose on average.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) Odds against a six</div>
+    Favourable outcomes 1, unfavourable 5, so the odds against a six are <strong>5 : 1</strong>, and
+    the probability read back from them is 1 / (1 + 5) = 1/6, matching the die.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **A wrong sample-space size.** Using 11 for two dice (the sums 2 to 12) instead of 36, or forgetting
+  that (2, 5) and (5, 2) are different pairs, corrupts every fraction. Two dice always give 36 ordered
+  outcomes.
+- **Adding overlapping events.** Writing P(king or heart) = 4/52 + 13/52 = 17/52 forgets to subtract
+  the king of hearts. Use the general addition theorem whenever the events can occur together.
+- **Confusing mutually exclusive with independent.** Mutually exclusive means P(A ∩ B) = 0;
+  independent means P(A ∩ B) = P(A)P(B). They are opposite ideas, not the same one.
+- **Ignoring "with" or "without" replacement.** Without replacement the denominator falls each draw and
+  the events are dependent; with replacement it does not and they are independent. The word changes the
+  answer.
+- **Odds read as a probability.** Odds in favour of a : b give a probability of a / (a + b), not a / b.
+  A "probability" above 1 is the fingerprint of this error.
+- **Summing probabilities of overlapping "at least one" events.** For "at least one", subtract the
+  probability of "none" from 1 rather than adding the separate chances, which double-counts the
+  overlaps.
+- **A probability outside 0 to 1.** Any answer below 0 or above 1 is impossible. Treat it as a signal
+  to recount, never as a figure to round into range.
+- **Expectation mistaken for a most-likely value.** E(X) is a weighted average; it need not be a value
+  X can actually take, as the die's 3.5 shows.
+
+## One-page revision summary
+
+- **Classical definition:** P(E) = n(E) / n(S), valid only for equally likely outcomes. **Relative
+  frequency:** the long-run proportion over many trials. **Axiomatic:** P(A) ≥ 0, P(S) = 1, and
+  P(A ∪ B) = P(A) + P(B) for mutually exclusive A, B.
+- **Complement:** P(A') = 1 − P(A). Range: 0 ≤ P(A) ≤ 1 always.
+- **Addition theorem:** P(A ∪ B) = P(A) + P(B) − P(A ∩ B); drop the last term only when A and B are
+  mutually exclusive.
+- **Conditional probability:** P(A | B) = P(A ∩ B) / P(B). **Multiplication theorem:**
+  P(A ∩ B) = P(B)P(A | B) = P(A)P(B | A).
+- **Independence:** P(A ∩ B) = P(A)P(B); equivalently P(A | B) = P(A). For "at least one", use
+  1 − P(none).
+- **Bayes' theorem:** P(Bk | A) = P(Bk)P(A | Bk) / ΣP(Bi)P(A | Bi), the causes being mutually exclusive
+  and exhaustive.
+- **Random variable:** E(X) = Σ x·P(x); Var(X) = E(X²) − [E(X)]²; standard deviation is its square
+  root. Mean and expectation are the same number.
+- **Odds:** odds in favour a : b give P = a / (a + b); if P = p then odds in favour are p : (1 − p) and
+  odds against are (1 − p) : p.
+- **Standard counts:** n coins give 2^n outcomes; two dice give 36 ordered pairs (sum peaks at 7 with 6
+  ways); a pack has 52 cards, 26 red, 13 per suit, 4 aces, 12 face cards; batch draws use combinations
+  nCr.
+- **Under negative marking:** 1 for right, −0.25 for wrong, 0 for blank. Eliminate the impossible
+  (P below 0 or above 1) and guess from two; leave truly blank only as a last resort.

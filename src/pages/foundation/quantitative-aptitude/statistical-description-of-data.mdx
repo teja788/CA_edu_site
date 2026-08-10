@@ -1,0 +1,747 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Statistical Description of Data and Sampling'
+description: 'CA Foundation Quantitative Aptitude Ch 13 — what statistics studies, primary and secondary data, the four scales of measurement, census and sampling methods, sampling and non-sampling error, classification and tabulation, frequency distributions with class limits, boundaries, width, mid-value, cumulative and relative frequency, and the diagrams and graphs — bar, pie, histogram, frequency polygon and ogive — with fully worked, computed examples.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 3 · Quantitative Aptitude'
+paperSlug: quantitative-aptitude
+chapter: 'Ch 13 · Statistical Description of Data and Sampling'
+chapterSlug: statistical-description-of-data
+masteryId: f3-ch13
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 3, Ch 13 (Statistical Description of Data) — scope, definitions and worked patterns'
+  - 'Standard statistical conventions for scales of measurement, Sturges'' rule, class boundaries and the ogive-median method as taught at Foundation level'
+sourceLabel: 'ICAI SM Paper 3 Ch 13 scope (May 2026 ed.) · standard statistical definitions'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '11 Aug 2026'
+readTime: 'About 30 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=quantitative-aptitude&chapter=statistical-description-of-data'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A milk co-operative in Anand collects the day's yield from four thousand members. By evening the
+society must know one thing above all: how much milk came in, and how it was spread across the small,
+medium and large suppliers. The raw register — four thousand entries, litre by litre — answers
+nothing on its own. Nobody can read four thousand numbers and see a pattern. Yet group those same
+numbers into a few bands, count how many members fall in each, and the picture appears at once: most
+members bring between two and six litres, a handful bring twenty or more, and the society can plan
+its tankers accordingly.
+
+That move — from a heap of figures to a short, readable summary — is the whole of this chapter. It
+is the first, quiet half of statistics: not the averages and correlations that come later, but the
+work of collecting the numbers honestly, arranging them so a human can see them, and drawing them so
+a reader grasps them in a glance. Get this half wrong and every average built on top is an average
+of rubbish.
+
+Paper 3 is fully objective, so you will not be asked to design a survey or draw a chart by hand. You
+will be asked to name the scale a variable is measured on, to pick the right sampling method, to
+compute a class width or a mid-value, to read a cumulative frequency, to convert a share into a
+pie-chart angle, or to locate a median on an ogive. This chapter takes each of those in turn, and
+shows the small computation behind every one, so that a definition you half-remember never costs you
+a mark.
+
+## 1. What statistics means
+
+The word **statistics** carries two senses, and the examiner tests both.
+
+- In the **plural** sense, statistics are the numerical facts themselves — the yields, the marks,
+  the prices. A single such figure is a *datum*; many are *data*.
+- In the **singular** sense, statistics is the **science** of collecting, organising, presenting,
+  analysing and interpreting numerical data so that sound decisions can be taken under uncertainty.
+
+This chapter lives almost entirely in the first three verbs of that definition — collecting,
+organising and presenting. Analysing and interpreting (averages, dispersion, correlation,
+probability) are the chapters that follow.
+
+Fix three more words now, because every later idea reuses them.
+
+- A **variable** is a characteristic that changes from one item to the next — height, marks, the
+  district a person lives in.
+- A **variable is discrete** when it can take only separate, countable values (the number of
+  children in a family: 0, 1, 2, …, never 2.4), and **continuous** when it can take any value in a
+  range (height, weight, time), limited only by the precision of the instrument.
+- An **attribute** is a characteristic that is not numerical at all — sex, religion, grade of a
+  product. Attributes are counted, not measured.
+
+<Callout kind="pointer">
+  <p>
+    Statistics deals with <strong>aggregates</strong>, not single items. The height of one student is
+    a fact of anatomy; the heights of a whole class, arranged and summarised, are a fact of
+    statistics. A question that turns on "the study of a single figure" is testing whether you know
+    that statistics is a science of the mass, not of the individual.
+  </p>
+</Callout>
+
+## 2. Primary and secondary data
+
+Data are classified by **who collected them and for what purpose**.
+
+- **Primary data** are collected by the investigator, first-hand, for the specific enquiry in hand.
+  A researcher who goes door to door with her own questionnaire is gathering primary data. They are
+  original, tailored to the need, and expensive in time and money.
+- **Secondary data** are data already collected by someone else, for some other purpose, and reused.
+  The Census of India tables, RBI bulletins, a company's published accounts, a newspaper's price
+  series — all are secondary in the hands of a new user.
+
+The single test is not the number itself but the **relationship of the collector to the enquiry**.
+The very same figures are primary to the body that first collected them and secondary to everyone
+who later borrows them. The Census is primary data to the Registrar General who conducts it, and
+secondary data to a student who quotes it in a project.
+
+<Callout kind="mistake">
+  <p>
+    "Primary data are always more accurate" is a half-truth the examiner exploits. Primary data are
+    fitted to the enquiry and their limitations are known to the collector, which is their strength.
+    But badly collected primary data are worse than well-collected secondary data. The right caution
+    with secondary data is different: before reuse, check <strong>who</strong> collected them,
+    <strong>how</strong>, <strong>when</strong>, and whether the definitions match your own — a
+    "worker" in one survey may exclude the part-timers your enquiry needs.
+  </p>
+</Callout>
+
+Data are gathered by several methods — direct personal interview, indirect oral investigation,
+mailed questionnaire, schedules sent through enumerators, and information from local correspondents.
+Each trades cost against coverage and reliability, and the method is chosen to fit the enquiry, the
+budget and the literacy of the respondents.
+
+## 3. The four scales of measurement
+
+Before a single figure is collected, ask what kind of scale the variable sits on. The scale fixes
+which arithmetic is meaningful, and the examiner's favourite trap is a calculation the scale does not
+permit. Four scales climb from least to most informative.
+
+<div class="formula">Nominal → Ordinal → Interval → Ratio (each level adds one new permitted operation)</div>
+
+- **Nominal scale** — labels only, with no order. Numbers, if used, are mere codes. Jersey numbers,
+  PIN codes, a code of 1 for male and 2 for female. You may say two items are the same or different;
+  you may **not** say one is greater. The average of two PIN codes is meaningless.
+- **Ordinal scale** — labels that carry a **rank**, but with unequal or unknown gaps between ranks.
+  Positions in a race (first, second, third), a satisfaction rating (poor, fair, good, excellent),
+  merit grades. You may order the items, but the difference between first and second need not equal
+  the difference between second and third, so subtraction is not meaningful.
+- **Interval scale** — ordered, with **equal and meaningful gaps**, but **no true zero**. The classic
+  case is temperature in Celsius or Fahrenheit: 30 °C is as far above 20 °C as 20 °C is above 10 °C,
+  so differences are real, but 0 °C does not mean "no temperature", so 40 °C is **not** twice as hot
+  as 20 °C. Ratios are meaningless; differences are fine.
+- **Ratio scale** — ordered, equal gaps, **and a true, absolute zero** that means "none of the
+  quantity". Height, weight, income, age, distance, the number of children. Zero income means no
+  income; ₹ 40,000 really is twice ₹ 20,000. Every arithmetic operation is permitted.
+
+| Scale | Order? | Equal intervals? | True zero? | Example |
+|---|---|---|---|---|
+| Nominal | No | No | No | Blood group, PIN code, sex code |
+| Ordinal | Yes | No | No | Merit rank, satisfaction rating |
+| Interval | Yes | Yes | No | Temperature in °C, calendar year |
+| Ratio | Yes | Yes | Yes | Height, weight, income, age |
+
+<Callout kind="pointer">
+  <p>
+    The two questions that separate the scales are: <strong>can I rank the values?</strong> (nominal
+    says no, the rest say yes) and <strong>is zero a real "nothing"?</strong> (only the ratio scale
+    says yes). Temperature in Celsius is the standard exam trap: it looks like a ratio scale but its
+    zero is a convention, not an absence, so it is <em>interval</em>. Temperature in Kelvin, whose
+    zero is absolute, is a ratio scale — the same quantity, a different scale, because the zero
+    changed.
+  </p>
+</Callout>
+
+## 4. Census, samples and methods of sampling
+
+To learn about a **population** — every item of interest — you have two routes.
+
+- A **census** (complete enumeration) examines **every** unit. It is exhaustive and, in principle,
+  most accurate, but it is costly, slow, and impossible where testing destroys the item (you cannot
+  test every matchstick by striking it).
+- A **sample survey** examines a **part** of the population, chosen to represent the whole, and infers
+  the population's features from it. It is cheaper, faster, and often *more* accurate in practice,
+  because the smaller task can be done with better-trained staff and closer supervision.
+
+A **sample** is the subset actually studied; the **sampling frame** is the list of all units from
+which the sample is drawn. Good sampling is **random** — every unit has a known, non-zero chance of
+selection — because only randomness lets you measure the reliability of the result and keeps the
+investigator's bias out of the choice.
+
+The examinable methods of random sampling:
+
+- **Simple random sampling** — every unit has an **equal** chance, and every possible sample of the
+  chosen size is equally likely. Done by lottery or by random numbers, with replacement or without.
+  It is the benchmark against which the others are judged.
+- **Systematic sampling** — order the frame, choose one random start within the first interval, then
+  take every k-th unit thereafter. The **sampling interval** is the key number:
+
+<div class="formula">Sampling interval k = Population size N ÷ Sample size n</div>
+
+  From 2,400 members choosing 60, k = 2,400 ÷ 60 = 40: pick a random start between 1 and 40, then
+  every 40th member. Quick and even, but it fails if the list has a hidden cycle of length k.
+- **Stratified sampling** — divide the population into **strata** (groups that are internally
+  similar — men and women, urban and rural, the three size-bands of supplier), then sample **within
+  each stratum**. Under **proportional allocation** the sample is split in the same proportions as
+  the strata:
+
+<div class="formula">Units drawn from a stratum = (Stratum size ÷ Population size) × Total sample size</div>
+
+  It guarantees every group is represented, and it sharpens accuracy when the strata differ from one
+  another but are uniform inside.
+- **Cluster sampling** — divide the population into **clusters** (usually geographic — villages,
+  blocks, schools), pick some clusters at random, and study **every** unit in the chosen clusters. It
+  is cheap when the population is spread out, because the fieldwork concentrates in a few places.
+- **Multistage sampling** — sampling in stages: pick states, then districts within them, then
+  villages within those, then households within those. It is how large national surveys are actually
+  run.
+
+<Callout kind="mistake">
+  <p>
+    Stratified and cluster sampling are constantly confused. In <strong>stratified</strong> sampling
+    you sample <em>from every group</em> and the groups are meant to be <em>internally similar</em>;
+    in <strong>cluster</strong> sampling you take <em>only some groups</em> but study them
+    <em>completely</em>, and the clusters are meant to be <em>internally varied</em>, each a small
+    picture of the whole. Same word "group", opposite handling. If the question says "every stratum
+    is represented", it is stratified; if it says "a few areas are chosen and fully surveyed", it is
+    cluster.
+  </p>
+</Callout>
+
+## 5. Sampling and non-sampling error
+
+No survey is perfect, and its errors come in two families that behave very differently.
+
+- **Sampling error** arises simply because a sample is a *part*, not the whole: a different sample
+  would have given a slightly different answer. It exists **only** in sample surveys, never in a
+  complete census. It is not a mistake — it is the price of not measuring everyone — and it
+  **shrinks as the sample size grows** and can be estimated from the sample itself.
+- **Non-sampling error** arises from **faults in the process** — a wrong measuring instrument, an
+  ambiguous question, a lying or forgetful respondent, an enumerator's recording slip, mistakes in
+  editing and tabulation. It afflicts **both** censuses and samples, and — this is the sting — it can
+  actually be **larger in a census**, because the huge scale of a complete count strains supervision
+  and invites more processing mistakes.
+
+| | Sampling error | Non-sampling error |
+|---|---|---|
+| Cause | Studying a part, not the whole | Faults in measurement and processing |
+| Present in a census? | No | Yes |
+| Present in a sample? | Yes | Yes |
+| Effect of a bigger sample | Falls | May rise (more data to mishandle) |
+| Can it be estimated? | Yes, from the sample | Only with difficulty |
+
+<Callout kind="pointer">
+  <p>
+    The counter-intuitive fact the examiner loves: a well-run <strong>sample</strong> can be more
+    accurate overall than a <strong>census</strong>, because although the sample carries sampling
+    error the census does not, the census can pile up so much non-sampling error that its total error
+    is the larger. "A census has no error" is simply false — it has no <em>sampling</em> error, which
+    is not the same thing.
+  </p>
+</Callout>
+
+## 6. Classification and tabulation
+
+Once collected, data must be arranged before they can be read. **Classification** is the sorting of
+data into homogeneous groups according to a common characteristic; **tabulation** is the orderly
+presentation of the classified data in rows and columns.
+
+Classification is done on one of four bases:
+
+- **Chronological** (by time) — production month by month.
+- **Geographical** (by place) — sales state by state.
+- **Qualitative** (by attribute) — workers by sex or by grade; when only one attribute is used it is
+  *simple* classification, when two or more are crossed it is *manifold*.
+- **Quantitative** (by the size of a variable) — families by number of children, workers by wage,
+  which is exactly the frequency distribution of the next section.
+
+A well-built **table** has a title, a stub (the row headings on the left), a caption (the column
+headings across the top), the body of figures, and, where needed, a head-note, foot-note and source
+note. Tabulation strips away words and lets the figures speak; a good table needs almost no prose to
+be understood.
+
+<Callout kind="pointer">
+  <p>
+    Classification comes <strong>before</strong> tabulation: you sort the data into groups, then you
+    lay the groups out in a table. A frequency distribution is simply a quantitative classification
+    presented as a table — which is why the two ideas of this section flow straight into the
+    frequency distribution that follows.
+  </p>
+</Callout>
+
+## 7. Frequency distributions and choosing the number of classes
+
+A **frequency distribution** shows the values a variable takes alongside the **frequency** — the
+number of times each value or band of values occurs. It is the single most important summary in this
+chapter, and it comes in two forms.
+
+- A **discrete (ungrouped) frequency distribution** lists each distinct value and its frequency —
+  the number of children per family: 0 (occurs 8 times), 1 (occurs 15 times), 2 (occurs 22 times),
+  and so on. Use it when the variable takes few distinct values.
+- A **continuous (grouped) frequency distribution** groups the values into **classes** (intervals)
+  and counts how many observations fall in each — marks 0–10, 10–20, 20–30, with frequencies against
+  each. Use it when the variable is continuous or takes many distinct values.
+
+How many classes should a grouped distribution have? Too few and the detail is crushed; too many and
+the pattern scatters. The usual guide is **Sturges' rule**:
+
+<div class="formula">Number of classes k = 1 + 3.322 × log₁₀ N, where N is the total number of observations</div>
+
+Round the result to a whole number. For N = 100, k = 1 + 3.322 × 2 = 7.644, so use **8 classes**.
+Once the number of classes is fixed, the class width follows from the spread of the data:
+
+<div class="formula">Range = Largest value − Smallest value   ·   Approximate class width = Range ÷ Number of classes</div>
+
+If the marks run from 10 to 90, the range is 80, and with 8 classes the width is 80 ÷ 8 = 10, giving
+classes 10–20, 20–30, and so on. The width is usually rounded up to a convenient number so the
+classes are easy to read.
+
+<Callout kind="mistake">
+  <p>
+    Sturges' rule is a <strong>guide, not a law</strong>. It suggests a starting number of classes;
+    the final choice rounds to something tidy and may be nudged so the class limits fall on round
+    numbers. Do not report "7.644 classes" — a count of classes is a whole number. And compute the
+    width from the <em>rounded</em> number of classes, not from the raw decimal, unless the question
+    says otherwise.
+  </p>
+</Callout>
+
+## 8. Class limits, boundaries, width and mid-value
+
+A grouped distribution hides four quantities inside every class, and Paper 3 tests each by a small
+computation. Take the class written 20–29.
+
+- **Class limits** are the values written down: the **lower class limit** (20) and the **upper class
+  limit** (29). This "20–29" style is an **inclusive** (discontinuous) distribution — both 20 and 29
+  belong to the class, and it is used for **discrete** data where no value lies between 29 and 30.
+- **Class boundaries** are the *true* limits, obtained by closing the gaps between one class and the
+  next so the classes run continuously. For inclusive classes 20–29, 30–39, …, the gap between 29 and
+  30 is 1, so each boundary is shifted by **half the gap**, 0.5:
+
+<div class="formula">Lower boundary = Lower limit − ½(gap)   ·   Upper boundary = Upper limit + ½(gap)</div>
+
+  So 20–29 has boundaries **19.5 to 29.5**. An **exclusive** distribution — written 20–30, 30–40,
+  where the upper value belongs to the next class — already has its boundaries equal to its limits.
+- **Class width (class size, i)** is the difference between the two **boundaries** of a class:
+
+<div class="formula">Class width = Upper class boundary − Lower class boundary</div>
+
+  For 20–29 (boundaries 19.5–29.5) the true width is 29.5 − 19.5 = **10**, even though the apparent
+  spread 29 − 20 is only 9. The width can also be read as the difference between the lower limits of
+  two successive classes (30 − 20 = 10).
+- **Mid-value (class mark)** is the midpoint of the class, the single value that represents it in
+  later averaging:
+
+<div class="formula">Mid-value = (Lower class limit + Upper class limit) ÷ 2 = (Lower boundary + Upper boundary) ÷ 2</div>
+
+  For 20–29 the mid-value is (20 + 29) ÷ 2 = 24.5; for the exclusive class 20–30 it is (20 + 30) ÷ 2
+  = 25. The **difference between two successive mid-values equals the class width**, which is a quick
+  way to recover the width when only the mid-values are given.
+
+<Callout kind="mistake">
+  <p>
+    The commonest slip is to treat an <strong>inclusive</strong> class as if its written limits were
+    its boundaries. The class 20–29 is 10 units wide, not 9, because its true boundaries are 19.5 and
+    29.5. Histograms, mid-values used in averaging, and any width calculation must use the
+    <strong>boundaries</strong>, not the raw inclusive limits. When the question shows classes with a
+    one-unit gap (20–29, 30–39), reach for the boundaries first.
+  </p>
+</Callout>
+
+## 9. Cumulative and relative frequency
+
+Two further columns turn a plain frequency distribution into a tool for answering "how many below"
+and "what share" questions.
+
+**Cumulative frequency** adds the frequencies up, and comes in two directions.
+
+- A **less-than** cumulative frequency against an upper boundary is the number of observations
+  **below** that value: it runs 0 upward to N.
+- A **more-than** cumulative frequency against a lower boundary is the number of observations **at or
+  above** that value: it runs N downward to 0.
+
+<div class="formula">Frequency of a class = (its less-than cumulative frequency) − (the previous less-than cumulative frequency)</div>
+
+The two cumulative columns always meet: the less-than figure at the top and the more-than figure at
+the bottom both equal N, and any single class frequency can be recovered as the difference of two
+neighbouring cumulative figures.
+
+**Relative frequency** expresses each frequency as a **share of the total**, which lets you compare
+distributions of different sizes.
+
+<div class="formula">Relative frequency = Class frequency ÷ Total frequency (N)   ·   Percentage frequency = Relative frequency × 100</div>
+
+A class of frequency 45 in a total of 300 has relative frequency 45 ÷ 300 = 0.15, that is 15%. The
+relative frequencies of all classes always **sum to 1** (the percentages to 100), which is both a
+check on your arithmetic and a fast way to find a missing frequency: if three classes carry 0.10,
+0.25 and 0.30, the fourth must carry 1 − 0.65 = 0.35.
+
+<Callout kind="pointer">
+  <p>
+    Turn the total-of-one fact into an examiner-proof check. Whenever a question gives you relative
+    frequencies, add them: they must reach exactly 1. A missing relative frequency is found by
+    subtraction, and the total frequency N is recovered from any single class by
+    <strong>N = class frequency ÷ its relative frequency</strong> — 24 ÷ 0.16 = 150.
+  </p>
+</Callout>
+
+## 10. Bar charts and pie charts
+
+A **diagram** presents data to the eye. Two kinds dominate the objective paper.
+
+- A **bar chart** shows the size of each category by the **length of a bar**. The bars are of equal
+  width and are separated by gaps, because the categories are distinct — sales by region, output by
+  year. Bars carry **one dimension of meaning, their length**; their width and area say nothing. A
+  *component* (stacked) bar chart splits each bar into its parts; a *multiple* bar chart sets several
+  bars side by side for comparison.
+- A **pie chart** (circular diagram) shows how a **whole** divides into parts, by cutting a circle
+  into sectors whose **angles are proportional to the components**. The full circle is 360°, so:
+
+<div class="formula">Angle of a sector = (Component value ÷ Total) × 360°   ·   equivalently, each 1% of the total = 3.6°</div>
+
+An item that is 35% of the total takes 35 × 3.6 = **126°**; a component of ₹ 1,800 out of ₹ 7,200
+takes (1,800 ÷ 7,200) × 360 = **90°**. The reverse is just as common: a sector of 45° representing
+₹ 5,000 implies a total of 5,000 × (360 ÷ 45) = ₹ 40,000, and a 60° sector of a ₹ 36,000 budget is
+(60 ÷ 360) × 36,000 = ₹ 6,000.
+
+<Callout kind="mistake">
+  <p>
+    The pie-chart trap is mixing up the three currencies — rupees, per cent and degrees. Convert
+    through the total. A share in <strong>rupees</strong> becomes a fraction of the total, times 360
+    for <strong>degrees</strong> or times 100 for <strong>per cent</strong>. The bridge worth
+    memorising is <strong>1% = 3.6°</strong> and its reverse <strong>1° = (1 ÷ 360) of the total</strong>.
+    Check your sectors by adding the angles: they must total 360°.
+  </p>
+</Callout>
+
+## 11. Histogram, frequency polygon and ogive
+
+A **graph** presents a frequency distribution on a pair of axes. Three are examinable, and each
+answers a different question.
+
+- A **histogram** is a set of **adjacent** rectangles, one per class, with **no gaps** (unlike a bar
+  chart, because the classes are continuous). The class boundaries mark the base of each rectangle,
+  and — this is the point students miss — it is the **area**, not the height, that represents the
+  frequency. When all classes are the same width, height alone is a fair guide. When class widths
+  **differ**, you must plot the **frequency density** so that area stays proportional to frequency:
+
+<div class="formula">Frequency density = Class frequency ÷ Class width</div>
+
+  A class 30–50 (width 20) with frequency 60 is plotted at a height of 60 ÷ 20 = 3, not at 60, so
+  that a double-width class does not tower falsely over its neighbours.
+- A **frequency polygon** joins the **mid-value, frequency** points of the classes with straight
+  lines, and closes the figure to the axis at a mid-value one class below the first and one above the
+  last. It is the histogram's outline, and it lets two distributions be overlaid for comparison.
+- An **ogive (cumulative frequency curve)** plots **cumulative frequency against the class
+  boundary**. The **less-than** ogive rises from left to right (from 0 up to N); the **more-than**
+  ogive falls. Their most useful trick is reading the **median** straight off the curve: the median
+  is the value below which half the observations lie, so:
+
+<div class="formula">Median position = N ÷ 2 (mark this on the cumulative axis, read across to the curve, then down to the value)</div>
+
+  With N = 80, mark 40 on the cumulative-frequency axis, run across to the less-than ogive and down
+  to the horizontal axis; that reading is the median. The two ogives, drawn together, cross at
+  exactly that point, which is a neat way to find the median without a formula. Where the reading is
+  taken between plotted points, linear interpolation inside the median class gives the same figure a
+  formula would:
+
+<div class="formula">Median = L + [(N ÷ 2 − cf) ÷ f] × h, where L is the lower boundary of the median class, cf the cumulative frequency before it, f its frequency, and h its width</div>
+
+<Callout kind="pointer">
+  <p>
+    Keep the three graphs sorted by what they plot. A <strong>histogram</strong> plots frequency
+    (as area) against class boundaries; a <strong>frequency polygon</strong> plots frequency against
+    <em>mid-values</em>; an <strong>ogive</strong> plots <em>cumulative</em> frequency against class
+    <em>boundaries</em>. Only the ogive uses cumulative frequency, and only the ogive reads off the
+    median. A "frequency curve" is a smoothed frequency polygon; an "ogive" is never smoothed away
+    from its cumulative meaning.
+  </p>
+</Callout>
+
+## 12. Answering under negative marking
+
+Paper 3 is entirely objective. A correct answer earns 1 mark, a wrong answer costs 0.25 mark, and a
+blank scores zero. That arithmetic should shape how you treat a definition you are unsure of.
+
+Guess blindly among four options and you expect (1 ÷ 4)(+1) + (3 ÷ 4)(−0.25) = 0.25 − 0.1875 =
+**+0.0625** marks — barely positive, almost worthless. Eliminate one option and it rises to
+(1 ÷ 3)(+1) + (2 ÷ 3)(−0.25) = **+0.1667**; eliminate two and it reaches **+0.375**. The value of a
+guess lives almost entirely in the options you can rule out.
+
+In this chapter you can often rule out two options without any real work. A "number of classes" that
+is not a whole number is wrong. A relative frequency above 1, or a set of relative frequencies that
+do not sum to 1, is wrong. A pie-chart angle above 360°, or a set of sector angles that do not add
+to 360°, is wrong. A class width read from inclusive limits without closing the gap is the classic
+distractor, so the option that ignores the 0.5 shift is usually the trap, not the answer. Eliminate
+on these grounds first, then choose. Leave a question blank only when nothing can be ruled out and
+the time is better spent elsewhere.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — naming the scale of measurement (easy)">
+  <p>
+    For each variable, name the scale: (a) the jersey numbers of a cricket team, (b) the finishing
+    positions in a marathon, (c) the temperature of five cities in °C, (d) the monthly incomes of
+    five families.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Apply the two tests to each</div>
+    Can the values be ranked? Is zero a true "nothing"?<br />
+    (a) Jersey numbers are labels; number 7 is not "more" than number 4 — no order, so
+    <strong>nominal</strong>.<br />
+    (b) Positions can be ranked but the gaps are unequal (the winner may finish far ahead of the
+    second) — order without equal intervals, so <strong>ordinal</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The two harder ones</div>
+    (c) Temperature in °C has equal intervals but no true zero (0 °C is not "no heat"), so
+    <strong>interval</strong>; 40 °C is not twice 20 °C.<br />
+    (d) Income has equal intervals and a true zero (₹ 0 is genuinely no income), and ₹ 40,000 really
+    is twice ₹ 20,000, so <strong>ratio</strong>.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — choosing and sizing a sample (moderate)">
+  <p>
+    A firm has 2,400 employees: 1,440 in the factory and 960 in the office. The audit team wants a
+    sample of 100. (a) If it uses systematic sampling on the full staff list, what is the sampling
+    interval? (b) If it uses stratified sampling with proportional allocation, how many should it
+    draw from each group?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Systematic interval</div>
+    k = N ÷ n = 2,400 ÷ 100 = <strong>24</strong><br />
+    Pick a random start between 1 and 24, then take every 24th name on the list.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Proportional allocation</div>
+    Factory: (1,440 ÷ 2,400) × 100 = <strong>60</strong><br />
+    Office: (960 ÷ 2,400) × 100 = <strong>40</strong><br />
+    The two add back to 100, and each group is represented in proportion to its size — the point of
+    stratifying.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — class limits, boundaries, width and mid-value (moderate)">
+  <p>
+    A distribution of daily wages is written with the inclusive classes 200–249, 250–299, 300–349,
+    … For the class 250–299, find the class boundaries, the class width and the mid-value.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Close the gap for the boundaries</div>
+    The gap between 249 and 250 is 1, so shift each limit by ½ × 1 = 0.5.<br />
+    Lower boundary = 250 − 0.5 = <strong>249.5</strong>; upper boundary = 299 + 0.5 =
+    <strong>299.5</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Width and mid-value</div>
+    Width = 299.5 − 249.5 = <strong>50</strong> (not 299 − 250 = 49; the inclusive limits understate
+    it).<br />
+    Mid-value = (250 + 299) ÷ 2 = 274.5, equivalently (249.5 + 299.5) ÷ 2 = <strong>274.5</strong> —
+    limits or boundaries give the same midpoint.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — Sturges' rule and the class width (moderate)">
+  <p>
+    A statistician has 100 observations ranging from a lowest of 12 to a highest of 92. Using
+    Sturges' rule, how many classes should she use, and what class width does that imply? Take
+    log₁₀ 100 = 2.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Number of classes</div>
+    k = 1 + 3.322 × log₁₀ 100 = 1 + 3.322 × 2 = 1 + 6.644 = 7.644<br />
+    A count of classes is a whole number, so round to <strong>8 classes</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Class width</div>
+    Range = 92 − 12 = 80<br />
+    Width = Range ÷ number of classes = 80 ÷ 8 = <strong>10</strong><br />
+    Convenient classes would then be 10–20, 20–30, …, 90–100, which comfortably cover 12 to 92.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — building cumulative and relative frequency (moderate)">
+  <p>
+    The marks of 50 students fall in the classes 0–10, 10–20, 20–30, 30–40 with frequencies 6, 14,
+    20 and 10. (a) Find the less-than cumulative frequency at each upper boundary. (b) What relative
+    frequency and percentage does the class 20–30 carry? (c) How many students scored less than 30?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Cumulate the frequencies upward</div>
+    Less than 10: 6<br />
+    Less than 20: 6 + 14 = 20<br />
+    Less than 30: 20 + 20 = 40<br />
+    Less than 40: 40 + 10 = <strong>50</strong> = N, the check that the column is complete.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Relative and percentage frequency of 20–30</div>
+    Relative frequency = 20 ÷ 50 = <strong>0.40</strong><br />
+    Percentage = 0.40 × 100 = <strong>40%</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) Students scoring less than 30</div>
+    Read the less-than-30 cumulative figure directly: <strong>40 students</strong>. The remaining
+    50 − 40 = 10 scored 30 or more.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — a pie chart of a household budget (moderate)">
+  <p>
+    A family's monthly spending of ₹ 36,000 splits as food ₹ 14,400, rent ₹ 9,000, education
+    ₹ 5,400 and other ₹ 7,200. Find the sector angle for each, and confirm the angles close the
+    circle.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Angle = (component ÷ total) × 360</div>
+    Food: (14,400 ÷ 36,000) × 360 = 0.40 × 360 = <strong>144°</strong><br />
+    Rent: (9,000 ÷ 36,000) × 360 = 0.25 × 360 = <strong>90°</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — The remaining two sectors</div>
+    Education: (5,400 ÷ 36,000) × 360 = 0.15 × 360 = <strong>54°</strong><br />
+    Other: (7,200 ÷ 36,000) × 360 = 0.20 × 360 = <strong>72°</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — The check</div>
+    144 + 90 + 54 + 72 = <strong>360°</strong>. The sectors close the circle exactly, which proves
+    the shares were handled correctly. Equivalently, the four percentages 40 + 25 + 15 + 20 = 100.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — a histogram with unequal class widths (hard)">
+  <p>
+    A distribution has classes 0–10, 10–30 and 30–60 with frequencies 20, 60 and 45. Why can the raw
+    frequencies not be used as bar heights, and what heights should the histogram use?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — The widths differ</div>
+    Widths: 0–10 is 10 wide, 10–30 is 20 wide, 30–60 is 30 wide. A histogram represents frequency by
+    <strong>area</strong>, so plotting raw frequencies as heights would let the wide classes claim
+    far more area than their frequency deserves.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Use frequency density = frequency ÷ width</div>
+    0–10: 20 ÷ 10 = <strong>2.0</strong><br />
+    10–30: 60 ÷ 20 = <strong>3.0</strong><br />
+    30–60: 45 ÷ 30 = <strong>1.5</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Read the result</div>
+    On density, the middle class is the tallest at 3.0, and the last class — despite its large raw
+    frequency of 45 — is the shortest at 1.5, because it is spread over the widest interval. Area
+    (density × width) recovers each original frequency: 2×10 = 20, 3×20 = 60, 1.5×30 = 45.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — reading the median off an ogive (hard)">
+  <p>
+    The marks of 50 students are grouped as 0–10, 10–20, 20–30, 30–40 with frequencies 6, 14, 20 and
+    10. Find the median from the cumulative frequency, and confirm it with the interpolation formula.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Locate the median position</div>
+    N ÷ 2 = 50 ÷ 2 = <strong>25</strong>. On a less-than ogive this is the cumulative frequency to
+    read across from.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Find the median class</div>
+    Less-than cumulative: &lt;10 = 6, &lt;20 = 20, &lt;30 = 40. The value 25 first passes into the
+    class <strong>20–30</strong>, so that is the median class: L = 20, cf before it = 20, f = 20,
+    h = 10.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Interpolate</div>
+    Median = L + [(N ÷ 2 − cf) ÷ f] × h = 20 + [(25 − 20) ÷ 20] × 10 = 20 + 2.5 =
+    <strong>22.5 marks</strong><br />
+    On the graph, the two ogives (less-than rising, more-than falling) cross at exactly the marks-axis
+    value 22.5, which is the same median read without any formula.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — recovering a frequency table from partial data (hard)">
+  <p>
+    A four-class distribution of 200 items gives the relative frequencies 0.10, 0.25 and 0.30 for the
+    first three classes, and a less-than cumulative frequency of 130 at the top of the third class.
+    (a) Find the relative frequency of the fourth class. (b) Find the frequency of the third class.
+    (c) Find the frequency of the fourth class.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) Relative frequencies sum to 1</div>
+    Fourth class relative frequency = 1 − (0.10 + 0.25 + 0.30) = 1 − 0.65 = <strong>0.35</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) Third-class frequency from its relative frequency</div>
+    Frequency = relative frequency × N = 0.30 × 200 = <strong>60</strong><br />
+    As a cross-check, the first two classes carry 0.10 × 200 = 20 and 0.25 × 200 = 50, so the
+    less-than cumulative at the top of the third class is 20 + 50 + 60 = 130, matching the data.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) Fourth-class frequency</div>
+    Either 0.35 × 200 = 70, or N minus the cumulative-so-far: 200 − 130 = <strong>70</strong>. The two
+    routes agree, which confirms the whole table.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Calling Celsius temperature a ratio scale.** Its zero is a convention, not an absence of heat,
+  so it is an interval scale; 40 °C is not twice 20 °C. Only a scale with a true zero (income,
+  height, weight, Kelvin) is a ratio scale.
+- **Confusing primary and secondary data by the figure rather than the collector.** The same data
+  are primary to the body that first collected them and secondary to everyone who reuses them.
+- **Swapping stratified and cluster sampling.** Stratified samples *every* group (internally
+  similar); cluster takes *some* groups and studies them *fully* (internally varied).
+- **Claiming a census has no error.** A census has no *sampling* error, but it can carry heavy
+  *non-sampling* error, sometimes more than a well-run sample.
+- **Reporting a fractional number of classes.** Sturges' rule gives a starting figure that is
+  rounded to a whole number; classes are counted, not measured.
+- **Treating inclusive class limits as boundaries.** The class 20–29 is 10 units wide, not 9,
+  because its true boundaries are 19.5 and 29.5. Close the half-unit gap before finding width or
+  drawing a histogram.
+- **Using raw frequencies as histogram heights when class widths differ.** Plot frequency density
+  (frequency ÷ width) so that area, not height, carries the frequency.
+- **Mixing rupees, per cent and degrees in a pie chart.** Convert through the total: 1% = 3.6°, and
+  the sector angles must sum to 360°.
+- **Forgetting that relative frequencies sum to 1.** Use it to find a missing frequency and to check
+  the whole table; N = a class frequency ÷ its relative frequency.
+- **Reading the median off a histogram or a frequency polygon.** Only the ogive plots cumulative
+  frequency, and only the ogive reads off the median at N ÷ 2.
+
+## One-page revision summary
+
+**Vocabulary.** Statistics (singular) is the science of collecting, organising, presenting,
+analysing and interpreting data; (plural) the figures themselves. A *variable* is measured, an
+*attribute* is counted; variables are *discrete* (countable) or *continuous* (any value in a range).
+
+**Data and scales**
+
+<div class="formula">Primary data — collected first-hand for this enquiry · Secondary data — reused from another source. The test is the collector's relation to the enquiry, not the figure.</div>
+<div class="formula">Scales: Nominal (labels) → Ordinal (rank) → Interval (equal gaps, no true zero, e.g. °C) → Ratio (true zero, e.g. income). Rankable from ordinal up; ratios valid only on a ratio scale.</div>
+
+**Sampling**
+
+<div class="formula">Census = every unit (no sampling error). Sample = a representative part (has sampling error, usually cheaper and often more accurate).</div>
+<div class="formula">Systematic interval k = N ÷ n · Stratified (proportional): from a stratum = (stratum size ÷ N) × sample size.</div>
+<div class="formula">Cluster = some groups studied fully; Stratified = every group sampled. Multistage = sampling in stages.</div>
+<div class="formula">Sampling error: sample only, falls with size, estimable. Non-sampling error: census and sample, from process faults.</div>
+
+**Frequency distribution**
+
+<div class="formula">Sturges: number of classes k = 1 + 3.322 log₁₀ N (round to a whole number) · Width ≈ Range ÷ k · Range = max − min</div>
+<div class="formula">Inclusive class boundaries: lower − ½(gap), upper + ½(gap) · Class width = upper boundary − lower boundary</div>
+<div class="formula">Mid-value = (lower limit + upper limit) ÷ 2 · Successive mid-values differ by the class width</div>
+<div class="formula">Class frequency = difference of two neighbouring less-than cumulative frequencies</div>
+<div class="formula">Relative frequency = f ÷ N (they sum to 1) · Percentage frequency = relative frequency × 100 · N = f ÷ relative frequency</div>
+
+**Diagrams and graphs**
+
+<div class="formula">Pie sector angle = (component ÷ total) × 360° · 1% = 3.6° · sectors sum to 360°</div>
+<div class="formula">Bar chart: length carries meaning, gaps between bars · Histogram: adjacent rectangles, area carries frequency</div>
+<div class="formula">Frequency density = frequency ÷ class width (needed when widths differ)</div>
+<div class="formula">Histogram → boundaries; Frequency polygon → mid-values; Ogive → cumulative frequency vs boundaries</div>
+<div class="formula">Median off the ogive at N ÷ 2 · Median = L + [(N ÷ 2 − cf) ÷ f] × h</div>
+
+**Directions to remember.** Only the ratio scale allows ratios · a bigger sample lowers sampling
+error but may raise non-sampling error · an inclusive class is one whole unit wider than its written
+limits suggest · relative frequencies always total 1 and pie angles always total 360° · only the
+ogive yields the median.
