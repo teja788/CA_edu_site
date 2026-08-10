@@ -54,25 +54,25 @@ def build_tree(root: Path, planted: bool) -> None:
     good_q = {"id": "q-ok", "type": "mcq", "applicableAttempts": ["Sept 2026"], "lawAsOnDate": "2026-02-28"}
     bad_q = {"id": "q-untagged", "type": "mcq"}
     questions = [good_q, bad_q] if planted else [good_q]
-    (bank_dir / "supply-under-gst.json").write_text(json.dumps({"questions": questions}))
+    (bank_dir / "supply-under-gst.json").write_text(json.dumps({"questions": questions}), encoding="utf-8")
 
     notes_dir = root / "src/pages/intermediate/taxation"
     notes_dir.mkdir(parents=True, exist_ok=True)
-    (notes_dir / "supply-under-gst.mdx").write_text(GOOD_MDX)
+    (notes_dir / "supply-under-gst.mdx").write_text(GOOD_MDX, encoding="utf-8")
     bad_note = notes_dir / "charge-of-gst.mdx"
     empty_date_note = notes_dir / "input-tax-credit.mdx"
     stray_astro = notes_dir / "charge-of-gst.astro"
     if planted:
-        bad_note.write_text(BAD_MDX)
-        empty_date_note.write_text(EMPTY_DATE_MDX)
-        stray_astro.write_text("---\n---\n<p>astro note</p>")
+        bad_note.write_text(BAD_MDX, encoding="utf-8")
+        empty_date_note.write_text(EMPTY_DATE_MDX, encoding="utf-8")
+        stray_astro.write_text("---\n---\n<p>astro note</p>", encoding="utf-8")
     else:
         bad_note.unlink(missing_ok=True)
         empty_date_note.unlink(missing_ok=True)
         stray_astro.unlink(missing_ok=True)
     # index/amendments pages must NOT be flagged
-    (notes_dir / "index.astro").write_text("---\n---\n<p>hub</p>")
-    (notes_dir / "amendments.astro").write_text("---\n---\n<p>tracker</p>")
+    (notes_dir / "index.astro").write_text("---\n---\n<p>hub</p>", encoding="utf-8")
+    (notes_dir / "amendments.astro").write_text("---\n---\n<p>tracker</p>", encoding="utf-8")
 
 
 def run(root: Path) -> subprocess.CompletedProcess:

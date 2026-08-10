@@ -26,7 +26,7 @@ def main() -> int:
         blind_path, queue_path, answered_path = td / "blind.json", td / "queue.md", td / "answered.json"
 
         r = run("strip", str(FIXTURE_BANK), "-o", str(blind_path))
-        blind = json.loads(blind_path.read_text())
+        blind = json.loads(blind_path.read_text(encoding="utf-8"))
         if r.returncode != 0:
             problems.append(f"strip failed: {r.stderr}")
         if any("correct" in q or any("explanation" in o for o in q["options"]) for q in blind["questions"]):
@@ -42,12 +42,12 @@ def main() -> int:
         # with the key elsewhere.
         fresh = {"answers": {"q-dep-001": "D", "q-dep-002": "B", "q-dep-003": "A",
                              "q-dep-004-a": "A", "q-dep-004-b": "A"}}
-        answered_path.write_text(json.dumps(fresh))
+        answered_path.write_text(json.dumps(fresh), encoding="utf-8")
 
         r = run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path))
         if r.returncode != 1:
             problems.append(f"diff should exit 1 on a mismatch, got {r.returncode}: {r.stdout}{r.stderr}")
-        queue = queue_path.read_text() if queue_path.exists() else ""
+        queue = queue_path.read_text(encoding="utf-8") if queue_path.exists() else ""
         if "q-dep-001" not in queue:
             problems.append("mismatch q-dep-001 was not written to the review queue")
         if "q-dep-002" in queue:
@@ -59,17 +59,17 @@ def main() -> int:
         # All-agree pass must exit 0; unanswered question must exit 2.
         fresh_ok = {"answers": {"q-dep-001": "B", "q-dep-002": "B", "q-dep-003": "A",
                                 "q-dep-004-a": "B", "q-dep-004-b": "A"}}
-        answered_path.write_text(json.dumps(fresh_ok))
+        answered_path.write_text(json.dumps(fresh_ok), encoding="utf-8")
         if run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path)).returncode != 0:
             problems.append("diff should exit 0 when every answer agrees")
 
         # Case/whitespace must not manufacture mismatches: "b " for key "B"
         # is agreement. Real disagreements (tested above) must still fail.
         fresh_lower = {"answers": {qid: a.lower() + " " for qid, a in fresh_ok["answers"].items()}}
-        answered_path.write_text(json.dumps(fresh_lower))
+        answered_path.write_text(json.dumps(fresh_lower), encoding="utf-8")
         if run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path)).returncode != 0:
             problems.append("diff wrongly treats a lowercase/padded fresh answer as a mismatch")
-        answered_path.write_text(json.dumps({"answers": {"q-dep-001": "B"}}))
+        answered_path.write_text(json.dumps({"answers": {"q-dep-001": "B"}}), encoding="utf-8")
         if run("diff", str(FIXTURE_BANK), str(answered_path), "--queue", str(queue_path)).returncode != 2:
             problems.append("diff should exit 2 on unanswered questions")
 
