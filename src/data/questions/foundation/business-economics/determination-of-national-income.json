@@ -1,0 +1,2109 @@
+{
+  "level": "foundation",
+  "paper": "Paper 4 — Business Economics",
+  "paperSlug": "business-economics",
+  "chapterSlug": "determination-of-national-income",
+  "chapter": "Ch 6 — Determination of National Income",
+  "questions": [
+    {
+      "id": "q-f4c6-001",
+      "topic": "Ch 6 · National income accounting · Meaning of national income",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "National income is best described as the money value of all:",
+      "options": [
+        {
+          "key": "A",
+          "text": "final goods and services produced by the normal residents of a country during a year",
+          "explanation": "Correct. National income is the money value of final output of a country's normal residents over an accounting year — a flow, counting final goods only."
+        },
+        {
+          "key": "B",
+          "text": "goods, both intermediate and final, produced in a country during a year",
+          "explanation": "Counting intermediate goods as well as final goods would double-count. Only final goods and services are included."
+        },
+        {
+          "key": "C",
+          "text": "wealth owned by the citizens of a country at a point in time",
+          "explanation": "Wealth is a stock held at a point in time; national income is a flow produced over a period."
+        },
+        {
+          "key": "D",
+          "text": "money in circulation in a country during a year",
+          "explanation": "The stock of money is not national income. National income measures the value of output produced, not the money supply."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: National income — what it measures, §1 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#1-national-income-what-it-measures"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "National income = money value of final goods and services of normal residents in a year",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-002",
+      "topic": "Ch 6 · National income accounting · GDP definition",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Gross Domestic Product (GDP) measures the value of output produced:",
+      "options": [
+        {
+          "key": "A",
+          "text": "by the normal residents of a country, wherever they earn it",
+          "explanation": "That describes GNP, the national concept. GDP is defined by territory, not residence."
+        },
+        {
+          "key": "B",
+          "text": "within the geographical territory of a country, whoever owns the factors",
+          "explanation": "Correct. GDP is the value of output produced inside the country's territory, regardless of who owns the factors of production."
+        },
+        {
+          "key": "C",
+          "text": "only by government-owned enterprises",
+          "explanation": "GDP covers all producing units — private and public — not only government enterprises."
+        },
+        {
+          "key": "D",
+          "text": "after deducting depreciation of capital",
+          "explanation": "Deducting depreciation gives a NET measure (NDP). GDP is a gross figure, before depreciation."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The aggregates, §2 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#2-the-aggregates-gdp-gnp-ndp-and-nnp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "GDP = output within the domestic territory, before depreciation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-003",
+      "topic": "Ch 6 · National income accounting · GNP and NFIA",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Gross National Product (GNP) is obtained from GDP by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "adding net factor income from abroad",
+          "explanation": "Correct. GNP = GDP + net factor income from abroad, the factor income residents earn abroad minus what foreigners earn at home."
+        },
+        {
+          "key": "B",
+          "text": "subtracting net factor income from abroad",
+          "explanation": "The adjustment is added, not subtracted. If NFIA is negative the result is smaller than GDP, but the operation is still addition."
+        },
+        {
+          "key": "C",
+          "text": "adding net indirect taxes",
+          "explanation": "Net indirect taxes bridge factor cost and market price, not domestic and national. The GDP-to-GNP bridge is NFIA."
+        },
+        {
+          "key": "D",
+          "text": "subtracting depreciation",
+          "explanation": "Subtracting depreciation moves gross to net (GDP to NDP), not domestic to national."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The aggregates, §2 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#2-the-aggregates-gdp-gnp-ndp-and-nnp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "GNP = GDP + NFIA",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-004",
+      "topic": "Ch 6 · National income accounting · GNP from GDP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "GDP at market price is ₹ 5,000 crore and net factor income from abroad is ₹ 200 crore. GNP at market price is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 5,200 crore",
+          "explanation": "Correct. GNP = GDP + NFIA = 5,000 + 200 = ₹ 5,200 crore."
+        },
+        {
+          "key": "B",
+          "text": "₹ 4,800 crore",
+          "explanation": "This subtracts NFIA. The net factor income from abroad is added to GDP, not subtracted."
+        },
+        {
+          "key": "C",
+          "text": "₹ 5,000 crore",
+          "explanation": "This ignores NFIA altogether. GNP differs from GDP by the net factor income from abroad."
+        },
+        {
+          "key": "D",
+          "text": "₹ 5,400 crore",
+          "explanation": "This adds NFIA twice. GNP = 5,000 + 200 = 5,200, not 5,400."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The aggregates, §2 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#2-the-aggregates-gdp-gnp-ndp-and-nnp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "GNP = GDP + NFIA = 5000 + 200",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-005",
+      "topic": "Ch 6 · National income accounting · NNP and depreciation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Net National Product (NNP) at market price is obtained from GNP at market price by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "adding depreciation",
+          "explanation": "Depreciation is subtracted, not added, to move from a gross figure to a net one."
+        },
+        {
+          "key": "B",
+          "text": "subtracting depreciation (consumption of fixed capital)",
+          "explanation": "Correct. NNP = GNP − depreciation; the wearing-out of capital is deducted to reach the net figure."
+        },
+        {
+          "key": "C",
+          "text": "adding net factor income from abroad",
+          "explanation": "NFIA bridges domestic and national concepts, not gross and net. GNP is already a national figure."
+        },
+        {
+          "key": "D",
+          "text": "subtracting net indirect taxes",
+          "explanation": "Net indirect taxes bridge market price and factor cost, not gross and net. The gross-to-net step deducts depreciation."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The aggregates, §2 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#2-the-aggregates-gdp-gnp-ndp-and-nnp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NNP = GNP − depreciation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-006",
+      "topic": "Ch 6 · National income accounting · Depreciation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The difference between a gross aggregate and its matching net aggregate is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "net factor income from abroad",
+          "explanation": "NFIA is the difference between domestic and national aggregates, not gross and net."
+        },
+        {
+          "key": "B",
+          "text": "net indirect taxes",
+          "explanation": "Net indirect taxes separate market-price and factor-cost valuations, not gross and net measures."
+        },
+        {
+          "key": "C",
+          "text": "depreciation (consumption of fixed capital)",
+          "explanation": "Correct. A net aggregate equals the gross aggregate minus depreciation — the value of capital used up in production."
+        },
+        {
+          "key": "D",
+          "text": "transfer payments",
+          "explanation": "Transfer payments are excluded from national income altogether; they do not separate gross from net."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The aggregates, §2 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#2-the-aggregates-gdp-gnp-ndp-and-nnp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Net = Gross − depreciation",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-007",
+      "topic": "Ch 6 · National income accounting · NNP from GNP",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "GNP at market price is ₹ 6,000 crore and depreciation is ₹ 500 crore. NNP at market price is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 500 crore",
+          "explanation": "₹ 500 crore is the depreciation itself, not the net national product."
+        },
+        {
+          "key": "B",
+          "text": "₹ 5,500 crore",
+          "explanation": "Correct. NNP = GNP − depreciation = 6,000 − 500 = ₹ 5,500 crore."
+        },
+        {
+          "key": "C",
+          "text": "₹ 6,500 crore",
+          "explanation": "This adds depreciation. Moving from gross to net deducts depreciation, giving 5,500."
+        },
+        {
+          "key": "D",
+          "text": "₹ 5,000 crore",
+          "explanation": "This deducts too much. 6,000 − 500 = 5,500, not 5,000."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The aggregates, §2 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#2-the-aggregates-gdp-gnp-ndp-and-nnp"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "NNP = GNP − depreciation = 6000 − 500",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-008",
+      "topic": "Ch 6 · National income accounting · Market price vs factor cost",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An aggregate 'at factor cost' differs from the same aggregate 'at market price' because factor cost:",
+      "options": [
+        {
+          "key": "A",
+          "text": "includes depreciation",
+          "explanation": "Depreciation separates gross from net, not factor cost from market price. The valuation difference is net indirect taxes."
+        },
+        {
+          "key": "B",
+          "text": "excludes net indirect taxes (indirect taxes minus subsidies)",
+          "explanation": "Correct. Factor cost is what the factors actually received; it strips out net indirect taxes, so market price = factor cost + net indirect taxes."
+        },
+        {
+          "key": "C",
+          "text": "adds net factor income from abroad",
+          "explanation": "NFIA bridges domestic and national aggregates, not the two valuations."
+        },
+        {
+          "key": "D",
+          "text": "counts only exports",
+          "explanation": "The valuation basis has nothing to do with exports; it is about whether indirect taxes and subsidies are included."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Market price and factor cost, §3 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#3-market-price-and-factor-cost-net-indirect-taxes"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Factor cost = market price − net indirect taxes",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-009",
+      "topic": "Ch 6 · National income accounting · Net indirect taxes",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Indirect taxes are ₹ 700 crore and subsidies are ₹ 150 crore. Net indirect taxes are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 700 crore",
+          "explanation": "₹ 700 crore is the indirect taxes alone. Net indirect taxes deduct the ₹ 150 crore of subsidies."
+        },
+        {
+          "key": "B",
+          "text": "₹ 150 crore",
+          "explanation": "₹ 150 crore is the subsidies alone, not the net figure. Net indirect taxes = 700 − 150 = 550."
+        },
+        {
+          "key": "C",
+          "text": "₹ 550 crore",
+          "explanation": "Correct. Net indirect taxes = indirect taxes − subsidies = 700 − 150 = ₹ 550 crore."
+        },
+        {
+          "key": "D",
+          "text": "₹ 850 crore",
+          "explanation": "This adds subsidies to indirect taxes. Net indirect taxes subtract subsidies: 700 − 150 = 550."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Market price and factor cost, §3 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#3-market-price-and-factor-cost-net-indirect-taxes"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Net indirect taxes = indirect taxes − subsidies = 700 − 150",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-010",
+      "topic": "Ch 6 · National income accounting · Market price from factor cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "GDP at factor cost is ₹ 4,000 crore and net indirect taxes are ₹ 600 crore. GDP at market price is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 3,400 crore",
+          "explanation": "This subtracts net indirect taxes. To move from factor cost up to market price you add them."
+        },
+        {
+          "key": "B",
+          "text": "₹ 4,000 crore",
+          "explanation": "This ignores net indirect taxes. Market price exceeds factor cost by the net indirect taxes."
+        },
+        {
+          "key": "C",
+          "text": "₹ 600 crore",
+          "explanation": "₹ 600 crore is the net indirect taxes, not the market-price aggregate."
+        },
+        {
+          "key": "D",
+          "text": "₹ 4,600 crore",
+          "explanation": "Correct. Market price = factor cost + net indirect taxes = 4,000 + 600 = ₹ 4,600 crore."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Market price and factor cost, §3 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#3-market-price-and-factor-cost-net-indirect-taxes"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Market price = factor cost + net indirect taxes = 4000 + 600",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-011",
+      "topic": "Ch 6 · National income accounting · National income from NNP at market price",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "NNP at market price is ₹ 4,900 crore, indirect taxes are ₹ 500 crore and subsidies are ₹ 100 crore. National Income (NNP at factor cost) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 4,900 crore",
+          "explanation": "₹ 4,900 crore is NNP at market price. National income is that figure minus net indirect taxes."
+        },
+        {
+          "key": "B",
+          "text": "₹ 4,500 crore",
+          "explanation": "Correct. Net indirect taxes = 500 − 100 = 400; National Income = 4,900 − 400 = ₹ 4,500 crore."
+        },
+        {
+          "key": "C",
+          "text": "₹ 5,300 crore",
+          "explanation": "This adds net indirect taxes. National income at factor cost subtracts them from NNP at market price."
+        },
+        {
+          "key": "D",
+          "text": "₹ 4,400 crore",
+          "explanation": "This subtracts the indirect taxes only (500) and ignores subsidies. Use net indirect taxes = 500 − 100 = 400."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The key relationships, §5 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#5-the-aggregates-at-a-glance-the-key-relationships"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "NI = NNP at market price − net indirect taxes = 4900 − (500 − 100)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-012",
+      "topic": "Ch 6 · National income accounting · National income defined",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In national income accounting, the aggregate called 'National Income' is the same as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "GDP at market price",
+          "explanation": "GDP at market price is gross, domestic and at market price — three steps away from national income."
+        },
+        {
+          "key": "B",
+          "text": "GNP at market price",
+          "explanation": "GNP at market price is still gross and at market price. National income is net and at factor cost."
+        },
+        {
+          "key": "C",
+          "text": "NNP at factor cost",
+          "explanation": "Correct. National Income is defined as Net National Product at factor cost — the total factor income of the country's residents."
+        },
+        {
+          "key": "D",
+          "text": "NDP at market price",
+          "explanation": "NDP at market price is a domestic, market-price figure. National income is national and at factor cost."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: National income, personal income and disposable income, §4 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#4-national-income-personal-income-and-disposable-income"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "National Income = NNP at factor cost",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-013",
+      "topic": "Ch 6 · National income accounting · Personal income",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is ADDED to national income when arriving at personal income?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Undistributed corporate profits",
+          "explanation": "Undistributed profits are earned but not received by households, so they are subtracted, not added."
+        },
+        {
+          "key": "B",
+          "text": "Corporate profit taxes",
+          "explanation": "Corporate taxes are part of income not reaching households, so they are subtracted when computing personal income."
+        },
+        {
+          "key": "C",
+          "text": "Transfer payments received by households",
+          "explanation": "Correct. Transfer payments (pensions, scholarships, relief) are received by households though not earned in production, so they are added to reach personal income."
+        },
+        {
+          "key": "D",
+          "text": "Social security contributions",
+          "explanation": "Social security contributions are withheld from households, so they are subtracted, not added."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: National income, personal income and disposable income, §4 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#4-national-income-personal-income-and-disposable-income"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Personal income = NI − undistributed profits − corporate taxes − social security + transfer payments",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-014",
+      "topic": "Ch 6 · National income accounting · Disposable personal income",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Disposable personal income is equal to personal income:",
+      "options": [
+        {
+          "key": "A",
+          "text": "minus direct (personal) taxes",
+          "explanation": "Correct. Disposable personal income is personal income after personal (direct) taxes — what households can actually spend or save."
+        },
+        {
+          "key": "B",
+          "text": "plus direct (personal) taxes",
+          "explanation": "Direct taxes are subtracted, not added; disposable income is what remains after tax."
+        },
+        {
+          "key": "C",
+          "text": "minus indirect taxes",
+          "explanation": "It is direct (personal) taxes that are deducted, not indirect taxes, which are already handled in the market-price/factor-cost step."
+        },
+        {
+          "key": "D",
+          "text": "plus transfer payments",
+          "explanation": "Transfer payments are added earlier, when moving from national income to personal income, not at the disposable-income stage."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: National income, personal income and disposable income, §4 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#4-national-income-personal-income-and-disposable-income"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Disposable personal income = personal income − direct taxes",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-015",
+      "topic": "Ch 6 · National income accounting · Full aggregate chain",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "GDP at market price is ₹ 8,000 crore, net factor income from abroad is −₹ 100 crore, depreciation is ₹ 700 crore, indirect taxes are ₹ 900 crore and subsidies are ₹ 200 crore. National Income is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 6,600 crore",
+          "explanation": "This ignores the negative NFIA. GNP = 8,000 + (−100) = 7,900, not 8,000."
+        },
+        {
+          "key": "B",
+          "text": "₹ 5,900 crore",
+          "explanation": "This deducts too much (for example subtracting the indirect taxes without adding back subsidies twice). The correct chain gives ₹ 6,500 crore."
+        },
+        {
+          "key": "C",
+          "text": "₹ 6,500 crore",
+          "explanation": "Correct. GNP = 8,000 − 100 = 7,900; NNP = 7,900 − 700 = 7,200; net indirect taxes = 900 − 200 = 700; NI = 7,200 − 700 = ₹ 6,500 crore."
+        },
+        {
+          "key": "D",
+          "text": "₹ 7,200 crore",
+          "explanation": "₹ 7,200 crore is NNP at market price. National income deducts net indirect taxes of ₹ 700 crore as well."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The key relationships, §5 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#5-the-aggregates-at-a-glance-the-key-relationships"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "NI = GDPmp + NFIA − depreciation − net indirect taxes",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-016",
+      "topic": "Ch 6 · National income accounting · Nominal vs real GDP",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Real GDP differs from nominal GDP because real GDP values output at:",
+      "options": [
+        {
+          "key": "A",
+          "text": "current-year prices",
+          "explanation": "Current-year prices give NOMINAL GDP, which rises with both output and prices. Real GDP uses base-year prices."
+        },
+        {
+          "key": "B",
+          "text": "the prices of a fixed base year",
+          "explanation": "Correct. Real GDP values output at constant base-year prices, so it rises only when output actually rises — inflation is stripped out."
+        },
+        {
+          "key": "C",
+          "text": "factor cost rather than market price",
+          "explanation": "The real–nominal distinction is about the year of the prices used, not about factor cost versus market price."
+        },
+        {
+          "key": "D",
+          "text": "world prices",
+          "explanation": "Real GDP uses the country's own base-year prices, not world prices."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Nominal GDP, real GDP and the deflator, §6 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#6-nominal-gdp-real-gdp-and-the-gdp-deflator"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Real GDP values output at constant base-year prices",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-017",
+      "topic": "Ch 6 · National income accounting · GDP deflator",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nominal GDP is ₹ 6,000 crore and real GDP is ₹ 5,000 crore. The GDP deflator is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "83.33",
+          "explanation": "This inverts the ratio (real ÷ nominal). The deflator is nominal over real, times 100."
+        },
+        {
+          "key": "B",
+          "text": "100",
+          "explanation": "A deflator of 100 would mean nominal equals real. Here nominal exceeds real, so the deflator is above 100."
+        },
+        {
+          "key": "C",
+          "text": "130",
+          "explanation": "130 is not the ratio of the two figures. (6,000 ÷ 5,000) × 100 = 120."
+        },
+        {
+          "key": "D",
+          "text": "120",
+          "explanation": "Correct. GDP deflator = (nominal ÷ real) × 100 = (6,000 ÷ 5,000) × 100 = 120."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Nominal GDP, real GDP and the deflator, §6 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#6-nominal-gdp-real-gdp-and-the-gdp-deflator"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "GDP deflator = (nominal ÷ real) × 100 = 6000/5000 × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-018",
+      "topic": "Ch 6 · National income accounting · Real GDP from deflator",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Nominal GDP is ₹ 7,200 crore and the GDP deflator is 120. Real GDP is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 6,000 crore",
+          "explanation": "Correct. Real GDP = (nominal ÷ deflator) × 100 = (7,200 ÷ 120) × 100 = ₹ 6,000 crore."
+        },
+        {
+          "key": "B",
+          "text": "₹ 8,640 crore",
+          "explanation": "This multiplies nominal by the deflator/100 instead of dividing. Real GDP = 7,200 ÷ 1.2 = 6,000."
+        },
+        {
+          "key": "C",
+          "text": "₹ 7,200 crore",
+          "explanation": "₹ 7,200 crore is the nominal figure. With a deflator above 100, real GDP is smaller than nominal."
+        },
+        {
+          "key": "D",
+          "text": "₹ 6,600 crore",
+          "explanation": "6,600 is not 7,200 ÷ 1.2. Dividing nominal by the deflator (as a fraction of 100) gives 6,000."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Nominal GDP, real GDP and the deflator, §6 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#6-nominal-gdp-real-gdp-and-the-gdp-deflator"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Real GDP = (nominal ÷ deflator) × 100 = 7200/120 × 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-019",
+      "topic": "Ch 6 · National income accounting · Deflator interpretation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the base year itself, the GDP deflator is always:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0",
+          "explanation": "A deflator of 0 has no meaning. In the base year nominal and real GDP are equal, giving a deflator of 100."
+        },
+        {
+          "key": "B",
+          "text": "100",
+          "explanation": "Correct. In the base year, output is valued at base-year prices for both measures, so nominal = real and the deflator = (nominal ÷ real) × 100 = 100."
+        },
+        {
+          "key": "C",
+          "text": "greater than 100",
+          "explanation": "A deflator above 100 signals prices above base-year levels, which cannot happen in the base year itself."
+        },
+        {
+          "key": "D",
+          "text": "less than 100",
+          "explanation": "A deflator below 100 signals prices below base-year levels; in the base year the deflator is exactly 100."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: Nominal GDP, real GDP and the deflator, §6 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#6-nominal-gdp-real-gdp-and-the-gdp-deflator"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Base year: nominal = real, deflator = 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-020",
+      "topic": "Ch 6 · National income accounting · Per capita income",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "National Income is ₹ 5,00,000 crore and the population is 25 crore. Per capita income is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 25,000",
+          "explanation": "25,000 uses the wrong divisor. Dividing 5,00,000 crore by 25 crore gives 20,000."
+        },
+        {
+          "key": "B",
+          "text": "₹ 5,00,000",
+          "explanation": "₹ 5,00,000 crore is the total national income, not the income per head."
+        },
+        {
+          "key": "C",
+          "text": "₹ 20,000",
+          "explanation": "Correct. Per capita income = National Income ÷ population = 5,00,000 ÷ 25 = ₹ 20,000 per person."
+        },
+        {
+          "key": "D",
+          "text": "₹ 12,500",
+          "explanation": "12,500 does not follow from 5,00,000 ÷ 25. The correct quotient is 20,000."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: Per capita income, §7 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#7-per-capita-income"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Per capita income = National Income ÷ population = 500000/25",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-021",
+      "topic": "Ch 6 · National income accounting · Circular flow",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the circular flow of income, a four-sector economy adds which sector to the three-sector model?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The household sector",
+          "explanation": "Households are present from the two-sector model onward; they are not the sector added at the four-sector stage."
+        },
+        {
+          "key": "B",
+          "text": "The government sector",
+          "explanation": "The government is added at the three-sector stage. The four-sector model adds one more sector beyond that."
+        },
+        {
+          "key": "C",
+          "text": "The foreign sector (rest of the world)",
+          "explanation": "Correct. The four-sector model adds the foreign sector, which injects income through exports and withdraws it through imports."
+        },
+        {
+          "key": "D",
+          "text": "The firms sector",
+          "explanation": "Firms are present from the two-sector model. The four-sector model adds the rest of the world."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The circular flow of income, §8 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#8-the-circular-flow-of-income"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Four-sector = two-sector + government + foreign sector",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-022",
+      "topic": "Ch 6 · National income accounting · Leakages and injections",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a 'leakage' from the circular flow of income?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Investment",
+          "explanation": "Investment is an injection — it puts income into the flow, not takes it out."
+        },
+        {
+          "key": "B",
+          "text": "Government spending",
+          "explanation": "Government spending is an injection into the circular flow, not a leakage."
+        },
+        {
+          "key": "C",
+          "text": "Exports",
+          "explanation": "Exports are an injection — foreign spending on domestic output adds to the flow."
+        },
+        {
+          "key": "D",
+          "text": "Saving",
+          "explanation": "Correct. Saving is a leakage: it is income withdrawn from the flow rather than spent on output. Taxes and imports are the other leakages."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The circular flow of income, §8 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#8-the-circular-flow-of-income"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Leakages: saving, taxes, imports; injections: investment, government spending, exports",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-023",
+      "topic": "Ch 6 · Methods of measurement · Value added and double counting",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The value added method avoids 'double counting' by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "adding the full value of output at every stage of production",
+          "explanation": "Adding full output at every stage is exactly the double-counting error, because intermediate goods get counted again and again."
+        },
+        {
+          "key": "B",
+          "text": "counting only the value added by each producing unit (output minus intermediate consumption)",
+          "explanation": "Correct. Value added = output − intermediate consumption; summing value added counts each good's value only once."
+        },
+        {
+          "key": "C",
+          "text": "counting only the output of the final firm",
+          "explanation": "The method sums value added across all firms, not the output of the final firm alone, though both happen to equal the final value."
+        },
+        {
+          "key": "D",
+          "text": "including transfer payments",
+          "explanation": "Transfer payments are not production and are excluded from all methods; they have nothing to do with avoiding double counting."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The value added (product) method, §9 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#9-the-value-added-product-method"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Value added = output − intermediate consumption; avoids double counting",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-024",
+      "topic": "Ch 6 · Methods of measurement · Expenditure method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "By the expenditure method, with C = ₹ 3,000 crore, I = ₹ 800 crore, G = ₹ 1,200 crore, exports X = ₹ 500 crore and imports M = ₹ 400 crore, GDP at market price is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 5,900 crore",
+          "explanation": "This adds imports instead of subtracting them. Net exports = X − M = 500 − 400 = 100, giving 5,100."
+        },
+        {
+          "key": "B",
+          "text": "₹ 5,000 crore",
+          "explanation": "This omits net exports altogether. Add X − M = 100 to reach 5,100."
+        },
+        {
+          "key": "C",
+          "text": "₹ 4,900 crore",
+          "explanation": "This subtracts exports as well as imports. Only imports are subtracted; net exports add 100 here."
+        },
+        {
+          "key": "D",
+          "text": "₹ 5,100 crore",
+          "explanation": "Correct. GDP = C + I + G + (X − M) = 3,000 + 800 + 1,200 + (500 − 400) = ₹ 5,100 crore."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The expenditure method, §11 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#11-the-expenditure-method"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "GDP = C + I + G + (X − M) = 3000 + 800 + 1200 + 100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-025",
+      "topic": "Ch 6 · Methods of measurement · Income method",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "By the income method, with compensation of employees ₹ 2,500 crore, rent ₹ 400 crore, interest ₹ 300 crore, profit ₹ 600 crore and mixed income ₹ 700 crore, domestic income (NDP at factor cost) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 5,000 crore",
+          "explanation": "5,000 overstates the total. The five factor incomes sum to 4,500, not 5,000."
+        },
+        {
+          "key": "B",
+          "text": "₹ 4,500 crore",
+          "explanation": "Correct. Domestic income = 2,500 + 400 + 300 + 600 + 700 = ₹ 4,500 crore."
+        },
+        {
+          "key": "C",
+          "text": "₹ 3,800 crore",
+          "explanation": "This omits one component (the mixed income of ₹ 700 crore). All five factor incomes are summed."
+        },
+        {
+          "key": "D",
+          "text": "₹ 4,100 crore",
+          "explanation": "This omits one component (the profit of ₹ 600 crore). The full sum is 4,500."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The income method, §10 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#10-the-income-method"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Domestic income = rent + wages + interest + profit + mixed income = 2500+400+300+600+700",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-026",
+      "topic": "Ch 6 · Methods of measurement · Income method components",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under the income method, the income of a self-employed shopkeeper, in which wages, rent, interest and profit cannot be separated, is recorded as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "net indirect taxes",
+          "explanation": "Net indirect taxes are a valuation adjustment, not a factor income. The shopkeeper's earnings are mixed income."
+        },
+        {
+          "key": "B",
+          "text": "compensation of employees",
+          "explanation": "Compensation of employees is the wage of hired labour; the self-employed shopkeeper is not an employee."
+        },
+        {
+          "key": "C",
+          "text": "mixed income",
+          "explanation": "Correct. The income of the self-employed, where the factor rewards cannot be separated, is recorded as mixed income."
+        },
+        {
+          "key": "D",
+          "text": "a transfer payment",
+          "explanation": "A transfer payment is received without production; the shopkeeper earns income by producing and selling, so it is a factor income."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The income method, §10 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#10-the-income-method"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Mixed income = income of the self-employed",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-027",
+      "topic": "Ch 6 · Methods of measurement · Expenditure components",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the expenditure method formula GDP = C + I + G + (X − M), the term 'I' stands for:",
+      "options": [
+        {
+          "key": "A",
+          "text": "spending on new capital goods and additions to stock (gross domestic investment)",
+          "explanation": "Correct. I is gross domestic investment — spending by firms on new capital goods and additions to inventory."
+        },
+        {
+          "key": "B",
+          "text": "the purchase of shares and bonds by households",
+          "explanation": "Buying financial assets is not investment in national income; I means spending on new physical capital goods."
+        },
+        {
+          "key": "C",
+          "text": "interest paid on loans",
+          "explanation": "Interest is a factor income in the income method, not the investment term in the expenditure method."
+        },
+        {
+          "key": "D",
+          "text": "imports of capital goods",
+          "explanation": "Imports are captured in the (X − M) term. I is domestic investment spending."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The expenditure method, §11 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#11-the-expenditure-method"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "I = gross domestic investment (new capital goods + stock)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-028",
+      "topic": "Ch 6 · Methods of measurement · Precautions (double counting)",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "To avoid double counting in the value added or expenditure method, one must exclude the value of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "government spending",
+          "explanation": "Government final consumption is a genuine component of expenditure, not a double-counting item."
+        },
+        {
+          "key": "B",
+          "text": "exports",
+          "explanation": "Exports are part of final expenditure; they are not excluded to avoid double counting."
+        },
+        {
+          "key": "C",
+          "text": "final goods",
+          "explanation": "Final goods are precisely what national income counts. It is intermediate goods that must be excluded."
+        },
+        {
+          "key": "D",
+          "text": "intermediate goods",
+          "explanation": "Correct. Intermediate goods (inputs bought from other firms) are excluded, because their value is already embodied in the final good."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Precautions and reconciling the methods, §12 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#12-precautions-and-reconciling-the-three-methods"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Exclude intermediate goods to avoid double counting",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-029",
+      "topic": "Ch 6 · Methods of measurement · Precautions (transfer payments)",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a transfer payment that must be EXCLUDED from national income?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rent received by a landlord",
+          "explanation": "Rent is a factor income for the use of land and is included in national income."
+        },
+        {
+          "key": "B",
+          "text": "Profit earned by a company",
+          "explanation": "Profit is a factor income (the reward of enterprise) and is included in national income."
+        },
+        {
+          "key": "C",
+          "text": "Wages paid to a factory worker",
+          "explanation": "Wages are a factor income earned in production and are included in national income."
+        },
+        {
+          "key": "D",
+          "text": "An old-age pension paid by the government",
+          "explanation": "Correct. A pension is a transfer payment — income received without any current production in return — so it is excluded from national income."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Precautions and reconciling the methods, §12 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#12-precautions-and-reconciling-the-three-methods"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Transfer payments (pensions) excluded from national income",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-030",
+      "topic": "Ch 6 · Methods of measurement · Financial transactions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The purchase of existing shares on the stock exchange is excluded from national income because it is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "a financial transaction, not production of a good or service",
+          "explanation": "Correct. Buying existing shares transfers ownership of an existing asset; nothing is produced, so it is excluded from national income."
+        },
+        {
+          "key": "B",
+          "text": "a form of gross domestic investment",
+          "explanation": "Investment in national income means new capital goods, not the buying of shares, which is a financial transfer."
+        },
+        {
+          "key": "C",
+          "text": "government final consumption expenditure",
+          "explanation": "A share purchase by a household is not government spending; it is a financial transaction that is excluded."
+        },
+        {
+          "key": "D",
+          "text": "a factor income like rent or wages",
+          "explanation": "A share purchase is not a factor income. Dividends might be, but buying the share itself is a financial transfer."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Precautions and reconciling the methods, §12 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#12-precautions-and-reconciling-the-three-methods"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Financial transactions (buying shares) excluded — not production",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-031",
+      "topic": "Ch 6 · National income and welfare · Limitations",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a limitation of national income as a measure of economic welfare?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It measures leisure and environmental quality precisely",
+          "explanation": "National income does NOT measure leisure or environmental costs; omitting them is one of its limitations."
+        },
+        {
+          "key": "B",
+          "text": "It counts pollution as a cost against output",
+          "explanation": "National income does not net off pollution and resource depletion; failing to do so is a limitation, not a strength."
+        },
+        {
+          "key": "C",
+          "text": "It captures the exact distribution of income among households",
+          "explanation": "This is the opposite of the truth: per capita income is an average that hides the distribution of income, which is a limitation."
+        },
+        {
+          "key": "D",
+          "text": "It ignores the distribution of income and non-market production",
+          "explanation": "Correct. National income hides inequality, leaves out non-market production (such as a homemaker's work) and ignores externalities, so it is an imperfect welfare measure."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: National income as a measure of welfare, §13 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#13-national-income-as-a-measure-of-welfare"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Limitations: distribution hidden, non-market output ignored, externalities uncounted",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-032",
+      "topic": "Ch 6 · Methods of measurement · Factor income vs transfer",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a factor income that IS included in national income?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A gift received from a relative",
+          "explanation": "A gift is a transfer, not payment for a factor service, so it is excluded from national income."
+        },
+        {
+          "key": "B",
+          "text": "Unemployment relief from the government",
+          "explanation": "Unemployment relief is a transfer payment, excluded from national income because no output is produced in return."
+        },
+        {
+          "key": "C",
+          "text": "A scholarship paid to a student",
+          "explanation": "A scholarship is a transfer payment, received without production, and is excluded from national income."
+        },
+        {
+          "key": "D",
+          "text": "Interest received on a loan to a business",
+          "explanation": "Correct. Interest is the factor reward of capital, earned in production, so it is a factor income included in national income."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The income method, §10 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#10-the-income-method"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Factor incomes (interest) included; transfers excluded",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-033",
+      "topic": "Ch 6 · National income accounting · NFIA meaning",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Net factor income from abroad (NFIA) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "indirect taxes minus subsidies",
+          "explanation": "Indirect taxes minus subsidies is net indirect taxes, a valuation adjustment, not NFIA."
+        },
+        {
+          "key": "B",
+          "text": "total foreign aid received in a year",
+          "explanation": "Foreign aid is a transfer, not a factor income. NFIA concerns factor incomes across borders."
+        },
+        {
+          "key": "C",
+          "text": "exports minus imports of goods",
+          "explanation": "Exports minus imports is net exports of goods and services, part of the expenditure method — not NFIA, which is about factor income."
+        },
+        {
+          "key": "D",
+          "text": "factor income earned by residents abroad minus factor income earned by foreigners at home",
+          "explanation": "Correct. NFIA is the factor income (wages, interest, rent, profit) residents earn abroad minus that earned by foreigners within the country."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The aggregates, §2 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#2-the-aggregates-gdp-gnp-ndp-and-nnp"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "NFIA = factor income of residents abroad − factor income of foreigners at home",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-034",
+      "topic": "Ch 6 · National income accounting · Disposable income identity",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Disposable personal income is used by households in exactly two ways. These are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "consumption and saving",
+          "explanation": "Correct. A household either spends its disposable income (consumption) or does not (saving), so disposable income = consumption + saving."
+        },
+        {
+          "key": "B",
+          "text": "consumption and taxes",
+          "explanation": "Taxes are already deducted to arrive at disposable income; what remains is split between consumption and saving."
+        },
+        {
+          "key": "C",
+          "text": "investment and saving",
+          "explanation": "Households consume and save; investment is a decision of firms, not the use of household disposable income."
+        },
+        {
+          "key": "D",
+          "text": "saving and transfer payments",
+          "explanation": "Transfer payments are receipts, not a use of income. Disposable income is used for consumption and saving."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: National income, personal income and disposable income, §4 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#4-national-income-personal-income-and-disposable-income"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Disposable income = consumption + saving",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-035",
+      "topic": "Ch 6 · Keynesian theory · Aggregate demand",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the simple two-sector Keynesian model, aggregate demand consists of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "consumption and investment (C + I)",
+          "explanation": "Correct. In the two-sector model aggregate demand is planned consumption plus planned investment, C + I."
+        },
+        {
+          "key": "B",
+          "text": "consumption only",
+          "explanation": "Aggregate demand also includes investment. Consumption alone is not the whole of planned spending."
+        },
+        {
+          "key": "C",
+          "text": "saving and investment",
+          "explanation": "Saving is a leakage, not a component of aggregate demand. Aggregate demand is C + I."
+        },
+        {
+          "key": "D",
+          "text": "government spending and net exports only",
+          "explanation": "Those appear in the fuller model; in the two-sector model aggregate demand is C + I."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Aggregate demand and aggregate supply, §14 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#14-aggregate-demand-and-aggregate-supply"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Two-sector aggregate demand = C + I",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-036",
+      "topic": "Ch 6 · Keynesian theory · Consumption function",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the consumption function C = a + bY, the term 'a' represents:",
+      "options": [
+        {
+          "key": "A",
+          "text": "autonomous consumption — the consumption at zero income",
+          "explanation": "Correct. 'a' is autonomous consumption, the amount consumed even when income is zero, financed by past savings or borrowing."
+        },
+        {
+          "key": "B",
+          "text": "the marginal propensity to consume",
+          "explanation": "The marginal propensity to consume is 'b', the slope of the line, not the intercept 'a'."
+        },
+        {
+          "key": "C",
+          "text": "total saving",
+          "explanation": "'a' is autonomous consumption, not saving. At zero income the household dis-saves by the amount 'a'."
+        },
+        {
+          "key": "D",
+          "text": "the level of investment",
+          "explanation": "Investment is a separate variable; 'a' is the intercept of the consumption function, autonomous consumption."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The consumption function, §15 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#15-the-consumption-function-apc-and-mpc"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "C = a + bY; a = autonomous consumption",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-037",
+      "topic": "Ch 6 · Keynesian theory · APC",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "At an income of ₹ 1,000 crore, consumption is ₹ 800 crore. The average propensity to consume (APC) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.8",
+          "explanation": "Correct. APC = C ÷ Y = 800 ÷ 1,000 = 0.8."
+        },
+        {
+          "key": "B",
+          "text": "1.25",
+          "explanation": "1.25 inverts the ratio (Y ÷ C). APC is consumption divided by income, 800 ÷ 1,000 = 0.8."
+        },
+        {
+          "key": "C",
+          "text": "0.2",
+          "explanation": "0.2 is the average propensity to SAVE (200 ÷ 1,000), not the APC. APC = 800 ÷ 1,000 = 0.8."
+        },
+        {
+          "key": "D",
+          "text": "0.08",
+          "explanation": "0.08 misplaces the decimal. 800 ÷ 1,000 = 0.8, not 0.08."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The consumption function, §15 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#15-the-consumption-function-apc-and-mpc"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "APC = C ÷ Y = 800/1000",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-038",
+      "topic": "Ch 6 · Keynesian theory · MPC",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "When income rises by ₹ 100 crore, consumption rises by ₹ 60 crore. The marginal propensity to consume (MPC) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.4",
+          "explanation": "0.4 is the marginal propensity to SAVE (40 ÷ 100). MPC = 60 ÷ 100 = 0.6."
+        },
+        {
+          "key": "B",
+          "text": "0.06",
+          "explanation": "0.06 misplaces the decimal. 60 ÷ 100 = 0.6, not 0.06."
+        },
+        {
+          "key": "C",
+          "text": "0.6",
+          "explanation": "Correct. MPC = ΔC ÷ ΔY = 60 ÷ 100 = 0.6."
+        },
+        {
+          "key": "D",
+          "text": "1.67",
+          "explanation": "1.67 inverts the ratio (ΔY ÷ ΔC). MPC is the change in consumption over the change in income, 60 ÷ 100 = 0.6."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The consumption function, §15 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#15-the-consumption-function-apc-and-mpc"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "MPC = ΔC ÷ ΔY = 60/100",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-039",
+      "topic": "Ch 6 · Keynesian theory · Range of MPC",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The marginal propensity to consume (MPC) normally lies:",
+      "options": [
+        {
+          "key": "A",
+          "text": "between 0 and 1",
+          "explanation": "Correct. An extra rupee of income raises consumption, but by less than a rupee (part is saved), so 0 < MPC < 1."
+        },
+        {
+          "key": "B",
+          "text": "above 1",
+          "explanation": "An MPC above 1 would mean consumption rises by more than the extra income, which is not the normal case."
+        },
+        {
+          "key": "C",
+          "text": "below 0",
+          "explanation": "A negative MPC would mean consumption falls when income rises, contrary to the consumption function."
+        },
+        {
+          "key": "D",
+          "text": "exactly equal to 1 always",
+          "explanation": "MPC = 1 would mean all extra income is consumed and none saved; normally MPC is a fraction between 0 and 1."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: The consumption function, §15 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#15-the-consumption-function-apc-and-mpc"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "0 < MPC < 1",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-040",
+      "topic": "Ch 6 · Keynesian theory · APS",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "At an income of ₹ 2,000 crore, consumption is ₹ 1,500 crore. The average propensity to save (APS) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.75",
+          "explanation": "0.75 is the average propensity to CONSUME (1,500 ÷ 2,000). APS = 1 − APC = 0.25."
+        },
+        {
+          "key": "B",
+          "text": "0.5",
+          "explanation": "0.5 does not match the figures. Saving of 500 on income of 2,000 gives APS = 0.25."
+        },
+        {
+          "key": "C",
+          "text": "0.2",
+          "explanation": "0.2 is not 500 ÷ 2,000. The average propensity to save here is 0.25."
+        },
+        {
+          "key": "D",
+          "text": "0.25",
+          "explanation": "Correct. Saving = 2,000 − 1,500 = 500; APS = S ÷ Y = 500 ÷ 2,000 = 0.25 (and indeed APC = 0.75, so APC + APS = 1)."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The saving function, §16 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#16-the-saving-function-aps-and-mps"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "APS = S ÷ Y = (2000 − 1500)/2000",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-041",
+      "topic": "Ch 6 · Keynesian theory · MPS from MPC",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If the marginal propensity to consume is 0.75, the marginal propensity to save (MPS) is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.5",
+          "explanation": "0.5 does not satisfy MPC + MPS = 1. With MPC = 0.75, MPS = 0.25."
+        },
+        {
+          "key": "B",
+          "text": "0.25",
+          "explanation": "Correct. MPS = 1 − MPC = 1 − 0.75 = 0.25, because MPC + MPS = 1."
+        },
+        {
+          "key": "C",
+          "text": "0.75",
+          "explanation": "0.75 is the MPC itself. The MPS is 1 − MPC = 0.25."
+        },
+        {
+          "key": "D",
+          "text": "1.33",
+          "explanation": "1.33 inverts the MPC. MPS is 1 − MPC = 0.25, not 1 ÷ MPC."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The saving function, §16 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#16-the-saving-function-aps-and-mps"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "MPS = 1 − MPC = 1 − 0.75",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-042",
+      "topic": "Ch 6 · Keynesian theory · MPC + MPS identity",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The sum of the marginal propensity to consume and the marginal propensity to save (MPC + MPS) always equals:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the level of income",
+          "explanation": "MPC + MPS is a pure ratio equal to 1; it is unrelated to the level of income."
+        },
+        {
+          "key": "B",
+          "text": "0",
+          "explanation": "The propensities are positive fractions that add to 1, not to 0."
+        },
+        {
+          "key": "C",
+          "text": "1",
+          "explanation": "Correct. Any extra income is either consumed or saved, so MPC + MPS = 1 (and likewise APC + APS = 1)."
+        },
+        {
+          "key": "D",
+          "text": "the multiplier",
+          "explanation": "The multiplier is 1 ÷ MPS, a separate quantity. MPC + MPS is always 1."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The saving function, §16 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#16-the-saving-function-aps-and-mps"
+      },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "MPC + MPS = 1",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-043",
+      "topic": "Ch 6 · Keynesian theory · Multiplier from MPC",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If the marginal propensity to consume is 0.8, the investment multiplier is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.25",
+          "explanation": "1.25 is 1 ÷ MPC (1 ÷ 0.8). The multiplier is 1 ÷ (1 − MPC) = 1 ÷ 0.2 = 5."
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "explanation": "4 would follow from MPC = 0.75. With MPC = 0.8, k = 1 ÷ 0.2 = 5."
+        },
+        {
+          "key": "C",
+          "text": "0.8",
+          "explanation": "0.8 is the MPC itself, not the multiplier. k = 1 ÷ (1 − 0.8) = 5."
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "explanation": "Correct. k = 1 ÷ (1 − MPC) = 1 ÷ (1 − 0.8) = 1 ÷ 0.2 = 5."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The investment multiplier, §18 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#18-the-investment-multiplier"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "k = 1 ÷ (1 − MPC) = 1/(1 − 0.8)",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-044",
+      "topic": "Ch 6 · Keynesian theory · Multiplier from MPS",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If the marginal propensity to save is 0.25, the investment multiplier is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5",
+          "explanation": "5 would follow from MPS = 0.2. With MPS = 0.25, k = 1 ÷ 0.25 = 4."
+        },
+        {
+          "key": "B",
+          "text": "1.33",
+          "explanation": "1.33 is 1 ÷ 0.75, using MPC by mistake. The multiplier is 1 ÷ MPS = 1 ÷ 0.25 = 4."
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "explanation": "Correct. k = 1 ÷ MPS = 1 ÷ 0.25 = 4."
+        },
+        {
+          "key": "D",
+          "text": "0.25",
+          "explanation": "0.25 is the MPS itself. The multiplier is its reciprocal, 1 ÷ 0.25 = 4."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The investment multiplier, §18 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#18-the-investment-multiplier"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "k = 1 ÷ MPS = 1/0.25",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-045",
+      "topic": "Ch 6 · Keynesian theory · Change in income from multiplier",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The marginal propensity to consume is 0.75 and investment rises by ₹ 200 crore. The resulting increase in income is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 250 crore",
+          "explanation": "250 does not follow from the multiplier. With k = 4, ΔY = 4 × 200 = 800."
+        },
+        {
+          "key": "B",
+          "text": "₹ 800 crore",
+          "explanation": "Correct. k = 1 ÷ (1 − 0.75) = 4; ΔY = k × ΔI = 4 × 200 = ₹ 800 crore."
+        },
+        {
+          "key": "C",
+          "text": "₹ 200 crore",
+          "explanation": "₹ 200 crore is the rise in investment itself. Income rises by a multiple of it: ΔY = 4 × 200 = 800."
+        },
+        {
+          "key": "D",
+          "text": "₹ 1,000 crore",
+          "explanation": "1,000 would use a multiplier of 5 (MPC = 0.8). Here MPC = 0.75, so k = 4 and ΔY = 800."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The investment multiplier, §18 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#18-the-investment-multiplier"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "ΔY = k × ΔI, k = 1/(1 − 0.75) = 4, ΔI = 200",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-046",
+      "topic": "Ch 6 · Keynesian theory · Equilibrium income",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "In a two-sector economy the consumption function is C = 100 + 0.8Y and autonomous investment is ₹ 100 crore. The equilibrium level of income is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 200 crore",
+          "explanation": "₹ 200 crore is total autonomous spending (a + I). Equilibrium income is that divided by (1 − MPC): 200 ÷ 0.2 = 1,000."
+        },
+        {
+          "key": "B",
+          "text": "₹ 800 crore",
+          "explanation": "800 does not solve Y = 100 + 0.8Y + 100. Solving gives 0.2Y = 200, so Y = 1,000."
+        },
+        {
+          "key": "C",
+          "text": "₹ 250 crore",
+          "explanation": "250 does not satisfy the equilibrium equation. The correct income is ₹ 1,000 crore."
+        },
+        {
+          "key": "D",
+          "text": "₹ 1,000 crore",
+          "explanation": "Correct. Y = C + I = 100 + 0.8Y + 100; 0.2Y = 200; Y = ₹ 1,000 crore."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: Investment and the equilibrium level of income, §17 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#17-investment-and-the-equilibrium-level-of-income"
+      },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Y = C + I; 100 + 0.8Y + 100 = Y → 0.2Y = 200",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-047",
+      "topic": "Ch 6 · Keynesian theory · Equilibrium condition S = I",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the simple Keynesian two-sector model, the equilibrium level of income can equivalently be found where:",
+      "options": [
+        {
+          "key": "A",
+          "text": "saving equals investment (S = I)",
+          "explanation": "Correct. Since Y = C + S and equilibrium is Y = C + I, it follows that S = I — the leakage equals the injection."
+        },
+        {
+          "key": "B",
+          "text": "saving equals consumption",
+          "explanation": "There is no equilibrium requirement that saving equal consumption. Equilibrium requires saving to equal investment."
+        },
+        {
+          "key": "C",
+          "text": "consumption equals investment",
+          "explanation": "Equilibrium does not require C = I. The condition is S = I (or equivalently Y = C + I)."
+        },
+        {
+          "key": "D",
+          "text": "income equals consumption",
+          "explanation": "Y = C would mean zero saving and zero investment. In general equilibrium is Y = C + I, i.e. S = I."
+        }
+      ],
+      "correct": "A",
+      "readLink": {
+        "label": "Read: Investment and the equilibrium level of income, §17 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#17-investment-and-the-equilibrium-level-of-income"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Equilibrium: Y = C + I ⇔ S = I",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-048",
+      "topic": "Ch 6 · Keynesian theory · Paradox of thrift",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The paradox of thrift states that when all households try to save more at the same time:",
+      "options": [
+        {
+          "key": "A",
+          "text": "the price level always rises",
+          "explanation": "The paradox is about output and saving in a world of idle resources, not a general price rise."
+        },
+        {
+          "key": "B",
+          "text": "investment automatically rises to match the extra saving",
+          "explanation": "There is no automatic rise in investment; the attempt to save more reduces demand and income instead."
+        },
+        {
+          "key": "C",
+          "text": "total saving rises sharply and income rises with it",
+          "explanation": "This is the opposite of the paradox. When everyone tries to save more, spending falls and income falls, so total saving need not rise."
+        },
+        {
+          "key": "D",
+          "text": "aggregate demand falls, income falls through the multiplier, and total saving may not rise",
+          "explanation": "Correct. A general attempt to save more cuts consumption and aggregate demand; income falls by a multiple, so total saving does not increase and may even fall."
+        }
+      ],
+      "correct": "D",
+      "readLink": {
+        "label": "Read: The paradox of thrift, §19 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#19-the-paradox-of-thrift"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Paradox of thrift: general attempt to save more lowers income, total saving need not rise",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-049",
+      "topic": "Ch 6 · Keynesian theory · Consumption from the function",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The consumption function is C = 200 + 0.6Y. At an income of ₹ 2,000 crore, planned consumption is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "₹ 1,300 crore",
+          "explanation": "1,300 does not match the function. C = 200 + 1,200 = 1,400."
+        },
+        {
+          "key": "B",
+          "text": "₹ 2,000 crore",
+          "explanation": "₹ 2,000 crore is the income, not consumption. C = 200 + 0.6 × 2,000 = 1,400."
+        },
+        {
+          "key": "C",
+          "text": "₹ 1,400 crore",
+          "explanation": "Correct. C = 200 + 0.6 × 2,000 = 200 + 1,200 = ₹ 1,400 crore."
+        },
+        {
+          "key": "D",
+          "text": "₹ 1,200 crore",
+          "explanation": "₹ 1,200 crore is only the induced part (0.6 × 2,000). Autonomous consumption of ₹ 200 crore must be added, giving 1,400."
+        }
+      ],
+      "correct": "C",
+      "readLink": {
+        "label": "Read: The consumption function, §15 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#15-the-consumption-function-apc-and-mpc"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "C = a + bY = 200 + 0.6 × 2000",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c6-050",
+      "topic": "Ch 6 · Keynesian theory · Multiplier and MPC relationship",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Other things equal, the investment multiplier is larger when the marginal propensity to consume is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "negative",
+          "explanation": "The MPC is a fraction between 0 and 1; it is not negative, and a larger MPC (not a negative one) raises the multiplier."
+        },
+        {
+          "key": "B",
+          "text": "larger (closer to 1)",
+          "explanation": "Correct. A larger MPC means a smaller MPS, so k = 1 ÷ MPS is larger — more of each round of income is passed on as further spending."
+        },
+        {
+          "key": "C",
+          "text": "smaller (closer to 0)",
+          "explanation": "A smaller MPC means a larger MPS and a smaller multiplier, the opposite of what is asked."
+        },
+        {
+          "key": "D",
+          "text": "exactly zero",
+          "explanation": "With MPC = 0 all extra income is saved and the multiplier is just 1 — the smallest, not the largest."
+        }
+      ],
+      "correct": "B",
+      "readLink": {
+        "label": "Read: The investment multiplier, §18 →",
+        "href": "/foundation/business-economics/determination-of-national-income/#18-the-investment-multiplier"
+      },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Larger MPC → smaller MPS → larger multiplier k = 1/MPS",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lastVerified": "2026-08-12"
+    }
+  ]
+}

@@ -1,0 +1,1009 @@
+{
+  "level": "foundation",
+  "paper": "Paper 4 — Business Economics",
+  "paperSlug": "business-economics",
+  "chapterSlug": "international-trade",
+  "chapter": "Ch 9 — International Trade",
+  "questions": [
+    {
+      "id": "q-f4c9-001",
+      "topic": "Ch 9 · Theories of trade · Why countries trade",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The basic reason countries engage in international trade is that:",
+      "options": [
+        { "key": "A", "text": "every country can produce every good equally well", "explanation": "If every country were equally good at everything there would be little reason to trade. Trade arises precisely because countries differ." },
+        { "key": "B", "text": "countries differ in resources and efficiency, so each can gain by specialising and exchanging", "explanation": "Correct. Differences in climate, resources, skills and technology let each country specialise where it is relatively efficient and trade for the rest, raising total output." },
+        { "key": "C", "text": "governments always ban domestic production", "explanation": "Governments do not ban domestic production; trade rests on differences in comparative efficiency, not on prohibition." },
+        { "key": "D", "text": "money can only be earned from foreigners", "explanation": "Income is earned domestically as well. Trade is driven by mutual gains from specialisation, not by any rule that money comes only from abroad." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Why countries trade, §1 →", "href": "/foundation/business-economics/international-trade/#1-why-countries-trade-and-absolute-advantage" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Countries trade because they differ in resources and efficiency; specialisation raises world output",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-002",
+      "topic": "Ch 9 · Theories of trade · Absolute advantage",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The theory of absolute advantage, associated with Adam Smith, says a country should specialise in a good when it can:",
+      "options": [
+        { "key": "A", "text": "produce more of that good than another country from the same resources", "explanation": "Correct. A country has an absolute advantage in a good if it can produce more of it from the same resources (or use fewer resources per unit), and should specialise there." },
+        { "key": "B", "text": "produce the good at a lower opportunity cost than another country", "explanation": "Lower opportunity cost is the test for comparative advantage (Ricardo), not absolute advantage." },
+        { "key": "C", "text": "sell the good at the highest possible tariff", "explanation": "Tariffs are a trade-policy instrument, not the basis of absolute advantage, which is about productive efficiency." },
+        { "key": "D", "text": "import the good more cheaply than it can make it", "explanation": "That describes a reason to import, not the definition of an absolute advantage in producing the good." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Absolute advantage, §1 →", "href": "/foundation/business-economics/international-trade/#1-why-countries-trade-and-absolute-advantage" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Absolute advantage (Smith): produce more from the same resources; use fewer resources per unit",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-003",
+      "topic": "Ch 9 · Theories of trade · Absolute advantage from a table",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From one unit of resources, India produces 80 shirts or 40 kg of rice, and Vietnam produces 60 shirts or 60 kg of rice. Which country has the absolute advantage in shirts?",
+      "options": [
+        { "key": "A", "text": "Vietnam", "explanation": "Vietnam makes only 60 shirts from the same resources, fewer than India's 80, so it does not have the absolute advantage in shirts." },
+        { "key": "B", "text": "India", "explanation": "Correct. India makes 80 shirts against Vietnam's 60 from the same resources, so India has the absolute advantage in shirts." },
+        { "key": "C", "text": "Both equally", "explanation": "The outputs differ (80 versus 60), so the countries are not equal in shirt production." },
+        { "key": "D", "text": "Neither", "explanation": "One country clearly makes more shirts; India, at 80, has the absolute advantage." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Absolute advantage, §1 →", "href": "/foundation/business-economics/international-trade/#1-why-countries-trade-and-absolute-advantage" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Absolute advantage in shirts = larger shirt output from the same resources: India 80 > Vietnam 60",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-004",
+      "topic": "Ch 9 · Theories of trade · Comparative advantage",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "David Ricardo's theory of comparative advantage shows that trade can benefit two countries even when one country:",
+      "options": [
+        { "key": "A", "text": "has no resources at all", "explanation": "A country with no resources could produce nothing; comparative advantage concerns countries that both produce, but with different efficiencies." },
+        { "key": "B", "text": "uses a fixed exchange rate", "explanation": "The exchange-rate regime is unrelated to Ricardo's real-trade argument, which is about opportunity costs." },
+        { "key": "C", "text": "is more efficient at producing both goods, provided its degree of advantage differs between the goods", "explanation": "Correct. Even if one country is absolutely more efficient at both goods, trade still benefits both as long as opportunity costs differ, so each specialises where its opportunity cost is lower." },
+        { "key": "D", "text": "refuses to specialise in anything", "explanation": "The gains from trade come precisely from each country specialising; refusing to specialise forgoes the gain." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Comparative advantage, §2 →", "href": "/foundation/business-economics/international-trade/#2-comparative-advantage-and-the-gains-from-trade" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Comparative advantage (Ricardo): trade gains persist even if one country is absolutely more efficient at both goods",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-005",
+      "topic": "Ch 9 · Theories of trade · Opportunity cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From one unit of resources, India produces 80 shirts or 40 kg of rice. What is India's opportunity cost of producing one shirt, in terms of rice?",
+      "options": [
+        { "key": "A", "text": "2 kg of rice", "explanation": "2 kg is the opportunity cost of a kilogram of rice in terms of shirts (80 ÷ 40), not of a shirt in terms of rice." },
+        { "key": "B", "text": "1 kg of rice", "explanation": "This would hold only if the two outputs were equal. Here rice per shirt = 40 ÷ 80, which is less than 1." },
+        { "key": "C", "text": "0.5 kg of rice", "explanation": "Correct. Giving resources to one more shirt costs the rice those resources would have made: 40 ÷ 80 = 0.5 kg of rice per shirt." },
+        { "key": "D", "text": "1.5 kg of rice", "explanation": "The ratio 40 ÷ 80 is 0.5, not 1.5. The opportunity cost of a shirt is half a kilogram of rice." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Opportunity cost, §2 →", "href": "/foundation/business-economics/international-trade/#2-comparative-advantage-and-the-gains-from-trade" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Opportunity cost of 1 shirt in India = rice given up ÷ shirts gained = 40 ÷ 80 = 0.5 kg",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-006",
+      "topic": "Ch 9 · Theories of trade · Opportunity cost",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From one unit of resources, India produces 80 shirts or 40 kg of rice. What is India's opportunity cost of producing one kilogram of rice, in terms of shirts?",
+      "options": [
+        { "key": "A", "text": "2 shirts", "explanation": "Correct. Producing one more kilogram of rice costs the shirts those resources would have made: 80 ÷ 40 = 2 shirts per kg." },
+        { "key": "B", "text": "0.5 shirts", "explanation": "0.5 is the opportunity cost of a shirt in terms of rice (40 ÷ 80), the reciprocal of what is asked." },
+        { "key": "C", "text": "1 shirt", "explanation": "This would require equal outputs. Here shirts per kg of rice = 80 ÷ 40 = 2." },
+        { "key": "D", "text": "4 shirts", "explanation": "The ratio 80 ÷ 40 is 2, not 4." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Opportunity cost, §2 →", "href": "/foundation/business-economics/international-trade/#2-comparative-advantage-and-the-gains-from-trade" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Opportunity cost of 1 kg rice in India = shirts given up ÷ rice gained = 80 ÷ 40 = 2 shirts",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-007",
+      "topic": "Ch 9 · Theories of trade · Comparative advantage from a table",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "From one unit of resources, India produces 80 shirts or 40 kg of rice, and Vietnam produces 60 shirts or 60 kg of rice. Which country has the comparative advantage in rice?",
+      "options": [
+        { "key": "A", "text": "India", "explanation": "India's opportunity cost of rice is 80 ÷ 40 = 2 shirts, higher than Vietnam's, so India does not have the comparative advantage in rice." },
+        { "key": "B", "text": "Both equally", "explanation": "The opportunity costs differ (India 2 shirts, Vietnam 1 shirt per kg), so the countries are not equal." },
+        { "key": "C", "text": "Neither", "explanation": "One country has the lower opportunity cost in rice — Vietnam, at 1 shirt per kg." },
+        { "key": "D", "text": "Vietnam", "explanation": "Correct. Vietnam gives up 60 ÷ 60 = 1 shirt per kg of rice, less than India's 2 shirts, so Vietnam has the comparative advantage in rice." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Comparative advantage, §2 →", "href": "/foundation/business-economics/international-trade/#2-comparative-advantage-and-the-gains-from-trade" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Comparative advantage in rice = lower opportunity cost of rice: Vietnam 1 shirt < India 2 shirts",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-008",
+      "topic": "Ch 9 · Theories of trade · Gains from trade",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For both countries to gain from trade, the ratio at which the two goods are exchanged must lie:",
+      "options": [
+        { "key": "A", "text": "below both countries' opportunity-cost ratios", "explanation": "If the ratio is below both, at least one country would do better producing at home; the terms must fall between the two costs." },
+        { "key": "B", "text": "between the two countries' opportunity-cost ratios", "explanation": "Correct. Only an exchange ratio between the two domestic opportunity costs leaves both countries better off than producing alone; outside that range one country loses." },
+        { "key": "C", "text": "exactly equal to one country's cost", "explanation": "At exactly one country's own cost, that country gains nothing from trade; a strict gain for both needs a ratio strictly between the two costs." },
+        { "key": "D", "text": "above both countries' opportunity-cost ratios", "explanation": "If the ratio is above both, at least one country would prefer to produce the good itself. The exchange ratio must lie between the costs." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The gains from trade, §2 →", "href": "/foundation/business-economics/international-trade/#2-comparative-advantage-and-the-gains-from-trade" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Both gain only if the exchange ratio lies between the two countries' opportunity-cost ratios",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-009",
+      "topic": "Ch 9 · Theories of trade · Heckscher-Ohlin",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "According to the Heckscher–Ohlin (factor-endowment) theory, a country will tend to export goods that use intensively its:",
+      "options": [
+        { "key": "A", "text": "scarce and expensive factor", "explanation": "Using the scarce, expensive factor makes a good costly to produce; a country imports such goods rather than exporting them." },
+        { "key": "B", "text": "abundant and cheap factor", "explanation": "Correct. A country exports goods that use its abundant (and therefore cheap) factor intensively — labour-abundant countries export labour-intensive goods, capital-abundant countries export capital-intensive goods." },
+        { "key": "C", "text": "imported raw materials only", "explanation": "The theory turns on a country's own factor endowments, not on imported inputs." },
+        { "key": "D", "text": "government-owned resources only", "explanation": "Ownership by the government is irrelevant; the theory is about the relative abundance of land, labour and capital." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Heckscher–Ohlin, §3 →", "href": "/foundation/business-economics/international-trade/#3-the-heckscher-ohlin-theory-and-the-terms-of-trade" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Heckscher–Ohlin: export goods that use the abundant, cheap factor intensively",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-010",
+      "topic": "Ch 9 · Theories of trade · Terms of trade",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The (commodity) terms of trade of a country measure:",
+      "options": [
+        { "key": "A", "text": "the total value of its exports minus its imports", "explanation": "Exports minus imports is the balance of trade, not the terms of trade. The terms of trade compare export and import prices." },
+        { "key": "B", "text": "the rate at which its export prices exchange against its import prices", "explanation": "Correct. The terms of trade are the ratio of an index of export prices to an index of import prices — the rate at which exports exchange for imports." },
+        { "key": "C", "text": "the number of tariffs it imposes", "explanation": "The count of tariffs is a policy measure, not the terms of trade." },
+        { "key": "D", "text": "the quantity of goods it produces at home", "explanation": "Domestic output is unrelated to the terms of trade, which compare export and import prices." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Terms of trade, §3 →", "href": "/foundation/business-economics/international-trade/#3-the-heckscher-ohlin-theory-and-the-terms-of-trade" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Terms of trade = ratio of export price index to import price index",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-011",
+      "topic": "Ch 9 · Theories of trade · Terms of trade calculation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A country's index of export prices is 120 and its index of import prices is 96 (base year = 100). Its terms of trade are:",
+      "options": [
+        { "key": "A", "text": "96", "explanation": "96 is the import price index, not the terms of trade. Compute (120 ÷ 96) × 100." },
+        { "key": "B", "text": "120", "explanation": "120 is the export price index alone; the terms of trade divide it by the import index and multiply by 100." },
+        { "key": "C", "text": "125", "explanation": "Correct. Terms of trade = (120 ÷ 96) × 100 = 1.25 × 100 = 125, above 100, so they have moved in the country's favour." },
+        { "key": "D", "text": "80", "explanation": "80 would result from dividing the import index by the export index (96 ÷ 120) — the ratio is the wrong way round." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Terms of trade, §3 →", "href": "/foundation/business-economics/international-trade/#3-the-heckscher-ohlin-theory-and-the-terms-of-trade" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Terms of trade = (export price index ÷ import price index) × 100 = (120 ÷ 96) × 100 = 125",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-012",
+      "topic": "Ch 9 · Trade policy · Free trade",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Free trade refers to a situation in which:",
+      "options": [
+        { "key": "A", "text": "goods move between countries without government-imposed barriers such as tariffs and quotas", "explanation": "Correct. Free trade is trade unhindered by artificial restrictions, so goods flow according to comparative advantage." },
+        { "key": "B", "text": "the government supplies all goods free of charge", "explanation": "Free trade is not about free goods; it is about the absence of trade restrictions." },
+        { "key": "C", "text": "only exports are allowed and imports are banned", "explanation": "Banning imports is a form of protection, the opposite of free trade." },
+        { "key": "D", "text": "every country produces only for itself", "explanation": "Producing only for oneself (autarky) is the absence of trade, not free trade." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Free trade versus protection, §4 →", "href": "/foundation/business-economics/international-trade/#4-free-trade-versus-protection-and-tariffs" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Free trade = trade free of government-imposed barriers",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-013",
+      "topic": "Ch 9 · Trade policy · Tariffs",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A tariff is best described as:",
+      "options": [
+        { "key": "A", "text": "a direct limit on the quantity of a good that may be imported", "explanation": "A quantity limit is a quota, not a tariff. A tariff works on price, not on volume directly." },
+        { "key": "B", "text": "a tax imposed on an imported (or exported) good", "explanation": "Correct. A tariff is a tax on a traded good — usually an import duty — which raises the good's price in the home market." },
+        { "key": "C", "text": "a subsidy paid to domestic producers", "explanation": "A subsidy is a payment to producers, a different (non-tariff) instrument; a tariff is a tax on trade." },
+        { "key": "D", "text": "a fixed exchange rate set by the central bank", "explanation": "An exchange rate is a currency price, unrelated to a tariff, which is a tax on goods." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Tariffs, §4 →", "href": "/foundation/business-economics/international-trade/#4-free-trade-versus-protection-and-tariffs" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Tariff = tax on an imported (or exported) good",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-014",
+      "topic": "Ch 9 · Trade policy · Specific tariff",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A good has a world (landed) price of ₹ 450 and faces a specific import tariff of ₹ 90 per unit. Its price in the domestic market becomes:",
+      "options": [
+        { "key": "A", "text": "₹ 450", "explanation": "₹ 450 is the world price before the tariff; a specific tariff of ₹ 90 must be added on top." },
+        { "key": "B", "text": "₹ 540", "explanation": "Correct. A specific tariff adds a fixed sum per unit: 450 + 90 = ₹ 540." },
+        { "key": "C", "text": "₹ 360", "explanation": "₹ 360 subtracts the tariff (450 − 90). A tariff raises the price, so it is added, not subtracted." },
+        { "key": "D", "text": "₹ 500", "explanation": "₹ 500 does not match 450 + 90. The specific tariff of ₹ 90 gives a price of ₹ 540." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Tariffs, §4 →", "href": "/foundation/business-economics/international-trade/#4-free-trade-versus-protection-and-tariffs" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Price after a specific tariff = world price + tariff = 450 + 90 = ₹ 540",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-015",
+      "topic": "Ch 9 · Trade policy · Ad valorem tariff",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A good is imported at ₹ 1,200 and faces an ad valorem import tariff of 15%. Its price in the domestic market becomes:",
+      "options": [
+        { "key": "A", "text": "₹ 180", "explanation": "₹ 180 is only the duty (1,200 × 15%); it must be added to the ₹ 1,200 price." },
+        { "key": "B", "text": "₹ 1,020", "explanation": "₹ 1,020 subtracts the duty (1,200 − 180). A tariff raises the price, so the duty is added." },
+        { "key": "C", "text": "₹ 1,215", "explanation": "₹ 1,215 adds only 15 rupees, not 15% of the value. 15% of 1,200 is ₹ 180." },
+        { "key": "D", "text": "₹ 1,380", "explanation": "Correct. Duty = 1,200 × 15% = ₹ 180, so the price = 1,200 + 180 = ₹ 1,380 (= 1,200 × 1.15)." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Tariffs, §4 →", "href": "/foundation/business-economics/international-trade/#4-free-trade-versus-protection-and-tariffs" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Price after an ad valorem tariff = value × (1 + rate) = 1,200 × 1.15 = ₹ 1,380",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-016",
+      "topic": "Ch 9 · Trade policy · Quotas",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "An import quota differs from a tariff mainly because a quota:",
+      "options": [
+        { "key": "A", "text": "lowers the domestic price of the good", "explanation": "A quota, like a tariff, restricts supply and therefore raises the domestic price; it does not lower it." },
+        { "key": "B", "text": "is a tax on each unit imported", "explanation": "A per-unit tax describes a tariff. A quota is a limit on quantity, not a tax." },
+        { "key": "C", "text": "directly limits the quantity of the good that may be imported", "explanation": "Correct. A quota sets a ceiling on the quantity imported, working through volume, whereas a tariff works through price." },
+        { "key": "D", "text": "always raises more revenue for the government than a tariff", "explanation": "The reverse tends to hold: a tariff raises revenue, while the extra profit from a quota usually goes to licence-holders, not the government." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: Quotas, §5 →", "href": "/foundation/business-economics/international-trade/#5-quotas-and-other-non-tariff-barriers" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Quota = direct quantitative limit on imports; a tariff is a tax working through price",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-017",
+      "topic": "Ch 9 · Trade policy · Non-tariff barriers",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A voluntary export restraint (VER) is:",
+      "options": [
+        { "key": "A", "text": "a tax the importing country places on foreign goods", "explanation": "A tax on imports is a tariff. A VER is a limit on quantity, arranged with the exporting country." },
+        { "key": "B", "text": "an arrangement under which the exporting country agrees to limit its exports to another country", "explanation": "Correct. Under a VER the exporting country 'voluntarily' caps its exports, usually to avoid harsher measures — a quota administered by the exporter." },
+        { "key": "C", "text": "a subsidy paid to foreign producers", "explanation": "A VER restricts exports; it is not a subsidy, which would encourage them." },
+        { "key": "D", "text": "a rule forcing exporters to sell at world prices", "explanation": "A VER limits the quantity exported; it does not fix the selling price." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Non-tariff barriers, §5 →", "href": "/foundation/business-economics/international-trade/#5-quotas-and-other-non-tariff-barriers" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "VER = exporting country voluntarily limits its exports; a quota run by the exporter",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-018",
+      "topic": "Ch 9 · Trade policy · Subsidies",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A subsidy to domestic producers protects them from imports by:",
+      "options": [
+        { "key": "A", "text": "raising the price foreigners must pay", "explanation": "A subsidy does not act on the foreign price; it lowers domestic producers' costs so they can undercut imports." },
+        { "key": "B", "text": "lowering domestic producers' costs so they can undercut imports", "explanation": "Correct. A subsidy reduces home producers' costs, letting them sell more cheaply and compete against imports indirectly." },
+        { "key": "C", "text": "banning the good outright", "explanation": "A subsidy does not ban a good; it changes relative costs to favour domestic supply." },
+        { "key": "D", "text": "fixing the exchange rate", "explanation": "A subsidy is a producer payment, unrelated to setting the exchange rate." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Non-tariff barriers, §5 →", "href": "/foundation/business-economics/international-trade/#5-quotas-and-other-non-tariff-barriers" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Subsidy protects indirectly by lowering domestic producers' costs",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-019",
+      "topic": "Ch 9 · Trade policy · Effect of a tariff",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Imposing an import tariff on a good generally:",
+      "options": [
+        { "key": "A", "text": "helps domestic producers and the government but hurts domestic consumers", "explanation": "Correct. The higher price protects producers and yields duty revenue, but consumers pay more and buy less, giving a net cost to the economy." },
+        { "key": "B", "text": "benefits domestic consumers through lower prices", "explanation": "A tariff raises the domestic price, so consumers are worse off, not better." },
+        { "key": "C", "text": "has no effect on the domestic price", "explanation": "The core effect of an import tariff is precisely to raise the domestic price by the amount of the duty." },
+        { "key": "D", "text": "reduces the revenue of the government", "explanation": "A tariff raises government revenue through the duty collected, not reduces it." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Tariffs, §4 →", "href": "/foundation/business-economics/international-trade/#4-free-trade-versus-protection-and-tariffs" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Import tariff raises price: gains to producers and government, loss to consumers, net cost",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-020",
+      "topic": "Ch 9 · Trade policy · Arguments for protection",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The infant-industry argument for protection holds that a new domestic industry should be:",
+      "options": [
+        { "key": "A", "text": "protected permanently, whatever its performance", "explanation": "The argument calls for temporary protection until the industry matures, not permanent shelter." },
+        { "key": "B", "text": "protected temporarily until it grows large and efficient enough to compete", "explanation": "Correct. A young industry is given time behind a temporary tariff to reach scale and efficiency, after which the protection is withdrawn." },
+        { "key": "C", "text": "closed down to allow imports", "explanation": "The argument seeks to nurture the industry, not to close it in favour of imports." },
+        { "key": "D", "text": "taxed more heavily than foreign firms", "explanation": "Protection lightens the competitive burden on the infant industry; it does not tax it more heavily than rivals." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Arguments for protection, §6 →", "href": "/foundation/business-economics/international-trade/#6-the-arguments-for-and-against-protection" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Infant-industry argument: temporary protection until the industry can compete",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-021",
+      "topic": "Ch 9 · Trade policy · Arguments against protection",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is an argument AGAINST protection?",
+      "options": [
+        { "key": "A", "text": "It shelters inefficiency and invites retaliation by other countries", "explanation": "Correct. Protection dulls the pressure to be efficient and can provoke retaliatory barriers abroad, harming the country's own exports." },
+        { "key": "B", "text": "It raises revenue for the government", "explanation": "Revenue is an argument used in favour of tariffs, not against protection." },
+        { "key": "C", "text": "It safeguards national security industries", "explanation": "National security is an argument for protection, not against it." },
+        { "key": "D", "text": "It gives infant industries time to grow", "explanation": "Nurturing infant industries is an argument for protection, not an objection to it." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Arguments against protection, §6 →", "href": "/foundation/business-economics/international-trade/#6-the-arguments-for-and-against-protection" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Against protection: sheltered inefficiency, retaliation, higher prices, misallocation",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-022",
+      "topic": "Ch 9 · Trade negotiations · GATT to WTO",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The World Trade Organization (WTO) came into existence, replacing and extending the GATT framework, on:",
+      "options": [
+        { "key": "A", "text": "1 January 1948", "explanation": "1948 is when GATT itself came into force. The WTO was created later, out of the Uruguay Round." },
+        { "key": "B", "text": "1 January 1995", "explanation": "Correct. The WTO began on 1 January 1995, following the Uruguay Round, absorbing and extending GATT." },
+        { "key": "C", "text": "15 August 1947", "explanation": "This is unrelated to the WTO; it does not mark the WTO's creation." },
+        { "key": "D", "text": "1 April 2000", "explanation": "The WTO was already operating from 1995, so 2000 is too late." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The WTO, §7 →", "href": "/foundation/business-economics/international-trade/#7-the-wto-from-gatt-to-today" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "WTO began 1 January 1995, from the Uruguay Round; GATT dated from 1948",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-023",
+      "topic": "Ch 9 · Trade negotiations · GATT",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Before the WTO, international trade rules were provided from 1948 by:",
+      "options": [
+        { "key": "A", "text": "the International Monetary Fund (IMF)", "explanation": "The IMF deals with exchange rates and balance-of-payments financing, not the trade-rules framework that preceded the WTO." },
+        { "key": "B", "text": "the World Bank", "explanation": "The World Bank finances development projects; it did not provide the pre-WTO trade framework." },
+        { "key": "C", "text": "the General Agreement on Tariffs and Trade (GATT)", "explanation": "Correct. GATT, from 1948, was the framework of negotiated tariff cuts and trade rules that the WTO later absorbed." },
+        { "key": "D", "text": "the United Nations Security Council", "explanation": "The Security Council handles peace and security matters, not trade rules." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: The WTO, §7 →", "href": "/foundation/business-economics/international-trade/#7-the-wto-from-gatt-to-today" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "GATT (from 1948) provided the pre-WTO trade framework",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-024",
+      "topic": "Ch 9 · Trade negotiations · Most-favoured-nation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The WTO principle of most-favoured-nation (MFN) treatment requires that a member country:",
+      "options": [
+        { "key": "A", "text": "treat imported goods less favourably than its own goods", "explanation": "Favouring domestic goods breaches national treatment; MFN is about not discriminating among trading partners." },
+        { "key": "B", "text": "give a trade advantage granted to one member to all other members equally", "explanation": "Correct. MFN is non-discrimination between partners: an advantage given to one member must be extended to all members alike." },
+        { "key": "C", "text": "charge the highest tariff on its closest ally", "explanation": "MFN forbids discrimination between partners; it does not single out any country for a higher tariff." },
+        { "key": "D", "text": "ban imports from developing countries", "explanation": "Banning imports from a group of countries is discrimination, exactly what MFN prohibits." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: WTO principles, §7 →", "href": "/foundation/business-economics/international-trade/#7-the-wto-from-gatt-to-today" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "MFN: an advantage to one member must be extended to all members (non-discrimination among partners)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-025",
+      "topic": "Ch 9 · Trade negotiations · National treatment",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The WTO principle of national treatment requires that:",
+      "options": [
+        { "key": "A", "text": "once imported goods have entered the market, they be treated no less favourably than like domestic goods", "explanation": "Correct. National treatment forbids discrimination between imported and domestic goods inside the home market after the goods have cleared customs." },
+        { "key": "B", "text": "a country treat all its trading partners equally", "explanation": "Equal treatment of partners is the most-favoured-nation principle, not national treatment." },
+        { "key": "C", "text": "domestic goods always be taxed more than imports", "explanation": "National treatment demands equal, not harsher, treatment of domestic goods; this reverses the idea." },
+        { "key": "D", "text": "foreign firms be barred from the domestic market", "explanation": "National treatment governs equal treatment inside the market; it does not bar foreign firms." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: WTO principles, §7 →", "href": "/foundation/business-economics/international-trade/#7-the-wto-from-gatt-to-today" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "National treatment: imported goods treated no less favourably than like domestic goods once in the market",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-026",
+      "topic": "Ch 9 · Trade negotiations · WTO functions",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT a function of the WTO?",
+      "options": [
+        { "key": "A", "text": "Administering WTO trade agreements", "explanation": "This is a core WTO function, so it is not the exception the question seeks." },
+        { "key": "B", "text": "Providing a forum for trade negotiations", "explanation": "Hosting trade negotiations is a stated WTO function, so it is not the exception." },
+        { "key": "C", "text": "Settling trade disputes between members", "explanation": "Dispute settlement is a central WTO function, so it is not the exception." },
+        { "key": "D", "text": "Setting the exchange rate of each member's currency", "explanation": "Correct. The WTO does not set exchange rates; that lies with national authorities and the IMF, not the trade body." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: WTO functions, §7 →", "href": "/foundation/business-economics/international-trade/#7-the-wto-from-gatt-to-today" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "WTO functions: administer agreements, host negotiations, settle disputes, review trade policies — not set exchange rates",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-027",
+      "topic": "Ch 9 · Trade negotiations · Regional trade blocs",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A customs union differs from a free-trade area in that a customs union also has:",
+      "options": [
+        { "key": "A", "text": "a common external tariff against non-members", "explanation": "Correct. A customs union is a free-trade area plus a common external tariff, so members apply the same tariff to outside countries." },
+        { "key": "B", "text": "a single currency for all members", "explanation": "A single currency belongs to a deeper stage (economic union), not to the step from free-trade area to customs union." },
+        { "key": "C", "text": "free movement of labour and capital", "explanation": "Free movement of factors defines a common market, a stage beyond a customs union." },
+        { "key": "D", "text": "no internal trade at all", "explanation": "A customs union frees internal trade among members; it does not abolish it." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Regional trade blocs, §8 →", "href": "/foundation/business-economics/international-trade/#8-regional-trade-blocs-and-india-and-the-wto" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Free-trade area + common external tariff = customs union",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-028",
+      "topic": "Ch 9 · Trade negotiations · India and the WTO",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "In the WTO, India has generally taken positions that:",
+      "options": [
+        { "key": "A", "text": "seek to protect the interests of developing countries, such as food security and farmers' livelihoods", "explanation": "Correct. India engages with the rules-based order while pressing for policy space suited to a developing economy, including on agriculture and food security." },
+        { "key": "B", "text": "call for the abolition of the WTO", "explanation": "India is a founder member that participates actively; it does not seek to abolish the WTO." },
+        { "key": "C", "text": "oppose all trade with other countries", "explanation": "India is a major trading nation; its stance is engagement, not opposition to trade." },
+        { "key": "D", "text": "demand higher tariffs from every member on Indian goods", "explanation": "India seeks better market access for its exports, not higher tariffs against them." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: India and the WTO, §8 →", "href": "/foundation/business-economics/international-trade/#8-regional-trade-blocs-and-india-and-the-wto" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "India engages with the WTO while seeking policy space for developing-country concerns",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-029",
+      "topic": "Ch 9 · Exchange rate · Nominal vs real",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The real exchange rate differs from the nominal exchange rate because the real rate is adjusted for:",
+      "options": [
+        { "key": "A", "text": "the price levels in the two countries", "explanation": "Correct. The real exchange rate takes the nominal rate and adjusts it for the two countries' price levels, so it measures competitiveness, not just the currency price." },
+        { "key": "B", "text": "the number of tariffs in force", "explanation": "Tariffs are a trade-policy matter; the real exchange rate is the nominal rate adjusted for relative prices." },
+        { "key": "C", "text": "the size of the population", "explanation": "Population is not part of the real-exchange-rate adjustment, which uses relative price levels." },
+        { "key": "D", "text": "the volume of gold reserves", "explanation": "Gold reserves do not enter the real exchange rate; the adjustment is for relative prices." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The foreign exchange rate, §9 →", "href": "/foundation/business-economics/international-trade/#9-the-foreign-exchange-rate" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Real exchange rate = nominal rate adjusted for the two countries' price levels",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-030",
+      "topic": "Ch 9 · Exchange rate · Effective exchange rate",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The effective exchange rate of a currency is:",
+      "options": [
+        { "key": "A", "text": "its rate against a single foreign currency only", "explanation": "A rate against one currency is a bilateral rate. The effective rate summarises many rates at once." },
+        { "key": "B", "text": "a weighted average of its exchange rates against a basket of currencies", "explanation": "Correct. The effective (nominal effective) exchange rate is a trade-weighted average of a currency's rates against a basket of partner currencies." },
+        { "key": "C", "text": "the rate fixed by the WTO", "explanation": "The WTO does not fix exchange rates; the effective rate is a statistical average of market rates." },
+        { "key": "D", "text": "the interest rate on foreign loans", "explanation": "An interest rate is the price of borrowing, not an exchange rate at all." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The foreign exchange rate, §9 →", "href": "/foundation/business-economics/international-trade/#9-the-foreign-exchange-rate" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Effective exchange rate = trade-weighted average against a basket of currencies",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-031",
+      "topic": "Ch 9 · Exchange rate · Currency conversion",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The exchange rate is ₹ 83 per US dollar. An importer must pay $ 600 for a shipment. The cost in rupees is:",
+      "options": [
+        { "key": "A", "text": "₹ 49,800", "explanation": "Correct. Dollars are converted to rupees by multiplying by the rate: 600 × 83 = ₹ 49,800." },
+        { "key": "B", "text": "₹ 49,080", "explanation": "₹ 49,080 is an arithmetic slip; 600 × 83 = 49,800, not 49,080." },
+        { "key": "C", "text": "₹ 7.23", "explanation": "₹ 7.23 divides 600 by 83 — the wrong operation. To get rupees from dollars, multiply by the rate." },
+        { "key": "D", "text": "₹ 4,980", "explanation": "₹ 4,980 is ten times too small; 600 × 83 = 49,800." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The foreign exchange rate, §9 →", "href": "/foundation/business-economics/international-trade/#9-the-foreign-exchange-rate" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Dollars to rupees: 600 × 83 = ₹ 49,800",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-032",
+      "topic": "Ch 9 · Exchange rate · Currency conversion",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The exchange rate is ₹ 83 per US dollar. An exporter receives ₹ 3,32,000. In dollars this is:",
+      "options": [
+        { "key": "A", "text": "$ 3,320", "explanation": "$ 3,320 divides by 100, not by the rate of 83. Divide 3,32,000 by 83 to get dollars." },
+        { "key": "B", "text": "$ 2,766", "explanation": "$ 2,766 does not match 3,32,000 ÷ 83, which is exactly 4,000." },
+        { "key": "C", "text": "$ 4,000", "explanation": "Correct. Rupees are converted to dollars by dividing by the rate: 3,32,000 ÷ 83 = $ 4,000." },
+        { "key": "D", "text": "$ 400", "explanation": "$ 400 is ten times too small; 3,32,000 ÷ 83 = 4,000." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: The foreign exchange rate, §9 →", "href": "/foundation/business-economics/international-trade/#9-the-foreign-exchange-rate" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Rupees to dollars: 3,32,000 ÷ 83 = $ 4,000",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-033",
+      "topic": "Ch 9 · Exchange rate · Cross rate",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "If $ 1 = ₹ 80 and £ 1 = $ 1.25, then one pound sterling is worth:",
+      "options": [
+        { "key": "A", "text": "₹ 64", "explanation": "₹ 64 divides 80 by 1.25 — the wrong operation. A pound buys more dollars, so it is worth more rupees, not fewer." },
+        { "key": "B", "text": "₹ 100", "explanation": "Correct. £ 1 buys $ 1.25, and each dollar is worth ₹ 80, so £ 1 = 1.25 × 80 = ₹ 100." },
+        { "key": "C", "text": "₹ 81.25", "explanation": "₹ 81.25 adds 1.25 to 80 rather than multiplying; the cross rate multiplies through the dollar." },
+        { "key": "D", "text": "₹ 105", "explanation": "₹ 105 does not match 1.25 × 80 = 100." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The foreign exchange rate, §9 →", "href": "/foundation/business-economics/international-trade/#9-the-foreign-exchange-rate" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Cross rate: (₹ per $) × ($ per £) = 80 × 1.25 = ₹ 100 per £",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-034",
+      "topic": "Ch 9 · Exchange rate · Appreciation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The rupee is said to appreciate against the dollar when:",
+      "options": [
+        { "key": "A", "text": "it takes fewer rupees to buy one dollar", "explanation": "Correct. Appreciation means the rupee strengthens, so fewer rupees are needed per dollar (for example ₹ 83 → ₹ 80 per $)." },
+        { "key": "B", "text": "it takes more rupees to buy one dollar", "explanation": "Needing more rupees per dollar is a depreciation, the opposite of appreciation." },
+        { "key": "C", "text": "the government prints more rupees", "explanation": "Printing money is not the definition of appreciation, which is about the rupee's value rising against the dollar." },
+        { "key": "D", "text": "the dollar becomes stronger", "explanation": "If the dollar becomes stronger, the rupee is weaker (depreciating), not appreciating." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Appreciation and depreciation, §11 →", "href": "/foundation/business-economics/international-trade/#11-appreciation-depreciation-and-fixed-versus-floating-systems" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Appreciation = fewer rupees per dollar (rupee stronger)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-035",
+      "topic": "Ch 9 · Exchange rate · Depreciation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "If the rupee moves from ₹ 80 per dollar to ₹ 85 per dollar, the rupee has:",
+      "options": [
+        { "key": "A", "text": "appreciated", "explanation": "Appreciation would mean fewer rupees per dollar. Here more rupees are needed, so the rupee has weakened." },
+        { "key": "B", "text": "depreciated", "explanation": "Correct. More rupees per dollar (₹ 80 → ₹ 85) means the rupee has fallen in value — a depreciation." },
+        { "key": "C", "text": "been revalued upward", "explanation": "Revaluation upward raises a currency's value under a fixed system; here the rupee's value has fallen." },
+        { "key": "D", "text": "stayed unchanged", "explanation": "The rate has moved from 80 to 85, so it has clearly changed." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Appreciation and depreciation, §11 →", "href": "/foundation/business-economics/international-trade/#11-appreciation-depreciation-and-fixed-versus-floating-systems" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Depreciation = more rupees per dollar (₹ 80 → ₹ 85)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-036",
+      "topic": "Ch 9 · Exchange rate · Effect on exports and imports",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A depreciation of the rupee tends to:",
+      "options": [
+        { "key": "A", "text": "make exports cheaper for foreigners and imports dearer for residents", "explanation": "Correct. A weaker rupee lowers the foreign-currency price of exports (boosting them) and raises the rupee price of imports (curbing them)." },
+        { "key": "B", "text": "make exports dearer and imports cheaper", "explanation": "That is the effect of an appreciation, not a depreciation." },
+        { "key": "C", "text": "have no effect on trade flows", "explanation": "A change in the exchange rate changes the relative prices of exports and imports, so trade flows are affected." },
+        { "key": "D", "text": "raise the price of exports and lower the price of imports", "explanation": "This reverses the effect; a depreciation lowers export prices abroad and raises import prices at home." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Effect on exports and imports, §11 →", "href": "/foundation/business-economics/international-trade/#11-appreciation-depreciation-and-fixed-versus-floating-systems" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Depreciation: exports cheaper abroad, imports dearer at home",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-037",
+      "topic": "Ch 9 · Exchange rate · Depreciation effect on an exporter",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A software exporter invoices a US client $ 50,000. The rupee depreciates from ₹ 80 to ₹ 85 per dollar. How much MORE does the exporter earn in rupees than at the old rate?",
+      "options": [
+        { "key": "A", "text": "₹ 40,00,000", "explanation": "₹ 40,00,000 is the total earnings at the old rate (50,000 × 80), not the extra gain from the depreciation." },
+        { "key": "B", "text": "₹ 42,50,000", "explanation": "₹ 42,50,000 is the total earnings at the new rate (50,000 × 85), not the increase." },
+        { "key": "C", "text": "₹ 5,00,000", "explanation": "₹ 5,00,000 would need a ₹ 10 move per dollar; the rate moved by ₹ 5 (80 → 85), giving 50,000 × 5 = ₹ 2,50,000." },
+        { "key": "D", "text": "₹ 2,50,000", "explanation": "Correct. Extra earnings = 50,000 × (85 − 80) = 50,000 × 5 = ₹ 2,50,000." }
+      ],
+      "correct": "D",
+      "readLink": { "label": "Read: Depreciation, exporter and importer, §11 →", "href": "/foundation/business-economics/international-trade/#11-appreciation-depreciation-and-fixed-versus-floating-systems" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Extra export earnings = 50,000 × (85 − 80) = ₹ 2,50,000",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-038",
+      "topic": "Ch 9 · Exchange rate · Depreciation effect on an importer",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "An importer has a bill of $ 1,00,000. The rupee depreciates from ₹ 78 to ₹ 80 per dollar. How much MORE must the importer pay in rupees than at the old rate?",
+      "options": [
+        { "key": "A", "text": "₹ 2,00,000", "explanation": "Correct. Extra cost = 1,00,000 × (80 − 78) = 1,00,000 × 2 = ₹ 2,00,000." },
+        { "key": "B", "text": "₹ 80,00,000", "explanation": "₹ 80,00,000 is the total bill at the new rate (1,00,000 × 80), not the increase." },
+        { "key": "C", "text": "₹ 78,00,000", "explanation": "₹ 78,00,000 is the total bill at the old rate (1,00,000 × 78), not the extra cost." },
+        { "key": "D", "text": "₹ 1,00,000", "explanation": "₹ 1,00,000 would need a ₹ 1 move per dollar; the rate moved by ₹ 2 (78 → 80), giving an extra ₹ 2,00,000." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: Depreciation, exporter and importer, §11 →", "href": "/foundation/business-economics/international-trade/#11-appreciation-depreciation-and-fixed-versus-floating-systems" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Extra import cost = 1,00,000 × (80 − 78) = ₹ 2,00,000",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-039",
+      "topic": "Ch 9 · Exchange rate · Devaluation vs depreciation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The key difference between a devaluation and a depreciation of a currency is that:",
+      "options": [
+        { "key": "A", "text": "devaluation raises a currency's value while depreciation lowers it", "explanation": "Both lower the currency's value; the difference is the cause, not the direction. Raising the official value is a revaluation." },
+        { "key": "B", "text": "devaluation is a deliberate government act under a fixed system, while depreciation is a market fall under a floating system", "explanation": "Correct. A devaluation is a policy decision to cut an official (fixed) rate; a depreciation is a fall brought about by market forces under a floating rate." },
+        { "key": "C", "text": "they are exactly the same thing", "explanation": "They move a currency the same way but differ in cause: policy decision versus market outcome." },
+        { "key": "D", "text": "depreciation only happens to the dollar", "explanation": "Any floating currency can depreciate; this is not specific to the dollar." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Devaluation versus depreciation, §11 →", "href": "/foundation/business-economics/international-trade/#11-appreciation-depreciation-and-fixed-versus-floating-systems" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Devaluation = deliberate cut of a fixed rate; depreciation = market fall under a floating rate",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-040",
+      "topic": "Ch 9 · Exchange rate · Fixed vs floating",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under a fixed (pegged) exchange-rate system, the exchange rate is:",
+      "options": [
+        { "key": "A", "text": "left entirely to the demand for and supply of foreign exchange", "explanation": "A market-determined rate describes a floating system, not a fixed one." },
+        { "key": "B", "text": "set and maintained by the central bank, which buys and sells foreign exchange to hold it", "explanation": "Correct. Under a fixed system the authorities peg the rate and defend it using reserves, buying and selling foreign exchange to keep it at the announced level." },
+        { "key": "C", "text": "determined by the WTO", "explanation": "The WTO governs trade rules, not exchange-rate regimes; a fixed rate is held by the central bank." },
+        { "key": "D", "text": "changed automatically every day by the market", "explanation": "Continuous market-driven change is the feature of a floating rate, not a fixed one." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: Fixed versus floating systems, §11 →", "href": "/foundation/business-economics/international-trade/#11-appreciation-depreciation-and-fixed-versus-floating-systems" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Fixed system: central bank pegs and defends the rate using reserves",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-041",
+      "topic": "Ch 9 · Exchange rate · Floating rate determination",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under a floating system, the demand for foreign exchange (dollars) in India arises mainly from:",
+      "options": [
+        { "key": "A", "text": "foreigners buying Indian exports", "explanation": "Foreign buyers of Indian exports supply dollars (and demand rupees); they are on the supply side, not the demand side." },
+        { "key": "B", "text": "Indian importers and residents needing to pay for foreign goods and services", "explanation": "Correct. Demand for dollars comes from Indians who need them — importers, travellers and investors abroad; the demand curve slopes downward." },
+        { "key": "C", "text": "the WTO fixing the rate", "explanation": "The WTO does not fix exchange rates; the demand for foreign exchange comes from those who need to pay abroad." },
+        { "key": "D", "text": "foreign tourists visiting India", "explanation": "Foreign tourists in India supply dollars and demand rupees; they add to the supply of foreign exchange, not the demand." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: How a floating rate is determined, §10 →", "href": "/foundation/business-economics/international-trade/#10-how-a-floating-exchange-rate-is-determined" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Demand for foreign exchange comes from importers and residents paying abroad; supply from exporters and inflows",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-042",
+      "topic": "Ch 9 · Capital movements · FDI vs FPI",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The main feature that distinguishes foreign direct investment (FDI) from foreign portfolio investment (FPI) is that FDI involves:",
+      "options": [
+        { "key": "A", "text": "a lasting interest and a degree of control in the business", "explanation": "Correct. FDI gives the investor a lasting management interest and control over a real business, whereas FPI is a purely financial stake with no control." },
+        { "key": "B", "text": "only the purchase of shares and bonds without control", "explanation": "Buying shares and bonds without control describes FPI, not FDI." },
+        { "key": "C", "text": "short-term, easily reversible flows", "explanation": "Short-term, reversible flows characterise FPI ('hot money'); FDI is long-term and stable." },
+        { "key": "D", "text": "no transfer of technology or management skill", "explanation": "FDI typically brings technology and management skill; the absence of these is more typical of FPI." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: FDI versus FPI, §12 →", "href": "/foundation/business-economics/international-trade/#12-foreign-capital-fdi-versus-fpi" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "FDI = lasting interest and control in a business; FPI = financial stake without control",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-043",
+      "topic": "Ch 9 · Capital movements · FDI features",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is a typical feature of foreign direct investment (FDI)?",
+      "options": [
+        { "key": "A", "text": "It is short-term and can be withdrawn very quickly", "explanation": "Quick withdrawal is a feature of portfolio flows (FPI). FDI is committed to real assets and is relatively hard to reverse." },
+        { "key": "B", "text": "It is long-term and relatively stable, often bringing technology and jobs", "explanation": "Correct. FDI is tied to productive assets, is long-term and stable, and usually brings technology, management skill and employment." },
+        { "key": "C", "text": "It buys shares purely for a financial return with no control", "explanation": "Buying shares purely for return with no control describes FPI, not FDI." },
+        { "key": "D", "text": "It is called 'hot money'", "explanation": "'Hot money' refers to volatile portfolio flows (FPI), not to FDI." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: FDI versus FPI, §12 →", "href": "/foundation/business-economics/international-trade/#12-foreign-capital-fdi-versus-fpi" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "FDI features: long-term, stable, brings technology, skills and jobs",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-044",
+      "topic": "Ch 9 · Capital movements · FPI features",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Foreign portfolio investment (FPI) is often called 'hot money' because it:",
+      "options": [
+        { "key": "A", "text": "is used to build factories and hire workers", "explanation": "Building factories and hiring is the domain of FDI, which is committed to real assets, not portfolio flows." },
+        { "key": "B", "text": "gives the investor management control of the company", "explanation": "FPI does not give management control; that is a feature of FDI." },
+        { "key": "C", "text": "is liquid and short-term, and can leave the country quickly if sentiment changes", "explanation": "Correct. Portfolio money in shares and bonds is liquid and short-term, so it can flow out rapidly when sentiment turns — hence 'hot money'." },
+        { "key": "D", "text": "can never be withdrawn once invested", "explanation": "The opposite is true: FPI is easily reversible, which is exactly why it is called hot money." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: FDI versus FPI, §12 →", "href": "/foundation/business-economics/international-trade/#12-foreign-capital-fdi-versus-fpi" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "FPI is liquid, short-term and reversible — 'hot money'",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-045",
+      "topic": "Ch 9 · Balance of payments · Meaning",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The balance of payments of a country is:",
+      "options": [
+        { "key": "A", "text": "a record of only its exports of goods", "explanation": "Exports of goods alone are part of the balance of trade, a small slice of the balance of payments." },
+        { "key": "B", "text": "a systematic record of all its economic transactions with the rest of the world over a period", "explanation": "Correct. The balance of payments records all transactions — goods, services, income, transfers and capital flows — between residents and the rest of the world." },
+        { "key": "C", "text": "the total money supply in the country", "explanation": "The money supply is a domestic monetary aggregate, not a record of external transactions." },
+        { "key": "D", "text": "the government's annual budget", "explanation": "The budget records government receipts and spending, not the country's transactions with the world." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The balance of payments, §13 →", "href": "/foundation/business-economics/international-trade/#13-the-balance-of-payments" },
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "BoP = systematic record of all economic transactions with the rest of the world",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-046",
+      "topic": "Ch 9 · Balance of payments · Current account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is recorded in the current account of the balance of payments?",
+      "options": [
+        { "key": "A", "text": "Foreign direct investment inflows", "explanation": "FDI is a capital flow, recorded in the capital (and financial) account, not the current account." },
+        { "key": "B", "text": "An external loan raised abroad", "explanation": "Borrowing abroad is a capital-account transaction, not a current-account item." },
+        { "key": "C", "text": "Receipts from software exports and tourism", "explanation": "Correct. Services such as software and tourism are 'invisibles' recorded in the current account, alongside goods, income and transfers." },
+        { "key": "D", "text": "A change in foreign-exchange reserves", "explanation": "Changes in reserves are part of the capital/financial account, not the current account." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: The balance of payments, §13 →", "href": "/foundation/business-economics/international-trade/#13-the-balance-of-payments" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Current account records goods, services, income and current transfers",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-047",
+      "topic": "Ch 9 · Balance of payments · Capital account",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The capital account of the balance of payments records:",
+      "options": [
+        { "key": "A", "text": "exports and imports of goods", "explanation": "Goods trade is recorded in the current account (as the balance of trade), not the capital account." },
+        { "key": "B", "text": "capital and financial flows such as FDI, FPI, loans and changes in reserves", "explanation": "Correct. The capital (and financial) account records cross-border capital movements — FDI, FPI, external loans, banking capital and reserve changes." },
+        { "key": "C", "text": "remittances from workers abroad", "explanation": "Workers' remittances are current transfers, recorded in the current account, not the capital account." },
+        { "key": "D", "text": "receipts from tourism", "explanation": "Tourism receipts are a service (invisible) in the current account, not a capital-account item." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The balance of payments, §13 →", "href": "/foundation/business-economics/international-trade/#13-the-balance-of-payments" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Capital account records FDI, FPI, loans, banking capital and reserve changes",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-048",
+      "topic": "Ch 9 · Balance of payments · BoT vs BoP",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The balance of trade differs from the balance of payments because the balance of trade covers:",
+      "options": [
+        { "key": "A", "text": "only exports and imports of goods", "explanation": "Correct. The balance of trade is the goods-only figure (exports minus imports of goods); the balance of payments is far wider, covering services, income, transfers and capital flows too." },
+        { "key": "B", "text": "all transactions including capital flows", "explanation": "All transactions including capital flows is the balance of payments, not the narrower balance of trade." },
+        { "key": "C", "text": "services and remittances only", "explanation": "Services and remittances are invisibles in the wider current account; the balance of trade is goods only." },
+        { "key": "D", "text": "the government budget", "explanation": "The government budget is unrelated to the balance of trade, which measures merchandise exports against imports." }
+      ],
+      "correct": "A",
+      "readLink": { "label": "Read: The balance of payments, §13 →", "href": "/foundation/business-economics/international-trade/#13-the-balance-of-payments" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Balance of trade = goods only; balance of payments is the whole record",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-049",
+      "topic": "Ch 9 · Balance of payments · Balance of trade calculation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A country's merchandise exports are ₹ 6,200 crore and its merchandise imports are ₹ 7,900 crore. Its balance of trade is:",
+      "options": [
+        { "key": "A", "text": "a surplus of ₹ 1,700 crore", "explanation": "A surplus needs exports to exceed imports. Here imports exceed exports, so the balance is a deficit, not a surplus." },
+        { "key": "B", "text": "a deficit of ₹ 1,700 crore", "explanation": "Correct. Balance of trade = exports − imports = 6,200 − 7,900 = −₹ 1,700 crore, a trade deficit." },
+        { "key": "C", "text": "a deficit of ₹ 14,100 crore", "explanation": "₹ 14,100 crore adds the two figures instead of subtracting; the balance of trade is exports minus imports." },
+        { "key": "D", "text": "balanced (zero)", "explanation": "The two figures differ by ₹ 1,700 crore, so the balance is not zero." }
+      ],
+      "correct": "B",
+      "readLink": { "label": "Read: The balance of payments, §13 →", "href": "/foundation/business-economics/international-trade/#13-the-balance-of-payments" },
+      "difficulty": "moderate",
+      "source": "original",
+      "sourceRef": "Balance of trade = 6,200 − 7,900 = −₹ 1,700 crore (deficit)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    },
+    {
+      "id": "q-f4c9-050",
+      "topic": "Ch 9 · Balance of payments · Current-account balance calculation",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A country records (₹ crore): merchandise exports 600, merchandise imports 800, net services +250, net income −40, net current transfers +90. Its current-account balance is:",
+      "options": [
+        { "key": "A", "text": "a deficit of ₹ 200 crore", "explanation": "−200 is only the balance of trade (600 − 800); the current account must also add net services, income and transfers." },
+        { "key": "B", "text": "a deficit of ₹ 100 crore", "explanation": "The sign is wrong: the invisibles more than cover the goods deficit, giving a surplus, not a deficit." },
+        { "key": "C", "text": "a surplus of ₹ 100 crore", "explanation": "Correct. Current-account balance = (600 − 800) + 250 − 40 + 90 = −200 + 300 = +₹ 100 crore, a surplus." },
+        { "key": "D", "text": "a surplus of ₹ 300 crore", "explanation": "₹ 300 crore is the net of the invisibles alone (250 − 40 + 90); the goods deficit of 200 must still be subtracted." }
+      ],
+      "correct": "C",
+      "readLink": { "label": "Read: The balance of payments, §13 →", "href": "/foundation/business-economics/international-trade/#13-the-balance-of-payments" },
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Current-account balance = (600 − 800) + 250 − 40 + 90 = +₹ 100 crore (surplus)",
+      "applicableAttempts": ["Sept 2026", "Jan 2027"],
+      "lastVerified": "2026-08-12"
+    }
+  ]
+}

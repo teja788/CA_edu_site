@@ -1,0 +1,685 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Money Market'
+description: 'CA Foundation Business Economics Ch 8 — money and the money market in plain language: the functions of money, the quantity theory of money (Fisher and Cambridge), the Keynesian liquidity-preference theory and its three motives, Friedman''s restatement, the meaning and measurement of money supply, the RBI monetary aggregates M1 to M4, high-powered money and the money multiplier, credit creation by commercial banks with the credit multiplier, the limitations of credit creation, and monetary policy with its quantitative and qualitative instruments, with fully worked money-multiplier and credit-creation calculations.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 4 · Business Economics'
+paperSlug: business-economics
+chapter: 'Ch 8 · Money Market'
+chapterSlug: money-market
+masteryId: f4-ch8
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 4 (Business Economics), Ch 8 (Money Market), three units — scope and treatment'
+  - 'Standard monetary economics: the functions of money, the quantity theory of money (Fisher and Cambridge), the Keynesian liquidity-preference theory, the money multiplier and credit creation, and the RBI monetary aggregates and monetary-policy instruments'
+sourceLabel: 'ICAI SM Paper 4 Ch 8 scope (2026 syllabus) · standard monetary economics · RBI institutional definitions'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '12 Aug 2026'
+readTime: 'About 30 min read · 8 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=business-economics&chapter=money-market'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+You deposit ₹ 1,000 in your savings account. The bank keeps a small slice as a reserve and lends the
+rest to a shopkeeper, who deposits it in his own bank, which lends most of that out again. Your single
+₹ 1,000 note has quietly become several thousand rupees of bank deposits circulating in the economy.
+That multiplication — and the Reserve Bank of India's power to speed it up or slow it down through a
+repo-rate announcement in the morning news — is the whole of this chapter. Money, how much of it there
+is, and who controls the tap.
+
+Paper 4 is an objective paper, and this chapter carries two kinds of question. Most test whether you
+can state a definition cleanly — the four functions of money, what M3 adds to M1, which instrument the
+RBI uses to tighten credit. A large minority ask you to **compute** — a money multiplier from money
+supply and high-powered money, the total credit a banking system can create from a fresh deposit, or
+M1 from its components. The computations are short. The marks are lost on confusing money demand with
+money supply, on mixing up the CRR and the SLR, and on reading a rate cut as contractionary when it is
+expansionary.
+
+## 1. Money and its functions
+
+**Money** is anything that is generally accepted as a means of payment and in settlement of debts. It
+is not defined by what it is made of — paper, metal, or an electronic entry in a bank's ledger — but
+by what it **does**. Economists identify four functions, split into two primary and two secondary.
+
+| Function | Type | What it means |
+|---|---|---|
+| Medium of exchange | primary | Money is handed over to buy goods and services, so trade no longer needs a barter "double coincidence of wants". |
+| Measure (unit) of value | primary | Every good's worth is expressed in one common unit — the rupee — so prices can be compared and added. |
+| Store of value | secondary | Purchasing power can be held over time; money saved today can be spent later. |
+| Standard of deferred payment | secondary | Debts and future payments (loans, salaries, instalments) are written and settled in money. |
+
+The first function is the one that defines money. Before money, exchange needed a **double coincidence
+of wants** — a person with rice who wanted cloth had to find someone with cloth who wanted rice. Money
+removes that obstacle: the rice is sold for money, and the money buys cloth from anyone. As a **measure
+of value**, money gives one yardstick, so the price of a book and the price of a bus ride can be
+compared at once. As a **store of value**, money lets a seller hold the proceeds of a sale and spend
+them later. As a **standard of deferred payment**, contracts for future payment — loans, rents, wages
+— are stated in money.
+
+<Callout kind="pointer">
+  <p>
+    Learn the split: the two <strong>primary</strong> functions are medium of exchange and measure of
+    value; the two <strong>secondary</strong> (derived) functions are store of value and standard of
+    deferred payment. A very common MCQ asks for the "primary function of money" — the safe answer is
+    <strong>medium of exchange</strong>, the function that removes the double coincidence of wants.
+  </p>
+</Callout>
+
+## 2. The quantity theory of money: Fisher and Cambridge
+
+The **quantity theory of money** is the classical account of what determines the general price level.
+Its core claim is simple: other things equal, the general price level moves in **direct proportion**
+to the quantity of money. Double the money supply and, in the classical world of full employment and a
+fixed volume of transactions, prices roughly double. There are two ways to write it.
+
+**Fisher's transactions (cash-transactions) approach.** Irving Fisher stated the theory as an
+**equation of exchange**: the total money paid over must equal the total money value of what is
+bought.
+
+<div class="formula">MV = PT</div>
+
+Here **M** is the quantity of money, **V** is the transactions velocity of circulation (the number of
+times a unit of money changes hands in the period), **P** is the general price level, and **T** is the
+total volume of transactions (goods and services traded). Fisher treated V and T as **fixed in the
+short run** — V by payment habits and institutions, T by the economy's real resources at full
+employment — so a change in M works straight through to P. Rearranged, P = MV ÷ T.
+
+**The Cambridge cash-balance approach.** Marshall and Pigou looked at the same idea from the demand
+side. People choose to hold a fraction of their money income as cash balances. Writing that fraction
+as **k**, the demand for money is:
+
+<div class="formula">M = kPY</div>
+
+Here **M** is the money people wish to hold, **k** is the proportion of income held as cash (the
+Cambridge k), **P** is the price level, and **Y** is real income (real output). Because k is the
+reciprocal of velocity (k = 1 ÷ V), the two equations are two views of one theory: Fisher stresses
+money in **motion** (velocity), Cambridge stresses money **at rest** (the balances people hold).
+
+<Callout kind="mistake">
+  <p>
+    The two equations are not rivals to be memorised separately without thought — they are the same
+    theory seen from opposite ends. <strong>V and k are reciprocals</strong> (k = 1 ÷ V). A high
+    velocity means money is held only briefly, which is a <em>small</em> k. Do not treat a large V and
+    a large k as describing the same situation; they describe opposite ones.
+  </p>
+</Callout>
+
+## 3. The Keynesian liquidity-preference theory
+
+Keynes rejected the classical view that money is held only to spend. In his **liquidity-preference**
+theory, people hold money — the most liquid of all assets — for three distinct motives, and the total
+demand for money is the sum of the three.
+
+- **The transactions motive.** Money is held to bridge the gap between receiving income and spending
+  it, for day-to-day purchases. This demand depends mainly on the **level of income**: a higher income
+  means more transactions, so more money held for them.
+- **The precautionary motive.** Money is held as a cushion against unforeseen needs — an illness, an
+  emergency, a sudden opportunity. This too rises with **income**.
+- **The speculative motive.** Money is held as an alternative to bonds, to gain from expected changes
+  in the bond price (and so the rate of interest). This demand depends on the **rate of interest**.
+  When the interest rate is **high**, bond prices are low and expected to rise, so people hold bonds,
+  not money — speculative demand for money is **low**. When the interest rate is **low**, people hold
+  money rather than bonds — speculative demand is **high**.
+
+So the demand for money is a function of two variables: it **rises with income** (the transactions and
+precautionary balances) and **falls as the rate of interest rises** (the speculative balance).
+
+<div class="formula">Demand for money = L₁(income) + L₂(rate of interest), rising in income, falling in the interest rate</div>
+
+At a very low rate of interest the speculative demand can become perfectly elastic — people will hold
+any amount of extra money rather than bonds. This is the **liquidity trap**, where further increases
+in the money supply are absorbed into idle balances and fail to push the interest rate down any more.
+
+<Callout kind="pointer">
+  <p>
+    Fix which motive depends on what: the <strong>transactions</strong> and
+    <strong>precautionary</strong> motives depend on <strong>income</strong>; the
+    <strong>speculative</strong> motive depends on the <strong>rate of interest</strong>, and it moves
+    <em>inversely</em> to the rate. A classic MCQ asks which motive links the demand for money to the
+    interest rate — the answer is the <strong>speculative</strong> motive.
+  </p>
+</Callout>
+
+## 4. Friedman's restatement of the quantity theory
+
+Milton Friedman restated the quantity theory as a modern **theory of the demand for money**, not a
+theory of the price level directly. He argued that people hold money as one asset among many — bonds,
+equities, physical goods — and that the demand for money is a **stable function** of a small set of
+variables: **permanent income** (a long-run measure of wealth, the chief influence), the **returns on
+the competing assets** (interest on bonds, the yield on equities, the expected rate of inflation on
+holding goods), and tastes.
+
+The practical message of Friedman's restatement is that, because the demand for money is stable and
+depends mainly on permanent income, changes in the **money supply** are the dominant force behind
+changes in money income and prices. This is the **monetarist** conclusion: "money matters", and steady
+control of the money supply is the key to steady prices.
+
+## 5. Money supply: the idea and its measurement
+
+**Money supply** is the total stock of money held by the public **at a point in time**. Two words in
+that sentence do real work. It is a **stock**, not a flow — a photograph taken on a given date, not a
+rate per period like income. And it is money held by the **public**, so it excludes money held by the
+government and the banking system itself (a bank's own cash and inter-bank deposits are not part of the
+money the public can spend).
+
+Because "money" can be drawn narrowly (only the most spendable forms) or broadly (adding near-money
+like time deposits), the RBI publishes **several measures**, called monetary aggregates, from the
+narrowest to the broadest. The next section sets them out.
+
+<Callout kind="mistake">
+  <p>
+    Money supply is a <strong>stock</strong> measured at a point in time; the demand for money studied
+    in Units 1 is about how much of that stock people wish to <em>hold</em>. Do not confuse the two.
+    "How much money exists" (supply, a stock controlled largely by the RBI and the banks) is a
+    different question from "how much money people want to keep in cash" (demand, driven by income and
+    the interest rate).
+  </p>
+</Callout>
+
+## 6. The RBI monetary aggregates: M1 to M4
+
+The RBI measures the money supply in four aggregates. Each broader aggregate **adds** a less-liquid
+component to the one before it, so M1 is the narrowest and M4 the broadest.
+
+| Aggregate | Composition | Note |
+|---|---|---|
+| **M1** | Currency with the public + demand deposits with banks + other deposits with the RBI | The narrowest measure — "narrow money". Every component is instantly spendable. |
+| **M2** | M1 + savings deposits with post-office savings banks | M1 plus one near-money item. |
+| **M3** | M1 + time (fixed) deposits with banks | The "broad money" aggregate, the one most watched for policy. |
+| **M4** | M3 + all deposits with post-office savings banks (excluding National Savings Certificates) | The broadest measure. |
+
+Two of these carry most of the exam weight. **M1 (narrow money)** is currency with the public plus
+demand deposits plus other deposits with the RBI — the money available for immediate spending.
+**M3 (broad money)** adds the **time deposits** of banks to M1, because those savings can be converted
+to spendable form, and M3 is the aggregate the RBI targets for policy.
+
+<div class="formula">M1 = currency with the public + demand deposits with banks + other deposits with the RBI</div>
+<div class="formula">M3 = M1 + time deposits with banks  (broad money)</div>
+
+<Callout kind="pointer">
+  <p>
+    Two facts are asked again and again. <strong>M1 is narrow money</strong> and is fully spendable;
+    <strong>M3 is broad money</strong> and equals M1 plus <strong>time deposits</strong>. The single
+    difference between M1 and M3 is time deposits — hold that, and most aggregate questions answer
+    themselves. Remember the order of liquidity: M1 &gt; M2 &gt; M3 &gt; M4 in liquidity, but M1 &lt;
+    M2 &lt; M3 &lt; M4 in size.
+  </p>
+</Callout>
+
+## 7. High-powered money and the money multiplier
+
+The public's money supply rests on a much smaller base created by the RBI. **High-powered money**,
+also called **reserve money** or the **monetary base** (H), is the money the RBI itself issues. It has
+three parts.
+
+<div class="formula">H = currency held by the public + bankers' deposits (reserves) with the RBI + other deposits with the RBI</div>
+
+It is called "high-powered" because each rupee of it can support **several rupees** of money supply.
+When a rupee of reserves reaches the banking system, banks lend against it, the loan returns as a
+deposit, and the process repeats — so the money supply is a **multiple** of the high-powered money that
+backs it. The link between the two is the **money multiplier**.
+
+<div class="formula">Money multiplier m = money supply ÷ high-powered money = MS ÷ H</div>
+
+Rearranged, the money supply is the multiplier times the base, and the base is the money supply divided
+by the multiplier:
+
+<div class="formula">MS = m × H     and     H = MS ÷ m</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the multiplier and the two rearrangements</div>
+  If the money supply is ₹ 4,000 crore and high-powered money is ₹ 800 crore,<br />
+  money multiplier m = 4,000 ÷ 800 = <strong>5</strong> — each ₹ 1 of base supports ₹ 5 of money.<br />
+  Given m = 5, a base of H = ₹ 1,000 crore would support MS = 5 × 1,000 = ₹ 5,000 crore.<br />
+  Given m = 5 and MS = ₹ 6,000 crore, the base needed is H = 6,000 ÷ 5 = ₹ 1,200 crore.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    The money multiplier here is <strong>MS ÷ H</strong> (money supply over high-powered money), and
+    it is normally greater than 1. It is close cousin to, but not the same object as, the simple
+    <em>credit</em> multiplier <strong>1 ÷ r</strong> of the next section, which uses only the reserve
+    ratio. Read which the question gives you: if it hands you a money supply and a base, use MS ÷ H; if
+    it hands you a reserve ratio and a fresh deposit, use 1 ÷ r.
+  </p>
+</Callout>
+
+## 8. Credit creation by commercial banks
+
+Commercial banks do not simply store the money deposited with them; by lending, they **create** new
+deposits, and so add to the money supply. The starting point is the distinction between two kinds of
+deposit.
+
+- A **primary deposit** is the cash a customer actually pays into a bank — the first, "real" deposit.
+- A **derivative deposit** is a deposit **created by the bank** when it makes a loan: the bank credits
+  the borrower's account, and that credit is spendable money that did not exist before.
+
+Banks must keep a fraction of every deposit as a reserve — the **required reserve ratio**, r — and can
+lend out the rest. When the amount lent is spent and re-deposited, the receiving bank keeps r of it and
+lends the rest, and so on. The deposits shrink at each round by the factor (1 − r), and their total is
+a geometric series that sums to the initial deposit times **1 ÷ r**.
+
+<div class="formula">Credit (deposit) multiplier = 1 ÷ r</div>
+<div class="formula">Total deposits (credit) created = initial (primary) deposit ÷ r = initial deposit × (1 ÷ r)</div>
+
+The **derivative deposits** — the new money the banking system creates — are the total minus the
+original primary deposit.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — an initial ₹ 10,000 deposit with r = 20%</div>
+  Reserve ratio r = 20% = 0.20, so the credit multiplier = 1 ÷ 0.20 = <strong>5</strong>.<br />
+  Total deposits the system can create = 10,000 × 5 = <strong>₹ 50,000</strong>.<br />
+  Of that, the first ₹ 10,000 is the primary deposit, so the <strong>derivative deposits</strong>
+  (the new money) = 50,000 − 10,000 = <strong>₹ 40,000</strong>.<br />
+  The required reserves held against the ₹ 50,000 of deposits = 50,000 × 0.20 = ₹ 10,000, exactly the
+  original cash — which is why the base holds the whole structure up.
+</div>
+
+A **lower** reserve ratio means a **larger** multiplier and more credit; a **higher** reserve ratio
+means a smaller multiplier and less credit. That is precisely why the RBI changes the CRR to control
+how much banks can lend (Section 11).
+
+<Callout kind="pointer">
+  <p>
+    Keep "total credit" and "derivative deposits" apart. <strong>Total deposits created = initial
+    deposit ÷ r</strong> (it includes the original deposit); <strong>derivative deposits = total −
+    initial deposit</strong> (the new money only). A question that asks "how much credit can the
+    banking system create" usually wants the total (÷ r); one that asks for the "new deposits created"
+    wants the derivative figure.
+  </p>
+</Callout>
+
+## 9. The limitations of credit creation
+
+The credit multiplier 1 ÷ r is the **maximum**, reached only under ideal conditions. In practice
+several leakages and limits pull the actual credit below it.
+
+- **The reserve ratio itself.** The higher the required reserve ratio (CRR plus the banks' own prudent
+  reserves), the smaller the multiplier.
+- **Cash drain (currency leakage).** If the public holds part of each loan as cash rather than
+  re-depositing all of it, less returns to the banks at each round, so the multiplier falls.
+- **Excess reserves.** If banks choose to hold reserves above the required minimum — in uncertain
+  times — they lend less than they could, shrinking credit creation.
+- **Availability of borrowers and sound securities.** Banks can only lend if there is demand for loans
+  from creditworthy borrowers offering acceptable security; in a slump, willing borrowers are few.
+- **The overall monetary policy of the RBI.** The central bank's instruments (Section 11) cap the
+  system's ability to expand credit.
+
+<Callout kind="mistake">
+  <p>
+    The figure "total credit = initial deposit ÷ r" is a <strong>ceiling</strong>, not a guaranteed
+    outcome. A leakage of cash into the public's pockets, or banks holding excess reserves, means the
+    actual credit created is <strong>less</strong>. An exam stem that says "maximum credit" or "assume
+    no cash drain" is signalling that it wants the full 1 ÷ r figure.
+  </p>
+</Callout>
+
+## 10. Monetary policy: meaning and objectives
+
+**Monetary policy** is the use, by the central bank, of instruments that control the **money supply
+and the cost and availability of credit** to achieve stated economic goals. In India the monetary
+authority is the **Reserve Bank of India (RBI)**. Its objectives, which can pull against one another,
+include:
+
+- **Price stability** — controlling inflation. In the current framework this is the RBI's primary
+  objective, pursued around an inflation target set with the government.
+- **Economic growth** — supporting output and investment by keeping credit adequately available.
+- **Full employment** and, more broadly, the growth of income.
+- **Exchange-rate stability** and a healthy balance of payments.
+
+The RBI reaches these goals with two families of instruments: **quantitative (general)** instruments,
+which act on the **total** volume of money and credit, and **qualitative (selective)** instruments,
+which act on **particular** uses of credit.
+
+## 11. Quantitative instruments of monetary policy
+
+The **quantitative** or **general** instruments change the overall quantity of money and the cost of
+credit in the whole economy. Know each one's name, what it does, and the direction in which it moves
+the money supply.
+
+- **Cash Reserve Ratio (CRR).** The fraction of a bank's net deposits it must keep as cash reserves
+  with the RBI. A **rise** in the CRR leaves banks less to lend, so it **reduces** the money supply; a
+  **cut** in the CRR **increases** it.
+- **Statutory Liquidity Ratio (SLR).** The fraction of net deposits a bank must hold in safe liquid
+  assets (cash, gold, approved government securities) with **itself**. A rise in the SLR reduces
+  lendable funds and so the money supply; a cut raises it.
+- **Repo rate.** The rate at which the RBI **lends** to banks against securities for the short term. A
+  **rise** in the repo rate makes borrowing from the RBI dearer, so banks lend less and charge more —
+  it **reduces** the money supply. A **cut** in the repo rate is expansionary.
+- **Reverse repo rate.** The rate at which the RBI **borrows** from banks (banks park surplus funds
+  with the RBI). A rise in the reverse repo rate tempts banks to park more with the RBI, draining
+  liquidity and reducing the money supply.
+- **Bank rate.** The rate at which the RBI lends to banks for longer terms (standard refinance). It
+  moves the money supply the same way the repo rate does — a rise contracts, a cut expands.
+- **Open market operations (OMO).** The RBI's **buying and selling of government securities** in the
+  open market. **Selling** securities takes cash out of the system and **reduces** the money supply;
+  **buying** securities injects cash and increases it.
+- **Marginal Standing Facility (MSF).** A facility under which banks can borrow overnight from the RBI
+  above their normal limit, at a rate a little **above** the repo rate — an emergency safety valve.
+- **Liquidity Adjustment Facility (LAF).** The framework of daily repo and reverse-repo operations
+  through which the RBI manages short-term liquidity day to day.
+
+| Instrument | What the RBI does to tighten | Effect on money supply |
+|---|---|---|
+| CRR | raises it | falls |
+| SLR | raises it | falls |
+| Repo rate | raises it | falls |
+| Reverse repo rate | raises it | falls |
+| Bank rate | raises it | falls |
+| Open market operations | **sells** securities | falls |
+
+Every row reverses for an easing move: cut the CRR, SLR, repo, reverse repo or bank rate, or **buy**
+securities in the market, and the money supply **rises**.
+
+<Callout kind="mistake">
+  <p>
+    A <strong>CRR cut is expansionary</strong> — it <em>raises</em> the money supply, because banks are
+    left with more to lend. Students slip because "cut" sounds contractionary; it is the opposite. The
+    reliable rule: any <strong>reduction</strong> in a rate or ratio (CRR, SLR, repo, bank rate), or
+    any <strong>purchase</strong> of securities by the RBI, <strong>increases</strong> the money
+    supply.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    Do not confuse the <strong>CRR</strong> with the <strong>SLR</strong>. The CRR is held as
+    <strong>cash with the RBI</strong>; the SLR is held by the bank <strong>with itself</strong> in
+    liquid assets (cash, gold, approved securities). And do not confuse <strong>repo</strong> (the RBI
+    <em>lends</em> to banks) with <strong>reverse repo</strong> (the RBI <em>borrows</em> from banks) —
+    the "reverse" tells you the direction of the lending is flipped.
+  </p>
+</Callout>
+
+## 12. Qualitative (selective) instruments
+
+The **qualitative** or **selective** instruments do not change the total money supply; they steer
+credit toward or away from **particular** uses. They are the RBI's fine-tuning tools.
+
+- **Margin requirements.** The margin is the part of the value of a security that a borrower must fund
+  themselves; the bank lends only the rest. **Raising** the margin on loans against a commodity makes
+  such loans smaller and discourages them — used to curb speculation in, say, food grains.
+- **Moral suasion.** Persuasion and informal pressure — letters, meetings, appeals — by which the RBI
+  urges banks to follow its wishes without any formal order.
+- **Credit rationing.** Direct limits on the amount of credit banks may extend to particular sectors,
+  or ceilings on lending against certain securities.
+- **Direct action** and **consumer-credit regulation** (for example, setting the down-payment and
+  repayment period on hire-purchase) are further selective tools.
+
+<Callout kind="pointer">
+  <p>
+    The dividing line is the exam's favourite: <strong>quantitative</strong> instruments (CRR, SLR,
+    repo, bank rate, OMO) change the <strong>total</strong> volume of credit;
+    <strong>qualitative</strong> instruments (margin requirements, moral suasion, credit rationing)
+    change the <strong>direction</strong> of credit without changing the total. If asked which tool
+    controls credit to a <em>specific</em> sector, pick a qualitative one.
+  </p>
+</Callout>
+
+## 13. Expansionary versus contractionary policy
+
+The instruments combine into two opposite stances, and each has a nickname.
+
+**Expansionary (easy-money) policy** is used in a slowdown or recession to **increase** the money
+supply and make credit cheaper and more available. The RBI **cuts** the CRR, SLR, repo and bank rate,
+and **buys** securities in the open market. Because credit becomes cheap, it is also called a
+**cheap-money** policy. The aim is to lift spending, investment and output.
+
+**Contractionary (tight-money) policy** is used to fight inflation by **reducing** the money supply and
+making credit dearer and scarcer. The RBI **raises** the CRR, SLR, repo and bank rate, and **sells**
+securities. Because credit becomes dear, it is also called a **dear-money** policy. The aim is to cool
+demand and bring prices down.
+
+| Stance | Nickname | The RBI's moves | Money supply | Used to fight |
+|---|---|---|---|---|
+| Expansionary | easy / cheap money | cut CRR, SLR, repo, bank rate; **buy** securities | rises | recession, unemployment |
+| Contractionary | tight / dear money | raise CRR, SLR, repo, bank rate; **sell** securities | falls | inflation |
+
+<Callout kind="mistake">
+  <p>
+    Match the stance to the disease. <strong>Inflation</strong> is fought with a
+    <strong>contractionary (dear-money)</strong> policy that <em>reduces</em> the money supply; a
+    <strong>recession</strong> is fought with an <strong>expansionary (cheap-money)</strong> policy
+    that <em>increases</em> it. A stem that describes rising prices and asks for the right policy wants
+    the tight-money answer — raise the repo rate, sell securities.
+  </p>
+</Callout>
+
+## 14. Negative marking and exam strategy
+
+Paper 4 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+For this chapter the arithmetic favours a considered attempt over a blank. Most questions are
+definition or direction questions where at least one option is plainly wrong — a CRR cut labelled
+contractionary, M3 defined without time deposits, the speculative motive tied to income. Ruling out
+even one option lifts a guess clearly into positive expected value. The numerical questions are cleaner
+still: recompute 1 ÷ r or MS ÷ H, and the answer is exact, not a judgement call. A sensible rule:
+**attempt every question where you can eliminate at least one option, and reserve leaving blank for the
+rare item where nothing can be ruled out.**
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — the money multiplier from MS and H (easy)">
+  <p>
+    In an economy the money supply is ₹ 6,000 crore and high-powered money (reserve money) is ₹ 1,200
+    crore. (a) Find the money multiplier. (b) If the RBI raises high-powered money to ₹ 1,500 crore and
+    the multiplier is unchanged, find the new money supply.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) money multiplier = MS ÷ H</div>
+    m = 6,000 ÷ 1,200 = <strong>5</strong> — each ₹ 1 of reserve money supports ₹ 5 of money supply.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) new money supply = m × new H</div>
+    MS = 5 × 1,500 = <strong>₹ 7,500 crore</strong>. Raising the base by ₹ 300 crore raised the money
+    supply by 5 × 300 = ₹ 1,500 crore — the multiplier at work.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — credit creation from a fresh deposit (easy-moderate)">
+  <p>
+    A bank receives a fresh (primary) deposit of ₹ 20,000. The required reserve ratio is 25%. Assuming
+    no cash drain and full lending, find (a) the credit multiplier, (b) the total deposits the banking
+    system can create, and (c) the derivative deposits.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) credit multiplier = 1 ÷ r</div>
+    r = 25% = 0.25, so the credit multiplier = 1 ÷ 0.25 = <strong>4</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) total deposits = initial deposit ÷ r</div>
+    Total credit = 20,000 × 4 = <strong>₹ 80,000</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) derivative deposits = total − initial</div>
+    Derivative (newly created) deposits = 80,000 − 20,000 = <strong>₹ 60,000</strong>. The new money
+    the system created is ₹ 60,000; the first ₹ 20,000 was the original cash.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — computing M1 and M3 from components (easy-moderate)">
+  <p>
+    On a given date a country's data are: currency with the public ₹ 500 crore, demand deposits with
+    banks ₹ 300 crore, other deposits with the RBI ₹ 20 crore, and time deposits with banks ₹ 680
+    crore. Find (a) M1 (narrow money) and (b) M3 (broad money).
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) M1 = currency + demand deposits + other deposits with RBI</div>
+    M1 = 500 + 300 + 20 = <strong>₹ 820 crore</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) M3 = M1 + time deposits</div>
+    M3 = 820 + 680 = <strong>₹ 1,500 crore</strong>. The whole difference between M1 and M3 is the
+    ₹ 680 crore of time deposits.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — required reserves and the reserve ratio (moderate)">
+  <p>
+    A commercial bank holds total deposits of ₹ 40,000 and must keep a cash reserve ratio of 8%.
+    (a) How much must it hold as required reserves? (b) If the RBI cuts the CRR to 5%, how much extra
+    is freed for lending, and is this expansionary or contractionary?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) required reserves = deposits × r</div>
+    Required reserves = 40,000 × 8% = 40,000 × 0.08 = <strong>₹ 3,200</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the CRR cut frees reserves</div>
+    At 5% the requirement is 40,000 × 0.05 = ₹ 2,000, so 3,200 − 2,000 = <strong>₹ 1,200</strong> is
+    freed for lending. A CRR <strong>cut</strong> leaves banks more to lend, so it is
+    <strong>expansionary</strong> — it raises the money supply.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — high-powered money from MS and the multiplier (moderate)">
+  <p>
+    The money supply of an economy is ₹ 9,000 crore and the money multiplier is 6. (a) Find the
+    high-powered money. (b) If the RBI wants to raise the money supply to ₹ 12,000 crore with the same
+    multiplier, by how much must it raise high-powered money?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) H = MS ÷ m</div>
+    H = 9,000 ÷ 6 = <strong>₹ 1,500 crore</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the base needed for the higher money supply</div>
+    New H = 12,000 ÷ 6 = ₹ 2,000 crore, so H must rise by 2,000 − 1,500 = <strong>₹ 500 crore</strong>.
+    A ₹ 500-crore injection of base money supports a ₹ 3,000-crore rise in the money supply (6 × 500).
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — the quantity theory: solving for the price level (moderate)">
+  <p>
+    In Fisher's equation MV = PT, the money supply M is ₹ 2,000, the velocity of circulation V is 5,
+    and the volume of transactions T is 500 units. (a) Find the general price level P. (b) If the
+    money supply doubles to ₹ 4,000 with V and T unchanged, what happens to P?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) rearrange MV = PT to P = MV ÷ T</div>
+    P = (2,000 × 5) ÷ 500 = 10,000 ÷ 500 = <strong>₹ 20 per unit</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) doubling M with V and T fixed</div>
+    New P = (4,000 × 5) ÷ 500 = 20,000 ÷ 500 = ₹ 40. The price level <strong>doubles</strong> — exactly
+    the quantity theory's claim that, with V and T fixed, prices move in proportion to the money
+    supply.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — choosing the right policy for inflation (moderate)">
+  <p>
+    Prices in an economy are rising fast and the RBI wants to bring inflation down. (a) Should it run
+    an expansionary or a contractionary policy? (b) State the moves it would make with the CRR, the
+    repo rate, and open market operations, and the effect on the money supply.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) match the stance to inflation</div>
+    Inflation is fought by reducing demand, so the RBI runs a <strong>contractionary (tight / dear
+    money)</strong> policy that <strong>reduces</strong> the money supply.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the specific moves</div>
+    <strong>Raise</strong> the CRR (banks keep more with the RBI, lend less);
+    <strong>raise</strong> the repo rate (borrowing from the RBI is dearer, so bank lending rates
+    rise); <strong>sell</strong> securities in the open market (cash is drawn out of the system). All
+    three <strong>reduce</strong> the money supply and cool the price rise.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — credit creation with a different ratio, and its limit (moderate-hard)">
+  <p>
+    An initial deposit of ₹ 5,000 enters a banking system with a required reserve ratio of 10%.
+    (a) Find the maximum total credit the system can create. (b) In fact the public keeps ₹ 500 of
+    every ₹ 5,000 lent as cash instead of re-depositing it. Explain, without recomputing, why the
+    actual credit falls short of the maximum.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) maximum total credit = initial deposit ÷ r</div>
+    r = 10% = 0.10, credit multiplier = 1 ÷ 0.10 = 10, so maximum total credit = 5,000 × 10 =
+    <strong>₹ 50,000</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) why the actual figure is lower</div>
+    The ₹ 50,000 assumes every rupee lent returns to a bank as a deposit. A <strong>cash drain</strong>
+    — the public holding part of each loan as currency — means less returns at each round, so fewer
+    derivative deposits are created and the actual credit is <strong>below</strong> the ₹ 50,000
+    ceiling. Excess reserves held by cautious banks would lower it further.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Money demand versus money supply.** Demand for money (Unit 1) is how much of the stock people wish
+  to hold, driven by income and the interest rate; money supply (Unit 2) is the stock in existence,
+  controlled by the RBI and the banks. Do not answer one when the question asks the other.
+- **A CRR (or repo) cut is expansionary.** A cut in any rate or ratio, or a **purchase** of securities
+  by the RBI, **increases** the money supply. "Cut" is not contractionary.
+- **CRR versus SLR.** The CRR is cash held **with the RBI**; the SLR is liquid assets held by the bank
+  **with itself**. Both reduce lending when raised, but they are different reserves.
+- **Repo versus reverse repo.** In a **repo** the RBI **lends** to banks; in a **reverse repo** the RBI
+  **borrows** from banks. The "reverse" flips the direction.
+- **M1 versus M3.** M1 is narrow money (currency + demand deposits + other deposits with the RBI); M3
+  is broad money = M1 + **time deposits**. Defining M3 without time deposits is the classic slip.
+- **The two multipliers.** The money multiplier is **MS ÷ H**; the credit (deposit) multiplier is
+  **1 ÷ r**. Use MS ÷ H when given a money supply and a base; use 1 ÷ r when given a reserve ratio and a
+  deposit.
+- **Total credit versus derivative deposits.** Total deposits created = initial deposit ÷ r (includes
+  the original); derivative deposits = total − initial (the new money only).
+- **Which motive depends on the interest rate.** The **speculative** motive depends on the interest
+  rate (inversely); the transactions and precautionary motives depend on income.
+- **V and k are reciprocals.** In the quantity theory, Cambridge k = 1 ÷ V. A high velocity is a small
+  k, not a large one.
+- **The 1 ÷ r figure is a ceiling.** Cash drain, excess reserves, and a shortage of sound borrowers all
+  pull the actual credit below the maximum.
+
+## One-page revision summary
+
+**Functions of money:** primary — medium of exchange (removes the double coincidence of wants) and
+measure/unit of value; secondary — store of value and standard of deferred payment.
+
+**Quantity theory of money.** Fisher: **MV = PT** (money in motion; V and T fixed in the short run, so
+P moves with M). Cambridge cash balances: **M = kPY** (money at rest; k = 1 ÷ V). Both say prices move
+in proportion to the money supply.
+
+**Keynesian liquidity preference:** three motives to hold money — **transactions** and
+**precautionary** (depend on **income**) and **speculative** (depends inversely on the **rate of
+interest**). Money demand rises with income and falls as the interest rate rises; the **liquidity
+trap** is a floor on the interest rate. **Friedman:** money demand is a stable function of permanent
+income; money-supply changes drive money income and prices (monetarism).
+
+**Money supply** = stock of money held by the public at a point in time. **RBI aggregates:**
+**M1** = currency with the public + demand deposits + other deposits with the RBI (**narrow money**);
+M2 = M1 + post-office savings deposits; **M3 = M1 + time deposits** (**broad money**); M4 = M3 + all
+post-office deposits.
+
+<div class="formula">M1 = currency + demand deposits + other deposits with RBI · M3 = M1 + time deposits</div>
+
+**High-powered money** H = currency + bankers' reserves with the RBI + other deposits with the RBI.
+**Money multiplier m = MS ÷ H**, so **MS = m × H** and **H = MS ÷ m**.
+
+**Credit creation:** primary deposit (cash paid in) vs derivative deposit (created by a loan). **Credit
+multiplier = 1 ÷ r; total deposits created = initial deposit ÷ r; derivative deposits = total −
+initial.** Limitations: reserve ratio, cash drain, excess reserves, few sound borrowers, RBI policy —
+the 1 ÷ r figure is a ceiling.
+
+**Monetary policy:** the RBI (the monetary authority) controls the money supply and credit for price
+stability, growth and employment. **Quantitative (general) instruments:** CRR, SLR, repo rate, reverse
+repo rate, bank rate, OMO, MSF, LAF — a rise (or a **sale** of securities) reduces the money supply.
+**Qualitative (selective) instruments:** margin requirements, moral suasion, credit rationing — steer
+credit's direction, not its total.
+
+<div class="formula">Tighten: raise CRR / SLR / repo / bank rate, or SELL securities → money supply falls (dear money, fights inflation)</div>
+<div class="formula">Ease: cut CRR / SLR / repo / bank rate, or BUY securities → money supply rises (cheap money, fights recession)</div>
+
+**Expansionary (cheap / easy money)** raises the money supply to fight recession; **contractionary
+(dear / tight money)** reduces it to fight inflation.
+
+**Marking:** 1 mark correct, −0.25 wrong, 0 unattempted. Eliminate at least one option and attempt;
+recompute the numericals exactly.

@@ -1,0 +1,889 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Determination of National Income'
+description: 'CA Foundation Business Economics Ch 6 — national income accounting and the Keynesian theory in plain language: the meaning of national income, the aggregates GDP, GNP, NDP and NNP at market price and at factor cost, national income, personal income and disposable income, the market-price to factor-cost bridge and net indirect taxes, nominal versus real GDP and the GDP deflator, per capita income, the circular flow, the value added, income and expenditure methods with their precautions, the limitations of national income as a welfare measure, and the Keynesian determination of income through the consumption and saving functions, aggregate demand, the equilibrium level of income, the investment multiplier and the paradox of thrift, with fully worked aggregate and multiplier calculations.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 4 · Business Economics'
+paperSlug: business-economics
+chapter: 'Ch 6 · Determination of National Income'
+chapterSlug: determination-of-national-income
+masteryId: f4-ch6
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 4 (Business Economics), Ch 6 (Determination of National Income), Units 1 and 2 — scope and treatment'
+  - 'Standard macroeconomic results: the national income identities and aggregates, the three methods of measurement, the Keynesian consumption and saving functions, the equilibrium condition, and the investment multiplier'
+sourceLabel: 'ICAI SM Paper 4 Ch 6 scope (2026 syllabus) · standard macroeconomic results'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '12 Aug 2026'
+readTime: 'About 30 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=business-economics&chapter=determination-of-national-income'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Every year the newspapers report that India's GDP "grew by 7 per cent". A shopkeeper in Nagpur, a
+software engineer in Bengaluru and a farmer in Punjab all add to that single number, each time they
+produce something and earn from it. National income accounting is the careful bookkeeping that adds
+up the whole country's production and income into a handful of totals — GDP, GNP, national income —
+and the second half of the chapter asks the deeper question: what fixes the level of that income in
+the first place, and why does it rise or fall? The answer, in Keynes's framework, turns on how much
+households choose to spend and how much firms choose to invest.
+
+Paper 4 is an objective paper, and this chapter carries two kinds of question. The first tests
+whether you can state a definition cleanly — what GNP adds to GDP, why factor cost differs from
+market price, what personal income leaves out. The second asks you to **compute** — to walk GDP at
+market price down to national income, to total up the expenditure or income method, to read a GDP
+deflator, or to work an average and marginal propensity and the multiplier that follows from it. The
+computations are short. Marks are lost on the direction of an adjustment (add depreciation or
+subtract it?), on confusing market price with factor cost, and on reading the multiplier off the
+wrong propensity.
+
+## 1. National income: what it measures
+
+**National income** is the money value of all the final goods and services produced by the normal
+residents of a country during an accounting year. It is a **flow**, measured over a period (a year),
+not a stock held at a point in time, and it is valued in money so that unlike things — wheat, haircuts
+and steel — can be added into one total.
+
+Three words in that definition do real work.
+
+- **Final goods.** Only goods that reach their final user are counted. The flour a bakery buys is an
+  **intermediate good**; counting both the flour and the bread would count the flour twice. Section 9
+  makes this the central rule of the product method.
+- **Produced during the year.** Only current production counts. The resale of an old house or a
+  second-hand car is not new production, so it is excluded — though the broker's fee on the sale is,
+  because that service is produced this year.
+- **Normal residents.** National income belongs to the residents of the country, wherever they earn
+  it. This is the point at which "national" parts company with "domestic", and Section 2 turns on it.
+
+<Callout kind="pointer">
+  <p>
+    A national income aggregate is meaningless until three things are fixed: <strong>whose</strong>
+    income (national = residents, domestic = within the territory), at <strong>which valuation</strong>
+    (market price or factor cost), and <strong>before or after</strong> providing for the wearing-out
+    of capital (gross or net). Almost every conversion question in this chapter is really a question
+    about which of these three you are being asked to change.
+  </p>
+</Callout>
+
+## 2. The aggregates: GDP, GNP, NDP and NNP
+
+The four core aggregates are built from two choices laid on top of one another: **domestic versus
+national**, and **gross versus net**. Get those two axes straight and the whole family follows.
+
+**Domestic versus national.** **Gross Domestic Product (GDP)** is the value of output produced
+**within the geographical territory** of a country, no matter who owns the factors that produced it.
+**Gross National Product (GNP)** is the value of output produced by the **normal residents** of the
+country, wherever in the world they earn it. The bridge between the two is the **net factor income
+from abroad (NFIA)** — the factor income (wages, interest, rent, profit) that residents earn abroad,
+minus the factor income foreigners earn inside the country.
+
+<div class="formula">GNP = GDP + net factor income from abroad (NFIA)</div>
+
+NFIA can be positive or negative. If residents earn more abroad than foreigners earn at home, NFIA is
+positive and GNP exceeds GDP; if the reverse, NFIA is negative and GNP is smaller than GDP. For most
+developing economies NFIA is slightly negative.
+
+**Gross versus net.** Producing output wears out machines and buildings — this using-up of capital is
+**depreciation** (also called consumption of fixed capital). A **gross** measure ignores it; a
+**net** measure subtracts it. Subtracting depreciation from a gross aggregate gives the matching net
+aggregate.
+
+<div class="formula">Net product = Gross product − depreciation</div>
+
+Combine the two axes and the four aggregates appear. Each also comes **at market price** or **at
+factor cost**, which Section 3 handles; the table below states them at market price.
+
+| Aggregate | Full name | How it is built |
+|---|---|---|
+| GDP | Gross Domestic Product | output within the territory, before depreciation |
+| GNP | Gross National Product | GDP + NFIA |
+| NDP | Net Domestic Product | GDP − depreciation |
+| NNP | Net National Product | GNP − depreciation |
+
+<div class="formula">NDP = GDP − depreciation · NNP = GNP − depreciation · GNP = GDP + NFIA</div>
+
+<Callout kind="mistake">
+  <p>
+    The two adjustments run in opposite directions and are easy to swap. Moving from
+    <strong>domestic to national</strong> you <strong>add</strong> NFIA; moving from
+    <strong>gross to net</strong> you <strong>subtract</strong> depreciation. So NNP = GDP + NFIA −
+    depreciation. Adding depreciation, or subtracting NFIA, is the classic sign slip that turns a
+    right method into a wrong number.
+  </p>
+</Callout>
+
+## 3. Market price and factor cost: net indirect taxes
+
+An aggregate can be valued two ways. **At market price** counts each good at the price the buyer
+actually pays — a price that includes indirect taxes (GST, excise) and is reduced by any subsidy. **At
+factor cost** counts output at what the factors of production actually received — the payment to land,
+labour, capital and enterprise, with no tax added and no subsidy taken away. The gap between the two
+valuations is **net indirect taxes**.
+
+<div class="formula">Net indirect taxes = indirect taxes − subsidies</div>
+<div class="formula">Market price = Factor cost + net indirect taxes</div>
+<div class="formula">Factor cost = Market price − net indirect taxes</div>
+
+Indirect taxes push the market price **above** factor cost (the government takes a slice the factors
+never see); subsidies pull it **below** (the buyer pays less than the factors received). The net of
+the two is what separates the two valuations. To go from a market-price aggregate to its factor-cost
+twin, **subtract** net indirect taxes; to go the other way, **add** them.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — factor cost from market price</div>
+  NDP at market price = ₹ 4,600 crore; indirect taxes = ₹ 700 crore; subsidies = ₹ 150 crore<br />
+  Net indirect taxes = 700 − 150 = ₹ 550 crore<br />
+  NDP at factor cost = 4,600 − 550 = <strong>₹ 4,050 crore</strong>
+</div>
+
+<Callout kind="pointer">
+  <p>
+    Hold one sentence: <strong>market price is the bigger, tax-inclusive figure; factor cost is what
+    the factors kept</strong>. So market price = factor cost + net indirect taxes. When a question
+    gives indirect taxes and subsidies separately, the quantity you need is nearly always their
+    difference, <strong>net</strong> indirect taxes — not the indirect taxes alone.
+  </p>
+</Callout>
+
+## 4. National income, personal income and disposable income
+
+The headline figure called **National Income (NI)** is one specific aggregate: **Net National Product
+at factor cost (NNP at factor cost)**. It is the total factor income — rent, wages, interest and
+profit — earned by the normal residents of the country in the year.
+
+<div class="formula">National Income = NNP at factor cost = NNP at market price − net indirect taxes</div>
+
+From national income two further "who actually receives it" measures are derived. Not all of national
+income reaches households, and households receive some income that was not earned in production.
+
+**Personal Income (PI)** is the income actually **received** by households, from all sources. It
+starts from national income, **removes** the parts earned but not received by households — corporate
+(undistributed) profits kept back by companies, corporate profit taxes, and social security
+contributions — and **adds** transfer payments households receive from the government (pensions,
+scholarships, unemployment relief), which are income received but not earned in current production.
+
+<div class="formula">Personal Income = National Income − undistributed profits − corporate taxes − social security contributions + transfer payments</div>
+
+**Disposable Personal Income (DPI)** is what households can actually **spend or save** — personal
+income after direct (personal) taxes are paid.
+
+<div class="formula">Disposable Personal Income = Personal Income − direct (personal) taxes</div>
+<div class="formula">Disposable Personal Income = Consumption + Saving</div>
+
+The last identity matters for Unit 2: a household does only two things with its disposable income —
+spend it or save it — so consumption plus saving must equal disposable income.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Transfer payments</strong> — pensions, scholarships, unemployment benefit, gifts — are
+    payments made without any good or service produced in return. They are <strong>excluded</strong>
+    from national income (nothing was produced), but they are <strong>added</strong> when moving from
+    national income to personal income, because a household really does receive them. Treating a
+    transfer payment as production, or forgetting it at the personal-income stage, are opposite errors
+    the examiner sets side by side.
+  </p>
+</Callout>
+
+## 5. The aggregates at a glance: the key relationships
+
+Every conversion in Unit 1 is one of a small set of moves. This table is the whole map; read a
+question as "which move, and in which direction?"
+
+| To go from | to | do this |
+|---|---|---|
+| GDP | GNP | **add** net factor income from abroad |
+| Gross (GDP or GNP) | Net (NDP or NNP) | **subtract** depreciation |
+| Market price | Factor cost | **subtract** net indirect taxes |
+| NNP at market price | National Income | **subtract** net indirect taxes (this gives NNP at factor cost) |
+
+<div class="formula">GNP at market price = GDP at market price + NFIA</div>
+<div class="formula">NNP at market price = GNP at market price − depreciation</div>
+<div class="formula">National Income (NNP at factor cost) = NNP at market price − (indirect taxes − subsidies)</div>
+
+The full walk from the broadest gross-and-market figure down to national income chains these moves:
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — GDP at market price down to National Income</div>
+  Given: GDP at market price = ₹ 8,000 crore; NFIA = −₹ 100 crore; depreciation = ₹ 700 crore;
+  indirect taxes = ₹ 900 crore; subsidies = ₹ 200 crore.<br />
+  GNP at market price = 8,000 + (−100) = ₹ 7,900 crore<br />
+  NNP at market price = 7,900 − 700 = ₹ 7,200 crore<br />
+  Net indirect taxes = 900 − 200 = ₹ 700 crore<br />
+  National Income (NNP at factor cost) = 7,200 − 700 = <strong>₹ 6,500 crore</strong>
+</div>
+
+<Callout kind="pointer">
+  <p>
+    A long "find national income" question is never hard — it is the same three moves in a fixed
+    order: <strong>add NFIA, subtract depreciation, subtract net indirect taxes</strong>. Do them one
+    line at a time and label each line with the aggregate it produces. Most wrong answers come from
+    stopping one line early (quoting NNP at market price as if it were national income) or getting one
+    sign backwards.
+  </p>
+</Callout>
+
+## 6. Nominal GDP, real GDP and the GDP deflator
+
+A rise in GDP can mean two very different things: the country produced **more**, or the same output
+simply cost **more**. Separating the two is the job of the real–nominal distinction.
+
+**Nominal GDP** (GDP at current prices) values this year's output at this year's prices, so it rises
+both when output rises and when prices rise. **Real GDP** (GDP at constant prices) values output at
+the prices of a fixed **base year**, so it rises only when output actually rises. Real GDP is the
+honest measure of growth, because it strips inflation out.
+
+The ratio of the two, scaled by 100, is the **GDP deflator** — a price index for the whole economy.
+
+<div class="formula">GDP deflator = (Nominal GDP ÷ Real GDP) × 100</div>
+<div class="formula">Real GDP = (Nominal GDP ÷ GDP deflator) × 100</div>
+
+A deflator of 100 means prices are unchanged from the base year; above 100 means the general price
+level has risen; below 100 means it has fallen. In the base year itself, nominal and real GDP are
+equal by construction and the deflator is exactly 100.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the deflator and back again</div>
+  Nominal GDP = ₹ 6,000 crore; Real GDP = ₹ 5,000 crore<br />
+  GDP deflator = (6,000 ÷ 5,000) × 100 = <strong>120</strong> — prices are 20% above the base year<br />
+  Check the inverse: with nominal ₹ 7,200 crore and a deflator of 120, Real GDP = (7,200 ÷ 120) × 100
+  = <strong>₹ 6,000 crore</strong>
+</div>
+
+<Callout kind="mistake">
+  <p>
+    The deflator is <strong>nominal over real</strong>, then ×100 — not real over nominal. Flipping
+    the ratio gives 83.3 instead of 120 and reverses the story (it would say prices fell when they
+    rose). A quick sanity check: when the economy has inflation, nominal GDP is the larger number, so
+    the deflator must come out <strong>above 100</strong>.
+  </p>
+</Callout>
+
+## 7. Per capita income
+
+**Per capita income** is national income divided by the population — the income per head. It is the
+common way to compare living standards across countries or across years, because a large national
+income shared among a large population can still mean modest incomes per person.
+
+<div class="formula">Per capita income = National Income ÷ Population</div>
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — income per head</div>
+  National Income = ₹ 5,00,000 crore; Population = 25 crore<br />
+  Per capita income = 5,00,000 ÷ 25 = <strong>₹ 20,000</strong> per person
+</div>
+
+Per capita income is only an **average**, so it hides the distribution of income: two countries with
+the same per capita income can have very different degrees of inequality. That limitation carries into
+Section 13, where national income is judged as a measure of welfare.
+
+## 8. The circular flow of income
+
+The **circular flow of income** shows how income moves round the economy in a never-ending loop.
+Households own the factors of production and sell their services to firms; firms pay households
+**factor incomes** (rent, wages, interest, profit) for them; households spend that income buying the
+goods and services firms produce; and that spending returns to firms as **receipts**, which they pay
+out again as factor incomes. Production, income and expenditure are three views of the **same** flow —
+which is exactly why the three methods of Sections 9 to 11 must give the same national income total.
+
+The model is built up in stages by adding sectors.
+
+- **Two-sector economy** — households and firms only. Income flows from firms to households as factor
+  payments and back as consumption spending.
+- **Three-sector economy** — add the **government**, which withdraws income as taxes and injects it as
+  government spending and transfer payments.
+- **Four-sector economy** — add the **foreign sector** (the rest of the world), which withdraws income
+  through imports and injects it through exports.
+
+Anything that takes income **out** of the circular flow is a **leakage** (saving, taxes, imports);
+anything that puts income **in** is an **injection** (investment, government spending, exports). The
+flow is in balance — income is at its equilibrium level — when total leakages equal total injections.
+
+<Callout kind="pointer">
+  <p>
+    The circular flow is the reason the three measurement methods agree: <strong>value of output =
+    income paid out = expenditure received</strong>, because every rupee of output is someone's income
+    and someone else's spending. Learn the leakage/injection pairing — saving–investment, taxes–government
+    spending, imports–exports — because Unit 2 finds equilibrium exactly where the leakages match the
+    injections (saving = investment in the simple model).
+  </p>
+</Callout>
+
+## 9. The value added (product) method
+
+The three methods measure the same national income from three sides. The first is the **value added**
+or **product method**, which totals the **value added** by every producing unit in the economy.
+
+**Value added** by a firm is the value of its output minus the value of the **intermediate goods** it
+bought from other firms. Summing value added across all firms avoids **double counting** — the error
+of adding the full value of output at every stage, which would count intermediate goods again and
+again.
+
+<div class="formula">Value added = Value of output − Value of intermediate consumption</div>
+<div class="formula">GDP at market price = Sum of value added by all producing units</div>
+
+A wheat-to-bread example makes the point. A farmer grows ₹ 100 of wheat (no inputs), sells it to a
+miller who turns it into ₹ 170 of flour, who sells to a baker who bakes ₹ 300 of bread. The value
+added is 100, then 170 − 100 = 70, then 300 − 170 = 130 — a total of ₹ 300, exactly the value of the
+final good, the bread. Adding the three outputs (100 + 170 + 300 = 570) would double-count the wheat
+and the flour.
+
+**Precautions.** Count the value added of each firm, not its whole output; exclude the sale and
+purchase of **second-hand goods** (they were counted when first produced), though commissions on their
+sale are included; and value own-account production (a farmer's self-consumed grain, the imputed rent
+of an owner-occupied house) at market prices.
+
+## 10. The income method
+
+The **income method** totals the **factor incomes** paid out in producing the output — the payments to
+the factors of production. Because every rupee of value added is paid to some factor, the sum of factor
+incomes equals the sum of value added.
+
+<div class="formula">Domestic income = Rent + Wages (compensation of employees) + Interest + Profit + Mixed income</div>
+
+The components are the rewards of the factors: **rent** for land, **wages and salaries** (compensation
+of employees) for labour, **interest** for capital, and **profit** for enterprise. **Mixed income** is
+the income of the self-employed — a shopkeeper, a farmer, a doctor in private practice — where wages,
+rent, interest and profit cannot be separated, so they are lumped together.
+
+This sum gives **domestic** income (net domestic product at factor cost). Adding net factor income
+from abroad turns it into **national** income.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — income method total</div>
+  Compensation of employees = ₹ 2,500 crore; rent = ₹ 400 crore; interest = ₹ 300 crore;
+  profit = ₹ 600 crore; mixed income = ₹ 700 crore<br />
+  Domestic income (NDP at factor cost) = 2,500 + 400 + 300 + 600 + 700 = <strong>₹ 4,500 crore</strong>
+</div>
+
+**Precautions.** Include only **factor** incomes, never **transfer payments** (pensions, gifts,
+scholarships) — they are received without production. Exclude income from the sale of second-hand goods
+and from financial transactions (buying shares or bonds is a transfer of ownership, not production).
+Include the imputed value of own-account services.
+
+## 11. The expenditure method
+
+The **expenditure method** totals the spending on the economy's **final** goods and services by the
+four groups of buyers — households, firms, government and the rest of the world.
+
+<div class="formula">GDP at market price = C + I + G + (X − M)</div>
+
+The four components are: **private final consumption expenditure (C)** by households; **gross domestic
+investment (I)**, the spending of firms on capital goods and additions to stock; **government final
+consumption expenditure (G)**; and **net exports (X − M)**, exports minus imports. Imports are
+subtracted because they are produced abroad, not part of domestic output, yet they are already buried
+inside C, I and G.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — expenditure method total</div>
+  C = ₹ 3,000 crore; I = ₹ 800 crore; G = ₹ 1,200 crore; exports X = ₹ 500 crore; imports M = ₹ 400 crore<br />
+  Net exports (X − M) = 500 − 400 = ₹ 100 crore<br />
+  GDP at market price = 3,000 + 800 + 1,200 + 100 = <strong>₹ 5,100 crore</strong>
+</div>
+
+**Precautions.** Count only spending on **final** goods, never on intermediate goods (that is the
+double-counting error again, from the spending side). Exclude spending on **second-hand goods** and on
+**financial assets** (shares, bonds), and exclude **transfer payments** by the government, because none
+of these is expenditure on current output.
+
+## 12. Precautions and reconciling the three methods
+
+The three methods are three windows on one flow, so — properly measured — they give the **same** GDP.
+The circular flow is the reason: the value of output equals the income paid to produce it equals the
+expenditure that buys it.
+
+| Method | What it sums | Chief precaution |
+|---|---|---|
+| Value added (product) | value added of every firm | count value added, not whole output; no double counting |
+| Income | factor incomes (rent, wages, interest, profit, mixed) | include factor incomes only; **exclude transfer payments** |
+| Expenditure | C + I + G + (X − M) | spend on **final** goods only; exclude second-hand goods and financial assets |
+
+Three threads run through every method's precautions, and every one is an examiner favourite:
+
+- **No double counting** — exclude intermediate goods (product side) and intermediate spending
+  (expenditure side).
+- **No transfer payments** — they are income received without production, so they enter none of the
+  three totals.
+- **No second-hand goods or financial transactions** — these are transfers of existing assets, not
+  current production; only the **commission or service fee** on such deals is included, because that
+  service is produced now.
+
+<Callout kind="mistake">
+  <p>
+    The purchase of <strong>shares or bonds</strong> is not investment in the national-income sense. In
+    economics "investment" (I) means spending on <strong>new capital goods</strong> — plant, machinery,
+    buildings, additions to stock. Buying a share is a <strong>financial</strong> transaction, a change
+    of ownership of an existing asset, and is excluded from every method. The everyday sense of
+    "investing in shares" is the trap.
+  </p>
+</Callout>
+
+## 13. National income as a measure of welfare
+
+National income (and per capita income) is the usual proxy for a country's economic welfare, but it is
+an imperfect one, and the exam asks you to name the gaps.
+
+- **Distribution is hidden.** Per capita income is an average; the same average can sit on top of very
+  different degrees of inequality, and rising national income can coexist with the poor becoming worse
+  off.
+- **Non-market production is left out.** The unpaid work of a homemaker, or subsistence output consumed
+  by the grower, adds to welfare but is largely missed by the accounts.
+- **The composition of output is ignored.** A rupee of output is counted the same whether it is
+  medicine or armaments; more guns and less food can still raise national income.
+- **Externalities and the value of leisure are not counted.** The pollution and resource depletion that
+  production causes reduce welfare but are not netted off, and extra leisure raises welfare without
+  raising measured income.
+- **Non-monetary and black-economy transactions** escape measurement.
+
+For these reasons a rise in national income is a **necessary but not sufficient** signal of rising
+welfare — a signpost, not a full picture.
+
+## 14. Aggregate demand and aggregate supply
+
+Unit 2 turns from measuring income to explaining what **determines** it. Keynes's answer is that the
+level of income and employment is fixed by **aggregate demand** and **aggregate supply**, and in the
+short run — with spare capacity and unemployed resources — it is **aggregate demand** that does the
+work.
+
+**Aggregate demand (AD)** is the total planned spending on the economy's output at a given level of
+income. In the simple model it is consumption plus investment; adding the other sectors it is
+C + I + G + (X − M). **Aggregate supply (AS)** is the total value of output producers plan to supply —
+which, since producing it pays out exactly that value in incomes, equals the income of the economy.
+
+Equilibrium income is where planned spending matches output — where **aggregate demand equals aggregate
+supply**. Because Keynes assumed idle resources, an increase in aggregate demand raises **output and
+employment** rather than simply raising prices: firms meet the extra demand by producing more. The
+components of aggregate demand — chiefly consumption and investment — are therefore the levers that
+move national income, and the next sections examine each.
+
+## 15. The consumption function: APC and MPC
+
+The **consumption function** states how planned consumption depends on income: as income rises,
+consumption rises, but by **less** than the rise in income. Keynes wrote it as a straight line.
+
+<div class="formula">C = a + bY</div>
+
+Here **C** is consumption, **Y** is income, **a** is **autonomous consumption** (the consumption that
+takes place even at zero income, met by past savings or borrowing), and **b** is the **marginal
+propensity to consume**, the slope of the line. Two ratios describe the function.
+
+**Average propensity to consume (APC)** is the share of total income that is consumed.
+
+<div class="formula">APC = Consumption ÷ Income = C ÷ Y</div>
+
+**Marginal propensity to consume (MPC)** is the fraction of any **extra** income that is consumed — the
+change in consumption divided by the change in income.
+
+<div class="formula">MPC = Change in consumption ÷ Change in income = ΔC ÷ ΔY = b</div>
+
+MPC lies between 0 and 1: an extra rupee of income raises consumption, but by less than a rupee,
+because part of it is saved. As income rises, APC **falls** (the fixed autonomous consumption `a`
+becomes a smaller share of a bigger income) and stays **above** MPC.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — APC and MPC from a schedule</div>
+  When income Y = ₹ 1,000 crore, consumption C = ₹ 800 crore → APC = 800 ÷ 1,000 = <strong>0.8</strong><br />
+  When income rises to ₹ 1,100 crore, consumption rises to ₹ 860 crore →
+  ΔC = 60, ΔY = 100 → MPC = 60 ÷ 100 = <strong>0.6</strong><br />
+  APC (0.8) is above MPC (0.6), as it must be while autonomous consumption is positive.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>APC and MPC are different questions.</strong> APC is consumption as a share of
+    <em>total</em> income (C ÷ Y); MPC is the share of <em>extra</em> income consumed (ΔC ÷ ΔY). A
+    stem that gives one income–consumption pair is asking for APC; a stem that gives a <em>change</em>
+    in each is asking for MPC. Reading "change in" is the whole difference between the two.
+  </p>
+</Callout>
+
+## 16. The saving function: APS and MPS
+
+Whatever income is not consumed is **saved**, so the saving function is the mirror image of the
+consumption function. Since Y = C + S, saving is income minus consumption.
+
+<div class="formula">S = Y − C = −a + (1 − b)Y</div>
+
+The intercept is **−a**: at zero income the household must still consume `a`, so it **dis-saves** by
+that amount. The slope, **(1 − b)**, is the **marginal propensity to save**. Two ratios match those of
+consumption.
+
+**Average propensity to save (APS)** is the share of income saved; **marginal propensity to save
+(MPS)** is the fraction of extra income saved.
+
+<div class="formula">APS = Saving ÷ Income = S ÷ Y</div>
+<div class="formula">MPS = Change in saving ÷ Change in income = ΔS ÷ ΔY</div>
+
+Because income is either consumed or saved, the two pairs of ratios each sum to one.
+
+<div class="formula">MPC + MPS = 1 · APC + APS = 1</div>
+
+So MPS = 1 − MPC and APS = 1 − APC. If the marginal propensity to consume is 0.75, the marginal
+propensity to save is 0.25; if 80 paise of an extra rupee is spent, 20 paise is saved.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — APS and MPS</div>
+  Income Y = ₹ 2,000 crore, consumption C = ₹ 1,500 crore → saving S = 2,000 − 1,500 = ₹ 500 crore<br />
+  APS = 500 ÷ 2,000 = <strong>0.25</strong> — and indeed APC = 1,500 ÷ 2,000 = 0.75, so APC + APS = 1<br />
+  If MPC = 0.75, then MPS = 1 − 0.75 = <strong>0.25</strong>
+</div>
+
+<Callout kind="pointer">
+  <p>
+    The identities <strong>MPC + MPS = 1</strong> and <strong>APC + APS = 1</strong> turn half the
+    Unit 2 numericals into one-step subtractions. Given any one propensity you have its partner for
+    free, and the multiplier of Section 18 can be read off either the MPC or the MPS. Whenever a
+    question gives MPC, write MPS = 1 − MPC in the margin before you start.
+  </p>
+</Callout>
+
+## 17. Investment and the equilibrium level of income
+
+**Investment (I)** is spending on new capital goods and additions to stock. In the simple Keynesian
+model investment is taken as **autonomous** — fixed independently of the level of income, decided by
+the rate of interest and the expected profitability of capital (the marginal efficiency of capital).
+
+**Equilibrium income** is the level of income at which planned spending equals output. With only
+households and firms, aggregate demand is C + I, so equilibrium is where income equals consumption plus
+investment.
+
+<div class="formula">Equilibrium: Y = C + I</div>
+
+There is an equivalent way to state the same condition. Since Y = C + S always holds, setting
+Y = C + I gives C + S = C + I, so **saving equals investment**.
+
+<div class="formula">Equilibrium (equivalent form): S = I</div>
+
+The saving–investment form is the leakage–injection idea from Section 8: income is at rest when the
+leakage (saving) exactly matches the injection (investment). To find equilibrium income from a
+consumption function and an investment figure, substitute C = a + bY into Y = C + I and solve for Y.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — equilibrium income</div>
+  Consumption function C = 100 + 0.8Y; autonomous investment I = ₹ 100 crore<br />
+  Y = C + I = (100 + 0.8Y) + 100<br />
+  Y − 0.8Y = 200 → 0.2Y = 200 → <strong>Y = ₹ 1,000 crore</strong><br />
+  Check with S = I: S = −100 + 0.2(1,000) = 100 = I ✓
+</div>
+
+## 18. The investment multiplier
+
+An increase in investment raises income by a **multiple** of itself. The extra investment is income to
+those who receive it; they spend a fraction (the MPC) of it, which is income to the next set of
+people, who spend a fraction of that, and so on — a diminishing chain of extra spending that sums to
+more than the original injection. The **investment multiplier (k)** is the ratio of the change in
+income to the change in investment that caused it.
+
+<div class="formula">k = ΔY ÷ ΔI = 1 ÷ (1 − MPC) = 1 ÷ MPS</div>
+<div class="formula">Change in income: ΔY = k × ΔI</div>
+
+Because MPS = 1 − MPC, the multiplier can be read off either propensity — one over (one minus MPC), or
+one over MPS. The **larger the MPC** (the smaller the MPS), the larger the multiplier, because more of
+each round is passed on as further spending. With MPC = 0.8 the multiplier is 5; with MPC = 0.75 it is
+4; with MPC = 0.5 it is only 2.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — the multiplier and the change in income</div>
+  MPC = 0.75, so MPS = 1 − 0.75 = 0.25<br />
+  Multiplier k = 1 ÷ (1 − 0.75) = 1 ÷ 0.25 = <strong>4</strong><br />
+  If investment rises by ΔI = ₹ 200 crore, then ΔY = k × ΔI = 4 × 200 = <strong>₹ 800 crore</strong>
+</div>
+
+<Callout kind="mistake">
+  <p>
+    The multiplier is <strong>1 ÷ (1 − MPC)</strong>, which is the same as <strong>1 ÷ MPS</strong> —
+    never 1 ÷ MPC. With MPC = 0.8, k = 1 ÷ 0.2 = 5, not 1 ÷ 0.8 = 1.25. A quick check: a high MPC means
+    a <em>large</em> multiplier, so if your answer for a high MPC comes out small, you have divided by
+    the wrong propensity.
+  </p>
+</Callout>
+
+## 19. The paradox of thrift
+
+The **paradox of thrift** is Keynes's counter-intuitive result that if **everyone** tries to save more
+at once, the community may end up saving **no more**, or even less, and with a lower income. The
+attempt to save more means spending less; lower spending is lower aggregate demand; through the
+multiplier working in reverse, income falls; and out of the lower income the same or a smaller total is
+actually saved. What is prudent for one household — saving more — can be self-defeating for the economy
+as a whole when all households do it together.
+
+The paradox holds in the Keynesian world of **idle resources**, where output is demand-determined. It
+is a caution against reading a household truth as an economy-wide truth: a virtue in the part can be a
+vice in the whole. It also shows the multiplier cuts both ways — a fall in planned spending contracts
+income by a multiple, just as a rise expands it.
+
+<Callout kind="pointer">
+  <p>
+    The paradox of thrift is a favourite one-line MCQ: an attempt by <strong>all</strong> households to
+    save more reduces aggregate demand and, through the multiplier, lowers income, so total saving does
+    not rise (and may fall). The key words the examiner watches for are "<strong>everyone/simultaneously</strong>"
+    and "<strong>total</strong> saving" — the result is about the whole economy, not one saver.
+  </p>
+</Callout>
+
+## 20. Negative marking and when to leave a question
+
+Paper 4 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+The arithmetic is worth holding calmly. A blind guess among four options is right one time in four:
+across four such guesses you expect 1 mark gained and 3 × 0.25 = 0.75 lost, a net of +0.25 for four
+questions — very slightly positive but close to neutral. What changes the picture is **elimination**.
+Rule out one option and a guess among three is worth about 0.5 marks per four attempts; rule out two
+and the last guess is worth about 1.5 marks per four.
+
+In this chapter elimination is unusually easy, because the distractors are built from named errors — a
+depreciation added instead of subtracted, a deflator taken upside down, a multiplier read off MPC
+rather than MPS. A sensible rule: **answer when you can eliminate at least one option; consider leaving
+it only when you cannot narrow the field at all.** The marks at stake either way are small, so a
+question you can actually finish is worth more than either choice.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — building the aggregates from GDP at market price (easy-moderate)">
+  <p>
+    For an economy: GDP at market price = ₹ 9,000 crore, net factor income from abroad = ₹ 300 crore,
+    depreciation = ₹ 600 crore, indirect taxes = ₹ 800 crore, subsidies = ₹ 100 crore. Find (a) GNP at
+    market price, (b) NNP at market price, and (c) National Income.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) add NFIA to reach the national figure</div>
+    GNP at market price = GDP at market price + NFIA = 9,000 + 300 = <strong>₹ 9,300 crore</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) subtract depreciation to reach the net figure</div>
+    NNP at market price = GNP at market price − depreciation = 9,300 − 600 = <strong>₹ 8,700 crore</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) subtract net indirect taxes to reach factor cost</div>
+    Net indirect taxes = 800 − 100 = ₹ 700 crore<br />
+    National Income (NNP at factor cost) = 8,700 − 700 = <strong>₹ 8,000 crore</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — net indirect taxes and the market-price/factor-cost bridge (easy)">
+  <p>
+    A country's NDP at factor cost is ₹ 5,200 crore. Indirect taxes are ₹ 900 crore and subsidies are
+    ₹ 250 crore. Find (a) net indirect taxes and (b) NDP at market price.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) net indirect taxes</div>
+    Net indirect taxes = indirect taxes − subsidies = 900 − 250 = <strong>₹ 650 crore</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) add net indirect taxes to move up to market price</div>
+    NDP at market price = NDP at factor cost + net indirect taxes = 5,200 + 650 =
+    <strong>₹ 5,850 crore</strong><br />
+    Market price is the larger, tax-inclusive figure, so we <strong>add</strong> the net indirect taxes.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — national income by the expenditure method (moderate)">
+  <p>
+    Find GDP at market price by the expenditure method from: private consumption C = ₹ 4,200 crore,
+    investment I = ₹ 1,100 crore, government spending G = ₹ 1,500 crore, exports X = ₹ 700 crore,
+    imports M = ₹ 500 crore.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — net exports</div>
+    Net exports (X − M) = 700 − 500 = ₹ 200 crore
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — add the four components</div>
+    GDP at market price = C + I + G + (X − M) = 4,200 + 1,100 + 1,500 + 200 =
+    <strong>₹ 7,000 crore</strong><br />
+    Imports are subtracted because they are output produced abroad, already sitting inside C, I and G.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — national income by the income method (moderate)">
+  <p>
+    From the following, find (a) domestic income (NDP at factor cost) and (b) National Income:
+    compensation of employees ₹ 3,000 crore, rent ₹ 500 crore, interest ₹ 400 crore, profit ₹ 800
+    crore, mixed income ₹ 900 crore, and net factor income from abroad ₹ 200 crore. (Note: pensions of
+    ₹ 150 crore are also paid, but are a transfer payment.)
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) add the factor incomes only</div>
+    Domestic income = 3,000 + 500 + 400 + 800 + 900 = <strong>₹ 5,600 crore</strong><br />
+    The ₹ 150 crore of pensions is a <strong>transfer payment</strong> and is excluded — no output was
+    produced in return for it.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) add NFIA to reach the national figure</div>
+    National Income = domestic income + NFIA = 5,600 + 200 = <strong>₹ 5,800 crore</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — nominal GDP, real GDP and the deflator (moderate)">
+  <p>
+    In a year, nominal GDP is ₹ 12,000 crore and real GDP (at base-year prices) is ₹ 10,000 crore.
+    (a) Find the GDP deflator. (b) The next year nominal GDP is ₹ 13,500 crore and the deflator is 125;
+    find that year's real GDP.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) deflator = nominal ÷ real × 100</div>
+    GDP deflator = (12,000 ÷ 10,000) × 100 = <strong>120</strong> — the price level is 20% above the base year
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) real GDP = nominal ÷ deflator × 100</div>
+    Real GDP = (13,500 ÷ 125) × 100 = <strong>₹ 10,800 crore</strong><br />
+    Real GDP rose from 10,000 to 10,800 — genuine growth of 8%, once the price rise is stripped out.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — APC, MPC, APS and MPS from a schedule (moderate)">
+  <p>
+    At an income of ₹ 2,000 crore a household consumes ₹ 1,700 crore. When income rises to ₹ 2,500
+    crore, consumption rises to ₹ 2,050 crore. Find (a) APC at each income, (b) MPC, and (c) MPS.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) average propensity to consume</div>
+    At Y = 2,000: APC = 1,700 ÷ 2,000 = <strong>0.85</strong><br />
+    At Y = 2,500: APC = 2,050 ÷ 2,500 = <strong>0.82</strong> — APC falls as income rises
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) marginal propensity to consume</div>
+    ΔC = 2,050 − 1,700 = 350; ΔY = 2,500 − 2,000 = 500<br />
+    MPC = 350 ÷ 500 = <strong>0.7</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) marginal propensity to save</div>
+    MPS = 1 − MPC = 1 − 0.7 = <strong>0.3</strong>
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — equilibrium income from the consumption function (moderate)">
+  <p>
+    In a two-sector economy the consumption function is C = 200 + 0.75Y and autonomous investment is
+    I = ₹ 300 crore. Find (a) the equilibrium level of income and (b) confirm it with S = I.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) set Y = C + I</div>
+    Y = (200 + 0.75Y) + 300<br />
+    Y − 0.75Y = 500 → 0.25Y = 500 → <strong>Y = ₹ 2,000 crore</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) check with the saving = investment form</div>
+    Saving function: S = −200 + 0.25Y; at Y = 2,000, S = −200 + 0.25(2,000) = −200 + 500 = ₹ 300 crore<br />
+    S = ₹ 300 crore = I ✓ — the two forms of the equilibrium condition agree.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — the multiplier and a change in income (moderate-hard)">
+  <p>
+    In an economy the marginal propensity to consume is 0.8. (a) Find the investment multiplier.
+    (b) Investment rises by ₹ 250 crore; find the change in income. (c) If instead the MPC were 0.6,
+    what would the multiplier be?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) multiplier from the MPC</div>
+    MPS = 1 − 0.8 = 0.2<br />
+    k = 1 ÷ (1 − MPC) = 1 ÷ 0.2 = <strong>5</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) apply ΔY = k × ΔI</div>
+    ΔY = k × ΔI = 5 × 250 = <strong>₹ 1,250 crore</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) a lower MPC gives a smaller multiplier</div>
+    With MPC = 0.6, MPS = 0.4, so k = 1 ÷ 0.4 = <strong>2.5</strong> — a lower propensity to consume
+    means a smaller multiplier, because less of each round is passed on.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — the paradox of thrift (moderate)">
+  <p>
+    An economy has MPC = 0.75 and is in equilibrium. Households collectively decide to save ₹ 100 crore
+    more at every level of income (autonomous saving rises, autonomous consumption falls by ₹ 100
+    crore). Explain, with the multiplier, what happens to equilibrium income, and comment on total
+    saving.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the fall in autonomous spending works through the multiplier</div>
+    Multiplier k = 1 ÷ (1 − 0.75) = 4<br />
+    A ₹ 100 crore fall in autonomous consumption is a fall in aggregate demand, so
+    ΔY = k × (−100) = 4 × (−100) = <strong>−₹ 400 crore</strong> — equilibrium income falls by ₹ 400 crore.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — why total saving need not rise</div>
+    In equilibrium saving equals investment (S = I). If investment is unchanged, equilibrium saving is
+    <strong>unchanged</strong> despite everyone trying to save more — the attempt only lowers income.
+    This is the <strong>paradox of thrift</strong>: a greater desire to save, acted on by all at once,
+    reduces income rather than raising total saving.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Adding depreciation instead of subtracting it.** Gross to net always **subtracts** depreciation
+  (NDP = GDP − depreciation). Adding it is the commonest sign error in the aggregate chain.
+- **Subtracting NFIA instead of adding it.** Domestic to national **adds** net factor income from
+  abroad (GNP = GDP + NFIA). NFIA can itself be negative, which is not the same as subtracting it.
+- **Market price versus factor cost.** Market price = factor cost + **net** indirect taxes. Use net
+  indirect taxes (indirect taxes − subsidies), not the indirect taxes alone, and remember market price
+  is the larger figure.
+- **Stopping one line early.** National Income is NNP at **factor cost**. Quoting NNP at market price,
+  or NDP, as "national income" loses the mark; finish all three moves (add NFIA, subtract depreciation,
+  subtract net indirect taxes).
+- **Counting transfer payments as production.** Pensions, scholarships and gifts enter **none** of the
+  three methods (no output was produced), but they **are** added when moving from national income to
+  personal income.
+- **The GDP deflator upside down.** Deflator = nominal ÷ real × 100. With inflation the deflator is
+  above 100 and nominal GDP is the bigger number.
+- **Treating share purchases as investment.** In national income, investment (I) is spending on **new
+  capital goods**, not the buying of shares or bonds, which is a financial transaction and is excluded.
+- **APC versus MPC (and APS versus MPS).** APC uses total income (C ÷ Y); MPC uses the change (ΔC ÷ ΔY).
+  A single pair of figures gives APC; a change in each gives MPC.
+- **The multiplier from the wrong propensity.** k = 1 ÷ (1 − MPC) = 1 ÷ MPS, never 1 ÷ MPC. A high MPC
+  gives a large multiplier.
+- **The paradox of thrift misread.** It applies when **all** households save more **at once** and refers
+  to **total** saving, which need not rise; it is not a claim about a single saver.
+
+## One-page revision summary
+
+**National income** = money value of all final goods and services produced by a country's normal
+residents in a year — a flow, valued in money, counting final output only.
+
+**The four aggregates** turn on two axes — domestic/national and gross/net:
+
+<div class="formula">GNP = GDP + NFIA · NDP = GDP − depreciation · NNP = GNP − depreciation = GDP + NFIA − depreciation</div>
+
+**Market price vs factor cost:** market price = factor cost + net indirect taxes, where **net indirect
+taxes = indirect taxes − subsidies**. **National Income = NNP at factor cost = NNP at market price −
+net indirect taxes**.
+
+**Derived measures:** Personal Income = NI − undistributed profits − corporate taxes − social security
+contributions + transfer payments. Disposable Personal Income = PI − direct taxes = Consumption +
+Saving.
+
+**Real vs nominal:** real GDP values output at base-year prices; **GDP deflator = (nominal ÷ real) ×
+100** (100 in the base year, above 100 with inflation). **Per capita income = National Income ÷
+Population** — an average that hides distribution.
+
+**Circular flow:** value of output = income paid out = expenditure received. Leakages (saving, taxes,
+imports) = injections (investment, government spending, exports) in equilibrium.
+
+**The three methods (all give the same GDP):** value added (Σ value added, no double counting); income
+(rent + wages + interest + profit + mixed income); expenditure (**C + I + G + (X − M)**). Common
+precautions: no double counting, no transfer payments, no second-hand goods or financial transactions.
+
+**Welfare limits:** national income ignores distribution, non-market production, the composition of
+output, externalities and leisure — a necessary but not sufficient welfare signal.
+
+**Keynesian determination:** income is fixed by aggregate demand (= C + I + …) with idle resources.
+**Consumption function C = a + bY**; APC = C ÷ Y, MPC = ΔC ÷ ΔY = b. **Saving S = −a + (1 − b)Y**;
+APS = S ÷ Y, MPS = ΔS ÷ ΔY. **MPC + MPS = 1** and **APC + APS = 1**.
+
+**Equilibrium:** Y = C + I, equivalently **S = I**. **Investment multiplier k = 1 ÷ (1 − MPC) = 1 ÷
+MPS**, and **ΔY = k × ΔI**; a larger MPC gives a larger multiplier.
+
+**Paradox of thrift:** if all households try to save more at once, aggregate demand falls, income falls
+through the multiplier, and total saving need not rise.
+
+**Marking:** 1 mark correct, −0.25 wrong, 0 unattempted. Guessing among four is close to neutral;
+eliminating even one option makes an attempt clearly worthwhile.

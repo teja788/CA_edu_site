@@ -1,0 +1,742 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Price Determination in Different Markets'
+description: 'CA Foundation Business Economics Ch 4 — the meaning and types of markets, the four market forms and their features, the firm and the industry, Marshall''s time periods, how demand and supply fix the equilibrium price and quantity, the revenue curves TR, AR and MR with the AR–MR relationship, the profit-maximising rule MR = MC, and price-output determination under perfect competition, monopoly with price discrimination, monopolistic competition, and oligopoly with the kinked demand curve, with fully worked revenue, equilibrium and profit calculations.'
+level: foundation
+levelName: 'CA Foundation'
+paper: 'Paper 4 · Business Economics'
+paperSlug: business-economics
+chapter: 'Ch 4 · Price Determination in Different Markets'
+chapterSlug: price-determination-in-different-markets
+masteryId: f4-ch4
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+sources:
+  - 'ICAI Foundation Study Material, Paper 4 (Business Economics), Ch 4 (Price Determination in Different Markets) — scope and treatment'
+  - 'Standard microeconomic results: the classification of markets, the features of the four market forms, the total, average and marginal revenue curves and the AR–MR relationship, the profit-maximising rule MR = MC, and the short-run and long-run equilibrium of the firm under perfect competition, monopoly, monopolistic competition and oligopoly'
+sourceLabel: 'ICAI SM Paper 4 Ch 4 scope (2026 syllabus) · standard microeconomic results'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '12 Aug 2026'
+readTime: 'About 30 min read · 9 worked examples'
+practiceHref: '/practice/quiz/?level=foundation&paper=business-economics&chapter=price-determination-in-different-markets'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Walk into a wholesale vegetable mandi and you meet one kind of market: dozens of sellers, the same
+tomatoes on every cart, one price ruling the whole shed, and no single seller able to move it. Pay
+your monthly electricity bill and you meet the opposite kind: one supplier, a price you cannot
+bargain, and nowhere else to go. Between these two lie the markets most firms actually live in — a
+street of restaurants each a little different from the next, or the handful of telecom companies that
+watch each other's tariffs like poker players. This chapter is the map of those four worlds and the
+single question that runs through all of them: **what price will rule, and how much will be
+produced?**
+
+Paper 4 tests this chapter heavily and in three layers. The first layer is **recognition** — match a
+market form to its features, name the seller who is a "price taker" or a "price maker", read a
+comparison table. The second is the **mechanics of equilibrium** — set demand equal to supply and
+solve, or find the output where marginal revenue meets marginal cost. The third is **short
+computation** — derive a marginal-revenue schedule from a price schedule, or work out profit as total
+revenue minus total cost. The marks are lost on confusing average revenue with marginal revenue, on
+forgetting that price equals marginal revenue only under perfect competition, and on the two
+long-run results (normal profit under competition, excess capacity under monopolistic competition)
+that examiners ask again and again.
+
+## 1. What a market means
+
+In everyday speech a **market** is a place. In economics it is not a place at all but an
+**arrangement** — any set of contacts through which buyers and sellers of a good are in touch with
+one another to fix a price and trade. The buyers and sellers may never meet: a share is traded
+between two people in different cities through a screen, yet they form one market. Three things
+define a market in the economic sense.
+
+- **A commodity or service** that is bought and sold.
+- **Buyers and sellers** who are in contact with one another.
+- **A price** at which the trade takes place, tending toward one price for the whole market.
+
+The last point is the **"one market, one price"** idea: within a single market, competition pushes
+the price of a good toward a single ruling level, because no buyer will pay more than the going price
+and no seller will accept less. A wide gap between two prices for the same good is a sign of two
+separate markets, not one.
+
+<Callout kind="pointer">
+  <p>
+    The favourite opening MCQ asks what a market "means" in economics. The right answer is the
+    <strong>arrangement or contact between buyers and sellers</strong>, not "a place where goods are
+    sold". The trap option is the geographical one — a physical marketplace. Modern examples (online
+    marketplaces, stock exchanges) exist precisely to show that no single location is needed.
+  </p>
+</Callout>
+
+## 2. Classifying markets by area, time and competition
+
+Markets are classified on three different bases, and a question can ask about any one of them.
+
+**By area (geographical extent).** How wide the contact between buyers and sellers reaches.
+
+- **Local market** — for perishable or bulky goods sold near where they are made (fresh vegetables,
+  bricks, milk).
+- **Regional / national market** — for goods traded across a country (cars, branded clothing).
+- **International (world) market** — for goods traded across the globe (gold, crude oil, wheat).
+
+**By time.** How long a period is allowed for supply to adjust — the Marshallian time element,
+developed fully in Section 4: the very short (market) period, the short period, and the long period.
+
+**By competition (the market structure).** The number of sellers, the nature of the product and the
+freedom of entry together fix the **degree of competition**, and this is the classification the rest
+of the chapter uses. It yields the **four market forms**:
+
+- **Perfect competition** — very many sellers, an identical product, free entry.
+- **Monopoly** — a single seller, no close substitute, blocked entry.
+- **Monopolistic competition** — many sellers, a differentiated product, free entry.
+- **Oligopoly** — a few interdependent sellers, identical or differentiated product, some barriers to
+  entry.
+
+<Callout kind="mistake">
+  <p>
+    "Perfect competition" and "monopoly" are the two theoretical extremes; the two forms in between —
+    monopolistic competition and oligopoly — are together called <strong>imperfect competition</strong>.
+    A common slip is to treat "imperfect competition" as a fifth, separate market form. It is not: it
+    is the umbrella name for the middle two. Real markets are almost always one of the two imperfect
+    forms.
+  </p>
+</Callout>
+
+## 3. The four market forms at a glance
+
+The whole of price-output theory rests on four sets of features. Learn this table before anything
+else in the chapter, because at least one MCQ turns on a single cell of it.
+
+| Feature | Perfect competition | Monopoly | Monopolistic competition | Oligopoly |
+|---|---|---|---|---|
+| Number of sellers | very large | one | many | a few |
+| Nature of product | homogeneous (identical) | single product, no close substitute | differentiated (close but not identical) | identical **or** differentiated |
+| Entry and exit | free | blocked | free | barriers exist |
+| Control over price | none — a **price taker** | high — a **price maker** | some (limited by rivals) | interdependent; some control |
+| Demand curve for the firm | horizontal (perfectly elastic) | downward-sloping (fairly inelastic) | downward-sloping but highly elastic | kinked / indeterminate |
+| AR and MR | AR = MR (both horizontal, AR = MR = price) | MR below AR (both fall) | MR below AR (both fall) | MR below AR, with a gap at the kink |
+| Examples | farm produce in a wholesale mandi | a public water or electricity utility | restaurants, toothpaste, salons | telecom, cement, passenger cars |
+
+Two columns do the heavy lifting. **Control over price** separates the price **taker** (perfect
+competition, where the firm must accept the ruling price) from the price **maker** (monopoly, where
+the firm sets the price). And **AR versus MR** is the difference that drives every equilibrium
+diagram: only under perfect competition does average revenue equal marginal revenue, because only
+there is the firm's demand curve horizontal.
+
+<Callout kind="pointer">
+  <p>
+    If you memorise one row, make it <strong>number of sellers</strong>: one → monopoly; a few →
+    oligopoly; many with a differentiated product → monopolistic competition; very many with an
+    identical product → perfect competition. A large share of recognition questions is answered from
+    this row alone. The <strong>product</strong> row then separates the two "many-seller" forms:
+    identical → perfect competition, differentiated → monopolistic competition.
+  </p>
+</Callout>
+
+## 4. Firm, industry and the time element
+
+Two ideas set the stage for the price theory that follows.
+
+**Firm and industry.** A **firm** is a single producing unit — one factory or business that makes a
+good. An **industry** is the **group of all firms** producing the same or a closely similar good. In
+perfect competition the distinction is sharp: the industry sets the price (through total demand and
+total supply), and each tiny firm takes that price as given. Under monopoly the firm **is** the whole
+industry, because there is only one seller — so there is no separate industry price to take.
+
+**The time element (Marshall).** Alfred Marshall stressed that the answer to "how is price
+determined?" depends on the **length of time** allowed for supply to respond. He divided time into
+three periods.
+
+- **Very short period (the market period).** Supply is **fixed** — output cannot be changed at all,
+  because there is no time to produce more. Price is determined mainly by **demand** against a given
+  stock (the price of fish already landed at a morning market).
+- **Short period.** Firms can vary output by changing the **variable** factors (more labour, more
+  raw material) but **not** the fixed plant. Supply is somewhat responsive, so both demand and supply
+  share in fixing the price.
+- **Long period.** **All** factors are variable — firms can build new plant and new firms can enter
+  or leave. Supply is fully responsive, and price is governed mainly by the **conditions of supply**
+  (cost of production).
+
+<Callout kind="pointer">
+  <p>
+    The reliable exam result is the <strong>role of demand and supply across the periods</strong>: in
+    the market period <strong>demand</strong> is the dominant force (supply is fixed); in the long
+    period <strong>supply / cost of production</strong> dominates (supply is fully adjustable); the
+    short period is the balanced case. "Price is determined by demand alone" points to the market
+    period; "price tends to equal cost of production" points to the long period.
+  </p>
+</Callout>
+
+## 5. Demand, supply and the equilibrium price
+
+Before comparing market forms, fix the tool used in all of them: the **equilibrium** of demand and
+supply. Market **demand** slopes downward (more is bought at a lower price); market **supply** slopes
+upward (more is offered at a higher price). The **equilibrium price** is the one at which the two are
+equal — the quantity buyers want to buy exactly matches the quantity sellers want to sell, and the
+market clears with no surplus and no shortage.
+
+<div class="formula">At equilibrium: quantity demanded = quantity supplied</div>
+
+To find it from equations, set the demand quantity equal to the supply quantity, solve for the
+**equilibrium price**, then substitute that price back into either equation to get the **equilibrium
+quantity**.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — Qd = 240 − 5P and Qs = 3P − 80</div>
+  Set demand equal to supply: 240 − 5P = 3P − 80<br />
+  240 + 80 = 3P + 5P → 320 = 8P → <strong>equilibrium price P = ₹ 40</strong><br />
+  Quantity from demand: 240 − 5(40) = 240 − 200 = <strong>40 units</strong><br />
+  Check in supply: 3(40) − 80 = 120 − 80 = 40 ✓ — both sides give the same quantity, which is the
+  proof that the price is right.
+</div>
+
+Away from equilibrium the market corrects itself. **Above** the equilibrium price, quantity supplied
+exceeds quantity demanded — a **surplus** — and sellers cut the price to clear stock. **Below** the
+equilibrium price, quantity demanded exceeds quantity supplied — a **shortage** — and competing
+buyers bid the price up. Either way the price is pushed back toward the equilibrium.
+
+## 6. Shifts in demand and supply
+
+Equilibrium moves when a whole curve shifts. These four results are worth holding ready, because
+"what happens to price and quantity if …" is a stock question.
+
+| The change | Effect on equilibrium **price** | Effect on equilibrium **quantity** |
+|---|---|---|
+| **Demand increases** (curve shifts right) | rises | rises |
+| **Demand decreases** (curve shifts left) | falls | falls |
+| **Supply increases** (curve shifts right) | falls | rises |
+| **Supply decreases** (curve shifts left) | rises | falls |
+
+The pattern is easy to hold: a **demand** shift moves price and quantity in the **same** direction;
+a **supply** shift moves them in **opposite** directions.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — a supply increase, computed</div>
+  Start from Qd = 200 − 4P and Qs = 6P − 100. Old equilibrium: 200 − 4P = 6P − 100 → 300 = 10P →
+  P = ₹ 30, quantity = 80 units.<br />
+  Supply now rises by 60 units at every price, so the new supply is Qs = 6P − 40.<br />
+  New equilibrium: 200 − 4P = 6P − 40 → 240 = 10P → <strong>P = ₹ 24</strong>, down from ₹ 30.<br />
+  New quantity: 6(24) − 40 = <strong>104 units</strong>, up from 80 — the price fell and the quantity
+  rose, exactly what a rightward supply shift does.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    When <strong>both</strong> curves shift at once, only one of price and quantity is certain and the
+    other depends on the sizes of the shifts. If demand and supply both increase, quantity definitely
+    <strong>rises</strong> but the price could move either way. A question that asks for a definite
+    effect on the ambiguous variable is a trap — read whether it wants the certain effect (usually
+    quantity) or asserts a certain effect on the uncertain one.
+  </p>
+</Callout>
+
+## 7. Revenue: total, average and marginal
+
+To decide how much to produce, a firm compares what each unit adds to its **revenue** with what it
+adds to its **cost**. Three revenue ideas are needed.
+
+- **Total revenue (TR)** — the whole receipts from selling a quantity: price times quantity.
+- **Average revenue (AR)** — revenue per unit sold, which is simply the **price**.
+- **Marginal revenue (MR)** — the addition to total revenue from selling **one more** unit.
+
+<div class="formula">TR = price × quantity sold</div>
+<div class="formula">AR = TR ÷ quantity = price (so the AR curve is the firm's demand curve)</div>
+<div class="formula">MR of the nth unit = TR of n units − TR of (n − 1) units</div>
+
+Because average revenue equals price at every output, **the AR curve is the firm's demand curve**.
+The shape of AR therefore decides everything: horizontal under perfect competition, downward-sloping
+everywhere else.
+
+**The AR–MR relationship.** When AR (price) is the **same** at every output — a horizontal demand
+curve — each extra unit sells at that unchanged price, so **MR equals AR**. When AR **falls** as more
+is sold — a downward-sloping demand curve — selling one more unit means cutting the price on **all**
+the units, so the extra revenue is **less** than the price of that unit: **MR lies below AR**, and MR
+falls faster than AR.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — TR, AR and MR from a monopolist's price schedule</div>
+  Price schedule (AR): at 1 unit ₹ 20, 2 units ₹ 18, 3 units ₹ 16, 4 units ₹ 14, 5 units ₹ 12,
+  6 units ₹ 10.<br />
+  TR = price × quantity: 20, 36, 48, 56, 60, 60.<br />
+  MR = change in TR: 20, 16, 12, 8, 4, 0.<br />
+  Notice MR (falling by 4 each step) drops <strong>twice as fast</strong> as AR (falling by 2), and MR
+  is below AR at every output beyond the first — the signature of a downward-sloping demand curve. TR
+  is greatest (₹ 60) where MR reaches <strong>zero</strong>.
+</div>
+
+<Callout kind="mistake">
+  <p>
+    Average revenue and marginal revenue are not the same thing once the demand curve slopes down. AR
+    is the <strong>price</strong> of the unit; MR is the <strong>extra total revenue</strong> from
+    selling it, which is smaller because the price is cut on every earlier unit too. Only under
+    <strong>perfect competition</strong>, where the price does not change with the firm's output, do
+    AR and MR coincide. Reading "AR = MR" as a universal rule is a classic error.
+  </p>
+</Callout>
+
+## 8. The profit-maximising rule MR equals MC
+
+Every firm, in every market form, chooses the output that makes its profit largest, and the rule is
+the same everywhere: **produce the output at which marginal revenue equals marginal cost, with
+marginal cost rising through marginal revenue at that point.**
+
+<div class="formula">Profit is maximised where MR = MC (and MC is rising)</div>
+<div class="formula">Profit = total revenue − total cost = TR − TC</div>
+
+The logic is simple. While MR is **above** MC, one more unit adds more to revenue than to cost, so
+profit grows — the firm should expand. While MR is **below** MC, the last unit costs more than it
+earns, so profit shrinks — the firm should cut back. Profit is largest at the output where the two
+just meet. The second condition — MC **rising** as it cuts MR from below — makes sure the point is a
+maximum, not a minimum.
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — MR = MC with a marginal-cost schedule</div>
+  Marginal cost of successive units: 1st ₹ 12, 2nd ₹ 14, 3rd ₹ 16, 4th ₹ 18, 5th ₹ 20.<br />
+  Marginal revenue is constant at ₹ 16 (a price-taking firm).<br />
+  Produce every unit whose MC does not exceed MR: units 1, 2 and 3 (MC ₹ 12, ₹ 14, ₹ 16 ≤ ₹ 16); the
+  4th unit costs ₹ 18 &gt; ₹ 16 and would cut profit.<br />
+  Equilibrium output = <strong>3 units</strong>, where MR = MC = ₹ 16 and MC is rising.
+</div>
+
+## 9. Perfect competition
+
+**Perfect competition** is the market of very many sellers offering an **identical** product, with
+**free entry and exit** and full knowledge among buyers and sellers. No single firm is large enough
+to affect the price; each is a **price taker** that accepts the price set by the whole industry's
+demand and supply.
+
+Because the firm can sell any quantity it likes at the ruling price but nothing at all above it, its
+**demand curve is horizontal** (perfectly elastic) at that price. With the price unchanged at every
+output, average revenue equals marginal revenue equals price:
+
+<div class="formula">Perfect competition: P = AR = MR (a horizontal demand curve for the firm)</div>
+
+**Short-run equilibrium.** In the short run the firm produces where **MR = MC**, i.e. where price
+equals marginal cost. Whether it earns a profit depends on how the price compares with average cost:
+
+- **Supernormal profit** if price (AR) is **above** average cost — TR exceeds TC.
+- **Normal profit** if price **equals** average cost — TR equals TC (normal profit is the minimum
+  return that keeps the firm in business and is counted inside cost).
+- **Loss** if price is **below** average cost — TR falls short of TC (the firm stays open only while
+  price covers its average variable cost).
+
+**Long-run equilibrium.** Free entry and exit is the key. If firms are earning supernormal profit,
+new firms enter, supply rises and the price falls; if firms are making losses, some leave, supply
+falls and the price rises. Entry and exit stop only when firms earn **exactly normal profit**. At
+that point the price has been driven down to the **minimum of the long-run average cost curve**:
+
+<div class="formula">Perfect competition long run: P = AR = MR = MC = minimum LAC → only normal profit</div>
+
+<Callout kind="pointer">
+  <p>
+    The two most-tested facts about perfect competition are that the firm is a <strong>price
+    taker</strong> with a <strong>horizontal demand curve where P = AR = MR</strong>, and that in the
+    <strong>long run it earns only normal profit</strong> at the point where <strong>price equals the
+    minimum of average cost</strong>. Supernormal profit is a short-run possibility only; free entry
+    competes it away in the long run.
+  </p>
+</Callout>
+
+## 10. Monopoly and price discrimination
+
+**Monopoly** is the market of a **single seller** of a product with **no close substitute** and
+**blocked entry** — no rival can come in. The monopolist is the whole industry, and is a **price
+maker**: it can set the price, but only by choosing a point on the market demand curve, because a
+higher price still means fewer units sold.
+
+The firm's demand curve is therefore the **downward-sloping** market demand curve. As Section 7
+showed, this makes **MR lie below AR**, both falling as output rises. The monopolist maximises profit
+at the output where **MR = MC**, then charges the **price read off the demand (AR) curve** above that
+output — so the price is higher than marginal revenue and higher than marginal cost.
+
+Because entry is blocked, a monopolist can earn **supernormal profit in the long run as well as the
+short run** — there is no entry of new firms to compete it away. (A monopolist can also make a loss
+in the short run; it is not guaranteed a profit, but if it profits, nothing erodes that profit.)
+
+<div class="working-note">
+  <div class="working-note-label">Worked line by line — monopoly equilibrium and profit</div>
+  Take the demand (AR) schedule of Section 7: AR of ₹ 20, 18, 16, 14, 12, 10 at 1–6 units, giving
+  MR of 20, 16, 12, 8, 4, 0.<br />
+  Marginal cost is constant at ₹ 8 a unit, so total cost = ₹ 8 × output.<br />
+  MR = MC at the <strong>4th unit</strong> (MR ₹ 8 = MC ₹ 8); price read off AR at 4 units =
+  <strong>₹ 14</strong>.<br />
+  Profit = TR − TC = (14 × 4) − (8 × 4) = 56 − 32 = <strong>₹ 24</strong>. Price ₹ 14 is above both MR
+  and MC — the mark of monopoly.
+</div>
+
+**Price discrimination.** A monopolist can sometimes charge **different prices** for the **same
+good** to different buyers or in different markets. Economists (following Pigou) name three
+**degrees**:
+
+- **First degree (perfect) price discrimination** — a different price for **every unit**, equal to
+  the most each buyer will pay, so the whole consumer surplus is taken.
+- **Second degree** — different prices for **blocks of quantity** (a lower rate on later units), as
+  with slab tariffs for electricity.
+- **Third degree** — a different price in each **separate market or group** of buyers (student versus
+  regular fares), the most common form.
+
+Price discrimination is only possible when three **conditions** hold: (i) the seller has **monopoly
+power** over the price; (ii) the markets can be **kept separate** so the good cannot be resold from
+the cheap market into the dear one; and (iii) the buyers have **different elasticities of demand**,
+so it pays to charge the **higher price in the market with the more inelastic demand**.
+
+<Callout kind="mistake">
+  <p>
+    Under monopoly the price is <strong>not</strong> equal to marginal revenue. Equilibrium is where
+    MR = MC, but the price is then taken from the higher AR (demand) curve, so
+    <strong>price &gt; MR = MC</strong>. Writing "P = MR" for a monopolist imports a perfect-competition
+    result into the wrong market. For price discrimination, the higher price always goes to the
+    <strong>more inelastic</strong> market, not the more elastic one.
+  </p>
+</Callout>
+
+## 11. Monopolistic competition
+
+**Monopolistic competition** is the common real-world market of **many sellers** offering a
+**differentiated** product — close substitutes that are not identical (different brands of soap,
+toothpaste or restaurants). Entry and exit are **free**, as under perfect competition, but each
+firm's product is a little different, so each has a **small amount of price control**.
+
+Two features mark this form:
+
+- **Product differentiation.** Each firm's product is distinguished by brand, quality, packaging or
+  location, giving the firm its own set of loyal buyers. Its demand curve slopes **downward** (it can
+  raise price and keep some buyers) but is **highly elastic** (raise price too far and buyers switch
+  to a close substitute).
+- **Selling costs.** Because products are differentiated, firms spend on **advertising and
+  salesmanship** to shift and steepen their demand curves — an expense that does not exist under
+  perfect competition, where the product is identical and needs no promotion.
+
+**Short-run equilibrium** is like monopoly: the firm produces where **MR = MC** and can earn
+**supernormal profit** (or a loss) because its product is distinctive. **Long-run equilibrium** is
+like perfect competition: **free entry** competes supernormal profit away, so each firm ends with
+**only normal profit** (AR = AC). But the tangency of the downward-sloping demand curve to average
+cost happens to the **left of minimum average cost**, so the firm produces **less than the
+cost-minimising output** — the celebrated result of **excess capacity**.
+
+<Callout kind="pointer">
+  <p>
+    The signature long-run result of monopolistic competition is <strong>normal profit with excess
+    capacity</strong>: free entry erases supernormal profit (as in perfect competition), but because
+    the demand curve slopes down, its tangency with average cost is to the left of minimum AC, so the
+    firm operates below full capacity. Contrast with perfect competition, where the long-run firm sits
+    exactly at minimum average cost with no excess capacity.
+  </p>
+</Callout>
+
+## 12. Oligopoly and the kinked demand curve
+
+**Oligopoly** is the market of a **few** sellers, each large enough that its actions matter to the
+others — so the defining feature is **interdependence**. Each firm must guess how its rivals will
+react before it changes price or output. The product may be identical (cement, steel — "pure"
+oligopoly) or differentiated (cars, phones — "differentiated" oligopoly), and there are usually
+**barriers to entry**.
+
+**The kinked demand curve and price rigidity.** The most-tested oligopoly model (Sweezy's) explains
+why oligopoly prices tend to be **sticky** — they change less often than costs or demand would
+suggest. Each firm believes its rivals react **asymmetrically** to its price moves:
+
+- If the firm **raises** its price, rivals **do not follow**, so it loses many customers to them —
+  demand is **elastic** above the current price (the flat upper segment).
+- If the firm **cuts** its price, rivals **match the cut** to protect their share, so it gains few
+  extra customers — demand is **inelastic** below the current price (the steep lower segment).
+
+The demand curve therefore has a **kink** at the current price, and the marginal revenue curve has a
+**vertical gap** below the kink. Because MC can rise or fall within that gap without moving the point
+where MR = MC, the firm keeps the **same price** — the model's explanation of price rigidity.
+
+**Collusion and cartels.** Interdependence is uncomfortable, so oligopolists often **collude** —
+agree openly or tacitly on price or output to act like a single monopoly and avoid ruinous price
+wars. A formal agreement, often to fix price and share the market, is a **cartel** (OPEC is the
+textbook example). Collusion is unstable, because each member is tempted to cheat by secretly cutting
+price to win extra sales.
+
+<Callout kind="pointer">
+  <p>
+    Two oligopoly facts are near-certain exam material: <strong>interdependence</strong> is the
+    defining feature (each firm watches its rivals), and the <strong>kinked demand curve</strong>
+    (elastic above the ruling price, inelastic below it, with a gap in MR) explains <strong>price
+    rigidity</strong>. A formal collusive agreement to fix price and share the market is a
+    <strong>cartel</strong>.
+  </p>
+</Callout>
+
+## 13. Negative marking and when to leave a question
+
+Paper 4 is entirely objective and carries **negative marking of 0.25 mark for each wrong answer**. A
+correct answer earns 1 mark, a wrong one costs 0.25, and an unattempted one scores 0.
+
+The arithmetic favours informed attempts. A blind guess among four options is right one time in four:
+across four such guesses you expect 1 mark gained and 3 × 0.25 = 0.75 lost, a net of +0.25 for four
+questions — barely positive. What tips the balance is **elimination**. Rule out one option and a
+guess among three is worth about 0.5 marks per four attempts; rule out two and the last guess is
+worth about 1.5 marks per four.
+
+In this chapter elimination is easy, because the distractors are built from named errors — a price
+taker labelled a price maker, "P = MR" applied to a monopolist, excess capacity attributed to perfect
+competition, the higher discriminating price put in the elastic market. A sensible rule: **answer
+when you can rule out at least one option; consider leaving it only when you cannot narrow the field
+at all.** The marks at stake either way are small, so a question you can actually finish is worth more
+than either choice.
+
+## Fully worked examples
+
+<Callout kind="example" label="Worked example 1 — name the market form from its features (easy)">
+  <p>
+    A market has a very large number of sellers, all selling an identical product, with free entry and
+    exit, and no single firm able to influence the price. (a) Name the market form. (b) What kind of
+    demand curve does the individual firm face, and what is the relationship between its AR and MR?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) match the features</div>
+    Very many sellers + identical product + free entry + no price control = <strong>perfect
+    competition</strong>. The firm is a price taker.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the revenue curves</div>
+    Because the firm can sell any amount at the ruling price, its demand curve is <strong>horizontal
+    (perfectly elastic)</strong>, and price does not change with output, so
+    <strong>AR = MR = price</strong>.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 2 — build the TR, AR and MR schedules (easy-moderate)">
+  <p>
+    A firm faces the price schedule: 1 unit ₹ 20, 2 units ₹ 18, 3 units ₹ 16, 4 units ₹ 14. (a) Find
+    total revenue at each output. (b) Find the marginal revenue of the 2nd, 3rd and 4th units.
+    (c) What does the fact that MR is below AR tell you about the market?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) TR = price × quantity</div>
+    TR: 20 × 1 = 20; 18 × 2 = 36; 16 × 3 = 48; 14 × 4 = 56.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) MR = change in TR</div>
+    MR of 2nd unit = 36 − 20 = <strong>16</strong>; 3rd unit = 48 − 36 = <strong>12</strong>; 4th
+    unit = 56 − 48 = <strong>8</strong>. Each MR is below the price (AR) of its unit.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) read the market form</div>
+    AR falls as output rises and MR lies below AR, so the demand curve slopes downward — this is
+    <strong>not</strong> perfect competition. It is a monopoly or an imperfectly competitive firm.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 3 — monopoly equilibrium and profit (moderate)">
+  <p>
+    A monopolist's demand (AR) schedule is ₹ 20, 18, 16, 14, 12, 10 at 1 to 6 units. Marginal cost is
+    constant at ₹ 8 per unit and there is no fixed cost. Find (a) the marginal revenue schedule,
+    (b) the profit-maximising output and price, and (c) the maximum profit.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) TR then MR</div>
+    TR = 20, 36, 48, 56, 60, 60. MR = 20, 16, 12, 8, 4, 0.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) apply MR = MC</div>
+    MC is ₹ 8. MR falls to ₹ 8 at the <strong>4th unit</strong>. So output = 4 units and the price is
+    the AR at 4 units = <strong>₹ 14</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) profit = TR − TC</div>
+    TR at 4 units = 14 × 4 = ₹ 56. TC = 8 × 4 = ₹ 32. Profit = 56 − 32 = <strong>₹ 24</strong>. Note
+    the price ₹ 14 sits above MR = MC = ₹ 8, the hallmark of monopoly.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 4 — perfect-competition firm equilibrium (moderate)">
+  <p>
+    The ruling market price for a perfectly competitive firm is ₹ 16. The marginal cost of successive
+    units is ₹ 10, 12, 14, 16, 18. (a) State the firm's MR. (b) Find the profit-maximising output.
+    (c) If average cost at that output is ₹ 13, find the profit per unit and total profit.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) price taker, so MR = price</div>
+    Under perfect competition P = AR = MR, so MR = <strong>₹ 16</strong> at every unit.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) MR = MC with MC rising</div>
+    Produce each unit whose MC ≤ MR (₹ 16): units at MC ₹ 10, 12, 14, 16 all qualify; the next unit's
+    MC ₹ 18 exceeds ₹ 16. Output = <strong>4 units</strong>, where MC = MR = ₹ 16.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — (c) profit from AR and AC</div>
+    Profit per unit = AR − AC = 16 − 13 = ₹ 3. Total profit = 3 × 4 = <strong>₹ 12</strong> — a
+    short-run supernormal profit, since price exceeds average cost.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 5 — perfect competition in the long run (moderate)">
+  <p>
+    In a perfectly competitive industry firms are currently earning supernormal profit. (a) What
+    process removes that profit in the long run? (b) State the long-run equilibrium condition of the
+    firm, and the level of profit it ends with.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) free entry</div>
+    Supernormal profit attracts <strong>new firms</strong> into the industry. Their output raises
+    market supply, which drives the price down, until the profit is competed away.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the long-run condition</div>
+    Entry stops when firms earn only <strong>normal profit</strong>. This happens where
+    <strong>P = AR = MR = MC = minimum long-run average cost</strong>. At that point AR = AC, so TR =
+    TC and no supernormal profit remains — with no excess capacity, unlike monopolistic competition.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 6 — equilibrium price, quantity, and a shift (moderate)">
+  <p>
+    A competitive market has Qd = 240 − 5P and Qs = 3P − 80. (a) Find the equilibrium price and
+    quantity. (b) A better technology raises supply to Qs = 3P − 40. Find the new equilibrium and
+    describe the change.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) set demand equal to supply</div>
+    240 − 5P = 3P − 80 → 320 = 8P → <strong>P = ₹ 40</strong>; quantity = 240 − 5(40) =
+    <strong>40 units</strong>. Check: 3(40) − 80 = 40 ✓.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) after the supply increase</div>
+    240 − 5P = 3P − 40 → 280 = 8P → <strong>P = ₹ 35</strong>; quantity = 240 − 5(35) =
+    <strong>65 units</strong>. The supply rose, so the price <strong>fell</strong> (₹ 40 → ₹ 35) and
+    the quantity <strong>rose</strong> (40 → 65) — the standard result of a rightward supply shift.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 7 — profit from total revenue and total cost (easy-moderate)">
+  <p>
+    At its profit-maximising output a firm sells 50 units at ₹ 24 each, and its average cost is ₹ 18.
+    (a) Find total revenue and total cost. (b) Find the total profit and the profit per unit.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) TR and TC</div>
+    TR = price × quantity = 24 × 50 = ₹ 1,200. TC = average cost × quantity = 18 × 50 = ₹ 900.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) profit</div>
+    Profit = TR − TC = 1,200 − 900 = <strong>₹ 300</strong>. Profit per unit = AR − AC = 24 − 18 =
+    <strong>₹ 6</strong> (and 6 × 50 = ₹ 300, the same answer).
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 8 — the kinked demand curve and price rigidity (moderate-hard)">
+  <p>
+    An oligopolist finds that if it raises its price above ₹ 50 its rivals hold their prices, but if it
+    cuts its price below ₹ 50 its rivals match the cut. (a) Describe the elasticity of demand above and
+    below ₹ 50. (b) Explain why the firm keeps its price at ₹ 50 even when its marginal cost changes a
+    little.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) two segments of demand</div>
+    Above ₹ 50 the firm loses many buyers to rivals who did not follow, so demand is
+    <strong>elastic</strong> (flat). Below ₹ 50 rivals match the cut, so the firm gains few extra
+    buyers — demand is <strong>inelastic</strong> (steep). The demand curve is <strong>kinked</strong>
+    at ₹ 50.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) the gap in MR gives price rigidity</div>
+    The kink creates a <strong>vertical gap</strong> in the marginal-revenue curve below ₹ 50. Small
+    rises or falls in marginal cost stay inside that gap, so the output where MR = MC does not move,
+    and the firm holds its price at <strong>₹ 50</strong> — the kinked-demand explanation of
+    <strong>price rigidity</strong>.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Worked example 9 — price discrimination and elasticity (hard)">
+  <p>
+    A monopolist can keep two markets separate and sells the same good in both. Market A has inelastic
+    demand; market B has elastic demand. (a) State the three conditions that make price discrimination
+    possible. (b) In which market should the monopolist charge the higher price, and why?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — (a) the three conditions</div>
+    (i) The seller has <strong>monopoly power</strong> over price; (ii) the markets can be
+    <strong>kept separate</strong>, so the good cannot be resold from the cheap market to the dear one;
+    (iii) the two markets have <strong>different elasticities</strong> of demand.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — (b) higher price in the inelastic market</div>
+    The higher price goes to <strong>market A, the inelastic market</strong>. Buyers there respond
+    little to a higher price, so the seller can raise price without losing much quantity, while in the
+    elastic market B a lower price is needed to hold sales. Charging more where demand is inelastic
+    raises total revenue and profit.
+  </div>
+</Callout>
+
+## Common mistakes and examiner traps
+
+- **Market means a place.** In economics a market is the **arrangement or contact** between buyers and
+  sellers, not a physical location. The geographical option is the trap.
+- **Price taker versus price maker.** A perfectly competitive firm is a **price taker** (accepts the
+  ruling price); a monopolist is a **price maker** (sets the price). Swapping the two labels is a
+  stock error.
+- **AR = MR everywhere.** AR equals MR **only** under perfect competition (a horizontal demand curve).
+  Wherever demand slopes down — monopoly, monopolistic competition, oligopoly — **MR lies below AR**.
+- **P = MR for a monopolist.** A monopolist's equilibrium is at MR = MC, but the **price is higher**,
+  read off the AR (demand) curve: **P &gt; MR = MC**. Price never equals MR when demand slopes down.
+- **Long-run profit confusion.** Under **perfect competition and monopolistic competition** the
+  long-run firm earns only **normal profit** (free entry). Under **monopoly** supernormal profit can
+  **persist**, because entry is blocked.
+- **Excess capacity placed wrongly.** **Excess capacity** is the long-run result of **monopolistic
+  competition** (tangency left of minimum AC), not of perfect competition, where the long-run firm
+  sits at minimum average cost.
+- **Discriminating price in the wrong market.** The **higher** price goes to the **more inelastic**
+  market; the lower price to the elastic one. Reversing this loses the mark.
+- **Kinked demand elasticity reversed.** On the kinked demand curve, demand is **elastic above** the
+  ruling price and **inelastic below** it — the gap in MR at the kink is what makes the price rigid.
+- **Imperfect competition as a fifth form.** "Imperfect competition" is the umbrella for
+  **monopolistic competition and oligopoly**, not a separate market form.
+- **Time element muddled.** In the **market period** supply is fixed and **demand** rules the price;
+  in the **long period** all factors vary and **cost of production (supply)** rules the price.
+
+## One-page revision summary
+
+**Market** = an arrangement/contact between buyers and sellers of a good, tending to one price — not a
+place. Classified by **area** (local/national/international), **time** (market/short/long period), and
+**competition** (the four market forms).
+
+**Four market forms.** Perfect competition (very many sellers, identical product, free entry, price
+taker); monopoly (one seller, no substitute, blocked entry, price maker); monopolistic competition
+(many sellers, differentiated product, free entry); oligopoly (few interdependent sellers). The
+middle two together = **imperfect competition**.
+
+**Firm and industry.** A firm is one producing unit; an industry is all firms making the same good.
+Under monopoly the firm is the industry.
+
+**Marshall's time element.** Market period — supply fixed, **demand** dominant. Short period — some
+supply response, both matter. Long period — all factors variable, **supply / cost of production**
+dominant.
+
+**Equilibrium price:** set quantity demanded = quantity supplied, solve for **price**, substitute for
+**quantity**. Above equilibrium → surplus (price falls); below → shortage (price rises). Demand
+increase → price and quantity rise; supply increase → price falls, quantity rises.
+
+<div class="formula">TR = P × Q · AR = TR ÷ Q = price · MR = ΔTR ÷ ΔQ · profit = TR − TC</div>
+
+**AR–MR relationship.** Horizontal demand (perfect competition) → AR = MR = price. Downward demand
+(all other forms) → **MR below AR**, MR falling faster; TR is greatest where **MR = 0**.
+
+<div class="formula">Profit-maximising rule (all markets): MR = MC, with MC rising through MR</div>
+
+**Perfect competition.** Firm is a **price taker**, horizontal demand, **P = AR = MR**. Short run:
+supernormal profit, normal profit, or loss (MR = MC). Long run: free entry drives price to **minimum
+LAC**, only **normal profit**, no excess capacity.
+
+**Monopoly.** Single seller, **price maker**, downward AR with **MR below AR**. Equilibrium at
+MR = MC, price read off AR, so **P &gt; MR = MC**. Supernormal profit can **persist** (blocked entry).
+**Price discrimination**: needs monopoly power, separable markets, different elasticities; higher
+price in the **inelastic** market. Degrees: first (each unit), second (blocks), third (separate
+markets).
+
+**Monopolistic competition.** Many sellers, **product differentiation**, **selling costs**
+(advertising), downward but **elastic** demand. Short run: supernormal profit possible. Long run: free
+entry → **normal profit with excess capacity** (tangency left of minimum AC).
+
+**Oligopoly.** A few **interdependent** sellers. The **kinked demand curve** — elastic above the
+ruling price, inelastic below — has a gap in MR that gives **price rigidity**. Firms may **collude**;
+a formal price-and-share agreement is a **cartel**.
+
+**Marking:** 1 mark correct, −0.25 wrong, 0 unattempted. Eliminate at least one option, then attempt.
