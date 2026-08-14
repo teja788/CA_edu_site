@@ -29,6 +29,7 @@ practiceHref: '/practice/quiz/?level=foundation&paper=business-laws&chapter=indi
 practiceLabel: 'Practice this chapter'
 ---
 import Callout from '../../../components/Callout.astro';
+import Checkpoint from '../../../components/Checkpoint.astro';
 
 At the chai stall outside your coaching centre, you tell your friend you will buy him a cutting
 chai tomorrow. Tomorrow you forget. Nothing happens — no notice, no court, no damages. On the same
@@ -83,6 +84,25 @@ is that ladder applied to different facts.
     (Amendment) Act 2018. Answer from the SM edition notified for your attempt where it differs.
   </p>
 </Callout>
+
+<Checkpoint
+  variant="prequestion"
+  question="Both promises above were broken — the chai and the 200 cups a day. Only one of them can be sued on. Before you read the section 2 ladder: what is missing from the chai promise, and which words of section 2(h) does it fail?"
+>
+  <p>
+    What is missing is the <strong>intention to create legal relations</strong>. The Act never says
+    so in words, but it is read into the requirement of an agreement, and in social and domestic
+    arrangements that intention is <em>presumed absent</em> — the point of <em>Balfour v Balfour</em>.
+    In commercial arrangements it is presumed present, which is why the stall owner's supply promise
+    is a different animal.
+  </p>
+  <p>
+    The words it fails are <strong>“enforceable by law”</strong> in s. 2(h). The chai promise still
+    climbs the first steps of the ladder — there is a proposal and an acceptance, so there is an
+    agreement under s. 2(e). It simply never reaches the top step. That is Salmond's line in
+    practice: all contracts are agreements, but all agreements are not contracts.
+  </p>
+</Checkpoint>
 
 ## 1. Agreement, contract and the section 2 ladder
 
@@ -394,6 +414,23 @@ performance, **prior communication is not required** — performance is the comm
   </p>
 </Callout>
 
+<Checkpoint
+  variant="checkpoint"
+  label="Checkpoint — offer and acceptance"
+  items={[
+    {
+      q: "Ravi's written offer says “reply by telegram”. Meera instead accepts by registered post. The letter reaches Ravi, who reads it and says nothing for a fortnight. Is there a contract?",
+      a: "Yes. Under the tail of s. 7 the proposer may, within a reasonable time of receiving a deviant acceptance, insist that his proposal be accepted in the prescribed manner. Ravi did not — and by staying silent he accepts the acceptance.",
+      why: "A prescribed manner is not mandatory in Indian law, unlike the English rule. It is the proposer's silence that cures the deviation, so the marks are in naming who had to object and by when.",
+    },
+    {
+      q: "Ashok posts an offer. Bharti posts her acceptance on 11 March and it reaches Ashok on 15 March. On 13 March Bharti sends a telegram revoking her acceptance; it reaches Ashok on 14 March. Is Ashok able to hold Bharti to the sale?",
+      a: "No. Communication of an acceptance is complete as against the acceptor only when it comes to the proposer's knowledge — 15 March. Under s. 5 Bharti could revoke at any time before that moment, and her telegram arrived on 14 March. The revocation wins by a day.",
+      why: "The two deadlines run on different clocks: the offeror is bound the moment the acceptance is posted, the acceptor only when it is received. A revoking telegram travels through exactly that gap.",
+    },
+  ]}
+/>
+
 ## 7. Consideration — section 2(d) and its essentials
 
 Consideration is what makes a promise a bargain instead of a gift. **Section 2(d)**: "When, at the
@@ -616,6 +653,23 @@ estate remains liable for necessaries under section 68.
     recovers nothing else. Total money recovery: <strong>₹9,000</strong>.
   </div>
 </Callout>
+
+<Checkpoint
+  variant="checkpoint"
+  label="Checkpoint — capacity"
+  items={[
+    {
+      q: "A seventeen-year-old lies about his age, borrows ₹40,000, spends ₹25,000 of it and still holds the remaining ₹15,000. On turning eighteen he refuses to repay anything. What can the lender recover, and on what footing?",
+      a: "Only the ₹15,000 still traceable in his hands, and only as equitable restitution — never on the agreement, which was void ab initio under Mohori Bibee. The ₹25,000 already spent cannot be followed, no personal decree for repayment will be made, and the lie raises no estoppel against him.",
+      why: "Restitution restores what is still identifiable. Ordering him to repay money that is gone would be enforcing a void agreement under a different name, which is precisely what the rule exists to prevent.",
+    },
+    {
+      q: "A man who is generally of unsound mind signs a contract during a lucid interval. His neighbour, generally sane, signs one while heavily drunk. Which of the two contracts stands?",
+      a: "The first. Section 12 tests soundness at the time the contract is made: a person usually of unsound mind may contract during a lucid interval, and a person usually sane may not contract while his judgment is gone. Drunkenness sits expressly inside the s. 12 category.",
+      why: "Capacity is judged at the moment of signing, not by the person's general reputation — which is why the question is always set with the two facts crossed over.",
+    },
+  ]}
+/>
 
 ## 11. Free consent: coercion and undue influence — sections 15 and 16
 
@@ -1561,6 +1615,39 @@ recovered.
 - **Wager and contingent contract mixed up.** The event in a wager is the **whole** contract; in a
   contingent contract it is **collateral** to it. Insurance is contingent, not a wager, because of
   **insurable interest**.
+
+<Checkpoint
+  variant="recall"
+  question="Cover this page before you read the summary below. From memory, and out loud: the eight essentials of a valid contract under section 10, then the five things that destroy free consent under section 14 — and what each one does to the contract. Write down what you get before you reveal; the gaps are the list to revise tonight."
+>
+  <p><strong>Section 10 — the eight essentials.</strong></p>
+  <ul>
+    <li>Free consent</li>
+    <li>Competent parties</li>
+    <li>Lawful consideration</li>
+    <li>Lawful object</li>
+    <li>Not expressly declared void by the Act</li>
+    <li>Certainty of meaning</li>
+    <li>Possibility of performance</li>
+    <li>Legal formalities, where a law requires them</li>
+  </ul>
+  <p><strong>Section 14 — the five vitiating factors, and their effect.</strong></p>
+  <ul>
+    <li>Coercion (s. 15) — <strong>voidable</strong> at the option of the party coerced</li>
+    <li>Undue influence (s. 16) — <strong>voidable</strong>, and the court may set terms</li>
+    <li>Fraud (s. 17) — <strong>voidable</strong>, plus damages</li>
+    <li>Misrepresentation (s. 18) — <strong>voidable</strong>, no damages</li>
+    <li>
+      Mistake (ss. 20–22) — the odd one out: bilateral mistake of fact makes the agreement
+      <strong>void</strong> (s. 20), while unilateral mistake of fact and mistake of Indian law
+      leave it <strong>valid</strong> (ss. 21, 22). Mistake of foreign law counts as mistake of fact.
+    </li>
+  </ul>
+  <p>
+    If the effects are what you missed rather than the names, that is the more expensive gap — it is
+    the half of the answer that carries the marks in a scenario question.
+  </p>
+</Checkpoint>
 
 ## One-page revision summary
 

@@ -748,3 +748,173 @@ export const p3SafePathTo40 = [
     chapterSlugs: ['mathematics-of-finance'],
   },
 ];
+
+/**
+ * Every Foundation chapter as one flat list, in syllabus order, each entry
+ * carrying the paper it belongs to. Print sheets and any other route that
+ * needs to enumerate chapters reads this instead of re-walking `sections`,
+ * so a chapter added to `foundationPapers` appears everywhere at once.
+ */
+export function foundationChapterList() {
+  const out = [];
+  for (const paper of foundationPapers) {
+    for (const section of paper.sections) {
+      for (const chapter of section.chapters) {
+        out.push({ paper, section, chapter });
+      }
+    }
+  }
+  return out;
+}
+
+/**
+ * "Confusable regimes" — chapters a student reliably mixes up because they
+ * answer the SAME questions under DIFFERENT statutes. Asked one at a time
+ * each of these is easy; asked side by side, the wrong regime's rule is the
+ * commonest way marks are lost in Paper 2.
+ *
+ * This is a study-design judgement of ours, not an ICAI grouping. The slugs
+ * are resolved against `foundationPapers` by the build check below, so a
+ * renamed chapter fails the build rather than silently emptying the set.
+ */
+export const confusableSets = [
+  {
+    id: 'f2-regimes',
+    paperSlug: 'business-laws',
+    label: 'Five regimes that answer the same questions differently',
+    why:
+      'Contract, Sale of Goods, Partnership, LLP and the Companies Act each answer "who is liable, and when does property pass?" — in their own way. Practised one chapter at a time you never have to choose between them. The exam always makes you choose.',
+    chapterSlugs: [
+      'indian-contract-act-1872',
+      'sale-of-goods-act-1930',
+      'indian-partnership-act-1932',
+      'llp-act-2008',
+      'companies-act-2013',
+    ],
+  },
+];
+
+/** The confusable set defined for a paper, or undefined. */
+export function getConfusableSet(paperSlug) {
+  return confusableSets.find((s) => s.paperSlug === paperSlug);
+}
+
+/**
+ * Free lecture sources that pair with these notes — NAME + channel/portal
+ * home only. Never a specific video: individual lecture URLs rot within an
+ * attempt or two, channel homepages do not.
+ *
+ * ICAI's own free recordings come first everywhere, because they are the only
+ * source on this list that is both free and official.
+ *
+ * VERIFICATION STATUS. The two icai.org / youtube.com/@icaicatube URLs are the
+ * same ones carried by `paperResources` above (last checked 3 Jul 2026). The
+ * independent teachers below are widely used and free, but their exact channel
+ * handles are NOT verified by fetch from this repo — so rather than guess a
+ * handle that may be wrong or may change, each links to a YouTube SEARCH for
+ * the teacher's name. A search link cannot rot into someone else's channel,
+ * and it puts the student one click from the current channel either way.
+ * If you verify a handle by hand, replace the search URL and note the date.
+ */
+const YT_SEARCH = 'https://www.youtube.com/results?search_query=';
+const ytSearch = (name, subject) => `${YT_SEARCH}${encodeURIComponent(`${name} CA Foundation ${subject}`)}`;
+
+export const freeLectureSources = {
+  accounting: [
+    {
+      name: 'ICAI CA Tube — free recorded classes',
+      by: 'ICAI Board of Studies · official',
+      url: 'https://www.youtube.com/@icaicatube',
+      official: true,
+      verified: true, // same URL as paperResources, last checked 3 Jul 2026
+    },
+    {
+      name: 'CA Nitin Goel',
+      by: 'independent · free Accounting lectures',
+      url: ytSearch('CA Nitin Goel', 'Accounting'),
+      official: false,
+      verified: false, // channel handle unverified-by-fetch — search link used deliberately
+    },
+  ],
+  'business-laws': [
+    {
+      name: 'ICAI CA Tube — free recorded classes',
+      by: 'ICAI Board of Studies · official',
+      url: 'https://www.youtube.com/@icaicatube',
+      official: true,
+      verified: true,
+    },
+    {
+      name: 'Arjun Chhabra',
+      by: 'independent · free Business Laws lectures',
+      url: ytSearch('Arjun Chhabra', 'Business Laws'),
+      official: false,
+      verified: false, // unverified-by-fetch
+    },
+    {
+      name: 'CA Gurpreet Singh',
+      by: 'independent · free Business Laws lectures',
+      url: ytSearch('CA Gurpreet Singh', 'Business Laws'),
+      official: false,
+      verified: false, // unverified-by-fetch
+    },
+  ],
+  'quantitative-aptitude': [
+    {
+      name: 'ICAI CA Tube — free recorded classes',
+      by: 'ICAI Board of Studies · official',
+      url: 'https://www.youtube.com/@icaicatube',
+      official: true,
+      verified: true,
+    },
+    {
+      name: 'CA Pranav Popat',
+      by: 'independent · free Quantitative Aptitude lectures',
+      url: ytSearch('CA Pranav Popat', 'Quantitative Aptitude'),
+      official: false,
+      verified: false, // unverified-by-fetch
+    },
+    {
+      name: 'Love Kaushik',
+      by: 'independent · free Quantitative Aptitude lectures',
+      url: ytSearch('Love Kaushik', 'Quantitative Aptitude'),
+      official: false,
+      verified: false, // unverified-by-fetch
+    },
+  ],
+  'business-economics': [
+    {
+      name: 'ICAI CA Tube — free recorded classes',
+      by: 'ICAI Board of Studies · official',
+      url: 'https://www.youtube.com/@icaicatube',
+      official: true,
+      verified: true,
+    },
+    {
+      name: 'CA Nishant Kumar',
+      by: 'independent · free Business Economics lectures',
+      url: ytSearch('CA Nishant Kumar', 'Business Economics'),
+      official: false,
+      verified: false, // unverified-by-fetch
+    },
+  ],
+};
+
+/** Free lecture sources for a paper, ICAI first. Always an array. */
+export function getFreeLectureSources(paperSlug) {
+  return freeLectureSources[paperSlug] ?? [];
+}
+
+// Build check: every confusable slug must name a real chapter of its paper.
+// A renamed or removed chapter fails the build here rather than quietly
+// shrinking the mixed set at runtime.
+for (const set of confusableSets) {
+  const paper = foundationPapers.find((p) => p.slug === set.paperSlug);
+  if (!paper) throw new Error(`confusableSets: unknown paper "${set.paperSlug}"`);
+  const known = new Set(paper.sections.flatMap((s) => s.chapters.map((c) => c.slug)));
+  for (const slug of set.chapterSlugs) {
+    if (!known.has(slug)) {
+      throw new Error(`confusableSets "${set.id}": "${slug}" is not a chapter of ${paper.slug}`);
+    }
+  }
+}

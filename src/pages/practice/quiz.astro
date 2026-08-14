@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { questions } from '../../data/site.js';
-import { foundationScoring } from '../../data/foundation.js';
+import { foundationScoring, confusableSets } from '../../data/foundation.js';
 
 // Chapter banks (src/data/questions/<level>/<paper>/<chapter>.json — see that
 // dir's README) merge into the deck at build time. Bank metadata rides along
@@ -71,6 +71,7 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
     <span class="counter" data-counter>Question 1 of {allQuestions.length}</span>
     <span data-negative-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;">Foundation marking · −0.25</span>
     <span data-inter-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;">Inter marking · no negative</span>
+    <span data-mixed-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;"></span>
     <span data-timer hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8; font-variant-numeric: tabular-nums;">◷ Timed · <span data-timer-value>0:00</span></span>
   </div>
   <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
@@ -142,6 +143,7 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
 
   <script type="application/json" data-questions set:html={JSON.stringify(allQuestions)}></script>
   <script type="application/json" data-scoring set:html={JSON.stringify(foundationScoring)}></script>
+  <script type="application/json" data-confusable set:html={JSON.stringify(confusableSets)}></script>
 
   <script>
     import {
@@ -149,9 +151,11 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
       clearMistake,
       recordAnswer,
       bumpMastery,
+      getMastery,
       getDueMistakes,
       rescheduleMistake,
     } from '../../scripts/store.js';
+    import { sampleMixedSet, MIXED_SET_SIZE } from '../../scripts/mixed.js';
 
     const all = JSON.parse(document.querySelector('[data-questions]').textContent);
 
@@ -180,6 +184,31 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
     // An empty mistakes/topic deck shows an honest empty state — silently
     // serving the full deck would break the "Retry all" promise.
     let emptyReason = null;
+    // Set when a cumulative sampler built the deck — the due-mistake
+    // front-loading below then stands down, because the sampler has already
+    // weighted those chapters and its 20 is a deliberate session length.
+    let cumulative = null;
+
+    // Per-chapter standing, for the cumulative samplers: how well the chapter
+    // is known, and how many of its questions are waiting in the notebook.
+    function chapterStats() {
+      const masteryIdOf = new Map();
+      for (const q of base) {
+        const slug = q.meta && q.meta.chapterSlug;
+        if (slug && !masteryIdOf.has(slug)) masteryIdOf.set(slug, q.meta.masteryId);
+      }
+      const byId = new Map(all.map((q) => [q.id, q]));
+      const dueOf = new Map();
+      for (const m of getDueMistakes()) {
+        const slug = byId.get(m.questionId)?.meta?.chapterSlug;
+        if (slug) dueOf.set(slug, (dueOf.get(slug) ?? 0) + 1);
+      }
+      return (slug) => ({
+        mastery: masteryIdOf.get(slug) ? getMastery(masteryIdOf.get(slug)) : 0,
+        due: dueOf.get(slug) ?? 0,
+      });
+    }
+
     if (params.get('mode') === 'mistakes') {
       const saved = JSON.parse(localStorage.getItem('adh-progress') ?? '{}').mistakes ?? [];
       const ids = new Set(saved.map((m) => m.questionId));
@@ -189,9 +218,47 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
       const t = params.get('topic').toLowerCase();
       deck = base.filter((q) => q.topic.toLowerCase().includes(t));
       if (deck.length === 0) emptyReason = 'topic';
+    } else if (params.get('mode') === 'confusable') {
+      // Confusable regimes — a fixed pool of chapters that answer the same
+      // questions under different statutes (see `confusableSets`). Started or
+      // not, all of them are in: the point of the drill is choosing between
+      // regimes, which needs every regime present.
+      const sets = JSON.parse(document.querySelector('[data-confusable]').textContent);
+      const set = sets.find((s) => s.paperSlug === params.get('paper')) ?? sets[0];
+      if (!set) {
+        deck = [];
+        emptyReason = 'confusable';
+      } else {
+        const picked = sampleMixedSet(base, {
+          size: MIXED_SET_SIZE,
+          statsFor: chapterStats(),
+          restrictTo: set.chapterSlugs,
+          requireStarted: false,
+        });
+        deck = picked.questions;
+        cumulative = { kind: 'confusable', chapters: picked.chapters, label: 'Confusable regimes' };
+        if (deck.length === 0) emptyReason = 'confusable';
+      }
+    } else if (params.get('mode') === 'mixed' && params.get('paper')) {
+      // Mixed cumulative set — one session spanning every chapter of this
+      // paper the student has actually started, weighted toward the ones with
+      // mistakes waiting and mastery still low. Chapter-at-a-time practice
+      // tells you which chapter the question came from; the exam does not.
+      const picked = sampleMixedSet(base, {
+        size: MIXED_SET_SIZE,
+        statsFor: chapterStats(),
+      });
+      deck = picked.questions;
+      cumulative = {
+        kind: 'mixed',
+        chapters: picked.chapters,
+        label: picked.startedOnly ? 'Mixed · chapters you have started' : 'Mixed · whole paper',
+      };
+      if (deck.length === 0) emptyReason = 'mixed';
     } else if (params.get('mode') === 'mixed') {
-      // Shuffle at block level: a case-scenario set's linked MCQs must stay
-      // together and in order, so each set travels as one block.
+      // Unscoped mixed drill (the whole deck, no paper filter) — shuffle at
+      // block level: a case-scenario set's linked MCQs must stay together and
+      // in order, so each set travels as one block.
       const blocks = [];
       for (const q of base) {
         const last = blocks[blocks.length - 1];
@@ -205,12 +272,20 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
       deck = blocks.flat();
     }
 
+    // Quiet chip naming the mix, so a student who lands here from a link knows
+    // why the questions are jumping between chapters.
+    if (cumulative && deck.length > 0) {
+      const chip = document.querySelector('[data-mixed-chip]');
+      chip.hidden = false;
+      chip.textContent = `${cumulative.label} · ${cumulative.chapters.length} chapters`;
+    }
+
     // Mistakes that have come due ride at the front of the session (up to 5).
     // Where the bank holds another question on the same topic, that VARIANT
     // comes instead of the exact question — recognising an old stem is not
     // the same as knowing the idea. Answering one reschedules the notebook
     // entry; the ?mode=mistakes deck already is the notebook, so it opts out.
-    if (params.get('mode') !== 'mistakes' && deck.length > 0) {
+    if (params.get('mode') !== 'mistakes' && !cumulative && deck.length > 0) {
       const prefixOf = (t) => (t ?? '').split(/[—–:|-]/)[0].trim().toLowerCase();
       const front = [];
       const taken = new Set();
@@ -578,6 +653,14 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
         document.querySelector('[data-summary-title]').textContent = 'No questions for this topic yet';
         document.querySelector('[data-summary-note]').textContent =
           'Topic drills fill in as the question bank grows chapter by chapter.';
+      } else if (emptyReason === 'mixed') {
+        document.querySelector('[data-summary-title]').textContent = 'Nothing to mix yet';
+        document.querySelector('[data-summary-note]').textContent =
+          'A mixed set draws across the chapters of this paper. Once this paper has questions banked, this becomes the closest practice to the real thing.';
+      } else if (emptyReason === 'confusable') {
+        document.querySelector('[data-summary-title]').textContent = 'This drill needs the law chapters banked';
+        document.querySelector('[data-summary-note]').textContent =
+          'The confusable-regimes drill mixes Contract, Sale of Goods, Partnership, LLP and the Companies Act. It opens once those banks are in place.';
       } else if (scoped) {
         document.querySelector('[data-summary-title]').textContent = 'No questions here yet';
         document.querySelector('[data-summary-note]').textContent =

@@ -1,0 +1,320 @@
+---
+/**
+ * Printable one-pagers — one A4 revision sheet per Foundation chapter.
+ *
+ * Nothing on this page is authored separately. The sheet IS the chapter's own
+ * "One-page revision summary" section, read from the raw MDX at build time and
+ * re-rendered for paper (see src/scripts/one-pager.js). A fix to the notes
+ * reaches the printed sheet on the next build; the two can never drift.
+ *
+ * Chapters whose summary cannot be parsed fall back to a section checklist
+ * plus weightage and a practice link — a plainer sheet, never a broken one.
+ *
+ * Route: /print/foundation/<paper>/<chapter>/
+ */
+import Base from '../../layouts/Base.astro';
+import {
+  foundationChapterList,
+  getWeightageGroupForChapter,
+  formatWeightage,
+  WEIGHTAGE_NOTE,
+} from '../../data/foundation.js';
+import { parseOnePager } from '../../scripts/one-pager.js';
+
+// Raw chapter text. `?raw` keeps MDX out of the compiler here — this page
+// wants the source, not a rendered component.
+const rawNotes = import.meta.glob('../foundation/**/*.mdx', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+const banks = import.meta.glob('../../data/questions/foundation/**/*.json', { eager: true });
+
+export function getStaticPaths() {
+  return foundationChapterList().map(({ paper, section, chapter }) => ({
+    params: { slug: `foundation/${paper.slug}/${chapter.slug}` },
+    props: { paper, section, chapter },
+  }));
+}
+
+const { paper, section, chapter } = Astro.props;
+
+// ── the chapter's own summary ─────────────────────────────────────────────
+const rawKey = Object.keys(rawNotes).find((k) => k.endsWith(`/${paper.slug}/${chapter.slug}.mdx`));
+const parsed = rawKey
+  ? parseOnePager(rawNotes[rawKey])
+  : { mode: 'fallback', html: '', headings: [], lastVerified: null, sourceLabel: null };
+
+// ── what this chapter's bank actually tests ───────────────────────────────
+// Topics read "Ch N · theme · specific point". The THEME is the useful
+// granularity for a revision sheet; where a bank uses one theme throughout
+// (so the theme adds nothing) the specific points are listed instead.
+const bank = Object.values(banks)
+  .map((m) => m.default ?? m)
+  .find((b) => b.chapterSlug === chapter.slug && b.paperSlug === paper.slug);
+
+function topicList(b) {
+  if (!b || !Array.isArray(b.questions)) return [];
+  const topics = [];
+  for (const q of b.questions) {
+    if (typeof q.topic === 'string') topics.push(q.topic);
+    if (Array.isArray(q.questions)) for (const s of q.questions) if (s.topic) topics.push(s.topic);
+  }
+  const segmentsOf = (t) => {
+    const parts = t.split('·').map((s) => s.trim()).filter(Boolean);
+    return /^Ch\s*\d+$/i.test(parts[0]) ? parts.slice(1) : parts;
+  };
+  const themes = [...new Set(topics.map((t) => segmentsOf(t)[0]).filter(Boolean))];
+  if (themes.length >= 3) return themes;
+  return [...new Set(topics.map((t) => segmentsOf(t).pop()).filter(Boolean))];
+}
+const topics = topicList(bank);
+const questionCount = bank
+  ? bank.questions.reduce((n, q) => n + (Array.isArray(q.questions) ? q.questions.length : q.type === 'mcq' ? 1 : 0), 0)
+  : 0;
+
+// ── framing ───────────────────────────────────────────────────────────────
+const group = getWeightageGroupForChapter(paper.slug, chapter.slug);
+const weightLabel = group
+  ? group.weightage
+    ? `${formatWeightage(group.weightage)}${paper.weightageBasisLabel ? ` ${paper.weightageBasisLabel}` : ''}`
+    : group.marks
+      ? `${group.marks} marks of the paper`
+      : null
+  : null;
+
+const chapterPath = `/foundation/${paper.slug}/${chapter.slug}/`;
+const chapterUrl = new URL(chapterPath, Astro.site).href;
+const siteUrl = new URL('/', Astro.site).href.replace(/\/$/, '');
+const practicePath = `/practice/quiz/?level=foundation&paper=${paper.slug}&chapter=${chapter.slug}`;
+const title = `${chapter.name} — one-page revision sheet`;
+---
+
+<Base title={title} description={`Printable one-page revision sheet for ${chapter.name}, CA Foundation Paper ${paper.number}.`} bare>
+  <div class="sheet-screen-bar no-print">
+    <a href={chapterPath}>← Back to the chapter</a>
+    <span style="flex: 1;"></span>
+    <button type="button" class="btn btn-primary" data-print>Print this sheet</button>
+  </div>
+
+  <article class="sheet">
+    <header class="sheet-head">
+      <div class="sheet-kicker">
+        CA Foundation · Paper {paper.number} · {paper.name}{section.name !== 'All chapters' ? ` · ${section.name}` : ''}
+      </div>
+      <h1>Ch {chapter.number} · {chapter.name}</h1>
+      <div class="sheet-meta">
+        {weightLabel && <span><strong>Weightage</strong> {weightLabel} — {WEIGHTAGE_NOTE}</span>}
+        {parsed.lastVerified && <span><strong>Last verified</strong> {parsed.lastVerified}</span>}
+      </div>
+      {topics.length > 0 && (
+        <p class="sheet-tested">
+          <strong>Tested from this chapter</strong> ({questionCount} questions in the bank): {topics.join(' · ')}.
+        </p>
+      )}
+    </header>
+
+    {parsed.mode === 'summary' ? (
+      <section class="sheet-body" set:html={parsed.html} />
+    ) : (
+      <section class="sheet-body">
+        {/*
+          Fallback sheet: this chapter has no parseable one-page summary, so
+          the sheet becomes a revision CHECKLIST of its sections. Less dense
+          than a summary, still useful in the last week — and never a broken
+          page.
+        */}
+        <p class="sheet-fallback-note">
+          This chapter has no one-page summary yet, so this sheet is a checklist of its sections.
+          Tick each one you can explain from memory, then read back only the ones you cannot.
+        </p>
+        {parsed.headings.length > 0 ? (
+          <ul class="sheet-checklist">
+            {parsed.headings.map((h) => (
+              <li><span class="tickbox" aria-hidden="true"></span>{h}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>Open the chapter for the full notes — this sheet has nothing to condense yet.</p>
+        )}
+      </section>
+    )}
+
+    <footer class="sheet-foot">
+      <div class="sheet-foot-row">
+        <span><strong>{chapter.name}</strong> · CA Foundation Paper {paper.number}</span>
+        <span class="sheet-foot-url">{chapterUrl}</span>
+      </div>
+      <div class="sheet-foot-row sheet-foot-fine">
+        <span>
+          {siteUrl} — free, no login. Practise this chapter at {siteUrl}{practicePath.replace(/\?.*$/, '')}
+        </span>
+        <span>ICAI Study Material remains the primary source.</span>
+      </div>
+    </footer>
+
+    <div class="no-print sheet-screen-foot">
+      <a href={practicePath} class="btn btn-secondary">Practise this chapter</a>
+      <a href={chapterPath} class="btn btn-tertiary">Read the full chapter</a>
+    </div>
+  </article>
+
+  <style is:global>
+    /* The sheet is a paper document: black on white, on screen and in print,
+       regardless of the site theme the reader has chosen. */
+    body:has(.sheet) { background: #fff; }
+
+    .sheet-screen-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 16px 12mm 0;
+    }
+    .sheet-screen-bar a { font-size: 14px; }
+
+    .sheet {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 12mm;
+      background: #fff;
+      color: #000;
+      font-size: 10.5pt;
+      line-height: 1.42;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+    .sheet-head { border-bottom: 1.5pt solid #000; padding-bottom: 6pt; margin-bottom: 9pt; }
+    .sheet-kicker {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 8pt;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #333;
+    }
+    .sheet h1 {
+      font-size: 16pt;
+      line-height: 1.2;
+      margin: 3pt 0 5pt;
+      font-weight: 700;
+      color: #000;
+    }
+    .sheet-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3pt 14pt;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 8pt;
+      color: #333;
+    }
+    .sheet-tested {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 8pt;
+      color: #333;
+      margin: 5pt 0 0;
+      line-height: 1.4;
+    }
+
+    .sheet-body p { margin: 0 0 5pt; }
+    .sheet-body ul { margin: 0 0 5pt; padding-left: 12pt; }
+    .sheet-body li { margin-bottom: 2pt; }
+    .sheet-body strong { font-weight: 700; }
+    .sheet-body code { font-family: 'SF Mono', Menlo, monospace; font-size: 9pt; }
+    .sheet-body .formula {
+      border: 0.75pt solid #000;
+      padding: 4pt 6pt;
+      margin: 5pt 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 9pt;
+      line-height: 1.4;
+      background: #f4f4f4;
+      break-inside: avoid;
+    }
+    .sheet-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 5pt 0;
+      font-size: 8.5pt;
+      break-inside: avoid;
+    }
+    .sheet-body th,
+    .sheet-body td {
+      border: 0.5pt solid #666;
+      padding: 2pt 4pt;
+      text-align: left;
+      vertical-align: top;
+    }
+    .sheet-body th { background: #eee; font-weight: 700; }
+
+    .sheet-fallback-note {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 9pt;
+      color: #333;
+      font-style: italic;
+    }
+    .sheet-checklist { list-style: none; padding-left: 0; margin: 6pt 0; }
+    .sheet-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6pt;
+      margin-bottom: 4pt;
+      break-inside: avoid;
+    }
+    .tickbox {
+      flex: none;
+      width: 9pt;
+      height: 9pt;
+      border: 0.75pt solid #000;
+      margin-top: 2pt;
+    }
+
+    .sheet-foot {
+      border-top: 0.75pt solid #000;
+      margin-top: 10pt;
+      padding-top: 5pt;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 7.5pt;
+      color: #333;
+    }
+    .sheet-foot-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12pt;
+      flex-wrap: wrap;
+    }
+    .sheet-foot-url { word-break: break-all; }
+    .sheet-foot-fine { margin-top: 2pt; color: #555; }
+
+    .sheet-screen-foot {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 210mm;
+      margin: 20px auto 40px;
+      padding: 0 12mm;
+    }
+
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      html, body { background: #fff !important; }
+      .no-print { display: none !important; }
+      .sheet {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        font-size: 9.5pt;
+      }
+      .sheet a { color: #000; text-decoration: none; }
+      .sheet-body .formula { background: transparent; }
+      .sheet-body th { background: transparent; }
+      .sheet-head { break-after: avoid; }
+      .sheet-foot { break-inside: avoid; }
+    }
+  </style>
+
+  <script is:inline>
+    document.querySelector('[data-print]')?.addEventListener('click', function () {
+      window.print();
+    });
+  </script>
+</Base>

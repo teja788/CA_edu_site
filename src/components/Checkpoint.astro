@@ -1,0 +1,101 @@
+---
+/**
+ * Checkpoint — inline retrieval prompts for notes pages.
+ *
+ * Reading a chapter start to finish feels like learning and mostly is not.
+ * What moves knowledge is being asked before you are ready, and being asked
+ * again before you have finished forgetting. These boxes put that inside the
+ * notes so the student does not have to leave the page to test themselves.
+ *
+ * Three variants:
+ *   prequestion — a question BEFORE the section that answers it. Guessing
+ *                 wrong first makes the right answer stick better than
+ *                 reading it cold; the box exists to be attempted, not
+ *                 answered correctly.
+ *   checkpoint  — one or two quick questions at a section boundary, each
+ *                 with a one-line explanation of why.
+ *   recall      — end-of-chapter free recall: cover the page and list what
+ *                 you can, then reveal.
+ *
+ * No JavaScript. The reveal is a native <details>/<summary>, so the boxes
+ * work with scripts blocked, in print, and under a screen reader — the same
+ * progressive-enhancement floor as the rest of the site.
+ *
+ * Usage in MDX:
+ *   <Checkpoint variant="prequestion" question="…">answer markup</Checkpoint>
+ *   <Checkpoint variant="checkpoint" items={[{ q: "…", a: "…", why: "…" }]} />
+ *   <Checkpoint variant="recall" question="…">the list</Checkpoint>
+ */
+interface Item {
+  /** The question. */
+  q: string;
+  /** The answer, revealed on click. */
+  a: string;
+  /** One line on why — the reason, not a restatement of the answer. */
+  why?: string;
+}
+
+interface Props {
+  variant?: 'prequestion' | 'checkpoint' | 'recall';
+  /** The prompt, for the prequestion and recall variants. */
+  question?: string;
+  /** Overrides the default box label. */
+  label?: string;
+  /** Overrides the default reveal wording. */
+  reveal?: string;
+  /** The checkpoint variant's questions. Ignored by the other two. */
+  items?: Item[];
+}
+
+const {
+  variant = 'checkpoint',
+  question,
+  label,
+  reveal,
+  items = [],
+} = Astro.props as Props;
+
+const defaults = {
+  prequestion: { glyph: '?', label: 'Before you read on', reveal: 'Show the answer' },
+  checkpoint: { glyph: '✓', label: 'Checkpoint', reveal: 'Show the answer' },
+  recall: { glyph: '↻', label: 'Recall — cover the page', reveal: 'Reveal the list' },
+};
+// An unknown variant degrades to a checkpoint rather than crashing the build
+// on meta.glyph — same contract as Callout.astro.
+const safe = variant in defaults ? variant : 'checkpoint';
+const meta = defaults[safe];
+const boxLabel = label ?? meta.label;
+const revealLabel = reveal ?? meta.reveal;
+const list = Array.isArray(items) ? items.filter((it) => it && it.q) : [];
+---
+
+<aside class={`cp cp-${safe}`}>
+  <div class="cp-head">
+    <span class="cp-glyph" aria-hidden="true">{meta.glyph}</span>
+    <span class="cp-label">{boxLabel}</span>
+  </div>
+
+  {question && <p class="cp-q">{question}</p>}
+
+  {list.length > 0 ? (
+    <ol class="cp-items">
+      {list.map((it) => (
+        <li class="cp-item">
+          <p class="cp-q cp-q-item">{it.q}</p>
+          <details class="cp-reveal">
+            <summary>{revealLabel}</summary>
+            <div class="cp-a">
+              <p>{it.a}</p>
+              {it.why && <p class="cp-why">{it.why}</p>}
+            </div>
+          </details>
+        </li>
+      ))}
+    </ol>
+  ) : (
+    <details class="cp-reveal">
+      <summary>{revealLabel}</summary>
+      <div class="cp-a"><slot /></div>
+    </details>
+  )}
+</aside>

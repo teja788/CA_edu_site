@@ -13,6 +13,7 @@ import {
   foundationScoring,
   formatWeightage,
   getWeightageGroupForChapter,
+  getFreeLectureSources,
   p3SafePathTo40,
   WEIGHTAGE_NOTE,
   WEIGHTAGE_SOURCE,
@@ -44,6 +45,11 @@ const chapterName = (slug) => {
   return slug;
 };
 const safePath = paper.slug === 'quantitative-aptitude' ? p3SafePathTo40 : null;
+
+// Free lecture companions — names and channel homepages only, never a
+// specific video (see `freeLectureSources` for why, and for which URLs are
+// verified). Notes + practice here are the other half of the work.
+const lectures = getFreeLectureSources(paper.slug);
 ---
 
 <Base title={`Paper ${paper.number}: ${paper.name} — CA Foundation`} active="papers">
@@ -200,6 +206,36 @@ const safePath = paper.slug === 'quantitative-aptitude' ? p3SafePathTo40 : null;
         free syllabus source for this paper — start there today.
       </div>
     </div>
+
+    <!--
+      Lecture companions. Channel homepages only — a specific video URL rots
+      within an attempt or two, a channel does not. Nothing here is affiliated
+      with or endorsed by these teachers, and nothing is re-hosted.
+    -->
+    {lectures.length > 0 && (
+      <div style="max-width: 720px; margin-top: 28px;">
+        <div class="overline" style="margin-bottom: 10px;">Free lectures that pair well with these notes</div>
+        <div class="card card-pad">
+          <p style="font-size: 15px; line-height: 1.7; margin: 0;">
+            {lectures.map((l, i) => (
+              <>
+                {i > 0 && <span style="color: var(--text-3);"> · </span>}
+                <a href={l.url} rel="noopener" target="_blank">{l.name} ↗</a>
+                <span style="font-size: 13px; color: var(--text-3);"> — {l.by}</span>
+              </>
+            ))}
+          </p>
+          <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; margin: 12px 0 0;">
+            Lectures are the explaining half of studying; the notes and practice here are the
+            drill half. Watching more videos is the easiest way to feel prepared without
+            becoming prepared — after a lecture, come back and answer questions on it from
+            memory. We link channel homepages rather than individual videos, because playlists
+            get reordered and single videos disappear. Independent teachers listed here are not
+            affiliated with Adhyayan or with ICAI.
+          </p>
+        </div>
+      </div>
+    )}
 
     <!-- Official resources: deep links only, never re-hosted -->
     <div class="overline" id="resources" style="margin: 32px 0 12px;">Official ICAI resources · {attempt.name} attempt</div>

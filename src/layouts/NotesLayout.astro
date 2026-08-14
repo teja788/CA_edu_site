@@ -16,6 +16,13 @@ import { attempt } from '../data/site.js';
 const { frontmatter, headings = [] } = Astro.props;
 const fm = frontmatter;
 const toc = headings.filter((h) => h.depth === 2);
+// Printable one-pagers are built for Foundation chapters only (see
+// src/pages/print/[...slug].astro). The guard is on the page's own level, so
+// an Intermediate chapter never advertises a route that was not generated.
+const printHref =
+  fm.level === 'foundation' && fm.paperSlug && fm.chapterSlug
+    ? `/print/foundation/${fm.paperSlug}/${fm.chapterSlug}/`
+    : null;
 const crumbs = [
   { label: fm.levelName, href: `/${fm.level}/` },
   { label: fm.paper, href: `/${fm.level}/${fm.paperSlug}/` },
@@ -43,8 +50,19 @@ const crumbs = [
         </div>
 
         <div style="border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px;">
-          {fm.practiceHref && (
-            <a href={fm.practiceHref} class="btn btn-primary">{fm.practiceLabel ?? 'Practice this chapter'}</a>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+            {fm.practiceHref && (
+              <a href={fm.practiceHref} class="btn btn-primary">{fm.practiceLabel ?? 'Practice this chapter'}</a>
+            )}
+            {printHref && (
+              <a href={printHref} class="btn btn-tertiary">Print one-pager</a>
+            )}
+          </div>
+          {printHref && (
+            <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; margin-top: 12px;">
+              The one-pager is this chapter's own revision summary, set for A4 — for the last week,
+              when there is no time left to re-read.
+            </p>
           )}
           <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; margin-top: 16px;">
             Spotted an error? <a href={`/report-error/?page=${encodeURIComponent(Astro.url.pathname)}`}>Report it</a> — fixes are public.

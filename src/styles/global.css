@@ -451,6 +451,112 @@ a.list-row:hover { background: var(--row-alt); }
 .callout-note .callout-glyph { background: var(--text-3); color: var(--surface); }
 .callout-note .callout-label { color: var(--text-2); }
 
+/* ============ checkpoints (Checkpoint.astro) ============ */
+/* Retrieval prompts inside notes. Quieter than a callout on purpose — these
+   interrupt reading, so they are marked by a left rule rather than a filled
+   panel. The reveal is a native <details>: no JS, works in print. */
+
+.cp {
+  border-left: 3px solid var(--border-strong, var(--border));
+  background: var(--surface-2);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 18px;
+  margin: 0 0 18px;
+}
+.cp-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.cp-glyph {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  background: var(--text-3);
+  color: var(--surface);
+}
+.cp-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.cp-q {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.cp-items {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cp-item::marker { color: var(--text-3); font-weight: 650; }
+.cp-q-item { margin-bottom: 8px; }
+
+.cp-reveal > summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--info-text);
+  list-style: none;
+}
+.cp-reveal > summary::-webkit-details-marker { display: none; }
+.cp-reveal > summary::before {
+  content: '▸';
+  margin-right: 7px;
+  font-size: 11px;
+  color: var(--text-3);
+}
+.cp-reveal[open] > summary::before { content: '▾'; }
+.cp-reveal > summary:hover { text-decoration: underline; }
+.cp-reveal > summary:focus-visible {
+  outline: 2px solid var(--info);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.cp-a {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  padding: 8px 0 0;
+}
+.cp-a p { margin: 0 0 10px; }
+.cp-a p:last-child { margin-bottom: 0; }
+.cp-a ul, .cp-a ol { margin: 0 0 10px; padding-left: 20px; line-height: 1.7; }
+.cp-why { font-size: 14px; color: var(--text-2); }
+
+/* Prequestion: the one variant worth a tint — it is asking the reader to stop
+   before they have the answer, which needs to look deliberate. */
+.cp-prequestion { background: var(--info-tint); border-left-color: var(--info); }
+.cp-prequestion .cp-glyph { background: var(--info); color: var(--on-info); }
+.cp-prequestion .cp-label { color: var(--info-text); }
+
+.cp-recall { background: var(--accent-tint); border-left-color: var(--accent); }
+.cp-recall .cp-glyph { background: var(--accent); color: var(--on-accent); }
+.cp-recall .cp-label { color: var(--accent); }
+
+@media print {
+  /* On paper the answer is always visible — a printed sheet cannot be clicked. */
+  .cp-reveal > summary { display: none; }
+  .cp-a { display: block !important; }
+}
+
 .callout-amendment { background: var(--warning-tint); border-color: var(--warning-border); }
 .callout-amendment .callout-glyph { background: var(--warning); color: var(--on-warning); }
 .callout-amendment .callout-label { color: var(--warning-text); }
