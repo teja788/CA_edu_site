@@ -2,78 +2,713 @@
 import Base from '../layouts/Base.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Callout from '../components/Callout.astro';
-import { attempt } from '../data/site.js';
+import { foundationAttempts, foundationPapers } from '../data/foundation.js';
+
+/**
+ * The planner runs in the browser so a plan can be regenerated without a
+ * round trip, and stored in this browser only (`adh-plan`). Everything the
+ * pure module needs is serialised here — slimmed down to what it reads, so
+ * the page does not ship the whole exam-facts layer twice.
+ */
+const planData = {
+  attempts: foundationAttempts.map((a) => ({
+    id: a.id,
+    name: a.name,
+    examDate: a.examDates.begins ?? null,
+    examLabel: a.examDates.label,
+    papers: (a.papers ?? []).filter((p) => p.date).map((p) => ({
+      paperSlug: p.paperSlug,
+      date: p.date,
+      label: p.label,
+    })),
+    cutoff: a.registration?.cutoff ?? null,
+    cutoffLabel: a.registration?.label ?? null,
+    sessionLabel: a.session?.label ?? null,
+  })),
+  papers: foundationPapers.map((p) => ({
+    id: p.id,
+    slug: p.slug,
+    number: p.number,
+    name: p.name,
+    shortName: p.shortName,
+    marks: p.marks,
+    weightageBasis: p.weightageBasis ?? 'paper',
+    weightageGroups: (p.weightageGroups ?? []).map((g) => ({
+      id: g.id,
+      label: g.label,
+      section: g.section ?? null,
+      weightage: g.weightage ?? null,
+      marks: g.marks ?? null,
+      chapterSlugs: g.chapterSlugs,
+    })),
+    chapters: p.sections.flatMap((s) => s.chapters.map((c) => ({
+      number: c.number,
+      slug: c.slug,
+      name: c.name,
+    }))),
+  })),
+};
+
+const modes = [
+  { id: 'class12', label: 'School and Foundation together', hint: 'Class 11–12 alongside board prep · 14–27 hours a week' },
+  { id: 'postboards', label: 'After the boards, Foundation full-time', hint: 'Boards done, nothing else running · 35–60 hours a week' },
+  { id: 'bcom', label: 'Alongside college', hint: 'B.Com or another degree in parallel · 20–40 hours a week' },
+];
 ---
 
-<Base title="Study-plan generator">
+<Base
+  title="Foundation study plan"
+  active="plan"
+  description="A day-by-day CA Foundation study plan built from ICAI weightage, three shrinking revision cycles, real mock timing and buffer days — generated in your browser, stored nowhere else."
+>
   <main class="page">
-    <div style="max-width: 720px; margin: 0 auto;">
+    <div style="max-width: 860px; margin: 0 auto;">
       <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Study plan' }]} />
 
       <div class="overline" style="margin-bottom: 6px;">Structure is what coaching actually sells</div>
       <h1 style="margin: 0 0 12px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
-        Your week-by-week study plan
+        Your CA Foundation study plan
       </h1>
-      <p style="font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 0 0 24px;">
-        Built on the revision cycle that works: learn → revise within 48 hours → revise again in a week →
-        pre-exam pass. No plan survives a bad week intact — this one just stretches; nothing is "lost".
+      <p style="font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 0 0 8px;">
+        Half the runway to learn the syllabus, a third to practise it, a fifth to revise it —
+        then three revision passes, each shallower than the last, and mocks in the final weeks.
+        Chapter time follows ICAI's own weightage. About one day in five is left empty on purpose.
+      </p>
+      <p style="font-size: 15px; line-height: 1.7; color: var(--text-3); margin: 0 0 24px;">
+        Everything is generated in this browser and saved here only. No plan survives a bad week
+        intact — this one has the bad week already built in.
       </p>
 
-      <form class="card card-pad" data-plan-form style="margin-bottom: 28px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 650;">
-            Your attempt
-            <select name="attempt" style="font-family: inherit; font-size: 16px; min-height: 44px; padding: 8px 12px; border: 1.5px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text);">
-              <option value="2026-09-08">Sept 2026 (begins 8 Sept)</option>
-              <option value="2027-01-15">Jan 2027 (dates TBA — assumed mid-Jan)</option>
+      <form class="card card-pad fp-form" data-fp-form>
+        <div class="fp-grid">
+          <label class="fp-field">
+            <span class="fp-label">Your attempt</span>
+            <select class="fp-input" data-fp-attempt>
+              {planData.attempts.map((a) => (
+                <option value={a.id}>{a.name}{a.examDate ? ` — ${a.examLabel}` : ' — dates not notified'}</option>
+              ))}
             </select>
           </label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 650;">
-            Group
-            <select name="group" style="font-family: inherit; font-size: 16px; min-height: 44px; padding: 8px 12px; border: 1.5px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text);">
-              <option value="g1">Group I (3 papers)</option>
-              <option value="g2">Group II (3 papers)</option>
-              <option value="both">Both groups (6 papers)</option>
-            </select>
-          </label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 650;">
-            Study hours per day
-            <select name="hours" style="font-family: inherit; font-size: 16px; min-height: 44px; padding: 8px 12px; border: 1.5px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text);">
-              <option value="2">~2 (working / articleship)</option>
-              <option value="4" selected>~4</option>
-              <option value="6">6+ (full-time prep)</option>
-            </select>
+
+          <label class="fp-field">
+            <span class="fp-label">Starting from</span>
+            <input type="date" class="fp-input" data-fp-start />
           </label>
         </div>
-        <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Generate plan</button>
+
+        <div class="fp-field" data-fp-custom hidden style="margin-top: 16px;">
+          <span class="fp-label">Date you are working towards</span>
+          <input type="date" class="fp-input" data-fp-exam-date />
+          <span class="fp-hint">
+            ICAI has not notified this attempt. Use the date you are planning around — it shapes the
+            spacing, and nothing here is a prediction of the real timetable.
+          </span>
+        </div>
+
+        <fieldset class="fp-fieldset">
+          <legend class="fp-label">What else is running</legend>
+          {modes.map((m, i) => (
+            <label class="fp-radio">
+              <input type="radio" name="fp-mode" value={m.id} checked={i === 1} data-fp-mode />
+              <span>
+                <span class="fp-radio-label">{m.label}</span>
+                <span class="fp-hint">{m.hint}</span>
+              </span>
+            </label>
+          ))}
+        </fieldset>
+
+        <div class="fp-grid" style="margin-top: 18px;">
+          <label class="fp-field">
+            <span class="fp-label">Hours a week you can really give</span>
+            <input type="number" class="fp-input" min="1" max="90" step="1" value="40" data-fp-hours />
+            <span class="fp-hint" data-fp-hours-hint></span>
+          </label>
+
+          <fieldset class="fp-fieldset" style="margin: 0;">
+            <legend class="fp-label">Papers you find hard</legend>
+            <span class="fp-hint" style="margin-bottom: 8px;">These draw about a third more study time.</span>
+            {planData.papers.map((p) => (
+              <label class="fp-check">
+                <input type="checkbox" value={p.slug} checked={p.slug === 'quantitative-aptitude'} data-fp-weak />
+                <span>P{p.number} · {p.shortName}</span>
+              </label>
+            ))}
+          </fieldset>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 22px;">
+          <button type="submit" class="btn btn-primary">Generate the plan</button>
+          <span class="fp-hint" data-fp-saved></span>
+        </div>
       </form>
 
-      <div data-plan-warning hidden class="banner" style="margin-bottom: 24px;">
-        <span style="flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px; background: var(--warning); color: var(--on-warning); display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;" aria-hidden="true">!</span>
-        <div style="flex: 1;" data-plan-warning-text></div>
-      </div>
+      <div data-fp-warnings hidden style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;"></div>
 
-      <div data-plan-output hidden>
-        <div class="card card-pad" style="margin-bottom: 24px;">
-          <div style="font-size: 18px; font-weight: 700; margin-bottom: 6px;" data-plan-headline></div>
-          <div class="tnum" style="font-size: 14px; color: var(--text-2); line-height: 1.7;" data-plan-summary></div>
-        </div>
-        <div data-plan-phases style="display: flex; flex-direction: column; gap: 16px;"></div>
+      <div data-fp-output hidden>
+        <section class="card card-pad" style="margin-bottom: 24px;">
+          <div style="font-size: 18px; font-weight: 700; margin-bottom: 6px;" data-fp-headline></div>
+          <div class="tnum" style="font-size: 14px; color: var(--text-2); line-height: 1.7;" data-fp-summary></div>
+          <div class="fp-bar" data-fp-bar></div>
+          <div class="fp-bar-key" data-fp-bar-key></div>
+        </section>
 
-        <Callout kind="pointer" label="How to run a week">
+        <div class="overline" style="margin: 0 0 12px;">This week and next</div>
+        <div data-fp-weeks style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 28px;"></div>
+
+        <div class="overline" style="margin: 0 0 12px;">The whole runway, month by month</div>
+        <div data-fp-months style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px;"></div>
+
+        <div class="overline" style="margin: 0 0 12px;">Mocks</div>
+        <section class="card card-pad" style="margin-bottom: 28px;">
+          <div style="font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 14px;" data-fp-mock-note></div>
+          <div data-fp-mocks></div>
+        </section>
+
+        <Callout kind="pointer" label="How to run a day">
           <p>
-            Each study day: new material first (60%), then yesterday's 48-hour revision (25%),
-            then the <a href="/dashboard/">review queue</a> (15%). Sundays: no new material —
-            cumulative mixed practice on everything so far. Skipped days just push the plan;
-            never "catch up" by skipping revision.
+            Practical paper first while the mind is fresh, theory paper second — that is why every
+            study day pairs one of each. Finish the day's chapter with questions, not with reading:
+            the retrieval is what makes it stick.
+          </p>
+          <p>
+            Miss a day and nothing resets. The buffer days exist to absorb exactly that, and if a
+            week goes badly, regenerate from today — the plan is meant to be rebuilt, not obeyed.
+          </p>
+          <p>
+            On a day when everything is too much, do the minimum: your due flashcards and ten MCQs,
+            thirty to sixty minutes. Short and done beats long and skipped.
           </p>
         </Callout>
       </div>
 
+      <details class="fp-legacy">
+        <summary>Planning CA Intermediate instead? A rough phase estimate</summary>
+        <p style="font-size: 15px; line-height: 1.7; color: var(--text-2); margin: 12px 0 16px;">
+          The day-by-day planner above is built on Foundation's syllabus, weightage and paper dates.
+          For Intermediate, this older estimator still gives you the phase split to work back from.
+        </p>
+
+        <form class="card card-pad" data-plan-form style="margin-bottom: 20px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <label class="fp-field">
+              <span class="fp-label">Your attempt</span>
+              <select name="attempt" class="fp-input">
+                <option value="2026-09-08">Sept 2026 (begins 8 Sept)</option>
+                <option value="2027-01-15">Jan 2027 (dates TBA — assumed mid-Jan)</option>
+              </select>
+            </label>
+            <label class="fp-field">
+              <span class="fp-label">Group</span>
+              <select name="group" class="fp-input">
+                <option value="g1">Group I (3 papers)</option>
+                <option value="g2">Group II (3 papers)</option>
+                <option value="both">Both groups (6 papers)</option>
+              </select>
+            </label>
+            <label class="fp-field">
+              <span class="fp-label">Study hours per day</span>
+              <select name="hours" class="fp-input">
+                <option value="2">~2 (working / articleship)</option>
+                <option value="4" selected>~4</option>
+                <option value="6">6+ (full-time prep)</option>
+              </select>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-secondary" style="margin-top: 20px;">Estimate the phases</button>
+        </form>
+
+        <div data-plan-warning hidden class="banner" style="margin-bottom: 20px;">
+          <span style="flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px; background: var(--warning); color: var(--on-warning); display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;" aria-hidden="true">!</span>
+          <div style="flex: 1;" data-plan-warning-text></div>
+        </div>
+
+        <div data-plan-output hidden>
+          <div class="card card-pad" style="margin-bottom: 20px;">
+            <div style="font-size: 18px; font-weight: 700; margin-bottom: 6px;" data-plan-headline></div>
+            <div class="tnum" style="font-size: 14px; color: var(--text-2); line-height: 1.7;" data-plan-summary></div>
+          </div>
+          <div data-plan-phases style="display: flex; flex-direction: column; gap: 16px;"></div>
+        </div>
+      </details>
     </div>
   </main>
 
+  <style>
+    .fp-form { margin-bottom: 28px; }
+    .fp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+    .fp-field { display: flex; flex-direction: column; gap: 6px; }
+    .fp-label { font-size: 14px; font-weight: 650; color: var(--text); }
+    .fp-input {
+      font: inherit;
+      font-size: 16px;
+      min-height: 44px;
+      padding: 8px 12px;
+      border: 1.5px solid var(--border-strong);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      width: 100%;
+    }
+    .fp-hint { display: block; font-size: 13px; color: var(--text-3); line-height: 1.55; }
+    .fp-fieldset { border: 0; padding: 0; margin: 18px 0 0; min-width: 0; }
+    .fp-fieldset legend { padding: 0; margin-bottom: 8px; }
+    .fp-radio, .fp-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      min-height: 40px;
+      padding: 4px 0;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .fp-radio input, .fp-check input { margin-top: 3px; flex-shrink: 0; }
+    .fp-radio-label { display: block; font-weight: 600; }
+
+    .fp-bar { display: flex; height: 12px; border-radius: 6px; overflow: hidden; margin-top: 16px; background: var(--track); }
+    .fp-bar span { display: block; height: 100%; }
+    .fp-bar-key { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 10px; font-size: 13px; color: var(--text-2); }
+    .fp-bar-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; }
+
+    .fp-week { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); overflow: hidden; }
+    .fp-week-head {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
+      padding: 14px 18px; border-bottom: 1px solid var(--surface-2); background: var(--row-alt);
+    }
+    .fp-day { display: flex; gap: 14px; padding: 12px 18px; border-top: 1px solid var(--surface-2); }
+    .fp-day:first-of-type { border-top: 0; }
+    .fp-day-date { flex-shrink: 0; width: 82px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+    .fp-day-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+    .fp-chip {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+      text-transform: uppercase; padding: 2px 7px; border-radius: 5px; align-self: flex-start;
+    }
+    .fp-task { font-size: 15px; line-height: 1.6; }
+    .fp-task a { text-decoration: none; font-weight: 600; }
+    .fp-task-links { font-size: 13px; }
+    .fp-note { font-size: 13px; color: var(--text-3); line-height: 1.6; }
+
+    .fp-month { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 0 18px; }
+    .fp-month > summary {
+      cursor: pointer; padding: 14px 0; font-size: 15px; font-weight: 650;
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
+    .fp-month > summary::marker { color: var(--text-3); }
+    .fp-month-body { padding: 0 0 16px; font-size: 14px; color: var(--text-2); line-height: 1.8; }
+
+    .fp-legacy { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 20px; }
+    .fp-legacy > summary { cursor: pointer; font-size: 15px; font-weight: 650; min-height: 44px; display: flex; align-items: center; }
+
+    @media (max-width: 560px) {
+      .fp-day { flex-direction: column; gap: 6px; }
+      .fp-day-date { width: auto; }
+    }
+  </style>
+
+  <script type="application/json" data-fp-data set:html={JSON.stringify(planData)}></script>
+
   <script>
+    import { generatePlan, humanDate, monthKey, monthLabel, MODE_ENVELOPES } from '../scripts/planner.js';
+    import { setAttempt } from '../scripts/store.js';
+
+    /** This page owns its own key. store.js is left exactly as it is. */
+    const PLAN_KEY = 'adh-plan';
+
+    const data = JSON.parse(document.querySelector('[data-fp-data]').textContent);
+    const $ = (sel) => document.querySelector(sel);
+    const form = $('[data-fp-form]');
+    const attemptSel = $('[data-fp-attempt]');
+    const customWrap = $('[data-fp-custom]');
+    const examDateInput = $('[data-fp-exam-date]');
+    const startInput = $('[data-fp-start]');
+    const hoursInput = $('[data-fp-hours]');
+    const hoursHint = $('[data-fp-hours-hint]');
+    const savedNote = $('[data-fp-saved]');
+    const output = $('[data-fp-output]');
+    const warnBox = $('[data-fp-warnings]');
+
+    const DEFAULT_HOURS = { class12: 20, postboards: 42, bcom: 28 };
+    const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const KIND = {
+      study: { label: 'Study', bg: 'var(--accent-tint)', fg: 'var(--accent)' },
+      revision1: { label: 'Revision 1', bg: 'var(--info-tint)', fg: 'var(--info-text)' },
+      revision2: { label: 'Revision 2', bg: 'var(--info-tint)', fg: 'var(--info-text)' },
+      revision3: { label: 'One-pagers', bg: 'var(--info-tint)', fg: 'var(--info-text)' },
+      mock: { label: 'Mock', bg: 'var(--warning-tint)', fg: 'var(--warning-text)' },
+      minimum: { label: 'Minimum', bg: 'var(--surface-2)', fg: 'var(--text-2)' },
+      buffer: { label: 'Buffer', bg: 'var(--surface-2)', fg: 'var(--text-3)' },
+      gap: { label: 'Gap day', bg: 'var(--correct-tint)', fg: 'var(--correct-text)' },
+      exam: { label: 'Exam', bg: 'var(--accent)', fg: 'var(--on-accent)' },
+    };
+    const PHASE_COLOR = { study: 'var(--accent)', practice: 'var(--info)', revision: 'var(--correct)',
+      revision1: 'var(--accent)', revision2: 'var(--info)', revision3: 'var(--correct)' };
+
+    /** Today in IST — the exam calendar this site plans against is Indian. */
+    const todayISO = () => new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' });
+    const shortDate = (iso) => humanDate(iso).replace(/ \d{4}$/, '');
+    const el = (tag, cls, text) => {
+      const node = document.createElement(tag);
+      if (cls) node.className = cls;
+      if (text != null) node.textContent = text;
+      return node;
+    };
+
+    /* ── form state ───────────────────────────────────────────────────── */
+
+    const attemptById = (id) => data.attempts.find((a) => a.id === id) ?? data.attempts[0];
+    const currentMode = () => {
+      const picked = document.querySelector('[data-fp-mode]:checked')?.value;
+      return MODE_ENVELOPES[picked] ? picked : 'postboards';
+    };
+    let hoursTouched = false;
+
+    function syncMode() {
+      const envelope = MODE_ENVELOPES[currentMode()];
+      hoursHint.textContent =
+        `${envelope.lo}–${envelope.hi} hours a week is the usual band here. Anything outside it still generates a plan — it just says so.`;
+      if (!hoursTouched) hoursInput.value = String(DEFAULT_HOURS[currentMode()]);
+    }
+
+    function syncAttempt() {
+      const meta = attemptById(attemptSel.value);
+      customWrap.hidden = Boolean(meta.examDate);
+      if (meta.examDate) examDateInput.value = '';
+      // Keep the dashboard and the review scheduler on the same attempt.
+      setAttempt(meta.id, meta.examDate ?? (examDateInput.value || null));
+    }
+
+    function readForm() {
+      const meta = attemptById(attemptSel.value);
+      return {
+        attemptId: meta.id,
+        attemptName: meta.name,
+        examDate: meta.examDate ?? (examDateInput.value || null),
+        paperDates: meta.examDate ? meta.papers : [],
+        registrationCutoff: meta.cutoff,
+        registrationLabel: meta.cutoffLabel,
+        sessionLabel: meta.sessionLabel ? 'papers begin at 2:00 PM' : undefined,
+        startDate: startInput.value || todayISO(),
+        mode: currentMode(),
+        hoursPerWeek: Number(hoursInput.value),
+        weakPapers: [...document.querySelectorAll('[data-fp-weak]:checked')].map((c) => c.value),
+      };
+    }
+
+    /* ── rendering ────────────────────────────────────────────────────── */
+
+    function linksFor(a) {
+      if (a.activity === 'mock') return [{ href: '/practice/foundation-mock/', text: 'mock room' }];
+      if (a.activity === 'flashcards') return [{ href: '/practice/flashcards/', text: 'flashcards' }];
+      if (!a.paperSlug) return [{ href: '/practice/quiz/?mode=mistakes', text: 'mistakes' }];
+      if (a.chapterSlug) {
+        return [
+          { href: `/foundation/${a.paperSlug}/${a.chapterSlug}/`, text: 'open' },
+          { href: `/practice/quiz/?level=foundation&paper=${a.paperSlug}&chapter=${a.chapterSlug}`, text: 'practise' },
+        ];
+      }
+      return [
+        { href: `/foundation/${a.paperSlug}/`, text: 'chapters' },
+        { href: `/practice/quiz/?level=foundation&paper=${a.paperSlug}`, text: 'practise' },
+      ];
+    }
+
+    function dayRow(day, today) {
+      const row = el('div', 'fp-day');
+      if (day.date === today) row.style.background = 'var(--accent-tint)';
+
+      const when = el('div', 'fp-day-date');
+      when.appendChild(el('strong', null, WEEKDAYS[day.weekday]));
+      when.appendChild(document.createElement('br'));
+      when.appendChild(document.createTextNode(shortDate(day.date) + (day.date === today ? ' · today' : '')));
+      row.appendChild(when);
+
+      const body = el('div', 'fp-day-body');
+      const kind = KIND[day.kind] ?? KIND.study;
+      const chip = el('span', 'fp-chip', kind.label);
+      chip.style.background = kind.bg;
+      chip.style.color = kind.fg;
+      body.appendChild(chip);
+
+      for (const a of day.assignments) {
+        const line = el('div', 'fp-task');
+        line.appendChild(document.createTextNode(a.label));
+        const links = el('span', 'fp-task-links');
+        for (const link of linksFor(a)) {
+          links.appendChild(document.createTextNode(' · '));
+          const anchor = el('a', null, link.text);
+          anchor.href = link.href;
+          links.appendChild(anchor);
+        }
+        line.appendChild(links);
+        body.appendChild(line);
+      }
+      if (day.note) body.appendChild(el('div', 'fp-note', day.note));
+      row.appendChild(body);
+      return row;
+    }
+
+    function tally(days) {
+      const counts = new Map();
+      for (const d of days) counts.set(d.kind, (counts.get(d.kind) ?? 0) + 1);
+      return [...counts.entries()]
+        .map(([kind, n]) => `${n} ${(KIND[kind] ?? { label: kind }).label.toLowerCase()}`)
+        .join(' · ');
+    }
+
+    function renderWeeks(plan, today) {
+      const box = $('[data-fp-weeks]');
+      box.innerHTML = '';
+      // This week and the next one, or the first two weeks if the plan has
+      // not started yet — never a wall of every week at once.
+      let from = plan.weeks.findIndex((w) => w.days.some((d) => d.date >= today));
+      if (from < 0) from = Math.max(0, plan.weeks.length - 2);
+      const shown = plan.weeks.slice(from, from + 2);
+      if (shown.length === 0) return;
+
+      shown.forEach((week, i) => {
+        const card = el('div', 'fp-week');
+        const head = el('div', 'fp-week-head');
+        const title = el('div');
+        title.style.cssText = 'font-size: 15px; font-weight: 700;';
+        title.textContent = i === 0 && week.days.some((d) => d.date === today)
+          ? `This week — from ${shortDate(week.startDate)}`
+          : `Week of ${shortDate(week.startDate)}`;
+        head.appendChild(title);
+        const meta = el('div', 'tnum', tally(week.days));
+        meta.style.cssText = 'font-size: 13px; color: var(--text-2);';
+        head.appendChild(meta);
+        card.appendChild(head);
+        for (const day of week.days) card.appendChild(dayRow(day, today));
+        box.appendChild(card);
+      });
+    }
+
+    function renderMonths(plan, today) {
+      const box = $('[data-fp-months]');
+      box.innerHTML = '';
+      const months = new Map();
+      for (const week of plan.weeks) {
+        for (const day of week.days) {
+          const key = monthKey(day.date);
+          if (!months.has(key)) months.set(key, []);
+          months.get(key).push(day);
+        }
+      }
+      for (const [key, days] of months) {
+        const block = el('details', 'fp-month');
+        if (key === monthKey(today)) block.open = true;
+        const head = el('summary');
+        head.appendChild(el('span', null, monthLabel(days[0].date)));
+        const meta = el('span', 'tnum', tally(days));
+        meta.style.cssText = 'font-size: 13px; font-weight: 400; color: var(--text-2);';
+        head.appendChild(meta);
+        block.appendChild(head);
+
+        const body = el('div', 'fp-month-body');
+        // One line per week: what it is, and which papers it touches.
+        const byWeek = new Map();
+        for (const day of days) {
+          const wk = plan.weeks.find((w) => w.days.includes(day));
+          if (!byWeek.has(wk.startDate)) byWeek.set(wk.startDate, []);
+          byWeek.get(wk.startDate).push(day);
+        }
+        for (const [start, group] of byWeek) {
+          const papers = [...new Set(group.flatMap((d) => d.assignments.map((a) => a.paperName).filter(Boolean)))];
+          const line = el('div');
+          line.appendChild(el('strong', null, `${shortDate(start)} — `));
+          line.appendChild(document.createTextNode(
+            `${tally(group)}${papers.length ? ` · ${papers.join(', ')}` : ''}`
+          ));
+          body.appendChild(line);
+        }
+        block.appendChild(body);
+        box.appendChild(block);
+      }
+    }
+
+    function renderMocks(plan) {
+      const box = $('[data-fp-mocks]');
+      box.innerHTML = '';
+      const note = $('[data-fp-mock-note]');
+      if (plan.mocks.length === 0) {
+        note.textContent = 'No room for a mock on this runway. If you can find one afternoon, sit a past paper to the clock — it is worth more than the day of revision it costs.';
+        return;
+      }
+      note.textContent =
+        `${plan.mocks.length} full sitting${plan.mocks.length === 1 ? '' : 's'}, all in the last weeks, on days with an unbroken afternoon. Two of them line up with the windows in which ICAI usually releases its Mock Test Papers — sit the real MTP on those days if it is out, and mark it against the suggested answers.`;
+      for (const mock of plan.mocks) {
+        const row = el('div');
+        row.style.cssText = 'display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-top: 1px solid var(--surface-2);';
+        const when = el('span', 'tnum', shortDate(mock.date));
+        when.style.cssText = 'flex-shrink: 0; width: 82px; font-size: 14px; color: var(--text-2);';
+        row.appendChild(when);
+        const what = el('span');
+        what.style.cssText = 'flex: 1; font-size: 15px; line-height: 1.6;';
+        what.appendChild(document.createTextNode(mock.label));
+        if (mock.note) {
+          const hint = el('span', 'fp-note', mock.note);
+          what.appendChild(hint);
+        }
+        row.appendChild(what);
+        const go = el('a', null, 'mock room');
+        go.href = '/practice/foundation-mock/';
+        go.style.cssText = 'font-size: 14px; font-weight: 600; text-decoration: none;';
+        row.appendChild(go);
+        box.appendChild(row);
+      }
+    }
+
+    function renderWarnings(plan) {
+      warnBox.innerHTML = '';
+      warnBox.hidden = plan.warnings.length === 0;
+      for (const text of plan.warnings) {
+        const banner = el('div', 'banner');
+        const glyph = el('span', null, '!');
+        glyph.setAttribute('aria-hidden', 'true');
+        glyph.style.cssText = 'flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px; background: var(--warning); color: var(--on-warning); display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;';
+        banner.appendChild(glyph);
+        const body = el('div', null, text);
+        body.style.flex = '1';
+        banner.appendChild(body);
+        warnBox.appendChild(banner);
+      }
+    }
+
+    function render(plan) {
+      renderWarnings(plan);
+      if (!plan.summary || plan.weeks.length === 0) {
+        output.hidden = true;
+        return;
+      }
+      const today = todayISO();
+      const s = plan.summary;
+
+      $('[data-fp-headline]').textContent = plan.examWindow.papers.length
+        ? `${plan.generatedFor.attemptName} · first paper ${humanDate(plan.examWindow.first)}, last ${humanDate(plan.examWindow.last)}`
+        : `${plan.generatedFor.attemptName} · working towards ${humanDate(plan.examWindow.first)}`;
+      $('[data-fp-summary]').textContent = [
+        `${s.runwayDays} days from ${shortDate(s.startDate)} to the first paper`,
+        `${s.workDays} working days`,
+        `${s.bufferDays} buffer days (${s.bufferPct}%)`,
+        `${s.mockCount} mock${s.mockCount === 1 ? '' : 's'}`,
+        `${s.chapterCount} chapters`,
+      ].join(' · ');
+
+      const bar = $('[data-fp-bar]');
+      const key = $('[data-fp-bar-key]');
+      bar.innerHTML = '';
+      key.innerHTML = '';
+      const totalWork = plan.phases.reduce((n, p) => n + p.workDays, 0) || 1;
+      for (const phase of plan.phases) {
+        const seg = document.createElement('span');
+        seg.style.width = `${(phase.workDays / totalWork) * 100}%`;
+        seg.style.background = PHASE_COLOR[phase.key] ?? 'var(--accent)';
+        seg.title = phase.name;
+        bar.appendChild(seg);
+
+        const item = el('span');
+        const swatch = el('i');
+        swatch.style.background = PHASE_COLOR[phase.key] ?? 'var(--accent)';
+        item.appendChild(swatch);
+        item.appendChild(document.createTextNode(
+          `${phase.name} · ${shortDate(phase.startDate)}–${shortDate(phase.endDate)} · ${phase.workDays} days`
+        ));
+        key.appendChild(item);
+      }
+
+      renderWeeks(plan, today);
+      renderMonths(plan, today);
+      renderMocks(plan);
+      output.hidden = false;
+    }
+
+    /* ── persistence ──────────────────────────────────────────────────── */
+
+    function load() {
+      try {
+        const raw = localStorage.getItem(PLAN_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch {
+        return null;
+      }
+    }
+
+    function save(input, plan) {
+      try {
+        localStorage.setItem(PLAN_KEY, JSON.stringify({ savedAt: Date.now(), input, plan }));
+        savedNote.textContent = 'Saved in this browser. Your dashboard will show today’s line.';
+      } catch {
+        savedNote.textContent = 'This browser would not store the plan, so it will be gone on reload. Everything above still holds.';
+      }
+    }
+
+    function applyInput(input) {
+      if (!input) return;
+      if (data.attempts.some((a) => a.id === input.attemptId)) attemptSel.value = input.attemptId;
+      const meta = attemptById(attemptSel.value);
+      customWrap.hidden = Boolean(meta.examDate);
+      if (!meta.examDate && input.examDate) examDateInput.value = input.examDate;
+      if (input.startDate) startInput.value = input.startDate;
+      const radio = document.querySelector(`[data-fp-mode][value="${input.mode}"]`);
+      if (radio) radio.checked = true;
+      if (input.hoursPerWeek) {
+        hoursInput.value = String(input.hoursPerWeek);
+        hoursTouched = true;
+      }
+      const weak = new Set(input.weakPapers ?? []);
+      for (const box of document.querySelectorAll('[data-fp-weak]')) box.checked = weak.has(box.value);
+    }
+
+    /* ── wiring ───────────────────────────────────────────────────────── */
+
+    startInput.value = todayISO();
+    startInput.min = '2024-01-01';
+    syncMode();
+
+    for (const radio of document.querySelectorAll('[data-fp-mode]')) {
+      radio.addEventListener('change', syncMode);
+    }
+    hoursInput.addEventListener('input', () => { hoursTouched = true; });
+    attemptSel.addEventListener('change', syncAttempt);
+    examDateInput.addEventListener('change', () => {
+      const meta = attemptById(attemptSel.value);
+      if (!meta.examDate) setAttempt(meta.id, examDateInput.value || null);
+    });
+
+    const stored = load();
+    if (stored?.plan) {
+      applyInput(stored.input);
+      savedNote.textContent = `Last generated ${humanDate(new Date(stored.savedAt).toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' }))}.`;
+      render(stored.plan);
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      // One calm confirm before a plan is replaced — regenerating is normal,
+      // but it should never happen by accident.
+      if (load()?.plan && !window.confirm(
+        'Replace the plan you already have?\n\nYour progress, mistakes and flashcards are untouched — only the timetable changes.'
+      )) return;
+
+      const input = readForm();
+      const plan = generatePlan({ ...input, papers: data.papers });
+      setAttempt(input.attemptId, input.examDate);
+      render(plan);
+      if (plan.weeks.length > 0) save(input, plan);
+      else savedNote.textContent = '';
+      const target = plan.weeks.length > 0 ? output : warnBox;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+
+  <script>
+    /* The older Intermediate estimator, kept as it was — it is the only
+       planning this site offers for Inter until that level's data lands. */
     const form = document.querySelector('[data-plan-form]');
     const out = document.querySelector('[data-plan-output]');
     const warning = document.querySelector('[data-plan-warning]');

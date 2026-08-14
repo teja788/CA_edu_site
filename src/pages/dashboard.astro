@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
 import { attempt, papers, partnershipRefresherTopics } from '../data/site.js';
-import { foundationAttempts } from '../data/foundation.js';
+import { foundationAttempts, foundationPapers } from '../data/foundation.js';
 
 // Progress denominator for P1: 15 syllabus chapters + the partnership
 // refresher topics (same tracked-topic set the paper hub uses).
@@ -18,6 +18,19 @@ const attemptOptions = foundationAttempts.map((a) => ({
   cutoff: a.registration?.cutoff ?? null,
   cutoffLabel: a.registration?.label ?? null,
   cutoffRule: a.registration?.rule ?? null,
+  // Per-paper dates drive the exam-week gap-day kit; TBA attempts send [].
+  papers: (a.papers ?? []).filter((p) => p.date).map((p) => ({ paperSlug: p.paperSlug, date: p.date, label: p.label })),
+  sessionLabel: a.session?.label ?? null,
+}));
+
+// Just enough of each Foundation paper for the gap-day kit to build links.
+const gapPapers = foundationPapers.map((p) => ({
+  id: p.id,
+  slug: p.slug,
+  number: p.number,
+  name: p.name,
+  shortName: p.shortName,
+  chapters: p.sections.flatMap((s) => s.chapters.map((c) => ({ number: c.number, slug: c.slug, name: c.name }))),
 }));
 ---
 
@@ -38,6 +51,33 @@ const attemptOptions = foundationAttempts.map((a) => ({
     <div class="dash-grid">
       <!-- left column -->
       <div style="display: flex; flex-direction: column; gap: 24px; min-width: 0;">
+        <!-- today, from the study plan (adh-plan) — one sentence, or a quiet
+             link to /plan/ when there is no plan yet. In exam week this card
+             becomes the gap-day kit for the next paper. -->
+        <section class="card card-pad" data-today-card>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px;">
+            <div style="font-size: 18px; font-weight: 700;" data-today-title>Today’s plan</div>
+            <a href="/plan/" style="font-size: 13px; font-weight: 600; text-decoration: none;" data-today-planlink>your plan</a>
+          </div>
+          <div style="font-size: 15px; line-height: 1.7; color: var(--text);" data-today-line>
+            <a href="/plan/">Make a study plan</a> and today's work will appear here.
+          </div>
+
+          <!-- gap-day kit: only ever shown inside the exam window -->
+          <div data-gap-kit hidden style="margin-top: 14px;">
+            <div style="font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 12px;" data-gap-intro></div>
+            <div style="font-size: 13px; color: var(--text-3); margin-bottom: 6px;">One-pager pass — chapters of this paper</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 14px; line-height: 1.7; margin-bottom: 14px;" data-gap-chapters></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;" data-gap-actions></div>
+            <div style="font-size: 13px; color: var(--text-2); line-height: 1.65; margin-top: 14px;" data-gap-evening></div>
+          </div>
+
+          <div style="margin-top: 14px;" data-today-min-wrap hidden>
+            <button type="button" class="btn btn-tertiary" data-today-min-toggle aria-expanded="false">Can't today — show the minimum</button>
+            <div data-today-min hidden style="font-size: 14px; color: var(--text-2); line-height: 1.7; margin-top: 12px;"></div>
+          </div>
+        </section>
+
         <!-- review queue — never interrupted by ads -->
         <section class="card card-pad">
           <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; gap: 12px; flex-wrap: wrap;">
@@ -199,6 +239,7 @@ const attemptOptions = foundationAttempts.map((a) => ({
   </style>
 
   <script type="application/json" data-attempts set:html={JSON.stringify(attemptOptions)}></script>
+  <script type="application/json" data-gap-papers set:html={JSON.stringify(gapPapers)}></script>
 
   <script>
     import {
@@ -216,6 +257,7 @@ const attemptOptions = foundationAttempts.map((a) => ({
       importProgress,
     } from '../scripts/store.js';
     import { allCards } from '../data/flashcards.js';
+    import { humanDate, addDays, diffDays, dayFor, MINIMUM_DOSE } from '../scripts/planner.js';
 
     // Greeting by time of day — factual, no pressure.
     const h = new Date().getHours();
@@ -418,5 +460,215 @@ const attemptOptions = foundationAttempts.map((a) => ({
       pct.textContent = `${p1.pct}%`;
       if (fill) fill.style.width = `${p1.pct}%`;
     }
+
+    /* ── Today, from the study plan ───────────────────────────────────────
+       Reads `adh-plan` (written by /plan/) — store.js is untouched. Inside
+       the exam window this card becomes the gap-day kit instead. */
+    const gapPapers = JSON.parse(document.querySelector('[data-gap-papers]').textContent);
+    const paperBySlug = new Map(gapPapers.map((p) => [p.slug, p]));
+    const paperByNumber = new Map(gapPapers.map((p) => [p.number, p]));
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' });
+
+    const todayTitle = document.querySelector('[data-today-title]');
+    const todayLine = document.querySelector('[data-today-line]');
+    const gapKit = document.querySelector('[data-gap-kit]');
+    const minWrap = document.querySelector('[data-today-min-wrap]');
+    const minToggle = document.querySelector('[data-today-min-toggle]');
+    const minBox = document.querySelector('[data-today-min]');
+
+    let storedPlan = null;
+    try {
+      const raw = localStorage.getItem('adh-plan');
+      storedPlan = raw ? JSON.parse(raw) : null;
+    } catch {
+      storedPlan = null; // unreadable plan is the same as no plan
+    }
+    const plan = storedPlan?.plan ?? null;
+
+    function anchor(href, text) {
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = text;
+      a.style.cssText = 'font-weight: 600; text-decoration: none;';
+      return a;
+    }
+
+    /** Foundation question ids carry their paper: q-f1c4-001, cs-f2c2-01, d-f1c7-03. */
+    function paperNumberOfQuestion(id) {
+      const m = /(?:^|-)f(\d+)c\d+/.exec(id ?? '');
+      return m ? Number(m[1]) : null;
+    }
+
+    /** The links that belong with one plan assignment. */
+    function linksForAssignment(a) {
+      if (a.activity === 'mock') return [['/practice/foundation-mock/', 'mock room']];
+      if (a.activity === 'flashcards') return [['/practice/flashcards/', 'flashcards']];
+      if (!a.paperSlug) return [['/practice/quiz/?mode=mistakes', 'mistakes']];
+      if (a.chapterSlug) {
+        return [
+          [`/foundation/${a.paperSlug}/${a.chapterSlug}/`, 'open'],
+          [`/practice/quiz/?level=foundation&paper=${a.paperSlug}&chapter=${a.chapterSlug}`, 'practise'],
+        ];
+      }
+      return [[`/foundation/${a.paperSlug}/`, 'chapters'], [`/practice/quiz/?level=foundation&paper=${a.paperSlug}`, 'practise']];
+    }
+
+    /** One assignment, said the short way — the card is a sentence, not a table. */
+    function shortPhrase(a) {
+      const chapter = a.chapterName ?? null;
+      if (a.activity === 'mock') return a.label;
+      if (a.activity === 'flashcards') return 'your due flashcards';
+      if (!chapter) return `${a.paperName ?? 'mixed'} one-pager`;
+      if (a.activity === 'notes') return `${a.paperName} — ${chapter} notes`;
+      if (a.activity === 'practice') return `${a.paperName} — ${chapter} questions`;
+      if (a.activity === 'mixed') return `${a.paperName} — revise ${chapter}, then questions`;
+      return `${a.paperName} — ${chapter}`;
+    }
+
+    function actionButton(href, text, cls) {
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = text;
+      a.className = `btn ${cls}`;
+      a.style.textDecoration = 'none';
+      return a;
+    }
+
+    /* The minimum effective dose, one tap away on any ordinary day. */
+    (function buildMinimum() {
+      const line = document.createElement('div');
+      line.appendChild(document.createTextNode('The minimum that still counts: '));
+      line.appendChild(anchor('/practice/flashcards/', 'your due flashcards'));
+      line.appendChild(document.createTextNode(', then '));
+      line.appendChild(anchor('/practice/quiz/?mode=mixed', 'ten mixed questions'));
+      line.appendChild(document.createTextNode(`. ${MINIMUM_DOSE.minutes[0].toUpperCase()}${MINIMUM_DOSE.minutes.slice(1)}, and the day counts.`));
+      minBox.appendChild(line);
+      const why = document.createElement('div');
+      why.style.cssText = 'color: var(--text-3); margin-top: 8px;';
+      why.textContent = MINIMUM_DOSE.why;
+      minBox.appendChild(why);
+    })();
+
+    minToggle.addEventListener('click', () => {
+      const show = minBox.hidden;
+      minBox.hidden = !show;
+      minToggle.setAttribute('aria-expanded', show ? 'true' : 'false');
+      minToggle.textContent = show ? 'Hide the minimum' : 'Can’t today — show the minimum';
+    });
+
+    /* Exam window: the attempt's own notified paper dates first, the stored
+       plan's copy second. First paper − 1 through the last paper. */
+    const savedAttempt = getAttempt();
+    const attemptMeta = attempts.find((a) => a.id === savedAttempt?.id) ?? null;
+    let examPapers = (attemptMeta?.papers ?? []).slice();
+    if (examPapers.length === 0 && Array.isArray(plan?.examWindow?.papers)) {
+      examPapers = plan.examWindow.papers.slice();
+    }
+    examPapers.sort((a, b) => a.date.localeCompare(b.date));
+    const inExamWindow = examPapers.length > 0
+      && today >= addDays(examPapers[0].date, -1)
+      && today <= examPapers[examPapers.length - 1].date;
+
+    function renderGapDay() {
+      const next = examPapers.find((p) => p.date >= today);
+      const paper = next ? paperBySlug.get(next.paperSlug) : null;
+      if (!paper) return false;
+      const away = diffDays(today, next.date);
+
+      todayTitle.textContent = 'Exam week';
+      todayLine.textContent = away === 0
+        ? `${paper.name} today — the paper begins at 2:00 PM.`
+        : away === 1
+          ? `${paper.name} tomorrow, ${humanDate(next.date)}. Today belongs to it.`
+          : `Next paper: ${paper.name} on ${humanDate(next.date)}, ${away} days away.`;
+
+      document.querySelector('[data-gap-intro]').textContent = away === 0
+        ? 'Nothing new goes in today. One pass of your one-pagers, then the hall.'
+        : 'Whatever is written is written — that paper cannot move now. This one still can, and it is the only thing today is for.';
+
+      const chapterBox = document.querySelector('[data-gap-chapters]');
+      chapterBox.innerHTML = '';
+      for (const ch of paper.chapters) {
+        chapterBox.appendChild(anchor(`/foundation/${paper.slug}/${ch.slug}/`, `${ch.number}. ${ch.name}`));
+      }
+
+      const mine = dueMistakes.filter((m) => paperNumberOfQuestion(m.questionId) === paper.number);
+      const actions = document.querySelector('[data-gap-actions]');
+      actions.innerHTML = '';
+      if (mine.length > 0) {
+        actions.appendChild(actionButton(
+          `/practice/quiz/?mode=mistakes&level=foundation&paper=${paper.slug}`,
+          `Retry ${mine.length} mistake${mine.length === 1 ? '' : 's'} from this paper`,
+          'btn-primary'
+        ));
+      }
+      actions.appendChild(actionButton(
+        `/practice/quiz/?level=foundation&paper=${paper.slug}`,
+        mine.length > 0 ? 'Practice questions' : 'Practice questions from this paper',
+        mine.length > 0 ? 'btn-secondary' : 'btn-primary'
+      ));
+
+      document.querySelector('[data-gap-evening]').textContent =
+        'Stop while there is still light in the sky. Eat something, and sleep — the sleep is what fixes today’s revision, and the last hour of the night has never shown up on an answer sheet.';
+
+      gapKit.hidden = false;
+      minWrap.hidden = true; // in exam week the one-pager pass IS the minimum
+      return true;
+    }
+
+    function renderPlanDay() {
+      if (!plan || !Array.isArray(plan.weeks) || plan.weeks.length === 0) return false;
+      const day = dayFor(plan, today);
+
+      if (!day) {
+        const first = plan.weeks[0].days[0].date;
+        todayLine.textContent = '';
+        if (today < first) {
+          todayLine.appendChild(document.createTextNode(`Your plan starts on ${humanDate(first)}. Until then the review queue below is plenty — `));
+          todayLine.appendChild(anchor('/plan/', 'see the plan'));
+        } else {
+          todayLine.appendChild(document.createTextNode('This plan has run past its exam date. When you are ready for the next attempt, '));
+          todayLine.appendChild(anchor('/plan/', 'build the next one'));
+        }
+        todayLine.appendChild(document.createTextNode('.'));
+        minWrap.hidden = false;
+        return true;
+      }
+
+      if (day.kind === 'buffer') {
+        todayLine.textContent = 'Buffer day — catch up on anything that slipped, or rest. Both are the plan working.';
+        minWrap.hidden = false;
+        return true;
+      }
+
+      todayLine.textContent = '';
+      todayLine.appendChild(document.createTextNode('Today: '));
+      day.assignments.forEach((a, i) => {
+        if (i > 0) {
+          todayLine.appendChild(document.createTextNode(i === day.assignments.length - 1 ? ', then ' : ', '));
+        }
+        todayLine.appendChild(document.createTextNode(shortPhrase(a)));
+        const links = document.createElement('span');
+        links.style.fontSize = '13px';
+        for (const [href, text] of linksForAssignment(a)) {
+          links.appendChild(document.createTextNode(' · '));
+          links.appendChild(anchor(href, text));
+        }
+        todayLine.appendChild(links);
+      });
+      if (day.assignments.length === 0) {
+        todayLine.appendChild(document.createTextNode('nothing scheduled — the review queue below is the day.'));
+      }
+      if (day.note) {
+        const note = document.createElement('div');
+        note.style.cssText = 'font-size: 13px; color: var(--text-3); line-height: 1.65; margin-top: 8px;';
+        note.textContent = day.note;
+        todayLine.appendChild(note);
+      }
+      minWrap.hidden = false;
+      return true;
+    }
+
+    if (!(inExamWindow && renderGapDay())) renderPlanDay();
   </script>
 </Base>

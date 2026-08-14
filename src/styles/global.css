@@ -791,7 +791,7 @@ a.list-row:hover { background: var(--row-alt); }
   right: 0;
   background: var(--surface);
   border-top: 1px solid var(--border);
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   padding: 6px 4px calc(10px + env(safe-area-inset-bottom));
   z-index: 50;
 }

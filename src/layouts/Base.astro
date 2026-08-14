@@ -4,7 +4,7 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
-  active?: 'home' | 'papers' | 'practice' | 'dashboard';
+  active?: 'home' | 'papers' | 'practice' | 'plan' | 'dashboard';
   /** Quiz pages hide the standard chrome (dedicated quiz bar, no bottom nav). */
   bare?: boolean;
 }
@@ -20,6 +20,7 @@ const nav = [
   { key: 'home', label: 'Home', href: '/', icon: '⌂' },
   { key: 'papers', label: 'Papers', href: '/intermediate/', icon: '▤' },
   { key: 'practice', label: 'Practice', href: '/practice/', icon: '✎' },
+  { key: 'plan', label: 'Plan', href: '/plan/', icon: '◵' },
   { key: 'dashboard', label: 'Dashboard', href: '/dashboard/', icon: '◔' },
 ];
 ---
