@@ -1,0 +1,146 @@
+---
+/**
+ * RTP, MTP and past papers — the free ICAI practice corpus, rendered from
+ * `foundationOfficialCorpus` and `foundationAttempts` in
+ * src/data/foundation.js. Links only; nothing is re-hosted.
+ */
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Badge from '../../components/Badge.astro';
+import Callout from '../../components/Callout.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import {
+  foundationAttempts,
+  foundationOfficialCorpus,
+  foundationPapers,
+} from '../../data/foundation.js';
+
+const nextAttempt = foundationAttempts[0];
+const rtp = foundationOfficialCorpus.find((r) => r.kind === 'RTP');
+const mtp = foundationOfficialCorpus.find((r) => r.kind === 'MTP');
+const pastPapers = foundationOfficialCorpus.find((r) => r.kind === 'PastPaper');
+---
+
+<Base
+  title="CA Foundation RTP, MTP and past papers"
+  description="What ICAI's RTPs, MTPs, past papers and model papers are, when each is released relative to an attempt, and where they belong in a revision plan. All free on the BoS portal."
+>
+  <main class="page">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'RTP, MTP & past papers' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        RTP, MTP and past papers, explained
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={nextAttempt.name} updated="14 Aug 2026" source="ICAI Board of Studies announcements" />
+      </div>
+
+      <div class="article">
+        <p>
+          The single best question bank for CA Foundation is published by the examiner, costs nothing, and
+          most students open it three weeks too late. RTPs, MTPs, past papers and model papers are all
+          free on the ICAI Board of Studies portal — the same portal your study material comes from, with
+          the same free student login.
+        </p>
+
+        <Callout kind="pointer" label="Where all of this lives">
+          <p>
+            <a href="https://boslive.icai.org/" rel="noopener">boslive.icai.org ↗</a> — the BoS Knowledge
+            Portal. Log in with your registration number and date of birth; Foundation students see
+            Foundation material. Past papers with suggested answers are also on
+            {' '}<a href={pastPapers.url} rel="noopener">icai.org ↗</a>, no login needed. Nothing on
+            Adhyayan is a re-hosted copy — we link, ICAI publishes.
+          </p>
+        </Callout>
+
+        <h2>What each one is</h2>
+      </div>
+
+      {foundationOfficialCorpus.map((item) => (
+        <div class="card card-pad" style="margin-bottom: 14px;">
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 8px;">
+            <strong style="font-size: 17px;">{item.name}</strong>
+            {item.requiresLogin
+              ? <Badge kind="login">Requires ICAI login</Badge>
+              : <Badge kind="neutral">Open access</Badge>}
+          </div>
+          <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.7; color: var(--text);">{item.what}</p>
+          <div style="font-size: 14px; color: var(--text-2); line-height: 1.7;">
+            <div><strong style="color: var(--text);">When it lands:</strong> {item.timing}</div>
+            <div><strong style="color: var(--text);">How to use it:</strong> {item.useIt}</div>
+          </div>
+          <div style="margin-top: 12px;">
+            <a href={item.url} rel="noopener" style="font-size: 14px; font-weight: 600;">Open on {new URL(item.url).host} ↗</a>
+          </div>
+        </div>
+      ))}
+
+      <div class="article" style="margin-top: 28px;">
+        <h2>Timing, relative to your attempt</h2>
+        <p>
+          Every attempt gets its own RTP and its own two MTP series. They are not interchangeable across
+          attempts: the RTP carries the amendments applicable to that specific sitting, which is exactly
+          why the RTP of the attempt you are writing matters more than any older one.
+        </p>
+        <p>
+          For {nextAttempt.name} — papers on {nextAttempt.examDates.label},
+          {' '}{nextAttempt.session.label.toLowerCase()} — that means the RTP is
+          {' '}{rtp.timing.toLowerCase()}. The mock papers follow their own rhythm: {mtp.timing.toLowerCase()}.
+        </p>
+
+        <Callout kind="mistake">
+          <p>
+            Saving the MTPs "until I'm ready". They exist to tell you what ready means, and the answer key
+            is worth most when there is still time to act on it. A mock sat at 60% syllabus coverage is a
+            diagnostic; a mock sat the week before the exam is only a rehearsal.
+          </p>
+        </Callout>
+
+        <h2>Where they fit in revision</h2>
+        <p>
+          A workable ordering, once the syllabus is covered once:
+        </p>
+        <p>
+          <strong>1. Past papers first.</strong> Take the last three attempts, one paper at a time, and
+          attempt before reading the suggested answers. This is where you learn the depth expected.<br />
+          <strong>2. RTP during the second revision cycle.</strong> Read the amendment section the day it
+          releases; work the question set once you have revised the chapters it draws on.<br />
+          <strong>3. MTPs to the clock, in the last few weeks.</strong> Full length, no pauses, in the
+          afternoon slot the real papers use. Classify every lost mark afterwards — concept gap, revision
+          gap, calculation slip, or time — because the four have different fixes.
+        </p>
+        <p>
+          On the objective papers, the post-mock question worth asking is not "how many did I get wrong"
+          but "what did wrong attempts cost me against what skipping would have cost." That arithmetic is
+          the whole skill of an OMR paper.
+        </p>
+
+        <h2>Per-paper links</h2>
+      </div>
+
+      <div class="list-card" style="margin-bottom: 24px;">
+        {foundationPapers.map((paper) => (
+          <a class="list-row" href={`/foundation/${paper.slug}/#resources`}>
+            <span class="row-num tnum">{String(paper.number).padStart(2, '0')}</span>
+            <span class="row-title">{paper.name}</span>
+            <span class="row-meta">Official resources</span>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="article">
+        <h2>Where to go next</h2>
+        <p>
+          <a href="/guides/ca-foundation-exam-pattern/">The exam pattern</a> — the structure your mocks
+          should be reproducing, including the {nextAttempt.session.label.toLowerCase()}.<br />
+          <a href="/guides/ca-foundation-weightage/">Official section-wise weightage</a> — which chapters
+          deserve the questions you have time for.<br />
+          <a href="/practice/">Practice sets on Adhyayan</a> — original questions with an explanation on
+          every option, to use between the official papers, never instead of them.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>

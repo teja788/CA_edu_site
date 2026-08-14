@@ -1,0 +1,30 @@
+---
+/**
+ * The Foundation all-or-nothing rule, in one calm sentence.
+ * Numbers come from `passRule` in src/data/foundation.js (ICAI Foundation
+ * scheme of examination) — never hard-code them here.
+ */
+import { passRule } from '../data/foundation.js';
+
+interface Props {
+  /** `plain` drops the callout chrome for use inside an existing card. */
+  variant?: 'callout' | 'plain';
+}
+const { variant = 'callout' } = Astro.props;
+
+const sentence = `Foundation is passed in one sitting: at least ${passRule.perPaperPct}% in each of the ${passRule.papers} papers and at least ${passRule.aggregatePct}% of the aggregate (${passRule.aggregateMarks} of ${passRule.totalMarks}) — there is no set-off and no exemption at this level, so falling short in one paper means writing all ${passRule.papers} again.`;
+---
+
+{variant === 'plain' ? (
+  <p style="margin: 0; font-size: 15px; line-height: 1.7; color: var(--text);">{sentence}</p>
+) : (
+  <aside class="callout callout-note">
+    <div class="callout-head">
+      <span class="callout-glyph" aria-hidden="true">✎</span>
+      <span class="callout-label">The passing rule</span>
+    </div>
+    <div class="callout-body">
+      <p>{sentence}</p>
+    </div>
+  </aside>
+)}

@@ -1,0 +1,134 @@
+---
+/**
+ * CA Foundation section-wise weightage — rendered entirely from
+ * `foundationWeightage` in src/data/foundation.js (ICAI announcement of
+ * 26 Oct 2023, published with the Foundation syllabus).
+ */
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Badge from '../../components/Badge.astro';
+import Callout from '../../components/Callout.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import {
+  foundationAttempts,
+  foundationPapers,
+  foundationWeightage,
+  formatWeightage,
+  WEIGHTAGE_NOTE,
+  WEIGHTAGE_SOURCE,
+} from '../../data/foundation.js';
+
+// Chapter names for the "covers" column, looked up from the same taxonomy.
+function chapterNames(paper, slugs) {
+  const all = paper.sections.flatMap((s) => s.chapters);
+  return slugs.map((slug) => (all.find((c) => c.slug === slug) || {}).name || slug);
+}
+---
+
+<Base
+  title="CA Foundation weightage"
+  description="ICAI's official section-wise weightage for all four CA Foundation papers, with the ±5% deviation ICAI permits and the chapters each section covers."
+>
+  <main class="page">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'Foundation weightage' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        CA Foundation section-wise weightage
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={foundationAttempts[0].name} updated="14 Aug 2026" source={WEIGHTAGE_SOURCE.label} />
+      </div>
+
+      <div class="article">
+        <p>
+          ICAI publishes, with the syllabus itself, how the marks in each paper are distributed across
+          syllabus sections. It is the only official statement of what is worth what — everything else you
+          read about "important chapters" is somebody's guess. The tables below are that statement,
+          unedited.
+        </p>
+
+        <Callout kind="pointer" label="Read the ranges as ranges">
+          <p>
+            {WEIGHTAGE_NOTE}. A section shown at 15–20% can legitimately appear anywhere from 10% to 25%
+            in the paper you sit. Weightage tells you where to spend your <em>first</em> hours; it never
+            tells you what to leave out.
+          </p>
+        </Callout>
+      </div>
+
+      {foundationPapers.map((paper) => {
+        const w = foundationWeightage[paper.slug];
+        const sections = [...new Set(w.groups.map((g) => g.section || null))];
+        return (
+          <>
+            <div class="overline" style="margin: 32px 0 12px;">
+              Paper {paper.number} · {paper.name} · {paper.marks} marks
+            </div>
+            <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 12px;">
+              Each percentage is a share {w.basisLabel}.
+            </p>
+            {sections.map((sectionName) => (
+              <>
+                {sectionName && (
+                  <div style="font-size: 14px; font-weight: 650; color: var(--text-2); margin: 16px 0 8px;">{sectionName}</div>
+                )}
+                <div class="table-scroll" style="margin-bottom: 12px;">
+                  <div class="data-table">
+                    <div class="tr head" style="grid-template-columns: 1fr 100px;">
+                      <div class="td">Syllabus section</div>
+                      <div class="td num">Weightage</div>
+                    </div>
+                    {w.groups
+                      .filter((g) => (g.section || null) === sectionName)
+                      .map((g) => (
+                        <div class="tr" style="grid-template-columns: 1fr 100px;">
+                          <div class="td">
+                            <div style="font-weight: 600;">{g.label}</div>
+                            <div style="font-size: 13px; color: var(--text-3); line-height: 1.5; margin-top: 2px;">
+                              {chapterNames(paper, g.chapterSlugs).join(' · ')}
+                            </div>
+                            {g.note && <div style="font-size: 13px; color: var(--text-3); margin-top: 4px;">{g.note}</div>}
+                          </div>
+                          <div class="td num" style="font-weight: 650;">
+                            {g.weightage ? formatWeightage(g.weightage) : `${g.marks} marks`}
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </>
+            ))}
+            <p style="margin: 0 0 4px;">
+              <a href={`/foundation/${paper.slug}/`}>Open the Paper {paper.number} chapter list →</a>
+            </p>
+          </>
+        );
+      })}
+
+      <div class="article" style="margin-top: 32px;">
+        <h2>Source</h2>
+        <p>
+          {WEIGHTAGE_SOURCE.label}, published with the Foundation syllabus:
+          {' '}<a href={WEIGHTAGE_SOURCE.url} rel="noopener">{WEIGHTAGE_SOURCE.url} ↗</a>.
+          Last checked {WEIGHTAGE_SOURCE.lastChecked}. Nothing on this page is re-hosted ICAI material —
+          it is the weightage table restated, with the chapters each section covers spelled out.
+        </p>
+        <div class="trust-row" style="margin-bottom: 20px;">
+          <Badge kind="verified">Official figures</Badge>
+          <span>Re-verify against the current syllabus PDF if ICAI issues a new edition.</span>
+        </div>
+
+        <h2>Where to go next</h2>
+        <p>
+          <a href="/guides/ca-foundation-exam-pattern/">The exam pattern</a> — durations, question
+          structure and the passing rule these percentages sit inside.<br />
+          <a href="/foundation/quantitative-aptitude/">Paper 3, Quantitative Aptitude</a> — where the
+          weightage ranges do the most work, including a safe route to a pass.<br />
+          <a href="/foundation/">All four Foundation papers</a> — chapter lists with the weightage of each
+          section shown against them.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>

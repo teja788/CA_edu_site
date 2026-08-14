@@ -5,8 +5,18 @@ import Badge from '../../../components/Badge.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Mastery from '../../../components/Mastery.astro';
 import TrustRow from '../../../components/TrustRow.astro';
+import Callout from '../../../components/Callout.astro';
+import PassRule from '../../../components/PassRule.astro';
 import { attempt } from '../../../data/site.js';
-import { foundationPapers, foundationScoring } from '../../../data/foundation.js';
+import {
+  foundationPapers,
+  foundationScoring,
+  formatWeightage,
+  getWeightageGroupForChapter,
+  p3SafePathTo40,
+  WEIGHTAGE_NOTE,
+  WEIGHTAGE_SOURCE,
+} from '../../../data/foundation.js';
 
 export function getStaticPaths() {
   return foundationPapers.map((paper) => ({
@@ -19,6 +29,21 @@ const { paper } = Astro.props;
 const negative = paper.pattern.negativeMarking;
 const practiceHref = `/practice/quiz/?level=foundation&paper=${paper.slug}${negative ? '&scoring=foundation' : ''}`;
 const chapterCount = paper.sections.reduce((n, s) => n + s.chapters.length, 0);
+
+// Weightage annotation only — the chapter order below is ICAI's and is never
+// re-sorted by weightage. Groups are listed in syllabus order.
+const weightageGroups = paper.weightageGroups ?? [];
+
+// Paper 3 only: the safe-40 route. Chapter names come from the paper's own
+// section lists so the links can never point at a slug that doesn't exist.
+const chapterName = (slug) => {
+  for (const s of paper.sections) {
+    const ch = s.chapters.find((c) => c.slug === slug);
+    if (ch) return ch.name;
+  }
+  return slug;
+};
+const safePath = paper.slug === 'quantitative-aptitude' ? p3SafePathTo40 : null;
 ---
 
 <Base title={`Paper ${paper.number}: ${paper.name} — CA Foundation`} active="papers">
@@ -56,7 +81,7 @@ const chapterCount = paper.sections.reduce((n, s) => n + s.chapters.length, 0);
       <ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.8; color: var(--text);">
         <li>{paper.marks} marks · {paper.pattern.style}{negative ? ' · every question carries negative marking' : ''}.</li>
         <li>Pass this paper: <strong>minimum 40 of 100</strong>.</li>
-        <li>Pass Foundation: 40 in <em>each</em> of the four papers <strong>and 50% aggregate</strong> (200 of 400) across all four together.</li>
+        <li><PassRule variant="plain" /></li>
         {negative ? (
           <li>
             Marking: <strong>+1 for a correct answer, −0.25 for a wrong answer, 0 for a skip</strong>.
@@ -73,19 +98,84 @@ const chapterCount = paper.sections.reduce((n, s) => n + s.chapters.length, 0);
       </div>
     </div>
 
+    <!--
+      Official ICAI section-wise weightage (announced 26 Oct 2023, ±5%
+      deviation permitted) — source resource.cdn.icai.org/76829bos61899-foundation.pdf.
+      Displayed in syllabus order; nothing below is sorted by weightage.
+    -->
+    {weightageGroups.length > 0 && (
+      <>
+        <div class="overline" style="margin: 32px 0 12px;">Official weightage</div>
+        <div class="list-card" style="max-width: 720px;">
+          {weightageGroups.map((g) => (
+            <div class="list-row">
+              <span style="flex: 1;">
+                <span style="display: block; font-size: 15px; font-weight: 600;">{g.label}</span>
+                {g.section && <span style="font-size: 13px; color: var(--text-3);">{g.section}</span>}
+                {g.note && <span style="display: block; font-size: 13px; color: var(--text-3);">{g.note}</span>}
+              </span>
+              <span class="row-meta tnum" style="font-weight: 650; color: var(--text);">
+                {g.weightage ? formatWeightage(g.weightage) : `${g.marks} marks`}
+              </span>
+            </div>
+          ))}
+        </div>
+        <p style="font-size: 13px; color: var(--text-3); line-height: 1.6; max-width: 720px; margin: 10px 0 0;">
+          {WEIGHTAGE_NOTE}{paper.weightageBasisLabel ? ` — each range is a share ${paper.weightageBasisLabel}` : ''}.
+          Source: <a href={WEIGHTAGE_SOURCE.url} rel="noopener">{WEIGHTAGE_SOURCE.label} ↗</a> ·
+          last checked {WEIGHTAGE_SOURCE.lastChecked}.
+        </p>
+      </>
+    )}
+
+    <!-- Paper 3 only: the safe route to the 40-mark bar. -->
+    {safePath && (
+      <div style="max-width: 720px; margin-top: 20px;">
+        <Callout kind="pointer" label="A safe path to 40 in this paper">
+          <p>
+            Forty marks passes this paper. If Quantitative Aptitude is your weakest paper, three blocks
+            carry most of that forty between them — secure these first, then spend whatever time is left
+            widening out.
+          </p>
+          <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+            {safePath.map((item) => (
+              <li>
+                <strong>{item.label}</strong> — {item.detail}<br />
+                {item.chapterSlugs.map((slug, si) => (
+                  <>
+                    {si > 0 && <span style="color: var(--text-3);"> · </span>}
+                    <a href={`/foundation/${paper.slug}/${slug}/`}>{chapterName(slug)}</a>
+                  </>
+                ))}
+              </li>
+            ))}
+          </ul>
+          <p style="margin-top: 12px;">
+            The mark figures are ICAI's official weightage; the order of attack is our reading of it, not
+            an ICAI recommendation. Nothing here says skip the rest — it says what to cover first when
+            time is short.
+          </p>
+        </Callout>
+      </div>
+    )}
+
     <!-- Chapters with mastery states -->
     {paper.sections.map((section, i) => (
       <>
         <div class="overline" style="margin: 24px 0 12px;">{section.name}</div>
         <div class="list-card">
-          {section.chapters.map((ch) => (
-            ch.hasNotes ? (
+          {section.chapters.map((ch) => {
+            // Weightage of the ICAI group this chapter sits in — annotation only.
+            const g = getWeightageGroupForChapter(paper.slug, ch.slug);
+            const range = g && g.weightage ? formatWeightage(g.weightage) : null;
+            return ch.hasNotes ? (
               <a class="list-row" href={`/foundation/${paper.slug}/${ch.slug}/`}>
                 <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
                 <span class="row-title">
                   {ch.name}
                   <span class="badge badge-draft" style="margin-left: 8px;">✎ Community draft</span>
                 </span>
+                {range && <span class="row-meta tnum" title={g.label}>{range}</span>}
                 <Mastery level={0} topicId={`${paper.id}-ch${ch.number}`} />
                 <span class="chev" aria-hidden="true">›</span>
               </a>
@@ -93,10 +183,11 @@ const chapterCount = paper.sections.reduce((n, s) => n + s.chapters.length, 0);
               <div class="list-row">
                 <span class="row-num tnum">{String(ch.number).padStart(2, '0')}</span>
                 <span class="row-title">{ch.name}</span>
+                {range && <span class="row-meta tnum" title={g.label}>{range}</span>}
                 <Mastery level={0} topicId={`${paper.id}-ch${ch.number}`} />
               </div>
-            )
-          ))}
+            );
+          })}
         </div>
         {i === 0 && <AdSlot />}
       </>

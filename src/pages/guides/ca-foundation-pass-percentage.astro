@@ -1,0 +1,159 @@
+---
+/**
+ * CA Foundation pass percentages — every figure rendered from
+ * `foundationPassPercentages` in src/data/foundation.js (as announced by
+ * ICAI with each result).
+ */
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Badge from '../../components/Badge.astro';
+import Callout from '../../components/Callout.astro';
+import PassRule from '../../components/PassRule.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import {
+  foundationAttempts,
+  foundationPassPercentages,
+  foundationPassRange,
+  passRule,
+  PASS_PERCENTAGE_SOURCE,
+} from '../../data/foundation.js';
+
+const newScheme = foundationPassPercentages.filter((r) => r.scheme === 'new');
+const oldScheme = foundationPassPercentages.filter((r) => r.scheme === 'old');
+const latest = newScheme[newScheme.length - 1];
+const withCounts = newScheme.filter((r) => r.appeared);
+const nf = new Intl.NumberFormat('en-IN');
+---
+
+<Base
+  title="CA Foundation pass percentage"
+  description="Attempt-wise CA Foundation pass percentages as announced by ICAI, and what the 40% per paper / 50% aggregate rule has to do with them."
+>
+  <main class="page">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'Foundation pass percentage' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        CA Foundation pass percentage, attempt by attempt
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={foundationAttempts[0].name} updated="14 Aug 2026" source={PASS_PERCENTAGE_SOURCE.label} />
+      </div>
+
+      <div class="article">
+        <p>
+          ICAI announces a pass percentage with every Foundation result. The figures below are those
+          announcements, each against the attempt it belongs to. They are useful for one thing only:
+          calibrating how much preparation an attempt is actually worth. They say nothing about you.
+        </p>
+
+        <h2>Under the New Scheme</h2>
+        <p>
+          The scheme changed from the June 2024 attempt, so figures on either side of that line measure
+          different exams. Since then the pass percentage has sat between
+          {' '}{foundationPassRange.lo}% and {foundationPassRange.hi}%.
+        </p>
+      </div>
+
+      <div class="table-scroll">
+        <div class="data-table">
+          <div class="tr head" style="grid-template-columns: 1fr 110px 1fr;">
+            <div class="td">Attempt</div>
+            <div class="td num">Pass %</div>
+            <div class="td num">Candidates</div>
+          </div>
+          {newScheme.map((r, i) => (
+            <div class={`tr${i % 2 === 1 ? ' alt' : ''}`} style="grid-template-columns: 1fr 110px 1fr;">
+              <div class="td">{r.attempt}</div>
+              <div class="td num" style="font-weight: 650;">{r.pct}%</div>
+              <div class="td num dim">
+                {r.appeared
+                  ? (r.passed ? `${nf.format(r.passed)} of ${nf.format(r.appeared)}` : `${nf.format(r.appeared)} appeared`)
+                  : 'not announced'}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="article" style="margin-top: 28px;">
+        <h2>Before the New Scheme</h2>
+        <p>
+          Shown for completeness, not comparison — the syllabus, the paper pattern and the number of
+          attempts a year were all different.
+        </p>
+      </div>
+
+      <div class="table-scroll">
+        <div class="data-table">
+          <div class="tr head" style="grid-template-columns: 1fr 110px;">
+            <div class="td">Attempt (old scheme)</div>
+            <div class="td num">Pass %</div>
+          </div>
+          {oldScheme.map((r, i) => (
+            <div class={`tr${i % 2 === 1 ? ' alt' : ''}`} style="grid-template-columns: 1fr 110px;">
+              <div class="td">{r.attempt}</div>
+              <div class="td num" style="font-weight: 650;">{r.pct}%</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="article" style="margin-top: 28px;">
+        <h2>What the number is measuring</h2>
+        <p>
+          A Foundation pass percentage is not a per-paper figure. ICAI publishes no per-paper statistics at
+          this level, and the reported percentage is the share of candidates who cleared the whole stage —
+          which is a stricter test than clearing any single paper.
+        </p>
+      </div>
+
+      <PassRule />
+
+      <div class="article" style="margin-top: 24px;">
+        <p>
+          That is most of the explanation. A candidate who scores {passRule.perPaperPct + 30},
+          {' '}{passRule.perPaperPct + 25} and {passRule.perPaperPct + 20} in three papers and
+          {' '}{passRule.perPaperPct - 5} in the fourth has cleared the aggregate comfortably and still has
+          to write all {passRule.papers} papers again. Every reported percentage carries candidates in
+          exactly that position. The headline number is therefore less a measure of difficulty than a
+          measure of how unforgiving the combination rule is.
+        </p>
+
+        <Callout kind="pointer" label="The useful reading">
+          <p>
+            Around one in five candidates clears Foundation in a given attempt
+            ({latest.attempt}: {latest.pct}%{latest.passed ? `, ${nf.format(latest.passed)} of ${nf.format(latest.appeared)} candidates` : ''}).
+            The practical consequence is not "this is frightening" — it is "no paper can be left as the
+            one you will deal with later." Plan for a comfortable margin above {passRule.perPaperPct} in
+            your weakest paper first, and the aggregate takes care of itself.
+          </p>
+        </Callout>
+
+        <h2>Source and caveats</h2>
+        <p>
+          {PASS_PERCENTAGE_SOURCE.label}. Candidate counts appear only where ICAI announced them;
+          {' '}{withCounts.length} of the {newScheme.length} New Scheme attempts listed here include one.
+          Last checked {PASS_PERCENTAGE_SOURCE.lastChecked} against
+          {' '}<a href={PASS_PERCENTAGE_SOURCE.url} rel="noopener">icai.org ↗</a>. If a figure here differs
+          from the ICAI announcement, the announcement is right — please
+          {' '}<a href="/report-error/?page=/guides/ca-foundation-pass-percentage/">report it</a>.
+        </p>
+        <div class="trust-row" style="margin-bottom: 20px;">
+          <Badge kind="verified">As announced by ICAI</Badge>
+          <span>No per-paper pass statistics are published at Foundation level.</span>
+        </div>
+
+        <h2>Where to go next</h2>
+        <p>
+          <a href="/guides/ca-foundation-exam-pattern/">The exam pattern and passing rule</a> — the
+          mechanics behind the number on this page.<br />
+          <a href="/guides/ca-foundation-weightage/">Official section-wise weightage</a> — where the marks
+          in each paper actually sit.<br />
+          <a href="/foundation/quantitative-aptitude/">Paper 3, Quantitative Aptitude</a> — the paper most
+          often responsible for a shortfall in one paper, with a route to a safe margin.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>

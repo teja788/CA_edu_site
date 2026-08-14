@@ -63,6 +63,14 @@ const { level } = Astro.props;
     <div class="list-card" style="max-width: 720px;">
       <a class="list-row" href="/start-here/"><span class="row-title">Start here — the self-study playbook</span><span class="chev" aria-hidden="true">›</span></a>
       <a class="list-row" href="/guides/exemptions/"><span class="row-title">Exemption rules, explained</span><span class="chev" aria-hidden="true">›</span></a>
+      {level.id === 'foundation' && (
+        <>
+          <a class="list-row" href="/guides/ca-foundation-exam-pattern/"><span class="row-title">Foundation exam pattern &amp; passing rule</span><span class="chev" aria-hidden="true">›</span></a>
+          <a class="list-row" href="/guides/ca-foundation-weightage/"><span class="row-title">Official section-wise weightage</span><span class="chev" aria-hidden="true">›</span></a>
+          <a class="list-row" href="/guides/ca-foundation-pass-percentage/"><span class="row-title">Pass percentage, attempt by attempt</span><span class="chev" aria-hidden="true">›</span></a>
+          <a class="list-row" href="/guides/ca-foundation-rtp-mtp/"><span class="row-title">RTP, MTP and past papers, explained</span><span class="chev" aria-hidden="true">›</span></a>
+        </>
+      )}
       {level.id === 'final' && <a class="list-row" href="/guides/spom/"><span class="row-title">SPOM — the definitive guide</span><span class="chev" aria-hidden="true">›</span></a>}
       {level.id !== 'foundation' && <a class="list-row" href="/guides/articleship/"><span class="row-title">Articleship under the new scheme</span><span class="chev" aria-hidden="true">›</span></a>}
       <a class="list-row" href="/attempt/"><span class="row-title">Your attempt — dates, forms, applicable law</span><span class="chev" aria-hidden="true">›</span></a>

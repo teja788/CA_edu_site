@@ -1,0 +1,168 @@
+---
+/**
+ * CA Foundation exam pattern — every figure on this page is rendered from
+ * src/data/foundation.js (paperStructure, foundationScoring, passRule,
+ * foundationAttempts). Nothing is typed into the body by hand.
+ */
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Badge from '../../components/Badge.astro';
+import Callout from '../../components/Callout.astro';
+import PassRule from '../../components/PassRule.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import {
+  foundationAttempts,
+  foundationPapers,
+  foundationScoring,
+  getPaperStructure,
+  passRule,
+} from '../../data/foundation.js';
+
+const rows = foundationPapers.map((p) => ({ paper: p, structure: getPaperStructure(p.slug) }));
+const objective = rows.filter((r) => r.structure.mode === 'objective');
+const subjective = rows.filter((r) => r.structure.mode === 'subjective');
+const mcqStructure = objective[0].structure;
+const descriptiveStructure = subjective[0].structure;
+---
+
+<Base
+  title="CA Foundation exam pattern"
+  description="The CA Foundation paper pattern under the New Scheme: durations, question structure, OMR and negative marking, the 40/50 passing rule and the attempt calendar with registration cut-offs."
+>
+  <main class="page">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'Foundation exam pattern' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        CA Foundation exam pattern
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={foundationAttempts[0].name} updated="14 Aug 2026" source="ICAI Foundation syllabus & scheme of examination" />
+      </div>
+
+      <div class="article">
+        <p>
+          Four papers, {passRule.totalMarks} marks in total. Two are written by hand and two are answered
+          on an OMR sheet, and the two halves reward completely different exam-day habits. Here is the
+          structure as ICAI publishes it.
+        </p>
+
+        <h2>The four papers at a glance</h2>
+      </div>
+
+      <div class="list-card">
+        {rows.map(({ paper, structure }) => (
+          <a class="list-row" href={`/foundation/${paper.slug}/`}>
+            <span class="row-num tnum">{String(paper.number).padStart(2, '0')}</span>
+            <span style="flex: 1;">
+              <span style="display: block; font-size: 15px; font-weight: 600;">{paper.name}</span>
+              <span style="font-size: 13px; color: var(--text-3);">
+                {structure.modeLabel} · {structure.durationLabel} · {structure.marks} marks
+              </span>
+            </span>
+            {structure.negativeMarking
+              ? <Badge kind="amended">Negative marking</Badge>
+              : <Badge kind="neutral">No negative marking</Badge>}
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="article" style="margin-top: 28px;">
+        <h2>Papers {subjective.map((r) => r.paper.number).join(' and ')} — the written papers</h2>
+        <p>
+          {descriptiveStructure.durationLabel}, {descriptiveStructure.marks} marks, answered in a booklet.
+          {' '}{descriptiveStructure.questionPattern.summary} That choice matters more than students expect:
+          you are marked on {descriptiveStructure.questionPattern.compulsory + descriptiveStructure.questionPattern.chooseFromRemaining.attempt}
+          {' '}questions of {descriptiveStructure.questionPattern.marksPerQuestion} marks each, so a single
+          badly-chosen question costs a full {descriptiveStructure.questionPattern.marksPerQuestion} marks.
+        </p>
+        <p>
+          Presentation earns marks here — stated provisions, labelled working notes, a conclusion that
+          answers the question asked. There is no negative marking on these papers, so an incomplete
+          attempt always beats a blank.
+        </p>
+
+        <h2>Papers {objective.map((r) => r.paper.number).join(' and ')} — the OMR papers</h2>
+        <p>
+          {mcqStructure.durationLabel} for {mcqStructure.questionPattern.totalQuestions} questions, which is
+          a little over a minute per question. {mcqStructure.questionPattern.summary} You also get
+          {' '}{mcqStructure.readingTimeMinutes} minutes of reading time before the clock starts — use it to
+          find the questions you can finish quickly, not to start solving.
+        </p>
+
+        <Callout kind="pointer" label="Negative marking, priced out">
+          <p>
+            A correct answer is worth {foundationScoring.correct}. A wrong answer costs
+            {' '}{Math.abs(foundationScoring.wrong)}. A blank is {foundationScoring.skipped}. Guessing at
+            random across four options therefore breaks about even — it only turns profitable once you can
+            rule out two options. This applies to
+            {' '}{objective.map((r) => `Paper ${r.paper.number}`).join(' and ')} only; it is the only
+            negative marking anywhere in the CA course.
+          </p>
+        </Callout>
+
+        <h2>How Foundation is passed</h2>
+      </div>
+
+      <PassRule />
+
+      <div class="article" style="margin-top: 24px;">
+        <p>
+          Because there is no set-off, the arithmetic that matters is not "how do I top this paper" but
+          "is every paper safely clear of {passRule.perPaperPct}, and does the total clear
+          {' '}{passRule.aggregateMarks}". A paper you enjoy cannot rescue one you have avoided.
+        </p>
+
+        <h2>Attempt calendar and registration cut-offs</h2>
+        <p>
+          Foundation runs three times a year. Registration closes months before the exam — missing the
+          cut-off moves you to the next attempt regardless of how ready you are.
+        </p>
+      </div>
+
+      {foundationAttempts.map((att) => (
+        <div class="card card-pad" style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: baseline;">
+            <strong style="font-size: 17px;">{att.name}</strong>
+            <span class="tnum" style="font-size: 14px; color: var(--text-2);">{att.examDates.label}</span>
+          </div>
+          <div class="list-card" style="margin-top: 14px;">
+            {att.papers.map((slot) => {
+              const p = foundationPapers.find((fp) => fp.slug === slot.paperSlug);
+              return (
+                <div class="list-row">
+                  <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
+                  <span class="row-title" style="font-weight: 600;">{p.name}</span>
+                  <span class="row-meta tnum">{slot.label}</span>
+                </div>
+              );
+            })}
+          </div>
+          <div style="margin-top: 14px; font-size: 14px; color: var(--text-2); line-height: 1.7;">
+            <div><strong style="color: var(--text);">Register by {att.registration.label}</strong> — {att.registration.rule}</div>
+            <div>{att.session.label}. {att.dayPattern}</div>
+          </div>
+          {!att.verified && (
+            <div class="trust-row" style="margin-top: 14px;">
+              <Badge kind="amended">Confirm before you rely on this</Badge>
+              <span>{att.verify[0]}</span>
+            </div>
+          )}
+        </div>
+      ))}
+
+      <div class="article" style="margin-top: 28px;">
+        <h2>Where to go next</h2>
+        <p>
+          <a href="/guides/ca-foundation-weightage/">The official section-wise weightage for all four papers</a> —
+          what ICAI has said about how the marks are distributed.<br />
+          <a href="/foundation/quantitative-aptitude/">Paper 3, Quantitative Aptitude</a> — the OMR paper most
+          students find hardest, with a chapter-by-chapter safe route to {passRule.perPaperPct}.<br />
+          <a href="/practice/">Practice with the Foundation scoring rules</a> — the same
+          {' '}+{foundationScoring.correct} / {foundationScoring.wrong} arithmetic as the real OMR papers.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>
