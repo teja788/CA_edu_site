@@ -1,0 +1,1791 @@
+---
+import Base from '../../layouts/Base.astro';
+import PassRule from '../../components/PassRule.astro';
+import {
+  foundationPapers,
+  foundationWeightage,
+  paperStructure,
+  passRule,
+  foundationScoring,
+  formatWeightage,
+  WEIGHTAGE_NOTE,
+} from '../../data/foundation.js';
+
+/**
+ * CA Foundation mock-exam simulator (plan §7 Phase 2).
+ *
+ * Two engines, one page, because Foundation is two exams in one course:
+ *
+ *   OBJECTIVE (P3 Quantitative Aptitude, P4 Business Economics) — 100 MCQs,
+ *   2 hours, 15 minutes of reading time, +1 / −0.25 / 0. Composed from the
+ *   Foundation chapter banks, sampled to the ICAI section-wise weightage
+ *   midpoints, answered against an OMR-style grid with per-question timing.
+ *
+ *   SUBJECTIVE (P1 Accounting, P2 Business Laws) — 6 questions of 20 marks,
+ *   3 hours, Q1 compulsory and any four of the remaining five. Assembled from
+ *   the descriptive bank items, then self-graded against their mark skeletons.
+ *
+ * Every structural number comes from `paperStructure` / `passRule` /
+ * `foundationScoring` in src/data/foundation.js — nothing is hard-coded here.
+ * The composer is honest about bank shortfall in the same way
+ * /practice/mock/ is: it builds what the bank can support and says what it
+ * could not fill.
+ */
+
+const bankModules = import.meta.glob('../../data/questions/foundation/**/*.json', { eager: true });
+const banks = Object.values(bankModules)
+  .map((mod) => mod.default ?? mod)
+  .filter((b) => b && b.level === 'foundation' && Array.isArray(b.questions));
+
+/** chapterSlug → weightage group id, per paper. */
+const groupOfChapter = {};
+for (const [paperSlug, w] of Object.entries(foundationWeightage)) {
+  groupOfChapter[paperSlug] = {};
+  for (const g of w.groups) {
+    for (const c of g.chapterSlugs) groupOfChapter[paperSlug][c] = g.id;
+  }
+}
+
+/**
+ * Marks each weightage group should carry in a 100-mark paper.
+ *
+ * ICAI publishes P1/P2/P4 weightage against the whole paper and P3 weightage
+ * against its own Part (Part A 40 · Part B 20 · Part C 40), so the section
+ * marks are parsed from the group's `section` label and the group midpoints
+ * are normalised inside that section. Part B carries no published sub-split,
+ * so its group holds a flat `marks` figure instead of a range. Largest
+ * remainder rounding lands the set on exactly 100.
+ */
+function groupTargets(paperSlug) {
+  const w = foundationWeightage[paperSlug];
+  if (!w) return [];
+  const mid = (g) => (g.weightage ? (g.weightage.lo + g.weightage.hi) / 2 : null);
+  const sections = new Map();
+  for (const g of w.groups) {
+    const key = w.basis === 'section' ? g.section ?? 'all' : 'all';
+    if (!sections.has(key)) sections.set(key, []);
+    sections.get(key).push(g);
+  }
+  const raw = [];
+  for (const [key, groups] of sections) {
+    const sectionMarks = w.basis === 'section' ? Number(String(key).match(/\((\d+)\s*marks?\)/i)?.[1] ?? 100) : 100;
+    const fixed = groups.filter((g) => mid(g) === null);
+    const fixedMarks = fixed.reduce((s, g) => s + (g.marks ?? 0), 0);
+    const flex = groups.filter((g) => mid(g) !== null);
+    const midSum = flex.reduce((s, g) => s + mid(g), 0) || 1;
+    for (const g of fixed) raw.push({ g, exact: g.marks ?? 0 });
+    for (const g of flex) raw.push({ g, exact: ((sectionMarks - fixedMarks) * mid(g)) / midSum });
+  }
+  const rows = raw.map(({ g, exact }) => ({
+    id: g.id,
+    label: g.label,
+    section: g.section ?? null,
+    weightageLabel: formatWeightage(g.weightage),
+    chapterSlugs: g.chapterSlugs,
+    mid: mid(g) ?? g.marks ?? 0,
+    exact,
+    target: Math.floor(exact),
+    rem: exact - Math.floor(exact),
+  }));
+  let left = 100 - rows.reduce((s, r) => s + r.target, 0);
+  const byRem = [...rows].sort((a, b) => b.rem - a.rem);
+  for (let i = 0; left > 0 && byRem.length; i = (i + 1) % byRem.length, left--) byRem[i].target += 1;
+  return rows.map(({ rem, exact, ...r }) => r);
+}
+
+/**
+ * Objective pool: every Foundation MCQ of the paper, tagged with its
+ * weightage group. A case-scenario set contributes its sub-questions as
+ * standalone MCQs carrying the case narrative (the real P3/P4 OMR paper has
+ * no linked-set marking), and descriptive items never enter this pool.
+ */
+function objectivePool(paperSlug) {
+  const out = [];
+  for (const bank of banks) {
+    if (bank.paperSlug !== paperSlug) continue;
+    const groupId = groupOfChapter[paperSlug]?.[bank.chapterSlug] ?? null;
+    const meta = { chapterSlug: bank.chapterSlug, chapter: bank.chapter ?? null, groupId };
+    for (const q of bank.questions) {
+      if (q.type === 'mcq') {
+        out.push({
+          id: q.id,
+          topic: q.topic,
+          stem: q.stem,
+          options: q.options,
+          correct: q.correct,
+          readLink: q.readLink ?? null,
+          caseText: null,
+          ...meta,
+        });
+      } else if (q.type === 'case_mcq_set' && Array.isArray(q.questions)) {
+        for (const sub of q.questions) {
+          out.push({
+            id: sub.id,
+            topic: sub.topic ?? q.topic,
+            stem: sub.stem,
+            options: sub.options,
+            correct: sub.correct,
+            readLink: sub.readLink ?? q.readLink ?? null,
+            caseText: q.case ?? null,
+            ...meta,
+          });
+        }
+      }
+    }
+  }
+  return out;
+}
+
+/** Subjective pool: descriptive items with their mark skeletons. */
+function subjectivePool(paperSlug) {
+  const out = [];
+  for (const bank of banks) {
+    if (bank.paperSlug !== paperSlug) continue;
+    const groupId = groupOfChapter[paperSlug]?.[bank.chapterSlug] ?? null;
+    for (const q of bank.questions) {
+      if (q.type !== 'descriptive' || !Array.isArray(q.skeleton)) continue;
+      out.push({
+        id: q.id,
+        topic: q.topic,
+        stem: q.stem,
+        skeleton: q.skeleton,
+        readLink: q.readLink ?? null,
+        workingNotes: q.workingNotes ?? false,
+        marks: q.marks ?? q.skeleton.reduce((s, p) => s + (p.marks ?? 1), 0),
+        chapterSlug: bank.chapterSlug,
+        groupId,
+      });
+    }
+  }
+  return out;
+}
+
+const papers = foundationPapers.map((p) => {
+  const structure = paperStructure[p.slug];
+  const objective = structure.mode === 'objective';
+  const targets = objective ? groupTargets(p.slug) : [];
+  const pool = objective ? objectivePool(p.slug) : subjectivePool(p.slug);
+  const poolByGroup = {};
+  for (const item of pool) {
+    const g = item.groupId ?? 'ungrouped';
+    poolByGroup[g] = (poolByGroup[g] ?? 0) + 1;
+  }
+  return {
+    slug: p.slug,
+    number: p.number,
+    name: p.name,
+    mode: structure.mode,
+    structure,
+    groups: (objective ? targets : (p.weightageGroups ?? []).map((g) => ({
+      id: g.id,
+      label: g.label,
+      section: g.section ?? null,
+      weightageLabel: formatWeightage(g.weightage),
+      chapterSlugs: g.chapterSlugs,
+      mid: g.weightage ? (g.weightage.lo + g.weightage.hi) / 2 : g.marks ?? 0,
+      target: null,
+    }))).map((g) => ({ ...g, pool: poolByGroup[g.id] ?? 0 })),
+    poolSize: pool.length,
+    // Descriptive papers: total bank marks available to pack into six slots.
+    poolMarks: objective ? null : pool.reduce((s, q) => s + q.marks, 0),
+  };
+});
+
+const objectiveBanks = Object.fromEntries(
+  papers.filter((p) => p.mode === 'objective').map((p) => [p.slug, objectivePool(p.slug)])
+);
+const subjectiveBanks = Object.fromEntries(
+  papers.filter((p) => p.mode === 'subjective').map((p) => [p.slug, subjectivePool(p.slug)])
+);
+
+/* Expected value of one MCQ under Foundation marking, derived — never typed
+   as a literal — so the drill and the page can never disagree with
+   `foundationScoring`. `live` = options still in play after elimination. */
+const ev = (live) => (foundationScoring.correct + (live - 1) * foundationScoring.wrong) / live;
+const evBlind = ev(4);
+const evOne = ev(3);
+const evTwo = ev(2);
+const fmtEv = (n) => (Math.round(n * 10000) / 10000).toString();
+const penalty = Math.abs(foundationScoring.wrong);
+---
+
+<Base title="Foundation mock exam" bare>
+  <div class="quiz-bar">
+    <a href="/practice/">← Exit practice</a>
+    <div style="flex: 1;"></div>
+    <span class="counter" data-counter hidden></span>
+    <span data-marking-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: var(--inkbar-soft); border: 1px solid var(--inkbar-hairline); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: var(--inkbar-dim);"></span>
+    <span data-clock hidden style="display: inline-flex; align-items: center; gap: 6px; background: var(--inkbar-soft); border: 1px solid var(--inkbar-hairline); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: var(--inkbar-dim); font-variant-numeric: tabular-nums;">◷ <span data-clock-label>Time left</span> <span data-clock-value>—</span></span>
+  </div>
+  <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
+
+  <main style="max-width: 860px; margin: 0 auto; padding: 28px 20px 64px;">
+
+    <!-- ══════════════ START ══════════════ -->
+    <section data-screen="start">
+      <div class="overline" style="margin-bottom: 6px;">CA Foundation · one full paper, to the clock</div>
+      <h1 style="margin: 0 0 12px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">Sit a Foundation mock</h1>
+      <p style="max-width: 660px; font-size: 16px; color: var(--text-2); line-height: 1.7; margin: 0 0 8px;">
+        The real structure of the paper you pick — its duration, its question pattern, its marking —
+        built from the question bank and sampled to ICAI's own section-wise weightage. Nothing here
+        is timed to alarm you: the clock counts down quietly and the paper ends when it ends.
+      </p>
+      <p style="max-width: 660px; font-size: 15px; color: var(--text-3); line-height: 1.65; margin: 0 0 26px;">
+        Questions are original. Your answers stay on this device.
+        <a href="#ev-trainer" data-goto-ev style="color: var(--accent); font-weight: 650;">Not sure when to guess and when to leave a blank? →</a>
+      </p>
+
+      <div class="overline" style="margin-bottom: 10px;">Choose a paper</div>
+      <div class="list-card" data-paper-picker>
+        {papers.map((p) => (
+          <button type="button" class="list-row" data-paper-btn={p.slug} style="width: 100%; text-align: left; background: none; border: 0; font: inherit; cursor: pointer;">
+            <span style="flex: 1;">
+              <span style="display: block; font-size: 16px; font-weight: 600;">Paper {p.number} · {p.name}</span>
+              <span style="font-size: 13px; color: var(--text-2);">
+                {p.structure.modeLabel} · {p.structure.durationLabel} · {p.structure.marks} marks
+                {p.structure.negativeMarking ? ' · negative marking' : ' · no negative marking'}
+              </span>
+            </span>
+            <span class="chev" aria-hidden="true">›</span>
+          </button>
+        ))}
+      </div>
+
+      {papers.map((p) => {
+        const objective = p.mode === 'objective';
+        const takes = p.groups.map((g) => ({ ...g, take: objective ? Math.min(g.target ?? 0, g.pool) : 0 }));
+        const direct = takes.reduce((s, g) => s + g.take, 0);
+        const surplus = takes.reduce((s, g) => s + Math.max(0, g.pool - g.take), 0);
+        const composable = objective ? Math.min(100, direct + surplus) : 0;
+        const slotMarks = p.structure.questionPattern.marksPerQuestion * p.structure.questionPattern.totalQuestions;
+        return (
+          <div data-paper-panel={p.slug} hidden style="margin-top: 24px;">
+            <div class="card card-pad">
+              <div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+                <h2 style="margin: 0; font-size: 20px; font-weight: 700;">Paper {p.number} · {p.name}</h2>
+                <span class="tnum" style="font-size: 14px; color: var(--text-2);">{p.structure.durationLabel} · {p.structure.marks} marks</span>
+              </div>
+              <div class="trust-row" style="margin: 10px 0 16px;">
+                <span>{p.structure.modeLabel}</span>
+                <span class="dot" aria-hidden="true">·</span>
+                <span>{p.structure.questionPattern.answerMedium}</span>
+                {p.structure.readingTimeMinutes > 0 && (
+                  <>
+                    <span class="dot" aria-hidden="true">·</span>
+                    <span>{p.structure.readingTimeMinutes} minutes reading time</span>
+                  </>
+                )}
+              </div>
+              <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.7;">{p.structure.questionPattern.summary}</p>
+              {p.structure.readingTimeMinutes > 0 && (
+                <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.7; color: var(--text-2);">
+                  ICAI gives {p.structure.readingTimeMinutes} minutes of reading time before the {p.structure.durationLabel} start.
+                  In this simulator that reading phase is optional: the questions are visible, the answer buttons are
+                  locked, and you can begin early whenever you want.
+                </p>
+              )}
+              {p.structure.negativeMarking ? (
+                <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.7; color: var(--text-2);">
+                  Marking: <strong>+{foundationScoring.correct}</strong> for a correct answer,
+                  <strong> −{penalty}</strong> for a wrong one, <strong>0</strong> for a blank.
+                  This and Paper {papers.find((x) => x.structure.negativeMarking && x.slug !== p.slug)?.number} are the
+                  only negatively marked papers in the whole CA course.
+                </p>
+              ) : (
+                <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.7; color: var(--text-2);">
+                  No negative marking. Every question you attempt can only add marks — leave nothing blank.
+                </p>
+              )}
+
+              {objective ? (
+                <>
+                  <div class="overline" style="margin: 18px 0 8px;">How the 100 questions are sampled</div>
+                  <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.65; color: var(--text-2);">
+                    {WEIGHTAGE_NOTE}. Each group's share below is the midpoint of its published range
+                    {p.slug === 'quantitative-aptitude' ? ', taken within its own Part (Part A 40 · Part B 20 · Part C 40)' : ''} —
+                    so the mock leans where the real paper leans.
+                  </p>
+                  <div class="table-scroll">
+                    <div class="data-table">
+                      <div class="tr head"><div class="td" style="flex: 1;">Weightage group</div><div class="td num">ICAI</div><div class="td num">Questions</div><div class="td num">In bank</div></div>
+                      {takes.map((g, i) => (
+                        <div class={`tr ${i % 2 ? 'alt' : ''}`}>
+                          <div class="td" style="flex: 1;">{g.label}</div>
+                          <div class="td num dim">{g.weightageLabel ?? '—'}</div>
+                          <div class="td num tnum">{g.target}</div>
+                          <div class="td num tnum dim">{g.pool}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.65; color: var(--text-2);">
+                    {composable >= 100
+                      ? `The bank holds ${p.poolSize} questions for this paper — enough to compose all 100 without repeating any, and a fresh set every time you sit it.`
+                      : `Honest shortfall: the bank holds ${p.poolSize} questions for this paper, so a full sitting composes ${composable} of 100. The mock runs at that length and the results screen says so again.`}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <div class="overline" style="margin: 18px 0 8px;">How the six questions are assembled</div>
+                  <p style="margin: 0 0 0; font-size: 14px; line-height: 1.65; color: var(--text-2);">
+                    The bank holds {p.poolSize} descriptive items worth {p.poolMarks} marks for this paper, authored at
+                    4–10 marks each rather than as single 20-mark questions. Each {p.structure.questionPattern.marksPerQuestion}-mark
+                    slot below is therefore <strong>assembled</strong>: related items from one weightage group are grouped
+                    into parts (a), (b), (c) until the slot reaches about {p.structure.questionPattern.marksPerQuestion} marks.
+                    The shape, the choice rule and the clock are real; the internal parts are an approximation, and the
+                    exact marks each slot carries are printed on it.
+                    {p.poolMarks < slotMarks && ` Honest shortfall: ${slotMarks} marks are needed for a full paper and the bank holds ${p.poolMarks}, so some slots will run light.`}
+                  </p>
+                </>
+              )}
+            </div>
+
+            <div style="margin-top: 18px;"><PassRule /></div>
+
+            <div style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; align-items: center;">
+              <button type="button" class="btn btn-primary" data-start={p.slug}>
+                {objective ? `Begin — ${p.structure.readingTimeMinutes} min reading, then ${p.structure.durationLabel}` : `Begin — ${p.structure.durationLabel}`}
+              </button>
+              <button type="button" class="btn btn-tertiary" data-back-to-picker>Pick a different paper</button>
+            </div>
+            <p style="margin: 12px 0 0; font-size: 13px; color: var(--text-3); line-height: 1.6;">
+              {objective
+                ? 'Sit it in one go if you can. Close the tab mid-paper and the sitting is gone — this simulator deliberately keeps no resume button for the OMR papers, because the exam hall has none either.'
+                : 'Your outline notes and your choice of questions are saved on this device as you write, so a reload will not cost you the paper.'}
+            </p>
+          </div>
+        );
+      })}
+    </section>
+
+    <!-- ══════════════ NEGATIVE-MARKING EV TRAINER ══════════════ -->
+    <section data-screen="ev" id="ev-trainer" hidden>
+      <div class="overline" style="margin-bottom: 6px;">Papers 3 &amp; 4 · attempt strategy</div>
+      <h1 style="margin: 0 0 12px; font-size: 28px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">When is a guess worth the −{penalty}?</h1>
+      <p style="max-width: 660px; font-size: 16px; color: var(--text-2); line-height: 1.7; margin: 0 0 20px;">
+        Negative marking makes students cautious, and caution costs marks. The arithmetic is small
+        enough to settle the question once, so here it is in full.
+      </p>
+
+      <div class="card card-pad" style="max-width: 660px;">
+        <div class="overline" style="margin-bottom: 10px;">The arithmetic</div>
+        <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.75;">
+          A blind guess on a four-option question is right one time in four. Averaged over four such
+          guesses you earn <strong>+{foundationScoring.correct}</strong> once and lose
+          <strong>{penalty}</strong> three times:
+        </p>
+        <p class="tnum" style="margin: 0 0 14px; font-size: 16px; line-height: 1.7; padding: 12px 14px; background: var(--surface-2); border-radius: 10px;">
+          ({foundationScoring.correct} − 3 × {penalty}) ÷ 4 = <strong>+{fmtEv(evBlind)}</strong> marks per question
+        </p>
+        <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.75;">
+          Positive — but barely. It buys variance, not marks. Eliminate one option and the same sum runs
+          over three:
+        </p>
+        <p class="tnum" style="margin: 0 0 14px; font-size: 16px; line-height: 1.7; padding: 12px 14px; background: var(--surface-2); border-radius: 10px;">
+          ({foundationScoring.correct} − 2 × {penalty}) ÷ 3 = <strong>+{evOne.toFixed(2)}</strong> marks per question
+        </p>
+        <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.75;">
+          Eliminate two and it is <strong>+{evTwo.toFixed(2)}</strong> — more than a third of a mark, every time,
+          for a question you were going to leave blank. A blank is worth exactly
+          <strong>{foundationScoring.skipped}</strong>, guaranteed, forever.
+        </p>
+        <div class="table-scroll">
+          <div class="data-table">
+            <div class="tr head"><div class="td" style="flex: 1;">Your position on the question</div><div class="td num">Marks on average</div></div>
+            <div class="tr"><div class="td" style="flex: 1;">Leave it blank</div><div class="td num tnum">{foundationScoring.skipped.toFixed(2)}</div></div>
+            <div class="tr alt"><div class="td" style="flex: 1;">Blind guess, all four options live</div><div class="td num tnum">+{fmtEv(evBlind)}</div></div>
+            <div class="tr"><div class="td" style="flex: 1;">One option eliminated</div><div class="td num tnum">+{evOne.toFixed(2)}</div></div>
+            <div class="tr alt"><div class="td" style="flex: 1;">Two eliminated — a 50–50</div><div class="td num tnum">+{evTwo.toFixed(2)}</div></div>
+            <div class="tr total"><div class="td" style="flex: 1;">You know the answer</div><div class="td num tnum">+{foundationScoring.correct.toFixed(2)}</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overline" style="margin: 28px 0 10px;">The drill · <span data-ev-round>round 1 of 20</span></div>
+      <div class="card card-pad" style="max-width: 660px;" data-ev-play>
+        <p style="margin: 0 0 4px; font-size: 13px; color: var(--text-3);" data-ev-context></p>
+        <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.6; font-weight: 600;" data-ev-scenario></p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button type="button" class="btn btn-primary" data-ev-attempt>Attempt it</button>
+          <button type="button" class="btn btn-secondary" data-ev-skip>Leave it blank</button>
+        </div>
+        <div data-ev-feedback hidden style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border);">
+          <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.65;" data-ev-outcome></p>
+          <button type="button" class="btn btn-tertiary" data-ev-next>Next round</button>
+        </div>
+      </div>
+
+      <div class="card card-pad" style="max-width: 660px; margin-top: 16px;" data-ev-scoreboard>
+        <div class="overline" style="margin-bottom: 10px;">Running total, on the same draws</div>
+        <div style="display: flex; justify-content: space-between; font-size: 15px; line-height: 2;">
+          <span>Your policy</span><span class="tnum" data-ev-you>0.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 15px; line-height: 2; color: var(--text-2);">
+          <span>Always attempt once you can eliminate one option</span><span class="tnum" data-ev-bench>0.00</span>
+        </div>
+        <p style="margin: 10px 0 0; font-size: 13px; color: var(--text-3); line-height: 1.6;">
+          Both policies face the identical draws each round, so the gap is the decision, not the luck.
+          Twenty rounds is a small sample — the arithmetic above is the reliable part.
+        </p>
+      </div>
+
+      <div data-ev-end hidden class="card card-pad" style="max-width: 660px; margin-top: 16px; border-left: 3px solid var(--accent);">
+        <div class="overline" style="margin-bottom: 8px;">Takeaway</div>
+        <p style="margin: 0 0 10px; font-size: 16px; line-height: 1.7;">
+          Under CA Foundation's rules, skipping a question where you can eliminate even one option costs marks on average.
+        </p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: var(--text-2);" data-ev-verdict></p>
+      </div>
+
+      <div style="display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap;">
+        <button type="button" class="btn btn-secondary" data-ev-restart>Run the drill again</button>
+        <button type="button" class="btn btn-tertiary" data-ev-back>← Back to the mock</button>
+      </div>
+    </section>
+
+    <!-- ══════════════ OBJECTIVE · READING PHASE ══════════════ -->
+    <section data-screen="reading" hidden>
+      <div class="card card-pad" style="margin-bottom: 20px;">
+        <div class="overline" style="margin-bottom: 8px;">Reading time</div>
+        <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.7;" data-reading-note></p>
+        <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.7; color: var(--text-2);">
+          Answers are locked. Use it the way the toppers do: scan for the questions you can finish in
+          twenty seconds, and note which ones to leave for the second pass.
+        </p>
+        <button type="button" class="btn btn-primary" data-skip-reading>Skip reading time and begin →</button>
+      </div>
+      <div data-reading-list style="display: flex; flex-direction: column; gap: 14px;"></div>
+      <div style="margin-top: 20px;">
+        <button type="button" class="btn btn-primary" data-skip-reading-2>Begin the paper →</button>
+      </div>
+    </section>
+
+    <!-- ══════════════ OBJECTIVE · ANSWERING ══════════════ -->
+    <section data-screen="exam" hidden>
+      <div style="display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap-reverse;">
+        <div style="flex: 1 1 380px; min-width: 300px;">
+          <div data-exam-case hidden class="card card-pad" style="margin-bottom: 16px; font-size: 14px; line-height: 1.65; color: var(--text-2);"></div>
+          <div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <div style="font-size: 13px; color: var(--text-3);" data-exam-topic></div>
+            <label style="font-size: 13px; color: var(--text-2); display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+              <input type="checkbox" data-exam-flag /> Flag for review
+            </label>
+          </div>
+          <div style="font-size: 18px; line-height: 1.6; font-weight: 600; margin: 8px 0 22px;" data-exam-stem></div>
+          <div style="display: flex; flex-direction: column; gap: 10px;" data-exam-options></div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: 22px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-secondary" data-exam-prev>← Previous</button>
+            <button type="button" class="btn btn-primary" data-exam-next>Next →</button>
+            <button type="button" class="btn btn-tertiary" data-exam-clear>Clear answer</button>
+            <div style="flex: 1;"></div>
+            <button type="button" class="btn btn-secondary" data-exam-submit>Submit paper</button>
+          </div>
+          <p style="margin: 14px 0 0; font-size: 13px; color: var(--text-3); line-height: 1.6;">
+            A blank scores {foundationScoring.skipped}. A wrong answer scores −{penalty}. Between the two sits every
+            question you can narrow down: once one option is ruled out, attempting is worth +{evOne.toFixed(2)} on average.
+          </p>
+        </div>
+
+        <aside style="flex: 0 1 260px; min-width: 240px; position: sticky; top: 16px;">
+          <div class="card card-pad" style="padding: 16px 18px;">
+            <div class="overline" style="margin-bottom: 10px;">Answer grid</div>
+            <div data-omr-grid style="display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px;"></div>
+            <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--text-2);">
+              <span style="display: flex; align-items: center; gap: 8px;"><span class="omr-key omr-answered" aria-hidden="true"></span><span data-omr-answered>0 answered</span></span>
+              <span style="display: flex; align-items: center; gap: 8px;"><span class="omr-key omr-flagged" aria-hidden="true"></span><span data-omr-flagged>0 flagged</span></span>
+              <span style="display: flex; align-items: center; gap: 8px;"><span class="omr-key" aria-hidden="true"></span><span data-omr-blank>0 blank</span></span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ══════════════ OBJECTIVE · RESULTS ══════════════ -->
+    <section data-screen="results" hidden>
+      <div class="overline" style="margin-bottom: 6px;" data-res-paper></div>
+      <h1 style="margin: 0 0 6px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em;" data-res-score></h1>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-2); margin: 0 0 4px;" data-res-verdict></p>
+      <p style="font-size: 15px; line-height: 1.7; color: var(--text-3); margin: 0 0 24px;" data-res-breakdown></p>
+
+      <div data-res-shortfall hidden class="card card-pad" style="margin-bottom: 20px; font-size: 14px; line-height: 1.65; border-left: 3px solid var(--warning);"></div>
+
+      <div class="overline" style="margin: 0 0 10px;">Where the marks went</div>
+      <div class="card card-pad" style="margin-bottom: 26px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div>
+            <div style="font-size: 15px; font-weight: 650; margin-bottom: 4px;" data-res-wrongcost></div>
+            <div style="font-size: 14px; line-height: 1.65; color: var(--text-2);" data-res-wrongcost-note></div>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 650; margin-bottom: 4px;" data-res-skipcost></div>
+            <div style="font-size: 14px; line-height: 1.65; color: var(--text-2);" data-res-skipcost-note></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overline" style="margin: 0 0 10px;">Accuracy by weightage group</div>
+      <div class="table-scroll" style="margin-bottom: 26px;">
+        <div class="data-table" data-res-groups></div>
+      </div>
+
+      <div class="overline" style="margin: 0 0 10px;">The five that took longest</div>
+      <div class="table-scroll" style="margin-bottom: 26px;">
+        <div class="data-table" data-res-slowest></div>
+      </div>
+
+      <div class="overline" style="margin: 0 0 10px;">Question-by-question review</div>
+      <div data-res-review style="display: flex; flex-direction: column; gap: 16px;"></div>
+
+      <div style="display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap;">
+        <a href="/practice/foundation-mock/" class="btn btn-primary">Sit another paper</a>
+        <a href="/practice/quiz/?mode=mistakes" class="btn btn-secondary">Drill today's mistakes</a>
+        <a href="/dashboard/" class="btn btn-tertiary">Open dashboard</a>
+      </div>
+    </section>
+
+    <!-- ══════════════ SUBJECTIVE · WRITING ══════════════ -->
+    <section data-screen="subjective" hidden>
+      <div class="overline" style="margin-bottom: 6px;" data-sub-paper></div>
+      <h1 style="margin: 0 0 10px; font-size: 26px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3;" data-sub-title></h1>
+      <p style="font-size: 15px; line-height: 1.7; color: var(--text-2); margin: 0 0 6px;" data-sub-instructions></p>
+      <p style="font-size: 14px; line-height: 1.7; color: var(--text-3); margin: 0 0 18px;" data-sub-approx></p>
+
+      <div class="card card-pad" style="margin-bottom: 22px; position: sticky; top: 12px; z-index: 2;">
+        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+          <span style="font-size: 15px; font-weight: 650;" data-sub-choice></span>
+          <div style="flex: 1;"></div>
+          <button type="button" class="btn btn-primary" data-sub-submit>Submit and self-grade</button>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 13px; color: var(--text-3); line-height: 1.6;">
+          Write on paper if you can — presentation earns marks and a keyboard hides that. The boxes below
+          are for the outline you'd plan first; they survive a reload.
+        </p>
+      </div>
+
+      <div data-sub-list style="display: flex; flex-direction: column; gap: 20px;"></div>
+
+      <div style="margin-top: 24px;">
+        <button type="button" class="btn btn-primary" data-sub-submit-2>Submit and self-grade</button>
+      </div>
+    </section>
+
+    <!-- ══════════════ SUBJECTIVE · SELF-GRADING ══════════════ -->
+    <section data-screen="selfgrade" hidden>
+      <div class="overline" style="margin-bottom: 6px;">Self-grading</div>
+      <h1 style="margin: 0 0 10px; font-size: 26px; font-weight: 700; letter-spacing: -0.01em;">Grade yourself, point by point</h1>
+      <p style="max-width: 660px; font-size: 15px; line-height: 1.7; color: var(--text-2); margin: 0 0 8px;">
+        Every point below carries the marks ICAI's own marking would give it. Tick a point only if your
+        answer actually stated it — and cited it, where a citation is shown. Being generous here is the
+        one way to make this exercise useless.
+      </p>
+      <div class="card card-pad" style="position: sticky; top: 12px; z-index: 2; margin-bottom: 22px;">
+        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+          <span style="font-size: 17px; font-weight: 700;" class="tnum" data-sg-total>0 of 100</span>
+          <div style="flex: 1;"></div>
+          <button type="button" class="btn btn-primary" data-sg-finish>Finish and see the verdict</button>
+        </div>
+      </div>
+
+      <div data-sg-list style="display: flex; flex-direction: column; gap: 20px;"></div>
+
+      <div data-sg-summary hidden style="margin-top: 28px;">
+        <div class="card card-pad">
+          <div class="overline" style="margin-bottom: 8px;">Result</div>
+          <div style="font-size: 24px; font-weight: 700; margin-bottom: 6px;" class="tnum" data-sg-final></div>
+          <p style="margin: 0 0 10px; font-size: 16px; line-height: 1.7; color: var(--text-2);" data-sg-verdict></p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.7; color: var(--text-3);">
+            A self-graded mark is a rough instrument. Treat anything within five marks of the
+            {passRule.perPaperPct}% bar as "not yet safe" and work the missed points below.
+          </p>
+        </div>
+        <div class="overline" style="margin: 24px 0 10px;">Points you did not claim</div>
+        <div data-sg-missed style="display: flex; flex-direction: column; gap: 14px;"></div>
+        <div style="display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap;">
+          <a href="/practice/foundation-mock/" class="btn btn-primary">Sit another paper</a>
+          <a href="/practice/descriptive/" class="btn btn-secondary">Drill single descriptive questions</a>
+          <a href="/dashboard/" class="btn btn-tertiary">Open dashboard</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global, not scoped: the OMR cells and the note boxes are created in the
+       client script, so they never carry Astro's scoping attribute. Every
+       selector here is namespaced (omr- / fm-) to keep the leak harmless. -->
+  <style is:global>
+    .omr-cell {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--surface);
+      color: var(--text-3);
+      cursor: pointer;
+      padding: 0;
+      font-family: inherit;
+    }
+    .omr-cell:hover { border-color: var(--border-strong); }
+    .omr-cell.answered { background: var(--accent-tint); border-color: var(--accent-tint-border); color: var(--accent); font-weight: 650; }
+    .omr-cell.flagged { border-color: var(--warning); box-shadow: inset 0 0 0 1px var(--warning); }
+    .omr-cell.current { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .omr-key {
+      width: 14px; height: 14px; border-radius: 4px;
+      border: 1px solid var(--border); background: var(--surface); flex: none;
+    }
+    .omr-key.omr-answered { background: var(--accent-tint); border-color: var(--accent-tint-border); }
+    .omr-key.omr-flagged { border-color: var(--warning); box-shadow: inset 0 0 0 1px var(--warning); }
+    .fm-notes {
+      width: 100%; font: inherit; font-size: 15px; line-height: 1.6;
+      padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px;
+      background: var(--surface); color: var(--text); resize: vertical;
+    }
+    .fm-slot.dimmed { opacity: 0.55; }
+  </style>
+
+  <script type="application/json" data-papers set:html={JSON.stringify(papers)}></script>
+  <script type="application/json" data-objective set:html={JSON.stringify(objectiveBanks)}></script>
+  <script type="application/json" data-subjective set:html={JSON.stringify(subjectiveBanks)}></script>
+  <script type="application/json" data-scoring set:html={JSON.stringify(foundationScoring)}></script>
+  <script type="application/json" data-passrule set:html={JSON.stringify(passRule)}></script>
+
+  <script>
+    import { addMistake, recordAnswer } from '../../scripts/store.js';
+
+    const J = (sel) => JSON.parse(document.querySelector(sel).textContent);
+    const PAPERS = J('[data-papers]');
+    const OBJECTIVE = J('[data-objective]');
+    const SUBJECTIVE = J('[data-subjective]');
+    const SCORING = J('[data-scoring]');
+    const PASS = J('[data-passrule]');
+    const PENALTY = Math.abs(SCORING.wrong);
+    /** EV of one MCQ with `live` options still in play. */
+    const ev = (live) => (SCORING.correct + (live - 1) * SCORING.wrong) / live;
+
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => [...document.querySelectorAll(s)];
+    const paperBySlug = Object.fromEntries(PAPERS.map((p) => [p.slug, p]));
+
+    function show(name) {
+      $$('[data-screen]').forEach((s) => { s.hidden = s.dataset.screen !== name; });
+      window.scrollTo(0, 0);
+    }
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+    const fmt = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
+    function hms(sec) {
+      const s = Math.max(0, Math.round(sec));
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const r = s % 60;
+      return h > 0
+        ? `${h}:${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`
+        : `${m}:${String(r).padStart(2, '0')}`;
+    }
+    const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
+    /** Authored option keys skew toward A/B — display order is shuffled once
+        per composed question and reused on the review screen. */
+    function displayOptions(q) {
+      if (!q._opts) {
+        q._opts = shuffle(q.options).map((o, i) => ({ ...o, display: LETTERS[i] ?? o.key }));
+      }
+      return q._opts;
+    }
+
+    /* ── the clock: informative, never alarming ─────────────────────────── */
+    let clockHandle = null;
+    function startClock(label, endsAt, onEnd) {
+      clearInterval(clockHandle);
+      const chip = $('[data-clock]');
+      chip.hidden = false;
+      $('[data-clock-label]').textContent = label;
+      const tick = () => {
+        const left = (endsAt - Date.now()) / 1000;
+        $('[data-clock-value]').textContent = hms(left);
+        if (left <= 0) { clearInterval(clockHandle); if (onEnd) onEnd(); }
+      };
+      tick();
+      clockHandle = setInterval(tick, 1000);
+    }
+    function stopClock() {
+      clearInterval(clockHandle);
+      $('[data-clock]').hidden = true;
+    }
+    function setCounter(text) {
+      const el = $('[data-counter]');
+      el.hidden = !text;
+      el.textContent = text ?? '';
+    }
+    function setMarking(paper) {
+      const chip = $('[data-marking-chip]');
+      chip.hidden = false;
+      chip.textContent = paper.structure.negativeMarking
+        ? `Marking · +${SCORING.correct} / −${PENALTY} / ${SCORING.skipped}`
+        : 'Marking · no negative marking';
+    }
+    function setProgress(pct) {
+      $('[data-progress]').style.width = `${Math.max(0, Math.min(100, pct))}%`;
+    }
+
+    /* ── mock history (self-contained; store.js is untouched) ───────────── */
+    const MOCKS_KEY = 'adh-mocks';
+    function saveMock(entry) {
+      try {
+        const list = JSON.parse(localStorage.getItem(MOCKS_KEY) ?? '[]');
+        list.push(entry);
+        localStorage.setItem(MOCKS_KEY, JSON.stringify(list.slice(-50)));
+      } catch { /* storage unavailable — a lost history entry is not worth a crash */ }
+    }
+
+    /* ═══════════════ START SCREEN ═══════════════ */
+    function openPaperPanel(slug) {
+      $$('[data-paper-panel]').forEach((el) => { el.hidden = el.dataset.paperPanel !== slug; });
+      $('[data-paper-picker]').hidden = true;
+      $(`[data-paper-panel="${slug}"]`).scrollIntoView({ block: 'start' });
+    }
+    $$('[data-paper-btn]').forEach((btn) => {
+      btn.addEventListener('click', () => openPaperPanel(btn.dataset.paperBtn));
+    });
+    $$('[data-back-to-picker]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        $$('[data-paper-panel]').forEach((el) => { el.hidden = true; });
+        $('[data-paper-picker]').hidden = false;
+        window.scrollTo(0, 0);
+      });
+    });
+    $$('[data-goto-ev]').forEach((a) => {
+      a.addEventListener('click', (e) => { e.preventDefault(); show('ev'); });
+    });
+    $('[data-ev-back]').addEventListener('click', () => {
+      if (exam && !exam.submitted) show('exam');
+      else if (sub) show('subjective');
+      else show('start');
+    });
+    $$('[data-start]').forEach((btn) => {
+      btn.addEventListener('click', () => beginPaper(btn.dataset.start));
+    });
+
+    function beginPaper(slug) {
+      const paper = paperBySlug[slug];
+      setMarking(paper);
+      if (paper.mode === 'objective') startObjective(paper);
+      else startSubjective(paper, null);
+    }
+
+    /* ═══════════════ NEGATIVE-MARKING EV TRAINER ═══════════════ */
+    const EV_ROUNDS = 20;
+    const EV_SCENES = [
+      {
+        elim: 0,
+        head: 'Nothing is ruled out. All four options are still live.',
+        context: 'Second pass · a formula you have never seen',
+      },
+      {
+        elim: 1,
+        head: 'One option is plainly impossible — wrong sign, wrong unit, wrong order of magnitude. Three left.',
+        context: 'Second pass · you can rule one out on inspection',
+      },
+      {
+        elim: 1,
+        head: 'You remember the definition well enough to strike one distractor. Three options left.',
+        context: 'First pass · half-remembered theory question',
+      },
+      {
+        elim: 2,
+        head: 'You have it down to two and cannot separate them. A straight 50–50.',
+        context: 'Second pass · two options survive your working',
+      },
+      {
+        elim: 2,
+        head: 'Two options are arithmetically out. The other two both look plausible.',
+        context: 'Final ten minutes · a numerical you part-solved',
+      },
+    ];
+    let evRounds = [];
+    let evIndex = 0;
+    let evYou = 0;
+    let evBench = 0;
+
+    function evBuild() {
+      evRounds = [];
+      for (let i = 0; i < EV_ROUNDS; i++) {
+        const scene = EV_SCENES[Math.floor(Math.random() * EV_SCENES.length)];
+        const live = 4 - scene.elim;
+        // The draw is fixed before either policy decides, so both face it.
+        evRounds.push({ ...scene, live, hit: Math.random() < 1 / live });
+      }
+      evIndex = 0;
+      evYou = 0;
+      evBench = 0;
+      $('[data-ev-end]').hidden = true;
+      $('[data-ev-play]').hidden = false;
+      evRenderScore();
+      evRenderRound();
+    }
+    function evRenderScore() {
+      $('[data-ev-you]').textContent = (evYou >= 0 ? '+' : '') + evYou.toFixed(2);
+      $('[data-ev-bench]').textContent = (evBench >= 0 ? '+' : '') + evBench.toFixed(2);
+    }
+    function evRenderRound() {
+      const r = evRounds[evIndex];
+      $('[data-ev-round]').textContent = `round ${evIndex + 1} of ${EV_ROUNDS}`;
+      $('[data-ev-context]').textContent = `Question ${Math.floor(Math.random() * 90) + 8} · ${r.context}`;
+      $('[data-ev-scenario]').textContent = `${r.head} Attempt it, or leave it blank?`;
+      $('[data-ev-feedback]').hidden = true;
+      $('[data-ev-attempt]').disabled = false;
+      $('[data-ev-skip]').disabled = false;
+    }
+    function evChoose(attempt) {
+      const r = evRounds[evIndex];
+      const gain = r.hit ? SCORING.correct : SCORING.wrong;
+      const expected = ev(r.live);
+      evYou += attempt ? gain : SCORING.skipped;
+      // Benchmark policy: attempt whenever at least one option is eliminated.
+      evBench += r.elim >= 1 ? gain : SCORING.skipped;
+      evRenderScore();
+      $('[data-ev-attempt]').disabled = true;
+      $('[data-ev-skip]').disabled = true;
+      $('[data-ev-feedback]').hidden = false;
+      const evText = `On this scenario an attempt averages ${expected >= 0 ? '+' : ''}${expected.toFixed(2)} marks.`;
+      $('[data-ev-outcome]').textContent = attempt
+        ? (r.hit
+            ? `You attempted and it landed: +${fmt(SCORING.correct)}. ${evText}`
+            : `You attempted and it missed: −${PENALTY}. That is the price of a fair bet, not a mistake. ${evText}`)
+        : `You left it blank: ${fmt(SCORING.skipped)}. ${evText}${r.elim >= 1 ? ' Averaged over a paper, blanks like this one are where marks quietly disappear.' : ' With all four live the edge is thin — this is the one case where skipping costs almost nothing.'}`;
+      $('[data-ev-next]').textContent = evIndex + 1 < EV_ROUNDS ? 'Next round' : 'See the takeaway';
+    }
+    function evNext() {
+      evIndex += 1;
+      if (evIndex >= EV_ROUNDS) {
+        $('[data-ev-play]').hidden = true;
+        $('[data-ev-end]').hidden = false;
+        const diff = evYou - evBench;
+        $('[data-ev-verdict]').textContent =
+          Math.abs(diff) < 0.001
+            ? `Over these ${EV_ROUNDS} rounds you played exactly that policy: ${evYou.toFixed(2)} marks either way.`
+            : diff > 0
+              ? `Over these ${EV_ROUNDS} rounds you finished ${diff.toFixed(2)} marks ahead of it — luck, on this sample size, unless you were attempting the blind guesses too. The arithmetic, not the run, is what to carry into the hall.`
+              : `Over these ${EV_ROUNDS} rounds that policy finished ${Math.abs(diff).toFixed(2)} marks ahead of yours. On a 100-question paper the same gap scales.`;
+      } else {
+        evRenderRound();
+      }
+    }
+    $('[data-ev-attempt]').addEventListener('click', () => evChoose(true));
+    $('[data-ev-skip]').addEventListener('click', () => evChoose(false));
+    $('[data-ev-next]').addEventListener('click', evNext);
+    $('[data-ev-restart]').addEventListener('click', evBuild);
+    evBuild();
+
+    /* ═══════════════ OBJECTIVE ENGINE (P3 / P4) ═══════════════ */
+    let exam = null;
+
+    /**
+     * Sample the paper to the ICAI weightage midpoints: each group's target
+     * comes off `paper.groups[].target` (computed at build time), questions
+     * are drawn without replacement from that group's shuffled pool, and any
+     * group that cannot fill its target is backfilled from the rest of the
+     * paper — recorded, and reported on the results screen.
+     */
+    function composeObjective(paper) {
+      const pool = OBJECTIVE[paper.slug] ?? [];
+      const total = paper.structure.questionPattern.totalQuestions;
+      const byGroup = new Map();
+      for (const q of pool) {
+        const g = q.groupId ?? 'ungrouped';
+        if (!byGroup.has(g)) byGroup.set(g, []);
+        byGroup.get(g).push(q);
+      }
+      for (const [k, arr] of byGroup) byGroup.set(k, shuffle(arr));
+
+      const used = new Set();
+      const picked = [];
+      const shortfall = [];
+      paper.groups.forEach((g, order) => {
+        const arr = byGroup.get(g.id) ?? [];
+        const take = arr.slice(0, g.target);
+        for (const q of take) { used.add(q.id); picked.push({ ...q, _order: order }); }
+        if (take.length < g.target) shortfall.push({ label: g.label, short: g.target - take.length });
+      });
+
+      let backfilled = 0;
+      if (picked.length < total) {
+        const orderOf = Object.fromEntries(paper.groups.map((g, i) => [g.id, i]));
+        for (const q of shuffle(pool.filter((x) => !used.has(x.id)))) {
+          if (picked.length >= total) break;
+          used.add(q.id);
+          picked.push({ ...q, _order: orderOf[q.groupId] ?? 99 });
+          backfilled += 1;
+        }
+      }
+      // Keep the paper in syllabus order (Part A → B → C for P3) as ICAI does.
+      picked.sort((a, b) => a._order - b._order);
+      return { questions: picked, shortfall, backfilled, target: total };
+    }
+
+    function startObjective(paper) {
+      const composed = composeObjective(paper);
+      exam = {
+        paper,
+        questions: composed.questions,
+        shortfall: composed.shortfall,
+        backfilled: composed.backfilled,
+        target: composed.target,
+        answers: composed.questions.map(() => null),
+        flags: composed.questions.map(() => false),
+        time: composed.questions.map(() => 0),
+        idx: 0,
+        enteredAt: 0,
+        submitted: false,
+      };
+      buildOmrGrid();
+      const reading = paper.structure.readingTimeMinutes;
+      if (reading > 0) {
+        $('[data-reading-note]').textContent =
+          `${reading} minutes, exactly as ICAI gives them. The full paper is below and the answer buttons stay locked until the ${paper.structure.durationLabel} begin.`;
+        renderReadingList();
+        setCounter(`${exam.questions.length} questions`);
+        setProgress(0);
+        show('reading');
+        startClock('Reading time', Date.now() + reading * 60000, beginAnswering);
+      } else {
+        beginAnswering();
+      }
+    }
+
+    function renderReadingList() {
+      const list = $('[data-reading-list]');
+      list.innerHTML = '';
+      exam.questions.forEach((q, i) => {
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        if (q.caseText) {
+          const c = document.createElement('p');
+          c.style.cssText = 'margin: 0 0 10px; font-size: 14px; line-height: 1.65; color: var(--text-2);';
+          c.textContent = q.caseText;
+          card.appendChild(c);
+        }
+        const stem = document.createElement('div');
+        stem.style.cssText = 'font-size: 15px; font-weight: 600; line-height: 1.6;';
+        stem.textContent = `${i + 1}. ${q.stem}`;
+        card.appendChild(stem);
+        const opts = document.createElement('div');
+        opts.style.cssText = 'font-size: 14px; color: var(--text-2); margin-top: 8px; display: flex; flex-direction: column; gap: 3px;';
+        for (const o of displayOptions(q)) {
+          const line = document.createElement('span');
+          line.textContent = `(${o.display}) ${o.text}`;
+          opts.appendChild(line);
+        }
+        card.appendChild(opts);
+        list.appendChild(card);
+      });
+    }
+
+    function beginAnswering() {
+      if (!exam || exam.submitted) return;
+      show('exam');
+      exam.enteredAt = Date.now();
+      renderExam();
+      startClock('Time left', Date.now() + exam.paper.structure.durationMinutes * 60000, () => submitObjective(true));
+    }
+    $('[data-skip-reading]').addEventListener('click', beginAnswering);
+    $('[data-skip-reading-2]').addEventListener('click', beginAnswering);
+
+    function buildOmrGrid() {
+      const grid = $('[data-omr-grid]');
+      grid.innerHTML = '';
+      exam.questions.forEach((q, i) => {
+        const cell = document.createElement('button');
+        cell.type = 'button';
+        cell.className = 'omr-cell';
+        cell.textContent = String(i + 1);
+        cell.setAttribute('aria-label', `Question ${i + 1}`);
+        cell.addEventListener('click', () => goTo(i));
+        grid.appendChild(cell);
+      });
+    }
+
+    function syncOmr() {
+      const cells = $('[data-omr-grid]').children;
+      let answered = 0;
+      let flagged = 0;
+      exam.questions.forEach((q, i) => {
+        const cell = cells[i];
+        const isAnswered = exam.answers[i] != null;
+        if (isAnswered) answered += 1;
+        if (exam.flags[i]) flagged += 1;
+        cell.classList.toggle('answered', isAnswered);
+        cell.classList.toggle('flagged', exam.flags[i]);
+        cell.classList.toggle('current', i === exam.idx);
+      });
+      const n = exam.questions.length;
+      $('[data-omr-answered]').textContent = `${answered} answered`;
+      $('[data-omr-flagged]').textContent = `${flagged} flagged for review`;
+      $('[data-omr-blank]').textContent = `${n - answered} still blank`;
+      setProgress((answered / n) * 100);
+    }
+
+    function commitTime() {
+      if (!exam || !exam.enteredAt) return;
+      exam.time[exam.idx] += (Date.now() - exam.enteredAt) / 1000;
+      exam.enteredAt = Date.now();
+    }
+
+    function goTo(i) {
+      if (i < 0 || i >= exam.questions.length) return;
+      commitTime();
+      exam.idx = i;
+      renderExam();
+      window.scrollTo(0, 0);
+    }
+
+    function renderExam() {
+      const q = exam.questions[exam.idx];
+      const n = exam.questions.length;
+      setCounter(`Question ${exam.idx + 1} of ${n}`);
+      const caseBox = $('[data-exam-case]');
+      caseBox.hidden = !q.caseText;
+      caseBox.textContent = q.caseText ?? '';
+      $('[data-exam-topic]').textContent = q.topic ?? '';
+      $('[data-exam-stem]').textContent = q.stem;
+      $('[data-exam-flag]').checked = exam.flags[exam.idx];
+
+      const wrap = $('[data-exam-options]');
+      wrap.innerHTML = '';
+      for (const opt of displayOptions(q)) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'option';
+        if (exam.answers[exam.idx] === opt.key) btn.classList.add('selected');
+        const letter = document.createElement('span');
+        letter.className = 'opt-letter';
+        letter.textContent = opt.display;
+        const text = document.createElement('span');
+        text.className = 'tnum';
+        text.textContent = opt.text;
+        const state = document.createElement('span');
+        state.className = 'opt-state';
+        state.hidden = exam.answers[exam.idx] !== opt.key;
+        state.textContent = 'Marked';
+        btn.append(letter, text, state);
+        btn.addEventListener('click', () => {
+          exam.answers[exam.idx] = opt.key;
+          renderExam();
+        });
+        wrap.appendChild(btn);
+      }
+      $('[data-exam-prev]').disabled = exam.idx === 0;
+      $('[data-exam-next]').textContent = exam.idx + 1 < n ? 'Next →' : 'Back to question 1';
+      syncOmr();
+    }
+
+    $('[data-exam-prev]').addEventListener('click', () => goTo(exam.idx - 1));
+    $('[data-exam-next]').addEventListener('click', () => goTo(exam.idx + 1 < exam.questions.length ? exam.idx + 1 : 0));
+    $('[data-exam-clear]').addEventListener('click', () => { exam.answers[exam.idx] = null; renderExam(); });
+    $('[data-exam-flag]').addEventListener('change', (e) => {
+      exam.flags[exam.idx] = e.target.checked;
+      syncOmr();
+    });
+    $('[data-exam-submit]').addEventListener('click', () => submitObjective(false));
+
+    function submitObjective(auto) {
+      if (!exam || exam.submitted) return;
+      commitTime();
+      const blanks = exam.answers.filter((a) => a == null).length;
+      const flagged = exam.flags.filter(Boolean).length;
+      if (!auto && blanks > 0) {
+        const gain = (blanks * ev(4)).toFixed(2);
+        const lines = [
+          `${blanks} question${blanks === 1 ? '' : 's'} still blank${flagged ? `, ${flagged} flagged for review` : ''}.`,
+          '',
+          `A blank scores ${fmt(SCORING.skipped)}. Guessing all of them blind averages about +${gain} marks — more wherever you can rule one option out.`,
+          '',
+          'Submit the paper anyway?',
+        ];
+        if (!window.confirm(lines.join('\n'))) return;
+      }
+      exam.submitted = true;
+      stopClock();
+      renderObjectiveResults(auto);
+    }
+
+    function renderObjectiveResults(auto) {
+      const paper = exam.paper;
+      const qs = exam.questions;
+      let correct = 0;
+      let wrong = 0;
+      let blank = 0;
+      qs.forEach((q, i) => {
+        const a = exam.answers[i];
+        if (a == null) { blank += 1; return; }
+        const ok = a === q.correct;
+        if (ok) correct += 1;
+        else { wrong += 1; addMistake({ questionId: q.id, topic: q.topic ?? paper.name }); }
+        recordAnswer({ questionId: q.id, correct: ok });
+      });
+      const net = correct * SCORING.correct + wrong * SCORING.wrong;
+      const outOf = qs.length;
+      const pctOfPaper = (net / paper.structure.marks) * 100;
+      const bar = (PASS.perPaperPct / 100) * paper.structure.marks;
+
+      show('results');
+      setCounter('Paper submitted');
+      setProgress(100);
+      $('[data-res-paper]').textContent = `Paper ${paper.number} · ${paper.name} · ${paper.structure.durationLabel} · submitted ${auto ? 'when the clock ran out' : 'by you'}`;
+      $('[data-res-score]').textContent = `${fmt(net)} of ${paper.structure.marks}`;
+      $('[data-res-verdict]').textContent =
+        net >= bar
+          ? `That clears the ${PASS.perPaperPct}% bar for this paper by ${fmt(net - bar)} marks. Remember Foundation also needs ${PASS.aggregatePct}% across all ${PASS.papers} papers in the same sitting.`
+          : `That is ${fmt(bar - net)} marks short of the ${PASS.perPaperPct}% bar for this paper. It is one mock, on one day — the group table below says where the gap actually sits.`;
+      $('[data-res-breakdown]').textContent =
+        `${correct} correct (+${fmt(correct * SCORING.correct)}) · ${wrong} wrong (−${fmt(wrong * PENALTY)}) · ${blank} blank (${fmt(SCORING.skipped)})` +
+        (outOf !== 100 ? ` · scored over ${outOf} questions` : '');
+
+      const short = $('[data-res-shortfall]');
+      const shortBits = [];
+      if (exam.shortfall.length) {
+        shortBits.push(
+          `The bank could not fill every weightage group: ${exam.shortfall.map((s) => `${s.label} (${s.short} short)`).join('; ')}. Those slots were filled from the rest of the paper instead, so the section balance of this sitting is not exactly ICAI's.`
+        );
+      }
+      if (outOf < exam.target) {
+        shortBits.push(`This sitting ran ${outOf} questions instead of ${exam.target} — the bank has no more original questions for this paper yet.`);
+      }
+      short.hidden = shortBits.length === 0;
+      short.textContent = shortBits.join(' ');
+
+      // ── marks lost, split honestly ──────────────────────────────────────
+      const penaltyPaid = wrong * PENALTY;
+      const forgone = wrong * SCORING.correct;
+      $('[data-res-wrongcost]').textContent = `Wrong-attempt cost: ${fmt(penaltyPaid + forgone)} marks`;
+      $('[data-res-wrongcost-note]').textContent = wrong === 0
+        ? 'Nothing given away — every question you attempted, you got.'
+        : `${fmt(penaltyPaid)} paid in negative marking on ${wrong} wrong answer${wrong === 1 ? '' : 's'}, plus the ${fmt(forgone)} mark${forgone === 1 ? '' : 's'} those questions would have carried if right. The penalty is the smaller half: wrong answers cost you mostly by not being right.`;
+      const blindGain = blank * ev(4);
+      const oneGain = blank * ev(3);
+      $('[data-res-skipcost]').textContent = `Skipped opportunity: about ${fmt(Math.round(blindGain * 100) / 100)}–${fmt(Math.round(oneGain * 100) / 100)} marks`;
+      $('[data-res-skipcost-note]').textContent = blank === 0
+        ? 'You left nothing blank. Under these rules that is the right default — a blank is the only score that can never be positive.'
+        : `Every one of your ${blank} blank${blank === 1 ? '' : 's'} had positive expected value: a blind guess averages +${ev(4).toFixed(4)} a question, and +${ev(3).toFixed(2)} once one option is eliminated. Across ${blank} blank${blank === 1 ? '' : 's'} that is ${fmt(Math.round(blindGain * 100) / 100)} to ${fmt(Math.round(oneGain * 100) / 100)} marks left on the table.`;
+
+      // ── accuracy by weightage group ─────────────────────────────────────
+      const stats = new Map();
+      qs.forEach((q, i) => {
+        const key = q.groupId ?? 'ungrouped';
+        if (!stats.has(key)) stats.set(key, { n: 0, correct: 0, wrong: 0, blank: 0, secs: 0 });
+        const s = stats.get(key);
+        s.n += 1;
+        s.secs += exam.time[i];
+        const a = exam.answers[i];
+        if (a == null) s.blank += 1;
+        else if (a === q.correct) s.correct += 1;
+        else s.wrong += 1;
+      });
+      const gt = $('[data-res-groups]');
+      gt.innerHTML = '';
+      gt.appendChild(tableRow(['Weightage group', 'Qs', 'Right', 'Wrong', 'Blank', 'Net'], 'head'));
+      paper.groups.forEach((g, i) => {
+        const s = stats.get(g.id);
+        if (!s) return;
+        const gnet = s.correct * SCORING.correct + s.wrong * SCORING.wrong;
+        gt.appendChild(tableRow([g.label, s.n, s.correct, s.wrong, s.blank, fmt(gnet)], i % 2 ? 'alt' : ''));
+      });
+      const ung = stats.get('ungrouped');
+      if (ung) {
+        const gnet = ung.correct * SCORING.correct + ung.wrong * SCORING.wrong;
+        gt.appendChild(tableRow(['Outside the published groups', ung.n, ung.correct, ung.wrong, ung.blank, fmt(gnet)], ''));
+      }
+
+      // ── slowest five ────────────────────────────────────────────────────
+      const order = qs.map((q, i) => i).sort((a, b) => exam.time[b] - exam.time[a]).slice(0, 5);
+      const st = $('[data-res-slowest]');
+      st.innerHTML = '';
+      st.appendChild(tableRow(['Q', 'Topic', 'Time on it', 'Outcome'], 'head'));
+      order.forEach((i, row) => {
+        const q = qs[i];
+        const a = exam.answers[i];
+        const outcome = a == null ? 'left blank' : a === q.correct ? 'correct' : 'wrong';
+        st.appendChild(tableRow([i + 1, q.topic ?? '—', hms(exam.time[i]), outcome], row % 2 ? 'alt' : ''));
+      });
+      const totalSecs = exam.time.reduce((s, t) => s + t, 0);
+      const avg = totalSecs / qs.length;
+      const slowNote = document.createElement('div');
+      slowNote.className = 'tr';
+      slowNote.innerHTML = '';
+      const cell = document.createElement('div');
+      cell.className = 'td dim';
+      cell.style.flex = '1';
+      cell.textContent = `Average across the paper: ${hms(avg)} a question. The exam allows ${hms((paper.structure.durationMinutes * 60) / qs.length)}.`;
+      slowNote.appendChild(cell);
+      st.appendChild(slowNote);
+
+      renderObjectiveReview();
+
+      const sorted = [...exam.time].sort((a, b) => a - b);
+      saveMock({
+        paper: paper.slug,
+        paperNumber: paper.number,
+        mode: 'objective',
+        at: Date.now(),
+        score: Math.round(net * 100) / 100,
+        outOf: paper.structure.marks,
+        questions: outOf,
+        correct,
+        wrongs: wrong,
+        blanks: blank,
+        timePerQ: {
+          totalSec: Math.round(totalSecs),
+          medianSec: Math.round(sorted[Math.floor(sorted.length / 2)] ?? 0),
+          fastestSec: Math.round(sorted[0] ?? 0),
+          slowestSec: Math.round(sorted[sorted.length - 1] ?? 0),
+        },
+      });
+    }
+
+    function tableRow(cells, cls) {
+      const row = document.createElement('div');
+      row.className = `tr ${cls ?? ''}`.trim();
+      cells.forEach((c, i) => {
+        const td = document.createElement('div');
+        td.className = i === 0 ? 'td' : 'td num tnum';
+        if (i === 0) td.style.flex = '1';
+        td.textContent = String(c);
+        row.appendChild(td);
+      });
+      return row;
+    }
+
+    function renderObjectiveReview() {
+      const wrap = $('[data-res-review]');
+      wrap.innerHTML = '';
+      exam.questions.forEach((q, i) => {
+        const a = exam.answers[i];
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        const head = document.createElement('div');
+        head.style.cssText = 'display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--text-3); margin-bottom: 8px; flex-wrap: wrap;';
+        const left = document.createElement('span');
+        left.textContent = `Q${i + 1} · ${q.topic ?? ''}`;
+        const right = document.createElement('span');
+        right.className = 'tnum';
+        right.textContent = `${hms(exam.time[i])} · ${a == null ? `blank (${fmt(SCORING.skipped)})` : a === q.correct ? `correct (+${fmt(SCORING.correct)})` : `wrong (−${PENALTY})`}`;
+        head.append(left, right);
+        card.appendChild(head);
+        if (q.caseText) {
+          const c = document.createElement('p');
+          c.style.cssText = 'margin: 0 0 10px; font-size: 14px; line-height: 1.65; color: var(--text-2);';
+          c.textContent = q.caseText;
+          card.appendChild(c);
+        }
+        const stem = document.createElement('div');
+        stem.style.cssText = 'font-size: 16px; font-weight: 600; line-height: 1.6; margin-bottom: 12px;';
+        stem.textContent = q.stem;
+        card.appendChild(stem);
+        for (const opt of displayOptions(q)) {
+          const isAnswer = opt.key === q.correct;
+          const isChosenWrong = opt.key === a && !isAnswer;
+          const div = document.createElement('div');
+          div.className = `result-option ${isAnswer ? 'is-correct' : ''} ${isChosenWrong ? 'is-wrong' : ''}`.trim();
+          const row = document.createElement('div');
+          row.className = 'opt-row';
+          const glyph = document.createElement('span');
+          glyph.className = 'opt-letter';
+          glyph.setAttribute('aria-hidden', 'true');
+          if (isAnswer) {
+            glyph.style.cssText = 'background: var(--correct); color: var(--on-correct); border-color: var(--correct);';
+            glyph.textContent = '✓';
+          } else if (isChosenWrong) {
+            glyph.style.cssText = 'background: var(--incorrect); color: var(--on-incorrect); border-color: var(--incorrect);';
+            glyph.textContent = '✕';
+          } else {
+            glyph.textContent = opt.display;
+          }
+          const text = document.createElement('span');
+          text.className = 'tnum';
+          text.textContent = opt.text;
+          row.append(glyph, text);
+          if (isAnswer || isChosenWrong) {
+            const tag = document.createElement('span');
+            tag.className = 'opt-tag';
+            tag.textContent = isAnswer ? (opt.key === a ? 'Yours ✓' : 'Correct answer') : 'Your answer';
+            row.appendChild(tag);
+          }
+          const expl = document.createElement('div');
+          expl.className = 'opt-expl';
+          expl.textContent = opt.explanation ?? '';
+          if (isAnswer && q.readLink) {
+            expl.append(' ');
+            const link = document.createElement('a');
+            link.href = q.readLink.href;
+            link.style.fontWeight = '650';
+            link.textContent = q.readLink.label;
+            expl.appendChild(link);
+          }
+          div.append(row, expl);
+          card.appendChild(div);
+        }
+        wrap.appendChild(card);
+      });
+    }
+
+    /* ═══════════════ SUBJECTIVE ENGINE (P1 / P2) ═══════════════ */
+    const SUB_KEY = 'adh-mock-sub';
+    let sub = null;
+
+    /**
+     * Assemble six ~20-mark question slots.
+     *
+     * Real P1/P2 questions are single 20-mark questions with internal parts.
+     * The bank is authored at 4–10 marks an item, so each slot here packs
+     * related items from ONE weightage group into parts (a), (b), (c) until it
+     * reaches about the slot size. Slots are allotted to groups in proportion
+     * to the ICAI weightage midpoints, so the heavier chapters appear more
+     * often — exactly as they do in the real paper.
+     */
+    function composeSubjective(paper) {
+      const pool = SUBJECTIVE[paper.slug] ?? [];
+      const slotSize = paper.structure.questionPattern.marksPerQuestion;
+      const slotCount = paper.structure.questionPattern.totalQuestions;
+      const byGroup = new Map();
+      for (const q of pool) {
+        const g = q.groupId ?? 'ungrouped';
+        if (!byGroup.has(g)) byGroup.set(g, []);
+        byGroup.get(g).push(q);
+      }
+      for (const [k, arr] of byGroup) byGroup.set(k, shuffle(arr));
+      const avail = paper.groups.filter((g) => (byGroup.get(g.id) ?? []).length > 0);
+      const seq = [];
+      if (avail.length) {
+        const midSum = avail.reduce((s, g) => s + (g.mid || 1), 0);
+        for (const g of avail) {
+          const n = Math.max(1, Math.round((slotCount * (g.mid || 1)) / midSum));
+          for (let i = 0; i < n; i++) seq.push(g);
+        }
+      }
+      const order = shuffle(seq);
+      while (order.length < slotCount && avail.length) order.push(avail[order.length % avail.length]);
+
+      const used = new Set();
+      const anywhere = shuffle(pool);
+      const slots = [];
+      for (let s = 0; s < slotCount; s++) {
+        const g = order[s] ?? null;
+        const parts = [];
+        let marks = 0;
+        const take = (it) => { parts.push(it); marks += it.marks; used.add(it.id); };
+        // Greedy fill that never overshoots …
+        const draw = (arr) => {
+          for (const it of arr) {
+            if (marks >= slotSize) break;
+            if (used.has(it.id)) continue;
+            if (marks + it.marks <= slotSize) take(it);
+          }
+        };
+        // … then close whatever gap is left with the item that lands nearest
+        // the slot size, over or under, stopping as soon as nothing improves.
+        const closeGap = (arr) => {
+          for (;;) {
+            const gap = slotSize - marks;
+            if (gap <= 0) break;
+            let best = null;
+            for (const it of arr) {
+              if (used.has(it.id)) continue;
+              const err = Math.abs(gap - it.marks);
+              if (!best || err < best.err) best = { it, err };
+            }
+            if (!best || best.err >= gap) break;
+            take(best.it);
+          }
+        };
+        const groupPool = g ? byGroup.get(g.id) ?? [] : [];
+        draw(groupPool);
+        closeGap(groupPool);
+        if (marks < slotSize - 2) { draw(anywhere); closeGap(anywhere); }
+        slots.push({ groupId: g?.id ?? null, groupLabel: g?.label ?? 'Mixed', parts, marks });
+      }
+      return slots;
+    }
+
+    function saveSubSession() {
+      if (!sub) return;
+      try {
+        localStorage.setItem(SUB_KEY, JSON.stringify({
+          paper: sub.paper.slug,
+          endsAt: sub.endsAt,
+          slots: sub.slots.map((s) => ({ groupId: s.groupId, groupLabel: s.groupLabel, ids: s.parts.map((p) => p.id) })),
+          chosen: [...sub.chosen],
+          notes: sub.notes,
+        }));
+      } catch { /* storage unavailable */ }
+    }
+    function clearSubSession() {
+      try { localStorage.removeItem(SUB_KEY); } catch { /* ignore */ }
+    }
+    function restoreSubSession() {
+      let saved = null;
+      try { saved = JSON.parse(localStorage.getItem(SUB_KEY) ?? 'null'); } catch { return null; }
+      if (!saved || !saved.paper || !paperBySlug[saved.paper]) return null;
+      if (!(saved.endsAt > Date.now())) { clearSubSession(); return null; }
+      const paper = paperBySlug[saved.paper];
+      const byId = Object.fromEntries((SUBJECTIVE[paper.slug] ?? []).map((q) => [q.id, q]));
+      const slots = (saved.slots ?? []).map((s) => {
+        const parts = (s.ids ?? []).map((id) => byId[id]).filter(Boolean);
+        return { groupId: s.groupId, groupLabel: s.groupLabel, parts, marks: parts.reduce((t, p) => t + p.marks, 0) };
+      });
+      if (!slots.length || slots.some((s) => s.parts.length === 0)) { clearSubSession(); return null; }
+      return { paper, slots, chosen: new Set(saved.chosen ?? []), notes: saved.notes ?? {}, endsAt: saved.endsAt };
+    }
+
+    function startSubjective(paper, restored) {
+      sub = restored ?? {
+        paper,
+        slots: composeSubjective(paper),
+        chosen: new Set(),
+        notes: {},
+        endsAt: Date.now() + paper.structure.durationMinutes * 60000,
+      };
+      setMarking(sub.paper);
+      setCounter(`${sub.slots.length} questions`);
+      renderSubjective();
+      show('subjective');
+      startClock('Time left', sub.endsAt, () => submitSubjective(true));
+      saveSubSession();
+    }
+
+    function renderSubjective() {
+      const paper = sub.paper;
+      const pattern = paper.structure.questionPattern;
+      $('[data-sub-paper]').textContent = `Paper ${paper.number} · ${paper.name} · ${paper.structure.durationLabel} · ${paper.structure.marks} marks`;
+      $('[data-sub-title]').textContent = pattern.summary;
+      $('[data-sub-instructions]').textContent =
+        `Answer Question 1 and any ${pattern.chooseFromRemaining.attempt} of Questions 2 to ${pattern.totalQuestions}. Working notes form part of the answer. Cite the section, standard or rule you rely on — citations carry marks.`;
+      $('[data-sub-approx]').textContent =
+        `Each ${pattern.marksPerQuestion}-mark slot below is assembled from smaller bank items in one weightage group, so its parts are related but were not authored as a single question. The marks each slot actually carries are printed on it.`;
+
+      const list = $('[data-sub-list]');
+      list.innerHTML = '';
+      sub.slots.forEach((slot, i) => {
+        const card = document.createElement('div');
+        card.className = 'card card-pad fm-slot';
+        card.dataset.slot = String(i);
+
+        const head = document.createElement('div');
+        head.style.cssText = 'display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px;';
+        const title = document.createElement('span');
+        title.style.cssText = 'font-size: 17px; font-weight: 700;';
+        title.textContent = `Question ${i + 1}${i === 0 ? ' — compulsory' : ''}`;
+        const marks = document.createElement('span');
+        marks.className = 'tnum';
+        marks.style.cssText = 'font-size: 14px; color: var(--text-2);';
+        marks.textContent = `${slot.marks} marks assembled (slot size ${sub.paper.structure.questionPattern.marksPerQuestion})`;
+        head.append(title, marks);
+        card.appendChild(head);
+
+        const groupLine = document.createElement('div');
+        groupLine.style.cssText = 'font-size: 13px; color: var(--text-3); margin-bottom: 12px;';
+        groupLine.textContent = slot.groupLabel;
+        card.appendChild(groupLine);
+
+        if (i > 0) {
+          const label = document.createElement('label');
+          label.style.cssText = 'display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 650; cursor: pointer; margin-bottom: 14px;';
+          const box = document.createElement('input');
+          box.type = 'checkbox';
+          box.dataset.choose = String(i);
+          box.checked = sub.chosen.has(i);
+          box.addEventListener('change', () => {
+            if (box.checked) sub.chosen.add(i); else sub.chosen.delete(i);
+            syncChoice();
+            saveSubSession();
+          });
+          const span = document.createElement('span');
+          span.textContent = 'Attempt this question';
+          label.append(box, span);
+          card.appendChild(label);
+        }
+
+        slot.parts.forEach((part, pi) => {
+          const block = document.createElement('div');
+          block.style.cssText = 'margin-bottom: 12px;';
+          const row = document.createElement('div');
+          row.style.cssText = 'display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap;';
+          const stem = document.createElement('span');
+          stem.style.cssText = 'font-size: 15px; line-height: 1.65; flex: 1; min-width: 220px;';
+          stem.textContent = `(${partLetter(pi)}) ${part.stem}`;
+          const m = document.createElement('span');
+          m.className = 'tnum';
+          m.style.cssText = 'font-size: 13px; color: var(--text-2); white-space: nowrap;';
+          m.textContent = `${part.marks} marks`;
+          row.append(stem, m);
+          block.appendChild(row);
+          card.appendChild(block);
+        });
+
+        const notes = document.createElement('textarea');
+        notes.className = 'fm-notes';
+        notes.rows = 6;
+        notes.placeholder = 'Plan the answer here — headings, sections to cite, working notes to show. Saved on this device as you type.';
+        notes.value = sub.notes[i] ?? '';
+        notes.addEventListener('input', () => {
+          sub.notes[i] = notes.value;
+          queueNoteSave();
+        });
+        card.appendChild(notes);
+        list.appendChild(card);
+      });
+      syncChoice();
+    }
+
+    let noteTimer = null;
+    function queueNoteSave() {
+      clearTimeout(noteTimer);
+      noteTimer = setTimeout(saveSubSession, 400);
+    }
+
+    function syncChoice() {
+      const pattern = sub.paper.structure.questionPattern;
+      const need = pattern.chooseFromRemaining.attempt;
+      const outOf = pattern.chooseFromRemaining.outOf;
+      const picked = sub.chosen.size;
+      $('[data-sub-choice]').textContent =
+        picked === need
+          ? `Question 1 (compulsory) + ${picked} of ${outOf} chosen — that is the full paper.`
+          : `Question 1 (compulsory) + ${picked} of ${outOf} chosen — choose ${need - picked} more.`;
+      $$('[data-choose]').forEach((box) => {
+        const i = Number(box.dataset.choose);
+        box.disabled = picked >= need && !sub.chosen.has(i);
+        const card = box.closest('.fm-slot');
+        if (card) card.classList.toggle('dimmed', box.disabled);
+      });
+      $$('[data-sub-submit], [data-sub-submit-2]').forEach((b) => { b.disabled = picked !== need; });
+    }
+
+    function submitSubjective(auto) {
+      if (!sub) return;
+      const need = sub.paper.structure.questionPattern.chooseFromRemaining.attempt;
+      if (!auto && sub.chosen.size !== need) return;
+      stopClock();
+      clearSubSession();
+      renderSelfGrade(auto);
+    }
+    $$('[data-sub-submit], [data-sub-submit-2]').forEach((b) => b.addEventListener('click', () => submitSubjective(false)));
+
+    function attemptedSlots() {
+      return [0, ...[...sub.chosen].sort((a, b) => a - b)];
+    }
+
+    function renderSelfGrade(auto) {
+      show('selfgrade');
+      setCounter('Self-grading');
+      setProgress(100);
+      const list = $('[data-sg-list]');
+      list.innerHTML = '';
+      const attempted = attemptedSlots();
+      attempted.forEach((si) => {
+        const slot = sub.slots[si];
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        const head = document.createElement('div');
+        head.style.cssText = 'display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px;';
+        const title = document.createElement('span');
+        title.style.cssText = 'font-size: 17px; font-weight: 700;';
+        title.textContent = `Question ${si + 1}${si === 0 ? ' — compulsory' : ''}`;
+        const m = document.createElement('span');
+        m.className = 'tnum';
+        m.style.cssText = 'font-size: 14px; color: var(--text-2);';
+        m.textContent = `${slot.marks} marks`;
+        head.append(title, m);
+        card.appendChild(head);
+
+        slot.parts.forEach((part, pi) => {
+          const wrap = document.createElement('div');
+          wrap.style.cssText = 'margin-bottom: 16px;';
+          const stem = document.createElement('div');
+          stem.style.cssText = 'font-size: 15px; font-weight: 600; line-height: 1.6; margin-bottom: 8px;';
+          stem.textContent = `(${partLetter(pi)}) ${part.stem}`;
+          wrap.appendChild(stem);
+          if (part.workingNotes) {
+            const wn = document.createElement('div');
+            wn.style.cssText = 'font-size: 13px; color: var(--text-3); margin-bottom: 8px;';
+            wn.textContent = 'Working notes carry marks here — tick a point only if you showed the working.';
+            wrap.appendChild(wn);
+          }
+          part.skeleton.forEach((pt, ki) => {
+            const row = document.createElement('label');
+            row.style.cssText = 'display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.55; cursor: pointer; margin-bottom: 8px;';
+            const box = document.createElement('input');
+            box.type = 'checkbox';
+            box.style.marginTop = '4px';
+            box.dataset.sgMarks = String(pt.marks ?? 1);
+            box.dataset.sgSlot = String(si);
+            box.dataset.sgPart = String(pi);
+            box.dataset.sgPoint = String(ki);
+            box.addEventListener('change', syncSelfGrade);
+            const body = document.createElement('span');
+            body.style.flex = '1';
+            body.textContent = pt.point;
+            if (pt.citation) {
+              body.append(' ');
+              const cite = document.createElement('span');
+              cite.style.cssText = 'color: var(--text-3); font-size: 13px;';
+              cite.textContent = `[${pt.citation}]`;
+              body.appendChild(cite);
+            }
+            const mk = document.createElement('span');
+            mk.className = 'tnum';
+            mk.style.cssText = 'color: var(--text-2); font-size: 14px; white-space: nowrap;';
+            mk.textContent = `${pt.marks ?? 1} mark${(pt.marks ?? 1) === 1 ? '' : 's'}`;
+            row.append(box, body, mk);
+            wrap.appendChild(row);
+          });
+          if (part.readLink) {
+            const link = document.createElement('a');
+            link.href = part.readLink.href;
+            link.style.cssText = 'font-size: 14px; font-weight: 650; color: var(--accent);';
+            link.textContent = part.readLink.label;
+            wrap.appendChild(link);
+          }
+          card.appendChild(wrap);
+        });
+
+        const noteText = (sub.notes[si] ?? '').trim();
+        if (noteText) {
+          const nb = document.createElement('div');
+          nb.style.cssText = 'margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--border);';
+          const lbl = document.createElement('div');
+          lbl.className = 'overline';
+          lbl.style.marginBottom = '6px';
+          lbl.textContent = 'Your outline';
+          const body = document.createElement('div');
+          body.style.cssText = 'font-size: 14px; line-height: 1.65; white-space: pre-wrap; color: var(--text-2);';
+          body.textContent = noteText;
+          nb.append(lbl, body);
+          card.appendChild(nb);
+        }
+        list.appendChild(card);
+      });
+      $('[data-sg-summary]').hidden = true;
+      $('[data-sg-finish]').disabled = false;
+      syncSelfGrade();
+      if (auto) {
+        $('[data-sg-total]').scrollIntoView({ block: 'center' });
+      }
+    }
+
+    function partLetter(i) {
+      return (LETTERS[i] ?? String(i + 1)).toLowerCase();
+    }
+
+    function attemptedMarks() {
+      return attemptedSlots().reduce((s, i) => s + sub.slots[i].marks, 0);
+    }
+
+    function selfGradeEarned() {
+      return $$('[data-sg-marks]').filter((b) => b.checked).reduce((s, b) => s + Number(b.dataset.sgMarks), 0);
+    }
+
+    function syncSelfGrade() {
+      const earned = selfGradeEarned();
+      $('[data-sg-total]').textContent = `${fmt(earned)} of ${fmt(attemptedMarks())} assembled marks`;
+    }
+
+    $('[data-sg-finish]').addEventListener('click', () => {
+      const earned = selfGradeEarned();
+      const possible = attemptedMarks();
+      const paper = sub.paper;
+      const scaled = possible > 0 ? (earned / possible) * paper.structure.marks : 0;
+      const bar = (PASS.perPaperPct / 100) * paper.structure.marks;
+      $('[data-sg-summary]').hidden = false;
+      $('[data-sg-finish]').disabled = true;
+      $('[data-sg-final]').textContent =
+        `${fmt(earned)} of ${fmt(possible)} — about ${fmt(Math.round(scaled * 10) / 10)} on a ${paper.structure.marks}-mark paper`;
+      $('[data-sg-verdict]').textContent =
+        scaled >= bar
+          ? `That clears the ${PASS.perPaperPct}-mark bar for this paper. Foundation still needs ${PASS.aggregatePct}% across all ${PASS.papers} papers in the same sitting.`
+          : `That is short of the ${PASS.perPaperPct}-mark bar for this paper by about ${fmt(Math.round((bar - scaled) * 10) / 10)} marks. The unticked points below are the whole gap.`;
+
+      // Missed points, question by question.
+      const missedWrap = $('[data-sg-missed]');
+      missedWrap.innerHTML = '';
+      let anyMissed = false;
+      attemptedSlots().forEach((si) => {
+        const slot = sub.slots[si];
+        const rows = [];
+        slot.parts.forEach((part, pi) => {
+          part.skeleton.forEach((pt, ki) => {
+            const box = document.querySelector(`[data-sg-slot="${si}"][data-sg-part="${pi}"][data-sg-point="${ki}"]`);
+            if (box && !box.checked) rows.push({ part, pi, pt });
+          });
+        });
+        if (!rows.length) return;
+        anyMissed = true;
+        const card = document.createElement('div');
+        card.className = 'card card-pad';
+        const title = document.createElement('div');
+        title.style.cssText = 'font-size: 15px; font-weight: 700; margin-bottom: 10px;';
+        const lost = rows.reduce((s, r) => s + (r.pt.marks ?? 1), 0);
+        title.textContent = `Question ${si + 1} — ${fmt(lost)} marks of points not claimed`;
+        card.appendChild(title);
+        rows.forEach((r) => {
+          const line = document.createElement('div');
+          line.style.cssText = 'font-size: 14px; line-height: 1.6; color: var(--text-2); margin-bottom: 8px;';
+          line.textContent = `(${partLetter(r.pi)}) ${r.pt.point}${r.pt.citation ? ` [${r.pt.citation}]` : ''} — ${fmt(r.pt.marks ?? 1)} marks`;
+          card.appendChild(line);
+        });
+        missedWrap.appendChild(card);
+      });
+      if (!anyMissed) {
+        const done = document.createElement('div');
+        done.className = 'empty-state';
+        done.style.cssText = 'font-size: 14px; color: var(--text-2);';
+        done.textContent = 'You claimed every point in every skeleton. Grade yourself again in a week without the rubric open — that is the harder test.';
+        missedWrap.appendChild(done);
+      }
+
+      // File the attempt: a part scores if it earned half its marks or more.
+      attemptedSlots().forEach((si) => {
+        sub.slots[si].parts.forEach((part, pi) => {
+          const got = part.skeleton.reduce((s, pt, ki) => {
+            const box = document.querySelector(`[data-sg-slot="${si}"][data-sg-part="${pi}"][data-sg-point="${ki}"]`);
+            return s + (box && box.checked ? Number(box.dataset.sgMarks) : 0);
+          }, 0);
+          const passed = got >= part.marks / 2;
+          recordAnswer({ questionId: part.id, correct: passed });
+          if (!passed) addMistake({ questionId: part.id, topic: part.topic ?? sub.paper.name });
+        });
+      });
+
+      saveMock({
+        paper: sub.paper.slug,
+        paperNumber: sub.paper.number,
+        mode: 'subjective',
+        at: Date.now(),
+        score: Math.round(scaled * 10) / 10,
+        outOf: sub.paper.structure.marks,
+        selfGraded: { earned, possible },
+        questions: attemptedSlots().length,
+        wrongs: null,
+        blanks: null,
+        timePerQ: null,
+      });
+      $('[data-sg-summary]').scrollIntoView({ block: 'start' });
+    });
+
+    /* ═══════════════ BOOT ═══════════════ */
+    const resumed = restoreSubSession();
+    if (resumed) {
+      startSubjective(resumed.paper, resumed);
+    } else if (location.hash === '#ev-trainer') {
+      show('ev');
+    }
+  </script>
+</Base>
