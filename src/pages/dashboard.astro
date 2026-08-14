@@ -2,10 +2,23 @@
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
 import { attempt, papers, partnershipRefresherTopics } from '../data/site.js';
+import { foundationAttempts } from '../data/foundation.js';
 
 // Progress denominator for P1: 15 syllabus chapters + the partnership
 // refresher topics (same tracked-topic set the paper hub uses).
 const p1TrackedTopics = papers.find((p) => p.id === 'p1').chapters + partnershipRefresherTopics.length;
+
+// Slim attempt list for the picker — the client only needs the date, the
+// registration cut-off and the label, not the whole exam-facts record.
+const attemptOptions = foundationAttempts.map((a) => ({
+  id: a.id,
+  name: a.name,
+  examDate: a.examDates.begins ?? null,
+  examLabel: a.examDates.label,
+  cutoff: a.registration?.cutoff ?? null,
+  cutoffLabel: a.registration?.label ?? null,
+  cutoffRule: a.registration?.rule ?? null,
+}));
 ---
 
 <Base title="Dashboard" active="dashboard">
@@ -69,10 +82,57 @@ const p1TrackedTopics = papers.find((p) => p.id === 'p1').chapters + partnership
             </div>
           </div>
         </section>
+
+        <!-- Confidence calibration — hidden until there are enough tagged
+             answers for the comparison to mean anything. -->
+        <section class="card card-pad" data-calibration hidden>
+          <div style="font-size: 18px; font-weight: 700; margin-bottom: 4px;">Confidence check</div>
+          <div style="font-size: 14px; color: var(--text-2); margin-bottom: 16px;">
+            How your “Sure” and “Not sure” taps in practice compared with what actually happened.
+          </div>
+          <div style="display: flex; gap: 28px; flex-wrap: wrap;" class="tnum">
+            <div>
+              <div style="font-size: 13px; color: var(--text-3);">When you said Sure</div>
+              <div style="font-size: 22px; font-weight: 700;" data-cal-sure-pct>—</div>
+              <div style="font-size: 13px; color: var(--text-2);" data-cal-sure-n></div>
+            </div>
+            <div>
+              <div style="font-size: 13px; color: var(--text-3);">When you said Not sure</div>
+              <div style="font-size: 22px; font-weight: 700;" data-cal-unsure-pct>—</div>
+              <div style="font-size: 13px; color: var(--text-2);" data-cal-unsure-n></div>
+            </div>
+          </div>
+          <div style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin-top: 16px;" data-cal-note></div>
+        </section>
       </div>
 
       <!-- right rail -->
       <div style="display: flex; flex-direction: column; gap: 24px; min-width: 0;">
+        <!-- attempt picker: the scheduler keeps every card inside this window -->
+        <section class="card card-pad">
+          <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Your attempt</div>
+          <div style="font-size: 13px; color: var(--text-2); line-height: 1.55; margin-bottom: 12px;">
+            Set it and the review schedule stays inside your exam window — nothing gets pushed past the paper. Change it whenever your plan changes.
+          </div>
+          <label for="attempt-select" style="font-size: 13px; color: var(--text-3); display: block; margin-bottom: 6px;">Foundation attempt</label>
+          <select id="attempt-select" data-attempt-select style="width: 100%; min-height: 44px; font: inherit; font-size: 15px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px;">
+            <option value="">Not set</option>
+            {foundationAttempts.map((a) => (
+              <option value={a.id} data-exam-date={a.examDates.begins ?? ''}>
+                {a.name}{a.examDates.begins ? '' : ' — dates not notified'}
+              </option>
+            ))}
+          </select>
+          <div data-attempt-custom hidden style="margin-top: 12px;">
+            <label for="attempt-date" style="font-size: 13px; color: var(--text-2); display: block; line-height: 1.55; margin-bottom: 6px;">
+              ICAI has not notified these dates yet. If you are working to a date of your own, use it — it only shapes the spacing.
+            </label>
+            <input type="date" id="attempt-date" data-attempt-date style="width: 100%; min-height: 44px; font: inherit; font-size: 15px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px;" />
+          </div>
+          <div class="tnum" data-attempt-days style="font-size: 14px; color: var(--text-2); margin-top: 12px; line-height: 1.6;"></div>
+          <div data-attempt-cutoff hidden style="font-size: 13px; color: var(--warning-text); background: var(--warning-tint); border: 1px solid var(--warning-border); border-radius: 8px; padding: 10px 12px; margin-top: 12px; line-height: 1.55;"></div>
+        </section>
+
         <section class="card card-pad">
           <div style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Your papers</div>
           <div style="display: flex; flex-direction: column; gap: 18px;">
@@ -101,6 +161,26 @@ const p1TrackedTopics = papers.find((p) => p.id === 'p1').chapters + partnership
           <div style="font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.55;">
             A quiet week is fine. The queue adjusts to you.
           </div>
+          <div data-gap-note hidden style="font-size: 13px; color: var(--text-2); margin-top: 10px; line-height: 1.55;">
+            Missing days doesn't reset anything. Pick up where you left off.
+          </div>
+        </section>
+
+        <!-- backup: this browser is the only copy, so make a second one easy -->
+        <section class="card card-pad">
+          <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Backup</div>
+          <div style="font-size: 13px; color: var(--text-2); line-height: 1.55; margin-bottom: 12px;">
+            Your progress lives in this browser only. A backup file moves it to another device, or brings it back after a cleared cache.
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <button type="button" class="btn btn-secondary" data-backup-download>Download backup</button>
+            <button type="button" class="btn btn-tertiary" data-backup-restore>Restore backup</button>
+          </div>
+          <input type="file" accept="application/json,.json" data-backup-file hidden />
+          <div style="font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.55;">
+            Restoring adds to what is already here — mastery keeps the higher level, and nothing in this browser is deleted.
+          </div>
+          <div data-backup-status style="font-size: 13px; color: var(--text-2); margin-top: 8px; line-height: 1.55;"></div>
         </section>
       </div>
     </div>
@@ -118,8 +198,23 @@ const p1TrackedTopics = papers.find((p) => p.id === 'p1').chapters + partnership
     }
   </style>
 
+  <script type="application/json" data-attempts set:html={JSON.stringify(attemptOptions)}></script>
+
   <script>
-    import { getMistakes, getWeekStats, getPaperProgress, getDueCards } from '../scripts/store.js';
+    import {
+      getMistakes,
+      getDueMistakes,
+      getWeekStats,
+      getPaperProgress,
+      getDueCards,
+      getAttempt,
+      setAttempt,
+      getDaysToExam,
+      getCalibration,
+      getLastActivity,
+      exportProgress,
+      importProgress,
+    } from '../scripts/store.js';
     import { allCards } from '../data/flashcards.js';
 
     // Greeting by time of day — factual, no pressure.
@@ -136,14 +231,17 @@ const p1TrackedTopics = papers.find((p) => p.id === 'p1').chapters + partnership
 
     // Review queue caption + rows.
     const mistakes = getMistakes();
+    const dueMistakes = getDueMistakes();
     const due = getDueCards(allCards).length;
-    const items = 1 + mistakes.length + due;
+    const items = 1 + dueMistakes.length + due;
     const minutes = Math.max(5, Math.round(items * 1.5));
     document.querySelector('[data-queue-caption]').textContent =
       `${items} item${items === 1 ? '' : 's'} due — about ${minutes} minutes. Anything skipped simply waits.`;
-    document.querySelector('[data-queue-mistakes]').textContent = mistakes.length > 0
-      ? `From Mistake notebook — ${mistakes.length} question${mistakes.length === 1 ? '' : 's'}`
-      : 'Mistake notebook — empty, nothing waiting';
+    document.querySelector('[data-queue-mistakes]').textContent = dueMistakes.length > 0
+      ? `From Mistake notebook — ${dueMistakes.length} ready to retry`
+      : mistakes.length > 0
+        ? `Mistake notebook — ${mistakes.length} logged, none due yet`
+        : 'Mistake notebook — empty, nothing waiting';
     document.querySelector('[data-queue-cards]').textContent = due > 0
       ? `Flashcards — ${due} card${due === 1 ? '' : 's'} due`
       : 'Flashcards — all scheduled ahead';
@@ -176,6 +274,141 @@ const p1TrackedTopics = papers.find((p) => p.id === 'p1').chapters + partnership
       document.querySelector('[data-week-stats]').textContent =
         `${stats.attempted} questions attempted · ${stats.correct} correct`;
     }
+
+    // Quiet nudge after a break — never a streak, never a scold.
+    const last = getLastActivity();
+    if (last && Date.now() - last >= 4 * 86400000) {
+      document.querySelector('[data-gap-note]').hidden = false;
+    }
+
+    /* ── Attempt picker ───────────────────────────────────────────────── */
+    const attempts = JSON.parse(document.querySelector('[data-attempts]').textContent);
+    const attemptSelect = document.querySelector('[data-attempt-select]');
+    const customWrap = document.querySelector('[data-attempt-custom]');
+    const dateInput = document.querySelector('[data-attempt-date]');
+    const daysLine = document.querySelector('[data-attempt-days]');
+    const cutoffBox = document.querySelector('[data-attempt-cutoff]');
+
+    function renderAttempt() {
+      const saved = getAttempt();
+      attemptSelect.value = saved?.id ?? '';
+      const meta = attempts.find((a) => a.id === attemptSelect.value) ?? null;
+      // Attempts ICAI has not notified take a date the student supplies.
+      customWrap.hidden = !(meta && !meta.examDate);
+      if (meta && !meta.examDate && saved?.examDate) dateInput.value = saved.examDate;
+
+      if (!saved) {
+        daysLine.textContent = 'No attempt set — reviews use ordinary spacing.';
+      } else {
+        const days = getDaysToExam();
+        const name = meta?.name ?? saved.id;
+        daysLine.textContent =
+          days === null
+            ? `${name} — ICAI has not notified the dates. Add one above if you want the spacing to tighten toward it.`
+            : days > 0
+              ? `${days} day${days === 1 ? '' : 's'} to ${name}. Reviews are kept inside that window.`
+              : `${name} has come and gone. Pick the next attempt when you're ready.`;
+      }
+
+      // Next registration cut-off still ahead — the selected attempt's own
+      // cut-off first, otherwise the nearest one across attempts.
+      const now = Date.now();
+      const ahead = attempts
+        .filter((a) => a.cutoff && new Date(`${a.cutoff}T00:00:00+05:30`).getTime() > now)
+        .sort((a, b) => a.cutoff.localeCompare(b.cutoff));
+      const relevant = ahead.find((a) => a.id === attemptSelect.value) ?? ahead[0] ?? null;
+      if (relevant) {
+        cutoffBox.hidden = false;
+        cutoffBox.textContent = `Registration for ${relevant.name} closes ${relevant.cutoffLabel}. ${relevant.cutoffRule ?? ''}`.trim();
+      } else {
+        cutoffBox.hidden = true;
+      }
+    }
+
+    attemptSelect.addEventListener('change', () => {
+      const id = attemptSelect.value;
+      if (!id) {
+        setAttempt(null);
+      } else {
+        const meta = attempts.find((a) => a.id === id);
+        setAttempt(id, meta?.examDate ?? (dateInput.value || null));
+      }
+      renderAttempt();
+    });
+    dateInput.addEventListener('change', () => {
+      if (!attemptSelect.value) return;
+      setAttempt(attemptSelect.value, dateInput.value || null);
+      renderAttempt();
+    });
+    renderAttempt();
+
+    /* ── Confidence calibration ───────────────────────────────────────── */
+    const cal = getCalibration();
+    // Below 20 tagged answers — or with nothing on one side — the two
+    // accuracies are noise. Say nothing.
+    if (cal.tagged >= 20 && cal.sure.n > 0 && cal.unsure.n > 0) {
+      const panel = document.querySelector('[data-calibration]');
+      panel.hidden = false;
+      document.querySelector('[data-cal-sure-pct]').textContent = `${cal.sure.pct}%`;
+      document.querySelector('[data-cal-sure-n]').textContent =
+        `${cal.sure.correct} of ${cal.sure.n} correct`;
+      document.querySelector('[data-cal-unsure-pct]').textContent = `${cal.unsure.pct}%`;
+      document.querySelector('[data-cal-unsure-n]').textContent =
+        `${cal.unsure.correct} of ${cal.unsure.n} correct`;
+      document.querySelector('[data-cal-note]').textContent =
+        cal.verdict === 'overconfident'
+          ? 'Your “Sure” answers are not yet much safer than your guesses. The confident misses are the highest-value things to fix — they are in the notebook and come back first.'
+          : cal.verdict === 'underconfident'
+            ? 'You get most of the questions you doubt right as well. The knowledge is there; the hesitation is costing you time in the paper, not marks.'
+            : 'Your sense of knowing is tracking reality — sure means right far more often than not sure. That signal is worth trusting when you decide what to attempt.';
+    }
+
+    /* ── Backup ───────────────────────────────────────────────────────── */
+    const status = document.querySelector('[data-backup-status]');
+    const fileInput = document.querySelector('[data-backup-file]');
+
+    document.querySelector('[data-backup-download]').addEventListener('click', () => {
+      try {
+        const blob = new Blob([JSON.stringify(exportProgress(), null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `adhyayan-backup-${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
+        status.textContent = 'Backup saved to your downloads.';
+      } catch {
+        status.textContent = 'This browser blocked the download. Nothing changed.';
+      }
+    });
+
+    document.querySelector('[data-backup-restore]').addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        let merged = null;
+        try {
+          merged = importProgress(JSON.parse(String(reader.result)));
+        } catch {
+          merged = null;
+        }
+        if (!merged) {
+          status.textContent = 'That file does not look like an Adhyayan backup. Nothing changed.';
+          fileInput.value = '';
+          return;
+        }
+        status.textContent = 'Restored. Reloading the page…';
+        setTimeout(() => location.reload(), 500);
+      };
+      reader.onerror = () => {
+        status.textContent = 'That file could not be read. Nothing changed.';
+      };
+      reader.readAsText(file);
+    });
 
     // Paper progress — same key prefixes and denominator as the paper hub.
     const pct = document.querySelector('[data-paper-pct="p1"]');

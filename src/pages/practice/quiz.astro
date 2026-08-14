@@ -79,9 +79,19 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
     <div data-quiz-root>
       <div data-result-banner hidden></div>
       <div data-case hidden class="card card-pad" style="margin-bottom: 18px; font-size: 15px; line-height: 1.65;"></div>
-      <div style="font-size: 13px; color: var(--text-3); margin-bottom: 10px;" data-topic></div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
+        <span style="font-size: 13px; color: var(--text-3);" data-topic></span>
+        <span data-review-badge hidden style="font-size: 12px; color: var(--text-3); background: var(--surface-2); border-radius: 999px; padding: 2px 9px;">review</span>
+      </div>
       <div style="font-size: 18px; line-height: 1.6; font-weight: 600; margin-bottom: 24px;" data-stem></div>
       <div style="display: flex; flex-direction: column; gap: 10px;" data-options></div>
+      <div data-confidence-note hidden style="font-size: 14px; color: var(--text-2); margin-top: 16px; line-height: 1.6;"></div>
+      <!-- Optional confidence tap: skipping it changes nothing. -->
+      <div data-confidence hidden style="display: flex; align-items: center; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
+        <span style="font-size: 13px; color: var(--text-3);">Before you check — how sure are you?</span>
+        <button type="button" class="btn btn-tertiary" data-sure="1" aria-pressed="false">Sure</button>
+        <button type="button" class="btn btn-tertiary" data-sure="0" aria-pressed="false">Not sure</button>
+      </div>
       <div style="display: flex; align-items: center; gap: 16px; margin-top: 24px; flex-wrap: wrap;" data-actions>
         <button type="button" class="btn btn-primary" data-check disabled>Check answer</button>
         <button type="button" class="btn btn-tertiary" data-skip>Skip this question</button>
@@ -134,7 +144,14 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
   <script type="application/json" data-scoring set:html={JSON.stringify(foundationScoring)}></script>
 
   <script>
-    import { addMistake, clearMistake, recordAnswer, bumpMastery } from '../../scripts/store.js';
+    import {
+      addMistake,
+      clearMistake,
+      recordAnswer,
+      bumpMastery,
+      getDueMistakes,
+      rescheduleMistake,
+    } from '../../scripts/store.js';
 
     const all = JSON.parse(document.querySelector('[data-questions]').textContent);
 
@@ -188,6 +205,35 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
       deck = blocks.flat();
     }
 
+    // Mistakes that have come due ride at the front of the session (up to 5).
+    // Where the bank holds another question on the same topic, that VARIANT
+    // comes instead of the exact question — recognising an old stem is not
+    // the same as knowing the idea. Answering one reschedules the notebook
+    // entry; the ?mode=mistakes deck already is the notebook, so it opts out.
+    if (params.get('mode') !== 'mistakes' && deck.length > 0) {
+      const prefixOf = (t) => (t ?? '').split(/[—–:|-]/)[0].trim().toLowerCase();
+      const front = [];
+      const taken = new Set();
+      for (const m of getDueMistakes()) {
+        if (front.length >= 5) break;
+        const original = deck.find((q) => q.id === m.questionId);
+        if (!original || taken.has(original.id)) continue;
+        const prefix = prefixOf(m.topic ?? original.topic);
+        const variants = deck.filter(
+          (q) => q.id !== original.id && !taken.has(q.id) && !q.case && prefixOf(q.topic) === prefix
+        );
+        const samePaper = variants.filter((q) => q.meta?.paperSlug === original.meta?.paperSlug);
+        const pool = samePaper.length ? samePaper : variants;
+        const pick = pool.length ? pool[Math.floor(Math.random() * pool.length)] : original;
+        taken.add(pick.id);
+        taken.add(original.id);
+        // Copy, so the review card carries `_review` without tagging the
+        // shared question object for the rest of the deck.
+        front.push({ ...pick, _review: m.questionId });
+      }
+      if (front.length > 0) deck = [...front, ...deck.filter((q) => !taken.has(q.id))];
+    }
+
     // Foundation scoring mode (+1 / −0.25 / 0) — Papers 3 & 4 only. Activates
     // from the bank metadata, or explicitly via ?scoring=foundation.
     const scoring = JSON.parse(document.querySelector('[data-scoring]').textContent);
@@ -231,6 +277,28 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
     // proficient; a session-wide count would promote the wrong topic.
     const topicCorrect = new Map();
 
+    // Optional confidence tap — "Sure" / "Not sure" before the answer is
+    // revealed. Purely opt-in: checking an answer without tapping behaves
+    // exactly as before, and the tag simply goes unrecorded.
+    let sureChoice = null;
+    const confidenceRow = $('[data-confidence]');
+    const sureButtons = [...confidenceRow.querySelectorAll('[data-sure]')];
+    function paintConfidence() {
+      for (const b of sureButtons) {
+        const on = sureChoice !== null && (b.dataset.sure === '1') === sureChoice;
+        b.classList.toggle('btn-secondary', on);
+        b.classList.toggle('btn-tertiary', !on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
+    }
+    for (const b of sureButtons) {
+      b.addEventListener('click', () => {
+        if (answered) return;
+        sureChoice = b.dataset.sure === '1';
+        paintConfidence();
+      });
+    }
+
     // Options render shuffled with positional letters (authored keys skew
     // toward A/B); correctness still compares authored keys underneath.
     const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -270,6 +338,12 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
       }
       $('[data-topic]').textContent = q.topic;
       $('[data-stem]').textContent = q.stem;
+      // Quiet marker: this one came back from the notebook.
+      $('[data-review-badge]').hidden = !q._review;
+      sureChoice = null;
+      paintConfidence();
+      confidenceRow.hidden = false;
+      $('[data-confidence-note]').hidden = true;
 
       const wrap = $('[data-options]');
       wrap.innerHTML = '';
@@ -332,6 +406,7 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
         if (isCorrect) cs.correct += 1;
         caseScores.set(q.case.id, cs);
       }
+      confidenceRow.hidden = true;
       if (isCorrect) {
         correctCount += 1;
         clearMistake(q.id);
@@ -343,9 +418,20 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
         }
       } else {
         wrongCount += 1;
-        addMistake({ questionId: q.id, topic: q.topic });
+        addMistake({ questionId: q.id, topic: q.topic, sure: sureChoice ?? undefined });
       }
-      recordAnswer({ questionId: q.id, correct: isCorrect });
+      // A review card answers for the notebook entry it came from — which may
+      // be a different question id when a variant was served.
+      if (q._review) rescheduleMistake(q._review, isCorrect);
+      recordAnswer({ questionId: q.id, correct: isCorrect, sure: sureChoice ?? undefined });
+
+      const note = document.querySelector('[data-confidence-note]');
+      if (!isCorrect && sureChoice === true) {
+        note.hidden = false;
+        note.textContent = 'You were confident here — these are the highest-value fixes.';
+      } else {
+        note.hidden = true;
+      }
 
       const banner = document.querySelector('[data-result-banner]');
       banner.hidden = false;
