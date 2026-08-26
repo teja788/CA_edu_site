@@ -1,0 +1,1078 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Prospectus and Allotment of Securities'
+description: 'CA Intermediate Paper 2 Ch 3 — how a company asks the public for money and what happens when it does: sections 23 to 42 of the Companies Act 2013, the four kinds of prospectus, misstatement liability, the section 39 allotment window and the section 42 private-placement clocks, worked through dated scenarios.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 3 · Prospectus and Allotment'
+chapterSlug: prospectus-and-allotment
+masteryId: i2-ch3
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42'
+  - 'Companies Act 2013, s. 2(70) (prospectus); s. 2(30) (debenture); s. 447 (fraud)'
+  - 'Companies (Prospectus and Allotment of Securities) Rules 2014 — PAS-2, PAS-3, PAS-4, PAS-5, minimum subscription and refund mechanics (rules-level, amendment-sensitive)'
+  - 'Companies (Share Capital and Debentures) Rules 2014, r. 13 — underwriting commission caps (rules-level)'
+  - 'SEBI (ICDR) Regulations — referred to only where the Act defers to SEBI'
+sourceLabel: 'Companies Act 2013 ss. 23–42 · ICAI SM Paper 2 Ch 3 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 26 min read · 7 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=prospectus-and-allotment'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A private company writes to eleven investors it already knows and raises ₹40 crore. A public company
+takes out newspaper advertisements, files a document with the Registrar, and raises the same ₹40
+crore from twenty thousand strangers. Both end with money in a bank account and shares in a register.
+Chapter III of the Companies Act 2013 is the law of the difference between them: **who may be
+approached, what must be told to them, in what document, when the money must be returned if the
+issue fails, and who pays when the document lies**.
+
+For the exam this chapter is **two clocks and one document**. The document is the prospectus — its
+definition, its four kinds and the liability that attaches to a false statement in it. The clocks are
+**section 39** (public allotment: minimum subscription, 30 days, refunds) and **section 42** (private
+placement: 200 persons, 60 days, 15 days, 12% per annum). Examiners set the same question shapes year
+after year: *give the date*, *give the amount*, *state whether the offer is a public offer or a
+private placement*, and *who is liable and with what defence*. Nothing here rewards vague prose.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · this chapter sits on shifting rules">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. The Act-level numbers used in the question bank — the
+    <strong>200-person</strong> cap, the <strong>60-day</strong> allotment window, the
+    <strong>15-day</strong> refund window, <strong>12% per annum</strong> interest, the
+    <strong>5%</strong> minimum application money, the <strong>90-day</strong> registration validity
+    and the <strong>30-day</strong> minimum-subscription window — are stable in the section text. The
+    <em>Rules</em> layer is not: form names (PAS-2, PAS-3, PAS-4, PAS-5), the underwriting-commission
+    caps, the refund-with-interest mechanics under section 39(3) and the section 42 penalty ceilings
+    have all been recast since 2014. Every rules-level item is flagged below. Re-check them against
+    the Study Material edition notified for your attempt.
+  </p>
+</Callout>
+
+## 1. Two routes to raising securities — section 23
+
+**Section 23** is the map of the whole chapter. It answers one question: *how may a company issue
+securities at all?*
+
+| Company | Permitted routes |
+|---|---|
+| **Public company** | **(a)** to the **public** through a **prospectus** (a "public offer"); **(b)** through a **private placement** under s. 42; **(c)** through a **rights issue** or a **bonus issue** under s. 62, with the Act's and, for a listed company, SEBI's requirements complied with |
+| **Private company** | **(a)** through a **private placement** under s. 42; **(b)** through a **rights issue** or a **bonus issue** under s. 62 |
+
+Two consequences follow immediately, and both are examined.
+
+First, a **private company can never make a public offer**. Its articles must restrict the right to
+transfer shares and **prohibit any invitation to the public** to subscribe for its securities
+(s. 2(68)). If a private company advertises an issue, it has not merely broken s. 23 — it has
+destroyed the very restriction that makes it private.
+
+Second, **"public offer" is defined by the section itself** to include an **initial public offer**, a
+**further public offer** of securities to the public by a company, **and an offer for sale** of
+securities to the public by an **existing shareholder** through a company. That last limb is the door
+to s. 28 (§6 below).
+
+<Callout kind="pointer">
+  <p>
+    <strong>Section 23(2)–(4) — the "listing abroad" limbs.</strong> Section 23(3) permits a
+    <strong>public company</strong> to issue such class of securities as may be prescribed for listing
+    on <strong>permitted stock exchanges in permissible foreign jurisdictions</strong>, and s. 23(4)
+    empowers the Central Government to exempt any class of public companies from provisions of
+    Chapter III, Chapter IV, s. 89, s. 90 or s. 127 by notification, every such notification being
+    laid before Parliament. These sub-sections are examinable as <em>existence</em> points — that the
+    power exists and sits with the Central Government — not as detail.
+  </p>
+</Callout>
+
+## 2. What counts as a prospectus — definition and kinds
+
+**Section 2(70)** defines a prospectus as **any document described or issued as a prospectus**, and
+includes a **red herring prospectus** under s. 32, a **shelf prospectus** under s. 31, or **any
+notice, circular, advertisement or other document inviting offers from the public for the
+subscription or purchase of any securities** of a body corporate.
+
+Take the definition apart, because every trap in this area lives in one of its four elements:
+
+1. **A document.** An oral invitation, however public, is not a prospectus. The document need not be
+   called a prospectus — a circular, a newspaper advertisement or a notice qualifies.
+2. **Inviting offers.** A prospectus is an **invitation to offer**, not an offer. The applicant makes
+   the offer; the company accepts it by **allotment**. That single point decides a surprising number
+   of questions about when a contract is formed.
+3. **From the public.** An invitation to identified persons on a strictly private basis is not a
+   public invitation — which is exactly the space s. 42 occupies.
+4. **For subscription or purchase of securities.** "Purchase" widens it beyond fresh issues to an
+   **offer for sale** of existing securities (s. 28).
+
+<Callout kind="mistake">
+  <p>
+    <strong>A document is not saved by what it calls itself.</strong> Students often reason that a
+    circular headed "Information Note — not a prospectus" escapes s. 2(70). It does not. The
+    definition catches "any notice, circular, advertisement or <em>other document</em>" that
+    <em>invites offers from the public</em>; the label is irrelevant and the test is the
+    <strong>substance of the invitation</strong>. Conversely, a document that genuinely invites no one
+    — an annual report, a research note — is not a prospectus merely because it describes securities.
+  </p>
+</Callout>
+
+**The four kinds, at a glance.** The chapter's structure follows this table, and so does the exam.
+
+| Kind | Section | One-line identity |
+|---|---|---|
+| **Abridged prospectus** | s. 33 (defined in s. 2(1)) | the memorandum containing the **salient features** of a prospectus, which **must accompany every application form** |
+| **Shelf prospectus** | s. 31 | one prospectus filed by a **prescribed class** of company, valid for **one year**, with an **information memorandum** before each later offer |
+| **Red herring prospectus** | s. 32 | a prospectus that **does not state the quantum or the price** of the securities, filed **at least three days** before the opening of the offer |
+| **Deemed prospectus** | ss. 25, 28 | a document by which an **issuing house or an existing shareholder** offers securities to the public is **deemed to be a prospectus issued by the company** |
+
+## 3. Abridged prospectus — section 33
+
+**Section 33(1)** states the rule in a single breath: **no application form** for the purchase of any
+securities of a company may be issued **unless it is accompanied by an abridged prospectus**. The
+abridged prospectus is defined by **s. 2(1)** as a **memorandum containing such salient features of a
+prospectus as may be specified by SEBI**.
+
+The proviso lists the cases where the requirement does not bite:
+
+- where the offer is made in connection with a **bona fide invitation to a person to enter into an
+  underwriting agreement** with respect to the securities; or
+- where the securities are **not offered to the public**.
+
+**Section 33(2)** — a copy of the **full prospectus** must be furnished to **any person, before the
+closing of the subscription list and the offer, on his request**. **Section 33(3)** — issuing an
+application form without the abridged prospectus attracts a **penalty of ₹50,000 for each default**.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Why the abridged prospectus exists.</strong> A full prospectus runs to hundreds of pages;
+    an investor filling in a form will not read it. The abridged document puts the salient features in
+    his hand at the moment of decision, while s. 33(2) preserves his right to demand the full text.
+    The examiner's favourite pairing is <strong>s. 33(1) proviso (b)</strong> with <strong>s. 42</strong>:
+    a private placement is not an offer to the public, so <em>no</em> abridged prospectus is needed —
+    the PAS-4 offer letter does that job instead.
+  </p>
+</Callout>
+
+## 4. Shelf prospectus — section 31
+
+A company that will tap the market repeatedly — typically a large lender — should not have to file a
+fresh prospectus every quarter. **Section 31(1)** allows **any class or classes of companies as SEBI
+may provide by regulations** to file a **shelf prospectus** with the Registrar at the stage of the
+**first offer** of securities.
+
+| Element | Position |
+|---|---|
+| Who may file | a class of companies **prescribed by SEBI regulations** — not every company |
+| Filed with | the **Registrar**, at the stage of the **first offer** |
+| Validity | must indicate a period **not exceeding one year** as the period of validity, **commencing from the date of opening of the first offer** of securities under it |
+| Effect within validity | **no further prospectus is required** for any **second or subsequent offer** made within that period |
+| Before each later offer | file an **information memorandum** with the Registrar, in the prescribed form and within the prescribed time |
+
+**Section 31(2)** — the information memorandum states the **new charges created**, the **changes in
+the financial position** of the company between the first offer and the succeeding offer, and such
+other prescribed matters.
+
+**The proviso to s. 31(2) is the deep point.** Where a company or any other person has **received
+applications with advance payments** before a change is noted in the information memorandum, it must
+**intimate the changes to the applicants**, and if any of them **wishes to withdraw** the application,
+the company must **refund the whole of the money received** as advance payment — within the prescribed
+time and manner. Investors who committed on stale information get an exit.
+
+**Section 31(3)** — where an information memorandum is filed on every subsequent offer, the
+**memorandum together with the shelf prospectus constitutes the prospectus** for that offer.
+
+<div class="formula">Shelf prospectus validity = up to <strong>1 year</strong>, running from the <strong>date of opening of the first offer</strong> — not from the date of filing</div>
+
+<Callout kind="example" label="Scenario 1 — counting the shelf year, and the withdrawal right">
+  <p>
+    Sahyadri Infra Finance Limited, a company of a class SEBI has prescribed for this purpose, files a
+    shelf prospectus with the Registrar on <strong>10 March 2026</strong>. Its first offer of
+    debentures opens on <strong>2 April 2026</strong>. It plans a second tranche in November 2026 and a
+    third in May 2027. In October 2026 it creates a fresh charge over its receivables. Applications
+    with advance money for the second tranche have already been received when the charge is created.
+  </p>
+  <p>
+    <strong>1 · The clock.</strong> Validity runs from the <strong>opening of the first offer</strong>,
+    so the shelf prospectus is good to <strong>1 April 2027</strong> — not to 9 March 2027 (filing) and
+    not to a rolling year from each tranche. The November tranche is inside; the
+    <strong>May 2027 tranche is outside</strong>, and needs a fresh prospectus.
+    <strong>2 · The information memorandum.</strong> Before the November tranche the company files an
+    information memorandum disclosing the new charge and the change in its financial position; that
+    memorandum <em>plus</em> the shelf prospectus is the prospectus for the tranche.
+    <strong>3 · The applicants.</strong> Those who applied with advance payment before the charge was
+    noted must be intimated; any of them who wishes to withdraw gets the <strong>whole</strong> of his
+    advance money back. There is no "part refund" and no forfeiture.
+  </p>
+</Callout>
+
+## 5. Red herring prospectus — section 32
+
+A **red herring prospectus** is defined in the Explanation to **s. 32** as a prospectus which **does
+not include complete particulars of the quantum or price of the securities** included in it. It is
+the book-building instrument: the issuer tests demand before fixing the price.
+
+| Requirement | Position |
+|---|---|
+| Who may issue | a company **proposing to make an offer of securities**, prior to the issue of a prospectus |
+| Filing | with the **Registrar**, **at least three days before the opening of the subscription list and the offer** |
+| Obligations | a red herring prospectus **carries the same obligations as a prospectus**, and any **variation** between it and the prospectus is **highlighted as variations** in the prospectus |
+| On closing | **upon the closing of the offer**, the **prospectus** stating the **total capital raised** (whether by way of debt or share capital), the **closing price** of the securities, and **any other details not included in the red herring prospectus**, is filed with the **Registrar and SEBI** |
+
+<div class="formula">Red herring prospectus → file with the Registrar <strong>at least 3 days</strong> before the offer opens; after closing, file the final prospectus with <strong>the Registrar and SEBI</strong></div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Three days before the OPENING, not three days before printing; and the post-closing filing
+    goes to two authorities.</strong> Two slips are common here. The first is treating the three-day
+    period as running from the filing of the draft with SEBI — s. 32(2) fixes it to the
+    <strong>opening of the subscription list and the offer</strong>. The second is answering that the
+    final prospectus is filed with the Registrar alone: s. 32(4) says <strong>Registrar and
+    SEBI</strong>. And note what a red herring prospectus is <em>not</em> — it is not a document with
+    no price band and no liability. It <strong>carries the same obligations as a prospectus</strong>,
+    so ss. 34 and 35 apply to it in full.
+  </p>
+</Callout>
+
+## 6. Deemed prospectus and offer for sale — sections 25 and 28
+
+Suppose a company allots its whole issue to a merchant bank, which the next week offers those shares
+to the public. On a literal reading the company never invited the public, and the merchant bank is not
+issuing "its" securities. **Section 25** closes that gap.
+
+**Section 25(1)** — where a company **allots or agrees to allot** securities **with a view to all or
+any of them being offered for sale to the public**, any document by which the **offer for sale to the
+public is made** is **deemed to be a prospectus issued by the company**; all enactments and rules as
+to the contents of a prospectus and as to **liability in respect of misstatements and otherwise**
+apply as if the securities had been offered to the public directly by the company.
+
+**Section 25(2)** supplies the evidential shortcut. It is **evidence that an allotment was made with a
+view to the securities being offered for sale to the public** if it is shown either —
+
+- **(a)** that an **offer of the securities for sale to the public was made within six months** after
+  the allotment or agreement to allot; **or**
+- **(b)** that at the date when the offer was made, the **whole consideration to be received** by the
+  company in respect of the securities **had not been so received**.
+
+**Section 25(3)** — in addition to the s. 26 contents, the deemed prospectus must state the **net
+amount of the consideration received or to be received** by the company in respect of the securities
+offered, and the **place and time** at which the contract under which the securities were allotted may
+be inspected.
+
+**Section 25(4)** — where the offeror is a **company or a firm**, it is enough that the document is
+signed on behalf of the company by **two directors** or, in the case of a firm, by **not less than
+one-half of the partners**.
+
+**Section 28** is the shareholder's version. Where **certain members** of a company propose, **in
+consultation with the Board**, to **offer the whole or part of their holding of shares to the
+public**, they may do so **in accordance with the prescribed procedure**; any document by which the
+offer is made is **deemed to be a prospectus issued by the company**, and all laws relating to a
+prospectus apply. **Section 28(3)** requires the members to **reimburse the company** all expenses
+incurred by it on the offer.
+
+<div class="formula">s. 25(2) presumption: offer for sale within <strong>6 months</strong> of allotment, <strong>or</strong> full consideration not yet received at the date of the offer → deemed prospectus</div>
+
+<Callout kind="example" label="Scenario 2 — an offer for sale, and the six-month presumption">
+  <p>
+    Kalinga Ceramics Limited allots 80 lakh shares to Marut Capital Private Limited, an issuing house,
+    on <strong>4 May 2026</strong>, for ₹96 crore payable in two instalments. Marut Capital pays ₹60
+    crore and offers the shares to the public by a printed document dated <strong>18 September
+    2026</strong>. The document contains an overstatement of Kalinga's order book.
+  </p>
+  <p>
+    <strong>1 · Is it a prospectus?</strong> Yes, twice over. The offer for sale was made
+    <strong>within six months</strong> of the allotment (4 May → 18 September is inside the window),
+    and separately the <strong>whole consideration had not been received</strong> at the date of the
+    offer. Either limb of s. 25(2) is enough; here both apply.
+    <strong>2 · Whose prospectus?</strong> It is deemed to be a prospectus <strong>issued by Kalinga
+    Ceramics</strong> — the company — so the s. 26 contents requirements and the ss. 34 and 35
+    liabilities attach to it and to Kalinga's directors, not merely to Marut Capital.
+    <strong>3 · Extra contents.</strong> Section 25(3) requires the document to state the
+    <strong>net consideration</strong> received or receivable by Kalinga and the place and time for
+    inspecting the allotment contract. <strong>4 · Signature.</strong> Marut Capital being a company,
+    signature by <strong>two of its directors</strong> suffices under s. 25(4).
+  </p>
+</Callout>
+
+## 7. Matters to be stated, dating, signing and registration — section 26
+
+**Section 26(1)** requires every prospectus issued by or on behalf of a public company, or by or on
+behalf of any person engaged or interested in the formation of a public company, to be **dated and
+signed** and to **state** the information and set out the reports specified — broadly, three families
+of content:
+
+1. **Identity and structure** — the name and registered-office address of the company; the names and
+   addresses of the **company secretary, chief financial officer, auditors, bankers, trustees for
+   debenture holders, underwriters** and such other persons as may be prescribed.
+2. **The offer itself** — the **dates of opening and closing** of the issue; a declaration about the
+   issue of an **allotment letter and refunds** within the prescribed time; a statement by the Board
+   that **all monies received out of the issue** are to be **transferred to a separate bank account**
+   as mentioned in **s. 40(3)**; details of **all monies utilised out of previous issues** and of
+   monies **not so utilised**, with the form in which they are lying; the **capital structure**; the
+   **main objects of the public offer** and terms of the present issue; the **minimum subscription**;
+   the **premium payable on securities**; the **procedure and time schedule for allotment and issue**;
+   and the **authority for the issue** with the details of the resolution passed for it.
+3. **The reports** — reports for the purposes of the **financial information** specified in the
+   section: the **auditor's report** on **profits and losses and assets and liabilities**, and where
+   applicable on the **business of any subsidiary**, in the prescribed form.
+
+Also required: **details of directors** including their appointments and remuneration; the
+**particulars relating to management perception of risk factors** specific to the project; the
+**gestation period** of the project; **deadlines for completion**; and any **litigation or legal
+action** pending or taken by a Government Department or a statutory body during the last **five
+years** immediately preceding the issue against the promoter of the company.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Section 26(2) — what a prospectus need not repeat.</strong> Nothing in s. 26(1) requires
+    the inclusion of matters or reports that would otherwise be required where the prospectus is
+    issued <strong>more than two years after the company is entitled to commence business</strong>, in
+    respect of an <strong>interval of more than two years</strong> between the issue and the last
+    accounts. The point is that stale detail is not made compulsory; do not read s. 26(1) as an
+    eternal checklist.
+  </p>
+</Callout>
+
+**Section 26(3) — the expert's consent.** Where a prospectus includes a **statement made by an
+expert**, the expert must have given his **written consent** to the issue and must **not have
+withdrawn** it before delivery of a copy to the Registrar, and the prospectus must state that he has
+given his consent and has not withdrawn it. The **Explanation** limits "expert" to a person who is
+**not, and has not been, engaged or interested in the formation or promotion or management of the
+company** — an independent expert only.
+
+**Section 26(4)–(6) — dating, signing and registration.** No prospectus may be **issued** by or on
+behalf of a company or in relation to an intended company unless, **on or before the date of its
+publication**, a copy **signed by every person named in it as a director or proposed director**, or by
+his duly authorised attorney, has been **delivered to the Registrar for registration**. The copy
+delivered must have **endorsed on or attached to it** every consent to the issue given by an expert
+and any other prescribed documents. Every prospectus must, **on its face**, state that a copy has been
+delivered for registration and specify the documents delivered or attached.
+
+**Section 26(7)–(9) — the outer limits.**
+
+| Rule | Position |
+|---|---|
+| Registrar's duty | the Registrar **shall not register** a prospectus unless the s. 26(1)–(3) requirements are complied with and it is **accompanied by the consent in writing of every person named in it** as auditor, legal adviser, attorney, solicitor, banker or broker |
+| **90-day validity** | a prospectus **shall not be valid if it is issued more than ninety days after the date on which a copy is delivered to the Registrar** |
+| Contravention | **penalty on the company**, and on **every person knowingly a party to the issue** of a prospectus in contravention of s. 26 |
+
+<div class="formula">A prospectus is <strong>not valid</strong> if issued more than <strong>90 days</strong> after the date a copy was delivered to the Registrar — the clock starts at <strong>delivery</strong>, not at Board approval or at registration</div>
+
+<Callout kind="example" label="Scenario 3 — the 90-day registration clock, dated">
+  <p>
+    Netravati Foods Limited's Board approves its prospectus on <strong>6 April 2026</strong>. A copy
+    signed by every director is <strong>delivered to the Registrar on 21 April 2026</strong>. The
+    Registrar registers it on 28 April 2026. The company, waiting for market conditions to improve,
+    publishes the prospectus and opens the issue on <strong>24 July 2026</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — where the 90 days run from</div>
+    Delivery to the Registrar = <strong>21 April 2026</strong><br />
+    90 days from 21 April 2026 → 21 April + 9 days (April) = 30 April; + 31 (May) = 40 days to 31 May;
+    + 30 (June) = 70 days to 30 June; + 20 = <strong>90 days on 20 July 2026</strong><br />
+    Issue on <strong>24 July 2026</strong> is <strong>4 days late</strong> → the prospectus is
+    <strong>not valid</strong>
+  </div>
+  <p>
+    <strong>The trap.</strong> Counting from Board approval (6 April) gives 5 July; counting from
+    registration (28 April) gives 27 July and makes the issue look safe. Both are wrong. Section 26(8)
+    fixes the clock to the <strong>date on which a copy was delivered for registration</strong>. The
+    company must deliver a fresh copy and start again.
+  </p>
+</Callout>
+
+## 8. Variation of terms of contracts or objects — section 27
+
+Money raised on a stated purpose may not be quietly redirected. **Section 27(1)** — a company **shall
+not**, at any time, **vary the terms of a contract referred to in the prospectus** or **vary the
+objects** for which the prospectus was issued, **except** subject to the **approval of, or except
+subject to an authority given by, the company in general meeting by way of a special resolution**.
+
+Three riders sit on that rule:
+
+- The company must **publish the details of the notice** of the special resolution to shareholders,
+  in the manner prescribed, in **two newspapers — one in English and one in the vernacular language**
+  of the city where the registered office is situated — and place it on the company's **website**, if
+  any, indicating the **justification** for the variation.
+- The company **shall not use any amount raised by it through the prospectus** for **buying,
+  trading or otherwise dealing in equity shares of any other listed company**.
+- **Section 27(2)** — **dissenting shareholders**, being those who **have not agreed to the proposal
+  to vary the terms of contracts or objects** referred to in the prospectus, must be given an **exit
+  offer** by **promoters or controlling shareholders**, at such exit price and in such manner and
+  conditions as may be **specified by SEBI** by regulations.
+
+| Question | Answer |
+|---|---|
+| Who approves a variation? | the **members**, by **special resolution** — not the Board, not the Registrar |
+| What publicity? | **two newspapers** (English + vernacular of the registered-office city) **and** the website, with the **justification** |
+| Who funds the exit? | **promoters or controlling shareholders**, at a price specified by **SEBI** |
+| May the money be parked in listed equity? | **No** — an express prohibition in the proviso |
+
+<Callout kind="mistake">
+  <p>
+    <strong>Do not confuse s. 27 with s. 13(8).</strong> They look alike and are examined against each
+    other. <strong>Section 13(8)</strong> is about <em>altering the objects clause of the
+    memorandum</em> where a company that raised money from the public through a prospectus still has
+    <strong>unutilised</strong> money — it needs a special resolution plus the two newspapers, the
+    website and a dissenters' exit. <strong>Section 27</strong> is about <em>varying the terms of a
+    contract referred to in the prospectus, or the objects for which the prospectus was issued</em>,
+    and it applies <strong>"at any time"</strong> — it is not conditioned on money remaining unspent.
+    Both end with a special resolution and a dissenters' exit; the <strong>trigger</strong> is what
+    separates them.
+  </p>
+</Callout>
+
+## 9. Dematerialised issue and advertisement of prospectus — sections 29 and 30
+
+**Section 29 — securities in dematerialised form.** Notwithstanding anything contained in any other
+provisions of the Act, **every company making a public offer**, and **such other class or classes of
+companies as may be prescribed**, must **issue securities only in dematerialised form** by complying
+with the provisions of the **Depositories Act 1996** and the regulations made under it.
+**Section 29(1A)** extends the discipline beyond issue: such class of **unlisted companies as may be
+prescribed** must **hold and transfer** securities **only in dematerialised form**. **Section 29(2)**
+leaves everyone else a choice — any other company **may convert** its securities into dematerialised
+form **or issue** them in physical form under the Act, **or** in dematerialised form under the
+Depositories Act.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · which unlisted companies are caught by s. 29(1A)">
+  <p>
+    The <em>class</em> of unlisted companies required to hold and transfer only in dematerialised form
+    is <strong>prescribed by rule</strong> and has been widened more than once — first for unlisted
+    public companies, later extended to certain private companies with a transition window. The
+    <strong>section</strong> is stable; the <strong>class</strong> is not. Answer from s. 29(1) and
+    (1A) and say "such class as may be prescribed" unless the Study Material edition for your attempt
+    names a class.
+  </p>
+</Callout>
+
+**Section 30 — advertisement of prospectus.** Where an **advertisement of any prospectus** of a
+company is published in any manner, it is **necessary to specify therein**:
+
+- the **contents of its memorandum** as regards the **objects**, the **liability of members** and the
+  **amount of share capital** of the company;
+- the **names of the signatories to the memorandum** and the **number of shares subscribed for by
+  them**; and
+- its **capital structure**.
+
+The point is that a short advertisement cannot smuggle a company past the disclosure the memorandum
+would have forced. Note what s. 30 is not: it is not the s. 33 abridged prospectus (which accompanies
+an **application form**), and it is not the s. 42(7) prohibition (which bans public advertising of a
+**private placement** altogether).
+
+## 10. Criminal liability for misstatements — section 34
+
+**Section 34** — where a prospectus **issued, circulated or distributed** under Chapter III includes
+any statement which is **untrue or misleading in form or context** in which it is included, **or where
+any inclusion or omission of any matter is likely to mislead**, **every person who authorises the
+issue** of such prospectus is **liable under section 447** (punishment for fraud).
+
+**The proviso is the defence, and it has two independent limbs.** A person is not so liable if he
+proves either:
+
+- that the **statement or omission was immaterial**; **or**
+- that he had **reasonable grounds to believe**, and **did up to the time of the issue of the
+  prospectus believe**, that the statement was **true** or the inclusion or omission was
+  **necessary**.
+
+| Element | Section 34 |
+|---|---|
+| Who is liable | **every person who authorises the issue** of the prospectus |
+| Nature | **criminal** — action under **s. 447** |
+| Trigger | untrue or misleading statement, **or** a misleading inclusion or omission |
+| Defence | **immateriality**, **or** reasonable and actual belief in truth or in the necessity of the inclusion/omission, held **up to the time of issue** |
+
+<Callout kind="mistake">
+  <p>
+    <strong>The belief must survive to the moment of issue.</strong> A director who believed a forecast
+    when the draft was settled, but learned it was false a week before the prospectus went out, has no
+    defence — the proviso requires belief <em>up to the time of the issue</em>. The second common slip
+    is treating s. 34 as requiring proof that someone <em>relied</em> on the statement. It does not:
+    reliance and loss belong to <strong>s. 35</strong> (civil compensation). Section 34 punishes the
+    <em>authorising</em> of a misleading prospectus whether or not a single investor was misled.
+  </p>
+</Callout>
+
+## 11. Civil liability for misstatements — section 35
+
+**Section 35(1)** — where a person has **subscribed for securities** of a company **acting on** any
+statement included, or the inclusion or omission of any matter, in the prospectus **which is
+misleading**, and has **sustained any loss or damage** as a consequence, the **company** and **every
+person** who —
+
+| Limb | Who |
+|---|---|
+| (a) | **is a director** at the time of the issue of the prospectus |
+| (b) | has **authorised himself to be named and is named** in the prospectus as a director, or as having agreed to become a director either immediately or after an interval of time |
+| (c) | is a **promoter** of the company |
+| (d) | has **authorised the issue** of the prospectus |
+| (e) | is an **expert** whose statement is included with his consent under s. 26 |
+
+— is liable to **pay compensation to every person** who has sustained such loss or damage, **without
+prejudice** to any punishment to which any person may be liable under **s. 36**.
+
+**Section 35(2) — the two defences**, and they are narrow:
+
+1. that, **having consented to become a director**, he **withdrew his consent before the issue** of
+   the prospectus, and that it was **issued without his authority or consent**; or
+2. that the prospectus was **issued without his knowledge or consent**, and that **on becoming aware
+   of its issue he forthwith gave reasonable public notice** that it was issued without his knowledge
+   or consent.
+
+**Section 35(3) — fraud strips the ceiling.** Where it is proved that a prospectus has been issued
+**with intent to defraud** the applicants for the securities, or any other person, **or for any
+fraudulent purpose**, every person referred to in s. 35(1) is **personally responsible, without any
+limitation of liability**, for all or any of the losses or damages incurred by any person who
+subscribed to the securities on the basis of such prospectus.
+
+<div class="formula">s. 34 = <strong>criminal</strong>, s. 447, "every person who authorises the issue", defence = immaterial <em>or</em> reasonable belief · s. 35 = <strong>civil</strong> compensation to a subscriber who acted on the statement and suffered loss, five categories, defence = withdrawal of consent <em>or</em> no knowledge + forthwith public notice</div>
+
+<Callout kind="example" label="Scenario 4 — the same prospectus, three different liabilities">
+  <p>
+    Girivan Renewables Limited's prospectus overstates a signed power-purchase agreement. Four people
+    are before the court. <strong>P</strong> is a director who chaired the meeting approving the
+    prospectus and knew the agreement had lapsed. <strong>Q</strong> agreed in March 2026 to become a
+    director and is named in the prospectus as such; she wrote withdrawing her consent on 2 April 2026
+    and the prospectus issued on 20 April 2026 without her authority. <strong>R</strong> is the
+    valuer whose report, given with written consent, contains the overstated figure. <strong>S</strong>
+    is an investor who read the prospectus, subscribed for 40,000 shares, and lost money when the
+    truth emerged.
+  </p>
+  <p>
+    <strong>P.</strong> He authorised the issue and had no belief in the truth of the statement:
+    <strong>s. 34</strong> criminal liability under s. 447, and <strong>s. 35(1)(a)</strong> civil
+    compensation to S. Because the prospectus was issued knowing the fact was false, s. 35(3) exposes
+    him to <strong>unlimited personal liability</strong> if fraudulent intent is proved.
+    <strong>Q.</strong> She falls squarely inside <strong>s. 35(2)(a)</strong> — consent withdrawn
+    before issue, prospectus issued without her authority — so she is <strong>not liable</strong>. Had
+    she merely disagreed but not withdrawn, she would be liable under limb (b).
+    <strong>R.</strong> An expert under <strong>s. 35(1)(e)</strong>, liable for compensation; his
+    escape route was to withdraw the s. 26(3) consent before delivery of the prospectus to the
+    Registrar. <strong>S.</strong> He is the claimant — he must show he <strong>acted on</strong> the
+    statement and <strong>sustained loss</strong>. An investor who never read the prospectus, or who
+    lost money because the whole sector fell, recovers nothing under s. 35.
+  </p>
+</Callout>
+
+## 12. Fraudulent inducement, impersonation and class action — sections 36, 38 and 37
+
+**Section 36 — fraudulently inducing persons to invest money.** Any person who, **knowingly or
+recklessly**, makes any **statement, promise or forecast which is false, deceptive or misleading**, or
+**deliberately conceals any material facts**, to **induce another person** to enter into or offer to
+enter into —
+
+- **(a)** any agreement for, or with a view to, **acquiring, disposing of, subscribing for or
+  underwriting securities**; or
+- **(b)** any agreement the purpose or pretended purpose of which is to **secure a profit** to any of
+  the parties from the **yield of securities** or by reference to **fluctuations in the value** of
+  securities; or
+- **(c)** any agreement for, or with a view to, **obtaining credit facilities from any bank or
+  financial institution**,
+
+is **liable for action under section 447**.
+
+Section 36 is deliberately wider than s. 34. It needs **no prospectus at all** — a telephone call, a
+messaging-app broadcast or a slide deck will do — and it reaches **bank credit**, which has nothing to
+do with an offer of securities.
+
+**Section 38 — punishment for personation for acquisition of securities.** Any person who —
+
+- **(a)** makes or **abets making** of an application in a **fictitious name** to a company for
+  acquiring or subscribing for its securities; or
+- **(b)** makes or abets making of **multiple applications** to a company **in different names or in
+  different combinations of his name or surname** for acquiring or subscribing for its securities; or
+- **(c)** otherwise **induces a company, directly or indirectly, to allot or register any transfer**
+  of securities to him or to any other person **in a fictitious name**,
+
+is **liable for action under section 447**. Three consequences complete the section:
+
+| Sub-section | Consequence |
+|---|---|
+| **38(2)** | s. 38(1) must be **prominently reproduced in every prospectus** issued by a company **and in every form of application** for securities |
+| **38(3)** | on conviction, the **Court may also order disgorgement of the gain** made and the **seizure and disposal of the securities** in the person's possession |
+| **38(4)** | the amount received through **disgorgement or disposal** is credited to the **Investor Education and Protection Fund** |
+
+**Section 37 — class action.** A suit may be filed, or any other action taken, **under s. 34, s. 35 or
+s. 36** by **any person, group of persons or association of persons** affected by any **misleading
+statement** or by the **inclusion or omission of any matter** in the prospectus. The section does not
+create a new wrong; it creates **standing** — investors need not sue one by one.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Keep the four misstatement sections apart by asking two questions.</strong>
+    <em>Is a prospectus required?</em> — ss. 34, 35 and 37 need one; <strong>s. 36 does not</strong>.
+    <em>Who is the wrongdoer?</em> — s. 34 and s. 35 catch those on the <strong>issuer side</strong>
+    (authorisers, directors, promoters, experts); <strong>s. 38 catches the applicant</strong>, the
+    person on the <em>outside</em> trying to obtain securities by fictitious or multiple applications.
+    Section 38 is the only one of the four in which the company is the victim.
+  </p>
+</Callout>
+
+## 13. Allotment of securities — section 39
+
+Section 39 protects an applicant in a **public** issue from two risks: that the company will take his
+money on a half-subscribed issue that can never fund the project, and that it will keep the money if
+the issue fails.
+
+**Section 39(1) — minimum subscription.** **No allotment** of any securities of a company **offered to
+the public for subscription** may be made unless (i) the amount stated in the prospectus as the
+**minimum amount** has been **subscribed**, and (ii) the sums payable **on application** for the amount
+so stated have been **paid to and received by the company** by cheque or other instrument.
+
+**Section 39(2) — the application-money floor.** The amount payable on application on **every
+security** must **not be less than five per cent of the nominal amount of the security**, or such
+**other percentage or amount as may be specified by SEBI** by regulations.
+
+<div class="formula">Minimum application money = <strong>5% of the NOMINAL (face) amount</strong> of the security — never 5% of the issue price — unless SEBI specifies a higher percentage or amount</div>
+
+**Section 39(3) — the 30-day window and the refund.** If the stated minimum amount **has not been
+subscribed** and the sum payable on application **is not received within thirty days from the date of
+issue of the prospectus**, or such other period as may be specified by SEBI, the amount received under
+s. 39(1) must be **returned within such time and manner as may be prescribed**.
+
+**Section 39(4) — return of allotment.** Whenever a company **having a share capital** makes any
+allotment of securities, it must **file with the Registrar a return of allotment** in the prescribed
+manner.
+
+**Section 39(5) — default.** On default under sub-section (3) or (4), the **company and its officer
+who is in default** are liable to a penalty, **for each default, of ₹1,000 for each day during which
+the default continues or ₹1,00,000, whichever is less**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the refund mechanics and the return of allotment are rules-level">
+  <p>
+    The <strong>30 days</strong> in s. 39(3), the <strong>5%</strong> floor in s. 39(2) and the
+    penalty in s. 39(5) are in the <strong>section</strong>. What is <em>prescribed</em> sits in the
+    <strong>Companies (Prospectus and Allotment of Securities) Rules 2014</strong>: the refund is to be
+    made within <strong>fifteen days from the closure of the issue</strong>, failing which the
+    directors who are officers in default become <strong>jointly and severally liable to repay with
+    interest</strong> at a rate fixed by the rule; and the return of allotment under s. 39(4) is filed
+    in <strong>Form PAS-3 within thirty days of the allotment</strong>. Both the form name and the
+    rule-level interest rate have moved since 2014 — verify for your attempt. This chapter's bank
+    examines the <strong>30-day</strong> and <strong>PAS-3 30-day</strong> periods and the
+    <strong>5%</strong> floor, and deliberately does <em>not</em> examine the rule-level interest rate.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 5 — minimum application money and the 30-day window">
+  <p>
+    Aravalli Speciality Steels Limited issues a prospectus on <strong>4 June 2026</strong> offering
+    20,00,000 equity shares of <strong>₹10 each at a premium of ₹90</strong>, stating a minimum
+    subscription of 90% of the issue. By the thirtieth day it has received applications for only 62% of
+    the issue.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the minimum amount payable on application</div>
+    Section 39(2) floor = <strong>5% of the NOMINAL amount</strong> = 5% × ₹10 = <strong>₹0.50 per
+    share</strong><br />
+    On the whole issue: ₹0.50 × 20,00,000 = <strong>₹10,00,000</strong><br />
+    The tempting wrong figure: 5% × ₹100 (the issue price) = ₹5.00 per share = ₹1,00,00,000 —
+    <strong>ten times too much</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the s. 39(3) clock</div>
+    Date of issue of the prospectus = <strong>4 June 2026</strong><br />
+    30 days: 4 June + 26 days = 30 June (day 26); + 4 days = <strong>4 July 2026</strong> (day 30)<br />
+    Minimum subscription not received by 4 July 2026 → <strong>no allotment may be made</strong> and the
+    application money must be returned as prescribed
+  </div>
+  <p>
+    <strong>The consequence chain.</strong> Section 39(1) bars allotment outright — the Board has no
+    discretion to allot on 62%. The money is refunded per the prescribed timetable, and default on the
+    refund attracts the s. 39(5) penalty of <strong>₹1,000 per day of continuing default or
+    ₹1,00,000, whichever is less</strong>, on the company and on the officer in default, <em>for each
+    default</em>.
+  </p>
+</Callout>
+
+## 14. Listing, application money and underwriting commission — section 40
+
+**Section 40(1)** — **every company making a public offer** must, **before making such offer**, make
+an **application to one or more recognised stock exchanges** and **obtain permission** for the
+securities to be **dealt with** in such exchange or exchanges. **Section 40(2)** — where a prospectus
+states that such an application has been made, the prospectus must **state the name or names of the
+stock exchange** in which the securities are to be dealt with.
+
+**Section 40(3) — the separate bank account.** All monies **received on application** from the public
+for subscription must be **kept in a separate bank account in a scheduled bank**, and may **not be
+utilised for any purpose other than**:
+
+- **(a)** **adjustment against allotment** of securities, where the securities have been permitted to
+  be dealt with in the stock exchange or exchanges; or
+- **(b)** **repayment** of monies received from applicants, where the company is **for any other
+  reason unable to allot** securities.
+
+**Section 40(4)** — any **condition purporting to require or bind any applicant to waive compliance**
+with any requirement of s. 40 is **void**. An investor cannot sign away this protection, and a clause
+in the application form attempting it has no effect.
+
+**Section 40(5)** — default in complying with s. 40 makes the **company punishable with a fine** and
+**every officer in default punishable with imprisonment or fine or both** — the only place in this
+chapter where imprisonment attaches to a purely procedural default.
+
+**Section 40(6) — underwriting commission.** A company **may pay commission to any person in
+connection with the subscription to its securities**, **subject to such conditions as may be
+prescribed**. The conditions are in the **Companies (Share Capital and Debentures) Rules 2014**:
+
+| Condition | Position (rules-level) |
+|---|---|
+| Authority | payment must be **authorised by the articles** |
+| Source | out of the **proceeds of the issue** or the **profits** of the company, or both |
+| Cap — **shares** | **5% of the price at which the shares are issued**, or the rate authorised by the articles, **whichever is less** |
+| Cap — **debentures** | **2.5% of the price at which the debentures are issued**, or the rate authorised by the articles, **whichever is less** |
+| Disclosure | the **prospectus** discloses the **names of the underwriters**, the **rate of commission** and the **number of securities underwritten** |
+| Bar | **no commission** on securities **not offered to the public** for subscription |
+| Filing | a copy of the **contract for payment of commission** is delivered to the Registrar with the prospectus |
+
+<div class="formula">Commission cap = <strong>lower of</strong> (rate in the articles) and (<strong>5%</strong> of the issue price for shares · <strong>2.5%</strong> of the issue price for debentures) — the base is the <strong>PRICE at which they are issued</strong>, not the face value</div>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the 5% / 2.5% caps live in the Rules, not in section 40">
+  <p>
+    Section 40(6) says only "subject to such conditions as may be prescribed". The
+    <strong>5%</strong> and <strong>2.5%</strong> ceilings, the "whichever is less" formulation and the
+    disclosure list are in <strong>rule 13 of the Companies (Share Capital and Debentures) Rules
+    2014</strong>. Under the 1956 Act the equivalent figures were 5% and 2.5% of the <em>price</em>
+    too, but the surrounding conditions differed. Because these are rules-level, an examiner who wants
+    a safe question asks for the <strong>section</strong> (40(6)) and the <strong>base</strong> (issue
+    price); an examiner who wants a hard one asks for the arithmetic. This chapter's bank does both —
+    re-verify the percentages against the edition notified for your attempt.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 6 — two commission caps in one issue">
+  <p>
+    Chandrabhaga Ports Limited makes a public offer of <strong>50,00,000 equity shares of ₹10 each at
+    ₹40 per share</strong> and, simultaneously, <strong>2,00,000 debentures of ₹100 each at par</strong>.
+    Its articles authorise underwriting commission at <strong>6%</strong> without distinguishing
+    between the two.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — commission on the equity shares</div>
+    Issue price × number = ₹40 × 50,00,000 = <strong>₹20,00,00,000</strong><br />
+    Rule cap = 5% × ₹20,00,00,000 = <strong>₹1,00,00,000</strong> · Articles = 6% × ₹20,00,00,000 =
+    ₹1,20,00,000<br />
+    Lower of the two = <strong>₹1,00,00,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — commission on the debentures</div>
+    Issue price × number = ₹100 × 2,00,000 = <strong>₹2,00,00,000</strong><br />
+    Rule cap = 2.5% × ₹2,00,00,000 = <strong>₹5,00,000</strong> · Articles = 6% × ₹2,00,00,000 =
+    ₹12,00,000<br />
+    Lower of the two = <strong>₹5,00,000</strong>
+  </div>
+  <p>
+    <strong>Two traps.</strong> First, a generous article does <em>not</em> raise the ceiling — the rule
+    fixes the maximum and the article can only lower it. Second, using the <strong>face value</strong>
+    of ₹10 for the shares gives 5% × ₹5,00,00,000 = ₹25,00,000, which is wrong: the base is the
+    <strong>price at which the shares are issued</strong>. Contrast s. 39(2), where the base
+    <em>is</em> the nominal amount — the two bases are deliberately different and are examined against
+    each other.
+  </p>
+</Callout>
+
+## 15. Private placement — section 42
+
+Private placement is the **quiet route**. Section 42 keeps it quiet by capping the audience, banning
+advertising, forcing the money into a separate account, and putting a hard clock on allotment.
+
+**Section 42(1)–(2) — who may be approached.** A company may make a private placement of securities to
+a **select group of persons identified by the Board** ("identified persons"), whose number **shall not
+exceed the prescribed maximum in a financial year**. The prescribed maximum is **200 persons in the
+aggregate in a financial year**, **excluding qualified institutional buyers** and **employees offered
+securities under a scheme of employees' stock option**.
+
+<div class="formula"><strong>200 identified persons</strong> in the aggregate in a <strong>financial year</strong>, per kind of security — <strong>excluding</strong> qualified institutional buyers and <strong>excluding</strong> employees under an ESOP scheme</div>
+
+**Explanation III to s. 42 — the deeming trap.** If a company, **listed or unlisted**, makes an offer
+to allot, or invites subscription, or allots, or enters into an agreement to allot, securities to
+**more than the prescribed number of persons** — **whether or not the payment has been received**, and
+**whether or not the company intends to list** the securities anywhere in or outside India — the offer
+is **deemed to be an offer to the public** and is governed by Part I of Chapter III. That is, the
+company is retrospectively treated as having made a **public offer without a prospectus**, with every
+consequence that follows.
+
+**Section 42(3) — the offer letter.** The company issues a **private placement offer and application**
+in the prescribed form to the identified persons, whose **names and addresses are recorded** by the
+company in the prescribed manner. The **proviso** is short and heavily examined: the private placement
+offer and application **shall not carry any right of renunciation**. Contrast a rights issue under
+s. 62, where renunciation is the norm.
+
+**Section 42(4) — the money.** Every identified person willing to subscribe applies in the offer
+document **along with the subscription money paid by cheque, demand draft or other banking channel and
+NOT by cash**. The proviso: a company **shall not utilise monies raised through private placement
+unless allotment is made AND the return of allotment is filed with the Registrar** under s. 42(8).
+
+**Section 42(5) — one offer at a time.** **No fresh offer or invitation** may be made unless the
+**allotments with respect to any offer or invitation made earlier have been completed**, or that
+earlier offer or invitation has been **withdrawn or abandoned** by the company.
+
+**Section 42(6) — the 60/15/12 chain.** This is the single most examined provision in the chapter.
+
+| Step | Period | Runs from |
+|---|---|---|
+| **Allot** the securities | **within 60 days** | the date of **receipt of the application money** |
+| If not allotted — **repay** the application money | **within 15 days** | the **expiry of the 60 days** |
+| If not repaid — **interest at 12% per annum** | until repayment | the **expiry of the sixtieth day** |
+
+<div class="formula">Allot within <strong>60 days</strong> of receipt of application money → else repay within <strong>15 days</strong> of the expiry of the 60 days → else repay with interest at <strong>12% p.a. from the expiry of the SIXTIETH day</strong> (not from the end of the 15-day window)</div>
+
+The **proviso to s. 42(6)** puts the money in quarantine: monies received on application must be kept
+in a **separate bank account in a scheduled bank** and used only for **(a)** adjustment against
+allotment, or **(b)** repayment where the company is unable to allot. The parallel with s. 40(3) is
+exact.
+
+**Section 42(7) — no publicity.** A company issuing securities under s. 42 **shall not release any
+public advertisements** or utilise any **media, marketing or distribution channels or agents** to
+inform the **public at large** about the issue. A private placement that is advertised is a
+contradiction in terms.
+
+**Section 42(8) — the return of allotment.** A company making any allotment under s. 42 must **file
+with the Registrar a return of allotment within fifteen days from the date of the allotment**,
+including a **complete list of all allottees** with full names, addresses, the number of securities
+allotted and such other information as may be prescribed.
+
+**Sections 42(9) and 42(10) — penalties.**
+
+| Default | Consequence |
+|---|---|
+| **s. 42(9)** — failure to file the return of allotment in time | the **company, its promoters and directors** are liable to a penalty **for each default of ₹1,000 for each day** during which the default continues, **not exceeding ₹25,00,000** |
+| **s. 42(10)** — making an offer or accepting monies **in contravention of the section** | the **company, its promoters and directors** are liable to a penalty which may extend to the **amount raised through the private placement or ₹2 crore, whichever is lower**, and the company must **refund all monies with interest as specified in s. 42(6) within 30 days of the order imposing the penalty** |
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · section 42 was substituted, and its ceilings have moved">
+  <p>
+    The whole of s. 42 was <strong>substituted by the Companies (Amendment) Act 2017</strong> with
+    effect from 2018. Three things changed that older banks still get wrong: the return of allotment
+    now goes in <strong>15 days</strong> (formerly 30); the company may <strong>not use the money until
+    the return is filed</strong> (a new proviso to s. 42(4)); and the s. 42(10) penalty is now capped
+    at the <strong>amount raised or ₹2 crore, whichever is lower</strong> (formerly the amount involved
+    or ₹2 crore, whichever is <em>higher</em>). The <strong>200-person</strong> figure is
+    <strong>rules-level</strong> — s. 42(2) says "fifty or such higher number as may be prescribed",
+    and <strong>rule 14</strong> prescribes 200 per financial year per kind of security. The
+    <strong>form names</strong> — PAS-4 for the offer-cum-application letter, PAS-5 for the record of
+    offers, PAS-3 for the return of allotment — and the retention of PAS-5 itself are rules-level and
+    have been amended. Verify all of these for your attempt.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 7 — the 60/15/12 chain, dated and priced">
+  <p>
+    Zarine Speciality Chemicals Private Limited identifies 140 persons by Board resolution and issues
+    the private placement offer-cum-application letter. It receives ₹3,00,00,000 of application money
+    on <strong>1 April 2026</strong>. The Board is unable to agree on the valuation and makes
+    <strong>no allotment at all</strong>. The money is finally returned on <strong>30 November
+    2026</strong>. During the same financial year the company separately offers securities to 30
+    qualified institutional buyers and to 45 employees under an ESOP scheme.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the two deadlines</div>
+    Application money received = <strong>1 April 2026</strong><br />
+    60 days: 1 April + 29 days = 30 April (day 29); + 31 days = <strong>31 May 2026</strong> (day 60)
+    → last date to <strong>allot</strong><br />
+    15 days from the expiry of the 60 days: 31 May + 15 = <strong>15 June 2026</strong> → last date to
+    <strong>repay</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — interest under s. 42(6)</div>
+    Interest runs from the <strong>expiry of the sixtieth day</strong> = <strong>31 May 2026</strong>
+    (NOT from 15 June 2026)<br />
+    31 May 2026 → 30 November 2026 = <strong>6 complete months</strong><br />
+    Interest = ₹3,00,00,000 × 12% × 6/12 = <strong>₹18,00,000</strong><br />
+    The wrong start date (15 June, i.e. 5½ months) would give ₹16,50,000 — the classic distractor
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — how much of the 200-person cap is left</div>
+    Identified persons already offered = <strong>140</strong><br />
+    QIBs (30) and ESOP employees (45) are <strong>excluded</strong> from the count<br />
+    Headroom remaining in the financial year = 200 − 140 = <strong>60 persons</strong>
+  </div>
+  <p>
+    <strong>Three further points an examiner will want.</strong> The ₹3 crore had to sit in a
+    <strong>separate scheduled-bank account</strong> and could not be touched, because no allotment was
+    made and no return was filed (s. 42(4) proviso and s. 42(6) proviso). <strong>No fresh offer</strong>
+    could be made while this one was pending unless it was first withdrawn or abandoned (s. 42(5)). And
+    if the company had instead offered securities to <strong>more than 200</strong> identified persons,
+    Explanation III would have deemed the whole thing a <strong>public offer made without a
+    prospectus</strong>, dragging in ss. 23, 26 and 39.
+  </p>
+</Callout>
+
+## 16. Global depository receipts — section 41
+
+**Section 41** is one sentence and is worth exactly the marks it takes to state it: a company may,
+**after passing a special resolution in its general meeting**, **issue depository receipts in any
+foreign country** in such manner, and subject to such conditions, as may be **prescribed**.
+
+Three points carry the marks:
+
+1. **The approver is the members by special resolution** — not the Board, not the Central Government,
+   not SEBI.
+2. The instrument is a **depository receipt issued in a foreign country** against underlying shares
+   deposited with a domestic custodian; the **overseas depository** issues the receipts.
+3. Everything else — the eligible companies, the manner and the conditions — is **prescribed by
+   rule**, and is therefore amendment-sensitive.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the s. 41 rules">
+  <p>
+    The <strong>Companies (Issue of Global Depository Receipts) Rules 2014</strong> supply the
+    machinery, and the framework interacts with the Depository Receipts Scheme notified by the Central
+    Government and with FEMA. The <strong>special resolution</strong> requirement is in the section and
+    is safe to state; the machinery is not. Nothing in this chapter's question bank turns on the rules.
+  </p>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+1. **Using the wrong base for a percentage.** **Section 39(2)** measures minimum application money
+   against the **nominal (face) amount**; **rule 13** measures underwriting commission against the
+   **price at which the securities are issued**. Swapping the bases is the single most costly slip in
+   this chapter.
+2. **Starting the section 42 interest clock at the wrong date.** Interest at 12% per annum runs from
+   the **expiry of the sixtieth day**, not from the end of the further fifteen-day repayment window.
+   The 15 days is a grace period for repayment, not a holiday from interest.
+3. **Counting QIBs and ESOP employees towards the 200.** Both are **excluded**. So are they excluded
+   from the private-placement machinery? No — the offer still has to comply; they simply do not
+   consume the cap.
+4. **Treating the 200-person cap as a per-offer cap.** It is **per financial year, in the aggregate**,
+   and per kind of security. Four offers of 60 persons each in one year breach it.
+5. **Confusing section 27 with section 13(8).** Section 27 varies the **terms of a contract referred
+   to in the prospectus or the objects for which the prospectus was issued**, at any time; s. 13(8)
+   alters the **objects clause of the memorandum** where prospectus money is still **unutilised**.
+6. **Confusing section 34 with section 35.** Section 34 is **criminal** (s. 447) and needs no proof of
+   reliance; s. 35 is **civil compensation** and requires that the subscriber **acted on** the
+   statement and **sustained loss**.
+7. **Forgetting that section 36 needs no prospectus.** It catches false statements, promises and
+   forecasts made to induce investment **or to obtain bank credit**, in any form.
+8. **Putting the section 38 liability on the company's officers.** Section 38 punishes the
+   **applicant** who applies in a fictitious name or makes multiple applications; the company is the
+   victim. Its distinctive remedies are **disgorgement**, **seizure and disposal**, and credit of the
+   proceeds to the **Investor Education and Protection Fund**.
+9. **Running the 90-day prospectus clock from the wrong event.** It runs from the date a copy was
+   **delivered to the Registrar for registration** — not from Board approval, not from registration.
+10. **Running the shelf-prospectus year from the date of filing.** It runs from the **date of opening
+    of the first offer**.
+11. **Saying the final prospectus after a red herring goes only to the Registrar.** It goes to the
+    **Registrar and SEBI**.
+12. **Allowing renunciation on a private placement.** Section 42(3) proviso: the offer and application
+    **carries no right of renunciation**. Renunciation belongs to a **rights issue** under s. 62.
+13. **Using private-placement money on allotment.** Not enough — the money may be used only once the
+    allotment is made **and the return of allotment has been filed** (s. 42(4) proviso).
+14. **Answering that a private company may make a public offer if it converts later.** Section 23
+    gives a private company only **private placement** and **rights or bonus issues**.
+
+## One-page revision summary
+
+**Section 23 — the routes.** Public company: **public offer through a prospectus**, **private
+placement (s. 42)**, or **rights/bonus (s. 62)**. Private company: **private placement** or
+**rights/bonus** only. "Public offer" includes an **IPO, an FPO, and an offer for sale by an existing
+shareholder** through the company.
+
+**Section 2(70) — prospectus.** Any document **described or issued as a prospectus**, plus a **red
+herring** (s. 32), a **shelf** (s. 31), and any **notice, circular, advertisement or other document
+inviting offers from the public** for the subscription or purchase of securities. It is an
+**invitation to offer**; the applicant offers, the company accepts by **allotment**.
+
+**The four kinds.** **Abridged** (s. 33) — salient features specified by SEBI, **must accompany every
+application form**; exceptions for an underwriting invitation and where securities are not offered to
+the public; full prospectus on request before closing; **₹50,000 per default**. **Shelf** (s. 31) — a
+**SEBI-prescribed class**, filed at the **first offer**, valid up to **one year from the opening of
+the first offer**, with an **information memorandum** before each later offer disclosing new charges
+and changes in financial position; applicants with advance money who wish to withdraw get the
+**whole** of it back. **Red herring** (s. 32) — no quantum or price; filed with the Registrar **at
+least 3 days** before the offer opens; **same obligations as a prospectus**; on closing, the final
+prospectus with total capital raised and closing price goes to the **Registrar and SEBI**.
+**Deemed** (ss. 25, 28) — an offer for sale by an **issuing house** or by **existing members in
+consultation with the Board** is a prospectus **issued by the company**; presumption if the offer is
+within **6 months** of the allotment **or** the whole consideration is not yet received; extra
+contents = **net consideration** plus place and time for inspecting the contract; signed by **two
+directors** (company) or **half the partners** (firm); under s. 28(3) the members **reimburse the
+company's expenses**.
+
+**Section 26.** Dated and signed; identity, offer details (opening/closing dates, separate bank
+account under s. 40(3), use of earlier issue money, capital structure, main objects, minimum
+subscription, premium, allotment schedule, authority for the issue), risk factors, gestation period,
+and **litigation by a Government Department or statutory body in the last 5 years against the
+promoter**; auditor's reports on profits and losses and assets and liabilities. **s. 26(3)** —
+independent **expert's written consent**, not withdrawn before delivery. **s. 26(4)** — a copy signed
+by **every director/proposed director** delivered to the Registrar **on or before publication**.
+**s. 26(7)** — the Registrar registers only with the written consents of the named auditor, legal
+adviser, attorney, solicitor, banker and broker. **s. 26(8)** — **not valid if issued more than 90
+days after delivery**.
+
+**Section 27.** Vary the terms of a prospectus contract or the objects only by **special resolution**;
+notice details in **two newspapers** (English + vernacular of the registered-office city) **and the
+website**, with **justification**; **no use of prospectus money to deal in equity shares of another
+listed company**; **dissenting shareholders get an exit from promoters/controlling shareholders at a
+SEBI-specified price**.
+
+**Sections 29–30.** Every company making a **public offer** and prescribed classes issue **only in
+demat**; prescribed **unlisted** classes also **hold and transfer** only in demat; others may choose.
+An **advertisement of a prospectus** must specify the memorandum's **objects, members' liability and
+share capital**, the **signatories and their shares**, and the **capital structure**.
+
+**Misstatement map.**
+
+| Section | Nature | Who | Key point |
+|---|---|---|---|
+| **34** | criminal, **s. 447** | every person who **authorises the issue** | defence: **immaterial** or **reasonable belief up to the time of issue** |
+| **35** | civil **compensation** | company; **director at issue**; person **named** as director/agreed to be; **promoter**; **authoriser**; **expert** | claimant must have **acted on** the statement and **sustained loss**; defences: **consent withdrawn before issue**, or **no knowledge + forthwith public notice**; **s. 35(3)** fraud → **unlimited personal liability** |
+| **36** | **s. 447** | any person | **no prospectus needed**; covers securities agreements, yield/fluctuation agreements and **bank credit facilities** |
+| **37** | standing | **any person, group or association affected** | class action under **s. 34, 35 or 36** |
+| **38** | **s. 447** | the **applicant** | fictitious name, **multiple applications**, inducing allotment/transfer in a fictitious name; **reproduce in every prospectus and application form**; **disgorgement**, **seizure and disposal**, proceeds to the **IEPF** |
+
+**Section 39 — public allotment.** No allotment unless the **minimum amount** stated in the prospectus
+is **subscribed** and the application sums **received**. Application money **≥ 5% of the NOMINAL
+amount** (SEBI may specify higher). If not received within **30 days from the date of issue of the
+prospectus**, the money is **returned as prescribed** (rules: within **15 days of the closure of the
+issue**). Return of allotment filed with the Registrar (rules: **PAS-3 within 30 days** of allotment).
+Default under (3) or (4): **₹1,000 per day or ₹1,00,000, whichever is less**, per default, on the
+company and the officer in default.
+
+**Section 40 — listing and money.** Apply to one or more **recognised stock exchanges** and obtain
+permission **before** the public offer; **name the exchanges** in the prospectus; keep application
+money in a **separate scheduled-bank account**, usable only for **adjustment against allotment** (once
+permission is obtained) or **repayment**; any **waiver clause is void**; default carries a **fine on
+the company and imprisonment or fine on officers**. **s. 40(6)** — commission as prescribed: articles
+must authorise it; out of issue proceeds or profits; **shares ≤ 5%** and **debentures ≤ 2.5% of the
+issue price**, or the articles' rate, **whichever is less**; disclosed in the prospectus; **none on
+securities not offered to the public**.
+
+**Section 42 — private placement.** **Identified persons** chosen by the **Board**; **≤ 200 in a
+financial year**, aggregate, per kind of security, **excluding QIBs and ESOP employees**; exceed it
+and **Explanation III deems it a public offer**. Offer in the prescribed **offer-cum-application**
+(PAS-4), names and addresses recorded, **no right of renunciation**. Money by **banking channel, never
+cash**, into a **separate scheduled-bank account**; **not usable until allotment is made AND the
+return is filed**. **No fresh offer** while an earlier one is pending, unless withdrawn or abandoned.
+**Allot within 60 days** of receipt of application money; else **repay within 15 days** of that
+expiry; else **12% p.a. from the expiry of the sixtieth day**. **No public advertisement or media,
+marketing or distribution channels or agents.** **Return of allotment within 15 days** of allotment
+with the full list of allottees. **s. 42(9)** — ₹1,000 per day, **max ₹25 lakh**, on company,
+promoters and directors. **s. 42(10)** — penalty up to the **amount raised or ₹2 crore, whichever is
+lower**, plus refund with s. 42(6) interest **within 30 days of the order**.
+
+**Section 41 — GDRs.** A company may issue **depository receipts in any foreign country** after a
+**special resolution**, in the prescribed manner and on the prescribed conditions.
+
+**Every number in the chapter.**
+
+| Number | What it measures |
+|---|---|
+| **90 days** | validity of a prospectus from **delivery to the Registrar** (s. 26(8)) |
+| **3 days** | red herring prospectus filed before the **opening** of the offer (s. 32(2)) |
+| **1 year** | shelf prospectus validity from the **opening of the first offer** (s. 31(1)) |
+| **6 months** | s. 25(2) presumption of an offer for sale after allotment |
+| **5 years** | litigation against the promoter to be disclosed under s. 26(1) |
+| **5%** | minimum application money as a share of the **nominal amount** (s. 39(2)) |
+| **30 days** | receipt of minimum subscription from the **date of issue of the prospectus** (s. 39(3)) |
+| **₹1,000 / ₹1,00,000** | s. 39(5) penalty per day / cap, whichever is less |
+| **5% · 2.5%** | commission caps on the **issue price** of shares · debentures (r. 13) |
+| **200** | identified persons per **financial year**, excluding QIBs and ESOP employees (s. 42(2), r. 14) |
+| **60 days** | allotment from **receipt of application money** (s. 42(6)) |
+| **15 days** | repayment from the **expiry of the 60 days** (s. 42(6)); and the **return of allotment** from the date of allotment (s. 42(8)) |
+| **12% p.a.** | interest from the **expiry of the sixtieth day** (s. 42(6)) |
+| **₹25,00,000** | cap on the s. 42(9) daily penalty |
+| **₹2,00,00,000** | the s. 42(10) ceiling — **amount raised or ₹2 crore, whichever is LOWER** |
+| **30 days** | refund after a s. 42(10) penalty order; and **PAS-3** after a s. 39 allotment (rules) |
+| **₹50,000** | penalty for issuing an application form without an abridged prospectus (s. 33(3)) |

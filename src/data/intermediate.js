@@ -211,10 +211,10 @@ export const intermediatePapers = [
         chapters: [
           { number: 1, slug: 'preliminary', name: 'Preliminary', hasNotes: true },
           { number: 2, slug: 'incorporation-of-company', name: 'Incorporation of Company and Matters Incidental Thereto', hasNotes: true },
-          { number: 3, slug: 'prospectus-and-allotment', name: 'Prospectus and Allotment of Securities' },
-          { number: 4, slug: 'share-capital-and-debentures', name: 'Share Capital and Debentures' },
-          { number: 5, slug: 'acceptance-of-deposits', name: 'Acceptance of Deposits by Companies' },
-          { number: 6, slug: 'registration-of-charges', name: 'Registration of Charges' },
+          { number: 3, slug: 'prospectus-and-allotment', name: 'Prospectus and Allotment of Securities', hasNotes: true },
+          { number: 4, slug: 'share-capital-and-debentures', name: 'Share Capital and Debentures', hasNotes: true },
+          { number: 5, slug: 'acceptance-of-deposits', name: 'Acceptance of Deposits by Companies', hasNotes: true },
+          { number: 6, slug: 'registration-of-charges', name: 'Registration of Charges', hasNotes: true },
         ],
       },
       {

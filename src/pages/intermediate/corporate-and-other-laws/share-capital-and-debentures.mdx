@@ -1,0 +1,760 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Share Capital and Debentures'
+description: 'CA Intermediate Paper 2 Ch 4 — sections 43 to 72 of the Companies Act 2013: kinds of capital, class rights, premium and discount, preference-share redemption and the CRR, transfer timelines, rights and bonus issues, reduction, buy-back arithmetic, and debentures, worked through scenarios.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 4 · Share Capital and Debentures'
+chapterSlug: share-capital-and-debentures
+masteryId: i2-ch4
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 58, 59, 61, 62, 63, 64, 66, 67, 68, 69, 70, 71, 72'
+  - 'Companies (Share Capital and Debentures) Rules 2014 — DVR conditions, sweat equity, preference tenure, DRR (rules-level, amendment-sensitive)'
+  - 'Private-company exemption notifications under s. 462 (ss. 43, 47, 62 and 67 modifications)'
+sourceLabel: 'Companies Act 2013 ss. 43–72 · ICAI SM Paper 2 Ch 4 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 26 min read · 7 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=share-capital-and-debentures'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+The Board of a profitable manufacturer sits down with four proposals on the table: redeem the
+preference shares falling due, reward employees with a bonus issue, buy back a quarter of the equity,
+and raise fresh money through a rights offer. Every one of those proposals lives in **Chapter IV of
+the Companies Act 2013 — sections 43 to 72** — and every one of them turns on the same three
+questions: *what resolution*, *what source of funds*, and *what bright-line number*.
+
+For the exam this chapter is **arithmetic bolted onto procedure**. The descriptive marks come from
+stating conditions in the statutory order; the MCQ marks come from computing the buy-back ceilings,
+the Capital Redemption Reserve, the transfer timelines and the rights-offer window correctly. Learn
+the numbers as a table and the sources as a map — free reserves, securities premium, CRR — and this
+becomes the most predictable chapter in Paper 2.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · this is a volatile paper">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. The Act-level skeleton is stable, but this chapter leans unusually
+    hard on the <strong>Companies (Share Capital and Debentures) Rules 2014</strong> — DVR
+    conditions, sweat-equity mechanics, preference tenure beyond 20 years, the rights-offer minimum
+    period and the DRR percentages all sit there and have been amended repeatedly. Rules-level items
+    are flagged below. Re-check them against the SM edition notified for your attempt.
+  </p>
+</Callout>
+
+## 1. Kinds of share capital — sections 43 to 46
+
+**Section 43** — the share capital of a company limited by shares is of **two kinds**:
+
+| Kind | What it carries | Basis |
+|---|---|---|
+| **Equity share capital** | (i) with **voting rights**, or (ii) with **differential rights** as to dividend, voting or otherwise, per the rules | s. 43(a) |
+| **Preference share capital** | a **preferential right to dividend** (fixed amount or fixed rate) **and** a preferential right to **repayment of capital on winding up** | s. 43(b) and Explanation |
+
+Both preferential rights must exist for a share to be preference capital; a share preferred as to
+dividend but ranking equally as to capital is not preference share capital. The Explanation adds
+that capital which is **not preference** is equity — the definition is residual. A **private
+company** may, by its memorandum or articles, provide otherwise: ss. 43 and 47 do not apply to it
+where its constitution so provides (an exemption-notification modification worth one line in an
+answer).
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · DVR conditions are rules-level">
+  <p>
+    Equity with <strong>differential voting rights</strong> may be issued only on the rules-level
+    conditions: the <strong>articles must authorise</strong> it; an <strong>ordinary
+    resolution</strong> of the general meeting must approve it (postal ballot where required for a
+    listed company); the shares with differential rights must not exceed the prescribed
+    <strong>ceiling of total voting power</strong> (recast by amendment — the old cap of 26% of
+    post-issue paid-up equity was replaced with a 74%-of-total-voting-power formulation); the company
+    must have <strong>no default</strong> in filing financial statements and annual returns for the
+    three preceding financial years, and no subsisting default in paying a declared dividend,
+    repaying matured deposits, redeeming preference shares or debentures, or repaying loans from
+    banks and institutions. Every element of this list sits in the rules and has moved; verify
+    before the attempt. No bank question turns on the percentage.
+  </p>
+</Callout>
+
+**Section 44** — a share or debenture is **movable property**, transferable **in the manner provided
+by the articles**. **Section 45** — every share is **distinguished by its distinctive number**, but
+this does **not** apply to shares held by a person **whose name is entered as holder of beneficial
+interest in the records of a depository** — dematerialised shares are fungible, so numbering is
+meaningless for them.
+
+**Section 46** — a **share certificate**, issued under the common seal (if any) or signed by two
+directors or a director and the company secretary, is **prima facie evidence** of the member's title
+to the shares. *Prima facie*, not conclusive — the company may still show the certificate was issued
+without authority, and a forged certificate confers nothing. **Duplicate certificates** may be issued
+where the original is proved to be lost or destroyed, or has been defaced, mutilated or torn and is
+surrendered, on the rules-level conditions; issuing a certificate with **intent to defraud** invites
+the punishment for fraud.
+
+## 2. Voting rights and variation of class rights — sections 47 and 48
+
+**Section 47(1)** — every **equity** member has a **right to vote on every resolution** placed before
+the company, and his voting right is in **proportion to his share of the paid-up equity capital**.
+
+**Section 47(2)** — a **preference** member votes only on:
+
+- resolutions which **directly affect the rights attached to his preference shares** — and any
+  resolution for **winding up** or for **repayment or reduction** of equity or preference share
+  capital is deemed directly to affect them;
+- **every resolution**, where the **dividend payable in respect of a class of preference shares has
+  not been paid for a period of two years or more**.
+
+His voting right is in proportion to his paid-up preference capital, and the proportion of equity to
+preference voting rights follows the respective paid-up capitals.
+
+<div class="formula">Preference shareholders vote on <strong>all</strong> resolutions once their dividend is unpaid for <strong>2 years or more</strong> — cumulative or not, the test is the same</div>
+
+**Section 48 — variation of class rights.** Where the share capital is divided into classes, the
+rights attached to any class may be varied only with:
+
+1. the **consent in writing of the holders of not less than three-fourths of the issued shares of
+   that class**, or a **special resolution at a separate meeting** of that class — and only if the
+   memorandum or articles permit variation, or (absent a prohibition in the memorandum or articles)
+   the variation is not prohibited by the terms of issue;
+2. where the variation of one class **affects the rights of any other class**, the **consent of
+   three-fourths of that other class** as well.
+
+**Dissent — s. 48(2).** Holders of **not less than 10% of the issued shares of that class** who did
+**not consent or vote in favour** may apply to the **Tribunal** to have the variation cancelled,
+**within 21 days** of the consent or resolution. Where such an application is made, the variation
+**has no effect unless and until confirmed by the Tribunal**, whose decision is binding. The company
+files the Tribunal's order with the Registrar **within 30 days**.
+
+<Callout kind="example" label="Scenario 1 — a class variation with dissent, dated">
+  <p>
+    Vasundhara Textiles Limited has 8,00,000 9% preference shares as a class. On <strong>10 July
+    2026</strong> a special resolution at a separate class meeting approves reducing the rate to 7%.
+    Holders of 70,000 preference shares voted against.
+  </p>
+  <p>
+    <strong>1 · The threshold.</strong> An application to the NCLT needs holders of not less than 10%
+    of the issued shares of the class — <strong>80,000 shares</strong>. The 70,000 dissenting shares
+    fall short, so no application lies unless more non-consenting holders join. <strong>2 · The
+    clock.</strong> Any application must be made within <strong>21 days of 10 July 2026 — by 31 July
+    2026</strong>. <strong>3 · Suspension.</strong> If a valid application is made, the variation is
+    frozen until the Tribunal confirms it. <strong>4 · The other class.</strong> Had the variation
+    also affected the equity holders' rights, three-fourths of the equity class would have had to
+    consent too.
+  </p>
+</Callout>
+
+## 3. Calls, calls in advance and dividend in proportion — sections 49 to 51
+
+**Section 49** — where any calls for further capital are made on shares, they must be made on a
+**uniform basis on all shares falling under the same class**. The Explanation is the exam point:
+shares of the **same nominal value on which different amounts have been paid up** are **not** deemed
+to fall under the same class — so a differential call on them is not a breach.
+
+**Section 50** — a company may, **if authorised by its articles**, accept from a member the whole or
+part of the amount remaining **unpaid on his shares, even though not called up**. But the member gets
+**no voting rights in respect of the amount so paid** until that amount **would, but for the advance,
+become presently payable** — money in advance buys interest (if the articles provide), never votes.
+
+**Section 51** — a company may, **if authorised by its articles**, pay dividends **in proportion to
+the amount paid-up on each share**. Without such an article, the default position in the model
+articles applies to the amounts paid on the shares.
+
+<Callout kind="example" label="Scenario 2 — dividend on partly paid shares">
+  <p>
+    Nandini Agrotech Limited's articles authorise proportionate dividend under s. 51. It declares a
+    dividend of 12%. Tanvi holds 5,000 equity shares of ₹10 each on which ₹6 per share has been
+    called and paid.
+  </p>
+  <p>
+    Her dividend is computed on the <strong>paid-up</strong> amount: 5,000 × ₹6 × 12% =
+    <strong>₹3,600</strong> — not 5,000 × ₹10 × 12% = ₹6,000. Had another member paid the full ₹10
+    in advance under s. 50, the articles may allow dividend on the advance only if they expressly say
+    so; voting on the advance is barred by the section itself.
+  </p>
+</Callout>
+
+## 4. Securities premium, discount and sweat equity — sections 52 to 54
+
+**Section 52(1)–(2)** — where shares are issued at a **premium**, an amount equal to the aggregate
+premium goes to the **securities premium account**. The Act's provisions on **reduction of share
+capital apply as if the account were paid-up share capital** — so it may leave the company only
+through the section's own list of applications, or through a s. 66 reduction. The **five permitted
+applications**:
+
+1. issuing **fully paid bonus shares** to members out of unissued shares;
+2. writing off the **preliminary expenses** of the company;
+3. writing off the **expenses of, or the commission paid or discount allowed on, any issue of shares
+   or debentures** of the company;
+4. providing for the **premium payable on the redemption** of any redeemable preference shares or
+   debentures; and
+5. the **purchase of its own shares or other securities under section 68** (buy-back).
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the narrower list in s. 52(3)">
+  <p>
+    For a <strong>class of companies whose financial statements comply with the accounting standards
+    prescribed under s. 133</strong>, s. 52(3) confines the premium to a narrower list — bonus
+    shares, writing off the expenses of or commission on an issue of <strong>equity</strong> shares,
+    and buy-back under s. 68. Which companies fall in the class is a rules-and-standards question;
+    state the five-item list as the general rule and mention the narrower list for AS-compliant
+    companies. No bank question turns on the classification.
+  </p>
+</Callout>
+
+**Section 53 — no issue at a discount.** Except as provided in **section 54 (sweat equity)**, a
+company **shall not issue shares at a discount**. Any share issued at a discounted price is
+**void**. One statutory carve-out: **s. 53(2A)** permits a company to issue shares **at a discount
+to its creditors when its debt is converted into shares** in pursuance of any statutory resolution
+plan or debt-restructuring scheme in accordance with RBI guidelines or directions.
+
+**Consequence — s. 53(3).** The company and every officer in default face a **penalty equal to the
+amount raised through the issue at a discount or ₹5 lakh, whichever is less**, and the company must
+**refund all monies received with interest at 12% per annum from the date of issue**.
+
+<Callout kind="example" label="Scenario 3 — a discounted issue unwound, with interest">
+  <p>
+    Kaustubh Forgings Limited issues 50,000 equity shares of ₹10 each at ₹9 on <strong>1 May
+    2026</strong>, receiving ₹4,50,000. The default is established and the refund falls due on
+    <strong>1 January 2027</strong> — eight months later.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the s. 53(3) unwinding</div>
+    The shares are <strong>void</strong>; monies received = ₹4,50,000<br />
+    Interest = ₹4,50,000 × 12% × 8/12 = <strong>₹36,000</strong>; refund = ₹4,86,000<br />
+    Penalty = amount raised (₹4,50,000) or ₹5,00,000, <strong>whichever is less</strong> → up to
+    ₹4,50,000 on the company and each officer in default
+  </div>
+  <p>
+    <strong>The trap.</strong> Sweat equity under s. 54 and a s. 53(2A) debt-conversion are the only
+    doors; an "issue at a discount to a strategic investor approved by special resolution" is still
+    void — no resolution can authorise what the section prohibits.
+  </p>
+</Callout>
+
+**Section 54 — sweat equity.** A company may issue **sweat equity shares** — shares issued to
+**directors or employees** at a discount or for consideration other than cash, for know-how, IP
+rights or value additions — of a **class of shares already issued**, if:
+
+- the issue is authorised by a **special resolution** of the company;
+- the resolution specifies the **number of shares, the current market price, the consideration (if
+  any) and the class or classes of directors or employees** to whom they are to be issued;
+- for **listed** equity, the issue follows **SEBI regulations**; for others, the prescribed
+  **rules**.
+
+Sweat equity shares rank **pari passu** with other equity shares after issue, and rules-level limits
+(annual and aggregate ceilings, lock-in) apply.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The one-year wait is gone.</strong> As originally enacted, s. 54 required that at least
+    one year had elapsed since the company <em>commenced business</em>. That condition was
+    <strong>omitted by amendment</strong> — a newly incorporated company may now issue sweat equity.
+    Options reviving the one-year condition are wrong, and older banks still carry it.
+  </p>
+</Callout>
+
+## 5. Preference shares and their redemption — section 55
+
+**Section 55(1)** — no company limited by shares may issue **irredeemable** preference shares.
+**Section 55(2)** — a company limited by shares may, **if authorised by its articles**, issue
+preference shares **redeemable within a period not exceeding 20 years** from the date of issue.
+
+<div class="formula">Preference tenure ceiling = <strong>20 years</strong>; <strong>infrastructure projects</strong> (Schedule VI) may go beyond — rules-level: up to <strong>30 years</strong>, with a minimum annual redemption (10% from the 21st year, at the holders' option)</div>
+
+The redemption discipline, all in the provisos to s. 55(2):
+
+- **Sources** — redemption only out of **profits which would otherwise be available for dividend**,
+  or out of the **proceeds of a fresh issue of shares made for the purposes of the redemption**.
+- **Fully paid** — no preference shares may be redeemed **unless fully paid**.
+- **CRR** — where shares are redeemed **out of profits**, a sum **equal to the nominal amount of the
+  shares to be redeemed** is transferred to the **Capital Redemption Reserve account**; the Act's
+  provisions on **reduction of share capital apply to the CRR as if it were paid-up share capital**.
+  The CRR may be **applied in paying up unissued shares to be issued to members as fully paid bonus
+  shares** — that is its only outward application.
+- **Premium on redemption** — provided **before redemption**, out of the **profits of the company or
+  the securities premium account**; for the AS-compliant class of companies, out of **profits only**
+  (the same class-of-companies split as s. 52(3) — amendment-sensitive, flagged below).
+
+**Section 55(3)** — where a company is **not in a position to redeem** its preference shares or pay
+the dividend due (unredeemed preference shares), it may — with the **consent of holders of
+three-fourths in value** of the preference shares and the **approval of the Tribunal** — issue
+**further redeemable preference shares equal to the amount due**, and on their issue the unredeemed
+shares are **deemed redeemed**. The Tribunal must, while giving approval, **order the immediate
+redemption of the shares held by dissenters**. The Explanation confirms the further issue is **not an
+increase in capital**.
+
+<Callout kind="example" label="Scenario 4 — a redemption financed two ways, with the CRR worked">
+  <p>
+    Amoghavarsha Chemicals Limited must redeem 2,00,000 8% preference shares of ₹100 each, fully
+    paid, at par. It makes a fresh issue of equity for the purposes of the redemption raising
+    proceeds of ₹80,00,000, and meets the balance from distributable profits.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the CRR transfer</div>
+    Nominal amount redeemed = 2,00,000 × ₹100 = ₹2,00,00,000<br />
+    Redeemed out of fresh-issue proceeds = ₹80,00,000 → no CRR on this slice<br />
+    Redeemed out of profits = ₹2,00,00,000 − ₹80,00,000 = <strong>₹1,20,00,000 → CRR</strong><br />
+    Had the shares been redeemable at a 10% premium, the ₹20,00,000 premium would come from profits
+    or the securities premium account — it never enters the CRR computation, which is on
+    <strong>nominal</strong> value alone
+  </div>
+  <p>
+    <strong>The trap.</strong> If 40,000 of the shares had been only ₹80 paid up, the redemption
+    could not proceed at all for those shares — the fully-paid precondition is absolute; the company
+    must first call the balance.
+  </p>
+</Callout>
+
+## 6. Transfer and transmission — sections 56 to 59
+
+**Section 56(1)** — a transfer is registered only on a **proper instrument of transfer (Form SH-4)**,
+duly **stamped, dated and executed** by or on behalf of both transferor and transferee, **delivered
+to the company within 60 days from the date of execution**, together with the certificate (or the
+letter of allotment). Where the instrument **has been lost** or was **not delivered in time**, the
+company may register on such terms as to indemnity as the Board thinks fit. For **partly paid**
+shares, where the application is by the transferor alone, the company must give **notice of the
+application to the transferee** (Form SH-5), and register only if the transferee raises **no
+objection within two weeks** of receipt.
+
+**Transmission** — devolution **by operation of law** (death, insolvency, lunacy): the survivor,
+nominee or legal representative is registered on an **intimation of transmission with proof**; **no
+instrument of transfer, no stamp duty, no execution** — and the s. 56(1) machinery simply does not
+apply.
+
+**Section 56(4) — the certificate-delivery clocks:**
+
+| Event | Deliver certificates within | Runs from |
+|---|---|---|
+| Subscription to the memorandum | **2 months** | date of **incorporation** |
+| Allotment of shares | **2 months** | date of **allotment** |
+| Transfer or transmission | **1 month** | date of **receipt of the instrument of transfer / intimation of transmission** |
+| Allotment of **debentures** | **6 months** | date of **allotment** |
+
+Where securities are dealt with in a **depository**, the company instead **intimates the details of
+allotment to the depository immediately** on allotment. Default under s. 56 attracts penalties on
+the company and officers, and a **depository or depository participant transferring shares with an
+intention to defraud** is liable under **s. 447**.
+
+**Section 58 — refusal and appeal.** A **private company** which refuses to register a transfer or
+transmission must send **notice of the refusal**, with reasons, to the transferor and transferee (or
+the person giving intimation) **within 30 days** of the date the instrument or intimation was
+delivered. A **public company's** securities are **freely transferable** — refusal needs
+**sufficient cause** — and any contract or arrangement between two or more persons in respect of
+transfer of securities is **enforceable as a contract**.
+
+| Company | Appeal to the Tribunal — notice received | Appeal — no notice sent |
+|---|---|---|
+| **Private** | within **30 days** of receipt of the notice | within **60 days** of delivery of the instrument / intimation |
+| **Public** | within **60 days** of receipt of the notice | within **90 days** of delivery of the instrument / intimation |
+
+The Tribunal may **dismiss** the appeal, or direct the transfer or transmission to be **registered
+within 10 days** of its order, or direct **rectification of the register** with **damages** to the
+aggrieved party. Contravening the Tribunal's order is punishable.
+
+**Section 59 — rectification of the register.** Where a name is entered in or omitted from the
+register of members **without sufficient cause**, or default or unnecessary delay occurs in noting a
+change, the **person aggrieved, any member, or the company** may appeal to the **Tribunal** (or a
+competent court outside India for foreign members) — which may order rectification, damages, and
+where the transfer contravened the SEBI Act or other laws, direct consequential action.
+
+<Callout kind="example" label="Scenario 5 — a transfer refused, and the clocks that follow">
+  <p>
+    Ritwik executes Form SH-4 for the purchase of shares in Devagiri Foods Private Limited on
+    <strong>10 April 2026</strong> and delivers it, with the certificate, to the company on
+    <strong>2 June 2026</strong>. The Board refuses the transfer and sends a reasoned notice which
+    Ritwik receives on <strong>20 June 2026</strong>.
+  </p>
+  <p>
+    <strong>1 · Delivery.</strong> The instrument had to reach the company within 60 days of
+    execution — by <strong>9 June 2026</strong>; delivery on 2 June is in time. <strong>2 · The
+    refusal notice.</strong> The company's own clock was 30 days from 2 June — by 2 July; it
+    complied. <strong>3 · The appeal.</strong> Ritwik may appeal to the NCLT within 30 days of
+    receipt of the notice — by <strong>20 July 2026</strong>. Had no notice been sent, his window
+    would be 60 days from 2 June. <strong>4 · Public-company variant.</strong> In a listed or public
+    company the windows stretch to 60 and 90 days, and the refusal itself must survive the
+    free-transferability rule.
+  </p>
+</Callout>
+
+## 7. Alteration of share capital — sections 61 and 64
+
+**Section 61(1)** — a limited company having a share capital may, **if authorised by its articles**,
+alter the capital clause of its memorandum **by ordinary resolution** in general meeting, in five
+ways:
+
+1. **increase** its authorised share capital;
+2. **consolidate and divide** all or any of its capital into shares of a larger amount — **but** if
+   the consolidation and division **changes the voting percentage of shareholders**, it takes effect
+   only with the **approval of the Tribunal**;
+3. **convert** fully paid shares into **stock**, and reconvert;
+4. **sub-divide** shares into shares of a smaller amount, the **proportion between paid and unpaid**
+   on each reduced share remaining the same as on the original share;
+5. **cancel** shares which have **not been taken or agreed to be taken** by any person, and diminish
+   the authorised capital accordingly — and s. 61(2) declares that such a cancellation is **not a
+   reduction of share capital** (no s. 66 machinery, no Tribunal).
+
+**Section 64** — notice of any such alteration, of an increase ordered or effected, or of the
+redemption of redeemable preference shares, must be filed with the **Registrar within 30 days**,
+with the altered memorandum. Default attracts a penalty on the company and officers (rupee figures
+recast by amendment — state the 30 days, treat the penalty as amendment-sensitive).
+
+<div class="formula">s. 61 = <strong>ordinary</strong> resolution (articles must authorise) · Tribunal only for a consolidation that <strong>changes voting percentages</strong> · notice to the Registrar in <strong>30 days</strong> (s. 64)</div>
+
+## 8. Further issue of capital — section 62
+
+Section 62 governs **every further issue** of shares by a company at any time after incorporation —
+the SM treats it as the gateway provision. **Section 62(1)** offers three routes:
+
+**(a) Rights issue** — offer to the **existing equity holders in proportion, as nearly as
+circumstances admit, to the paid-up capital on their shares**, by a **notice** specifying the number
+of shares offered and a period **not less than 15 days and not exceeding 30 days from the date of
+the offer** within which, if not accepted, the offer is **deemed declined**. The notice is
+despatched at least three days before the opening (rules-level despatch mechanics). The offer
+carries a **right of renunciation** in favour of any other person, unless the articles provide
+otherwise — the notice must state this right. After the period expires, or on earlier intimation of
+decline, the **Board may dispose of the unsubscribed shares in a manner not disadvantageous to the
+shareholders and the company**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the rights-offer window has two moving parts">
+  <p>
+    The Act now reads "not less than fifteen days <strong>or such lesser number of days as may be
+    prescribed</strong>" — an amendment opened the floor to the rules, and a rules-level minimum
+    (seven days) has been prescribed. Separately, a <strong>private company</strong> may close the
+    offer earlier than the statutory minimum where members holding <strong>90%</strong> consent in
+    writing or electronically (exemption-notification modification). The bank examines only the
+    Act-level <strong>15-to-30-day</strong> window and flags the shorter periods in the
+    explanations; re-verify the prescribed number for your attempt.
+  </p>
+</Callout>
+
+**(b) ESOP** — an issue to **employees under a scheme of employees' stock option**, subject to a
+**special resolution** and the prescribed conditions (a private company passes an **ordinary
+resolution** under its exemption notification — flag it, do not lead with it).
+
+**(c) Preferential allotment** — an issue **to any persons**, whether or not falling under (a) or
+(b), **if authorised by a special resolution**, for cash or consideration other than cash, where the
+**price is determined by the valuation report of a registered valuer**, subject to the prescribed
+conditions (Rule 13 layering in the s. 42 private-placement discipline).
+
+**Section 62(3)** — nothing in the section applies to the increase caused by the **conversion of
+debentures or loans into shares** where the conversion term was attached by the terms of issue
+approved by **special resolution** before the issue. Government-directed conversions of loans
+extended by the Government are dealt with by s. 62(4) to (6).
+
+| Route | To whom | Resolution | Pricing discipline |
+|---|---|---|---|
+| **Rights** — s. 62(1)(a) | existing equity holders, in proportion | Board of directors (no members' resolution) | none in the section; offer window 15–30 days |
+| **ESOP** — s. 62(1)(b) | employees under a scheme | **special** resolution (private: ordinary) | rules / SEBI regulations |
+| **Preferential** — s. 62(1)(c) | any persons | **special** resolution | **registered valuer's** report |
+| **Bonus** — s. 63 | existing members, in proportion | general meeting on Board recommendation | no consideration moves at all |
+
+<Callout kind="example" label="Scenario 6 — a rights offer, dated end to end">
+  <p>
+    Chitradurga Cements Limited despatches a rights offer with a letter of offer <strong>dated 1
+    September 2026</strong>, stating that the offer closes on 12 September 2026.
+  </p>
+  <p>
+    <strong>1 · The floor.</strong> The offer must stay open <strong>not less than 15 days</strong>
+    from the date of the offer — closing on 12 September is too early; the earliest lawful close is
+    <strong>16 September 2026</strong>. <strong>2 · The ceiling.</strong> The offer cannot stay open
+    beyond 30 days — the latest close is <strong>1 October 2026</strong>. <strong>3 · Silence.</strong>
+    A member who does nothing by the closing date is <strong>deemed to have declined</strong>; the
+    Board may then place the shares in a manner not disadvantageous to members or the company.
+    <strong>4 · Renunciation.</strong> The member may instead renounce in favour of anyone, unless the
+    articles provide otherwise — renunciation needs no company approval.
+  </p>
+</Callout>
+
+## 9. Bonus shares — section 63
+
+**Section 63(1)** — a company may issue **fully paid bonus shares** to its members, in any manner
+whatsoever, out of —
+
+1. its **free reserves**;
+2. the **securities premium account**; or
+3. the **capital redemption reserve account** —
+
+with the proviso every examiner loves: **no bonus shares out of reserves created by the revaluation
+of assets**.
+
+**Section 63(2) — conditions.** The issue must be **authorised by the articles**; **authorised in
+general meeting on the recommendation of the Board**; the company must have **no default** in
+payment of interest or principal on **fixed deposits or debt securities**, and **no default** in
+payment of **statutory dues of employees** (provident fund, gratuity, bonus); any **partly paid-up
+shares must be made fully paid-up** before the bonus; and the prescribed conditions must be met —
+the rules add that a Board recommendation **once announced cannot be withdrawn**, and that bonus
+shares **cannot be issued in lieu of dividend**.
+
+<div class="formula">Bonus sources = free reserves · securities premium · CRR — <strong>never the revaluation reserve</strong>, and never in lieu of dividend</div>
+
+<Callout kind="pointer">
+  <p>
+    <strong>Watch the two directions of the CRR.</strong> Money flows <em>into</em> the CRR on a
+    redemption out of profits (s. 55) and on every buy-back (s. 69); it flows <em>out</em> only into
+    <strong>fully paid bonus shares</strong>. So the CRR is simultaneously the answer to "what is
+    created" in a redemption question and "what may be used" in a bonus question — a favourite
+    cross-section link.
+  </p>
+</Callout>
+
+## 10. Reduction of share capital — section 66
+
+**Section 66(1)** — subject to **confirmation by the Tribunal**, a company limited by shares or by
+guarantee with share capital may, by **special resolution**, reduce its share capital in any manner —
+in particular by:
+
+- **extinguishing or reducing the liability** on shares not fully paid-up;
+- **cancelling paid-up capital which is lost** or unrepresented by available assets; or
+- **paying off paid-up capital in excess of the wants** of the company —
+
+altering its memorandum accordingly. The proviso is a bright line: **no reduction if the company is
+in arrears in the repayment of any deposits accepted, or the interest thereon**.
+
+The Tribunal's process: notice to the **Central Government, the Registrar, SEBI (listed companies)
+and every creditor**, with representations **within three months**; the Tribunal satisfies itself
+that every creditor's **debt has been discharged, determined or secured, or his consent obtained**;
+an **auditor's certificate** that the accounting treatment conforms to the s. 133 accounting
+standards must accompany the application. The confirming order may be on such terms as the Tribunal
+thinks fit, and is **published** as directed; the company files the order and an approved minute
+with the Registrar, whose certificate of registration is conclusive. An officer who knowingly
+**conceals a creditor's name or misrepresents a debt** faces s. 447 liability. And by s. 66(6), the
+section **does not apply to a buy-back under s. 68** — that is a self-contained code.
+
+| Point | Reduction — s. 66 | Buy-back — s. 68 |
+|---|---|---|
+| Approval | special resolution **+ NCLT confirmation** | special resolution (or Board alone up to 10%) — **no Tribunal** |
+| Selectivity | any manner — may target particular shares, cancel lost capital, return excess | offer routes per rules/SEBI; the company purchases and **extinguishes** |
+| Funding discipline | none prescribed — capital itself shrinks | only free reserves, securities premium or fresh-issue proceeds; 25% and 2:1 ceilings |
+| Creditor protection | built into the Tribunal process | replaced by the **declaration of solvency** and the debt cap |
+| Statutory bar | deposit or deposit-interest arrears | s. 70 defaults (cured + 3 years) |
+| Reserve created | none | **CRR equal to nominal value** bought back (s. 69) |
+
+## 11. Buy-back and restrictions on acquiring own shares — sections 67 to 70
+
+**Section 67(1)** — no company limited by shares or by guarantee with share capital may **buy its own
+shares** unless the consequent reduction is effected under the Act (that is, s. 66 or s. 68).
+**Section 67(2)** — no **public company** may give, directly or indirectly, **any financial
+assistance** — loan, guarantee, security or otherwise — **for the purchase of its own shares** or its
+holding company's shares. The exceptions in s. 67(3):
+
+- **lending by a banking company** in the ordinary course of its business;
+- provision of money per a scheme for the **purchase of fully paid shares by trustees, to be held for
+  the benefit of employees**;
+- **loans to employees** (other than directors or key managerial personnel) **not exceeding six
+  months' salary or wages**, to purchase fully paid shares to be held by them by way of beneficial
+  ownership.
+
+A **private company** is exempt from s. 67 altogether if: **no other body corporate has invested in
+its share capital**; its **borrowings** from banks, financial institutions and bodies corporate are
+**less than twice its paid-up capital or ₹50 crore, whichever is lower**; and it has **no subsisting
+default** in repaying such borrowings — an exemption-notification package worth stating as three
+cumulative conditions.
+
+**Section 68 — buy-back.** A company may purchase its own shares or other specified securities out of
+three sources — **free reserves**, the **securities premium account**, or the **proceeds of an
+earlier issue of any shares or other specified securities** — but **never out of the proceeds of an
+earlier issue of the same kind** of shares or securities. For the ceilings, the Explanation makes
+**free reserves include the securities premium account**. The conditions:
+
+<div class="formula">Special-resolution route ≤ <strong>25%</strong> of (paid-up capital + free reserves) · Board route ≤ <strong>10%</strong> of (paid-up equity + free reserves) · equity bought back in a financial year ≤ <strong>25% of paid-up equity capital</strong> · post-buy-back debts ≤ <strong>2 ×</strong> (paid-up capital + free reserves)</div>
+
+- **articles** must authorise the buy-back;
+- a **special resolution** in general meeting — except that the **Board alone** may resolve where the
+  buy-back is **10% or less of the paid-up equity capital and free reserves**;
+- the buy-back is **25% or less of the aggregate of paid-up capital and free reserves** — and for a
+  buy-back of **equity shares in any financial year**, the 25% is applied to the **total paid-up
+  equity capital** in that year;
+- after the buy-back, the **aggregate of secured and unsecured debts is not more than twice the
+  paid-up capital and free reserves** (the Central Government may prescribe a higher ratio for a
+  class of companies);
+- all shares or securities bought back are **fully paid-up**;
+- listed securities follow **SEBI regulations**; unlisted follow the **rules**.
+
+**The buy-back clocks and filings:**
+
+| Step | Requirement |
+|---|---|
+| Completion | within **1 year** from the date of the special resolution (or Board resolution) |
+| Gap between offers | **no fresh offer of buy-back within 1 year** from the date of closure of the preceding offer |
+| Declaration of solvency | filed with the Registrar (and SEBI, for listed companies) **before** the buy-back, signed by at least two directors, one the managing director if any |
+| Extinguishment | **extinguish and physically destroy** the securities within **7 days** of the last date of completion |
+| Cooling-off on fresh issue | **no further issue of the same kind** of shares or securities within **6 months** — except bonus shares or discharge of subsisting obligations (conversion of warrants, stock-option schemes, sweat equity, conversion of preference shares or debentures) |
+| Register | register of bought-back securities (Form **SH-10**) |
+| Return | return of buy-back (Form **SH-11**) filed with the Registrar (and SEBI, listed) within **30 days** of completion |
+
+**Section 69** — where a buy-back is out of free reserves or the securities premium account, a sum
+equal to the **nominal value of the shares purchased** is transferred to the **capital redemption
+reserve account**, disclosed in the balance sheet; the CRR may be applied for **fully paid bonus
+shares**.
+
+**Section 70** — no buy-back, directly or indirectly: **through any subsidiary company** (including
+its own subsidiaries), **through any investment company or group of investment companies**, or while
+a **default subsists** in the repayment of deposits or interest, redemption of debentures or
+preference shares, payment of dividend, or repayment of a term loan or interest to a bank or
+financial institution — though the buy-back **revives once the default is remedied and three years
+have lapsed** since it ceased to subsist. A company that has not complied with **ss. 92 (annual
+return), 123 (declaration of dividend), 127 (failure to pay dividend) or 129 (financial statements)**
+also cannot buy back.
+
+<Callout kind="example" label="Scenario 7 — a buy-back sized against every ceiling">
+  <p>
+    Arunodaya Precision Limited's audited balance sheet as at 31 March 2026 shows paid-up equity
+    capital ₹1,00,00,000 (10,00,000 shares of ₹10, fully paid), free reserves ₹2,20,00,000,
+    securities premium ₹80,00,000, secured loans ₹5,00,00,000 and unsecured loans ₹2,60,00,000. It
+    proposes to buy back 2,50,000 shares at ₹40 each — an outflow of ₹1,00,00,000.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the four s. 68 tests</div>
+    Base = capital + free reserves (incl. premium) = 1,00,00,000 + 2,20,00,000 + 80,00,000 =
+    ₹4,00,00,000<br />
+    <strong>25% amount test:</strong> ceiling = ₹1,00,00,000 → outflow of ₹1,00,00,000 is exactly at
+    the ceiling — needs a <strong>special resolution</strong> (Board route stops at 10% =
+    ₹40,00,000)<br />
+    <strong>25% equity test:</strong> nominal bought back = 2,50,000 × ₹10 = ₹25,00,000 = 25% of
+    paid-up equity capital — within the financial-year cap<br />
+    <strong>Debt cap:</strong> debts 5,00,00,000 + 2,60,00,000 = ₹7,60,00,000 ≤ 2 × 4,00,00,000 =
+    ₹8,00,00,000 — satisfied on the opening figures (re-test post buy-back)<br />
+    <strong>CRR (s. 69):</strong> nominal value bought back = <strong>₹25,00,000</strong>
+  </div>
+  <p>
+    <strong>The sequence afterwards:</strong> complete within 1 year of the resolution; extinguish
+    the shares within 7 days of completion; no fresh issue of equity (except bonus and subsisting
+    conversions) for 6 months; SH-10 register; SH-11 return within 30 days; and no second buy-back
+    offer within 1 year of this offer's closure.
+  </p>
+</Callout>
+
+## 12. Debentures and nomination — sections 71 and 72
+
+**Section 71(1)** — a company may issue debentures with an **option to convert** into shares, wholly
+or partly, at redemption — a convertible issue must be approved by a **special resolution**.
+**Section 71(2)** — **no debentures carry voting rights**, ever. Secured debentures follow the
+prescribed terms and conditions.
+
+- **Debenture Redemption Reserve (s. 71(4))** — created **out of profits available for dividend**,
+  and used **only for redemption**. The percentage of the outstanding value, and the classes wholly
+  **exempt** (listed issuers, NBFCs and others were carved out by a 2019 rules amendment), are
+  **rules-level and amendment-sensitive** — state the concept, flag the number.
+- **Debenture trustee (s. 71(5))** — no company may issue a **prospectus or make an offer or
+  invitation to the public or to its members exceeding 500** for debentures **unless it has appointed
+  one or more debenture trustees** before the issue, on the prescribed conditions; the trustee must
+  protect the holders' interests and redress grievances (s. 71(6)); an exemption clause relieving a
+  trustee of the duty of care is **void**, subject to the rules-level meeting-approved release.
+- **Secured tenure** — rules-level: a secured debenture must be **redeemable within 10 years** from
+  the date of issue; **infrastructure companies and other permitted classes** may stretch to **30
+  years**.
+- **Enforcement** — the company must **pay interest and redeem per the terms** (s. 71(8)). Where the
+  trustee concludes the **assets are insufficient** to discharge the principal as it falls due, it
+  may petition the **Tribunal**, which may restrict the company from incurring further liabilities
+  (s. 71(9)). On a **failure to redeem on maturity or to pay interest**, the Tribunal may — on the
+  application of any or all debenture-holders or the trustee, after hearing the parties — direct the
+  company to **redeem the debentures forthwith with payment of principal and interest** (s. 71(10));
+  default in complying with that order is punishable (s. 71(11)).
+
+**Section 72 — nomination.** Every **holder of securities** (not just shares) may nominate, in the
+prescribed manner, a person in whom the securities shall **vest on his death**; joint holders may
+nominate jointly. The nominee's right on death prevails **notwithstanding anything in any other law
+or any testamentary disposition** — the nomination overrides even a will as the vehicle of vesting,
+per the section's non-obstante wording. Where the nominee is a **minor**, the holder may appoint a
+person to become entitled during the minority.
+
+<div class="formula">Debentures: <strong>no voting rights</strong> · trustee where the offer goes to <strong>more than 500</strong> persons · secured redemption within <strong>10 years</strong> (infrastructure classes up to 30 — rules-level) · s. 71(10): NCLT may order redemption <strong>forthwith</strong></div>
+
+## Common mistakes and examiner traps
+
+1. **Calling a share "preference" on one preferential right.** Section 43 needs both — preferential
+   dividend **and** preferential repayment of capital on winding up.
+2. **Forgetting when preference shareholders vote on everything.** Dividend unpaid for **two years or
+   more** → votes on **all** resolutions (s. 47(2)); otherwise only on resolutions directly affecting
+   their rights, winding up, and repayment or reduction of capital.
+3. **Wrong dissent numbers under s. 48.** Consent needs **three-fourths of the issued shares of the
+   class**; the Tribunal application needs **10% of the class**, filed **within 21 days** — and the
+   variation is suspended once a valid application is made.
+4. **Using the securities premium for anything outside the s. 52 list.** Dividends, general losses
+   and working capital are all wrong answers; the five uses are bonus shares, preliminary expenses,
+   issue expenses/commission/discount, premium on redemption, and s. 68 buy-back.
+5. **Treating a shareholder-approved discount as valid.** Section 53 makes a discounted issue
+   **void** regardless of any resolution; the doors are sweat equity (s. 54) and the s. 53(2A)
+   debt-conversion. The refund carries **12% interest from the date of issue**.
+6. **Reviving the one-year wait for sweat equity.** Omitted by amendment — a new company may issue
+   sweat equity in year one.
+7. **Computing the CRR on the redemption amount.** The CRR equals the **nominal value redeemed out
+   of profits** (s. 55) or the **nominal value bought back** (s. 69) — the premium never enters it.
+8. **Redeeming or buying back partly paid shares.** Both s. 55 and s. 68 require **fully paid**
+   shares; call the balance first.
+9. **Mixing the s. 56 and s. 58 clocks.** SH-4 delivery — 60 days from execution; certificates — 2
+   months (incorporation/allotment), 1 month (transfer/transmission receipt), 6 months (debenture
+   allotment); refusal notice — 30 days; appeals — private 30/60, public 60/90.
+10. **Special resolution for s. 61 alterations.** All five modes need only an **ordinary**
+    resolution (articles permitting); the Tribunal enters only where a consolidation changes voting
+    percentages — and cancelling unissued shares is **not** a reduction.
+11. **Bonus out of the revaluation reserve, or in lieu of dividend.** Both prohibited; and an
+    announced Board recommendation cannot be withdrawn.
+12. **Ignoring the Explanation that free reserves include securities premium for buy-back
+    ceilings.** The 25% and 10% bases and the debt cap all include the premium account.
+13. **Letting a buy-back proceed during a s. 70 default.** The bar lifts only when the default is
+    **remedied and three years have passed**; buying through a subsidiary or investment company is
+    always barred.
+14. **Giving debenture-holders votes,** or forgetting that the s. 72 nomination overrides a will as
+    to vesting of the securities.
+
+## One-page revision summary
+
+**Resolutions.** **Board alone** — rights offer (s. 62(1)(a)); buy-back up to 10% of paid-up equity +
+free reserves. **Ordinary resolution** — s. 61 alterations (articles permitting); DVR issue
+(rules-level); ESOP in a private company (exemption). **Special resolution** — sweat equity (s. 54);
+ESOP (s. 62(1)(b)); preferential allotment (s. 62(1)(c)); reduction (s. 66, + NCLT); buy-back beyond
+the Board route (s. 68); convertible debentures (s. 71(1)). **Three-fourths of the class** —
+variation of class rights (s. 48); s. 55(3) further issue (in value, + NCLT). **NCLT** — s. 48
+dissent; consolidation changing voting percentages (s. 61); reduction confirmation (s. 66); s. 55(3)
+approval; debenture default (s. 71(9)–(10)).
+
+**Every number in the chapter.**
+
+| Bright line | Figure | Provision |
+|---|---|---|
+| Preference dividend unpaid → vote on all resolutions | **2 years or more** | s. 47(2) |
+| Class-rights consent · dissent · application window · order filed | **3/4 · 10% · 21 days · 30 days** | s. 48 |
+| Discount refund interest | **12% p.a.** from the date of issue | s. 53(3) |
+| Preference tenure | **20 years** (infrastructure: rules, up to 30) | s. 55(2) |
+| SH-4 delivery | **60 days** from execution | s. 56(1) |
+| Certificates — incorporation / allotment / transfer / debentures | **2 m / 2 m / 1 m / 6 m** | s. 56(4) |
+| Refusal notice · private appeal · public appeal | **30 days · 30/60 · 60/90** | s. 58 |
+| Notice of capital alteration to Registrar | **30 days** | s. 64 |
+| Rights-offer window | **15–30 days** (lesser prescribed — rules) | s. 62(1)(a) |
+| Buy-back — SR route · Board route · equity in FY · debt cap | **25% · 10% · 25% of equity · 2×** | s. 68(2) |
+| Buy-back — complete · extinguish · fresh-issue bar · return · offer gap | **1 yr · 7 days · 6 m · 30 days · 1 yr** | s. 68 |
+| Debenture trustee threshold | offer to **more than 500** persons | s. 71(5) |
+| Secured debenture redemption | **10 years** (infrastructure classes up to 30 — rules) | s. 71 rules |
+
+**Sources map.** **Securities premium** may fund: bonus shares, preliminary expenses, issue
+expenses/commission/discount, premium on redemption, buy-back (s. 52). **Redemption of preference
+shares**: distributable profits or fresh-issue proceeds only; fully paid only; CRR = nominal redeemed
+out of profits; premium on redemption from profits or securities premium (AS-class: profits only)
+(s. 55). **Bonus**: free reserves, securities premium, CRR — never the revaluation reserve, never in
+lieu of dividend (s. 63). **Buy-back**: free reserves, securities premium, proceeds of an earlier
+issue of any *other* kind of security; CRR = nominal value bought back (ss. 68–69). **DRR**: out of
+profits available for dividend, percentages rules-level (s. 71).
+
+**Core positions.** s. 43 — two kinds; DVR per rules; private-company opt-out. s. 44 — shares are
+movable property, transferable per the articles. s. 45 — numbering, not for depository holdings.
+s. 46 — certificate is prima facie evidence. s. 49 — uniform calls within a class (different paid-up
+= different class). s. 50 — calls in advance carry no votes until due. s. 51 — proportionate dividend
+if articles authorise. s. 53 — discounted issue void; penalty up to the amount raised or ₹5 lakh,
+whichever is less; refund + 12%. s. 54 — sweat equity: existing class, special resolution, SEBI
+regs/rules; no one-year wait. s. 55(3) — inability to redeem → further issue with 3/4-in-value
+consent + NCLT, deemed redemption, dissenters paid out forthwith. s. 56 — transmission needs no
+instrument. s. 58 — public-company securities freely transferable; contracts over securities
+enforceable. s. 59 — rectification via NCLT. s. 62(3) — special-resolution conversion terms need no
+fresh approval. s. 66 — special resolution + NCLT; barred while deposit arrears subsist; auditor's
+certificate on accounting treatment; does not touch s. 68. s. 67 — no financial assistance by a
+public company; exceptions — banking business, employee trusts, employee loans to 6 months' salary;
+private-company exemption on three cumulative conditions. s. 70 — no buy-back via subsidiaries or
+investment companies; default → cured + 3 years; ss. 92/123/127/129 compliance needed. s. 71 — no
+voting rights; trustee above 500; DRR rules-level; NCLT may order redemption forthwith. s. 72 —
+nomination vests the securities on death, notwithstanding any other law or testamentary disposition.
+

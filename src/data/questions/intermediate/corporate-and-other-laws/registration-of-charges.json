@@ -1,0 +1,2289 @@
+{
+  "level": "intermediate",
+  "paper": "corporate-and-other-laws",
+  "paperSlug": "corporate-and-other-laws",
+  "chapterSlug": "registration-of-charges",
+  "chapter": "Ch 6 — Registration of Charges",
+  "questions": [
+    {
+      "id": "q-i2c6-001",
+      "topic": "Ch 6 · s. 2(16) · Meaning of charge",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 2(16) of the Companies Act 2013, a 'charge' means:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 2(16)",
+      "readLink": {
+        "label": "Read: What a charge is — s. 2(16) →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#1-what-a-charge-is--section-216"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "A transfer of ownership in the property or assets of a company to a lender, until the debt is repaid",
+          "explanation": "A charge creates an INTEREST, not ownership. The company remains the owner of the charged asset and may deal with it subject to the charge; an outright transfer of ownership would be a sale, not a charge."
+        },
+        {
+          "key": "B",
+          "text": "Any debt owed by a company to a bank or financial institution, whether or not any property is offered as security",
+          "explanation": "An unsecured loan creates no charge at all. Section 2(16) requires an interest or lien on property or assets, created AS SECURITY; a bare debt is outside the definition and outside Chapter VI."
+        },
+        {
+          "key": "C",
+          "text": "An interest or lien created on the property or assets of a company or any of its undertakings, or both, as security, and includes a mortgage",
+          "explanation": "Correct. That is section 2(16). Four limbs carry marks — an interest or lien (not ownership); on the property, assets or undertakings of the COMPANY; created AS SECURITY; and the express inclusion of a mortgage."
+        },
+        {
+          "key": "D",
+          "text": "A lien created by a court order over the property of a company in execution of a decree",
+          "explanation": "Section 2(16) is about a security interest created by the company in favour of a creditor. A lien arising from execution proceedings is not a charge created by the company and is not registrable under s. 77."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-002",
+      "topic": "Ch 6 · s. 2(16) · What the definition expressly includes",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The definition of 'charge' in section 2(16) expressly states that the expression includes:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 2(16)",
+      "readLink": {
+        "label": "Read: What a charge is — s. 2(16) →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#1-what-a-charge-is--section-216"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "A guarantee given by a director of the company",
+          "explanation": "A personal guarantee is a contract of guarantee under the Contract Act. It creates no interest in any property of the COMPANY, so it is neither a charge nor registrable under s. 77."
+        },
+        {
+          "key": "B",
+          "text": "A mortgage",
+          "explanation": "Correct. Section 2(16) ends with the words 'and includes a mortgage'. The drafter added them so that nobody could argue a mortgage is a transfer of an interest rather than the creation of one, and so escapes registration."
+        },
+        {
+          "key": "C",
+          "text": "A negative-pledge covenant",
+          "explanation": "A negative pledge is a promise NOT to create a further charge without the lender's consent. It is a contractual restraint on the company, not itself an interest or lien on any asset, so it is not within s. 2(16)."
+        },
+        {
+          "key": "D",
+          "text": "A letter of comfort issued by the holding company",
+          "explanation": "A letter of comfort creates, at most, a moral or contractual assurance. It creates no interest or lien on the property of the company and is nowhere mentioned in s. 2(16)."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-003",
+      "topic": "Ch 6 · Fixed charge",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement correctly describes a fixed (specific) charge?",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "ICAI SM P2 Ch 6 — fixed and floating charges",
+      "readLink": {
+        "label": "Read: Fixed and floating charges →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#2-fixed-and-floating-charges"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "It attaches immediately to a specific, ascertained and identified asset, and the company cannot dispose of that asset without the charge-holder's consent",
+          "explanation": "Correct. Both halves matter: the asset is identified at the moment of creation, and the charge attaches at once, which is why the company loses its freedom to deal with that asset."
+        },
+        {
+          "key": "B",
+          "text": "It attaches to a class of assets that changes in the ordinary course of business",
+          "explanation": "That is the first of Romer LJ's tests for a FLOATING charge. A charge on a shifting class of assets is precisely what a fixed charge is not."
+        },
+        {
+          "key": "C",
+          "text": "It attaches to the identified asset only when the charge-holder takes steps to enforce the security",
+          "explanation": "Deferred attachment on enforcement is crystallisation, which belongs to a floating charge. A fixed charge attaches at creation and needs no crystallising event."
+        },
+        {
+          "key": "D",
+          "text": "It need not be registered under section 77 because the asset is already identified in the instrument",
+          "explanation": "Section 77(1) requires EVERY charge to be registered. Neither a fixed nor a floating charge is exempt on the ground that the asset is identified."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-004",
+      "topic": "Ch 6 · Floating charge · Romer LJ's tests",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which of the following is NOT one of the characteristics of a floating charge as classically stated (Romer LJ, Re Yorkshire Woolcombers Association)?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "ICAI SM P2 Ch 6 — characteristics of a floating charge",
+      "readLink": {
+        "label": "Read: Fixed and floating charges →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#2-fixed-and-floating-charges"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is a charge on a class of assets of the company, present and future",
+          "explanation": "This is the first characteristic. The charge covers a class rather than a named asset, and it reaches assets the company has not yet acquired."
+        },
+        {
+          "key": "B",
+          "text": "That class of assets is one which, in the ordinary course of the company's business, changes from time to time",
+          "explanation": "This is the second characteristic — stock-in-trade and book debts are the standard examples of a class that turns over constantly."
+        },
+        {
+          "key": "C",
+          "text": "Until some step is taken by or on behalf of the charge-holder, the company may carry on its business in the ordinary way so far as concerns that class of assets",
+          "explanation": "This is the third and most practical characteristic, and it is what makes the charge 'float' — the company keeps selling and replacing the assets."
+        },
+        {
+          "key": "D",
+          "text": "The company must obtain the charge-holder's prior written consent before disposing of any asset within the class",
+          "explanation": "Correct as the ODD ONE OUT, and therefore the answer. A consent requirement is the mark of a FIXED charge. A floating charge exists precisely because the company may deal with the class in the ordinary course without asking anyone."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-005",
+      "topic": "Ch 6 · Crystallisation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A floating charge crystallises on the happening of certain events. Which of the following is NOT, by itself, a crystallising event?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "ICAI SM P2 Ch 6 — crystallisation of a floating charge",
+      "readLink": {
+        "label": "Read: Fixed and floating charges →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#2-fixed-and-floating-charges"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The company goes into winding up",
+          "explanation": "Winding up is the classic crystallising event — the company ceases to be a going concern and can no longer deal with the class in the ordinary course."
+        },
+        {
+          "key": "B",
+          "text": "The company sells part of the charged stock-in-trade to a customer in the ordinary course of business",
+          "explanation": "Correct as the odd one out, and therefore the answer. An ordinary-course sale is exactly what a floating charge permits; the buyer takes free of the charge and the charge continues to float over what remains and over what is later acquired."
+        },
+        {
+          "key": "C",
+          "text": "A receiver is appointed over the charged assets",
+          "explanation": "The appointment of a receiver or manager is a step taken by or on behalf of the charge-holder and crystallises the charge."
+        },
+        {
+          "key": "D",
+          "text": "An event specified in the charge instrument as a crystallising event occurs",
+          "explanation": "The parties may stipulate their own crystallising events in the debenture or deed, and the courts give effect to them."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-006",
+      "topic": "Ch 6 · Effect of crystallisation",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On crystallisation of a floating charge:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "ICAI SM P2 Ch 6 — effect of crystallisation",
+      "readLink": {
+        "label": "Read: Fixed and floating charges →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#2-fixed-and-floating-charges"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The charge becomes void and the charge-holder ranks as an unsecured creditor",
+          "explanation": "Crystallisation strengthens the security; it does not destroy it. Voidness against the liquidator and other creditors is the consequence of NON-REGISTRATION under s. 77(3), an unrelated point."
+        },
+        {
+          "key": "B",
+          "text": "The charge continues to float but the company must obtain the charge-holder's consent for every future sale",
+          "explanation": "Crystallisation is not a consent regime. The charge stops floating altogether and fastens on the assets then in the class."
+        },
+        {
+          "key": "C",
+          "text": "The charge fastens on the assets then comprised in the class and operates as a fixed charge, and the company can no longer deal with them in the ordinary course",
+          "explanation": "Correct. That is the whole effect of crystallisation — the floating charge settles on whatever is in the class at that moment and behaves from then on like a fixed charge."
+        },
+        {
+          "key": "D",
+          "text": "The charge must be re-registered with the Registrar within thirty days of crystallisation",
+          "explanation": "Crystallisation is not a modification under s. 79 and no fresh registration is required. Chapter VI requires registration of the creation and of modifications, not of the operation of a term already in the registered instrument."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-007",
+      "topic": "Ch 6 · s. 77(1) · Scope of the duty",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Yamuna Steels Limited, an Indian company, executes in Singapore a mortgage over a warehouse situated in Dubai, to secure a loan from a foreign bank. As to registration under section 77:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1)",
+      "readLink": {
+        "label": "Read: The duty to register — s. 77 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#3-the-duty-to-register--section-77"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The charge must be registered, because section 77(1) covers a charge created within or outside India, on property whether tangible or otherwise, and situated in or outside India",
+          "explanation": "Correct. Section 77(1) is deliberately drafted to defeat exactly this argument: neither the place of execution nor the situs of the property nor the nature of the property takes the charge outside the duty."
+        },
+        {
+          "key": "B",
+          "text": "The charge need not be registered, because the property is situated outside India",
+          "explanation": "Section 77(1) expressly covers property 'situated in or outside India'. The situs of the asset is irrelevant to the duty."
+        },
+        {
+          "key": "C",
+          "text": "The charge need not be registered, because the instrument was executed outside India",
+          "explanation": "Section 77(1) expressly covers a charge created 'within or outside India'. The place of execution is irrelevant."
+        },
+        {
+          "key": "D",
+          "text": "The charge need not be registered, because the charge-holder is a foreign bank not registered in India",
+          "explanation": "The duty in s. 77(1) attaches to the COMPANY creating the charge, not to the identity or nationality of the charge-holder. The section says nothing about who the lender is."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-008",
+      "topic": "Ch 6 · s. 77(1) · Which charges are registrable",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Which statement about the charges that must be registered under the Companies Act 2013 is correct?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1) and its proviso",
+      "readLink": {
+        "label": "Read: The duty to register — s. 77 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#3-the-duty-to-register--section-77"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only the nine categories of charge listed in the Act — such as charges on uncalled capital, on immovable property, on book debts and floating charges — are registrable",
+          "explanation": "That was the scheme of section 125 of the Companies Act 1956. The 2013 Act abandoned the list; options built on the nine categories are testing whether you have read the current section."
+        },
+        {
+          "key": "B",
+          "text": "Only charges created in favour of banks and public financial institutions are registrable",
+          "explanation": "Section 77(1) says nothing about the identity of the charge-holder. The duty attaches to the company creating the charge, whoever the lender may be."
+        },
+        {
+          "key": "C",
+          "text": "Only fixed charges are registrable, floating charges being registrable only on crystallisation",
+          "explanation": "Both are registrable at creation. Section 85(1) even goes out of its way to say 'all charges and floating charges' when describing the company's own register."
+        },
+        {
+          "key": "D",
+          "text": "Every charge created by a company is registrable, subject only to such charges as may be prescribed in consultation with the Reserve Bank of India",
+          "explanation": "Correct. Section 77(1) covers 'every company creating a charge' without any list, and the only carve-out is the proviso permitting exemptions to be PRESCRIBED in consultation with the RBI — a rules-level list."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-009",
+      "topic": "Ch 6 · s. 77 · Particulars and instrument",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 77(1), the particulars of the charge filed with the Registrar must be signed by:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1)",
+      "readLink": {
+        "label": "Read: The duty to register — s. 77 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#3-the-duty-to-register--section-77"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The company alone, since the duty to register is cast on the company",
+          "explanation": "The duty is indeed on the company, but the section requires the particulars to be signed by BOTH parties. Confusing whose duty it is with whose signature is required is the trap here."
+        },
+        {
+          "key": "B",
+          "text": "The company and the charge-holder, and the instrument creating the charge must be filed with the particulars",
+          "explanation": "Correct on both counts. Section 77(1) requires particulars 'signed by the company and the charge-holder' to be filed 'together with the instruments, if any, creating such charge'. A summary without the instrument does not satisfy the section."
+        },
+        {
+          "key": "C",
+          "text": "A practising chartered accountant, company secretary or cost accountant certifying the particulars",
+          "explanation": "A professional certification is a feature of the incorporation filing under s. 7(1)(b). Section 77(1) requires the signatures of the parties, not of a professional."
+        },
+        {
+          "key": "D",
+          "text": "The charge-holder alone, since the security is created in his favour",
+          "explanation": "The reverse of option A and equally wrong. Both the company and the charge-holder sign."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-010",
+      "topic": "Ch 6 · s. 77(1) · The 30-day window",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vindhya Ceramics Limited creates a charge over its kiln in favour of Sanchay Bank on 5 May 2026. Ignoring any extension, the last date on which the company may register the charge with the Registrar as of right, on payment of normal fees, is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1) — thirty days from the date of creation",
+      "readLink": {
+        "label": "Read: The registration timeline — 30, 60 and 120 days →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#4-the-registration-timeline--30-60-and-120-days"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "5 June 2026",
+          "explanation": "That is one calendar month from creation. Section 77(1) speaks of thirty DAYS, and May has thirty-one days, so a month and thirty days are not the same thing here."
+        },
+        {
+          "key": "B",
+          "text": "4 July 2026",
+          "explanation": "That is sixty days from creation — the outer limit of the Registrar's FIRST extension, available only on an application and on additional fees. The stem asks for the period available as of right."
+        },
+        {
+          "key": "C",
+          "text": "4 June 2026",
+          "explanation": "Correct. Thirty days from 5 May 2026, counting from the day after the date of creation, expires on 4 June 2026. Up to that date the company may register on normal fees without applying to anyone."
+        },
+        {
+          "key": "D",
+          "text": "20 May 2026",
+          "explanation": "That is fifteen days. No fifteen-day period appears anywhere in Chapter VI."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-011",
+      "topic": "Ch 6 · s. 77(1) first proviso · The 60-day window",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vindhya Ceramics Limited creates a charge on 5 May 2026 and lets the thirty days lapse. On an application by the company, the Registrar may allow registration on payment of additional fees up to and including:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1), first proviso, clause (b) — sixty days from creation",
+      "readLink": {
+        "label": "Read: The registration timeline — 30, 60 and 120 days →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#4-the-registration-timeline--30-60-and-120-days"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 July 2026",
+          "explanation": "Correct. The first proviso allows registration within sixty days OF CREATION, not sixty days from the end of the first window. Sixty days from 5 May 2026 expires on 4 July 2026, and additional fees are payable."
+        },
+        {
+          "key": "B",
+          "text": "4 June 2026",
+          "explanation": "That is the thirty-day window that has already lapsed on these facts. The stem asks how far the first extension reaches."
+        },
+        {
+          "key": "C",
+          "text": "5 July 2026",
+          "explanation": "That is two calendar months from creation. The proviso is expressed in days, and 5 May plus sixty days is 4 July, not 5 July."
+        },
+        {
+          "key": "D",
+          "text": "2 September 2026",
+          "explanation": "That is one hundred and twenty days — the outer limit of the SECOND extension under the second proviso, which needs a further application and AD VALOREM fees, not additional fees."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-012",
+      "topic": "Ch 6 · s. 77(1) second proviso · The 120-day outer limit",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Vindhya Ceramics Limited creates a charge on 5 May 2026 and misses both the thirty-day and the sixty-day windows. The last date on which the Registrar may, on an application and on payment of ad valorem fees, allow the charge to be registered is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1), second proviso, clause (b) — a further sixty days, i.e. 120 days from creation",
+      "readLink": {
+        "label": "Read: The registration timeline — 30, 60 and 120 days →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#4-the-registration-timeline--30-60-and-120-days"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "5 September 2026",
+          "explanation": "That is four calendar months. The scheme is expressed in days throughout; converting 120 days into four months is the commonest error in this question."
+        },
+        {
+          "key": "B",
+          "text": "4 July 2026",
+          "explanation": "That is sixty days — the first extension, which the stem says has already been missed."
+        },
+        {
+          "key": "C",
+          "text": "1 November 2026",
+          "explanation": "That is one hundred and eighty days. No 180-day period exists in section 77."
+        },
+        {
+          "key": "D",
+          "text": "2 September 2026",
+          "explanation": "Correct. The second proviso allows a FURTHER sixty days after the sixty-day window, so the outer limit is one hundred and twenty days from creation: 5 May 2026 plus 120 days is 2 September 2026. After that date no authority can register the charge."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-013",
+      "topic": "Ch 6 · s. 77(1) first proviso (a) · Pre-commencement charges",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "A charge was created by Yamuna Steels Limited on 10 July 2018, before the commencement of the Companies (Amendment) Ordinance 2019. Under clause (a) of the first proviso to section 77(1), the Registrar could allow registration of such a charge within three hundred days of its creation on payment of additional fees. That three-hundred-day period expired on:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1), first proviso, clause (a) — 300 days for pre-commencement charges",
+      "readLink": {
+        "label": "Read: The registration timeline — 30, 60 and 120 days →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#4-the-registration-timeline--30-60-and-120-days"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 September 2018",
+          "explanation": "That is sixty days. The sixty-day window belongs to clause (b) of the first proviso, which applies only to charges created ON OR AFTER the commencement of the Ordinance."
+        },
+        {
+          "key": "B",
+          "text": "6 May 2019",
+          "explanation": "Correct. Three hundred days from 10 July 2018 expires on 6 May 2019. Keep the two schemes apart by asking first when the charge was created: before commencement, 300 days; on or after, 30 / 60 / 120 days."
+        },
+        {
+          "key": "C",
+          "text": "10 May 2019",
+          "explanation": "That is ten calendar months, which is close to but not the same as three hundred days. The proviso counts in days."
+        },
+        {
+          "key": "D",
+          "text": "7 November 2018",
+          "explanation": "That is one hundred and twenty days — the outer limit under the post-commencement scheme, which does not apply to a charge created in July 2018."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-014",
+      "topic": "Ch 6 · s. 77 · Which fee for which window",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "For a charge created after the commencement of the Companies (Amendment) Ordinance 2019, the fees payable for registration escalate with the window used. The correct sequence is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1) with its first and second provisos",
+      "readLink": {
+        "label": "Read: The registration timeline — 30, 60 and 120 days →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#4-the-registration-timeline--30-60-and-120-days"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Normal fees within 30 days; ad valorem fees up to 60 days; additional fees up to 120 days",
+          "explanation": "The two extension fees are the right way round in the section but the wrong way round here. Ad valorem fees belong to the LAST window, not the middle one."
+        },
+        {
+          "key": "B",
+          "text": "Ad valorem fees within 30 days; normal fees up to 60 days; additional fees up to 120 days",
+          "explanation": "Nothing extra is payable inside the first thirty days — that window is available as of right on the normal fees."
+        },
+        {
+          "key": "C",
+          "text": "Normal fees within 30 days; additional fees up to 60 days; ad valorem fees up to 120 days",
+          "explanation": "Correct. The escalation is normal, then ADDITIONAL under clause (b) of the first proviso, then AD VALOREM under clause (b) of the second proviso. Remember that the last two windows also require an application to the Registrar."
+        },
+        {
+          "key": "D",
+          "text": "Normal fees within 30 days; additional fees up to 300 days; ad valorem fees up to 6 months from the Ordinance",
+          "explanation": "This mixes in the transitional scheme for PRE-commencement charges. For a charge created after commencement the windows are 30, 60 and 120 days."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-015",
+      "topic": "Ch 6 · s. 77 · Who allows the extended windows",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company creates a charge and lets the thirty days go by. To use the sixty-day window under the first proviso to section 77(1), the company must:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1), first proviso",
+      "readLink": {
+        "label": "Read: The registration timeline — 30, 60 and 120 days →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#4-the-registration-timeline--30-60-and-120-days"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apply to the Registrar, who may allow the registration on payment of additional fees",
+          "explanation": "Correct. The proviso reads 'the Registrar may, on an application by the company, allow such registration'. The extension is discretionary and application-based; simply filing on day fifty without applying does not use the window."
+        },
+        {
+          "key": "B",
+          "text": "Simply file the particulars within sixty days, since the extension operates automatically on payment of additional fees",
+          "explanation": "This is the commonest misreading. The extended windows are not automatic — they open only on an application, and the Registrar 'may' allow."
+        },
+        {
+          "key": "C",
+          "text": "Apply to the Central Government under section 87 for condonation of the delay",
+          "explanation": "Section 87 no longer covers delay in registering the CREATION of a charge; that limb was deleted in 2019. It now reaches only late intimation of satisfaction and omissions or mis-statements."
+        },
+        {
+          "key": "D",
+          "text": "Apply to the Tribunal for an order extending the time",
+          "explanation": "The Tribunal has no role anywhere in Chapter VI. The authorities in this chapter are the Registrar and, within the narrow limits of s. 87, the Central Government."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-016",
+      "topic": "Ch 6 · s. 87 · The narrowed rectification power",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Since the Companies (Amendment) Act 2019, which of the following can the Central Government NO LONGER do under section 87?",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 87 as substituted in 2019",
+      "readLink": {
+        "label": "Read: Punishment and rectification — ss. 86 and 87 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#13-punishment-and-rectification--sections-86-and-87"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Direct that an omission of particulars in a filing already made in respect of a charge be rectified",
+          "explanation": "This survives. Clause (b) of the substituted section expressly covers the omission or mis-statement of particulars in a filing previously made to the Registrar."
+        },
+        {
+          "key": "B",
+          "text": "Extend the time for giving intimation to the Registrar of the payment or satisfaction of a charge",
+          "explanation": "This survives. Clause (a) of the substituted section is precisely about the omission to intimate satisfaction within the time required."
+        },
+        {
+          "key": "C",
+          "text": "Direct that a mis-statement in a memorandum of satisfaction entered under section 82 or section 83 be rectified",
+          "explanation": "This survives. Clause (b) names entries made in pursuance of s. 82 or s. 83 among the filings that may be rectified."
+        },
+        {
+          "key": "D",
+          "text": "Extend the time for registration of the creation of a charge where the company has missed all the windows in section 77",
+          "explanation": "Correct. This is the limb the 2019 amendment DELETED. A company that has run past 120 days has no relief left — not from the Registrar, whose power stops there, and not from the Central Government. Options offering condonation of a late creation filing are a post-2019 trap."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-017",
+      "topic": "Ch 6 · s. 77(2) · Certificate of registration",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "On registering a charge, the Registrar issues a certificate of registration under section 77(2). That certificate:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(2), read with Rule 6 of the Companies (Registration of Charges) Rules 2014",
+      "readLink": {
+        "label": "Read: The duty to register — s. 77 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#3-the-duty-to-register--section-77"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Is issued only to the company, the charge-holder being entitled merely to inspect the Registrar's register",
+          "explanation": "Section 77(2) requires the certificate to be issued to the company AND to the charge-holder. Both need proof that the security is on the record."
+        },
+        {
+          "key": "B",
+          "text": "Is issued to the company and the charge-holder, and is conclusive evidence that the requirements as to registration of the creation of the charge have been complied with",
+          "explanation": "Correct. Section 77(2) fixes who receives it; the Rules make it conclusive evidence that the requirements of Chapter VI and the Rules as to registration of the creation (or modification) have been complied with. Note that the conclusive-evidence wording is rules-level."
+        },
+        {
+          "key": "C",
+          "text": "Is conclusive evidence that the charge itself was validly created under the general law",
+          "explanation": "Registration proves that the FILING requirements were met. It cannot cure a defect in the creation of the security — an unstamped or improperly executed mortgage is no better for having been registered."
+        },
+        {
+          "key": "D",
+          "text": "May be cancelled by the Registrar at any time if he later forms the opinion that the charge should not have been registered",
+          "explanation": "No such power exists in section 77. The Registrar's later powers relate to satisfaction and release (s. 83), not to undoing a certificate of registration."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-018",
+      "topic": "Ch 6 · s. 77(3) · Consequence of non-registration",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A charge created by a company is never registered. On the company's liquidation, the consequence under section 77(3) is that the charge:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(3)",
+      "readLink": {
+        "label": "Read: What non-registration costs — s. 77(3) and (4) →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#5-what-non-registration-costs--section-773-and-4"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Is void for all purposes, so that the charge-holder cannot enforce it even against the company itself",
+          "explanation": "Too wide. Section 77(3) makes the charge unavailable against the liquidator and other creditors only; as between the company and the charge-holder the security still stands."
+        },
+        {
+          "key": "B",
+          "text": "Remains valid, because registration is a procedural formality that affects only the company's liability to penalty",
+          "explanation": "Too narrow. Non-registration certainly attracts penalties under s. 86, but s. 77(3) also strips the security of all effect against the liquidator and other creditors."
+        },
+        {
+          "key": "C",
+          "text": "Shall not be taken into account by the liquidator appointed under the Companies Act 2013 or the Insolvency and Bankruptcy Code 2016, or by any other creditor",
+          "explanation": "Correct. Those are the words of s. 77(3). The charge-holder proves in the liquidation as an UNSECURED creditor and shares rateably with the rest — the practical death of the security."
+        },
+        {
+          "key": "D",
+          "text": "Is converted into a floating charge ranking after all registered fixed charges",
+          "explanation": "There is no such conversion anywhere in the Act. An unregistered charge is not demoted to a floating charge; it is simply disregarded by the liquidator and other creditors."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-019",
+      "topic": "Ch 6 · s. 77(4) · The debt survives",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Section 77(4) provides that nothing in section 77(3) shall prejudice any contract or obligation for the repayment of the money secured by a charge. The practical effect is that, where the charge is unregistered:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(4)",
+      "readLink": {
+        "label": "Read: What non-registration costs — s. 77(3) and (4) →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#5-what-non-registration-costs--section-773-and-4"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The debt remains fully recoverable from the company; only the security is lost as against the liquidator and other creditors",
+          "explanation": "Correct, and this is the half of the answer students omit. Section 77(3) destroys the SECURITY; section 77(4) preserves the DEBT. The lender is a creditor for the whole sum, but an unsecured one."
+        },
+        {
+          "key": "B",
+          "text": "The debt is extinguished along with the security, and the company is discharged from repayment",
+          "explanation": "The opposite of what s. 77(4) says. The section exists precisely to stop the borrower from arguing that its own default in filing has wiped out its debt."
+        },
+        {
+          "key": "C",
+          "text": "The debt survives but becomes payable only after all registered charge-holders have been paid in full, in priority to unsecured creditors",
+          "explanation": "There is no such intermediate ranking. The unregistered charge-holder proves alongside the ordinary unsecured creditors, not in a class between them and the secured creditors."
+        },
+        {
+          "key": "D",
+          "text": "The debt survives only if the charge-holder registers the charge under section 78 within thirty days of the liquidation order",
+          "explanation": "Two errors. The debt's survival under s. 77(4) is unconditional, and s. 78 gives no window measured from a liquidation order — it operates against the outer limits in s. 77."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-020",
+      "topic": "Ch 6 · s. 87 · Grounds for rectification",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 87, the Central Government may direct rectification only where it is satisfied that the omission or mis-statement:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 87 as substituted in 2019",
+      "readLink": {
+        "label": "Read: Punishment and rectification — ss. 86 and 87 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#13-punishment-and-rectification--sections-86-and-87"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Was caused by the negligence of the Registrar rather than of the company",
+          "explanation": "The section says nothing about whose negligence caused the lapse. Its tests are the character of the lapse and its effect on creditors and shareholders."
+        },
+        {
+          "key": "B",
+          "text": "Occurred within thirty days of the event that ought to have been reported",
+          "explanation": "A lapse inside thirty days would need no relief at all — the statutory period would still be running. Section 87 is for lapses that have already gone beyond time."
+        },
+        {
+          "key": "C",
+          "text": "Relates to a charge in favour of a bank or public financial institution",
+          "explanation": "The identity of the charge-holder is irrelevant under s. 87, as it is under s. 77."
+        },
+        {
+          "key": "D",
+          "text": "Was accidental, or due to inadvertence, or due to some other sufficient cause, or is not of a nature to prejudice the position of the creditors or shareholders of the company",
+          "explanation": "Correct. Those are the alternative tests in the section. Note the word 'or' before the last limb: a lapse that prejudices nobody may be rectified even if it was not accidental. The application may be made by the company OR any person interested."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-021",
+      "topic": "Ch 6 · s. 77(1) third proviso · Effect of late registration",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A charge created on 1 April is registered on 20 July under the ad valorem window. On 10 June, before that registration, a third party had acquired an interest in the charged property. Under the third proviso to section 77(1):",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 77(1), third proviso",
+      "readLink": {
+        "label": "Read: The duty to register — s. 77 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#3-the-duty-to-register--section-77"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The registration relates back to 1 April, so the third party's interest is subject to the charge",
+          "explanation": "There is no doctrine of relation back in section 77. The third proviso was inserted to say the opposite."
+        },
+        {
+          "key": "B",
+          "text": "The registration does not prejudice the right the third party acquired on 10 June, because that right was acquired before the charge was actually registered",
+          "explanation": "Correct. The third proviso says that any subsequent registration 'shall not prejudice any right acquired in respect of any property before the charge is actually registered'. Late filing cures the charge going forward only."
+        },
+        {
+          "key": "C",
+          "text": "The registration is invalid, because a charge may not be registered once a third party has acquired an interest in the property",
+          "explanation": "The registration is perfectly valid; the proviso limits its effect against intervening rights, it does not bar the filing."
+        },
+        {
+          "key": "D",
+          "text": "The third party is deemed to have notice of the charge from 1 April under section 80",
+          "explanation": "Section 80 fixes deemed notice from the DATE OF REGISTRATION — here 20 July — and not from the date of creation. On 10 June there was nothing on the register to have notice of."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-022",
+      "topic": "Ch 6 · s. 78 · When the charge-holder's right arises",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Kaveri Logistics Limited creates a charge in favour of Ashwath Credit Limited on 12 February 2026 and files nothing with the Registrar. The earliest date on which Ashwath Credit may itself apply to the Registrar under section 78 for registration of the charge is:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 78 read with s. 77(1)",
+      "readLink": {
+        "label": "Read: Registration by the charge-holder — s. 78 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#6-registration-by-the-charge-holder--section-78"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "14 March 2026",
+          "explanation": "That is the last day of the company's own thirty-day window. While it is still running the company has not yet 'failed to register', so the section 78 right has not arisen."
+        },
+        {
+          "key": "B",
+          "text": "13 April 2026",
+          "explanation": "That is sixty days from creation. Section 78 is triggered by the expiry of the THIRTY days in s. 77(1), not by the expiry of the extended window."
+        },
+        {
+          "key": "C",
+          "text": "15 March 2026",
+          "explanation": "Correct. The company's thirty days run from 12 February 2026 and expire on 14 March 2026. The failure is complete on that date, so the charge-holder's right under section 78 arises from the next day, 15 March 2026."
+        },
+        {
+          "key": "D",
+          "text": "12 June 2026",
+          "explanation": "That is one hundred and twenty days from creation. The charge-holder need not wait for every window of the company to close; s. 78 opens as soon as the thirty days lapse."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-023",
+      "topic": "Ch 6 · s. 78 · The Registrar's fourteen days",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On an application by a charge-holder under section 78, the Registrar gives notice to the company on 20 April 2026. The last date by which the Registrar may allow the registration on that application is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 78 — fourteen days after giving notice to the company",
+      "readLink": {
+        "label": "Read: Registration by the charge-holder — s. 78 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#6-registration-by-the-charge-holder--section-78"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 May 2026",
+          "explanation": "Correct. Section 78 lets the Registrar act 'within a period of fourteen days after giving notice to the company'. Fourteen days from 20 April 2026 expires on 4 May 2026 — unless the company registers the charge itself or shows sufficient cause meanwhile."
+        },
+        {
+          "key": "B",
+          "text": "27 April 2026",
+          "explanation": "That is seven days. No seven-day period appears in Chapter VI."
+        },
+        {
+          "key": "C",
+          "text": "20 May 2026",
+          "explanation": "That is thirty days. Thirty days is the registration and satisfaction period elsewhere in the Chapter; the Registrar's window under s. 78 is fourteen days."
+        },
+        {
+          "key": "D",
+          "text": "11 May 2026",
+          "explanation": "That is twenty-one days, a period that appears nowhere in Chapter VI."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-024",
+      "topic": "Ch 6 · s. 78 proviso · Recovery of fees",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Where a charge is registered on the application of the charge-holder under section 78, the proviso to that section entitles him to:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 78, proviso",
+      "readLink": {
+        "label": "Read: Registration by the charge-holder — s. 78 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#6-registration-by-the-charge-holder--section-78"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Recall the entire loan immediately, the company having defaulted in its statutory duty",
+          "explanation": "The proviso says nothing about acceleration of the debt. Whether the loan can be recalled depends on the loan agreement, not on Chapter VI."
+        },
+        {
+          "key": "B",
+          "text": "Claim damages from every officer of the company who was in default",
+          "explanation": "Officers in default face a penalty under s. 86 payable to the State, not damages payable to the charge-holder. The proviso gives a fee-recovery right, nothing more."
+        },
+        {
+          "key": "C",
+          "text": "Have the charge registered free of any fees, since the default was the company's",
+          "explanation": "The charge-holder must pay the Registrar first; the proviso then lets him recover what he paid. It is a right of reimbursement, not an exemption."
+        },
+        {
+          "key": "D",
+          "text": "Recover from the company the amount of any fees, additional fees or ad valorem fees he paid to the Registrar for the registration",
+          "explanation": "Correct. The proviso to section 78 names all three kinds of fee and makes them recoverable from the company, which is where the default lay."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-025",
+      "topic": "Ch 6 · s. 79 · Modification and acquisition",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Section 79 applies the provisions of section 77 relating to registration of charges to:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 79",
+      "readLink": {
+        "label": "Read: Modification of a charge — s. 79 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#7-modification-of-a-charge--section-79"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The satisfaction of a charge and the release of part of the charged property",
+          "explanation": "Those are dealt with by sections 82 and 83, which have their own periods. Section 79 is about acquisitions and modifications, not satisfactions."
+        },
+        {
+          "key": "B",
+          "text": "A company acquiring property that is already subject to a charge, and any modification in the terms or conditions or the extent or operation of a registered charge",
+          "explanation": "Correct — those are clauses (a) and (b) of section 79. Note that under clause (a) the company created nothing: it bought the encumbrance, and must still register."
+        },
+        {
+          "key": "C",
+          "text": "The crystallisation of a floating charge into a fixed charge",
+          "explanation": "Crystallisation is the operation of a term already in the registered instrument, not a modification of the charge's terms, and no fresh filing is required for it."
+        },
+        {
+          "key": "D",
+          "text": "The appointment of a receiver over property subject to a charge",
+          "explanation": "That is section 84, which has its own thirty-day notice and its own filer — the person who obtained the order or made the appointment."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-026",
+      "topic": "Ch 6 · s. 80 · Date from which notice is deemed",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 80, a person acquiring property that is subject to a registered charge is deemed to have notice of the charge from:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 80",
+      "readLink": {
+        "label": "Read: Deemed notice — s. 80 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#8-deemed-notice--section-80"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The date on which the charge was created",
+          "explanation": "The register cannot give notice of something not yet on it. Between creation and registration there is nothing for the acquirer to have notice of — which is why the third proviso to s. 77(1) protects rights acquired in that gap."
+        },
+        {
+          "key": "B",
+          "text": "The date on which he acquires the property",
+          "explanation": "That is when the deeming BITES, not when it starts. The section fixes the notice to the date of registration, so that a charge registered after the acquisition gives no deemed notice to that acquirer at all."
+        },
+        {
+          "key": "C",
+          "text": "The date of registration of the charge",
+          "explanation": "Correct. Section 80 says the acquirer 'shall be deemed to have notice of the charge from the date of such registration'. This is the reward for registering and the mirror image of s. 77(3)."
+        },
+        {
+          "key": "D",
+          "text": "The date on which the Registrar issues the certificate of registration under section 77(2)",
+          "explanation": "A tempting near-miss. Section 80 keys the notice to the date of REGISTRATION, not to the date the certificate is issued, which may be later."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-027",
+      "topic": "Ch 6 · s. 80 · Who is fixed with notice",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The deeming provision in section 80 operates against:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 80",
+      "readLink": {
+        "label": "Read: Deemed notice — s. 80 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#8-deemed-notice--section-80"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Any person acquiring the charged property, assets or undertaking, or any part of it, or any share or interest in it",
+          "explanation": "Correct. Section 80 names the acquirer of the property or of any share or interest in it — the person who most needs to know that the asset is encumbered."
+        },
+        {
+          "key": "B",
+          "text": "Every person dealing with the company in any capacity, including its trade creditors",
+          "explanation": "Too wide. That is the doctrine of constructive notice of the memorandum and articles, which comes from Chapter II. Section 80 is confined to acquirers of the charged property."
+        },
+        {
+          "key": "C",
+          "text": "The members of the company only",
+          "explanation": "Members are not mentioned in section 80 at all. Their rights of inspection come from s. 85(2)(a)."
+        },
+        {
+          "key": "D",
+          "text": "The liquidator of the company only",
+          "explanation": "The liquidator appears in section 77(3), a different provision with a different effect. Section 80 is about acquirers of the property."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-028",
+      "topic": "Ch 6 · s. 81 · The Registrar's register",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The register of charges kept by the Registrar under section 81 is open to inspection by:",
+      "difficulty": "easy",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 81(1) and (2)",
+      "readLink": {
+        "label": "Read: The register kept by the Registrar — s. 81 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#9-the-register-kept-by-the-registrar--section-81"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Members and creditors of the company without payment of any fee, and any other person on payment of the prescribed fee",
+          "explanation": "That is the inspection regime for the COMPANY's own register under s. 85(2). The Registrar's register has a single rule for everybody."
+        },
+        {
+          "key": "B",
+          "text": "Members of the company only, during business hours",
+          "explanation": "The Registrar's register is a public record. Nothing in s. 81 confines inspection to members."
+        },
+        {
+          "key": "C",
+          "text": "Any person, but only with the previous written consent of the company",
+          "explanation": "No consent of the company is required or even contemplated. The purpose of the register is to inform the world without asking the company."
+        },
+        {
+          "key": "D",
+          "text": "Any person, on payment of the prescribed fees for each inspection",
+          "explanation": "Correct. Section 81(2) opens the Registrar's register to any person on payment of the prescribed fees for each inspection. That public character is what makes the deemed notice in s. 80 fair."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-029",
+      "topic": "Ch 6 · s. 82(1) · Who may seek the extension",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "A company fails to intimate the satisfaction of a charge within thirty days. Under the proviso to section 82(1), an application for the Registrar to allow the intimation to be made within three hundred days may be made by:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 82(1) and its proviso (as amended in 2019)",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The company only, the duty to intimate being cast on the company",
+          "explanation": "That was the position before the 2019 amendment. The words 'or the charge holder' were then inserted, and the amended proviso is what applies to the current attempts."
+        },
+        {
+          "key": "B",
+          "text": "The company or the charge-holder",
+          "explanation": "Correct. As amended in 2019 the proviso reads 'on an application by the company or the charge holder'. The change matters in practice because the holder often wants the register cleared even when the company is indifferent."
+        },
+        {
+          "key": "C",
+          "text": "The company or any creditor of the company",
+          "explanation": "Ordinary creditors have no standing under the proviso. Only the company and the charge-holder may apply."
+        },
+        {
+          "key": "D",
+          "text": "The Central Government, on a reference by the Registrar",
+          "explanation": "The Central Government's role in this Chapter is confined to section 87, and even there it acts on the application of the company or a person interested, not on a reference from the Registrar."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-030",
+      "topic": "Ch 6 · s. 82(1) · The 30-day satisfaction window",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Trilok Papers Limited repays its term loan in full on 9 September 2026, satisfying the registered charge. The last date on which the company may give intimation of the satisfaction to the Registrar as of right, without applying for any extension, is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 82(1) — thirty days from the date of payment or satisfaction",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "23 September 2026",
+          "explanation": "That is fourteen days. Fourteen days is the show-cause period under s. 82(2) and the Registrar's window under s. 78 — not the intimation period."
+        },
+        {
+          "key": "B",
+          "text": "8 November 2026",
+          "explanation": "That is sixty days. The sixty-day window belongs to the registration of a CREATION under s. 77; section 82 goes straight from thirty days to three hundred."
+        },
+        {
+          "key": "C",
+          "text": "9 October 2026",
+          "explanation": "Correct. Section 82(1) requires intimation within thirty days from the date of payment or satisfaction. Thirty days from 9 September 2026 expires on 9 October 2026."
+        },
+        {
+          "key": "D",
+          "text": "6 July 2027",
+          "explanation": "That is three hundred days — the outer limit under the proviso, available only on an application by the company or the charge-holder and on additional fees."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-031",
+      "topic": "Ch 6 · s. 82(1) proviso · The 300-day window",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "The charge over Trilok Papers Limited's assets was satisfied on 9 September 2026 and no intimation was given within thirty days. On an application under the proviso to section 82(1), the Registrar may allow the intimation to be made on additional fees up to and including:",
+      "difficulty": "hard",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 82(1), proviso — three hundred days from the payment or satisfaction",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "9 July 2027",
+          "explanation": "That is ten calendar months, which is close to but not the same as three hundred days. The proviso counts in days."
+        },
+        {
+          "key": "B",
+          "text": "9 October 2026",
+          "explanation": "That is the thirty-day window, which the stem says has already been missed."
+        },
+        {
+          "key": "C",
+          "text": "9 March 2027",
+          "explanation": "That is six calendar months. The six-month period in this Chapter belongs to the transitional fallback in the second proviso to s. 77(1), not to satisfaction."
+        },
+        {
+          "key": "D",
+          "text": "6 July 2027",
+          "explanation": "Correct. Three hundred days from 9 September 2026 expires on 6 July 2027. Note that the 300-day window survived the 2019 recast only for SATISFACTION; for a creation it was replaced by the 60 and 120-day windows."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-032",
+      "topic": "Ch 6 · s. 82(2) · The show-cause period",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "On receiving an intimation of satisfaction that was not signed by the charge-holder, the Registrar sends the holder a notice dated 3 November 2026 calling on him to show cause, specifying the maximum period the section allows. The last date for the holder to show cause is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 82(2) — a period not exceeding fourteen days",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "17 November 2026",
+          "explanation": "Correct. Section 82(2) allows the Registrar to specify a period 'not exceeding fourteen days'. Fourteen days from 3 November 2026 expires on 17 November 2026. If no cause is shown, the Registrar orders a memorandum of satisfaction to be entered."
+        },
+        {
+          "key": "B",
+          "text": "18 November 2026",
+          "explanation": "An off-by-one error, produced by counting the date of the notice itself as day one. The period runs from the day after the notice."
+        },
+        {
+          "key": "C",
+          "text": "3 December 2026",
+          "explanation": "That is thirty days. Thirty days is the intimation period under s. 82(1), not the show-cause period under s. 82(2)."
+        },
+        {
+          "key": "D",
+          "text": "10 November 2026",
+          "explanation": "That is seven days. The section names fourteen days as the maximum, and the stem says the Registrar specified the maximum."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-033",
+      "topic": "Ch 6 · s. 82(2) proviso · When no notice is needed",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "The Registrar need NOT send a show-cause notice to the holder of a charge under section 82(2) where:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 82(2), proviso",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "The intimation is given within thirty days of the satisfaction",
+          "explanation": "Timeliness is irrelevant to the notice requirement. An intimation filed on day two still attracts a notice unless the holder has signed it."
+        },
+        {
+          "key": "B",
+          "text": "The intimation is in the specified form and is signed by the holder of the charge",
+          "explanation": "Correct. That is the proviso to section 82(2). The notice exists only to give the holder a chance to object; if he has signed the intimation himself there is nothing to ask him, and the Registrar proceeds straight to the memorandum of satisfaction."
+        },
+        {
+          "key": "C",
+          "text": "The company files an affidavit confirming that the debt has been repaid in full",
+          "explanation": "An affidavit by the company is not the holder's signature. The proviso is satisfied only by the holder signing the intimation in the specified form."
+        },
+        {
+          "key": "D",
+          "text": "The Registrar has already made an entry of satisfaction under section 83",
+          "explanation": "Section 83 is a separate route on which the Registrar acts on his own evidence. It does not describe the exception in the proviso to s. 82(2)."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-034",
+      "topic": "Ch 6 · s. 83 · The Registrar's own power",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Under section 83, the Registrar may enter a memorandum of satisfaction in the register of charges:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 83(1)",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only on an intimation received from the company under section 82(1)",
+          "explanation": "The opposite. Section 83 exists precisely to let the Registrar act 'notwithstanding the fact that no intimation has been received by him from the company', and s. 82(4) preserves that power."
+        },
+        {
+          "key": "B",
+          "text": "Only where the debt has been satisfied in full, and never in part",
+          "explanation": "Section 83(1)(a) expressly covers a debt 'paid or satisfied in whole or in part', and the section allows a memorandum of satisfaction in whole or in part."
+        },
+        {
+          "key": "C",
+          "text": "On evidence given to his satisfaction that the debt has been paid or satisfied in whole or in part, or that part of the charged property has been released or has ceased to form part of the company's property, even though no intimation has been received from the company",
+          "explanation": "Correct. That is section 83(1), clauses (a) and (b) together with its closing words. He must then inform the affected parties within thirty days of making the entry."
+        },
+        {
+          "key": "D",
+          "text": "Only with the previous approval of the Central Government",
+          "explanation": "No approval is required. The Central Government's role in this Chapter is confined to the narrow rectification power in section 87."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "q-i2c6-035",
+      "topic": "Ch 6 · s. 83(2) · Informing the affected parties",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Having made an entry in the register of charges under section 83(1) on his own motion, the Registrar must inform the affected parties:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 83(2)",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Within fourteen days of making the entry",
+          "explanation": "Fourteen days is the show-cause period in s. 82(2) and the Registrar's window in s. 78. Section 83(2) allows thirty days."
+        },
+        {
+          "key": "B",
+          "text": "Before making the entry, by way of a show-cause notice",
+          "explanation": "The show-cause notice belongs to the s. 82 route, which begins with the company's intimation. Under s. 83 the Registrar acts on evidence and informs the parties afterwards."
+        },
+        {
+          "key": "C",
+          "text": "Within three hundred days of making the entry",
+          "explanation": "Three hundred days is the extended intimation window in the proviso to s. 82(1). It has nothing to do with the Registrar's duty to inform."
+        },
+        {
+          "key": "D",
+          "text": "Within thirty days of making the entry",
+          "explanation": "Correct. Section 83(2) requires the Registrar to inform the affected parties within thirty days of making the entry in the register kept under section 81(1)."
+        }
+      ],
+      "correct": "D"
+    },
+    {
+      "id": "q-i2c6-036",
+      "topic": "Ch 6 · s. 84(1) · Notice of appointment of a receiver",
+      "type": "mcq",
+      "numerical": true,
+      "stem": "Ashwath Credit Limited appoints a receiver over the charged assets of Nirvaan Analytics Limited on 7 January 2027, under a power contained in the debenture. The last date by which notice of the appointment must be given to the company and the Registrar under section 84(1) is:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 84(1) — thirty days from the making of the appointment",
+      "readLink": {
+        "label": "Read: Receivers and managers — s. 84 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#11-receivers-and-managers--section-84"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "6 February 2027",
+          "explanation": "Correct. Section 84(1) allows thirty days from the date of the order or of the making of the appointment. Thirty days from 7 January 2027 expires on 6 February 2027. The duty is on the appointer, here Ashwath Credit Limited."
+        },
+        {
+          "key": "B",
+          "text": "7 February 2027",
+          "explanation": "That is one calendar month. January has thirty-one days, so a month and thirty days part company; the section counts in days."
+        },
+        {
+          "key": "C",
+          "text": "22 January 2027",
+          "explanation": "That is fifteen days. No fifteen-day period appears in Chapter VI."
+        },
+        {
+          "key": "D",
+          "text": "8 March 2027",
+          "explanation": "That is sixty days. The sixty-day window belongs to the first proviso to s. 77(1) and has no application to a receiver's appointment."
+        }
+      ],
+      "correct": "A"
+    },
+    {
+      "id": "q-i2c6-037",
+      "topic": "Ch 6 · s. 85 · The company's own register",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "As to the register of charges that a company must keep under section 85, which statement is correct?",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 85(1) and (2)",
+      "readLink": {
+        "label": "Read: The register of charges kept by the company — s. 85 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#12-the-register-of-charges-kept-by-the-company--section-85"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "It records fixed charges only, floating charges being entered when they crystallise",
+          "explanation": "Section 85(1) says 'all charges and floating charges'. The drafter used both words precisely so that a floating charge could not be left out on the argument that it has not yet attached."
+        },
+        {
+          "key": "B",
+          "text": "It is kept at the registered office along with a copy of the instrument creating each charge, and is open to inspection by members and creditors free of charge and by any other person on payment of the prescribed fee",
+          "explanation": "Correct on all three counts: the place is the registered office, the proviso to s. 85(1) requires the instrument copies to be kept with the register, and s. 85(2) draws the free/paid line between members and creditors on one side and everyone else on the other."
+        },
+        {
+          "key": "C",
+          "text": "It may be kept at any office of the company and is open to inspection by any person on payment of the prescribed fee",
+          "explanation": "Two errors. The register must be at the REGISTERED OFFICE, and members and creditors inspect it without any fee."
+        },
+        {
+          "key": "D",
+          "text": "It replaces the register kept by the Registrar under section 81, which is maintained only for companies in liquidation",
+          "explanation": "The two registers coexist and serve different purposes. The Registrar keeps a register for every company under s. 81(1), regardless of its condition."
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "id": "q-i2c6-038",
+      "topic": "Ch 6 · s. 86(2) · False information and section 447",
+      "type": "mcq",
+      "numerical": false,
+      "stem": "Section 86(2), inserted by the Companies (Amendment) Act 2019, provides that a person shall be liable for action under section 447 where he:",
+      "difficulty": "medium",
+      "source": "original",
+      "sourceRef": "Companies Act 2013, s. 86(2)",
+      "readLink": {
+        "label": "Read: Punishment and rectification — ss. 86 and 87 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#13-punishment-and-rectification--sections-86-and-87"
+      },
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fails to register a charge within the period allowed by section 77",
+          "explanation": "A mere failure to file is a default under section 86(1) and attracts a penalty. Section 447 requires the fraud elements in section 86(2) — wilfulness or knowledge."
+        },
+        {
+          "key": "B",
+          "text": "Registers a charge that is later held to have been invalidly created under the general law",
+          "explanation": "An invalid security is a matter for the general law. Section 86(2) is aimed at what was TOLD to the Registrar, not at the quality of the underlying instrument."
+        },
+        {
+          "key": "C",
+          "text": "Wilfully furnishes any false or incorrect information, or knowingly suppresses any material information, which is required to be registered under section 77",
+          "explanation": "Correct. The two mental elements are the marks-bearing words — WILFULLY furnishing false or incorrect information, or KNOWINGLY suppressing material information required to be registered under s. 77."
+        },
+        {
+          "key": "D",
+          "text": "Inspects the Registrar's register of charges without paying the prescribed fee",
+          "explanation": "Not an offence at all, let alone fraud. Section 81(2) is about the fee for inspection; it creates no liability under section 447."
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "id": "d-i2c6-01",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 6 · s. 2(16) and the fixed/floating distinction",
+      "stem": "Define a 'charge' as the Companies Act 2013 understands it, distinguish between a fixed charge and a floating charge, and explain what is meant by the crystallisation of a floating charge. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Section 2(16): a charge means an interest or lien created on the property or assets of a company or any of its undertakings, or both, as security, and includes a mortgage — note that it creates an interest and not ownership, that it must be created as security, and that it attaches to the company's own property",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 2(16)"
+        },
+        {
+          "point": "Fixed (specific) charge: created on a specific, ascertained and identified asset; attaches immediately on creation; the company cannot dispose of or deal with the asset without the charge-holder's consent; typically immovable property or named plant",
+          "marks": 1,
+          "citation": "ICAI SM P2 Ch 6 — fixed charge"
+        },
+        {
+          "point": "Floating charge: Romer LJ's three characteristics — (i) a charge on a class of assets, present and future; (ii) that class changes from time to time in the ordinary course of business; (iii) until the charge-holder takes some step, the company may carry on business in the ordinary way as regards that class; typically stock-in-trade, book debts or the undertaking as a whole",
+          "marks": 1.5,
+          "citation": "ICAI SM P2 Ch 6 — characteristics of a floating charge (Re Yorkshire Woolcombers Association)"
+        },
+        {
+          "point": "Crystallisation: the floating charge ceases to float and fastens on the assets then comprised in the class, operating thereafter as a fixed charge — on winding up; on the company ceasing to carry on business or to be a going concern; on the appointment of a receiver or manager; on the charge-holder taking steps to enforce; or on the happening of any event stipulated in the instrument",
+          "marks": 1,
+          "citation": "ICAI SM P2 Ch 6 — crystallisation"
+        },
+        {
+          "point": "Both kinds are registrable under s. 77, and s. 85(1) requires the company's own register to include 'all charges and floating charges'; assets sold in the ordinary course before crystallisation pass free of a floating charge",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, ss. 77(1) and 85(1)"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27"
+    },
+    {
+      "id": "d-i2c6-02",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 6 · s. 77 · Duty, timeline and consequences",
+      "stem": "Explain the duty of a company to register a charge under section 77 of the Companies Act 2013, setting out the time limits available for registration of a charge created after the commencement of the Companies (Amendment) Ordinance 2019 and the consequences of a failure to register. (6 marks)",
+      "marks": 6,
+      "skeleton": [
+        {
+          "point": "Section 77(1): it is the duty of every company creating a charge, within or outside India, on its property or assets or any of its undertakings, whether tangible or otherwise, and situated in or outside India, to register the particulars of the charge — signed by the company and the charge-holder — together with the instrument creating the charge, in the prescribed form and on the prescribed fees, with the Registrar",
+          "marks": 1.5,
+          "citation": "Companies Act 2013, s. 77(1)"
+        },
+        {
+          "point": "First window: thirty days from the date of creation of the charge, available as of right on payment of the normal fees",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, s. 77(1)"
+        },
+        {
+          "point": "Second window: the Registrar may, on an application by the company, allow registration within sixty days of the creation of the charge on payment of additional fees — the extension is discretionary and application-based, not automatic",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 77(1), first proviso, clause (b)"
+        },
+        {
+          "point": "Third window: if registration is not made within that sixty days, the Registrar may, on an application, allow registration within a further sixty days — that is, within one hundred and twenty days of creation — on payment of ad valorem fees; beyond that no authority can register the charge",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 77(1), second proviso, clause (b)"
+        },
+        {
+          "point": "Section 77(2): the Registrar issues a certificate of registration to the company and to the charge-holder. Third proviso to s. 77(1): any subsequent (late) registration shall not prejudice any right acquired in respect of the property before the charge is actually registered",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 77(2) and s. 77(1), third proviso"
+        },
+        {
+          "point": "Consequences of non-registration: under s. 77(3) the charge shall not be taken into account by the liquidator appointed under the Act or the Insolvency and Bankruptcy Code 2016, or by any other creditor, so the holder ranks as an unsecured creditor; but under s. 77(4) the contract or obligation for repayment of the money secured is unaffected, so the debt survives in full; and the company and every officer in default are liable to penalty under s. 86(1)",
+          "marks": 1,
+          "citation": "Companies Act 2013, ss. 77(3), 77(4) and 86(1)"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27"
+    },
+    {
+      "id": "d-i2c6-03",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 6 · ss. 78 and 79 · The charge-holder's remedy and modifications",
+      "stem": "A company has created a charge in favour of a lender but has not registered it. Explain the remedy available to the lender under section 78 of the Companies Act 2013, and state the situations to which section 79 applies. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Trigger: the right arises only where the company fails to register the charge within the thirty days referred to in s. 77(1); this is without prejudice to the company's liability for any offence under Chapter VI, so the default remains the company's",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, s. 78"
+        },
+        {
+          "point": "Application: the person in whose favour the charge is created may apply to the Registrar for registration of the charge, along with the instrument creating it, within the prescribed time and in the prescribed form and manner",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, s. 78"
+        },
+        {
+          "point": "Procedure: the Registrar may, on such application, within a period of fourteen days after giving notice to the company, allow the registration on payment of the prescribed fees — unless the company itself registers the charge, or shows sufficient cause why the charge should not be registered",
+          "marks": 1.5,
+          "citation": "Companies Act 2013, s. 78"
+        },
+        {
+          "point": "Recovery of cost: where registration is effected on the charge-holder's application, he is entitled to recover from the company the amount of any fees, additional fees or ad valorem fees paid by him to the Registrar",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, s. 78, proviso"
+        },
+        {
+          "point": "Section 79: the provisions of s. 77 relating to registration apply, so far as may be, to (a) a company acquiring any property subject to a charge, and (b) any modification in the terms or conditions or the extent or operation of a charge already registered — with the same time limits, running from the date of the acquisition or modification; examples of modification include a change in the amount secured, in the assets charged, in the ranking of the charge, a partial release and an assignment",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 79"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27"
+    },
+    {
+      "id": "d-i2c6-04",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 6 · ss. 82 and 83 · Satisfaction of charges",
+      "stem": "Describe the procedure for recording the satisfaction of a registered charge under sections 82 and 83 of the Companies Act 2013, including the powers of the Registrar to act on his own motion. (5 marks)",
+      "marks": 5,
+      "skeleton": [
+        {
+          "point": "Section 82(1): a company shall give intimation to the Registrar of the payment or satisfaction in full of any charge registered under Chapter VI within thirty days from the date of such payment or satisfaction",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 82(1)"
+        },
+        {
+          "point": "Proviso to s. 82(1): the Registrar may, on an application by the company or the charge-holder, allow the intimation to be made within three hundred days of the payment or satisfaction, on payment of additional fees — the words 'or the charge holder' were inserted by the 2019 amendment",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 82(1), proviso"
+        },
+        {
+          "point": "Section 82(2): on receipt of the intimation the Registrar causes a notice to be sent to the holder of the charge calling on him to show cause, within a time not exceeding fourteen days as specified in the notice, why the payment or satisfaction should not be recorded as intimated; if no cause is shown, the Registrar orders that a memorandum of satisfaction be entered in the register of charges kept under s. 81 and informs the company accordingly. Proviso: no such notice is required where the intimation is in the specified form and is signed by the holder of the charge",
+          "marks": 1.5,
+          "citation": "Companies Act 2013, s. 82(2) and its proviso"
+        },
+        {
+          "point": "Section 82(3): if cause is shown, the Registrar records a note to that effect in the register of charges and informs the company accordingly — he records the dispute, he does not adjudicate it. Section 82(4) preserves his powers under s. 83",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, ss. 82(3) and 82(4)"
+        },
+        {
+          "point": "Section 83(1): on evidence given to his satisfaction that (a) the debt for which the charge was given has been paid or satisfied in whole or in part, or (b) part of the property or undertaking charged has been released from the charge or has ceased to form part of the company's property or undertaking, the Registrar may enter a memorandum of satisfaction in whole or in part, or of the release, notwithstanding that no intimation has been received from the company",
+          "marks": 0.75,
+          "citation": "Companies Act 2013, s. 83(1)"
+        },
+        {
+          "point": "Section 83(2): the Registrar shall inform the affected parties within thirty days of making the entry in the register of charges kept under s. 81(1)",
+          "marks": 0.25,
+          "citation": "Companies Act 2013, s. 83(2)"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27"
+    },
+    {
+      "id": "d-i2c6-05",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 6 · ss. 80, 81 and 85 · Notice and the two registers",
+      "stem": "Explain the effect of registration of a charge under section 80 of the Companies Act 2013, and distinguish the register of charges kept by the Registrar under section 81 from the register a company must keep under section 85. (4 marks)",
+      "marks": 4,
+      "skeleton": [
+        {
+          "point": "Section 80: where any charge on the property or assets of a company or any of its undertakings is registered under s. 77, any person acquiring such property, assets or undertaking, or any part thereof, or any share or interest therein, shall be deemed to have notice of the charge from the date of such registration — the notice runs from the date of registration, the person fixed is the acquirer, and an unregistered charge gives no deemed notice at all",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 80"
+        },
+        {
+          "point": "Section 81(1) and (2): the Registrar shall, in respect of every company, keep a register containing particulars of the charges registered under Chapter VI in the prescribed form and manner; that register is open to inspection by any person on payment of the prescribed fees for each inspection",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 81"
+        },
+        {
+          "point": "Section 85(1): every company shall keep at its registered office a register of charges in the prescribed form, including all charges and floating charges affecting any property or assets of the company or any of its undertakings, with the prescribed particulars; the proviso requires a copy of the instrument creating each charge to be kept at the registered office along with the register",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 85(1) and its proviso"
+        },
+        {
+          "point": "Section 85(2): the register and the instruments are open to inspection during business hours by any member or creditor without payment of any fee, and by any other person on payment of the prescribed fee, subject to such reasonable restrictions as the company may by its articles impose — the contrast with s. 81(2), where every inspector pays, is the examinable point",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 85(2)"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27"
+    },
+    {
+      "id": "d-i2c6-06",
+      "type": "descriptive",
+      "numerical": false,
+      "topic": "Ch 6 · ss. 84, 86 and 87 · Receivers, punishment and rectification",
+      "stem": "State the obligations arising on the appointment of a receiver or manager under section 84 of the Companies Act 2013. Explain the consequences of a default under Chapter VI in terms of section 86, and set out the extent of the power of the Central Government to order rectification under section 87 as it now stands. (6 marks)",
+      "marks": 6,
+      "skeleton": [
+        {
+          "point": "Section 84(1): where a person obtains an order for the appointment of a receiver of, or of a person to manage, property of a company that is subject to a charge, or appoints such a receiver or manager under a power contained in any instrument, he shall within thirty days from the date of the passing of the order or of the making of the appointment give notice of the appointment to the company and the Registrar, with a copy of the order or instrument; the Registrar then registers particulars of the receiver, person or instrument in the register of charges on payment of the prescribed fees. The duty lies on the appointer or the person who obtained the order, not on the company",
+          "marks": 1.5,
+          "citation": "Companies Act 2013, s. 84(1)"
+        },
+        {
+          "point": "Section 84(2): the person so appointed shall, on ceasing to hold the appointment, give notice to that effect to the company and the Registrar, and the Registrar shall register that notice",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, s. 84(2)"
+        },
+        {
+          "point": "Section 86(1): where a company is in default in complying with any provision of Chapter VI, the company is liable to a penalty and every officer of the company who is in default is liable to a penalty — the regime is penalty-based, imprisonment for officers having been removed by amendment",
+          "marks": 0.5,
+          "citation": "Companies Act 2013, s. 86(1)"
+        },
+        {
+          "point": "Section 86(2), inserted in 2019: if any person wilfully furnishes any false or incorrect information, or knowingly suppresses any material information, which is required to be registered under s. 77, he shall be liable for action under s. 447 (punishment for fraud). The mental elements — wilfully, knowingly — separate this from a mere default under s. 86(1)",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 86(2)"
+        },
+        {
+          "point": "Section 87 grounds as substituted in 2019: (a) the omission to give intimation to the Registrar of the payment or satisfaction of a charge within the time required under Chapter VI; or (b) the omission or mis-statement of any particulars in any filing previously made to the Registrar with respect to a charge or its modification, or with respect to a memorandum of satisfaction or other entry made in pursuance of s. 82 or s. 83",
+          "marks": 1.5,
+          "citation": "Companies Act 2013, s. 87, clauses (a) and (b)"
+        },
+        {
+          "point": "Section 87 conditions and relief: the Central Government must be satisfied that the omission or mis-statement was accidental, or due to inadvertence, or due to some other sufficient cause, or is not of a nature to prejudice the position of the creditors or shareholders of the company; on the application of the company or any person interested, and on such terms and conditions as it deems just and expedient, it may direct that the time for giving the intimation of payment or satisfaction be extended or that the omission or mis-statement be rectified. Note that the power to extend time for registration of the CREATION of a charge was deleted by the 2019 amendment, so a company that has missed all the s. 77 windows has no relief",
+          "marks": 1,
+          "citation": "Companies Act 2013, s. 87 as substituted in 2019"
+        }
+      ],
+      "source": "original",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "lastVerified": "2026-08-27"
+    },
+    {
+      "id": "cs-i2c6-01",
+      "type": "case_mcq_set",
+      "topic": "Ch 6 · Case: a charge created and a deadline missed",
+      "case": "Sarvodaya Textiles Limited borrows ₹12 crore from Sanchay Bank and creates a charge over its dyeing plant and its Nashik godown on 18 March 2026. The finance department prepares the filing but never submits it. The lapse comes to light in the third week of August 2026, by which time the company has also allowed a second lender, Meghna Finance, to take a charge over the same godown on 2 June 2026, which Meghna registered on 10 June 2026. The company's counsel advises that an application be made to the Central Government to condone the delay, and, failing that, that Sanchay Bank be asked to file under section 78.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: The registration timeline — 30, 60 and 120 days →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#4-the-registration-timeline--30-60-and-120-days"
+      },
+      "questions": [
+        {
+          "id": "cs-i2c6-01-a",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Whose duty was it to register the charge created on 18 March 2026, and within what period as of right?",
+          "sourceRef": "Companies Act 2013, s. 77(1)",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sanchay Bank's, within thirty days of creation, since the charge was created in its favour",
+              "explanation": "Section 77(1) casts the duty on the COMPANY creating the charge. The lender's role arises only under section 78, and only after the company's thirty days have lapsed."
+            },
+            {
+              "key": "B",
+              "text": "Sarvodaya Textiles Limited's, within thirty days of the creation of the charge",
+              "explanation": "Correct. Section 77(1) makes it the duty of every company creating a charge to register the particulars with the Registrar, and the period available as of right is thirty days from the date of creation."
+            },
+            {
+              "key": "C",
+              "text": "Jointly the company's and the bank's, since the particulars must be signed by both",
+              "explanation": "Both must SIGN the particulars, but the statutory duty to register is the company's alone. Do not confuse whose signature is required with whose duty it is."
+            },
+            {
+              "key": "D",
+              "text": "Sarvodaya Textiles Limited's, within one hundred and twenty days of creation",
+              "explanation": "One hundred and twenty days is the outer limit reachable only through two successive applications to the Registrar, on additional and then ad valorem fees. It is not the period available as of right."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i2c6-01-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "Assuming the company had applied to the Registrar at each stage, the last date on which the charge created on 18 March 2026 could have been registered — on payment of ad valorem fees — was:",
+          "sourceRef": "Companies Act 2013, s. 77(1), second proviso, clause (b) — 120 days from creation",
+          "options": [
+            {
+              "key": "A",
+              "text": "17 April 2026",
+              "explanation": "That is thirty days — the window available as of right, which expired long before the lapse was discovered."
+            },
+            {
+              "key": "B",
+              "text": "17 May 2026",
+              "explanation": "That is sixty days — the outer limit of the first extension, on additional fees, not ad valorem fees."
+            },
+            {
+              "key": "C",
+              "text": "16 July 2026",
+              "explanation": "Correct. The second proviso allows a further sixty days after the sixty-day window, giving an outer limit of one hundred and twenty days from creation: 18 March 2026 plus 120 days is 16 July 2026. By the third week of August that limit had passed."
+            },
+            {
+              "key": "D",
+              "text": "18 July 2026",
+              "explanation": "That is four calendar months from creation. The provisos count in days, not months, and 120 days from 18 March 2026 lands on 16 July."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i2c6-01-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Counsel's two suggestions — an application to the Central Government under section 87, and a filing by Sanchay Bank under section 78 — are:",
+          "sourceRef": "Companies Act 2013, ss. 87 and 78",
+          "options": [
+            {
+              "key": "A",
+              "text": "Both unavailable: section 87 no longer permits condonation of delay in registering the creation of a charge, and section 78 does not create a fresh window beyond the outer limit in section 77",
+              "explanation": "Correct. The limb of s. 87 that allowed extension of time for registering a creation was deleted by the 2019 amendment, and s. 78 merely lets the charge-holder step into the company's shoes — it cannot register what the Registrar has lost the power to register."
+            },
+            {
+              "key": "B",
+              "text": "Both available: the Central Government may condone any delay under section 87, and the charge-holder may file at any time under section 78",
+              "explanation": "Neither proposition survives the 2019 amendment and the outer limit in the second proviso to s. 77(1). This is the pre-2019 answer."
+            },
+            {
+              "key": "C",
+              "text": "Section 87 is available but section 78 is not, because the charge-holder's right lapsed with the company's thirty days",
+              "explanation": "The reasoning about s. 78 is exactly backwards — the holder's right ARISES when the company's thirty days lapse. And s. 87 is not available for a late creation filing."
+            },
+            {
+              "key": "D",
+              "text": "Section 78 is available but section 87 is not, because the Registrar retains an unlimited power to register a charge on an application by the charge-holder",
+              "explanation": "The conclusion on s. 87 is right but the reasoning on s. 78 is wrong: the Registrar has no unlimited power. His authority to register a creation stops at one hundred and twenty days, whoever applies."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i2c6-01-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Sarvodaya Textiles Limited later goes into liquidation. As between Sanchay Bank and Meghna Finance in respect of the Nashik godown:",
+          "sourceRef": "Companies Act 2013, ss. 77(3), 77(4) and 80",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sanchay Bank's charge prevails, because it was created first in point of time",
+              "explanation": "Priority by date of creation assumes both charges are effective against the liquidator. Section 77(3) removes Sanchay Bank's charge from consideration entirely, so the contest never reaches the question of who was first."
+            },
+            {
+              "key": "B",
+              "text": "Both charges are void, because the company was in default under Chapter VI",
+              "explanation": "The company's default cannot destroy the security of a lender who did register. Meghna Finance registered on 10 June 2026 and its charge stands."
+            },
+            {
+              "key": "C",
+              "text": "Sanchay Bank's ₹12 crore debt is extinguished, and only Meghna Finance may prove in the liquidation",
+              "explanation": "Section 77(4) preserves the contract for repayment. Sanchay Bank proves for the whole ₹12 crore; what it loses is the security, not the debt."
+            },
+            {
+              "key": "D",
+              "text": "Meghna Finance's registered charge is effective against the liquidator, while Sanchay Bank's unregistered charge is not taken into account and the bank ranks as an unsecured creditor for its ₹12 crore",
+              "explanation": "Correct. Section 77(3) keeps the unregistered charge out of the liquidator's reckoning, section 77(4) preserves the debt, and Meghna Finance — having registered — also had the benefit of deemed notice under s. 80 running in its favour from 10 June 2026."
+            }
+          ],
+          "correct": "D"
+        }
+      ]
+    },
+    {
+      "id": "cs-i2c6-02",
+      "type": "case_mcq_set",
+      "topic": "Ch 6 · Case: repayment, satisfaction and a show-cause notice",
+      "case": "Kaveri Logistics Limited repays in full, on 25 June 2026, the term loan secured by a registered charge in favour of Ashwath Credit Limited. Absorbed in a restructuring, the company gives no intimation to the Registrar. In February 2027 Ashwath Credit, which wants the register cleared before it applies for a licence, takes the matter up. When an intimation is eventually filed, it is on the company's letterhead and is not signed by Ashwath Credit, and the Registrar issues a notice to Ashwath Credit calling on it to show cause.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Satisfaction of a charge — ss. 82 and 83 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#10-satisfaction-of-a-charge--sections-82-and-83"
+      },
+      "questions": [
+        {
+          "id": "cs-i2c6-02-a",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "In February 2027, may Ashwath Credit Limited itself apply to the Registrar for the intimation of satisfaction to be accepted late?",
+          "sourceRef": "Companies Act 2013, s. 82(1) and its proviso",
+          "options": [
+            {
+              "key": "A",
+              "text": "No — only the company may apply, the duty to intimate being cast on the company by section 82(1)",
+              "explanation": "That was the position before the 2019 amendment. The words 'or the charge holder' were then inserted into the proviso, precisely for the situation in this case."
+            },
+            {
+              "key": "B",
+              "text": "No — an application must be made to the Central Government under section 87, not to the Registrar",
+              "explanation": "Section 87 is a separate and additional route. The proviso to s. 82(1) gives the Registrar his own power to allow a late intimation within three hundred days, and that is the first port of call."
+            },
+            {
+              "key": "C",
+              "text": "Yes — the proviso to section 82(1) permits an application by the company or the charge-holder, and the Registrar may then allow the intimation within three hundred days of the satisfaction on payment of additional fees",
+              "explanation": "Correct. The 2019 amendment added the charge-holder as an applicant, and the extended window is three hundred days from the date of payment or satisfaction."
+            },
+            {
+              "key": "D",
+              "text": "Yes — but only within one hundred and twenty days of the satisfaction, on payment of ad valorem fees",
+              "explanation": "The 120-day limit and ad valorem fees belong to the registration of a CREATION under s. 77. Satisfaction runs on a thirty-day and three-hundred-day scheme with additional fees."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i2c6-02-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The last date on which Kaveri Logistics Limited could have given intimation of the satisfaction as of right, without applying for any extension, was:",
+          "sourceRef": "Companies Act 2013, s. 82(1) — thirty days from the date of payment or satisfaction",
+          "options": [
+            {
+              "key": "A",
+              "text": "25 July 2026",
+              "explanation": "Correct. Section 82(1) allows thirty days from the date of payment or satisfaction. Thirty days from 25 June 2026 expires on 25 July 2026, and up to that date no application to anyone is needed."
+            },
+            {
+              "key": "B",
+              "text": "24 August 2026",
+              "explanation": "That is sixty days. Section 82 has no sixty-day window; the sixty days belong to the first proviso to s. 77(1) and to registration of a creation."
+            },
+            {
+              "key": "C",
+              "text": "21 April 2027",
+              "explanation": "That is three hundred days — the outer limit under the proviso, which is available only on an application and on payment of additional fees, not as of right."
+            },
+            {
+              "key": "D",
+              "text": "25 December 2026",
+              "explanation": "That is six calendar months. The six-month period in this Chapter belongs to the transitional fallback for pre-commencement charges in the second proviso to s. 77(1)."
+            }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "cs-i2c6-02-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Why did the Registrar issue a show-cause notice to Ashwath Credit Limited, and what follows if it does not respond?",
+          "sourceRef": "Companies Act 2013, s. 82(2) and its proviso",
+          "options": [
+            {
+              "key": "A",
+              "text": "Because every intimation of satisfaction attracts a notice; if no cause is shown the Registrar rejects the intimation and the charge remains on the register",
+              "explanation": "Two errors. The proviso dispenses with the notice where the holder has signed the intimation in the specified form; and silence by the holder leads to the satisfaction being RECORDED, not rejected."
+            },
+            {
+              "key": "B",
+              "text": "Because the intimation was not in the specified form signed by the holder of the charge; if no cause is shown, the Registrar orders that a memorandum of satisfaction be entered in the register and informs the company",
+              "explanation": "Correct. The notice exists to give the holder an opportunity to object. Had Ashwath Credit signed the intimation in the specified form, the proviso to s. 82(2) would have dispensed with the notice altogether. Silence is treated as no objection."
+            },
+            {
+              "key": "C",
+              "text": "Because the intimation was filed after thirty days; if no cause is shown, the Registrar refers the matter to the Central Government under section 87",
+              "explanation": "The notice is not triggered by lateness, and the Registrar makes no reference to the Central Government. Under s. 87 it is the company or a person interested who applies."
+            },
+            {
+              "key": "D",
+              "text": "Because the company and the holder disagreed; if no cause is shown, the Registrar decides the dispute and records his finding",
+              "explanation": "The Registrar never adjudicates. If cause IS shown, s. 82(3) requires him only to record a note to that effect in the register and inform the company."
+            }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "id": "cs-i2c6-03",
+      "type": "case_mcq_set",
+      "topic": "Ch 6 · Case: a floating charge, a section 78 filing and a receiver",
+      "case": "Nirvaan Analytics Limited creates, on 6 October 2026, a charge in favour of Ashwath Credit Limited over 'all computers, servers, software licences and receivables now owned or hereafter acquired'. The company files nothing with the Registrar. Ashwath Credit applies under section 78, and the Registrar gives notice to the company on 16 November 2026. Ashwath Credit pays the fees demanded. The company defaults on the facility, and on 4 January 2027 Ashwath Credit appoints a receiver over the charged assets under a power in the debenture.",
+      "applicableAttempts": [
+        "Sept 2026",
+        "Jan 2027"
+      ],
+      "lawAsOnDate": "2026-02-28",
+      "source": "original",
+      "readLink": {
+        "label": "Read: Registration by the charge-holder — s. 78 →",
+        "href": "/intermediate/corporate-and-other-laws/registration-of-charges/#6-registration-by-the-charge-holder--section-78"
+      },
+      "questions": [
+        {
+          "id": "cs-i2c6-03-a",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "The charge created on 6 October 2026 is best described as:",
+          "sourceRef": "ICAI SM P2 Ch 6 — characteristics of a floating charge",
+          "options": [
+            {
+              "key": "A",
+              "text": "A fixed charge, because the categories of asset are described in the instrument",
+              "explanation": "Describing a class is not the same as identifying an asset. A fixed charge attaches to specific, ascertained property; here the members of each class change constantly."
+            },
+            {
+              "key": "B",
+              "text": "A pledge, because the assets are movable",
+              "explanation": "A pledge requires delivery of possession of the goods to the pledgee. Nirvaan Analytics keeps and uses its computers and collects its own receivables."
+            },
+            {
+              "key": "C",
+              "text": "Not a charge at all, because future assets cannot be charged",
+              "explanation": "Future assets can be charged, and a floating charge is the standard device for doing so. Section 85(1) expressly contemplates floating charges."
+            },
+            {
+              "key": "D",
+              "text": "A floating charge, because it covers a class of assets present and future that changes in the ordinary course of business, and the company may deal with them until the charge-holder takes a step",
+              "explanation": "Correct. All three of Romer LJ's characteristics are present. The appointment of the receiver on 4 January 2027 will crystallise the charge on to whatever falls within those classes at that moment."
+            }
+          ],
+          "correct": "D"
+        },
+        {
+          "id": "cs-i2c6-03-b",
+          "type": "mcq",
+          "numerical": true,
+          "stem": "The Registrar gave notice to the company on 16 November 2026 on Ashwath Credit's application. The last date by which the Registrar may allow registration on that application is:",
+          "sourceRef": "Companies Act 2013, s. 78 — fourteen days after giving notice to the company",
+          "options": [
+            {
+              "key": "A",
+              "text": "5 November 2026",
+              "explanation": "That is the expiry of the company's own thirty-day window under s. 77(1), counted from the creation of the charge on 6 October 2026. It is the date that made the section 78 application possible, not the date the Registrar must act by."
+            },
+            {
+              "key": "B",
+              "text": "30 November 2026",
+              "explanation": "Correct. Section 78 lets the Registrar allow the registration within fourteen days after giving notice to the company. Fourteen days from 16 November 2026 expires on 30 November 2026 — unless the company registers the charge itself or shows sufficient cause meanwhile."
+            },
+            {
+              "key": "C",
+              "text": "1 December 2026",
+              "explanation": "An off-by-one error, produced by counting the date of the notice itself as day one. The fourteen days run from the day after the notice."
+            },
+            {
+              "key": "D",
+              "text": "16 December 2026",
+              "explanation": "That is thirty days from the notice. Thirty days is the registration and satisfaction period elsewhere in Chapter VI; the Registrar's window under s. 78 is fourteen days."
+            }
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "cs-i2c6-03-c",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "Ashwath Credit Limited has paid the fees demanded by the Registrar on its section 78 application. It may:",
+          "sourceRef": "Companies Act 2013, s. 78, proviso, and s. 86(1)",
+          "options": [
+            {
+              "key": "A",
+              "text": "Set the fees off against the secured debt only, and not recover them separately",
+              "explanation": "The proviso creates a free-standing entitlement to recover the amount from the company. It is not limited to a set-off against the debt."
+            },
+            {
+              "key": "B",
+              "text": "Recover the fees from the officers of the company who were in default",
+              "explanation": "Officers in default are liable to a PENALTY under s. 86(1), which is payable to the State. The proviso to s. 78 makes the fees recoverable from the company, not from its officers."
+            },
+            {
+              "key": "C",
+              "text": "Recover from the company the amount of any fees, additional fees or ad valorem fees it paid to the Registrar; and the company remains liable to penalty under section 86(1) notwithstanding that the charge-holder filed",
+              "explanation": "Correct on both limbs. The proviso to s. 78 gives the recovery right, and the opening words of s. 78 register the charge 'without prejudice to' the company's liability for any offence under Chapter VI — the filing by the holder does not cure the company's default."
+            },
+            {
+              "key": "D",
+              "text": "Recover the fees from the company, and the company's default is thereby cured so that no penalty is attracted",
+              "explanation": "The recovery right is correct but the cure is not. Section 78 opens with the words 'without prejudice to its liability in respect of any offence under this Chapter'."
+            }
+          ],
+          "correct": "C"
+        },
+        {
+          "id": "cs-i2c6-03-d",
+          "type": "mcq",
+          "numerical": false,
+          "stem": "On the appointment of the receiver on 4 January 2027, notice of the appointment must be given to the company and the Registrar by:",
+          "sourceRef": "Companies Act 2013, s. 84(1) and (2)",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ashwath Credit Limited, being the person who made the appointment under a power contained in the instrument, within thirty days of the appointment",
+              "explanation": "Correct. Section 84(1) puts the duty on the person who obtains the order or makes the appointment. The receiver's own notice duty under s. 84(2) arises only when he CEASES to hold the appointment."
+            },
+            {
+              "key": "B",
+              "text": "Nirvaan Analytics Limited, within thirty days of the appointment, since the charge is on its property",
+              "explanation": "The company is the recipient of the notice, not the giver. Section 84(1) names the person who obtained the order or made the appointment."
+            },
+            {
+              "key": "C",
+              "text": "The receiver, within thirty days of taking charge of the assets",
+              "explanation": "Two errors. The initial notice is the appointer's duty, and the period runs from the appointment, not from the receiver taking charge."
+            },
+            {
+              "key": "D",
+              "text": "Ashwath Credit Limited, within fourteen days of the appointment",
+              "explanation": "The appointer is right but the period is wrong. Fourteen days is the Registrar's window under s. 78 and the show-cause period under s. 82(2); section 84(1) allows thirty days."
+            }
+          ],
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,778 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Registration of Charges'
+description: 'CA Intermediate Paper 2 Ch 6 — what a charge is, why the Registrar must be told about it, and every clock in sections 77 to 87 of the Companies Act 2013: the 30/60/120-day creation windows, the 30/300-day satisfaction windows, the charge-holder route, deemed notice and the narrowed rectification power.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 6 · Registration of Charges'
+chapterSlug: registration-of-charges
+masteryId: i2-ch6
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87'
+  - 'Companies Act 2013, s. 2(16) (definition of charge)'
+  - 'Companies (Registration of Charges) Rules 2014 — forms CHG-1 to CHG-9, fees and exemptions (rules-level, amendment-sensitive)'
+  - 'Companies (Amendment) Ordinance 2019 / Companies (Amendment) Act 2019 — recast of ss. 77, 82, 86 and 87'
+  - 'Insolvency and Bankruptcy Code 2016 — the liquidator referred to in s. 77(3)'
+sourceLabel: 'Companies Act 2013 ss. 77–87 · ICAI SM Paper 2 Ch 6 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 24 min read · 7 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=registration-of-charges'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+A bank lends ₹9 crore to a manufacturer against its factory land and its whole stock of raw material.
+The documents are perfect: a registered mortgage deed, a hypothecation agreement, board resolutions,
+a personal guarantee. Two years later the company goes into liquidation. The bank files its claim as
+a secured creditor and is told that it ranks with the unsecured trade creditors — because nobody
+filed a form with the Registrar of Companies inside thirty days of signing.
+
+That is the whole of Chapter VI in one paragraph. Sections 77 to 87 do not decide *whether* security
+was validly created — the Transfer of Property Act and the Contract Act do that. They decide whether
+the world was **told**, and they attach a brutal consequence to silence. For the exam this is the
+purest **timeline chapter in Paper 2**: marks come from knowing *which clock*, *how many days*, *from
+what event*, *who may ask for more time*, and *what fee that costs*. Learn the table in §4 and §10
+and most of the paper's charge questions answer themselves.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · this chapter was rewritten in 2019">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. Sections 77, 82, 86 and 87 were all recast by the <strong>Companies
+    (Amendment) Ordinance 2019 / Companies (Amendment) Act 2019</strong>: the single 300-day
+    registration window became the layered <strong>30 / 60 / 120-day</strong> scheme, s. 86 gained a
+    fraud limb, and the Central Government's rectification power under s. 87 was <strong>cut
+    down</strong>. Older textbooks and older question banks still teach the 300-day rule for
+    <em>creation</em> — it now survives only for satisfaction and for pre-commencement charges. The
+    <strong>CHG form numbers, the fee slabs and the prescribed exemptions</strong> sit in the
+    <strong>Companies (Registration of Charges) Rules 2014</strong> and move more often still. Every
+    rules-level item is flagged below.
+  </p>
+</Callout>
+
+## 1. What a charge is — section 2(16)
+
+**Section 2(16)** — a **"charge"** means an **interest or lien created on the property or assets of a
+company or any of its undertakings, or both, as security**, and **includes a mortgage**.
+
+Take the definition apart, because each limb earns a mark:
+
+- **an interest or lien** — not ownership. The charge-holder gets a right *over* the asset, not the
+  asset. The company remains the owner and can still sell, subject to the charge.
+- **created on the property or assets** — of the company. A charge given by a *director* over his own
+  flat to secure the company's loan is not a charge on the company's property and is nothing to do
+  with s. 77.
+- **or any of its undertakings** — a whole business, as a going concern, may be charged.
+- **as security** — the purpose test. An absolute sale is not a charge; a transfer that is really a
+  security, whatever it is labelled, is.
+- **includes a mortgage** — the drafter's belt and braces, so that nobody argues a mortgage is a
+  transfer of interest rather than the creation of one.
+
+The security devices you will meet, and where each sits:
+
+| Device | How it works | Possession |
+|---|---|---|
+| **Mortgage** | transfer of an interest in **immovable** property to secure a debt | stays with the company (usually) |
+| **Hypothecation** | charge on **movables** — stock, book debts, plant — without delivery | stays with the company |
+| **Pledge** | **bailment of goods** as security, under the Contract Act | **delivered** to the pledgee |
+| **Lien** | a right to **retain** property until a debt is paid | already with the holder |
+
+Two context words the examiner uses without defining them. A **pari passu** charge means two or more
+charge-holders rank **equally** on the same asset and share the proceeds **rateably**, in the ratio of
+their dues, rather than one ranking ahead of the other. A **negative pledge** (or **negative lien**)
+clause is a promise by the company **not to create** any further charge on the charged assets without
+the lender's consent — it is a contractual restraint, not itself a charge.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Under the 1956 Act only nine specified kinds of charge were registrable. Under the 2013
+    Act, EVERY charge is.</strong> Section 77(1) says "every company creating a charge" and stops. The
+    old list — charges on uncalled capital, on immovable property, on book debts, floating charges, on
+    goodwill or patents, and so on — has gone, and questions built on it are testing whether you have
+    read the current section. The only carve-out is the proviso to s. 77(1), which lets the Government
+    <em>prescribe</em> exempt charges in consultation with the <strong>Reserve Bank of India</strong>;
+    that list lives in the Rules and is not a list of nine.
+  </p>
+</Callout>
+
+## 2. Fixed and floating charges
+
+The Act does not define the two. The distinction comes from case law — most usefully **Romer LJ's
+three tests** in *Re Yorkshire Woolcombers Association* — and it is the single most examinable piece
+of non-statutory material in this chapter.
+
+| | **Fixed (specific) charge** | **Floating charge** |
+|---|---|---|
+| **What it attaches to** | a **specific, ascertained and identified** asset, fixed at the moment of creation | a **class of assets, present and future**, the members of which change |
+| **Typical asset** | factory land, a named machine, a specific vehicle | stock-in-trade, book debts, the undertaking as a whole |
+| **Can the company deal with the asset?** | **No** — not without the charge-holder's consent | **Yes** — it may sell, buy and replace **in the ordinary course of business** |
+| **When does it attach?** | **immediately** on creation | only on **crystallisation** |
+| **Registration** | registrable under s. 77 | registrable under s. 77 |
+| **Priority** | generally ranks ahead | generally ranks behind a fixed charge on the same asset |
+| **Company's register (s. 85)** | must be entered | must be entered — s. 85(1) says "**all charges and floating charges**" |
+
+**Romer LJ's three marks of a floating charge.** A charge floats if **(1)** it is a charge on a
+**class** of assets, present and future; **(2)** that class is one which, **in the ordinary course of
+the company's business, changes from time to time**; and **(3)** until some step is taken by or on
+behalf of the charge-holder, **the company may carry on its business in the ordinary way** so far as
+that class of assets is concerned. All three together; the third is the practical test.
+
+**Crystallisation** is the moment a floating charge stops floating and **fastens on the assets then
+comprised in the class**, becoming, in effect, a fixed charge. It happens on:
+
+1. the **winding up** of the company;
+2. the company **ceasing to carry on business** or ceasing to be a going concern;
+3. the **appointment of a receiver or manager** over the charged assets;
+4. the charge-holder **taking steps to enforce** the security on default; or
+5. the occurrence of **any event the charge instrument itself specifies** as a crystallising event.
+
+<div class="formula">Floating charge + crystallising event → fixed charge on whatever is in the class at that moment. Assets sold in the ordinary course BEFORE crystallisation go to the buyer free of the charge; assets bought BEFORE crystallisation are caught by it.</div>
+
+<Callout kind="pointer">
+  <p>
+    <strong>The advantage of a floating charge is also its risk.</strong> It lets a company borrow
+    against stock it has not yet bought and debts it has not yet earned, while trading on normally —
+    the fixed charge cannot do that. The price is that the security is a moving target: the company
+    can run the stock down to nothing before crystallisation, and a later <em>fixed</em> charge over
+    the same assets will generally take priority over the earlier floating charge, which is why
+    lenders bolt a <strong>negative-pledge clause</strong> on to the debenture. Registration under
+    s. 77 does not change that priority contest — but by s. 80 it does put the later taker on
+    <strong>notice</strong> of the earlier charge.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 1 — is it fixed or floating, and what does it catch?">
+  <p>
+    Anantha Spinners Limited gives Sanchay Bank <strong>(i)</strong> a charge on its mill building at
+    Hubballi and <strong>(ii)</strong> a charge on "all raw cotton, yarn and finished fabric now owned
+    or hereafter acquired". On 3 June the company sells 40 tonnes of yarn to a regular customer and
+    buys 60 tonnes of raw cotton. On 21 June the bank appoints a receiver.
+  </p>
+  <p>
+    <strong>(i)</strong> is a <strong>fixed</strong> charge — one identified asset, ascertained at
+    creation; the company cannot sell the building without consent. <strong>(ii)</strong> satisfies all
+    three of Romer's tests and is a <strong>floating</strong> charge. <strong>The 3 June sale:</strong>
+    made in the ordinary course before crystallisation, so the customer takes the yarn <strong>free of
+    the charge</strong>. <strong>The 3 June purchase:</strong> the 60 tonnes fall into the class and are
+    caught. <strong>21 June:</strong> the appointment of the receiver <strong>crystallises</strong> the
+    floating charge, which now bites as a fixed charge on the stock then lying in the mill — and the
+    company can no longer deal with it. <strong>Both</strong> charges had to be registered under s. 77
+    and <strong>both</strong> go into the company's own register under s. 85.
+  </p>
+</Callout>
+
+## 3. The duty to register — section 77
+
+**Section 77(1)** puts the duty on the **company**, not on the lender:
+
+> It is the duty of **every company creating a charge** — **within or outside India**, on its
+> **property or assets or any of its undertakings**, **whether tangible or otherwise**, and situated
+> **in or outside India** — to **register the particulars of the charge**, signed by **the company and
+> the charge-holder**, together with the **instrument creating the charge**, in the prescribed form, on
+> payment of the prescribed fees, with the **Registrar**.
+
+Five things the section says that students routinely drop:
+
+1. **Every** charge — there is no registrable list (see §1).
+2. The charge may be created **within or outside India** and the property may be situated **in or
+   outside India**. An Indian company mortgaging a warehouse in Dubai must still file in India.
+3. The property may be **tangible or otherwise** — trade marks, patents, book debts, goodwill.
+4. The particulars must be signed by **both** the company **and** the charge-holder.
+5. The **instrument** creating the charge goes with the particulars; it is not enough to file a
+   summary.
+
+**Section 77(2)** — on registration the **Registrar issues a certificate of registration** to the
+**company and to the charge-holder**.
+
+**Section 77(1), third proviso** — any **subsequent** registration of a charge (that is, one made in
+an extended window rather than in the first thirty days) **shall not prejudice any right acquired in
+respect of the property before the charge is actually registered**. Late filing cures the charge going
+forward; it does not reach back and defeat someone who acquired an interest in the meantime.
+
+**Section 77(1), proviso** — the section **does not apply to such charges as may be prescribed in
+consultation with the Reserve Bank of India**. This is the only exemption route, and it is
+**rules-level**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · form numbers and the exemption list are rules-level">
+  <p>
+    In practice the filing is made in <strong>Form CHG-1</strong> for a charge <em>other than</em> one
+    relating to debentures, and in <strong>Form CHG-9</strong> for a charge relating to
+    <strong>debentures</strong> (including rectification). The Registrar's certificate issues in
+    <strong>CHG-2</strong> for a creation and <strong>CHG-3</strong> for a modification, and
+    <strong>Rule 6(3)</strong> of the Companies (Registration of Charges) Rules 2014 makes that
+    certificate <strong>conclusive evidence</strong> that the requirements of Chapter VI and the Rules
+    as to registration of the creation or modification have been complied with. The charges exempted
+    under the RBI proviso — certain short-term banking transactions — are likewise listed in those
+    Rules. <strong>Form numbers, fee slabs and the exemption list all change; the section numbers do
+    not.</strong> Answer from the section and name the form only as the vehicle.
+  </p>
+</Callout>
+
+## 4. The registration timeline — 30, 60 and 120 days
+
+This is the heart of the chapter. The scheme is **layered**: each window opens only because the
+previous one closed, each needs an **application to the Registrar**, and each costs more.
+
+<div class="formula">Charge created on or after the 2019 amendment commencement:<br />30 days as of right → a further 30 (to <strong>60 days from creation</strong>) on ADDITIONAL fees → a further 60 (to <strong>120 days from creation</strong>) on AD VALOREM fees.</div>
+
+**The master timeline table.**
+
+| Clock | Period | Runs from | Who asks / who allows | Fee |
+|---|---|---|---|---|
+| **Creation of a charge** — s. 77(1) | **30 days** | date of **creation** | duty of the **company**; no application needed | normal |
+| First extension — s. 77(1), first proviso (b) | up to **60 days** from creation | date of **creation** | **application by the company**; the **Registrar** may allow | **additional** fees |
+| Second extension — s. 77(1), second proviso (b) | a **further 60 days**, i.e. up to **120 days** from creation | date of **creation** | **application**; the **Registrar** may allow | **ad valorem** fees |
+| **Pre-commencement charges** — first proviso (a) | **300 days** from creation | date of **creation** | Registrar may allow | additional fees |
+| Pre-commencement fallback — second proviso (a) | **6 months** from the commencement of the 2019 Ordinance | **commencement** | — | additional fees |
+| **Modification** — s. 79 | **the same windows as creation** | date of **modification** | same | same |
+| **Charge-holder's route** — s. 78 | arises once the company's **30 days** lapse | expiry of the company's 30 days | **charge-holder** applies; Registrar acts **within 14 days after notice to the company** | holder pays, and **recovers from the company** |
+| **Satisfaction** — s. 82(1) | **30 days** | date of **payment or satisfaction** | duty of the **company** | normal |
+| Satisfaction, extended — s. 82(1) proviso | up to **300 days** from satisfaction | date of **payment or satisfaction** | application by the **company or the charge-holder**; Registrar may allow | additional fees |
+| Show cause to the charge-holder — s. 82(2) | **not exceeding 14 days** | date of the Registrar's **notice** | charge-holder answers | — |
+| Registrar informs affected parties — s. 83(2) | **30 days** | date of the **entry** in the register | Registrar | — |
+| **Receiver or manager** — s. 84(1) | **30 days** | date of the **order** or of the **appointment** | the person who obtained the order or made the appointment | — |
+
+<Callout kind="pointer">
+  <p>
+    <strong>Three sentences that carry most of the marks.</strong> (1) The 60-day and 120-day windows
+    are <strong>not automatic</strong> — the Registrar "may, on an application, allow", so a company
+    that simply files on day 100 without applying has filed nothing. (2) Every one of the creation
+    windows runs from the <strong>date of creation of the charge</strong>, never from the date the
+    money was drawn, the board resolution, or the date the deed was stamped or registered under the
+    Registration Act. (3) The fee escalates by <strong>window</strong>: normal → <strong>additional</strong>
+    → <strong>ad valorem</strong>. If an option offers "ad valorem fees within sixty days", it has
+    swapped the two.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 2 — one charge, three last dates">
+  <p>
+    Vindhya Ceramics Limited creates a charge over its kiln in favour of Sanchay Bank on
+    <strong>5 May 2026</strong>. Work out the last date under each window.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — count in days from the date of creation, excluding the day itself</div>
+    Window 1 · s. 77(1): 5 May 2026 + 30 days = <strong>4 June 2026</strong> (as of right, normal fees)<br />
+    Window 2 · first proviso (b): 5 May 2026 + 60 days = <strong>4 July 2026</strong> (on application, additional fees)<br />
+    Window 3 · second proviso (b): 5 May 2026 + 120 days = <strong>2 September 2026</strong> (on application, ad valorem fees)
+  </div>
+  <p>
+    Note what the arithmetic is <em>not</em>. It is not "one month, two months, four months" — 5 June,
+    5 July and 5 September are the three commonest wrong answers, and they appear as options because
+    students silently convert days into calendar months. It is also not 30 + 60 + 120 = 210 days: the
+    60 and the 120 are <strong>measured from creation</strong>, so the second window adds thirty days
+    and the third adds sixty.
+  </p>
+</Callout>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · charges created before the commencement">
+  <p>
+    A charge created <strong>before</strong> the commencement of the Companies (Amendment) Ordinance
+    2019 keeps the <strong>old scheme</strong>: 30 days as of right, and the Registrar may allow
+    registration <strong>within 300 days of creation</strong> on additional fees; if even that was
+    missed, registration had to be completed <strong>within six months from the commencement</strong>
+    of the Ordinance on additional fees. This transitional limb is now largely spent, but ICAI still
+    tests the contrast, so keep the two schemes apart by asking one question first —
+    <strong>when was the charge created?</strong> The <em>commencement date itself</em> is a
+    notification detail: verify it against the edition notified for your attempt before quoting it.
+  </p>
+</Callout>
+
+## 5. What non-registration costs — section 77(3) and (4)
+
+**Section 77(3)** — notwithstanding anything in any other law, **no charge created by a company shall
+be taken into account by the liquidator** appointed under the Companies Act 2013 or under the
+**Insolvency and Bankruptcy Code 2016**, **or by any other creditor**, unless it is **duly registered**
+under s. 77(1) **and** a **certificate of registration** has been given by the Registrar under
+s. 77(2).
+
+**Section 77(4)** — nothing in sub-section (3) shall **prejudice any contract or obligation for the
+repayment of the money secured** by the charge.
+
+<div class="formula">Unregistered charge = <strong>void against the liquidator and other creditors</strong> · but <strong>valid between the company and the charge-holder</strong> · and the <strong>debt survives in full</strong> as an unsecured debt.</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>"The charge is void" is only half a sentence — and the missing half is where the marks
+    are.</strong> Non-registration does <strong>not</strong> make the loan void, does not make the
+    money irrecoverable, and does not release the borrower. It destroys only the <em>security</em>, and
+    only <em>as against</em> the liquidator and other creditors. Between the lender and the company
+    the charge still stands, so the lender may enforce it against the company itself while the company
+    is a going concern; the moment insolvency arrives, the security is invisible and the lender queues
+    up with the unsecured creditors. Write both limbs — s. 77(3) <em>and</em> s. 77(4) — in every
+    answer on this point.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 3 — the unregistered charge, worked both ways">
+  <p>
+    Meghna Finance lends ₹4 crore to Trilok Papers Limited on 12 January 2026 against a hypothecation
+    of its book debts. Nobody files anything with the Registrar. In November 2026 Trilok Papers goes
+    into liquidation owing ₹4 crore to Meghna and ₹6 crore to trade creditors.
+  </p>
+  <p>
+    <strong>1 · Is the loan recoverable?</strong> Yes. Section 77(4) preserves the contract; Meghna is
+    a creditor for the whole ₹4 crore. <strong>2 · Is it secured?</strong> No. The liquidator cannot
+    take the charge into account under s. 77(3), so Meghna proves as an <strong>unsecured</strong>
+    creditor and shares rateably with the trade creditors. <strong>3 · Whose default was it?</strong>
+    The <strong>company's</strong> — the duty is on the company under s. 77(1) — and s. 86 penalises the
+    company and every officer in default. <strong>4 · What could Meghna have done?</strong> Applied
+    under <strong>s. 78</strong> once the company's thirty days lapsed, registered the charge itself,
+    and recovered the fees from the company. <strong>5 · Can the Central Government cure it now?</strong>
+    <strong>No</strong> — since the 2019 amendment, s. 87 no longer allows condonation of delay in
+    registering the <em>creation</em> of a charge (§13). <strong>6 · If liquidation had not
+    intervened?</strong> Meghna could still have enforced the hypothecation against Trilok Papers
+    itself; s. 77(3) speaks only of the liquidator and other creditors.
+  </p>
+</Callout>
+
+## 6. Registration by the charge-holder — section 78
+
+The company owns the duty; s. 78 gives the lender a self-help remedy when the company sits on it.
+
+**Section 78** — where a company **fails to register the charge within the thirty days** referred to
+in s. 77(1), then **without prejudice to the company's liability for any offence** under Chapter VI,
+the **person in whose favour the charge is created** may apply to the **Registrar** for registration,
+with the instrument, in the prescribed time, form and manner. The Registrar may, on such application,
+**within fourteen days after giving notice to the company**, allow the registration on payment of the
+prescribed fees — **unless the company itself registers the charge, or shows sufficient cause why the
+charge should not be registered**.
+
+**Proviso** — where the registration is effected on the application of the charge-holder, **he is
+entitled to recover from the company** the amount of any **fees, additional fees or ad valorem fees**
+paid by him to the Registrar.
+
+The mechanics, in order:
+
+1. The company's **thirty days** under s. 77(1) expire without registration. Only then does the
+   holder's right arise.
+2. The **charge-holder applies** to the Registrar with the instrument.
+3. The Registrar **gives notice to the company**.
+4. **Within fourteen days after that notice**, the Registrar may allow the registration — unless the
+   company registers it first, or shows sufficient cause against registration.
+5. The holder **recovers his fees from the company**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Three misreadings of the fourteen days.</strong> It is <em>not</em> a period the
+    charge-holder gets to apply in; it is <em>not</em> measured from the application; and it is
+    <em>not</em> the show-cause period under s. 82(2). It is the window in which the
+    <strong>Registrar</strong> may act, counted from the date he <strong>gives notice to the
+    company</strong>. Also note that s. 78 does not transfer the <em>duty</em> — the company remains
+    the defaulter under s. 86 even after the holder files.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 4 — the lender rescues its own security">
+  <p>
+    Kaveri Logistics Limited creates a charge in favour of Ashwath Credit Limited on <strong>12
+    February 2026</strong>. The company files nothing. Ashwath Credit applies under s. 78 and the
+    Registrar issues notice to the company on <strong>20 April 2026</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — two separate clocks</div>
+    Company's window (s. 77(1)): 12 Feb 2026 + 30 days = <strong>14 March 2026</strong><br />
+    Ashwath's right arises on the failure, i.e. from <strong>15 March 2026</strong><br />
+    Registrar's window (s. 78): notice 20 April 2026 + 14 days = <strong>4 May 2026</strong>
+  </div>
+  <p>
+    If Kaveri Logistics itself registers the charge on 28 April, the Registrar does not proceed on
+    Ashwath's application — the section is expressly subject to the company doing it first. Whoever
+    files, Ashwath may bill the company for the fees it paid. And Kaveri Logistics is still in default
+    under s. 86 for the period it let run.
+  </p>
+</Callout>
+
+## 7. Modification of a charge — section 79
+
+**Section 79** applies the whole of s. 77 — the duty, the windows, the certificate, the consequence —
+to two further situations:
+
+- **s. 79(a)** — a company **acquiring any property which is already subject to a charge**. It did not
+  create the charge; it bought the encumbrance. It must still register.
+- **s. 79(b)** — **any modification** in the **terms or conditions**, or in the **extent or
+  operation**, of a charge already registered under s. 77.
+
+What counts as a modification: a change in the **rate of interest** (other than a bank-rate-linked
+change), a change in the **amount** secured, a change in the **assets** charged (adding or releasing
+property), a change in the **ranking** of the charge, a **partial release**, and an **assignment** of
+the charge to another holder. The clock runs from the **date of the modification**, and the layered
+30 / 60 / 120-day scheme applies to it exactly as to a creation.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Section 79 is the reason a "no new charge was created" answer is usually wrong.</strong> A
+    company that merely re-negotiates its existing facility, or releases one of five charged godowns,
+    or lets its lender assign the debenture to another bank, has <strong>modified</strong> a registered
+    charge and has thirty days to say so. The registrable event under s. 79(a) is not even a company
+    act at all — it is the <em>purchase of encumbered property</em>.
+  </p>
+</Callout>
+
+## 8. Deemed notice — section 80
+
+**Section 80** — where a charge on any property or assets of a company, or any of its undertakings, is
+**registered under s. 77**, **any person acquiring** such property, assets or undertaking, or any part
+of it, **or any share or interest in it**, is **deemed to have notice of the charge from the date of
+such registration**.
+
+This is the pay-off for registration and the mirror image of s. 77(3). The register is public
+(s. 81(2)), so the law fixes the buyer with knowledge of what it contains whether or not he looked.
+Three precise points:
+
+- Notice runs **from the date of registration**, not from the date the charge was created and not from
+  the date of the Registrar's certificate.
+- The person fixed is **the acquirer of the property**, not the general public and not the company's
+  own members.
+- The deeming is a consequence of **registration**. An **unregistered** charge gives no deemed notice
+  at all — a further reason the unregistered charge-holder loses the priority contest.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Do not confuse s. 80 with the doctrine of constructive notice from Chapter 2.</strong>
+    Constructive notice fixes everyone dealing with a company with knowledge of its
+    <em>memorandum and articles</em>. Section 80 fixes a <em>person acquiring charged property</em>
+    with knowledge of <em>a registered charge</em>, from a fixed date. Different documents, different
+    audience, different trigger.
+  </p>
+</Callout>
+
+## 9. The register kept by the Registrar — section 81
+
+**Section 81(1)** — the **Registrar** shall, **in respect of every company**, keep a **register
+containing particulars of the charges registered** under Chapter VI, in the prescribed form and
+manner. **Section 81(2)** — that register is **open to inspection by any person on payment of the
+prescribed fees for each inspection**.
+
+Keep the two registers apart; the examiner tests exactly this pairing.
+
+| | **s. 81 — kept by the REGISTRAR** | **s. 85 — kept by the COMPANY** |
+|---|---|---|
+| Where | at the Registrar's office | at the **registered office** |
+| Contents | particulars of charges **registered** under Chapter VI | **all charges and floating charges** affecting the company's property, plus a **copy of the instrument** creating each charge |
+| Who may inspect | **any person**, on payment of fees | **members and creditors free**; **any other person** on payment of fees |
+| Restrictions | none stated | reasonable restrictions the **articles** may impose |
+| Form | prescribed | **CHG-7** (rules-level) |
+
+## 10. Satisfaction of a charge — sections 82 and 83
+
+A charge does not disappear from the register when the loan is repaid. Somebody has to say so.
+
+**Section 82(1)** — a company shall give **intimation to the Registrar of the payment or satisfaction
+in full** of any charge registered under Chapter VI, **within thirty days from the date of such
+payment or satisfaction**. **Proviso** — the **Registrar may, on an application by the company or the
+charge-holder**, allow the intimation to be made **within three hundred days** of the payment or
+satisfaction, **on payment of additional fees**.
+
+**Section 82(2)** — on receiving the intimation the Registrar **causes a notice to be sent to the
+holder of the charge**, calling on him to **show cause within a time not exceeding fourteen days** as
+specified in the notice, why the payment or satisfaction should not be recorded as intimated. **If no
+cause is shown**, the Registrar **orders that a memorandum of satisfaction be entered** in the register
+kept under s. 81, and **informs the company** that he has done so. **Proviso** — **no such notice is
+required** where the **intimation is in the specified form and is signed by the holder of the charge**.
+
+**Section 82(3)** — **if cause is shown**, the Registrar **records a note to that effect** in the
+register of charges and **informs the company** accordingly. He does not adjudicate the dispute; he
+records it.
+
+**Section 82(4)** — nothing in s. 82 affects the Registrar's power to make an entry under **s. 83**, or
+otherwise than on an intimation from the company.
+
+**Section 83 — the Registrar's own power.** On **evidence given to his satisfaction** with respect to
+any registered charge that **(a)** the debt for which the charge was given has been **paid or satisfied
+in whole or in part**, or **(b)** **part of the property or undertaking charged has been released** from
+the charge or has **ceased to form part** of the company's property or undertaking, the Registrar may
+**enter a memorandum of satisfaction in whole or in part** — or of the release — **notwithstanding that
+no intimation has been received from the company**. **Section 83(2)** — he shall **inform the affected
+parties within thirty days of making the entry**.
+
+<div class="formula">Satisfaction: <strong>30 days</strong> from payment as of right → up to <strong>300 days</strong> from payment on application (company OR charge-holder) with additional fees. Show cause: <strong>not exceeding 14 days</strong> from the Registrar's notice — and <strong>no notice at all</strong> if the holder signed the intimation.</div>
+
+<Callout kind="pointer">
+  <p>
+    <strong>The 300 days survived the 2019 recast only here.</strong> For a <em>creation</em> the
+    300-day window was replaced by 60 and 120 days; for a <em>satisfaction</em> it is still 300 days.
+    Any option that offers 300 days for registering the creation of a post-amendment charge, or 120
+    days for intimating a satisfaction, has crossed the two sections. Note too that the 2019 amendment
+    added the words <strong>"or the charge holder"</strong> to the s. 82(1) proviso — before that only
+    the company could ask.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 5 — satisfaction, two clocks and a show-cause notice">
+  <p>
+    Trilok Papers Limited repays its term loan in full on <strong>9 September 2026</strong>. It does
+    nothing. The charge-holder later applies to the Registrar for an extension. When the intimation is
+    eventually filed — not signed by the holder — the Registrar issues a show-cause notice dated
+    <strong>3 November 2026</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — three independent counts</div>
+    s. 82(1), as of right: 9 Sep 2026 + 30 days = <strong>9 October 2026</strong><br />
+    s. 82(1) proviso, on application with additional fees: 9 Sep 2026 + 300 days = <strong>6 July 2027</strong><br />
+    s. 82(2), show cause: 3 Nov 2026 + 14 days = <strong>17 November 2026</strong>
+  </div>
+  <p>
+    Two refinements. <strong>Who may apply for the extension:</strong> after the 2019 amendment,
+    <strong>the company or the charge-holder</strong> — here the holder, who wants the register
+    cleared. <strong>Why the notice issued at all:</strong> because the intimation was not signed by
+    the holder; had it been in the specified form and signed by him, the proviso to s. 82(2) dispenses
+    with the notice entirely and the Registrar can move straight to the memorandum of satisfaction.
+  </p>
+</Callout>
+
+## 11. Receivers and managers — section 84
+
+**Section 84(1)** — if any person **obtains an order** for the appointment of a **receiver** of, or of a
+person to **manage**, property of a company that is **subject to a charge**, **or** if any person
+**appoints** such a receiver or manager **under a power contained in any instrument**, he shall —
+**within thirty days from the date of the passing of the order or of the making of the appointment** —
+give **notice of the appointment to the company and to the Registrar**, with a **copy of the order or
+instrument**. The Registrar then, on payment of the prescribed fees, **registers particulars** of the
+receiver, person or instrument in the register of charges.
+
+**Section 84(2)** — the person appointed shall, **on ceasing to hold the appointment**, give **notice
+to that effect to the company and the Registrar**, and the Registrar shall register the notice.
+
+Three exam points. The duty is on the **appointer or the person who obtained the order** — not on the
+company and not on the receiver's own initiative for the appointment. The **thirty days run from the
+order, or from the appointment**, whichever route was used, not from the date the receiver takes
+charge. And the **cessation** notice under 84(2) carries no stated period in the section.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · CHG-6">
+  <p>
+    Both the appointment notice and the cessation notice are filed in <strong>Form CHG-6</strong> under
+    the Companies (Registration of Charges) Rules 2014. The form number is rules-level; the thirty days
+    in s. 84(1) are statutory. Quote the section for the period and the form only as the vehicle.
+  </p>
+</Callout>
+
+## 12. The register of charges kept by the company — section 85
+
+**Section 85(1)** — **every company** shall keep, **at its registered office**, a **register of
+charges** in the prescribed form, which shall include **all charges and floating charges** affecting
+any property or assets of the company or any of its undertakings, with the prescribed particulars.
+**Proviso** — a **copy of the instrument creating the charge** shall also be kept at the registered
+office **along with the register**.
+
+**Section 85(2)** — the register and the instruments are **open to inspection during business hours**:
+
+- **(a)** by **any member or creditor**, **without payment of any fee**; and
+- **(b)** by **any other person**, on payment of the prescribed fee,
+
+**subject to such reasonable restrictions as the company may, by its articles, impose**.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Two register questions, two different free lists.</strong> Under <strong>s. 81(2)</strong>
+    the Registrar's register is open to <strong>any person on payment of fees</strong> — nobody
+    inspects it free. Under <strong>s. 85(2)</strong> the company's own register is free for
+    <strong>members and creditors</strong> and charged to everyone else, and only the company's register
+    is subject to restrictions in the <em>articles</em>. Note also the words "all charges
+    <strong>and floating charges</strong>" in s. 85(1): the drafter is making sure a floating charge
+    cannot be left out on the argument that it has not yet attached to anything.
+  </p>
+</Callout>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · CHG-7 and the preservation periods">
+  <p>
+    The company's register is kept in <strong>Form CHG-7</strong>, with entries authenticated by a
+    director or the company secretary or another person authorised by the Board. The Rules also fix
+    <strong>preservation periods</strong> — the register permanently, and the instrument creating a
+    charge for a stated number of years from the date of satisfaction. Both the form and the
+    preservation periods are <strong>rules-level</strong> and are not examined in this chapter's bank.
+  </p>
+</Callout>
+
+## 13. Punishment and rectification — sections 86 and 87
+
+**Section 86(1)** — if a company is **in default in complying with any provision of Chapter VI**, the
+**company** is liable to a **penalty**, and **every officer of the company who is in default** is liable
+to a **penalty**. The regime is **penalty-based**: the earlier fine-and-imprisonment structure for
+officers was replaced by amendment.
+
+**Section 86(2)** — inserted by the Companies (Amendment) Act 2019 — if **any person wilfully furnishes
+any false or incorrect information, or knowingly suppresses any material information, which is
+required to be registered under s. 77**, he shall be **liable for action under section 447** (fraud).
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the rupee figures in s. 86(1)">
+  <p>
+    The <strong>amounts</strong> of the penalties in s. 86(1) — and the removal of imprisonment for
+    officers — were changed by the amendment Acts of 2019 and 2020. The notes therefore state s. 86(1)
+    <strong>qualitatively</strong>, and <strong>no question in this chapter's bank turns on the
+    figures</strong>. What is examined is the <em>character</em> of the liability (penalty, not fine)
+    and the <strong>s. 86(2) fraud limb</strong>, whose two mental elements — <em>wilfully</em>
+    furnishing false information, <em>knowingly</em> suppressing material information — are the
+    marks-bearing words.
+  </p>
+</Callout>
+
+**Section 87 — rectification by the Central Government.** As substituted in 2019, the section is
+narrow. The Central Government, on being satisfied that —
+
+- **(a)** the **omission to give intimation to the Registrar of the payment or satisfaction of a
+  charge** within the time required under Chapter VI; **or**
+- **(b)** the **omission or mis-statement of any particulars** in any filing previously made to the
+  Registrar in respect of a charge, its modification, a memorandum of satisfaction, or any other entry
+  made under s. 82 or s. 83,
+
+was **accidental, or due to inadvertence, or due to some other sufficient cause**, **or** is **not of a
+nature to prejudice the position of the creditors or shareholders** of the company, may — **on the
+application of the company or any person interested**, and on such terms and conditions as it thinks
+just and expedient — **direct** that the **time for giving the intimation of payment or satisfaction be
+extended**, or that the **omission or mis-statement be rectified**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The single most examinable change in this chapter: s. 87 can no longer condone delay in
+    registering the CREATION of a charge.</strong> Before the 2019 amendment the Central Government
+    could extend the time for filing the particulars of a charge itself. That limb was
+    <strong>deleted</strong>. What survives is only <strong>(a)</strong> late intimation of
+    <em>satisfaction</em> and <strong>(b)</strong> omissions or mis-statements in filings already made.
+    So a company that has blown all three creation windows in s. 77 has <strong>no relief anywhere</strong>
+    — not from the Registrar, whose power stops at 120 days, and not from the Central Government. Any
+    option offering "apply to the Central Government under s. 87 for condonation of the delay in
+    registering the charge" is a post-2019 trap.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 6 — every window missed, and what is left">
+  <p>
+    Sarvodaya Textiles Limited creates a charge on 18 March 2026 and files nothing. Its finance head
+    discovers the lapse on 20 August 2026 and proposes: (i) file now with ad valorem fees; (ii) failing
+    that, apply to the Central Government under s. 87; (iii) failing that, have the lender file under
+    s. 78.
+  </p>
+  <p>
+    <strong>(i) The windows.</strong> 30 days ended <strong>17 April 2026</strong>; 60 days
+    <strong>17 May 2026</strong>; 120 days <strong>16 July 2026</strong>. On 20 August every window is
+    shut, and the Registrar has no residual power. <strong>(ii) Section 87 does not help</strong> —
+    post-2019 it reaches only the intimation of <em>satisfaction</em> and omissions or mis-statements
+    in filings already made, not the delay in registering a creation. <strong>(iii) Section 78 does
+    not help either</strong> — it lets the charge-holder step into the company's shoes, but it does not
+    create a fresh window; the outer limit of 120 days has passed for everyone.
+    <strong>Consequence:</strong> the charge is void against the liquidator and other creditors under
+    s. 77(3), the debt survives under s. 77(4), and the company and its officers in default face
+    penalties under s. 86(1). <strong>The one practical route left</strong> is commercial, not
+    statutory: create a <em>fresh</em> charge and register that one on time — and it takes effect only
+    from its own creation, with no reach-back over rights acquired in between (third proviso to
+    s. 77(1)).
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 7 — a modification, a receiver and a satisfaction in one chain">
+  <p>
+    Nirvaan Analytics Limited has a registered floating charge in favour of Ashwath Credit Limited. On
+    6 October 2026 the parties raise the secured amount and add a godown to the charged assets. On
+    7 January 2027 Ashwath Credit appoints a receiver under a power in the debenture. In due course the
+    debt is paid off and Ashwath Credit signs the intimation of satisfaction in the specified form.
+  </p>
+  <p>
+    <strong>1 · 6 October 2026 is a modification</strong> under s. 79(b) — both the extent and the
+    assets changed — so the s. 77 windows apply from that date: 30 days to <strong>5 November
+    2026</strong>, 60 days to 5 December 2026, 120 days to 3 February 2027. <strong>2 · The
+    appointment crystallises</strong> the floating charge, and <strong>Ashwath Credit</strong> — the
+    appointer, not the company and not the receiver — must give notice to the company and the Registrar
+    <strong>within thirty days of the appointment</strong>, i.e. by <strong>6 February 2027</strong>
+    (s. 84(1)). <strong>3 · On satisfaction</strong>, the company has 30 days to intimate (extendable
+    to 300 days on application by the company <em>or the holder</em>), and because the intimation is in
+    the specified form and <strong>signed by the holder</strong>, the proviso to s. 82(2) means the
+    Registrar sends <strong>no show-cause notice</strong> and proceeds to the memorandum of
+    satisfaction. <strong>4 · When the receiver goes</strong>, he must himself notify the company and
+    the Registrar under s. 84(2).
+  </p>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+1. **Saying only "the charge is void".** It is void **against the liquidator and other creditors**; it
+   is good between the company and the holder, and **the debt survives in full** (s. 77(3) with
+   s. 77(4)).
+2. **Using 300 days for a creation.** Post-amendment, 300 days survives only for **satisfaction**
+   (s. 82) and for **pre-commencement** charges. Creation is **30 / 60 / 120**.
+3. **Treating the 60 and 120-day windows as automatic.** Each needs an **application** and the
+   Registrar's leave; the fees escalate from normal to **additional** to **ad valorem**.
+4. **Adding the windows.** 60 and 120 are measured **from creation**, not from the end of the previous
+   window. They are not 30 + 60 + 120.
+5. **Starting the clock at the wrong event.** Creation runs from the **date of creation**; modification
+   from the **date of modification**; satisfaction from the **date of payment or satisfaction**;
+   s. 84 from the **order or the appointment**; the s. 78 fourteen days from the Registrar's **notice
+   to the company**; the s. 82(2) fourteen days from the Registrar's **notice to the holder**.
+6. **Confusing the two fourteen-day rules.** s. 78 — the **Registrar** may allow registration within 14
+   days **after giving notice to the company**. s. 82(2) — the **charge-holder** must show cause within
+   a period **not exceeding 14 days** of the Registrar's notice.
+7. **Putting the s. 77 duty on the lender.** It is the **company's** duty. Section 78 gives the lender
+   a remedy; it does not shift the default or excuse the company under s. 86.
+8. **Applying to the Central Government under s. 87 to condone a late creation filing.** That limb was
+   **deleted in 2019**.
+9. **Mixing up the two registers.** s. 81 — Registrar's register, **any person on fees**. s. 85 —
+   company's register at the **registered office**, **free for members and creditors**, with the
+   **instrument copies**, subject to restrictions in the **articles**.
+10. **Forgetting s. 79(a).** Buying property that is **already charged** is registrable even though the
+    company created nothing.
+11. **Reading s. 80 as constructive notice of the memorandum and articles.** It fixes **a person
+    acquiring the charged property** with notice **of the charge**, **from the date of registration**.
+12. **Leaving a floating charge out of the company's register.** Section 85(1) says "all charges **and
+    floating charges**".
+
+## One-page revision summary
+
+**Every clock in the chapter.**
+
+| Clock | Period | Runs from | Fee |
+|---|---|---|---|
+| Registration of a **creation** (s. 77(1)) | **30 days** | date of **creation** | normal |
+| First extension (s. 77(1) proviso 1(b)) | to **60 days** from creation | date of creation | **additional** |
+| Second extension (s. 77(1) proviso 2(b)) | to **120 days** from creation | date of creation | **ad valorem** |
+| Pre-commencement charge (proviso 1(a)) | **300 days** | date of creation | additional |
+| Pre-commencement fallback (proviso 2(a)) | **6 months** | commencement of the 2019 Ordinance | additional |
+| **Modification** (s. 79) | **same as creation** | date of **modification** | same |
+| Registrar's action on a charge-holder's application (s. 78) | **14 days** | Registrar's **notice to the company** | holder pays, recovers from company |
+| Intimation of **satisfaction** (s. 82(1)) | **30 days** | date of **payment/satisfaction** | normal |
+| Extended intimation (s. 82(1) proviso) | **300 days** | date of payment/satisfaction | additional |
+| Show cause by the charge-holder (s. 82(2)) | **not exceeding 14 days** | Registrar's **notice to the holder** | — |
+| Registrar informs affected parties (s. 83(2)) | **30 days** | the **entry** in the register | — |
+| Notice of a **receiver or manager** (s. 84(1)) | **30 days** | the **order** or the **appointment** | — |
+
+**Core positions.** **s. 2(16)** — an **interest or lien** on the company's property or assets or any
+of its undertakings, **as security**, and **includes a mortgage**. **Fixed vs floating** — specific
+identified asset, company cannot deal, attaches at once *versus* a changing class, ordinary-course
+dealing allowed, attaches on **crystallisation** (winding up · cessation of business · appointment of a
+receiver · enforcement · a stipulated event); Romer's three tests. **s. 77** — duty on the
+**company**; **every** charge; created **in or outside India**, property **in or outside India**,
+**tangible or otherwise**; particulars signed by **company and charge-holder** with the **instrument**;
+certificate of registration under **77(2)**; **77(3)** the unregistered charge is **not taken into
+account by the liquidator or any other creditor**; **77(4)** the **debt survives**; third proviso —
+late registration does **not prejudice rights acquired before actual registration**; the only exemption
+is prescribed **in consultation with the RBI**. **s. 78** — on the company's failure inside 30 days, the
+**charge-holder** may apply; Registrar acts **within 14 days of notice to the company** unless the
+company registers or shows cause; the holder **recovers the fees**. **s. 79** — applies s. 77 to a
+**modification** and to **acquiring property already subject to a charge**. **s. 80** — a person
+**acquiring** the charged property has **deemed notice from the date of registration**. **s. 81** —
+Registrar's register, inspection by **any person on fees**. **s. 82** — intimate satisfaction in **30
+days**, extendable to **300 days** on application by the **company or the charge-holder**; Registrar
+sends a **show-cause notice** (**≤ 14 days**) to the holder **unless** the intimation is in the
+specified form and **signed by the holder**; no cause shown → **memorandum of satisfaction**; cause
+shown → a **note** in the register. **s. 83** — the Registrar may enter satisfaction or release
+**suo motu** on evidence, **without any intimation**, and must **inform affected parties within 30
+days**. **s. 84** — the **appointer**, or the person who obtained the order, gives notice to the
+company and the Registrar **within 30 days**; the receiver notifies **cessation**. **s. 85** — the
+company keeps a register of **all charges and floating charges** at its **registered office** with
+**copies of the instruments**; **free** inspection for **members and creditors**, fees for others,
+subject to the **articles**. **s. 86** — **penalty** on the company and every officer in default;
+**86(2)** — wilfully false or knowingly suppressed information required under s. 77 → **s. 447**.
+**s. 87** — the Central Government may extend the time for intimating **satisfaction**, or rectify an
+**omission or mis-statement**, where accidental, inadvertent, for sufficient cause, or not prejudicial
+to creditors or shareholders — **but it can no longer condone a late registration of a creation**.
+
+**Forms, for context only (rules-level).** CHG-1 creation/modification other than debentures · CHG-9
+debentures · CHG-2 and CHG-3 certificates · CHG-4 intimation of satisfaction · CHG-5 memorandum of
+satisfaction · CHG-6 receiver or manager · CHG-7 the company's own register · CHG-8 application to the
+Central Government under s. 87.

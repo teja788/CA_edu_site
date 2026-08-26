@@ -1,0 +1,799 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Acceptance of Deposits by Companies'
+description: 'CA Intermediate Paper 2 Ch 5 — when money a company receives becomes a regulated deposit: section 2(31), the rule 2(1)(c) exclusion list, sections 73 to 76A, the private-company relaxation, the eligible-company route, and every ceiling, clock and form in the Deposit Rules worked through scenarios.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 5 · Acceptance of Deposits'
+chapterSlug: acceptance-of-deposits
+masteryId: i2-ch5
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 2(31), 73, 74, 75, 76 and 76A'
+  - 'Companies (Acceptance of Deposits) Rules 2014 — rules 2, 3, 4, 5, 6, 7, 10 to 17 (rules-level, amendment-sensitive)'
+  - 'MCA exemption notification for private companies dated 5 June 2015, as amended 13 June 2017'
+  - 'Companies Act 2013, s. 180(1)(c) (borrowing limits) and s. 447 (fraud) — read across'
+  - 'Section 73(2)(d) (deposit insurance) stands omitted'
+sourceLabel: 'Companies Act 2013 ss. 73–76A + Deposit Rules 2014 · ICAI SM Paper 2 Ch 5 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 26 min read · 6 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=acceptance-of-deposits'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Sharada Ceramics Limited ends March with ₹6.8 crore of other people's money on its books. A supplier
+has paid ₹90 lakh in advance for tiles due in November. A director has lent the company ₹40 lakh. A
+customer has left ₹25 lakh as a performance security. Fifty-two shareholders have placed ₹3.1 crore
+with the company at 11% for three years. A sister company has parked ₹2 crore. Six employees have
+each lodged a month's pay as a security deposit.
+
+Exactly **one** of those buckets is a *deposit*. The rest are excluded — some absolutely, some only
+while a condition holds. And the difference is not academic: get it wrong and the company owes a
+penalty that starts at ₹1 crore, its officers face imprisonment, and the depositor can drag it to the
+NCLT.
+
+That is the whole chapter. **Chapter V of the Companies Act 2013 does not regulate borrowing; it
+regulates a particular way of borrowing — taking money from the public and from members without the
+discipline of a bank, a charge or a prospectus.** Everything else follows: a definition, a long list
+of things the definition does not catch, a general prohibition, two narrow gateways through it, a
+book of ceilings and clocks, and a penalty.
+
+For the exam, marks come from three habits. **One**, ask *who paid the money and why* before you ask
+anything else — the exclusion list is organised by payer and purpose, not by amount. **Two**, keep
+the three ceilings apart (35% · 100% · 10% + 25%) and know which company each belongs to. **Three**,
+know which numbers sit in the **Act** (stable) and which sit in the **Rules** (moved repeatedly).
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · two-thirds of this chapter lives in the Rules">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. The <em>section</em> text of ss. 73 to 76A is comparatively stable —
+    but the <strong>Companies (Acceptance of Deposits) Rules 2014</strong> have been amended almost
+    every year since notification, and the amendments have touched exactly the things questions are
+    set on: the <strong>exclusion list in rule 2(1)(c)</strong> (the start-up convertible note, the
+    alternate-investment-fund entry and the 365-day advance rule were all inserted or reworked after
+    2014), the <strong>percentage ceilings in rule 3</strong>, the <strong>deposit-insurance
+    requirement</strong> (s. 73(2)(d) now <strong>stands omitted</strong>), and the
+    <strong>penalty figures in ss. 74(3) and 76A</strong>. Every rules-level number below carries its
+    own flag. Re-check each against the SM edition notified for your attempt.
+  </p>
+</Callout>
+
+## 1. The money question — what section 2(31) calls a deposit
+
+**Section 2(31)** is deliberately wide at the front and narrow at the back:
+
+> a **deposit** *includes* any **receipt of money by way of deposit or loan or in any other form** by
+> a company, **but does not include such categories of amount as may be prescribed** in consultation
+> with the Reserve Bank of India.
+
+Three things follow, and each is worth a mark.
+
+**The definition is inclusive, not exhaustive.** "Deposit or loan **or in any other form**" catches
+whatever label the parties put on the receipt. Calling money an "advance", a "security", a
+"contribution" or an "interest-free loan" changes nothing. What matters is whether the receipt falls
+inside a prescribed exclusion.
+
+**The exclusions are prescribed, not statutory.** They sit in **rule 2(1)(c) of the Companies
+(Acceptance of Deposits) Rules 2014** — subordinate legislation made **in consultation with the
+RBI**. That is why the list moves so often, and why an answer that treats an exclusion as if it were
+in the Act is only half right.
+
+**A deposit is money the company must give back.** Share capital is not a deposit because it is never
+repayable as such; a sale price is not a deposit because it is not repayable at all. The moment a
+receipt carries an obligation to return money, ask whether an exclusion saves it.
+
+<div class="formula">Receipt of money by a company · in ANY form · repayable → a deposit, UNLESS it falls in the rule 2(1)(c) exclusion list</div>
+
+<Callout kind="pointer">
+  <p>
+    <strong>Chapter V does not apply to everyone.</strong> The first proviso to s. 73(1) puts a
+    <strong>banking company</strong>, a <strong>non-banking financial company</strong> registered with
+    the RBI, and <strong>such other company as the Central Government may specify after consultation
+    with the RBI</strong> outside the sub-section altogether — they are regulated by the RBI instead.
+    <strong>Nidhi companies</strong> (s. 406) and <strong>chit</strong> subscriptions are handled by
+    the exclusion list rather than by the proviso. Never write that "no company may accept deposits";
+    write that <em>a company governed by Chapter V</em> may not, except through ss. 73(2) and 76.
+  </p>
+</Callout>
+
+## 2. The exclusion list — rule 2(1)(c) in working order
+
+The list is long, so learn it by **payer** and by **purpose** rather than by clause number. The table
+is the spine of the chapter; the paragraphs after it carry the conditions that examiners hang
+questions on.
+
+| Group | What is excluded | The condition that can destroy the exclusion |
+|---|---|---|
+| **Sovereign & public** | Money from the Central or a State Government, money whose repayment is **guaranteed** by them, money from a local authority or a statutory authority | none — an absolute exclusion |
+| **Foreign** | Money from foreign governments, foreign or international banks, multilateral financial institutions, foreign export-credit agencies, foreign collaborators, foreign bodies corporate, foreign citizens and persons resident outside India | must comply with **FEMA 1999** and the regulations under it |
+| **Institutional lenders** | Loans or facilities from a **banking company**, a co-operative bank, a **public financial institution**, a scheduled bank, an insurance company or a notified regional financial institution | none, so long as the lender is of that description |
+| **Money-market paper** | Money against **commercial paper** or any other instrument issued in accordance with RBI directions | issue must follow RBI directions |
+| **Inter-corporate** | **Any amount received by a company from any other company** | the payer must itself be a **company** — a firm, an LLP or an individual will not do |
+| **Securities subscription** | Share application money or advance towards allotment, **pending allotment** | **60 + 15**: allot within 60 days of receipt, else refund within 15 days of the 60 days expiring |
+| **Directors** | Money from a person who **at the time of receipt was a director**; and, **for a private company only**, from a **relative of a director** | a **written declaration** that the money is his own — not borrowed or taken as a deposit from anyone else — plus disclosure in the Board's report |
+| **Debt securities** | Bonds or debentures **secured by a first charge** (or a charge ranking *pari passu* with the first charge) on the company's tangible assets; bonds or debentures **compulsorily convertible into shares within 10 years**; and **listed non-convertible debentures** issued under SEBI regulations | security must be on assets referred to in Schedule III **excluding intangible assets**; the unsecured NCD route works only if the NCDs are **listed** and SEBI-compliant |
+| **Employees** | A **security deposit** taken from an employee under his contract of employment | **not exceeding his annual salary**, and **non-interest-bearing** |
+| **Trust money** | A **non-interest-bearing** amount received and held **in trust** | interest destroys the exclusion |
+| **Business advances** | Seven listed kinds of trade advance (see below) | each has its own condition; and any of them becomes a deposit **15 days** after it falls due for refund because the company lacks a required permission or approval |
+| **Promoters** | An **unsecured loan** brought in by promoters (or their relatives) **in pursuance of a stipulation by a lending bank or financial institution** | exemption lasts **only until the bank's or institution's loan is repaid** |
+| **Regulated pools** | Nidhi deposits (s. 406); **chit** subscriptions; money under a SEBI-registered **collective investment scheme**; money from SEBI-registered **AIFs, domestic venture capital funds, InvITs, REITs and mutual funds** | registration or statutory framework must hold |
+| **Start-ups** | A **convertible note** of **₹25 lakh or more in a single tranche** from a person | convertible into equity, or repayable, **within a period not exceeding 10 years** from issue |
+
+### 2.1 Share application money — the 60-and-15 rule
+
+Money paid towards securities is not a deposit **while allotment is pending**. But the exclusion has a
+clock attached:
+
+<div class="formula">Allot within 60 days of receipt · else refund within 15 days from the expiry of those 60 days · else the money is treated as a DEPOSIT from the expiry of that 15-day window</div>
+
+Two points students miss. First, the company does not become a depositee on day 61 — it gets a
+15-day cure period. Second, if the securities are issued on terms that make the money
+**non-refundable** by the instrument itself, the question never arises.
+
+### 2.2 Money from directors and their relatives
+
+This is the single most examined exclusion, because it is the one small companies actually use.
+
+- The payer must have been a **director at the time the money was received**. A person who becomes a
+  director next week does not retrospectively fix a receipt made today.
+- The **relative of a director** limb is available to a **private company only**. A public company
+  taking money from a director's brother is taking a deposit.
+- The director (or relative) must furnish a **written declaration at the time of giving the money**
+  that the amount is **not being given out of funds acquired by him by borrowing or accepting loans
+  or deposits from others**. No declaration, no exclusion.
+- The company must **disclose the details in the Board's report**; and the Deposit Rules require the
+  amount to be disclosed **by way of notes to the financial statements** — a public company disclosing
+  money from directors, a private company disclosing money from directors **and their relatives**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The declaration is about the source of the money, not about the rate of interest.</strong>
+    A director may lend at interest and the exclusion still holds; a director may lend at zero interest
+    out of money he himself borrowed and the exclusion fails. Options that make the exclusion turn on
+    "interest-free", on a ceiling amount, or on a Board resolution are wrong. The three genuine
+    conditions are: <strong>director at the time of receipt · own-funds declaration · disclosure in
+    the Board's report</strong>.
+  </p>
+</Callout>
+
+### 2.3 Business advances — the 365-day rule and its cousins
+
+Rule 2(1)(c) excludes seven kinds of trade advance:
+
+1. **Advance for the supply of goods or provision of services**, howsoever accounted for, provided it
+   is **appropriated against supply within 365 days** from the date of acceptance. (Where the advance
+   is the subject matter of proceedings before a court, the 365-day limit does not run.)
+2. **Advance towards consideration for immovable property** under an agreement or arrangement,
+   provided it is **adjusted against the property** as per the terms.
+3. A **security deposit for the performance of a contract** for the supply of goods or provision of
+   services.
+4. An advance received under **long-term projects for the supply of capital goods**, other than one
+   covered by item 2.
+5. An advance towards **future services as a warranty or maintenance contract**, under a written
+   agreement, for a period not exceeding the period prevalent in common business practice or **five
+   years**, whichever is **less**.
+6. An advance **allowed by a sectoral regulator** or in accordance with directions of the Central or a
+   State Government.
+7. An advance for **subscription towards publication**, print or electronic, to be adjusted against
+   receipt of the publications.
+
+<div class="formula">Advance against goods or services · appropriated against supply within 365 DAYS of acceptance → not a deposit · not so appropriated → a deposit from the 366th day</div>
+
+And then the catch-all proviso, which is a favourite: if an amount received under **any** of the seven
+items becomes **refundable** (with or without interest) because the company **does not hold the
+necessary permission or approval to deal in the goods, property or services**, the amount is
+**deemed to be a deposit after 15 days from the date it becomes due for refund**.
+
+<Callout kind="example" label="Scenario 1 — four advances, four different answers">
+  <p>
+    Sharada Ceramics Limited receives, all on <strong>12 May 2026</strong>: (i) ₹90 lakh from a
+    builder as an advance against floor tiles to be supplied in November 2026; (ii) ₹60 lakh from a
+    developer against a plot the company has agreed to sell; (iii) ₹25 lakh from a distributor as a
+    security deposit for performance of a three-year distribution contract; and (iv) ₹48 lakh as an
+    advance for supplying industrial kiln linings, an item for which the company's licence
+    <strong>lapsed on 1 April 2026</strong>, so the money became refundable on <strong>20 June
+    2026</strong>.
+  </p>
+  <p>
+    <strong>(i)</strong> Excluded, but conditionally: the tiles must be supplied and the advance
+    appropriated by <strong>12 May 2027</strong>. Supply in November 2026 is comfortably inside the
+    365 days, so no deposit arises. <strong>(ii)</strong> Excluded so long as it is adjusted against
+    the property per the agreement — <em>no</em> 365-day clock applies to an immovable-property
+    advance. <strong>(iii)</strong> Excluded as a performance security; again no 365-day clock, and the
+    three-year contract term is irrelevant. <strong>(iv)</strong> The permission proviso bites: the
+    money became due for refund on 20 June 2026, so it is <strong>deemed a deposit 15 days later, on
+    5 July 2026</strong> — and from that date every Chapter V obligation attaches to ₹48 lakh the
+    company probably thinks of as a trade advance.
+  </p>
+</Callout>
+
+### 2.4 Employees, promoters and start-ups
+
+**Employees.** A security deposit taken from an employee under his contract of employment is excluded
+**only up to his annual salary**, and only if it is **non-interest-bearing**. Both conditions are
+cumulative. An employee drawing ₹7,20,000 a year may lodge up to ₹7,20,000; pay him interest on it
+and the exclusion collapses whatever the amount.
+
+**Promoters.** An unsecured loan from promoters is excluded only where **all three** conditions hold:
+the loan is brought **in pursuance of a stipulation imposed by a lending financial institution or
+bank** on the promoters to contribute such finance; the loan is provided by the **promoters
+themselves or their relatives or both**; and — the limb everyone forgets — the exemption is available
+**only till the loans of the financial institution or bank are repaid, and not thereafter**. The day
+the bank loan is cleared, the promoter money still lying with the company turns into a deposit.
+
+**Start-ups.** A **convertible note** is excluded if it is for **₹25 lakh or more in a single
+tranche** from a person, and is convertible into equity shares or repayable **within a period not
+exceeding 10 years** from the date of issue. "Single tranche" is doing real work: two payments of
+₹15 lakh and ₹12 lakh from the same investor are not one ₹27 lakh tranche.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the start-up entries have moved twice">
+  <p>
+    The convertible-note entry was <strong>inserted in 2016</strong> and the conversion/repayment
+    window was <strong>extended from 5 years to 10 years in 2022</strong>. The parallel relaxation for
+    a <strong>private start-up company</strong> under the exemption notification (see §4) was likewise
+    <strong>extended from 5 to 10 years from incorporation</strong>. Both the <strong>₹25 lakh</strong>
+    figure and the <strong>10-year</strong> window are rules-level. Older banks and older editions
+    still print "five years" — verify before relying on either.
+  </p>
+</Callout>
+
+## 3. Section 73 — the prohibition, and deposits from members
+
+**Section 73(1)** states the rule: on and after the commencement of the Act, **no company shall
+invite, accept or renew deposits from the public** except in a manner provided under Chapter V. The
+proviso carves out banking companies, RBI-registered NBFCs and companies specified by the Central
+Government in consultation with the RBI.
+
+**Section 73(2)** opens the first gateway. A company may accept deposits **from its members**, on
+terms agreed between them (including security, if any), subject to **a resolution passed in general
+meeting**, to the prescribed rules, and to these conditions:
+
+| s. 73(2) | Condition | The examinable detail |
+|---|---|---|
+| (a) | Issue a **circular to members** | must show the company's **financial position**, the **credit rating obtained**, the **total number of depositors** and the **amount due** on earlier deposits — in **Form DPT-1** |
+| (b) | **File the circular with the Registrar** | **within 30 days BEFORE the date of issue** of the circular — a *pre*-filing, not a post-filing |
+| (c) | Fund the **Deposit Repayment Reserve Account** | **on or before 30 April each year**, a sum **not less than 20%** of deposits **maturing during the following financial year**, kept in a **separate account with a scheduled bank** |
+| (d) | *(deposit insurance)* | **OMITTED** — see the flag below |
+| (e) | **Certify no default** | no default in repayment of deposits or interest, whether accepted before or after the Act; and where a default did occur, it was **made good and 5 years have lapsed** since |
+| (f) | **Provide security, if any** | including creation of a charge on the company's property or assets; deposits not secured, or only partly secured, are **"unsecured deposits"** |
+
+<div class="formula">Deposit Repayment Reserve = at least 20% of deposits maturing in the following financial year · funded on or before 30 April each year · scheduled bank · separate account · usable for NOTHING but repayment of deposits (s. 73(5))</div>
+
+**Section 73(3)** — every deposit accepted under 73(2) must be **repaid with interest in accordance
+with the terms and conditions of the agreement**. **Section 73(4)** — where the company fails to
+repay, **the depositor may apply to the Tribunal (NCLT)** for an order directing payment of the sum
+due, or for **loss or damage** suffered by reason of the non-payment, and for such other orders as
+the Tribunal thinks fit. **Section 73(5)** — the Deposit Repayment Reserve Account **shall not be
+used for any purpose other than repayment of deposits**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · deposit insurance is gone, but the rule survives on paper">
+  <p>
+    Section <strong>73(2)(d)</strong>, which required the company to <strong>provide deposit insurance
+    </strong> in the prescribed manner, was <strong>omitted</strong> by an amendment Act. The reason was
+    practical: no insurer offered the product, and the MCA had extended the compliance date year after
+    year before the clause was dropped altogether. <strong>Rule 5</strong> of the Deposit Rules, which
+    set out the mechanics (a contract entered into at least 30 days before issuing the circular, cover
+    of at least ₹20,000 per depositor), therefore has <strong>no operative parent</strong>. Treat
+    deposit insurance as <strong>not a condition</strong> — it is the standard distractor in a "which of
+    the following is NOT required" question — but re-verify the omission for your attempt.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Section 73(2) is about members, not the public — and the resolution is an ordinary
+    one.</strong> Three separate slips live here. <strong>One</strong>, s. 73(2) permits deposits
+    <em>from members only</em>; deposits from the public need s. 76. <strong>Two</strong>, the
+    resolution required by s. 73(2) is a resolution <em>in general meeting</em> — an
+    <strong>ordinary</strong> resolution; the <strong>special</strong> resolution belongs to the
+    <em>eligible-company</em> definition in the Rules (§5). <strong>Three</strong>, the circular is filed
+    with the Registrar <strong>30 days before</strong> issue, not 30 days after — and it goes to
+    <em>members</em>, not to a newspaper, unless the company is an eligible company advertising to the
+    public.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 2 — the reserve account, computed and dated">
+  <p>
+    Sharada Ceramics Limited, a non-eligible public company, has member deposits outstanding. Of them,
+    <strong>₹6.25 crore matures during the financial year 2027-28</strong> and ₹1.90 crore matures
+    during 2026-27. On 12 April 2027 the board transfers ₹80 lakh to a current account with a
+    scheduled bank labelled "deposit reserve", and in September 2027 draws ₹30 lakh from it to pay a
+    creditor.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the reserve requirement</div>
+    Deposits maturing during the following financial year (2027-28) = ₹6,25,00,000<br />
+    Minimum reserve = 20% × ₹6,25,00,000 = <strong>₹1,25,00,000</strong><br />
+    Amount actually set aside = ₹80,00,000 → <strong>short by ₹45,00,000</strong><br />
+    Deadline = <strong>30 April 2027</strong> (transfer on 12 April is in time; the amount is not)
+  </div>
+  <p>
+    <strong>Three defaults, not one.</strong> The <em>amount</em> is short of the 20% floor. The
+    <em>account</em> must be a <strong>separate</strong> deposit repayment reserve account, not a
+    general current account carrying a label. And the <strong>₹30 lakh withdrawal breaches s. 73(5)
+    outright</strong> — the account may be used for repayment of deposits and for nothing else, however
+    pressing the creditor. Each failure is a contravention of the manner and conditions of s. 73, and
+    therefore attracts s. 76A.
+  </p>
+</Callout>
+
+## 4. Private companies — the relaxed route under the exemption notification
+
+A private company that takes money from its members is doing exactly what s. 73(2) regulates. The MCA
+exemption notification frees it from the **procedural** conditions in **clauses (a) to (e) of
+s. 73(2)** — circular, pre-filing with the Registrar, deposit repayment reserve, deposit insurance and
+the no-default certificate — if it falls in **any one** of three classes:
+
+| Class | Test |
+|---|---|
+| **(A) The 100% company** | It accepts from its members monies **not exceeding 100% of the aggregate of its paid-up share capital, free reserves and securities premium account** |
+| **(B) The start-up** | It is a **start-up**, for **10 years from the date of its incorporation** |
+| **(C) The clean small company** | **All three** must hold: it is **not an associate or a subsidiary** of any other company; its **borrowings from banks, financial institutions or any body corporate are less than twice its paid-up share capital or ₹50 crore, whichever is less**; and it has **not defaulted** in repaying those borrowings subsisting at the time it accepts the deposit |
+
+<div class="formula">Private company, class (A): members' deposits ≤ 100% of (paid-up share capital + free reserves + securities premium account)</div>
+
+Two riders decide most questions. **First**, the relaxation is from clauses **(a) to (e)** only —
+clause **(f)** (security, if any) is untouched, and so are ss. 73(3), 73(4) and 73(5). **Second**, an
+exempt private company **must still file the details of the monies accepted with the Registrar** in
+the prescribed manner — that is the **DPT-3 return**. Exemption from the circular is not exemption
+from the return.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The private-company relaxation does not let a private company touch the public.</strong>
+    It relaxes conditions for deposits <em>from members</em>. A private company can never invite
+    deposits from the public: s. 76 is available only to a <strong>public</strong> company meeting the
+    eligibility thresholds. Also note that the three classes are <strong>alternatives</strong> — a
+    start-up private company does not additionally have to satisfy the 100% ceiling, and a class (C)
+    company does not have to be a start-up.
+  </p>
+</Callout>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the exemption notification has been amended">
+  <p>
+    Classes (B) and (C) were <strong>inserted by the amending notification of 13 June 2017</strong>;
+    the original 5 June 2015 notification carried only the 100% class, and even that was worded
+    differently. The start-up period in class (B) was <strong>extended from 5 years to 10 years</strong>
+    along with the convertible-note change. The <strong>₹50 crore / twice paid-up capital</strong> test
+    in class (C) is notification-level and has no counterpart in the Act. Every figure in this section
+    is amendment-sensitive; verify all three classes for your attempt.
+  </p>
+</Callout>
+
+## 5. Section 76 — eligible public companies and the public
+
+**Section 76(1)** opens the second gateway, and it is narrow. *Notwithstanding s. 73*, a **public
+company having such net worth or turnover as may be prescribed** may accept deposits from **persons
+other than its members**, subject to compliance with **the requirements of s. 73(2)** and with the
+prescribed rules. Section 76(2) applies the rest of Chapter V *mutatis mutandis*.
+
+So s. 76 does not replace s. 73(2) — it **adds to it**. An eligible company complies with every
+s. 73(2) condition *and* with the three extras in the provisos.
+
+**Who is an "eligible company".** The Deposit Rules prescribe the thresholds:
+
+| Requirement | Threshold |
+|---|---|
+| Class of company | **Public company** — never a private company |
+| Financial size | **Net worth ≥ ₹100 crore** **OR** **turnover ≥ ₹500 crore** — either limb suffices |
+| Members' consent | **Prior consent by special resolution** in general meeting |
+| Filing | The **special resolution must be filed with the Registrar BEFORE** any invitation to the public |
+| Relaxation | Where the deposits are **within the limits specified in s. 180(1)(c)**, an **ordinary resolution** suffices |
+
+<div class="formula">Eligible company = public company AND (net worth ≥ ₹100 crore OR turnover ≥ ₹500 crore) AND special resolution filed with the ROC before invitation — ordinary resolution if the deposits stay inside the s. 180(1)(c) borrowing limits</div>
+
+**The three extras in s. 76.**
+
+- **Credit rating, annually.** The company must obtain a rating — covering its **net worth, liquidity
+  and ability to pay its deposits on the due date** — from a **recognised credit rating agency**, for
+  informing the public **at the time of invitation and on every renewal**; the rating must be
+  **obtained every year during the tenure of the deposits**, and a copy sent to the Registrar
+  **along with the return of deposits in Form DPT-3**.
+- **A charge for secured deposits.** A company accepting **secured** deposits from the public must
+  **create a charge on its assets within 30 days of acceptance**, of an amount **not less than the
+  amount of deposits accepted**, in favour of the deposit holders. The Rules require the charge to be
+  on **tangible assets** (intangibles excluded), created in favour of a **deposit trustee** appointed
+  before the circular is issued, under a **deposit trust deed in Form DPT-2 executed at least 7 days
+  before** the circular or advertisement is issued.
+- **Deposit insurance** — the third proviso as originally enacted. It goes the same way as
+  s. 73(2)(d): see the AMENDMENT-CHECK in §3.
+
+<Callout kind="example" label="Scenario 3 — is it eligible, and for how much?">
+  <p>
+    Nirmalya Infrastructure Limited, a listed public company, reports <strong>net worth ₹78
+    crore</strong> and <strong>turnover ₹540 crore</strong>. Its paid-up share capital is ₹60 crore,
+    free reserves ₹36 crore and securities premium ₹24 crore. It has ₹6 crore of member deposits
+    already outstanding and now wants to invite deposits from the public.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — eligibility</div>
+    Net worth ₹78 crore &lt; ₹100 crore ✗ · Turnover ₹540 crore ≥ ₹500 crore ✔<br />
+    The two limbs are joined by <strong>OR</strong> → <strong>eligible company</strong> on the turnover
+    limb alone.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the base and the two ceilings</div>
+    Base = paid-up capital + free reserves + securities premium = 60 + 36 + 24 = <strong>₹120
+    crore</strong><br />
+    Deposits from <strong>members</strong> (eligible company): 10% × ₹120 crore = <strong>₹12
+    crore</strong> → already used ₹6 crore, headroom <strong>₹6 crore</strong><br />
+    Deposits from the <strong>public</strong>: 25% × ₹120 crore = <strong>₹30 crore</strong><br />
+    Aggregate exposure permitted = 10% + 25% = <strong>35% = ₹42 crore</strong>
+  </div>
+  <p>
+    <strong>Before it invites a rupee:</strong> pass a <strong>special resolution</strong> and file it
+    with the Registrar (an ordinary resolution would do only if the borrowing stays inside the
+    s. 180(1)(c) limits); obtain a <strong>credit rating</strong> and repeat it annually; issue the
+    <strong>Form DPT-1 circular as an advertisement</strong> and file it with the Registrar 30 days
+    before issue; and, for any secured tranche, appoint a deposit trustee, execute the DPT-2 trust deed
+    7 days before the advertisement, and <strong>create the charge within 30 days of acceptance</strong>.
+  </p>
+</Callout>
+
+## 6. Ceilings, tenure, interest and brokerage
+
+This is a table-and-numbers section. All of it is **rules-level**.
+
+**Tenure.** No deposit may be accepted or renewed **repayable on demand**, or on notice of **less
+than 6 months or more than 36 months** from acceptance or renewal. One exception exists: for
+**short-term requirements of funds**, a company may accept deposits repayable earlier than 6 months
+provided (a) such deposits do **not exceed 10% of the aggregate of paid-up share capital, free
+reserves and securities premium account**, and (b) they are **not repayable earlier than 3 months**
+from the date of deposit or renewal.
+
+<div class="formula">Tenure: minimum 6 months · maximum 36 months · never repayable on demand<br />Short-term exception: ≤ 10% of (capital + free reserves + premium), and not repayable before 3 months</div>
+
+**Ceilings.** Four different companies, four different numbers, one common base:
+
+<div class="formula">Base for every ceiling = paid-up share capital + free reserves + securities premium account</div>
+
+| Company | From whom | Ceiling on deposits outstanding |
+|---|---|---|
+| Any company under **s. 73(2)** (non-eligible public company) | its **members** | **35%** of the base |
+| **Private company** in an exempt class | its **members** | **100%** of the base (class A); classes B and C are relaxed from conditions, not given a different ceiling |
+| **Eligible company** (s. 76) | its **members** | **10%** of the base |
+| **Eligible company** (s. 76) | the **public** | **25%** of the base |
+| **Government company** eligible under s. 76 | members and public together | **35%** of the base |
+| Any company | short-term deposits under the sub-6-month exception | **10%** of the base |
+
+The ceiling is tested on the **amount of the proposed deposit together with deposits already
+outstanding** on the date of acceptance or renewal — not on the fresh money alone.
+
+**Interest and brokerage.** No company may invite, accept or renew deposits carrying a **rate of
+interest**, or pay **brokerage**, **exceeding the maximum rate prescribed by the RBI for acceptance of
+deposits by non-banking financial companies**. "Brokerage" covers any commission, by whatever name,
+paid to a person authorised to solicit deposits; it does not cover legal fees, rating fees or
+advertisement costs. The company may **not reserve to itself any right to alter the terms of the
+deposit to the depositor's prejudice** after the circular has been issued and deposits accepted.
+
+**Joint holders.** Deposits may be accepted in **joint names not exceeding three**, with or without
+clauses such as "Jointly", "Either or Survivor", "First named or Survivor" or "Anyone or Survivor".
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · every percentage in this section is rules-level">
+  <p>
+    The <strong>35% · 100% · 10% · 25% · 10%</strong> ceilings, the <strong>6-to-36-month</strong>
+    tenure band, the <strong>3-month</strong> floor for short-term deposits and the
+    <strong>three-name</strong> joint-holding cap all sit in <strong>rule 3</strong> of the Deposit
+    Rules, which has been amended repeatedly — the member ceiling for a non-eligible company was
+    <strong>raised from 25% to 35%</strong> by an amendment, and the private-company proviso was
+    rewritten when the exemption notification changed. The <strong>interest ceiling is not a fixed
+    percentage at all</strong>: it floats with the RBI's NBFC rate, so never write a number for it.
+    Verify rule 3 in full for your attempt.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 4 — three companies, the same balance sheet, three answers">
+  <p>
+    Each of three companies shows <strong>paid-up share capital ₹8 crore, free reserves ₹3.5 crore and
+    securities premium ₹2.5 crore</strong>, and each already has <strong>₹1.40 crore</strong> of
+    members' deposits outstanding. How much more may each accept from its members?
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — one base, three ceilings</div>
+    Base = 8.00 + 3.50 + 2.50 = <strong>₹14 crore</strong> for all three<br />
+    <strong>Kaveri Alloys Limited</strong> (non-eligible public, s. 73(2)): 35% × 14 = ₹4.90 crore →
+    headroom = 4.90 − 1.40 = <strong>₹3.50 crore</strong><br />
+    <strong>Kaveri Foods Private Limited</strong> (exempt class A): 100% × 14 = ₹14 crore → headroom =
+    14.00 − 1.40 = <strong>₹12.60 crore</strong><br />
+    <strong>Kaveri Power Limited</strong> (eligible company, s. 76): 10% × 14 = ₹1.40 crore → headroom =
+    1.40 − 1.40 = <strong>NIL</strong> — it is already at its members' ceiling, though it may still take
+    25% × 14 = ₹3.50 crore from the <em>public</em>
+  </div>
+  <p>
+    The trap is assuming that a bigger, listed, eligible company may take <em>more</em> from its
+    members. It may take less: the eligible-company regime trades a low members' ceiling for access to
+    the public.
+  </p>
+</Callout>
+
+## 7. Forms, filings and the register — DPT-1, DPT-2, DPT-3 and DPT-4
+
+| Form | What it is | When |
+|---|---|---|
+| **DPT-1** | **Circular** to members, or **circular in the form of an advertisement** to the public | **filed with the Registrar 30 days before** the date of issue, signed by a **majority of the directors** as constituted when the Board approved it; valid until **6 months from the end of the financial year** in which it is issued, or the date the financial statement is laid at the AGM (or the last day on which that AGM should have been held), **whichever is earlier**; a **fresh circular each financial year** |
+| **DPT-2** | **Deposit trust deed** for secured deposits | executed **at least 7 days before** the circular or advertisement is issued |
+| **DPT-3** | **Annual return of deposits**, and of money received that is **not** treated as a deposit | filed **on or before 30 June every year**, with information **as on 31 March** of that year, **duly audited by the company's auditor** |
+| **DPT-4** | **Statement of deposits accepted before the commencement of the Act** and remaining unpaid | filed **within 3 months** of commencement, or of the date the payments became due (s. 74(1)(a)) |
+
+| Record / act | Clock | Where it lives |
+|---|---|---|
+| Deposit **receipt** to the depositor | **within 21 days** of receipt of money or realisation of the cheque | Deposit Rules |
+| Entry in the **register of deposits** | **within 7 days** of issuing the deposit receipt, authenticated by a director, the company secretary or an officer authorised by the Board | Deposit Rules |
+| **Register of deposits** kept at | the **registered office** | Deposit Rules |
+| **Preservation** of the register | **8 years** from the financial year in which the latest entry is made | Deposit Rules |
+| **Deposit Repayment Reserve** funded | **on or before 30 April** each year | s. 73(2)(c) |
+| **Charge** for secured deposits created | **within 30 days** of acceptance | s. 76, first proviso group |
+| **Credit rating** obtained | at invitation, on every renewal, and **every year** during the tenure | s. 76, proviso |
+
+<div class="formula">DPT-3 · information as on 31 March · audited · filed on or before 30 JUNE of the same calendar year</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>DPT-3 is not only for deposits.</strong> The return covers <em>both</em> deposits and
+    <strong>outstanding receipts of money or loans that are NOT treated as deposits</strong> under
+    rule 2(1)(c). A company that has taken nothing but director loans and inter-corporate money — and
+    therefore holds no deposits at all — <strong>still files DPT-3</strong>. The other half of the trap:
+    an exempt private company is relieved of the circular, the reserve account and the no-default
+    certificate, but is <strong>expressly required</strong> by the exemption notification to file the
+    details of monies accepted with the Registrar.
+  </p>
+</Callout>
+
+## 8. Repayment, premature repayment and penal interest
+
+**Repayment on maturity.** Deposits are repaid **with interest, in accordance with the terms of the
+agreement** (s. 73(3)). If the company fails, the depositor's remedy is an application to the
+**Tribunal** under s. 73(4) for payment of the sum due, for loss or damage, and for such other orders
+as the Tribunal thinks fit.
+
+**Penal interest.** Where a deposit — secured or unsecured — has **matured and been claimed but
+remains unpaid**, the company must pay **penal interest at 18% per annum for the overdue period**.
+
+<div class="formula">Penal interest = Amount unpaid × 18% × (overdue days ÷ 365) — running from the date of maturity to the date of actual repayment</div>
+
+**Premature repayment.** A depositor may ask for his money back early, but not immediately and not on
+the same terms:
+
+- No premature repayment on request **before six months** have run from the date of the deposit.
+- Where repayment is made **after six months but before the agreed maturity**, the rate of interest
+  payable is the rate the company **would have paid had the deposit been accepted for the period it
+  actually ran**, **reduced by 1 percentage point**.
+- Where the depositor is permitted instead to **renew** the deposit before expiry for a further term,
+  the 1% reduction does **not** apply.
+
+<Callout kind="example" label="Scenario 5 — penal interest and a premature exit, both computed">
+  <p>
+    <strong>(a)</strong> A deposit of <strong>₹15,00,000</strong> with Sharada Ceramics Limited matures
+    on <strong>20 June 2026</strong> and is claimed on that day. The company repays it only on
+    <strong>1 September 2026</strong>. <strong>(b)</strong> Separately, a depositor who had placed
+    <strong>₹5,00,000</strong> for 36 months at 11% asks for repayment after the deposit has run
+    <strong>18 months</strong>. The company's card rate for an 18-month deposit is <strong>9.5%</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note (a) — penal interest at 18%</div>
+    Overdue period: 20 June → 30 June = 10 days · July = 31 · August = 31 · 1 September = 1 →
+    <strong>73 days</strong><br />
+    Penal interest = 15,00,000 × 18% × 73 ÷ 365 = 15,00,000 × 0.18 × 0.2 = <strong>₹54,000</strong><br />
+    This is payable <em>in addition to</em> the ₹15,00,000 and the contractual interest up to maturity.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note (b) — premature repayment haircut</div>
+    Rate for the period actually run (18 months) = 9.5% → <strong>reduced by 1%</strong> → 8.5%<br />
+    Interest payable = 5,00,000 × 8.5% × 18 ÷ 12 = 5,00,000 × 0.085 × 1.5 = <strong>₹63,750</strong><br />
+    Note what is <em>not</em> used: the 11% contracted rate for 36 months, and any attempt to deduct 1%
+    from 11% to get 10%.
+  </div>
+  <p>
+    The examiner's hinge in (b) is the phrase <strong>"the rate which the company would have paid had
+    the deposit been accepted for the period for which it has run"</strong>. You start from the shorter
+    tenor's rate, then subtract one percentage point. Starting from the contracted rate is the standard
+    wrong answer.
+  </p>
+</Callout>
+
+## 9. Sections 74 and 75 — old deposits and damages for fraud
+
+**Section 74** cleans up deposits accepted **before the commencement of the Act** that remained unpaid
+on commencement or fell due afterwards. The company must:
+
+- **(a)** file with the Registrar a **statement of all such deposits** and the sums remaining unpaid
+  with interest, **together with the arrangements made for repayment**, **within 3 months** of the
+  commencement or of the date the payments became due — that is **Form DPT-4**; and
+- **(b)** **repay within 3 years** of the commencement, or **on or before the expiry of the period for
+  which the deposits were accepted, whichever is earlier**.
+
+Any **renewal** of such a deposit must comply with Chapter V and the Rules. **Section 74(2)** lets the
+**Tribunal**, on the company's application and after considering its financial condition, the amount
+involved and the interest payable, **allow further time** as it considers reasonable. **Section
+74(3)** — failure to repay within the time allowed makes the company punishable, **in addition to
+paying the deposit and interest due**.
+
+**Section 75 — damages for fraud.** Where a company fails to repay a s. 74 deposit within the time
+allowed **and it is proved that the deposits were accepted with intent to defraud the depositors or
+for any fraudulent purpose**, then **every officer of the company responsible for the acceptance** of
+such deposit is — **without prejudice to s. 74(3) and to liability under s. 447** — **personally
+responsible, without any limitation of liability, for all or any of the losses or damages** incurred
+by the depositors. **Section 75(2)** allows the suit or proceeding to be brought by **any person, any
+group of persons or any association of persons** who suffered loss.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Three liabilities, three different triggers.</strong> <strong>s. 73(4)</strong> — a
+    <em>depositor</em> applies to the <em>Tribunal</em> because the company did not repay; no fraud
+    needed. <strong>s. 74(3) / s. 76A</strong> — the <em>company and its officers</em> are punished for
+    contravening the Chapter; no fraud needed. <strong>s. 75</strong> — <em>officers responsible for
+    the acceptance</em> are personally liable <strong>without limit</strong>, but only where
+    <strong>fraudulent intent is proved</strong>, and only on top of everything else. Section 75 adds
+    liability; it never replaces it.
+  </p>
+</Callout>
+
+## 10. Section 76A — the penalty
+
+**Section 76A** applies where a company **accepts, invites, or allows or causes any other person to
+accept or invite on its behalf, any deposit in contravention of the manner or conditions** prescribed
+under s. 73 or s. 76 or the rules, **or fails to repay** a deposit or interest within the time
+specified or the further time allowed by the Tribunal. Then:
+
+| Who | Consequence |
+|---|---|
+| **The company** | in addition to repaying the deposit and interest due, a **penalty of ₹1 crore or twice the amount of deposits accepted, whichever is LOWER**, which may extend to **₹10 crore** |
+| **Every officer in default** | **imprisonment up to 7 years** **and** a **fine** within the prescribed band |
+| **An officer who acted knowingly or wilfully with intent to deceive** the company, its shareholders, depositors, creditors or the tax authorities | liable in addition for **fraud under s. 447** |
+
+<div class="formula">Company's minimum penalty = LOWER of (₹1 crore, 2 × deposits accepted) · ceiling ₹10 crore · payable ON TOP of repaying the deposit with interest</div>
+
+The word **lower** is the whole question. A company that accepted ₹35 lakh of deposits in
+contravention faces a minimum of **₹70 lakh** (twice ₹35 lakh, being lower than ₹1 crore), not
+₹1 crore. A company that accepted ₹9 crore faces a minimum of **₹1 crore** (₹1 crore being lower than
+₹18 crore). Read the two numbers, take the smaller, then check it against the ₹10 crore cap.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · s. 76A has been recast more than once">
+  <p>
+    Section 76A was <strong>inserted in 2015</strong> and amended at least twice since. The company's
+    liability was converted from a <strong>fine</strong> to a <strong>penalty</strong>, and the
+    officer's punishment has moved between "imprisonment <em>or</em> fine" and "imprisonment
+    <em>and</em> fine", with the fine band itself revised. The <strong>₹1 crore / twice-the-deposit /
+    ₹10 crore</strong> structure on the company side is the position stated here and is the one
+    examined; the <strong>exact rupee band for officers</strong> is deliberately left qualitative in
+    these notes and is <strong>not examined</strong>. Section <strong>74(3)</strong> now routes the
+    company's punishment through s. 76A rather than stating its own figures. Verify all of this against
+    the notified text before relying on any number.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 6 — a full contravention, unpicked">
+  <p>
+    Girinagar Textiles Limited, a public company that is <strong>not</strong> an eligible company (net
+    worth ₹64 crore, turnover ₹210 crore), advertises in two newspapers and collects
+    <strong>₹42 lakh</strong> from 180 persons, none of them members, repayable in <strong>4
+    months</strong>. It files no circular with the Registrar and funds no reserve account. Two
+    depositors are not repaid on the due date.
+  </p>
+  <p>
+    <strong>1 · The gateway.</strong> The company is not an eligible company on either limb, so
+    <strong>s. 76 is closed to it</strong>; and the money is from non-members, so s. 73(2) is closed too.
+    The acceptance breaches <strong>s. 73(1)</strong> outright. <strong>2 · The tenure.</strong> Four
+    months is below the <strong>6-month floor</strong>, and the short-term exception cannot help because
+    that route is capped at 10% of the base and, in any event, deposits from the public need
+    eligibility first. <strong>3 · The process.</strong> No DPT-1 circular filed 30 days before issue;
+    no deposit repayment reserve; no credit rating; no DPT-3 will reconcile. <strong>4 · The
+    penalty.</strong> Twice the deposits = 2 × ₹42 lakh = <strong>₹84 lakh</strong>, which is
+    <em>lower</em> than ₹1 crore → the company's minimum penalty is <strong>₹84 lakh</strong>, over and
+    above repaying ₹42 lakh with interest; officers in default face imprisonment up to 7 years and
+    fine, and any officer who acted knowingly to deceive faces <strong>s. 447</strong>.
+    <strong>5 · The depositors.</strong> The two unpaid depositors may apply to the
+    <strong>Tribunal</strong> under s. 73(4) for payment and for loss or damage — a remedy that exists
+    independently of the penalty.
+  </p>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+1. **Reading "deposit" as "loan from the public".** Section 2(31) catches a receipt of money **in any
+   form**. Start from the receipt, then hunt for an exclusion — never the other way round.
+2. **Forgetting that the exclusions are conditional.** A director's loan without the **own-funds
+   declaration**, an employee security deposit **bearing interest**, a trade advance not appropriated
+   **within 365 days**, a promoter loan surviving **after the bank loan is repaid** — each is a deposit
+   the moment its condition fails.
+3. **Giving a public company the relative-of-a-director exclusion.** That limb is for **private
+   companies only**.
+4. **Mixing up the resolutions.** s. 73(2) needs a resolution **in general meeting** — ordinary. The
+   **eligible-company** definition needs a **special** resolution, **filed with the Registrar before**
+   the invitation; an **ordinary** resolution suffices only where the deposits stay inside the
+   **s. 180(1)(c)** limits.
+5. **Filing the circular late.** DPT-1 goes to the Registrar **30 days before** issue.
+6. **Confusing the four ceilings.** **35%** — members, non-eligible company. **100%** — members,
+   exempt private company. **10% + 25%** — eligible company, members and public. **35%** —
+   government eligible company, in total. **10%** — the short-term sub-6-month window.
+7. **Getting the reserve wrong.** It is **20%** of deposits maturing in the **following** financial
+   year, funded **by 30 April**, in a **separate** account with a **scheduled bank**, usable for
+   **nothing but repayment of deposits**.
+8. **Treating deposit insurance as a live condition.** Section **73(2)(d) stands omitted**.
+9. **Taking 1% off the contracted rate on premature repayment.** You take it off the rate for the
+   period the deposit **actually ran**.
+10. **Reading s. 76A as "₹1 crore minimum, always".** It is the **lower** of ₹1 crore and twice the
+    deposits accepted, capped at ₹10 crore.
+11. **Thinking DPT-3 is only for deposits.** It also reports receipts that are **not** deposits.
+12. **Sending the depositor to the Registrar.** The depositor's forum under s. 73(4) and s. 74(2) is
+    the **Tribunal**.
+
+## One-page revision summary
+
+**The definition.** s. 2(31) — a deposit **includes** any receipt of money by way of deposit or loan
+**or in any other form**, **excluding** categories prescribed in consultation with the **RBI** (rule
+2(1)(c)). Outside Chapter V altogether: **banking companies**, RBI-registered **NBFCs**, companies
+specified by the CG.
+
+**The exclusion list, by payer.** Government / guaranteed by government / local or statutory
+authority · foreign sources (FEMA-compliant) · banks, co-operative banks, PFIs, scheduled banks,
+insurance companies · commercial paper per RBI directions · **any other company** · share application
+money **pending allotment (60 + 15)** · **directors** (and **relatives, private companies only**) with
+an **own-funds declaration** and Board's-report disclosure · **secured** bonds/debentures, bonds
+**compulsorily convertible within 10 years**, and **listed NCDs** · **employee** security deposit
+**≤ annual salary, non-interest-bearing** · **non-interest-bearing trust** money · **seven business
+advances** (goods/services within **365 days**; immovable property; performance security; long-term
+capital-goods projects; warranty/maintenance ≤ 5 years or common practice, whichever is less; sectoral
+regulator; publication subscription) with the **15-days-after-refund-falls-due** proviso where a
+permission is lacking · **promoter** unsecured loans under a **bank stipulation**, only **until the
+bank loan is repaid** · **Nidhi**, **chit**, **CIS**, SEBI-registered **AIF/VCF/InvIT/REIT/mutual
+fund** · **start-up convertible note of ₹25 lakh+ in a single tranche**, convertible or repayable
+within **10 years**.
+
+**Every number in the chapter.**
+
+| Item | Number | Where it comes from |
+|---|---|---|
+| Deposit Repayment Reserve | **20%** of deposits maturing in the following FY, by **30 April** | s. 73(2)(c) |
+| Circular filed with the Registrar | **30 days before** issue | s. 73(2)(b) |
+| Past default made good | **5 years** must have lapsed | s. 73(2)(e) |
+| Share application money | allot in **60 days**, refund in **15 days** thereafter | rule 2(1)(c) |
+| Trade advance for goods or services | **365 days** to appropriate | rule 2(1)(c) |
+| Advance refundable for want of permission | deposit after **15 days** | rule 2(1)(c) proviso |
+| Employee security deposit | ≤ **annual salary**, non-interest-bearing | rule 2(1)(c) |
+| Start-up convertible note | **₹25 lakh** in a single tranche, **10-year** window | rule 2(1)(c) |
+| Eligible company | net worth **≥ ₹100 crore** OR turnover **≥ ₹500 crore** | rule 2(1)(e) |
+| Members' ceiling — non-eligible company | **35%** of capital + free reserves + premium | rule 3(2) |
+| Members' ceiling — exempt private company | **100%** of the base | exemption notification |
+| Members' ceiling — eligible company | **10%** of the base | rule 3(3)(a) |
+| Public ceiling — eligible company | **25%** of the base | rule 3(3)(b) |
+| Government eligible company | **35%** of the base in total | rule 3(4) |
+| Tenure | **6 to 36 months**; never repayable on demand | rule 3(1) |
+| Short-term exception | ≤ **10%** of the base, not repayable before **3 months** | rule 3(1) proviso |
+| Joint holders | maximum **three** names | Deposit Rules |
+| Interest and brokerage ceiling | the **RBI's NBFC maximum** — no fixed figure | rule 3(6) |
+| Charge for secured deposits | within **30 days** of acceptance | s. 76 proviso |
+| Deposit trust deed (DPT-2) | **7 days** before the circular | Deposit Rules |
+| Deposit receipt to the depositor | **21 days** | Deposit Rules |
+| Entry in the register of deposits | **7 days**, at the **registered office**, preserved **8 years** | Deposit Rules |
+| Annual return DPT-3 | by **30 June**, as on **31 March**, audited | rule 16 |
+| Pre-2014 deposits | statement in **DPT-4** within **3 months**; repay within **3 years** | s. 74(1) |
+| Penal interest | **18% p.a.** for the overdue period | rule 17 |
+| Premature repayment | after **6 months**; rate for the period run **less 1%** | rule 15 |
+| Penalty on the company | **lower of ₹1 crore and 2 × deposits**, up to **₹10 crore** | s. 76A |
+
+**The two gateways.** **s. 73(2) — members only**: ordinary resolution in general meeting + DPT-1
+circular + pre-filing with the ROC + 20% reserve by 30 April + no-default certificate (5 years since
+any default was made good) + security if any. **s. 76 — public**, and only for an **eligible public
+company**: everything in s. 73(2) **plus** a **special resolution filed with the ROC before
+invitation** (ordinary if within s. 180(1)(c)), an **annual credit rating** sent to the ROC with
+DPT-3, and a **charge within 30 days** on secured deposits. **Private companies** in an exempt class
+are relieved of s. 73(2)(a) to (e) but **must still file DPT-3**, and can **never** approach the
+public.
+
+**The consequences.** **s. 73(4)** — depositor applies to the **Tribunal**. **s. 73(5)** — reserve
+account for repayment of deposits only. **s. 74** — DPT-4 in 3 months, repayment in 3 years, Tribunal
+may extend. **s. 75** — where fraud is proved, officers responsible for the acceptance are
+**personally liable without limitation**, in addition to s. 74(3) and s. 447. **s. 76A** — company
+penalised the **lower** of ₹1 crore and twice the deposits, up to ₹10 crore, on top of repayment;
+officers face imprisonment up to **7 years** and fine, and **s. 447** where they acted knowingly to
+deceive.
