@@ -1,0 +1,772 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Declaration and Payment of Dividend'
+description: 'CA Intermediate Paper 2 Ch 8 — where dividend may lawfully come from and how fast it must reach the shareholder: sections 123 to 127 and section 51 of the Companies Act 2013, the Rule 3 three-condition test worked with figures, and the 5 / 30 / 7 day and seven-year timeline.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 8 · Dividend'
+chapterSlug: declaration-and-payment-of-dividend
+masteryId: i2-ch8
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 123, 124, 125, 126, 127 (Chapter VIII)'
+  - 'Companies Act 2013, s. 51 (dividend in proportion to amount paid-up); s. 2(35) (dividend); s. 2(43) (free reserves)'
+  - 'Companies (Declaration and Payment of Dividend) Rules 2014 — Rule 3 (rules-level, amendment-sensitive)'
+  - 'Investor Education and Protection Fund Authority (Accounting, Audit, Transfer and Refund) Rules 2016 (rules-level)'
+  - 'Companies Act 2013, ss. 73 and 74 (deposit defaults); Schedule II (depreciation); Table F, Schedule I'
+sourceLabel: 'Companies Act 2013 ss. 123–127 and s. 51 · ICAI SM Paper 2 Ch 8 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 24 min read · 6 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=declaration-and-payment-of-dividend'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+On 12 August 2026 the members of Suryodaya Ceramics Limited sit down at the annual general meeting.
+The Board has recommended a dividend of 14 per cent. The company earned very little this year, but it
+has ₹5 crore of free reserves built up over a decade. A member stands up and proposes 18 per cent
+instead — "the reserves are ours, after all." The chairman refuses. Six weeks later a shareholder who
+never received his warrant writes in, and the company discovers that ₹9 lakh of the declared dividend
+is still sitting in its current account.
+
+Every mark in this chapter lives inside that story. **Where may the money come from?** **Who may fix
+the rate?** **How many days until it must move, and to which account?** **What does it cost to be
+late?** Sections 123 to 127 answer those four questions and almost nothing else, and they answer them
+with numbers — 5 days, 30 days, 7 days, 7 years, 12 per cent, 18 per cent, one-tenth, fifteen per
+cent. This is the most *computable* chapter in Paper 2, and the paper rewards students who can carry
+a balance sheet through Rule 3 and a declaration date through a calendar.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the Act is stable, the Rules are not">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. The section-level positions — the sources in s. 123(1), the 5/30/7-day
+    clocks, the seven-year transfer, 12 per cent and 18 per cent — are stable. The
+    <strong>percentages inside Rule 3</strong> of the Dividend Rules (one-tenth, fifteen per cent), the
+    <strong>IEPF Rules</strong> machinery for transferring and claiming back shares, and the
+    <strong>penalty figures in s. 124(7)</strong> all sit at rules or amended-penalty level and have
+    moved before. They are flagged individually below.
+  </p>
+</Callout>
+
+## 1. Meaning of dividend — final and interim
+
+**Section 2(35)** does not define dividend; it merely says that "dividend" **includes any interim
+dividend**. That one word does the heavy lifting for the whole chapter: every obligation the Act
+imposes on "dividend" — the five-day deposit, the thirty-day payment, the unpaid-dividend transfer,
+the s. 127 punishment — applies to an **interim** dividend exactly as it applies to a final one.
+
+Commercially, a dividend is that part of divisible profits which the company distributes among its
+members in proportion to their shareholding. It is a **return on** capital, never a **return of**
+capital: the entire architecture of s. 123 exists to keep dividend out of the capital fund which
+creditors look to.
+
+**Who declares what.** The two dividends have different masters, and the examiner tests the pair
+constantly.
+
+| Question | Final dividend | Interim dividend |
+|---|---|---|
+| Who declares it | the **members in general meeting** (the AGM) | the **Board of Directors** (s. 123(3)) |
+| On whose initiative | on the **Board's recommendation** — members cannot declare without one | the Board's own motion |
+| Can the rate be raised | **No.** Members may **reduce** the recommended rate, or refuse altogether; they may **never exceed** it | not applicable — the Board fixes it |
+| When | at the AGM for the financial year | **during** the financial year, or **from the closure of the financial year till the AGM is held** |
+| Source provision | s. 123(1) | s. 123(3) |
+| Deposit within 5 days, payment within 30 days, s. 127 exposure | yes | **yes** — because of s. 2(35) |
+
+<Callout kind="pointer">
+  <p>
+    <strong>The rate ceiling is one-directional, and it is a favourite one-mark trap.</strong> The
+    Board <em>recommends</em>; the members <em>declare</em>. A general meeting that votes 18 per cent
+    where the Board recommended 14 per cent has passed a resolution the company cannot act on. It may
+    lawfully declare 14 per cent, 10 per cent, or nothing at all. The reverse relationship — members
+    recommending and the Board declaring — exists nowhere in the Act for a final dividend.
+  </p>
+</Callout>
+
+## 2. Sources of dividend — section 123
+
+**Section 123(1)** is a prohibition, not a permission: **no dividend shall be declared or paid by a
+company for any financial year except** out of one of the sources it names.
+
+**Source (a) — profits.** Either (i) the **profits of the company for that financial year** arrived at
+**after providing for depreciation in accordance with s. 123(2)**, or (ii) the **profits of any
+previous financial year or years** arrived at after providing for depreciation **and remaining
+undistributed**, or (iii) **out of both**. **Section 123(2)** fixes the depreciation standard: it must
+be provided **in accordance with Schedule II**.
+
+**Source (b) — government money.** Out of **money provided by the Central Government or a State
+Government** for the payment of dividend by the company **in pursuance of a guarantee given by that
+Government**. This is the only source that has nothing to do with profits at all, and it is examined
+precisely because students forget it exists.
+
+Four provisos then close the gaps:
+
+1. **Transfer to reserves is voluntary.** Before declaring dividend, a company **may** transfer
+   **such percentage of its profits for that financial year as it may consider appropriate** to its
+   reserves. Under the 1956 Act a slab of compulsory transfer applied; the 2013 Act abolished it. An
+   option saying "the company must transfer at least 10 per cent" is testing exactly this.
+2. **Inadequate or absent profits.** Where, owing to **inadequacy or absence of profits** in any
+   financial year, a company **proposes to declare dividend out of the accumulated profits earned in
+   previous years and transferred to the free reserves**, the declaration must be made **only in
+   accordance with the prescribed rules** — Rule 3, worked in §3.
+3. **Set off past losses and unprovided depreciation first.** **No company shall declare dividend
+   unless carried-over previous losses and depreciation not provided in previous year or years are set
+   off against the profit of the company for the current year.**
+4. **Free reserves only.** **No dividend shall be declared or paid by a company from its reserves
+   other than free reserves.** A capital redemption reserve, a securities premium account or a
+   revaluation reserve is therefore off limits, however large.
+
+<div class="formula">Dividend may come from: current-year profits after Schedule II depreciation · undistributed profits of previous years after depreciation · both · or government money under a government guarantee. From nothing else.</div>
+
+**What "free reserves" means — s. 2(43).** Free reserves are such reserves as, **per the latest
+audited balance sheet**, are **available for distribution as dividend**, but **excluding**:
+
+- any amount representing **unrealised gains, notional gains or revaluation of assets**, whether shown
+  as a reserve or otherwise; and
+- any **change in the carrying amount of an asset or a liability recognised in equity**, including the
+  surplus in the profit and loss account on measurement of the asset or liability at **fair value**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>A revaluation surplus is not a free reserve, and a large "reserves and surplus" figure on
+    the face of the balance sheet is not the Rule 3 input.</strong> Students routinely take the whole
+    reserves-and-surplus line into the one-tenth and fifteen-per-cent computations. Strip out
+    revaluation reserve, capital redemption reserve, securities premium, debenture redemption reserve
+    and any fair-value or unrealised-gain component first. What survives — and only what survives — is
+    "free reserves" for s. 2(43), s. 123 and Rule 3.
+  </p>
+</Callout>
+
+**Section 123(6) — the deposit-default bar.** A company which **fails to comply with ss. 73 and 74**
+(acceptance and repayment of deposits) **shall not, so long as such failure continues, declare any
+dividend on its equity shares.** Three features carry marks: the bar is **automatic**, needing no
+order; it lasts **only while the failure continues** and revives the power the moment the default is
+cured; and it is expressed to bite **equity shares**, so preference dividend is not caught by its
+words.
+
+<Callout kind="example" label="Scenario 1 — three source questions in one balance sheet">
+  <p>
+    Ambalika Alloys Limited closes the year to 31 March 2026 with a profit of ₹80,00,000 before
+    depreciation. Schedule II depreciation for the year is ₹22,00,000. Brought forward from earlier
+    years are an accumulated loss of ₹15,00,000 and depreciation of ₹6,00,000 that was never provided
+    for. The balance sheet also shows a revaluation reserve of ₹2,40,00,000 and free reserves of
+    ₹18,00,000. A ₹40,00,000 deposit repayment fell due in January 2026 and remains unpaid.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — what is actually distributable</div>
+    <p>
+      Profit for the year after Schedule II depreciation = ₹80,00,000 − ₹22,00,000 =
+      <strong>₹58,00,000</strong>.<br />
+      Less carried-over loss set off (third proviso) = ₹15,00,000.<br />
+      Less depreciation not provided in previous years (third proviso) = ₹6,00,000.<br />
+      Distributable current-year profit = 58,00,000 − 15,00,000 − 6,00,000 =
+      <strong>₹37,00,000</strong>.<br />
+      The revaluation reserve of ₹2,40,00,000 is <strong>not</strong> a free reserve (s. 2(43)) and the
+      fourth proviso bars any dividend out of it.
+    </p>
+  </div>
+  <p>
+    <strong>And then the answer changes completely.</strong> Because the s. 73/74 deposit default
+    subsists, <strong>s. 123(6) forbids any dividend on equity shares at all</strong> until the default
+    is cured — the ₹37,00,000 computation is correct but academic. That two-step structure — compute,
+    then apply the bar — is the standard six-mark question in this chapter.
+  </p>
+</Callout>
+
+## 3. Dividend out of accumulated profits — Rule 3
+
+When the current year's profits are **inadequate or absent** and the company still wants to pay, the
+second proviso to s. 123(1) sends it to **Rule 3 of the Companies (Declaration and Payment of
+Dividend) Rules 2014**. Rule 3 does not ask whether the reserves are large enough. It imposes
+**three independent ceilings plus a set-off**, and the company must satisfy **every** one of them.
+
+| Condition | The test | Measured against |
+|---|---|---|
+| **(a) Rate ceiling** | the **rate of dividend** declared shall **not exceed the average of the rates** at which dividend was declared by the company in the **three years immediately preceding** that year | the three preceding years' declared rates |
+| **(b) Draw ceiling** | the **total amount drawn from the accumulated profits** shall **not exceed one-tenth of the sum of paid-up share capital and free reserves** | as appearing in the **latest audited financial statement** |
+| **(c) Reserve floor** | the **balance of reserves after such withdrawal** shall **not fall below fifteen per cent of paid-up share capital** | as appearing in the **latest audited financial statement** |
+| **Set-off** | the amount so drawn shall **first be used to set off the losses incurred in the financial year in which the dividend is declared**, before any dividend on equity shares is declared | the current year's loss |
+
+**The exception to condition (a).** The rate ceiling **does not apply to a company which has not
+declared any dividend in each of the three immediately preceding financial years.** Read the words
+carefully: the exception needs **no dividend in each** of the three years. A company that skipped two
+years but paid in the third is still inside condition (a) — and its "average" is then taken on the
+Study Material's approach as the average of the rates for the three years, treating a nil year as nil.
+
+<div class="formula">Rule 3 ceilings — rate ≤ average of the last 3 years' rates · draw ≤ 1/10 × (paid-up capital + free reserves) · reserves left ≥ 15% of paid-up capital · current-year loss set off first.</div>
+
+<Callout kind="example" label="Scenario 2 — Rule 3 worked, where the rate ceiling binds">
+  <p>
+    Vaidehi Chemicals Limited has a paid-up equity share capital of <strong>₹9,00,00,000</strong> and
+    free reserves of <strong>₹5,00,00,000</strong> per its latest audited financial statement. For the
+    year to 31 March 2026 it has a <strong>loss of ₹40,00,000</strong>. Dividend rates in the three
+    immediately preceding years were <strong>14 per cent, 11 per cent and 8 per cent</strong>. The
+    Board wants the largest dividend the law allows.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — the three ceilings, computed separately</div>
+    <p>
+      <strong>Condition (a) — rate.</strong> Average of 14, 11 and 8 = 33 ÷ 3 =
+      <strong>11 per cent</strong>. Maximum dividend by rate = 11% × ₹9,00,00,000 =
+      <strong>₹99,00,000</strong>.<br />
+      <strong>Condition (b) — draw.</strong> One-tenth of (₹9,00,00,000 + ₹5,00,00,000) = 1/10 ×
+      ₹14,00,00,000 = <strong>₹1,40,00,000</strong>.<br />
+      <strong>Condition (c) — floor.</strong> 15% × ₹9,00,00,000 = ₹1,35,00,000. Reserves after the
+      draw must be at least that, so the draw may not exceed ₹5,00,00,000 − ₹1,35,00,000 =
+      <strong>₹3,65,00,000</strong>.
+    </p>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — the set-off, and which ceiling actually bites</div>
+    <p>
+      The binding draw ceiling is the lower of ₹1,40,00,000 and ₹3,65,00,000 =
+      <strong>₹1,40,00,000</strong>.<br />
+      Out of the draw, the current year's loss of ₹40,00,000 must be set off <em>first</em>. Money left
+      for dividend from the draw = ₹1,40,00,000 − ₹40,00,000 = <strong>₹1,00,00,000</strong>.<br />
+      But condition (a) independently caps the dividend at ₹99,00,000. <strong>Maximum dividend =
+      ₹99,00,000</strong>, i.e. 11 per cent.<br />
+      <strong>Cross-check.</strong> Total draw = ₹99,00,000 + ₹40,00,000 = ₹1,39,00,000, which is
+      within ₹1,40,00,000 ✓. Reserves left = ₹5,00,00,000 − ₹1,39,00,000 = ₹3,61,00,000, comfortably
+      above the ₹1,35,00,000 floor ✓.
+    </p>
+  </div>
+  <p>
+    <strong>The examiner's point.</strong> All three ceilings must be computed; only one of them binds.
+    Here it was the rate. Answer scripts that compute one-tenth, announce ₹1,40,00,000 and stop lose
+    most of the marks.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 3 — the same rule, where the fifteen-per-cent floor binds">
+  <p>
+    Nandini Steels Limited has paid-up equity capital of <strong>₹20,00,00,000</strong> and free
+    reserves of only <strong>₹4,00,00,000</strong>. It made no profit this year and no loss. Dividend
+    rates in the three preceding years were <strong>10, 8 and 6 per cent</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the floor overtakes the one-tenth cap</div>
+    <p>
+      <strong>Rate ceiling:</strong> average = (10 + 8 + 6) ÷ 3 = 8 per cent → 8% × ₹20,00,00,000 =
+      ₹1,60,00,000.<br />
+      <strong>Draw ceiling:</strong> 1/10 × (₹20,00,00,000 + ₹4,00,00,000) = ₹2,40,00,000.<br />
+      <strong>Reserve floor:</strong> 15% × ₹20,00,00,000 = ₹3,00,00,000. Reserves are only
+      ₹4,00,00,000, so the maximum draw is ₹4,00,00,000 − ₹3,00,00,000 =
+      <strong>₹1,00,00,000</strong>.<br />
+      <strong>Maximum dividend = ₹1,00,00,000</strong> — a rate of 5 per cent, well inside the 8 per
+      cent ceiling. Here the <em>floor</em>, not the one-tenth cap and not the rate, is the binding
+      constraint.
+    </p>
+  </div>
+</Callout>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · every number in Rule 3 is rules-level">
+  <p>
+    The <strong>three-year averaging period</strong>, the <strong>one-tenth</strong> draw cap and the
+    <strong>fifteen per cent</strong> reserve floor are all in <strong>Rule 3 of the Companies
+    (Declaration and Payment of Dividend) Rules 2014</strong>, not in the Act, and rules-level figures
+    are exactly the kind that move between editions. Note also that condition (b) is measured on
+    <strong>paid-up share capital <em>plus</em> free reserves</strong> while condition (c) is measured
+    on <strong>paid-up share capital alone</strong> — a difference that is itself examined. Re-verify
+    both bases and all three figures against the edition notified for your attempt.
+  </p>
+</Callout>
+
+## 4. Interim dividend and its rate cap
+
+**Section 123(3)** lets the **Board of Directors** declare an interim dividend, and it is drafted with
+unusual precision on both **when** and **out of what**.
+
+**When.** During **any financial year**, **or** at any time during the period **from the closure of
+the financial year till the holding of the annual general meeting**.
+
+**Out of what.** Any of three pools:
+
+1. the **surplus in the profit and loss account**;
+2. the **profits of the financial year for which the interim dividend is sought to be declared**; or
+3. the **profits generated in the financial year till the quarter preceding the date of declaration**.
+
+**The loss proviso — the examinable bit.** Where the company has **incurred a loss during the current
+financial year up to the end of the quarter immediately preceding the date of declaration** of the
+interim dividend, that interim dividend **shall not be declared at a rate higher than the average
+dividends declared by the company during the immediately preceding three financial years**.
+
+<div class="formula">Loss up to the end of the quarter immediately preceding declaration → interim rate ≤ average of the last 3 financial years' dividend rates. No loss → no rate cap in s. 123(3).</div>
+
+<Callout kind="pointer">
+  <p>
+    <strong>Two different three-year averages, two different triggers — keep them apart.</strong> The
+    <strong>Rule 3</strong> average applies to a <em>final</em> dividend declared out of
+    <em>accumulated profits</em> when current profits are inadequate or absent, and it comes with the
+    one-tenth and fifteen-per-cent conditions attached. The <strong>s. 123(3) proviso</strong> average
+    applies to an <em>interim</em> dividend where there is a <em>loss up to the preceding quarter</em>,
+    and it comes with <strong>no</strong> draw cap and <strong>no</strong> reserve floor. Answers that
+    import one-tenth into an interim-dividend problem are answering a different question.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 4 — an interim dividend after a loss-making quarter">
+  <p>
+    Girija Textiles Limited has a paid-up equity capital of <strong>₹3,00,00,000</strong>. For the year
+    2026-27 it has an accumulated <strong>loss of ₹12,00,000</strong> up to 31 December 2026, though
+    the surplus in its profit and loss account stands at ₹1,10,00,000. On <strong>20 January
+    2027</strong> the Board proposes an interim dividend of 16 per cent. Dividend rates for 2023-24,
+    2024-25 and 2025-26 were <strong>18, 15 and 9 per cent</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — identifying the quarter, then the ceiling</div>
+    <p>
+      <strong>1 · The quarter.</strong> The quarter immediately preceding 20 January 2027 is the
+      quarter <strong>ended 31 December 2026</strong>. There is a loss up to that date, so the proviso
+      to s. 123(3) engages.<br />
+      <strong>2 · The average.</strong> (18 + 15 + 9) ÷ 3 = <strong>14 per cent</strong>.<br />
+      <strong>3 · The ceiling in money.</strong> 14% × ₹3,00,00,000 = <strong>₹42,00,000</strong>. The
+      proposed 16 per cent (₹48,00,000) is <strong>not permissible</strong>; the Board may declare up
+      to 14 per cent.<br />
+      <strong>4 · The source is still fine.</strong> The dividend comes out of the surplus in the
+      profit and loss account, which s. 123(3) expressly allows. The loss restricts the
+      <em>rate</em>, not the <em>source</em>.
+    </p>
+  </div>
+</Callout>
+
+## 5. Depositing and paying the dividend — the 5-day and 30-day clocks
+
+**Section 123(4) — the five-day deposit.** The **amount of the dividend, including interim dividend**,
+shall be **deposited in a scheduled bank in a separate account within five days from the date of
+declaration**. Three examinable features: the account must be **separate** (not the company's ordinary
+current account), the bank must be **scheduled**, and the obligation attaches to **interim dividend
+too** — that is why the sub-section says so expressly.
+
+**Section 123(5) — to whom, and in what form.** No dividend shall be paid in respect of any share
+**except to the registered shareholder of that share, or to his order, or to his banker**, and it
+**shall not be payable except in cash**. Two provisos:
+
+- nothing in the sub-section prohibits the **capitalisation of profits or reserves** for the purpose of
+  **issuing fully paid-up bonus shares**, or **paying up any amount for the time being unpaid** on
+  shares held by the members; and
+- any dividend payable in cash **may be paid by cheque or warrant or in any electronic mode** to the
+  shareholder entitled to payment.
+
+<Callout kind="mistake">
+  <p>
+    <strong>"Payable in cash" does not mean currency notes, and bonus shares are not a dividend in
+    kind.</strong> The bar in s. 123(5) is against dividend <strong>in kind</strong> — distributing the
+    company's goods, its investments, or shares of a subsidiary as dividend. Cheque, warrant and
+    electronic transfer are all "in cash" for this purpose. Bonus shares survive the bar not because
+    they are a permitted dividend but because they are a <strong>capitalisation of profits or
+    reserves</strong>, expressly saved by the first proviso — no cash leaves the company at all.
+  </p>
+</Callout>
+
+**Section 127 — the thirty-day payment clock.** Where a dividend has been declared but **has not been
+paid, or the warrant in respect of it has not been posted, within thirty days from the date of
+declaration**, the consequences in §9 follow. So the two clocks run **in parallel from the same
+event**, the date of declaration: **5 days to deposit**, **30 days to pay**.
+
+<div class="formula">Date of declaration → deposit in a separate scheduled-bank account within 5 days (s. 123(4)) → pay or post the warrant within 30 days (s. 127). Both clocks start on the declaration date, not on the deposit date.</div>
+
+## 6. Unpaid dividend and the Unpaid Dividend Account — section 124
+
+Some shareholders never claim. **Section 124** is the machinery that keeps that money identifiable
+instead of letting it drift back into the company's working capital.
+
+**124(1) — the seven-day transfer.** Where a dividend has been declared but **has not been paid or
+claimed within thirty days** from the date of declaration, the company shall, **within seven days from
+the date of expiry of that period of thirty days**, transfer the **total amount** unpaid or unclaimed
+to a **special account opened in any scheduled bank** called the **Unpaid Dividend Account**.
+
+**124(2) — the ninety-day statement.** Within **ninety days of making any transfer** to the Unpaid
+Dividend Account, the company shall prepare a statement containing the **names, last known addresses
+and the unpaid dividend to be paid to each person**, and place it on **its own website, if any**, and
+**on any other website approved by the Central Government** for the purpose.
+
+**124(3) — interest at twelve per cent.** If default is made in transferring the whole or any part of
+that amount to the Unpaid Dividend Account, the company **shall pay, from the date of such default,
+interest at twelve per cent per annum** on so much as has not been transferred; and that **interest
+enures to the benefit of the members in proportion to the amount remaining unpaid to them**.
+
+**124(4) — claiming from the company.** Any person claiming to be entitled to money transferred to the
+Unpaid Dividend Account may **apply to the company** for payment.
+
+**124(5) — seven years, then the money moves.** Money in the Unpaid Dividend Account which remains
+unpaid or unclaimed for **seven years from the date of that transfer** shall be transferred by the
+company, **together with interest accrued**, to the **Fund established under s. 125(1)**. The company
+sends a statement of the details to the **authority administering the Fund**, which issues a
+**receipt** as evidence of the transfer.
+
+**124(6) — and the shares follow the money.** **All shares in respect of which dividend has not been
+paid or claimed for seven consecutive years or more shall be transferred by the company in the name of
+the Investor Education and Protection Fund**, along with a statement in the prescribed form. The
+proviso preserves the owner: **any claimant of shares so transferred is entitled to claim the transfer
+of the shares back from the IEPF** on the prescribed procedure and documents.
+
+<div class="formula">30 days to pay → 7 days after that to move the unpaid balance into the Unpaid Dividend Account → 90 days from that transfer to publish the statement → 7 years from that transfer and the money AND the shares go to the IEPF.</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Twelve per cent and eighteen per cent are different penalties for different
+    defaults.</strong> <strong>Twelve per cent</strong> under s. 124(3) is charged for failing to
+    <em>transfer</em> unpaid dividend into the Unpaid Dividend Account, and it belongs to the
+    <em>members</em>. <strong>Eighteen per cent</strong> under s. 127 is charged for failing to
+    <em>pay</em> the dividend within thirty days, and it is payable to the shareholders kept waiting.
+    A company that is late on both pays both, on different amounts, for different periods. Mixing the
+    rates is the single most common error in this chapter.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 5 — a section 124(3) interest computation">
+  <p>
+    Kalindi Papers Limited was required to transfer <strong>₹15,00,000</strong> of unclaimed dividend
+    to its Unpaid Dividend Account by <strong>20 September 2026</strong>. It actually made the transfer
+    on <strong>13 February 2027</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — days of default, then the interest</div>
+    <p>
+      Days from 20 September 2026 to 13 February 2027: September 10 + October 31 + November 30 +
+      December 31 + January 31 + February 13 = <strong>146 days</strong>.<br />
+      Interest at 12 per cent per annum = ₹15,00,000 × 12/100 × 146/365 =
+      <strong>₹72,000</strong>.<br />
+      That ₹72,000 does <strong>not</strong> stay with the company: s. 124(3) directs it to the benefit
+      of the members in proportion to the amounts remaining unpaid to them.
+    </p>
+  </div>
+</Callout>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the s. 124(7) figures and the IEPF Rules">
+  <p>
+    The consequence of contravening s. 124 was <strong>recast from a fine to a penalty</strong> by the
+    Companies (Amendment) Act 2020, with separate day-rate and maximum figures for the company and for
+    every officer in default. Those rupee figures are deliberately <strong>not stated</strong> in these
+    notes and <strong>no question in the bank turns on them</strong>. Likewise, the machinery for
+    transferring shares to the IEPF and for claiming them back lives in the <strong>Investor Education
+    and Protection Fund Authority (Accounting, Audit, Transfer and Refund) Rules 2016</strong>, which
+    have been amended repeatedly. Learn the <strong>seven-year</strong> trigger and the
+    <strong>right to claim back</strong> from the section; treat the forms and procedure as
+    rules-level.
+  </p>
+</Callout>
+
+## 7. The Investor Education and Protection Fund — section 125
+
+**Section 125(1)** establishes the **Investor Education and Protection Fund**. For the exam you need
+its principal **credits** and its permitted **uses**, not an exhaustive list.
+
+**What is credited to the Fund (s. 125(2)), in outline:** amounts given by the Central Government by
+way of **grants**, and **donations** by governments, companies or other institutions; the amount in the
+**Unpaid Dividend Account** transferred under s. 124(5); **application money received for allotment of
+securities and due for refund**; **matured deposits** with companies other than banking companies;
+**matured debentures** with companies; the **interest accrued** on all of those; **sale proceeds of
+fractional shares** arising on bonus issues, mergers and amalgamations; the **redemption amount of
+preference shares** remaining unclaimed; amounts **disgorged** under s. 38(4); income from investments
+of the Fund; and such other amounts as may be prescribed.
+
+The controlling proviso: the amounts in the middle group **do not form part of the Fund unless they
+have remained unclaimed and unpaid for a period of seven years** from the date they became due for
+payment. Seven years is the pulse of the whole chapter.
+
+**What the Fund may be used for (s. 125(3)):**
+
+- **refund** of unclaimed dividends, matured deposits, matured debentures, application money due for
+  refund, and the interest on them;
+- **promotion of investors' education, awareness and protection**;
+- **distribution of any disgorged amount** among eligible and identifiable applicants for shares or
+  debentures who suffered losses due to wrongful actions of any person, in accordance with orders made
+  by the **Court**;
+- **reimbursement of legal expenses** incurred in pursuing **class action suits under ss. 37 and 245**
+  by members, debenture-holders or depositors, as **sanctioned by the Tribunal**; and
+- any **other purpose incidental** to the above, as may be prescribed.
+
+**Section 125(4)** preserves the individual claim: a person whose **amount** was transferred to the
+Fund under s. 124, or whose **shares** were transferred under s. 124(6), may **apply to the Authority
+for a refund**, and the Authority orders refund after verification.
+
+<Callout kind="pointer">
+  <p>
+    <strong>Transfer to the IEPF is not confiscation.</strong> Both limbs of s. 124 have a claw-back —
+    s. 124(6)'s proviso for the shares and s. 125(4) for the money. Any option that says the
+    shareholder "permanently forfeits" his dividend or his shares after seven years is wrong, and
+    knowing <em>who</em> he applies to is the second half of the mark: to the <strong>company</strong>
+    while the money is still in the Unpaid Dividend Account (s. 124(4)), and to the
+    <strong>IEPF Authority</strong> once it has gone to the Fund (s. 125(4)).
+  </p>
+</Callout>
+
+## 8. Dividend in abeyance — section 126
+
+**Section 126** deals with the shares in transit. Where an **instrument of transfer of shares has been
+delivered to the company for registration** and the transfer **has not yet been registered**, the
+company shall, notwithstanding anything else in the Act:
+
+- **(a)** **transfer the dividend** in relation to those shares **to the Unpaid Dividend Account**
+  referred to in s. 124 — **unless the company is authorised by the registered holder in writing to
+  pay that dividend to the transferee** named in the instrument; and
+- **(b)** **keep in abeyance**, in relation to those shares, any **offer of rights shares under
+  s. 62(1)(a)** and any **issue of fully paid-up bonus shares** under the first proviso to s. 123(5).
+
+Notice the asymmetry that the section is built on: the **dividend is parked**, not withheld
+permanently — it goes into the Unpaid Dividend Account and is paid to whoever is finally held
+entitled; whereas the **rights and bonus entitlements are frozen** until the register is settled. And
+notice who can shortcut it: the **registered holder**, in **writing**. The transferee cannot authorise
+his own payment.
+
+## 9. Failure to pay — section 127 and its five defences
+
+**Section 127** engages where a dividend **has been declared** but has **not been paid, or the warrant
+in respect of it has not been posted, within thirty days from the date of declaration**, to any
+shareholder entitled to payment. Two limbs of consequence:
+
+| Who | Consequence |
+|---|---|
+| **Every director** who is **knowingly a party to the default** | **imprisonment which may extend to two years** **and** **fine of not less than ₹1,000 for every day** during which the default continues |
+| **The company** | liable to pay **simple interest at eighteen per cent per annum** during the period for which the default continues |
+
+<div class="formula">s. 127 — director knowingly a party: imprisonment up to 2 years AND fine of at least ₹1,000 per day of default. Company: simple interest at 18% p.a. for the period of default.</div>
+
+**The five statutory defences.** The proviso says **no offence under this section shall be deemed to
+have been committed**:
+
+1. where the dividend **could not be paid by reason of the operation of any law**;
+2. where a **shareholder has given directions** to the company regarding the payment of the dividend
+   and **those directions cannot be complied with**, **and the same has been communicated to him**;
+3. where there is a **dispute regarding the right to receive the dividend**;
+4. where the dividend has been **lawfully adjusted by the company against any sum due to it from the
+   shareholder**; or
+5. where, **for any other reason, the failure to pay or to post the warrant was not due to any default
+   on the part of the company**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Defence 2 has two halves and defence 4 has the word "lawfully".</strong> A shareholder's
+    impossible payment instruction protects the company <em>only if</em> the company
+    <strong>communicated the difficulty back to him</strong>; silence forfeits the defence. And a
+    set-off protects the company only if the adjustment was <strong>lawful</strong> — a company cannot
+    invent a claim against a member and call it an adjustment. Note too that the defences bar the
+    <em>offence</em>; where a defence applies, neither the director's punishment nor the company's
+    18 per cent interest follows.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 6 — the eighteen-per-cent computation, and a defence that works">
+  <p>
+    Rukmini Papers Limited declares a dividend on <strong>10 July 2026</strong>. A block of
+    <strong>₹50,00,000</strong> payable to one institutional shareholder is neither paid nor posted;
+    the company finally pays on <strong>21 October 2026</strong>. Director K knew of and was party to
+    the delay. Separately, ₹4,00,000 payable to another member could not be paid because a civil court
+    was seized of a dispute between two claimants over the right to receive it.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the default period and the interest</div>
+    <p>
+      <strong>1 · When the default begins.</strong> Thirty days from 10 July 2026 expire on
+      <strong>9 August 2026</strong>. The default runs from then.<br />
+      <strong>2 · Days of default.</strong> 9 August 2026 to 21 October 2026 = August 22 + September 30
+      + October 21 = <strong>73 days</strong>.<br />
+      <strong>3 · Interest.</strong> ₹50,00,000 × 18/100 × 73/365 = <strong>₹1,80,000</strong>, as
+      simple interest.<br />
+      <strong>4 · Director K.</strong> Being knowingly a party, he faces imprisonment up to two years
+      and a fine of at least ₹1,000 for each day of the default.<br />
+      <strong>5 · The ₹4,00,000.</strong> Defence (c) applies — there is a genuine
+      <strong>dispute regarding the right to receive the dividend</strong>. No offence is deemed
+      committed, and no 18 per cent interest runs on that amount. Under s. 126 the money is parked in
+      the Unpaid Dividend Account until entitlement is settled.
+    </p>
+  </div>
+</Callout>
+
+## 10. Dividend in proportion to paid-up capital — section 51
+
+**Section 51** is one sentence: a company **may, if so authorised by its articles, pay dividends in
+proportion to the amount paid-up on each share**.
+
+Everything examinable flows from the two conditions inside it. **First**, the power is
+**permissive** — the company "may". **Second**, it is **conditional on the articles**; without an
+enabling article the company pays dividend on the **nominal amount** of the shares, so a partly paid
+share carries the same dividend as a fully paid one of the same denomination. Regulation 88 of
+**Table F** contains the enabling provision, so a company that has adopted Table F has the power
+already.
+
+**Calls in advance carry no dividend.** Money paid to the company **in advance of calls** is a debt
+owed by the company to the member, not paid-up capital. Under s. 50(2) it carries **no voting rights**
+until it becomes presently payable, and it is not counted for dividend either; the articles typically
+allow **interest** on it instead. So the base for a s. 51 dividend is the amount **called up and paid**
+— never the amount actually received where that includes an advance.
+
+<div class="formula">Dividend base under s. 51 = amount paid-up on the share, if the articles so authorise. Calls in advance are excluded. Without an enabling article, dividend follows the nominal amount of the share.</div>
+
+<Callout kind="example" label="Scenario 7 — three shareholders, one rate, three answers">
+  <p>
+    Prakriti Foods Limited, whose articles adopt Regulation 88 of Table F, declares a dividend of
+    <strong>12 per cent</strong> for the year. Its equity shares have a face value of ₹10 each.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — apply the rate to the paid-up amount, share by share</div>
+    <p>
+      <strong>Aarav</strong> — 20,000 shares, fully paid. Paid-up = ₹2,00,000 → dividend
+      <strong>₹24,000</strong>.<br />
+      <strong>Bhavna</strong> — 20,000 shares, ₹7 per share paid up. Paid-up = ₹1,40,000 → dividend
+      <strong>₹16,800</strong>.<br />
+      <strong>Charu</strong> — 10,000 shares on which ₹6 has been called and paid, plus ₹4 per share
+      paid <em>in advance of calls</em>. Paid-up for dividend = ₹60,000 → dividend
+      <strong>₹7,200</strong>. The ₹40,000 advance is ignored, though the articles may allow interest
+      on it.<br />
+      <strong>The variation.</strong> Had the articles contained no enabling provision, s. 51 would not
+      apply and dividend would follow the <em>nominal</em> value — Aarav and Bhavna would each receive
+      ₹24,000 on their 20,000 shares of ₹10, despite Bhavna having paid less.
+    </p>
+  </div>
+</Callout>
+
+## 11. Revocation, and the master timeline
+
+**A declared dividend is a debt.** Once the members declare a final dividend at the general meeting,
+the amount becomes a **debt due from the company to each shareholder**, enforceable as such. It
+follows that the declaration **cannot be revoked** by a later resolution of the members or of the
+Board. The narrow exceptions are where the declaration was **itself unlawful** — for example made out
+of capital or in breach of s. 123 — or where **all the shareholders consent** to the revocation.
+
+**Interim dividend, once declared, stands on the same footing.** Under the pre-2013 position an
+interim dividend was often treated as revocable because it was a mere Board resolution creating no
+debt. The 2013 Act closed that gap: s. 2(35) brings interim dividend inside "dividend", s. 123(4)
+requires the **same five-day deposit**, and s. 127 applies the **same thirty-day clock and eighteen per
+cent**. A Board that declares an interim dividend and then changes its mind is in default.
+
+**The master timeline.** Take Suryodaya Ceramics Limited from the opening: the members declare the
+final dividend at the AGM on **12 August 2026**, and ₹9,00,000 of it is neither paid nor claimed.
+
+| Step | Provision | Period | Runs from | Last date |
+|---|---|---|---|---|
+| Deposit the whole dividend in a separate scheduled-bank account | s. 123(4) | **5 days** | date of declaration, 12 Aug 2026 | **17 August 2026** |
+| Pay the dividend or post the warrant | s. 127 | **30 days** | date of declaration, 12 Aug 2026 | **11 September 2026** |
+| Transfer the unpaid ₹9,00,000 to the Unpaid Dividend Account | s. 124(1) | **7 days** | **expiry of the 30 days**, 11 Sep 2026 | **18 September 2026** |
+| Place the statement of unpaid amounts on the websites | s. 124(2) | **90 days** | date of that transfer, 18 Sep 2026 | **17 December 2026** |
+| Transfer the still-unclaimed money, with interest, to the IEPF, and transfer the underlying shares | ss. 124(5) and 124(6) | **7 years** | date of that transfer, 18 Sep 2026 | **18 September 2033** |
+
+<div class="working-note">
+  <div class="working-note-label">Working note — the date arithmetic, spelled out</div>
+  <p>
+    <strong>12 Aug + 5 days</strong> = 17 August 2026.<br />
+    <strong>12 Aug + 30 days</strong> — 19 days remain in August after the 12th, so 19 + 11 = 30 lands
+    on <strong>11 September 2026</strong>.<br />
+    <strong>7 days from the expiry of the 30-day period</strong> — the clock restarts on
+    <strong>11 September</strong>, not on 12 August, giving <strong>18 September 2026</strong>. This is
+    the single most common date error in the chapter: adding 37 days to the declaration date would give
+    18 September only by coincidence of month lengths, and adding 7 days to the declaration date gives
+    19 August, which is wrong by a month.<br />
+    <strong>90 days from 18 September 2026</strong> — 12 remaining in September + 31 in October + 30 in
+    November = 73; 17 more days gives <strong>17 December 2026</strong>.<br />
+    <strong>7 years from 18 September 2026</strong> = <strong>18 September 2033</strong>, counted from
+    the date of transfer into the Unpaid Dividend Account, not from the date of declaration.
+  </p>
+</div>
+
+## Common mistakes &amp; examiner traps
+
+1. **Letting members raise the rate.** Members may reduce or refuse the Board's recommended final
+   dividend; they may **never exceed** it. The Board alone fixes an interim dividend.
+2. **Confusing 12 per cent with 18 per cent.** **12 per cent (s. 124(3))** — failure to **transfer** to
+   the Unpaid Dividend Account, and the interest belongs to the **members**. **18 per cent (s. 127)** —
+   failure to **pay within thirty days**.
+3. **Starting the seven-day clock at the declaration date.** It runs from the **expiry of the thirty
+   days**, not from the declaration.
+4. **Starting the seven-year clock at the declaration date.** It runs from the **date of transfer into
+   the Unpaid Dividend Account**.
+5. **Treating "reserves and surplus" as "free reserves".** Revaluation reserve, securities premium,
+   capital redemption reserve and any unrealised or fair-value gain are excluded by s. 2(43), and the
+   fourth proviso to s. 123(1) bars dividend from reserves other than free reserves.
+6. **Computing only one Rule 3 ceiling.** All three must be computed — rate average, one-tenth of
+   (capital + free reserves), and the fifteen per cent of **paid-up capital** floor — and the
+   **lowest** governs. The current-year loss is set off out of the draw **first**.
+7. **Using the wrong base in Rule 3.** The one-tenth cap is on **capital plus free reserves**; the
+   fifteen per cent floor is on **paid-up capital alone**.
+8. **Importing Rule 3 into an interim dividend.** The s. 123(3) proviso caps only the **rate**, and
+   only where there is a **loss up to the quarter immediately preceding declaration**. No one-tenth
+   cap, no reserve floor.
+9. **Forgetting the s. 123(6) bar.** While an s. 73/74 deposit default subsists, **no dividend on
+   equity shares** may be declared, however healthy the profits.
+10. **Saying dividend in kind is allowed because bonus shares are.** Bonus shares are a
+    **capitalisation** saved by the first proviso to s. 123(5), not a dividend in kind.
+11. **Treating the IEPF transfer as forfeiture.** Both the money (s. 125(4)) and the shares (proviso to
+    s. 124(6)) can be claimed back from the **IEPF Authority**.
+12. **Paying dividend on calls in advance.** Calls in advance are a debt, not paid-up capital: no
+    dividend, and no voting rights until presently payable (s. 50(2)).
+13. **Revoking a declared dividend.** It is a debt from the moment of declaration — and under the 2013
+    Act that is true of an **interim** dividend as well.
+14. **Missing the second half of s. 127 defence (b).** The company must have **communicated** to the
+    shareholder that his directions cannot be complied with.
+
+## One-page revision summary
+
+**Who does what.** **Members at the AGM** declare the final dividend, on the **Board's recommendation**
+and never above the recommended rate. The **Board** declares an interim dividend, during the year or
+between the year-end and the AGM. **s. 2(35)** — "dividend" **includes interim dividend**, so every
+obligation applies to both.
+
+**Sources — s. 123(1).** Current-year profits **after Schedule II depreciation**; or undistributed
+profits of previous years after depreciation; or **both**; or **money provided by the Central or a
+State Government under a government guarantee**. Provisos: transfer to reserves is **voluntary**;
+inadequate profits send you to **Rule 3**; **carried-over losses and unprovided depreciation must be
+set off first**; **only free reserves**, as defined in **s. 2(43)** (no revaluation, no unrealised or
+fair-value gains). **s. 123(6)** — no dividend on **equity shares** while an **ss. 73/74** deposit
+default continues.
+
+**Rule 3 — dividend out of accumulated profits.**
+
+| Ceiling | Test | Base |
+|---|---|---|
+| Rate | ≤ **average of the last three years' rates** (not applicable if **no dividend in each** of those three years) | declared rates |
+| Draw | ≤ **one-tenth** of the sum | **paid-up capital + free reserves**, latest audited financial statement |
+| Floor | reserves left ≥ **fifteen per cent** | **paid-up capital**, latest audited financial statement |
+| Set-off | the draw sets off the **current year's loss first** | current year |
+
+**Interim — s. 123(3).** Sources: **surplus in the P&amp;L account**, profits of the year, or profits
+till the **quarter preceding** declaration. If there is a **loss up to the end of that quarter**, the
+rate may not exceed the **average of the three preceding years' rates**.
+
+**Form and mode — s. 123(5).** Only to the **registered holder, his order or his banker**; **in cash**,
+payable by **cheque, warrant or electronic mode**; **no dividend in kind**; **bonus shares** are a
+saved capitalisation.
+
+**Every clock in the chapter.**
+
+| Clock | Period | Runs from |
+|---|---|---|
+| Deposit in a separate scheduled-bank account (s. 123(4)) | **5 days** | date of **declaration** |
+| Pay the dividend or post the warrant (s. 127) | **30 days** | date of **declaration** |
+| Transfer unpaid or unclaimed to the Unpaid Dividend Account (s. 124(1)) | **7 days** | **expiry of the 30 days** |
+| Statement of unpaid amounts on the websites (s. 124(2)) | **90 days** | **date of that transfer** |
+| Money, with interest, to the IEPF (s. 124(5)); shares to the IEPF (s. 124(6)) | **7 years** | **date of that transfer** / seven consecutive years unclaimed |
+
+**Money consequences.** **s. 124(3)** — **12 per cent per annum** for failing to transfer to the
+Unpaid Dividend Account, enuring to the **members** in proportion to the amounts unpaid to them.
+**s. 127** — **18 per cent per annum simple interest** on the company, and for a director **knowingly a
+party**, **imprisonment up to two years and a fine of at least ₹1,000 per day**.
+
+**The five s. 127 defences.** Operation of law · shareholder's directions that cannot be complied with
+**and were communicated back** · a **dispute** over the right to receive · a **lawful adjustment**
+against a sum due to the company · **any other reason not due to the company's default**.
+
+**IEPF — s. 125.** Credits include the s. 124(5) transfers, unclaimed application money, matured
+deposits and debentures with companies, unclaimed preference-share redemption amounts, fractional-share
+sale proceeds, disgorged amounts under s. 38(4), grants and donations — the middle group only after
+**seven years** unclaimed. Uses: **refunds**, **investor education and awareness**, distribution of
+**disgorged amounts** under Court orders, **reimbursement of class-action legal expenses** sanctioned
+by the Tribunal. **s. 125(4)** — claim a refund from the **Authority**.
+
+**s. 126 — abeyance.** Transfer instrument delivered but not registered: the **dividend goes to the
+Unpaid Dividend Account** unless the **registered holder authorises payment to the transferee in
+writing**; **rights and bonus entitlements are held in abeyance**.
+
+**s. 51 — proportional dividend.** Payable on the **amount paid-up**, **if the articles so authorise**
+(Table F, Regulation 88). **Calls in advance are excluded**. Without an enabling article, dividend
+follows the **nominal amount**.
+
+**Revocation.** A declared dividend is a **debt** and is **irrevocable**, save where the declaration
+was unlawful or all shareholders consent — and under the 2013 Act this is true of an **interim**
+dividend too.

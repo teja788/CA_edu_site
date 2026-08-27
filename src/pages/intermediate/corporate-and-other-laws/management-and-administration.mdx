@@ -1,0 +1,1207 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Management and Administration'
+description: 'CA Intermediate Paper 2 Ch 7 — the registers a company must keep and the meetings it must hold: sections 88 to 122 of the Companies Act 2013, every notice period, quorum figure and filing clock, with clear-days and AGM-deadline computations worked step by step.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 7 · Management & Administration'
+chapterSlug: management-and-administration
+masteryId: i2-ch7
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, ss. 88, 89, 90, 91, 92, 93 (omitted), 94, 95'
+  - 'Companies Act 2013, ss. 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113'
+  - 'Companies Act 2013, ss. 114, 115, 116, 117, 118, 119, 120, 121, 122'
+  - 'Companies (Management and Administration) Rules 2014 — rules 3 to 31 (rules-level, amendment-sensitive)'
+  - 'Companies (Significant Beneficial Owners) Rules 2018 — the 10% thresholds and the BEN forms (rules-level)'
+  - 'Companies (Incorporation) Rules 2014, rule 35(6) — deemed service of a notice of meeting by post'
+  - 'Secretarial Standards SS-1 (Board meetings) and SS-2 (General meetings), mandated by s. 118(10)'
+sourceLabel: 'Companies Act 2013 ss. 88–122 · ICAI SM Paper 2 Ch 7 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 28 min read · 7 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=management-and-administration'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Hemadri Alloys Limited closes its financial year on 31 March 2026. Its company secretary posts the
+notice of the annual general meeting on 1 September 2026 for a meeting on 22 September 2026. On the
+day, 11 of the company's 4,200 members walk in; two more send proxies. One member, holding 40,000 of
+the company's 40,00,000 shares, stands up and demands a poll on the resolution appointing a director.
+The chairman refuses the poll, counts the two proxy-holders towards the quorum, and declares the
+resolution carried on a show of hands.
+
+Four things went wrong, and each is worth marks: the notice was **short** (a posted notice is deemed
+served only 48 hours after posting, and 21 days must be **clear**); the quorum for a company with
+4,200 members is **15 members personally present**, and a proxy is not personally present; the member
+demanding the poll held shares carrying **1%** of the voting power on which ₹4,00,000 was paid up —
+below **both** limbs of section 109; and a resolution declared on a show of hands is conclusive only
+if the meeting itself was validly convened.
+
+This chapter is **arithmetic wearing a legal coat**. Almost every mark turns on a **number** — a day
+count, a member count, a percentage, a rupee threshold — and on **what event starts the clock**. Learn
+the clock table and the quorum table in §17 and you have most of the chapter.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · Act layer stable, Rules layer volatile">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. The section-level numbers (21 clear days, 95%, one-tenth, 5/15/30,
+    48 hours, 60 days, 15 months, three months) are stable. The layer that moves is the
+    <strong>Rules</strong>: the MGT-8 certification thresholds, the classes of company bound to
+    provide e-voting under s. 108, the significant-beneficial-owner percentage and the BEN forms, the
+    list of items transactable only by postal ballot, and every e-form name. Each of those is flagged
+    below. Re-check them against the SM edition notified for your attempt.
+  </p>
+</Callout>
+
+## 1. Registers of members and security holders — sections 88, 94 and 95
+
+**Section 88(1)** requires every company to keep and maintain, **from the date of its registration**,
+three registers in the prescribed form:
+
+| Register | Covers |
+|---|---|
+| **Register of members** | separately for **each class** of equity and preference shares held by each member, resident in or outside India |
+| **Register of debenture-holders** | every holder of debentures of the company |
+| **Register of any other security holders** | every holder of any other security the company has issued |
+
+**Section 88(2)** — each register must include an **index of the names** entered in it. **Section
+88(3)** — a register maintained by a **depository** under the Depositories Act 1996 is **deemed to be
+the corresponding register and index** for this section.
+
+**Foreign register — s. 88(4).** A company **whose articles so authorise** may keep, **in any country
+outside India**, a part of the register of members, debenture-holders or other security holders,
+**resident in that country**. That part is called a **foreign register**, and it is **deemed to be part
+of the company's principal register**. Two exam points: the authority comes from the **articles**, not
+from a members' resolution; and because the foreign register is part of the principal register, entries
+in it carry the same evidentiary weight.
+
+**Section 88(5)** — failure to maintain the registers or the index attracts a penalty on the company
+and every officer in default.
+
+**Section 94 — where the registers live.** The s. 88 registers, their indices and the copies of the
+annual return filed under s. 92 are kept at the **registered office**. They may be kept at **some other
+place in India** only if **both** conditions are met:
+
+<div class="formula">More than <strong>1/10th</strong> of the total number of members entered in the register of members <strong>reside</strong> at that place · <strong>AND</strong> a <strong>special resolution</strong> is passed at a general meeting approving it</div>
+
+Note the shape of the test: the one-tenth is counted on **members**, not on capital, and the place must
+be **in India**. A foreign register under s. 88(4) is the separate, articles-driven exception.
+
+**Section 94(2)–(3) — inspection.** Except when closed under s. 91, the registers, indices and annual
+returns are open during business hours to inspection by any **member, debenture-holder, other security
+holder or beneficial owner without any fee**, and by **any other person on payment of the prescribed
+fee**, subject to reasonable restrictions imposed by the articles — but **not less than two hours on
+every business day** must be allowed. Any person may take extracts or require copies, and the company
+must furnish the copy **within seven days** of the request. **Section 94(4)** — refusing inspection or
+missing the seven days costs a **per-day penalty** on the company and every officer in default.
+**Section 94(5)** — the **Central Government** may by order compel an **immediate inspection**.
+
+**Section 95 — the evidentiary payoff.** The registers, their indices and the copies of annual returns
+maintained under ss. 88 and 94 are **prima facie evidence** of any matter directed or authorised to be
+inserted in them by the Act. Two traps live here: it is **prima facie**, not conclusive — rebuttable by
+better evidence; and it applies to the **registers and annual returns**, not to minutes (minutes have
+their own evidence rule in s. 118(7)–(8)).
+
+<Callout kind="pointer">
+  <p>
+    <strong>Section 93 is omitted.</strong> It required a listed company to file a return with the
+    Registrar on any change of two per cent or more in the shareholding of promoters and the top ten
+    shareholders. It was <strong>omitted by the Companies (Amendment) Act 2017</strong>. Never cite
+    s. 93 as live law; the disclosure now runs through the SEBI listing regulations.
+  </p>
+</Callout>
+
+## 2. Beneficial interest and significant beneficial owners — sections 89 and 90
+
+Section 89 answers a narrow question: **the register says X, but the money belongs to Y — who tells the
+company?** Everyone does, on the **same 30-day clock**.
+
+| Who declares | Trigger | Period | Form |
+|---|---|---|---|
+| The **registered** holder who holds **no beneficial interest** | entry of his name in the register | **30 days** | **MGT-4** |
+| The **beneficial owner** who is **not** the registered holder | acquiring the beneficial interest | **30 days** | **MGT-5** |
+| Either of them, on a **change** in the beneficial interest | the change | **30 days** | MGT-4 / MGT-5 |
+| The **company**, to the Registrar | **receipt** of the declaration | **30 days** | **MGT-6** |
+
+<div class="formula">s. 89 · every clock is <strong>30 days</strong> · three declarations by persons + one return by the company</div>
+
+**Section 89(7)–(8).** Default by the company in filing the return carries a penalty on the company and
+every officer in default, with a daily continuing penalty. Where a declaration required by s. 89 is
+**not made**, **no right in relation to the share is enforceable** by the person holding the beneficial
+interest — but this does **not** relieve the company of its duty to pay dividend to the **registered**
+owner. The **Explanation to s. 89** defines **beneficial interest** in a share as the right or
+entitlement of a person, alone or together with any other person, to **exercise any or all of the rights
+attached to the share**, or to **receive or participate in any dividend or other distribution** in
+respect of it.
+
+**Section 90 — the significant beneficial owner (SBO).** Section 89 catches the person one layer behind
+the register. Section 90 chases the **individual at the end of the chain**.
+
+**Section 90(1)** — every individual who, **acting alone or together, or through one or more persons or
+trust, including a trust and persons resident outside India**, holds **beneficial interests of not less
+than 25%** in the shares of a company, **or such other percentage as may be prescribed**, or the **right
+to exercise significant influence or control** over the company, must make a **declaration to the
+company** specifying the nature of his interest and other particulars.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the SBO percentage and the BEN forms are rules-level">
+  <p>
+    The section says <strong>25% "or such other percentage as may be prescribed"</strong>. The
+    <strong>Companies (Significant Beneficial Owners) Rules 2018</strong>, as substituted in 2019,
+    prescribe <strong>10%</strong> — of shares, of voting rights, or of the right to receive or
+    participate in the total distributable dividend or other distribution in a financial year — plus
+    the alternative limb of the right to exercise <strong>significant influence or control</strong>
+    otherwise than through direct holdings. The declarations and returns run on forms
+    <strong>BEN-1</strong> (individual to the company), <strong>BEN-2</strong> (company to the
+    Registrar), <strong>BEN-3</strong> (the company's own register of significant beneficial owners)
+    and <strong>BEN-4</strong> (the company's notice seeking information). <strong>All of this sits in
+    the Rules and has been amended.</strong> In an answer, state the section's 25% and add that the
+    prescribed percentage is presently 10%.
+  </p>
+</Callout>
+
+**Sections 90(2) to 90(11) — the enforcement chain.** The company **maintains a register** of
+significant beneficial owners, open to members' inspection on payment of the prescribed fee, and
+**files a return** with the Registrar. Where the company **knows or has reason to believe** that a
+person is an SBO, or has knowledge of an SBO and that person is not registered, it must **give him
+notice** seeking information; the person must **reply within 30 days** of the notice. If he **fails to
+give the information** or the company is **not satisfied** with the reply, the company must **apply to
+the Tribunal within 15 days of the expiry of that 30-day period** for an order **restricting the
+shares** — restrictions on **transfer of interest**, **suspension of voting rights**, **suspension of
+the right to receive dividend** or any other restriction on all or any of the rights attaching to the
+shares. The **Tribunal decides within 60 days** of the application, after giving the parties a hearing.
+A person aggrieved by the order may apply to the Tribunal for **relaxation or lifting of the
+restrictions within one year** of the order; if no such application is made within a year, the shares
+are **transferred to the Investor Education and Protection Fund**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Keep the two sections apart.</strong> Section 89 is about <em>any</em> beneficial interest,
+    however small, and the declarant may be a company, a firm or an individual. Section 90 catches
+    only <strong>individuals</strong>, only above a <strong>threshold</strong>, and only after a chain
+    of ownership is traced. Section 89's remedy is a penalty and unenforceability of rights; section
+    90's remedy is a <strong>Tribunal order restricting the shares</strong>, and ultimately transfer to
+    the <strong>IEPF</strong>. Options that give the Registrar power to restrict the shares, or that put
+    the s. 90 application before the Central Government, are wrong.
+  </p>
+</Callout>
+
+## 3. Closure of the register — section 91
+
+A company closes its register of members (or of debenture-holders or other security holders) to freeze
+entitlement before a dividend, a bonus issue or a meeting. Section 91 fixes two ceilings and one notice.
+
+<div class="formula">Aggregate <strong>45 days in each year</strong> · never more than <strong>30 days at any one time</strong> · previous notice of at least <strong>7 days</strong> in the prescribed manner</div>
+
+For a **listed company**, or a company that intends to get its securities listed, the seven days may be
+replaced by **such lesser period as SEBI may specify**. The notice is given by advertisement in the
+prescribed manner. **Section 91(2)** — closing the register otherwise than as permitted attracts a
+**per-day penalty** on the company and every officer in default.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the notice period for listed companies">
+  <p>
+    The Act sets the floor at <strong>seven days' previous notice</strong> and lets
+    <strong>SEBI specify a lesser period</strong> for listed companies and companies proposing to list.
+    The <strong>manner</strong> of giving the notice sits in the Companies (Management and
+    Administration) Rules, and listed companies separately owe advance intimation to the stock
+    exchanges under the SEBI listing regulations, whose own period has been amended. Some older notes
+    circulate a longer figure for listed companies: <strong>verify the notice period against the SM
+    edition notified for your attempt</strong>. The two ceilings — <strong>45 days a year</strong> and
+    <strong>30 days at one time</strong> — are section-level and are what the bank examines.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 1 — how much closure is left">
+  <p>
+    Nandini Steels Limited closed its register of members for <strong>18 days</strong> in June 2026
+    before the final dividend and for <strong>12 days</strong> in October 2026 before a bonus issue. In
+    February 2027 it wants to close the register again, in the same year, for as long as the law
+    allows.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the two ceilings applied together</div>
+    Annual aggregate allowed = <strong>45 days</strong><br />
+    Already used = 18 + 12 = <strong>30 days</strong><br />
+    Aggregate head-room = 45 − 30 = <strong>15 days</strong><br />
+    Single-spell ceiling = 30 days → not binding here, because 15 &lt; 30<br />
+    Maximum further closure = <strong>15 days</strong>
+  </div>
+  <p>
+    The trap is answering "30 days" because that is the single-spell ceiling. Both ceilings apply at
+    once; the <strong>lower</strong> of the two governs. Had the company used only 5 days so far, the
+    aggregate head-room would be 40 days but a single spell could still not exceed
+    <strong>30</strong>.
+  </p>
+</Callout>
+
+## 4. Annual return — section 92
+
+The annual return is the company's yearly self-portrait for the public record. **Section 92(1)** — every
+company prepares a return **in the prescribed form** containing the particulars **as they stood on the
+close of the financial year** regarding:
+
+1. its **registered office**, **principal business activities**, and particulars of its **holding,
+   subsidiary and associate companies**;
+2. its **shares, debentures and other securities** and its **shareholding pattern**;
+3. its **members and debenture-holders** along with **changes** since the close of the previous
+   financial year;
+4. its **promoters, directors and key managerial personnel** along with changes;
+5. **meetings of members** or a class of them, of the **Board and its committees**, with **attendance
+   details**;
+6. **remuneration of directors and key managerial personnel**;
+7. **penalties imposed** on the company, its directors or officers, and details of **compounding of
+   offences** and appeals;
+8. matters relating to **certification of compliances** and **disclosures** as prescribed; and
+9. such **other matters** as may be prescribed.
+
+<Callout kind="pointer">
+  <p>
+    Two clauses were <strong>omitted by the Companies (Amendment) Act 2017</strong> and are a favourite
+    distractor: the company's <strong>indebtedness</strong>, and details of shares held by or on behalf
+    of <strong>foreign institutional investors</strong>. An option listing "indebtedness" among the
+    contents of the annual return is wrong on the current text.
+  </p>
+</Callout>
+
+**Who signs — s. 92(1) provisos.**
+
+| Company | Signed by |
+|---|---|
+| Every company (general rule) | a **director** **and** the **company secretary**; where there is no company secretary, by a **company secretary in practice** |
+| **One Person Company** and **small company** | the **company secretary**; where there is no company secretary, by the **director** of the company |
+
+**Certification — the second proviso.** The annual return of a **listed company**, or of a company
+having **paid-up share capital of ₹10 crore or more** **or** **turnover of ₹50 crore or more**, must
+also be **certified by a company secretary in practice** in **Form MGT-8**, stating that the return
+discloses the facts correctly and adequately and that the company has complied with all the provisions
+of the Act.
+
+<div class="formula">MGT-8 needed if: <strong>listed</strong> · <strong>OR</strong> paid-up capital <strong>≥ ₹10 crore</strong> · <strong>OR</strong> turnover <strong>≥ ₹50 crore</strong> — the limbs are joined by OR, so one is enough</div>
+
+**Section 92(3) — publication.** Every company must place a copy of the annual return on its
+**website**, if any, and the **web link** must be disclosed in the **Board's report**. (This replaced
+the old requirement to annex an extract in Form MGT-9.)
+
+**Section 92(4) — filing.**
+
+<div class="formula">File with the Registrar within <strong>60 days</strong> · from the date the AGM <strong>is held</strong> · or, if no AGM was held, from the <strong>last date on which it should have been held</strong>, with a statement of the reasons for not holding it</div>
+
+**Section 92(5)–(6) — default.** The company and every officer in default face a penalty with a daily
+continuing component and a cap. A **company secretary in practice** who certifies the return
+otherwise than in conformity with the requirements faces a **separate penalty**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · MGT-7, MGT-7A and the MGT-8 thresholds">
+  <p>
+    The form is <strong>MGT-7</strong> generally and <strong>MGT-7A</strong> for a
+    <strong>One Person Company and a small company</strong>; the certificate is
+    <strong>MGT-8</strong>. Form names and the OPC/small-company split live in the
+    <strong>Companies (Management and Administration) Rules 2014</strong> and were introduced by
+    amendment in 2021. The section itself says only "as may be prescribed": the
+    <strong>₹10 crore paid-up capital and ₹50 crore turnover</strong> figures for MGT-8 are supplied
+    by <strong>rule 11(2)</strong> of those Rules, and a prescribed figure can be revised by a single
+    notification. State the thresholds, but flag them as rules-level. The <strong>60-day filing clock
+    in s. 92(4) is section-level</strong> and safe.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 2 — the annual return clock, both ways">
+  <p>
+    <strong>(a)</strong> Ravikiran Textiles Limited holds its AGM for the year ended 31 March 2026 on
+    <strong>18 September 2026</strong>. <strong>(b)</strong> Vishaka Polymers Limited, with the same
+    financial year, holds <strong>no AGM at all</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — s. 92(4) applied to each</div>
+    <strong>(a)</strong> Clock starts on the date the AGM <em>was held</em> = 18 Sep 2026<br />
+    18 Sep 2026 + 60 days → 12 days to 30 Sep, 31 days to 31 Oct, 17 more → <strong>17 November
+    2026</strong><br />
+    <br />
+    <strong>(b)</strong> Clock starts on the <em>last date on which the AGM should have been held</em><br />
+    Financial year closed 31 Mar 2026 → AGM due within 6 months → <strong>30 September 2026</strong><br />
+    30 Sep 2026 + 60 days → 31 days to 31 Oct, 29 more → <strong>29 November 2026</strong><br />
+    Vishaka must also file a <strong>statement of the reasons</strong> for not holding the AGM
+  </div>
+  <p>
+    The examiner's trap in (b) is to start the 60 days from the end of the financial year, or from the
+    date the company eventually gets round to a meeting. Neither is the section. And note that in (b)
+    the company is <em>also</em> in default under s. 96, punishable under s. 99 — two separate
+    defaults, two separate consequences.
+  </p>
+</Callout>
+
+## 5. Annual general meeting — section 96
+
+**Section 96(1)** — every company **other than a One Person Company** must hold, **in each year**, in
+addition to any other meetings, a general meeting as its **annual general meeting**, and must **describe
+it as such in the notices** calling it. Three limits then apply at once:
+
+| Which AGM | Outer limit | Runs from |
+|---|---|---|
+| The **first** AGM | **9 months** | the **close of the first financial year** |
+| **Every other** AGM | **6 months** | the **close of that financial year** |
+| Every AGM after the first | gap of not more than **15 months** | the date of the **previous** AGM |
+
+<div class="formula">Subsequent AGM last date = the <strong>EARLIER</strong> of (close of FY + 6 months) and (previous AGM + 15 months)</div>
+
+**The two riders.** If a company holds its **first** AGM within the nine months, it **need not hold any
+AGM in the year of its incorporation**. And the **Registrar may, for any special reason, extend the time
+for holding an AGM by up to three months** — but **not the first AGM**. That exclusion is examined every
+year.
+
+**Section 96(2) — when and where.** Every AGM must be called **during business hours, that is between
+9 a.m. and 6 p.m.**, on a day that is **not a National Holiday**, and must be held either at the
+**registered office** or at some **other place within the city, town or village in which the registered
+office is situate**.
+
+- **Proviso 1** — the AGM of an **unlisted company** may be held at **any place in India** if
+  **consent is given in writing or in electronic mode by all the members in advance**.
+- **Proviso 2** — the Central Government may exempt any company from these requirements, subject to
+  conditions.
+- **Explanation** — a **National Holiday** means a day declared as such by the **Central Government**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>"Not a National Holiday" is not "not a public holiday".</strong> A meeting may lawfully be
+    held on a Sunday, on a bank holiday or on a State holiday. Only a day declared a
+    <strong>National Holiday by the Central Government</strong> is barred. A second trap: the meeting
+    must <strong>begin</strong> within business hours; it does not have to end by 6 p.m. A third: the
+    "any place in India" relaxation needs consent of <strong>all</strong> the members
+    <strong>in advance</strong>, and is available to <strong>unlisted</strong> companies only.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 3 — three AGM deadlines, three different answers">
+  <p>
+    <strong>(a)</strong> Sanchay Instruments Private Limited was incorporated on 5 August 2025. Its
+    first financial year closed on <strong>31 March 2026</strong>. <strong>(b)</strong> Meghdoot
+    Cables Limited closed its financial year on <strong>31 March 2026</strong>; its last AGM was held
+    on <strong>12 August 2025</strong>. <strong>(c)</strong> Same as (b), except the last AGM was held
+    on <strong>2 May 2025</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — apply both limits, take the earlier</div>
+    <strong>(a) First AGM</strong> — 9 months from 31 Mar 2026 = <strong>31 December 2026</strong>.
+    The 15-month gap rule has nothing to work on (there is no previous AGM), and the Registrar
+    <em>cannot</em> extend a first AGM.<br />
+    <br />
+    <strong>(b)</strong> Six-month limit: 31 Mar 2026 + 6 months = <strong>30 Sep 2026</strong><br />
+    Fifteen-month limit: 12 Aug 2025 + 15 months = <strong>12 Nov 2026</strong><br />
+    Earlier of the two → <strong>30 September 2026</strong><br />
+    <br />
+    <strong>(c)</strong> Six-month limit: <strong>30 Sep 2026</strong><br />
+    Fifteen-month limit: 2 May 2025 + 15 months = <strong>2 Aug 2026</strong><br />
+    Earlier of the two → <strong>2 August 2026</strong> — the gap rule bites first
+  </div>
+  <p>
+    In (b) the six-month rule governs; in (c) the fifteen-month gap governs. Students who memorise only
+    "six months from the year-end" get (c) wrong by three months. If Meghdoot in case (b) applies to
+    the Registrar and shows a special reason, the deadline may be pushed to <strong>30 December
+    2026</strong> — three months, no more, and only for a non-first AGM.
+  </p>
+</Callout>
+
+## 6. Tribunal-called meetings and default — sections 97, 98 and 99
+
+**Section 97 — the Tribunal calls a defaulted AGM.** If **default is made in holding the AGM** under
+s. 96, the **Tribunal** may, **notwithstanding anything in the Act or the articles**, on the
+**application of any member**, call or direct the calling of an annual general meeting, and give such
+ancillary or consequential directions as it thinks expedient — **including a direction that one member
+present in person or by proxy shall be deemed to constitute a meeting**. A meeting so held is **deemed
+to be an annual general meeting** of the company.
+
+**Section 98 — meetings other than an AGM.** Where for **any reason it is impracticable** to call a
+meeting of a company **other than an annual general meeting** in the manner in which meetings may be
+called, or to hold or conduct it in the manner prescribed by the Act or the articles, the **Tribunal**
+may — **suo motu**, or on the application of **any director**, or of **any member entitled to vote** —
+order a meeting to be called, held and conducted as it thinks fit, again with the power to direct that
+**one member present in person or by proxy is deemed to constitute a meeting**. Such a meeting is
+**deemed to be duly called, held and conducted**.
+
+| | s. 97 | s. 98 |
+|---|---|---|
+| Which meeting | the **AGM** only | any meeting **other than** an AGM |
+| Trigger | **default** in holding the AGM | it is **impracticable** to call or conduct the meeting |
+| Who may move | **any member** | the Tribunal **suo motu**, any **director**, or any **member entitled to vote** |
+| Result | deemed an **AGM** | deemed **duly called, held and conducted** |
+
+**Section 99 — punishment.** If default is made in **holding a meeting in accordance with s. 96, s. 97
+or s. 98**, or in **complying with any directions of the Tribunal**, the **company and every officer in
+default** are punishable with a **fine**, and, for a continuing default, a **further fine for every day**
+during which the default continues.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The Tribunal, not the Registrar, calls the meeting; the Registrar only extends time.</strong>
+    Keep the three powers apart: the <strong>Registrar</strong> may extend the time for holding an AGM
+    (three months, never the first AGM) under the third proviso to s. 96(1); the <strong>Tribunal</strong>
+    calls or directs a defaulted AGM under s. 97 and an impracticable non-AGM meeting under s. 98; and
+    the <strong>court</strong> imposes the s. 99 fine. Also note that the one-member-is-a-meeting
+    direction is a <strong>Tribunal</strong> power under both ss. 97 and 98 — it is not a general
+    exception to the s. 103 quorum.
+  </p>
+</Callout>
+
+## 7. Extraordinary general meeting — section 100
+
+Every general meeting that is not an AGM is an **extraordinary general meeting**. There are three routes
+to one, and only the third has a clock.
+
+**Route 1 — the Board, s. 100(1).** The Board may call an EGM **whenever it deems fit**. A proviso
+requires the EGM to be **held at a place within India**, except for an EGM of a company that is the
+**wholly owned subsidiary of a company incorporated outside India**.
+
+**Route 2 — the Board on requisition, s. 100(2).** The Board **shall** call an EGM on a valid
+requisition made by:
+
+<div class="formula">Company <strong>with</strong> share capital — members holding, on the date of receipt of the requisition, not less than <strong>1/10th of the paid-up share capital carrying voting rights</strong> · Company <strong>without</strong> share capital — members having not less than <strong>1/10th of the total voting power</strong></div>
+
+**Section 100(3)** — the requisition must **set out the matters** for consideration, be **signed by the
+requisitionists** and be **sent to the registered office**.
+
+**Route 3 — the requisitionists themselves, s. 100(4).** The clock:
+
+<div class="formula">Board must, within <strong>21 days</strong> of receipt of a valid requisition, <strong>proceed to call</strong> a meeting <strong>for a day not later than 45 days</strong> from the date of receipt · failing which the <strong>requisitionists may call and hold</strong> the meeting themselves <strong>within 3 months</strong> from the date of the requisition</div>
+
+**Section 100(5)** — a meeting called by the requisitionists must be **called and held in the same manner
+as one called by the Board**. **Section 100(6)** — the **reasonable expenses** incurred by the
+requisitionists are **reimbursed by the company**, and the sums so paid are **deducted from any fee or
+other remuneration payable to the directors who were in default** in calling the meeting.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Three different clocks, three different starting points.</strong> The <strong>21 days</strong>
+    and the <strong>45 days</strong> both run from the <strong>date of receipt of the requisition</strong>
+    — the 21 days for the Board to <em>proceed to call</em>, the 45 days as the outer date for
+    <em>holding</em> the meeting. The <strong>3 months</strong> for the requisitionists' own meeting runs
+    from the <strong>date of the requisition</strong>. Answers that run the three months from the expiry
+    of the 21 days, or from the expiry of the 45 days, lose the mark. And note what the Board must do
+    inside 21 days: <em>proceed to call</em> — issuing the notice is enough; the meeting itself may be
+    later, so long as it is inside the 45 days.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 4 — the requisition clocks, dated">
+  <p>
+    Members holding 14% of the paid-up voting capital of Alaknanda Papers Limited sign a requisition
+    dated <strong>2 June 2026</strong>, which reaches the registered office on <strong>4 June
+    2026</strong>. The Board takes no step at all.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — three dates from two events</div>
+    Threshold: 14% ≥ 10% of the paid-up voting capital → <strong>valid requisition</strong><br />
+    Board must proceed to call by 4 Jun + 21 days = <strong>25 June 2026</strong><br />
+    Meeting must be held on or before 4 Jun + 45 days = 26 days to 30 Jun, 19 more →
+    <strong>19 July 2026</strong><br />
+    Requisitionists may hold their own meeting up to 2 Jun + 3 months = <strong>2 September
+    2026</strong> (from the date of the <em>requisition</em>, not of receipt)
+  </div>
+  <p>
+    Two riders. First, the requisitionists' meeting is called and held <strong>in the same manner</strong>
+    as a Board-called meeting — so the 21 clear days' notice under s. 101 still applies, and working
+    backwards from 2 September is the practical constraint. Second, if that meeting begins without a
+    quorum, s. 103(2)(b) says it stands <strong>cancelled</strong>; it does not adjourn to the next week
+    the way a Board-called meeting does.
+  </p>
+</Callout>
+
+## 8. Notice and explanatory statement — sections 101 and 102
+
+**Section 101(1)** — a general meeting may be called by giving **not less than clear twenty-one days'
+notice**, either **in writing** or **through electronic mode** in the prescribed manner.
+
+<div class="formula"><strong>21 CLEAR days</strong> — exclude the day the notice is <strong>served</strong> and exclude the day of the <strong>meeting</strong>; 21 whole days must lie between them</div>
+
+**Deemed service.** Where the notice goes by **post**, **rule 35(6) of the Companies (Incorporation)
+Rules 2014** deems service of a **notice of a meeting** to be effected at the **expiration of 48 hours
+after the letter is posted**. So a posted notice needs **two extra days** before the clear-days count
+even begins.
+
+<Callout kind="example" label="Scenario 5 — computing the earliest date of the meeting">
+  <p>
+    Hemadri Alloys Limited wants to hold a general meeting. <strong>(a)</strong> The notice is sent by
+    electronic mode and served on <strong>2 September 2026</strong>. <strong>(b)</strong> The notice is
+    <strong>posted</strong> on <strong>1 September 2026</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — clear days, counted twice</div>
+    <strong>(a)</strong> Day of service = 2 Sep → <strong>excluded</strong><br />
+    First clear day = 3 Sep; twenty-first clear day = 23 Sep<br />
+    Day of the meeting is also excluded → earliest meeting = <strong>24 September 2026</strong><br />
+    Shortcut: <strong>service date + 22 days</strong><br />
+    <br />
+    <strong>(b)</strong> Posted 1 Sep → deemed served 48 hours later = <strong>3 Sep</strong><br />
+    First clear day = 4 Sep; twenty-first clear day = 24 Sep<br />
+    Earliest meeting = <strong>25 September 2026</strong><br />
+    Shortcut: <strong>posting date + 24 days</strong>
+  </div>
+  <p>
+    The opening scenario of this chapter now resolves: Hemadri posted on 1 September for a meeting on
+    <strong>22 September</strong>. The earliest lawful date was <strong>25 September</strong> — the
+    notice was <strong>three days short</strong>. Unless 95% of the members entitled to vote consented
+    to shorter notice, the meeting was not validly convened.
+  </p>
+</Callout>
+
+**Shorter notice — the proviso to s. 101(1).** A meeting may be called on shorter notice with consent
+**in writing or by electronic mode**:
+
+| Meeting | Consent required |
+|---|---|
+| **Annual general meeting** | not less than **95% of the members entitled to vote** at it |
+| **Any other general meeting**, company **with** share capital | members holding a **majority in number** of the members entitled to vote **and** representing not less than **95% of the paid-up share capital** giving a right to vote |
+| **Any other general meeting**, company **without** share capital | not less than **95% of the total voting power** exercisable at the meeting |
+
+A further proviso: where a member is entitled to vote **only on some** of the resolutions, he is counted
+for this computation **in respect of those resolutions only**.
+
+**Section 101(2)** — the notice must specify the **place, date, day and hour** of the meeting and contain
+a **statement of the business** to be transacted. **Section 101(3)** — notice is given to **every member**
+(and to the legal representative of a deceased member and the assignee of an insolvent member), to the
+**auditor or auditors**, and to **every director**. **Section 101(4)** — an **accidental omission** to
+give notice to, or the **non-receipt** of notice by, any member or other entitled person **does not
+invalidate the proceedings**.
+
+**Section 102 — the explanatory statement.** A statement must be **annexed to the notice** setting out
+the **material facts** concerning **each item of special business**, namely (a) the **nature of the
+concern or interest, financial or otherwise**, of every **director and the manager**, of **every other
+key managerial personnel** and of **their relatives**; and (b) any other information and facts enabling
+members to understand the **meaning, scope and implications** of the item and to take a decision on it.
+
+**Section 102(2) — what is ordinary business.** At an **annual general meeting**, **all** business is
+**special** except these four:
+
+<div class="formula">Ordinary business at an AGM = (1) consideration of the <strong>financial statements</strong> and the reports of the <strong>Board and auditors</strong> · (2) declaration of <strong>dividend</strong> · (3) appointment of <strong>directors in place of those retiring</strong> · (4) appointment of the <strong>auditors and fixing their remuneration</strong></div>
+
+At **any other meeting** — every EGM — **all business is special**. So an EGM always needs an
+explanatory statement.
+
+**Section 102(3)** — where an item of special business relates to or affects **another company**, the
+**extent of the shareholding interest** in that other company of every **promoter, director, manager and
+other key managerial personnel** must also be set out **if it is not less than 2% of the paid-up share
+capital** of that other company. **Section 102(4)** — where a benefit accrues to such a person or a
+relative because of **non-disclosure or insufficient disclosure**, he **holds the benefit in trust for
+the company** and must **compensate** the company to the extent of it. **Section 102(5)** — default
+attracts a penalty on every promoter, director, manager or other KMP in default of **₹50,000 or five
+times the benefit** accruing to him or a relative, **whichever is higher**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Clear days are not days.</strong> "Twenty-one days' notice" and "twenty-one
+    <em>clear</em> days' notice" differ by two days, because <em>clear</em> excludes both the day of
+    service and the day of the meeting. And "notice given" is not "notice served": for a posted
+    notice, service is deemed 48 hours after posting, which costs two more days. A notice posted on
+    the 1st cannot support a meeting before the 25th. Get into the habit of writing the shortcut on
+    the answer sheet — <strong>post + 24</strong>, <strong>serve + 22</strong> — and then showing the
+    clear-day count underneath it.
+  </p>
+</Callout>
+
+## 9. Quorum and chairman — sections 103 and 104
+
+**Section 103(1)** — unless the articles provide for a **larger** number, the quorum is:
+
+| Company | Members as on the date of the meeting | Quorum — members **personally present** |
+|---|---|---|
+| **Public** | not more than **1,000** | **5** |
+| **Public** | more than 1,000 but up to **5,000** | **15** |
+| **Public** | more than **5,000** | **30** |
+| **Private** | any number | **2** |
+
+<div class="formula">Public company · <strong>5 / 15 / 30</strong> at <strong>1,000 / 5,000</strong> members · Private company · <strong>2</strong> · always <strong>personally present</strong> · the articles may raise but never lower it</div>
+
+**"Personally present" is the whole examination point.** A **proxy is not personally present** and is
+**not counted** towards the quorum. A **representative of a body corporate** appointed under s. 113, and a
+**representative of the President or a Governor** appointed under s. 112, **are** treated as members
+personally present and **are** counted.
+
+**Section 103(2) — no quorum within half an hour.** If a quorum is not present **within half an hour**
+from the appointed time:
+
+- **(a)** the meeting **stands adjourned** to the **same day in the next week, at the same time and
+  place**, or to such other date, time and place as the **Board may determine**; **or**
+- **(b)** if the meeting was called by **requisitionists under s. 100**, it **stands cancelled**.
+
+Where the meeting is adjourned, or the day, time or place is changed, the company must give **not less
+than three days' notice** to the members, either **individually** or by **advertisement in two
+newspapers** — one in English and one in the vernacular language — **in circulation at the place where
+the registered office is situate**.
+
+**Section 103(3)** — if at the **adjourned meeting** a quorum is again not present within half an hour,
+the **members present shall be the quorum**. One member alone can then transact the business.
+
+**Section 104 — the chairman.** Unless the articles otherwise provide, the members **personally present**
+elect one of themselves as **Chairman on a show of hands**. If a **poll is demanded on the election of the
+Chairman**, it is taken **forthwith**; the Chairman elected on the show of hands continues until the poll
+result, and the person elected on the poll is Chairman for the **rest of the meeting**.
+
+<Callout kind="example" label="Scenario 6 — quorum, proxies and the adjournment">
+  <p>
+    Chandrabhaga Cements Limited, a public company with <strong>6,400 members</strong>, calls a general
+    meeting for 11 a.m. on <strong>10 August 2026</strong>. At 11.30 a.m. there are
+    <strong>26 members personally present</strong>, together with a representative appointed by
+    Trishul Holdings Private Limited (a member) under s. 113, a representative of the Governor of a
+    State (also a member) under s. 112, and <strong>9 proxy-holders</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — who counts</div>
+    Members &gt; 5,000 → required quorum = <strong>30 members personally present</strong><br />
+    Members personally present = 26<br />
+    + corporate representative (s. 113) = 1 → 27<br />
+    + Governor's representative (s. 112) = 1 → <strong>28</strong><br />
+    + 9 proxy-holders = <strong>not counted</strong><br />
+    28 &lt; 30 → <strong>quorum not present</strong>
+  </div>
+  <p>
+    <strong>What follows.</strong> The meeting stands <strong>adjourned</strong> — not to later the
+    same day, but to the <strong>same day in the next week at the same time and place</strong>, that is
+    <strong>17 August 2026 at 11 a.m.</strong>, unless the Board fixes another date, time and place;
+    and the company must give <strong>at least three days' notice</strong> of any such change. If on
+    17 August only four members turn up, <strong>those four are the quorum</strong> under s. 103(3) and
+    the business is validly transacted. Had this meeting been called by requisitionists under s. 100,
+    it would instead have <strong>stood cancelled</strong> at 11.30 a.m. on 10 August.
+  </p>
+</Callout>
+
+## 10. Proxies and restrictions on voting — sections 105 and 106
+
+**Section 105(1)** — any member entitled to attend and vote may appoint **another person as his proxy**
+to attend and vote **on his behalf**. Three provisos matter:
+
+1. a proxy **has no right to speak** at the meeting, and is **not entitled to vote except on a poll**;
+2. unless the articles otherwise provide, the sub-section **does not apply to a company not having a
+   share capital**;
+3. the Central Government may prescribe classes of companies whose members may **not** appoint a proxy —
+   and the Rules do so for a **section 8 company**, whose member may appoint a proxy **only if the proxy
+   is himself a member** of that company.
+
+<div class="formula">Proxy · <strong>need not be a member</strong> · <strong>cannot speak</strong> · <strong>cannot vote on a show of hands</strong> · <strong>votes only on a poll</strong> · <strong>not counted for quorum</strong></div>
+
+**Section 105(2)–(3)** — every notice calling a meeting of a company **having a share capital**, or whose
+articles provide for proxy voting, must state **with reasonable prominence** that a member entitled to
+attend and vote may appoint a proxy to attend and vote **instead of himself**, and that **a proxy need
+not be a member**. Default makes **every officer in default** liable to a penalty.
+
+**Section 105(4) — the 48-hour rule.**
+
+<div class="formula">Any article requiring a proxy instrument to be deposited <strong>more than 48 hours</strong> before the meeting takes effect <strong>as if it said 48 hours</strong> — the articles may shorten the deposit period but never lengthen it</div>
+
+**Section 105(5)** — every member entitled to vote or to demand a poll may **inspect the proxies lodged**
+during the period beginning **24 hours before** the time fixed for the commencement of the meeting and
+ending with its conclusion, during business hours, on **not less than three days' notice in writing** of
+the intention to inspect. **Section 105(6)** — the instrument must be **in writing and signed** by the
+appointer or his attorney duly authorised in writing; if the appointer is a **body corporate**, under its
+**seal** or signed by an **officer or attorney duly authorised** by it. **Section 105(7)** — an instrument
+in the **prescribed form** cannot be questioned for failing to meet special requirements in the articles.
+
+**The proxy-holder's own limits (rule-level).**
+
+<div class="formula">A person may act as proxy for <strong>not more than 50 members</strong> and holding in the aggregate <strong>not more than 10%</strong> of the total share capital carrying voting rights · but a member holding <strong>more than 10%</strong> may appoint <strong>one single person</strong> as proxy, and that person may then act for <strong>no one else</strong></div>
+
+**Section 106 — restriction on voting rights.** The **articles may** provide that a member shall exercise
+**no voting right** in respect of shares on which **calls or other sums presently payable by him have not
+been paid**, or in regard to which the company has **exercised any right of lien**. Section 106(2) then
+shuts the door: **on no other ground** may a company prohibit a member from voting. **Section 106(3)** —
+on a **poll**, a member entitled to more than one vote, or his proxy, **need not use all his votes, nor
+cast all the votes he uses in the same way** — split voting is expressly allowed.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Three proxy traps in one place.</strong> (i) A proxy is <strong>not counted for the
+    quorum</strong>, but a <strong>corporate representative under s. 113 is</strong> — the difference is
+    that the representative <em>is</em> the member for the purpose of that meeting, while a proxy merely
+    votes for one. (ii) The 48 hours is a <strong>ceiling on the articles</strong>, not a right of the
+    member: an article saying "24 hours" is perfectly valid and binds the member. (iii) The 50-member
+    and 10% caps are <strong>rules-level</strong> limits on the <em>proxy-holder</em>, not on the
+    member; and the "more than 10%" member's proxy becomes an <strong>exclusive</strong> proxy.
+  </p>
+</Callout>
+
+## 11. Voting — show of hands, e-voting, poll and postal ballot — sections 107 to 110
+
+**Section 107 — show of hands.** At any general meeting a resolution put to the vote is decided on a
+**show of hands**, **unless a poll is demanded under s. 109** or **the voting is carried out
+electronically**. A **declaration by the Chairman** that the resolution is or is not carried on a show of
+hands, **together with an entry to that effect in the minutes**, is **conclusive evidence** of the fact
+— without proof of the number or proportion of the votes.
+
+**Section 108 — voting through electronic means.** The **Central Government may prescribe the class or
+classes of companies** and the manner in which a member may exercise his right to vote by electronic
+means.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · which companies must provide e-voting is rules-level">
+  <p>
+    Section 108 itself prescribes <strong>nothing</strong>; the classes live in <strong>rule 20 of the
+    Companies (Management and Administration) Rules 2014</strong>, which has been amended more than
+    once. As it presently stands, <strong>every listed company and every company having not less than
+    1,000 members</strong> must provide a facility to vote by electronic means, with a carve-out for
+    companies listed on an SME platform under the relevant SEBI regulations; remote e-voting must stay
+    open for <strong>not less than three days</strong> and close at <strong>5 p.m. on the day
+    preceding the meeting</strong>. The earlier version of the rule used a <strong>500-member</strong>
+    threshold. In an answer, say "the classes prescribed under s. 108" and add the current rule figure
+    as the prescribed position.
+  </p>
+</Callout>
+
+**Section 109 — demand for a poll.** A poll may be ordered by the **Chairman on his own motion**, and
+**must** be ordered by him on a demand made **before or on the declaration of the result of the voting on
+a show of hands**, by members present in person or by proxy (where allowed) and:
+
+<div class="formula">Company <strong>with</strong> share capital — having not less than <strong>1/10th of the total voting power</strong> <strong>OR</strong> holding shares on which an aggregate of not less than <strong>₹5,00,000</strong> (or such higher prescribed amount) has been <strong>paid up</strong> · Company <strong>without</strong> share capital — members having not less than <strong>1/10th of the total voting power</strong></div>
+
+**The two limbs are alternatives.** A demand is good if **either** is satisfied, so in practice the
+**lower** of the two requirements governs the answer.
+
+**Section 109(2)–(7).** The demand may be **withdrawn at any time** by those who made it. A poll demanded
+on the **adjournment of the meeting** or the **appointment of a Chairman** is taken **forthwith**; any
+other poll is taken at such time as the Chairman directs, **not later than 48 hours** from the time the
+demand was made. The Chairman appoints **scrutinisers** and regulates the manner of the poll, and the
+**result of the poll is deemed to be the decision of the meeting** on that resolution.
+
+<Callout kind="example" label="Scenario 7 — did the demand for a poll succeed?">
+  <p>
+    Hemadri Alloys Limited has <strong>40,00,000 equity shares of ₹10 each, fully paid</strong>, one
+    vote per share. At the AGM, <strong>Mr Rege</strong> holds 40,000 shares; <strong>Ms Bhalla</strong>
+    holds 3,60,000 shares; and a group of eight members present in person hold 55,000 shares between
+    them and jointly demand a poll.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the two limbs of s. 109(1)(a)</div>
+    Limb 1 — one-tenth of total voting power = 40,00,000 ÷ 10 = <strong>4,00,000 shares</strong><br />
+    Limb 2 — shares on which ₹5,00,000 is paid up = ₹5,00,000 ÷ ₹10 = <strong>50,000 shares</strong><br />
+    The limbs are alternatives → the effective minimum is the <strong>lower</strong> =
+    <strong>50,000 shares</strong><br />
+    <br />
+    Mr Rege: 40,000 &lt; 50,000 and &lt; 4,00,000 → <strong>demand fails</strong><br />
+    Ms Bhalla: 3,60,000 ≥ 50,000 → <strong>demand succeeds</strong> (on limb 2, though she misses
+    limb 1)<br />
+    The eight members jointly: 55,000 ≥ 50,000 → <strong>demand succeeds</strong> — members may
+    <strong>combine</strong> to reach the threshold
+  </div>
+  <p>
+    Two lessons. First, the paid-up-value limb is far easier to satisfy in a large company, so
+    computing only the one-tenth is how marks are lost. Second, the threshold is measured on the
+    holdings of those <strong>making the demand together</strong> — a single member need not clear it
+    alone.
+  </p>
+</Callout>
+
+**Section 110 — postal ballot.** A company **shall** transact by postal ballot such items as the
+**Central Government declares by notification** to be transactable only that way, and **may** transact by
+postal ballot **any other item except (i) ordinary business and (ii) any business in respect of which
+directors or auditors have a right to be heard** at a meeting. A resolution assented to by the requisite
+majority by postal ballot is **deemed to have been duly passed at a general meeting**. A **proviso** lets
+a company that is required to provide e-voting under s. 108 transact even the notified items **at a
+general meeting** in the manner provided by that section.
+
+<div class="formula">Postal ballot is <strong>barred</strong> for <strong>ordinary business</strong> and for business on which <strong>directors or auditors have a right to be heard</strong> — those must go to a meeting</div>
+
+## 12. Representation and circulation — sections 111, 112 and 113
+
+**Section 111 — circulation of members' resolutions.** On a requisition by the number of members
+prescribed for s. 100, a company must **give notice of a resolution** intended to be moved at a meeting
+to members entitled to receive notice of the next general meeting, and **circulate a statement** of not
+more than the prescribed number of words on the matter, to every member entitled to notice — at the
+**requisitionists' cost** unless the company resolves otherwise, and provided the requisition is
+deposited in time. The company is **not bound to circulate** a statement if, on the application of the
+company or any aggrieved person, the **Central Government** is satisfied that the rights are being
+**abused to secure needless publicity for defamatory matter**.
+
+**Section 112 — the President and Governors.** The **President of India** or the **Governor of a State**,
+being a member of a company, may appoint such person as he thinks fit to act as his **representative** at
+any meeting of the company or of any class of members. That person is **deemed to be a member** for the
+purposes of the Act and may exercise the **same rights and powers**, including the right to vote **by
+proxy and by postal ballot**, as the President or Governor could.
+
+**Section 113 — bodies corporate.** A **body corporate**, whether or not a company under the Act, may by
+**resolution of its Board or other governing body** authorise a person to act as its representative:
+**(a)** at any meeting of a company of which it is a **member**, or of any class of members; **(b)** at
+any meeting of **creditors** of a company, if it is a **creditor** (including a debenture-holder). The
+person so authorised may exercise the **same rights and powers, including the right to vote by proxy and
+by postal ballot**, as the body corporate could exercise **if it were an individual member, creditor or
+debenture-holder**.
+
+| | **Proxy** (s. 105) | **Representative** (ss. 112, 113) |
+|---|---|---|
+| Appointed by | a member, by an **instrument of proxy** | the President/Governor, or a body corporate **by resolution of its Board** |
+| Counted for **quorum** | **No** | **Yes** |
+| Right to **speak** | **No** | **Yes** |
+| Vote on a **show of hands** | **No** | **Yes** |
+| Vote on a **poll** | **Yes** | **Yes** |
+| May appoint a proxy himself | — | **Yes** |
+
+## 13. Resolutions and special notice — sections 114, 115 and 116
+
+**Section 114(1) — ordinary resolution.** A resolution is **ordinary** if the notice required by the Act
+has been duly given and the votes cast **in favour** — whether on a show of hands, electronically or on a
+poll, including the **casting vote of the Chairman**, if any — by members entitled to vote in person, by
+proxy where allowed, or by postal ballot, **exceed** the votes cast **against** by members so entitled and
+voting.
+
+**Section 114(2) — special resolution.** A resolution is **special** when **all three** conditions hold:
+
+1. the **intention to propose it as a special resolution** has been **duly specified in the notice**
+   calling the general meeting or in another intimation to the members;
+2. the **notice required by the Act** has been duly given; and
+3. the votes cast **in favour** are **not less than three times** the votes cast **against**.
+
+<div class="formula">Ordinary resolution — <strong>for &gt; against</strong> (a simple majority of votes <strong>cast</strong>) · Special resolution — <strong>for ≥ 3 × against</strong> (that is, 75% of the votes cast) · <strong>abstentions are ignored in both</strong></div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Both tests run on votes CAST, not on total voting power.</strong> A member who stays away, or
+    who attends and abstains, is out of the arithmetic altogether. So a special resolution can pass on
+    the votes of a small fraction of the capital, provided the 3:1 ratio among those actually voting is
+    met. A second trap: <strong>condition (1) of s. 114(2) is substantive</strong> — if the notice did
+    not say the resolution was to be proposed as a special resolution, a 90% vote in favour still does
+    not produce a special resolution.
+  </p>
+</Callout>
+
+**Section 115 — resolutions requiring special notice.** Where the Act or the articles require **special
+notice** of a resolution, notice of the **intention to move** it must be given to the company by:
+
+<div class="formula">Members holding not less than <strong>1% of the total voting power</strong> · <strong>OR</strong> holding shares on which an aggregate sum <strong>not exceeding ₹5,00,000</strong>, as prescribed, has been <strong>paid up</strong> — again two alternative limbs, so the <strong>lower</strong> requirement governs</div>
+
+The company must then **give its members notice of the resolution** in the prescribed manner. **Rule-level
+timing:** the members' notice must reach the company **not earlier than three months but at least 14 days
+before** the meeting (excluding the day of the notice and the day of the meeting), and the company must
+notify its members **at least 7 days before** the meeting, excluding the day of despatch and the day of
+the meeting, in the same manner as a notice of a general meeting.
+
+**Where special notice is required** — the two situations to remember are **s. 140(4)** (appointing an
+auditor other than the retiring auditor, or expressly providing that the retiring auditor shall not be
+re-appointed) and **s. 169** (removing a director before the expiry of his term, and appointing a director
+in his place at the same meeting).
+
+**Section 116 — resolutions passed at an adjourned meeting.** A resolution passed at an **adjourned
+meeting** of a company, of a class of shareholders, or of the **Board**, is treated for **all purposes** as
+having been passed on the **date it was in fact passed**, and is **not deemed** to have been passed on any
+earlier date. This matters wherever another section runs a clock from the passing of the resolution — the
+s. 117 filing clock, for example, starts on the **adjourned** date.
+
+## 14. Filing of resolutions — section 117
+
+**Section 117(1)** — a copy of every resolution or agreement in respect of the matters in s. 117(3),
+**together with the explanatory statement under s. 102**, if any, must be **filed with the Registrar
+within 30 days of the passing or making of it**, in the prescribed manner and with the prescribed fee.
+A proviso requires every resolution **altering the articles**, and every agreement in s. 117(3), to be
+**embodied in or annexed to every copy of the articles** issued afterwards.
+
+<div class="formula">Form <strong>MGT-14</strong> · <strong>30 days</strong> · from the <strong>passing</strong> of the resolution or the <strong>making</strong> of the agreement</div>
+
+**Section 117(3) — what must be filed.**
+
+| Clause | Resolution or agreement |
+|---|---|
+| (a) | every **special resolution** |
+| (b) | resolutions **agreed to by all the members** which, if not so agreed, would have needed a **special resolution** |
+| (c) | any **Board resolution or agreement** relating to the **appointment, re-appointment, renewal or variation of the terms of appointment of a managing director** |
+| (d) | resolutions or agreements agreed to by **any class of members** which would otherwise have needed a **specified majority**, and all resolutions or agreements binding a class though not agreed to by all of them |
+| (e) | resolutions giving the Board **consent to exercise the powers in s. 180(1)(a)** (disposal of an undertaking) **and s. 180(1)(c)** (borrowing beyond paid-up capital, free reserves and securities premium) |
+| (f) | resolutions for **voluntary winding up** |
+| (g) | resolutions passed under **s. 179(3)** — the Board's powers exercisable only at a Board meeting — with a proviso that **no person may inspect or obtain copies** of these under s. 399, and a further proviso exempting a **banking company** in respect of s. 179(3)(f) resolutions granting loans, guarantees or security **in the ordinary course of its business** |
+| (h) | any other resolution or agreement **as may be prescribed** and placed in the public domain |
+
+**Section 117(2)** — default carries a penalty on the **company**, with a daily continuing component and a
+cap, and a separate penalty on **every officer in default, including the liquidator** of the company.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Not every resolution goes to the Registrar.</strong> The default position is that an
+    <strong>ordinary resolution is not filed</strong>; it reaches MGT-14 only if it falls inside a
+    specific clause of s. 117(3) — most often (e), the s. 180 consents, which are in fact
+    <em>special</em> resolutions, and (g), the s. 179(3) <em>Board</em> resolutions. Note also that
+    s. 117 catches <strong>Board</strong> resolutions in clauses (c) and (g), so "only members'
+    resolutions are filed" is wrong.
+  </p>
+</Callout>
+
+## 15. Minutes, inspection and electronic records — sections 118, 119 and 120
+
+**Section 118(1)** — every company must cause **minutes** of the proceedings of **every general meeting**,
+of **every meeting of a class of shareholders or creditors**, of **every resolution passed by postal
+ballot**, and of **every meeting of the Board or of a committee of the Board**, to be **prepared and
+signed** in the prescribed manner and **kept within 30 days of the conclusion** of the meeting (or of the
+passing of the postal-ballot resolution) in **books kept for that purpose with their pages consecutively
+numbered**.
+
+<div class="formula">Minutes entered and signed within <strong>30 days</strong> of the conclusion of the meeting · pages <strong>consecutively numbered</strong> · signed by the <strong>Chairman of that meeting</strong>, or on his death or inability by a <strong>director authorised by the Board</strong></div>
+
+**Section 118(2)–(4)** — the minutes must contain a **fair and correct summary** of the proceedings; **all
+appointments** made at the meeting must be included; and for a **Board or committee** meeting they must
+also record the **names of the directors present** and, for each resolution, the names of the directors
+**dissenting from or not concurring** with it.
+
+**Section 118(5)–(6) — the Chairman's discretion.** Nothing may be included that in the **opinion of the
+Chairman** is or could reasonably be regarded as **defamatory** of any person, is **irrelevant or
+immaterial** to the proceedings, or is **detrimental to the interests of the company**; and the Chairman
+has **absolute discretion** on inclusion or exclusion on those grounds.
+
+**Section 118(7)–(8) — evidence.** Minutes kept in accordance with the section are **evidence of the
+proceedings** recorded. And **until the contrary is proved**, the meeting is **deemed to have been duly
+called and held**, all the proceedings to have duly taken place, the postal-ballot resolutions to have
+been duly passed, and **all appointments of directors, key managerial personnel, auditors or a company
+secretary in practice** are **deemed valid**.
+
+**Section 118(9)** — no document purporting to be a report of the proceedings of a general meeting may be
+**circulated or advertised at the company's expense** unless it includes what the section requires the
+minutes to contain. **Section 118(10)** — every company must **observe the secretarial standards** on
+**general and Board meetings** specified by the **Institute of Company Secretaries of India** and approved
+by the Central Government — **SS-1** for Board meetings and **SS-2** for general meetings.
+
+**Section 118(11)–(12) — default.** Failure to comply attracts a penalty on the **company** and on
+**every officer in default**. A person who **tampers** with the minutes is punishable with
+**imprisonment** and a **fine** — the only imprisonment in this chapter.
+
+**Section 119 — inspection of minute-books of general meetings.** The books containing the minutes of
+**general meetings** and of **postal-ballot resolutions** must be **kept at the registered office** and be
+**open during business hours to inspection by any member without charge**, subject to reasonable
+restrictions imposed by the articles or in general meeting, so that **not less than two hours in each
+business day** are allowed. Any member is entitled to a **copy** on payment of the prescribed fee
+**within seven working days** of his request. Refusal attracts a penalty on the company and every officer
+in default **for each refusal**, and the **Tribunal** may order **immediate inspection** or direct that
+the copy be **sent forthwith**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Board minutes are not open to members.</strong> Section 119 covers only the minutes of
+    <strong>general meetings</strong> and of <strong>postal-ballot resolutions</strong>. A member has no
+    right to inspect the minutes of Board or committee meetings — those are for directors and the
+    auditor. Note the two different periods that sit side by side in this chapter: a copy of the
+    <strong>registers</strong> under s. 94(3) within <strong>seven days</strong>, and a copy of the
+    <strong>minutes</strong> under s. 119(2) within <strong>seven working days</strong>.
+  </p>
+</Callout>
+
+**Section 120 — records in electronic form.** Any document, record, register, minutes or return that a
+company is **required to keep**, or that must be **allowed to be inspected or copied**, may be **kept,
+inspected or copied in electronic form** in the prescribed manner. At rules level, **every listed company
+and every company having not less than 1,000 security holders** may maintain its records electronically;
+the records must remain **accessible, legible and unaltered**, with the security and back-up the rules
+require.
+
+## 16. Report on annual general meeting and OPC modifications — sections 121 and 122
+
+**Section 121 — report on the AGM.** Every **listed public company** must prepare a report on **each
+annual general meeting**, in the prescribed manner, **including a confirmation** that the meeting was
+**convened, held and conducted** as required by the Act and the rules. The company must **file a copy with
+the Registrar within 30 days of the conclusion of the AGM**, in **Form MGT-15**. Default attracts a
+penalty on the company, with a daily continuing component and a cap, and on **every officer in default**.
+
+<div class="formula"><strong>Listed public company</strong> only · report on <strong>each AGM</strong> · filed within <strong>30 days of the conclusion</strong> of the AGM · Form MGT-15</div>
+
+**Section 122 — how this Chapter applies to a One Person Company.**
+
+| Provision | Position for an OPC |
+|---|---|
+| **s. 98 and ss. 100 to 111** | **do not apply** at all |
+| **s. 96** (AGM) | an OPC is **excluded** from the AGM requirement by s. 96(1) itself |
+| **Ordinary business** under s. 102(2)(a) | **deemed transacted** where the member **communicates the resolution** to the company and it is **entered in the minutes book**, **signed and dated by the member** |
+| **s. 114** — any ordinary or special resolution | **sufficient** if the member communicates it to the company and it is entered in the minutes book, signed and dated by him |
+| **One-director OPC** | any business required to be transacted at a **Board meeting** is validly done if the **resolution is entered in the minutes book and signed and dated by that director** |
+| **The date so recorded** | is **deemed to be the date of the meeting** for all purposes of the Act |
+
+<Callout kind="pointer">
+  <p>
+    Section 122 does <strong>not</strong> switch off ss. 88 to 95, s. 112, s. 113, or ss. 114 to 122
+    themselves. An OPC therefore still keeps its <strong>registers</strong> under s. 88, still files an
+    <strong>annual return</strong> under s. 92 (in <strong>MGT-7A</strong>, signed by the company
+    secretary or, where there is none, by the <strong>director</strong>), and still maintains
+    <strong>minutes</strong> under s. 118. What it does not do is hold general meetings: ss. 100 to 111
+    — EGMs, notice, explanatory statement, quorum, chairman, proxies, voting, poll, postal ballot — and
+    s. 98 simply do not apply.
+  </p>
+</Callout>
+
+## 17. The master clock table and the quorum table
+
+**Every day-count in the chapter.**
+
+| Clock | Period | Runs from |
+|---|---|---|
+| Declaration by the registered holder with no beneficial interest — MGT-4 (s. 89(1)) | **30 days** | entry of his name in the register |
+| Declaration by the beneficial owner — MGT-5 (s. 89(2)) | **30 days** | acquisition of the beneficial interest |
+| Declaration on a **change** in beneficial interest (s. 89(3)) | **30 days** | the change |
+| Company's return to the Registrar — MGT-6 (s. 89(6)) | **30 days** | **receipt** of the declaration |
+| Reply to the company's SBO notice (s. 90(4A)–(5)) | **30 days** | the company's notice |
+| Company's application to the Tribunal on an SBO default (s. 90(7)) | **15 days** | **expiry** of that 30-day period |
+| Tribunal's order on that application (s. 90(8)) | **60 days** | the application |
+| Application to relax the SBO restrictions (s. 90(9)) | **1 year** | the Tribunal's order |
+| Closure of the register (s. 91) | **45 days** a year, **30 days** at one time, **7 days'** previous notice | the year · each spell · before closure |
+| Copy of a register or annual return to a requisitionist (s. 94(3)) | **7 days** | the request |
+| Filing the annual return (s. 92(4)) | **60 days** | the AGM **held**, or the **last date** it should have been held |
+| **First** AGM (s. 96(1), first proviso) | **9 months** | close of the **first financial year** |
+| **Every other** AGM (s. 96(1), first proviso) | **6 months** | close of that financial year |
+| Maximum gap between AGMs (s. 96(1)) | **15 months** | the **previous** AGM |
+| Registrar's extension of an AGM — never the first (s. 96(1), third proviso) | **3 months** | the due date |
+| Board to **proceed to call** a requisitioned EGM (s. 100(4)) | **21 days** | **receipt** of the requisition |
+| Outer date for **holding** the requisitioned EGM (s. 100(4)) | **45 days** | **receipt** of the requisition |
+| Requisitionists' own meeting (s. 100(4)) | **3 months** | the date of the **requisition** |
+| Notice of a general meeting (s. 101(1)) | **21 CLEAR days** | **service**, both end days excluded |
+| Deemed service of a posted notice (rule 35(6)) | **48 hours** | posting |
+| Notice of an adjourned meeting or a change of day, time or place (s. 103(2)) | **3 days** | before the adjourned meeting |
+| Adjournment for want of quorum (s. 103(2)) | **same day next week**, same time and place | the original meeting |
+| Deposit of a proxy instrument — ceiling on the articles (s. 105(4)) | **48 hours** | before the meeting |
+| Inspection of proxies (s. 105(5)) | window opens **24 hours** before; **3 days'** notice of intention | the meeting |
+| Poll on any question other than adjournment or the chairman (s. 109(4)) | **not later than 48 hours** | the demand |
+| Special notice from members to the company (s. 115, rules) | **not earlier than 3 months**, **at least 14 days** before | the meeting |
+| Company's notice of the special-notice resolution to members (rules) | **at least 7 days** before | the meeting |
+| Filing a resolution — MGT-14 (s. 117(1)) | **30 days** | the **passing** or **making** |
+| Entering and signing minutes (s. 118(1)) | **30 days** | conclusion of the meeting |
+| Copy of minutes of a general meeting to a member (s. 119(2)) | **7 working days** | the request |
+| Report on the AGM of a listed public company — MGT-15 (s. 121(2)) | **30 days** | **conclusion** of the AGM |
+
+**Quorum at a glance (s. 103).**
+
+| Company | Members on the date of the meeting | Quorum |
+|---|---|---|
+| Public | up to 1,000 | **5 personally present** |
+| Public | 1,001 to 5,000 | **15 personally present** |
+| Public | more than 5,000 | **30 personally present** |
+| Private | any | **2 personally present** |
+| Adjourned meeting where quorum again absent (s. 103(3)) | any | **the members present** |
+| Meeting called by requisitionists, no quorum (s. 103(2)(b)) | any | the meeting **stands cancelled** |
+
+**The percentage and rupee bright lines.**
+
+| Threshold | Where |
+|---|---|
+| **1/10th of members** must reside there | keeping registers elsewhere in India, with a **special resolution** (s. 94(1)) |
+| **10%** (prescribed) beneficial interest | significant beneficial owner (s. 90 with the SBO Rules) |
+| **₹10 crore** paid-up capital **or** **₹50 crore** turnover, or **listed** | PCS certification of the annual return in **MGT-8** (s. 92, rule 11(2)) |
+| **1/10th of the paid-up voting capital** or of the total voting power | valid requisition for an EGM (s. 100(2)) |
+| **95%** of members entitled to vote (AGM) | consent to shorter notice (s. 101(1) proviso) |
+| **Majority in number and 95% of the paid-up voting capital** (other meetings) | consent to shorter notice (s. 101(1) proviso) |
+| **2%** of the paid-up capital of another company | disclosure in the explanatory statement (s. 102(3)) |
+| **50 members** and **10%** of the voting share capital | maximum a single person may hold proxies for (rules) |
+| **1/10th of the total voting power** **or** shares with **₹5,00,000** paid up | demand for a poll (s. 109(1)) |
+| **1%** of the total voting power **or** shares with **₹5,00,000** paid up | special notice (s. 115) |
+| **For &gt; against** · **for ≥ 3 × against** | ordinary · special resolution (s. 114) |
+
+## Common mistakes &amp; examiner traps
+
+1. **Counting days instead of clear days.** Twenty-one **clear** days excludes both the day of service
+   and the day of the meeting. For a **posted** notice add **48 hours** of deemed service first. The
+   two shortcuts worth memorising: **service date + 22** and **posting date + 24**.
+2. **Using only the six-month rule for the AGM.** The **15-month gap** from the previous AGM applies at
+   the same time, and the **earlier** of the two dates governs. Where the previous AGM was held early in
+   the year, the gap rule bites first.
+3. **Extending the first AGM.** The Registrar's three-month extension is available for **any AGM except
+   the first**. And the first AGM has its **own** period — **nine months from the close of the first
+   financial year**, not six.
+4. **Starting the annual-return clock at the year-end.** Section 92(4) runs **60 days** from the date the
+   AGM **was held**, or, if none was held, from the **last date on which it should have been held** —
+   never from the close of the financial year.
+5. **Counting proxies towards the quorum.** A proxy is not "personally present". A **s. 113 corporate
+   representative** and a **s. 112 President's or Governor's representative** are, and they may also
+   speak and vote on a show of hands.
+6. **Treating the 48-hour proxy rule as a member's entitlement.** It is a **ceiling on the articles**: an
+   article demanding deposit more than 48 hours before the meeting is read down to 48 hours, but an
+   article demanding 24 hours is valid and binding.
+7. **Computing only one limb of s. 109 or s. 115.** Both sections have **two alternative limbs**, and in a
+   large company the **paid-up-value limb** (₹5,00,000) is far easier to satisfy than the one-tenth or
+   one-per-cent limb. The **lower** requirement governs.
+8. **Running the s. 100 clocks from the wrong event.** The **21 days** and the **45 days** run from
+   **receipt** of the requisition; the requisitionists' **3 months** runs from the **date of the
+   requisition**. And the Board must only **proceed to call** within 21 days — the meeting itself may be
+   later, inside the 45 days.
+9. **Applying both s. 91 ceilings as if they were alternatives.** They apply **together**: never more than
+   **45 days in a year** and never more than **30 days at one time**. The lower head-room governs.
+10. **Saying every resolution is filed in MGT-14.** Only the categories in **s. 117(3)** are filed —
+    special resolutions, unanimous resolutions that would otherwise need a special resolution, MD
+    appointment terms, class resolutions, s. 180(1)(a) and (c) consents, voluntary winding up, and
+    **s. 179(3) Board** resolutions.
+11. **Opening the Board minutes to members.** Section 119 covers only **general meeting** and
+    **postal-ballot** minutes. Note also **seven days** for a register copy (s. 94(3)) against **seven
+    working days** for a minutes copy (s. 119(2)).
+12. **Forgetting that ordinary business cannot go to a postal ballot**, and that a company required to
+    provide **e-voting** may transact even the notified postal-ballot items **at a general meeting**.
+13. **Ignoring the notice condition for a special resolution.** Section 114(2) needs the **intention** to
+    propose it as a special resolution to be **stated in the notice**; without that, the 3:1 majority
+    achieves nothing.
+14. **Citing section 93.** It stands **omitted**.
+
+## One-page revision summary
+
+**Registers (ss. 88–95).** Three registers from the **date of registration** — members (class-wise),
+debenture-holders, other security holders — each with an **index**; a **depository** register is deemed to
+be the register; a **foreign register** may be kept abroad **if the articles authorise** and is **part of
+the principal register**. Registers and annual returns live at the **registered office**, or elsewhere in
+India where **more than 1/10th of the members reside** and a **special resolution** approves;
+**inspection** free for members and security holders, **two hours minimum** each business day, **copies in
+7 days**. Section 95 — **prima facie evidence**. **Section 93 is omitted.**
+
+**Beneficial interest (ss. 89–90).** Every s. 89 clock is **30 days** — MGT-4 by the registered holder,
+MGT-5 by the beneficial owner, MGT-4/5 on any change, **MGT-6 by the company** from receipt. No
+declaration → the beneficial owner's **rights are unenforceable**, but the company still pays dividend to
+the **registered** owner. Section 90 catches **individuals** at **25% or the prescribed percentage
+(presently 10%)** or with **significant influence or control**: BEN-1 to the company, **BEN-2** to the
+Registrar, **BEN-3** register, **BEN-4** notice, **30 days** to reply, application to the **Tribunal in 15
+days**, order in **60 days**, restrictions on transfer, voting and dividend, relaxation within **1 year**,
+else the shares go to the **IEPF**.
+
+**Closure and annual return (ss. 91–92).** Closure — **45 days a year**, **30 days at one time**,
+**7 days'** previous notice (less for listed companies as SEBI specifies). Annual return — contents from
+registered office to penalties and compounding (**indebtedness and FII holdings are omitted**); signed by
+a **director and the CS**, or a **PCS** where there is none; **OPC and small company** — the CS, or the
+**director**; **MGT-7**, and **MGT-7A** for OPC and small companies; **MGT-8** certification by a **PCS**
+if **listed** or **paid-up ≥ ₹10 crore** or **turnover ≥ ₹50 crore**; on the **website** with the web link
+in the **Board's report**; filed in **60 days** from the AGM held or the last date it should have been
+held.
+
+**AGM (ss. 96–99).** Not for an OPC. First AGM **9 months** from the close of the **first** financial
+year; others **6 months** from the close of the financial year; gap never more than **15 months**;
+Registrar's extension **up to 3 months**, **never for the first AGM**. **9 a.m. to 6 p.m.**, not a
+**National Holiday**, at the registered office or within the same city, town or village; an **unlisted**
+company may meet **anywhere in India** with the **advance consent of all members**. **Tribunal** calls a
+defaulted AGM on a **member's** application (s. 97) and an impracticable non-AGM meeting **suo motu** or on
+a **director's or voting member's** application (s. 98), and may direct that **one member is a meeting**.
+Section 99 — fine on the company and every officer in default, with a daily continuing fine.
+
+**EGM and notice (ss. 100–102).** Board at will, or on requisition by **1/10th of the paid-up voting
+capital** (or of the total voting power). Board **proceeds to call within 21 days** for a meeting **within
+45 days** of **receipt**, failing which the **requisitionists** meet within **3 months of the requisition**
+and the company **reimburses their expenses**, recovering them from the **defaulting directors'
+remuneration**. Notice — **21 clear days**, writing or electronic; shorter notice with **95%** (AGM) or
+**majority in number plus 95% of the voting capital** (other meetings); to **members, auditors and
+directors**; **accidental omission** does not invalidate. Explanatory statement for **all special
+business** — at an AGM everything except **accounts and reports, dividend, retiring directors and
+auditors**; at every other meeting, **everything**. **2%** interest in another company must be disclosed;
+undisclosed benefits are **held in trust** and repayable, with a penalty of **₹50,000 or five times the
+benefit, whichever is higher**.
+
+**Quorum, chairman, proxies, voting (ss. 103–113).** Quorum **5 / 15 / 30** for a public company at
+**1,000 / 5,000** members and **2** for a private company, always **personally present**; no quorum in
+**half an hour** → adjourned to the **same day next week** (**3 days'** notice of any change) or
+**cancelled** if requisitioned; at the adjourned meeting the **members present are the quorum**. Chairman
+elected **on a show of hands** unless the articles say otherwise; a poll on his election is taken
+**forthwith**. A proxy **need not be a member**, **cannot speak**, **votes only on a poll**, is **not
+counted for quorum**, and the articles cannot demand deposit more than **48 hours** ahead; **50 members and
+10%** cap the proxy-holder. Section 106 — voting may be barred **only** for unpaid calls or a lien;
+**split voting** allowed on a poll. Show of hands unless a **poll** or **e-voting**; the Chairman's
+declaration plus the minute entry is **conclusive**. Poll on **1/10th of the voting power or ₹5,00,000
+paid up**, taken within **48 hours** (forthwith for adjournment or the chairman). Postal ballot for the
+**notified items**, and optionally for anything except **ordinary business** and business where
+**directors or auditors have a right to be heard**. **s. 112 and s. 113 representatives count for quorum,
+speak and vote on a show of hands**; a proxy does none of these.
+
+**Resolutions and records (ss. 114–122).** Ordinary — **for &gt; against**; special — **for ≥ 3 ×
+against** **and** the intention stated **in the notice**. Special notice by members with **1% of the
+voting power or ₹5,00,000 paid up**, **14 days** before the meeting, the company notifying members
+**7 days** before; required for **s. 140(4)** and **s. 169**. A resolution at an **adjourned meeting** is
+passed on the **actual** date (s. 116). **MGT-14 within 30 days** for the s. 117(3) list. Minutes prepared,
+signed and kept within **30 days**, consecutively numbered, Chairman's **absolute discretion** on
+defamatory, irrelevant or detrimental matter, **evidence** of the proceedings, **SS-1 and SS-2**
+mandatory, **tampering carries imprisonment**. Section 119 — **general meeting** minutes at the registered
+office, free member inspection, **two hours** a day, copy in **7 working days**; **Board minutes are not
+open to members**. Section 120 — electronic records. Section 121 — **listed public company**, report on
+each AGM in **MGT-15** within **30 days** of its conclusion. Section 122 — **s. 98 and ss. 100 to 111 do
+not apply to an OPC**; the member's (or sole director's) resolution **entered, signed and dated in the
+minutes book** is the meeting, and that date is the **date of the meeting** for all purposes.

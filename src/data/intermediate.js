@@ -220,10 +220,10 @@ export const intermediatePapers = [
       {
         name: 'Part I · Company Law & LLP Law — Module 2',
         chapters: [
-          { number: 7, slug: 'management-and-administration', name: 'Management & Administration' },
-          { number: 8, slug: 'declaration-and-payment-of-dividend', name: 'Declaration and Payment of Dividend' },
-          { number: 9, slug: 'accounts-of-companies', name: 'Accounts of Companies' },
-          { number: 10, slug: 'audit-and-auditors', name: 'Audit and Auditors' },
+          { number: 7, slug: 'management-and-administration', name: 'Management & Administration', hasNotes: true },
+          { number: 8, slug: 'declaration-and-payment-of-dividend', name: 'Declaration and Payment of Dividend', hasNotes: true },
+          { number: 9, slug: 'accounts-of-companies', name: 'Accounts of Companies', hasNotes: true },
+          { number: 10, slug: 'audit-and-auditors', name: 'Audit and Auditors', hasNotes: true },
           { number: 11, slug: 'companies-incorporated-outside-india', name: 'Companies Incorporated Outside India' },
         ],
       },
