@@ -1,0 +1,808 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'Companies Incorporated Outside India'
+description: 'CA Intermediate Paper 2 Ch 11 — when a company registered abroad becomes a "foreign company" for Indian law, the three limbs of section 2(42), the 50% Indian-holding rule in section 379(2), and every filing clock in Chapter XXII: FC-1 in 30 days, FC-3 accounts, FC-4 in 60 days, plus prospectus, IDR, closure and punishment provisions.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 11 · Foreign Companies'
+chapterSlug: companies-incorporated-outside-india
+masteryId: i2-ch11
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Companies Act 2013, Chapter XXII — ss. 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 393A'
+  - 'Companies Act 2013, s. 2(42) (definition of foreign company)'
+  - 'Companies (Registration of Foreign Companies) Rules 2014 — Rule 2 (electronic mode, place of business), Rules 3 to 8, Forms FC-1 to FC-4 (rules-level, amendment-sensitive)'
+  - 'Companies Act 2013, ss. 34, 35, 36 (misstatements) and Chapter XX (winding up), applied through s. 391'
+  - 'Companies (Amendment) Act 2017 — insertion of s. 393A and substitution of s. 391(2); Companies (Amendment) Act 2020 — recast of s. 392'
+sourceLabel: 'Companies Act 2013 ss. 379–393A · ICAI SM Paper 2 Ch 11 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 23 min read · 7 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=companies-incorporated-outside-india'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Helios Cloudworks Pte Ltd is incorporated in Singapore. It has no Indian subsidiary, no Indian
+shareholders and no Indian directors. In March it signs a lease on two floors of an office block in
+Bengaluru, moves in forty engineers, prints letterhead, and starts billing its Singapore parent for
+the work done there. Its finance head is confident that nothing in the Companies Act 2013 touches
+the company, because the company was never registered in India.
+
+He is wrong, and the error costs a fine on the company plus a fine on every officer in default. From
+the day those two floors opened, Helios Cloudworks became a **foreign company** under s. 2(42), and
+Chapter XXII gave it **thirty days** to deliver its charter, its directors' particulars and the name
+of a person resident in India who can accept service, to the Registrar.
+
+That is the whole chapter in a sentence: **Indian company law does not care where you were born; it
+cares where you set up shop.** For the exam this is a **definition-plus-clocks chapter**. The marks
+sit in three places — whether the definition is satisfied at all (three limbs, all of which must
+hold), which clock runs from which event (30 days · 30 days · 6 months · 60 days), and which
+*other* provisions of the Act are dragged in by s. 384. Learn those and the rest is recall.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the Act is stable, the Rules are not">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. The Act-level positions in ss. 379 to 393A are settled, but three
+    layers move: the <strong>Companies (Registration of Foreign Companies) Rules 2014</strong> carry
+    the <strong>FC-1 to FC-4 form names</strong>, the audit requirement and the six-month accounts
+    window; the <strong>definition of "electronic mode"</strong> in Rule 2(1)(c) is extremely broad
+    and has been amended; and <strong>s. 393A</strong> lets the Central Government exempt classes of
+    foreign companies <em>by notification</em>, so the applicable law can change without any
+    amendment to the Act at all. Every rules-level item below is flagged.
+  </p>
+</Callout>
+
+## 1. The definition of a foreign company — section 2(42)
+
+**Section 2(42)** — a "foreign company" means **any company or body corporate incorporated outside
+India** which **(a)** has a **place of business in India**, whether by itself or through an agent,
+physically or through electronic mode; **and (b)** **conducts any business activity in India** in
+any other manner.
+
+Three limbs, and the conjunction between (a) and (b) is **"and"**, not "or":
+
+| Limb | What it requires | Where students go wrong |
+|---|---|---|
+| **1 · Incorporated outside India** | a company **or body corporate** registered under the law of another country | the entity need not be a "company" in the Indian sense — any body corporate qualifies |
+| **2 · Place of business in India** | **by itself or through an agent**, and **physically or through electronic mode** | an agent's office counts; a server-based presence can count; a one-off visit does not |
+| **3 · Conducts business activity in India** | actual **business activity**, in any manner | a dormant address with no activity fails this limb |
+
+<div class="formula">Foreign company = <strong>incorporated outside India</strong> + <strong>place of business in India</strong> (itself / agent · physically / electronically) + <strong>conducts business activity in India</strong>. Miss any one limb and Chapter XXII does not apply at all.</div>
+
+**"Place of business."** The Act defines it only in **s. 386(c)**, and inclusively: place of business
+**includes a share transfer or registration office**. So a foreign company that keeps nothing in
+India but a registrar-and-transfer office for its own securities has a place of business here. The
+Rules add the mirror image for the electronic route.
+
+**"Electronic mode."** Rule 2(1)(c) of the Companies (Registration of Foreign Companies) Rules 2014
+defines electronic mode very widely — carrying out electronically, **whether the main server is
+installed in India or not**, business-to-business and business-to-consumer transactions, data
+interchange, digital supply transactions, offering to accept deposits or subscriptions in India or
+from citizens of India, financial settlements, web-based marketing, advisory and transactional
+services, database services, supply-chain management, online services such as telemarketing,
+telecommuting, telemedicine, education and information research, and all related data communication
+services, whether by e-mail, mobile devices, social media, cloud computing, document management or
+voice or data transmission.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the electronic-mode definition is rules-level and very broad">
+  <p>
+    Read literally, Rule 2(1)(c) would catch a great many overseas websites that transact with Indian
+    customers, which is why the words <strong>"whether the main server is installed in India or
+    not"</strong> matter so much: the <em>location of the server is not the test</em>. This definition
+    sits in the <strong>Rules</strong>, not the Act, and has been amended. Answer the
+    <em>section</em> first (s. 2(42) — place of business physically or through electronic mode), then
+    cite the Rule for the detail, and re-check the Rule text against the edition notified for your
+    attempt.
+  </p>
+</Callout>
+
+**What is not a place of business.** An **isolated transaction** concluded in India — a single
+export sale negotiated by post or e-mail, a director attending one meeting, a one-off consignment
+sold through an independent buyer — does not by itself establish a place of business. The idea the
+definition reaches is a **settled, continuing presence** from which business is done, coupled with
+actual business activity. The distinction is the SM's, and it is a matter of degree: a leased
+office, a branch, a liaison office, a project office or an agent's standing establishment are on the
+wrong side of the line for the foreign company.
+
+<Callout kind="mistake">
+  <p>
+    <strong>All three limbs must hold — and the commonest exam trap drops the third.</strong> A
+    company incorporated in Dubai that leases a flat in Mumbai as a guest house for visiting staff,
+    and does no business from it, has a presence but <em>no business activity</em>: limb 3 fails and it
+    is not a foreign company. Equally, a company incorporated in Germany that sells into India purely
+    by shipping goods against orders placed from Germany, with no office, agent or electronic presence
+    here, has business <em>with</em> India but <strong>no place of business in India</strong>: limb 2
+    fails. Options that say "any company incorporated outside India that does business with India" are
+    always wrong — they collapse three limbs into one.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 1 — three companies, one definition">
+  <p>
+    <strong>(i)</strong> Nordwind GmbH (Germany) appoints an independent Indian distributor who buys
+    goods on his own account and resells them. <strong>(ii)</strong> Kestrel Analytics Inc (USA) keeps
+    no premises in India but runs a subscription analytics platform sold to 4,000 Indian businesses,
+    with its servers in Virginia and a support team reachable from India. <strong>(iii)</strong>
+    Sabari Holdings Ltd (Mauritius) keeps a share transfer office in Chennai for its own listed
+    securities and does nothing else here.
+  </p>
+  <p>
+    <strong>(i) — not a foreign company.</strong> An independent distributor buying and reselling on
+    his own account is not the company's <em>agent</em>, and the company has no place of business
+    here. <strong>(ii) — foreign company.</strong> Limb 2 is satisfied through <strong>electronic
+    mode</strong>; Rule 2(1)(c) expressly says the location of the main server is irrelevant, and
+    business-to-business transactions and online services are named. Limb 3 is plainly satisfied.
+    <strong>(iii) — foreign company.</strong> Section 386(c) makes a <strong>share transfer or
+    registration office</strong> a place of business, and maintaining the register for its own
+    securities is business activity conducted in India.
+  </p>
+</Callout>
+
+**Which provisions apply, and to whom.** **Section 379(1)** — **ss. 380 to 386 and ss. 392 and 393
+apply to all foreign companies**. Note what is *not* in that list: ss. 387 to 391 are not confined
+to foreign companies at all. They bite on **any person** who issues a prospectus in India for a
+company incorporated outside India, whether or not that company has a place of business here (see
+§8).
+
+## 2. Indian-held foreign companies — section 379
+
+**Section 379(2)** raises the stakes for a foreign company that is substantially Indian-owned.
+
+> Where **not less than fifty per cent of the paid-up share capital** — whether **equity or
+> preference or partly equity and partly preference** — of a company incorporated outside India and
+> having a place of business in India is held by **one or more citizens of India** or by **one or
+> more companies or bodies corporate incorporated in India**, or by **any combination of them**,
+> whether **singly or in the aggregate**, such company shall comply with **the provisions of this
+> Chapter** and **such other provisions of this Act as may be prescribed**, with regard to the
+> business carried on by it in India, **as if it were a company incorporated in India**.
+
+Four things to fix in memory:
+
+1. **The threshold is "not less than 50%"** — so **exactly 50% is enough**. "More than 50%" is a
+   wrong reading, and it is the standard distractor.
+2. **The base is paid-up share capital**, not voting power, not net worth, not turnover — and it is
+   **equity or preference or partly both**, so preference capital held by an Indian body corporate
+   counts towards the numerator and the denominator alike.
+3. **Who counts:** **citizens of India**, and **companies or bodies corporate incorporated in
+   India**. A person of Indian origin who is not a citizen does not count. A company incorporated
+   abroad does not count, however Indian its ownership.
+4. **Singly or in the aggregate** — you add every qualifying holder together. One Indian citizen
+   holding 6%, another holding 9%, and an Indian company holding 35% together cross the line.
+
+<div class="formula">s. 379(2) test = <strong>(Indian citizens' paid-up capital + Indian-incorporated bodies corporate's paid-up capital) ÷ total paid-up share capital ≥ 50%</strong> — equity and preference both counted, holders aggregated.</div>
+
+<Callout kind="example" label="Scenario 2 — running the 50% aggregation">
+  <p>
+    Aurelia Systems Inc, incorporated in Delaware, has a branch office in Hyderabad. Its paid-up
+    capital is ₹40,00,000 of equity and ₹10,00,000 of preference. The equity is held as to
+    ₹12,00,000 by three Indian citizens, ₹9,00,000 by Sundar Infotech Private Limited (incorporated
+    in India) and ₹19,00,000 by its Delaware parent. The preference is held as to ₹4,00,000 by
+    Sundar Infotech Private Limited and ₹6,00,000 by a Cayman fund.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the s. 379(2) aggregation</div>
+    Total paid-up share capital = ₹40,00,000 (equity) + ₹10,00,000 (preference) = <strong>₹50,00,000</strong><br />
+    Indian citizens' holding = ₹12,00,000<br />
+    Indian-incorporated body corporate = ₹9,00,000 (equity) + ₹4,00,000 (preference) = ₹13,00,000<br />
+    Qualifying aggregate = ₹12,00,000 + ₹13,00,000 = <strong>₹25,00,000</strong><br />
+    ₹25,00,000 ÷ ₹50,00,000 = <strong>50%</strong> → "not less than 50%" is <strong>satisfied</strong>
+  </div>
+  <p>
+    So Aurelia Systems must comply with Chapter XXII <em>and</em> with such other provisions of the
+    Act as are prescribed, <strong>as if it were a company incorporated in India</strong>, with regard
+    to its Indian business. Two traps sit in this working. First, dropping the <strong>preference
+    capital</strong> from either the numerator or the denominator: on equity alone the Indian share
+    would be ₹21,00,000 of ₹40,00,000 = 52.5%, a different number reached by the wrong route.
+    Second, reading the threshold as "more than 50%" and concluding that an exact half escapes — it
+    does not.
+  </p>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Section 379(2) does not turn the foreign company into an Indian company.</strong> It is
+    incorporated abroad, it stays incorporated abroad, and it is still a foreign company for s. 2(42).
+    What changes is the <em>measure of compliance</em>: it must comply <strong>as if</strong> it were
+    an Indian company, and only <strong>with regard to the business carried on by it in India</strong>.
+    Options saying it "shall be deemed to be incorporated in India", or that it must register afresh
+    under s. 7, or that it is required to convert into an Indian subsidiary, are all wrong. Also note
+    the second half of the sub-section — "and such other provisions of this Act <em>as may be
+    prescribed</em>" — which makes the reach of the extra compliance a <strong>rules-level</strong>
+    question.
+  </p>
+</Callout>
+
+## 3. Documents to be delivered on establishing a place of business — section 380
+
+**Section 380(1)** — every foreign company which **establishes a place of business in India** must,
+**within thirty days of the establishment**, deliver to the **Registrar** for registration:
+
+1. a **certified copy of the charter, statutes or memorandum and articles** of the company, or other
+   instrument constituting or defining its constitution — and, if the instrument is **not in
+   English**, a **certified translation** in English;
+2. the **full address of the registered or principal office** of the company;
+3. a **list of the directors and secretary** of the company, with the prescribed particulars;
+4. the **name and address of one or more persons resident in India** authorised to **accept on
+   behalf of the company service of process** and any notices or other documents required to be
+   served on the company;
+5. the **full address of the office of the company in India** which is deemed to be its **principal
+   place of business** in India;
+6. **particulars of the opening and closing of a place of business in India on any earlier
+   occasion or occasions**;
+7. a **declaration** that **none of the directors** of the company **or the authorised
+   representative in India** has ever been **convicted or debarred** from formation of companies and
+   management in India or abroad; and
+8. **any other prescribed information**.
+
+**Section 380(3)** — where any **alteration** is made or occurs in the above particulars, the
+company must deliver to the Registrar, **within thirty days of the alteration**, a return containing
+the particulars of the alteration.
+
+<div class="formula">s. 380(1): documents to the Registrar within <strong>30 days of establishing the place of business</strong> — <strong>Form FC-1</strong>. s. 380(3): any alteration in those particulars within <strong>30 days of the alteration</strong> — <strong>Form FC-2</strong>.</div>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · FC-1 and FC-2 are rules-level">
+  <p>
+    The <strong>thirty-day periods and the list of documents are in the section</strong> and are what
+    an examiner marks. The <strong>form numbers FC-1 and FC-2</strong>, the attachments, the fee, the
+    manner of certification of copies and translations, and the requirement of prior regulatory
+    approval where applicable, are all in the <strong>Companies (Registration of Foreign Companies)
+    Rules 2014</strong> and change. Cite the section; mention the form only as the vehicle.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 3 — the FC-1 clock, dated">
+  <p>
+    Helios Cloudworks Pte Ltd (Singapore) takes possession of its Bengaluru premises and begins
+    operations on <strong>9 March 2026</strong>. On <strong>6 November 2026</strong> it replaces the
+    person resident in India authorised to accept service of process.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — count in days from the trigger, excluding the trigger day</div>
+    s. 380(1) · establishment 9 Mar 2026 + 30 days = <strong>8 April 2026</strong> (FC-1)<br />
+    s. 380(3) · alteration 6 Nov 2026 + 30 days = <strong>6 December 2026</strong> (FC-2)
+  </div>
+  <p>
+    Note the two commonest wrong answers. <strong>9 April 2026</strong> comes from reading "thirty
+    days" as "one calendar month" — the section says days. <strong>8 May 2026</strong> comes from
+    borrowing the sixty-day figure that belongs to the <em>annual return</em> in Rule 7. And the
+    clock starts from the <strong>establishment of the place of business</strong>, not from the date
+    the lease was signed, not from the date the company was incorporated in Singapore, and not from
+    the date the first invoice was raised.
+  </p>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    <strong>The authorised person is the hinge of the whole Chapter.</strong> Item 4 of the s. 380(1)
+    list is not administrative housekeeping — it is what makes the foreign company reachable.
+    <strong>Section 383</strong> then provides that service on that person, at the address delivered
+    under s. 380, is <strong>sufficient service on the company</strong>. A foreign company that never
+    files FC-1 has not thereby made itself unserveable; it has simply committed an offence under
+    s. 392, and under <strong>s. 393</strong> it cannot bring a suit in India until it complies.
+  </p>
+</Callout>
+
+## 4. Accounts, audit and the annual return — section 381
+
+**Section 381(1)** — every foreign company must, in **every calendar year**, **make out a balance
+sheet and a profit and loss account** in the prescribed form, containing the prescribed particulars
+and including or having annexed the prescribed documents, and **deliver a copy to the Registrar**.
+**Section 381(2)** brings in, along with those documents, the prescribed documents relating to the
+company's **latest consolidated financial statements** and other statements as prescribed.
+**Section 381(3)** — if any of the documents is **not in English**, a **certified translation** must
+accompany it. **Section 381(4)** — the company must send with those documents **a list, in the
+prescribed form, of all the places of business established by it in India as at the date of the
+balance sheet**.
+
+The Rules supply the machinery, and this is where the two examinable practical points sit:
+
+| Requirement | Position | Level |
+|---|---|---|
+| Form and content of the financial statements | as far as may be, in respect of its **Indian business operations**, in accordance with **Schedule III** as applicable | Act + Rules |
+| **Audit** of the accounts of the Indian business operations | by a **practising chartered accountant in India**, or a **firm or LLP of practising chartered accountants** | **Rules-level** |
+| Filing of the financial statements with the Registrar, with the list of places of business | **Form FC-3**, within **six months of the close of the financial year** (extendable by up to **three months** at the Registrar's discretion, for special reasons, on the company's application) | **Rules-level** |
+| **Annual return** | **Form FC-4**, within **sixty days from the last day of its financial year** | **Rules-level (s. 384(2) is the enabling provision)** |
+
+<div class="formula">Accounts clock: <strong>FC-3 within 6 months of the close of the financial year</strong> (+ up to 3 months on the Registrar's extension). Annual-return clock: <strong>FC-4 within 60 days from the last day of the financial year</strong>. Two different clocks off the <em>same</em> event.</div>
+
+<Callout kind="example" label="Scenario 4 — two clocks off one year-end">
+  <p>
+    Aurelia Systems Inc closes its financial year on <strong>31 March 2027</strong> in respect of its
+    Indian business.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — both periods run from the last day of the financial year</div>
+    Annual return · 31 Mar 2027 + 60 days = <strong>30 May 2027</strong> (FC-4)<br />
+    Financial statements · 31 Mar 2027 + 6 months = <strong>30 September 2027</strong> (FC-3)<br />
+    Extension, if the Registrar allows it on special grounds = up to <strong>31 December 2027</strong>
+  </div>
+  <p>
+    Students routinely swap the two. The mnemonic that survives the exam hall: the
+    <strong>return</strong> is the <strong>shorter</strong> clock (60 days), the
+    <strong>accounts</strong> the longer (6 months), because the accounts have to be audited first.
+    And 30 May is not "two months" — 31 March plus sixty days lands on 30 May 2027, not 31 May.
+  </p>
+</Callout>
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · FC-3, FC-4, the audit and the six-month window are all rules-level">
+  <p>
+    <strong>Section 381 itself fixes no date.</strong> The six-month filing window, the three-month
+    extension, the requirement that the Indian business accounts be audited by a
+    <strong>practising chartered accountant in India</strong>, and the sixty-day annual-return window
+    all come from the <strong>Companies (Registration of Foreign Companies) Rules 2014</strong>.
+    Rules-level periods have been changed before. State the section for the obligation and the Rule
+    for the period, and verify the Rule against the material notified for your attempt.
+  </p>
+</Callout>
+
+## 5. Display of name, service of documents and fees — sections 382, 383 and 385
+
+**Section 382 — display of name.** Every foreign company must:
+
+- **(a)** **conspicuously exhibit** on the **outside of every office or place** where it carries on
+  business in India, the **name of the company** and the **country in which it is incorporated**, in
+  letters easily legible in **English characters**, and **also in the characters of the language or
+  one of the languages in general use in that locality**;
+- **(b)** cause the **name of the company** and the **country of incorporation** to be stated in
+  legible English characters in **all business letters, bill-heads and letter paper**, and in **all
+  notices and other official publications** of the company; and
+- **(c)** if the **liability of the members is limited**, cause **notice of that fact** to be stated
+  in **every prospectus** issued and in **all business letters, bill-heads, letter paper, notices,
+  advertisements and other official publications** in legible English characters, and to be
+  **conspicuously exhibited on the outside of every office or place** where it carries on business
+  in India, in legible English characters **and** in the characters of the local language.
+
+<div class="formula">s. 382 display = <strong>name + country of incorporation</strong>, and where liability is limited, <strong>notice of limited liability</strong> as well — outside every place of business in <strong>English + local language</strong>, and on every business letter and official publication in <strong>English</strong>.</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>The country of incorporation is half the requirement — do not drop it.</strong> Compare
+    s. 12(3), where an Indian company displays its <em>name and registered-office address</em>. A
+    foreign company displays its <strong>name and the country in which it is incorporated</strong>.
+    That is the whole point of the section: a person dealing with the Bengaluru office must be able to
+    see, from the signboard, that he is dealing with a Singapore company. And note the language split
+    — the <strong>local-language requirement attaches to the signboard outside the premises</strong>
+    (and to the limited-liability notice), not to ordinary business letters, which need only English
+    characters.
+  </p>
+</Callout>
+
+**Section 383 — service on a foreign company.** Any process, notice or other document required to be
+served on a foreign company is **deemed to be sufficiently served** if it is **addressed to any
+person whose name and address have been delivered to the Registrar under s. 380** and **left at, or
+sent by post to, that address**, or **sent by electronic mode**. The section works only because
+s. 380(1) made the company file that name and address — the two provisions are a pair.
+
+**Section 385 — fee for registration of documents.** There must be paid to the Registrar, for
+registering any document required by the provisions of this Chapter to be registered by him, **such
+fee as may be prescribed**. Nothing else is examinable in this section; the amount is rules-level.
+
+## 6. Which other provisions of the Act apply — section 384
+
+Section 384 is the bridge. It takes five blocks of the Act written for Indian companies and applies
+them, with modifications, to foreign companies. Learn it as a **mapping table**, because that is how
+it is examined.
+
+| s. 384 | Provision pulled in | How it applies to a foreign company |
+|---|---|---|
+| **384(1)** | **s. 71 — debentures** | applies **mutatis mutandis** to a foreign company |
+| **384(2)** | **s. 92 — annual return** | applies **subject to such exceptions, modifications and adaptations as may be prescribed** — this is the enabling power behind the **FC-4** return filed within **60 days** of the financial-year end |
+| **384(3)** | **s. 128 — books of account** | applies **with respect to the business carried on by the foreign company in India**, as it applies to an Indian company |
+| **384(4)** | **Chapter VI — ss. 77 to 87, registration of charges** | applies **mutatis mutandis** to **charges on properties which are created or acquired by any foreign company in India** |
+| **384(5)** | **Chapter XIV — ss. 206 to 229, inspection, inquiry and investigation** | applies **mutatis mutandis** to the foreign company |
+
+<Callout kind="pointer">
+  <p>
+    <strong>Two boundary lines run through this table, and both are examined.</strong> The first is
+    <em>territorial</em>: ss. 128 and 384(4) reach only the <strong>Indian</strong> business and
+    <strong>property in India</strong>. A charge created by a Singapore company over its Singapore
+    factory is nothing to do with the Indian Registrar; a charge over its Bengaluru premises must be
+    registered under Chapter VI within the ordinary <strong>thirty-day</strong> window, with the same
+    60-day and 120-day extension windows and the same consequence of non-registration — the charge is
+    void against the liquidator and other creditors. The second line is <em>what is left out</em>:
+    s. 384 does <strong>not</strong> pull in the general-meeting provisions (s. 96 annual general
+    meeting), the board-composition and directors provisions, the auditor-appointment machinery of
+    s. 139, the dividend chapter, or the CSR provision. Only what s. 384 names is imported.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 5 — the s. 384 mapping applied">
+  <p>
+    Meridian Cloudworks Pte Ltd, a foreign company with a Pune office, does four things in one year:
+    it issues debentures to Indian investors; it mortgages its Pune office building to a bank; it
+    keeps the books of its Indian operations on a server in Singapore; and it holds no annual general
+    meeting anywhere.
+  </p>
+  <p>
+    <strong>Debentures</strong> — s. 71 applies mutatis mutandis (s. 384(1)). <strong>The
+    mortgage</strong> — the property is <em>in India</em>, so Chapter VI applies mutatis mutandis
+    (s. 384(4)) and the charge must be registered with the Registrar within thirty days of creation.
+    <strong>The books</strong> — s. 128 applies to the business carried on <em>in India</em>
+    (s. 384(3)), so the books of the Indian operations must be kept and maintained as s. 128 requires;
+    the location and the conditions for keeping them electronically are governed by s. 128 and its
+    rules. <strong>No AGM</strong> — <strong>no contravention under this Chapter</strong>: s. 96 is
+    not among the provisions s. 384 imports. That last one is the mark students lose, because the
+    instinct is to say every Indian-company obligation applies.
+  </p>
+</Callout>
+
+## 7. Interpretation — section 386
+
+Section 386 is three definitions, and each has been examined:
+
+- **"certified"** means **certified in the prescribed manner** to be a **true copy** or a **correct
+  translation** — so certification is a rules-level formality, not the company's own say-so;
+- **"director"**, in relation to a foreign company, **includes any person in accordance with whose
+  directions or instructions the Board of Directors of the company is accustomed to act** — the
+  shadow-director extension, which matters because s. 380(1) requires a list of directors and
+  s. 380(1)(g) a declaration about them;
+- **"place of business"** **includes a share transfer or registration office**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>The s. 386(b) definition is inclusive, and it is wider than s. 2(34).</strong> For an
+    Indian company, "director" means a director appointed to the Board. For a
+    <strong>foreign</strong> company, a person who never sits on the Board but whose instructions the
+    Board is accustomed to follow <em>is</em> a director for Chapter XXII — so his particulars belong
+    in the s. 380 list and he is caught by the s. 380(1)(g) declaration and by "officer in default"
+    for s. 392. Note also the qualification the courts read into this kind of provision: a person
+    giving advice merely in a professional capacity is not brought in by it.
+  </p>
+</Callout>
+
+## 8. Prospectus and Indian Depository Receipts — sections 387 to 390
+
+These four sections are the **capital-raising half** of the Chapter, and they have a different
+target. They bite on **any person** who issues, circulates or distributes a prospectus in India for
+a company incorporated outside India — **whether or not that company has established, or when
+formed will establish, a place of business in India**. So a company that is not a "foreign company"
+at all can be caught here.
+
+**Section 387 — dating of the prospectus and particulars in it.** No person may issue, circulate or
+distribute in India any **prospectus offering to subscribe for securities** of a company
+incorporated outside India unless the prospectus is **dated** and **signed**, and contains
+particulars of:
+
+- **(a)** the **instrument constituting or defining the constitution** of the company;
+- **(b)** the **enactments, or provisions having the force of an enactment**, under which the
+  company was incorporated;
+- **(c)** an **address in India** where the said instrument, enactments or provisions, or copies
+  thereof, **can be inspected** (and, if not in English, a certified translation);
+- **(d)** the **date on which and the country in which** the company was **incorporated**; and
+- **(e)** whether the company has **established a place of business in India** and, if so, the
+  **address of its principal office in India**;
+
+and states the prescribed matters and sets out the prescribed reports. Two exceptions: the section
+does **not** apply to a prospectus issued to **existing members or debenture-holders** of the
+company, whether or not the applicant has a right to renounce; nor to a prospectus relating to
+securities **which are or are to be in all respects uniform** with securities **previously issued
+and for the time being dealt in or quoted on a recognised stock exchange**.
+
+**Section 388 — expert's consent and allotment.** No person may issue in India a prospectus
+containing a statement purporting to be made by an **expert** unless the expert has given, and has
+**not withdrawn**, his **written consent** to the issue of the prospectus with the statement in the
+form and context in which it appears, and a **statement to that effect appears in the prospectus**;
+and unless the prospectus states on its face that a copy has been **delivered for registration** as
+required by s. 389. The section also fixes the particulars a prospectus must contain as to
+**application and allotment**.
+
+**Section 389 — registration of the prospectus.** No person may issue, circulate or distribute in
+India a prospectus offering for subscription securities of a company incorporated outside India
+unless, **before the issue, circulation or distribution**, a copy of the prospectus **certified by
+the chairperson of the company and two other directors** as having been approved by resolution of
+the **managing body**, has been **delivered for registration to the Registrar**; and unless the
+prospectus **states on its face** that a copy has been so delivered, with the prescribed documents
+endorsed on or attached to it — the **consent of any expert** named in it, a **copy of every
+material contract**, and the other prescribed particulars.
+
+<div class="formula">Order of operations for an overseas issue in India: <strong>expert's written consent (s. 388) → certified copy delivered for registration to the Registrar (s. 389) → only then may the prospectus be issued, circulated or distributed</strong>. Registration is a <em>precondition</em>, never a follow-up filing.</div>
+
+**Section 390 — offer of Indian Depository Receipts.** The **Central Government may make rules** as
+to **(a)** the offer of **Indian Depository Receipts**; **(b)** the requirement of **disclosures** in
+the prospectus or letter of offer issued in connection with them; **(c)** the manner in which IDRs
+are to be **dealt with in a depository mode** and by **custodian and underwriters**; and **(d)** the
+manner of **sale, transfer or transmission** of IDRs — **by a company incorporated or to be
+incorporated outside India, whether or not it has established, or will establish, any place of
+business in India**. An IDR is, in substance, an instrument issued in India by a domestic custodian
+against the underlying equity of a company incorporated abroad, allowing Indian investors to take
+economic exposure to a foreign issuer in rupees. The detail is rules-level.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · s. 390 is an enabling section only">
+  <p>
+    Section 390 confers a <strong>rule-making power</strong>; it states no substantive condition of
+    its own. Every operative requirement for IDRs — eligibility, minimum issue size, disclosure,
+    depository and custodian mechanics, transfer and redemption — lives in the
+    <strong>Rules</strong> and in the SEBI framework, and both move. Answer s. 390 as an
+    <em>enabling</em> provision and cite the four heads (a) to (d); do not recite rules-level
+    thresholds.
+  </p>
+</Callout>
+
+## 9. Misstatements, closure and punishment — sections 391 and 392
+
+**Section 391(1)** — the provisions of **ss. 34 to 36** apply to **(i)** the issue of a prospectus by
+a company incorporated outside India under **s. 389**, and **(ii)** the issue of **Indian Depository
+Receipts** by a foreign company. So the whole misstatement code follows the prospectus into India:
+
+- **s. 34 — criminal liability for misstatements in a prospectus**: where a prospectus includes any
+  statement which is **untrue or misleading in form or context**, or where any **inclusion or
+  omission** of any matter is likely to mislead, every person who **authorises the issue** is liable
+  under **s. 447** (fraud) — unless he proves the statement or omission was **immaterial**, or that
+  he had **reasonable grounds to believe, and did up to the time of issue believe**, that it was
+  true or that the omission was necessary;
+- **s. 35 — civil liability**: compensation to every person who **subscribes** for securities on the
+  faith of the prospectus and **sustains loss or damage**, payable by the company and by its
+  directors, promoters, persons named as directors, experts and persons who authorised the issue,
+  with the statutory defences (withdrawal of consent before issue, issue without knowledge, honest
+  belief on reasonable grounds); and
+- **s. 36 — punishment for fraudulently inducing persons to invest money**, again attracting
+  **s. 447**.
+
+**Section 391(2)** — **notwithstanding anything in s. 376**, the provisions of **Chapter XX (winding
+up)** apply **mutatis mutandis** for the **closure of the place of business of a foreign company in
+India**, **as if it were a company incorporated in India**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · s. 391(2) was substituted">
+  <p>
+    As originally enacted, s. 391(2) applied Chapter XX only to a foreign company
+    <strong>which had issued a prospectus or IDRs in India</strong>. The
+    <strong>Companies (Amendment) Act 2017</strong> substituted the sub-section with the present text,
+    which is not limited in that way and opens with a non obstante clause referring to
+    <strong>s. 376</strong> (winding up of an unregistered company that has been carrying on business
+    in India and has ceased to do so). Older banks and older editions still state the narrower
+    position. Verify the current text before relying on either.
+  </p>
+</Callout>
+
+**Section 392 — punishment for contravention.** Without prejudice to s. 391, if a **foreign company
+contravenes any provision of this Chapter**:
+
+| Who | Consequence |
+|---|---|
+| **The foreign company** | **fine not less than ₹1,00,000**, extendable to **₹3,00,000**, and for a **continuing offence** an **additional fine up to ₹50,000 for every day** after the first during which the contravention continues |
+| **Every officer of the foreign company who is in default** | **fine not less than ₹25,000**, extendable to **₹5,00,000** |
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · s. 392 was decriminalised for officers">
+  <p>
+    As enacted, s. 392 punished an officer in default with <strong>imprisonment up to six months or a
+    fine, or both</strong>. The <strong>Companies (Amendment) Act 2020</strong> removed the
+    imprisonment limb, leaving a fine only. The rupee bands above are the amended position; note also
+    that s. 392 imposes a <strong>fine</strong> (a court-imposed punishment), not a
+    <strong>penalty</strong> (an adjudicating-officer levy), which is why the section speaks of an
+    offence being "continuing". Both the bands and the classification have moved before —
+    re-verify.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 6 — one default, three consequences">
+  <p>
+    Nordwind Marine GmbH (Hamburg) establishes a project office in Kochi on 2 February 2026 and files
+    nothing at all with the Registrar. In September 2026 an Indian supplier refuses to pay for a
+    consignment, and Nordwind Marine wants to sue in an Indian court.
+  </p>
+  <p>
+    <strong>1 · The breach.</strong> FC-1 was due within thirty days of 2 February 2026; nothing was
+    filed, so the company has contravened s. 380(1) — and, as the year runs on, s. 381 and the annual
+    return as well. <strong>2 · The money.</strong> Section 392: a fine on the company of not less
+    than ₹1,00,000 up to ₹3,00,000, plus up to ₹50,000 for every day the contravention continues, and
+    a fine of not less than ₹25,000 up to ₹5,00,000 on every officer in default — remembering that
+    "director" for this Chapter includes a person on whose instructions the Board is accustomed to act
+    (s. 386(b)). <strong>3 · The suit.</strong> Section 393 is the sting: the supply contract
+    <em>remains perfectly valid</em> and Nordwind Marine <em>can be sued</em> on it, but Nordwind
+    Marine <strong>cannot bring its own suit, claim a set-off, make a counter-claim or institute any
+    legal proceeding</strong> in respect of the contract <strong>until it has complied</strong> with
+    the provisions of the Act applicable to it. The door is one-way until the filings are made.
+  </p>
+</Callout>
+
+## 10. Validity of contracts and Central Government exemptions — sections 393 and 393A
+
+**Section 393** — any **failure by a company to comply with the provisions of this Chapter** shall
+**not affect the validity of any contract, dealing or transaction** entered into by the company, or
+its **liability to be sued** in respect thereof; **but** the company **shall not be entitled to
+bring any suit, claim any set-off, make any counter-claim or institute any legal proceeding** in
+respect of any such contract, dealing or transaction **until it has complied** with the provisions
+of this Act applicable to it.
+
+<div class="formula">s. 393 = <strong>contracts stay valid</strong> · <strong>the company can still be sued</strong> · <strong>but the company cannot sue, set off or counter-claim until it complies</strong>. Non-compliance disables the sword, never the shield.</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Half of section 393 is the trap and half is the answer.</strong> The commonest wrong
+    option says non-compliance makes the contracts <strong>void</strong> — it does not, expressly.
+    The second-commonest says non-compliance has no consequence for litigation at all — it does, and
+    the bar covers <em>four</em> things: suit, set-off, counter-claim and any legal proceeding. The
+    third says the bar is permanent — it is not: it lifts <strong>the moment the company
+    complies</strong>, so the practical advice to a defaulting foreign company is simply to file
+    everything and then sue. Always state both halves.
+  </p>
+</Callout>
+
+**Section 393A — exemptions.** The **Central Government may, by notification, exempt any class or
+classes of foreign companies** from any of the provisions of **ss. 380 to 386** and **ss. 392 and
+393**, and a copy of every such notification must, **as soon as may be after it is made, be laid
+before both Houses of Parliament**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · s. 393A is a live notification power">
+  <p>
+    Section 393A was <strong>inserted by the Companies (Amendment) Act 2017</strong>. Two points to
+    hold: the exemption power reaches only <strong>ss. 380 to 386 and ss. 392 and 393</strong> —
+    <em>not</em> s. 379, and <em>not</em> the prospectus and IDR sections 387 to 391; and it operates
+    by <strong>notification</strong>, so the classes exempted at any moment are a matter of the
+    notifications in force, which must be laid before Parliament. Learn the <em>scope of the
+    power</em>, not any particular notified class, and check what stands notified for your attempt.
+  </p>
+</Callout>
+
+## 11. A compliance timeline for a foreign company entering India
+
+Put together, the Chapter is a single sequence. This is the answer skeleton for the "advise a
+foreign company setting up in India" question, which is the most likely six-mark descriptive in the
+chapter.
+
+| Stage | What must be done | Clock | Provision |
+|---|---|---|---|
+| **0 · Test the definition** | confirm all three limbs of s. 2(42) — incorporated outside India, place of business in India (itself/agent, physical/electronic), business activity in India | — | s. 2(42), s. 386(c), Rule 2 |
+| **0A · Test the ownership** | compute the Indian holding: if **≥ 50%** of paid-up capital (equity + preference) is held by Indian citizens and/or Indian-incorporated bodies corporate, singly or in aggregate, the company complies **as if it were an Indian company** for its Indian business | — | s. 379(2) |
+| **1 · Establish the place of business** | deliver charter (certified translation if not in English), registered/principal office address, directors and secretary particulars, name and address of the **person resident in India** authorised to accept service, principal place of business in India, prior openings and closings, and the no-conviction/no-debarment declaration | **within 30 days of establishment** — **FC-1** | s. 380(1)–(2) |
+| **2 · Keep it current** | file a return of **any alteration** in the s. 380 particulars | **within 30 days of the alteration** — **FC-2** | s. 380(3) |
+| **3 · Display and be reachable** | signboard outside every place of business: **name + country of incorporation**, English + local language (plus limited-liability notice if applicable); name + country on business letters and official publications; service on the authorised person is good service | continuous | ss. 382, 383 |
+| **4 · Books, charges, debentures, inspection** | s. 128 books for the Indian business; Chapter VI registration of charges on **property in India** (30 days from creation); s. 71 for debentures; Chapter XIV inspection powers | as in those provisions | s. 384 |
+| **5 · Annual return** | **FC-4** | **within 60 days from the last day of the financial year** | s. 384(2) + Rules |
+| **6 · Financial statements** | balance sheet and profit and loss account with the prescribed documents, the consolidated statements, certified translations where needed, and the **list of all places of business in India as at the balance-sheet date**; Indian business accounts audited by a **practising chartered accountant in India** | **FC-3 within 6 months of the close of the financial year**, extendable by up to **3 months** | s. 381 + Rules |
+| **7 · Raise capital in India (if it does)** | expert's written consent → certified copy delivered for **registration before issue** → then issue the dated, signed prospectus with the s. 387 particulars; ss. 34–36 apply to misstatements | before issue | ss. 387–389, 391(1) |
+| **8 · Close the place of business** | **Chapter XX (winding up)** applies mutatis mutandis to the closure of the Indian place of business, as if the company were incorporated in India | — | s. 391(2) |
+| **9 · If it defaults** | fine on the company ₹1,00,000–₹3,00,000 (+ up to ₹50,000 per day continuing) and on every officer in default ₹25,000–₹5,00,000; contracts stay valid but **the company cannot sue until it complies** | — | ss. 392, 393 |
+
+<Callout kind="example" label="Scenario 7 — the full clock set for one company">
+  <p>
+    Meridian Cloudworks Pte Ltd (Singapore) opens a branch office in Pune on <strong>14 May
+    2026</strong> and adopts a financial year ending <strong>30 June</strong>. Its paid-up capital is
+    ₹60,00,000, held as to ₹14,00,000 of equity by Indian citizens, ₹22,00,000 of equity by an Indian
+    company, ₹3,00,000 of preference by that same Indian company, and the balance by its Singapore
+    parent.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note — the definition, the ownership test and the three clocks</div>
+    <strong>s. 2(42):</strong> incorporated outside India ✓ · branch office in Pune ✓ · business
+    activity in India ✓ → <strong>foreign company</strong><br />
+    <strong>s. 379(2):</strong> Indian holding = ₹14,00,000 + ₹22,00,000 + ₹3,00,000 =
+    ₹39,00,000 of ₹60,00,000 = <strong>65% ≥ 50%</strong> → complies as if incorporated in India, for
+    its Indian business<br />
+    <strong>FC-1:</strong> 14 May 2026 + 30 days = <strong>13 June 2026</strong><br />
+    <strong>FC-4:</strong> 30 June 2026 + 60 days = <strong>29 August 2026</strong><br />
+    <strong>FC-3:</strong> 30 June 2026 + 6 months = <strong>30 December 2026</strong>
+  </div>
+  <p>
+    Note that the s. 379(2) conclusion does <strong>not</strong> displace any of the clocks — Chapter
+    XXII still applies in full, and s. 379(2) adds to it. Note too that the three dates come off
+    <strong>two different events</strong>: FC-1 from the establishment of the place of business,
+    FC-3 and FC-4 from the last day of the financial year. Mixing those two events is the single
+    most expensive error in this chapter.
+  </p>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+1. **Treating any overseas company that trades with India as a foreign company.** All **three limbs**
+   of s. 2(42) must hold. Exporting into India from abroad, with no office, agent or electronic
+   presence here, is not enough.
+2. **Reading s. 379(2) as "more than 50%".** It is **not less than 50%** — exactly half qualifies.
+3. **Counting equity only in the s. 379(2) test.** The sub-section says **equity or preference or
+   partly equity and partly preference**, and holders are aggregated **singly or in the aggregate**.
+4. **Counting the wrong holders.** Only **citizens of India** and **companies or bodies corporate
+   incorporated in India** count. A non-citizen of Indian origin does not; a foreign-incorporated
+   company with Indian owners does not.
+5. **Saying s. 379(2) makes the company an Indian company.** It makes it comply **as if** it were
+   one, and only for the business carried on **in India**.
+6. **Starting the FC-1 clock at the wrong event.** Thirty days run from the **establishment of the
+   place of business** — not from incorporation abroad, not from signing the lease, not from the
+   first invoice.
+7. **Swapping the accounts clock and the return clock.** **FC-3 · six months** from the close of the
+   financial year; **FC-4 · sixty days** from the last day of the financial year.
+8. **Converting days into calendar months.** Thirty days from 9 March is **8 April**, not 9 April.
+   Sixty days from 31 March is **30 May**, not 31 May.
+9. **Dropping the country of incorporation from the s. 382 display.** Name **and** country, outside
+   every place of business, in English **and** the local language.
+10. **Importing all Indian-company obligations through s. 384.** Only **s. 71, s. 92, s. 128,
+    Chapter VI and Chapter XIV** are imported. The AGM, board-composition, s. 139 auditor-appointment
+    and dividend provisions are not.
+11. **Limiting the charge provisions to Indian-registered property generally.** Section 384(4)
+    reaches charges on **properties created or acquired by the foreign company in India** — the
+    location of the property is the test.
+12. **Saying non-compliance voids the contracts.** Section 393 expressly preserves their validity and
+    the company's liability to be sued; what it takes away is the company's own **right to sue, set
+    off or counter-claim, until it complies**.
+13. **Confining ss. 387 to 390 to foreign companies.** They bite on **any person** issuing a
+    prospectus in India for a company incorporated outside India, **whether or not** it has a place
+    of business here.
+14. **Treating registration of the prospectus as a post-issue filing.** Section 389 requires delivery
+    for registration **before** issue, circulation or distribution.
+15. **Forgetting that s. 393A cannot exempt anyone from s. 379 or ss. 387 to 391.** The notification
+    power reaches only **ss. 380 to 386** and **ss. 392 and 393**.
+
+## One-page revision summary
+
+**The definition (s. 2(42)).** Company **or body corporate** incorporated outside India **+** a
+**place of business in India** — by itself or through an **agent**, **physically or through
+electronic mode** **+** it **conducts business activity in India**. All three. **s. 386(c)** — place
+of business **includes a share transfer or registration office**. **Rule 2(1)(c)** — electronic mode
+is defined very widely and expressly applies **whether or not the main server is in India**
+(rules-level). An **isolated transaction** is not a place of business.
+
+**Application (s. 379).** **379(1)** — **ss. 380 to 386 and ss. 392 and 393 apply to all foreign
+companies**. **379(2)** — where **not less than 50%** of the **paid-up share capital** (**equity or
+preference or partly both**) is held by **Indian citizens** and/or **bodies corporate incorporated
+in India**, **singly or in the aggregate**, the company complies with this Chapter **and such other
+provisions as may be prescribed**, for its **Indian business**, **as if it were incorporated in
+India**.
+
+**Every clock in the chapter.**
+
+| Clock | Period | Runs from | Form |
+|---|---|---|---|
+| Documents on establishing a place of business (s. 380(1)–(2)) | **30 days** | **establishment of the place of business** | FC-1 |
+| Return of alteration in those particulars (s. 380(3)) | **30 days** | **the alteration** | FC-2 |
+| Financial statements + list of places of business (s. 381, Rules) | **6 months** (+ up to **3 months** on the Registrar's extension) | **close of the financial year** | FC-3 |
+| Annual return (s. 384(2), Rules) | **60 days** | **last day of the financial year** | FC-4 |
+| Registration of a charge on property in India (s. 384(4) → Chapter VI) | **30 days** (then 60 / 120 with fees) | **creation of the charge** | CHG-1 |
+| Registration of a prospectus (s. 389) | **before issue** | — | — |
+
+**s. 380(1) checklist.** Certified charter/constitution + certified English translation · registered
+or principal office address · directors and secretary with particulars · **name and address of one
+or more persons resident in India** authorised to accept **service of process** · full address of
+the **principal place of business in India** · particulars of **earlier openings and closings** ·
+**declaration of no conviction or debarment** for any director or the authorised representative ·
+any other prescribed information.
+
+**ss. 381–385.** **381** — balance sheet and P&amp;L **every calendar year** in the prescribed form,
+with the consolidated statements, **certified translations**, and a **list of all places of business
+in India as at the balance-sheet date**; Indian business accounts **audited by a practising CA in
+India** (Rules); filed in FC-3. **382** — display **name + country of incorporation** outside every
+place of business (**English + local language**) and on all **business letters, bill-heads, letter
+paper, notices and official publications** (English); **notice of limited liability** where members'
+liability is limited. **383** — service on the **person named under s. 380** at that address, by
+post, delivery or **electronic mode**, is good service. **385** — prescribed **fee** for registering
+documents.
+
+**s. 384 mapping.** **384(1)** → **s. 71 debentures** (mutatis mutandis) · **384(2)** → **s. 92
+annual return** (with prescribed exceptions, modifications and adaptations — FC-4) · **384(3)** →
+**s. 128 books of account**, for the **Indian** business · **384(4)** → **Chapter VI charges**, on
+property **created or acquired in India** · **384(5)** → **Chapter XIV inspection, inquiry and
+investigation**. Nothing else is imported.
+
+**s. 386 interpretation.** **"Certified"** = certified in the prescribed manner as a true copy or
+correct translation. **"Director"** includes a person on whose **directions or instructions the
+Board is accustomed to act**. **"Place of business"** includes a **share transfer or registration
+office**.
+
+**Prospectus and IDRs (ss. 387–390).** Apply to **any person** issuing in India for a company
+incorporated outside India, **whether or not** it has a place of business here. **387** —
+prospectus **dated and signed**, with the constitution, the incorporating enactments, an **Indian
+address for inspection**, the **date and country of incorporation**, and whether a place of business
+has been established with its principal Indian address; exceptions for issues to **existing members
+or debenture-holders** and for securities **uniform with securities already quoted on a recognised
+stock exchange**. **388** — **expert's written consent**, not withdrawn, and a statement to that
+effect; application and allotment particulars. **389** — copy certified by the **chairperson and two
+directors** as approved by the **managing body**, **delivered for registration before issue**, with
+expert consents and material contracts. **390** — **enabling** rule-making power for **Indian
+Depository Receipts** under four heads: offer · disclosures · depository/custodian/underwriter
+mechanics · sale, transfer and transmission.
+
+**Consequences (ss. 391–393A).** **391(1)** — **ss. 34 to 36** (criminal liability for
+misstatements, civil liability for misstatements, fraudulently inducing investment) apply to a
+s. 389 prospectus and to IDRs. **391(2)** — **Chapter XX (winding up)** applies **mutatis mutandis**
+to the **closure of the Indian place of business**, notwithstanding s. 376. **392** — company
+**₹1,00,000 to ₹3,00,000** plus **up to ₹50,000 per day** for a continuing offence; every **officer
+in default ₹25,000 to ₹5,00,000** (imprisonment removed in 2020). **393** — contracts **remain
+valid**, the company **can be sued**, but it **cannot sue, set off, counter-claim or institute any
+proceeding until it complies**. **393A** — the Central Government may **by notification exempt
+classes of foreign companies** from **ss. 380 to 386 and ss. 392 and 393**, the notification to be
+**laid before both Houses of Parliament**.

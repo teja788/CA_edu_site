@@ -1,0 +1,1076 @@
+---
+layout: ../../../layouts/NotesLayout.astro
+title: 'The Foreign Exchange Management Act, 1999'
+description: 'CA Intermediate Paper 2 Ch 15 — FEMA 1999 worked end to end: the FERA-to-FEMA shift, the 182-day residence test, current versus capital account transactions, the Current Account Transactions Rules and the LRS ceiling, authorised persons, and the penalty, compounding and appellate ladder.'
+level: intermediate
+levelName: 'CA Intermediate'
+paper: 'Paper 2 · Corporate & Other Laws'
+paperSlug: corporate-and-other-laws
+chapter: 'Ch 15 · FEMA 1999'
+chapterSlug: fema-1999
+masteryId: i2-ch15
+applicable_attempts:
+  - 'Sept 2026'
+  - 'Jan 2027'
+law_as_on_date: '2026-02-28'
+sources:
+  - 'Foreign Exchange Management Act 1999, ss. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 35, 37, 39, 42, 46, 47'
+  - 'Foreign Exchange Management (Current Account Transactions) Rules 2000 — Schedules I, II and III (rules-level, amendment-sensitive)'
+  - 'RBI Liberalised Remittance Scheme — USD 2,50,000 per financial year per resident individual (circular-level, amendment-sensitive)'
+  - 'Foreign Exchange (Compounding Proceedings) Rules 2000 — RBI and Directorate of Enforcement split (rules-level)'
+  - 'Foreign Exchange Management (Possession and Retention of Foreign Currency) Regulations 2000 (rules-level, amendment-sensitive)'
+sourceLabel: 'FEMA 1999 · ICAI SM Paper 2 Ch 15 scope (May 2026 ed.)'
+author: 'claude-draft'
+review_status: 'unreviewed'
+last_verified: '27 Aug 2026'
+readTime: 'About 24 min read · 7 worked scenarios'
+practiceHref: '/practice/quiz/?level=intermediate&paper=corporate-and-other-laws&chapter=fema-1999'
+practiceLabel: 'Practice this chapter'
+---
+import Callout from '../../../components/Callout.astro';
+
+Meera Iyengar has lived in Bengaluru all her life. In one financial year she sends USD 48,000 to her
+daughter's university in Toronto, buys USD 6,000 of currency notes for a holiday in Vietnam, wires
+USD 30,000 to her brother in Dubai as a birthday gift, and quietly hands ₹40 lakh in cash to a man in
+Chennai who promises that "an associate" will pay the equivalent dollars into a New York account for
+her. Three of those four things are lawful, routine and done through her bank. The fourth exposes
+her to a penalty of up to **₹1.2 crore**.
+
+That is the whole of FEMA in one paragraph. The Act does not ask whether you *may* send money
+abroad — mostly you may. It asks **what kind of transaction it is**, **who you are** for the purposes
+of the Act, and **through whom the money moved**. Get those three right and the rest of the chapter
+is a set of numbers.
+
+For the exam this is a **definitions-and-numbers chapter**. Marks come from the residence test, the
+capital/current split, the three Schedules, the LRS ceiling, and the penalty and appeal clocks. The
+policy history is worth two lines in an answer, never more.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the Act is stable, the numbers below it are not">
+  <p>
+    These notes state the law <strong>as on 28 February 2026</strong>, for the <strong>Sept 2026 and
+    Jan 2027</strong> attempts. The <em>sections</em> of FEMA have barely moved since 1999. What moves
+    almost every year sits <em>underneath</em> the Act — the <strong>Current Account Transactions
+    Rules 2000</strong> schedules, the <strong>LRS ceiling of USD 2,50,000</strong>, the
+    possession-and-retention limits for foreign currency, and the RBI/ED split in the compounding
+    rules. Every one of those is flagged below. Re-check them against the SM edition and the RBI
+    Master Direction notified for your attempt.
+  </p>
+</Callout>
+
+## 1. From FERA to FEMA — the shift and the objectives
+
+The Foreign Exchange Regulation Act 1973 belonged to a country short of foreign exchange. It treated
+every outward transaction as suspect, put the **burden of proving innocence on the citizen**, made
+contraventions **criminal offences** punishable with imprisonment, and gave enforcement officers
+powers of arrest. By the 1990s the reserves position had reversed and the statute had outlived its
+premise. FEMA replaced it with effect from **1 June 2000**.
+
+| | FERA 1973 | FEMA 1999 |
+|---|---|---|
+| Purpose | **Regulation** and conservation of scarce foreign exchange | **Management** of foreign exchange; facilitation of trade and payments |
+| Nature of a breach | **Criminal offence**, prosecution, imprisonment | **Civil contravention**, monetary penalty; imprisonment only for **non-payment** of the penalty |
+| Burden of proof | On the **accused** | On the **enforcement authority**, in the ordinary way |
+| Default rule | Everything **prohibited** unless permitted | Current account transactions **free** unless restricted |
+| Drafting technique | Long list of prohibitions in the Act | Short Act; the detail lives in **Rules and Regulations** |
+
+**The preamble states two objects**: to **facilitate external trade and payments**, and to promote the
+**orderly development and maintenance of the foreign exchange market in India**. Both objects are
+positive. When an exam question asks you to choose between "to conserve foreign exchange" and "to
+facilitate external trade and payments", the second is the FEMA answer and the first is the FERA one.
+
+<Callout kind="pointer">
+  <p>
+    <strong>The one-line contrast worth writing.</strong> FERA asked "is this permitted?"; FEMA asks
+    "which kind of transaction is this?" Under FEMA a <strong>current account transaction is free</strong>
+    unless the Central Government restricts it by rule (s. 5), while a <strong>capital account
+    transaction is restricted</strong> unless the RBI permits it by regulation (s. 6). That single
+    inversion is the architecture of the whole Act, and it earns a mark on its own.
+  </p>
+</Callout>
+
+## 2. Extent and application — section 1
+
+**Section 1(2)** gives FEMA an unusually long reach. The Act extends to:
+
+1. the **whole of India**; and
+2. **all branches, offices and agencies outside India** which are **owned or controlled by a person
+   resident in India**; and
+3. **any contravention thereunder committed outside India by any person to whom this Act applies**.
+
+Limb 2 catches the Singapore branch of a Mumbai company. Limb 3 catches the person himself: an Indian
+resident who, while sitting in Zurich, arranges a prohibited routing of funds has contravened FEMA in
+Zurich, and the Act follows him. **Section 1(3)** left the commencement to notification, which is why
+the operative date is 1 June 2000 and not 1999.
+
+<Callout kind="mistake">
+  <p>
+    <strong>"Owned or controlled", not "situated".</strong> A branch abroad is caught because a person
+    resident in India owns or controls it — not because it happens to be a branch of an Indian entity
+    in some looser sense, and not because its customers are Indian. Conversely, the Indian branch of a
+    foreign bank is inside FEMA because it is <em>in India</em> under limb 1, whoever controls it.
+    Options that say FEMA "extends only to the territory of India" are testing limbs 2 and 3.
+  </p>
+</Callout>
+
+## 3. Person resident in India — the section 2 residence test
+
+Everything in FEMA turns on which side of the line a person stands. **Section 2(v)** defines a
+**person resident in India**, and **s. 2(w)** defines a **person resident outside India** as, simply,
+a person who is not resident in India. There is no third category.
+
+The definition has a **day-count gate** and then two **purpose-based carve-outs** that override the
+day count.
+
+**The gate.** A person **residing in India for more than one hundred and eighty-two days during the
+course of the preceding financial year** is a person resident in India.
+
+<div class="formula">More than <strong>182 days</strong> in the <strong>PRECEDING</strong> financial year (1 April to 31 March) → the day-count gate is passed. "More than 182" means <strong>183 days or more</strong>.</div>
+
+**The carve-outs.** The gate does **not** make a person resident where he falls inside either
+exclusion:
+
+- **(A) He has gone out of India, or stays outside India**, for or on taking up **employment** outside
+  India, or for carrying on **business or vocation** outside India, or for any other purpose in
+  circumstances indicating an **intention to stay outside India for an uncertain period** → **not**
+  resident in India.
+- **(B) He has come to or stays in India otherwise than** for or on taking up **employment** in India,
+  or for carrying on **business or vocation** in India, or for any other purpose in circumstances
+  indicating an **intention to stay in India for an uncertain period** → **not** resident in India.
+
+Read limb (B) twice. It is a double negative. A person who comes to India **for employment, business
+or an uncertain stay** is *outside* the carve-out, so the ordinary rule applies to him. A person who
+comes to India **for anything else** — a six-month holiday, a course of medical treatment, a visit to
+grandchildren — stays **non-resident** however long he actually sits here.
+
+**The residence test as a flowchart:**
+
+| Step | Question | If YES | If NO |
+|---|---|---|---|
+| 1 | Is it a person other than an individual — a company, firm or other body? | Resident if **incorporated in or registered in India**; go to step 5 for its offices | Go to step 2 |
+| 2 | Has he **gone out of / stayed outside** India for **employment, business or vocation, or an uncertain-period stay**? | **Person resident OUTSIDE India** — stop. The day count is irrelevant | Go to step 3 |
+| 3 | Has he **come to / stayed in** India for a purpose **other than** employment, business or vocation, or an uncertain-period stay? | **Person resident OUTSIDE India** — stop | Go to step 4 |
+| 4 | Did he reside in India for **more than 182 days** during the **preceding financial year**? | **Person resident IN India** | **Person resident OUTSIDE India** |
+| 5 | Offices, branches and agencies | An **office, branch or agency in India** owned or controlled by a person resident **outside** India is a **person resident in India**; an **office, branch or agency outside India** owned or controlled by a person resident **in India** is also a **person resident in India** | — |
+
+Step 5 is the counter-intuitive one and it is examined often. Both directions land on **resident in
+India**: the Indian branch of a foreign parent, and the foreign branch of an Indian parent. The
+foreign branch is resident because s. 1(2) has already dragged it inside the Act.
+
+<Callout kind="example" label="Scenario 1 — three residence questions, one financial year">
+  <p>
+    The question is always asked for a stated financial year, so fix that first. Take
+    <strong>FY 2026-27</strong>; the "preceding financial year" is therefore
+    <strong>FY 2025-26 (1 April 2025 to 31 March 2026)</strong>.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Mr Kabir Shah, day count</div>
+    In India 1 April 2025 to 15 July 2025 → 30 + 31 + 30 + 15 = <strong>106 days</strong><br />
+    In India 1 January 2026 to 31 March 2026 → 31 + 28 + 31 = <strong>90 days</strong><br />
+    Total in the preceding FY = 106 + 90 = <strong>196 days</strong><br />
+    196 &gt; 182, and he left only for holidays. → <strong>Person resident in India</strong> for FY 2026-27.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Ms Aarohi Nambiar, one day over the line</div>
+    In India 1 June 2025 to 30 November 2025 only → 30 + 31 + 31 + 30 + 31 + 30 = <strong>183 days</strong><br />
+    "More than 182" needs <strong>183</strong>. She clears it by exactly <strong>one day</strong>.
+    → <strong>Person resident in India</strong>, assuming no carve-out applies.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — Mr Deven Rao, the carve-out beats the count</div>
+    In India for the <strong>whole</strong> of FY 2025-26 (365 days), then on 20 April 2026 he leaves
+    for a permanent job in Frankfurt.<br />
+    Day count says resident. But limb (A) applies from the moment he goes out
+    <strong>for employment outside India</strong>. → <strong>Person resident outside India</strong>
+    from his departure, on 365 days of presence.
+  </div>
+</Callout>
+
+<Callout kind="mistake">
+  <p>
+    <strong>Three traps in one definition.</strong> (1) The count is for the <strong>preceding</strong>
+    financial year, not the current one — a person's status in FY 2026-27 is fixed by what he did in
+    FY 2025-26. (2) <strong>More than 182</strong> is 183, not 182; an option offering "182 days or
+    more" is wrong. (3) The <strong>purpose carve-outs override the day count</strong> in both
+    directions, so a person can be non-resident after 365 days in India and resident after 40. Never
+    answer a FEMA residence question on arithmetic alone — state the purpose first.
+  </p>
+</Callout>
+
+**Two more definitions in the same family.** **Section 2(u) — "person"** includes an individual, a
+Hindu undivided family, a company, a firm, an association of persons or a body of individuals whether
+incorporated or not, every artificial juridical person, and **any agency, office or branch owned or
+controlled by such person**. **Section 2(y) — "repatriate to India"** means bringing into India the
+realised foreign exchange and **selling it to an authorised person** in India in exchange for rupees,
+or holding it in an account with an authorised dealer to the extent notified — and includes the use
+of the realised amount for discharging a debt owed **outside India** by a person resident in India.
+Repatriation is therefore not merely "bringing money home"; it is **converting or parking it through
+an authorised person**.
+
+## 4. Capital account and current account transactions — the residual definition
+
+**Section 2(e) — capital account transaction** means a transaction which **alters the assets or
+liabilities outside India of persons resident in India**, or the **assets or liabilities in India of
+persons resident outside India**, and includes the transactions referred to in **s. 6(3)**.
+
+**Section 2(j) — current account transaction** means a transaction **other than a capital account
+transaction**, and — **without prejudice to that generality** — includes four named groups:
+
+1. **payments due in connection with foreign trade**, other current business, services, and
+   **short-term banking and credit facilities in the ordinary course of business**;
+2. payments due as **interest on loans** and as **net income from investments**;
+3. remittances for **living expenses of parents, spouse and children residing abroad**; and
+4. **expenses in connection with foreign travel, education and medical care** of parents, spouse and
+   children.
+
+<div class="formula">Current account transaction = <strong>everything that is not a capital account transaction</strong>. The four listed groups are illustrations, not the definition. Test the transaction against s. 2(e) FIRST; if it does not alter assets or liabilities across the border, it is a current account transaction by default.</div>
+
+<Callout kind="mistake">
+  <p>
+    <strong>The residual definition is the single most examined point in this chapter.</strong>
+    Students learn the four illustrations and then treat anything outside the list as "capital". It is
+    the other way round. A remittance for a nephew's wedding gift is not in the list — but it does not
+    create an asset or a liability outside India for anyone, so it is a <strong>current</strong>
+    account transaction. Ask "does this leave someone owning something or owing something across the
+    border afterwards?" If no, it is current.
+  </p>
+</Callout>
+
+**Working the split on examples:**
+
+| Transaction by a person resident in India | Alters cross-border assets/liabilities? | Classification |
+|---|---|---|
+| Paying an Italian supplier for imported machinery already delivered | No — it discharges a trade payable | **Current** |
+| Buying shares of a listed company in Singapore | Yes — creates an asset outside India | **Capital** |
+| Paying interest on an external commercial borrowing | No — interest is expressly current | **Current** |
+| **Repaying the principal** of that same borrowing | Yes — extinguishes a liability outside India | **Capital** |
+| Remitting a child's university tuition to Australia | No | **Current** |
+| Buying a flat in Dubai | Yes | **Capital** |
+| Gifting USD 20,000 to a friend abroad | No | **Current** |
+| Giving a **guarantee** in favour of a non-resident | Yes — creates a contingent liability | **Capital** |
+| Receiving net dividend on shares already held abroad | No — net income from investments | **Current** |
+| **Emigration** remittance to settle abroad | Treated as **current** under Schedule III, though it looks capital | **Current** |
+
+The interest/principal pair in rows three and four is the examiner's favourite one-line trap: the same
+loan generates a current account transaction every quarter and a capital account transaction on
+maturity.
+
+**Section 6(3) legacy list.** The definition in s. 2(e) picks up the classes of transaction that
+s. 6(3) once empowered the RBI to regulate — transfer or issue of a foreign security by a resident,
+transfer or issue of a security by a person resident outside India, borrowing and lending in foreign
+exchange and in rupees between residents and non-residents, deposits between them, export/import of
+currency or currency notes, transfer of immovable property outside India by a resident and in India
+by a non-resident, and guarantees in respect of a debt owed to or by a non-resident.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · s. 6(3) was OMITTED in 2015">
+  <p>
+    <strong>Sub-section 6(3) itself stands omitted</strong> by the Finance Act 2015, which redrew the
+    line between the RBI and the Central Government (see §8). The <em>list</em> survives in substance
+    because <strong>s. 2(e) continues to refer to "the transactions referred to in section 6(3)"</strong>
+    and because the same classes reappear in the RBI's regulations. Study Material editions differ on
+    how they present this. Learn the classes as the content of a capital account transaction; do not
+    write "under s. 6(3) the RBI may specify…" as live law without checking the edition notified for
+    your attempt.
+  </p>
+</Callout>
+
+## 5. Authorised persons and other key definitions
+
+**Section 2(c) — "authorised person"** means an **authorised dealer, money changer, off-shore banking
+unit or any other person for the time being authorised under s. 10(1)** to deal in foreign exchange or
+foreign securities. The four limbs matter because students routinely answer "a scheduled commercial
+bank", which is neither necessary (a full-fledged money changer is not a bank) nor sufficient (a bank
+without an RBI authorisation is not an authorised person).
+
+| Definition | Section | The point that is examined |
+|---|---|---|
+| **Foreign exchange** | 2(n) | Foreign currency, and **deposits, credits and balances** payable in foreign currency; **drafts, travellers' cheques, letters of credit and bills of exchange** expressed in Indian currency but **payable in foreign currency**; and instruments payable at the option of the drawee or holder in foreign currency |
+| **Foreign security** | 2(o) | A security **denominated in foreign currency**, wherever issued or held; it stays a foreign security even where **redemption or interest is payable in Indian currency** |
+| **Currency** | 2(h) | Includes currency notes, postal notes, postal orders, money orders, cheques, drafts, travellers' cheques, letters of credit, bills of exchange and **such other similar instruments as the RBI may notify** |
+| **Security** | 2(za) | Shares, stocks, bonds, debentures, Government securities, savings certificates, deposit receipts and units of mutual funds — but **not bills of exchange or promissory notes other than Government promissory notes** |
+| **Export** | 2(l) | Taking **goods** out of India by land, sea or air, **and** provision of **services** from India to a person outside India |
+| **Import** | 2(p) | Bringing **goods or services** into India |
+| **Authorised person** | 2(c) | Authorised dealer · money changer · off-shore banking unit · any other person authorised under s. 10(1) |
+
+<Callout kind="pointer">
+  <p>
+    <strong>Two definitional near-misses worth memorising.</strong> A draft drawn in Chennai,
+    <em>expressed in rupees</em> but <em>payable in US dollars</em>, <strong>is foreign
+    exchange</strong> — the currency of payment governs, not the currency of expression. And a bond
+    denominated in US dollars whose interest the issuer pays in rupees <strong>remains a foreign
+    security</strong>. Both are one-line MCQs.
+  </p>
+</Callout>
+
+## 6. Dealing in and holding foreign exchange — sections 3 and 4
+
+**Section 3** is the gatekeeper. **Save as otherwise provided in the Act, rules or regulations, or
+with the general or special permission of the RBI, no person shall**:
+
+- **(a)** **deal in or transfer** any foreign exchange or foreign security **to any person other than
+  an authorised person**;
+- **(b)** make any **payment to or for the credit of any person resident outside India** in any
+  manner;
+- **(c)** **receive otherwise than through an authorised person** any payment by order or on behalf of
+  any person resident outside India in any manner; and
+- **(d)** enter into any **financial transaction in India as consideration for, or in association
+  with, the acquisition or creation or transfer of a right to acquire any asset outside India** by any
+  person.
+
+**Clause (c) carries an Explanation** that is worth learning: where a person **receives in India** a
+payment from, or by order or on behalf of, a person resident outside India **without a corresponding
+inward remittance from outside India**, he is **deemed to have received it otherwise than through an
+authorised person**.
+
+That Explanation, with clause (d), is what makes an informal parallel-transfer arrangement a
+contravention. In the pattern the Explanation targets, a resident hands over rupees in India while a
+counterpart abroad pays out foreign currency to the intended recipient; no money crosses the border
+and no authorised person touches the transaction. Every leg — the rupee payment, the foreign payout,
+the arrangement itself — sits inside s. 3, and the penalty in s. 13 bites on the **sum involved**.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Section 3 is not about the purpose of the payment.</strong> Meera's gift to her brother in
+    Dubai (§ opening) is a perfectly permissible current account transaction. What makes the ₹40 lakh
+    arrangement a contravention is not the purpose but the <strong>channel</strong> — it bypassed an
+    authorised person. A lawful purpose sent through an unlawful channel is still a contravention of
+    s. 3, and the penalty is computed on the whole sum involved.
+  </p>
+</Callout>
+
+**Section 4 — holding of foreign exchange, etc.** Save as otherwise provided, **no person resident in
+India shall acquire, hold, own, possess or transfer** any **foreign exchange**, **foreign security**,
+or **immovable property situated outside India**. The section is a flat prohibition with the exceptions
+pushed into ss. 6, 9 and the regulations. Two riders keep it workable:
+
+- **Section 6(4)** protects legacy assets — see §8.
+- **Section 9** exempts, among other things, possession of foreign currency and coins within limits
+  prescribed by regulation, foreign currency **acquired by way of gift or inheritance** from a person
+  covered by s. 6(4), and foreign exchange acquired from employment, business, trade, vocation,
+  services, honorarium, gifts or inheritance held within prescribed limits.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · possession limits are regulation-level">
+  <p>
+    The actual limits — how much foreign currency a resident may retain, how long unspent foreign
+    exchange brought back from a trip may be held before it is surrendered, and what value of foreign
+    coins may be held without limit — sit in the <strong>Foreign Exchange Management (Possession and
+    Retention of Foreign Currency) Regulations 2000</strong> and the realisation and repatriation
+    regulations, not in s. 9. They have been revised. State s. 9 as a set of <em>categories</em>; do
+    not quote a figure in an answer unless your SM edition gives it. No question in this chapter's
+    bank turns on a possession figure.
+  </p>
+</Callout>
+
+## 7. Current account transactions — section 5 and the Rules of 2000
+
+**Section 5** is the liberalising provision, and it is short. **Any person may sell or draw foreign
+exchange to or from an authorised person if such sale or drawal is a current account transaction** —
+subject to the proviso that the **Central Government** may, **in the public interest and in
+consultation with the Reserve Bank**, impose **reasonable restrictions** by rules.
+
+<div class="formula">s. 5 default: a current account transaction is <strong>FREE</strong>. The restriction must be found in the <strong>Foreign Exchange Management (Current Account Transactions) Rules 2000</strong>, made by the <strong>CENTRAL GOVERNMENT</strong> in consultation with the RBI — not by the RBI alone.</div>
+
+The Rules divide restricted drawals into three Schedules. Learning **which authority appears against
+which Schedule** is worth more marks than learning the individual items.
+
+| Schedule | Effect | Approving authority | Illustrative items |
+|---|---|---|---|
+| **Schedule I** | Drawal is **PROHIBITED** outright | **None — no approval is available** | Remittance out of **lottery winnings**; remittance of income from **racing, riding or any hobby**; remittance for purchase of **lottery tickets, sweepstakes, banned or proscribed magazines** and the like; payment of **commission on exports towards equity investment in Indian joint ventures or wholly-owned subsidiaries abroad**; **dividend** payments where dividend balancing applies; payment related to a **"call-back services" telephone arrangement**; remittance of **interest income on funds held in a Non-Resident Special Rupee Account** |
+| **Schedule II** | Drawal needs **prior approval of the CENTRAL GOVERNMENT** — of the Ministry or Department administering the subject | The relevant **Ministry / Department of the Central Government** | **Cultural tours**; **advertisement in foreign print media** above the prescribed threshold for purposes other than promotion of tourism, foreign investments and international bidding; remittance of **freight on a vessel chartered by a PSU**; multi-modal transport operators' remittances to their agents abroad; **hiring of transponders** for TV and internet service providers; remittance of **prize money or sponsorship** of a sports activity abroad above the threshold; payment for **securing insurance for health from a company abroad** |
+| **Schedule III** | Drawal is **free up to a limit**; **beyond the limit it needs prior approval of the RBI** | **Reserve Bank of India** | **Private visits** abroad (other than to Nepal and Bhutan); **gift or donation**; going abroad for **employment**; **emigration**; **maintenance of close relatives** abroad; **business travel**, conference or specialised training; **medical treatment** abroad; **studies** abroad; any other current account transaction |
+
+**The Schedule III limit is the Liberalised Remittance Scheme ceiling.**
+
+<div class="formula">LRS: <strong>USD 2,50,000</strong> per <strong>financial year</strong> per <strong>resident individual</strong>, across <em>all</em> permissible current and capital account transactions taken together. Beyond that ceiling → <strong>prior RBI approval</strong>.</div>
+
+Four features of the ceiling decide most questions:
+
+1. It is **per individual**, not per family or per household. A family of four resident individuals has
+   four separate ceilings — but a minor's remittance also counts against the minor's own ceiling, and
+   the form must be signed by a guardian.
+2. It is **per financial year** (1 April to 31 March), and it does **not** carry forward.
+3. It is a **combined** ceiling: private visits, gifts, maintenance of relatives, education, medical
+   treatment and permitted capital account items such as buying shares or property abroad all draw on
+   the **same** USD 2,50,000.
+4. Two purposes may exceed it **on documentation**: **studies abroad** and **medical treatment
+   abroad** may be remitted beyond the ceiling where a higher amount is supported by an **estimate
+   from the institution or hospital abroad**; and **emigration** and **maintenance of close relatives**
+   are similarly relaxed where the country of emigration or the estimate requires more. A remittance for
+   **any other purpose** — a gift, a donation, a private visit — is capped absolutely at the ceiling
+   without RBI approval.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · the LRS ceiling and the Schedules move">
+  <p>
+    <strong>USD 2,50,000</strong> is the figure in force as on 28 February 2026. The ceiling has been
+    USD 75,000, USD 1,25,000 and USD 2,00,000 within living memory, and it is set by
+    <strong>RBI circular</strong>, not by the Act. The <strong>contents</strong> of Schedules I, II and
+    III, and the rupee/dollar thresholds embedded in Schedule II, are equally rules-level and have been
+    amended more than once — items have moved between Schedules. Learn the
+    <strong>Schedule-to-authority mapping</strong> (prohibited · Central Government · RBI), which is
+    stable, and re-verify every figure.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 2 — LRS headroom, two ways">
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — Mr Ranjit Bose, FY 2026-27</div>
+    Already remitted: son's tuition in Melbourne USD 90,000; gift to a nephew USD 35,000<br />
+    Used = 90,000 + 35,000 = <strong>USD 1,25,000</strong><br />
+    Headroom = 2,50,000 − 1,25,000 = <strong>USD 1,25,000</strong> for the rest of the year,
+    without RBI approval.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — Mrs Sunanda Pillai, FY 2026-27</div>
+    Already remitted: medical treatment abroad USD 1,20,000; private visits USD 48,000;
+    donation to a foreign charity USD 25,000<br />
+    Used = 1,20,000 + 48,000 + 25,000 = <strong>USD 1,93,000</strong><br />
+    Headroom = 2,50,000 − 1,93,000 = <strong>USD 57,000</strong><br />
+    Note the asymmetry: had the hospital's estimate justified more, the <em>medical</em> leg could have
+    gone above the ceiling on documentation; the <em>donation</em> could not.
+  </div>
+</Callout>
+
+<Callout kind="pointer">
+  <p>
+    <strong>Nepal and Bhutan are carved out of the private-visit entry, and Schedule I has no
+    approval route.</strong> A candidate who writes "the RBI may permit a remittance of lottery
+    winnings on application" has lost the mark: Schedule I items are <strong>prohibited</strong>, and
+    no authority — not the RBI, not the Central Government — can approve them. Approval exists only for
+    Schedule II (Central Government) and for amounts above the Schedule III limits (RBI).
+  </p>
+</Callout>
+
+## 8. Capital account transactions — section 6
+
+**Section 6(1)** — subject to sub-section (2), **any person may sell or draw foreign exchange to or
+from an authorised person for a capital account transaction**. Read alone it sounds as liberal as
+s. 5. Sub-section (2) supplies the restriction that makes the whole difference.
+
+**Section 6(2)** — the **Reserve Bank** may, **in consultation with the Central Government**, specify
+**(a)** any **class or classes of capital account transactions involving DEBT INSTRUMENTS** which are
+**permissible**; **(b)** the **limit** up to which foreign exchange shall be admissible for such
+transactions; and **(c)** any **conditions** which may be placed on such transactions.
+
+**Section 6(2A)** — the **Central Government** may, **in consultation with the Reserve Bank**,
+prescribe the same three things for capital account transactions **NOT involving debt instruments**.
+
+<div class="formula">Post-2015 split — <strong>DEBT instruments → RESERVE BANK</strong> (s. 6(2)); <strong>NON-DEBT instruments → CENTRAL GOVERNMENT</strong> (s. 6(2A)). What counts as a "debt instrument" is itself <strong>determined by the Central Government in consultation with the RBI</strong> (s. 6(7)).</div>
+
+**The proviso to s. 6(2)** protects two payments from restriction altogether: neither the RBI nor the
+Central Government may restrict the drawal of foreign exchange for payments due on account of
+**amortisation of loans** or for **depreciation of direct investments in the ordinary course of
+business**.
+
+**The permissible-classes technique.** Section 6 does not list what you may do; it empowers the
+regulator to say what is **permissible**. Anything not brought inside a permissible class needs
+specific approval. That is the mirror image of s. 5, where anything not restricted is free.
+
+| | Current account (s. 5) | Capital account (s. 6) |
+|---|---|---|
+| Default | **Free** | **Restricted** |
+| Who restricts / permits | **Central Government** by **rules**, in consultation with RBI, in the public interest | **RBI** (debt) and **Central Government** (non-debt) by regulations/rules, in consultation with each other |
+| Instrument of the law | Current Account Transactions **Rules** 2000 | Capital account **Regulations** and the non-debt instrument **Rules** |
+| Technique | List the **restricted** items (three Schedules) | List the **permissible** classes |
+
+**Section 6(4) — the legacy shield.** A **person resident in India** may **hold, own, transfer or
+invest in** foreign currency, foreign security or **immovable property situated outside India** if
+that currency, security or property was **acquired, held or owned by him when he was resident outside
+India**, or **inherited from a person who was resident outside India**. This is the answer to the
+returning-NRI question: the Boston apartment bought during eight years of employment in the United
+States does not have to be sold on the day he becomes resident again, and s. 4 does not bite on it.
+
+**Section 6(5)** is the mirror: a **person resident outside India** may hold, own, transfer or invest
+in Indian currency, security or immovable property in India acquired when he **was resident in India**
+or **inherited from a person resident in India**.
+
+**Section 6(6)** lets the RBI **prohibit, restrict or regulate the establishment in India of a branch,
+office or other place of business** by a person resident outside India, for carrying on any activity
+relating to that branch or office.
+
+<Callout kind="example" label="Scenario 3 — the returning non-resident">
+  <p>
+    Mr Faisal Qureshi worked in Dubai from 2014 to 2025 and was a person resident outside India
+    throughout. In that time he bought an apartment in Dubai, opened a dirham deposit and acquired
+    shares in a UAE-listed company. He returns to Bengaluru for good in June 2026 and becomes a person
+    resident in India for FY 2027-28.
+  </p>
+  <p>
+    <strong>1 · Section 4 alone</strong> would prohibit a resident from holding a foreign security or
+    immovable property outside India. <strong>2 · Section 6(4) saves all three assets</strong>, because
+    each was acquired while he was resident outside India — he may continue to hold, own, transfer or
+    invest in them. <strong>3 · Income</strong> from them, being net income from investments, is a
+    <em>current</em> account transaction. <strong>4 · A FRESH purchase</strong> of another Dubai flat
+    made <em>after</em> he becomes resident is a new capital account transaction: it must fit a
+    permissible class and it draws on his LRS ceiling. <strong>5 · An inheritance</strong> from a
+    person resident outside India would equally be protected by s. 6(4).
+  </p>
+</Callout>
+
+## 9. Export of goods and services, realisation and exemptions — sections 7, 8 and 9
+
+FEMA's second half of the balance sheet: money that must come **in**.
+
+**Section 7(1)** — every **exporter of goods** shall **(a)** furnish to the Reserve Bank or to such
+other authority a **declaration** in the prescribed form, supported by such evidence as prescribed,
+containing **true and correct material particulars including the amount representing the full export
+value** of the goods or, **where the full export value is not ascertainable at the time of export**,
+the value **which the exporter, having regard to the prevailing market conditions, expects to
+receive** on a sale in a market outside India; and **(b)** furnish such other information as the RBI
+may require **for the purpose of ensuring the realisation of the export proceeds**.
+
+**Section 7(2)** — the RBI may, to ensure that the **full export value** (or such reduced value as the
+RBI determines) is **received without delay**, direct any exporter to comply with such requirements as
+it deems fit. **Section 7(3)** — every **exporter of services** shall furnish a declaration in the
+prescribed form containing true and correct material particulars **in relation to payment for those
+services**.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · declaration forms and realisation periods are rules-level">
+  <p>
+    The <strong>form</strong> of the s. 7 declaration — the <strong>EDF</strong> for physical goods and
+    the <strong>SOFTEX</strong> route for software and certain service exports — and the
+    <strong>period within which export proceeds must be realised</strong> live in the RBI's export and
+    realisation regulations and Master Direction, not in s. 7 or s. 8. Both the forms and the
+    realisation periods have been changed, including by temporary relaxations. Write the
+    <em>obligation</em> from the section; name a form only as the vehicle, and never state a
+    realisation period as statutory. No question in this bank turns on a form name or a realisation
+    period.
+  </p>
+</Callout>
+
+**Section 8 — realisation and repatriation.** Where any amount of foreign exchange is **due or has
+accrued** to any person resident in India, that person shall **take all reasonable steps to realise
+and repatriate to India** such foreign exchange **within such period and in such manner as the RBI may
+specify** — save as otherwise provided in the Act, or with the general or special permission of the
+RBI.
+
+Three features are examined. The duty attaches to what is **due or accrued**, not only to what has
+been received. The standard is **all reasonable steps** — an exporter who has genuinely pursued a
+defaulting buyer has complied even if the money never arrives. And "repatriate" carries its s. 2(y)
+meaning: bring it in and **sell it to an authorised person**, or hold it in an authorised dealer
+account to the extent permitted.
+
+**Section 9 — exemptions from realisation and repatriation.** Sections 4 and 8 do not apply to:
+
+- **(a)** possession of **foreign currency or foreign coins** by any person up to such limit as the RBI
+  may specify;
+- **(b)** **foreign currency accounts** held or operated by such person or class of persons, within the
+  RBI's limits;
+- **(c)** foreign exchange **acquired or received before 8 July 1947**, or any income arising on it
+  held outside India under an RBI permission;
+- **(d)** foreign exchange held by a resident up to the RBI's limit where it was acquired **by way of
+  gift or inheritance** from a person referred to in clause (c), including income arising from it;
+- **(e)** foreign exchange acquired from **employment, business, trade, vocation, services,
+  honorarium, gifts, inheritance or any other legitimate means**, up to the RBI's limit; and
+- **(f)** such **other receipts** in foreign exchange as the RBI may specify.
+
+Each clause ends in "up to such limit as the RBI may specify". Section 9 grants **categories**; the
+regulations supply the **numbers**, and the numbers are the part that changes.
+
+## 10. Authorised persons — sections 10 to 12
+
+The authorised person is FEMA's compliance checkpoint. Everything lawful passes through one; the Act
+therefore both licenses and polices them.
+
+| Sub-section | What it does |
+|---|---|
+| **s. 10(1)** | The **RBI may, on application, authorise** any person to be an **authorised person** to deal in foreign exchange or foreign securities — as an **authorised dealer**, **money changer**, **off-shore banking unit**, or in any other manner it deems fit |
+| **s. 10(2)** | The authorisation is **in writing** and **subject to conditions** |
+| **s. 10(3)** | The RBI may **revoke** the authorisation at any time if satisfied that **(a)** it is **in the public interest** to do so, or **(b)** the authorised person has **failed to comply with the conditions** or has **contravened** the Act, rules, regulations, notifications, directions or orders. Revocation on ground **(b) needs a reasonable opportunity of making a representation**; revocation in the **public interest does not** |
+| **s. 10(4)** | The authorised person must **comply with the RBI's general or special directions or orders**, and must **not**, without the RBI's previous permission, engage in any transaction **not in conformity with the terms of his authorisation** |
+| **s. 10(5)** | Before undertaking a transaction the authorised person must **require a declaration and such information** as will reasonably satisfy him that the transaction **will not involve, and is not designed for the purpose of, any contravention or evasion**. On refusal or unsatisfactory compliance he must **refuse in writing** to undertake the transaction and, if he has **reason to believe** a contravention or evasion is contemplated, **report the matter to the RBI** |
+| **s. 10(6)** | A person **other than an authorised person** who acquires foreign exchange for a **declared purpose** and then **(i)** does not use it for that purpose, **(ii)** does not **surrender** it to an authorised person within the specified period, or **(iii)** uses it for a purpose for which acquisition is not permissible, is **deemed to have committed a contravention** |
+
+<Callout kind="pointer">
+  <p>
+    <strong>Section 10(6) is where the customer, not the bank, gets caught.</strong> A resident who
+    draws USD 20,000 declaring "private visit", cancels the trip and quietly retains the currency has
+    committed a deemed contravention — not because holding dollars is wicked, but because the
+    declaration was the basis of the drawal. The cure is to <strong>use it for the declared purpose or
+    surrender it</strong>. Examiners like this because the contravention exists even though the
+    original drawal was entirely lawful.
+  </p>
+</Callout>
+
+**Section 11 — RBI's directions to authorised persons.** The RBI may give **directions** to authorised
+persons in regard to making any payment, or the doing or desisting from doing any act relating to
+foreign exchange or foreign security (11(1)), and may direct an authorised person to **furnish
+information** (11(2)). Where an authorised person **contravenes a direction** or **fails to file a
+return**, the RBI may, **after a reasonable opportunity of being heard**, impose a penalty **up to
+₹10,000**, with a further **₹2,000 for every day** of a continuing contravention (11(3)).
+
+**Section 12 — power of the RBI to inspect.** The RBI may at any time cause an **inspection** of the
+business and affairs of any authorised person, for verifying the correctness of statements, obtaining
+information not furnished, or **securing compliance**. The authorised person, his officers and his
+employees must **produce books, accounts and documents** and **furnish statements and information**
+within the time and manner the inspecting officer requires.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Do not mix the two penalty provisions.</strong> Section 11(3) — <strong>₹10,000 plus
+    ₹2,000 per day</strong> — is a small, RBI-imposed penalty on an <strong>authorised person</strong>
+    for breaching a <em>direction</em> or missing a <em>return</em>. Section 13 — <strong>thrice the
+    sum involved, or ₹2,00,000, plus ₹5,000 per day</strong> — is the general adjudicated penalty on
+    <strong>any person</strong> for contravening the Act. An MCQ that names an authorised person and a
+    missed return is testing s. 11(3); one that names a sum involved is testing s. 13.
+  </p>
+</Callout>
+
+## 11. Contravention and penalty — section 13
+
+**Section 13(1)** — if any person **contravenes any provision** of the Act, or any **rule, regulation,
+notification, direction or order** issued under it, or **contravenes any condition** subject to which
+an authorisation is issued by the RBI, he shall, **upon adjudication**, be liable to a penalty:
+
+<div class="formula">Up to <strong>THRICE the sum involved</strong> in the contravention, where that amount is <strong>quantifiable</strong>;<br />or up to <strong>₹2,00,000</strong>, where the amount is <strong>not quantifiable</strong>;<br />and, where the contravention is a <strong>continuing</strong> one, a further penalty up to <strong>₹5,000 for every day AFTER THE FIRST DAY</strong> during which it continues.</div>
+
+Four words in that formula carry marks. **"Upon adjudication"** — the penalty is imposed by an
+Adjudicating Authority, never automatically. **"Up to"** — every figure is a **maximum**, not a fixed
+amount; an option saying "shall be three times" is wrong. **"Sum involved"** — the base is the amount
+of the transaction, not the profit made on it. **"After the first day"** — the continuing-day count
+excludes the first day of the contravention.
+
+<Callout kind="example" label="Scenario 4 — three penalty computations">
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — quantifiable, not continuing</div>
+    Sum involved ₹42,00,000; the contravention is complete on one day.<br />
+    Maximum penalty = 3 × 42,00,000 = <strong>₹1,26,00,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — not quantifiable, continuing 40 days</div>
+    Base maximum = <strong>₹2,00,000</strong><br />
+    Continuing days after the first day = 40 → 40 × 5,000 = ₹2,00,000<br />
+    Maximum total = 2,00,000 + 2,00,000 = <strong>₹4,00,000</strong>
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — quantifiable AND continuing 25 days</div>
+    Sum involved ₹18,50,000 → 3 × 18,50,000 = ₹55,50,000<br />
+    Continuing days after the first day = 25 → 25 × 5,000 = ₹1,25,000<br />
+    Maximum total = 55,50,000 + 1,25,000 = <strong>₹56,75,000</strong>
+  </div>
+</Callout>
+
+**Section 13(2) — confiscation.** The Adjudicating Authority may, **in addition to any penalty**,
+direct that the **currency, security or any other money or property in respect of which the
+contravention took place be confiscated to the Central Government**, and further direct that the
+person's **foreign exchange holdings be brought back into India** or **retained outside India** in
+accordance with its directions. The Explanation traces the property: where it has been **converted
+into a bank deposit, into Indian currency, or into any other property**, the substitute is caught too.
+
+**Sections 13(1A) to (1D) — the aggravated case.** Where a person is found to have acquired **foreign
+exchange, foreign security or immovable property situated outside India of an aggregate value
+exceeding the threshold** referred to in the proviso to s. 37A(1), he faces a penalty **up to three
+times the sum involved** together with **confiscation of the value equivalent situated in India**
+(13(1A)); the Adjudicating Authority may, after recording reasons, **recommend prosecution**, which the
+Director of Enforcement may direct by a criminal complaint filed by an officer not below the rank of
+Assistant Director (13(1B)); such a person is, **in addition**, punishable with **imprisonment up to
+five years and fine** (13(1C)); and **no court may take cognizance** except on a written complaint by
+such an officer (13(1D)).
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · ss. 13(1A)–(1D) and the s. 37A threshold">
+  <p>
+    Sub-sections 13(1A) to (1D) and s. 37A were <strong>inserted by the Finance Act 2015 and amended in
+    2019</strong>, and they are the <em>one place where FEMA restores criminal liability</em> — a
+    genuine exception to "FEMA is civil". The <strong>threshold value</strong> under the proviso to
+    s. 37A(1) is <strong>prescribed by rule</strong>. State the structure; do not state the threshold
+    figure. No question in this bank turns on it, but several test the proposition that FEMA is
+    <em>generally</em> civil <em>subject to</em> this carve-out and to s. 14.
+  </p>
+</Callout>
+
+## 12. Enforcement, compounding and the appellate ladder — sections 14 to 21
+
+**Section 14 — enforcement of the Adjudicating Authority's order.** If a person **fails to make full
+payment of the penalty within 90 days from the date on which the notice for payment is served** on
+him, he is **liable to civil imprisonment**. The mechanics are protective: no arrest and detention
+order may be made unless the Adjudicating Authority has **issued and served a show-cause notice**
+calling on the defaulter to appear and explain why he should not be committed to civil prison, and
+has given him an opportunity of showing cause. Detention runs **up to three years** where the demand
+exceeds ₹1 crore and **up to six months** in any other case, and the defaulter is **released on
+payment**. Detention **does not discharge the liability** to pay.
+
+<div class="formula">Civil imprisonment under s. 14 is triggered by <strong>non-payment within 90 days of service of the notice of demand</strong> — never by the contravention itself. FEMA punishes the debt, not the deed.</div>
+
+**Section 15 — compounding.** Any contravention under **s. 13** may, **on an application** by the
+person committing it, be **compounded within 180 days from the date of receipt of the application** by
+the Director of Enforcement or such other officers of the Directorate of Enforcement and officers of
+the Reserve Bank as may be authorised. **Section 15(2)** — where a contravention has been compounded,
+**no proceeding or further proceeding shall be initiated or continued** against that person under
+s. 13 in respect of the contravention so compounded.
+
+<div class="formula">Compounding: <strong>180 days</strong> from the date of <strong>RECEIPT OF THE APPLICATION</strong> — not from the contravention, not from the notice.</div>
+
+<Callout kind="pointer">
+  <p>
+    <strong>Who compounds what.</strong> Under the Foreign Exchange (Compounding Proceedings) Rules
+    2000 the <strong>Reserve Bank</strong> compounds contraventions generally, while contraventions of
+    <strong>s. 3(a)</strong> — dealing in or transferring foreign exchange to a person other than an
+    authorised person, the informal-channel cases — are compounded by the <strong>Directorate of
+    Enforcement</strong>. Compounding is <strong>voluntary and on application</strong>; it is not a
+    right, the authority may decline, and it does not run where the matter is already the subject of an
+    adjudication that has concluded. The RBI's monetary limits on which officer may compound are
+    rules-level.
+  </p>
+</Callout>
+
+**Section 16 — Adjudicating Authority.** The Central Government appoints officers of the Directorate
+of Enforcement as **Adjudicating Authorities** to hold enquiries. Three points are examined: an
+enquiry may be held **only upon a complaint in writing** by an officer authorised by the Central
+Government; the person is given a **reasonable opportunity of being heard** and may **appear in person
+or through a legal practitioner or a chartered accountant** of his choice; and the Adjudicating
+Authority must **endeavour to dispose of the complaint within one year** of receiving it, recording
+reasons in writing where it does not.
+
+**The appellate ladder.**
+
+| Rung | From what order | To whom | Window | Extension |
+|---|---|---|---|---|
+| 1 | Order of an **Adjudicating Authority who is an Assistant Director or Deputy Director** of Enforcement | **Special Director (Appeals)** — s. 17 | **45 days** from the date the **copy of the order is received** | May be entertained **after** 45 days on **sufficient cause**; no outer limit stated |
+| 2 | Order of an **Adjudicating Authority above that rank**, or of the **Special Director (Appeals)** | **Appellate Tribunal** — s. 19 | **45 days** from the date the **copy of the order is received** | May be entertained **after** 45 days on **sufficient cause**; no outer limit stated |
+| 3 | Decision or **order of the Appellate Tribunal**, **on any question of law** arising out of it | **High Court** — s. 35 | **60 days** from the date the decision or order is **communicated** | A **further 60 days** where the High Court is satisfied the appellant was prevented by **sufficient cause** |
+
+Three riders complete the picture. The **pre-deposit proviso to s. 19(1)** — an appeal to the Tribunal
+is entertained **only on deposit of the penalty**, though the Tribunal may **dispense with the deposit,
+subject to conditions, where it is of the opinion that the deposit would cause undue hardship**. The
+Tribunal must **endeavour to dispose of the appeal within 180 days** of receiving it, recording reasons
+where it does not (s. 19(5)). And the **High Court's jurisdiction is confined to a question of law** —
+the Tribunal is the last fact-finder.
+
+<Callout kind="amendment" label="AMENDMENT-CHECK · which Tribunal, and the pre-deposit">
+  <p>
+    The <strong>Appellate Tribunal for Foreign Exchange</strong> constituted under s. 18 was
+    <strong>merged, by the Finance Act 2017, into the Appellate Tribunal established under s. 25 of the
+    Prevention of Money-Laundering Act 2002</strong>, which now hears FEMA appeals; ss. 20, 21 and the
+    related provisions on qualifications, terms and conditions were affected. The
+    <strong>pre-deposit proviso</strong> and the undue-hardship relief have also been the subject of
+    amendment and litigation. The <strong>45 / 45 / 60-day windows</strong> are stable and are what the
+    bank examines; treat the identity and composition of the Tribunal as amendment-sensitive.
+  </p>
+</Callout>
+
+<Callout kind="example" label="Scenario 5 — every clock in the enforcement chain, dated">
+  <p>
+    Sanchita Exports LLP is adjudicated in contravention of s. 8. Follow the dates.
+  </p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1 — appeal to the Appellate Tribunal (s. 19)</div>
+    Copy of the Special Director (Appeals)' order received <strong>8 September 2026</strong><br />
+    45 days → last date to appeal = <strong>23 October 2026</strong><br />
+    (30 days would give 8 October; 60 days would give 7 November — both are distractors.)
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2 — appeal to the High Court (s. 35)</div>
+    Tribunal's order communicated <strong>3 December 2026</strong><br />
+    60 days → last date = <strong>1 February 2027</strong>; a further 60 days may be allowed on
+    sufficient cause, taking the outer limit to <strong>2 April 2027</strong>.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3 — civil imprisonment exposure (s. 14)</div>
+    Notice of demand for the penalty served <strong>10 June 2026</strong><br />
+    90 days → full payment due by <strong>8 September 2026</strong>; only on failure by that date does
+    liability to civil imprisonment arise, and only after a show-cause notice.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — compounding (s. 15)</div>
+    Application received by the RBI <strong>12 May 2026</strong><br />
+    180 days → the contravention is to be compounded by <strong>8 November 2026</strong><br />
+    (Six calendar months would give 12 November — the standard trap.)
+  </div>
+</Callout>
+
+## 13. Directorate of Enforcement, presumptions and offences by companies — sections 37, 39 and 42
+
+**Section 36** establishes the **Directorate of Enforcement** with a **Director** and such other
+officers as the Central Government appoints.
+
+**Section 37 — investigation.** The **Director of Enforcement and officers of the Directorate not
+below the rank of Assistant Director** shall take up for investigation the contraventions referred to
+in **s. 13** (37(1)). The Central Government may also **authorise any officer or class of officers of
+the Central Government, a State Government or the Reserve Bank, not below the rank of an Under
+Secretary to the Government of India**, to investigate such contraventions (37(2)). Those officers
+exercise the **like powers as are conferred on income-tax authorities under the Income-tax Act 1961**,
+subject to the limitations laid down under that Act (37(3)).
+
+**Section 37A** (2015) allows the seizure of **value equivalent situated in India** where foreign
+exchange, foreign security or immovable property outside India is suspected to be held in contravention
+of s. 4, with the seizure placed before a **Competent Authority** for confirmation within a prescribed
+period — the enforcement limb that pairs with s. 13(1A).
+
+**Section 39 — presumption as to documents.** Where a document is **produced or furnished** by any
+person, or has been **seized from the custody or control of any person** under this or any other law,
+or has been **received from a place outside India in the course of an investigation**, and is tendered
+in evidence, the court or the Adjudicating Authority **shall presume, unless the contrary is proved**:
+
+- **(a)** the **truth of the contents** of the document; and
+- **(b)** that the **signature and every other part** of the document purporting to be in a particular
+  person's handwriting **is** in that handwriting, and, in the case of a document **executed or
+  attested**, that it was executed or attested by the person by whom it purports to have been.
+
+The presumption is **rebuttable** — the phrase "unless the contrary is proved" is the mark. It shifts
+an evidential burden; it does not restore FERA's reverse onus on guilt.
+
+**Section 42 — contravention by companies.** The officer-in-default template, in two limbs:
+
+| Limb | Who is caught | Escape route |
+|---|---|---|
+| **42(1)** | Every person who, **at the time the contravention was committed, was in charge of, and was responsible to, the company for the conduct of its business**, as well as **the company itself** | He proves the contravention took place **without his knowledge**, **or** that he exercised **all due diligence** to prevent it |
+| **42(2)** | Any **director, manager, secretary or other officer** with whose **consent or connivance** the contravention was committed, or to whose **neglect** it is attributable | None stated — consent, connivance or neglect must be **proved** against him |
+
+The **Explanation** widens "company" to **any body corporate, including a firm or other association of
+individuals**, and defines "director", **in relation to a firm, as a partner in the firm**. So a
+partnership firm and its partners are inside s. 42 despite the marginal heading.
+
+<Callout kind="mistake">
+  <p>
+    <strong>Section 42(1) needs a position; section 42(2) needs a state of mind.</strong> Limb (1)
+    catches a person by <em>office</em> — in charge of and responsible for the conduct of the business
+    — and lets him escape by proving absence of knowledge or due diligence. Limb (2) catches a person
+    by <em>conduct</em> — consent, connivance or neglect — and has no statutory escape. A non-executive
+    director who was never in charge of the business is outside (1); he comes inside (2) only if
+    consent, connivance or neglect is established against him. Answers that make every director
+    automatically liable ignore both limbs.
+  </p>
+</Callout>
+
+**Two residual powers worth a line each.** **Section 40** lets the **Central Government**, in the
+public interest and by notification, **suspend or relax** the operation of any provision of the Act for
+a specified period. **Section 41** lets the Central Government **give directions to the Reserve Bank**
+in the public interest, which the RBI must comply with in exercising its powers under the Act.
+**Sections 46 and 47** confer rule-making power on the **Central Government** and regulation-making
+power on the **Reserve Bank** respectively — which is why the Current Account Transactions **Rules**
+are the Government's and the capital account **Regulations** are the RBI's.
+
+## 14. The master scenario — one family, four transactions
+
+<Callout kind="example" label="Scenario 6 — the Iyengar family, FY 2026-27">
+  <p>
+    <strong>The facts.</strong> Meera Iyengar has lived in Bengaluru continuously for the last ten
+    financial years and is a person resident in India. In FY 2026-27 she and her husband Vikram do
+    four things.
+  </p>
+  <p>
+    <strong>(a)</strong> Meera remits <strong>USD 48,000</strong> to the University of Toronto as their
+    daughter Ira's annual tuition and hostel fees. The university's estimate for the year is USD
+    48,000. <strong>(b)</strong> Vikram, a partner in an engineering firm, draws
+    <strong>USD 22,000</strong> for a three-week business trip to Germany to negotiate a supply
+    contract. <strong>(c)</strong> Meera remits <strong>USD 2,30,000</strong> to her brother in Dubai as
+    a gift towards his new house, having already remitted the USD 48,000 in (a). <strong>(d)</strong>
+    Frustrated at the bank's refusal of part of (c), she pays <strong>₹40,00,000</strong> in cash to an
+    intermediary in Chennai who arranges for an associate abroad to credit the equivalent dollars to
+    her brother's account. No money crosses the border and no authorised person is involved.
+  </p>
+
+  <p><strong>(a) The tuition — Schedule III, and the documented exception.</strong></p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 1</div>
+    Classification: paying fees creates no asset or liability outside India → <strong>current account
+    transaction</strong> (and expressly within s. 2(j)(iv), education of a child).<br />
+    Route: <strong>Schedule III</strong>, "studies abroad" → free up to the LRS ceiling.<br />
+    USD 48,000 &lt; USD 2,50,000 → <strong>permitted, no RBI approval</strong>.<br />
+    Note: had the university's estimate been USD 3,20,000, the excess could still have been remitted
+    <strong>on the strength of that estimate</strong> — studies and medical treatment are the two
+    purposes that may go above the ceiling on documentation.
+  </div>
+
+  <p><strong>(b) The business trip — Schedule III, a different entry, the same pot.</strong></p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 2</div>
+    Classification: travel expenses in the ordinary course of business → <strong>current account
+    transaction</strong>.<br />
+    Route: <strong>Schedule III</strong>, "business travel", free up to the ceiling.<br />
+    Vikram is a <strong>separate resident individual</strong> with his <strong>own</strong> USD 2,50,000
+    for the financial year. His USD 22,000 does <strong>not</strong> consume Meera's headroom.<br />
+    Trap: the ceiling is per individual, not per family.
+  </div>
+
+  <p><strong>(c) The gift — the ceiling bites, and there is no documented exception.</strong></p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 3</div>
+    Meera's drawals in FY 2026-27: 48,000 (tuition) + 2,30,000 (gift) = <strong>USD 2,78,000</strong><br />
+    LRS ceiling = USD 2,50,000 → <strong>excess = USD 28,000</strong><br />
+    Headroom available for the gift without approval = 2,50,000 − 48,000 = <strong>USD 2,02,000</strong><br />
+    A <strong>gift</strong> is not one of the documented exceptions. The excess USD 28,000 needs
+    <strong>prior approval of the RBI</strong>; the bank is right to refuse it as a matter of course.<br />
+    Classification check: the gift alters no cross-border asset or liability → it is
+    <strong>current</strong>, not capital. It is restricted by a <em>limit</em>, not by its nature.
+  </div>
+
+  <p><strong>(d) The parallel arrangement — this is the contravention.</strong></p>
+  <div class="working-note">
+    <div class="working-note-label">Working note 4 — the provisions breached</div>
+    <strong>s. 3(a)</strong> — dealing in or transferring foreign exchange to a person other than an
+    authorised person.<br />
+    <strong>s. 3(b)</strong> — a payment to or for the credit of a person resident outside India
+    otherwise than as provided.<br />
+    <strong>s. 3(c)</strong> with its <strong>Explanation</strong> — the associate abroad pays out
+    <em>without a corresponding inward remittance</em>, so the receipt is deemed to be otherwise than
+    through an authorised person.<br />
+    Note what does <em>not</em> save her: the purpose (a gift) was itself permissible. The
+    <strong>channel</strong> is the contravention.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 5 — the penalty (s. 13(1))</div>
+    Sum involved = <strong>₹40,00,000</strong>, quantifiable<br />
+    Maximum penalty = 3 × 40,00,000 = <strong>₹1,20,00,000</strong><br />
+    Plus, if the contravention is a continuing one, up to ₹5,000 for every day
+    <strong>after the first day</strong>.<br />
+    Plus, under s. 13(2), possible <strong>confiscation</strong> of the currency or property involved,
+    and a direction to bring foreign exchange holdings back into India.<br />
+    Say <strong>"up to"</strong>: the Adjudicating Authority fixes the amount, and ₹1.2 crore is the
+    ceiling, not the automatic figure.
+  </div>
+  <div class="working-note">
+    <div class="working-note-label">Working note 6 — what happens next</div>
+    Investigation: <strong>Directorate of Enforcement</strong> (s. 37).<br />
+    Adjudication: an <strong>Adjudicating Authority</strong> on a written complaint (s. 16), disposal
+    endeavoured within one year.<br />
+    Compounding: available <strong>on application</strong>, to be disposed of within
+    <strong>180 days of receipt</strong>; because the contravention is of <strong>s. 3(a)</strong>, the
+    compounding authority is the <strong>Directorate of Enforcement</strong>, not the RBI.<br />
+    Appeal: <strong>45 days</strong> to the Special Director (Appeals) or the Appellate Tribunal as the
+    case may be; then <strong>60 days</strong> to the High Court on a question of law.<br />
+    Non-payment: penalty unpaid <strong>90 days</strong> after service of the demand notice →
+    <strong>civil imprisonment</strong> exposure under s. 14.
+  </div>
+</Callout>
+
+<Callout kind="example" label="Scenario 7 — five one-line classifications, for speed">
+  <p>
+    Each of these is a full MCQ in disguise. Decide <em>capital or current</em>, then
+    <em>free, limited or prohibited</em>.
+  </p>
+  <p>
+    <strong>1 · A resident pays USD 9,000 as the interest instalment on an external commercial
+    borrowing.</strong> Current (expressly, s. 2(j)(ii)); free. <strong>2 · The same resident repays
+    USD 5,00,000 of principal on maturity.</strong> Capital — a liability outside India is
+    extinguished; permissible class and conditions apply. <strong>3 · A resident remits USD 12,000 of
+    winnings from a foreign lottery to a relative abroad.</strong> Current in nature, but
+    <strong>Schedule I — prohibited</strong>; no approval is available from anyone. <strong>4 · An
+    Indian company pays USD 60,000 for an advertisement in a foreign newspaper to promote a product
+    launch.</strong> Current; <strong>Schedule II</strong> above the prescribed threshold — prior
+    approval of the <strong>Central Government</strong> department concerned. <strong>5 · A resident
+    individual buys USD 40,000 of shares in a listed US company.</strong> Capital, permitted under LRS
+    and drawing on the <strong>same</strong> USD 2,50,000 ceiling as his current account remittances.
+  </p>
+</Callout>
+
+## Common mistakes &amp; examiner traps
+
+1. **Reading the current account definition as a list.** It is **residual** — anything that is not a
+   capital account transaction. The four groups in s. 2(j) are illustrations. Test against s. 2(e)
+   first.
+2. **Counting 182 days in the wrong year.** The test is **more than 182 days in the PRECEDING
+   financial year**, and "more than 182" means **183**.
+3. **Letting the day count beat the purpose.** The carve-outs in s. 2(v) **override** the arithmetic in
+   both directions — 365 days in India and still non-resident; 40 days and still resident.
+4. **Giving the RBI the Schedule II job.** Schedule I — **prohibited, no approval at all**;
+   Schedule II — **Central Government**; above the Schedule III limits — **RBI**.
+5. **Treating the LRS ceiling as per family or per transaction.** It is **per resident individual, per
+   financial year, across current and capital drawals combined**, and it does not carry forward.
+6. **Forgetting the documented exceptions.** Only **studies, medical treatment, emigration and
+   maintenance of close relatives** can go above the ceiling on documentation; a **gift or donation
+   cannot**.
+7. **Confusing s. 5 with s. 6 on who restricts.** Current account restrictions come from the **Central
+   Government by rules**; capital account permissions come from the **RBI (debt)** and the **Central
+   Government (non-debt)**.
+8. **Saying the contravention itself carries imprisonment.** FEMA is **civil**. Imprisonment arises
+   only for **non-payment within 90 days** (s. 14) and in the **s. 13(1C)/37A** aggravated case.
+9. **Writing "three times the sum" as a fixed penalty.** Every s. 13 figure is a **maximum** — "which
+   may extend to".
+10. **Counting continuing-day penalty from day one.** It runs **after the first day**.
+11. **Starting the 180-day compounding clock at the contravention.** It runs from the **receipt of the
+    application**.
+12. **Mixing the appeal windows.** **45 / 45 / 60** — Special Director (Appeals) / Appellate Tribunal /
+    High Court; only the **High Court** window has a stated extension, of a further **60 days**.
+13. **Judging s. 3 by the purpose of the payment.** A lawful purpose through an unauthorised channel is
+    still a contravention, and the penalty runs on the **whole sum involved**.
+14. **Making every director liable under s. 42.** Limb (1) needs the person to have been **in charge of
+    and responsible for** the business; limb (2) needs **consent, connivance or neglect**.
+
+## One-page revision summary
+
+**The architecture.** FERA **regulated** and criminalised; FEMA **manages** and civilises. Objects —
+**facilitate external trade and payments** and **orderly development of the foreign exchange market**.
+Extent (s. 1(2)) — **whole of India**, **branches/offices/agencies outside India owned or controlled by
+a person resident in India**, and **contraventions committed outside India** by persons to whom the Act
+applies. In force from **1 June 2000**.
+
+**Residence (s. 2(v)/(w)).** Gate — **more than 182 days in the PRECEDING financial year**. Carve-outs
+override the gate: gone out or staying out for **employment / business or vocation / uncertain-period
+stay** → **non-resident**; come to or staying in India for **anything other than** employment, business
+or an uncertain stay → **non-resident**. Offices — an office/branch/agency **in India owned or
+controlled by a non-resident** is **resident in India**, and one **outside India owned or controlled by
+a resident** is **also resident in India**.
+
+**The split.** **Capital account (s. 2(e))** — alters **assets or liabilities outside India of
+residents**, or **in India of non-residents**; includes the s. 6(3) classes. **Current account
+(s. 2(j))** — **everything else**, illustrated by trade payments, **interest on loans**, **net income
+from investments**, **living expenses of family abroad**, and **travel, education and medical
+expenses**. Interest = current; **repayment of principal = capital**.
+
+**Sections 3 and 4.** s. 3 — no dealing or transfer **except through an authorised person**; no payment
+to or for a non-resident; no receipt otherwise than through an authorised person (**Explanation**: a
+receipt in India with **no corresponding inward remittance** is deemed to be outside the channel); no
+financial transaction in India as consideration for acquiring an asset outside India. s. 4 — a resident
+shall not **acquire, hold, own, possess or transfer** foreign exchange, foreign security or **immovable
+property outside India**, save as provided.
+
+**Sections 5 and 6.**
+
+| | s. 5 — current | s. 6 — capital |
+|---|---|---|
+| Default | **Free** | **Restricted** |
+| Restricted / permitted by | **Central Government**, by **rules**, in the **public interest**, in consultation with RBI | **RBI** for **debt** instruments (6(2)); **Central Government** for **non-debt** (6(2A)) |
+| Never restrictable | — | **Amortisation of loans**; **depreciation of direct investments** in the ordinary course of business (proviso to 6(2)) |
+| Legacy shield | — | **6(4)** resident may keep assets acquired while **non-resident** or inherited from one; **6(5)** the mirror |
+
+**The three Schedules.** **I — prohibited**, no approval from anyone (lottery winnings and tickets,
+income from racing/riding/hobby, banned publications, call-back services, interest on NRSR account
+funds). **II — prior Central Government approval** (cultural tours, certain foreign-media
+advertisements, PSU charter freight, transponder hire, sports sponsorship above the threshold,
+overseas health insurance). **III — free up to the limit, RBI approval beyond** (private visits other
+than Nepal and Bhutan, gift or donation, employment abroad, emigration, maintenance of close relatives,
+business travel, medical treatment, studies).
+
+**LRS — USD 2,50,000** per **financial year** per **resident individual**, current and capital drawals
+**combined**, no carry-forward. Above it on **documentation**: studies, medical treatment, emigration,
+maintenance of close relatives. **Not** above it: gifts and donations, private visits.
+
+**Sections 7 to 9.** s. 7 — exporter of **goods** files a declaration of the **full export value** (or
+the expected value where not ascertainable) and such information as the RBI requires; the RBI may
+direct compliance to secure realisation **without delay**; exporters of **services** file a declaration
+as to payment. s. 8 — **all reasonable steps** to **realise and repatriate** foreign exchange **due or
+accrued**, within the RBI's period and manner. s. 9 — exemptions by **category** (possession within
+limits, foreign currency accounts, pre-8 July 1947 holdings, gift or inheritance from such a holder,
+legitimate earnings, other notified receipts), each **up to the RBI's limit**.
+
+**Sections 10 to 12.** RBI **authorises** in writing on conditions; **revokes** in the **public
+interest** (no hearing required) or for **non-compliance/contravention** (**representation
+required**); the authorised person obeys **directions**, stays within his **authorisation**, takes a
+**declaration**, **refuses in writing** and **reports to the RBI** on reasonable belief of a
+contravention. **s. 10(6)** — a customer who misuses or fails to surrender foreign exchange drawn on a
+declaration is **deemed to have contravened**. **s. 11(3)** — RBI penalty on an authorised person up to
+**₹10,000**, plus **₹2,000 per day**. **s. 12** — **inspection**.
+
+**Penalty and enforcement.**
+
+| Provision | Number |
+|---|---|
+| s. 13(1) quantifiable | up to **3 × the sum involved** |
+| s. 13(1) not quantifiable | up to **₹2,00,000** |
+| s. 13(1) continuing | up to **₹5,000 per day AFTER THE FIRST DAY** |
+| s. 13(2) | **confiscation** + repatriation directions |
+| s. 14 | **90 days** from service of the demand notice → **civil imprisonment** (3 years above ₹1 crore; else 6 months) |
+| s. 15 | compounding within **180 days of receipt of the application**; RBI generally, **Directorate of Enforcement for s. 3(a)** |
+| s. 16 | Adjudicating Authority, **written complaint**, hearing, legal practitioner or **CA**, endeavour **1 year** |
+| s. 17 | **Special Director (Appeals)** — **45 days** from receipt of the copy |
+| s. 19 | **Appellate Tribunal** — **45 days** from receipt of the copy; **pre-deposit** unless undue hardship; endeavour **180 days** |
+| s. 35 | **High Court**, **question of law** — **60 days** from communication, extendable by a further **60 days** |
+| s. 11(3) | authorised person — **₹10,000** + **₹2,000 per day** |
+
+**Sections 37, 39 and 42.** s. 37 — investigation by the **Director of Enforcement and officers not
+below Assistant Director**; the CG may authorise officers of the CG, a State Government or the RBI
+**not below Under Secretary**; powers are those of **income-tax authorities**. s. 39 — **rebuttable
+presumption** as to the **truth of the contents** and the **handwriting, execution and attestation** of
+documents produced, seized or received from outside India. s. 42 — **(1)** the person **in charge of and
+responsible for** the conduct of the business **and the company**, with escape on **no knowledge or due
+diligence**; **(2)** any **director, manager, secretary or other officer** by **consent, connivance or
+neglect**; **Explanation** — "company" includes a **firm**, and "director" includes a **partner**.
