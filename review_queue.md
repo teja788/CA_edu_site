@@ -1740,3 +1740,115 @@ _No factual corrections were needed to the MDX or the bank during this citations
   reversed subtraction is carried as a distractor in `q-f3c8-050` (−34 against
   the correct 34). A presentation casual about the order would make that
   distractor defensible, which it must not be.
+
+## Foundation banks — blind consistency check 2026-09-17
+
+All 46 Foundation banks (2,375 questions) were re-answered in fresh passes with
+the keys and explanations stripped, by eleven independent sessions that were
+denied access to `src/data/questions/` and to the chapter notes. Result:
+**2,371 agreed, 4 mismatched, 0 unanswered — and all 4 mismatches were
+fresh-pass errors, not key errors.** Adjudicated inline, no action needed:
+`q-f1c11-045` (redemption premium is 110−100, not 110−95), `q-f3c18-024`
+(fresh pass inverted the Laspeyres quantity ratio), `cs-f3c5-01-a` (26³×10² =
+17,57,600), `q-f3c15-004` (relative-frequency *is* the limiting proportion).
+
+No key in the Foundation banks is currently believed wrong. The items below are
+stem-quality and legal-currency issues the fresh passes raised on questions they
+nonetheless answered in agreement with the key.
+
+### Legal currency — check before the next attempt tags are cut
+
+- [ ] **`q-f2c5-043` (llp-act-2008) — s.64(c) may no longer exist.** The
+  LLP (Amendment) Act 2021 omitted "unable to pay its debts" from s.64, moving
+  LLP insolvency to the IBC. The key (B, default in filing for five consecutive
+  FYs) is right on current law, but distractor C is a live ground only on
+  pre-2021 material. If the chapter still teaches the old s.64, the question has
+  two defensible answers. Source: LLP (Amendment) Act 2021, s.36.
+- [ ] **`q-f2c1-035` (indian-regulatory-framework) — s.74 of the Arbitration
+  and Conciliation Act 1996.** The Mediation Act 2023 (s.65 + First Schedule)
+  omitted Part III of the 1996 Act, which is where s.74 lived. The key (C) is
+  still the only defensible option, but the explanation should not cite s.74 as
+  live law. Distractor B is separately mis-stated: a mediated settlement is
+  enforceable as a decree under s.27 of the 2023 Act, not by fresh suit.
+
+### Stems that are under-determined — fix the wording, keys stand
+
+- [ ] **`q-f2c4-042` (indian-partnership-act-1932) — no profit-sharing ratio
+  stated.** Assets ₹27L − creditors ₹15L − P's advance ₹3L = ₹9L against
+  capitals of ₹12L (P 8, Q 4). The key (C, ₹3,00,000) follows only if the ₹9L is
+  distributed in the capital ratio. Read with s.13(b) — no ratio stated, so
+  profits and losses are equal — Q receives ₹2,50,000, which is not an option.
+  Either state the ratio in the stem or add ₹2,50,000. **Highest-priority item
+  in this section.**
+- [ ] **`cs-f3c4-02-a` and `cs-f3c4-02-b` (mathematics-of-finance) — supplied
+  discount factors do not reproduce the options.** The case gives 13% factors
+  (annuity factor 3.5172); using them yields NPV 1,10,320 and 22,800, while the
+  options read 1,10,338.76 and 22,763.50, which come from unrounded
+  discounting. A student following the case's own instructions lands between
+  options. Either drop the factor table or restate the options.
+- [ ] **`q-f3c13-022` (statistical-description-of-data) — Sturges rounding
+  unstated.** Range/(1+3.322 log N) = 80/7.644 = 10.47, matching no option. The
+  key (10) follows from rounding the class count up to 8 first; option D
+  (11.43) from rounding down to 7. Say which.
+- [ ] **`q-f1c10-007` (partnership-and-llp-accounts) — "divisible profit"
+  ambiguous.** Key B (₹4,26,000) reads it as after rent, loan interest AND the
+  partner's salary appropriation; D (₹5,46,000) is the before-appropriations
+  reading. Both are on the option list, so this is the stem most likely to
+  produce a genuine key dispute.
+- [ ] **`q-f1c11-025` (company-accounts) — pro-rata excess treatment unstated.**
+  Key A (₹50,000) assumes excess on pro-rata allotments is adjusted against
+  allotment; on a literal reading B (₹2,00,000) is defensible. Add "the excess
+  on pro-rata allotments being adjusted against allotment".
+- [ ] **`q-f3c14-028` (central-tendency-and-dispersion) — quartile method not
+  pinned.** Options carry 15.75 ((n+1)/4, the ICAI rule and the key), 15 (n/4)
+  and 16.5 (Tukey). Name the rule in the stem.
+- [ ] **`q-f4c5-006` (business-cycles) — "starting from the bottom of a cycle"**
+  literally means depression first, but no option lists depression → recovery →
+  expansion → recession. Reword to "starting from the recovery phase".
+- [ ] **`q-f3c6-022` (sequence-and-series) — "first reach 150"** (week 18 = 147,
+  week 19 = 153). Key D (week 19) is right for "≥ 150"; say so explicitly.
+- [ ] **`cs-f2c7-03-c` (negotiable-instruments) and `q-f2c3-031`
+  (sale-of-goods) — counting conventions unstated.** Both have an
+  inclusive/exclusive reading reaching a different listed option (21 vs 22 Aug;
+  25 vs 26 Mar). The NI case study states its convention elsewhere; these two
+  do not.
+- [ ] **`q-f4c9-047` (indian-economy) — BPM6 vs the SM.** Key B is correct as
+  the CA Foundation SM teaches it, but under BPM6 (which India's actual BoP
+  uses) FDI/FPI/loans/reserves sit in the financial account, not the capital
+  account. Worth a line in the explanation rather than a rewrite.
+- [ ] **`q-f4c3-025` (theory-of-production-and-cost) — stem and key describe
+  duals.** The stem asks about minimising the cost of a given output; option A
+  describes maximising output for a given cost. A is still the only defensible
+  option; reword to "the given isoquant tangent to the lowest attainable
+  iso-cost line".
+- [ ] **`q-f4c10-035` (international-trade) — overlapping options.** Cutting
+  import tariffs literally *is* trade liberalization, so option A overlaps the
+  key (B, Globalization). The intended LPG split makes B right; the overlap is
+  real.
+
+### Category question for a human
+
+- [ ] **Exam-strategy items sitting inside subject banks.** At least nine
+  questions test negative-marking EV or guessing policy rather than the
+  chapter's subject: `q-f4c5-050`, `q-f4c1-050`, `q-f3c10-047`, `q-f3c12-048`,
+  `q-f3c11-033`, `-034`, `-035`, `-050`. They are answerable and correctly
+  keyed, but they inflate a chapter's question count with content that belongs
+  in the mock/EV trainer. Decide whether to move them.
+
+### Systemic — authored key positions cluster (UI already mitigates)
+
+Not a queue item, recorded so it is not rediscovered: the authored `correct`
+letters in the raw banks are badly distributed. `probability.json` keys 49 of 50
+to A (a run of 46); `seating-arrangements` 32/50 A; `blood-relations` 28/50 A
+(run of 20); `business-cycles` 35/50 A (run of 19); and
+`ratio-proportion-indices-logarithms`, `equations`, `accounting-process`,
+`bank-reconciliation-statement` and `depreciation-and-amortisation` are
+near-perfect A,B,C,D rotations. Four chapters never key D at all.
+
+Students are NOT exposed to this: `quiz.astro`, `foundation-mock.astro` and (as
+of 17 Sep 2026) `mock.astro` all shuffle options at render time and letter them
+by position. The stored order is deliberately left alone because
+`scripts/verify_numerical/*.py` hardcode letter→value maps
+(`{150_000: "C", ...}`); reshuffling the banks would silently break every
+verifier. If the banks are ever reordered, the verifiers must be regenerated in
+the same commit.

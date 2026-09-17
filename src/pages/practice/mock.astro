@@ -92,6 +92,8 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
       return !Array.isArray(q.applicableAttempts) || q.applicableAttempts.includes(attemptName);
     }
 
+    const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
+
     function shuffle(arr) {
       const a = [...arr];
       for (let i = a.length - 1; i > 0; i--) {
@@ -211,9 +213,15 @@ const attemptOptions = attempts.map((a) => ({ id: a.id, name: a.name, verified: 
       wrap.appendChild(stem);
       const opts = document.createElement('div');
       opts.style.cssText = 'font-size: 14px; color: var(--text-2); margin-top: 6px; display: flex; flex-direction: column; gap: 3px;';
-      for (const o of q.options ?? []) {
+      // Authored option keys cluster (some chapters key 90%+ of answers to A),
+      // so a paper printed in authored order is guessable without reading the
+      // stems. Shuffle per compose and letter by position, exactly as the quiz
+      // and the Foundation mock do.
+      const shuffledOpts = shuffle(q.options ?? []);
+      for (let i = 0; i < shuffledOpts.length; i++) {
+        const o = shuffledOpts[i];
         const line = document.createElement('span');
-        line.textContent = `(${o.key}) ${o.text}`;
+        line.textContent = `(${OPTION_LETTERS[i] ?? o.key}) ${o.text}`;
         opts.appendChild(line);
       }
       wrap.appendChild(opts);
