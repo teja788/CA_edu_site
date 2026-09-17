@@ -1,0 +1,53 @@
+---
+/**
+ * Privacy-first, cookie-free page counts (site audit 2026-07-17, item 4).
+ *
+ * Rendered from Base.astro only, so it covers every page exactly once.
+ * Nothing at all is emitted unless the build is a production build AND
+ * src/data/site.js has `analytics.enabled` with a non-empty `code` — the
+ * committed default is inert, and `astro dev` never loads the script.
+ *
+ * No cookies and no personal data are involved, so the site carries no
+ * consent banner by design.
+ */
+import { analytics } from '../data/site.js';
+
+const endpoints = {
+  goatcounter: (code) => `https://${code}.goatcounter.com/count`,
+};
+
+const build = endpoints[analytics.provider];
+const endpoint =
+  import.meta.env.PROD && analytics.enabled && analytics.code && build
+    ? build(analytics.code)
+    : null;
+---
+
+{endpoint && (
+  <script is:inline define:vars={{ endpoint }}>
+    (function () {
+      // Do Not Track is honoured before the script is even fetched, so a
+      // student who opts out generates no third-party request at all.
+      if (
+        navigator.doNotTrack === '1' ||
+        window.doNotTrack === '1' ||
+        navigator.msDoNotTrack === '1'
+      ) {
+        return;
+      }
+      // Send the path only. Some routes carry state in the query string
+      // (/report-error/?page=…, /practice/quiz/?…) which must not leave
+      // the browser.
+      window.goatcounter = {
+        path: function () {
+          return location.pathname;
+        },
+      };
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://gc.zgo.at/count.js';
+      s.setAttribute('data-goatcounter', endpoint);
+      document.head.appendChild(s);
+    })();
+  </script>
+)}

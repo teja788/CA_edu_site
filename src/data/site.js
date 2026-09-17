@@ -19,6 +19,26 @@ export const attempt = {
   applicableFinanceAct: 'Finance Act 2025 (Income-tax Act, 1961 · AY 2026-27)',
 };
 
+/**
+ * Privacy-first analytics (site audit 2026-07-17, deferred item 4).
+ *
+ * GoatCounter sets no cookies and stores no personal data, so the site needs
+ * no consent banner. Query strings are stripped before the hit is sent —
+ * some routes carry state (e.g. /report-error/?page=…) that must not leave
+ * the browser.
+ *
+ * The committed default is INERT: with an empty `code` or `enabled: false`
+ * nothing is rendered at all. Register the site at goatcounter.com, drop the
+ * code in here and flip `enabled` to turn it on. Switching to Plausible is a
+ * change to `provider` here plus the matching branch in
+ * src/components/Analytics.astro — nothing else in the site knows about it.
+ */
+export const analytics = {
+  provider: 'goatcounter',
+  code: '',
+  enabled: false,
+};
+
 export const level = {
   id: 'intermediate',
   name: 'CA Intermediate',

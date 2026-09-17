@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
 
 interface Props {
   title: string;
@@ -181,5 +182,8 @@ const nav = [
         }
       })();
     </script>
+
+    {/* Cookie-free page counts; emits nothing unless configured (src/data/site.js). */}
+    <Analytics />
   </body>
 </html>

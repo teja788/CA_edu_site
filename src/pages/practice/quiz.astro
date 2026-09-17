@@ -1,74 +1,20 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { questions } from '../../data/site.js';
 import { foundationScoring, confusableSets } from '../../data/foundation.js';
 
-// Chapter banks (src/data/questions/<level>/<paper>/<chapter>.json — see that
-// dir's README) merge into the deck at build time. Bank metadata rides along
-// on each question so the client can filter by level/paper and switch scoring.
-const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: true });
-const bankQuestions = Object.values(bankModules).flatMap((mod) => {
-  const bank = mod.default ?? mod;
-  if (!Array.isArray(bank.questions)) return [];
-  // Descriptive questions (model-answer skeletons) live in /practice/descriptive/,
-  // not here — only MCQs enter the deck. Case-scenario sets (the Inter 30% MCQ
-  // pattern) flatten into linked MCQs that stay together and score as a unit.
-  const mcqs = bank.questions.flatMap((q) => {
-    if (q.type === 'case_mcq_set' && Array.isArray(q.questions)) {
-      return q.questions.map((sub, i) => ({
-        topic: q.topic,
-        applicableAttempts: q.applicableAttempts,
-        lawAsOnDate: q.lawAsOnDate,
-        ...sub,
-        type: 'mcq',
-        case: { id: q.id, text: q.case, pos: i + 1, size: q.questions.length },
-      }));
-    }
-    return q.type === 'mcq' ? [q] : [];
-  });
-  const paperNum = Number((bank.paper ?? '').match(/Paper\s*(\d)/i)?.[1] ?? 0);
-  const chapterNum = Number((bank.chapter ?? '').match(/Ch\s*(\d+)/i)?.[1] ?? 0);
-  // Foundation Papers 3 & 4 are the only negatively marked papers in the course.
-  const negative = bank.level === 'foundation' && [3, 4].includes(paperNum);
-  return mcqs.map((q) => ({
-    ...q,
-    meta: {
-      level: bank.level,
-      paper: bank.paper,
-      // Canonical route slug carried by the bank; slugifying the display
-      // string loses "&" → "and" and breaks ?paper= filters.
-      paperSlug: bank.paperSlug ?? null,
-      chapterSlug: bank.chapterSlug,
-      negative,
-      masteryId:
-        paperNum && chapterNum
-          ? `${bank.level === 'foundation' ? 'f' : 'i'}${paperNum}-ch${chapterNum}`
-          : null,
-    },
-  }));
-});
-// The 12 launch questions in site.js are Inter P1 — give them the same meta
-// shape (incl. their per-question masteryId) so every filter treats the deck
-// uniformly.
-const legacyQuestions = questions.map((q) => ({
-  ...q,
-  meta: {
-    level: 'intermediate',
-    paper: 'Paper 1 — Advanced Accounting',
-    paperSlug: 'advanced-accounting',
-    chapterSlug: null,
-    negative: false,
-    masteryId: q.masteryId ?? null,
-  },
-}));
-const allQuestions = [...legacyQuestions, ...bankQuestions];
+// The question banks are NOT inlined here. Doing that put every chapter of
+// every paper into this one HTML file — 6.3 MB paid on every visit, by
+// students on mobile data, to answer twenty questions from one chapter.
+// They are emitted instead as static JSON under /practice/banks/ (see
+// src/scripts/banks.js): a small manifest the deck is built and filtered
+// from, and one file per bank fetched only when its questions come up.
 ---
 
 <Base title="Practice quiz" bare>
   <div class="quiz-bar">
     <a href="/practice/">← Exit practice</a>
     <div style="flex: 1;"></div>
-    <span class="counter" data-counter>Question 1 of {allQuestions.length}</span>
+    <span class="counter" data-counter>Loading…</span>
     <span data-negative-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;">Foundation marking · −0.25</span>
     <span data-inter-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;">Inter marking · no negative</span>
     <span data-mixed-chip hidden style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: #C6CBD8;"></span>
@@ -77,7 +23,16 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
   <div class="quiz-progress"><div class="fill" data-progress style="width: 0%;"></div></div>
 
   <main style="max-width: 680px; margin: 0 auto; padding: 28px 20px 48px;">
-    <div data-quiz-root>
+    <!-- Shown until the manifest and the first question's bank have arrived.
+         The deck is fetched, so there is a real moment on a slow connection
+         where the page would otherwise sit blank. -->
+    <div data-loading class="card card-pad" style="text-align: center; color: var(--text-2); font-size: 15px; line-height: 1.6;">
+      Loading your questions…
+      <div data-loading-slow hidden style="font-size: 13px; color: var(--text-3); margin-top: 8px;">
+        Still fetching — this only happens once per chapter, then it works offline.
+      </div>
+    </div>
+    <div data-quiz-root hidden>
       <div data-result-banner hidden></div>
       <div data-case hidden class="card card-pad" style="margin-bottom: 18px; font-size: 15px; line-height: 1.65;"></div>
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
@@ -141,7 +96,6 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
     </div>
   </main>
 
-  <script type="application/json" data-questions set:html={JSON.stringify(allQuestions)}></script>
   <script type="application/json" data-scoring set:html={JSON.stringify(foundationScoring)}></script>
   <script type="application/json" data-confusable set:html={JSON.stringify(confusableSets)}></script>
 
@@ -157,7 +111,106 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
     } from '../../scripts/store.js';
     import { sampleMixedSet, MIXED_SET_SIZE } from '../../scripts/mixed.js';
 
-    const all = JSON.parse(document.querySelector('[data-questions]').textContent);
+    /* ── Bank loading ──────────────────────────────────────────────────────
+     * The deck is built from a manifest that carries only what the filters
+     * and samplers read — id, topic, chapter metadata, case grouping. Stems,
+     * options and explanations arrive per bank, on demand, a few questions
+     * ahead of where the student actually is.
+     *
+     * Bank JSON is same-origin and outside /_astro/, so the service worker's
+     * network-first-with-cache-fallback branch caches each one on first use;
+     * a chapter practised once stays practisable offline. */
+    const PREFETCH_AHEAD = 3;
+    const bankCache = new Map(); // slug → Promise<Map<questionId, question>>
+
+    function loadBank(slug) {
+      if (!bankCache.has(slug)) {
+        const pending = fetch(`/practice/banks/${slug}.json`)
+          .then((r) => {
+            if (!r.ok) throw new Error(`bank ${slug} → HTTP ${r.status}`);
+            return r.json();
+          })
+          .then((list) => new Map(list.map((q) => [q.id, q])))
+          .catch((err) => {
+            // Don't cache a failure — a flaky connection should be able to
+            // retry on the next question rather than break the session.
+            bankCache.delete(slug);
+            throw err;
+          });
+        bankCache.set(slug, pending);
+      }
+      return bankCache.get(slug);
+    }
+
+    /** Deck positions whose bodies are needed to show question `from`. */
+    function windowFrom(from, deckRef) {
+      const out = [];
+      for (let i = from; i < deckRef.length && i <= from + PREFETCH_AHEAD; i++) out.push(i);
+      return out;
+    }
+
+    const loadingBox = () => document.querySelector('[data-loading]');
+    let slowTimer = null;
+    function showLoading(on) {
+      const box = loadingBox();
+      box.hidden = !on;
+      document.querySelector('[data-quiz-root]').hidden = on;
+      clearTimeout(slowTimer);
+      document.querySelector('[data-loading-slow]').hidden = true;
+      if (on) {
+        slowTimer = setTimeout(() => {
+          document.querySelector('[data-loading-slow]').hidden = false;
+        }, 1200);
+      }
+    }
+
+    function fail(message) {
+      clearTimeout(slowTimer);
+      const box = loadingBox();
+      box.hidden = false;
+      box.textContent = message;
+      document.querySelector('[data-quiz-root]').hidden = true;
+      document.querySelector('[data-counter]').textContent = '';
+    }
+
+    (async () => {
+      let manifest;
+      try {
+        const res = await fetch('/practice/banks/manifest.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        manifest = await res.json();
+      } catch {
+        fail('Could not load the question list. Check your connection and reload — practice you have already done is saved.');
+        return;
+      }
+
+      // Manifest rows are tuples: [bankIndex, id, topic, caseId?, casePos?,
+      // caseSize?, masteryId?]. Bank metadata is shared by reference; it is
+      // only ever read.
+      const all = manifest.questions.map((row) => {
+        const [bankIndex, id, topic, caseId, casePos, caseSize, masteryId] = row;
+        const bank = manifest.banks[bankIndex];
+        const q = { id, topic, _bank: bank.slug, meta: masteryId ? { ...bank, masteryId } : bank };
+        if (caseId) q.case = { id: caseId, pos: casePos, size: caseSize };
+        return q;
+      });
+
+      /** Fill in stems/options for the given deck positions. */
+      async function ensureLoaded(positions, deckRef) {
+        const wanted = positions.filter((i) => deckRef[i] && !deckRef[i].stem);
+        if (wanted.length === 0) return;
+        const slugs = [...new Set(wanted.map((i) => deckRef[i]._bank))];
+        const loaded = new Map(
+          await Promise.all(slugs.map((slug) => loadBank(slug).then((map) => [slug, map])))
+        );
+        for (const i of wanted) {
+          const q = deckRef[i];
+          const body = loaded.get(q._bank)?.get(q.id);
+          // Whole-object merge: the bank body carries `case` complete with its
+          // text, and leaves `_opts`/`_review` on the deck entry alone.
+          if (body) Object.assign(q, body);
+        }
+      }
 
     // Modes: ?mode=mistakes → notebook only · ?mode=mixed → shuffled across
     // topics (interleaving) · ?timed=1 → factual elapsed clock, not a threat.
@@ -389,8 +442,23 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
       return q._opts;
     }
 
-    function renderQuestion() {
+    async function renderQuestion() {
       const q = deck[index];
+      // Bodies arrive per bank. Normally the prefetch below has already
+      // fetched this one and nothing is awaited; on a cold start, or when a
+      // mixed set jumps into a chapter the student has not touched, this is
+      // the moment the loading state earns its keep.
+      if (!q.stem) {
+        showLoading(true);
+        try {
+          await ensureLoaded(windowFrom(index, deck), deck);
+        } catch {
+          fail('Could not load this question. Check your connection and reload — your progress is saved.');
+          return;
+        }
+      }
+      showLoading(false);
+      ensureLoaded(windowFrom(index + 1, deck), deck).catch(() => {});
       answered = false;
       selected = null;
       $('[data-counter]').textContent = `Question ${index + 1} of ${deck.length}`;
@@ -642,6 +710,7 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
     }
 
     if (deck.length === 0) {
+      showLoading(false);
       root.hidden = true;
       summary.hidden = false;
       document.querySelector('[data-counter]').textContent = '';
@@ -667,7 +736,8 @@ const allQuestions = [...legacyQuestions, ...bankQuestions];
           'Question banks ship chapter by chapter. Until then, the official ICAI resources on the paper page cover this paper completely.';
       }
     } else {
-      renderQuestion();
+      await renderQuestion();
     }
+    })();
   </script>
 </Base>

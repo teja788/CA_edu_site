@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
+    "build": "astro build && pagefind --site dist && node scripts/sw_precache/generate_sw.js",
     "preview": "astro preview"
   },
   "dependencies": {

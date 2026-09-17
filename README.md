@@ -33,6 +33,33 @@ npm run dev      # local dev at :4321
 npm run build    # static build to dist/
 ```
 
+## Analytics (optional, off by default)
+
+Page counts use [GoatCounter](https://www.goatcounter.com) — no cookies, no
+personal data, no consent banner needed. It ships **disabled**: nothing is
+rendered until it is configured, and it never loads in `astro dev`.
+
+To turn it on:
+
+1. Register the site at [goatcounter.com](https://www.goatcounter.com) and note
+   your code (the `yourcode` in `yourcode.goatcounter.com`).
+2. In `src/data/site.js`, set that code and flip the switch:
+
+   ```js
+   export const analytics = {
+     provider: 'goatcounter',
+     code: 'yourcode',
+     enabled: true,
+   };
+   ```
+
+3. Rebuild. The script then loads on every page in production builds only.
+
+It skips visitors sending `Do Not Track`, and sends the path only — query
+strings are stripped so route state (`/report-error/?page=…`) never leaves the
+browser. Swapping providers means changing `provider` here and adding the
+matching branch in `src/components/Analytics.astro`.
+
 ## Repository layout
 
 ```
