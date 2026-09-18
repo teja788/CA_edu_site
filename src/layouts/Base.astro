@@ -13,14 +13,14 @@ interface Props {
 
 const {
   title,
-  description = 'Every resource you need to become a CA is already free. We organize it, keep it current, and give you the practice system coaching never did.',
+  description = 'Free CA Foundation exam prep — 46 chapters of notes, 2,374 original MCQs with explanations, mock exams, and a study planner. Built on the ICAI syllabus.',
   active,
   bare = false,
 } = Astro.props;
 
 const nav = [
   { key: 'home', label: 'Home', href: '/', icon: '⌂' },
-  { key: 'papers', label: 'Papers', href: '/intermediate/', icon: '▤' },
+  { key: 'papers', label: 'Papers', href: '/foundation/', icon: '▤' },
   { key: 'practice', label: 'Practice', href: '/practice/', icon: '✎' },
   { key: 'plan', label: 'Plan', href: '/plan/', icon: '◵' },
   { key: 'dashboard', label: 'Dashboard', href: '/dashboard/', icon: '◔' },
@@ -114,20 +114,15 @@ const nav = [
         <div class="page-width">
           <p style="display: flex; flex-wrap: wrap; gap: 6px 16px;">
             <a href="/start-here/">Start here</a>
-            <a href="/foundation/">Foundation</a>
-            <a href="/intermediate/">Intermediate</a>
-            <a href="/final/">Final</a>
-            <a href="/attempt/">Your attempt</a>
-            <a href="/updates/">Amendments</a>
+            <a href="/foundation/">Papers</a>
+            <a href="/practice/">Practice</a>
             <a href="/plan/">Study plan</a>
-            <a href="/guides/spom/">SPOM</a>
-            <a href="/guides/articleship/">Articleship</a>
-            <a href="/guides/exemptions/">Exemptions</a>
-            <a href="/guides/answer-writing/">Answer writing</a>
-            <a href="/guides/ca-foundation-exam-pattern/">Foundation pattern</a>
-            <a href="/guides/ca-foundation-weightage/">Foundation weightage</a>
-            <a href="/guides/ca-foundation-pass-percentage/">Foundation pass %</a>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/guides/ca-foundation-exam-pattern/">Exam pattern</a>
+            <a href="/guides/ca-foundation-weightage/">Weightage</a>
+            <a href="/guides/ca-foundation-pass-percentage/">Pass %</a>
             <a href="/guides/ca-foundation-rtp-mtp/">RTP &amp; MTP</a>
+            <a href="/search/">Search</a>
           </p>
           <p>
             <strong>Adhyayan</strong> is an independent, free, open study project. It is

@@ -1,138 +1,121 @@
 ---
 import Base from '../layouts/Base.astro';
 import Badge from '../components/Badge.astro';
-import AdSlot from '../components/AdSlot.astro';
-import { attempt, papers } from '../data/site.js';
+import { foundationPapers, foundationAttempts } from '../data/foundation.js';
 
-const group1 = papers.filter((p) => p.group === 1);
-const group2 = papers.filter((p) => p.group === 2);
+const nextAttempt = foundationAttempts.find((a) => {
+  if (!a.examDates.begins) return true;
+  return new Date(a.examDates.begins) >= new Date();
+}) ?? foundationAttempts[foundationAttempts.length - 1];
+
+const questionCounts = { accounting: 503, 'business-laws': 386, 'quantitative-aptitude': 985, 'business-economics': 500 };
+const totalQuestions = Object.values(questionCounts).reduce((s, n) => s + n, 0);
 ---
 
-<Base title="Free, organized CA exam prep" active="home">
+<Base title="CA Foundation — Free exam prep" active="home">
   <main class="page">
     <section style="max-width: 640px; padding: 24px 0 8px;">
-      <div class="overline">Free forever · Open source · Not affiliated with ICAI</div>
+      <div class="overline">CA Foundation · Free forever · Not affiliated with ICAI</div>
       <h1 style="margin: 8px 0 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
-        Every resource you need to become a CA is already free.
+        Everything you need to clear CA Foundation, organised and free.
       </h1>
       <p style="font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 12px 0 20px;">
-        ICAI gives away the study material, revision papers, mock tests and even live classes.
-        What's missing is organisation, a practice engine, and a study method.
-        Adhyayan is that missing piece — built on retrieval practice and spaced repetition,
-        the two study techniques with the strongest evidence behind them.
+        46 chapters of notes, {totalQuestions.toLocaleString('en-IN')} original MCQs with per-option explanations,
+        full mock exams in the real paper pattern, and a study planner —
+        all built on the ICAI syllabus, all free.
       </p>
-      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
-        <a href="/intermediate/" class="btn btn-primary">Start with CA Intermediate</a>
-        <a href="/start-here/" class="btn btn-secondary">New to CA? Start here</a>
-        <a href="/about/" class="btn btn-tertiary">How this site teaches</a>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+        <a href="/foundation/" class="btn btn-primary">See all 4 papers</a>
+        <a href="/practice/quiz/?level=foundation&paper=accounting&chapter=theoretical-framework" class="btn btn-secondary">Try a question now</a>
       </div>
     </section>
 
-    <!--
-      The guarantee strip. Every clause is a statement of fact about how the
-      site is built, not a promise about the future: there is no login system,
-      no ad code, no DRM, nothing time-limited, and no paid tier to upgrade to.
-      If any of those ever stops being true, this strip comes down first.
-    -->
-    <section style="margin-top: 28px; max-width: 720px;">
+    <!-- Guarantee strip -->
+    <section style="margin-top: 24px; max-width: 720px;">
       <div class="card card-pad" style="border-color: var(--border);">
         <div style="display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 15px; font-weight: 650; line-height: 1.5;">
           <span>No login.</span>
           <span style="color: var(--text-3);" aria-hidden="true">·</span>
           <span>No ads.</span>
           <span style="color: var(--text-3);" aria-hidden="true">·</span>
-          <span>No DRM.</span>
-          <span style="color: var(--text-3);" aria-hidden="true">·</span>
           <span>Nothing expires.</span>
           <span style="color: var(--text-3);" aria-hidden="true">·</span>
           <span>₹0, permanently.</span>
         </div>
         <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 10px 0 0;">
-          Every figure, section and date carries the source it came from and the day it was last
-          checked, so you can verify any claim here against ICAI rather than trust us for it.
-          Your progress stays in your own browser — there is no account to lose.
+          Your progress stays in your own browser — there is no account to create or lose.
+          Every figure and date carries the ICAI source it came from, so you can verify any claim here yourself.
         </p>
       </div>
     </section>
 
-    <section style="margin-top: 40px;">
-      <div class="overline" style="margin-bottom: 12px;">CA Intermediate · {attempt.name} attempt · Group I</div>
+    <!-- 4 Foundation papers -->
+    <section style="margin-top: 36px;">
+      <div class="overline" style="margin-bottom: 12px;">4 papers · {nextAttempt.examDates.label}</div>
       <div class="list-card">
-        {group1.map((p) => (
-          <a class="list-row" href={`/intermediate/${p.slug}/`}>
-            <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
-            <span class="row-title">{p.name}</span>
-            {p.status === 'live' ? (
-              <Badge kind="verified">Verified</Badge>
-            ) : (
-              <Badge kind="neutral">Coming soon</Badge>
-            )}
-            <span class="chev" aria-hidden="true">›</span>
-          </a>
-        ))}
-      </div>
-
-      <AdSlot />
-
-      <div class="overline" style="margin-bottom: 12px;">Group II</div>
-      <div class="list-card">
-        {group2.map((p) => (
-          <a class="list-row" href={`/intermediate/${p.slug}/`}>
-            <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
-            <span class="row-title">{p.name}</span>
-            <Badge kind="neutral">Coming soon</Badge>
-            <span class="chev" aria-hidden="true">›</span>
-          </a>
-        ))}
-      </div>
-
-      <div class="overline" style="margin: 32px 0 12px;">Other levels</div>
-      <div class="list-card">
-        <a class="list-row" href="/foundation/">
-          <span class="row-title">CA Foundation</span>
-          <span class="row-meta">4 papers · level guide + official resources</span>
-          <span class="chev" aria-hidden="true">›</span>
-        </a>
-        <a class="list-row" href="/final/">
-          <span class="row-title">CA Final</span>
-          <span class="row-meta">6 papers · level guide + SPOM guide</span>
-          <span class="chev" aria-hidden="true">›</span>
-        </a>
+        {foundationPapers.map((p) => {
+          const qCount = questionCounts[p.slug] ?? 0;
+          const chCount = p.sections.reduce((n, s) => n + s.chapters.length, 0);
+          return (
+            <a class="list-row" href={`/foundation/${p.slug}/`}>
+              <span class="row-num tnum">{String(p.number).padStart(2, '0')}</span>
+              <span class="row-title">
+                {p.name}
+                {p.pattern.negativeMarking && <Badge kind="amended">−0.25</Badge>}
+              </span>
+              <span class="row-meta">{chCount} ch · {qCount} MCQs</span>
+              <span class="chev" aria-hidden="true">›</span>
+            </a>
+          );
+        })}
       </div>
     </section>
 
-    <section style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+    <!-- Quick actions -->
+    <section style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
       <div class="card card-pad card-e1">
-        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Practice-first, always</div>
+        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Practice MCQs</div>
         <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 14px;">
-          Original MCQs where every option explains <em>why</em> it's right or wrong.
-          Wrong answers slip quietly into your Mistake notebook and come back at the right time.
+          {totalQuestions.toLocaleString('en-IN')} original questions across all 4 papers.
+          Every option — right or wrong — explains itself.
+          Wrong answers go into your Mistake notebook and come back later.
         </p>
-        <a href="/practice/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Try a practice set →</a>
+        <a href="/practice/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Open practice →</a>
       </div>
       <div class="card card-pad card-e1">
-        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">The official map</div>
+        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Mock exam</div>
         <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 14px;">
-          Every free official ICAI resource — study material, RTPs, MTPs, past papers, live classes —
-          organised per paper, per attempt, with login flags and last-checked dates.
+          Full-length papers in the real exam shape: 15-min reading time for P3/P4,
+          OMR grid, negative marking, and the choose-4 format for P1/P2.
         </p>
-        <a href="/intermediate/advanced-accounting/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">See Paper 1's resources →</a>
+        <a href="/practice/foundation-mock/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Take a mock →</a>
       </div>
       <div class="card card-pad card-e1">
-        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Your attempt, tracked</div>
+        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Study plan</div>
         <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 14px;">
-          {attempt.name} exams begin {attempt.beginsLabel}. Content is tagged per attempt,
-          so amendments never surprise you.
+          A day-by-day plan from ICAI weightage: learn, practise, three revision passes,
+          timed mocks — with a fifth of the days left empty.
         </p>
-        <a href="/dashboard/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Open your dashboard →</a>
+        <a href="/plan/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Build your plan →</a>
       </div>
       <div class="card card-pad card-e1">
-        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">A plan for the days in between</div>
+        <div style="font-size: 17px; font-weight: 650; margin-bottom: 6px;">Your dashboard</div>
         <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 14px;">
-          A day-by-day Foundation plan from ICAI weightage: learn, practise, then three revision
-          passes and timed mocks — with a fifth of the days deliberately left empty.
+          Today's work, review queue, mistakes and paper-wise progress —
+          all stored in your browser, no account needed.
         </p>
-        <a href="/plan/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Build your study plan →</a>
+        <a href="/dashboard/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 650; text-decoration: none;">Open dashboard →</a>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section style="margin-top: 40px; max-width: 640px;">
+      <div class="overline" style="margin-bottom: 12px;">How this works</div>
+      <div class="card card-pad" style="font-size: 15px; line-height: 1.8;">
+        <p style="margin: 0 0 12px;"><strong>1. Pick a paper and chapter.</strong> Read the notes — plain-language explanations built on the ICAI study material, with worked examples.</p>
+        <p style="margin: 0 0 12px;"><strong>2. Practice immediately.</strong> Every chapter has original MCQs. Get one wrong and it enters your Mistake notebook automatically.</p>
+        <p style="margin: 0 0 12px;"><strong>3. Revise with mixed sets.</strong> Once you've started a few chapters, the mixed sets pull questions from across the paper — the way the exam does.</p>
+        <p style="margin: 0;"><strong>4. Sit a mock.</strong> Full papers, real format, real negative marking. See where you stand before exam day.</p>
       </div>
     </section>
   </main>
