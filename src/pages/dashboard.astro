@@ -268,8 +268,13 @@ const gapPapers = foundationPapers.map((p) => ({
     // new attempt pointer never leaves a stale hardcoded date here.
     const daysEl = document.querySelector('[data-days-left]');
     const begins = new Date(`${daysEl.dataset.begins}T00:00:00+05:30`);
-    const days = Math.max(0, Math.ceil((begins.getTime() - Date.now()) / 86400000));
-    daysEl.textContent = `${days} days from today · `;
+    const days = Math.ceil((begins.getTime() - Date.now()) / 86400000);
+    daysEl.textContent =
+      days > 0
+        ? `${days} days from today · `
+        : days === 0
+          ? 'starting today · '
+          : 'attempt under way · ';
 
     // Review queue caption + rows.
     const mistakes = getMistakes();

@@ -1,4 +1,5 @@
 ---
+import { indexable } from '../data/site.js';
 import '../styles/global.css';
 import Analytics from '../components/Analytics.astro';
 
@@ -37,6 +38,10 @@ const nav = [
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#232B3A" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    {/* Preview deployments stay out of search results. Crawling is left ALLOWED
+        on purpose: a robots.txt Disallow stops the crawl before this tag is
+        read, which is exactly how blocked URLs still end up listed. */}
+    {!indexable && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Adhyayan" />
     <meta property="og:title" content={`${title} · Adhyayan`} />

@@ -89,9 +89,18 @@ const milestones = [
 
   <script>
     // Date rides on the element from site.js — no hardcoded copy to go stale.
+    // Factual countdown. Once the date is past, say so rather than counting
+    // down to zero forever — a stale "0 days from today" on an attempt that
+    // already finished reads as a broken page, and quietly misleads anyone
+    // who does not already know the exam is over.
     const el = document.querySelector('[data-days-left]');
     const begins = new Date(`${el.dataset.begins}T00:00:00+05:30`);
-    const days = Math.max(0, Math.ceil((begins.getTime() - Date.now()) / 86400000));
-    el.textContent = `${days} days from today`;
+    const days = Math.ceil((begins.getTime() - Date.now()) / 86400000);
+    el.textContent =
+      days > 0
+        ? `${days} days from today`
+        : days === 0
+          ? 'starting today'
+          : 'this attempt has begun — see ICAI for the next attempt';
   </script>
 </Base>

@@ -39,6 +39,19 @@ export const analytics = {
   enabled: false,
 };
 
+/**
+ * Whether search engines may index this deployment.
+ *
+ * OFF by default, deliberately. Every chapter currently carries a "Community
+ * draft — not yet CA-reviewed" badge, and a preview link shared with a few
+ * people should not become the indexed copy of the site — least of all under a
+ * temporary domain that would then compete with the real one.
+ *
+ * Set SITE_INDEXABLE=1 in the deploy environment when the site is genuinely
+ * launching. Nothing else needs to change.
+ */
+export const indexable = process.env.SITE_INDEXABLE === '1';
+
 export const level = {
   id: 'intermediate',
   name: 'CA Intermediate',
