@@ -28,8 +28,7 @@ law_primary:
     - Tag every law-derived item with applicable_attempts and law_as_on_date.
   registry: https://www.indiacode.nic.in/
   # Deep handle URLs on India Code are session-quirky; resolve the canonical
-  # handle URL for each Act on first use in Prompt 2, record it here, and let
-  # scripts/linkcheck watch it thereafter.
+  # handle URL for each Act on first use in Prompt 2 and record it here.
   acts:
     - name: "The Indian Contract Act, 1872"
       act_no: "9 of 1872"

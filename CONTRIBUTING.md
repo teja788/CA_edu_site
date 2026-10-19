@@ -88,9 +88,6 @@ residue the machines can't judge, not re-checking arithmetic.
    applies to each attempt lives in `src/data/intermediate.js` (`attempts`),
    and every sourced change lands in `src/data/amendments.js`, rendered at
    `/updates/` and `/intermediate/<paper>/amendments/`.
-6. **Links are machine-checked weekly.** `scripts/linkcheck/` + the Monday
-   workflow ping every official URL, open an issue on failure, and stamp
-   `lastChecked` dates after a green sweep.
 
 The fastest useful review: open `review_queue.md`, resolve a quarantined
 question against the bare Act, and open a PR with the fix — 15 minutes,
