@@ -61,7 +61,7 @@ tax_primary:
   rules:
     - ALWAYS record section (and sub-section/clause), notification number, and date on every claim.
     - Rate and exemption positions must name the exact notification (e.g. "Notification No. 12/2017-CT (Rate) dated 28-06-2017, entry 66") — never "as per current rates".
-    - Tag every item with applicable_attempts and law_as_on_date; the attempt decides WHICH Act applies (1961 vs 2025 from May 2027) — enforced by scripts/attempt_lint in CI.
+    - Tag every item with applicable_attempts and law_as_on_date; the attempt decides WHICH Act applies (1961 vs 2025 from May 2027) — checked by scripts/attempt_lint.
     - Paper 3 is built LAST (plan §7 Phase 1) — no tax question merges until this machinery is battle-tested.
   direct_tax:
     - name: "The Income-tax Act, 1961 (as amended by the Finance Act, 2025)"

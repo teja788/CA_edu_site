@@ -60,9 +60,9 @@ residue the machines can't judge, not re-checking arithmetic.
    (`src/data/questions/<level>/<paper>/<chapter>.json`) flags computable
    questions `"numerical": true` and ships
    `scripts/verify_numerical/verify_<chapter>.py`, which recomputes every
-   answer from the stem's parameters. CI
-   (`.github/workflows/verify-content.yml`) fails the PR on any mismatch or
-   missing verifier — a fluent explanation defending a wrong key cannot merge.
+   answer from the stem's parameters. Run
+   `python3 scripts/verify_numerical/run.py` before opening a PR; it fails on
+   any mismatch or missing verifier.
    The toolkit's own self-test contains a planted wrong key to prove the
    runner catches exactly that.
 2. **Non-computable MCQs get an independent pass.** `scripts/consistency_check/`
@@ -84,7 +84,7 @@ residue the machines can't judge, not re-checking arithmetic.
    papers (P2 Corporate & Other Laws, P3 Taxation, P5 Auditing & Ethics)
    cannot merge a question without `applicableAttempts` + `lawAsOnDate`, or a
    note without `applicable_attempts` + `law_as_on_date` frontmatter —
-   `scripts/attempt_lint/` fails CI otherwise. Which Finance Act and cut-off
+   `scripts/attempt_lint/` fails otherwise. Which Finance Act and cut-off
    applies to each attempt lives in `src/data/intermediate.js` (`attempts`),
    and every sourced change lands in `src/data/amendments.js`, rendered at
    `/updates/` and `/intermediate/<paper>/amendments/`.

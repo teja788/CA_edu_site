@@ -31,5 +31,4 @@ python3 scripts/attempt_lint/attempt_lint.py   # lints the repo
 python3 scripts/attempt_lint/selftest.py       # proves the lint catches planted violations
 ```
 
-Both run in CI (`.github/workflows/verify-content.yml`); the selftest runs
-first so a broken lint can never green-light untagged content.
+Run the selftest first so a broken lint can never green-light untagged content.
