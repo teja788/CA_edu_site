@@ -17,17 +17,24 @@ import {
   WEIGHTAGE_NOTE,
   WEIGHTAGE_SOURCE,
 } from '../../data/foundation.js';
+import { weightageActuals, actualsSummary } from '../../data/weightageActuals.js';
 
 // Chapter names for the "covers" column, looked up from the same taxonomy.
 function chapterNames(paper, slugs) {
   const all = paper.sections.flatMap((s) => s.chapters);
   return slugs.map((slug) => (all.find((c) => c.slug === slug) || {}).name || slug);
 }
+
+function chapterName(paper, slug) {
+  return chapterNames(paper, [slug])[0];
+}
+
+const EVIDENCE_URL = 'https://github.com/teja788/CA_edu_site/tree/main/citations/foundation/weightage';
 ---
 
 <Base
   title="CA Foundation weightage"
-  description="ICAI's official section-wise weightage for all four CA Foundation papers, with the ±5% deviation ICAI permits and the chapters each section covers."
+  description="ICAI's official section-wise weightage for all four CA Foundation papers, plus the chapter-wise marks that actually came up in every New Scheme Paper 1 and Paper 2 exam."
 >
   <main class="page">
     <div style="max-width: 760px; margin: 0 auto;">
@@ -105,6 +112,85 @@ function chapterNames(paper, slugs) {
           </>
         );
       })}
+
+      <h2 style="margin: 40px 0 8px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em;">
+        What actually came up — Papers 1 &amp; 2
+      </h2>
+      <div class="article">
+        <p>
+          The ranges above are what ICAI promises. Below is what the papers actually did: every New Scheme
+          question paper for Papers 1 and 2 ({weightageActuals.papers.accounting.attempts.length} attempts,
+          June 2024 – September 2026), tallied question by question against this site's chapter list.
+          Papers 3 and 4 are fully objective and ICAI never publishes those question papers, so no such
+          tally is possible for them.
+        </p>
+        <Callout kind="pointer" label="How to read 'marks offered'">
+          <p>
+            Where a paper gives an internal choice, both alternatives are counted, so each paper offers
+            more than 100 marks ({weightageActuals.papers.accounting.offeredTotal} in Paper 1,
+            {weightageActuals.papers['business-laws'].offeredTotal} in Paper 2). The average is the marks a
+            chapter put on the table per attempt — what you could score from it with free choice of
+            questions.
+          </p>
+        </Callout>
+      </div>
+
+      {['accounting', 'business-laws'].map((slug) => {
+        const paper = foundationPapers.find((p) => p.slug === slug);
+        const actuals = weightageActuals.papers[slug];
+        const rows = actualsSummary(slug);
+        return (
+          <>
+            <div class="overline" style="margin: 24px 0 12px;">
+              Paper {paper.number} · {paper.name} · marks offered per attempt
+            </div>
+            <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; margin: 0 0 12px;">
+              {actuals.structureNote}
+            </p>
+            <div class="table-scroll" style="margin-bottom: 12px;">
+              <div class="data-table">
+                <div class="tr head" style="grid-template-columns: 1fr 110px 90px 90px;">
+                  <div class="td">Chapter</div>
+                  <div class="td num">Avg marks</div>
+                  <div class="td num">Range</div>
+                  <div class="td num">Papers</div>
+                </div>
+                {rows.map((r) => (
+                  <div class="tr" style="grid-template-columns: 1fr 110px 90px 90px;">
+                    <div class="td">
+                      <a href={`/foundation/${slug}/${r.slug}/`}>{chapterName(paper, r.slug)}</a>
+                    </div>
+                    <div class="td num" style="font-weight: 650;">{r.avg.toFixed(1)}</div>
+                    <div class="td num">{r.min}–{r.max}</div>
+                    <div class="td num">{r.appearances}/{r.attempts}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <details style="margin-bottom: 24px;">
+              <summary style="font-size: 14px; color: var(--text-2); cursor: pointer;">
+                The {actuals.attempts.length} question papers behind this table
+              </summary>
+              <ul style="font-size: 14px; color: var(--text-2); line-height: 1.8; margin: 8px 0 0;">
+                {actuals.attempts.map((a) => (
+                  <li>
+                    <a href={a.sourceUrl} rel="noopener">{a.name} question paper (icai.org) ↗</a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </>
+        );
+      })}
+
+      <div class="article">
+        <p>
+          The full question-by-question mapping behind these tables — every sub-part, its chapter and its
+          marks, spot-checkable against each PDF — is published in the
+          {' '}<a href={EVIDENCE_URL} rel="noopener">site's open evidence files ↗</a>. Tallied
+          {' '}{weightageActuals.lastChecked}; the tables extend with each new attempt.
+        </p>
+      </div>
 
       <div class="article" style="margin-top: 32px;">
         <h2>Source</h2>
