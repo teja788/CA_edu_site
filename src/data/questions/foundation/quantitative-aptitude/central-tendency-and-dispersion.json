@@ -1905,7 +1905,7 @@
         {
           "key": "A",
           "text": "2%",
-          "explanation": "This computes (100 ÷ 50) without the SD square root and mis-scales. Using SD = 10, CV = 20%."
+          "explanation": "This divides the variance by the mean (100 ÷ 50 = 2) and reads it as 2%. CV uses the SD, not the variance: SD = √100 = 10, so CV = (10 ÷ 50) × 100 = 20%."
         },
         {
           "key": "B",
@@ -1915,7 +1915,7 @@
         {
           "key": "C",
           "text": "10%",
-          "explanation": "This takes SD ÷ mean without ×100 mis-set, or halves the result. The correct CV is (10 ÷ 50) × 100 = 20%."
+          "explanation": "This reports the SD (10) itself as a percentage. CV divides the SD by the mean: (10 ÷ 50) × 100 = 20%."
         },
         {
           "key": "D",
