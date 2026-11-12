@@ -953,8 +953,8 @@
       "stem": "Which of the following business decisions is influenced by an awareness of the business cycle?",
       "options": [
         { "key": "A", "text": "demand forecasting, investment and capacity, inventory, pricing, financing and employment", "explanation": "Correct. Cycle awareness runs through all the main decision areas, because demand, prices, credit and costs all move with the cycle." },
-        { "key": "B", "text": "only the choice of the company's logo", "explanation": "A logo is unrelated to the cycle. Cycle awareness shapes demand, investment, inventory, pricing, financing and employment decisions." },
-        { "key": "C", "text": "only the colour of the office walls", "explanation": "Office decor is unrelated to the cycle. The cycle affects the firm's real economic decisions." },
+        { "key": "B", "text": "only long-term decisions such as where to locate the plant", "explanation": "Too narrow. Short-horizon decisions — inventory, pricing, hiring — are among the most cycle-sensitive, alongside long-term investment." },
+        { "key": "C", "text": "only financing decisions, because interest rates move with the cycle", "explanation": "Financing is cycle-sensitive, but so are demand forecasts, capacity, inventory, pricing and employment — the cycle runs through all of them." },
         { "key": "D", "text": "no business decision at all", "explanation": "The cycle affects many decisions; a firm that ignores it buys, builds and hires at the wrong time." }
       ],
       "correct": "A",
@@ -982,26 +982,6 @@
       "difficulty": "easy",
       "source": "original",
       "sourceRef": "Capital-goods and durable firms swing most and must plan most carefully",
-      "applicableAttempts": ["Sept 2026", "Jan 2027"],
-      "lastVerified": "2026-08-12"
-    },
-    {
-      "id": "q-f4c5-050",
-      "topic": "Ch 5 · Marking · Negative marking",
-      "type": "mcq",
-      "numerical": false,
-      "stem": "In Paper 4, which carries negative marking of 0.25 mark for a wrong answer, the soundest rule for an objective question is to:",
-      "options": [
-        { "key": "A", "text": "answer whenever you can eliminate at least one option, and consider leaving it only when you cannot narrow the field at all", "explanation": "Correct. Eliminating even one option raises the expected value of a guess clearly above zero, so an attempt becomes worthwhile." },
-        { "key": "B", "text": "leave every question you are not completely certain about", "explanation": "This is too cautious. Once you can eliminate an option, an attempt is worthwhile, so leaving every uncertain question loses easy marks." },
-        { "key": "C", "text": "guess randomly on every question without reading it", "explanation": "Random guessing on everything wastes the information you could use to eliminate options, and gains little on average with negative marking." },
-        { "key": "D", "text": "answer only the very first question and skip the rest", "explanation": "There is no reason to skip questions you can narrow down. Attempt every question where you can eliminate at least one option." }
-      ],
-      "correct": "A",
-      "readLink": { "label": "Read: Negative marking, §10 →", "href": "/foundation/business-economics/business-cycles/#10-negative-marking-and-when-to-leave-a-question" },
-      "difficulty": "easy",
-      "source": "original",
-      "sourceRef": "Negative marking 0.25: attempt when you can eliminate at least one option",
       "applicableAttempts": ["Sept 2026", "Jan 2027"],
       "lastVerified": "2026-08-12"
     }
