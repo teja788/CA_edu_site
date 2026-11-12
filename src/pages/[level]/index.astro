@@ -8,7 +8,11 @@ import { attempt } from '../../data/site.js';
 import { levels } from '../../data/levels.js';
 
 export function getStaticPaths() {
-  return levels.map((level) => ({ params: { level: level.id }, props: { level } }));
+  // Foundation-only site: Intermediate/Final level hubs are archived until
+  // their content clears review (archive/intermediate/README.md).
+  return levels
+    .filter((level) => level.id === 'foundation')
+    .map((level) => ({ params: { level: level.id }, props: { level } }));
 }
 
 const { level } = Astro.props;
@@ -73,7 +77,7 @@ const { level } = Astro.props;
       )}
       {level.id === 'final' && <a class="list-row" href="/guides/spom/"><span class="row-title">SPOM — the definitive guide</span><span class="chev" aria-hidden="true">›</span></a>}
       {level.id !== 'foundation' && <a class="list-row" href="/guides/articleship/"><span class="row-title">Articleship under the new scheme</span><span class="chev" aria-hidden="true">›</span></a>}
-      <a class="list-row" href="/attempt/"><span class="row-title">Your attempt — dates, forms, applicable law</span><span class="chev" aria-hidden="true">›</span></a>
+      <a class="list-row" href="/dashboard/"><span class="row-title">Your attempt — dates, deadlines and countdown</span><span class="chev" aria-hidden="true">›</span></a>
     </div>
   </main>
 </Base>

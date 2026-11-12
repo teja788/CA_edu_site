@@ -1,12 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
-import { attempt, papers, partnershipRefresherTopics } from '../data/site.js';
 import { foundationAttempts, foundationPapers } from '../data/foundation.js';
 
-// Progress denominator for P1: 15 syllabus chapters + the partnership
-// refresher topics (same tracked-topic set the paper hub uses).
-const p1TrackedTopics = papers.find((p) => p.id === 'p1').chapters + partnershipRefresherTopics.length;
+const nextAttempt = foundationAttempts[0];
+
+// Per-paper progress rows: mastery keys are `f<paper>-ch<chapter>` (the
+// masteryId convention in src/scripts/banks.js), one topic per chapter.
+const progressPapers = foundationPapers.map((p) => ({
+  id: p.id,
+  number: p.number,
+  shortName: p.shortName,
+  prefix: `f${p.number}-ch`,
+  total: p.sections.reduce((n, s) => n + s.chapters.length, 0),
+}));
 
 // Slim attempt list for the picker — the client only needs the date, the
 // registration cut-off and the label, not the whole exam-facts record.
@@ -43,8 +50,8 @@ const gapPapers = foundationPapers.map((p) => ({
         <div style="font-size: 15px; color: var(--text-2); margin-top: 4px;">Your review queue, mistakes and paper progress — stored in this browser only.</div>
       </div>
       <div class="tnum" style="text-align: right; font-size: 14px; color: var(--text-2);">
-        <div>{attempt.name} attempt begins <strong style="color: var(--text);">{attempt.beginsLabel}</strong></div>
-        <div style="color: var(--text-3);"><span data-days-left data-begins={attempt.beginsOn}></span><a href="/attempt/">attempt details</a></div>
+        <div>{nextAttempt.name} attempt: <strong style="color: var(--text);">{nextAttempt.examDates.label}</strong></div>
+        <div style="color: var(--text-3);"><span data-days-left data-begins={nextAttempt.examDates.begins ?? ''}></span></div>
       </div>
     </div>
 
@@ -176,21 +183,19 @@ const gapPapers = foundationPapers.map((p) => ({
         <section class="card card-pad">
           <div style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Your papers</div>
           <div style="display: flex; flex-direction: column; gap: 18px;">
-            {papers.filter((p) => p.group === 1).map((p) => (
+            {progressPapers.map((p) => (
               <div>
                 <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px;">
-                  <span style={`font-weight: 600; ${p.status !== 'live' ? 'color: var(--text-3);' : ''}`}>P{p.number} · {p.shortName}</span>
-                  {p.status === 'live'
-                    ? <span class="tnum" style="color: var(--text-2);" data-paper-pct={p.id} data-total={p.id === 'p1' ? p1TrackedTopics : 0}>0%</span>
-                    : <span style="font-size: 13px; color: var(--text-3);">Coming soon</span>}
+                  <span style="font-weight: 600;">P{p.number} · {p.shortName}</span>
+                  <span class="tnum" style="color: var(--text-2);" data-paper-pct={p.id} data-total={p.total} data-prefix={p.prefix}>0%</span>
                 </div>
                 <div class="progress-track">
-                  {p.status === 'live' && <div class="progress-fill" style="width: 0%;" data-paper-fill={p.id}></div>}
+                  <div class="progress-fill" style="width: 0%;" data-paper-fill={p.id}></div>
                 </div>
               </div>
             ))}
           </div>
-          <a href="/intermediate/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 600; text-decoration: none; margin-top: 10px;">All papers →</a>
+          <a href="/foundation/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 600; text-decoration: none; margin-top: 10px;">All papers →</a>
         </section>
 
         <section class="card card-pad">
@@ -267,14 +272,16 @@ const gapPapers = foundationPapers.map((p) => ({
     // Factual countdown — the date rides on the element from site.js, so a
     // new attempt pointer never leaves a stale hardcoded date here.
     const daysEl = document.querySelector('[data-days-left]');
-    const begins = new Date(`${daysEl.dataset.begins}T00:00:00+05:30`);
-    const days = Math.ceil((begins.getTime() - Date.now()) / 86400000);
-    daysEl.textContent =
-      days > 0
-        ? `${days} days from today · `
-        : days === 0
-          ? 'starting today · '
-          : 'attempt under way · ';
+    if (daysEl.dataset.begins) {
+      const begins = new Date(`${daysEl.dataset.begins}T00:00:00+05:30`);
+      const days = Math.ceil((begins.getTime() - Date.now()) / 86400000);
+      daysEl.textContent =
+        days > 0
+          ? `${days} days from today`
+          : days === 0
+            ? 'starting today'
+            : 'attempt under way';
+    }
 
     // Review queue caption + rows.
     const mistakes = getMistakes();
@@ -457,14 +464,14 @@ const gapPapers = foundationPapers.map((p) => ({
       reader.readAsText(file);
     });
 
-    // Paper progress — same key prefixes and denominator as the paper hub.
-    const pct = document.querySelector('[data-paper-pct="p1"]');
-    const fill = document.querySelector('[data-paper-fill="p1"]');
-    if (pct) {
-      const p1 = getPaperProgress(['i1-ch', 'p1-ch4-'], Number(pct.dataset.total));
-      pct.textContent = `${p1.pct}%`;
-      if (fill) fill.style.width = `${p1.pct}%`;
-    }
+    // Paper progress — mastery keys are `f<paper>-ch<chapter>` (banks.js).
+    document.querySelectorAll('[data-paper-pct]').forEach((pct) => {
+      const id = pct.dataset.paperPct;
+      const p = getPaperProgress([pct.dataset.prefix], Number(pct.dataset.total));
+      pct.textContent = `${p.pct}%`;
+      const fill = document.querySelector(`[data-paper-fill="${id}"]`);
+      if (fill) fill.style.width = `${p.pct}%`;
+    });
 
     /* ── Today, from the study plan ───────────────────────────────────────
        Reads `adh-plan` (written by /plan/) — store.js is untouched. Inside

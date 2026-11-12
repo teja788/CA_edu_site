@@ -1,6 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { allCards } from '../../data/flashcards.js';
+import { allCards as allCardsRaw } from '../../data/flashcards.js';
+
+// Foundation-only site: Intermediate decks (AS standards etc.) stay in
+// flashcards.js for the eventual Inter launch but are not served.
+const allCards = allCardsRaw.filter((c) => c.deckId.startsWith('foundation-'));
 ---
 
 <Base title="Flashcard review" bare>
@@ -39,7 +43,7 @@ import { allCards } from '../../data/flashcards.js';
         <div style="font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 14px;">
           Your review queue is clear. Rest, or read something new.
         </div>
-        <a href="/intermediate/advanced-accounting/" class="btn btn-secondary">Browse chapters</a>
+        <a href="/foundation/" class="btn btn-secondary">Browse chapters</a>
       </div>
     </div>
   </main>
