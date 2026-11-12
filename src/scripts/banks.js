@@ -21,8 +21,6 @@
  * ~2.7 KB per question of stem, options and explanations that they do not.
  */
 
-import { questions as legacyMcqs } from '../data/site.js';
-
 const bankModules = import.meta.glob('../data/questions/**/*.json', { eager: true });
 
 /** URL-safe bank slug from the source path: <level>--<paper>--<chapter>. */
@@ -66,6 +64,10 @@ export function buildBanks() {
     .flatMap(([path, mod]) => {
       const bank = mod.default ?? mod;
       if (!Array.isArray(bank.questions)) return [];
+      // Foundation-only site: Intermediate banks stay in the repo for the
+      // eventual Inter launch but never reach the practice deck (see
+      // archive/intermediate/README.md).
+      if (bank.level !== 'foundation') return [];
       const paperNum = Number((bank.paper ?? '').match(/Paper\s*(\d)/i)?.[1] ?? 0);
       const chapterNum = Number((bank.chapter ?? '').match(/Ch\s*(\d+)/i)?.[1] ?? 0);
       return [
@@ -89,22 +91,6 @@ export function buildBanks() {
         },
       ];
     });
-
-  // The launch questions in site.js are Inter P1 and predate the chapter banks.
-  // They ride in a bank of their own so the client has one uniform shape to
-  // fetch, rather than a special case inlined into the page.
-  banks.unshift({
-    slug: 'legacy--advanced-accounting--launch',
-    meta: {
-      level: 'intermediate',
-      paper: 'Paper 1 — Advanced Accounting',
-      paperSlug: 'advanced-accounting',
-      chapterSlug: null,
-      negative: false,
-      masteryId: null,
-    },
-    questions: legacyMcqs.map((q) => ({ ...q })),
-  });
 
   return banks;
 }

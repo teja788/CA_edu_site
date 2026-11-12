@@ -12,7 +12,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       </h1>
       <div id="search"></div>
       <noscript>
-        <p style="font-size: 15px; color: var(--text-2);">Search needs JavaScript. Browse the <a href="/intermediate/">paper index</a> instead.</p>
+        <p style="font-size: 15px; color: var(--text-2);">Search needs JavaScript. Browse the <a href="/foundation/">paper index</a> instead.</p>
       </noscript>
     </div>
   </main>
@@ -44,7 +44,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       };
       s.onerror = () => {
         document.getElementById('search').innerHTML =
-          '<p style="font-size: 15px; color: var(--text-2);">The search index is built with the production site (<code>npm run build</code>) and isn\'t available on the dev server. Browse the <a href="/intermediate/">paper index</a> instead.</p>';
+          '<p style="font-size: 15px; color: var(--text-2);">The search index is built with the production site (<code>npm run build</code>) and isn\'t available on the dev server. Browse the <a href="/foundation/">paper index</a> instead.</p>';
       };
       document.head.appendChild(s);
     });

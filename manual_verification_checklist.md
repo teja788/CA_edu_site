@@ -7,12 +7,15 @@ ships; strike items through with the date + your initials as you go.
 
 ## Blocking for any Inter content
 
-- [ ] **Inter P1 partnership content is off-syllabus.** The ICAI May-2026 SM
-  index for Paper 1 (15 chapters) has **no partnership chapter** — partnership
-  accounts now sit in Foundation. The live notes trio under
-  `src/pages/intermediate/advanced-accounting/partnership-accounts/` and the
-  12 launch MCQs in `src/data/site.js` predate this. Decide:
-  re-home to Foundation P1, or archive. Until then they render on a live page.
+- [x] ~~**Inter P1 partnership content is off-syllabus.**~~ Resolved 12 Nov
+  2026: **archived**, along with the entire `/intermediate/` route tree, the
+  `[level]/[paper]` dynamic hubs, `/attempt/` and `/practice/mock/` — see
+  `archive/intermediate/README.md`. The 12 launch MCQs in `src/data/site.js`
+  no longer enter the practice deck (banks.js is Foundation-only); Inter
+  flashcard decks are filtered off the flashcards page. Foundation P1 Ch 10
+  (`partnership-and-llp-accounts`) remains the live home of partnership.
+  Whether the archived deep-dive trio re-homes under it is a decision for
+  whoever next works that chapter.
   - Check: https://www.icai.org/post/bos-int-p1-may2026-exam
 
 ## Blocking for tax/law content (P2, P3, P5)
