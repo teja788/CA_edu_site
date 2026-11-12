@@ -1,0 +1,178 @@
+---
+/**
+ * Free resources directory — rendered from `freeResources` in
+ * src/data/freeResources.js. Every link was fetched/opened before listing;
+ * nothing is re-hosted. Listing rules are in the data file's header.
+ */
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Badge from '../../components/Badge.astro';
+import Callout from '../../components/Callout.astro';
+import TrustRow from '../../components/TrustRow.astro';
+import { foundationAttempts, foundationPapers } from '../../data/foundation.js';
+import { freeResources } from '../../data/freeResources.js';
+
+const nextAttempt = foundationAttempts[0];
+
+const PAPER_LABEL = Object.fromEntries(foundationPapers.map((p) => [p.slug, `P${p.number} ${p.shortName}`]));
+function paperTags(papers) {
+  if (!papers || papers.includes('all')) return 'All four papers';
+  return papers.map((s) => PAPER_LABEL[s] || s).join(' · ');
+}
+function host(url) {
+  return new URL(url).host.replace(/^www\./, '');
+}
+---
+
+<Base
+  title="Free CA Foundation resources"
+  description="Every genuinely free CA Foundation resource in one place — official ICAI material, free YouTube lectures per paper, bare acts, past papers and study communities. All links verified."
+>
+  <main class="page">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: 'Guides', href: '/start-here/' }, { label: 'Free resources' }]} />
+
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;">
+        Every free CA Foundation resource, in one place
+      </h1>
+      <div style="margin: 12px 0 24px;">
+        <TrustRow attempt={nextAttempt.name} updated={freeResources.lastChecked} source="Every link opened and checked before listing" />
+      </div>
+
+      <div class="article">
+        <p>
+          You can prepare for CA Foundation without paying for anything except the ICAI registration
+          itself. The examiner publishes the study material, revision papers, mocks, past papers and live
+          classes free; good educators publish full free lecture batches on YouTube; the bare Acts are on
+          government sites. The problem is that it's scattered — so here it is in one place.
+        </p>
+        <Callout kind="pointer" label="What this list is (and isn't)">
+          <p>
+            Every entry was opened and checked on {freeResources.lastChecked}. We list only content its
+            owner publishes free themselves — no re-uploads, no "free PDF" mirrors, no leaked lectures.
+            Where a free listing sits inside a platform that sells courses, the entry says what's free and
+            what's the upsell. Found a dead link or a great free source we missed?
+            {' '}<a href="/report-error/">Tell us</a>.
+          </p>
+        </Callout>
+      </div>
+
+      <!-- Official ICAI -->
+      <h2 style="margin: 32px 0 4px; font-size: 22px; font-weight: 700;">Official ICAI — the backbone</h2>
+      <p style="font-size: 15px; color: var(--text-2); line-height: 1.7; margin: 0 0 16px;">
+        Start here; everything else is a supplement. Entries marked with a login badge need the free
+        student login (registration number + date of birth) — nothing official costs extra.
+      </p>
+      {freeResources.official.map((e) => (
+        <div class="card card-pad" style="margin-bottom: 12px;">
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 6px;">
+            <strong style="font-size: 16px;">{e.title}</strong>
+            {e.requiresLogin ? <Badge kind="login">Free ICAI login</Badge> : <Badge kind="neutral">Open access</Badge>}
+          </div>
+          <p style="margin: 0 0 8px; font-size: 14px; line-height: 1.7; color: var(--text);">{e.what}</p>
+          {e.freeNote && <p style="margin: 0 0 8px; font-size: 13px; line-height: 1.6; color: var(--text-3);">{e.freeNote}</p>}
+          <a href={e.url} rel="noopener" style="font-size: 14px; font-weight: 600;">Open on {host(e.url)} ↗</a>
+        </div>
+      ))}
+      <p style="font-size: 14px; color: var(--text-2); line-height: 1.7; margin: 8px 0 0;">
+        New to RTPs and MTPs? <a href="/guides/ca-foundation-rtp-mtp/">What each one is and when to use it →</a>
+      </p>
+
+      <!-- YouTube -->
+      <h2 style="margin: 36px 0 4px; font-size: 22px; font-weight: 700;">Free video lectures on YouTube</h2>
+      <p style="font-size: 15px; color: var(--text-2); line-height: 1.7; margin: 0 0 16px;">
+        Full free batches and one-shots from channels that publish them openly. Free batches are seasonal —
+        a playlist tied to an attempt gets replaced by the next one, so check the upload dates.
+      </p>
+      <Callout kind="mistake" label="One imposter to avoid">
+        <p>
+          ICAI's official YouTube channel is <strong>@theicai</strong>. The channel named
+          "@ICAICATUBE" is <strong>not ICAI</strong> — same name, no affiliation.
+        </p>
+      </Callout>
+      {freeResources.youtube.map((ch) => (
+        <div class="card card-pad" style="margin-bottom: 14px;">
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 6px;">
+            <strong style="font-size: 16px;">{ch.title}</strong>
+            <Badge kind="neutral">{ch.language}</Badge>
+          </div>
+          <p style="margin: 0 0 8px; font-size: 14px; line-height: 1.7; color: var(--text);">{ch.what}</p>
+          {ch.freeNote && <p style="margin: 0 0 8px; font-size: 13px; line-height: 1.6; color: var(--text-3);">{ch.freeNote}</p>}
+          <a href={ch.url} rel="noopener" style="font-size: 14px; font-weight: 600;">Channel on {host(ch.url)} ↗</a>
+          {ch.playlists.length > 0 && (
+            <div style="margin-top: 10px; border-top: 1px solid var(--border); padding-top: 10px;">
+              {ch.playlists.map((pl) => (
+                <div style="display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: baseline; padding: 3px 0; font-size: 14px;">
+                  <a href={pl.url} rel="noopener" style="font-weight: 600;">{pl.label} ↗</a>
+                  <span style="color: var(--text-3); font-size: 13px;">{paperTags(pl.papers)}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+
+      <!-- Bare acts -->
+      <h2 style="margin: 36px 0 4px; font-size: 22px; font-weight: 700;">Bare Acts for Business Laws</h2>
+      <p style="font-size: 15px; color: var(--text-2); line-height: 1.7; margin: 0 0 12px;">
+        The authoritative, current text of every Act on the Paper 2 syllabus — free on India Code. Read the
+        section after the study material paraphrases it; examiners reward the Act's own words.
+      </p>
+      <div class="card card-pad" style="margin-bottom: 14px;">
+        {freeResources.bareActs.map((e) => (
+          <div style="display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: baseline; padding: 4px 0; font-size: 14px;">
+            <a href={e.url} rel="noopener" style="font-weight: 600;">{e.title} ↗</a>
+            <span style="color: var(--text-3); font-size: 13px;">{host(e.url)}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Background -->
+      <h2 style="margin: 36px 0 4px; font-size: 22px; font-weight: 700;">Free background courses</h2>
+      <p style="font-size: 15px; color: var(--text-2); line-height: 1.7; margin: 0 0 12px;">
+        If Paper 3 statistics or Paper 4 economics feels like it starts above your head, these free
+        non-profit courses rebuild the floor.
+      </p>
+      <div class="card card-pad" style="margin-bottom: 14px;">
+        {freeResources.background.map((e) => (
+          <div style="display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: baseline; padding: 4px 0; font-size: 14px;">
+            <a href={e.url} rel="noopener" style="font-weight: 600;">{e.title} ↗</a>
+            <span style="color: var(--text-3); font-size: 13px;">{paperTags(e.papers)}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Communities -->
+      <h2 style="margin: 36px 0 4px; font-size: 22px; font-weight: 700;">Where to ask questions</h2>
+      <p style="font-size: 15px; color: var(--text-2); line-height: 1.7; margin: 0 0 12px;">
+        Self-study doesn't have to mean studying alone. Public communities where Foundation questions get
+        answered — read first, then ask.
+      </p>
+      {freeResources.communities.map((e) => (
+        <div class="card card-pad" style="margin-bottom: 12px;">
+          <div style="margin-bottom: 6px;"><strong style="font-size: 16px;">{e.title}</strong></div>
+          <p style="margin: 0 0 8px; font-size: 14px; line-height: 1.7; color: var(--text);">{e.what}</p>
+          {e.freeNote && <p style="margin: 0 0 8px; font-size: 13px; line-height: 1.6; color: var(--text-3);">{e.freeNote}</p>}
+          <a href={e.url} rel="noopener" style="font-size: 14px; font-weight: 600;">Open on {host(e.url)} ↗</a>
+        </div>
+      ))}
+
+      <div class="article" style="margin-top: 32px;">
+        <h2>And this site</h2>
+        <p>
+          Adhyayan itself is part of the free stack: <a href="/foundation/">chapter notes for all four
+          papers</a>, <a href="/practice/">2,000+ practice MCQs with per-option explanations</a>,
+          {' '}<a href="/guides/ca-foundation-weightage/">chapter weightage from real past papers</a> and
+          {' '}<a href="/plan/">a study-plan generator</a> — no account, no paid tier.
+        </p>
+        <h2>Why some well-known names are missing</h2>
+        <p>
+          Channels and sites were dropped when their free content turned out to be old-syllabus, not
+          actually free, not findable under a verifiable official handle, or aimed at a different course.
+          The bar for this page is simple: genuinely free, owner-published, current syllabus, link opens.
+          If something that clears the bar is missing, <a href="/report-error/">suggest it</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>
