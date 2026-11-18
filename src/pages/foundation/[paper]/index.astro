@@ -52,7 +52,11 @@ const safePath = paper.slug === 'quantitative-aptitude' ? p3SafePathTo40 : null;
 const lectures = getFreeLectureSources(paper.slug);
 ---
 
-<Base title={`Paper ${paper.number}: ${paper.name} — CA Foundation`} active="papers">
+<Base
+  title={`Paper ${paper.number}: ${paper.name} — CA Foundation`}
+  description={`CA Foundation Paper ${paper.number} ${paper.name}: free notes for all ${paper.sections.reduce((n, s) => n + s.chapters.length, 0)} chapters, practice questions, ICAI weightage and the official study material, RTPs and MTPs.`}
+  active="papers"
+>
   <main class="page">
     <Breadcrumb crumbs={[
       { label: 'CA Foundation', href: '/foundation/' },

@@ -9,6 +9,10 @@ interface Props {
   active?: 'home' | 'papers' | 'practice' | 'plan' | 'dashboard';
   /** Quiz pages hide the standard chrome (dedicated quiz bar, no bottom nav). */
   bare?: boolean;
+  /** Path of the page this one duplicates (e.g. a print view → its chapter). */
+  canonicalPath?: string;
+  /** JSON-LD objects, emitted as one application/ld+json script each. */
+  jsonLd?: object[];
 }
 
 const {
@@ -16,7 +20,11 @@ const {
   description = 'Free CA Foundation exam prep — 46 chapters of notes, 2,374 original MCQs with explanations, mock exams, and a study planner. Built on the ICAI syllabus.',
   active,
   bare = false,
+  canonicalPath,
+  jsonLd = [],
 } = Astro.props;
+
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 
 const nav = [
   { key: 'home', label: 'Home', href: '/', icon: '⌂' },
@@ -37,7 +45,7 @@ const nav = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#232B3A" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonical} />
     {/* Preview deployments stay out of search results. Crawling is left ALLOWED
         on purpose: a robots.txt Disallow stops the crawl before this tag is
         read, which is exactly how blocked URLs still end up listed. */}
@@ -46,7 +54,8 @@ const nav = [
     <meta property="og:site_name" content="Adhyayan" />
     <meta property="og:title" content={`${title} · Adhyayan`} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:url" content={canonical} />
+    {jsonLd.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
     <meta property="og:image" content={new URL('/og-image.png', Astro.site)} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />

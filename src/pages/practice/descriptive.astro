@@ -15,7 +15,8 @@ import Base from '../../layouts/Base.astro';
 const bankModules = import.meta.glob('../../data/questions/**/*.json', { eager: true });
 const items = Object.values(bankModules).flatMap((mod) => {
   const bank = mod.default ?? mod;
-  if (!Array.isArray(bank.questions)) return [];
+  // Foundation-only site (archive/intermediate/README.md).
+  if (!Array.isArray(bank.questions) || bank.level !== 'foundation') return [];
   return bank.questions
     .filter((q) => q.type === 'descriptive' && Array.isArray(q.skeleton))
     .map((q) => ({
@@ -26,7 +27,7 @@ const items = Object.values(bankModules).flatMap((mod) => {
 });
 ---
 
-<Base title="Descriptive practice" bare>
+<Base description="Practise CA Foundation Accounting and Business Laws descriptive questions with model-answer skeletons, mark allocations and point-by-point self-grading." title="Descriptive practice" bare>
   <div class="quiz-bar">
     <a href="/practice/">← Exit practice</a>
     <div style="flex: 1;"></div>

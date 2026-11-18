@@ -24,5 +24,7 @@ const site =
 export default defineConfig({
   site,
   output: 'static',
-  integrations: [mdx(), sitemap()],
+  // Print one-pagers canonicalise to their chapter, so they stay out of the
+  // sitemap too.
+  integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/print/') })],
 });
