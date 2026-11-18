@@ -10,9 +10,18 @@ const nextAttempt = foundationAttempts.find((a) => {
 
 const questionCounts = { accounting: 503, 'business-laws': 386, 'quantitative-aptitude': 985, 'business-economics': 500 };
 const totalQuestions = Object.values(questionCounts).reduce((s, n) => s + n, 0);
+
+const siteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Adhyayan',
+  url: new URL('/', Astro.site).href,
+  description: 'Free, open CA Foundation exam preparation — not affiliated with ICAI.',
+  inLanguage: 'en-IN',
+};
 ---
 
-<Base title="CA Foundation — Free exam prep" active="home">
+<Base description="Free CA Foundation prep: chapter notes for all 4 papers, 2,000+ MCQs with explanations, timed mocks, past-paper weightage and a study planner. No signup." title="CA Foundation — Free exam prep" active="home" jsonLd={[siteLd]}>
   <main class="page">
     <section style="max-width: 640px; padding: 24px 0 8px;">
       <div class="overline">CA Foundation · Free forever · Not affiliated with ICAI</div>

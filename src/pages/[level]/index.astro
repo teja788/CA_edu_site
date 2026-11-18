@@ -18,7 +18,11 @@ export function getStaticPaths() {
 const { level } = Astro.props;
 ---
 
-<Base title={level.name} active="papers">
+<Base
+  title={level.name}
+  description="All four CA Foundation papers — Accounting, Business Laws, Quantitative Aptitude, Business Economics — with free chapter notes, passing rules and exam pattern."
+  active="papers"
+>
   <main class="page">
     <Breadcrumb crumbs={[{ label: 'Home', href: '/' }, { label: level.name }]} />
 

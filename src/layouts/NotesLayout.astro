@@ -28,9 +28,26 @@ const crumbs = [
   { label: fm.paper, href: `/${fm.level}/${fm.paperSlug}/` },
   { label: fm.chapter },
 ];
+// Students search "<topic> CA Foundation"; fm.paper is "Paper 1 · Accounting".
+const paperName = fm.paper.split('·').pop().trim();
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.label,
+    ...(c.href ? { item: new URL(c.href, Astro.site).href } : {}),
+  })),
+};
 ---
 
-<Base title={`${fm.title} — ${fm.paper}`} description={fm.description} active="papers">
+<Base
+  title={`${fm.title} — ${fm.levelName} ${paperName} Notes`}
+  description={fm.description}
+  active="papers"
+  jsonLd={[breadcrumbLd]}
+>
   <main class="page" style="max-width: 1024px;">
     <div style="display: flex; gap: 48px; justify-content: center; align-items: flex-start;">
       <article style="max-width: 640px; min-width: 0; flex: 1;">
